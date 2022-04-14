@@ -2,11 +2,16 @@ from abaqusConstants import *
 from .ConstrainedSketchDimension import ConstrainedSketchDimension
 from ..ConstrainedSketchVertex.ConstrainedSketchVertex import ConstrainedSketchVertex
 
+from __init__ import *
+
 
 class HorizontalDimension(ConstrainedSketchDimension):
-
-    def __init__(self, vertex1: ConstrainedSketchVertex, vertex2: ConstrainedSketchVertex,
-                 textPoint: tuple[float], value: float = None, reference: Boolean = OFF):
+    def __init__(self,
+                 vertex1: ConstrainedSketchVertex,
+                 vertex2: ConstrainedSketchVertex,
+                 textPoint: tuple[float],
+                 value: float = None,
+                 reference: Boolean = OFF):
         """This method constructs a ConstrainedSketchDimension object between two vertices. A
         horizontal dimension indicates the horizontal distance along the *X*-axis between two
         vertices.

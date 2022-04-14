@@ -1,3 +1,5 @@
+from __init__ import *
+
 
 class TransverseShearShell:
     """The TransverseShearShell object defines the transverse shear stiffness properties of a
@@ -18,7 +20,6 @@ class TransverseShearShell:
         - TRANSVERSE SHEAR STIFFNESS
 
     """
-
     def __init__(self, k11: float, k22: float, k12: float):
         """This method creates a TransverseShearShell object.
 

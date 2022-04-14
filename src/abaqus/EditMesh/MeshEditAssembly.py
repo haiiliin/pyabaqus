@@ -7,6 +7,8 @@ from ..Mesh.MeshElement import MeshElement
 from ..Mesh.MeshNode import MeshNode
 from ..Region.Region import Region
 
+from __init__ import *
+
 
 class MeshEditAssembly(AssemblyBase):
     """An Assembly object is a container for instances of parts. The Assembly object has no
@@ -23,7 +25,6 @@ class MeshEditAssembly(AssemblyBase):
         mdb.models[name].rootAssembly
 
     """
-
     def collapseMeshEdge(self, edge: str, collapseMethod: SymbolicConstant):
         """This method collapses an edge of a quadrilateral or triangular element of a part
         instance.
@@ -48,7 +49,9 @@ class MeshEditAssembly(AssemblyBase):
         """
         pass
 
-    def deleteElement(self, elements: tuple[MeshElement], deleteUnreferencedNodes: Boolean = OFF):
+    def deleteElement(self,
+                      elements: tuple[MeshElement],
+                      deleteUnreferencedNodes: Boolean = OFF):
         """This method deletes the given elements from a part instance. The elements must have been
         generated using the bottom-up meshing technique.
         
@@ -77,9 +80,16 @@ class MeshEditAssembly(AssemblyBase):
         """
         pass
 
-    def editNode(self, nodes: tuple[MeshNode], coordinate1: float = None, coordinate2: float = None,
-                 coordinate3: float = None, coordinates: tuple = (), offset1: float = None,
-                 offset2: float = None, offset3: float = None, localCsys: DatumCsys = DatumCsys(),
+    def editNode(self,
+                 nodes: tuple[MeshNode],
+                 coordinate1: float = None,
+                 coordinate2: float = None,
+                 coordinate3: float = None,
+                 coordinates: tuple = (),
+                 offset1: float = None,
+                 offset2: float = None,
+                 offset3: float = None,
+                 localCsys: DatumCsys = DatumCsys(),
                  projectToGeometry: Boolean = ON):
         """This method changes the coordinates of the given nodes on a part instance.
         
@@ -126,7 +136,9 @@ class MeshEditAssembly(AssemblyBase):
         pass
 
     @typing.overload
-    def mergeNodes(self, nodes: tuple[MeshNode], tolerance: float = None,
+    def mergeNodes(self,
+                   nodes: tuple[MeshNode],
+                   tolerance: float = None,
                    removeDuplicateElements: Boolean = True):
         """Merge the nodes of a part instance. The nodes must have been generated using the
         bottom-up meshing technique.
@@ -146,7 +158,10 @@ class MeshEditAssembly(AssemblyBase):
         pass
 
     @typing.overload
-    def mergeNodes(self, node1: MeshNode, node2: MeshNode, removeDuplicateElements: Boolean = True):
+    def mergeNodes(self,
+                   node1: MeshNode,
+                   node2: MeshNode,
+                   removeDuplicateElements: Boolean = True):
         """Merge two nodes of a part instance. At least one of the two nodes must have been
         generated using the bottom-up meshing technique.
         
@@ -199,10 +214,18 @@ class MeshEditAssembly(AssemblyBase):
         """
         pass
 
-    def generateMeshByOffset(self, region: Region, meshType: str, totalThickness: float, distanceBetweenLayers: float,
-                             numLayers: int, offsetDirection: str = OUTWARD, initialOffset: float = 0.0,
-                             shareNodes: str = False, deleteBaseElements: Boolean = False,
-                             constantThicknessCorners: Boolean = False, extendElementSets: Boolean = False):
+    def generateMeshByOffset(self,
+                             region: Region,
+                             meshType: str,
+                             totalThickness: float,
+                             distanceBetweenLayers: float,
+                             numLayers: int,
+                             offsetDirection: str = OUTWARD,
+                             initialOffset: float = 0.0,
+                             shareNodes: str = False,
+                             deleteBaseElements: Boolean = False,
+                             constantThicknessCorners: Boolean = False,
+                             extendElementSets: Boolean = False):
         """This method generates a solid or shell mesh from an orphan mesh surface by generating
         layers of elements that propagate out normal to the surface boundary.
         

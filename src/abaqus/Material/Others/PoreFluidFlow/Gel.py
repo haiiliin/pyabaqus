@@ -1,3 +1,6 @@
+from __init__ import *
+
+
 class Gel:
     """The Gel object defines a swelling gel.
 
@@ -22,7 +25,6 @@ class Gel:
         - GEL
 
     """
-
     def __init__(self, table: tuple):
         """This method creates a Gel object.
 

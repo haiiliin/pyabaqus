@@ -10,16 +10,22 @@ from .XYData import XYData
 from .XYSessionBase import XYSessionBase
 from ..PathAndProbe.Path import Path
 
-
 # prevent circular imports
+from __init__ import *
+
+
 class Odb:
     pass
 
 
-class XYSession(XYSessionBase):
+from __init__ import *
 
+
+class XYSession(XYSessionBase):
     @staticmethod
-    def AreaStyle(color: str = '', fill: Boolean = ON, style: SymbolicConstant = SOLID) -> AreaStyle:
+    def AreaStyle(color: str = '',
+                  fill: Boolean = ON,
+                  style: SymbolicConstant = SOLID) -> AreaStyle:
         """This method creates an AreaStyle.
 
         Notes
@@ -55,7 +61,9 @@ class XYSession(XYSessionBase):
         return areaStyle
 
     @staticmethod
-    def LineStyle(color: str = '', show: Boolean = ON, style: SymbolicConstant = SOLID,
+    def LineStyle(color: str = '',
+                  show: Boolean = ON,
+                  style: SymbolicConstant = SOLID,
                   thickness: float = 0) -> LineStyle:
         """This method creates a LineStyle.
 
@@ -96,7 +104,8 @@ class XYSession(XYSessionBase):
         return lineStyle
 
     @staticmethod
-    def QuantityType(label: str = '', type: SymbolicConstant = None) -> QuantityType:
+    def QuantityType(label: str = '',
+                     type: SymbolicConstant = None) -> QuantityType:
         """This method creates a QuantityType object.
 
         Notes
@@ -196,7 +205,9 @@ class XYSession(XYSessionBase):
         return quantityType
 
     @staticmethod
-    def SymbolStyle(color: str = '', show: Boolean = ON, marker: SymbolicConstant = FILLED_CIRCLE,
+    def SymbolStyle(color: str = '',
+                    show: Boolean = ON,
+                    marker: SymbolicConstant = FILLED_CIRCLE,
                     size: float = 2) -> SymbolStyle:
         """This method creates a SymbolStyle object.
 
@@ -248,7 +259,10 @@ class XYSession(XYSessionBase):
         return symbolStyle
 
     @staticmethod
-    def TextStyle(color: str = '', show: Boolean = ON, font: str = '', rotationAngle: float = 0) -> TextStyle:
+    def TextStyle(color: str = '',
+                  show: Boolean = ON,
+                  font: str = '',
+                  rotationAngle: float = 0) -> TextStyle:
         """This method creates a TextStyle.
 
         Notes
@@ -288,9 +302,15 @@ class XYSession(XYSessionBase):
 
     @staticmethod
     @typing.overload
-    def XYData(data: tuple, name: str = '', sourceDescription: str = '', contentDescription: str = '',
-               positionDescription: str = '', legendLabel: str = '', xValuesLabel: str = '',
-               yValuesLabel: str = '', axis1QuantityType: QuantityType = None,
+    def XYData(data: tuple,
+               name: str = '',
+               sourceDescription: str = '',
+               contentDescription: str = '',
+               positionDescription: str = '',
+               legendLabel: str = '',
+               xValuesLabel: str = '',
+               yValuesLabel: str = '',
+               axis1QuantityType: QuantityType = None,
                axis2QuantityType: QuantityType = None) -> XYData:
         """This method creates an XYData object from a sequence of *X–Y* data pairs.
 
@@ -373,10 +393,19 @@ class XYSession(XYSessionBase):
     def XYData(*args, **kwargs) -> XYData:
         return XYData(())
 
-    def XYDataFromFile(self, fileName: str, name: str = '', sourceDescription: str = '', contentDescription: str = '',
-                       positionDescription: str = '', legendLabel: str = '', xValuesLabel: str = '',
-                       yValuesLabel: str = '', axis1QuantityType: QuantityType = None,
-                       axis2QuantityType: QuantityType = None, xField: int = 1, yField: int = 2,
+    def XYDataFromFile(self,
+                       fileName: str,
+                       name: str = '',
+                       sourceDescription: str = '',
+                       contentDescription: str = '',
+                       positionDescription: str = '',
+                       legendLabel: str = '',
+                       xValuesLabel: str = '',
+                       yValuesLabel: str = '',
+                       axis1QuantityType: QuantityType = None,
+                       axis2QuantityType: QuantityType = None,
+                       xField: int = 1,
+                       yField: int = 2,
                        skipFrequency: int = None):
         """This method creates an XYData object from data in an ASCII file.
 
@@ -438,10 +467,19 @@ class XYSession(XYSessionBase):
         self.xyDataObjects[name] = xyData = XYData(())
         return xyData
 
-    def XYDataFromHistory(self, odb: Odb, outputVariableName: str, steps: tuple, name: str = '',
-                          sourceDescription: str = '', contentDescription: str = '',
-                          positionDescription: str = '', legendLabel: str = '', skipFrequency: int = None,
-                          numericForm: SymbolicConstant = REAL, complexAngle: float = 0, stepTuple: int = None):
+    def XYDataFromHistory(self,
+                          odb: Odb,
+                          outputVariableName: str,
+                          steps: tuple,
+                          name: str = '',
+                          sourceDescription: str = '',
+                          contentDescription: str = '',
+                          positionDescription: str = '',
+                          legendLabel: str = '',
+                          skipFrequency: int = None,
+                          numericForm: SymbolicConstant = REAL,
+                          complexAngle: float = 0,
+                          stepTuple: int = None):
         """This method creates an XYData object by reading history data from an Odb object.
 
         Notes
@@ -500,11 +538,19 @@ class XYSession(XYSessionBase):
         self.xyDataObjects[name] = xyData = XYData(())
         return xyData
 
-    def xyDataListFromField(self, odb: Odb, outputPosition: SymbolicConstant,
-                            variable: tuple[tuple[str, SymbolicConstant, tuple[SymbolicConstant, str]]],
-                            elementSets: tuple = (), elementLabels: tuple = (), nodeSets: tuple = (),
-                            nodeLabels: tuple = (), numericForm: SymbolicConstant = REAL, complexAngle: float = 0,
-                            operator: SymbolicConstant = None) -> list['XYData']:
+    def xyDataListFromField(
+            self,
+            odb: Odb,
+            outputPosition: SymbolicConstant,
+            variable: tuple[tuple[str, SymbolicConstant,
+                                  tuple[SymbolicConstant, str]]],
+            elementSets: tuple = (),
+            elementLabels: tuple = (),
+            nodeSets: tuple = (),
+            nodeLabels: tuple = (),
+            numericForm: SymbolicConstant = REAL,
+            complexAngle: float = 0,
+            operator: SymbolicConstant = None) -> list['XYData']:
         """This method creates a list of XYData objects by reading field data from an Odb object.
 
         Notes
@@ -587,8 +633,14 @@ class XYSession(XYSessionBase):
         self.xyDataObjects['name'] = xyData = XYData(())
         return [xyData]
 
-    def XYDataFromFreeBody(self, odb: Odb, force: Boolean = ON, moment: Boolean = OFF, heatFlowRate: Boolean = OFF,
-                           resultant: Boolean = ON, comp1: Boolean = OFF, comp2: Boolean = OFF,
+    def XYDataFromFreeBody(self,
+                           odb: Odb,
+                           force: Boolean = ON,
+                           moment: Boolean = OFF,
+                           heatFlowRate: Boolean = OFF,
+                           resultant: Boolean = ON,
+                           comp1: Boolean = OFF,
+                           comp2: Boolean = OFF,
                            comp3: Boolean = OFF):
         """This method creates a list of XYData objects by computing free body data from an Odb
         object.
@@ -633,13 +685,25 @@ class XYSession(XYSessionBase):
         self.xyDataObjects['name'] = xyData = XYData(())
         return [xyData]
 
-    def XYDataFromPath(self, path: Path, name: str, includeIntersections: Boolean, shape: SymbolicConstant,
-                       pathStyle: SymbolicConstant, numIntervals: int, labelType: SymbolicConstant,
-                       viewport: str = '', removeDuplicateXYPairs: Boolean = True,
-                       includeAllElements: Boolean = False, step: int = None, frame: int = None,
-                       variable: SymbolicConstant = None, deformedMag: float = None,
-                       numericForm: SymbolicConstant = REAL, complexAngle: float = 0,
-                       projectOntoMesh: Boolean = False, projectionTolerance: float = 0):
+    def XYDataFromPath(self,
+                       path: Path,
+                       name: str,
+                       includeIntersections: Boolean,
+                       shape: SymbolicConstant,
+                       pathStyle: SymbolicConstant,
+                       numIntervals: int,
+                       labelType: SymbolicConstant,
+                       viewport: str = '',
+                       removeDuplicateXYPairs: Boolean = True,
+                       includeAllElements: Boolean = False,
+                       step: int = None,
+                       frame: int = None,
+                       variable: SymbolicConstant = None,
+                       deformedMag: float = None,
+                       numericForm: SymbolicConstant = REAL,
+                       complexAngle: float = 0,
+                       projectOntoMesh: Boolean = False,
+                       projectionTolerance: float = 0):
         """This method creates an XYData object from path information.
 
         Notes

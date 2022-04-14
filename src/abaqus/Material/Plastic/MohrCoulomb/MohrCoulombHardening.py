@@ -1,5 +1,7 @@
 from abaqusConstants import *
 
+from __init__ import *
+
 
 class MohrCoulombHardening:
     """The MohrCoulombHardening object specifies hardening for the Mohr-Coulomb plasticity
@@ -28,8 +30,10 @@ class MohrCoulombHardening:
         - MOHR COULOMB HARDENING
 
     """
-
-    def __init__(self, table: tuple, temperatureDependency: Boolean = OFF, dependencies: int = 0):
+    def __init__(self,
+                 table: tuple,
+                 temperatureDependency: Boolean = OFF,
+                 dependencies: int = 0):
         """This method creates a MohrCoulombHardening object.
 
         Notes

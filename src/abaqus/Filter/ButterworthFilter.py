@@ -1,6 +1,8 @@
 from abaqusConstants import *
 from .Filter import Filter
 
+from __init__ import *
+
 
 class ButterworthFilter(Filter):
     """The ButterworthFilter object defines a Butterworth type filter.
@@ -21,9 +23,14 @@ class ButterworthFilter(Filter):
         - FILTER
 
     """
-
-    def __init__(self, name: str, cutoffFrequency: float, order: int = 2, operation: SymbolicConstant = NONE,
-                 halt: Boolean = OFF, limit: float = None, invariant: SymbolicConstant = NONE):
+    def __init__(self,
+                 name: str,
+                 cutoffFrequency: float,
+                 order: int = 2,
+                 operation: SymbolicConstant = NONE,
+                 halt: Boolean = OFF,
+                 limit: float = None,
+                 invariant: SymbolicConstant = NONE):
         """This method creates a ButterworthFilter object.
 
         Notes
@@ -73,8 +80,12 @@ class ButterworthFilter(Filter):
         super().__init__()
         pass
 
-    def setValues(self, order: int = 2, operation: SymbolicConstant = NONE, halt: Boolean = OFF,
-                  limit: float = None, invariant: SymbolicConstant = NONE):
+    def setValues(self,
+                  order: int = 2,
+                  operation: SymbolicConstant = NONE,
+                  halt: Boolean = OFF,
+                  limit: float = None,
+                  invariant: SymbolicConstant = NONE):
         """This method modifies the ButterworthFilter object.
         
         Parameters

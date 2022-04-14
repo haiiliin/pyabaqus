@@ -1,3 +1,6 @@
+from __init__ import *
+
+
 class MdbDataInstance:
     """The MdbDataInstance object instance data. It corresponds to same named part instance
     with a mesh in the cae model. 
@@ -18,5 +21,5 @@ class MdbDataInstance:
 
     """
 
-    # A String specifying the instance name. This attribute is read-only. 
+    # A String specifying the instance name. This attribute is read-only.
     name: str = ''

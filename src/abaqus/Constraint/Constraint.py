@@ -1,5 +1,7 @@
 from abaqusConstants import *
 
+from __init__ import *
+
 
 class Constraint:
     """The ConstrainedSketchConstraint object is the abstract base type for other ConstrainedSketchConstraint objects. The
@@ -25,11 +27,11 @@ class Constraint:
 
     """
 
-    # A String specifying the constraint repository key. 
+    # A String specifying the constraint repository key.
     name: str = ''
 
-    # A Boolean specifying whether the constraint is suppressed or not. The default value is 
-    # OFF. 
+    # A Boolean specifying whether the constraint is suppressed or not. The default value is
+    # OFF.
     suppressed: Boolean = OFF
 
     def resume(self):

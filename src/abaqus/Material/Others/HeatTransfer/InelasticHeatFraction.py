@@ -1,3 +1,6 @@
+from __init__ import *
+
+
 class InelasticHeatFraction:
     """The InelasticHeatFraction object defines the fraction of the rate of inelastic
     dissipation that appears as a heat source. 
@@ -17,7 +20,6 @@ class InelasticHeatFraction:
         - INELASTIC HEAT FRACTION
 
     """
-
     def __init__(self, fraction: float = 0):
         """This method creates an InelasticHeatFraction object.
 

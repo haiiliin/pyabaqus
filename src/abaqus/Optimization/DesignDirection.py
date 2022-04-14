@@ -2,6 +2,8 @@ from abaqusConstants import *
 from .GeometricRestriction import GeometricRestriction
 from ..Region.Region import Region
 
+from __init__ import *
+
 
 class DesignDirection(GeometricRestriction):
     """The DesignDirection object defines a design direction geometric restriction.
@@ -17,11 +19,16 @@ class DesignDirection(GeometricRestriction):
         mdb.models[name].optimizationTasks[name].geometricRestrictions[name]
 
     """
-
-    def __init__(self, name: str, region: Region, csys: int = None, mainPoint: str = None,
+    def __init__(self,
+                 name: str,
+                 region: Region,
+                 csys: int = None,
+                 mainPoint: str = None,
                  mainPointDetermination: SymbolicConstant = MAXIMUM,
                  movementRestriction: SymbolicConstant = VECTOR,
-                 presumeFeasibleRegionAtStart: Boolean = ON, u1: Boolean = ON, u2: Boolean = ON,
+                 presumeFeasibleRegionAtStart: Boolean = ON,
+                 u1: Boolean = ON,
+                 u2: Boolean = ON,
                  u3: Boolean = ON):
         """This method creates a DesignDirection object.
 
@@ -79,10 +86,14 @@ class DesignDirection(GeometricRestriction):
         super().__init__()
         pass
 
-    def setValues(self, csys: int = None, mainPoint: str = None,
+    def setValues(self,
+                  csys: int = None,
+                  mainPoint: str = None,
                   mainPointDetermination: SymbolicConstant = MAXIMUM,
                   movementRestriction: SymbolicConstant = VECTOR,
-                  presumeFeasibleRegionAtStart: Boolean = ON, u1: Boolean = ON, u2: Boolean = ON,
+                  presumeFeasibleRegionAtStart: Boolean = ON,
+                  u1: Boolean = ON,
+                  u2: Boolean = ON,
                   u3: Boolean = ON):
         """This method modifies the DesignDirection object.
         

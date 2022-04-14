@@ -7,6 +7,8 @@ from .OdbInstance import OdbInstance
 from .OdbSet import OdbSet
 from .SectionPoint import SectionPoint
 
+from __init__ import *
+
 
 class FieldOutput:
     """A FieldOutput object contains field data for a specific output variable.
@@ -39,27 +41,32 @@ class FieldOutput:
 
     """
 
-    # An Int specifying the dimension of vector or the first dimension (number of rows) of 
-    # matrix. 
+    # An Int specifying the dimension of vector or the first dimension (number of rows) of
+    # matrix.
     dim: int = None
 
-    # An Int specifying the second dimension (number of columns) of matrix. 
+    # An Int specifying the second dimension (number of columns) of matrix.
     dim2: int = None
 
-    # A Boolean specifying whether the data are complex. 
+    # A Boolean specifying whether the data are complex.
     isComplex: Boolean = OFF
 
-    # A FieldLocationArray object. 
+    # A FieldLocationArray object.
     locations: FieldLocationArray = FieldLocationArray()
 
-    # A FieldValueArray object specifying the order of the objects in the array is determined 
-    # by the Abaqus Scripting Interface; see the *data* argument to the addData method for a 
-    # description of the order. 
+    # A FieldValueArray object specifying the order of the objects in the array is determined
+    # by the Abaqus Scripting Interface; see the *data* argument to the addData method for a
+    # description of the order.
     values: int = None
 
     @typing.overload
-    def __init__(self, name: str, description: str, type: SymbolicConstant, componentLabels: tuple = (),
-                 validInvariants: SymbolicConstant = None, isEngineeringTensor: Boolean = OFF):
+    def __init__(self,
+                 name: str,
+                 description: str,
+                 type: SymbolicConstant,
+                 componentLabels: tuple = (),
+                 validInvariants: SymbolicConstant = None,
+                 isEngineeringTensor: Boolean = OFF):
         """This method creates a FieldOutput object.
 
         Notes
@@ -106,7 +113,10 @@ class FieldOutput:
         pass
 
     @typing.overload
-    def __init__(self, field: 'FieldOutput', name: str = '', description: str = ''):
+    def __init__(self,
+                 field: 'FieldOutput',
+                 name: str = '',
+                 description: str = ''):
         """This method creates a FieldOutput object from an existing FieldOutput object of the same
         output database.
 
@@ -138,8 +148,13 @@ class FieldOutput:
         pass
 
     @typing.overload
-    def addData(self, position: SymbolicConstant, instance: OdbInstance, labels: tuple, data: tuple,
-                sectionPoint: SectionPoint = None, localCoordSystem: tuple = ()):
+    def addData(self,
+                position: SymbolicConstant,
+                instance: OdbInstance,
+                labels: tuple,
+                data: tuple,
+                sectionPoint: SectionPoint = None,
+                localCoordSystem: tuple = ()):
         """This method adds data to a FieldOutput object.
         
         Parameters
@@ -216,8 +231,12 @@ class FieldOutput:
         pass
 
     @typing.overload
-    def addData(self, position: SymbolicConstant, set: OdbSet, data: tuple,
-                sectionPoint: SectionPoint = None, conjugateData: float = None):
+    def addData(self,
+                position: SymbolicConstant,
+                set: OdbSet,
+                data: tuple,
+                sectionPoint: SectionPoint = None,
+                conjugateData: float = None):
         """This method adds data to a FieldOutput object.
         
         Parameters
@@ -315,7 +334,9 @@ class FieldOutput:
         pass
 
     @typing.overload
-    def getSubset(self, position: SymbolicConstant = None, readOnly: Boolean = OFF):
+    def getSubset(self,
+                  position: SymbolicConstant = None,
+                  readOnly: Boolean = OFF):
         """A FieldOutput object with a subset of the field values.
         position
             *position* 
@@ -473,7 +494,10 @@ class FieldOutput:
         pass
 
     @typing.overload
-    def getTransformedField(self, datumCsys: str, projected22Axis: int = None, projectionTol: str = ''):
+    def getTransformedField(self,
+                            datumCsys: str,
+                            projected22Axis: int = None,
+                            projectionTol: str = ''):
         """This method generates a new vector or tensor field containing the transformed component
         values of the parent field. The new field will hold values for the same nodes or
         elements as the parent field. Results will be transformed based on the orientations
@@ -509,8 +533,11 @@ class FieldOutput:
         pass
 
     @typing.overload
-    def getTransformedField(self, datumCsys: str, deformationField: 'FieldOutput' = None,
-                            projected22Axis: int = None, projectionTol: str = ''):
+    def getTransformedField(self,
+                            datumCsys: str,
+                            deformationField: 'FieldOutput' = None,
+                            projected22Axis: int = None,
+                            projectionTol: str = ''):
         """This method generates a new vector or tensor field containing the transformed component
         values of the parent field. The new field will hold values for the same nodes or
         elements as the parent field. Results will be transformed based on the orientations
@@ -549,8 +576,11 @@ class FieldOutput:
         pass
 
     @typing.overload
-    def getTransformedField(self, datumCsys: str, deformationField: 'FieldOutput' = None,
-                            rotationField: 'FieldOutput' = None, projected22Axis: int = None,
+    def getTransformedField(self,
+                            datumCsys: str,
+                            deformationField: 'FieldOutput' = None,
+                            rotationField: 'FieldOutput' = None,
+                            projected22Axis: int = None,
                             projectionTol: str = ''):
         """This method generates a new vector or tensor field containing the transformed component
         values of the parent field. The new field will hold values for the same nodes or
@@ -596,7 +626,9 @@ class FieldOutput:
     def getTransformedField(self, *args, **kwargs):
         pass
 
-    def getConnectorFieldXformedToNodeA(self, deformationField: 'FieldOutput' = None):
+    def getConnectorFieldXformedToNodeA(self,
+                                        deformationField: 'FieldOutput' = None
+                                        ):
         """This method generates a new vector field containing the transformed component values of
         the parent connector field to the node A coordinate system. The new field will hold
         values for the same connector elements as the parent field. Some connection types such

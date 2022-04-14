@@ -2,6 +2,8 @@ from abaqusConstants import *
 from .GeometricRestriction import GeometricRestriction
 from ..Region.Region import Region
 
+from __init__ import *
+
 
 class TopologyMillingControl(GeometricRestriction):
     """The TopologyMillingControl object defines a topology milling control geometric
@@ -18,9 +20,13 @@ class TopologyMillingControl(GeometricRestriction):
         mdb.models[name].optimizationTasks[name].geometricRestrictions[name]
 
     """
-
-    def __init__(self, name: str, millingDirections: tuple, region: Region, csys: int = None,
-                 millingCheckRegion: SymbolicConstant = MILLING_REGION, radius: float = None):
+    def __init__(self,
+                 name: str,
+                 millingDirections: tuple,
+                 region: Region,
+                 csys: int = None,
+                 millingCheckRegion: SymbolicConstant = MILLING_REGION,
+                 radius: float = None):
         """This method creates a TopologyMillingControl object.
 
         Notes
@@ -61,7 +67,9 @@ class TopologyMillingControl(GeometricRestriction):
         super().__init__()
         pass
 
-    def setValues(self, csys: int = None, millingCheckRegion: SymbolicConstant = MILLING_REGION,
+    def setValues(self,
+                  csys: int = None,
+                  millingCheckRegion: SymbolicConstant = MILLING_REGION,
                   radius: float = None):
         """This method modifies the TopologyMillingControl object.
         

@@ -1,5 +1,7 @@
 from abaqusConstants import *
 
+from __init__ import *
+
 
 class QuantityType:
     """The QuantityType object is used to store attributes defining the physical dimension and
@@ -52,7 +54,6 @@ class QuantityType:
         session.xyPlots[name].curves[name].data.axis2QuantityType
 
     """
-
     def __init__(self, label: str = '', type: SymbolicConstant = None):
         """This method creates a QuantityType object.
 

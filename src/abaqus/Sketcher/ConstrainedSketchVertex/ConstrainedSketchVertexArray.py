@@ -1,5 +1,7 @@
 from abaqusConstants import *
 
+from __init__ import *
+
 
 class ConstrainedSketchVertexArray:
     """The ConstrainedSketchVertexArray is a sequence of ConstrainedSketchVertex objects.
@@ -14,7 +16,6 @@ class ConstrainedSketchVertexArray:
             mdb.models[name].sketches[name].vertices[i]
 
     """
-
     def findAt(self, coordinates: tuple, printWarning: Boolean = True):
         """This method returns the ConstrainedSketchVertex located at the given coordinates.
         

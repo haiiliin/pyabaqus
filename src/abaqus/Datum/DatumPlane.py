@@ -1,5 +1,7 @@
 from .Datum import Datum
 
+from __init__ import *
+
 
 class DatumPlane(Datum):
     """The DatumPlane object has no direct constructor; it is created when a Feature object is
@@ -30,9 +32,9 @@ class DatumPlane(Datum):
 
     """
 
-    # A tuple of Floats specifying the *X*-, *Y*-, and *Z*-coordinates of a point located on 
-    # the datum. 
+    # A tuple of Floats specifying the *X*-, *Y*-, and *Z*-coordinates of a point located on
+    # the datum.
     pointOn: float = None
 
-    # A tuple of Floats specifying a sequence of three Floats specifying the normal. 
+    # A tuple of Floats specifying a sequence of three Floats specifying the normal.
     normal: tuple = ()

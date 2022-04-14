@@ -1,5 +1,7 @@
 from abaqusConstants import *
 
+from __init__ import *
+
 
 class GeometricProperties:
     """The GeometricProperties object specifies surface interaction properties.
@@ -17,10 +19,14 @@ class GeometricProperties:
         - SURFACE INTERACTION
 
     """
-
-    def __init__(self, contactArea: float = 1, padThickness: float = None, trackingThickness: float = None,
-                 dependentVariables: int = 0, numProperties: int = 0,
-                 useUnsymmetricEqunProcedure: Boolean = OFF, modelType: SymbolicConstant = None):
+    def __init__(self,
+                 contactArea: float = 1,
+                 padThickness: float = None,
+                 trackingThickness: float = None,
+                 dependentVariables: int = 0,
+                 numProperties: int = 0,
+                 useUnsymmetricEqunProcedure: Boolean = OFF,
+                 modelType: SymbolicConstant = None):
         """This method creates a GeometricProperties object.
 
         Notes

@@ -4,6 +4,8 @@ from abaqusConstants import *
 from .Load import Load
 from ..Region.Region import Region
 
+from __init__ import *
+
 
 class ConnectorForce(Load):
     """The ConnectorForce object defines a connector force.
@@ -36,25 +38,32 @@ class ConnectorForce(Load):
 
     """
 
-    # A String specifying the load repository key. 
+    # A String specifying the load repository key.
     name: str = ''
 
-    # A String specifying the name of the assembled fastener to which the load will be 
-    # applied. This argument is not valid when *region* is specified. When this argument is 
-    # specified, *fastenerSetName* must also be specified. The default value is an empty 
-    # string. 
+    # A String specifying the name of the assembled fastener to which the load will be
+    # applied. This argument is not valid when *region* is specified. When this argument is
+    # specified, *fastenerSetName* must also be specified. The default value is an empty
+    # string.
     fastenerName: str = ''
 
-    # A String specifying the assembled fastener template model set to which the load will be 
-    # applied. This argument is not valid when *region* is specified. When this argument is 
-    # specified, *fastenerName* must also be specified. The default value is an empty string. 
+    # A String specifying the assembled fastener template model set to which the load will be
+    # applied. This argument is not valid when *region* is specified. When this argument is
+    # specified, *fastenerName* must also be specified. The default value is an empty string.
     fastenerSetName: str = ''
 
-    # A Region object specifying the region to which the load is applied. 
+    # A Region object specifying the region to which the load is applied.
     region: Region = Region()
 
-    def __init__(self, name: str, createStepName: str, region: str = '', fastenerName: str = '',
-                 fastenerSetName: str = '', f1: float = None, f2: float = None, f3: float = None,
+    def __init__(self,
+                 name: str,
+                 createStepName: str,
+                 region: str = '',
+                 fastenerName: str = '',
+                 fastenerSetName: str = '',
+                 f1: float = None,
+                 f2: float = None,
+                 f3: float = None,
                  amplitude: str = UNSET):
         """This method creates a ConnectorForce object on a wire region. Alternatively, the load
         may also be applied to a wire set referenced from an assembled fastener template model.
@@ -107,8 +116,14 @@ class ConnectorForce(Load):
         super().__init__()
         pass
 
-    def setValues(self, region: str = '', fastenerName: str = '', fastenerSetName: str = '', f1: float = None,
-                  f2: float = None, f3: float = None, amplitude: str = UNSET):
+    def setValues(self,
+                  region: str = '',
+                  fastenerName: str = '',
+                  fastenerSetName: str = '',
+                  f1: float = None,
+                  f2: float = None,
+                  f3: float = None,
+                  amplitude: str = UNSET):
         """This method modifies the data for an existing ConnectorForce object in the step where it
         is created.
         
@@ -143,7 +158,8 @@ class ConnectorForce(Load):
         """
         pass
 
-    def setValuesInStep(self, stepName: str,
+    def setValuesInStep(self,
+                        stepName: str,
                         f1: typing.Union[SymbolicConstant, float] = None,
                         f2: typing.Union[SymbolicConstant, float] = None,
                         f3: typing.Union[SymbolicConstant, float] = None,

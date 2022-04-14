@@ -1,5 +1,7 @@
 from .CommandRegister import CommandRegister
 
+from __init__ import *
+
 
 class RegisteredDictionary(CommandRegister):
     """This class allows you to create a dictionary that can be queried from the GUI and is
@@ -16,7 +18,6 @@ class RegisteredDictionary(CommandRegister):
         import customKernel
 
     """
-
     def __init__(self):
         """This method creates a RegisteredDictionary object.
 

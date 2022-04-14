@@ -1,6 +1,8 @@
 from abaqusConstants import *
 from ..PlotOptions.OdbDisplayOptions import OdbDisplayOptions
 
+from __init__ import *
+
 
 class DisplayGroupInstance:
     """A DisplayGroupInstance object stores the IDs of the entities displayed in a viewport.
@@ -41,19 +43,19 @@ class DisplayGroupInstance:
 
     """
 
-    # A String specifying the repository key. 
+    # A String specifying the repository key.
     name: str = ''
 
-    # A Boolean specifying whether the display options stored on the DisplayGroupInstance 
-    # object should be synchronized with changes to the viewport display options. This member 
-    # is available only for DisplayGroupInstance objects that are members of the 
-    # DisplayGroupInstance repository member of the OdbDisplay object. The default value is 
-    # OFF. 
+    # A Boolean specifying whether the display options stored on the DisplayGroupInstance
+    # object should be synchronized with changes to the viewport display options. This member
+    # is available only for DisplayGroupInstance objects that are members of the
+    # DisplayGroupInstance repository member of the OdbDisplay object. The default value is
+    # OFF.
     lockOptions: Boolean = OFF
 
-    # An OdbDisplayOptions object specifying this member is available only for 
-    # DisplayGroupInstance objects that are members of the DisplayGroupInstance repository 
-    # member of the OdbDisplay object. 
+    # An OdbDisplayOptions object specifying this member is available only for
+    # DisplayGroupInstance objects that are members of the DisplayGroupInstance repository
+    # member of the OdbDisplay object.
     odbDisplayOptions: OdbDisplayOptions = OdbDisplayOptions()
 
     def nodes(self):

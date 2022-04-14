@@ -59,6 +59,8 @@ from ..XY.XYData import XYData
 from ..XY.XYPlot import XYPlot
 from ..XY.XYReportOptions import XYReportOptions
 
+from __init__ import *
+
 
 class SessionBase:
     """The Session object has no constructor. Abaqus creates the *session* member when a
@@ -220,220 +222,223 @@ class SessionBase:
 
     """
 
-    # A Boolean specifying whether an Abaqus interactive session is running. 
+    # A Boolean specifying whether an Abaqus interactive session is running.
     attachedToGui: Boolean = OFF
 
-    # A Boolean specifying whether Abaqus is executing a replay file. 
+    # A Boolean specifying whether Abaqus is executing a replay file.
     replayInProgress: Boolean = OFF
 
-    # A Float specifying the memory usage value for the Abaqus/CAE kernel process in 
-    # megabytes. 
+    # A Float specifying the memory usage value for the Abaqus/CAE kernel process in
+    # megabytes.
     kernelMemoryFootprint: float = None
 
-    # A Float specifying the maximum value for the memory usage for the Abaqus/CAE kernel 
-    # process in megabytes. 
+    # A Float specifying the maximum value for the memory usage for the Abaqus/CAE kernel
+    # process in megabytes.
     kernelMemoryMaxFootprint: float = None
 
-    # A Float specifying the limit for the memory use for the Abaqus/CAE kernel process in 
-    # megabytes. 
+    # A Float specifying the limit for the memory use for the Abaqus/CAE kernel process in
+    # megabytes.
     kernelMemoryLimit: float = None
 
-    # A repository of Color objects. 
+    # A repository of Color objects.
     colors: dict[str, Color] = dict[str, Color]()
 
-    # A JournalOptions object specifying how to record selection of geometry in the journal 
-    # and replay files. 
+    # A JournalOptions object specifying how to record selection of geometry in the journal
+    # and replay files.
     journalOptions: JournalOptions = JournalOptions()
 
-    # A MemoryReductionOptions object specifying options for running in reduced memory mode. 
+    # A MemoryReductionOptions object specifying options for running in reduced memory mode.
     memoryReductionOptions: MemoryReductionOptions = MemoryReductionOptions()
 
-    # A NodeQuery object specifying nodes and their coordinates in a path. 
+    # A NodeQuery object specifying nodes and their coordinates in a path.
     nodeQuery: NodeQuery = NodeQuery()
 
-    # A ConstrainedSketcherOptions object specifying common options for all sketches. 
+    # A ConstrainedSketcherOptions object specifying common options for all sketches.
     sketcherOptions: ConstrainedSketcherOptions = ConstrainedSketcherOptions()
 
-    # A ViewerOptions object. 
+    # A ViewerOptions object.
     viewerOptions: ViewerOptions = ViewerOptions()
 
-    # An AnimationOptions object. 
+    # An AnimationOptions object.
     animationOptions: AnimationOptions = AnimationOptions()
 
-    # An AVIOptions object. 
+    # An AVIOptions object.
     aviOptions: AVIOptions = AVIOptions()
 
-    # An ImageAnimationOptions object. 
+    # An ImageAnimationOptions object.
     imageAnimationOptions: ImageAnimationOptions = ImageAnimationOptions()
 
-    # An ImageAnimation object. 
+    # An ImageAnimation object.
     imageAnimation: ImageAnimation = ImageAnimation('img', AVI)
 
-    # A QuickTimeOptions object. 
+    # A QuickTimeOptions object.
     quickTimeOptions: QuickTimeOptions = QuickTimeOptions()
 
-    # A repository of Viewport objects. 
+    # A repository of Viewport objects.
     viewports: dict[str, Viewport] = dict[str, Viewport]()
 
-    # A RepositorySupport object. 
+    # A RepositorySupport object.
     customData: RepositorySupport = RepositorySupport()
 
-    # A FieldReportOptions object. 
+    # A FieldReportOptions object.
     defaultFieldReportOptions: FieldReportOptions = FieldReportOptions()
 
-    # A FreeBodyReportOptions object. 
-    defaultFreeBodyReportOptions: FreeBodyReportOptions = FreeBodyReportOptions()
+    # A FreeBodyReportOptions object.
+    defaultFreeBodyReportOptions: FreeBodyReportOptions = FreeBodyReportOptions(
+    )
 
-    # A FieldReportOptions object. 
+    # A FieldReportOptions object.
     fieldReportOptions: FieldReportOptions = FieldReportOptions()
 
-    # A FreeBodyReportOptions object. 
+    # A FreeBodyReportOptions object.
     freeBodyReportOptions: FreeBodyReportOptions = FreeBodyReportOptions()
 
-    # A repository of Odb objects. 
+    # A repository of Odb objects.
     odbs: dict[str, Odb] = dict[str, Odb]()
 
-    # A repository of ScratchOdb objects. 
+    # A repository of ScratchOdb objects.
     scratchOdbs: dict[str, ScratchOdb] = dict[str, ScratchOdb]()
 
-    # A DefaultOdbDisplay object. 
+    # A DefaultOdbDisplay object.
     defaultOdbDisplay: DefaultOdbDisplay = DefaultOdbDisplay()
 
-    # A DefaultPlot object. 
+    # A DefaultPlot object.
     defaultPlot: DefaultPlot = DefaultPlot()
 
-    # A DefaultChartOptions object. 
+    # A DefaultChartOptions object.
     defaultChartOptions: DefaultChartOptions = DefaultChartOptions()
 
-    # A repository of OdbData objects. 
+    # A repository of OdbData objects.
     odbData: dict[str, OdbData] = dict[str, OdbData]()
 
-    # A repository of MdbData objects. 
+    # A repository of MdbData objects.
     mdbData: dict[str, MdbData] = dict[str, MdbData]()
 
-    # A repository of Path objects. 
+    # A repository of Path objects.
     paths: dict[str, Path] = dict[str, Path]()
 
-    # A repository of FreeBody objects. 
+    # A repository of FreeBody objects.
     freeBodies: dict[str, FreeBody] = dict[str, FreeBody]()
 
-    # A repository of Stream objects. 
+    # A repository of Stream objects.
     streams: dict[str, Stream] = dict[str, Stream]()
 
-    # A repository of Spectrum objects. 
+    # A repository of Spectrum objects.
     spectrums: dict[str, Spectrum] = dict[str, Spectrum]()
 
-    # A CurrentProbeValues object. 
+    # A CurrentProbeValues object.
     currentProbeValues: CurrentProbeValues = CurrentProbeValues()
 
-    # A ProbeOptions object. 
+    # A ProbeOptions object.
     defaultProbeOptions: ProbeOptions = ProbeOptions()
 
-    # A ProbeOptions object. 
+    # A ProbeOptions object.
     probeOptions: ProbeOptions = ProbeOptions()
 
-    # A ProbeReport object. 
+    # A ProbeReport object.
     probeReport: ProbeReport = ProbeReport()
 
-    # A ProbeReport object. 
+    # A ProbeReport object.
     defaultProbeReport: ProbeReport = ProbeReport()
 
-    # A SelectedProbeValues object. 
+    # A SelectedProbeValues object.
     selectedProbeValues: SelectedProbeValues = SelectedProbeValues()
 
-    # A PrintOptions object. 
+    # A PrintOptions object.
     printOptions: PrintOptions = PrintOptions()
 
-    # An EpsOptions object. 
+    # An EpsOptions object.
     epsOptions: EpsOptions = EpsOptions()
 
-    # A PageSetupOptions object. 
+    # A PageSetupOptions object.
     pageSetupOptions: PageSetupOptions = PageSetupOptions()
 
-    # A PngOptions object. 
+    # A PngOptions object.
     pngOptions: PngOptions = PngOptions()
 
-    # A PsOptions object. 
+    # A PsOptions object.
     psOptions: PsOptions = PsOptions()
 
-    # A SvgOptions object. 
+    # A SvgOptions object.
     svgOptions: SvgOptions = SvgOptions()
 
-    # A TiffOptions object. 
+    # A TiffOptions object.
     tiffOptions: TiffOptions = TiffOptions()
 
-    # An AutoColors object specifying the color palette to be used for color coding. 
+    # An AutoColors object specifying the color palette to be used for color coding.
     autoColors: AutoColors = AutoColors()
 
-    # An AutoColors object specifying the color palette to be used forXYCurve objects. 
+    # An AutoColors object specifying the color palette to be used forXYCurve objects.
     xyColors: AutoColors = AutoColors()
 
-    # A repository of XYData objects. 
+    # A repository of XYData objects.
     xyDataObjects: dict[str, XYData] = dict[str, XYData]()
 
-    # A repository of XYCurve objects. 
+    # A repository of XYCurve objects.
     curves: dict[str, XYCurve] = dict[str, XYCurve]()
 
-    # A repository of XYPlot objects. 
+    # A repository of XYPlot objects.
     xyPlots: dict[str, XYPlot] = dict[str, XYPlot]()
 
-    # A repository of Chart objects. 
+    # A repository of Chart objects.
     charts: dict[str, Chart] = dict[str, Chart]()
 
-    # An XYReportOptions object. 
+    # An XYReportOptions object.
     defaultXYReportOptions: XYReportOptions = XYReportOptions()
 
-    # An XYReportOptions object. 
+    # An XYReportOptions object.
     xyReportOptions: XYReportOptions = XYReportOptions()
 
-    # A repository of View objects. 
+    # A repository of View objects.
     views: dict[str, View] = dict[str, View]()
 
-    # A repository of NetworkDatabaseConnector objects. 
-    networkDatabaseConnectors: dict[str, NetworkDatabaseConnector] = dict[str, NetworkDatabaseConnector]()
+    # A repository of NetworkDatabaseConnector objects.
+    networkDatabaseConnectors: dict[str, NetworkDatabaseConnector] = dict[
+        str, NetworkDatabaseConnector]()
 
-    # A repository of DisplayGroup objects. 
+    # A repository of DisplayGroup objects.
     displayGroups: dict[str, DisplayGroup] = dict[str, DisplayGroup]()
 
-    # A GraphicsInfo object. 
+    # A GraphicsInfo object.
     graphicsInfo: GraphicsInfo = GraphicsInfo()
 
-    # A GraphicsOptions object. 
+    # A GraphicsOptions object.
     defaultGraphicsOptions: GraphicsOptions = GraphicsOptions()
 
-    # A GraphicsOptions object. 
+    # A GraphicsOptions object.
     graphicsOptions: GraphicsOptions = GraphicsOptions()
 
-    # A ViewportAnnotationOptions object. 
-    defaultViewportAnnotationOptions: ViewportAnnotationOptions = ViewportAnnotationOptions()
+    # A ViewportAnnotationOptions object.
+    defaultViewportAnnotationOptions: ViewportAnnotationOptions = ViewportAnnotationOptions(
+    )
 
-    # A repository of Queue objects. 
+    # A repository of Queue objects.
     queues: dict[str, Queue] = dict[str, Queue]()
 
-    # A String specifying the name of the current viewport. 
+    # A String specifying the name of the current viewport.
     currentViewportName: str = ''
 
-    # A Dictionary object specifying the viewports and their associated models. The Dictionary 
-    # key specifies the viewport name. The Dictionary value is a Dictionary specifying the 
-    # model name. 
+    # A Dictionary object specifying the viewports and their associated models. The Dictionary
+    # key specifies the viewport name. The Dictionary value is a Dictionary specifying the
+    # model name.
     sessionState: dict = None
 
-    # A repository of Image objects. 
+    # A repository of Image objects.
     images: dict[str, Image] = dict[str, Image]()
 
-    # A repository of Movie objects. 
+    # A repository of Movie objects.
     movies: dict[str, Movie] = dict[str, Movie]()
 
-    # A LightOptions object. 
+    # A LightOptions object.
     defaultLightOptions: LightOptions = LightOptions()
 
-    # A DrawingArea object. 
+    # A DrawingArea object.
     drawingArea: DrawingArea = DrawingArea()
 
-    # A MesherOptions object specifying how to control default settings in the Mesh module. 
+    # A MesherOptions object specifying how to control default settings in the Mesh module.
     defaultMesherOptions: MesherOptions = MesherOptions()
 
-    # A repository of Drawing objects. 
+    # A repository of Drawing objects.
     drawings: dict[str, Drawing] = dict[str, Drawing]()
 
     def setValues(self, kernelMemoryLimit: float = None):
@@ -497,7 +502,10 @@ class SessionBase:
         """
         pass
 
-    def enableParameterUpdate(self, CADName: str, CADVersion: str, CADPort: int = None):
+    def enableParameterUpdate(self,
+                              CADName: str,
+                              CADVersion: str,
+                              CADPort: int = None):
         """This method enables parameter updates for ProE and NX by establishing a connection with
         the listening port previously setup by the CAD application.
         
@@ -534,7 +542,11 @@ class SessionBase:
         """
         pass
 
-    def updateCADParameters(self, modelName: str, CADName: str, parameterFile: str, CADPartFile: str,
+    def updateCADParameters(self,
+                            modelName: str,
+                            CADName: str,
+                            parameterFile: str,
+                            CADPartFile: str,
                             CADPartName: str = ''):
         """This method updates the parameters for the specified model using the specified parameter
         file.
@@ -575,7 +587,10 @@ class SessionBase:
         """
         pass
 
-    def printToFile(self, fileName: str, format: SymbolicConstant = PNG, canvasObjects: tuple[Canvas] = (),
+    def printToFile(self,
+                    fileName: str,
+                    format: SymbolicConstant = PNG,
+                    canvasObjects: tuple[Canvas] = (),
                     compression: Boolean = OFF):
         """This method prints canvas objects to a file using the attributes stored in the
         PrintOptions object and the appropriate format options object.
@@ -598,7 +613,10 @@ class SessionBase:
         """
         pass
 
-    def printToPrinter(self, printCommand: str = '', numCopies: int = 1, canvasObjects: tuple[Canvas] = ()):
+    def printToPrinter(self,
+                       printCommand: str = '',
+                       numCopies: int = 1,
+                       canvasObjects: tuple[Canvas] = ()):
         """This method prints canvas objects to a Windows printer or to a PostScript printer. The
         attributes used for printing to a Windows printer are stored in the PrintOptions object
         and the PageSetupOptions object; the attributes used for printing to a PostScript
@@ -649,7 +667,10 @@ class SessionBase:
         """
         pass
 
-    def writeVrmlFile(self, fileName: str, format: Boolean = OFF, canvasObjects: tuple[Canvas] = ()):
+    def writeVrmlFile(self,
+                      fileName: str,
+                      format: Boolean = OFF,
+                      canvasObjects: tuple[Canvas] = ()):
         """This method exports the current viewport objects to a file.
         
         Parameters
@@ -665,7 +686,10 @@ class SessionBase:
         """
         pass
 
-    def write3DXMLFile(self, fileName: str, format: Boolean = OFF, canvasObjects: tuple[Canvas] = ()):
+    def write3DXMLFile(self,
+                       fileName: str,
+                       format: Boolean = OFF,
+                       canvasObjects: tuple[Canvas] = ()):
         """This method exports the current viewport objects to a file.
         
         Parameters
@@ -695,7 +719,10 @@ class SessionBase:
         pass
 
     @typing.overload
-    def openOdb(self, path: str, readOnly: Boolean = OFF, readInternalSets: Boolean = OFF) -> Odb:
+    def openOdb(self,
+                path: str,
+                readOnly: Boolean = OFF,
+                readInternalSets: Boolean = OFF) -> Odb:
         """This method opens an existing output database (.odb) file and creates a new Odb object.
         You typically execute this method outside of Abaqus/CAE when, in most cases, only one
         output database is open at any time. For example
@@ -733,7 +760,10 @@ class SessionBase:
         pass
 
     @typing.overload
-    def openOdb(self, name: str, path: str = '', readOnly: Boolean = OFF) -> Odb:
+    def openOdb(self,
+                name: str,
+                path: str = '',
+                readOnly: Boolean = OFF) -> Odb:
         """This method opens an existing output database (.odb) file and creates a new Odb object.
         This method is accessed only via the session object inside Abaqus/CAE and adds the new
         Odb object to the session.odbs repository. This method allows you to open multiple
@@ -815,8 +845,10 @@ class SessionBase:
         abaqus = 'abaqus'
         if 'ABAQUS_BAT_PATH' in os.environ.keys():
             abaqus = os.environ['ABAQUS_BAT_PATH']
-        os.system('cd {}'.format(os.path.basename(os.path.abspath(sys.argv[0]))))
-        os.system('{} cae database={} script={}'.format(abaqus, os.path.abspath(name), os.path.abspath(sys.argv[0])))
+        os.system('cd {}'.format(os.path.basename(os.path.abspath(
+            sys.argv[0]))))
+        os.system('{} cae database={} script={}'.format(
+            abaqus, os.path.abspath(name), os.path.abspath(sys.argv[0])))
         self.exit()
         return odb
 

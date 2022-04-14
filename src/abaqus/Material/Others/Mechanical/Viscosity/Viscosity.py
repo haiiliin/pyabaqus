@@ -1,6 +1,8 @@
 from abaqusConstants import *
 from .Trs import Trs
 
+from __init__ import *
+
 
 class Viscosity:
     """The Viscosity object specifies mechanical viscosity.
@@ -29,10 +31,13 @@ class Viscosity:
 
     """
 
-    # A Trs object. 
+    # A Trs object.
     trs: Trs = Trs()
 
-    def __init__(self, table: tuple, type: SymbolicConstant = NEWTONIAN, temperatureDependency: Boolean = OFF,
+    def __init__(self,
+                 table: tuple,
+                 type: SymbolicConstant = NEWTONIAN,
+                 temperatureDependency: Boolean = OFF,
                  dependencies: int = 0):
         """This method creates a Viscosity object.
 

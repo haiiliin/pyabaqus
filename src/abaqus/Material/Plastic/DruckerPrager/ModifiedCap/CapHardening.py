@@ -1,5 +1,7 @@
 from abaqusConstants import *
 
+from __init__ import *
+
 
 class CapHardening:
     """The CapHardening object specifies Drucker-Prager/Cap plasticity hardening.
@@ -27,8 +29,10 @@ class CapHardening:
         - CAP HARDENING
 
     """
-
-    def __init__(self, table: tuple, temperatureDependency: Boolean = OFF, dependencies: int = 0):
+    def __init__(self,
+                 table: tuple,
+                 temperatureDependency: Boolean = OFF,
+                 dependencies: int = 0):
         """This method creates a CapHardening object.
 
         Notes

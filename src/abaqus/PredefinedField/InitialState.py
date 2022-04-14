@@ -2,6 +2,8 @@ from abaqusConstants import *
 from .PredefinedField import PredefinedField
 from ..Assembly.PartInstanceArray import PartInstanceArray
 
+from __init__ import *
+
 
 class InitialState(PredefinedField):
     """The InitialState object stores the data for an initial state predefined field.
@@ -20,9 +22,12 @@ class InitialState(PredefinedField):
         - INSTANCE
 
     """
-
-    def __init__(self, name: str, instances: PartInstanceArray, fileName: str,
-                 endStep: SymbolicConstant = LAST_STEP, endIncrement: SymbolicConstant = STEP_END,
+    def __init__(self,
+                 name: str,
+                 instances: PartInstanceArray,
+                 fileName: str,
+                 endStep: SymbolicConstant = LAST_STEP,
+                 endIncrement: SymbolicConstant = STEP_END,
                  updateReferenceConfiguration: Boolean = OFF):
         """This method creates an InitialState predefined field object.
 
@@ -62,7 +67,9 @@ class InitialState(PredefinedField):
         super().__init__()
         pass
 
-    def setValues(self, endStep: SymbolicConstant = LAST_STEP, endIncrement: SymbolicConstant = STEP_END,
+    def setValues(self,
+                  endStep: SymbolicConstant = LAST_STEP,
+                  endIncrement: SymbolicConstant = STEP_END,
                   updateReferenceConfiguration: Boolean = OFF):
         """This method modifies the InitialState object.
         

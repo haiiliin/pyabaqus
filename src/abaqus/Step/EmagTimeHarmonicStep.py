@@ -15,6 +15,8 @@ from ..StepOutput.HistoryOutputRequestState import HistoryOutputRequestState
 from ..StepOutput.Monitor import Monitor
 from ..StepOutput.Restart import Restart
 
+from __init__ import *
+
 
 class EmagTimeHarmonicStep(AnalysisStep):
     """The EmagTimeHarmonicStep object is used to calculate the electromagnetic response of the
@@ -110,101 +112,112 @@ class EmagTimeHarmonicStep(AnalysisStep):
 
     """
 
-    # A SymbolicConstant specifying the type of matrix storage. Possible values are SYMMETRIC, 
-    # UNSYMMETRIC, and SOLVER_DEFAULT. The default value is SOLVER_DEFAULT. 
+    # A SymbolicConstant specifying the type of matrix storage. Possible values are SYMMETRIC,
+    # UNSYMMETRIC, and SOLVER_DEFAULT. The default value is SOLVER_DEFAULT.
     matrixStorage: SymbolicConstant = SOLVER_DEFAULT
 
-    # A Boolean specifying whether to subdivide each frequency range using the 
-    # eigenfrequencies of the system. The default value is OFF. 
+    # A Boolean specifying whether to subdivide each frequency range using the
+    # eigenfrequencies of the system. The default value is OFF.
     subdivideUsingEigenfrequencies: Boolean = OFF
 
-    # A SymbolicConstant specifying whether the step has an explicit procedure type 
-    # (*procedureType*=ANNEAL, DYNAMIC_EXPLICIT, or DYNAMIC_TEMP_DISPLACEMENT). 
+    # A SymbolicConstant specifying whether the step has an explicit procedure type
+    # (*procedureType*=ANNEAL, DYNAMIC_EXPLICIT, or DYNAMIC_TEMP_DISPLACEMENT).
     explicit: SymbolicConstant = None
 
-    # A Boolean specifying whether the step has a perturbation procedure type. 
+    # A Boolean specifying whether the step has a perturbation procedure type.
     perturbation: Boolean = OFF
 
-    # A Boolean specifying whether the step has a mechanical procedure type. 
+    # A Boolean specifying whether the step has a mechanical procedure type.
     nonmechanical: Boolean = OFF
 
-    # A SymbolicConstant specifying the Abaqus procedure. Possible values are: 
-    # - ANNEAL 
-    # - BUCKLE 
-    # - COMPLEX_FREQUENCY 
-    # - COUPLED_TEMP_DISPLACEMENT 
-    # - COUPLED_THERMAL_ELECTRIC 
-    # - DIRECT_CYCLIC 
-    # - DYNAMIC_IMPLICIT 
-    # - DYNAMIC_EXPLICIT 
-    # - DYNAMIC_SUBSPACE 
-    # - DYNAMIC_TEMP_DISPLACEMENT 
-    # - COUPLED_THERMAL_ELECTRICAL_STRUCTURAL 
-    # - FREQUENCY 
-    # - GEOSTATIC 
-    # - HEAT_TRANSFER 
-    # - MASS_DIFFUSION 
-    # - MODAL_DYNAMICS 
-    # - RANDOM_RESPONSE 
-    # - RESPONSE_SPECTRUM 
-    # - SOILS 
-    # - STATIC_GENERAL 
-    # - STATIC_LINEAR_PERTURBATION 
-    # - STATIC_RIKS 
-    # - STEADY_STATE_DIRECT 
-    # - STEADY_STATE_MODAL 
-    # - STEADY_STATE_SUBSPACE 
-    # - VISCO 
+    # A SymbolicConstant specifying the Abaqus procedure. Possible values are:
+    # - ANNEAL
+    # - BUCKLE
+    # - COMPLEX_FREQUENCY
+    # - COUPLED_TEMP_DISPLACEMENT
+    # - COUPLED_THERMAL_ELECTRIC
+    # - DIRECT_CYCLIC
+    # - DYNAMIC_IMPLICIT
+    # - DYNAMIC_EXPLICIT
+    # - DYNAMIC_SUBSPACE
+    # - DYNAMIC_TEMP_DISPLACEMENT
+    # - COUPLED_THERMAL_ELECTRICAL_STRUCTURAL
+    # - FREQUENCY
+    # - GEOSTATIC
+    # - HEAT_TRANSFER
+    # - MASS_DIFFUSION
+    # - MODAL_DYNAMICS
+    # - RANDOM_RESPONSE
+    # - RESPONSE_SPECTRUM
+    # - SOILS
+    # - STATIC_GENERAL
+    # - STATIC_LINEAR_PERTURBATION
+    # - STATIC_RIKS
+    # - STEADY_STATE_DIRECT
+    # - STEADY_STATE_MODAL
+    # - STEADY_STATE_SUBSPACE
+    # - VISCO
     procedureType: SymbolicConstant = None
 
-    # A Boolean specifying whether the step is suppressed or not. The default value is OFF. 
+    # A Boolean specifying whether the step is suppressed or not. The default value is OFF.
     suppressed: Boolean = OFF
 
-    # A repository of FieldOutputRequestState objects. 
-    fieldOutputRequestState: dict[str, FieldOutputRequestState] = dict[str, FieldOutputRequestState]()
+    # A repository of FieldOutputRequestState objects.
+    fieldOutputRequestState: dict[str, FieldOutputRequestState] = dict[
+        str, FieldOutputRequestState]()
 
-    # A repository of HistoryOutputRequestState objects. 
-    historyOutputRequestState: dict[str, HistoryOutputRequestState] = dict[str, HistoryOutputRequestState]()
+    # A repository of HistoryOutputRequestState objects.
+    historyOutputRequestState: dict[str, HistoryOutputRequestState] = dict[
+        str, HistoryOutputRequestState]()
 
-    # A DiagnosticPrint object. 
+    # A DiagnosticPrint object.
     diagnosticPrint: DiagnosticPrint = DiagnosticPrint()
 
-    # A Monitor object. 
+    # A Monitor object.
     monitor: Monitor = None
 
-    # A Restart object. 
+    # A Restart object.
     restart: Restart = Restart()
 
-    # A repository of AdaptiveMeshConstraintState objects. 
-    adaptiveMeshConstraintStates: dict[str, AdaptiveMeshConstraintState] = dict[
-        str, AdaptiveMeshConstraintState]()
+    # A repository of AdaptiveMeshConstraintState objects.
+    adaptiveMeshConstraintStates: dict[
+        str, AdaptiveMeshConstraintState] = dict[str,
+                                                 AdaptiveMeshConstraintState]()
 
-    # A repository of AdaptiveMeshDomain objects. 
-    adaptiveMeshDomains: dict[str, AdaptiveMeshDomain] = dict[str, AdaptiveMeshDomain]()
+    # A repository of AdaptiveMeshDomain objects.
+    adaptiveMeshDomains: dict[str,
+                              AdaptiveMeshDomain] = dict[str,
+                                                         AdaptiveMeshDomain]()
 
-    # A Control object. 
+    # A Control object.
     control: Control = Control()
 
-    # A SolverControl object. 
+    # A SolverControl object.
     solverControl: SolverControl = SolverControl()
 
-    # A repository of BoundaryConditionState objects. 
-    boundaryConditionStates: dict[str, BoundaryConditionState] = dict[str, BoundaryConditionState]()
+    # A repository of BoundaryConditionState objects.
+    boundaryConditionStates: dict[str, BoundaryConditionState] = dict[
+        str, BoundaryConditionState]()
 
-    # A repository of InteractionState objects. 
+    # A repository of InteractionState objects.
     interactionStates: int = None
 
-    # A repository of LoadState objects. 
+    # A repository of LoadState objects.
     loadStates: dict[str, LoadState] = dict[str, LoadState]()
 
-    # A repository of LoadCase objects. 
+    # A repository of LoadCase objects.
     loadCases: dict[str, LoadCase] = dict[str, LoadCase]()
 
-    # A repository of PredefinedFieldState objects. 
-    predefinedFieldStates: dict[str, PredefinedFieldState] = dict[str, PredefinedFieldState]()
+    # A repository of PredefinedFieldState objects.
+    predefinedFieldStates: dict[str, PredefinedFieldState] = dict[
+        str, PredefinedFieldState]()
 
-    def __init__(self, name: str, previous: str, frequencyRange: EmagTimeHarmonicFrequencyArray,
-                 description: str = '', factorization: SymbolicConstant = COMPLEX):
+    def __init__(self,
+                 name: str,
+                 previous: str,
+                 frequencyRange: EmagTimeHarmonicFrequencyArray,
+                 description: str = '',
+                 factorization: SymbolicConstant = COMPLEX):
         """This method creates a EmagTimeHarmonicStep object.
 
         Notes
@@ -242,7 +255,9 @@ class EmagTimeHarmonicStep(AnalysisStep):
         super().__init__()
         pass
 
-    def setValues(self, description: str = '', factorization: SymbolicConstant = COMPLEX):
+    def setValues(self,
+                  description: str = '',
+                  factorization: SymbolicConstant = COMPLEX):
         """This method modifies the EmagTimeHarmonicStep object.
         
         Parameters

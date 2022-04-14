@@ -2,6 +2,8 @@ from abaqusConstants import *
 from .GeometricRestriction import GeometricRestriction
 from ..Region.Region import Region
 
+from __init__ import *
+
 
 class SizingCyclicSymmetry(GeometricRestriction):
     """The SizingCyclicSymmetry object defines a sizing cyclic symmetry geometric restriction.
@@ -17,9 +19,13 @@ class SizingCyclicSymmetry(GeometricRestriction):
         mdb.models[name].optimizationTasks[name].geometricRestrictions[name]
 
     """
-
-    def __init__(self, name: str, region: Region, translation: float, axis: SymbolicConstant = AXIS_1,
-                 csys: int = None, ignoreFrozenArea: Boolean = OFF):
+    def __init__(self,
+                 name: str,
+                 region: Region,
+                 translation: float,
+                 axis: SymbolicConstant = AXIS_1,
+                 csys: int = None,
+                 ignoreFrozenArea: Boolean = OFF):
         """This method creates a SizingCyclicSymmetry object.
 
         Notes
@@ -56,7 +62,10 @@ class SizingCyclicSymmetry(GeometricRestriction):
         super().__init__()
         pass
 
-    def setValues(self, axis: SymbolicConstant = AXIS_1, csys: int = None, ignoreFrozenArea: Boolean = OFF):
+    def setValues(self,
+                  axis: SymbolicConstant = AXIS_1,
+                  csys: int = None,
+                  ignoreFrozenArea: Boolean = OFF):
         """This method modifies the SizingCyclicSymmetry object.
         
         Parameters

@@ -2,6 +2,8 @@ from abaqusConstants import *
 from .Interaction import Interaction
 from ..Region.Region import Region
 
+from __init__ import *
+
 
 class FluidCavity(Interaction):
     """The FluidCavity object defines a surface-based cavity.
@@ -20,10 +22,16 @@ class FluidCavity(Interaction):
         - FLUID CAVITY
 
     """
-
-    def __init__(self, name: str, createStepName: str, cavityPoint: Region, cavitySurface: Region,
-                 interactionProperty: str, ambientPressure: float = 0, thickness: float = 1,
-                 useAdiabatic: Boolean = OFF, checkNormals: Boolean = ON):
+    def __init__(self,
+                 name: str,
+                 createStepName: str,
+                 cavityPoint: Region,
+                 cavitySurface: Region,
+                 interactionProperty: str,
+                 ambientPressure: float = 0,
+                 thickness: float = 1,
+                 useAdiabatic: Boolean = OFF,
+                 checkNormals: Boolean = ON):
         """This method creates an FluidCavity object.
 
         Notes
@@ -66,7 +74,10 @@ class FluidCavity(Interaction):
         super().__init__()
         pass
 
-    def setValues(self, ambientPressure: float = 0, thickness: float = 1, useAdiabatic: Boolean = OFF,
+    def setValues(self,
+                  ambientPressure: float = 0,
+                  thickness: float = 1,
+                  useAdiabatic: Boolean = OFF,
                   checkNormals: Boolean = ON):
         """This method modifies the FluidCavity object.
         

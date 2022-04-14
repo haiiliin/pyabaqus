@@ -4,6 +4,8 @@ from abaqusConstants import *
 from .Amplitude import Amplitude
 from .BaselineCorrection import BaselineCorrection
 
+from __init__ import *
+
 
 class TabularAmplitude(Amplitude):
     """The TabularAmplitude object defines an amplitude curve as a table of values at
@@ -31,10 +33,14 @@ class TabularAmplitude(Amplitude):
 
     """
 
-    # A BaselineCorrection object. 
+    # A BaselineCorrection object.
     baselineCorrection: BaselineCorrection = BaselineCorrection()
 
-    def __init__(self, name: str, data: tuple, smooth: typing.Union[SymbolicConstant, float] = SOLVER_DEFAULT,
+    def __init__(self,
+                 name: str,
+                 data: tuple,
+                 smooth: typing.Union[SymbolicConstant,
+                                      float] = SOLVER_DEFAULT,
                  timeSpan: SymbolicConstant = STEP):
         """This method creates a TabularAmplitude object.
 
@@ -75,7 +81,9 @@ class TabularAmplitude(Amplitude):
         super().__init__()
         pass
 
-    def setValues(self, smooth: typing.Union[SymbolicConstant, float] = SOLVER_DEFAULT,
+    def setValues(self,
+                  smooth: typing.Union[SymbolicConstant,
+                                       float] = SOLVER_DEFAULT,
                   timeSpan: SymbolicConstant = STEP):
         """This method modifies the TabularAmplitude object.
         

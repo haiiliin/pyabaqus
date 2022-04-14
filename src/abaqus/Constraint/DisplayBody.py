@@ -3,6 +3,8 @@ from .Constraint import Constraint
 from ..Assembly.PartInstance import PartInstance
 from ..BasicGeometry.ModelDotArray import ModelDotArray
 
+from __init__ import *
+
 
 class DisplayBody(Constraint):
     """The DisplayBody object defines a constraint such that the specified instance is used for
@@ -31,11 +33,12 @@ class DisplayBody(Constraint):
 
     """
 
-    # A Boolean specifying whether the constraint is suppressed or not. The default value is 
-    # OFF. 
+    # A Boolean specifying whether the constraint is suppressed or not. The default value is
+    # OFF.
     suppressed: Boolean = OFF
 
-    def __init__(self, name: str, instance: PartInstance, controlPoints: ModelDotArray):
+    def __init__(self, name: str, instance: PartInstance,
+                 controlPoints: ModelDotArray):
         """This method creates a DisplayBody object.
 
         Notes

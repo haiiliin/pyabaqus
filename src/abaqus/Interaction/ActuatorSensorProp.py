@@ -1,5 +1,7 @@
 from .ContactProperty import ContactProperty
 
+from __init__ import *
+
 
 class ActuatorSensorProp(ContactProperty):
     """The ActuatorSensorProp object is an interaction property that defines the properties
@@ -19,8 +21,10 @@ class ActuatorSensorProp(ContactProperty):
         - UEL PROPERTY
 
     """
-
-    def __init__(self, name: str, realProperties: tuple = (), integerProperties: tuple = ()):
+    def __init__(self,
+                 name: str,
+                 realProperties: tuple = (),
+                 integerProperties: tuple = ()):
         """This method creates an ActuatorSensorProp object.
 
         Notes
@@ -49,7 +53,9 @@ class ActuatorSensorProp(ContactProperty):
         super().__init__(name)
         pass
 
-    def setValues(self, realProperties: tuple = (), integerProperties: tuple = ()):
+    def setValues(self,
+                  realProperties: tuple = (),
+                  integerProperties: tuple = ()):
         """This method modifies the ActuatorSensorProp object.
         
         Parameters

@@ -1,5 +1,7 @@
 from abaqusConstants import *
 
+from __init__ import *
+
 
 class InitializationAssignment:
     """The InitializationAssignment object stores the contact initialization assignment
@@ -19,7 +21,6 @@ class InitializationAssignment:
         - CONTACT INITIALIZATION ASSIGNMENT
 
     """
-
     def changeValuesInStep(self, stepName: str, index: int, value: str):
         """This method allows modification of contact initialization assignments to domain pairs
         already defined in a given step.

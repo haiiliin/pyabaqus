@@ -1,5 +1,7 @@
 from abaqusConstants import *
 
+from __init__ import *
+
 
 class Sorption:
     """The Sorption object defines absorption and exsorption behaviors of a partially saturated
@@ -30,10 +32,13 @@ class Sorption:
         - SORPTION
 
     """
-
-    def __init__(self, absorptionTable: tuple, lawAbsorption: SymbolicConstant = TABULAR,
-                 exsorption: Boolean = OFF, lawExsorption: SymbolicConstant = TABULAR,
-                 scanning: float = 0, exsorptionTable: tuple = ()):
+    def __init__(self,
+                 absorptionTable: tuple,
+                 lawAbsorption: SymbolicConstant = TABULAR,
+                 exsorption: Boolean = OFF,
+                 lawExsorption: SymbolicConstant = TABULAR,
+                 scanning: float = 0,
+                 exsorptionTable: tuple = ()):
         """This method creates a Sorption object.
 
         Notes

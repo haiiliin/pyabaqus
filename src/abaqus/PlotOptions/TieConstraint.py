@@ -1,3 +1,6 @@
+from __init__ import *
+
+
 class TieConstraint:
     """The TieConstraint object.
 
@@ -17,7 +20,7 @@ class TieConstraint:
 
     """
 
-    # A String specifying the tie constraint name. This attribute is read-only. 
+    # A String specifying the tie constraint name. This attribute is read-only.
     name: str = ''
 
     def constraintData(self):

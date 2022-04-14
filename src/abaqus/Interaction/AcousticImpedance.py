@@ -2,6 +2,8 @@ from abaqusConstants import *
 from .Interaction import Interaction
 from ..Region.Region import Region
 
+from __init__ import *
+
 
 class AcousticImpedance(Interaction):
     """The AcousticImpedance object defines surface impedance information or nonreflecting
@@ -21,11 +23,18 @@ class AcousticImpedance(Interaction):
         - SIMPEDANCE
 
     """
-
-    def __init__(self, name: str, createStepName: str, surface: Region, definition: SymbolicConstant = TABULAR,
-                 interactionProperty: str = '', nonreflectingType: SymbolicConstant = PLANE,
-                 radius: float = 1, semimajorAxis: float = 1, eccentricity: float = 0,
-                 centerCoordinates: tuple = (), directionCosine: tuple = ()):
+    def __init__(self,
+                 name: str,
+                 createStepName: str,
+                 surface: Region,
+                 definition: SymbolicConstant = TABULAR,
+                 interactionProperty: str = '',
+                 nonreflectingType: SymbolicConstant = PLANE,
+                 radius: float = 1,
+                 semimajorAxis: float = 1,
+                 eccentricity: float = 0,
+                 centerCoordinates: tuple = (),
+                 directionCosine: tuple = ()):
         """This method creates an AcousticImpedance object.
 
         Notes
@@ -84,9 +93,14 @@ class AcousticImpedance(Interaction):
         super().__init__()
         pass
 
-    def setValues(self, definition: SymbolicConstant = TABULAR, interactionProperty: str = '',
-                  nonreflectingType: SymbolicConstant = PLANE, radius: float = 1,
-                  semimajorAxis: float = 1, eccentricity: float = 0, centerCoordinates: tuple = (),
+    def setValues(self,
+                  definition: SymbolicConstant = TABULAR,
+                  interactionProperty: str = '',
+                  nonreflectingType: SymbolicConstant = PLANE,
+                  radius: float = 1,
+                  semimajorAxis: float = 1,
+                  eccentricity: float = 0,
+                  centerCoordinates: tuple = (),
                   directionCosine: tuple = ()):
         """This method modifies the data for an existing AcousticImpedance object in the step where
         it is created.

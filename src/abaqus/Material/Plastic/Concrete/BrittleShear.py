@@ -1,5 +1,7 @@
 from abaqusConstants import *
 
+from __init__ import *
+
 
 class BrittleShear:
     """The BrittleShear object specifies the postcracking shear behavior of a material used in
@@ -36,8 +38,10 @@ class BrittleShear:
         - BRITTLE SHEAR
 
     """
-
-    def __init__(self, table: tuple, temperatureDependency: Boolean = OFF, dependencies: int = 0,
+    def __init__(self,
+                 table: tuple,
+                 temperatureDependency: Boolean = OFF,
+                 dependencies: int = 0,
                  type: SymbolicConstant = RETENTION_FACTOR):
         """This method creates a BrittleShear object.
 

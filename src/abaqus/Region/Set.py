@@ -17,6 +17,8 @@ from ..Mesh.MeshElementArray import MeshElementArray
 from ..Mesh.MeshNode import MeshNode
 from ..Mesh.MeshNodeArray import MeshNodeArray
 
+from __init__ import *
+
 
 class Set:
     """If a set spans more than one part instance, the members *vertices*, *edges*, *faces*,
@@ -78,43 +80,53 @@ class Set:
 
     """
 
-    # A MeshElementArray object. 
+    # A MeshElementArray object.
     elements: MeshElementArray = MeshElementArray([])
 
-    # A MeshNodeArray object. 
+    # A MeshNodeArray object.
     nodes: MeshNodeArray = MeshNodeArray([])
 
-    # A VertexArray object. 
+    # A VertexArray object.
     vertices: VertexArray = VertexArray([])
 
-    # An EdgeArray object. 
+    # An EdgeArray object.
     edges: EdgeArray = EdgeArray([])
 
-    # A FaceArray object. 
+    # A FaceArray object.
     faces: FaceArray = FaceArray([])
 
-    # A CellArray object. 
+    # A CellArray object.
     cells: CellArray = CellArray([])
 
-    # A VertexArray object. 
+    # A VertexArray object.
     xVertices: VertexArray = VertexArray([])
 
-    # An EdgeArray object. 
+    # An EdgeArray object.
     xEdges: EdgeArray = EdgeArray([])
 
-    # A FaceArray object. 
+    # A FaceArray object.
     xFaces: FaceArray = FaceArray([])
 
-    # A ReferencePointArray object. 
+    # A ReferencePointArray object.
     referencePoints: ReferencePointArray = ReferencePointArray()
 
     @typing.overload
-    def __init__(self, name: str, nodes: tuple[MeshNode] = None, elements: tuple[MeshElement] = None,
-                 region: Region = None, vertices: tuple[Vertex] = None, edges: tuple[Edge] = None,
-                 faces: tuple[Face] = None, cells: tuple[Cell] = None, xVertices: tuple[Vertex] = None,
-                 xEdges: tuple[Edge] = None, xFaces: tuple[Face] = None,
-                 referencePoints: tuple[ReferencePoint] = (), skinFaces: tuple = (),
-                 skinEdges: tuple = (), stringerEdges: tuple = ()):
+    def __init__(self,
+                 name: str,
+                 nodes: tuple[MeshNode] = None,
+                 elements: tuple[MeshElement] = None,
+                 region: Region = None,
+                 vertices: tuple[Vertex] = None,
+                 edges: tuple[Edge] = None,
+                 faces: tuple[Face] = None,
+                 cells: tuple[Cell] = None,
+                 xVertices: tuple[Vertex] = None,
+                 xEdges: tuple[Edge] = None,
+                 xFaces: tuple[Face] = None,
+                 referencePoints: tuple[ReferencePoint] = (),
+                 skinFaces: tuple = (),
+                 skinEdges: tuple = (),
+                 stringerEdges: tuple = ()):
         """This method creates a set from a sequence of objects in a model database.
 
         Notes
@@ -201,7 +213,10 @@ class Set:
     def __init__(self, *args, **kwargs):
         pass
 
-    def SetByBoolean(self, name: str, sets: tuple['Set'], operation: SymbolicConstant = UNION):
+    def SetByBoolean(self,
+                     name: str,
+                     sets: tuple['Set'],
+                     operation: SymbolicConstant = UNION):
         """This method creates a set by performing a boolean operation on two or more input sets.
 
         Notes
@@ -289,7 +304,10 @@ class Set:
         """
         pass
 
-    def SetFromNodeLabels(self, name: str, nodeLabels: tuple, unsorted: Boolean = False):
+    def SetFromNodeLabels(self,
+                          name: str,
+                          nodeLabels: tuple,
+                          unsorted: Boolean = False):
         """This method creates a set from a sequence of node labels in a model database.
 
         Notes
@@ -318,7 +336,11 @@ class Set:
         """
         pass
 
-    def MapSetsFromOdb(self, odbPath: str, odbSets: str, partSets: str = '', method: str = OVERWRITE):
+    def MapSetsFromOdb(self,
+                       odbPath: str,
+                       odbSets: str,
+                       partSets: str = '',
+                       method: str = OVERWRITE):
         """This method creates sets based on mapping sets from element centroid locations in an
         Odb.
 

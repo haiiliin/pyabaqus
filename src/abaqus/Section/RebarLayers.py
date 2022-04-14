@@ -1,6 +1,8 @@
 from abaqusConstants import *
 from .LayerPropertiesArray import LayerPropertiesArray
 
+from __init__ import *
+
 
 class RebarLayers:
     """The RebarLayers object defines the rebar properties of a section.
@@ -21,8 +23,8 @@ class RebarLayers:
         - REBAR LAYER
 
     """
-
-    def __init__(self, rebarSpacing: SymbolicConstant, layerTable: LayerPropertiesArray):
+    def __init__(self, rebarSpacing: SymbolicConstant,
+                 layerTable: LayerPropertiesArray):
         """This method creates a RebarLayers object.
 
         Notes

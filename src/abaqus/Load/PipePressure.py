@@ -2,6 +2,8 @@ from abaqusConstants import *
 from .Load import Load
 from ..Region.Region import Region
 
+from __init__ import *
+
 
 class PipePressure(Load):
     """The PipePressure object stores the data for a pressure applied to pipe or elbow
@@ -38,31 +40,40 @@ class PipePressure(Load):
 
     """
 
-    # A String specifying the load repository key. 
+    # A String specifying the load repository key.
     name: str = ''
 
-    # A SymbolicConstant specifying whether the load is uniform. Possible values are UNIFORM, 
-    # HYDROSTATIC, USER_DEFINED, and FIELD. The default value is UNIFORM. 
+    # A SymbolicConstant specifying whether the load is uniform. Possible values are UNIFORM,
+    # HYDROSTATIC, USER_DEFINED, and FIELD. The default value is UNIFORM.
     distributionType: SymbolicConstant = UNIFORM
 
-    # A SymbolicConstant specifying whether the pressure is applied internally or externally. 
-    # Possible values are INTERNAL and EXTERNAL. The default value is INTERNAL. 
+    # A SymbolicConstant specifying whether the pressure is applied internally or externally.
+    # Possible values are INTERNAL and EXTERNAL. The default value is INTERNAL.
     side: SymbolicConstant = INTERNAL
 
-    # A Float specifying the effective inner or outer diameter. 
+    # A Float specifying the effective inner or outer diameter.
     diameter: float = None
 
-    # A String specifying the name of the AnalyticalField object associated with this load. 
-    # The *field* argument applies only when *distributionType*=FIELD. The default value is an 
-    # empty string. 
+    # A String specifying the name of the AnalyticalField object associated with this load.
+    # The *field* argument applies only when *distributionType*=FIELD. The default value is an
+    # empty string.
     field: str = ''
 
-    # A Region object specifying the region to which the load is applied. 
+    # A Region object specifying the region to which the load is applied.
     region: Region = Region()
 
-    def __init__(self, name: str, createStepName: str, region: Region, magnitude: float, diameter: float,
-                 hZero: float, hReference: float, field: str = '', amplitude: str = UNSET,
-                 distributionType: SymbolicConstant = UNIFORM, side: SymbolicConstant = INTERNAL):
+    def __init__(self,
+                 name: str,
+                 createStepName: str,
+                 region: Region,
+                 magnitude: float,
+                 diameter: float,
+                 hZero: float,
+                 hReference: float,
+                 field: str = '',
+                 amplitude: str = UNSET,
+                 distributionType: SymbolicConstant = UNIFORM,
+                 side: SymbolicConstant = INTERNAL):
         """This method creates a Pressure object.
 
         Notes
@@ -114,7 +125,10 @@ class PipePressure(Load):
         super().__init__()
         pass
 
-    def setValues(self, field: str = '', amplitude: str = UNSET, distributionType: SymbolicConstant = UNIFORM,
+    def setValues(self,
+                  field: str = '',
+                  amplitude: str = UNSET,
+                  distributionType: SymbolicConstant = UNIFORM,
                   side: SymbolicConstant = INTERNAL):
         """This method modifies the data for an existing PipePressure object in the step where it
         is created.
@@ -138,7 +152,11 @@ class PipePressure(Load):
         """
         pass
 
-    def setValuesInStep(self, stepName: str, magnitude: float = None, hZero: float = None, hReference: float = None,
+    def setValuesInStep(self,
+                        stepName: str,
+                        magnitude: float = None,
+                        hZero: float = None,
+                        hReference: float = None,
                         amplitude: str = ''):
         """This method modifies the propagating data for an existing PipePressure object in the
         specified step.

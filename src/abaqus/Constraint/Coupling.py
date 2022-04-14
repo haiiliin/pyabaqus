@@ -4,6 +4,8 @@ from abaqusConstants import *
 from .Constraint import Constraint
 from ..Region.Region import Region
 
+from __init__ import *
+
 
 class Coupling(Constraint):
     """The Coupling object defines a constraint between a group of coupling nodes located on a
@@ -30,14 +32,24 @@ class Coupling(Constraint):
 
     """
 
-    # A Boolean specifying whether the constraint is suppressed or not. The default value is 
-    # OFF. 
+    # A Boolean specifying whether the constraint is suppressed or not. The default value is
+    # OFF.
     suppressed: Boolean = OFF
 
-    def __init__(self, name: str, surface: Region, controlPoint: Region,
-                 influenceRadius: typing.Union[SymbolicConstant, float], couplingType: SymbolicConstant,
-                 adjust: Boolean = OFF, localCsys: str = None, u1: Boolean = ON, u2: Boolean = ON,
-                 u3: Boolean = ON, ur1: Boolean = ON, ur2: Boolean = ON, ur3: Boolean = ON,
+    def __init__(self,
+                 name: str,
+                 surface: Region,
+                 controlPoint: Region,
+                 influenceRadius: typing.Union[SymbolicConstant, float],
+                 couplingType: SymbolicConstant,
+                 adjust: Boolean = OFF,
+                 localCsys: str = None,
+                 u1: Boolean = ON,
+                 u2: Boolean = ON,
+                 u3: Boolean = ON,
+                 ur1: Boolean = ON,
+                 ur2: Boolean = ON,
+                 ur3: Boolean = ON,
                  weightingMethod: SymbolicConstant = UNIFORM):
         """This method creates a Coupling object.
 
@@ -107,8 +119,15 @@ class Coupling(Constraint):
         super().__init__()
         pass
 
-    def setValues(self, adjust: Boolean = OFF, localCsys: str = None, u1: Boolean = ON, u2: Boolean = ON,
-                  u3: Boolean = ON, ur1: Boolean = ON, ur2: Boolean = ON, ur3: Boolean = ON,
+    def setValues(self,
+                  adjust: Boolean = OFF,
+                  localCsys: str = None,
+                  u1: Boolean = ON,
+                  u2: Boolean = ON,
+                  u3: Boolean = ON,
+                  ur1: Boolean = ON,
+                  ur2: Boolean = ON,
+                  ur3: Boolean = ON,
                   weightingMethod: SymbolicConstant = UNIFORM):
         """This method modifies the Coupling object.
         

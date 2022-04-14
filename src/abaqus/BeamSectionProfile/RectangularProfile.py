@@ -1,7 +1,9 @@
 from .Profile import Profile
 
-class RectangularProfile(Profile):
+from __init__ import *
 
+
+class RectangularProfile(Profile):
     """The RectangularProfile object defines the properties of a solid rectangular profile. 
     The RectangularProfile object is derived from the Profile object. 
 
@@ -20,7 +22,6 @@ class RectangularProfile(Profile):
         - BEAM SECTION
 
     """
-
     def __init__(self, name: str, a: float, b: float):
         """This method creates a RectangularProfile object.
 
@@ -65,4 +66,3 @@ class RectangularProfile(Profile):
             
         """
         pass
-

@@ -1,5 +1,7 @@
 from ..Region.Region import Region
 
+from __init__ import *
+
 
 class Load:
     """The Load object is the abstract base type for other Load objects. The Load object has no
@@ -24,10 +26,10 @@ class Load:
 
     """
 
-    # A String specifying the load repository key. 
+    # A String specifying the load repository key.
     name: str = ''
 
-    # A Region object specifying the region to which the load is applied. 
+    # A Region object specifying the region to which the load is applied.
     region: Region = Region()
 
     def deactivate(self, stepName: str):

@@ -1,6 +1,8 @@
 from abaqusConstants import *
 from .Amplitude import Amplitude
 
+from __init__ import *
+
 
 class ActuatorAmplitude(Amplitude):
     """The ActuatorAmplitude object defines an actuator amplitude curve.
@@ -21,7 +23,6 @@ class ActuatorAmplitude(Amplitude):
         - AMPLITUDE
 
     """
-
     def __init__(self, name: str, timeSpan: SymbolicConstant = STEP):
         """This method creates a ActuatorAmplitude object.
 

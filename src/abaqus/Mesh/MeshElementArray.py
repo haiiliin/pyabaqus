@@ -1,5 +1,7 @@
 from .MeshElement import MeshElement
 
+from __init__ import *
+
 
 class MeshElementArray(list[MeshElement]):
     """The MeshElementArray is a sequence of MeshElement objects.
@@ -37,7 +39,6 @@ class MeshElementArray(list[MeshElement]):
         mdb.models[name].rootAssembly.surfaces[name].elements
 
     """
-
     def __init__(self, elements: list[MeshElement]):
         """This method creates a MeshElementArray object.
 
@@ -121,7 +122,12 @@ class MeshElementArray(list[MeshElement]):
         """
         pass
 
-    def getByBoundingBox(self, xMin: str = '', yMin: str = '', zMin: str = '', xMax: str = '', yMax: str = '',
+    def getByBoundingBox(self,
+                         xMin: str = '',
+                         yMin: str = '',
+                         zMin: str = '',
+                         xMax: str = '',
+                         yMax: str = '',
                          zMax: str = ''):
         """This method returns an array of element objects that lie within the specified bounding
         box.
@@ -147,7 +153,8 @@ class MeshElementArray(list[MeshElement]):
         """
         pass
 
-    def getByBoundingCylinder(self, center1: tuple, center2: tuple, radius: str):
+    def getByBoundingCylinder(self, center1: tuple, center2: tuple,
+                              radius: str):
         """This method returns an array of element objects that lie within the specified bounding
         cylinder.
         

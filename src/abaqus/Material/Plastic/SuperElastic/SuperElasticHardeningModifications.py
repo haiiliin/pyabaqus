@@ -1,3 +1,6 @@
+from __init__ import *
+
+
 class SuperElasticHardeningModifications:
     """The SuperElasticHardeningModifications object specifies the variation of the
     transformation stress levels of a material model. 
@@ -24,7 +27,6 @@ class SuperElasticHardeningModifications:
         - SUPERELASTIC HARDENING MODIFICATIONS
 
     """
-
     def __init__(self, table: tuple):
         """This method creates a SuperElasticHardeningModifications object.
 

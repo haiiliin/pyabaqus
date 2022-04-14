@@ -1,5 +1,7 @@
 from abaqusConstants import *
 
+from __init__ import *
+
 
 class DiagnosticPrint:
     """The DiagnosticPrint object is used to request detailed diagnostic output or to disable
@@ -18,11 +20,18 @@ class DiagnosticPrint:
         - DIAGNOSTICS
 
     """
-
-    def __init__(self, allke: Boolean = ON, criticalElement: Boolean = ON, dmass: Boolean = OFF,
-                 etotal: Boolean = OFF, contact: Boolean = ON, modelChange: Boolean = OFF,
-                 plasticity: Boolean = OFF, residual: Boolean = ON, frequency: int = 1,
-                 solve: Boolean = ON, mass: Boolean = OFF):
+    def __init__(self,
+                 allke: Boolean = ON,
+                 criticalElement: Boolean = ON,
+                 dmass: Boolean = OFF,
+                 etotal: Boolean = OFF,
+                 contact: Boolean = ON,
+                 modelChange: Boolean = OFF,
+                 plasticity: Boolean = OFF,
+                 residual: Boolean = ON,
+                 frequency: int = 1,
+                 solve: Boolean = ON,
+                 mass: Boolean = OFF):
         """This method creates a DiagnosticPrint object.
 
         Notes

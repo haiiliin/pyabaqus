@@ -1,6 +1,8 @@
 from .ErrorIndicatorResult import ErrorIndicatorResult
 from .RuleResult import RuleResult
 
+from __init__ import *
+
 
 class AdaptivityIteration:
     """The AdaptivityIteration object contains information about a given iteration of the
@@ -24,12 +26,13 @@ class AdaptivityIteration:
 
     """
 
-    # A repository of RuleResult objects specifying the calculated results from sizing 
-    # functions corresponding to the RemeshingRule objects for this iteration of an adaptivity 
-    # process. 
+    # A repository of RuleResult objects specifying the calculated results from sizing
+    # functions corresponding to the RemeshingRule objects for this iteration of an adaptivity
+    # process.
     ruleResults: dict[str, RuleResult] = dict[str, RuleResult]()
 
-    def __init__(self, iteration: int, jobName: str, modelName: str, odbPath: str, remeshingErrors: int):
+    def __init__(self, iteration: int, jobName: str, modelName: str,
+                 odbPath: str, remeshingErrors: int):
         """This method creates an AdaptivityIteration object.
 
         Notes
@@ -61,7 +64,8 @@ class AdaptivityIteration:
         """
         pass
 
-    def ErrorIndicatorResult(self, name: str, results: str) -> ErrorIndicatorResult:
+    def ErrorIndicatorResult(self, name: str,
+                             results: str) -> ErrorIndicatorResult:
         """This method creates an ErrorIndicatorResult with data for an error indicator variable in
         a RemeshingRule for a given adaptivity iteration.
 
@@ -90,11 +94,17 @@ class AdaptivityIteration:
         ------
             AbaqusException.
         """
-        self.ruleResults[name] = ruleResult = ErrorIndicatorResult(name, results)
+        self.ruleResults[name] = ruleResult = ErrorIndicatorResult(
+            name, results)
         return ruleResult
 
-    def RuleResult(self, name: str, indicatorResults: dict[str, ErrorIndicatorResult], numElems: int,
-                   minSizeElemCount: int, satisfiedVars: tuple = ()) -> RuleResult:
+    def RuleResult(
+        self,
+        name: str,
+        indicatorResults: dict[str, ErrorIndicatorResult],
+        numElems: int,
+        minSizeElemCount: int,
+        satisfiedVars: tuple = ()) -> RuleResult:
         """This method creates a RuleResult with data for a RemeshingRule for a given adaptivity
         iteration.
 
@@ -131,6 +141,6 @@ class AdaptivityIteration:
         ------
             AbaqusException.
         """
-        self.ruleResults[name] = ruleResult = RuleResult(name, indicatorResults, numElems, minSizeElemCount,
-                                                         satisfiedVars)
+        self.ruleResults[name] = ruleResult = RuleResult(
+            name, indicatorResults, numElems, minSizeElemCount, satisfiedVars)
         return ruleResult

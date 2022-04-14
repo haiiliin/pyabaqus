@@ -3,6 +3,8 @@ from PyQt5.QtWidgets import QDialog, QApplication, QStyle
 
 from .Ui_TextFinder import Ui_TextFinder
 
+from __init__ import *
+
 
 class TextFinder(QDialog):
     readyToFind = pyqtSignal(bool)
@@ -12,7 +14,8 @@ class TextFinder(QDialog):
         self.ui = Ui_TextFinder()
         self.ui.setupUi(self)
         self.raise_()
-        self.setWindowIcon(QApplication.style().standardIcon(QStyle.SP_TitleBarMenuButton))
+        self.setWindowIcon(QApplication.style().standardIcon(
+            QStyle.SP_TitleBarMenuButton))
 
         self.ui.previousButton.clicked.connect(self.findPrevious)
         self.ui.nextButton.clicked.connect(self.findNext)

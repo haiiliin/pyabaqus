@@ -2,6 +2,8 @@ import typing
 
 from abaqusConstants import *
 
+from __init__ import *
+
 
 class FractureCriterion:
     """The FractureCriterion object specifies fractureCriterion options for a contact
@@ -67,12 +69,16 @@ class FractureCriterion:
         - FRACTURE CRITERION
 
     """
-
-    def __init__(self, initTable: tuple, type: SymbolicConstant = VCCT,
-                 mixedModeBehavior: SymbolicConstant = BK, temperatureDependency: Boolean = OFF,
-                 dependencies: int = 0, tolerance: float = 0,
+    def __init__(self,
+                 initTable: tuple,
+                 type: SymbolicConstant = VCCT,
+                 mixedModeBehavior: SymbolicConstant = BK,
+                 temperatureDependency: Boolean = OFF,
+                 dependencies: int = 0,
+                 tolerance: float = 0,
                  specifyUnstableCrackProp: SymbolicConstant = OFF,
-                 unstableTolerance: typing.Union[SymbolicConstant, float] = DEFAULT):
+                 unstableTolerance: typing.Union[SymbolicConstant,
+                                                 float] = DEFAULT):
         """This method creates a FractureCriterion object.
 
         Notes

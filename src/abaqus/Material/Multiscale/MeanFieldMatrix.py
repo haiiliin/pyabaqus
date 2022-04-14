@@ -1,3 +1,6 @@
+from __init__ import *
+
+
 class MeanFieldMatrix:
     """The MeanFieldMatrix object specifies the matrix property.
 
@@ -16,8 +19,10 @@ class MeanFieldMatrix:
         - CONSTITUENT
 
     """
-
-    def __init__(self, name: str, material: str = '', isotropizationCoefficient: float = None):
+    def __init__(self,
+                 name: str,
+                 material: str = '',
+                 isotropizationCoefficient: float = None):
         """This method creates a MeanFieldMatrix object.
 
         Notes

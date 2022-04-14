@@ -1,6 +1,8 @@
 from abaqusConstants import *
 from .DerivedComponent import DerivedComponent
 
+from __init__ import *
+
 
 class ConnectorPotential:
     """The ConnectorPotential object is used to define a restricted set of mathematical
@@ -37,13 +39,18 @@ class ConnectorPotential:
 
     """
 
-    # A DerivedComponent object specifying the DerivedComponent used in the contribution. This 
-    # argument is applicable only if *componentStyle*=DERIVED_COMPONENT. 
+    # A DerivedComponent object specifying the DerivedComponent used in the contribution. This
+    # argument is applicable only if *componentStyle*=DERIVED_COMPONENT.
     derivedComponent: DerivedComponent = DerivedComponent()
 
-    def __init__(self, componentStyle: SymbolicConstant = COMPONENT_NUMBER, componentNumber: int = 0,
-                 sign: SymbolicConstant = POSITIVE, scaleFactor: float = 1, positiveExponent: float = 2,
-                 shiftFactor: float = 0, hFunction: SymbolicConstant = ABS):
+    def __init__(self,
+                 componentStyle: SymbolicConstant = COMPONENT_NUMBER,
+                 componentNumber: int = 0,
+                 sign: SymbolicConstant = POSITIVE,
+                 scaleFactor: float = 1,
+                 positiveExponent: float = 2,
+                 shiftFactor: float = 0,
+                 hFunction: SymbolicConstant = ABS):
         """This method creates a connector potential object to be used in conjunction with an
         allowable connector behavior option.
 

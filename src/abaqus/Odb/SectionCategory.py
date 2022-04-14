@@ -1,6 +1,8 @@
 from .SectionPoint import SectionPoint
 from .SectionPointArray import SectionPointArray
 
+from __init__ import *
+
 
 class SectionCategory:
     """The SectionCategory object is used to group regions of the model with like sections.
@@ -43,7 +45,7 @@ class SectionCategory:
 
     """
 
-    # A SectionPointArray object. 
+    # A SectionPointArray object.
     sectionPoints: SectionPointArray = SectionPointArray()
 
     def __init__(self, name: str, description: str):

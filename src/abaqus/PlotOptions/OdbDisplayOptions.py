@@ -5,6 +5,8 @@ from .DGOrientationOptions import DGOrientationOptions
 from .DGSuperimposeOptions import DGSuperimposeOptions
 from .DGSymbolOptions import DGSymbolOptions
 
+from __init__ import *
+
 
 class OdbDisplayOptions:
     """The OdbDisplayOptions object stores the display options associated with an OdbInstance
@@ -45,20 +47,20 @@ class OdbDisplayOptions:
 
     """
 
-    # A DGCommonOptions object. 
+    # A DGCommonOptions object.
     commonOptions: DGCommonOptions = DGCommonOptions()
 
-    # A DGSuperimposeOptions object. 
+    # A DGSuperimposeOptions object.
     superimposeOptions: DGSuperimposeOptions = DGSuperimposeOptions()
 
-    # A DGContourOptions object. 
+    # A DGContourOptions object.
     contourOptions: DGContourOptions = DGContourOptions()
 
-    # A DGSymbolOptions object. 
+    # A DGSymbolOptions object.
     symbolOptions: DGSymbolOptions = DGSymbolOptions()
 
-    # A DGOrientationOptions object. 
+    # A DGOrientationOptions object.
     materialOrientationOptions: DGOrientationOptions = DGOrientationOptions()
 
-    # A DGDisplayBodyOptions object. 
+    # A DGDisplayBodyOptions object.
     displayBodyOptions: DGDisplayBodyOptions = DGDisplayBodyOptions()

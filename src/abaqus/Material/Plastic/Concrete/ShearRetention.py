@@ -1,5 +1,7 @@
 from abaqusConstants import *
 
+from __init__ import *
+
 
 class ShearRetention:
     """The ShearRetention object defines the reduction of the shear modulus associated with
@@ -30,8 +32,10 @@ class ShearRetention:
         - SHEAR RETENTION
 
     """
-
-    def __init__(self, table: tuple, temperatureDependency: Boolean = OFF, dependencies: int = 0):
+    def __init__(self,
+                 table: tuple,
+                 temperatureDependency: Boolean = OFF,
+                 dependencies: int = 0):
         """This method creates a ShearRetention object.
 
         Notes

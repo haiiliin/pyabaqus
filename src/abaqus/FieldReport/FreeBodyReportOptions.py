@@ -1,5 +1,7 @@
 from abaqusConstants import *
 
+from __init__ import *
+
 
 class FreeBodyReportOptions:
     """The FreeBodyReportOptions object stores settings used by the writeFreeBodyReport method
@@ -18,10 +20,13 @@ class FreeBodyReportOptions:
             session.freeBodyReportOptions
 
     """
-
-    def setValues(self, numDigits: int = 3, forceThreshold: float = None, momentThreshold: float = None,
+    def setValues(self,
+                  numDigits: int = 3,
+                  forceThreshold: float = None,
+                  momentThreshold: float = None,
                   numberFormat: SymbolicConstant = SCIENTIFIC,
-                  reportFormat: SymbolicConstant = NORMAL_ANNOTATED, csysType: SymbolicConstant = GLOBAL):
+                  reportFormat: SymbolicConstant = NORMAL_ANNOTATED,
+                  csysType: SymbolicConstant = GLOBAL):
         """This method modifies the FreeBodyReportOptions object.
         
         Parameters

@@ -2,6 +2,8 @@ from abaqusConstants import *
 from .GeometricRestriction import GeometricRestriction
 from ..Region.Region import Region
 
+from __init__ import *
+
 
 class SizingPointSymmetry(GeometricRestriction):
     """The SizingPointSymmetry object defines a sizing point symmetry geometric restriction.
@@ -17,8 +19,11 @@ class SizingPointSymmetry(GeometricRestriction):
         mdb.models[name].optimizationTasks[name].geometricRestrictions[name]
 
     """
-
-    def __init__(self, name: str, region: Region, csys: int = None, ignoreFrozenArea: Boolean = OFF):
+    def __init__(self,
+                 name: str,
+                 region: Region,
+                 csys: int = None,
+                 ignoreFrozenArea: Boolean = OFF):
         """This method creates a SizingPointSymmetry object.
 
         Notes

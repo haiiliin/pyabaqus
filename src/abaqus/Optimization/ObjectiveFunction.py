@@ -1,6 +1,8 @@
 from abaqusConstants import *
 from .OptimizationObjectiveArray import OptimizationObjectiveArray
 
+from __init__ import *
+
 
 class ObjectiveFunction:
     """The ObjectiveFunction object defines the objective of the optimization.
@@ -23,7 +25,10 @@ class ObjectiveFunction:
     # Optimization objectives
     objectives: OptimizationObjectiveArray = OptimizationObjectiveArray()
 
-    def __init__(self, name: str, objectives: OptimizationObjectiveArray, target: SymbolicConstant = MINIMIZE):
+    def __init__(self,
+                 name: str,
+                 objectives: OptimizationObjectiveArray,
+                 target: SymbolicConstant = MINIMIZE):
         """This method creates an ObjectiveFunction object.
 
         Notes

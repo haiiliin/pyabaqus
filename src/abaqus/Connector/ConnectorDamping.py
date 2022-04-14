@@ -2,6 +2,8 @@ from abaqusConstants import *
 from .ConnectorBehaviorOption import ConnectorBehaviorOption
 from .ConnectorOptions import ConnectorOptions
 
+from __init__ import *
+
 
 class ConnectorDamping(ConnectorBehaviorOption):
     """The ConnectorDamping object defines damping behavior for one or more components of a
@@ -68,14 +70,19 @@ class ConnectorDamping(ConnectorBehaviorOption):
 
     """
 
-    # A ConnectorOptions object specifying the ConnectorOptions used to define tabular options 
-    # for this ConnectorBehaviorOption. 
+    # A ConnectorOptions object specifying the ConnectorOptions used to define tabular options
+    # for this ConnectorBehaviorOption.
     options: ConnectorOptions = ConnectorOptions()
 
-    def __init__(self, behavior: SymbolicConstant = LINEAR, coupling: SymbolicConstant = UNCOUPLED,
-                 dependencies: int = 0, temperatureDependency: Boolean = OFF,
-                 frequencyDependency: Boolean = OFF, table: tuple = (),
-                 independentComponents: tuple = (), components: tuple = ()):
+    def __init__(self,
+                 behavior: SymbolicConstant = LINEAR,
+                 coupling: SymbolicConstant = UNCOUPLED,
+                 dependencies: int = 0,
+                 temperatureDependency: Boolean = OFF,
+                 frequencyDependency: Boolean = OFF,
+                 table: tuple = (),
+                 independentComponents: tuple = (),
+                 components: tuple = ()):
         """This method creates a connector damping behavior option for a ConnectorSection object.
 
         Notes

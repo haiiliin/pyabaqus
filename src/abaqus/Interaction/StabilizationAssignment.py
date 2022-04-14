@@ -1,5 +1,7 @@
 from abaqusConstants import *
 
+from __init__ import *
+
 
 class StabilizationAssignment:
     """The StabilizationAssignment object stores the contact stabilization assignment
@@ -19,7 +21,6 @@ class StabilizationAssignment:
         - CONTACT STABILIZATION
 
     """
-
     def changeValuesInStep(self, stepName: str, index: int, value: str):
         """This method allows modification of contact stabilization assignments to domain pairs
         already defined in a given step.

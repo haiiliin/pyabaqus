@@ -1,5 +1,7 @@
 from abaqusConstants import *
 
+from __init__ import *
+
 
 class MovieOptions:
     """The MovieOptions object stores settings that control how the movie background for an
@@ -15,12 +17,17 @@ class MovieOptions:
             session.viewports[name].movieOptions
 
     """
-
-    def setValues(self, movieName: str = '', showMovie: Boolean = OFF,
+    def setValues(self,
+                  movieName: str = '',
+                  showMovie: Boolean = OFF,
                   positionMethod: SymbolicConstant = FIT_TO_VIEWPORT,
-                  fitMethod: SymbolicConstant = BEST_FIT, alignment: SymbolicConstant = CENTER,
-                  xScale: float = 1, yScale: float = 1, origin: tuple[float] = (),
-                  translucency: float = 1, options: str = None):
+                  fitMethod: SymbolicConstant = BEST_FIT,
+                  alignment: SymbolicConstant = CENTER,
+                  xScale: float = 1,
+                  yScale: float = 1,
+                  origin: tuple[float] = (),
+                  translucency: float = 1,
+                  options: str = None):
         """This method modifies the MovieOptions object.
         
         Parameters

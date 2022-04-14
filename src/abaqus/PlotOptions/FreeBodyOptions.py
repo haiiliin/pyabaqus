@@ -1,5 +1,7 @@
 from abaqusConstants import *
 
+from __init__ import *
+
 
 class FreeBodyOptions:
     """The FreeBodyOptions object stores values and attributes associated with a free body
@@ -26,20 +28,41 @@ class FreeBodyOptions:
             session.viewports[name].odbDisplay.freeBodyOptions
 
     """
-
-    def setValues(self, comp1ColorF: str = '', comp1ColorM: str = '', comp2ColorF: str = '',
-                  comp2ColorM: str = '', comp3ColorF: str = '', comp3ColorM: str = '',
-                  resultantColorF: str = '', resultantColorM: str = '', textColorF: str = '',
-                  textColorM: str = '', textFontF: str = '', textFontM: str = '',
+    def setValues(self,
+                  comp1ColorF: str = '',
+                  comp1ColorM: str = '',
+                  comp2ColorF: str = '',
+                  comp2ColorM: str = '',
+                  comp3ColorF: str = '',
+                  comp3ColorM: str = '',
+                  resultantColorF: str = '',
+                  resultantColorM: str = '',
+                  textColorF: str = '',
+                  textColorM: str = '',
+                  textFontF: str = '',
+                  textFontM: str = '',
                   numberFormatF: SymbolicConstant = SCIENTIFIC,
-                  numberFormatM: SymbolicConstant = SCIENTIFIC, scaleModeF: SymbolicConstant = MODEL_SIZE,
-                  scaleModeM: SymbolicConstant = MODEL_SIZE, vectorDisplay: SymbolicConstant = RESULTANT,
-                  numDigitsF: int = 3, numDigitsM: int = 3, sizePercentageF: float = 10,
-                  sizePercentageM: float = 10, thresholdF: float = None, thresholdM: float = None,
-                  drawLabelF: Boolean = ON, drawLabelM: Boolean = ON, showComp1F: Boolean = ON,
-                  showComp1M: Boolean = ON, showComp2F: Boolean = ON, showComp2M: Boolean = ON,
-                  showComp3F: Boolean = ON, showComp3M: Boolean = ON, showForce: Boolean = ON,
-                  showMoment: Boolean = ON, constantLengthArrow: Boolean = OFF):
+                  numberFormatM: SymbolicConstant = SCIENTIFIC,
+                  scaleModeF: SymbolicConstant = MODEL_SIZE,
+                  scaleModeM: SymbolicConstant = MODEL_SIZE,
+                  vectorDisplay: SymbolicConstant = RESULTANT,
+                  numDigitsF: int = 3,
+                  numDigitsM: int = 3,
+                  sizePercentageF: float = 10,
+                  sizePercentageM: float = 10,
+                  thresholdF: float = None,
+                  thresholdM: float = None,
+                  drawLabelF: Boolean = ON,
+                  drawLabelM: Boolean = ON,
+                  showComp1F: Boolean = ON,
+                  showComp1M: Boolean = ON,
+                  showComp2F: Boolean = ON,
+                  showComp2M: Boolean = ON,
+                  showComp3F: Boolean = ON,
+                  showComp3M: Boolean = ON,
+                  showForce: Boolean = ON,
+                  showMoment: Boolean = ON,
+                  constantLengthArrow: Boolean = OFF):
         """This method modifies the FreeBodyOptions object.
         
         Parameters

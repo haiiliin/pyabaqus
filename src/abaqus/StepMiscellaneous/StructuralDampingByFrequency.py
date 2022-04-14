@@ -1,5 +1,7 @@
 from .StructuralDampingByFrequencyComponentArray import StructuralDampingByFrequencyComponentArray
 
+from __init__ import *
+
 
 class StructuralDampingByFrequency:
     """A StructuralDampingByFrequency object contains structural damping parameters.
@@ -20,5 +22,6 @@ class StructuralDampingByFrequency:
 
     """
 
-    # A StructuralDampingByFrequencyComponentArray object. 
-    components: StructuralDampingByFrequencyComponentArray = StructuralDampingByFrequencyComponentArray()
+    # A StructuralDampingByFrequencyComponentArray object.
+    components: StructuralDampingByFrequencyComponentArray = StructuralDampingByFrequencyComponentArray(
+    )

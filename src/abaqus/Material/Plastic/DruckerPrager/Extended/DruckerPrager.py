@@ -4,6 +4,8 @@ from .DruckerPragerHardening import DruckerPragerHardening
 from .TriaxialTestData import TriaxialTestData
 from ...Metal.RateDependent.RateDependent import RateDependent
 
+from __init__ import *
+
 
 class DruckerPrager:
     """The DruckerPrager object specifies the extended Drucker-Prager plasticity model.
@@ -49,20 +51,26 @@ class DruckerPrager:
 
     """
 
-    # A DruckerPragerCreep object. 
-    druckerPragerCreep: DruckerPragerCreep = DruckerPragerCreep(((),))
+    # A DruckerPragerCreep object.
+    druckerPragerCreep: DruckerPragerCreep = DruckerPragerCreep(((), ))
 
-    # A DruckerPragerHardening object. 
-    druckerPragerHardening: DruckerPragerHardening = DruckerPragerHardening(((),))
+    # A DruckerPragerHardening object.
+    druckerPragerHardening: DruckerPragerHardening = DruckerPragerHardening(
+        ((), ))
 
-    # A RateDependent object. 
-    rateDependent: RateDependent = RateDependent(((),))
+    # A RateDependent object.
+    rateDependent: RateDependent = RateDependent(((), ))
 
-    # A TriaxialTestData object. 
-    triaxialTestData: TriaxialTestData = TriaxialTestData(((),))
+    # A TriaxialTestData object.
+    triaxialTestData: TriaxialTestData = TriaxialTestData(((), ))
 
-    def __init__(self, table: tuple, shearCriterion: SymbolicConstant = LINEAR, eccentricity: float = 0,
-                 testData: Boolean = OFF, temperatureDependency: Boolean = OFF, dependencies: int = 0):
+    def __init__(self,
+                 table: tuple,
+                 shearCriterion: SymbolicConstant = LINEAR,
+                 eccentricity: float = 0,
+                 testData: Boolean = OFF,
+                 temperatureDependency: Boolean = OFF,
+                 dependencies: int = 0):
         """This method creates a DruckerPrager object.
 
         Notes

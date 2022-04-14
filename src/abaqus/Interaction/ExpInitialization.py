@@ -1,6 +1,8 @@
 from abaqusConstants import *
 from .ContactInitialization import ContactInitialization
 
+from __init__ import *
+
 
 class ExpInitialization(ContactInitialization):
     """The ExpInitialization object is used in conjunction with ContactExp in Abaqus/Explicit
@@ -20,11 +22,15 @@ class ExpInitialization(ContactInitialization):
         - CONTACT INITIALIZATION DATA
 
     """
-
-    def __init__(self, name: str, overclosureType: SymbolicConstant = ADJUST,
-                 interferenceDistance: float = None, clearanceDistance: float = None,
-                 openingTolerance: float = None, overclosureTolerance: float = None,
-                 adjustNodalCoords: Boolean = True, secondaryNodesetName: str = None,
+    def __init__(self,
+                 name: str,
+                 overclosureType: SymbolicConstant = ADJUST,
+                 interferenceDistance: float = None,
+                 clearanceDistance: float = None,
+                 openingTolerance: float = None,
+                 overclosureTolerance: float = None,
+                 adjustNodalCoords: Boolean = True,
+                 secondaryNodesetName: str = None,
                  stepFraction: float = 1):
         """This method creates an ExpInitialization object.
 
@@ -84,10 +90,15 @@ class ExpInitialization(ContactInitialization):
         super().__init__()
         pass
 
-    def setValues(self, overclosureType: SymbolicConstant = ADJUST, interferenceDistance: float = None,
-                  clearanceDistance: float = None, openingTolerance: float = None,
-                  overclosureTolerance: float = None, adjustNodalCoords: Boolean = True,
-                  secondaryNodesetName: str = None, stepFraction: float = 1):
+    def setValues(self,
+                  overclosureType: SymbolicConstant = ADJUST,
+                  interferenceDistance: float = None,
+                  clearanceDistance: float = None,
+                  openingTolerance: float = None,
+                  overclosureTolerance: float = None,
+                  adjustNodalCoords: Boolean = True,
+                  secondaryNodesetName: str = None,
+                  stepFraction: float = 1):
         """This method modifies the ExpInitialization object.
         
         Parameters

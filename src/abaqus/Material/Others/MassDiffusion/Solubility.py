@@ -1,5 +1,7 @@
 from abaqusConstants import *
 
+from __init__ import *
+
 
 class Solubility:
     """The Solubility object specifies solubility.
@@ -26,8 +28,10 @@ class Solubility:
         - SOLUBILITY
 
     """
-
-    def __init__(self, table: tuple, temperatureDependency: Boolean = OFF, dependencies: int = 0):
+    def __init__(self,
+                 table: tuple,
+                 temperatureDependency: Boolean = OFF,
+                 dependencies: int = 0):
         """This method creates a Solubility object.
 
         Notes

@@ -1,7 +1,9 @@
 from .Profile import Profile
 
-class CircularProfile(Profile):
+from __init__ import *
 
+
+class CircularProfile(Profile):
     """The CircularProfile object defines the properties of a solid circular profile. 
     The CircularProfile object is derived from the Profile object. 
 
@@ -20,7 +22,6 @@ class CircularProfile(Profile):
         - BEAM SECTION
 
     """
-
     def __init__(self, name: str, r: float):
         """This method creates a CircularProfile object.
 
@@ -63,4 +64,3 @@ class CircularProfile(Profile):
             
         """
         pass
-

@@ -2,6 +2,8 @@ from abaqusConstants import *
 from .AdaptivityIteration import AdaptivityIteration
 from ..Job.ModelJob import ModelJob
 
+from __init__ import *
+
 
 class AdaptivityProcess:
     """The AdaptivityProcess object defines a series of jobs that will be submitted for
@@ -27,15 +29,20 @@ class AdaptivityProcess:
 
     """
 
-    # A SymbolicConstant specifying the status of the adaptivity process. Possible values are 
-    # SUBMITTED, RUNNING, ABORTED, TERMINATED, and COMPLETED. 
+    # A SymbolicConstant specifying the status of the adaptivity process. Possible values are
+    # SUBMITTED, RUNNING, ABORTED, TERMINATED, and COMPLETED.
     status: SymbolicConstant = None
 
-    # A repository of AdaptivityIteration objects specifying the AdaptivityIteration objects 
-    # received during running the adaptivity process. 
-    iterations: dict[int, AdaptivityIteration] = dict[str, AdaptivityIteration]()
+    # A repository of AdaptivityIteration objects specifying the AdaptivityIteration objects
+    # received during running the adaptivity process.
+    iterations: dict[int, AdaptivityIteration] = dict[str,
+                                                      AdaptivityIteration]()
 
-    def __init__(self, name: str, job: ModelJob, maxIterations: int = 3, jobPrefix: str = ''):
+    def __init__(self,
+                 name: str,
+                 job: ModelJob,
+                 maxIterations: int = 3,
+                 jobPrefix: str = ''):
         """This method creates an AdaptivityProcess object.
 
         Notes
@@ -72,7 +79,9 @@ class AdaptivityProcess:
         """
         pass
 
-    def submit(self, waitForCompletion: Boolean = OFF, datacheckJob: Boolean = False,
+    def submit(self,
+               waitForCompletion: Boolean = OFF,
+               datacheckJob: Boolean = False,
                continueJob: Boolean = False):
         """This method begins the process of analysis and adaptive remeshing.
         
@@ -106,7 +115,9 @@ class AdaptivityProcess:
         """
         pass
 
-    def AdaptivityIteration(self, iteration: int, jobName: str, modelName: str, odbPath: str, remeshingErrors: int) -> AdaptivityIteration:
+    def AdaptivityIteration(self, iteration: int, jobName: str, modelName: str,
+                            odbPath: str,
+                            remeshingErrors: int) -> AdaptivityIteration:
         """This method creates an AdaptivityIteration object.
 
         Notes
@@ -136,6 +147,6 @@ class AdaptivityProcess:
         -------
             An AdaptivityIteration object.
         """
-        self.iterations[iteration] = iteration = AdaptivityIteration(iteration, jobName, modelName, odbPath,
-                                                                     remeshingErrors)
+        self.iterations[iteration] = iteration = AdaptivityIteration(
+            iteration, jobName, modelName, odbPath, remeshingErrors)
         return iteration

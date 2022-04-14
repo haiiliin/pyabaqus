@@ -1,5 +1,7 @@
 from abaqusConstants import *
 
+from __init__ import *
+
 
 class Eos:
     """The Eos object specifies an equation of state model.
@@ -38,10 +40,15 @@ class Eos:
             - εcvol. (Dimensionless.)
 
     """
-
-    def __init__(self, type: SymbolicConstant = IDEALGAS, temperatureDependency: Boolean = OFF,
-                 dependencies: int = 0, detonationEnergy: float = 0, solidTable: tuple = (),
-                 gasTable: tuple = (), reactionTable: tuple = (), gasSpecificTable: tuple = (),
+    def __init__(self,
+                 type: SymbolicConstant = IDEALGAS,
+                 temperatureDependency: Boolean = OFF,
+                 dependencies: int = 0,
+                 detonationEnergy: float = 0,
+                 solidTable: tuple = (),
+                 gasTable: tuple = (),
+                 reactionTable: tuple = (),
+                 gasSpecificTable: tuple = (),
                  table: tuple = ()):
         """This method creates an Eos object.
 

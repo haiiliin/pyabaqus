@@ -1,5 +1,7 @@
 from abaqusConstants import *
 
+from __init__ import *
+
 
 class MesherOptions:
     """The MesherOptions object controls the default settings that Abaqus uses for all meshing
@@ -14,10 +16,13 @@ class MesherOptions:
             session.defaultMesherOptions
 
     """
-
-    def setValues(self, elemShape2D: SymbolicConstant = QUAD_DOMINATED, elemShape3D: SymbolicConstant = HEX,
-                  quadAlgorithm: SymbolicConstant = ADVANCING_FRONT, allowMapped: Boolean = OFF,
-                  minTransition: Boolean = ON, guiPreferredElements: SymbolicConstant = None):
+    def setValues(self,
+                  elemShape2D: SymbolicConstant = QUAD_DOMINATED,
+                  elemShape3D: SymbolicConstant = HEX,
+                  quadAlgorithm: SymbolicConstant = ADVANCING_FRONT,
+                  allowMapped: Boolean = OFF,
+                  minTransition: Boolean = ON,
+                  guiPreferredElements: SymbolicConstant = None):
         """This method modifies the MesherOptions object.
         
         Parameters

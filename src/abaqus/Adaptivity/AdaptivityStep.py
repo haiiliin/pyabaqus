@@ -6,6 +6,8 @@ from .VelocityAdaptiveMeshConstraintState import VelocityAdaptiveMeshConstraintS
 from ..Region.Region import Region
 from ..Step.StepBase import StepBase
 
+from __init__ import *
+
 
 class AdaptivityStep(StepBase):
     """The Step object stores the parameters that determine the context of the step. The Step
@@ -23,9 +25,11 @@ class AdaptivityStep(StepBase):
            mdb.models[name].steps[name]
 
     """
-
-    def AdaptiveMeshConstraintState(self, amplitudeState: SymbolicConstant = None, status: SymbolicConstant = None,
-                                    amplitude: str = '') -> AdaptiveMeshConstraintState:
+    def AdaptiveMeshConstraintState(
+            self,
+            amplitudeState: SymbolicConstant = None,
+            status: SymbolicConstant = None,
+            amplitude: str = '') -> AdaptiveMeshConstraintState:
         """The AdaptiveMeshConstraintState object is the abstract base type for other Arbitrary
         Lagrangian Eularian (ALE) style AdaptiveMeshConstraintState objects. The
         AdaptiveMeshConstraintState object has no explicit constructor or methods. The members
@@ -64,20 +68,28 @@ class AdaptivityStep(StepBase):
             A String specifying the name of the amplitude reference. The String is empty if the  adaptive mesh
             constraint has no amplitude reference.
         """
-        self.adaptiveMeshConstraintStates[amplitude] = adaptiveMeshConstraintState = AdaptiveMeshConstraintState(
-            amplitudeState, status, amplitude)
+        self.adaptiveMeshConstraintStates[
+            amplitude] = adaptiveMeshConstraintState = AdaptiveMeshConstraintState(
+                amplitudeState, status, amplitude)
         return adaptiveMeshConstraintState
 
-    def DisplacementAdaptiveMeshConstraintState(self, u1: float = None, u2: float = None, u3: float = None,
-                                                ur1: float = None, ur2: float = None,
-                                                ur3: float = None, u1State: SymbolicConstant = None,
-                                                u2State: SymbolicConstant = None,
-                                                u3State: SymbolicConstant = None, ur1State: SymbolicConstant = None,
-                                                ur2State: SymbolicConstant = None,
-                                                ur3State: SymbolicConstant = None,
-                                                amplitudeState: SymbolicConstant = None,
-                                                status: SymbolicConstant = None,
-                                                amplitude: str = '') -> DisplacementAdaptiveMeshConstraintState:
+    def DisplacementAdaptiveMeshConstraintState(
+            self,
+            u1: float = None,
+            u2: float = None,
+            u3: float = None,
+            ur1: float = None,
+            ur2: float = None,
+            ur3: float = None,
+            u1State: SymbolicConstant = None,
+            u2State: SymbolicConstant = None,
+            u3State: SymbolicConstant = None,
+            ur1State: SymbolicConstant = None,
+            ur2State: SymbolicConstant = None,
+            ur3State: SymbolicConstant = None,
+            amplitudeState: SymbolicConstant = None,
+            status: SymbolicConstant = None,
+            amplitude: str = '') -> DisplacementAdaptiveMeshConstraintState:
         """The DisplacementAdaptiveMeshConstraintState object stores the propagating data for an
         Arbitrary Lagrangian Eularian (ALE) style displacement/rotation adaptive mesh constraint
         in a step. One instance of this object is created internally by the
@@ -151,19 +163,27 @@ class AdaptivityStep(StepBase):
         """
         self.adaptiveMeshConstraintStates[
             amplitude] = adaptiveMeshConstraintState = DisplacementAdaptiveMeshConstraintState(
-            u1, u2, u3, ur1, ur2, ur3, u1State, u2State, u3State, ur1State, ur2State, ur3State, amplitudeState, status,
-            amplitude)
+                u1, u2, u3, ur1, ur2, ur3, u1State, u2State, u3State, ur1State,
+                ur2State, ur3State, amplitudeState, status, amplitude)
         return adaptiveMeshConstraintState
 
-    def VelocityAdaptiveMeshConstraintState(self, v1: float = None, v2: float = None, v3: float = None,
-                                            vr1: float = None, vr2: float = None,
-                                            vr3: float = None, v1State: SymbolicConstant = None,
-                                            v2State: SymbolicConstant = None,
-                                            v3State: SymbolicConstant = None, vr1State: SymbolicConstant = None,
-                                            vr2State: SymbolicConstant = None,
-                                            vr3State: SymbolicConstant = None, amplitudeState: SymbolicConstant = None,
-                                            status: SymbolicConstant = None,
-                                            amplitude: str = '') -> VelocityAdaptiveMeshConstraintState:
+    def VelocityAdaptiveMeshConstraintState(
+            self,
+            v1: float = None,
+            v2: float = None,
+            v3: float = None,
+            vr1: float = None,
+            vr2: float = None,
+            vr3: float = None,
+            v1State: SymbolicConstant = None,
+            v2State: SymbolicConstant = None,
+            v3State: SymbolicConstant = None,
+            vr1State: SymbolicConstant = None,
+            vr2State: SymbolicConstant = None,
+            vr3State: SymbolicConstant = None,
+            amplitudeState: SymbolicConstant = None,
+            status: SymbolicConstant = None,
+            amplitude: str = '') -> VelocityAdaptiveMeshConstraintState:
         """The VelocityAdaptiveMeshConstraintState object stores the propagating data for an
         Arbitrary Lagrangian Eularian (ALE) style velocity adaptive mesh constraint in a step.
         One instance of this object is created internally by the VelocityAdaptiveMeshConstraint
@@ -238,11 +258,15 @@ class AdaptivityStep(StepBase):
         super().__init__(amplitudeState, status, amplitude)
         self.adaptiveMeshConstraintStates[
             amplitude] = adaptiveMeshConstraintState = VelocityAdaptiveMeshConstraintState(
-            v1, v2, v3, vr1, vr2, vr3, v1State, v2State, v3State, vr1State, vr2State, vr3State, amplitudeState, status,
-            amplitude)
+                v1, v2, v3, vr1, vr2, vr3, v1State, v2State, v3State, vr1State,
+                vr2State, vr3State, amplitudeState, status, amplitude)
         return adaptiveMeshConstraintState
 
-    def AdaptiveMeshDomain(self, region: Region, controls: str = '', frequency: int = 10, initialMeshSweeps: int = 5,
+    def AdaptiveMeshDomain(self,
+                           region: Region,
+                           controls: str = '',
+                           frequency: int = 10,
+                           initialMeshSweeps: int = 5,
                            meshSweeps: int = 1) -> AdaptiveMeshDomain:
         """The AdaptiveMeshDomain object defines the region and controls that govern an Arbitrary
         Lagrangian Eularian (ALE) style adaptive smoothing mesh domain.
@@ -277,6 +301,7 @@ class AdaptivityStep(StepBase):
         -------
             An AdaptiveMeshDomain object
         """
-        self.adaptiveMeshDomains[controls] = adaptiveMeshDomain = AdaptiveMeshDomain(region, controls, frequency,
-                                                                                     initialMeshSweeps, meshSweeps)
+        self.adaptiveMeshDomains[
+            controls] = adaptiveMeshDomain = AdaptiveMeshDomain(
+                region, controls, frequency, initialMeshSweeps, meshSweeps)
         return adaptiveMeshDomain

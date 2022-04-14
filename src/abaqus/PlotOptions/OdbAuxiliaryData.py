@@ -1,5 +1,7 @@
 from abaqusConstants import *
 
+from __init__ import *
+
 
 class OdbAuxiliaryData:
     """The OdbAuxiliaryData object stores auxiliary data related to the steps in the analysis.
@@ -31,18 +33,18 @@ class OdbAuxiliaryData:
 
     """
 
-    # A tuple consisting of element instance names. This attribute is read-only. 
+    # A tuple consisting of element instance names. This attribute is read-only.
     elementInstanceNames: tuple = ()
 
-    # A tuple consisting of element label names. This attribute is read-only. 
+    # A tuple consisting of element label names. This attribute is read-only.
     elementLabels: tuple = ()
 
-    # A boolean specifying whether the OdbAuxiliaryData object has values in it. This 
-    # attribute is read-only. 
+    # A boolean specifying whether the OdbAuxiliaryData object has values in it. This
+    # attribute is read-only.
     hasValues: Boolean = OFF
 
-    # A tuple consisting of node instance names. This attribute is read-only. 
+    # A tuple consisting of node instance names. This attribute is read-only.
     nodeInstanceNames: tuple = ()
 
-    # A tuple consisting of node label names. This attribute is read-only. 
+    # A tuple consisting of node label names. This attribute is read-only.
     nodeLables: tuple = ()

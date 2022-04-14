@@ -2,6 +2,8 @@ from abaqusConstants import *
 from .CrushableFoamHardening import CrushableFoamHardening
 from ..Metal.RateDependent.RateDependent import RateDependent
 
+from __init__ import *
+
 
 class CrushableFoam:
     """The CrushableFoam object specifies the crushable foam plasticity model.
@@ -38,14 +40,18 @@ class CrushableFoam:
 
     """
 
-    # A CrushableFoamHardening object. 
-    crushableFoamHardening: CrushableFoamHardening = CrushableFoamHardening(((),))
+    # A CrushableFoamHardening object.
+    crushableFoamHardening: CrushableFoamHardening = CrushableFoamHardening(
+        ((), ))
 
-    # A RateDependent object. 
-    rateDependent: RateDependent = RateDependent(((),))
+    # A RateDependent object.
+    rateDependent: RateDependent = RateDependent(((), ))
 
-    def __init__(self, table: tuple, hardening: SymbolicConstant = VOLUMETRIC,
-                 temperatureDependency: Boolean = OFF, dependencies: int = 0):
+    def __init__(self,
+                 table: tuple,
+                 hardening: SymbolicConstant = VOLUMETRIC,
+                 temperatureDependency: Boolean = OFF,
+                 dependencies: int = 0):
         """This method creates a CrushableFoam object.
 
         Notes

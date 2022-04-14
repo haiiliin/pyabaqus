@@ -1,5 +1,7 @@
 from abaqusConstants import *
 
+from __init__ import *
+
 
 class TensionStiffening:
     """The TensionStiffening object defines the retained tensile stress normal to a crack in a
@@ -35,8 +37,10 @@ class TensionStiffening:
         - TENSION STIFFENING
 
     """
-
-    def __init__(self, table: tuple, type: SymbolicConstant = STRAIN, temperatureDependency: Boolean = OFF,
+    def __init__(self,
+                 table: tuple,
+                 type: SymbolicConstant = STRAIN,
+                 temperatureDependency: Boolean = OFF,
                  dependencies: int = 0):
         """This method creates a TensionStiffening object.
 

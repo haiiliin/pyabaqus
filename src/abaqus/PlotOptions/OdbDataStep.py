@@ -1,6 +1,8 @@
 from abaqusConstants import *
 from .OdbDataFrameArray import OdbDataFrameArray
 
+from __init__ import *
+
 
 class OdbDataStep:
     """The OdbDataStep object.
@@ -21,7 +23,7 @@ class OdbDataStep:
 
     """
 
-    # An OdbDataFrameArray object specifying the list of frames. The list is read-only. 
+    # An OdbDataFrameArray object specifying the list of frames. The list is read-only.
     frames: OdbDataFrameArray = OdbDataFrameArray()
 
     def setValues(self, activateFrames: Boolean, update: Boolean = OFF):

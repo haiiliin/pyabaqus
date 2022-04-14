@@ -1,6 +1,8 @@
 from abaqusConstants import *
 from .Amplitude import Amplitude
 
+from __init__ import *
+
 
 class SpectrumAmplitude(Amplitude):
     """The SpectrumAmplitude object defines the spectrum of responses for displacement,
@@ -22,12 +24,17 @@ class SpectrumAmplitude(Amplitude):
         - SPECTRUM
 
     """
-
-    def __init__(self, name: str, method: SymbolicConstant, data: tuple,
+    def __init__(self,
+                 name: str,
+                 method: SymbolicConstant,
+                 data: tuple,
                  specificationUnits: SymbolicConstant = ACCELERATION,
                  eventUnits: SymbolicConstant = EVENT_ACCELERATION,
-                 solution: SymbolicConstant = ABSOLUTE_VALUE, timeIncrement: float = 0,
-                 gravity: float = 1, criticalDamping: Boolean = OFF, timeSpan: SymbolicConstant = STEP,
+                 solution: SymbolicConstant = ABSOLUTE_VALUE,
+                 timeIncrement: float = 0,
+                 gravity: float = 1,
+                 criticalDamping: Boolean = OFF,
+                 timeSpan: SymbolicConstant = STEP,
                  amplitude: str = ''):
         """This method creates a SpectrumAmplitude object.
 
@@ -93,10 +100,14 @@ class SpectrumAmplitude(Amplitude):
         super().__init__()
         pass
 
-    def setValues(self, specificationUnits: SymbolicConstant = ACCELERATION,
+    def setValues(self,
+                  specificationUnits: SymbolicConstant = ACCELERATION,
                   eventUnits: SymbolicConstant = EVENT_ACCELERATION,
-                  solution: SymbolicConstant = ABSOLUTE_VALUE, timeIncrement: float = 0,
-                  gravity: float = 1, criticalDamping: Boolean = OFF, timeSpan: SymbolicConstant = STEP,
+                  solution: SymbolicConstant = ABSOLUTE_VALUE,
+                  timeIncrement: float = 0,
+                  gravity: float = 1,
+                  criticalDamping: Boolean = OFF,
+                  timeSpan: SymbolicConstant = STEP,
                   amplitude: str = ''):
         """This method modifies the SpectrumAmplitude object.
         

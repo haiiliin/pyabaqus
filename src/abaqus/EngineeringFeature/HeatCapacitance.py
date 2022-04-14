@@ -2,6 +2,8 @@ from abaqusConstants import *
 from .Inertia import Inertia
 from ..Region.Region import Region
 
+from __init__ import *
+
 
 class HeatCapacitance(Inertia):
     """The HeatCapacitance object defines point heat capacitance on a part or an assembly
@@ -37,10 +39,14 @@ class HeatCapacitance(Inertia):
 
     """
 
-    # A Boolean specifying whether the inertia is suppressed or not. The default value is OFF. 
+    # A Boolean specifying whether the inertia is suppressed or not. The default value is OFF.
     suppressed: Boolean = OFF
 
-    def __init__(self, name: str, region: Region, table: tuple, temperatureDependency: Boolean = OFF,
+    def __init__(self,
+                 name: str,
+                 region: Region,
+                 table: tuple,
+                 temperatureDependency: Boolean = OFF,
                  dependencies: int = 0):
         """This method creates a HeatCapacitance object.
 
@@ -74,7 +80,9 @@ class HeatCapacitance(Inertia):
         super().__init__()
         pass
 
-    def setValues(self, temperatureDependency: Boolean = OFF, dependencies: int = 0):
+    def setValues(self,
+                  temperatureDependency: Boolean = OFF,
+                  dependencies: int = 0):
         """This method modifies the HeatCapacitance object.
         
         Parameters

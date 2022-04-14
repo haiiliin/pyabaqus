@@ -1,3 +1,6 @@
+from __init__ import *
+
+
 class Color:
     """The Color object contains the RGB definition of a system color.
 
@@ -16,11 +19,11 @@ class Color:
 
     """
 
-    # A String specifying the name of the color. 
+    # A String specifying the name of the color.
     name: str = ''
 
-    # A tuple of three Floats specifying the RGB value of the color. The Float values must be 
-    # between 0.0 and 1.0. 
+    # A tuple of three Floats specifying the RGB value of the color. The Float values must be
+    # between 0.0 and 1.0.
     rgb: float = None
 
     def setByRGB(self, rgb: tuple):

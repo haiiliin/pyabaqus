@@ -1,10 +1,14 @@
 from abaqusConstants import *
 from .ConstrainedSketchGeometry import ConstrainedSketchGeometry
 
+from __init__ import *
+
 
 class getPointAtDistance(ConstrainedSketchGeometry):
-
-    def __init__(self, point: tuple[float], distance: str, percentage: Boolean = OFF):
+    def __init__(self,
+                 point: tuple[float],
+                 distance: str,
+                 percentage: Boolean = OFF):
         """This method returns a point offset along the given ConstrainedSketchGeometry from the
         given end by a specified arc length distance or a percentage of the total length of the
         ConstrainedSketchGeometry object.

@@ -2,6 +2,8 @@ from abaqusConstants import *
 from .CastIronCompressionHardening import CastIronCompressionHardening
 from .CastIronTensionHardening import CastIronTensionHardening
 
+from __init__ import *
+
 
 class CastIronPlasticity:
     """The CastIronPlasticity object specifies the Cast Iron plasticity model.
@@ -30,13 +32,18 @@ class CastIronPlasticity:
 
     """
 
-    # A CastIronTensionHardening object. 
-    castIronTensionHardening: CastIronTensionHardening = CastIronTensionHardening(((),))
+    # A CastIronTensionHardening object.
+    castIronTensionHardening: CastIronTensionHardening = CastIronTensionHardening(
+        ((), ))
 
-    # A CastIronCompressionHardening object. 
-    castIronCompressionHardening: CastIronCompressionHardening = CastIronCompressionHardening(((),))
+    # A CastIronCompressionHardening object.
+    castIronCompressionHardening: CastIronCompressionHardening = CastIronCompressionHardening(
+        ((), ))
 
-    def __init__(self, table: tuple, temperatureDependency: Boolean = OFF, dependencies: int = 0):
+    def __init__(self,
+                 table: tuple,
+                 temperatureDependency: Boolean = OFF,
+                 dependencies: int = 0):
         """This method creates a CastIronPlasticity object.
 
         Notes

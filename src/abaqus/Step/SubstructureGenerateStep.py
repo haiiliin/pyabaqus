@@ -17,6 +17,8 @@ from ..StepOutput.HistoryOutputRequestState import HistoryOutputRequestState
 from ..StepOutput.Monitor import Monitor
 from ..StepOutput.Restart import Restart
 
+from __init__ import *
+
 
 class SubstructureGenerateStep(AnalysisStep):
     """TheSubstructureGenerateStep object is used to generate a substructure.
@@ -151,164 +153,182 @@ class SubstructureGenerateStep(AnalysisStep):
 
     """
 
-    # A String specifying the repository key. 
+    # A String specifying the repository key.
     name: str = ''
 
-    # A SymbolicConstant specifying the subtructure recovery to be computed. Possible values 
-    # are WHOLE_MODEL, REGION, and NONE. The default value is WHOLE_MODEL. 
+    # A SymbolicConstant specifying the subtructure recovery to be computed. Possible values
+    # are WHOLE_MODEL, REGION, and NONE. The default value is WHOLE_MODEL.
     recoveryMatrix: SymbolicConstant = WHOLE_MODEL
 
-    # A Float specifying the frequency at which to evaluate the frequency dependent 
-    # properties. The default value is 0.0. 
+    # A Float specifying the frequency at which to evaluate the frequency dependent
+    # properties. The default value is 0.0.
     frequency: float = 0
 
-    # A SymbolicConstant specifying the eigenmodes to be retained. Possible values are 
-    # MODE_RANGE, FREQUENCY_RANGE, and NONE. The default value is NONE. 
+    # A SymbolicConstant specifying the eigenmodes to be retained. Possible values are
+    # MODE_RANGE, FREQUENCY_RANGE, and NONE. The default value is NONE.
     retainedEigenmodesMethod: SymbolicConstant = NONE
 
-    # A SymbolicConstant specifying the field to which the global damping factors should be 
-    # applied. Possible values are ALL, ACOUSTIC, MECHANICAL, and NONE. The default value is 
-    # NONE. 
+    # A SymbolicConstant specifying the field to which the global damping factors should be
+    # applied. Possible values are ALL, ACOUSTIC, MECHANICAL, and NONE. The default value is
+    # NONE.
     globalDampingField: SymbolicConstant = NONE
 
-    # A Float specifying the factor to create global Rayleigh mass proportional damping. The 
-    # default value is 0.0. 
+    # A Float specifying the factor to create global Rayleigh mass proportional damping. The
+    # default value is 0.0.
     alphaDampingRatio: float = 0
 
-    # A Float specifying the factor to create global Rayleigh stiffness proportional damping. 
-    # The default value is 0.0. 
+    # A Float specifying the factor to create global Rayleigh stiffness proportional damping.
+    # The default value is 0.0.
     betaDampingRatio: float = 0
 
-    # A Float specifying the factor to create frequency-independent stiffness proportional 
-    # structural damping. The default value is 0.0. 
+    # A Float specifying the factor to create frequency-independent stiffness proportional
+    # structural damping. The default value is 0.0.
     structuralDampingRatio: float = 0
 
-    # A SymbolicConstant specifying the damping control to include the viscous damping matrix. 
-    # Possible values are ELEMENT, FACTOR, COMBINED, and NONE. The default value is NONE. 
+    # A SymbolicConstant specifying the damping control to include the viscous damping matrix.
+    # Possible values are ELEMENT, FACTOR, COMBINED, and NONE. The default value is NONE.
     viscousDampingControl: SymbolicConstant = NONE
 
-    # A SymbolicConstant specifying the damping control to include the structural damping 
-    # matrix. Possible values are ELEMENT, FACTOR, COMBINED, and NONE. The default value is 
-    # NONE. 
+    # A SymbolicConstant specifying the damping control to include the structural damping
+    # matrix. Possible values are ELEMENT, FACTOR, COMBINED, and NONE. The default value is
+    # NONE.
     structuralDampingControl: SymbolicConstant = NONE
 
-    # A String specifying the name of the previous step. The new step appears after this step 
-    # in the list of analysis steps. 
+    # A String specifying the name of the previous step. The new step appears after this step
+    # in the list of analysis steps.
     previous: str = ''
 
-    # A String specifying a description of the new step. The default value is an empty string. 
+    # A String specifying a description of the new step. The default value is an empty string.
     description: str = ''
 
-    # A String specifying a unique identifier for the substructure. The default value is an 
-    # empty string. 
+    # A String specifying a unique identifier for the substructure. The default value is an
+    # empty string.
     substructureIdentifier: str = ''
 
-    # A Region object specifying the region for substructure recovery. This argument is 
-    # required when *recoveryMatrix*=REGION. 
+    # A Region object specifying the region for substructure recovery. This argument is
+    # required when *recoveryMatrix*=REGION.
     recoveryRegion: Region = Region()
 
-    # A SubstructureGenerateFrequencyArray object. 
-    frequencyRange: SubstructureGenerateFrequencyArray = SubstructureGenerateFrequencyArray()
+    # A SubstructureGenerateFrequencyArray object.
+    frequencyRange: SubstructureGenerateFrequencyArray = SubstructureGenerateFrequencyArray(
+    )
 
-    # A SubstructureGenerateModesArray object. 
-    modeRange: SubstructureGenerateModesArray = SubstructureGenerateModesArray()
+    # A SubstructureGenerateModesArray object.
+    modeRange: SubstructureGenerateModesArray = SubstructureGenerateModesArray(
+    )
 
-    # A SymbolicConstant specifying whether the step has an explicit procedure type 
-    # (*procedureType*=ANNEAL, DYNAMIC_EXPLICIT, or DYNAMIC_TEMP_DISPLACEMENT). 
+    # A SymbolicConstant specifying whether the step has an explicit procedure type
+    # (*procedureType*=ANNEAL, DYNAMIC_EXPLICIT, or DYNAMIC_TEMP_DISPLACEMENT).
     explicit: SymbolicConstant = None
 
-    # A Boolean specifying whether the step has a perturbation procedure type. 
+    # A Boolean specifying whether the step has a perturbation procedure type.
     perturbation: Boolean = OFF
 
-    # A Boolean specifying whether the step has a mechanical procedure type. 
+    # A Boolean specifying whether the step has a mechanical procedure type.
     nonmechanical: Boolean = OFF
 
-    # A SymbolicConstant specifying the Abaqus procedure. Possible values are: 
-    # - ANNEAL 
-    # - BUCKLE 
-    # - COMPLEX_FREQUENCY 
-    # - COUPLED_TEMP_DISPLACEMENT 
-    # - COUPLED_THERMAL_ELECTRIC 
-    # - DIRECT_CYCLIC 
-    # - DYNAMIC_IMPLICIT 
-    # - DYNAMIC_EXPLICIT 
-    # - DYNAMIC_SUBSPACE 
-    # - DYNAMIC_TEMP_DISPLACEMENT 
-    # - COUPLED_THERMAL_ELECTRICAL_STRUCTURAL 
-    # - FREQUENCY 
-    # - GEOSTATIC 
-    # - HEAT_TRANSFER 
-    # - MASS_DIFFUSION 
-    # - MODAL_DYNAMICS 
-    # - RANDOM_RESPONSE 
-    # - RESPONSE_SPECTRUM 
-    # - SOILS 
-    # - STATIC_GENERAL 
-    # - STATIC_LINEAR_PERTURBATION 
-    # - STATIC_RIKS 
-    # - STEADY_STATE_DIRECT 
-    # - STEADY_STATE_MODAL 
-    # - STEADY_STATE_SUBSPACE 
-    # - VISCO 
+    # A SymbolicConstant specifying the Abaqus procedure. Possible values are:
+    # - ANNEAL
+    # - BUCKLE
+    # - COMPLEX_FREQUENCY
+    # - COUPLED_TEMP_DISPLACEMENT
+    # - COUPLED_THERMAL_ELECTRIC
+    # - DIRECT_CYCLIC
+    # - DYNAMIC_IMPLICIT
+    # - DYNAMIC_EXPLICIT
+    # - DYNAMIC_SUBSPACE
+    # - DYNAMIC_TEMP_DISPLACEMENT
+    # - COUPLED_THERMAL_ELECTRICAL_STRUCTURAL
+    # - FREQUENCY
+    # - GEOSTATIC
+    # - HEAT_TRANSFER
+    # - MASS_DIFFUSION
+    # - MODAL_DYNAMICS
+    # - RANDOM_RESPONSE
+    # - RESPONSE_SPECTRUM
+    # - SOILS
+    # - STATIC_GENERAL
+    # - STATIC_LINEAR_PERTURBATION
+    # - STATIC_RIKS
+    # - STEADY_STATE_DIRECT
+    # - STEADY_STATE_MODAL
+    # - STEADY_STATE_SUBSPACE
+    # - VISCO
     procedureType: SymbolicConstant = None
 
-    # A Boolean specifying whether the step is suppressed or not. The default value is OFF. 
+    # A Boolean specifying whether the step is suppressed or not. The default value is OFF.
     suppressed: Boolean = OFF
 
-    # A repository of FieldOutputRequestState objects. 
-    fieldOutputRequestState: dict[str, FieldOutputRequestState] = dict[str, FieldOutputRequestState]()
+    # A repository of FieldOutputRequestState objects.
+    fieldOutputRequestState: dict[str, FieldOutputRequestState] = dict[
+        str, FieldOutputRequestState]()
 
-    # A repository of HistoryOutputRequestState objects. 
-    historyOutputRequestState: dict[str, HistoryOutputRequestState] = dict[str, HistoryOutputRequestState]()
+    # A repository of HistoryOutputRequestState objects.
+    historyOutputRequestState: dict[str, HistoryOutputRequestState] = dict[
+        str, HistoryOutputRequestState]()
 
-    # A DiagnosticPrint object. 
+    # A DiagnosticPrint object.
     diagnosticPrint: DiagnosticPrint = DiagnosticPrint()
 
-    # A Monitor object. 
+    # A Monitor object.
     monitor: Monitor = None
 
-    # A Restart object. 
+    # A Restart object.
     restart: Restart = Restart()
 
-    # A repository of AdaptiveMeshConstraintState objects. 
-    adaptiveMeshConstraintStates: dict[str, AdaptiveMeshConstraintState] = dict[
-        str, AdaptiveMeshConstraintState]()
+    # A repository of AdaptiveMeshConstraintState objects.
+    adaptiveMeshConstraintStates: dict[
+        str, AdaptiveMeshConstraintState] = dict[str,
+                                                 AdaptiveMeshConstraintState]()
 
-    # A repository of AdaptiveMeshDomain objects. 
-    adaptiveMeshDomains: dict[str, AdaptiveMeshDomain] = dict[str, AdaptiveMeshDomain]()
+    # A repository of AdaptiveMeshDomain objects.
+    adaptiveMeshDomains: dict[str,
+                              AdaptiveMeshDomain] = dict[str,
+                                                         AdaptiveMeshDomain]()
 
-    # A Control object. 
+    # A Control object.
     control: Control = Control()
 
-    # A SolverControl object. 
+    # A SolverControl object.
     solverControl: SolverControl = SolverControl()
 
-    # A repository of BoundaryConditionState objects. 
-    boundaryConditionStates: dict[str, BoundaryConditionState] = dict[str, BoundaryConditionState]()
+    # A repository of BoundaryConditionState objects.
+    boundaryConditionStates: dict[str, BoundaryConditionState] = dict[
+        str, BoundaryConditionState]()
 
-    # A repository of InteractionState objects. 
+    # A repository of InteractionState objects.
     interactionStates: int = None
 
-    # A repository of LoadState objects. 
+    # A repository of LoadState objects.
     loadStates: dict[str, LoadState] = dict[str, LoadState]()
 
-    # A repository of LoadCase objects. 
+    # A repository of LoadCase objects.
     loadCases: dict[str, LoadCase] = dict[str, LoadCase]()
 
-    # A repository of PredefinedFieldState objects. 
-    predefinedFieldStates: dict[str, PredefinedFieldState] = dict[str, PredefinedFieldState]()
+    # A repository of PredefinedFieldState objects.
+    predefinedFieldStates: dict[str, PredefinedFieldState] = dict[
+        str, PredefinedFieldState]()
 
-    def __init__(self, name: str, previous: str, substructureIdentifier: int, description: str = '',
-                 recoveryMatrix: SymbolicConstant = WHOLE_MODEL, recoveryRegion: Region = Region(),
-                 computeGravityLoadVectors: Boolean = False, computeReducedMassMatrix: Boolean = False,
+    def __init__(self,
+                 name: str,
+                 previous: str,
+                 substructureIdentifier: int,
+                 description: str = '',
+                 recoveryMatrix: SymbolicConstant = WHOLE_MODEL,
+                 recoveryRegion: Region = Region(),
+                 computeGravityLoadVectors: Boolean = False,
+                 computeReducedMassMatrix: Boolean = False,
                  computeReducedStructuralDampingMatrix: Boolean = False,
                  computeReducedViscousDampingMatrix: Boolean = False,
-                 evaluateFrequencyDependentProperties: Boolean = False, frequency: float = 0,
+                 evaluateFrequencyDependentProperties: Boolean = False,
+                 frequency: float = 0,
                  retainedEigenmodesMethod: SymbolicConstant = NONE,
                  modeRange: SubstructureGenerateModesArray = None,
                  frequencyRange: SubstructureGenerateFrequencyArray = None,
-                 globalDampingField: SymbolicConstant = NONE, alphaDampingRatio: float = 0,
-                 betaDampingRatio: float = 0, structuralDampingRatio: float = 0,
+                 globalDampingField: SymbolicConstant = NONE,
+                 alphaDampingRatio: float = 0,
+                 betaDampingRatio: float = 0,
+                 structuralDampingRatio: float = 0,
                  viscousDampingControl: SymbolicConstant = NONE,
                  structuralDampingControl: SymbolicConstant = NONE):
         """This method creates a SubstructureGenerateStep object.
@@ -395,17 +415,23 @@ class SubstructureGenerateStep(AnalysisStep):
         super().__init__()
         pass
 
-    def setValues(self, description: str = '', recoveryMatrix: SymbolicConstant = WHOLE_MODEL,
-                  recoveryRegion: Region = Region(), computeGravityLoadVectors: Boolean = False,
+    def setValues(self,
+                  description: str = '',
+                  recoveryMatrix: SymbolicConstant = WHOLE_MODEL,
+                  recoveryRegion: Region = Region(),
+                  computeGravityLoadVectors: Boolean = False,
                   computeReducedMassMatrix: Boolean = False,
                   computeReducedStructuralDampingMatrix: Boolean = False,
                   computeReducedViscousDampingMatrix: Boolean = False,
-                  evaluateFrequencyDependentProperties: Boolean = False, frequency: float = 0,
+                  evaluateFrequencyDependentProperties: Boolean = False,
+                  frequency: float = 0,
                   retainedEigenmodesMethod: SymbolicConstant = NONE,
                   modeRange: SubstructureGenerateModesArray = None,
                   frequencyRange: SubstructureGenerateFrequencyArray = None,
-                  globalDampingField: SymbolicConstant = NONE, alphaDampingRatio: float = 0,
-                  betaDampingRatio: float = 0, structuralDampingRatio: float = 0,
+                  globalDampingField: SymbolicConstant = NONE,
+                  alphaDampingRatio: float = 0,
+                  betaDampingRatio: float = 0,
+                  structuralDampingRatio: float = 0,
                   viscousDampingControl: SymbolicConstant = NONE,
                   structuralDampingControl: SymbolicConstant = NONE):
         """This method modifies the SubstructureGenerateStep object.

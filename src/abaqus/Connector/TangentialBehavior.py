@@ -1,5 +1,7 @@
 from abaqusConstants import *
 
+from __init__ import *
+
 
 class TangentialBehavior:
     """The TangentialBehavior object specifies tangential behavior for a connector friction
@@ -39,12 +41,18 @@ class TangentialBehavior:
         - FRICTION
 
     """
-
-    def __init__(self, formulation: SymbolicConstant = PENALTY, slipRateDependency: Boolean = OFF,
-                 pressureDependency: Boolean = OFF, temperatureDependency: Boolean = OFF,
-                 dependencies: int = 0, exponentialDecayDefinition: SymbolicConstant = COEFFICIENTS,
-                 shearStressLimit: float = None, maximumElasticSlip: SymbolicConstant = FRACTION,
-                 fraction: float = None, absoluteDistance: float = None, table: tuple = ()):
+    def __init__(self,
+                 formulation: SymbolicConstant = PENALTY,
+                 slipRateDependency: Boolean = OFF,
+                 pressureDependency: Boolean = OFF,
+                 temperatureDependency: Boolean = OFF,
+                 dependencies: int = 0,
+                 exponentialDecayDefinition: SymbolicConstant = COEFFICIENTS,
+                 shearStressLimit: float = None,
+                 maximumElasticSlip: SymbolicConstant = FRACTION,
+                 fraction: float = None,
+                 absoluteDistance: float = None,
+                 table: tuple = ()):
         """This method creates a TangentialBehavior object.
 
         Notes

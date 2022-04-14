@@ -1,6 +1,8 @@
 from abaqusConstants import *
 from .Amplitude import Amplitude
 
+from __init__ import *
+
 
 class SmoothStepAmplitude(Amplitude):
     """The SmoothStepAmplitude object defines an amplitude that ramps up or down smoothly from
@@ -22,8 +24,10 @@ class SmoothStepAmplitude(Amplitude):
         - AMPLITUDE
 
     """
-
-    def __init__(self, name: str, data: tuple, timeSpan: SymbolicConstant = STEP):
+    def __init__(self,
+                 name: str,
+                 data: tuple,
+                 timeSpan: SymbolicConstant = STEP):
         """This method creates a SmoothStepAmplitude object.
 
         Notes

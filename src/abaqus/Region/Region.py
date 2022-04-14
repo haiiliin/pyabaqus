@@ -8,6 +8,8 @@ from ..BasicGeometry.Vertex import Vertex
 from ..Mesh.MeshElement import MeshElement as Element
 from ..Mesh.MeshNode import MeshNode as Node
 
+from __init__ import *
+
 
 class Region:
     """The purpose of the Region object is to provide a link between an attribute and the
@@ -56,13 +58,20 @@ class Region:
         import regionToolset
 
     """
-
     @typing.overload
-    def __init__(self, elements: tuple[Element] = None, nodes: tuple[Node] = None,
-                 vertices: tuple[Vertex] = None, edges: tuple[Edge] = None, faces: tuple[Face] = None,
-                 cells: tuple[Cell] = None, referencePoints: tuple[ReferencePoint] = (),
-                 xVertices: tuple[Vertex] = None, xEdges: tuple[Vertex] = None,
-                 xFaces: tuple[Vertex] = None, skinFaces: tuple = (), skinEdges: tuple = (),
+    def __init__(self,
+                 elements: tuple[Element] = None,
+                 nodes: tuple[Node] = None,
+                 vertices: tuple[Vertex] = None,
+                 edges: tuple[Edge] = None,
+                 faces: tuple[Face] = None,
+                 cells: tuple[Cell] = None,
+                 referencePoints: tuple[ReferencePoint] = (),
+                 xVertices: tuple[Vertex] = None,
+                 xEdges: tuple[Vertex] = None,
+                 xFaces: tuple[Vertex] = None,
+                 skinFaces: tuple = (),
+                 skinEdges: tuple = (),
                  stringerEdges: tuple = ()):
         """This command creates a set-like region. For example
         myRegion = regionToolset.Region(vertices=v[2:4]
@@ -126,16 +135,27 @@ class Region:
         pass
 
     @typing.overload
-    def __init__(self, side1Faces: tuple[Face] = None, side2Faces: tuple[Face] = None,
-                 side12Faces: tuple[Face] = None, side1Edges: tuple[Edge] = None,
-                 side2Edges: tuple[Edge] = None, end1Edges: tuple[Edge] = None,
-                 end2Edges: tuple[Edge] = None, circumEdges: tuple[Edge] = None,
-                 face1Elements: tuple[Element] = None, face2Elements: tuple[Element] = None,
-                 face3Elements: tuple[Element] = None, face4Elements: tuple[Element] = None,
-                 face5Elements: tuple[Element] = None, face6Elements: tuple[Element] = None,
-                 side1Elements: tuple[Element] = None, side2Elements: tuple[Element] = None,
-                 side12Elements: tuple[Element] = None, end1Elements: tuple[Element] = None,
-                 end2Elements: tuple[Element] = None, circumElements: tuple[Element] = None):
+    def __init__(self,
+                 side1Faces: tuple[Face] = None,
+                 side2Faces: tuple[Face] = None,
+                 side12Faces: tuple[Face] = None,
+                 side1Edges: tuple[Edge] = None,
+                 side2Edges: tuple[Edge] = None,
+                 end1Edges: tuple[Edge] = None,
+                 end2Edges: tuple[Edge] = None,
+                 circumEdges: tuple[Edge] = None,
+                 face1Elements: tuple[Element] = None,
+                 face2Elements: tuple[Element] = None,
+                 face3Elements: tuple[Element] = None,
+                 face4Elements: tuple[Element] = None,
+                 face5Elements: tuple[Element] = None,
+                 face6Elements: tuple[Element] = None,
+                 side1Elements: tuple[Element] = None,
+                 side2Elements: tuple[Element] = None,
+                 side12Elements: tuple[Element] = None,
+                 end1Elements: tuple[Element] = None,
+                 end2Elements: tuple[Element] = None,
+                 circumElements: tuple[Element] = None):
         """This command creates a surface-like region. For example
         myRegion = regionToolset.Region(side1Faces=f[12:14])
         The arguments are the same as the arguments to the Surface method, except for the *name*

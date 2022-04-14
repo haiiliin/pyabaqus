@@ -5,14 +5,20 @@ from .OdbMeshNode import OdbMeshNode
 from .OdbRigidBody import OdbRigidBody
 from .OdbSet import OdbSet
 
+from __init__ import *
+
 
 class OdbInstance(OdbInstanceBase):
-
-    def OdbRigidBody(self, referenceNode: OdbSet, position: SymbolicConstant = INPUT, isothermal: Boolean = ON,
-                     elements: OdbSet = OdbSet('set', tuple[OdbMeshNode]()),
-                     tieNodes: OdbSet = OdbSet('set', tuple[OdbMeshNode]()),
-                     pinNodes: OdbSet = OdbSet('set', tuple[OdbMeshNode]()),
-                     analyticSurface: AnalyticSurface = AnalyticSurface()) -> OdbRigidBody:
+    def OdbRigidBody(
+        self,
+        referenceNode: OdbSet,
+        position: SymbolicConstant = INPUT,
+        isothermal: Boolean = ON,
+        elements: OdbSet = OdbSet('set', tuple[OdbMeshNode]()),
+        tieNodes: OdbSet = OdbSet('set', tuple[OdbMeshNode]()),
+        pinNodes: OdbSet = OdbSet('set', tuple[OdbMeshNode]()),
+        analyticSurface: AnalyticSurface = AnalyticSurface()
+    ) -> OdbRigidBody:
         """This method creates a OdbRigidBody object.
 
         Notes
@@ -53,7 +59,9 @@ class OdbInstance(OdbInstanceBase):
         -------
             An OdbRigidBody object.
         """
-        odbRigidBody = OdbRigidBody(referenceNode, position, isothermal, elements, tieNodes, pinNodes, analyticSurface)
+        odbRigidBody = OdbRigidBody(referenceNode, position, isothermal,
+                                    elements, tieNodes, pinNodes,
+                                    analyticSurface)
         self.rigidBodies.append(odbRigidBody)
         return odbRigidBody
 

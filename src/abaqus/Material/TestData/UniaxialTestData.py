@@ -1,5 +1,7 @@
 from abaqusConstants import *
 
+from __init__ import *
+
 
 class UniaxialTestData:
     """The UniaxialTestData object provides uniaxial test data (compression and/or tension).
@@ -40,9 +42,12 @@ class UniaxialTestData:
         - UNIAXIAL TEST DATA
 
     """
-
-    def __init__(self, table: tuple, smoothing: int = None, lateralNominalStrain: Boolean = OFF,
-                 temperatureDependency: Boolean = OFF, dependencies: int = 0):
+    def __init__(self,
+                 table: tuple,
+                 smoothing: int = None,
+                 lateralNominalStrain: Boolean = OFF,
+                 temperatureDependency: Boolean = OFF,
+                 dependencies: int = 0):
         """This method creates a UniaxialTestData object.
 
         Notes

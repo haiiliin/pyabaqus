@@ -1,5 +1,7 @@
 from abaqusConstants import *
 
+from __init__ import *
+
 
 class BackwardCompatibility:
     """The BackwardCompatibility object enables the user to control access to deprecated
@@ -57,16 +59,16 @@ class BackwardCompatibility:
 
     """
 
-    # A Boolean specifying whether deprecated members, methods, and arguments can be seen and 
-    # used. Possible values are ON and OFF. The default value is ON. 
+    # A Boolean specifying whether deprecated members, methods, and arguments can be seen and
+    # used. Possible values are ON and OFF. The default value is ON.
     includeDeprecated: Boolean = ON
 
-    # A Boolean specifying whether a warning is displayed after running a script that contains 
-    # deprecated commands. The default value is True. 
+    # A Boolean specifying whether a warning is displayed after running a script that contains
+    # deprecated commands. The default value is True.
     reportDeprecated: Boolean = True
 
-    # A Boolean specifying whether the keys and indices are included in the report that is 
-    # displayed when *reportDeprecated* is True. The default value is False. 
+    # A Boolean specifying whether the keys and indices are included in the report that is
+    # displayed when *reportDeprecated* is True. The default value is False.
     showKeysInReport: Boolean = False
 
     def getDeprecatedMethodsUsed(self):
@@ -99,7 +101,9 @@ class BackwardCompatibility:
         """
         pass
 
-    def setValues(self, includeDeprecated: Boolean = ON, reportDeprecated: Boolean = True,
+    def setValues(self,
+                  includeDeprecated: Boolean = ON,
+                  reportDeprecated: Boolean = True,
                   showKeysInReport: Boolean = False):
         """This method modifies the BackwardCompatibility object.
         

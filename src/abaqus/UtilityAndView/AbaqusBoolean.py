@@ -1,3 +1,4 @@
+from __init__ import *
 
 
 class AbaqusBoolean:
@@ -25,7 +26,6 @@ class AbaqusBoolean:
         from abaqusConstants import *
 
     """
-
     def __init__(self, value: int):
         """The AbaqusBoolean method creates an AbaqusBoolean object.
 

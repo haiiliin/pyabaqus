@@ -2,6 +2,8 @@ from abaqusConstants import *
 from .Load import Load
 from ..Region.Region import Region
 
+from __init__ import *
+
 
 class SubmodelSB(Load):
     """The SubmodelSB object stores the data for a submodel surface based load.
@@ -36,29 +38,35 @@ class SubmodelSB(Load):
 
     """
 
-    # A String specifying the load repository key. 
+    # A String specifying the load repository key.
     name: str = ''
 
-    # None or a Float specifying the absolute value by which a driven node of the submodel can 
-    # lie outside the region of the elements of the global model. The default value is None. 
+    # None or a Float specifying the absolute value by which a driven node of the submodel can
+    # lie outside the region of the elements of the global model. The default value is None.
     absoluteExteriorTolerance: float = None
 
-    # None or a Float specifying the fraction of the average element size in the global model 
-    # by which a driven node of the submodel can lie outside the region of the elements of the 
-    # global model. The default value is 0.05. 
+    # None or a Float specifying the fraction of the average element size in the global model
+    # by which a driven node of the submodel can lie outside the region of the elements of the
+    # global model. The default value is 0.05.
     exteriorTolerance: float = 0
 
-    # A String specifying the element set in the global model that will be searched for 
-    # elements whose responses will be used to drive the submodel. An empty string indicates 
-    # that the entire global model will be searched. The default value is an empty string. 
+    # A String specifying the element set in the global model that will be searched for
+    # elements whose responses will be used to drive the submodel. An empty string indicates
+    # that the entire global model will be searched. The default value is an empty string.
     globalDrivingRegion: str = ''
 
-    # A Region object specifying the region to which the load is applied. 
+    # A Region object specifying the region to which the load is applied.
     region: Region = Region()
 
-    def __init__(self, name: str, createStepName: str, region: Region, globalStep: str,
-                 globalDrivingRegion: str = '', absoluteExteriorTolerance: float = None,
-                 exteriorTolerance: float = 0, globalIncrement: int = 0):
+    def __init__(self,
+                 name: str,
+                 createStepName: str,
+                 region: Region,
+                 globalStep: str,
+                 globalDrivingRegion: str = '',
+                 absoluteExteriorTolerance: float = None,
+                 exteriorTolerance: float = 0,
+                 globalIncrement: int = 0):
         """This method creates a SubmodelSB object.
 
         Notes
@@ -106,8 +114,11 @@ class SubmodelSB(Load):
         super().__init__()
         pass
 
-    def setValues(self, globalDrivingRegion: str = '', absoluteExteriorTolerance: float = None,
-                  exteriorTolerance: float = 0, globalIncrement: int = 0):
+    def setValues(self,
+                  globalDrivingRegion: str = '',
+                  absoluteExteriorTolerance: float = None,
+                  exteriorTolerance: float = 0,
+                  globalIncrement: int = 0):
         """This method modifies the data for an existing SubmodelSB object in the step where it is
         created.
         
@@ -132,7 +143,11 @@ class SubmodelSB(Load):
         """
         pass
 
-    def setValuesInStep(self, stepName: str, fixed: Boolean = ON, globalStep: str = '', globalIncrement: int = 0):
+    def setValuesInStep(self,
+                        stepName: str,
+                        fixed: Boolean = ON,
+                        globalStep: str = '',
+                        globalIncrement: int = 0):
         """This method modifies the propagating data for an existing SubmodelSB object in the
         specified step.
         

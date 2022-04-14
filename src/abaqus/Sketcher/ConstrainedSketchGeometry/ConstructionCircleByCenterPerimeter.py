@@ -1,8 +1,9 @@
 from .ConstrainedSketchGeometry import ConstrainedSketchGeometry
 
+from __init__ import *
+
 
 class ConstructionCircleByCenterPerimeter(ConstrainedSketchGeometry):
-
     def __init__(self, center: tuple[float], point1: tuple[float]):
         """This method constructs a construction circle using a center point and a point on the
         perimeter. The circle is added to the geometry repository of the ConstrainedSketch

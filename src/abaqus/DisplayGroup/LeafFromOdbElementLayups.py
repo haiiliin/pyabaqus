@@ -1,6 +1,8 @@
 from abaqusConstants import *
 from .Leaf import Leaf
 
+from __init__ import *
+
 
 class LeafFromOdbElementLayups(Leaf):
     """The LeafFromOdbElementLayups object can be used whenever a Leaf object is expected as an
@@ -25,8 +27,8 @@ class LeafFromOdbElementLayups(Leaf):
 
     """
 
-    # A SymbolicConstant specifying the leaf type. Possible values are EMPTY_LEAF, 
-    # DEFAULT_MODEL, ALL_ELEMENTS, ALL_NODES, and ALL_SURFACES. 
+    # A SymbolicConstant specifying the leaf type. Possible values are EMPTY_LEAF,
+    # DEFAULT_MODEL, ALL_ELEMENTS, ALL_NODES, and ALL_SURFACES.
     leafType: SymbolicConstant = None
 
     def __init__(self, elementLayups: tuple):

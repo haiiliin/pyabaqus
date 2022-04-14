@@ -1,5 +1,7 @@
 from abaqusConstants import *
 
+from __init__ import *
+
 
 class GeometryDisplayOptions:
     """The GeometryDisplayOptions object stores settings that specify how assemblies are to be
@@ -16,12 +18,17 @@ class GeometryDisplayOptions:
             session.viewports[name].partDisplay.geometryOptions
 
     """
-
-    def setValues(self, geometryEdgesInShaded: Boolean = ON, geometryHiddenEdges: Boolean = OFF,
-                  geometrySilhouetteEdges: Boolean = ON, datumAxes: Boolean = ON,
-                  datumCoordSystems: Boolean = ON, datumPlanes: Boolean = ON,
-                  referencePointLabels: Boolean = ON, referencePointSymbols: Boolean = ON,
-                  referenceRepresentation: Boolean = OFF, referenceRepTranslucency: Boolean = ON):
+    def setValues(self,
+                  geometryEdgesInShaded: Boolean = ON,
+                  geometryHiddenEdges: Boolean = OFF,
+                  geometrySilhouetteEdges: Boolean = ON,
+                  datumAxes: Boolean = ON,
+                  datumCoordSystems: Boolean = ON,
+                  datumPlanes: Boolean = ON,
+                  referencePointLabels: Boolean = ON,
+                  referencePointSymbols: Boolean = ON,
+                  referenceRepresentation: Boolean = OFF,
+                  referenceRepTranslucency: Boolean = ON):
         """This method modifies the GeometryDisplayOptions object.
         
         Parameters

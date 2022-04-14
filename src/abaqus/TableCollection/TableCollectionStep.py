@@ -1,6 +1,8 @@
 from ..Step.StepBase import StepBase
 from ..TableCollection.ActivateElements import ActivateElements
 
+from __init__ import *
+
 
 class TableCollectionStep(StepBase):
     """The Step object stores the parameters that determine the context of the step. The Step
@@ -18,8 +20,10 @@ class TableCollectionStep(StepBase):
            mdb.models[name].steps[name]
 
     """
-
-    def ActivateElements(self, tableCollection: str, activation: str, eigenTimeConst: str = '',
+    def ActivateElements(self,
+                         tableCollection: str,
+                         activation: str,
+                         eigenTimeConst: str = '',
                          expansionTimeConstant: str = '') -> ActivateElements:
         """This method creates an ActivateElements object.
 
@@ -49,6 +53,8 @@ class TableCollectionStep(StepBase):
         elements: ActivateElements
             An ActivateElements object.
         """
-        self.activateElements['activation'] = activateElements = ActivateElements(tableCollection, activation,
-                                                                                  eigenTimeConst, expansionTimeConstant)
+        self.activateElements[
+            'activation'] = activateElements = ActivateElements(
+                tableCollection, activation, eigenTimeConst,
+                expansionTimeConstant)
         return activateElements

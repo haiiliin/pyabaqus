@@ -1,5 +1,7 @@
 from abaqusConstants import *
 
+from __init__ import *
+
 
 class ConstraintDisplayOptions:
     """The ConstraintDisplayOptions object stores settings that specify how assemblies are to
@@ -15,9 +17,11 @@ class ConstraintDisplayOptions:
             session.viewports[name].layers[name].assemblyDisplay.constraintOptions
 
     """
-
-    def setValues(self, constraintEquation: Boolean = ON, tieConstraint: Boolean = ON,
-                  rigidBodyConstraint: Boolean = ON, displayBodyConstraint: Boolean = ON,
+    def setValues(self,
+                  constraintEquation: Boolean = ON,
+                  tieConstraint: Boolean = ON,
+                  rigidBodyConstraint: Boolean = ON,
+                  displayBodyConstraint: Boolean = ON,
                   couplingConstrain: Boolean = ON):
         """This method modifies the ConstraintDisplayOptions object.
         

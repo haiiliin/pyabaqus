@@ -1,3 +1,5 @@
+from __init__ import *
+
 
 class Hysteresis:
     """The Hysteresis object specifies the creep part of the material model for the hysteretic
@@ -24,7 +26,6 @@ class Hysteresis:
         - HYSTERESIS
 
     """
-
     def __init__(self, table: tuple):
         """This method creates a Hysteresis object.
 

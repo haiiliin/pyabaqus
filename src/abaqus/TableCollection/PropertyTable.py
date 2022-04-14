@@ -1,6 +1,8 @@
 from abaqusConstants import *
 from .PropertyTableData import PropertyTableData
 
+from __init__ import *
+
 
 class PropertyTable:
     """A PropertyTable is an object that is used to define the container that encapsulates the
@@ -29,8 +31,10 @@ class PropertyTable:
 
     """
 
-    # A repository of PropertyTableData. Specifies all the propertyTableData in PropertyTable 
-    propertyTableDatas: dict[str, PropertyTableData] = dict[str, PropertyTableData]()
+    # A repository of PropertyTableData. Specifies all the propertyTableData in PropertyTable
+    propertyTableDatas: dict[str,
+                             PropertyTableData] = dict[str,
+                                                       PropertyTableData]()
 
     def __init__(self, name: str, properties: str, variables: str = ''):
         """This method creates a PropertyTable object.
@@ -81,9 +85,14 @@ class PropertyTable:
         """
         pass
 
-    def PropertyTableData(self, label: str = '', regularize: SymbolicConstant = None,
-                          extrapolate: SymbolicConstant = None, isTemp: Boolean = OFF, fieldNums: int = None,
-                          regularizeTolerance: str = '', data: str = '') -> PropertyTableData:
+    def PropertyTableData(self,
+                          label: str = '',
+                          regularize: SymbolicConstant = None,
+                          extrapolate: SymbolicConstant = None,
+                          isTemp: Boolean = OFF,
+                          fieldNums: int = None,
+                          regularizeTolerance: str = '',
+                          data: str = '') -> PropertyTableData:
         """This method creates a PropertyTableData object.
 
         Notes
@@ -121,6 +130,7 @@ class PropertyTable:
         ------
             RangeError.
         """
-        self.propertyTableDatas[label] = propertyTableData = PropertyTableData(label, regularize, extrapolate, isTemp,
-                                                                               fieldNums, regularizeTolerance, data)
+        self.propertyTableDatas[label] = propertyTableData = PropertyTableData(
+            label, regularize, extrapolate, isTemp, fieldNums,
+            regularizeTolerance, data)
         return propertyTableData

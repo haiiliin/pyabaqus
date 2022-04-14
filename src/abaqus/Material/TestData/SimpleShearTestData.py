@@ -1,3 +1,6 @@
+from __init__ import *
+
+
 class SimpleShearTestData:
     """The SimpleShearTestData object provides simple shear test data.
 
@@ -21,7 +24,6 @@ class SimpleShearTestData:
         - SIMPLE SHEAR TEST DATA
 
     """
-
     def __init__(self, table: tuple):
         """This method creates a SimpleShearTestData object.
 

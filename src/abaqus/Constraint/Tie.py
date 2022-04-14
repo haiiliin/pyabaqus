@@ -2,6 +2,8 @@ from abaqusConstants import *
 from .Constraint import Constraint
 from ..Region.Region import Region
 
+from __init__ import *
+
 
 class Tie(Constraint):
     """The Tie object defines two surfaces to be tied together for the duration of a
@@ -28,14 +30,21 @@ class Tie(Constraint):
 
     """
 
-    # A Boolean specifying whether the constraint is suppressed or not. The default value is 
-    # OFF. 
+    # A Boolean specifying whether the constraint is suppressed or not. The default value is
+    # OFF.
     suppressed: Boolean = OFF
 
-    def __init__(self, name: str, main: Region, secondary: Region, adjust: Boolean = ON,
-                 positionToleranceMethod: SymbolicConstant = COMPUTED, positionTolerance: float = 0,
-                 tieRotations: Boolean = ON, constraintRatioMethod: SymbolicConstant = DEFAULT,
-                 constraintRatio: float = 0, constraintEnforcement: SymbolicConstant = SOLVER_DEFAULT,
+    def __init__(self,
+                 name: str,
+                 main: Region,
+                 secondary: Region,
+                 adjust: Boolean = ON,
+                 positionToleranceMethod: SymbolicConstant = COMPUTED,
+                 positionTolerance: float = 0,
+                 tieRotations: Boolean = ON,
+                 constraintRatioMethod: SymbolicConstant = DEFAULT,
+                 constraintRatio: float = 0,
+                 constraintEnforcement: SymbolicConstant = SOLVER_DEFAULT,
                  thickness: Boolean = ON):
         """This method creates a Tie object.
 
@@ -95,10 +104,15 @@ class Tie(Constraint):
         """
         pass
 
-    def setValues(self, adjust: Boolean = ON, positionToleranceMethod: SymbolicConstant = COMPUTED,
-                  positionTolerance: float = 0, tieRotations: Boolean = ON,
-                  constraintRatioMethod: SymbolicConstant = DEFAULT, constraintRatio: float = 0,
-                  constraintEnforcement: SymbolicConstant = SOLVER_DEFAULT, thickness: Boolean = ON):
+    def setValues(self,
+                  adjust: Boolean = ON,
+                  positionToleranceMethod: SymbolicConstant = COMPUTED,
+                  positionTolerance: float = 0,
+                  tieRotations: Boolean = ON,
+                  constraintRatioMethod: SymbolicConstant = DEFAULT,
+                  constraintRatio: float = 0,
+                  constraintEnforcement: SymbolicConstant = SOLVER_DEFAULT,
+                  thickness: Boolean = ON):
         """This method modifies the Tie object.
         
         Parameters

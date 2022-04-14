@@ -2,6 +2,8 @@ import typing
 
 from abaqusConstants import *
 
+from __init__ import *
+
 
 class Movie:
     """The Movie object is used to store values and attributes associated with a movie file.
@@ -31,24 +33,31 @@ class Movie:
 
     """
 
-    # An Int specifying the width of the movie in pixels. 
+    # An Int specifying the width of the movie in pixels.
     width: int = None
 
-    # An Int specifying the height of the movie in pixels. 
+    # An Int specifying the height of the movie in pixels.
     height: int = None
 
-    # An Int specifying the total number of frames on the movie file. 
+    # An Int specifying the total number of frames on the movie file.
     numFrames: int = None
 
-    # A Float specifying the duration of the movie in seconds. 
+    # A Float specifying the duration of the movie in seconds.
     duration: float = None
 
-    # An Int specifying the memory taken by the movie frames as selected. 
+    # An Int specifying the memory taken by the movie frames as selected.
     memory: int = None
 
-    def __init__(self, name: str, fileName: str, startFrame: int = 0, endFrame: int = None,
-                 timelineStartFrame: int = 0, timelineEndFrame: int = None, timelineStartTime: float = 0,
-                 timelineEndTime: typing.Union[SymbolicConstant, float] = END_FRAME_TIME):
+    def __init__(self,
+                 name: str,
+                 fileName: str,
+                 startFrame: int = 0,
+                 endFrame: int = None,
+                 timelineStartFrame: int = 0,
+                 timelineEndFrame: int = None,
+                 timelineStartTime: float = 0,
+                 timelineEndTime: typing.Union[SymbolicConstant,
+                                               float] = END_FRAME_TIME):
         """This method creates a Movie object from the contents of the specified file.
 
         Notes
@@ -104,9 +113,14 @@ class Movie:
         """
         pass
 
-    def setValues(self, startFrame: int = 0, endFrame: int = None, timelineStartFrame: int = 0,
-                  timelineEndFrame: int = None, timelineStartTime: float = 0,
-                  timelineEndTime: typing.Union[SymbolicConstant, float] = END_FRAME_TIME):
+    def setValues(self,
+                  startFrame: int = 0,
+                  endFrame: int = None,
+                  timelineStartFrame: int = 0,
+                  timelineEndFrame: int = None,
+                  timelineStartTime: float = 0,
+                  timelineEndTime: typing.Union[SymbolicConstant,
+                                                float] = END_FRAME_TIME):
         """This method modifies the Movie object.
         
         Parameters

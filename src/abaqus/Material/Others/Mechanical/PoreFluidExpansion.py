@@ -1,5 +1,7 @@
 from abaqusConstants import *
 
+from __init__ import *
+
 
 class PoreFluidExpansion:
     """The PoreFluidExpansion object specifies the thermal expansion coefficient for a
@@ -27,8 +29,10 @@ class PoreFluidExpansion:
         - EXPANSION
 
     """
-
-    def __init__(self, table: tuple, zero: float = 0, temperatureDependency: Boolean = OFF,
+    def __init__(self,
+                 table: tuple,
+                 zero: float = 0,
+                 temperatureDependency: Boolean = OFF,
                  dependencies: int = 0):
         """This method creates a PoreFluidExpansion object.
 

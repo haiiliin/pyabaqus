@@ -1,7 +1,9 @@
 from .Profile import Profile
 
-class IProfile(Profile):
+from __init__ import *
 
+
+class IProfile(Profile):
     """The IProfile object defines the properties of an I profile. 
     The IProfile object is derived from the Profile object. 
 
@@ -20,8 +22,8 @@ class IProfile(Profile):
         - BEAM SECTION
 
     """
-
-    def __init__(self, name: str, l: float, h: float, b1: float, b2: float, t1: float, t2: float, t3: float):
+    def __init__(self, name: str, l: float, h: float, b1: float, b2: float,
+                 t1: float, t2: float, t3: float):
         """This method creates an IProfile object.
 
         Notes
@@ -75,4 +77,3 @@ class IProfile(Profile):
             
         """
         pass
-

@@ -1,5 +1,7 @@
 from ..ConstrainedSketchBase import ConstrainedSketchBase
 
+from __init__ import *
+
 
 class ConstrainedSketchParameterModel(ConstrainedSketchBase):
     """A ConstrainedSketch object contains the entities that are used to create a sketch. The
@@ -17,8 +19,11 @@ class ConstrainedSketchParameterModel(ConstrainedSketchBase):
             mdb.models[name].sketches[name]
 
     """
-
-    def ConstrainedSketchParameter(self, name: str, path: str = '', expression: str = '', previousParameter: str = ''):
+    def ConstrainedSketchParameter(self,
+                                   name: str,
+                                   path: str = '',
+                                   expression: str = '',
+                                   previousParameter: str = ''):
         """This method creates a parameter and optionally associates a dimension with this
         parameter.
 

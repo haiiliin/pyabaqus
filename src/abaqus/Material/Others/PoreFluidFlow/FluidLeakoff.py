@@ -1,5 +1,7 @@
 from abaqusConstants import *
 
+from __init__ import *
+
 
 class FluidLeakoff:
     """The FluidLeakoff object specifies leak-off coefficients for pore pressure cohesive
@@ -29,9 +31,11 @@ class FluidLeakoff:
         - FLUID LEAKOFF
 
     """
-
-    def __init__(self, temperatureDependency: Boolean = OFF, dependencies: int = 0,
-                 type: SymbolicConstant = COEFFICIENTS, table: tuple = ()):
+    def __init__(self,
+                 temperatureDependency: Boolean = OFF,
+                 dependencies: int = 0,
+                 type: SymbolicConstant = COEFFICIENTS,
+                 table: tuple = ()):
         """This method creates a FluidLeakoff object.
 
         Notes

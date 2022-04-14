@@ -1,3 +1,6 @@
+from __init__ import *
+
+
 class Stream:
     """TheStream object defines a set of streamlines in fluid mechanics.
 
@@ -11,8 +14,12 @@ class Stream:
         session.streams[name]
 
     """
-
-    def __init__(self, name: str, numPointsOnRake: str, pointA: tuple = (), pointB: tuple = (), path: str = ''):
+    def __init__(self,
+                 name: str,
+                 numPointsOnRake: str,
+                 pointA: tuple = (),
+                 pointB: tuple = (),
+                 path: str = ''):
         """This method creates aStream object and places it in the streams repository.
 
         Notes

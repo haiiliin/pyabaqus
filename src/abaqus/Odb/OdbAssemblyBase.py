@@ -11,6 +11,8 @@ from ..Assembly.ConnectorOrientationArray import ConnectorOrientationArray
 from ..Property.SectionAssignmentArray import SectionAssignmentArray
 from ..Section.Section import Section
 
+from __init__ import *
+
 
 class OdbAssemblyBase:
     """The OdbAssembly object has no constructor; it is created automatically when an Odb
@@ -53,42 +55,48 @@ class OdbAssemblyBase:
 
     """
 
-    # A repository of OdbInstance objects. 
+    # A repository of OdbInstance objects.
     instances: dict[str, OdbInstance] = dict[str, OdbInstance]()
 
-    # A repository of OdbSet objects specifying node sets. 
+    # A repository of OdbSet objects specifying node sets.
     nodeSets: dict[str, OdbSet] = dict[str, OdbSet]()
 
-    # A repository of OdbSet objects specifying element sets. 
+    # A repository of OdbSet objects specifying element sets.
     elementSets: dict[str, OdbSet] = dict[str, OdbSet]()
 
-    # A repository of OdbSet objects specifying surfaces. 
+    # A repository of OdbSet objects specifying surfaces.
     surfaces: dict[str, OdbSet] = dict[str, OdbSet]()
 
-    # An OdbMeshNodeArray object. 
+    # An OdbMeshNodeArray object.
     nodes: OdbMeshNodeArray = OdbMeshNodeArray()
 
-    # An OdbMeshElementArray object. 
+    # An OdbMeshElementArray object.
     elements: OdbMeshElementArray = OdbMeshElementArray()
 
-    # A repository of OdbDatumCsys objects. 
+    # A repository of OdbDatumCsys objects.
     datumCsyses: dict[str, OdbDatumCsys] = dict[str, OdbDatumCsys]()
 
-    # A SectionAssignmentArray object. 
+    # A SectionAssignmentArray object.
     sectionAssignments: SectionAssignmentArray = SectionAssignmentArray()
 
-    # An OdbRigidBodyArray object. 
+    # An OdbRigidBodyArray object.
     rigidBodies: OdbRigidBodyArray = OdbRigidBodyArray()
 
-    # An OdbPretensionSectionArray object. 
+    # An OdbPretensionSectionArray object.
     pretensionSections: OdbPretensionSectionArray = OdbPretensionSectionArray()
 
-    # A ConnectorOrientationArray object. 
-    connectorOrientations: ConnectorOrientationArray = ConnectorOrientationArray()
+    # A ConnectorOrientationArray object.
+    connectorOrientations: ConnectorOrientationArray = ConnectorOrientationArray(
+    )
 
-    def ConnectorOrientation(self, region: str, localCsys1: OdbDatumCsys = OdbDatumCsys(),
-                             axis1: SymbolicConstant = AXIS_1, angle1: float = 0, orient2sameAs1: Boolean = OFF,
-                             localCsys2: OdbDatumCsys = OdbDatumCsys(), axis2: SymbolicConstant = AXIS_1,
+    def ConnectorOrientation(self,
+                             region: str,
+                             localCsys1: OdbDatumCsys = OdbDatumCsys(),
+                             axis1: SymbolicConstant = AXIS_1,
+                             angle1: float = 0,
+                             orient2sameAs1: Boolean = OFF,
+                             localCsys2: OdbDatumCsys = OdbDatumCsys(),
+                             axis2: SymbolicConstant = AXIS_1,
                              angle2: float = 0):
         """This method assigns a connector orientation to a connector region.
         
@@ -145,8 +153,13 @@ class OdbAssemblyBase:
         """
         pass
 
-    def addElements(self, labels: tuple, connectivity: tuple, instanceNames: tuple, type: str,
-                    elementSetName: str = '', sectionCategory: SectionCategory = None):
+    def addElements(self,
+                    labels: tuple,
+                    connectivity: tuple,
+                    instanceNames: tuple,
+                    type: str,
+                    elementSetName: str = '',
+                    sectionCategory: SectionCategory = None):
         """This method is used to define elements using nodes defined at the OdbAssembly and/or
         OdbInstance level. For connector elements connected to ground, specify the lone node in
         the connectivity. The position of the ground node cannot be specified. This is a
@@ -181,7 +194,10 @@ class OdbAssemblyBase:
         """
         pass
 
-    def addNodes(self, labels: tuple, coordinates: tuple, nodeSetName: str = None):
+    def addNodes(self,
+                 labels: tuple,
+                 coordinates: tuple,
+                 nodeSetName: str = None):
         """This method adds nodes to the OdbAssembly object using node labels and coordinates.
         Warning:Adding nodes not in ascending order of their labels may cause Abaqus/Viewer to
         plot contours incorrectly.
@@ -204,8 +220,14 @@ class OdbAssemblyBase:
         """
         pass
 
-    def RigidBody(self, referenceNode: str, position: str = INPUT, isothermal: Boolean = OFF, elset: str = '',
-                  pinNodes: str = '', tieNodes: str = '', analyticSurface: str = ''):
+    def RigidBody(self,
+                  referenceNode: str,
+                  position: str = INPUT,
+                  isothermal: Boolean = OFF,
+                  elset: str = '',
+                  pinNodes: str = '',
+                  tieNodes: str = '',
+                  analyticSurface: str = ''):
         """This method defines an OdbRigidBody on the assembly.
         
         Parameters

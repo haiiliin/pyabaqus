@@ -2,6 +2,8 @@ from abaqusConstants import *
 from ..TableCollection.ParameterColumn import ParameterColumn
 from ..TableCollection.ParameterColumnArray import ParameterColumnArray
 
+from __init__ import *
+
 
 class ParameterTable:
     """A ParameterTable is an object that is used to define the containers that encapsulate
@@ -30,10 +32,10 @@ class ParameterTable:
 
     """
 
-    # A ParameterColumnArray specifying all the columns in the ParameterTable. 
+    # A ParameterColumnArray specifying all the columns in the ParameterTable.
     columns: ParameterColumnArray = ParameterColumnArray()
 
-    # A DataTableArray specifying all the dataTables in the ParameterTable. 
+    # A DataTableArray specifying all the dataTables in the ParameterTable.
     dataTables: str = ''
 
     def __init__(self, name: str):
@@ -59,7 +61,11 @@ class ParameterTable:
         """
         pass
 
-    def Column(self, type: SymbolicConstant, unit: str = '', description: str = '', default: str = '',
+    def Column(self,
+               type: SymbolicConstant,
+               unit: str = '',
+               description: str = '',
+               default: str = '',
                allowedValues: str = '') -> ParameterColumn:
         """ParameterColumn is a constructor method that creates a ParameterColumn object and stores
         it in the array data structure. It is accessible from the ParameterTable object using a
@@ -96,6 +102,7 @@ class ParameterTable:
         ------
             Incompatible data are given.
         """
-        parameterColumn = ParameterColumn(type, unit, description, default, allowedValues)
+        parameterColumn = ParameterColumn(type, unit, description, default,
+                                          allowedValues)
         self.columns.append(parameterColumn)
         return parameterColumn

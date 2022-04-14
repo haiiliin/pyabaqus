@@ -2,6 +2,8 @@ from abaqusConstants import *
 from .GeometricRestriction import GeometricRestriction
 from ..Region.Region import Region
 
+from __init__ import *
+
 
 class ShapePointSymmetry(GeometricRestriction):
     """The ShapePointSymmetry object defines a shape point symmetry geometric restriction.
@@ -17,11 +19,15 @@ class ShapePointSymmetry(GeometricRestriction):
         mdb.models[name].optimizationTasks[name].geometricRestrictions[name]
 
     """
-
-    def __init__(self, name: str, region: Region, csys: int = None,
+    def __init__(self,
+                 name: str,
+                 region: Region,
+                 csys: int = None,
                  mainPointDetermination: SymbolicConstant = MAXIMUM,
-                 presumeFeasibleRegionAtStart: Boolean = ON, tolerance1: float = 0,
-                 tolerance2: float = 0, tolerance3: float = 0):
+                 presumeFeasibleRegionAtStart: Boolean = ON,
+                 tolerance1: float = 0,
+                 tolerance2: float = 0,
+                 tolerance3: float = 0):
         """This method creates a ShapePointSymmetry object.
 
         Notes
@@ -67,9 +73,13 @@ class ShapePointSymmetry(GeometricRestriction):
         super().__init__()
         pass
 
-    def setValues(self, csys: int = None, mainPointDetermination: SymbolicConstant = MAXIMUM,
-                  presumeFeasibleRegionAtStart: Boolean = ON, tolerance1: float = 0,
-                  tolerance2: float = 0, tolerance3: float = 0):
+    def setValues(self,
+                  csys: int = None,
+                  mainPointDetermination: SymbolicConstant = MAXIMUM,
+                  presumeFeasibleRegionAtStart: Boolean = ON,
+                  tolerance1: float = 0,
+                  tolerance2: float = 0,
+                  tolerance3: float = 0):
         """This method modifies the ShapePointSymmetry object.
         
         Parameters

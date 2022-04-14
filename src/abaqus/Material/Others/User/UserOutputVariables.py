@@ -1,3 +1,6 @@
+from __init__ import *
+
+
 class UserOutputVariables:
     """The UserOutputVariables object specifies the number of user-defined output variables.
 
@@ -16,7 +19,6 @@ class UserOutputVariables:
         - USER OUTPUT VARIABLES
 
     """
-
     def __init__(self, n: int = 0):
         """This method creates a UserOutputVariables object.
 

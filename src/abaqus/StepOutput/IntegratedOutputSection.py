@@ -1,6 +1,8 @@
 from abaqusConstants import *
 from ..Region.Region import Region
 
+from __init__ import *
+
 
 class IntegratedOutputSection:
     """The IntegratedOutputSection object specifies parameters used for integrated output.
@@ -15,10 +17,14 @@ class IntegratedOutputSection:
         mdb.models[name].integratedOutputSections[name]
 
     """
-
-    def __init__(self, name: str, surface: Region = Region(), refPoint: SymbolicConstant = None,
-                 refPointAtCenter: Boolean = OFF, refPointMotion: SymbolicConstant = INDEPENDENT,
-                 localCsys: str = None, projectOrientation: Boolean = OFF):
+    def __init__(self,
+                 name: str,
+                 surface: Region = Region(),
+                 refPoint: SymbolicConstant = None,
+                 refPointAtCenter: Boolean = OFF,
+                 refPointMotion: SymbolicConstant = INDEPENDENT,
+                 localCsys: str = None,
+                 projectOrientation: Boolean = OFF):
         """This method creates an IntegratedOutputSection object.
 
         Notes
@@ -67,9 +73,13 @@ class IntegratedOutputSection:
         """
         pass
 
-    def setValues(self, surface: Region = Region(), refPoint: SymbolicConstant = None,
-                  refPointAtCenter: Boolean = OFF, refPointMotion: SymbolicConstant = INDEPENDENT,
-                  localCsys: str = None, projectOrientation: Boolean = OFF):
+    def setValues(self,
+                  surface: Region = Region(),
+                  refPoint: SymbolicConstant = None,
+                  refPointAtCenter: Boolean = OFF,
+                  refPointMotion: SymbolicConstant = INDEPENDENT,
+                  localCsys: str = None,
+                  projectOrientation: Boolean = OFF):
         """This method modifies the IntegratedOutputSection object.
         
         Parameters

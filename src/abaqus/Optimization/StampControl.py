@@ -2,6 +2,8 @@ from abaqusConstants import *
 from .GeometricRestriction import GeometricRestriction
 from ..Region.Region import Region
 
+from __init__ import *
+
 
 class StampControl(GeometricRestriction):
     """The StampControl object defines a stamp control geometric restriction.
@@ -17,12 +19,19 @@ class StampControl(GeometricRestriction):
         mdb.models[name].optimizationTasks[name].geometricRestrictions[name]
 
     """
-
-    def __init__(self, name: str, clientDirection: tuple, region: Region, csys: int = None,
-                 drawAngle: float = 0, mainPoint: str = None,
+    def __init__(self,
+                 name: str,
+                 clientDirection: tuple,
+                 region: Region,
+                 csys: int = None,
+                 drawAngle: float = 0,
+                 mainPoint: str = None,
                  mainPointDetermination: SymbolicConstant = MAXIMUM,
-                 presumeFeasibleRegionAtStart: Boolean = ON, tolerance1: float = 0,
-                 tolerance2: float = 0, tolerance3: float = 0, undercutTolerance: float = 0):
+                 presumeFeasibleRegionAtStart: Boolean = ON,
+                 tolerance1: float = 0,
+                 tolerance2: float = 0,
+                 tolerance3: float = 0,
+                 undercutTolerance: float = 0):
         """This method creates a StampControl object.
 
         Notes
@@ -78,10 +87,16 @@ class StampControl(GeometricRestriction):
         super().__init__()
         pass
 
-    def setValues(self, csys: int = None, drawAngle: float = 0, mainPoint: str = None,
+    def setValues(self,
+                  csys: int = None,
+                  drawAngle: float = 0,
+                  mainPoint: str = None,
                   mainPointDetermination: SymbolicConstant = MAXIMUM,
-                  presumeFeasibleRegionAtStart: Boolean = ON, tolerance1: float = 0,
-                  tolerance2: float = 0, tolerance3: float = 0, undercutTolerance: float = 0):
+                  presumeFeasibleRegionAtStart: Boolean = ON,
+                  tolerance1: float = 0,
+                  tolerance2: float = 0,
+                  tolerance3: float = 0,
+                  undercutTolerance: float = 0):
         """This method modifies the StampControl object.
         
         Parameters

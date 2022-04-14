@@ -33,10 +33,15 @@ from ..Region.Stringer import Stringer
 from ..Region.Surface import Surface
 from ..Sketcher.ConstrainedSketch import ConstrainedSketch
 
-
 # prevent circular imports
+from __init__ import *
+
+
 class PartInstance:
     pass
+
+
+from __init__ import *
 
 
 class PartBase(Feature):
@@ -152,120 +157,123 @@ class PartBase(Feature):
 
     """
 
-    # A Boolean specifying the validity of the geometry of the part. The value is computed, 
-    # but it can be set to ON to perform feature and mesh operations on an invalid part. There 
-    # is no guarantee that such operations will work if the part was originally invalid. 
+    # A Boolean specifying the validity of the geometry of the part. The value is computed,
+    # but it can be set to ON to perform feature and mesh operations on an invalid part. There
+    # is no guarantee that such operations will work if the part was originally invalid.
     geometryValidity: Boolean = OFF
 
-    # An Int specifying that feature parameters have been modified but that the part has not 
-    # been regenerated. Possible values are 0 and 1. 
+    # An Int specifying that feature parameters have been modified but that the part has not
+    # been regenerated. Possible values are 0 and 1.
     isOutOfDate: int = None
 
-    # A Float specifying when the part was last modified. 
+    # A Float specifying when the part was last modified.
     timeStamp: float = None
 
-    # A VertexArray object specifying all the vertices in the part. 
+    # A VertexArray object specifying all the vertices in the part.
     vertices: VertexArray = VertexArray([])
 
-    # An IgnoredVertexArray object specifying all the ignored vertices in the part. 
+    # An IgnoredVertexArray object specifying all the ignored vertices in the part.
     ignoredVertices: IgnoredVertexArray = IgnoredVertexArray()
 
-    # An EdgeArray object specifying all the edges in the part. 
+    # An EdgeArray object specifying all the edges in the part.
     edges: EdgeArray = EdgeArray([])
 
-    # An IgnoredEdgeArray object specifying all the ignored edges in the part. 
+    # An IgnoredEdgeArray object specifying all the ignored edges in the part.
     ignoredEdges: IgnoredEdgeArray = IgnoredEdgeArray()
 
-    # A FaceArray object specifying all the faces in the part. 
+    # A FaceArray object specifying all the faces in the part.
     faces: FaceArray = FaceArray([])
 
-    # A CellArray object specifying all the cells in the part. 
+    # A CellArray object specifying all the cells in the part.
     cells: CellArray = CellArray([])
 
-    # A repository of Feature objects specifying all the features in the part. 
+    # A repository of Feature objects specifying all the features in the part.
     features: dict[str, Feature] = dict[str, Feature]()
 
-    # A repository of Feature objects specifying all Feature objects in the part. The Feature 
-    # objects in the featuresById repository are the same as the Feature objects in the 
+    # A repository of Feature objects specifying all Feature objects in the part. The Feature
+    # objects in the featuresById repository are the same as the Feature objects in the
     # features' repository. However, the key to the objects in the featuresById repository is
-    # an integer specifying the *ID*, whereas the key to the objects in the features 
-    # repository is a string specifying the *name*. 
+    # an integer specifying the *ID*, whereas the key to the objects in the features
+    # repository is a string specifying the *name*.
     featuresById: dict[str, Feature] = dict[str, Feature]()
 
-    # A repository of Datum objects specifying all the datums in the part. 
+    # A repository of Datum objects specifying all the datums in the part.
     datums: list[Datum] = list[Datum]()
 
-    # A MeshElementArray object specifying all the elements in the part. 
+    # A MeshElementArray object specifying all the elements in the part.
     elements: MeshElementArray = MeshElementArray([])
 
-    # A repository of MeshFace objects specifying all the element faces in the part. For a 
-    # given element and a given face index within that element, the corresponding MeshFace 
-    # object can be retrieved from the repository by using the key calculated as (i*8 + j), 
-    # where i and j are zero-based element and face indices, respectively. 
+    # A repository of MeshFace objects specifying all the element faces in the part. For a
+    # given element and a given face index within that element, the corresponding MeshFace
+    # object can be retrieved from the repository by using the key calculated as (i*8 + j),
+    # where i and j are zero-based element and face indices, respectively.
     elemFaces: dict[str, MeshFace] = dict[str, MeshFace]()
 
-    # A MeshFaceArray object specifying all the unique element faces in the part. 
+    # A MeshFaceArray object specifying all the unique element faces in the part.
     elementFaces: MeshFaceArray = MeshFaceArray([])
 
-    # A MeshNodeArray object specifying all the nodes in the part. 
+    # A MeshNodeArray object specifying all the nodes in the part.
     nodes: MeshNodeArray = MeshNodeArray([])
 
-    # A MeshNodeArray object specifying all the retained nodes in the substructure part. 
+    # A MeshNodeArray object specifying all the retained nodes in the substructure part.
     retainedNodes: MeshNodeArray = MeshNodeArray([])
 
-    # A repository of Set objects specifying for more information, see Set. 
+    # A repository of Set objects specifying for more information, see Set.
     sets: dict[str, Set] = dict[str, Set]()
 
-    # A repository of Set objects specifying the contents of the *allSets* repository is the 
-    # same as the contents of the *sets* repository. 
+    # A repository of Set objects specifying the contents of the *allSets* repository is the
+    # same as the contents of the *sets* repository.
     allSets: dict[str, Set] = dict[str, Set]()
 
-    # A repository of Set objects specifying picked regions. 
+    # A repository of Set objects specifying picked regions.
     allInternalSets: dict[str, Set] = dict[str, Set]()
 
-    # A repository of Surface objects specifying for more information, see Surface. 
+    # A repository of Surface objects specifying for more information, see Surface.
     surfaces: dict[str, Surface] = dict[str, Surface]()
 
-    # A repository of Surface objects specifying the contents of the *allSurfaces* repository 
-    # is the same as the contents of the *surfaces* repository. 
+    # A repository of Surface objects specifying the contents of the *allSurfaces* repository
+    # is the same as the contents of the *surfaces* repository.
     allSurfaces: dict[str, Surface] = dict[str, Surface]()
 
-    # A repository of Surface objects specifying picked regions. 
+    # A repository of Surface objects specifying picked regions.
     allInternalSurfaces: dict[str, Surface] = dict[str, Surface]()
 
-    # A repository of Skin objects specifying the skins created on the part. 
+    # A repository of Skin objects specifying the skins created on the part.
     skins: dict[str, Skin] = dict[str, Skin]()
 
-    # A repository of Stringer objects specifying the stringers created on the part. 
+    # A repository of Stringer objects specifying the stringers created on the part.
     stringers: dict[str, Stringer] = dict[str, Stringer]()
 
-    # A repository of ReferencePoint objects. 
+    # A repository of ReferencePoint objects.
     referencePoints: ReferencePoints = ReferencePoints()
 
-    # An EngineeringFeature object. 
+    # An EngineeringFeature object.
     engineeringFeatures: EngineeringFeature = EngineeringFeature()
 
-    # A SectionAssignmentArray object. 
+    # A SectionAssignmentArray object.
     sectionAssignments: SectionAssignmentArray = SectionAssignmentArray()
 
-    # A MaterialOrientationArray object. 
+    # A MaterialOrientationArray object.
     materialOrientations: MaterialOrientationArray = MaterialOrientationArray()
 
-    # A repository of CompositeLayup objects. 
+    # A repository of CompositeLayup objects.
     compositeLayups: dict[str, CompositeLayup] = dict[str, CompositeLayup]()
 
-    # A repository of MeshEdge objects specifying all the element edges in the part. For a 
-    # given element and a given edge index on a given face within that element, the 
-    # corresponding MeshEdge object can be retrieved from the repository by using the key 
-    # calculated as (i*32 + j*4 + k), where i, j, and k are zero-based element, face, and edge 
-    # indices, respectively. 
+    # A repository of MeshEdge objects specifying all the element edges in the part. For a
+    # given element and a given edge index on a given face within that element, the
+    # corresponding MeshEdge object can be retrieved from the repository by using the key
+    # calculated as (i*32 + j*4 + k), where i, j, and k are zero-based element, face, and edge
+    # indices, respectively.
     elemEdges: dict[str, MeshEdge] = dict[str, MeshEdge]()
 
-    # A MeshEdgeArray object specifying all the unique element edges in the part. 
+    # A MeshEdgeArray object specifying all the unique element edges in the part.
     elementEdges: MeshEdgeArray = MeshEdgeArray([])
 
     @typing.overload
-    def __init__(self, name: str, dimensionality: SymbolicConstant, type: SymbolicConstant,
+    def __init__(self,
+                 name: str,
+                 dimensionality: SymbolicConstant,
+                 type: SymbolicConstant,
                  twist: Boolean = OFF):
         """This method creates a Part object and places it in the parts repository.
 
@@ -300,8 +308,13 @@ class PartBase(Feature):
         pass
 
     @typing.overload
-    def __init__(self, name: str, objectToCopy: str, scale: float = 1, mirrorPlane: SymbolicConstant = NONE,
-                 compressFeatureList: Boolean = OFF, separate: Boolean = OFF):
+    def __init__(self,
+                 name: str,
+                 objectToCopy: str,
+                 scale: float = 1,
+                 mirrorPlane: SymbolicConstant = NONE,
+                 compressFeatureList: Boolean = OFF,
+                 separate: Boolean = OFF):
         """This method copies a Part object and places the copy in the parts repository.
 
         Notes
@@ -346,7 +359,8 @@ class PartBase(Feature):
     def __init__(self, *args, **kwargs):
         pass
 
-    def PartFromBooleanCut(self, name: str, instanceToBeCut: str, cuttingInstances: tuple[PartInstance]):
+    def PartFromBooleanCut(self, name: str, instanceToBeCut: str,
+                           cuttingInstances: tuple[PartInstance]):
         """This method creates a Part in the parts repository after subtracting or cutting the
         geometries of a group of part instances from that of a base part instance.
 
@@ -375,9 +389,14 @@ class PartBase(Feature):
         """
         pass
 
-    def PartFromBooleanMerge(self, name: str, instances: tuple[PartInstance], keepIntersections: Boolean = False,
-                             mergeNodes: SymbolicConstant = BOUNDARY_ONLY, nodeMergingTolerance: float = None,
-                             removeDuplicateElements: Boolean = ON, domain: SymbolicConstant = GEOMETRY):
+    def PartFromBooleanMerge(self,
+                             name: str,
+                             instances: tuple[PartInstance],
+                             keepIntersections: Boolean = False,
+                             mergeNodes: SymbolicConstant = BOUNDARY_ONLY,
+                             nodeMergingTolerance: float = None,
+                             removeDuplicateElements: Boolean = ON,
+                             domain: SymbolicConstant = GEOMETRY):
         """This method creates a Part in the parts repository after merging two or more part
         instances. The part instances can be either Abaqus native parts or orphan mesh parts,
         but they cannot be a combination of both.
@@ -422,7 +441,8 @@ class PartBase(Feature):
         """
         pass
 
-    def PartFromExtrude2DMesh(self, name: str, part: 'PartBase', depth: float, elementSize: float):
+    def PartFromExtrude2DMesh(self, name: str, part: 'PartBase', depth: float,
+                              elementSize: float):
         """This method creates a Part object by extruding an existing two-dimensional orphan mesh
         Part object in the positive *Z*-direction and places it in the parts repository.
 
@@ -458,11 +478,21 @@ class PartBase(Feature):
         """
         pass
 
-    def PartFromGeometryFile(self, name: str, geometryFile: AcisFile, dimensionality: SymbolicConstant,
-                             type: SymbolicConstant, bodyNum: int = 1, combine: Boolean = False,
-                             booleanSolids: Boolean = FALSE, retainBoundary: Boolean = FALSE,
-                             usePartNameFromFile: Boolean = OFF, stitchTolerance: float = 1, twist: Boolean = OFF,
-                             scale: float = 1, convertToAnalytical: int = 0, convertToPrecise: int = 0):
+    def PartFromGeometryFile(self,
+                             name: str,
+                             geometryFile: AcisFile,
+                             dimensionality: SymbolicConstant,
+                             type: SymbolicConstant,
+                             bodyNum: int = 1,
+                             combine: Boolean = False,
+                             booleanSolids: Boolean = FALSE,
+                             retainBoundary: Boolean = FALSE,
+                             usePartNameFromFile: Boolean = OFF,
+                             stitchTolerance: float = 1,
+                             twist: Boolean = OFF,
+                             scale: float = 1,
+                             convertToAnalytical: int = 0,
+                             convertToPrecise: int = 0):
         """This method creates a Part object and places it in the parts repository.
 
         Notes
@@ -539,7 +569,10 @@ class PartBase(Feature):
         """
         pass
 
-    def PartFromInstanceMesh(self, name: str, partInstances: tuple[PartInstance] = (), copyPartSets: Boolean = False,
+    def PartFromInstanceMesh(self,
+                             name: str,
+                             partInstances: tuple[PartInstance] = (),
+                             copyPartSets: Boolean = False,
                              copyAssemblySets: Boolean = False):
         """This method creates a Part object containing the mesh found in the supplied PartInstance
         objects and places the new Part object in the parts repository.
@@ -610,7 +643,8 @@ class PartBase(Feature):
         """
         pass
 
-    def PartFromMeshMirror(self, name: str, part: 'PartBase', point1: tuple, point2: tuple):
+    def PartFromMeshMirror(self, name: str, part: 'PartBase', point1: tuple,
+                           point2: tuple):
         """This method creates a Part object by mirroring an existing orphan mesh Part object about
         a specified plane and places it in the parts repository. The result is a union of the
         original and the mirrored copy. Contrast the PartFromMeshMirror method with the
@@ -654,9 +688,13 @@ class PartBase(Feature):
         """
         pass
 
-    def PartFromNodesAndElements(self, name: str, dimensionality: SymbolicConstant, type: SymbolicConstant,
+    def PartFromNodesAndElements(self,
+                                 name: str,
+                                 dimensionality: SymbolicConstant,
+                                 type: SymbolicConstant,
                                  nodes: tuple,
-                                 elements: tuple, twist: Boolean = OFF):
+                                 elements: tuple,
+                                 twist: Boolean = OFF):
         """This method creates a Part object from nodes and elements and places it in the parts
         repository.
 
@@ -699,8 +737,15 @@ class PartBase(Feature):
         """
         pass
 
-    def PartFromOdb(self, name: str, odb: str, fileName: str = '', instance: str = '', elementSet: str = '',
-                    shape: SymbolicConstant = UNDEFORMED, step: int = None, frame: int = None,
+    def PartFromOdb(self,
+                    name: str,
+                    odb: str,
+                    fileName: str = '',
+                    instance: str = '',
+                    elementSet: str = '',
+                    shape: SymbolicConstant = UNDEFORMED,
+                    step: int = None,
+                    frame: int = None,
                     twist: Boolean = OFF):
         """This method creates an orphan mesh Part object by reading an output database. The new
         part is placed in the parts repository.
@@ -768,7 +813,9 @@ class PartBase(Feature):
         """
         pass
 
-    def PartFromSection3DMeshByPlane(self, name: str, part: 'PartBase', point1: float, point2: float, point3: tuple):
+    def PartFromSection3DMeshByPlane(self, name: str, part: 'PartBase',
+                                     point1: float, point2: float,
+                                     point3: tuple):
         """This method creates a Part object by cutting an existing three-dimensional orphan mesh
         Part object by a plane and places it in the parts repository. This method is valid only
         for orphan mesh parts composed of 8-node brick elements.
@@ -816,7 +863,8 @@ class PartBase(Feature):
         """
         pass
 
-    def PartFromSubstructure(self, name: str, substructureFile: str, odbFile: str):
+    def PartFromSubstructure(self, name: str, substructureFile: str,
+                             odbFile: str):
         """This method creates a substructure Part object by reading a substructure sim file and
         places it in the parts repository.
 
@@ -852,7 +900,11 @@ class PartBase(Feature):
         """
         pass
 
-    def Part2DGeomFrom2DMesh(self, name: str, part: 'PartBase', featureAngle: float, splineCurvatureLimit: float = 90,
+    def Part2DGeomFrom2DMesh(self,
+                             name: str,
+                             part: 'PartBase',
+                             featureAngle: float,
+                             splineCurvatureLimit: float = 90,
                              twist: Boolean = OFF):
         """This method creates a geometric Part object from the outline of an existing
         two-dimensional orphan mesh Part object and places it in the parts repository. If the
@@ -921,7 +973,10 @@ class PartBase(Feature):
         """
         pass
 
-    def assignThickness(self, faces: tuple[Face], thickness: float = None, topFaces: tuple[Face] = (),
+    def assignThickness(self,
+                        faces: tuple[Face],
+                        thickness: float = None,
+                        topFaces: tuple[Face] = (),
                         bottomFaces: tuple[Face] = ()):
         """This method assigns thickness data to shell faces. The thickness can be used while
         assigning shell and membrane sections to faces.
@@ -956,7 +1011,10 @@ class PartBase(Feature):
         """
         pass
 
-    def checkGeometry(self, detailed: Boolean = OFF, reportFacetErrors: Boolean = OFF, level: int = None):
+    def checkGeometry(self,
+                      detailed: Boolean = OFF,
+                      reportFacetErrors: Boolean = OFF,
+                      level: int = None):
         """This method checks the validity of the geometry of the part and prints a count of all
         topological entities on the part (faces, edges, vertices, etc.).
         
@@ -997,7 +1055,12 @@ class PartBase(Feature):
         """
         pass
 
-    def getAngle(self, plane1: str, plane2: str, line1: str, line2: str, commonVertex: str = ''):
+    def getAngle(self,
+                 plane1: str,
+                 plane2: str,
+                 line1: str,
+                 line2: str,
+                 commonVertex: str = ''):
         """This method returns the angle between the specified entities.
         
         Parameters
@@ -1075,7 +1138,10 @@ class PartBase(Feature):
         """
         pass
 
-    def getCentroid(self, faces: tuple[Face], cells: tuple[Face], relativeAccuracy: float = 0):
+    def getCentroid(self,
+                    faces: tuple[Face],
+                    cells: tuple[Face],
+                    relativeAccuracy: float = 0):
         """Depending on the arguments provided, this method returns the following:
             - The location of the centroid of a given face or group of faces.
             - The location of the centroid of a given cell or group of cells.
@@ -1205,9 +1271,16 @@ class PartBase(Feature):
         """
         pass
 
-    def getMassProperties(self, regions: str = '', relativeAccuracy: SymbolicConstant = LOW, useMesh: Boolean = False,
-                          specifyDensity: Boolean = False, density: str = '', specifyThickness: Boolean = False,
-                          thickness: str = '', miAboutCenterOfMass: Boolean = True, miAboutPoint: tuple = ()):
+    def getMassProperties(self,
+                          regions: str = '',
+                          relativeAccuracy: SymbolicConstant = LOW,
+                          useMesh: Boolean = False,
+                          specifyDensity: Boolean = False,
+                          density: str = '',
+                          specifyThickness: Boolean = False,
+                          thickness: str = '',
+                          miAboutCenterOfMass: Boolean = True,
+                          miAboutPoint: tuple = ()):
         """This method returns the mass properties of a part or region. Only beams, trusses,
         shells, solids, point, nonstructural mass, and rotary inertia elements are supported.
         
@@ -1416,7 +1489,10 @@ class PartBase(Feature):
         """
         pass
 
-    def projectEdgesOntoSketch(self, sketch: str, edges: tuple, constrainToBackground: Boolean = True):
+    def projectEdgesOntoSketch(self,
+                               sketch: str,
+                               edges: tuple,
+                               constrainToBackground: Boolean = True):
         """This method projects the selected edges of a part onto the specified ConstrainedSketch
         object. The edges appear as sketch geometry after projection. If the plane of projection
         is not parallel to the specified edge, the resultant sketch geometry may be of a
@@ -1437,9 +1513,12 @@ class PartBase(Feature):
         """
         pass
 
-    def projectReferencesOntoSketch(self, sketch: str, filter: SymbolicConstant = ALL_EDGES,
+    def projectReferencesOntoSketch(self,
+                                    sketch: str,
+                                    filter: SymbolicConstant = ALL_EDGES,
                                     upToFeature: Feature = Feature(),
-                                    edges: tuple = (), vertices: tuple = ()):
+                                    edges: tuple = (),
+                                    vertices: tuple = ()):
         """This method projects the vertices of specified edges, and datum points from the part
         onto the specified ConstrainedSketch object. The vertices and datum points appear on the
         sketch as reference geometry.
@@ -1495,7 +1574,9 @@ class PartBase(Feature):
         """
         pass
 
-    def queryGeometry(self, relativeAccuracy: float = 0, printResults: Boolean = True):
+    def queryGeometry(self,
+                      relativeAccuracy: float = 0,
+                      printResults: Boolean = True):
         """This method prints the following information about a part:
             - the name, modeling space, and analysis type;
             - whether twist is included (only available when the modeling space is axisymmetric and
@@ -1638,7 +1719,10 @@ class PartBase(Feature):
         """
         pass
 
-    def writeCADParameters(self, paramFile: str, modifiedParams: tuple = (), updatePaths: str = ''):
+    def writeCADParameters(self,
+                           paramFile: str,
+                           modifiedParams: tuple = (),
+                           updatePaths: str = ''):
         """This method writes the parameters that were imported from the CAD system to a parameter
         file.
         
@@ -1704,9 +1788,13 @@ class PartBase(Feature):
         """
         pass
 
-    def copyMeshPattern(self, elements: tuple[MeshElement] = (), faces: tuple[Face] = (),
-                        elemFaces: tuple[MeshFace] = (), targetFace: MeshFace = MeshFace(),
-                        nodes: tuple[MeshNode] = (), coordinates: tuple = ()):
+    def copyMeshPattern(self,
+                        elements: tuple[MeshElement] = (),
+                        faces: tuple[Face] = (),
+                        elemFaces: tuple[MeshFace] = (),
+                        targetFace: MeshFace = MeshFace(),
+                        nodes: tuple[MeshNode] = (),
+                        coordinates: tuple = ()):
         """This method copies a mesh pattern from a source region consisting of a set of shell
         elements or element faces onto a target face, mapping nodes and elements in a one-one
         correspondence between source and target.

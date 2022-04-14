@@ -2,6 +2,8 @@ from abaqusConstants import *
 from .Load import Load
 from ..Region.Region import Region
 
+from __init__ import *
+
 
 class SubstructureLoad(Load):
     """The SubstructureLoad object defines a substructure load.
@@ -25,13 +27,18 @@ class SubstructureLoad(Load):
 
     """
 
-    # A String specifying the load repository key. 
+    # A String specifying the load repository key.
     name: str = ''
 
-    # A Region object specifying the region to which the load is applied. 
+    # A Region object specifying the region to which the load is applied.
     region: Region = Region()
 
-    def __init__(self, name: str, createStepName: str, region: Region, loadCaseNames: str, magnitude: float,
+    def __init__(self,
+                 name: str,
+                 createStepName: str,
+                 region: Region,
+                 loadCaseNames: str,
+                 magnitude: float,
                  amplitude: str = UNSET):
         """This method creates a SubstructureLoad object.
 
@@ -80,7 +87,11 @@ class SubstructureLoad(Load):
         """
         pass
 
-    def setValuesInStep(self, stepName: str, loadCaseNames: str = '', magnitude: float = None, amplitude: str = ''):
+    def setValuesInStep(self,
+                        stepName: str,
+                        loadCaseNames: str = '',
+                        magnitude: float = None,
+                        amplitude: str = ''):
         """This method modifies the propagating data for an existing SubstructureLoad object in the
         specified step.
         

@@ -1,5 +1,7 @@
 from abaqusConstants import *
 
+from __init__ import *
+
 
 class Crack:
     """The Crack object is the abstract base type for ContourIntegral and future crack objects.
@@ -24,10 +26,10 @@ class Crack:
 
     """
 
-    # A String specifying the repository key. 
+    # A String specifying the repository key.
     name: str = ''
 
-    # A Boolean specifying whether the crack is suppressed or not. The default value is OFF. 
+    # A Boolean specifying whether the crack is suppressed or not. The default value is OFF.
     suppressed: Boolean = OFF
 
     def resume(self):

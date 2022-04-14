@@ -1,5 +1,7 @@
 from abaqusConstants import *
 
+from __init__ import *
+
 
 class BiaxialTestData:
     """The BiaxialTestData object provides equibiaxial test data (compression and/or tension).
@@ -23,9 +25,12 @@ class BiaxialTestData:
         - BIAXIAL TEST DATA
 
     """
-
-    def __init__(self, table: tuple, smoothing: int = None, lateralNominalStrain: Boolean = OFF,
-                 temperatureDependency: Boolean = OFF, dependencies: int = 0):
+    def __init__(self,
+                 table: tuple,
+                 smoothing: int = None,
+                 lateralNominalStrain: Boolean = OFF,
+                 temperatureDependency: Boolean = OFF,
+                 dependencies: int = 0):
         """This method creates a BiaxialTestData object.
 
         Notes

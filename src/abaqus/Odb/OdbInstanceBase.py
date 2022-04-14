@@ -13,6 +13,8 @@ from ..Property.MaterialOrientationArray import MaterialOrientationArray
 from ..Property.SectionAssignmentArray import SectionAssignmentArray
 from ..Section.Section import Section
 
+from __init__ import *
+
 
 class OdbInstanceBase:
     """A part instance is the usage of a part within an assembly.
@@ -68,58 +70,61 @@ class OdbInstanceBase:
 
     """
 
-    # A String specifying the instance name. 
+    # A String specifying the instance name.
     name: str = ''
 
-    # A SymbolicConstant specifying the type of the Part object. Only a value of 
-    # DEFORMABLE_BODY is currently supported. 
+    # A SymbolicConstant specifying the type of the Part object. Only a value of
+    # DEFORMABLE_BODY is currently supported.
     type: SymbolicConstant = None
 
-    # A SymbolicConstant specifying the dimensionality of the Part object. Possible values are 
-    # THREE_D, TWO_D_PLANAR, AXISYMMETRIC, and UNKNOWN_DIMENSION. 
+    # A SymbolicConstant specifying the dimensionality of the Part object. Possible values are
+    # THREE_D, TWO_D_PLANAR, AXISYMMETRIC, and UNKNOWN_DIMENSION.
     embeddedSpace: SymbolicConstant = None
 
-    # A SymbolicConstant specifying the state of the Instance as modified by the analysis. 
-    # This member is only present if the Instance is part of the RootAssemblyState tree. 
-    # Possible values are:PROPAGATED, specifying that the value is the same as the previous 
-    # frame or the original rootAssembly.MODIFIED, specifying that the geometry of the 
-    # instance has been changed at this frame.The default value is PROPAGATED. 
+    # A SymbolicConstant specifying the state of the Instance as modified by the analysis.
+    # This member is only present if the Instance is part of the RootAssemblyState tree.
+    # Possible values are:PROPAGATED, specifying that the value is the same as the previous
+    # frame or the original rootAssembly.MODIFIED, specifying that the geometry of the
+    # instance has been changed at this frame.The default value is PROPAGATED.
     resultState: SymbolicConstant = PROPAGATED
 
-    # An OdbMeshNodeArray object. 
+    # An OdbMeshNodeArray object.
     nodes: OdbMeshNodeArray = OdbMeshNodeArray()
 
-    # An OdbMeshElementArray object. 
+    # An OdbMeshElementArray object.
     elements: OdbMeshElementArray = OdbMeshElementArray()
 
-    # A repository of OdbSet objects specifying node sets. 
+    # A repository of OdbSet objects specifying node sets.
     nodeSets: dict[str, OdbSet] = dict[str, OdbSet]()
 
-    # A repository of OdbSet objects specifying element sets. 
+    # A repository of OdbSet objects specifying element sets.
     elementSets: dict[str, OdbSet] = dict[str, OdbSet]()
 
-    # A repository of OdbSet objects specifying surfaces. 
+    # A repository of OdbSet objects specifying surfaces.
     surfaces: dict[str, OdbSet] = dict[str, OdbSet]()
 
-    # A SectionAssignmentArray object. 
+    # A SectionAssignmentArray object.
     sectionAssignments: SectionAssignmentArray = SectionAssignmentArray()
 
-    # An OdbRigidBodyArray object. 
+    # An OdbRigidBodyArray object.
     rigidBodies: OdbRigidBodyArray = OdbRigidBodyArray()
 
-    # A BeamOrientationArray object. 
+    # A BeamOrientationArray object.
     beamOrientations: BeamOrientationArray = BeamOrientationArray()
 
-    # A MaterialOrientationArray object. 
+    # A MaterialOrientationArray object.
     materialOrientations: MaterialOrientationArray = MaterialOrientationArray()
 
-    # A RebarOrientationArray object. 
+    # A RebarOrientationArray object.
     rebarOrientations: RebarOrientationArray = RebarOrientationArray()
 
-    # An AnalyticSurface object specifying analytic Surface defined on the instance. 
+    # An AnalyticSurface object specifying analytic Surface defined on the instance.
     analyticSurface: AnalyticSurface = AnalyticSurface()
 
-    def __init__(self, name: str, object: OdbPart, localCoordSystem: tuple = ()):
+    def __init__(self,
+                 name: str,
+                 object: OdbPart,
+                 localCoordSystem: tuple = ()):
         """This method creates an OdbInstance object from an OdbPart object.
 
         Notes
@@ -158,7 +163,8 @@ class OdbInstanceBase:
         """
         pass
 
-    def assignBeamOrientation(self, region: str, method: SymbolicConstant, vector: tuple):
+    def assignBeamOrientation(self, region: str, method: SymbolicConstant,
+                              vector: tuple):
         """This method assigns a beam section orientation to a region of a part instance.
         
         Parameters
@@ -174,7 +180,10 @@ class OdbInstanceBase:
         """
         pass
 
-    def assignMaterialOrientation(self, region: str, localCsys: OdbDatumCsys, axis: SymbolicConstant = AXIS_1,
+    def assignMaterialOrientation(self,
+                                  region: str,
+                                  localCsys: OdbDatumCsys,
+                                  axis: SymbolicConstant = AXIS_1,
                                   angle: float = 0,
                                   stackDirection: SymbolicConstant = STACK_3):
         """This method assigns a material orientation to a region of a part instance.
@@ -200,7 +209,10 @@ class OdbInstanceBase:
         """
         pass
 
-    def assignRebarOrientation(self, region: str, localCsys: OdbDatumCsys, axis: SymbolicConstant = AXIS_1,
+    def assignRebarOrientation(self,
+                               region: str,
+                               localCsys: OdbDatumCsys,
+                               axis: SymbolicConstant = AXIS_1,
                                angle: float = 0):
         """This method assigns a rebar reference orientation to a region of a part instance.
         
@@ -279,7 +291,10 @@ class OdbInstanceBase:
         """
         pass
 
-    def AnalyticRigidSurf2DPlanar(self, name: str, profile: tuple[AnalyticSurfaceSegment], filletRadius: str = 0):
+    def AnalyticRigidSurf2DPlanar(self,
+                                  name: str,
+                                  profile: tuple[AnalyticSurfaceSegment],
+                                  filletRadius: str = 0):
         """This method is used to define a two-dimensional AnalyticSurface object on the instance.
         
         Parameters
@@ -301,7 +316,10 @@ class OdbInstanceBase:
         """
         pass
 
-    def AnalyticRigidSurfExtrude(self, name: str, profile: tuple[AnalyticSurfaceSegment], filletRadius: str = 0,
+    def AnalyticRigidSurfExtrude(self,
+                                 name: str,
+                                 profile: tuple[AnalyticSurfaceSegment],
+                                 filletRadius: str = 0,
                                  localCoordData: tuple = ()):
         """This method is used to define a three-dimensional cylindrical AnalyticSurface on the
         instance.
@@ -328,7 +346,10 @@ class OdbInstanceBase:
         """
         pass
 
-    def AnalyticRigidSurfRevolve(self, name: str, profile: tuple[AnalyticSurfaceSegment], filletRadius: str = 0,
+    def AnalyticRigidSurfRevolve(self,
+                                 name: str,
+                                 profile: tuple[AnalyticSurfaceSegment],
+                                 filletRadius: str = 0,
                                  localCoordData: tuple = ()):
         """This method is used to define a three-dimensional AnalyticSurface of revolution on the
         instance.
@@ -355,8 +376,14 @@ class OdbInstanceBase:
         """
         pass
 
-    def RigidBody(self, referenceNode: str, position: str = INPUT, isothermal: Boolean = OFF, elset: str = '',
-                  pinNodes: str = '', tieNodes: str = '', analyticSurface: str = ''):
+    def RigidBody(self,
+                  referenceNode: str,
+                  position: str = INPUT,
+                  isothermal: Boolean = OFF,
+                  elset: str = '',
+                  pinNodes: str = '',
+                  tieNodes: str = '',
+                  analyticSurface: str = ''):
         """This method defines an OdbRigidBody on the instance.
         
         Parameters

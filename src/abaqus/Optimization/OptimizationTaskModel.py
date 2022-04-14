@@ -7,6 +7,8 @@ from .SizingTask import SizingTask
 from .TopologyTask import TopologyTask
 from ..Model.ModelBase import ModelBase
 
+from __init__ import *
+
 
 class OptimizationTaskModel(ModelBase):
     """Abaqus creates a Model object named `Model-1` when a session is started.
@@ -20,18 +22,29 @@ class OptimizationTaskModel(ModelBase):
         mdb.models[name]
 
     """
-
-    def BeadTask(self, name: str, abaqusSensitivities: Boolean = True,
-                 algorithm: SymbolicConstant = GENERAL_OPTIMIZATION, areBCRegionsFrozen: Boolean = OFF,
-                 beadIter: str = 1, beadMaxMembraneStress: str = 0, beadMinStress: str = 0,
-                 beadPerturbation: str = 0, beadWidth: SymbolicConstant = DEFAULT, curveSmooth: str = 5,
-                 filterRadius: str = 4, filterRadiusBy: SymbolicConstant = VALUE,
-                 flipNormalDir: Boolean = OFF, frozenBoundaryConditionRegion: SymbolicConstant = MODEL,
+    def BeadTask(self,
+                 name: str,
+                 abaqusSensitivities: Boolean = True,
+                 algorithm: SymbolicConstant = GENERAL_OPTIMIZATION,
+                 areBCRegionsFrozen: Boolean = OFF,
+                 beadIter: str = 1,
+                 beadMaxMembraneStress: str = 0,
+                 beadMinStress: str = 0,
+                 beadPerturbation: str = 0,
+                 beadWidth: SymbolicConstant = DEFAULT,
+                 curveSmooth: str = 5,
+                 filterRadius: str = 4,
+                 filterRadiusBy: SymbolicConstant = VALUE,
+                 flipNormalDir: Boolean = OFF,
+                 frozenBoundaryConditionRegion: SymbolicConstant = MODEL,
                  isSensCalcOnlyOnDesignNodes: Boolean = OFF,
-                 modeTrackingRegion: SymbolicConstant = MODEL, nodalMoveLimit: float = 0,
+                 modeTrackingRegion: SymbolicConstant = MODEL,
+                 nodalMoveLimit: float = 0,
                  nodeSmooth: SymbolicConstant = DEFAULT,
-                 nodeUpdateStrategy: SymbolicConstant = CONSERVATIVE, numTrackedModes: int = 5,
-                 updateShapeBasisVectors: SymbolicConstant = EVERY_CYCLE, groupOperator: Boolean = OFF) -> BeadTask:
+                 nodeUpdateStrategy: SymbolicConstant = CONSERVATIVE,
+                 numTrackedModes: int = 5,
+                 updateShapeBasisVectors: SymbolicConstant = EVERY_CYCLE,
+                 groupOperator: Boolean = OFF) -> BeadTask:
         """This method creates a BeadTask object.
 
         Notes
@@ -116,44 +129,63 @@ class OptimizationTaskModel(ModelBase):
         -------
             A BeadTask object.
         """
-        self.optimizationTasks[name] = optimizationTask = BeadTask(name, abaqusSensitivities, algorithm,
-                                                                   areBCRegionsFrozen, beadIter, beadMaxMembraneStress,
-                                                                   beadMinStress, beadPerturbation, beadWidth,
-                                                                   curveSmooth, filterRadius, filterRadiusBy,
-                                                                   flipNormalDir, frozenBoundaryConditionRegion,
-                                                                   isSensCalcOnlyOnDesignNodes, modeTrackingRegion,
-                                                                   nodalMoveLimit, nodeSmooth, nodeUpdateStrategy,
-                                                                   numTrackedModes, updateShapeBasisVectors,
-                                                                   groupOperator)
+        self.optimizationTasks[name] = optimizationTask = BeadTask(
+            name, abaqusSensitivities, algorithm, areBCRegionsFrozen, beadIter,
+            beadMaxMembraneStress, beadMinStress, beadPerturbation, beadWidth,
+            curveSmooth, filterRadius, filterRadiusBy, flipNormalDir,
+            frozenBoundaryConditionRegion, isSensCalcOnlyOnDesignNodes,
+            modeTrackingRegion, nodalMoveLimit, nodeSmooth, nodeUpdateStrategy,
+            numTrackedModes, updateShapeBasisVectors, groupOperator)
         return optimizationTask
 
-    def ShapeTask(self, name: str, abaqusSensitivities: Boolean = True,
-                  absoluteStepSizeControl: SymbolicConstant = MINIMUM, activateDurability: Boolean = ON,
-                  additionalDurabilityFiles: str = '',
-                  algorithm: SymbolicConstant = CONDITION_BASED_OPTIMIZATION,
-                  constrainedLaplacianConvergenceLevel: SymbolicConstant = NORMAL,
-                  curvatureSmoothingEdgeLength: float = 5, durabilityInputfile: str = '',
-                  durabilitySolver: str = FE_SAFE, equalityConstraintTolerance: float = None,
-                  featureRecognitionAngle: float = 30, filterExponent: float = 1,
-                  filterMaxRadius: float = None, filterRadiusReduction: float = None,
-                  firstCycleDeletedVolumeTechnique: SymbolicConstant = OFF,
-                  freezeBoundaryConditionRegions: Boolean = OFF,
-                  frozenBoundaryConditionRegion: SymbolicConstant = MODEL,
-                  geometricRestrictionEvaluationFrequency: SymbolicConstant = LOW,
-                  growthScaleFactor: float = 1, haltUponViolation: Boolean = OFF,
-                  layerReferenceRegion: str = None,
-                  meshSmoothingRegionMethod: SymbolicConstant = TASK_REGION_LAYERS,
-                  meshSmoothingStrategy: SymbolicConstant = CONSTRAINED_LAPLACIAN,
-                  midsideInterpolation: SymbolicConstant = POSITIONS,
-                  numFreeNodeLayers: SymbolicConstant = 0, numSmoothedElementLayers: int = None,
-                  presumeFeasibleBCRegionAtStart: Boolean = ON, quadMaxAngle: float = 160,
-                  quadMinAngle: float = 20, quadSkew: float = 30, quadTaper: float = 0,
-                  region: SymbolicConstant = MODEL, reportPoorQualityElements: Boolean = OFF,
-                  reportQualityViolation: Boolean = OFF, shrinkScaleFactor: float = 1,
-                  smoothingRegion: str = None, targetMeshQuality: SymbolicConstant = LOW,
-                  tetAspectRatio: float = 100, tetMaxAspect: float = 8, tetMinAspect: float = 0,
-                  tetSkew: float = 100, triMaxAngle: float = 140, triMinAngle: float = 20,
-                  updateShapeBasisVectors: SymbolicConstant = EVERY_CYCLE, groupOperator: Boolean = OFF) -> ShapeTask:
+    def ShapeTask(
+            self,
+            name: str,
+            abaqusSensitivities: Boolean = True,
+            absoluteStepSizeControl: SymbolicConstant = MINIMUM,
+            activateDurability: Boolean = ON,
+            additionalDurabilityFiles: str = '',
+            algorithm: SymbolicConstant = CONDITION_BASED_OPTIMIZATION,
+            constrainedLaplacianConvergenceLevel: SymbolicConstant = NORMAL,
+            curvatureSmoothingEdgeLength: float = 5,
+            durabilityInputfile: str = '',
+            durabilitySolver: str = FE_SAFE,
+            equalityConstraintTolerance: float = None,
+            featureRecognitionAngle: float = 30,
+            filterExponent: float = 1,
+            filterMaxRadius: float = None,
+            filterRadiusReduction: float = None,
+            firstCycleDeletedVolumeTechnique: SymbolicConstant = OFF,
+            freezeBoundaryConditionRegions: Boolean = OFF,
+            frozenBoundaryConditionRegion: SymbolicConstant = MODEL,
+            geometricRestrictionEvaluationFrequency: SymbolicConstant = LOW,
+            growthScaleFactor: float = 1,
+            haltUponViolation: Boolean = OFF,
+            layerReferenceRegion: str = None,
+            meshSmoothingRegionMethod: SymbolicConstant = TASK_REGION_LAYERS,
+            meshSmoothingStrategy: SymbolicConstant = CONSTRAINED_LAPLACIAN,
+            midsideInterpolation: SymbolicConstant = POSITIONS,
+            numFreeNodeLayers: SymbolicConstant = 0,
+            numSmoothedElementLayers: int = None,
+            presumeFeasibleBCRegionAtStart: Boolean = ON,
+            quadMaxAngle: float = 160,
+            quadMinAngle: float = 20,
+            quadSkew: float = 30,
+            quadTaper: float = 0,
+            region: SymbolicConstant = MODEL,
+            reportPoorQualityElements: Boolean = OFF,
+            reportQualityViolation: Boolean = OFF,
+            shrinkScaleFactor: float = 1,
+            smoothingRegion: str = None,
+            targetMeshQuality: SymbolicConstant = LOW,
+            tetAspectRatio: float = 100,
+            tetMaxAspect: float = 8,
+            tetMinAspect: float = 0,
+            tetSkew: float = 100,
+            triMaxAngle: float = 140,
+            triMinAngle: float = 20,
+            updateShapeBasisVectors: SymbolicConstant = EVERY_CYCLE,
+            groupOperator: Boolean = OFF) -> ShapeTask:
         """This method creates a ShapeTask object.
 
         Notes
@@ -322,37 +354,39 @@ class OptimizationTaskModel(ModelBase):
         -------
             A ShapeTask object.
         """
-        self.optimizationTasks[name] = optimizationTask = ShapeTask(name, abaqusSensitivities, absoluteStepSizeControl,
-                                                                    activateDurability, additionalDurabilityFiles,
-                                                                    algorithm, constrainedLaplacianConvergenceLevel,
-                                                                    curvatureSmoothingEdgeLength, durabilityInputfile,
-                                                                    durabilitySolver, equalityConstraintTolerance,
-                                                                    featureRecognitionAngle, filterExponent,
-                                                                    filterMaxRadius, filterRadiusReduction,
-                                                                    firstCycleDeletedVolumeTechnique,
-                                                                    freezeBoundaryConditionRegions,
-                                                                    frozenBoundaryConditionRegion,
-                                                                    geometricRestrictionEvaluationFrequency,
-                                                                    growthScaleFactor, haltUponViolation,
-                                                                    layerReferenceRegion, meshSmoothingRegionMethod,
-                                                                    meshSmoothingStrategy, midsideInterpolation,
-                                                                    numFreeNodeLayers, numSmoothedElementLayers,
-                                                                    presumeFeasibleBCRegionAtStart, quadMaxAngle,
-                                                                    quadMinAngle, quadSkew, quadTaper, region,
-                                                                    reportPoorQualityElements, reportQualityViolation,
-                                                                    shrinkScaleFactor, smoothingRegion,
-                                                                    targetMeshQuality, tetAspectRatio, tetMaxAspect,
-                                                                    tetMinAspect, tetSkew, triMaxAngle, triMinAngle,
-                                                                    updateShapeBasisVectors, groupOperator)
+        self.optimizationTasks[name] = optimizationTask = ShapeTask(
+            name, abaqusSensitivities, absoluteStepSizeControl,
+            activateDurability, additionalDurabilityFiles, algorithm,
+            constrainedLaplacianConvergenceLevel, curvatureSmoothingEdgeLength,
+            durabilityInputfile, durabilitySolver, equalityConstraintTolerance,
+            featureRecognitionAngle, filterExponent, filterMaxRadius,
+            filterRadiusReduction, firstCycleDeletedVolumeTechnique,
+            freezeBoundaryConditionRegions, frozenBoundaryConditionRegion,
+            geometricRestrictionEvaluationFrequency, growthScaleFactor,
+            haltUponViolation, layerReferenceRegion, meshSmoothingRegionMethod,
+            meshSmoothingStrategy, midsideInterpolation, numFreeNodeLayers,
+            numSmoothedElementLayers, presumeFeasibleBCRegionAtStart,
+            quadMaxAngle, quadMinAngle, quadSkew, quadTaper, region,
+            reportPoorQualityElements, reportQualityViolation,
+            shrinkScaleFactor, smoothingRegion, targetMeshQuality,
+            tetAspectRatio, tetMaxAspect, tetMinAspect, tetSkew, triMaxAngle,
+            triMinAngle, updateShapeBasisVectors, groupOperator)
         return optimizationTask
 
-    def SizingTask(self, name: str, abaqusSensitivities: Boolean = True,
+    def SizingTask(self,
+                   name: str,
+                   abaqusSensitivities: Boolean = True,
                    elementThicknessDeltaStopCriteria: float = 0,
-                   freezeBoundaryConditionRegions: Boolean = OFF, freezeLoadRegions: Boolean = ON,
-                   modeTrackingRegion: str = MODEL, numFulfilledStopCriteria: int = 2,
-                   numTrackedModes: int = 5, objectiveFunctionDeltaStopCriteria: float = 0,
-                   stopCriteriaDesignCycle: int = 4, thicknessMoveLimit: float = 0,
-                   thicknessUpdateStrategy: SymbolicConstant = NORMAL, groupOperator: Boolean = OFF) -> SizingTask:
+                   freezeBoundaryConditionRegions: Boolean = OFF,
+                   freezeLoadRegions: Boolean = ON,
+                   modeTrackingRegion: str = MODEL,
+                   numFulfilledStopCriteria: int = 2,
+                   numTrackedModes: int = 5,
+                   objectiveFunctionDeltaStopCriteria: float = 0,
+                   stopCriteriaDesignCycle: int = 4,
+                   thicknessMoveLimit: float = 0,
+                   thicknessUpdateStrategy: SymbolicConstant = NORMAL,
+                   groupOperator: Boolean = OFF) -> SizingTask:
         """This method creates a SizingTask object.
 
         Notes
@@ -408,36 +442,51 @@ class OptimizationTaskModel(ModelBase):
         -------
             A SizingTask object.
         """
-        self.optimizationTasks[name] = optimizationTask = SizingTask(name, abaqusSensitivities,
-                                                                     elementThicknessDeltaStopCriteria,
-                                                                     freezeBoundaryConditionRegions, freezeLoadRegions,
-                                                                     modeTrackingRegion, numFulfilledStopCriteria,
-                                                                     numTrackedModes,
-                                                                     objectiveFunctionDeltaStopCriteria,
-                                                                     stopCriteriaDesignCycle, thicknessMoveLimit,
-                                                                     thicknessUpdateStrategy, groupOperator)
+        self.optimizationTasks[name] = optimizationTask = SizingTask(
+            name, abaqusSensitivities, elementThicknessDeltaStopCriteria,
+            freezeBoundaryConditionRegions, freezeLoadRegions,
+            modeTrackingRegion, numFulfilledStopCriteria, numTrackedModes,
+            objectiveFunctionDeltaStopCriteria, stopCriteriaDesignCycle,
+            thicknessMoveLimit, thicknessUpdateStrategy, groupOperator)
         return optimizationTask
 
-    def TopologyTask(self, name: str, abaqusSensitivities: Boolean = True,
-                     algorithm: SymbolicConstant = GENERAL_OPTIMIZATION, densityMoveLimit: float = 0,
-                     densityUpdateStrategy: SymbolicConstant = NORMAL,
-                     elementDensityDeltaStopCriteria: float = 0, filterRadius: float = None,
-                     firstCycleDeletedVolume: float = 5,
-                     firstCycleDeletedVolumeTechnique: SymbolicConstant = OFF,
-                     freezeBoundaryConditionRegions: Boolean = OFF, freezeLoadRegions: Boolean = ON,
-                     frequencySpectrumWeight: float = 6, initialDensity: SymbolicConstant = DEFAULT,
-                     materialInterpolationPenalty: float = 3,
-                     materialInterpolationTechnique: SymbolicConstant = DEFAULT, maxDensity: float = 1,
-                     minDensity: float = None, modeTrackingRegion: SymbolicConstant = MODEL,
-                     numDesignCycles: int = 15, numFulfilledStopCriteria: int = 2, numTrackedModes: int = 5,
-                     objectiveFunctionDeltaStopCriteria: float = None, region: SymbolicConstant = MODEL,
-                     softDeletionMethod: SymbolicConstant = STANDARD, softDeletionRadius: float = 0,
-                     softDeletionRegion: str = None, softDeletionThreshold: float = None,
-                     stepSize: SymbolicConstant = MEDIUM,
-                     stiffnessMassDamping: typing.Union[SymbolicConstant, float] = AVERAGE_EDGE_LENGTH,
-                     stopCriteriaDesignCycle: int = 4, structuralMassDamping: float = None,
-                     viscousMassDamping: float = None, viscousStiffnessDamping: float = None,
-                     groupOperator: Boolean = OFF) -> TopologyTask:
+    def TopologyTask(
+            self,
+            name: str,
+            abaqusSensitivities: Boolean = True,
+            algorithm: SymbolicConstant = GENERAL_OPTIMIZATION,
+            densityMoveLimit: float = 0,
+            densityUpdateStrategy: SymbolicConstant = NORMAL,
+            elementDensityDeltaStopCriteria: float = 0,
+            filterRadius: float = None,
+            firstCycleDeletedVolume: float = 5,
+            firstCycleDeletedVolumeTechnique: SymbolicConstant = OFF,
+            freezeBoundaryConditionRegions: Boolean = OFF,
+            freezeLoadRegions: Boolean = ON,
+            frequencySpectrumWeight: float = 6,
+            initialDensity: SymbolicConstant = DEFAULT,
+            materialInterpolationPenalty: float = 3,
+            materialInterpolationTechnique: SymbolicConstant = DEFAULT,
+            maxDensity: float = 1,
+            minDensity: float = None,
+            modeTrackingRegion: SymbolicConstant = MODEL,
+            numDesignCycles: int = 15,
+            numFulfilledStopCriteria: int = 2,
+            numTrackedModes: int = 5,
+            objectiveFunctionDeltaStopCriteria: float = None,
+            region: SymbolicConstant = MODEL,
+            softDeletionMethod: SymbolicConstant = STANDARD,
+            softDeletionRadius: float = 0,
+            softDeletionRegion: str = None,
+            softDeletionThreshold: float = None,
+            stepSize: SymbolicConstant = MEDIUM,
+            stiffnessMassDamping: typing.Union[SymbolicConstant,
+                                               float] = AVERAGE_EDGE_LENGTH,
+            stopCriteriaDesignCycle: int = 4,
+            structuralMassDamping: float = None,
+            viscousMassDamping: float = None,
+            viscousStiffnessDamping: float = None,
+            groupOperator: Boolean = OFF) -> TopologyTask:
         """This method creates a TopologyTask object.
 
         Notes
@@ -567,22 +616,18 @@ class OptimizationTaskModel(ModelBase):
         -------
             A TopologyTask object.
         """
-        self.optimizationTasks[name] = optimizationTask = TopologyTask(name, abaqusSensitivities, algorithm,
-                                                                       densityMoveLimit, densityUpdateStrategy,
-                                                                       elementDensityDeltaStopCriteria, filterRadius,
-                                                                       firstCycleDeletedVolume,
-                                                                       firstCycleDeletedVolumeTechnique,
-                                                                       freezeBoundaryConditionRegions,
-                                                                       freezeLoadRegions, frequencySpectrumWeight,
-                                                                       initialDensity, materialInterpolationPenalty,
-                                                                       materialInterpolationTechnique, maxDensity,
-                                                                       minDensity, modeTrackingRegion, numDesignCycles,
-                                                                       numFulfilledStopCriteria, numTrackedModes,
-                                                                       objectiveFunctionDeltaStopCriteria, region,
-                                                                       softDeletionMethod, softDeletionRadius,
-                                                                       softDeletionRegion, softDeletionThreshold,
-                                                                       stepSize, stiffnessMassDamping,
-                                                                       stopCriteriaDesignCycle, structuralMassDamping,
-                                                                       viscousMassDamping, viscousStiffnessDamping,
-                                                                       groupOperator)
+        self.optimizationTasks[name] = optimizationTask = TopologyTask(
+            name, abaqusSensitivities, algorithm, densityMoveLimit,
+            densityUpdateStrategy, elementDensityDeltaStopCriteria,
+            filterRadius, firstCycleDeletedVolume,
+            firstCycleDeletedVolumeTechnique, freezeBoundaryConditionRegions,
+            freezeLoadRegions, frequencySpectrumWeight, initialDensity,
+            materialInterpolationPenalty, materialInterpolationTechnique,
+            maxDensity, minDensity, modeTrackingRegion, numDesignCycles,
+            numFulfilledStopCriteria, numTrackedModes,
+            objectiveFunctionDeltaStopCriteria, region, softDeletionMethod,
+            softDeletionRadius, softDeletionRegion, softDeletionThreshold,
+            stepSize, stiffnessMassDamping, stopCriteriaDesignCycle,
+            structuralMassDamping, viscousMassDamping, viscousStiffnessDamping,
+            groupOperator)
         return optimizationTask

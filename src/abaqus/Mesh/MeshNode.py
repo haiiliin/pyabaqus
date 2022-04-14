@@ -1,5 +1,8 @@
 from ..Datum.DatumCsys import DatumCsys
 
+from __future__ import annotations
+from __init__ import *
+
 
 class MeshNode:
     """The MeshNode object refers to a node of a native mesh or an orphan mesh. A MeshNode
@@ -50,16 +53,19 @@ class MeshNode:
 
     """
 
-    # An Int specifying the node label. 
+    # An Int specifying the node label.
     label: int = None
 
-    # A String specifying the name of the part instance that owns this node. 
+    # A String specifying the name of the part instance that owns this node.
     instanceName: str = ''
 
-    # A tuple of three Floats specifying the coordinates of the new node. 
+    # A tuple of three Floats specifying the coordinates of the new node.
     coordinates: float = None
 
-    def __init__(self, coordinates: tuple, localCsys: DatumCsys = DatumCsys(), label: int = None):
+    def __init__(self,
+                 coordinates: tuple,
+                 localCsys: DatumCsys = DatumCsys(),
+                 label: int = None):
         """This method creates a node on an orphan mesh part.
 
         Notes

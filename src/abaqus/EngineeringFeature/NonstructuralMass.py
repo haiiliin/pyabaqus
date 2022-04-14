@@ -2,6 +2,8 @@ from abaqusConstants import *
 from .Inertia import Inertia
 from ..Region.Region import Region
 
+from __init__ import *
+
 
 class NonstructuralMass(Inertia):
     """The NonstructuralMass object defines the mass contribution from nonstructural features
@@ -29,10 +31,14 @@ class NonstructuralMass(Inertia):
 
     """
 
-    # A Boolean specifying whether the inertia is suppressed or not. The default value is OFF. 
+    # A Boolean specifying whether the inertia is suppressed or not. The default value is OFF.
     suppressed: Boolean = OFF
 
-    def __init__(self, name: str, region: Region, units: SymbolicConstant, magnitude: float,
+    def __init__(self,
+                 name: str,
+                 region: Region,
+                 units: SymbolicConstant,
+                 magnitude: float,
                  distribution: SymbolicConstant = MASS_PROPORTIONAL):
         """This method creates a NonstructuralMass object.
 

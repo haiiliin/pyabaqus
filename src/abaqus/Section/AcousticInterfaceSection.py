@@ -1,5 +1,7 @@
 from .Section import Section
 
+from __init__ import *
+
 
 class AcousticInterfaceSection(Section):
     """The AcousticInterfaceSection object defines the properties of an acoustic section.
@@ -20,7 +22,6 @@ class AcousticInterfaceSection(Section):
         - INTERFACE
 
     """
-
     def __init__(self, name: str, thickness: float = 1):
         """This method creates an AcousticInterfaceSection object.
 

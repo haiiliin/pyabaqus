@@ -1,5 +1,7 @@
 from abaqusConstants import *
 
+from __init__ import *
+
 
 class StreamOptions:
     """The StreamOptions object stores values and attributes associated with a stream plot. The
@@ -26,9 +28,12 @@ class StreamOptions:
             session.viewports[name].odbDisplay.streamOptions
 
     """
-
-    def setValues(self, colorMethod: SymbolicConstant = UNIFORM, uniformColor: str = '',
-                  lineThickness: float = 6, showArrow: Boolean = OFF, numArrows: int = 10):
+    def setValues(self,
+                  colorMethod: SymbolicConstant = UNIFORM,
+                  uniformColor: str = '',
+                  lineThickness: float = 6,
+                  showArrow: Boolean = OFF,
+                  numArrows: int = 10):
         """This method modifies the StreamOptions object.
         
         Parameters

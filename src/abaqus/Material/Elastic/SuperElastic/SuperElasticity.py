@@ -1,6 +1,8 @@
 from ...Plastic.SuperElastic.SuperElasticHardening import SuperElasticHardening
 from ...Plastic.SuperElastic.SuperElasticHardeningModifications import SuperElasticHardeningModifications
 
+from __init__ import *
+
 
 class SuperElasticity:
     """The SuperElasticity object specifies a superelastic material model.
@@ -34,13 +36,15 @@ class SuperElasticity:
 
     """
 
-    # A [SuperElasticHardening 
-    # object](https://help.3ds.com/2022/english/DSSIMULIA_Established/SIMACAEKERRefMap/simaker-c-superelastichardeningpyc.htm?ContextScope=all#simaker-c-superelastichardeningpyc). 
-    superElasticHardening: SuperElasticHardening = SuperElasticHardening(((),))
+    # A [SuperElasticHardening
+    # object](https://help.3ds.com/2022/english/DSSIMULIA_Established/SIMACAEKERRefMap/simaker-c-superelastichardeningpyc.htm?ContextScope=all#simaker-c-superelastichardeningpyc).
+    superElasticHardening: SuperElasticHardening = SuperElasticHardening(
+        ((), ))
 
-    # A [SuperElasticHardeningModifications 
-    # object](https://help.3ds.com/2022/english/DSSIMULIA_Established/SIMACAEKERRefMap/simaker-c-superelastichardeningmodificationpyc.htm?ContextScope=all#simaker-c-superelastichardeningmodificationpyc). 
-    superElasticHardeningModifications: SuperElasticHardeningModifications = SuperElasticHardeningModifications(((),))
+    # A [SuperElasticHardeningModifications
+    # object](https://help.3ds.com/2022/english/DSSIMULIA_Established/SIMACAEKERRefMap/simaker-c-superelastichardeningmodificationpyc.htm?ContextScope=all#simaker-c-superelastichardeningmodificationpyc).
+    superElasticHardeningModifications: SuperElasticHardeningModifications = SuperElasticHardeningModifications(
+        ((), ))
 
     def __init__(self, table: tuple, nonassociated: float = None):
         """This method creates a SuperElasticity object.

@@ -1,5 +1,7 @@
 from .Datum import Datum
 
+from __init__ import *
+
 
 class DatumAxis(Datum):
     """The DatumAxis object has no direct constructor; it is created when a Feature object is
@@ -31,10 +33,10 @@ class DatumAxis(Datum):
 
     """
 
-    # A tuple of Floats specifying the *X*-, *Y*-, and *Z*-coordinates of a point located on 
-    # the datum. 
+    # A tuple of Floats specifying the *X*-, *Y*-, and *Z*-coordinates of a point located on
+    # the datum.
     pointOn: float = None
 
-    # A tuple of Floats specifying a sequence of three Floats specifying the direction of the 
-    # axis. 
+    # A tuple of Floats specifying a sequence of three Floats specifying the direction of the
+    # axis.
     direction: tuple = ()

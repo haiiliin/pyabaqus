@@ -1,3 +1,6 @@
+from __init__ import *
+
+
 class TimePoint:
     """The TimePoint object defines time points at which data are written to the output
     database or restart files. 
@@ -15,7 +18,6 @@ class TimePoint:
         - TIME POINTS
 
     """
-
     def __init__(self, name: str, points: tuple):
         """This method creates a TimePoint object.
 

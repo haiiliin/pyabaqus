@@ -2,6 +2,8 @@ from abaqusConstants import *
 from .SaturationDependence import SaturationDependence
 from .VelocityDependence import VelocityDependence
 
+from __init__ import *
+
 
 class Permeability:
     """The Permeability object defines permeability for pore fluid flow.
@@ -43,16 +45,20 @@ class Permeability:
 
     """
 
-    # A SaturationDependence object specifying the dependence of the permeability of a 
-    # material on the saturation of the wetting liquid. 
-    saturationDependence: SaturationDependence = SaturationDependence(((),))
+    # A SaturationDependence object specifying the dependence of the permeability of a
+    # material on the saturation of the wetting liquid.
+    saturationDependence: SaturationDependence = SaturationDependence(((), ))
 
-    # A VelocityDependence object specifying the dependence of the permeability of a material 
-    # on the velocity of fluid flow. 
-    velocityDependence: VelocityDependence = VelocityDependence(((),))
+    # A VelocityDependence object specifying the dependence of the permeability of a material
+    # on the velocity of fluid flow.
+    velocityDependence: VelocityDependence = VelocityDependence(((), ))
 
-    def __init__(self, specificWeight: float, inertialDragCoefficient: float, table: tuple,
-                 type: SymbolicConstant = ISOTROPIC, temperatureDependency: Boolean = OFF,
+    def __init__(self,
+                 specificWeight: float,
+                 inertialDragCoefficient: float,
+                 table: tuple,
+                 type: SymbolicConstant = ISOTROPIC,
+                 temperatureDependency: Boolean = OFF,
                  dependencies: int = 0):
         """This method creates a Permeability object.
 

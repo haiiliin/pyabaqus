@@ -1,6 +1,8 @@
 from .Annotation import Annotation
 from ..Canvas.ViewportBase import ViewportBase
 
+from __init__ import *
+
 
 class AnnotationViewport(ViewportBase):
     """The following commands operate on Viewport objects. For more information about the 
@@ -15,7 +17,6 @@ class AnnotationViewport(ViewportBase):
             import annotationToolset
 
     """
-
     def plotAnnotation(self, annotation: Annotation, index: str = 0.0):
         """This method plots an Annotation object in aViewport.
         

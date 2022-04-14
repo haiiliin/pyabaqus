@@ -5,6 +5,8 @@ from .Interaction import Interaction
 from ..Datum.DatumAxis import DatumAxis
 from ..Region.Region import Region
 
+from __init__ import *
+
 
 class SurfaceToSurfaceContactStd(Interaction):
     """The SurfaceToSurfaceContactStd object defines surface-to-surface contact during an
@@ -36,34 +38,55 @@ class SurfaceToSurfaceContactStd(Interaction):
 
     """
 
-    # A SymbolicConstant specifying the choice of contact tracking algorithm. The STATE 
-    # tracking algorithm uses only normal projections and is specified by using ONE_CONFIG. 
-    # The PATH tracking algorithm uses crossing and normal projections and is specified by 
-    # using TWO_CONFIG. Possible values are ONE_CONFIG and TWO_CONFIG. The default value is 
-    # TWO_CONFIG.This argument is valid only when *sliding*=FINITE and 
-    # *enforcement*=SURFACE_TO_SURFACE. 
+    # A SymbolicConstant specifying the choice of contact tracking algorithm. The STATE
+    # tracking algorithm uses only normal projections and is specified by using ONE_CONFIG.
+    # The PATH tracking algorithm uses crossing and normal projections and is specified by
+    # using TWO_CONFIG. Possible values are ONE_CONFIG and TWO_CONFIG. The default value is
+    # TWO_CONFIG.This argument is valid only when *sliding*=FINITE and
+    # *enforcement*=SURFACE_TO_SURFACE.
     contactTracking: SymbolicConstant = TWO_CONFIG
 
-    # A SymbolicConstant specifying the manner in which midface constraints are employed. 
-    # Possible values are SELECTIVE, NEVER, and ALWAYS. The default value is SELECTIVE.This 
-    # argument is not valid when *sliding*=FINITE and *enforcement*=SURFACE_TO_SURFACE. 
+    # A SymbolicConstant specifying the manner in which midface constraints are employed.
+    # Possible values are SELECTIVE, NEVER, and ALWAYS. The default value is SELECTIVE.This
+    # argument is not valid when *sliding*=FINITE and *enforcement*=SURFACE_TO_SURFACE.
     supplementaryContact: SymbolicConstant = SELECTIVE
 
-    def __init__(self, name: str, createStepName: str, master: Region, slave: Region,
-                 sliding: SymbolicConstant, interactionProperty: str,
-                 interferenceType: SymbolicConstant = NONE, overclosure: float = 0,
-                 interferenceDirectionType: SymbolicConstant = COMPUTED, direction: tuple = (),
-                 amplitude: str = '', smooth: float = 0, hcrit: float = 0, extensionZone: float = 0,
-                 adjustMethod: SymbolicConstant = NONE, adjustTolerance: float = 0,
-                 adjustSet: Region = Region(), enforcement: SymbolicConstant = SURFACE_TO_SURFACE,
-                 thickness: Boolean = ON, contactControls: str = '', tied: Boolean = OFF,
-                 initialClearance: typing.Union[SymbolicConstant, float] = OMIT,
-                 halfThreadAngle: str = None, pitch: str = None,
-                 majorBoltDiameter: typing.Union[SymbolicConstant, float] = COMPUTED,
-                 meanBoltDiameter: typing.Union[SymbolicConstant, float] = COMPUTED,
-                 datumAxis: DatumAxis = DatumAxis(), useReverseDatumAxis: Boolean = OFF,
-                 clearanceRegion: Region = Region(), surfaceSmoothing: SymbolicConstant = NONE,
-                 bondingSet: Region = Region(), handedness: SymbolicConstant = RIGHT,
+    def __init__(self,
+                 name: str,
+                 createStepName: str,
+                 master: Region,
+                 slave: Region,
+                 sliding: SymbolicConstant,
+                 interactionProperty: str,
+                 interferenceType: SymbolicConstant = NONE,
+                 overclosure: float = 0,
+                 interferenceDirectionType: SymbolicConstant = COMPUTED,
+                 direction: tuple = (),
+                 amplitude: str = '',
+                 smooth: float = 0,
+                 hcrit: float = 0,
+                 extensionZone: float = 0,
+                 adjustMethod: SymbolicConstant = NONE,
+                 adjustTolerance: float = 0,
+                 adjustSet: Region = Region(),
+                 enforcement: SymbolicConstant = SURFACE_TO_SURFACE,
+                 thickness: Boolean = ON,
+                 contactControls: str = '',
+                 tied: Boolean = OFF,
+                 initialClearance: typing.Union[SymbolicConstant,
+                                                float] = OMIT,
+                 halfThreadAngle: str = None,
+                 pitch: str = None,
+                 majorBoltDiameter: typing.Union[SymbolicConstant,
+                                                 float] = COMPUTED,
+                 meanBoltDiameter: typing.Union[SymbolicConstant,
+                                                float] = COMPUTED,
+                 datumAxis: DatumAxis = DatumAxis(),
+                 useReverseDatumAxis: Boolean = OFF,
+                 clearanceRegion: Region = Region(),
+                 surfaceSmoothing: SymbolicConstant = NONE,
+                 bondingSet: Region = Region(),
+                 handedness: SymbolicConstant = RIGHT,
                  normalAdjustment: SymbolicConstant = None):
         """This method creates a SurfaceToSurfaceContactStd object.
 
@@ -200,19 +223,36 @@ class SurfaceToSurfaceContactStd(Interaction):
         """
         pass
 
-    def setValues(self, interferenceType: SymbolicConstant = NONE, overclosure: float = 0,
-                  interferenceDirectionType: SymbolicConstant = COMPUTED, direction: tuple = (),
-                  amplitude: str = '', smooth: float = 0, hcrit: float = 0, extensionZone: float = 0,
-                  adjustMethod: SymbolicConstant = NONE, adjustTolerance: float = 0,
-                  adjustSet: Region = Region(), enforcement: SymbolicConstant = SURFACE_TO_SURFACE,
-                  thickness: Boolean = ON, contactControls: str = '', tied: Boolean = OFF,
-                  initialClearance: typing.Union[SymbolicConstant, float] = OMIT,
-                  halfThreadAngle: str = None, pitch: str = None,
-                  majorBoltDiameter: typing.Union[SymbolicConstant, float] = COMPUTED,
-                  meanBoltDiameter: typing.Union[SymbolicConstant, float] = COMPUTED,
-                  datumAxis: DatumAxis = DatumAxis(), useReverseDatumAxis: Boolean = OFF,
-                  clearanceRegion: Region = Region(), surfaceSmoothing: SymbolicConstant = NONE,
-                  bondingSet: Region = Region(), handedness: SymbolicConstant = RIGHT,
+    def setValues(self,
+                  interferenceType: SymbolicConstant = NONE,
+                  overclosure: float = 0,
+                  interferenceDirectionType: SymbolicConstant = COMPUTED,
+                  direction: tuple = (),
+                  amplitude: str = '',
+                  smooth: float = 0,
+                  hcrit: float = 0,
+                  extensionZone: float = 0,
+                  adjustMethod: SymbolicConstant = NONE,
+                  adjustTolerance: float = 0,
+                  adjustSet: Region = Region(),
+                  enforcement: SymbolicConstant = SURFACE_TO_SURFACE,
+                  thickness: Boolean = ON,
+                  contactControls: str = '',
+                  tied: Boolean = OFF,
+                  initialClearance: typing.Union[SymbolicConstant,
+                                                 float] = OMIT,
+                  halfThreadAngle: str = None,
+                  pitch: str = None,
+                  majorBoltDiameter: typing.Union[SymbolicConstant,
+                                                  float] = COMPUTED,
+                  meanBoltDiameter: typing.Union[SymbolicConstant,
+                                                 float] = COMPUTED,
+                  datumAxis: DatumAxis = DatumAxis(),
+                  useReverseDatumAxis: Boolean = OFF,
+                  clearanceRegion: Region = Region(),
+                  surfaceSmoothing: SymbolicConstant = NONE,
+                  bondingSet: Region = Region(),
+                  handedness: SymbolicConstant = RIGHT,
                   normalAdjustment: SymbolicConstant = None):
         """This method modifies the data for an existing SurfaceToSurfaceContactStd object in the
         step where it is created.
@@ -316,9 +356,15 @@ class SurfaceToSurfaceContactStd(Interaction):
         """
         pass
 
-    def setValuesInStep(self, stepName: str, interactionProperty: str = '', interferenceType: SymbolicConstant = NONE,
-                        overclosure: float = 0, interferenceDirectionType: SymbolicConstant = COMPUTED,
-                        direction: tuple = (), amplitude: str = '', contactControls: str = ''):
+    def setValuesInStep(self,
+                        stepName: str,
+                        interactionProperty: str = '',
+                        interferenceType: SymbolicConstant = NONE,
+                        overclosure: float = 0,
+                        interferenceDirectionType: SymbolicConstant = COMPUTED,
+                        direction: tuple = (),
+                        amplitude: str = '',
+                        contactControls: str = ''):
         """This method modifies the propagating data for an existing SurfaceToSurfaceContactStd
         object in the specified step.
         

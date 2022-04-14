@@ -2,10 +2,14 @@ from abaqusConstants import *
 from .LoadCase import LoadCase
 from ..Step.StepBase import StepBase
 
+from __init__ import *
+
 
 class LoadStep(StepBase):
-
-    def LoadCase(self, name: str, boundaryConditions: tuple = (), loads: tuple = (),
+    def LoadCase(self,
+                 name: str,
+                 boundaryConditions: tuple = (),
+                 loads: tuple = (),
                  includeActiveBaseStateBC: Boolean = ON) -> LoadCase:
         """This method creates a load case in a step.
 
@@ -39,5 +43,7 @@ class LoadStep(StepBase):
         ------
             RangeError.
         """
-        self.loadCases[name] = loadCase = LoadCase(name, boundaryConditions, loads, includeActiveBaseStateBC)
+        self.loadCases[name] = loadCase = LoadCase(name, boundaryConditions,
+                                                   loads,
+                                                   includeActiveBaseStateBC)
         return loadCase

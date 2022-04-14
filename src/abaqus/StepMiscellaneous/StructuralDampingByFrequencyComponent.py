@@ -1,3 +1,6 @@
+from __init__ import *
+
+
 class StructuralDampingByFrequencyComponent:
     """A StructuralDampingByFrequencyComponent object is used to define structural damping over
     a range of frequencies. 
@@ -20,8 +23,8 @@ class StructuralDampingByFrequencyComponent:
 
     """
 
-    # A Float specifying the frequency value in cycles/time. 
+    # A Float specifying the frequency value in cycles/time.
     frequency: float = None
 
-    # A Float specifying the damping factor, s. 
+    # A Float specifying the damping factor, s.
     factor: float = None

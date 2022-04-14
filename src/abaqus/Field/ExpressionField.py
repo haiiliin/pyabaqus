@@ -1,5 +1,7 @@
 from .AnalyticalField import AnalyticalField
 
+from __init__ import *
+
 
 class ExpressionField(AnalyticalField):
     """The ExpressionField object defines a spatially varying field whose value is calculated
@@ -16,8 +18,11 @@ class ExpressionField(AnalyticalField):
         mdb.models[name].analyticalFields[name]
 
     """
-
-    def __init__(self, name: str, expression: str, localCsys: str = None, description: str = ''):
+    def __init__(self,
+                 name: str,
+                 expression: str,
+                 localCsys: str = None,
+                 description: str = ''):
         """This method creates an ExpressionField object.
 
         Notes

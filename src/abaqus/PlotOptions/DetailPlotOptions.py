@@ -1,5 +1,7 @@
 from .PlyStackPlotOptions import PlyStackPlotOptions
 
+from __init__ import *
+
 
 class DetailPlotOptions:
     """The DetailPlotOptions object stores values and attributes associated with a Viewport
@@ -18,5 +20,5 @@ class DetailPlotOptions:
 
     """
 
-    # A PlyStackPlotOptions object. 
+    # A PlyStackPlotOptions object.
     plyStackPlotOptions: PlyStackPlotOptions = PlyStackPlotOptions()

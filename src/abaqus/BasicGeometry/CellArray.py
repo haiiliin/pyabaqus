@@ -1,8 +1,12 @@
 from abaqusConstants import *
 from .Cell import Cell
 
+from __init__ import *
+
 
 class CellArray:
+    from .FaceArray import FaceArray
+    from .CellArray import CellArray
     """The CellArray is a sequence of Cell objects.
 
     Notes
@@ -27,7 +31,6 @@ class CellArray:
         mdb.models[name].rootAssembly.sets[name].cells
 
     """
-
     def __init__(self, cells: list[Cell]):
         """This method creates a CellArray object.
 
@@ -51,7 +54,7 @@ class CellArray:
         """
         pass
 
-    def findAt(self, coordinates: tuple, printWarning: Boolean = True):
+    def findAt(self, coordinates: tuple, printWarning: Boolean = True) -> Cell:
         """This method returns the object or objects in the CellArray located at the given
         coordinates. findAt initially uses the ACIS tolerance of 1E-6. As a result, findAt
         returns any entity that is at the arbitrary point specified or at a distance of less
@@ -87,7 +90,7 @@ class CellArray:
         """
         pass
 
-    def getExteriorFaces(self):
+    def getExteriorFaces(self) -> FaceArray:
         """This method returns the cell faces on the exterior of the CellArray. That is, it returns
         the faces that are referenced by exactly one of the cells in the sequence.
 
@@ -98,7 +101,7 @@ class CellArray:
         """
         pass
 
-    def getSequenceFromMask(self, mask: str):
+    def getSequenceFromMask(self, mask: str) -> Union[Cell, CellArray]:
         """This method returns the object or objects in the CellArray identified using the
         specified *mask*. This command is generated when the JournalOptions are set to
         COMPRESSEDINDEX. When large number of objects are involved, this method is highly
@@ -121,7 +124,7 @@ class CellArray:
         """
         pass
 
-    def getMask(self):
+    def getMask(self) -> str:
         """This method returns a string specifying the object or objects.
 
         Returns
@@ -131,8 +134,13 @@ class CellArray:
         """
         pass
 
-    def getByBoundingBox(self, xMin: str = '', yMin: str = '', zMin: str = '', xMax: str = '', yMax: str = '',
-                         zMax: str = ''):
+    def getByBoundingBox(self,
+                         xMin: str = '',
+                         yMin: str = '',
+                         zMin: str = '',
+                         xMax: str = '',
+                         yMax: str = '',
+                         zMax: str = '') -> CellArray:
         """This method returns an array of cell objects that lie within the specified bounding box.
         
         Parameters
@@ -157,7 +165,8 @@ class CellArray:
         """
         pass
 
-    def getByBoundingCylinder(self, center1: tuple, center2: tuple, radius: str):
+    def getByBoundingCylinder(self, center1: tuple, center2: tuple,
+                              radius: str) -> CellArray:
         """This method returns an array of cell objects that lie within the specified bounding
         cylinder.
         
@@ -179,7 +188,7 @@ class CellArray:
         """
         pass
 
-    def getByBoundingSphere(self, center: tuple, radius: str):
+    def getByBoundingSphere(self, center: tuple, radius: str) -> CellArray:
         """This method returns an array of cell objects that lie within the specified bounding
         sphere.
         
@@ -197,7 +206,9 @@ class CellArray:
         """
         pass
 
-    def getBoundingBox(self):
+    def getBoundingBox(
+            self
+    ) -> Dict["low":COORDINATE_3D, "high":Tuple[float, float, float]]:
         """This method returns a dictionary of two tuples representing minimum and maximum boundary
         values of the bounding box of the minimum size containing the cell sequence.
 

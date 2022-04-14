@@ -2,6 +2,8 @@ from abaqusConstants import *
 from .PredefinedField import PredefinedField
 from ..Region.Region import Region
 
+from __init__ import *
+
 
 class KinematicHardening(PredefinedField):
     """The KinematicHardening object stores the data for initial equivalent Plastic strains
@@ -29,14 +31,20 @@ class KinematicHardening(PredefinedField):
 
     """
 
-    # A String specifying the name of the AnalyticalField object associated with this 
-    # predefined field. The *field* argument applies only when 
-    # *distributionType*=ANALYTICAL_FIELD. The default value is an empty string. 
+    # A String specifying the name of the AnalyticalField object associated with this
+    # predefined field. The *field* argument applies only when
+    # *distributionType*=ANALYTICAL_FIELD. The default value is an empty string.
     field: str = ''
 
-    def __init__(self, name: str, region: Region, numBackStress: int = 1, equivPlasticStrain: tuple = (),
-                 backStress: tuple = (), sectPtNum: tuple = (),
-                 definition: SymbolicConstant = KINEMATIC_HARDENING, rebarLayerNames: tuple = (),
+    def __init__(self,
+                 name: str,
+                 region: Region,
+                 numBackStress: int = 1,
+                 equivPlasticStrain: tuple = (),
+                 backStress: tuple = (),
+                 sectPtNum: tuple = (),
+                 definition: SymbolicConstant = KINEMATIC_HARDENING,
+                 rebarLayerNames: tuple = (),
                  distributionType: SymbolicConstant = MAGNITUDE):
         """This method creates a KinematicHardening object.
 
@@ -82,9 +90,14 @@ class KinematicHardening(PredefinedField):
         super().__init__()
         pass
 
-    def setValues(self, numBackStress: int = 1, equivPlasticStrain: tuple = (), backStress: tuple = (),
-                  sectPtNum: tuple = (), definition: SymbolicConstant = KINEMATIC_HARDENING,
-                  rebarLayerNames: tuple = (), distributionType: SymbolicConstant = MAGNITUDE):
+    def setValues(self,
+                  numBackStress: int = 1,
+                  equivPlasticStrain: tuple = (),
+                  backStress: tuple = (),
+                  sectPtNum: tuple = (),
+                  definition: SymbolicConstant = KINEMATIC_HARDENING,
+                  rebarLayerNames: tuple = (),
+                  distributionType: SymbolicConstant = MAGNITUDE):
         """This method modifies the KinematicHardening object.
         
         Parameters

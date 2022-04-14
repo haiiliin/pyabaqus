@@ -1,6 +1,8 @@
 from abaqusConstants import *
 from .Crack import Crack
 
+from __init__ import *
+
 
 class DebondVCCT(Crack):
     """The DebondVCCT object defines the parameters needed to activate crack propagation using
@@ -28,11 +30,15 @@ class DebondVCCT(Crack):
 
     """
 
-    # A Boolean specifying whether the crack is suppressed or not. The default value is OFF. 
+    # A Boolean specifying whether the crack is suppressed or not. The default value is OFF.
     suppressed: Boolean = OFF
 
-    def __init__(self, name: str, initiationStep: str, surfToSurfInteraction: str,
-                 debondingForceAmplitude: SymbolicConstant = STEP, printToDATFrequency: int = 1):
+    def __init__(self,
+                 name: str,
+                 initiationStep: str,
+                 surfToSurfInteraction: str,
+                 debondingForceAmplitude: SymbolicConstant = STEP,
+                 printToDATFrequency: int = 1):
         """This method creates a DebondVCCT object. Although the constructor is available both for
         parts and for the assembly, DebondVCCT objects are currently supported only under the
         assembly.
@@ -70,7 +76,9 @@ class DebondVCCT(Crack):
         super().__init__()
         pass
 
-    def setValues(self, debondingForceAmplitude: SymbolicConstant = STEP, printToDATFrequency: int = 1):
+    def setValues(self,
+                  debondingForceAmplitude: SymbolicConstant = STEP,
+                  printToDATFrequency: int = 1):
         """This method modifies the DebondVCCT object.
         
         Parameters

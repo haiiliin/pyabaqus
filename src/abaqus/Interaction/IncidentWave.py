@@ -2,6 +2,8 @@ from abaqusConstants import *
 from .Interaction import Interaction
 from ..Region.Region import Region
 
+from __init__ import *
+
 
 class IncidentWave(Interaction):
     """The IncidentWave object defines incident wave interactions for acoustic and coupled
@@ -21,12 +23,21 @@ class IncidentWave(Interaction):
         - INCIDENT WAVE INTERACTION
 
     """
-
-    def __init__(self, name: str, createStepName: str, sourcePoint: Region, standoffPoint: Region,
-                 surface: Region, interactionProperty: str, definition: SymbolicConstant = PRESSURE,
-                 amplitude: str = '', imaginaryAmplitude: str = '', surfaceNormal: tuple = (),
-                 initialDepth: float = None, referenceMagnitude: float = None,
-                 detonationTime: float = None, magnitudeFactor: float = 1):
+    def __init__(self,
+                 name: str,
+                 createStepName: str,
+                 sourcePoint: Region,
+                 standoffPoint: Region,
+                 surface: Region,
+                 interactionProperty: str,
+                 definition: SymbolicConstant = PRESSURE,
+                 amplitude: str = '',
+                 imaginaryAmplitude: str = '',
+                 surfaceNormal: tuple = (),
+                 initialDepth: float = None,
+                 referenceMagnitude: float = None,
+                 detonationTime: float = None,
+                 magnitudeFactor: float = 1):
         """This method creates an IncidentWave object.
 
         Notes
@@ -94,9 +105,14 @@ class IncidentWave(Interaction):
         super().__init__()
         pass
 
-    def setValues(self, definition: SymbolicConstant = PRESSURE, amplitude: str = '',
-                  imaginaryAmplitude: str = '', surfaceNormal: tuple = (), initialDepth: float = None,
-                  referenceMagnitude: float = None, detonationTime: float = None,
+    def setValues(self,
+                  definition: SymbolicConstant = PRESSURE,
+                  amplitude: str = '',
+                  imaginaryAmplitude: str = '',
+                  surfaceNormal: tuple = (),
+                  initialDepth: float = None,
+                  referenceMagnitude: float = None,
+                  detonationTime: float = None,
                   magnitudeFactor: float = 1):
         """This method modifies the IncidentWave object.
         

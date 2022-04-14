@@ -1,6 +1,8 @@
 from .GeometricRestriction import GeometricRestriction
 from ..Region.Region import Region
 
+from __init__ import *
+
 
 class SizingMemberSize(GeometricRestriction):
     """The SizingMemberSize object defines a sizing member size geometric restriction.
@@ -16,7 +18,6 @@ class SizingMemberSize(GeometricRestriction):
         mdb.models[name].optimizationTasks[name].geometricRestrictions[name]
 
     """
-
     def __init__(self, name: str, region: Region, minWidth: float):
         """This method creates a SizingMemberSize object.
 

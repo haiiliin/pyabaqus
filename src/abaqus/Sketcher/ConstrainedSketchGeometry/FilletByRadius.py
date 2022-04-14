@@ -1,10 +1,12 @@
 from .ConstrainedSketchGeometry import ConstrainedSketchGeometry
 
+from __init__ import *
+
 
 class FilletByRadius(ConstrainedSketchGeometry):
-
-    def __init__(self, radius: float, curve1: 'ConstrainedSketchGeometry', nearPoint1: tuple[float],
-                 curve2: 'ConstrainedSketchGeometry', nearPoint2: tuple[float]):
+    def __init__(self, radius: float, curve1: 'ConstrainedSketchGeometry',
+                 nearPoint1: tuple[float], curve2: 'ConstrainedSketchGeometry',
+                 nearPoint2: tuple[float]):
         """This method constructs a fillet arc of a given radius between two curves. The fillet is
         added to the geometry repository of the ConstrainedSketch object.
 

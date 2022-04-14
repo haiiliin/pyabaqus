@@ -2,6 +2,8 @@ import typing
 
 from abaqusConstants import *
 
+from __init__ import *
+
 
 class HistoryOutput:
     """The HistoryOutput object contains the history output at a point for the specified
@@ -29,17 +31,20 @@ class HistoryOutput:
 
     """
 
-    # A tuple of pairs of Floats specifying the pairs (*frameValue*, *value*) where 
-    # *frameValue* is either time, frequency, or mode and *value* is the value of the 
-    # specified variable at *frameValue*. (This value depends on the type of the variable.) 
+    # A tuple of pairs of Floats specifying the pairs (*frameValue*, *value*) where
+    # *frameValue* is either time, frequency, or mode and *value* is the value of the
+    # specified variable at *frameValue*. (This value depends on the type of the variable.)
     data: float = None
 
-    # A tuple of pairs of Floats specifying the imaginary portion of a specified complex 
-    # variable at each frame value (time, frequency, or mode). The pairs have the form 
-    # (*frameValue*, *value*). 
+    # A tuple of pairs of Floats specifying the imaginary portion of a specified complex
+    # variable at each frame value (time, frequency, or mode). The pairs have the form
+    # (*frameValue*, *value*).
     conjugateData: float = None
 
-    def __init__(self, name: str, description: str, type: SymbolicConstant,
+    def __init__(self,
+                 name: str,
+                 description: str,
+                 type: SymbolicConstant,
                  validInvariants: SymbolicConstant = None):
         """This method creates a HistoryOutput object.
 

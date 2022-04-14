@@ -1,5 +1,9 @@
 from .MeshNode import MeshNode
 
+from __future__ import annotations
+
+from __init__ import *
+
 
 class MeshNodeArray(list[MeshNode]):
     """The MeshNodeArray is a sequence of MeshNode objects.
@@ -38,7 +42,6 @@ class MeshNodeArray(list[MeshNode]):
         mdb.models[name].rootAssembly.surfaces[name].nodes
 
     """
-
     def __init__(self, nodes: list[MeshNode]):
         """This method creates a MeshNodeArray object.
 
@@ -100,7 +103,12 @@ class MeshNodeArray(list[MeshNode]):
         """
         pass
 
-    def getByBoundingBox(self, xMin: str = '', yMin: str = '', zMin: str = '', xMax: str = '', yMax: str = '',
+    def getByBoundingBox(self,
+                         xMin: str = '',
+                         yMin: str = '',
+                         zMin: str = '',
+                         xMax: str = '',
+                         yMax: str = '',
                          zMax: str = ''):
         """This method returns an array of nodes that lie within the specified bounding box.
         
@@ -125,7 +133,8 @@ class MeshNodeArray(list[MeshNode]):
         """
         pass
 
-    def getByBoundingCylinder(self, center1: tuple, center2: tuple, radius: str):
+    def getByBoundingCylinder(self, center1: tuple, center2: tuple,
+                              radius: str):
         """This method returns an array of node objects that lie within the specified bounding
         cylinder.
         
@@ -179,7 +188,13 @@ class MeshNodeArray(list[MeshNode]):
         """
         pass
 
-    def getClosest(self, coordinates: str, numToFind: str = 1, searchTolerance: str = ''):
+    def getClosest(
+        self,
+        coordinates: Union[COORDINATE_3D, Tuple[COORDINATE_3D, ]],
+        numToFind: str = 1,
+        searchTolerance: str = ''
+    ) -> Union[Union[MeshNode, List[MeshNode]], List[Union[MeshNode,
+                                                           List[MeshNode]]]]:
         """This method returns the node or nodes closest to the given point or set of points.
         
         Parameters

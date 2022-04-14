@@ -1,6 +1,8 @@
 from abaqusConstants import *
 from .DataSet import DataSet
 
+from __init__ import *
+
 
 class Behavior:
     """The Behavior object specifies the method used for calibrating a material.
@@ -29,18 +31,18 @@ class Behavior:
 
     """
 
-    # A string specifying the name of the model to which the behavior belongs. 
+    # A string specifying the name of the model to which the behavior belongs.
     modelName: str = ''
 
-    # A string specifying the name of calibration to which the behavior belongs. 
+    # A string specifying the name of calibration to which the behavior belongs.
     calibrationName: str = ''
 
-    # A String specifying the name of the dataset containing all the raw data in the test data 
-    # file. Only valid if the behavior is of type FeFpBehavior 
+    # A String specifying the name of the dataset containing all the raw data in the test data
+    # file. Only valid if the behavior is of type FeFpBehavior
     biAxialAllName: str = ''
 
-    # A String specifying the name of the dataset containing all the raw data in the test data 
-    # file. Only valid if the behavior is of type FeFpBehavior 
+    # A String specifying the name of the dataset containing all the raw data in the test data
+    # file. Only valid if the behavior is of type FeFpBehavior
     uniAxialAllName: str = ''
 
     def __init__(self, name: str, typeName: str):
@@ -68,14 +70,34 @@ class Behavior:
         """
         pass
 
-    def setValues(self, E: str = '', nu: str = '', ds1Name: str = '', ds2Name: str = '', materialName: str = '',
-                  yieldPoint: str = '', ultimatePoint: str = '', plasticPoints: str = '',
-                  PoissonsRatio: str = '', elasticModulus: str = '', plasticPointsRange: str = '',
-                  name: str = '', uniaxialName: str = '', biaxialName: str = '', interpolation: str = '',
-                  uniWeight: str = '', biWeight: str = '', uMullinsReload: str = '',
-                  uMullinsUnload: str = '', uPYieldPoint: tuple = (), uPermSet: str = '',
-                  uPrimary: str = '', bMullinsReload: str = '', bMullinsUnload: str = '',
-                  bPYieldPoint: tuple = (), bPermSet: str = '', bPrimary: str = ''):
+    def setValues(self,
+                  E: str = '',
+                  nu: str = '',
+                  ds1Name: str = '',
+                  ds2Name: str = '',
+                  materialName: str = '',
+                  yieldPoint: str = '',
+                  ultimatePoint: str = '',
+                  plasticPoints: str = '',
+                  PoissonsRatio: str = '',
+                  elasticModulus: str = '',
+                  plasticPointsRange: str = '',
+                  name: str = '',
+                  uniaxialName: str = '',
+                  biaxialName: str = '',
+                  interpolation: str = '',
+                  uniWeight: str = '',
+                  biWeight: str = '',
+                  uMullinsReload: str = '',
+                  uMullinsUnload: str = '',
+                  uPYieldPoint: tuple = (),
+                  uPermSet: str = '',
+                  uPrimary: str = '',
+                  bMullinsReload: str = '',
+                  bMullinsUnload: str = '',
+                  bPYieldPoint: tuple = (),
+                  bPermSet: str = '',
+                  bPrimary: str = ''):
         """This method modifies the data for an existing behavior object.
         
         Parameters
@@ -233,7 +255,12 @@ class Behavior:
         """
         pass
 
-    def compute_plasticPoints(self, dataSet: DataSet, slider_val: str, start_index: str, end_index: str, yp: str = ''):
+    def compute_plasticPoints(self,
+                              dataSet: DataSet,
+                              slider_val: str,
+                              start_index: str,
+                              end_index: str,
+                              yp: str = ''):
         """This method extracts the coordinates of the Plastic Points. The method is only valid for
         ElasPlasIsoBehavior type of behavior.
         
@@ -256,7 +283,11 @@ class Behavior:
         """
         pass
 
-    def xyDataDissect(self, dsName: str, modelName: str, calibrationName: str, biaxial: Boolean = True):
+    def xyDataDissect(self,
+                      dsName: str,
+                      modelName: str,
+                      calibrationName: str,
+                      biaxial: Boolean = True):
         """This method extracts primary, unload, reload and permanent DataSet objects from the
         existing DataSet object.The method is only valid for FeFpBehavior type of behavior.
         

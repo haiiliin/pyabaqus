@@ -4,6 +4,8 @@ from .Monitor import Monitor
 from .Restart import Restart
 from ..Step.StepBase import StepBase
 
+from __init__ import *
+
 
 class OutputStep(StepBase):
     """The Step object stores the parameters that determine the context of the step. The Step
@@ -21,11 +23,18 @@ class OutputStep(StepBase):
            mdb.models[name].steps[name]
 
     """
-
-    def DiagnosticPrint(self, allke: Boolean = ON, criticalElement: Boolean = ON, dmass: Boolean = OFF,
-                        etotal: Boolean = OFF, contact: Boolean = ON, modelChange: Boolean = OFF,
-                        plasticity: Boolean = OFF, residual: Boolean = ON, frequency: int = 1,
-                        solve: Boolean = ON, mass: Boolean = OFF) -> DiagnosticPrint:
+    def DiagnosticPrint(self,
+                        allke: Boolean = ON,
+                        criticalElement: Boolean = ON,
+                        dmass: Boolean = OFF,
+                        etotal: Boolean = OFF,
+                        contact: Boolean = ON,
+                        modelChange: Boolean = OFF,
+                        plasticity: Boolean = OFF,
+                        residual: Boolean = ON,
+                        frequency: int = 1,
+                        solve: Boolean = ON,
+                        mass: Boolean = OFF) -> DiagnosticPrint:
         """This method creates a DiagnosticPrint object.
 
         Notes
@@ -86,12 +95,13 @@ class OutputStep(StepBase):
         diagnosticPrint: DiagnosticPrint
             A DiagnosticPrint object
         """
-        self.diagnosticPrint = diagnosticPrint = DiagnosticPrint(allke, criticalElement, dmass, etotal, contact,
-                                                                 modelChange, plasticity, residual, frequency, solve,
-                                                                 mass)
+        self.diagnosticPrint = diagnosticPrint = DiagnosticPrint(
+            allke, criticalElement, dmass, etotal, contact, modelChange,
+            plasticity, residual, frequency, solve, mass)
         return diagnosticPrint
 
-    def Monitor(self, node: str, dof: SymbolicConstant, frequency: int) -> Monitor:
+    def Monitor(self, node: str, dof: SymbolicConstant,
+                frequency: int) -> Monitor:
         """This method creates a request for a degree of freedom to be monitored in a general or
         modal procedure.
 
@@ -137,7 +147,10 @@ class OutputStep(StepBase):
         self.monitor = monitor = Monitor(node, dof, frequency)
         return monitor
 
-    def Restart(self, numberIntervals: int = 0, timeMarks: Boolean = OFF, overlay: Boolean = OFF,
+    def Restart(self,
+                numberIntervals: int = 0,
+                timeMarks: Boolean = OFF,
+                overlay: Boolean = OFF,
                 frequency: int = 0) -> Restart:
         """This method creates a restart request.
 
@@ -175,5 +188,6 @@ class OutputStep(StepBase):
         ------
             RangeError.
         """
-        self.restart = restart = Restart(numberIntervals, timeMarks, overlay, frequency)
+        self.restart = restart = Restart(numberIntervals, timeMarks, overlay,
+                                         frequency)
         return restart

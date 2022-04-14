@@ -1,6 +1,8 @@
 from abaqusConstants import *
 from .Amplitude import Amplitude
 
+from __init__ import *
+
 
 class SolutionDependentAmplitude(Amplitude):
     """The SolutionDependentAmplitude object defines a solution-dependent amplitude for
@@ -22,8 +24,11 @@ class SolutionDependentAmplitude(Amplitude):
         - AMPLITUDE
 
     """
-
-    def __init__(self, name: str, initial: float = 1, minimum: float = 0, maximum: float = 1000,
+    def __init__(self,
+                 name: str,
+                 initial: float = 1,
+                 minimum: float = 0,
+                 maximum: float = 1000,
                  timeSpan: SymbolicConstant = STEP):
         """This method creates a SolutionDependentAmplitude object.
 
@@ -65,7 +70,10 @@ class SolutionDependentAmplitude(Amplitude):
         super().__init__()
         pass
 
-    def setValues(self, initial: float = 1, minimum: float = 0, maximum: float = 1000,
+    def setValues(self,
+                  initial: float = 1,
+                  minimum: float = 0,
+                  maximum: float = 1000,
                   timeSpan: SymbolicConstant = STEP):
         """This method modifies the SolutionDependentAmplitude object.
         

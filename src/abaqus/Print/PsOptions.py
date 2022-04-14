@@ -1,5 +1,7 @@
 from abaqusConstants import *
 
+from __init__ import *
+
 
 class PsOptions:
     """The PsOptions object stores the settings that Abaqus uses when printing using PostScript
@@ -12,11 +14,18 @@ class PsOptions:
             session.psOptions
 
     """
-
-    def setValues(self, paperSize: SymbolicConstant = LETTER, topMargin: float = 0, bottomMargin: float = 0,
-                  leftMargin: float = 0, rightMargin: float = 0, orientation: SymbolicConstant = PORTRAIT,
-                  logo: Boolean = ON, date: Boolean = ON, resolution: SymbolicConstant = DPI_150,
-                  fontType: SymbolicConstant = PS_IF_AVAILABLE, imageFormat: SymbolicConstant = VECTOR,
+    def setValues(self,
+                  paperSize: SymbolicConstant = LETTER,
+                  topMargin: float = 0,
+                  bottomMargin: float = 0,
+                  leftMargin: float = 0,
+                  rightMargin: float = 0,
+                  orientation: SymbolicConstant = PORTRAIT,
+                  logo: Boolean = ON,
+                  date: Boolean = ON,
+                  resolution: SymbolicConstant = DPI_150,
+                  fontType: SymbolicConstant = PS_IF_AVAILABLE,
+                  imageFormat: SymbolicConstant = VECTOR,
                   shadingQuality: SymbolicConstant = MEDIUM):
         """This method modifies the PsOptions object.
         

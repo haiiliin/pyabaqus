@@ -38,6 +38,8 @@ from ..Datum.DatumAxis import DatumAxis
 from ..Model.ModelBase import ModelBase
 from ..Region.Region import Region
 
+from __init__ import *
+
 
 class LoadModel(ModelBase):
     """Abaqus creates a Model object named `Model-1` when a session is started.
@@ -51,9 +53,14 @@ class LoadModel(ModelBase):
         mdb.models[name]
 
     """
-
-    def BodyCharge(self, name: str, createStepName: str, region: Region, magnitude: float,
-                   amplitude: str = UNSET, distributionType: SymbolicConstant = UNIFORM, field: str = '') -> BodyCharge:
+    def BodyCharge(self,
+                   name: str,
+                   createStepName: str,
+                   region: Region,
+                   magnitude: float,
+                   amplitude: str = UNSET,
+                   distributionType: SymbolicConstant = UNIFORM,
+                   field: str = '') -> BodyCharge:
         """This method creates a BodyCharge object.
 
         Notes
@@ -91,11 +98,17 @@ class LoadModel(ModelBase):
         -------
             A BodyCharge object.
         """
-        self.loads[name] = load = BodyCharge(name, createStepName, region, magnitude, amplitude, distributionType,
-                                             field)
+        self.loads[name] = load = BodyCharge(name, createStepName, region,
+                                             magnitude, amplitude,
+                                             distributionType, field)
         return load
 
-    def BodyConcentrationFlux(self, name: str, createStepName: str, region: Region, magnitude: float, field: str = '',
+    def BodyConcentrationFlux(self,
+                              name: str,
+                              createStepName: str,
+                              region: Region,
+                              magnitude: float,
+                              field: str = '',
                               distributionType: SymbolicConstant = UNIFORM,
                               amplitude: str = UNSET) -> BodyConcentrationFlux:
         """This method creates a BodyConcentrationFlux object.
@@ -135,12 +148,18 @@ class LoadModel(ModelBase):
         -------
             A BodyConcentrationFlux object.
         """
-        self.loads[name] = load = BodyConcentrationFlux(name, createStepName, region, magnitude, field,
-                                                        distributionType, amplitude)
+        self.loads[name] = load = BodyConcentrationFlux(
+            name, createStepName, region, magnitude, field, distributionType,
+            amplitude)
         return load
 
-    def BodyCurrent(self, name: str, createStepName: str, region: Region, magnitude: float,
-                    amplitude: str = UNSET, distributionType: SymbolicConstant = UNIFORM,
+    def BodyCurrent(self,
+                    name: str,
+                    createStepName: str,
+                    region: Region,
+                    magnitude: float,
+                    amplitude: str = UNSET,
+                    distributionType: SymbolicConstant = UNIFORM,
                     field: str = '') -> BodyCurrent:
         """This method creates a BodyCurrent object.
 
@@ -179,12 +198,22 @@ class LoadModel(ModelBase):
         -------
             A BodyCurrent object.
         """
-        self.loads[name] = load = BodyCurrent(name, createStepName, region, magnitude, amplitude, distributionType,
-                                              field)
+        self.loads[name] = load = BodyCurrent(name, createStepName, region,
+                                              magnitude, amplitude,
+                                              distributionType, field)
         return load
 
-    def BodyCurrentDensity(self, name: str, createStepName: str, region: Region, comp1: str, comp2: str, comp3: str,
-                           amplitude: str = UNSET, distributionType: SymbolicConstant = UNIFORM) -> BodyCurrentDensity:
+    def BodyCurrentDensity(
+            self,
+            name: str,
+            createStepName: str,
+            region: Region,
+            comp1: str,
+            comp2: str,
+            comp3: str,
+            amplitude: str = UNSET,
+            distributionType: SymbolicConstant = UNIFORM
+    ) -> BodyCurrentDensity:
         """This method creates a BodyCurrentDensity object.
 
         Notes
@@ -222,13 +251,22 @@ class LoadModel(ModelBase):
         -------
             A BodyCurrentDensity object.
         """
-        self.loads[name] = load = BodyCurrentDensity(name, createStepName, region, comp1, comp2, comp3, amplitude,
+        self.loads[name] = load = BodyCurrentDensity(name, createStepName,
+                                                     region, comp1, comp2,
+                                                     comp3, amplitude,
                                                      distributionType)
         return load
 
-    def BodyForce(self, name: str, createStepName: str, region: Region, field: str = '',
-                  distributionType: SymbolicConstant = UNIFORM, comp1: float = None, comp2: float = None,
-                  comp3: float = None, amplitude: str = UNSET) -> BodyForce:
+    def BodyForce(self,
+                  name: str,
+                  createStepName: str,
+                  region: Region,
+                  field: str = '',
+                  distributionType: SymbolicConstant = UNIFORM,
+                  comp1: float = None,
+                  comp2: float = None,
+                  comp3: float = None,
+                  amplitude: str = UNSET) -> BodyForce:
         """This method creates a BodyForce object.
 
         Notes
@@ -271,12 +309,19 @@ class LoadModel(ModelBase):
         -------
             A BodyForce object.
         """
-        self.loads[name] = load = BodyForce(name, createStepName, region, field, distributionType, comp1, comp2, comp3,
-                                            amplitude)
+        self.loads[name] = load = BodyForce(name, createStepName, region,
+                                            field, distributionType, comp1,
+                                            comp2, comp3, amplitude)
         return load
 
-    def BodyHeatFlux(self, name: str, createStepName: str, region: Region, magnitude: float, field: str = '',
-                     distributionType: SymbolicConstant = UNIFORM, amplitude: str = UNSET) -> BodyHeatFlux:
+    def BodyHeatFlux(self,
+                     name: str,
+                     createStepName: str,
+                     region: Region,
+                     magnitude: float,
+                     field: str = '',
+                     distributionType: SymbolicConstant = UNIFORM,
+                     amplitude: str = UNSET) -> BodyHeatFlux:
         """This method creates a BodyHeatFlux object.
 
         Notes
@@ -314,13 +359,20 @@ class LoadModel(ModelBase):
         -------
             A BodyHeatFlux object.
         """
-        self.loads[name] = load = BodyHeatFlux(name, createStepName, region, magnitude, field, distributionType,
-                                               amplitude)
+        self.loads[name] = load = BodyHeatFlux(name, createStepName, region,
+                                               magnitude, field,
+                                               distributionType, amplitude)
         return load
 
-    def BoltLoad(self, name: str, createStepName: str, region: Region, magnitude: float,
-                 boltMethod: SymbolicConstant = APPLY_FORCE, datumAxis: DatumAxis = DatumAxis(),
-                 amplitude: str = UNSET, preTenSecPartLevel: Boolean = False) -> BoltLoad:
+    def BoltLoad(self,
+                 name: str,
+                 createStepName: str,
+                 region: Region,
+                 magnitude: float,
+                 boltMethod: SymbolicConstant = APPLY_FORCE,
+                 datumAxis: DatumAxis = DatumAxis(),
+                 amplitude: str = UNSET,
+                 preTenSecPartLevel: Boolean = False) -> BoltLoad:
         """This method creates a BoltLoad object.
 
         Notes
@@ -367,12 +419,19 @@ class LoadModel(ModelBase):
         ------
             TextError.
         """
-        self.loads[name] = load = BoltLoad(name, createStepName, region, magnitude, boltMethod, datumAxis, amplitude,
-                                           preTenSecPartLevel)
+        self.loads[name] = load = BoltLoad(name, createStepName, region,
+                                           magnitude, boltMethod, datumAxis,
+                                           amplitude, preTenSecPartLevel)
         return load
 
-    def ConcCharge(self, name: str, createStepName: str, region: Region, magnitude: float,
-                   distributionType: SymbolicConstant = UNIFORM, field: str = '', amplitude: str = UNSET) -> ConcCharge:
+    def ConcCharge(self,
+                   name: str,
+                   createStepName: str,
+                   region: Region,
+                   magnitude: float,
+                   distributionType: SymbolicConstant = UNIFORM,
+                   field: str = '',
+                   amplitude: str = UNSET) -> ConcCharge:
         """This method creates a ConcCharge object.
 
         Notes
@@ -410,12 +469,18 @@ class LoadModel(ModelBase):
         -------
             A ConcCharge object.
         """
-        self.loads[name] = load = ConcCharge(name, createStepName, region, magnitude, distributionType, field,
-                                             amplitude)
+        self.loads[name] = load = ConcCharge(name, createStepName, region,
+                                             magnitude, distributionType,
+                                             field, amplitude)
         return load
 
-    def ConcConcFlux(self, name: str, createStepName: str, region: Region, magnitude: float,
-                     distributionType: SymbolicConstant = UNIFORM, field: str = '',
+    def ConcConcFlux(self,
+                     name: str,
+                     createStepName: str,
+                     region: Region,
+                     magnitude: float,
+                     distributionType: SymbolicConstant = UNIFORM,
+                     field: str = '',
                      amplitude: str = UNSET) -> ConcConcFlux:
         """This method creates a ConcConcFlux object.
 
@@ -454,12 +519,18 @@ class LoadModel(ModelBase):
         -------
             A ConcConcFlux object.
         """
-        self.loads[name] = load = ConcConcFlux(name, createStepName, region, magnitude, distributionType, field,
-                                               amplitude)
+        self.loads[name] = load = ConcConcFlux(name, createStepName, region,
+                                               magnitude, distributionType,
+                                               field, amplitude)
         return load
 
-    def ConcCurrent(self, name: str, createStepName: str, region: Region, magnitude: float,
-                    distributionType: SymbolicConstant = UNIFORM, field: str = '',
+    def ConcCurrent(self,
+                    name: str,
+                    createStepName: str,
+                    region: Region,
+                    magnitude: float,
+                    distributionType: SymbolicConstant = UNIFORM,
+                    field: str = '',
                     amplitude: str = UNSET) -> ConcCurrent:
         """This method creates a ConcCurrent object.
 
@@ -498,13 +569,22 @@ class LoadModel(ModelBase):
         -------
             A ConcCurrent object.
         """
-        self.loads[name] = load = ConcCurrent(name, createStepName, region, magnitude, distributionType, field,
-                                              amplitude)
+        self.loads[name] = load = ConcCurrent(name, createStepName, region,
+                                              magnitude, distributionType,
+                                              field, amplitude)
         return load
 
-    def ConcentratedForce(self, name: str, createStepName: str, region: Region,
-                          distributionType: SymbolicConstant = UNIFORM, field: str = '', cf1: float = None,
-                          cf2: float = None, cf3: float = None, amplitude: str = UNSET, follower: Boolean = OFF,
+    def ConcentratedForce(self,
+                          name: str,
+                          createStepName: str,
+                          region: Region,
+                          distributionType: SymbolicConstant = UNIFORM,
+                          field: str = '',
+                          cf1: float = None,
+                          cf2: float = None,
+                          cf3: float = None,
+                          amplitude: str = UNSET,
+                          follower: Boolean = OFF,
                           localCsys: int = None) -> ConcentratedForce:
         """This method creates a ConcentratedForce object.
 
@@ -557,12 +637,21 @@ class LoadModel(ModelBase):
         -------
             A ConcentratedForce object.
         """
-        self.loads[name] = load = ConcentratedForce(name, createStepName, region, distributionType, field, cf1, cf2,
-                                                    cf3, amplitude, follower, localCsys)
+        self.loads[name] = load = ConcentratedForce(name, createStepName,
+                                                    region, distributionType,
+                                                    field, cf1, cf2, cf3,
+                                                    amplitude, follower,
+                                                    localCsys)
         return load
 
-    def ConcentratedHeatFlux(self, name: str, createStepName: str, region: Region, magnitude: float,
-                             distributionType: SymbolicConstant = UNIFORM, field: str = '', amplitude: str = UNSET,
+    def ConcentratedHeatFlux(self,
+                             name: str,
+                             createStepName: str,
+                             region: Region,
+                             magnitude: float,
+                             distributionType: SymbolicConstant = UNIFORM,
+                             field: str = '',
+                             amplitude: str = UNSET,
                              dof: int = 11) -> ConcentratedHeatFlux:
         """This method creates a ConcentratedHeatFlux object.
 
@@ -604,12 +693,19 @@ class LoadModel(ModelBase):
         -------
             A ConcentratedHeatFlux object.
         """
-        self.loads[name] = load = ConcentratedHeatFlux(name, createStepName, region, magnitude, distributionType, field,
+        self.loads[name] = load = ConcentratedHeatFlux(name, createStepName,
+                                                       region, magnitude,
+                                                       distributionType, field,
                                                        amplitude, dof)
         return load
 
-    def ConcPoreFluid(self, name: str, createStepName: str, region: Region, magnitude: float,
-                      distributionType: SymbolicConstant = UNIFORM, field: str = '',
+    def ConcPoreFluid(self,
+                      name: str,
+                      createStepName: str,
+                      region: Region,
+                      magnitude: float,
+                      distributionType: SymbolicConstant = UNIFORM,
+                      field: str = '',
                       amplitude: str = UNSET) -> ConcPoreFluid:
         """This method creates a ConcPoreFluid object.
 
@@ -648,12 +744,20 @@ class LoadModel(ModelBase):
         -------
             A ConcPoreFluid object.
         """
-        self.loads[name] = load = ConcPoreFluid(name, createStepName, region, magnitude, distributionType, field,
-                                                amplitude)
+        self.loads[name] = load = ConcPoreFluid(name, createStepName, region,
+                                                magnitude, distributionType,
+                                                field, amplitude)
         return load
 
-    def ConnectorForce(self, name: str, createStepName: str, region: str = '', fastenerName: str = '',
-                       fastenerSetName: str = '', f1: float = None, f2: float = None, f3: float = None,
+    def ConnectorForce(self,
+                       name: str,
+                       createStepName: str,
+                       region: str = '',
+                       fastenerName: str = '',
+                       fastenerSetName: str = '',
+                       f1: float = None,
+                       f2: float = None,
+                       f3: float = None,
                        amplitude: str = UNSET) -> ConnectorForce:
         """This method creates a ConnectorForce object on a wire region. Alternatively, the load
         may also be applied to a wire set referenced from an assembled fastener template model.
@@ -703,12 +807,20 @@ class LoadModel(ModelBase):
         -------
             A ConnectorForce object.
         """
-        self.loads[name] = load = ConnectorForce(name, createStepName, region, fastenerName, fastenerSetName, f1, f2,
-                                                 f3, amplitude)
+        self.loads[name] = load = ConnectorForce(name, createStepName, region,
+                                                 fastenerName, fastenerSetName,
+                                                 f1, f2, f3, amplitude)
         return load
 
-    def ConnectorMoment(self, name: str, createStepName: str, region: str = '', fastenerName: str = '',
-                        fastenerSetName: str = '', m1: float = None, m2: float = None, m3: float = None,
+    def ConnectorMoment(self,
+                        name: str,
+                        createStepName: str,
+                        region: str = '',
+                        fastenerName: str = '',
+                        fastenerSetName: str = '',
+                        m1: float = None,
+                        m2: float = None,
+                        m3: float = None,
                         amplitude: str = UNSET) -> ConnectorMoment:
         """This method creates a ConnectorMoment object on a wire region. Alternatively, the load
         may also be applied to a wire set referenced from an assembled fastener template model.
@@ -757,12 +869,21 @@ class LoadModel(ModelBase):
         -------
             A ConnectorMoment object.
         """
-        self.loads[name] = load = ConnectorMoment(name, createStepName, region, fastenerName, fastenerSetName, m1, m2,
-                                                  m3, amplitude)
+        self.loads[name] = load = ConnectorMoment(name, createStepName, region,
+                                                  fastenerName,
+                                                  fastenerSetName, m1, m2, m3,
+                                                  amplitude)
         return load
 
-    def CoriolisForce(self, name: str, createStepName: str, region: Region, magnitude: float, point1: tuple,
-                      point2: tuple, amplitude: str = UNSET, distributionType: SymbolicConstant = UNIFORM,
+    def CoriolisForce(self,
+                      name: str,
+                      createStepName: str,
+                      region: Region,
+                      magnitude: float,
+                      point1: tuple,
+                      point2: tuple,
+                      amplitude: str = UNSET,
+                      distributionType: SymbolicConstant = UNIFORM,
                       field: str = '') -> CoriolisForce:
         """This method creates a CoriolisForce object.
 
@@ -805,13 +926,22 @@ class LoadModel(ModelBase):
         -------
             A CoriolisForce object.
         """
-        self.loads[name] = load = CoriolisForce(name, createStepName, region, magnitude, point1, point2, amplitude,
-                                                distributionType, field)
+        self.loads[name] = load = CoriolisForce(name, createStepName, region,
+                                                magnitude, point1, point2,
+                                                amplitude, distributionType,
+                                                field)
         return load
 
-    def Gravity(self, name: str, createStepName: str, distributionType: SymbolicConstant = UNIFORM,
-                field: str = '', region: Region = Region(), comp1: float = None, comp2: float = None,
-                comp3: float = None, amplitude: str = UNSET) -> Gravity:
+    def Gravity(self,
+                name: str,
+                createStepName: str,
+                distributionType: SymbolicConstant = UNIFORM,
+                field: str = '',
+                region: Region = Region(),
+                comp1: float = None,
+                comp2: float = None,
+                comp3: float = None,
+                amplitude: str = UNSET) -> Gravity:
         """This method creates a Gravity object.
 
         Notes
@@ -854,12 +984,21 @@ class LoadModel(ModelBase):
         -------
             A Gravity object.
         """
-        self.loads[name] = load = Gravity(name, createStepName, distributionType, field, region, comp1, comp2, comp3,
-                                          amplitude)
+        self.loads[name] = load = Gravity(name, createStepName,
+                                          distributionType, field, region,
+                                          comp1, comp2, comp3, amplitude)
         return load
 
-    def InertiaRelief(self, name: str, createStepName: str, u1: Boolean = OFF, u2: Boolean = OFF, u3: Boolean = OFF,
-                      ur1: Boolean = OFF, ur2: Boolean = OFF, ur3: Boolean = OFF, referencePoint: tuple = (),
+    def InertiaRelief(self,
+                      name: str,
+                      createStepName: str,
+                      u1: Boolean = OFF,
+                      u2: Boolean = OFF,
+                      u3: Boolean = OFF,
+                      ur1: Boolean = OFF,
+                      ur2: Boolean = OFF,
+                      ur3: Boolean = OFF,
+                      referencePoint: tuple = (),
                       localCoordinates: int = None) -> InertiaRelief:
         """This method creates an InertiaRelief object.
 
@@ -907,12 +1046,19 @@ class LoadModel(ModelBase):
         -------
             An InertiaRelief object.
         """
-        self.loads[name] = load = InertiaRelief(name, createStepName, u1, u2, u3, ur1, ur2, ur3, referencePoint,
+        self.loads[name] = load = InertiaRelief(name, createStepName, u1, u2,
+                                                u3, ur1, ur2, ur3,
+                                                referencePoint,
                                                 localCoordinates)
         return load
 
-    def InwardVolAccel(self, name: str, createStepName: str, region: Region, magnitude: float,
-                       distributionType: SymbolicConstant = UNIFORM, field: str = '',
+    def InwardVolAccel(self,
+                       name: str,
+                       createStepName: str,
+                       region: Region,
+                       magnitude: float,
+                       distributionType: SymbolicConstant = UNIFORM,
+                       field: str = '',
                        amplitude: str = UNSET) -> InwardVolAccel:
         """This method creates a InwardVolAccel object.
 
@@ -951,13 +1097,21 @@ class LoadModel(ModelBase):
         -------
             An InwardVolAccel object.
         """
-        self.loads[name] = load = InwardVolAccel(name, createStepName, region, magnitude, distributionType, field,
-                                                 amplitude)
+        self.loads[name] = load = InwardVolAccel(name, createStepName, region,
+                                                 magnitude, distributionType,
+                                                 field, amplitude)
         return load
 
-    def LineLoad(self, name: str, createStepName: str, region: Region,
-                 distributionType: SymbolicConstant = UNIFORM, field: str = '', comp1: float = None,
-                 comp2: float = None, comp3: float = None, amplitude: str = UNSET,
+    def LineLoad(self,
+                 name: str,
+                 createStepName: str,
+                 region: Region,
+                 distributionType: SymbolicConstant = UNIFORM,
+                 field: str = '',
+                 comp1: float = None,
+                 comp2: float = None,
+                 comp3: float = None,
+                 amplitude: str = UNSET,
                  system: SymbolicConstant = GLOBAL) -> LineLoad:
         """This method creates a LineLoad object.
 
@@ -1005,13 +1159,23 @@ class LoadModel(ModelBase):
         -------
             A LineLoad object.
         """
-        self.loads[name] = load = LineLoad(name, createStepName, region, distributionType, field, comp1, comp2, comp3,
-                                           amplitude, system)
+        self.loads[name] = load = LineLoad(name, createStepName, region,
+                                           distributionType, field, comp1,
+                                           comp2, comp3, amplitude, system)
         return load
 
-    def Moment(self, name: str, createStepName: str, region: Region, cm1: float = None, cm2: float = None,
-               cm3: float = None, amplitude: str = UNSET, follower: Boolean = OFF,
-               localCsys: int = None, distributionType: SymbolicConstant = UNIFORM, field: str = '') -> Moment:
+    def Moment(self,
+               name: str,
+               createStepName: str,
+               region: Region,
+               cm1: float = None,
+               cm2: float = None,
+               cm3: float = None,
+               amplitude: str = UNSET,
+               follower: Boolean = OFF,
+               localCsys: int = None,
+               distributionType: SymbolicConstant = UNIFORM,
+               field: str = '') -> Moment:
         """This method creates a Moment object.
 
         Notes
@@ -1063,13 +1227,21 @@ class LoadModel(ModelBase):
         -------
             A Moment object.
         """
-        self.loads[name] = load = Moment(name, createStepName, region, cm1, cm2, cm3, amplitude, follower, localCsys,
-                                         distributionType, field)
+        self.loads[name] = load = Moment(name, createStepName, region, cm1,
+                                         cm2, cm3, amplitude, follower,
+                                         localCsys, distributionType, field)
         return load
 
-    def PEGLoad(self, name: str, createStepName: str, region: Region,
-                distributionType: SymbolicConstant = UNIFORM, field: str = '', comp1: float = None,
-                comp2: float = None, comp3: float = None, amplitude: str = UNSET) -> PEGLoad:
+    def PEGLoad(self,
+                name: str,
+                createStepName: str,
+                region: Region,
+                distributionType: SymbolicConstant = UNIFORM,
+                field: str = '',
+                comp1: float = None,
+                comp2: float = None,
+                comp3: float = None,
+                amplitude: str = UNSET) -> PEGLoad:
         """This method creates a PEGLoad object.
 
         Notes
@@ -1112,13 +1284,23 @@ class LoadModel(ModelBase):
         -------
             A PEGLoad object.
         """
-        self.loads[name] = load = PEGLoad(name, createStepName, region, distributionType, field, comp1, comp2, comp3,
-                                          amplitude)
+        self.loads[name] = load = PEGLoad(name, createStepName, region,
+                                          distributionType, field, comp1,
+                                          comp2, comp3, amplitude)
         return load
 
-    def PipePressure(self, name: str, createStepName: str, region: Region, magnitude: float, diameter: float,
-                     hZero: float, hReference: float, field: str = '', amplitude: str = UNSET,
-                     distributionType: SymbolicConstant = UNIFORM, side: SymbolicConstant = INTERNAL) -> PipePressure:
+    def PipePressure(self,
+                     name: str,
+                     createStepName: str,
+                     region: Region,
+                     magnitude: float,
+                     diameter: float,
+                     hZero: float,
+                     hReference: float,
+                     field: str = '',
+                     amplitude: str = UNSET,
+                     distributionType: SymbolicConstant = UNIFORM,
+                     side: SymbolicConstant = INTERNAL) -> PipePressure:
         """This method creates a Pressure object.
 
         Notes
@@ -1167,13 +1349,23 @@ class LoadModel(ModelBase):
         -------
             A PipePressure object.
         """
-        self.loads[name] = load = PipePressure(name, createStepName, region, magnitude, diameter, hZero, hReference,
-                                               field, amplitude, distributionType, side)
+        self.loads[name] = load = PipePressure(name, createStepName, region,
+                                               magnitude, diameter, hZero,
+                                               hReference, field, amplitude,
+                                               distributionType, side)
         return load
 
-    def Pressure(self, name: str, createStepName: str, region: Region, magnitude: float = 0.0, hZero: float = 0.0,
-                 hReference: float = 0.0, field: str = '', refPoint: str = '',
-                 distributionType: SymbolicConstant = UNIFORM, amplitude: str = UNSET) -> Pressure:
+    def Pressure(self,
+                 name: str,
+                 createStepName: str,
+                 region: Region,
+                 magnitude: float = 0.0,
+                 hZero: float = 0.0,
+                 hReference: float = 0.0,
+                 field: str = '',
+                 refPoint: str = '',
+                 distributionType: SymbolicConstant = UNIFORM,
+                 amplitude: str = UNSET) -> Pressure:
         """This method creates a Pressure object.
 
         Notes
@@ -1221,13 +1413,23 @@ class LoadModel(ModelBase):
         -------
             A Pressure object.
         """
-        self.loads[name] = load = Pressure(name, createStepName, region, magnitude, hZero, hReference, field, refPoint,
-                                           distributionType, amplitude)
+        self.loads[name] = load = Pressure(name, createStepName, region,
+                                           magnitude, hZero, hReference, field,
+                                           refPoint, distributionType,
+                                           amplitude)
         return load
 
-    def RotationalBodyForce(self, name: str, createStepName: str, region: Region, magnitude: float, point1: tuple,
-                            point2: tuple, distributionType: SymbolicConstant = UNIFORM, field: str = '',
-                            centrifugal: Boolean = OFF, rotaryAcceleration: Boolean = OFF,
+    def RotationalBodyForce(self,
+                            name: str,
+                            createStepName: str,
+                            region: Region,
+                            magnitude: float,
+                            point1: tuple,
+                            point2: tuple,
+                            distributionType: SymbolicConstant = UNIFORM,
+                            field: str = '',
+                            centrifugal: Boolean = OFF,
+                            rotaryAcceleration: Boolean = OFF,
                             amplitude: str = UNSET) -> RotationalBodyForce:
         """This method creates a RotationalBodyForce object.
 
@@ -1278,16 +1480,28 @@ class LoadModel(ModelBase):
         -------
             A RotationalBodyForce object.
         """
-        self.loads[name] = load = RotationalBodyForce(name, createStepName, region, magnitude, point1, point2,
-                                                      distributionType, field, centrifugal, rotaryAcceleration,
-                                                      amplitude)
+        self.loads[name] = load = RotationalBodyForce(
+            name, createStepName, region, magnitude, point1, point2,
+            distributionType, field, centrifugal, rotaryAcceleration,
+            amplitude)
         return load
 
-    def ShellEdgeLoad(self, name: str, createStepName: str, region: Region, magnitude: float,
-                      distributionType: SymbolicConstant = UNIFORM, field: str = '', amplitude: str = UNSET,
-                      angle: float = 0, axis: SymbolicConstant = AXIS_1, localCsys: int = GENERAL,
-                      userCsys: str = GENERAL, directionVector: tuple = (), follower: Boolean = ON,
-                      resultant: Boolean = OFF, traction: SymbolicConstant = NORMAL) -> ShellEdgeLoad:
+    def ShellEdgeLoad(self,
+                      name: str,
+                      createStepName: str,
+                      region: Region,
+                      magnitude: float,
+                      distributionType: SymbolicConstant = UNIFORM,
+                      field: str = '',
+                      amplitude: str = UNSET,
+                      angle: float = 0,
+                      axis: SymbolicConstant = AXIS_1,
+                      localCsys: int = GENERAL,
+                      userCsys: str = GENERAL,
+                      directionVector: tuple = (),
+                      follower: Boolean = ON,
+                      resultant: Boolean = OFF,
+                      traction: SymbolicConstant = NORMAL) -> ShellEdgeLoad:
         """This method creates a ShellEdgeLoad object.
 
         Notes
@@ -1360,14 +1574,23 @@ class LoadModel(ModelBase):
         -------
             A ShellEdgeLoad object.
         """
-        self.loads[name] = load = ShellEdgeLoad(name, createStepName, region, magnitude, distributionType, field,
-                                                amplitude, angle, axis, localCsys, userCsys, directionVector, follower,
+        self.loads[name] = load = ShellEdgeLoad(name, createStepName, region,
+                                                magnitude, distributionType,
+                                                field, amplitude, angle, axis,
+                                                localCsys, userCsys,
+                                                directionVector, follower,
                                                 resultant, traction)
         return load
 
-    def SubmodelSB(self, name: str, createStepName: str, region: Region, globalStep: str,
-                   globalDrivingRegion: str = '', absoluteExteriorTolerance: float = None,
-                   exteriorTolerance: float = 0, globalIncrement: int = 0) -> SubmodelSB:
+    def SubmodelSB(self,
+                   name: str,
+                   createStepName: str,
+                   region: Region,
+                   globalStep: str,
+                   globalDrivingRegion: str = '',
+                   absoluteExteriorTolerance: float = None,
+                   exteriorTolerance: float = 0,
+                   globalIncrement: int = 0) -> SubmodelSB:
         """This method creates a SubmodelSB object.
 
         Notes
@@ -1412,11 +1635,19 @@ class LoadModel(ModelBase):
         -------
             A SubmodelSB object.
         """
-        self.loads[name] = load = SubmodelSB(name, createStepName, region, globalStep, globalDrivingRegion,
-                                             absoluteExteriorTolerance, exteriorTolerance, globalIncrement)
+        self.loads[name] = load = SubmodelSB(name, createStepName, region,
+                                             globalStep, globalDrivingRegion,
+                                             absoluteExteriorTolerance,
+                                             exteriorTolerance,
+                                             globalIncrement)
         return load
 
-    def SubstructureLoad(self, name: str, createStepName: str, region: Region, loadCaseNames: str, magnitude: float,
+    def SubstructureLoad(self,
+                         name: str,
+                         createStepName: str,
+                         region: Region,
+                         loadCaseNames: str,
+                         magnitude: float,
                          amplitude: str = UNSET) -> SubstructureLoad:
         """This method creates a SubstructureLoad object.
 
@@ -1449,11 +1680,18 @@ class LoadModel(ModelBase):
         -------
             A SubstructureLoad object.
         """
-        self.loads[name] = load = SubstructureLoad(name, createStepName, region, loadCaseNames, magnitude, amplitude)
+        self.loads[name] = load = SubstructureLoad(name, createStepName,
+                                                   region, loadCaseNames,
+                                                   magnitude, amplitude)
         return load
 
-    def SurfaceCharge(self, name: str, createStepName: str, region: Region, magnitude: float,
-                      distributionType: SymbolicConstant = UNIFORM, field: str = '',
+    def SurfaceCharge(self,
+                      name: str,
+                      createStepName: str,
+                      region: Region,
+                      magnitude: float,
+                      distributionType: SymbolicConstant = UNIFORM,
+                      field: str = '',
                       amplitude: str = UNSET) -> SurfaceCharge:
         """This method creates a SurfaceCharge object.
 
@@ -1492,14 +1730,20 @@ class LoadModel(ModelBase):
         -------
             A SurfaceCharge object.
         """
-        self.loads[name] = load = SurfaceCharge(name, createStepName, region, magnitude, distributionType, field,
-                                                amplitude)
+        self.loads[name] = load = SurfaceCharge(name, createStepName, region,
+                                                magnitude, distributionType,
+                                                field, amplitude)
         return load
 
-    def SurfaceConcentrationFlux(self, name: str, createStepName: str, region: Region, magnitude: float,
-                                 field: str = '',
-                                 distributionType: SymbolicConstant = UNIFORM,
-                                 amplitude: str = UNSET) -> SurfaceConcentrationFlux:
+    def SurfaceConcentrationFlux(
+            self,
+            name: str,
+            createStepName: str,
+            region: Region,
+            magnitude: float,
+            field: str = '',
+            distributionType: SymbolicConstant = UNIFORM,
+            amplitude: str = UNSET) -> SurfaceConcentrationFlux:
         """This method creates a SurfaceConcentrationFlux object.
 
         Notes
@@ -1538,12 +1782,18 @@ class LoadModel(ModelBase):
         -------
             A SurfaceConcentrationFlux object.
         """
-        self.loads[name] = load = SurfaceConcentrationFlux(name, createStepName, region, magnitude, field,
-                                                           distributionType, amplitude)
+        self.loads[name] = load = SurfaceConcentrationFlux(
+            name, createStepName, region, magnitude, field, distributionType,
+            amplitude)
         return load
 
-    def SurfaceCurrent(self, name: str, createStepName: str, region: Region, magnitude: float,
-                       distributionType: SymbolicConstant = UNIFORM, field: str = '',
+    def SurfaceCurrent(self,
+                       name: str,
+                       createStepName: str,
+                       region: Region,
+                       magnitude: float,
+                       distributionType: SymbolicConstant = UNIFORM,
+                       field: str = '',
                        amplitude: str = UNSET) -> SurfaceCurrent:
         """This method creates a SurfaceCurrent object.
 
@@ -1582,11 +1832,18 @@ class LoadModel(ModelBase):
         -------
             A SurfaceCurrent object.
         """
-        self.loads[name] = load = SurfaceCurrent(name, createStepName, region, magnitude, distributionType, field,
-                                                 amplitude)
+        self.loads[name] = load = SurfaceCurrent(name, createStepName, region,
+                                                 magnitude, distributionType,
+                                                 field, amplitude)
         return load
 
-    def SurfaceCurrentDensity(self, name: str, createStepName: str, region: Region, comp1: str, comp2: str, comp3: str,
+    def SurfaceCurrentDensity(self,
+                              name: str,
+                              createStepName: str,
+                              region: Region,
+                              comp1: str,
+                              comp2: str,
+                              comp3: str,
                               distributionType: SymbolicConstant = UNIFORM,
                               amplitude: str = UNSET) -> SurfaceCurrentDensity:
         """This method creates a SurfaceCurrentDensity object.
@@ -1626,12 +1883,19 @@ class LoadModel(ModelBase):
         -------
             A SurfaceCurrentDensity object.
         """
-        self.loads[name] = load = SurfaceCurrentDensity(name, createStepName, region, comp1, comp2, comp3,
-                                                        distributionType, amplitude)
+        self.loads[name] = load = SurfaceCurrentDensity(
+            name, createStepName, region, comp1, comp2, comp3,
+            distributionType, amplitude)
         return load
 
-    def SurfaceHeatFlux(self, name: str, createStepName: str, region: Region, magnitude: float, field: str = '',
-                        distributionType: SymbolicConstant = UNIFORM, amplitude: str = UNSET) -> SurfaceHeatFlux:
+    def SurfaceHeatFlux(self,
+                        name: str,
+                        createStepName: str,
+                        region: Region,
+                        magnitude: float,
+                        field: str = '',
+                        distributionType: SymbolicConstant = UNIFORM,
+                        amplitude: str = UNSET) -> SurfaceHeatFlux:
         """This method creates a SurfaceHeatFlux object.
 
         Notes
@@ -1669,12 +1933,19 @@ class LoadModel(ModelBase):
         -------
             A SurfaceHeatFlux object.
         """
-        self.loads[name] = load = SurfaceHeatFlux(name, createStepName, region, magnitude, field, distributionType,
-                                                  amplitude)
+        self.loads[name] = load = SurfaceHeatFlux(name, createStepName, region,
+                                                  magnitude, field,
+                                                  distributionType, amplitude)
         return load
 
-    def SurfacePoreFluid(self, name: str, createStepName: str, region: Region, magnitude: float, field: str = '',
-                         distributionType: SymbolicConstant = UNIFORM, amplitude: str = UNSET) -> SurfacePoreFluid:
+    def SurfacePoreFluid(self,
+                         name: str,
+                         createStepName: str,
+                         region: Region,
+                         magnitude: float,
+                         field: str = '',
+                         distributionType: SymbolicConstant = UNIFORM,
+                         amplitude: str = UNSET) -> SurfacePoreFluid:
         """This method creates a SurfacePoreFluid object.
 
         Notes
@@ -1712,15 +1983,27 @@ class LoadModel(ModelBase):
         -------
             A SurfacePoreFluid object.
         """
-        self.loads[name] = load = SurfacePoreFluid(name, createStepName, region, magnitude, field, distributionType,
-                                                   amplitude)
+        self.loads[name] = load = SurfacePoreFluid(name, createStepName,
+                                                   region, magnitude, field,
+                                                   distributionType, amplitude)
         return load
 
-    def SurfaceTraction(self, name: str, createStepName: str, region: Region, magnitude: float,
-                        distributionType: SymbolicConstant = UNIFORM, field: str = '', amplitude: str = UNSET,
-                        angle: float = 0, axis: SymbolicConstant = AXIS_1, localCsys: int = None,
-                        userCsys: str = '', directionVector: tuple = (), follower: Boolean = ON,
-                        resultant: Boolean = OFF, traction: SymbolicConstant = SHEAR) -> SurfaceTraction:
+    def SurfaceTraction(self,
+                        name: str,
+                        createStepName: str,
+                        region: Region,
+                        magnitude: float,
+                        distributionType: SymbolicConstant = UNIFORM,
+                        field: str = '',
+                        amplitude: str = UNSET,
+                        angle: float = 0,
+                        axis: SymbolicConstant = AXIS_1,
+                        localCsys: int = None,
+                        userCsys: str = '',
+                        directionVector: tuple = (),
+                        follower: Boolean = ON,
+                        resultant: Boolean = OFF,
+                        traction: SymbolicConstant = SHEAR) -> SurfaceTraction:
         """This method creates a SurfaceTraction object.
 
         Notes
@@ -1791,7 +2074,10 @@ class LoadModel(ModelBase):
         -------
             A SurfaceTraction object.
         """
-        self.loads[name] = load = SurfaceTraction(name, createStepName, region, magnitude, distributionType, field,
-                                                  amplitude, angle, axis, localCsys, userCsys, directionVector,
-                                                  follower, resultant, traction)
+        self.loads[name] = load = SurfaceTraction(name, createStepName, region,
+                                                  magnitude, distributionType,
+                                                  field, amplitude, angle,
+                                                  axis, localCsys, userCsys,
+                                                  directionVector, follower,
+                                                  resultant, traction)
         return load

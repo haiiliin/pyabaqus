@@ -2,6 +2,8 @@ from abaqusConstants import *
 from .Interaction import Interaction
 from ..Region.Region import Region
 
+from __init__ import *
+
 
 class FilmCondition(Interaction):
     """The FilmCondition object defines film coefficients and associated sink temperatures for
@@ -18,11 +20,19 @@ class FilmCondition(Interaction):
         mdb.models[name].interactions[name]
 
     """
-
-    def __init__(self, name: str, createStepName: str, surface: Region, definition: SymbolicConstant,
-                 interactionProperty: str = '', sinkTemperature: float = 0, sinkAmplitude: str = '',
-                 filmCoeff: float = 0, filmCoeffAmplitude: str = '', field: str = '',
-                 sinkFieldName: str = '', sinkDistributionType: SymbolicConstant = UNIFORM):
+    def __init__(self,
+                 name: str,
+                 createStepName: str,
+                 surface: Region,
+                 definition: SymbolicConstant,
+                 interactionProperty: str = '',
+                 sinkTemperature: float = 0,
+                 sinkAmplitude: str = '',
+                 filmCoeff: float = 0,
+                 filmCoeffAmplitude: str = '',
+                 field: str = '',
+                 sinkFieldName: str = '',
+                 sinkDistributionType: SymbolicConstant = UNIFORM):
         """This method creates a FilmCondition object.
 
         Notes
@@ -89,9 +99,15 @@ class FilmCondition(Interaction):
         super().__init__()
         pass
 
-    def setValues(self, interactionProperty: str = '', sinkTemperature: float = 0, sinkAmplitude: str = '',
-                  filmCoeff: float = 0, filmCoeffAmplitude: str = '', field: str = '',
-                  sinkFieldName: str = '', sinkDistributionType: SymbolicConstant = UNIFORM):
+    def setValues(self,
+                  interactionProperty: str = '',
+                  sinkTemperature: float = 0,
+                  sinkAmplitude: str = '',
+                  filmCoeff: float = 0,
+                  filmCoeffAmplitude: str = '',
+                  field: str = '',
+                  sinkFieldName: str = '',
+                  sinkDistributionType: SymbolicConstant = UNIFORM):
         """This method modifies the data for an existing FilmCondition object in the step where it
         is created.
         

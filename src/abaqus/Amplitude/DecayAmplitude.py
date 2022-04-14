@@ -1,6 +1,8 @@
 from abaqusConstants import *
 from .Amplitude import Amplitude
 
+from __init__ import *
+
 
 class DecayAmplitude(Amplitude):
     """The DecayAmplitude object defines an amplitude curve using an exponential decay.
@@ -21,8 +23,12 @@ class DecayAmplitude(Amplitude):
         - AMPLITUDE
 
     """
-
-    def __init__(self, name: str, initial: float, maximum: float, start: float, decayTime: float,
+    def __init__(self,
+                 name: str,
+                 initial: float,
+                 maximum: float,
+                 start: float,
+                 decayTime: float,
                  timeSpan: SymbolicConstant = STEP):
         """This method creates a DecayAmplitude object.
 

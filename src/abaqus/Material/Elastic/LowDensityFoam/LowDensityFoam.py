@@ -1,6 +1,8 @@
 from abaqusConstants import *
 from ...TestData.UniaxialTestData import UniaxialTestData
 
+from __init__ import *
+
 
 class LowDensityFoam:
     """The LowDensityFoam object specifies properties for low-density foam.
@@ -21,15 +23,19 @@ class LowDensityFoam:
 
     """
 
-    # A UniaxialTestData object. 
-    uniaxialTensionTestData: UniaxialTestData = UniaxialTestData(((),))
+    # A UniaxialTestData object.
+    uniaxialTensionTestData: UniaxialTestData = UniaxialTestData(((), ))
 
-    # A UniaxialTestData object. 
-    uniaxialCompressionTestData: UniaxialTestData = UniaxialTestData(((),))
+    # A UniaxialTestData object.
+    uniaxialCompressionTestData: UniaxialTestData = UniaxialTestData(((), ))
 
-    def __init__(self, elementRemoval: Boolean = OFF, maxAllowablePrincipalStress: float = None,
+    def __init__(self,
+                 elementRemoval: Boolean = OFF,
+                 maxAllowablePrincipalStress: float = None,
                  extrapolateStressStrainCurve: Boolean = OFF,
-                 strainRateType: SymbolicConstant = VOLUMETRIC, mu0: float = None, mu1: float = 0,
+                 strainRateType: SymbolicConstant = VOLUMETRIC,
+                 mu0: float = None,
+                 mu1: float = 0,
                  alpha: float = 2):
         """This method creates a LowDensityFoam object.
 

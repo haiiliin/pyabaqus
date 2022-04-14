@@ -1,3 +1,6 @@
+from __init__ import *
+
+
 class MeshFace:
     """The MeshFace object refers to an element face. It has no constructor or members. A
     MeshFace object can be accessed via a MeshFaceArray or a repository on a part or part 
@@ -27,10 +30,10 @@ class MeshFace:
 
     """
 
-    # An Int specifying an Int specifying the element label. 
+    # An Int specifying an Int specifying the element label.
     label: int = None
 
-    # An Int specifying a symbolic constant specifying the side of the element. 
+    # An Int specifying a symbolic constant specifying the side of the element.
     face: int = None
 
     def getElemEdges(self):

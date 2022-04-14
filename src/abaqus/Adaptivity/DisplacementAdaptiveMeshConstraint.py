@@ -4,6 +4,8 @@ from abaqusConstants import *
 from .AdaptiveMeshConstraint import AdaptiveMeshConstraint
 from ..Region.Region import Region
 
+from __init__ import *
+
 
 class DisplacementAdaptiveMeshConstraint(AdaptiveMeshConstraint):
     """The AdaptivityProcess object defines a series of jobs that will be submitted for
@@ -34,26 +36,34 @@ class DisplacementAdaptiveMeshConstraint(AdaptiveMeshConstraint):
 
     """
 
-    # A String specifying the adaptive mesh constraint repository key. 
+    # A String specifying the adaptive mesh constraint repository key.
     name: str = ''
 
-    # A SymbolicConstant specifying the category of the adaptive mesh constraint. Possible 
-    # values are MECHANICAL and THERMAL. 
+    # A SymbolicConstant specifying the category of the adaptive mesh constraint. Possible
+    # values are MECHANICAL and THERMAL.
     category: SymbolicConstant = None
 
-    # A Region object specifying the region to which the adaptive mesh constraint is applied. 
+    # A Region object specifying the region to which the adaptive mesh constraint is applied.
     region: Region = Region()
 
-    # None or a DatumCsys object specifying the local coordinate system of the adaptive mesh 
-    # constraint's degrees of freedom. If *localCsys*=None, the degrees of freedom are defined 
-    # in the global coordinate system. The default value is None. 
+    # None or a DatumCsys object specifying the local coordinate system of the adaptive mesh
+    # constraint's degrees of freedom. If *localCsys*=None, the degrees of freedom are defined
+    # in the global coordinate system. The default value is None.
     localCsys: str = None
 
-    def __init__(self, name: str, createStepName: str, region: Region,
-                 u1: typing.Union[SymbolicConstant, float] = UNSET, u2: typing.Union[SymbolicConstant, float] = UNSET,
-                 u3: typing.Union[SymbolicConstant, float] = UNSET, ur1: typing.Union[SymbolicConstant, float] = UNSET,
-                 ur2: typing.Union[SymbolicConstant, float] = UNSET, ur3: typing.Union[SymbolicConstant, float] = UNSET,
-                 amplitude: str = UNSET, motionType: SymbolicConstant = INDEPENDENT, localCsys: str = None):
+    def __init__(self,
+                 name: str,
+                 createStepName: str,
+                 region: Region,
+                 u1: typing.Union[SymbolicConstant, float] = UNSET,
+                 u2: typing.Union[SymbolicConstant, float] = UNSET,
+                 u3: typing.Union[SymbolicConstant, float] = UNSET,
+                 ur1: typing.Union[SymbolicConstant, float] = UNSET,
+                 ur2: typing.Union[SymbolicConstant, float] = UNSET,
+                 ur3: typing.Union[SymbolicConstant, float] = UNSET,
+                 amplitude: str = UNSET,
+                 motionType: SymbolicConstant = INDEPENDENT,
+                 localCsys: str = None):
         """This method creates a DisplacementAdaptiveMeshConstraint object.
 
         Notes
@@ -116,13 +126,16 @@ class DisplacementAdaptiveMeshConstraint(AdaptiveMeshConstraint):
         """
         super().__init__(name, region=region, localCsys=localCsys)
 
-    def setValues(self, u1: typing.Union[SymbolicConstant, float] = UNSET,
+    def setValues(self,
+                  u1: typing.Union[SymbolicConstant, float] = UNSET,
                   u2: typing.Union[SymbolicConstant, float] = UNSET,
                   u3: typing.Union[SymbolicConstant, float] = UNSET,
                   ur1: typing.Union[SymbolicConstant, float] = UNSET,
                   ur2: typing.Union[SymbolicConstant, float] = UNSET,
-                  ur3: typing.Union[SymbolicConstant, float] = UNSET, amplitude: str = UNSET,
-                  motionType: SymbolicConstant = INDEPENDENT, localCsys: str = None):
+                  ur3: typing.Union[SymbolicConstant, float] = UNSET,
+                  amplitude: str = UNSET,
+                  motionType: SymbolicConstant = INDEPENDENT,
+                  localCsys: str = None):
         """This method modifies the data for an existing DisplacementAdaptiveMeshConstraint object
         in the step where it is created.
         
@@ -167,7 +180,8 @@ class DisplacementAdaptiveMeshConstraint(AdaptiveMeshConstraint):
         """
         pass
 
-    def setValuesInStep(self, stepName: str,
+    def setValuesInStep(self,
+                        stepName: str,
                         u1: typing.Union[SymbolicConstant, float] = None,
                         u2: typing.Union[SymbolicConstant, float] = None,
                         u3: typing.Union[SymbolicConstant, float] = None,

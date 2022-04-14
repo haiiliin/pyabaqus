@@ -2,6 +2,8 @@ from abaqusConstants import *
 from .RebarLayers import RebarLayers
 from .Section import Section
 
+from __init__ import *
+
 
 class SurfaceSection(Section):
     """The SurfaceSection object defines the properties of a surface section.
@@ -28,10 +30,13 @@ class SurfaceSection(Section):
 
     """
 
-    # A RebarLayers object specifying reinforcement properties. 
+    # A RebarLayers object specifying reinforcement properties.
     rebarLayers: RebarLayers = None
 
-    def __init__(self, name: str, useDensity: Boolean = OFF, density: float = 0):
+    def __init__(self,
+                 name: str,
+                 useDensity: Boolean = OFF,
+                 density: float = 0):
         """This method creates a SurfaceSection object.
 
         Notes

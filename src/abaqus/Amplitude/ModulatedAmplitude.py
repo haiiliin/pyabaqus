@@ -1,6 +1,8 @@
 from abaqusConstants import *
 from .Amplitude import Amplitude
 
+from __init__ import *
+
 
 class ModulatedAmplitude(Amplitude):
     """The ModulatedAmplitude object defines a modulated amplitude curve.
@@ -21,9 +23,14 @@ class ModulatedAmplitude(Amplitude):
         - AMPLITUDE
 
     """
-
-    def __init__(self, name: str, initial: float, magnitude: float, start: float, frequency1: float,
-                 frequency2: float, timeSpan: SymbolicConstant = STEP):
+    def __init__(self,
+                 name: str,
+                 initial: float,
+                 magnitude: float,
+                 start: float,
+                 frequency1: float,
+                 frequency2: float,
+                 timeSpan: SymbolicConstant = STEP):
         """This method creates a ModulatedAmplitude object.
 
         Notes

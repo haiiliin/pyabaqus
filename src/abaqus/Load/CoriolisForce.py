@@ -2,6 +2,8 @@ from abaqusConstants import *
 from .Load import Load
 from ..Region.Region import Region
 
+from __init__ import *
+
 
 class CoriolisForce(Load):
     """The CoriolisForce object stores the data for a coriolis force.
@@ -36,29 +38,36 @@ class CoriolisForce(Load):
 
     """
 
-    # A String specifying the load repository key. 
+    # A String specifying the load repository key.
     name: str = ''
 
-    # A SymbolicConstant specifying how the load is distributed spatially. Possible values are 
-    # UNIFORM and FIELD. The default value is UNIFORM. 
+    # A SymbolicConstant specifying how the load is distributed spatially. Possible values are
+    # UNIFORM and FIELD. The default value is UNIFORM.
     distributionType: SymbolicConstant = UNIFORM
 
-    # A tuple of Floats specifying the first point on the axis of rotation for the load. 
+    # A tuple of Floats specifying the first point on the axis of rotation for the load.
     point1: float = None
 
-    # A tuple of Floats specifying the second point on the axis of rotation for the load. 
+    # A tuple of Floats specifying the second point on the axis of rotation for the load.
     point2: float = None
 
-    # A String specifying the name of the AnalyticalField object associated with this load. 
-    # The *field* argument applies only when *distributionType*=FIELD. The default value is an 
-    # empty string. 
+    # A String specifying the name of the AnalyticalField object associated with this load.
+    # The *field* argument applies only when *distributionType*=FIELD. The default value is an
+    # empty string.
     field: str = ''
 
-    # A Region object specifying the region to which the load is applied. 
+    # A Region object specifying the region to which the load is applied.
     region: Region = Region()
 
-    def __init__(self, name: str, createStepName: str, region: Region, magnitude: float, point1: tuple,
-                 point2: tuple, amplitude: str = UNSET, distributionType: SymbolicConstant = UNIFORM,
+    def __init__(self,
+                 name: str,
+                 createStepName: str,
+                 region: Region,
+                 magnitude: float,
+                 point1: tuple,
+                 point2: tuple,
+                 amplitude: str = UNSET,
+                 distributionType: SymbolicConstant = UNIFORM,
                  field: str = ''):
         """This method creates a CoriolisForce object.
 
@@ -104,7 +113,10 @@ class CoriolisForce(Load):
         super().__init__()
         pass
 
-    def setValues(self, amplitude: str = UNSET, distributionType: SymbolicConstant = UNIFORM, field: str = ''):
+    def setValues(self,
+                  amplitude: str = UNSET,
+                  distributionType: SymbolicConstant = UNIFORM,
+                  field: str = ''):
         """This method modifies the data for an existing CoriolisForce object in the step where it
         is created.
         
@@ -124,7 +136,10 @@ class CoriolisForce(Load):
         """
         pass
 
-    def setValuesInStep(self, stepName: str, magnitude: float = None, amplitude: str = ''):
+    def setValuesInStep(self,
+                        stepName: str,
+                        magnitude: float = None,
+                        amplitude: str = ''):
         """This method modifies the propagating data for an existing CoriolisForce object in the
         specified step.
         

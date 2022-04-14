@@ -1,5 +1,7 @@
 from abaqusConstants import *
 
+from __init__ import *
+
 
 class Density:
     """The Density object specifies the material density.
@@ -26,9 +28,12 @@ class Density:
         - DENSITY
 
     """
-
-    def __init__(self, table: tuple, temperatureDependency: Boolean = OFF, dependencies: int = 0,
-                 distributionType: SymbolicConstant = UNIFORM, fieldName: str = ''):
+    def __init__(self,
+                 table: tuple,
+                 temperatureDependency: Boolean = OFF,
+                 dependencies: int = 0,
+                 distributionType: SymbolicConstant = UNIFORM,
+                 fieldName: str = ''):
         """This method creates a Density object.
 
         Notes

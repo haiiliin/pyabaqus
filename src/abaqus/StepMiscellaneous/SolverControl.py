@@ -2,6 +2,8 @@ import typing
 
 from abaqusConstants import *
 
+from __init__ import *
+
 
 class SolverControl:
     """The SolverControl object is used to provide additional optional solver controls.
@@ -16,10 +18,13 @@ class SolverControl:
            mdb.models[name].steps[name].solverControl
 
     """
-
-    def setValues(self, allowPropagation: Boolean = ON, resetDefaultValues: Boolean = OFF,
-                  relativeTolerance: typing.Union[SymbolicConstant, float] = DEFAULT,
-                  maxIterations: SymbolicConstant = DEFAULT, fillInLevel: SymbolicConstant = DEFAULT):
+    def setValues(self,
+                  allowPropagation: Boolean = ON,
+                  resetDefaultValues: Boolean = OFF,
+                  relativeTolerance: typing.Union[SymbolicConstant,
+                                                  float] = DEFAULT,
+                  maxIterations: SymbolicConstant = DEFAULT,
+                  fillInLevel: SymbolicConstant = DEFAULT):
         """This method modifies the SolverControl object.
         
         Parameters

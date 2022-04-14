@@ -2,6 +2,8 @@ from abaqusConstants import *
 from .Interaction import Interaction
 from ..Region.Region import Region
 
+from __init__ import *
+
 
 class SelfContactExp(Interaction):
     """The SelfContactExp object defines self-contact during an Abaqus/Explicit analysis.
@@ -17,9 +19,13 @@ class SelfContactExp(Interaction):
         mdb.models[name].interactions[name]
 
     """
-
-    def __init__(self, name: str, createStepName: str, surface: Region, interactionProperty: str,
-                 mechanicalConstraint: SymbolicConstant = KINEMATIC, contactControls: str = ''):
+    def __init__(self,
+                 name: str,
+                 createStepName: str,
+                 surface: Region,
+                 interactionProperty: str,
+                 mechanicalConstraint: SymbolicConstant = KINEMATIC,
+                 contactControls: str = ''):
         """This method creates a SelfContactExp object.
 
         Notes
@@ -56,7 +62,9 @@ class SelfContactExp(Interaction):
         super().__init__()
         pass
 
-    def setValues(self, mechanicalConstraint: SymbolicConstant = KINEMATIC, contactControls: str = ''):
+    def setValues(self,
+                  mechanicalConstraint: SymbolicConstant = KINEMATIC,
+                  contactControls: str = ''):
         """This method modifies the data for an existing SelfContactExp object in the step where it
         is created.
         
@@ -72,7 +80,10 @@ class SelfContactExp(Interaction):
         """
         pass
 
-    def setValuesInStep(self, stepName: str, interactionProperty: str = '', contactControls: str = ''):
+    def setValuesInStep(self,
+                        stepName: str,
+                        interactionProperty: str = '',
+                        contactControls: str = ''):
         """This method modifies the propagating data for an existing SelfContactExp object in the
         specified step.
         

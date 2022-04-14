@@ -4,6 +4,8 @@ from .OdbMeshElementArray import OdbMeshElementArray
 from .OdbMeshNode import OdbMeshNode
 from .OdbMeshNodeArray import OdbMeshNodeArray
 
+from __init__ import *
+
 
 class OdbSet:
     """The set objects are used to identify regions of a model.
@@ -51,29 +53,29 @@ class OdbSet:
 
     """
 
-    # A String specifying the name of the set and the repository key. 
+    # A String specifying the name of the set and the repository key.
     name: str = ''
 
-    # A tuple of Strings specifying the namespaces for the nodes, elements, and faces; None if 
-    # the set is on a Part or an OdbInstance object. 
+    # A tuple of Strings specifying the namespaces for the nodes, elements, and faces; None if
+    # the set is on a Part or an OdbInstance object.
     instanceNames: tuple = ()
 
-    # An OdbMeshNodeArray object specifying the nodes of an OdbSet. If a set spans more than 
-    # one part instance, this member is a sequence of sequences for each part instance. 
+    # An OdbMeshNodeArray object specifying the nodes of an OdbSet. If a set spans more than
+    # one part instance, this member is a sequence of sequences for each part instance.
     nodes: OdbMeshNodeArray = OdbMeshNodeArray()
 
-    # An OdbMeshElementArray object specifying the elements of an OdbSet. If a set spans more 
-    # than one part instance, this member is a sequence of sequences for each part instance. 
+    # An OdbMeshElementArray object specifying the elements of an OdbSet. If a set spans more
+    # than one part instance, this member is a sequence of sequences for each part instance.
     elements: OdbMeshElementArray = OdbMeshElementArray()
 
-    # A tuple of SymbolicConstants specifying the element face. If a set spans more than one 
-    # part instance, this member is a sequence of sequences for each part instance. 
+    # A tuple of SymbolicConstants specifying the element face. If a set spans more than one
+    # part instance, this member is a sequence of sequences for each part instance.
     faces: SymbolicConstant = None
 
-    # A repository of an OdbInstance object. 
+    # A repository of an OdbInstance object.
     instances: str = ''
 
-    # A Boolean specifying whether the set is internal. 
+    # A Boolean specifying whether the set is internal.
     isInternal: Boolean = OFF
 
     def __init__(self, name: str, nodes: tuple[OdbMeshNode]):

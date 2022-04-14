@@ -8,6 +8,8 @@ from ..Section.GeometryShellSection import GeometryShellSection
 from ..Section.HomogeneousShellSection import HomogeneousShellSection
 from ..Section.SectionLayerArray import SectionLayerArray
 
+from __init__ import *
+
 
 class CompositeLayup:
     """The CompositeLayup object is used to specify a composite layup on a part.
@@ -37,17 +39,22 @@ class CompositeLayup:
 
     """
 
-    # A GeometryShellSection object. 
+    # A GeometryShellSection object.
     section: GeometryShellSection = GeometryShellSection()
 
-    # A MaterialOrientation object. 
+    # A MaterialOrientation object.
     orientation: MaterialOrientation = MaterialOrientation()
 
-    # A CompositePlyArray object specifying the plies that make up this composite layup. 
+    # A CompositePlyArray object specifying the plies that make up this composite layup.
     plies: CompositePlyArray = CompositePlyArray()
 
-    def __init__(self, name: str, description: str = '', offsetType: SymbolicConstant = GLOBAL,
-                 offsetField: str = '', offsetValues: float = 0, elementType: SymbolicConstant = SHELL,
+    def __init__(self,
+                 name: str,
+                 description: str = '',
+                 offsetType: SymbolicConstant = GLOBAL,
+                 offsetField: str = '',
+                 offsetValues: float = 0,
+                 elementType: SymbolicConstant = SHELL,
                  symmetric: Boolean = OFF):
         """This method creates a CompositeLayup object.
 
@@ -108,8 +115,12 @@ class CompositeLayup:
         """
         pass
 
-    def setValues(self, description: str = '', offsetType: SymbolicConstant = GLOBAL, offsetField: str = '',
-                  offsetValues: float = 0, elementType: SymbolicConstant = SHELL,
+    def setValues(self,
+                  description: str = '',
+                  offsetType: SymbolicConstant = GLOBAL,
+                  offsetField: str = '',
+                  offsetValues: float = 0,
+                  elementType: SymbolicConstant = SHELL,
                   symmetric: Boolean = OFF):
         """This method modifies the CompositeLayup object.
         
@@ -137,12 +148,21 @@ class CompositeLayup:
         """
         pass
 
-    def CompositePly(self, thickness: float, region: Region, material: str, plyName: str,
-                     orientationType: SymbolicConstant, thicknessType: SymbolicConstant,
-                     orientationValue: float = 0, thicknessField: str = '', numIntPts: int = 3,
-                     axis: SymbolicConstant = AXIS_1, angle: float = 0,
+    def CompositePly(self,
+                     thickness: float,
+                     region: Region,
+                     material: str,
+                     plyName: str,
+                     orientationType: SymbolicConstant,
+                     thicknessType: SymbolicConstant,
+                     orientationValue: float = 0,
+                     thicknessField: str = '',
+                     numIntPts: int = 3,
+                     axis: SymbolicConstant = AXIS_1,
+                     angle: float = 0,
                      additionalRotationType: SymbolicConstant = ROTATION_NONE,
-                     orientation: SymbolicConstant = None, additionalRotationField: str = '') -> CompositePly:
+                     orientation: SymbolicConstant = None,
+                     additionalRotationField: str = '') -> CompositePly:
         """This method creates a CompositePly object.
 
         Notes
@@ -218,20 +238,34 @@ class CompositeLayup:
         ------
             AbaqusException.
         """
-        compositePly = CompositePly(thickness, region, material, plyName, orientationType, thicknessType,
-                                    orientationValue, thicknessField, numIntPts, axis, angle, additionalRotationType,
-                                    orientation, additionalRotationField)
+        compositePly = CompositePly(thickness, region, material, plyName,
+                                    orientationType, thicknessType,
+                                    orientationValue, thicknessField,
+                                    numIntPts, axis, angle,
+                                    additionalRotationType, orientation,
+                                    additionalRotationField)
         self.plies.append(compositePly)
         return compositePly
 
-    def CompositeShellSection(self, name: str, layup: SectionLayerArray, symmetric: Boolean = OFF,
-                              thicknessType: SymbolicConstant = UNIFORM, preIntegrate: Boolean = OFF,
-                              poissonDefinition: SymbolicConstant = DEFAULT, poisson: float = 0,
-                              integrationRule: SymbolicConstant = SIMPSON, temperature: SymbolicConstant = GRADIENT,
-                              idealization: SymbolicConstant = NO_IDEALIZATION, nTemp: int = None,
-                              thicknessModulus: float = None, useDensity: Boolean = OFF, density: float = 0,
-                              layupName: str = '', thicknessField: str = '',
-                              nodalThicknessField: str = '') -> CompositeShellSection:
+    def CompositeShellSection(
+            self,
+            name: str,
+            layup: SectionLayerArray,
+            symmetric: Boolean = OFF,
+            thicknessType: SymbolicConstant = UNIFORM,
+            preIntegrate: Boolean = OFF,
+            poissonDefinition: SymbolicConstant = DEFAULT,
+            poisson: float = 0,
+            integrationRule: SymbolicConstant = SIMPSON,
+            temperature: SymbolicConstant = GRADIENT,
+            idealization: SymbolicConstant = NO_IDEALIZATION,
+            nTemp: int = None,
+            thicknessModulus: float = None,
+            useDensity: Boolean = OFF,
+            density: float = 0,
+            layupName: str = '',
+            thicknessField: str = '',
+            nodalThicknessField: str = '') -> CompositeShellSection:
         """This method creates a CompositeShellSection object.
 
         Notes
@@ -311,18 +345,25 @@ class CompositeLayup:
         -------
             A CompositeShellSection object.
         """
-        self.section = compositeShellSection = CompositeShellSection(name, layup, symmetric, thicknessType,
-                                                                     preIntegrate, poissonDefinition, poisson,
-                                                                     integrationRule, temperature, idealization, nTemp,
-                                                                     thicknessModulus, useDensity, density, layupName,
-                                                                     thicknessField, nodalThicknessField)
+        self.section = compositeShellSection = CompositeShellSection(
+            name, layup, symmetric, thicknessType, preIntegrate,
+            poissonDefinition, poisson, integrationRule, temperature,
+            idealization, nTemp, thicknessModulus, useDensity, density,
+            layupName, thicknessField, nodalThicknessField)
         return compositeShellSection
 
-    def GeometryShellSection(self, nodalThicknessField: str = '', thicknessField: str = '',
-                             thicknessType: SymbolicConstant = UNIFORM, preIntegrate: Boolean = OFF,
-                             poissonDefinition: SymbolicConstant = DEFAULT, poisson: float = 0,
-                             integrationRule: SymbolicConstant = SIMPSON, temperature: SymbolicConstant = GRADIENT,
-                             nTemp: int = None, thicknessModulus: float = None, useDensity: Boolean = OFF,
+    def GeometryShellSection(self,
+                             nodalThicknessField: str = '',
+                             thicknessField: str = '',
+                             thicknessType: SymbolicConstant = UNIFORM,
+                             preIntegrate: Boolean = OFF,
+                             poissonDefinition: SymbolicConstant = DEFAULT,
+                             poisson: float = 0,
+                             integrationRule: SymbolicConstant = SIMPSON,
+                             temperature: SymbolicConstant = GRADIENT,
+                             nTemp: int = None,
+                             thicknessModulus: float = None,
+                             useDensity: Boolean = OFF,
                              density: float = 0) -> GeometryShellSection:
         """This method creates a GeometryShellSection object.
 
@@ -388,19 +429,31 @@ class CompositeLayup:
         -------
             A GeometryShellSection object.
         """
-        self.section = geometryShellSection = GeometryShellSection(nodalThicknessField, thicknessField, thicknessType,
-                                                                   preIntegrate, poissonDefinition, poisson,
-                                                                   integrationRule, temperature, nTemp,
-                                                                   thicknessModulus, useDensity, density)
+        self.section = geometryShellSection = GeometryShellSection(
+            nodalThicknessField, thicknessField, thicknessType, preIntegrate,
+            poissonDefinition, poisson, integrationRule, temperature, nTemp,
+            thicknessModulus, useDensity, density)
         return geometryShellSection
 
-    def HomogeneousShellSection(self, name: str, material: str, thickness: float = 0, numIntPts: int = 5,
-                 thicknessType: SymbolicConstant = UNIFORM, preIntegrate: Boolean = OFF,
-                 poissonDefinition: SymbolicConstant = DEFAULT, poisson: float = 0,
-                 integrationRule: SymbolicConstant = SIMPSON, temperature: SymbolicConstant = GRADIENT,
-                 idealization: SymbolicConstant = NO_IDEALIZATION, nTemp: int = None,
-                 thicknessModulus: float = None, useDensity: Boolean = OFF, density: float = 0,
-                 thicknessField: str = '', nodalThicknessField: str = '') -> HomogeneousShellSection:
+    def HomogeneousShellSection(
+            self,
+            name: str,
+            material: str,
+            thickness: float = 0,
+            numIntPts: int = 5,
+            thicknessType: SymbolicConstant = UNIFORM,
+            preIntegrate: Boolean = OFF,
+            poissonDefinition: SymbolicConstant = DEFAULT,
+            poisson: float = 0,
+            integrationRule: SymbolicConstant = SIMPSON,
+            temperature: SymbolicConstant = GRADIENT,
+            idealization: SymbolicConstant = NO_IDEALIZATION,
+            nTemp: int = None,
+            thicknessModulus: float = None,
+            useDensity: Boolean = OFF,
+            density: float = 0,
+            thicknessField: str = '',
+            nodalThicknessField: str = '') -> HomogeneousShellSection:
         """This method creates a HomogeneousShellSection object.
 
         Notes
@@ -482,5 +535,9 @@ class CompositeLayup:
         -------
             A HomogeneousShellSection object.
         """
-        self.section[name] = homogeneousShellSection = HomogeneousShellSection(name, material, thickness, numIntPts, thicknessType, preIntegrate, poissonDefinition, poisson, integrationRule, temperature, idealization, nTemp, thicknessModulus, useDensity, density, thicknessField, nodalThicknessField)
+        self.section[name] = homogeneousShellSection = HomogeneousShellSection(
+            name, material, thickness, numIntPts, thicknessType, preIntegrate,
+            poissonDefinition, poisson, integrationRule, temperature,
+            idealization, nTemp, thicknessModulus, useDensity, density,
+            thicknessField, nodalThicknessField)
         return homogeneousShellSection

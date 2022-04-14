@@ -1,5 +1,7 @@
 from abaqusConstants import *
 
+from __init__ import *
+
 
 class DisplayOptions:
     """The DisplayOptions object stores a plot state.
@@ -23,12 +25,14 @@ class DisplayOptions:
 
     """
 
-    # A tuple of SymbolicConstants specifying the plot state of the display. Possible values 
-    # are UNDEFORMED, DEFORMED, CONTOURS_ON_UNDEF, CONTOURS_ON_DEF, SYMBOLS_ON_UNDEF, 
-    # SYMBOLS_ON_DEF, ORIENT_ON_UNDEF, and ORIENT_ON_DEF. The default value is (UNDEFORMED). 
+    # A tuple of SymbolicConstants specifying the plot state of the display. Possible values
+    # are UNDEFORMED, DEFORMED, CONTOURS_ON_UNDEF, CONTOURS_ON_DEF, SYMBOLS_ON_UNDEF,
+    # SYMBOLS_ON_DEF, ORIENT_ON_UNDEF, and ORIENT_ON_DEF. The default value is (UNDEFORMED).
     plotState: SymbolicConstant = None
 
-    def setValues(self, options: 'DisplayOptions' = None, plotState: SymbolicConstant = None):
+    def setValues(self,
+                  options: 'DisplayOptions' = None,
+                  plotState: SymbolicConstant = None):
         """This method modifies the DisplayOptions object.
         
         Parameters

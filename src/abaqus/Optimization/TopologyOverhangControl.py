@@ -2,6 +2,8 @@ from abaqusConstants import *
 from .GeometricRestriction import GeometricRestriction
 from ..Region.Region import Region
 
+from __init__ import *
+
 
 class TopologyOverhangControl(GeometricRestriction):
     """The TopologyOverhangControl object defines a topology overhang control geometric
@@ -18,10 +20,15 @@ class TopologyOverhangControl(GeometricRestriction):
         mdb.models[name].optimizationTasks[name].geometricRestrictions[name]
 
     """
-
-    def __init__(self, name: str, pullDirection: tuple, region: Region, csys: int = None,
-                 draftAngle: float = 45, overhangCheckRegion: SymbolicConstant = OVERHANG_REGION,
-                 pointRegion: Region = Region(), radius: float = None,
+    def __init__(self,
+                 name: str,
+                 pullDirection: tuple,
+                 region: Region,
+                 csys: int = None,
+                 draftAngle: float = 45,
+                 overhangCheckRegion: SymbolicConstant = OVERHANG_REGION,
+                 pointRegion: Region = Region(),
+                 radius: float = None,
                  technique: SymbolicConstant = AUTO):
         """This method creates a TopologyOverhangControl object.
 
@@ -71,9 +78,13 @@ class TopologyOverhangControl(GeometricRestriction):
         super().__init__()
         pass
 
-    def setValues(self, csys: int = None, draftAngle: float = 45,
-                  overhangCheckRegion: SymbolicConstant = OVERHANG_REGION, pointRegion: Region = Region(),
-                  radius: float = None, technique: SymbolicConstant = AUTO):
+    def setValues(self,
+                  csys: int = None,
+                  draftAngle: float = 45,
+                  overhangCheckRegion: SymbolicConstant = OVERHANG_REGION,
+                  pointRegion: Region = Region(),
+                  radius: float = None,
+                  technique: SymbolicConstant = AUTO):
         """This method modifies the TopologyOverhangControl object.
         
         Parameters

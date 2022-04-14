@@ -1,7 +1,10 @@
 from abaqusConstants import *
-
+from __init__ import *
 
 class Edge:
+    from .EdgeArray import EdgeArray
+    from Mesh.MeshNodeArray import MeshNodeArray
+    from Mesh.MeshElementArray import MeshElementArray
     """Edges are one-dimensional regions of geometry.
 
     Attributes
@@ -54,25 +57,25 @@ class Edge:
 
     """
 
-    # An Int specifying the index of the edge in the EdgeArray. 
+    # An Int specifying the index of the edge in the EdgeArray.
     index: int = None
 
-    # A Boolean specifying whether the edge belongs to the reference representation of the 
-    # Part or Instance. 
+    # A Boolean specifying whether the edge belongs to the reference representation of the
+    # Part or Instance.
     isReferenceRep: Boolean = OFF
 
-    # A tuple of Floats specifying the *X*-, *Y*-, and *Z*-coordinates of a point located on 
-    # the edge. 
+    # A tuple of Floats specifying the *X*-, *Y*-, and *Z*-coordinates of a point located on
+    # the edge.
     pointOn: float = None
 
-    # A tuple of Floats specifying the name of the feature that created this edge. 
+    # A tuple of Floats specifying the name of the feature that created this edge.
     featureName: float = None
 
-    # A tuple of Floats specifying the name of the part instance for this edge (if 
-    # applicable). 
+    # A tuple of Floats specifying the name of the part instance for this edge (if
+    # applicable).
     instanceName: float = None
 
-    def isTangentFlipped(self):
+    def isTangentFlipped(self) -> bool:
         """This method determines whether the tangent to the edge is flipped from its default
         direction by the use of the flipTangent method on a Part object.
 
@@ -83,7 +86,7 @@ class Edge:
         """
         pass
 
-    def getCurvature(self, parameter: float, point: tuple):
+    def getCurvature(self, parameter: float, point: tuple) -> Dict:
         """This method returns curvature information at a location on the edge.
         
         Parameters
@@ -110,7 +113,7 @@ class Edge:
         """
         pass
 
-    def getFaces(self):
+    def getFaces(self) -> Tuple[int]:
         """This method returns a sequence consisting of the face ids of the faces which share this
         edge.
 
@@ -121,7 +124,7 @@ class Edge:
         """
         pass
 
-    def getAdjacentEdges(self):
+    def getAdjacentEdges(self) -> EdgeArray:
         """This method returns an array of Edge objects that share at least one vertex of the edge.
 
         Returns
@@ -131,7 +134,7 @@ class Edge:
         """
         pass
 
-    def getEdgesByEdgeAngle(self, angle: str):
+    def getEdgesByEdgeAngle(self, angle: str) -> EdgeArray:
         """This method returns an array of Edge objects that are obtained by recursively finding
         adjacent edges that are at an angle of less than or equal to the specified face angle.
         
@@ -147,7 +150,7 @@ class Edge:
         """
         pass
 
-    def getNodes(self):
+    def getNodes(self) -> MeshNodeArray:
         """This method returns an array of node objects that are associated with the edge.
 
         Returns
@@ -157,7 +160,7 @@ class Edge:
         """
         pass
 
-    def getElements(self):
+    def getElements(self) -> MeshElementArray:
         """This method returns an array of element objects that are associated with the edge.
 
         Returns
@@ -167,7 +170,7 @@ class Edge:
         """
         pass
 
-    def getRadius(self):
+    def getRadius(self) -> float:
         """This method returns the radius of circular edges.
 
         Returns
@@ -181,7 +184,7 @@ class Edge:
         """
         pass
 
-    def getSize(self, printResults: str = True):
+    def getSize(self, printResults: str = True) -> float:
         """This method returns a Float indicating the length of the edge.
         
         Parameters
@@ -196,7 +199,7 @@ class Edge:
         """
         pass
 
-    def getVertices(self):
+    def getVertices(self) -> Tuple[int]:
         """This method returns a sequence of indices of the vertices that bound this edge. The
         first index refers to the vertex where the normalized curve parameter = 0.0, and the
         second index refers to the vertex where the normalized curve parameter = 1.0. If the

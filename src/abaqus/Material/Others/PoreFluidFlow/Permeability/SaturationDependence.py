@@ -1,3 +1,5 @@
+from __init__ import *
+
 
 class SaturationDependence:
     """The SaturationDependence object specifies the dependence of the permeability of a
@@ -22,7 +24,6 @@ class SaturationDependence:
         - PERMEABILITY
 
     """
-
     def __init__(self, table: tuple):
         """This method creates a SaturationDependence object.
 

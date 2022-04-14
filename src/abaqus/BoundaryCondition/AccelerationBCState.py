@@ -1,6 +1,8 @@
 from abaqusConstants import *
 from .BoundaryConditionState import BoundaryConditionState
 
+from __init__ import *
+
 
 class AccelerationBCState(BoundaryConditionState):
     """The AccelerationBCState object stores the propagating data of an acceleration boundary
@@ -80,53 +82,53 @@ class AccelerationBCState(BoundaryConditionState):
 
     """
 
-    # A Float specifying the acceleration component in the 1-direction. 
+    # A Float specifying the acceleration component in the 1-direction.
     a1: float = None
 
-    # A Float specifying the acceleration component in the 2-direction. 
+    # A Float specifying the acceleration component in the 2-direction.
     a2: float = None
 
-    # A Float specifying the acceleration component in the 3-direction. 
+    # A Float specifying the acceleration component in the 3-direction.
     a3: float = None
 
-    # A Float specifying the rotational acceleration component about the 1-direction. 
+    # A Float specifying the rotational acceleration component about the 1-direction.
     ar1: float = None
 
-    # A Float specifying the rotational acceleration component about the 2-direction. 
+    # A Float specifying the rotational acceleration component about the 2-direction.
     ar2: float = None
 
-    # A Float specifying the rotational acceleration component about the 3-direction. 
+    # A Float specifying the rotational acceleration component about the 3-direction.
     ar3: float = None
 
-    # A SymbolicConstant specifying the propagation state of the acceleration component in the 
-    # 1-direction. Possible values are UNSET, SET, UNCHANGED, FREED, and MODIFIED. 
+    # A SymbolicConstant specifying the propagation state of the acceleration component in the
+    # 1-direction. Possible values are UNSET, SET, UNCHANGED, FREED, and MODIFIED.
     a1State: SymbolicConstant = None
 
-    # A SymbolicConstant specifying the propagation state of the acceleration component in the 
-    # 2-direction. Possible values are UNSET, SET, UNCHANGED, FREED, and MODIFIED. 
+    # A SymbolicConstant specifying the propagation state of the acceleration component in the
+    # 2-direction. Possible values are UNSET, SET, UNCHANGED, FREED, and MODIFIED.
     a2State: SymbolicConstant = None
 
-    # A SymbolicConstant specifying the propagation state of the acceleration component in the 
-    # 3-direction. Possible values are UNSET, SET, UNCHANGED, FREED, and MODIFIED. 
+    # A SymbolicConstant specifying the propagation state of the acceleration component in the
+    # 3-direction. Possible values are UNSET, SET, UNCHANGED, FREED, and MODIFIED.
     a3State: SymbolicConstant = None
 
-    # A SymbolicConstant specifying the propagation state of the rotational acceleration 
-    # component about the 1-direction. Possible values are UNSET, SET, UNCHANGED, FREED, and 
-    # MODIFIED. 
+    # A SymbolicConstant specifying the propagation state of the rotational acceleration
+    # component about the 1-direction. Possible values are UNSET, SET, UNCHANGED, FREED, and
+    # MODIFIED.
     ar1State: SymbolicConstant = None
 
-    # A SymbolicConstant specifying the propagation state of the rotational acceleration 
-    # component about the 2-direction. Possible values are UNSET, SET, UNCHANGED, FREED, and 
-    # MODIFIED. 
+    # A SymbolicConstant specifying the propagation state of the rotational acceleration
+    # component about the 2-direction. Possible values are UNSET, SET, UNCHANGED, FREED, and
+    # MODIFIED.
     ar2State: SymbolicConstant = None
 
-    # A SymbolicConstant specifying the propagation state of the rotational acceleration 
-    # component about the 3-direction. Possible values are UNSET, SET, UNCHANGED, FREED, and 
-    # MODIFIED. 
+    # A SymbolicConstant specifying the propagation state of the rotational acceleration
+    # component about the 3-direction. Possible values are UNSET, SET, UNCHANGED, FREED, and
+    # MODIFIED.
     ar3State: SymbolicConstant = None
 
-    # A SymbolicConstant specifying the propagation state of the amplitude reference. Possible 
-    # values are UNSET, SET, UNCHANGED, FREED, and MODIFIED. 
+    # A SymbolicConstant specifying the propagation state of the amplitude reference. Possible
+    # values are UNSET, SET, UNCHANGED, FREED, and MODIFIED.
     amplitudeState: SymbolicConstant = None
 
     # A SymbolicConstant specifying the propagation state of the BoundaryConditionState object. Possible values are:
@@ -144,6 +146,6 @@ class AccelerationBCState(BoundaryConditionState):
     # BUILT_INTO_MODES
     status: SymbolicConstant = None
 
-    # A String specifying the name of the amplitude reference. The String is empty if the 
-    # boundary condition has no amplitude reference. 
+    # A String specifying the name of the amplitude reference. The String is empty if the
+    # boundary condition has no amplitude reference.
     amplitude: str = ''

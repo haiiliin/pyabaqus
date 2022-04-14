@@ -1,6 +1,8 @@
 from abaqusConstants import *
 from .Interaction import Interaction
 
+from __init__ import *
+
 
 class XFEMCrackGrowth(Interaction):
     """The XFEMCrackGrowth object defines the enrichment activation state for an XFEMCrack.
@@ -19,8 +21,11 @@ class XFEMCrackGrowth(Interaction):
         - ENRICHMENT ACTIVATION
 
     """
-
-    def __init__(self, name: str, createStepName: str, crackName: str, allowGrowth: Boolean = ON):
+    def __init__(self,
+                 name: str,
+                 createStepName: str,
+                 crackName: str,
+                 allowGrowth: Boolean = ON):
         """This method creates an XFEMCrackGrowth object.
 
         Notes

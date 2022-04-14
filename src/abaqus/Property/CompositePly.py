@@ -1,6 +1,8 @@
 from abaqusConstants import *
 from ..Region.Region import Region
 
+from __init__ import *
+
 
 class CompositePly:
     """The CompositePly object defines the material layers in a composite layup.
@@ -15,13 +17,21 @@ class CompositePly:
         mdb.models[name].parts[name].compositeLayups[i].plies[i]
 
     """
-
-    def __init__(self, thickness: float, region: Region, material: str, plyName: str,
-                 orientationType: SymbolicConstant, thicknessType: SymbolicConstant,
-                 orientationValue: float = 0, thicknessField: str = '', numIntPts: int = 3,
-                 axis: SymbolicConstant = AXIS_1, angle: float = 0,
+    def __init__(self,
+                 thickness: float,
+                 region: Region,
+                 material: str,
+                 plyName: str,
+                 orientationType: SymbolicConstant,
+                 thicknessType: SymbolicConstant,
+                 orientationValue: float = 0,
+                 thicknessField: str = '',
+                 numIntPts: int = 3,
+                 axis: SymbolicConstant = AXIS_1,
+                 angle: float = 0,
                  additionalRotationType: SymbolicConstant = ROTATION_NONE,
-                 orientation: SymbolicConstant = None, additionalRotationField: str = ''):
+                 orientation: SymbolicConstant = None,
+                 additionalRotationField: str = ''):
         """This method creates a CompositePly object.
 
         Notes

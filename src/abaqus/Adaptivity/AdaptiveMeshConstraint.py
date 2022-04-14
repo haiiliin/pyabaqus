@@ -2,6 +2,8 @@ from abaqusConstants import *
 from ..Datum.DatumCsys import DatumCsys
 from ..Region.Region import Region
 
+from __init__ import *
+
 
 class AdaptiveMeshConstraint:
     """The AdaptiveMeshConstraint object is the abstract base type for other Arbitrary
@@ -35,22 +37,25 @@ class AdaptiveMeshConstraint:
 
     """
 
-    # A String specifying the adaptive mesh constraint repository key. 
+    # A String specifying the adaptive mesh constraint repository key.
     name: str = ''
 
-    # A SymbolicConstant specifying the category of the adaptive mesh constraint. Possible 
-    # values are MECHANICAL and THERMAL. 
+    # A SymbolicConstant specifying the category of the adaptive mesh constraint. Possible
+    # values are MECHANICAL and THERMAL.
     category: SymbolicConstant = None
 
-    # A Region object specifying the region to which the adaptive mesh constraint is applied. 
+    # A Region object specifying the region to which the adaptive mesh constraint is applied.
     region: Region = Region()
 
-    # None or a DatumCsys object specifying the local coordinate system of the adaptive mesh 
-    # constraint's degrees of freedom. If *localCsys*=None, the degrees of freedom are defined 
-    # in the global coordinate system. The default value is None. 
+    # None or a DatumCsys object specifying the local coordinate system of the adaptive mesh
+    # constraint's degrees of freedom. If *localCsys*=None, the degrees of freedom are defined
+    # in the global coordinate system. The default value is None.
     localCsys: DatumCsys = None
 
-    def __init__(self, name: str = '', category: SymbolicConstant = None, region: Region = Region(),
+    def __init__(self,
+                 name: str = '',
+                 category: SymbolicConstant = None,
+                 region: Region = Region(),
                  localCsys: DatumCsys = None):
         """The AdaptiveMeshConstraint object is the abstract base type for other Arbitrary
         Lagrangian Eularian (ALE) style AdaptiveMeshConstraint objects. The

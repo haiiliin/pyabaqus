@@ -6,8 +6,11 @@ from ..Odb.OdbSession import OdbSession
 from ..PathAndProbe.PathSession import PathSession
 from ..XY.XYSession import XYSession
 
+from __init__ import *
 
-class Session(AnimationSession, DisplayGroupSession, FieldReportSession, JobSession, OdbSession, PathSession, XYSession):
+
+class Session(AnimationSession, DisplayGroupSession, FieldReportSession,
+              JobSession, OdbSession, PathSession, XYSession):
     """The Session object has no constructor. Abaqus creates the *session* member when a
     session is started. 
 

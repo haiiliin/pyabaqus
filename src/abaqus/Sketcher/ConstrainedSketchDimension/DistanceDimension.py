@@ -2,11 +2,16 @@ from abaqusConstants import *
 from .ConstrainedSketchDimension import ConstrainedSketchDimension
 from ..ConstrainedSketchVertex.ConstrainedSketchVertex import ConstrainedSketchVertex
 
+from __init__ import *
+
 
 class DistanceDimension(ConstrainedSketchDimension):
-
-    def __init__(self, entity1: ConstrainedSketchVertex, entity2: ConstrainedSketchVertex,
-                 textPoint: tuple[float], value: float = None, reference: Boolean = OFF):
+    def __init__(self,
+                 entity1: ConstrainedSketchVertex,
+                 entity2: ConstrainedSketchVertex,
+                 textPoint: tuple[float],
+                 value: float = None,
+                 reference: Boolean = OFF):
         """This method constructs a ConstrainedSketchDimension object between two
         ConstrainedSketchGeometry, or aConstrainedSketchVertex and ConstrainedSketchGeometry
         object. A distance dimension specifies the shortest distance between two entities.

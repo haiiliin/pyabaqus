@@ -1,3 +1,6 @@
+from __init__ import *
+
+
 class IgnoredVertex:
     """An IgnoredVertex object is a point region of the geometry that was abstracted away by a
     virtual topology feature. 
@@ -23,8 +26,8 @@ class IgnoredVertex:
 
     """
 
-    # An Int specifying the index of the IgnoredVertex in the IgnoredVertexArray. 
+    # An Int specifying the index of the IgnoredVertex in the IgnoredVertexArray.
     index: int = None
 
-    # A tuple of Floats specifying the *X*-, *Y*-, and *Z*-coordinates of the vertex. 
+    # A tuple of Floats specifying the *X*-, *Y*-, and *Z*-coordinates of the vertex.
     pointOn: float = None

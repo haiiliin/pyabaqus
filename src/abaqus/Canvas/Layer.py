@@ -4,6 +4,8 @@ from ..DisplayOptions.PartDisplayOptions import PartDisplayOptions
 from ..OdbDisplay.OdbDisplay import OdbDisplay
 from ..UtilityAndView.View import View
 
+from __init__ import *
+
 
 class Layer:
     """Objects can be superimposed by displaying them in different layers of a viewport.
@@ -33,21 +35,21 @@ class Layer:
 
     """
 
-    # A Displayable object specifying the object to be displayed. The Displayable type is an 
-    # abstract generalization. The concrete possible types are Part, Assembly, 
-    # ConstrainedSketch, Odb, or XYPlot. 
+    # A Displayable object specifying the object to be displayed. The Displayable type is an
+    # abstract generalization. The concrete possible types are Part, Assembly,
+    # ConstrainedSketch, Odb, or XYPlot.
     displayedObject: Displayable = Displayable()
 
-    # A View object specifying the object that controls viewing of the layer. 
+    # A View object specifying the object that controls viewing of the layer.
     view: View = None
 
-    # An OdbDisplay object specifying the display options for the Odb object. 
+    # An OdbDisplay object specifying the display options for the Odb object.
     odbDisplay: OdbDisplay = OdbDisplay()
 
-    # A PartDisplayOptions object specifying the display options for the Part object. 
+    # A PartDisplayOptions object specifying the display options for the Part object.
     partDisplay: PartDisplayOptions = PartDisplayOptions()
 
-    # An AssemblyDisplayOptions object specifying the display options for the Assembly object. 
+    # An AssemblyDisplayOptions object specifying the display options for the Assembly object.
     assemblyDisplay: AssemblyDisplayOptions = AssemblyDisplayOptions()
 
     def __init__(self, name: str, copyViewName: str = ''):

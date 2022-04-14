@@ -1,5 +1,7 @@
 from abaqusConstants import *
 
+from __init__ import *
+
 
 class Conductivity:
     """The Conductivity object specifies thermal conductivity.
@@ -46,8 +48,10 @@ class Conductivity:
         - CONDUCTIVITY
 
     """
-
-    def __init__(self, table: tuple, type: SymbolicConstant = ISOTROPIC, temperatureDependency: Boolean = OFF,
+    def __init__(self,
+                 table: tuple,
+                 type: SymbolicConstant = ISOTROPIC,
+                 temperatureDependency: Boolean = OFF,
                  dependencies: int = 0):
         """This method creates a Conductivity object.
 

@@ -1,6 +1,8 @@
 from abaqusConstants import *
 from .ContactProperty import ContactProperty
 
+from __init__ import *
+
 
 class CavityRadiationProp(ContactProperty):
     """The CavityRadiationProp object is an interaction property that defines emissivity as a
@@ -20,8 +22,10 @@ class CavityRadiationProp(ContactProperty):
         - EMISSIVITY
 
     """
-
-    def __init__(self, name: str, temperatureDependency: Boolean = OFF, dependencies: int = 0,
+    def __init__(self,
+                 name: str,
+                 temperatureDependency: Boolean = OFF,
+                 dependencies: int = 0,
                  property: tuple = ()):
         """This method creates a CavityRadiationProp object.
 
@@ -53,7 +57,10 @@ class CavityRadiationProp(ContactProperty):
         super().__init__(name)
         pass
 
-    def setValues(self, temperatureDependency: Boolean = OFF, dependencies: int = 0, property: tuple = ()):
+    def setValues(self,
+                  temperatureDependency: Boolean = OFF,
+                  dependencies: int = 0,
+                  property: tuple = ()):
         """This method modifies the CavityRadiationProp object.
         
         Parameters

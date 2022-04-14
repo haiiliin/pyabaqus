@@ -1,6 +1,8 @@
 from .PredefinedField import PredefinedField
 from ..Region.Region import Region
 
+from __init__ import *
+
 
 class FluidCavityPressure(PredefinedField):
     """The FluidCavityPressure object stores the data for initial fluid cavity pressures. The
@@ -26,7 +28,7 @@ class FluidCavityPressure(PredefinedField):
 
     """
 
-    # A Region object on which the *fluidCavity* interaction is specified. 
+    # A Region object on which the *fluidCavity* interaction is specified.
     region: Region = Region()
 
     def __init__(self, name: str, fluidCavity: str, fluidPressure: float):

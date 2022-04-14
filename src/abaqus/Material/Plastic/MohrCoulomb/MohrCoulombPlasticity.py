@@ -2,6 +2,8 @@ from abaqusConstants import *
 from .MohrCoulombHardening import MohrCoulombHardening
 from .TensionCutOff import TensionCutOff
 
+from __init__ import *
+
 
 class MohrCoulombPlasticity:
     """The MohrCoulombPlasticity object specifies the extended Mohr-Coulomb plasticity model.
@@ -31,14 +33,18 @@ class MohrCoulombPlasticity:
 
     """
 
-    # A MohrCoulombHardening object. 
-    mohrCoulombHardening: MohrCoulombHardening = MohrCoulombHardening(((),))
+    # A MohrCoulombHardening object.
+    mohrCoulombHardening: MohrCoulombHardening = MohrCoulombHardening(((), ))
 
-    # A TensionCutOff object. 
-    tensionCutOff: TensionCutOff = TensionCutOff(((),))
+    # A TensionCutOff object.
+    tensionCutOff: TensionCutOff = TensionCutOff(((), ))
 
-    def __init__(self, table: tuple, deviatoricEccentricity: float = None, meridionalEccentricity: float = 0,
-                 temperatureDependency: Boolean = OFF, dependencies: int = 0,
+    def __init__(self,
+                 table: tuple,
+                 deviatoricEccentricity: float = None,
+                 meridionalEccentricity: float = 0,
+                 temperatureDependency: Boolean = OFF,
+                 dependencies: int = 0,
                  useTensionCutoff: Boolean = OFF):
         """This method creates a MohrCoulombPlasticity object.
 

@@ -2,6 +2,8 @@ from abaqusConstants import *
 from .GeometricRestriction import GeometricRestriction
 from ..Region.Region import Region
 
+from __init__ import *
+
 
 class TopologyPlanarSymmetry(GeometricRestriction):
     """The TopologyPlanarSymmetry object defines a topology planar symmetry geometric
@@ -18,8 +20,11 @@ class TopologyPlanarSymmetry(GeometricRestriction):
         mdb.models[name].optimizationTasks[name].geometricRestrictions[name]
 
     """
-
-    def __init__(self, name: str, region: Region, axis: SymbolicConstant = AXIS_1, csys: int = None,
+    def __init__(self,
+                 name: str,
+                 region: Region,
+                 axis: SymbolicConstant = AXIS_1,
+                 csys: int = None,
                  ignoreFrozenArea: Boolean = OFF):
         """This method creates a TopologyPlanarSymmetry object.
 
@@ -56,7 +61,10 @@ class TopologyPlanarSymmetry(GeometricRestriction):
         super().__init__()
         pass
 
-    def setValues(self, axis: SymbolicConstant = AXIS_1, csys: int = None, ignoreFrozenArea: Boolean = OFF):
+    def setValues(self,
+                  axis: SymbolicConstant = AXIS_1,
+                  csys: int = None,
+                  ignoreFrozenArea: Boolean = OFF):
         """This method modifies the TopologyPlanarSymmetry object.
         
         Parameters

@@ -1,3 +1,6 @@
+from __init__ import *
+
+
 class DataSet:
     """The DataSetobject specifies material test data.
 
@@ -11,8 +14,11 @@ class DataSet:
         mdb.models[name].calibrations[name].dataSets[name]
 
     """
-
-    def __init__(self, name: str, data: tuple = (), type: str = '', form: str = ''):
+    def __init__(self,
+                 name: str,
+                 data: tuple = (),
+                 type: str = '',
+                 form: str = ''):
         """This method creates a DataSet object.
 
         Notes

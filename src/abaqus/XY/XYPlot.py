@@ -9,11 +9,14 @@ from .TextStyle import TextStyle
 from .XYData import XYData
 from .XYPlotBase import XYPlotBase
 
+from __init__ import *
+
 
 class XYPlot(XYPlotBase):
-
     @staticmethod
-    def AreaStyle(color: str = '', fill: Boolean = ON, style: SymbolicConstant = SOLID) -> AreaStyle:
+    def AreaStyle(color: str = '',
+                  fill: Boolean = ON,
+                  style: SymbolicConstant = SOLID) -> AreaStyle:
         """This method creates an AreaStyle.
 
         Notes
@@ -49,7 +52,9 @@ class XYPlot(XYPlotBase):
         return areaStyle
 
     @staticmethod
-    def LineStyle(color: str = '', show: Boolean = ON, style: SymbolicConstant = SOLID,
+    def LineStyle(color: str = '',
+                  show: Boolean = ON,
+                  style: SymbolicConstant = SOLID,
                   thickness: float = 0) -> LineStyle:
         """This method creates a LineStyle.
 
@@ -90,7 +95,8 @@ class XYPlot(XYPlotBase):
         return lineStyle
 
     @staticmethod
-    def QuantityType(label: str = '', type: SymbolicConstant = None) -> QuantityType:
+    def QuantityType(label: str = '',
+                     type: SymbolicConstant = None) -> QuantityType:
         """This method creates a QuantityType object.
 
         Notes
@@ -190,7 +196,9 @@ class XYPlot(XYPlotBase):
         return quantityType
 
     @staticmethod
-    def SymbolStyle(color: str = '', show: Boolean = ON, marker: SymbolicConstant = FILLED_CIRCLE,
+    def SymbolStyle(color: str = '',
+                    show: Boolean = ON,
+                    marker: SymbolicConstant = FILLED_CIRCLE,
                     size: float = 2) -> SymbolStyle:
         """This method creates a SymbolStyle object.
 
@@ -242,7 +250,10 @@ class XYPlot(XYPlotBase):
         return symbolStyle
 
     @staticmethod
-    def TextStyle(color: str = '', show: Boolean = ON, font: str = '', rotationAngle: float = 0) -> TextStyle:
+    def TextStyle(color: str = '',
+                  show: Boolean = ON,
+                  font: str = '',
+                  rotationAngle: float = 0) -> TextStyle:
         """This method creates a TextStyle.
 
         Notes
@@ -282,9 +293,15 @@ class XYPlot(XYPlotBase):
 
     @staticmethod
     @typing.overload
-    def XYData(data: tuple, name: str = '', sourceDescription: str = '', contentDescription: str = '',
-               positionDescription: str = '', legendLabel: str = '', xValuesLabel: str = '',
-               yValuesLabel: str = '', axis1QuantityType: QuantityType = None,
+    def XYData(data: tuple,
+               name: str = '',
+               sourceDescription: str = '',
+               contentDescription: str = '',
+               positionDescription: str = '',
+               legendLabel: str = '',
+               xValuesLabel: str = '',
+               yValuesLabel: str = '',
+               axis1QuantityType: QuantityType = None,
                axis2QuantityType: QuantityType = None) -> XYData:
         """This method creates an XYData object from a sequence of *X–Y* data pairs.
 

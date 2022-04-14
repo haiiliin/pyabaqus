@@ -1,6 +1,8 @@
 from abaqusConstants import *
 from .SectionPointArray import SectionPointArray
 
+from __init__ import *
+
 
 class FieldLocation:
     """The FieldLocation object specifies locations for which data are available in the field.
@@ -32,13 +34,13 @@ class FieldLocation:
 
     """
 
-    # A SymbolicConstant specifying the position of the output in the element. Possible values 
-    # are:NODAL, specifying the values calculated at the nodes.INTEGRATION_POINT, specifying 
-    # the values calculated at the integration points.ELEMENT_NODAL, specifying the values 
-    # obtained by extrapolating results calculated at the integration 
-    # points.ELEMENT_FACE.CENTROID, specifying the value at the centroid obtained by 
-    # extrapolating results calculated at the integration points. 
+    # A SymbolicConstant specifying the position of the output in the element. Possible values
+    # are:NODAL, specifying the values calculated at the nodes.INTEGRATION_POINT, specifying
+    # the values calculated at the integration points.ELEMENT_NODAL, specifying the values
+    # obtained by extrapolating results calculated at the integration
+    # points.ELEMENT_FACE.CENTROID, specifying the value at the centroid obtained by
+    # extrapolating results calculated at the integration points.
     position: SymbolicConstant = None
 
-    # A SectionPointArray object. 
+    # A SectionPointArray object.
     sectionPoints: SectionPointArray = SectionPointArray()

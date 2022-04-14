@@ -1,5 +1,7 @@
 from abaqusConstants import *
 
+from __init__ import *
+
 
 class CapCreepCohesion:
     """The CapCreepCohesion object specifies a cap creep model and material properties.
@@ -47,9 +49,12 @@ class CapCreepCohesion:
         - CAP CREEP
 
     """
-
-    def __init__(self, table: tuple, law: SymbolicConstant = STRAIN, temperatureDependency: Boolean = OFF,
-                 dependencies: int = 0, time: SymbolicConstant = TOTAL):
+    def __init__(self,
+                 table: tuple,
+                 law: SymbolicConstant = STRAIN,
+                 temperatureDependency: Boolean = OFF,
+                 dependencies: int = 0,
+                 time: SymbolicConstant = TOTAL):
         """This method creates a CapCreepCohesion object.
 
         Notes

@@ -2,6 +2,8 @@ from abaqusConstants import *
 from .PredefinedField import PredefinedField
 from ..Region.Region import Region
 
+from __init__ import *
+
 
 class Field(PredefinedField):
     """The Field object stores the data for field predefined fields.
@@ -41,33 +43,44 @@ class Field(PredefinedField):
 
     """
 
-    # A String specifying the repository key. 
+    # A String specifying the repository key.
     name: str = ''
 
-    # A SymbolicConstant specifying how the predefined field varies spatially. Possible values 
-    # are UNIFORM, USER_DEFINED, FROM_FILE, FIELD, FROM_FILE_AND_USER_DEFINED, and 
-    # DISCRETE_FIELD. The default value is UNIFORM. 
+    # A SymbolicConstant specifying how the predefined field varies spatially. Possible values
+    # are UNIFORM, USER_DEFINED, FROM_FILE, FIELD, FROM_FILE_AND_USER_DEFINED, and
+    # DISCRETE_FIELD. The default value is UNIFORM.
     distributionType: SymbolicConstant = UNIFORM
 
-    # A String specifying the name of the AnalyticalField or DiscreteField object associated 
-    # with this predefined field. The *field* argument applies only when 
-    # *distributionType*=FIELD or *distributionType*=DISCRETE_FIELD. The default value is an 
-    # empty string. 
+    # A String specifying the name of the AnalyticalField or DiscreteField object associated
+    # with this predefined field. The *field* argument applies only when
+    # *distributionType*=FIELD or *distributionType*=DISCRETE_FIELD. The default value is an
+    # empty string.
     field: str = ''
 
-    # A Region object specifying the region to which the predefined field is applied. *Region* 
-    # is ignored if the predefined field has an *instances* member available. *Region* is also 
-    # ignored if the predefined field has a *distributionType* member available, and 
-    # *distributionType*=FROM_FILE or FROM_FILE_AND_USER_DEFINED. 
+    # A Region object specifying the region to which the predefined field is applied. *Region*
+    # is ignored if the predefined field has an *instances* member available. *Region* is also
+    # ignored if the predefined field has a *distributionType* member available, and
+    # *distributionType*=FROM_FILE or FROM_FILE_AND_USER_DEFINED.
     region: Region = Region()
 
-    def __init__(self, name: str, createStepName: str, region: Region, outputVariable: str = '',
-                 fieldVariableNum: int = None, distributionType: SymbolicConstant = UNIFORM,
-                 crossSectionDistribution: SymbolicConstant = CONSTANT_THROUGH_THICKNESS,
-                 field: str = '', amplitude: str = UNSET, fileName: str = '',
-                 beginStep: SymbolicConstant = None, beginIncrement: SymbolicConstant = None,
-                 endStep: SymbolicConstant = None, endIncrement: SymbolicConstant = None,
-                 interpolate: SymbolicConstant = OFF, magnitudes: str = ''):
+    def __init__(self,
+                 name: str,
+                 createStepName: str,
+                 region: Region,
+                 outputVariable: str = '',
+                 fieldVariableNum: int = None,
+                 distributionType: SymbolicConstant = UNIFORM,
+                 crossSectionDistribution:
+                 SymbolicConstant = CONSTANT_THROUGH_THICKNESS,
+                 field: str = '',
+                 amplitude: str = UNSET,
+                 fileName: str = '',
+                 beginStep: SymbolicConstant = None,
+                 beginIncrement: SymbolicConstant = None,
+                 endStep: SymbolicConstant = None,
+                 endIncrement: SymbolicConstant = None,
+                 interpolate: SymbolicConstant = OFF,
+                 magnitudes: str = ''):
         """This method creates a Field object.
 
         Notes
@@ -181,13 +194,21 @@ class Field(PredefinedField):
         """
         pass
 
-    def setValues(self, outputVariable: str = '', fieldVariableNum: int = None,
+    def setValues(self,
+                  outputVariable: str = '',
+                  fieldVariableNum: int = None,
                   distributionType: SymbolicConstant = UNIFORM,
-                  crossSectionDistribution: SymbolicConstant = CONSTANT_THROUGH_THICKNESS,
-                  field: str = '', amplitude: str = UNSET, fileName: str = '',
-                  beginStep: SymbolicConstant = None, beginIncrement: SymbolicConstant = None,
-                  endStep: SymbolicConstant = None, endIncrement: SymbolicConstant = None,
-                  interpolate: SymbolicConstant = OFF, magnitudes: str = ''):
+                  crossSectionDistribution:
+                  SymbolicConstant = CONSTANT_THROUGH_THICKNESS,
+                  field: str = '',
+                  amplitude: str = UNSET,
+                  fileName: str = '',
+                  beginStep: SymbolicConstant = None,
+                  beginIncrement: SymbolicConstant = None,
+                  endStep: SymbolicConstant = None,
+                  endIncrement: SymbolicConstant = None,
+                  interpolate: SymbolicConstant = OFF,
+                  magnitudes: str = ''):
         """This method modifies the data for an existing Field object in the step where it is
         created.
         
@@ -265,10 +286,18 @@ class Field(PredefinedField):
         """
         pass
 
-    def setValuesInStep(self, stepName: str, outputVariable: str = '', fieldVariableNum: int = None, field: str = '',
-                        amplitude: str = UNSET, fileName: str = '', beginStep: SymbolicConstant = None,
-                        beginIncrement: SymbolicConstant = None, endStep: SymbolicConstant = None,
-                        endIncrement: SymbolicConstant = None, interpolate: SymbolicConstant = OFF,
+    def setValuesInStep(self,
+                        stepName: str,
+                        outputVariable: str = '',
+                        fieldVariableNum: int = None,
+                        field: str = '',
+                        amplitude: str = UNSET,
+                        fileName: str = '',
+                        beginStep: SymbolicConstant = None,
+                        beginIncrement: SymbolicConstant = None,
+                        endStep: SymbolicConstant = None,
+                        endIncrement: SymbolicConstant = None,
+                        interpolate: SymbolicConstant = OFF,
                         magnitudes: str = ''):
         """This method modifies the propagating data for an existing Field object in the specified
         step.

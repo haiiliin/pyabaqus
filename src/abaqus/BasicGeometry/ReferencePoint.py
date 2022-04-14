@@ -5,6 +5,8 @@ from ..BasicGeometry.Vertex import Vertex
 from ..Datum.Datum import Datum
 from ..Mesh.MeshNode import MeshNode
 
+from __init__ import *
+
 
 class ReferencePoint:
     """The ReferencePoint object has no direct constructor; it is created when a Feature object
@@ -35,8 +37,10 @@ class ReferencePoint:
         mdb.models[name].rootAssembly.sets[name].referencePoints[i]
 
     """
-
-    def __init__(self, point: typing.Union[tuple, Vertex, InterestingPoint, MeshNode, Datum], instanceName: str = ''):
+    def __init__(self,
+                 point: typing.Union[tuple, Vertex, InterestingPoint, MeshNode,
+                                     Datum],
+                 instanceName: str = ''):
         """This method creates a Feature object and a ReferencePoint object at the specified
         location.
 

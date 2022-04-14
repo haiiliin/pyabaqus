@@ -1,6 +1,8 @@
 from .Material import Material
 from ..Odb.OdbBase import OdbBase
 
+from __init__ import *
+
 
 class MaterialOdb(OdbBase):
     """The Odb object is the in-memory representation of an output database (ODB) file.
@@ -15,8 +17,10 @@ class MaterialOdb(OdbBase):
         session.odbs[name]
 
     """
-
-    def Material(self, name: str, description: str = '', materialIdentifier: str = ''):
+    def Material(self,
+                 name: str,
+                 description: str = '',
+                 materialIdentifier: str = ''):
         """This method creates a Material object.
 
         Notes
@@ -42,5 +46,6 @@ class MaterialOdb(OdbBase):
         -------
             A Material object.
         """
-        self.materials[name] = material = Material(name, description, materialIdentifier)
+        self.materials[name] = material = Material(name, description,
+                                                   materialIdentifier)
         return material

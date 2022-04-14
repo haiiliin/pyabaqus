@@ -13,6 +13,8 @@ from .TProfile import TProfile
 from .TrapezoidalProfile import TrapezoidalProfile
 from ..Model.ModelBase import ModelBase
 
+from __init__ import *
+
 
 class BeamSectionProfileModel(ModelBase):
     """Abaqus creates a Model object named `Model-1` when a session is started.
@@ -26,7 +28,6 @@ class BeamSectionProfileModel(ModelBase):
         mdb.models[name]
 
     """
-
     def beamProfilesFromOdb(self, fileName: str):
         """This method creates Profile objects by reading an output database. The new profiles are
         placed in the profiles repository.
@@ -86,8 +87,15 @@ class BeamSectionProfileModel(ModelBase):
         self.profiles[name] = arbitraryProfile = ArbitraryProfile(name, table)
         return arbitraryProfile
 
-    def BoxProfile(self, name: str, a: float, b: float, uniformThickness: Boolean, t1: float, t2: float = 0,
-                   t3: float = 0, t4: float = 0) -> BoxProfile:
+    def BoxProfile(self,
+                   name: str,
+                   a: float,
+                   b: float,
+                   uniformThickness: Boolean,
+                   t1: float,
+                   t2: float = 0,
+                   t3: float = 0,
+                   t4: float = 0) -> BoxProfile:
         """This method creates a BoxProfile object.
 
         Notes
@@ -133,7 +141,9 @@ class BeamSectionProfileModel(ModelBase):
             RangeError.
             !img
         """
-        self.profiles[name] = boxProfile = BoxProfile(name, a, b, uniformThickness, t1, t2, t3, t4)
+        self.profiles[name] = boxProfile = BoxProfile(name, a, b,
+                                                      uniformThickness, t1, t2,
+                                                      t3, t4)
         return boxProfile
 
     def CircularProfile(self, name: str, r: float) -> CircularProfile:
@@ -169,7 +179,8 @@ class BeamSectionProfileModel(ModelBase):
         self.profiles[name] = circularProfile = CircularProfile(name, r)
         return circularProfile
 
-    def GeneralizedProfile(self, name: str, area: float, i11: float, i12: float, i22: float, j: float, gammaO: float,
+    def GeneralizedProfile(self, name: str, area: float, i11: float,
+                           i12: float, i22: float, j: float, gammaO: float,
                            gammaW: float) -> GeneralizedProfile:
         """This method creates a GeneralizedProfile object.
 
@@ -210,10 +221,12 @@ class BeamSectionProfileModel(ModelBase):
             RangeError.
             !img
         """
-        self.profiles[name] = generalizedProfile = GeneralizedProfile(name, area, i11, i12, i22, j, gammaO, gammaW)
+        self.profiles[name] = generalizedProfile = GeneralizedProfile(
+            name, area, i11, i12, i22, j, gammaO, gammaW)
         return generalizedProfile
 
-    def HexagonalProfile(self, name: str, r: float, t: float) -> HexagonalProfile:
+    def HexagonalProfile(self, name: str, r: float,
+                         t: float) -> HexagonalProfile:
         """This method creates a HexagonalProfile object.
 
         Notes
@@ -249,8 +262,8 @@ class BeamSectionProfileModel(ModelBase):
         self.profiles[name] = hexagonalProfile = HexagonalProfile(name, r, t)
         return hexagonalProfile
 
-    def IProfile(self, name: str, l: float, h: float, b1: float, b2: float, t1: float, t2: float,
-                 t3: float) -> IProfile:
+    def IProfile(self, name: str, l: float, h: float, b1: float, b2: float,
+                 t1: float, t2: float, t3: float) -> IProfile:
         """This method creates an IProfile object.
 
         Notes
@@ -292,10 +305,12 @@ class BeamSectionProfileModel(ModelBase):
             RangeError.
             !img
         """
-        self.profiles[name] = iProfile = IProfile(name, l, h, b1, b2, t1, t2, t3)
+        self.profiles[name] = iProfile = IProfile(name, l, h, b1, b2, t1, t2,
+                                                  t3)
         return iProfile
 
-    def LProfile(self, name: str, a: float, b: float, t1: float, t2: float) -> LProfile:
+    def LProfile(self, name: str, a: float, b: float, t1: float,
+                 t2: float) -> LProfile:
         """This method creates a LProfile object.
 
         Notes
@@ -371,7 +386,8 @@ class BeamSectionProfileModel(ModelBase):
         self.profiles[name] = pipeProfile = PipeProfile(name, r, t)
         return pipeProfile
 
-    def RectangularProfile(self, name: str, a: float, b: float) -> RectangularProfile:
+    def RectangularProfile(self, name: str, a: float,
+                           b: float) -> RectangularProfile:
         """This method creates a RectangularProfile object.
 
         Notes
@@ -403,10 +419,12 @@ class BeamSectionProfileModel(ModelBase):
             RangeError.
             !img
         """
-        self.profiles[name] = rectangularProfile = RectangularProfile(name, a, b)
+        self.profiles[name] = rectangularProfile = RectangularProfile(
+            name, a, b)
         return rectangularProfile
 
-    def TProfile(self, name: str, b: float, h: float, l: float, tf: float, tw: float) -> TProfile:
+    def TProfile(self, name: str, b: float, h: float, l: float, tf: float,
+                 tw: float) -> TProfile:
         """This method creates a TProfile object.
 
         Notes
@@ -450,7 +468,8 @@ class BeamSectionProfileModel(ModelBase):
         self.profiles[name] = tProfile = TProfile(name, b, h, l, tf, tw)
         return tProfile
 
-    def TrapezoidalProfile(self, name: str, a: float, b: float, c: float, d: float) -> TrapezoidalProfile:
+    def TrapezoidalProfile(self, name: str, a: float, b: float, c: float,
+                           d: float) -> TrapezoidalProfile:
         """This method creates a TrapezoidalProfile object.
 
         Notes
@@ -486,5 +505,6 @@ class BeamSectionProfileModel(ModelBase):
             RangeError.
             !img
         """
-        self.profiles[name] = trapezoidalProfile = TrapezoidalProfile(name, a, b, c, d)
+        self.profiles[name] = trapezoidalProfile = TrapezoidalProfile(
+            name, a, b, c, d)
         return trapezoidalProfile

@@ -3,6 +3,8 @@ from ..Job.JobMdb import JobMdb
 from ..Model.Model import Model
 from ..Part.AcisMdb import AcisMdb
 
+from __init__ import *
+
 
 class Mdb(AcisMdb, JobMdb):
     """The Mdb object is the high-level Abaqus model database. A model database stores models
@@ -42,11 +44,16 @@ class Mdb(AcisMdb, JobMdb):
         mdb
 
     """
-
-    def Model(self, name: str, description: str = '', stefanBoltzmann: float = None,
-              absoluteZero: float = None, waveFormulation: SymbolicConstant = NOT_SET,
-              modelType: SymbolicConstant = STANDARD_EXPLICIT, universalGas: float = None,
-              copyConstraints: Boolean = ON, copyConnectors: Boolean = ON,
+    def Model(self,
+              name: str,
+              description: str = '',
+              stefanBoltzmann: float = None,
+              absoluteZero: float = None,
+              waveFormulation: SymbolicConstant = NOT_SET,
+              modelType: SymbolicConstant = STANDARD_EXPLICIT,
+              universalGas: float = None,
+              copyConstraints: Boolean = ON,
+              copyConnectors: Boolean = ON,
               copyInteractions: Boolean = ON) -> Model:
         """This method creates a Model object.
 
@@ -93,7 +100,9 @@ class Mdb(AcisMdb, JobMdb):
         model: Model
             A Model object
         """
-        self.models[name] = model = Model(name, description, stefanBoltzmann, absoluteZero, waveFormulation, modelType,
-                                          universalGas, copyConstraints, copyConnectors, copyInteractions)
+        self.models[name] = model = Model(name, description, stefanBoltzmann,
+                                          absoluteZero, waveFormulation,
+                                          modelType, universalGas,
+                                          copyConstraints, copyConnectors,
+                                          copyInteractions)
         return model
-    

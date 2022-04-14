@@ -2,6 +2,8 @@ from ..Odb.Odb import Odb
 from ..Part.Part import Part
 from ..Region.Region import Region
 
+from __init__ import *
+
 
 class PlyStackPlot:
     """The PlyStackPlot object is used to plot the stacking of plies in a composite layup or in

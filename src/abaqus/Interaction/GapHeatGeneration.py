@@ -1,3 +1,4 @@
+from __init__ import *
 
 
 class GapHeatGeneration:
@@ -27,15 +28,17 @@ class GapHeatGeneration:
 
     """
 
-    # A Float specifying the fraction of dissipated energy caused by friction or electric 
-    # currents that is converted to heat. The default value is 1.0. 
+    # A Float specifying the fraction of dissipated energy caused by friction or electric
+    # currents that is converted to heat. The default value is 1.0.
     conversionFraction: float = 1
 
-    # A Float specifying the fraction of converted heat distributed to the secondary surface. 
-    # The default value is 0.5. 
+    # A Float specifying the fraction of converted heat distributed to the secondary surface.
+    # The default value is 0.5.
     secondaryFraction: float = 0
 
-    def __init__(self, conversionFraction: float = 1, secondaryFraction: float = 0):
+    def __init__(self,
+                 conversionFraction: float = 1,
+                 secondaryFraction: float = 0):
         """This method creates a GapHeatGeneration object.
 
         Notes

@@ -1,6 +1,8 @@
 from abaqusConstants import *
 from .ContactControl import ContactControl
 
+from __init__ import *
+
 
 class ExpContactControl(ContactControl):
     """The ExpContactControl object is used in Abaqus/Explicit analyses to specify optional
@@ -20,9 +22,13 @@ class ExpContactControl(ContactControl):
         - CONTACT CONTROLS
 
     """
-
-    def __init__(self, name: str, globTrkChoice: SymbolicConstant = DEFAULT, globTrkInc: int = None,
-                 fastLocalTrk: Boolean = ON, scalePenalty: float = 1, warpCheckPeriod: int = 20,
+    def __init__(self,
+                 name: str,
+                 globTrkChoice: SymbolicConstant = DEFAULT,
+                 globTrkInc: int = None,
+                 fastLocalTrk: Boolean = ON,
+                 scalePenalty: float = 1,
+                 warpCheckPeriod: int = 20,
                  warpCutoff: float = 20):
         """This method creates an ExpContactControl object.
 
@@ -71,8 +77,12 @@ class ExpContactControl(ContactControl):
         super().__init__()
         pass
 
-    def setValues(self, globTrkChoice: SymbolicConstant = DEFAULT, globTrkInc: int = None,
-                  fastLocalTrk: Boolean = ON, scalePenalty: float = 1, warpCheckPeriod: int = 20,
+    def setValues(self,
+                  globTrkChoice: SymbolicConstant = DEFAULT,
+                  globTrkInc: int = None,
+                  fastLocalTrk: Boolean = ON,
+                  scalePenalty: float = 1,
+                  warpCheckPeriod: int = 20,
                   warpCutoff: float = 20):
         """This method modifies the ExpContactControl object.
         

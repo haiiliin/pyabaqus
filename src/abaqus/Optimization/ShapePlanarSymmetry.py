@@ -2,6 +2,8 @@ from abaqusConstants import *
 from .GeometricRestriction import GeometricRestriction
 from ..Region.Region import Region
 
+from __init__ import *
+
 
 class ShapePlanarSymmetry(GeometricRestriction):
     """The ShapePlanarSymmetry object defines a shape planar symmetry geometric restriction.
@@ -17,12 +19,17 @@ class ShapePlanarSymmetry(GeometricRestriction):
         mdb.models[name].optimizationTasks[name].geometricRestrictions[name]
 
     """
-
-    def __init__(self, name: str, clientDirection: tuple, region: Region,
-                 allowNonSymmetricMesh: Boolean = TRUE, csys: int = None,
+    def __init__(self,
+                 name: str,
+                 clientDirection: tuple,
+                 region: Region,
+                 allowNonSymmetricMesh: Boolean = TRUE,
+                 csys: int = None,
                  mainPointDetermination: SymbolicConstant = MAXIMUM,
-                 presumeFeasibleRegionAtStart: Boolean = ON, tolerance1: float = 0,
-                 tolerance2: float = 0, tolerance3: float = 0):
+                 presumeFeasibleRegionAtStart: Boolean = ON,
+                 tolerance1: float = 0,
+                 tolerance2: float = 0,
+                 tolerance3: float = 0):
         """This method creates a ShapePlanarSymmetry object.
 
         Notes
@@ -75,10 +82,14 @@ class ShapePlanarSymmetry(GeometricRestriction):
         super().__init__()
         pass
 
-    def setValues(self, allowNonSymmetricMesh: Boolean = TRUE, csys: int = None,
+    def setValues(self,
+                  allowNonSymmetricMesh: Boolean = TRUE,
+                  csys: int = None,
                   mainPointDetermination: SymbolicConstant = MAXIMUM,
-                  presumeFeasibleRegionAtStart: Boolean = ON, tolerance1: float = 0,
-                  tolerance2: float = 0, tolerance3: float = 0):
+                  presumeFeasibleRegionAtStart: Boolean = ON,
+                  tolerance1: float = 0,
+                  tolerance2: float = 0,
+                  tolerance3: float = 0):
         """This method modifies the ShapePlanarSymmetry object.
         
         Parameters

@@ -3,6 +3,8 @@ import typing
 from abaqusConstants import *
 from .Annotation import Annotation
 
+from __init__ import *
+
 
 class Text(Annotation):
     """The Text object stores the text settings and location of a text annotation.
@@ -28,18 +30,26 @@ class Text(Annotation):
 
     """
 
-    # A Float specifying the width in millimeters of the Text object. 
+    # A Float specifying the width in millimeters of the Text object.
     width: float = None
 
-    # A Float specifying the height in millimeters of the Text object. 
+    # A Float specifying the height in millimeters of the Text object.
     height: float = None
 
-    def __init__(self, name: str, text: str = '', offset: tuple[float] = (),
+    def __init__(self,
+                 name: str,
+                 text: str = '',
+                 offset: tuple[float] = (),
                  anchor: typing.Union[SymbolicConstant, float] = BOTTOM_LEFT,
-                 referencePoint: typing.Union[SymbolicConstant, float] = BOTTOM_LEFT,
-                 rotationAngle: float = 0, color: str = '', font: str = '',
-                 backgroundStyle: SymbolicConstant = TRANSPARENT, backgroundColor: str = '',
-                 box: Boolean = OFF, justification: SymbolicConstant = JUSTIFY_LEFT):
+                 referencePoint: typing.Union[SymbolicConstant,
+                                              float] = BOTTOM_LEFT,
+                 rotationAngle: float = 0,
+                 color: str = '',
+                 font: str = '',
+                 backgroundStyle: SymbolicConstant = TRANSPARENT,
+                 backgroundColor: str = '',
+                 box: Boolean = OFF,
+                 justification: SymbolicConstant = JUSTIFY_LEFT):
         """This method creates a Text object.
 
         Notes
@@ -121,12 +131,19 @@ class Text(Annotation):
         super().__init__()
         pass
 
-    def setValues(self, text: str = '', offset: tuple[float] = (),
+    def setValues(self,
+                  text: str = '',
+                  offset: tuple[float] = (),
                   anchor: typing.Union[SymbolicConstant, float] = BOTTOM_LEFT,
-                  referencePoint: typing.Union[SymbolicConstant, float] = BOTTOM_LEFT,
-                  rotationAngle: float = 0, color: str = '', font: str = '',
-                  backgroundStyle: SymbolicConstant = TRANSPARENT, backgroundColor: str = '',
-                  box: Boolean = OFF, justification: SymbolicConstant = JUSTIFY_LEFT):
+                  referencePoint: typing.Union[SymbolicConstant,
+                                               float] = BOTTOM_LEFT,
+                  rotationAngle: float = 0,
+                  color: str = '',
+                  font: str = '',
+                  backgroundStyle: SymbolicConstant = TRANSPARENT,
+                  backgroundColor: str = '',
+                  box: Boolean = OFF,
+                  justification: SymbolicConstant = JUSTIFY_LEFT):
         """This method modifies the Text object.
         
         Parameters

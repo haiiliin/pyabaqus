@@ -1,5 +1,7 @@
 from abaqusConstants import *
 
+from __init__ import *
+
 
 class TensionCutOff:
     """The TensionCutOff object specifies tension cutoff for different material models for
@@ -28,8 +30,10 @@ class TensionCutOff:
         - TENSION CUTOFF
 
     """
-
-    def __init__(self, table: tuple, temperatureDependency: Boolean = OFF, dependencies: int = 0):
+    def __init__(self,
+                 table: tuple,
+                 temperatureDependency: Boolean = OFF,
+                 dependencies: int = 0):
         """This method creates a TensionCutOff object.
 
         Notes

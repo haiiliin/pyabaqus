@@ -2,6 +2,8 @@ from abaqusConstants import *
 from .SpringDashpot import SpringDashpot
 from ..Region.Region import Region
 
+from __init__ import *
+
 
 class SpringDashpotToGround(SpringDashpot):
     """The SpringDashpotToGround object defines springs and/or dashpots between points and
@@ -32,13 +34,19 @@ class SpringDashpotToGround(SpringDashpot):
 
     """
 
-    # A Boolean specifying whether the spring/dashpot is suppressed or not. The default value 
-    # is OFF. 
+    # A Boolean specifying whether the spring/dashpot is suppressed or not. The default value
+    # is OFF.
     suppressed: Boolean = OFF
 
-    def __init__(self, name: str, region: Region, dof: int, orientation: str = None,
-                 springBehavior: Boolean = OFF, dashpotBehavior: Boolean = OFF,
-                 springStiffness: float = 0, dashpotCoefficient: float = 0):
+    def __init__(self,
+                 name: str,
+                 region: Region,
+                 dof: int,
+                 orientation: str = None,
+                 springBehavior: Boolean = OFF,
+                 dashpotBehavior: Boolean = OFF,
+                 springStiffness: float = 0,
+                 dashpotCoefficient: float = 0):
         """This method creates a SpringDashpotToGround object.
 
         Notes
@@ -86,8 +94,12 @@ class SpringDashpotToGround(SpringDashpot):
         super().__init__()
         pass
 
-    def setValues(self, orientation: str = None, springBehavior: Boolean = OFF, dashpotBehavior: Boolean = OFF,
-                  springStiffness: float = 0, dashpotCoefficient: float = 0):
+    def setValues(self,
+                  orientation: str = None,
+                  springBehavior: Boolean = OFF,
+                  dashpotBehavior: Boolean = OFF,
+                  springStiffness: float = 0,
+                  dashpotCoefficient: float = 0):
         """This method modifies the SpringDashpotToGround object.
         
         Parameters

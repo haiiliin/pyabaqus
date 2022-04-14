@@ -1,5 +1,7 @@
 from abaqusConstants import *
 
+from __init__ import *
+
 
 class StopConditionDisplayOptions:
     """The StopConditionDisplayOptions object stores settings that specify how assemblies are
@@ -15,7 +17,6 @@ class StopConditionDisplayOptions:
             session.viewports[name].layers[name].assemblyDisplay.stopConditionOptions
 
     """
-
     def setValues(self, localStopCondition: Boolean = ON):
         """This method modifies the StopConditionDisplayOptions object.
         

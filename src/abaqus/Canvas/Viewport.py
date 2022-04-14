@@ -1,9 +1,10 @@
 from .Layer import Layer
 from ..Annotation.AnnotationViewport import AnnotationViewport
 
+from __init__ import *
+
 
 class Viewport(AnnotationViewport):
-
     def Layer(self, name: str, copyViewName: str = '') -> Layer:
         """This method creates a Layer object in the Layer repository.
 

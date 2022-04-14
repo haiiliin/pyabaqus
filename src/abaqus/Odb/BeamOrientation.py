@@ -2,6 +2,8 @@ from abaqusConstants import *
 from .OdbMeshNode import OdbMeshNode
 from .OdbSet import OdbSet
 
+from __init__ import *
+
 
 class BeamOrientation:
     """The BeamOrientation object represents the direction of the first beam section axis n1n1.
@@ -32,13 +34,13 @@ class BeamOrientation:
 
     """
 
-    # A SymbolicConstant specifying the orientation assignment method. Possible values are 
-    # N1_COSINES, CSYS, and VECT. 
+    # A SymbolicConstant specifying the orientation assignment method. Possible values are
+    # N1_COSINES, CSYS, and VECT.
     method: SymbolicConstant = None
 
-    # An OdbSet object specifying a region for which the beam orientation is defined. 
+    # An OdbSet object specifying a region for which the beam orientation is defined.
     region: OdbSet = OdbSet('set', tuple[OdbMeshNode]())
 
-    # A tuple of Floats specifying direction cosines of the n1-direction of the beam 
-    # cross-section. 
+    # A tuple of Floats specifying direction cosines of the n1-direction of the beam
+    # cross-section.
     vector: float = None

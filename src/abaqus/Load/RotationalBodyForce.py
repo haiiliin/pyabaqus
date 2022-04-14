@@ -2,6 +2,8 @@ from abaqusConstants import *
 from .Load import Load
 from ..Region.Region import Region
 
+from __init__ import *
+
 
 class RotationalBodyForce(Load):
     """The RotationalBodyForce object stores the data for a rotational body force.
@@ -44,40 +46,49 @@ class RotationalBodyForce(Load):
 
     """
 
-    # A String specifying the load repository key. 
+    # A String specifying the load repository key.
     name: str = ''
 
-    # A SymbolicConstant specifying how the load is distributed spatially. Possible values are 
-    # UNIFORM and FIELD. The default value is UNIFORM. 
+    # A SymbolicConstant specifying how the load is distributed spatially. Possible values are
+    # UNIFORM and FIELD. The default value is UNIFORM.
     distributionType: SymbolicConstant = UNIFORM
 
-    # A Boolean specifying whether or not the effect of the load is centrifugal. The default 
-    # value is OFF.Note:At least one of *centrifugal* or *rotaryAcceleration* must be 
-    # specified and only one must have the value ON. 
+    # A Boolean specifying whether or not the effect of the load is centrifugal. The default
+    # value is OFF.Note:At least one of *centrifugal* or *rotaryAcceleration* must be
+    # specified and only one must have the value ON.
     centrifugal: Boolean = OFF
 
-    # A Boolean specifying whether or not the effect of the load is rotary acceleration. The 
-    # default value is OFF.Note:At least one of *centrifugal* or *rotaryAcceleration* must be 
-    # specified and only one must have the value ON. 
+    # A Boolean specifying whether or not the effect of the load is rotary acceleration. The
+    # default value is OFF.Note:At least one of *centrifugal* or *rotaryAcceleration* must be
+    # specified and only one must have the value ON.
     rotaryAcceleration: Boolean = OFF
 
-    # A tuple of Floats specifying the first point on the axis of rotation for the load. 
+    # A tuple of Floats specifying the first point on the axis of rotation for the load.
     point1: float = None
 
-    # A tuple of Floats specifying the second point on the axis of rotation for the load. 
+    # A tuple of Floats specifying the second point on the axis of rotation for the load.
     point2: float = None
 
-    # A String specifying the name of the AnalyticalField object associated with this load. 
-    # The *field* argument applies only when *distributionType*=FIELD. The default value is an 
-    # empty string. 
+    # A String specifying the name of the AnalyticalField object associated with this load.
+    # The *field* argument applies only when *distributionType*=FIELD. The default value is an
+    # empty string.
     field: str = ''
 
-    # A Region object specifying the region to which the load is applied. 
+    # A Region object specifying the region to which the load is applied.
     region: Region = Region()
 
-    def __init__(self, name: str, createStepName: str, region: Region, magnitude: float, point1: tuple,
-                 point2: tuple, distributionType: SymbolicConstant = UNIFORM, field: str = '',
-                 centrifugal: Boolean = OFF, rotaryAcceleration: Boolean = OFF, amplitude: str = UNSET):
+    def __init__(self,
+                 name: str,
+                 createStepName: str,
+                 region: Region,
+                 magnitude: float,
+                 point1: tuple,
+                 point2: tuple,
+                 distributionType: SymbolicConstant = UNIFORM,
+                 field: str = '',
+                 centrifugal: Boolean = OFF,
+                 rotaryAcceleration: Boolean = OFF,
+                 amplitude: str = UNSET):
         """This method creates a RotationalBodyForce object.
 
         Notes
@@ -130,8 +141,12 @@ class RotationalBodyForce(Load):
         super().__init__()
         pass
 
-    def setValues(self, distributionType: SymbolicConstant = UNIFORM, field: str = '',
-                  centrifugal: Boolean = OFF, rotaryAcceleration: Boolean = OFF, amplitude: str = UNSET):
+    def setValues(self,
+                  distributionType: SymbolicConstant = UNIFORM,
+                  field: str = '',
+                  centrifugal: Boolean = OFF,
+                  rotaryAcceleration: Boolean = OFF,
+                  amplitude: str = UNSET):
         """This method modifies the data for an existing RotationalBodyForce object in the step
         where it is created.
         
@@ -159,7 +174,10 @@ class RotationalBodyForce(Load):
         """
         pass
 
-    def setValuesInStep(self, stepName: str, magnitude: float = None, amplitude: str = ''):
+    def setValuesInStep(self,
+                        stepName: str,
+                        magnitude: float = None,
+                        amplitude: str = ''):
         """This method modifies the propagating data for an existing RotationalBodyForce object in
         the specified step.
         

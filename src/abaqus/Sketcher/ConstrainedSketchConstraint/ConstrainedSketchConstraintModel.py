@@ -2,6 +2,8 @@ from ..ConstrainedSketchBase import ConstrainedSketchBase
 from ..ConstrainedSketchGeometry.ConstrainedSketchGeometry import ConstrainedSketchGeometry
 from ...BasicGeometry.Vertex import Vertex
 
+from __init__ import *
+
 
 class ConstrainedSketchConstraintModel(ConstrainedSketchBase):
     """A ConstrainedSketch object contains the entities that are used to create a sketch. The
@@ -19,8 +21,8 @@ class ConstrainedSketchConstraintModel(ConstrainedSketchBase):
             mdb.models[name].sketches[name]
 
     """
-
-    def CoincidentConstraint(self, entity1: ConstrainedSketchGeometry, entity2: ConstrainedSketchGeometry):
+    def CoincidentConstraint(self, entity1: ConstrainedSketchGeometry,
+                             entity2: ConstrainedSketchGeometry):
         """This method creates a coincident constraint. This constraint applies to two vertices, to
         a vertex and a ConstrainedSketchGeometry object, or to two ConstrainedSketchGeometry
         objects of the same type and constrains them to be coincident.
@@ -47,7 +49,8 @@ class ConstrainedSketchConstraintModel(ConstrainedSketchBase):
         """
         pass
 
-    def ConcentricConstraint(self, entity1: ConstrainedSketchGeometry, entity2: ConstrainedSketchGeometry):
+    def ConcentricConstraint(self, entity1: ConstrainedSketchGeometry,
+                             entity2: ConstrainedSketchGeometry):
         """This method creates a concentric constraint. This constraint applies to any combination
         of circles, arcs, ellipses, and points and constrains them to be concentric. A
         concentric constraint implies that the center of ConstrainedSketchGeometry objects
@@ -77,7 +80,8 @@ class ConstrainedSketchConstraintModel(ConstrainedSketchBase):
         """
         pass
 
-    def EqualLengthConstraint(self, entity1: ConstrainedSketchGeometry, entity2: ConstrainedSketchGeometry):
+    def EqualLengthConstraint(self, entity1: ConstrainedSketchGeometry,
+                              entity2: ConstrainedSketchGeometry):
         """This method creates an equal length constraint. This constraint applies to lines and
         constrains them such that their lengths are equal.
 
@@ -103,7 +107,8 @@ class ConstrainedSketchConstraintModel(ConstrainedSketchBase):
         """
         pass
 
-    def EqualRadiusConstraint(self, entity1: ConstrainedSketchGeometry, entity2: str):
+    def EqualRadiusConstraint(self, entity1: ConstrainedSketchGeometry,
+                              entity2: str):
         """This method creates an equal radius constraint. This constraint applies to circles and
         arcs and constrains them such that their radii are equal.
 
@@ -203,7 +208,8 @@ class ConstrainedSketchConstraintModel(ConstrainedSketchBase):
         """
         pass
 
-    def ParallelConstraint(self, entity1: ConstrainedSketchGeometry, entity2: ConstrainedSketchGeometry):
+    def ParallelConstraint(self, entity1: ConstrainedSketchGeometry,
+                           entity2: ConstrainedSketchGeometry):
         """This method creates a parallel constraint. This constraint applies to lines and
         constrains them to be parallel.
 
@@ -229,7 +235,8 @@ class ConstrainedSketchConstraintModel(ConstrainedSketchBase):
         """
         pass
 
-    def PerpendicularConstraint(self, entity1: ConstrainedSketchGeometry, entity2: ConstrainedSketchGeometry):
+    def PerpendicularConstraint(self, entity1: ConstrainedSketchGeometry,
+                                entity2: ConstrainedSketchGeometry):
         """This method creates a perpendicular constraint. This constraint applies to different
         types of ConstrainedSketchGeometry objects and constrains them to be perpendicular to
         each other.
@@ -256,7 +263,9 @@ class ConstrainedSketchConstraintModel(ConstrainedSketchBase):
         """
         pass
 
-    def EqualDistanceConstraint(self, entity1: str, entity2: ConstrainedSketchGeometry, midpoint: Vertex):
+    def EqualDistanceConstraint(self, entity1: str,
+                                entity2: ConstrainedSketchGeometry,
+                                midpoint: Vertex):
         """This method creates an equal distance constraint. This constraint can be applied between
         a midpoint ConstrainedSketchVertex object and any other two ConstrainedSketchVertex objects or between a
         midpoint ConstrainedSketchVertex
@@ -289,7 +298,8 @@ class ConstrainedSketchConstraintModel(ConstrainedSketchBase):
         """
         pass
 
-    def TangentConstraint(self, entity1: ConstrainedSketchGeometry, entity2: ConstrainedSketchGeometry):
+    def TangentConstraint(self, entity1: ConstrainedSketchGeometry,
+                          entity2: ConstrainedSketchGeometry):
         """This method creates a tangent constraint. This constraint applies to different types of
         ConstrainedSketchGeometry objects and constrains them to remain tangential.
 

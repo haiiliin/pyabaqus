@@ -2,6 +2,8 @@ from abaqusConstants import *
 from .Area import Area
 from .TextStyle import TextStyle
 
+from __init__ import *
+
 
 class Legend:
     """The Legend object is used to store the display attributes of the chart legend. A legend
@@ -44,38 +46,44 @@ class Legend:
 
     """
 
-    # A SymbolicConstant specifying how the minimum and maximum values are formatted. Possible 
-    # values are AUTOMATIC, DECIMAL, SCIENTIFIC, and ENGINEERING. The default value is 
-    # AUTOMATIC. 
+    # A SymbolicConstant specifying how the minimum and maximum values are formatted. Possible
+    # values are AUTOMATIC, DECIMAL, SCIENTIFIC, and ENGINEERING. The default value is
+    # AUTOMATIC.
     numberFormat: SymbolicConstant = AUTOMATIC
 
-    # An Int specifying the number of significant digits displayed for the minimum and maximum 
-    # values. Possible values are 1 to 7. The default value is 2. 
+    # An Int specifying the number of significant digits displayed for the minimum and maximum
+    # values. Possible values are 1 to 7. The default value is 2.
     numDigits: int = 2
 
-    # A Boolean specifying whether to show the legend. The default value is ON. 
+    # A Boolean specifying whether to show the legend. The default value is ON.
     show: Boolean = ON
 
-    # A Boolean specifying whether to display the minimum and maximum values. The default 
-    # value is OFF. 
+    # A Boolean specifying whether to display the minimum and maximum values. The default
+    # value is OFF.
     showMinMax: Boolean = OFF
 
-    # An Area object specifying the area of the legend. 
+    # An Area object specifying the area of the legend.
     area: Area = Area()
 
-    # A TextStyle object specifying the text properties used to display the legend text. 
+    # A TextStyle object specifying the text properties used to display the legend text.
     textStyle: TextStyle = TextStyle()
 
-    # A String specifying the title to appear on the legend. The default value is an empty 
-    # string. 
+    # A String specifying the title to appear on the legend. The default value is an empty
+    # string.
     title: str = ''
 
-    # A TextStyle object specifying the text properties used to display the legend title. 
+    # A TextStyle object specifying the text properties used to display the legend title.
     titleStyle: TextStyle = TextStyle()
 
-    def setValues(self, legend: 'Legend' = None, show: Boolean = ON, showMinMax: Boolean = OFF,
-                  title: str = '', numberFormat: SymbolicConstant = AUTOMATIC, numDigits: int = 2,
-                  textStyle: TextStyle = TextStyle(), titleStyle: TextStyle = TextStyle()):
+    def setValues(self,
+                  legend: 'Legend' = None,
+                  show: Boolean = ON,
+                  showMinMax: Boolean = OFF,
+                  title: str = '',
+                  numberFormat: SymbolicConstant = AUTOMATIC,
+                  numDigits: int = 2,
+                  textStyle: TextStyle = TextStyle(),
+                  titleStyle: TextStyle = TextStyle()):
         """This method modifies the Legend object.
         
         Parameters

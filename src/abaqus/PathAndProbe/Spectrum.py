@@ -1,3 +1,6 @@
+from __init__ import *
+
+
 class Spectrum:
     """The Spectrum object defines a color spectrum for the contour display.
 
@@ -11,7 +14,6 @@ class Spectrum:
         session.spectrums[name]
 
     """
-
     def __init__(self, name: str, colors: tuple):
         """This method creates a Spectrum object and places it in the spectrums repository.
 

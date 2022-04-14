@@ -3,6 +3,8 @@ from .CapCreepCohesion import CapCreepCohesion
 from .CapCreepConsolidation import CapCreepConsolidation
 from .CapHardening import CapHardening
 
+from __init__ import *
+
 
 class CapPlasticity:
     """The CapPlasticity object specifies the modified Drucker-Prager/Cap plasticity model.
@@ -35,16 +37,20 @@ class CapPlasticity:
 
     """
 
-    # A CapCreepCohesion object. 
-    capCreepCohesion: CapCreepCohesion = CapCreepCohesion(((),))
+    # A CapCreepCohesion object.
+    capCreepCohesion: CapCreepCohesion = CapCreepCohesion(((), ))
 
-    # A CapCreepConsolidation object. 
-    capCreepConsolidation: CapCreepConsolidation = CapCreepConsolidation(((),))
+    # A CapCreepConsolidation object.
+    capCreepConsolidation: CapCreepConsolidation = CapCreepConsolidation(
+        ((), ))
 
-    # A CapHardening object. 
-    capHardening: CapHardening = CapHardening(((),))
+    # A CapHardening object.
+    capHardening: CapHardening = CapHardening(((), ))
 
-    def __init__(self, table: tuple, temperatureDependency: Boolean = OFF, dependencies: int = 0):
+    def __init__(self,
+                 table: tuple,
+                 temperatureDependency: Boolean = OFF,
+                 dependencies: int = 0):
         """This method creates a CapPlasticity object.
 
         Notes

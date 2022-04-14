@@ -1,3 +1,6 @@
+from __init__ import *
+
+
 class Interaction:
     """The Interaction object is the abstract base type for other Interaction objects. The
     Interaction object has no explicit constructor. Each of the Interaction objects has the 
@@ -26,7 +29,7 @@ class Interaction:
 
     """
 
-    # A String specifying the repository key. 
+    # A String specifying the repository key.
     name: str = ''
 
     def deactivate(self, stepName: str):

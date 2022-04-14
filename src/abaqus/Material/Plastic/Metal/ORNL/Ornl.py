@@ -1,5 +1,7 @@
 from abaqusConstants import *
 
+from __init__ import *
+
 
 class Ornl:
     """The Ornl object specifies the constitutive model developed by Oak Ridge National
@@ -22,7 +24,6 @@ class Ornl:
         - ORNL
 
     """
-
     def __init__(self, a: float = 0, h: float = None, reset: Boolean = OFF):
         """This method creates an Ornl object.
 

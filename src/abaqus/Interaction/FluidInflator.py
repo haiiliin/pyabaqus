@@ -1,5 +1,7 @@
 from .Interaction import Interaction
 
+from __init__ import *
+
 
 class FluidInflator(Interaction):
     """The FluidInflator object is used to define a fluid inflator to model deployment of an
@@ -19,9 +21,13 @@ class FluidInflator(Interaction):
         - FLUID INFLATOR
 
     """
-
-    def __init__(self, name: str, createStepName: str, cavity: str, interactionProperty: str,
-                 inflationTimeAmplitude: str = '', massFlowAmplitude: str = ''):
+    def __init__(self,
+                 name: str,
+                 createStepName: str,
+                 cavity: str,
+                 interactionProperty: str,
+                 inflationTimeAmplitude: str = '',
+                 massFlowAmplitude: str = ''):
         """This method creates a FluidInflator object.
 
         Notes
@@ -56,7 +62,9 @@ class FluidInflator(Interaction):
         super().__init__()
         pass
 
-    def setValues(self, inflationTimeAmplitude: str = '', massFlowAmplitude: str = ''):
+    def setValues(self,
+                  inflationTimeAmplitude: str = '',
+                  massFlowAmplitude: str = ''):
         """This method modifies the FluidInflator object.
         
         Parameters

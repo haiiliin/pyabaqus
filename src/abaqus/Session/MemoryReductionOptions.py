@@ -1,5 +1,7 @@
 from abaqusConstants import *
 
+from __init__ import *
+
 
 class MemoryReductionOptions:
     """The MemoryReductionOptions object controls the default settings that Abaqus/CAE uses for
@@ -12,8 +14,9 @@ class MemoryReductionOptions:
             session.memoryReductionOptions
 
     """
-
-    def setValues(self, reducedMemoryMode: Boolean = ON, percentThreshold: float = 75):
+    def setValues(self,
+                  reducedMemoryMode: Boolean = ON,
+                  percentThreshold: float = 75):
         """This method modifies the MemoryReductionOptions object.
         
         Parameters

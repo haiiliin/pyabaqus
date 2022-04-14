@@ -4,6 +4,8 @@ from abaqusConstants import *
 from .Load import Load
 from ..Region.Region import Region
 
+from __init__ import *
+
 
 class ConcentratedForce(Load):
     """The ConcentratedForce object defines a concentrated force.
@@ -43,35 +45,43 @@ class ConcentratedForce(Load):
 
     """
 
-    # A String specifying the load repository key. 
+    # A String specifying the load repository key.
     name: str = ''
 
-    # A SymbolicConstant specifying how the load is distributed spatially. Possible values are 
-    # UNIFORM and FIELD. The default value is UNIFORM. 
+    # A SymbolicConstant specifying how the load is distributed spatially. Possible values are
+    # UNIFORM and FIELD. The default value is UNIFORM.
     distributionType: SymbolicConstant = UNIFORM
 
-    # A Boolean specifying whether the direction of the force rotates with the rotation at 
-    # each node of the region. You should provide the *follower* argument only if it is valid 
-    # for the specified step. The default value is OFF. 
+    # A Boolean specifying whether the direction of the force rotates with the rotation at
+    # each node of the region. You should provide the *follower* argument only if it is valid
+    # for the specified step. The default value is OFF.
     follower: Boolean = OFF
 
-    # None or a DatumCsys object specifying the local coordinate system of the load's degrees 
-    # of freedom. If *localCsys*=None, the degrees of freedom are defined in the global 
-    # coordinate system. When this member is queried, it returns an Int. The default value is 
-    # None. 
+    # None or a DatumCsys object specifying the local coordinate system of the load's degrees
+    # of freedom. If *localCsys*=None, the degrees of freedom are defined in the global
+    # coordinate system. When this member is queried, it returns an Int. The default value is
+    # None.
     localCsys: int = None
 
-    # A String specifying the name of the AnalyticalField object associated with this load. 
-    # The *field* argument applies only when *distributionType*=FIELD. The default value is an 
-    # empty string. 
+    # A String specifying the name of the AnalyticalField object associated with this load.
+    # The *field* argument applies only when *distributionType*=FIELD. The default value is an
+    # empty string.
     field: str = ''
 
-    # A Region object specifying the region to which the load is applied. 
+    # A Region object specifying the region to which the load is applied.
     region: Region = Region()
 
-    def __init__(self, name: str, createStepName: str, region: Region,
-                 distributionType: SymbolicConstant = UNIFORM, field: str = '', cf1: float = None,
-                 cf2: float = None, cf3: float = None, amplitude: str = UNSET, follower: Boolean = OFF,
+    def __init__(self,
+                 name: str,
+                 createStepName: str,
+                 region: Region,
+                 distributionType: SymbolicConstant = UNIFORM,
+                 field: str = '',
+                 cf1: float = None,
+                 cf2: float = None,
+                 cf3: float = None,
+                 amplitude: str = UNSET,
+                 follower: Boolean = OFF,
                  localCsys: int = None):
         """This method creates a ConcentratedForce object.
 
@@ -127,8 +137,14 @@ class ConcentratedForce(Load):
         super().__init__()
         pass
 
-    def setValues(self, distributionType: SymbolicConstant = UNIFORM, field: str = '', cf1: float = None,
-                  cf2: float = None, cf3: float = None, amplitude: str = UNSET, follower: Boolean = OFF,
+    def setValues(self,
+                  distributionType: SymbolicConstant = UNIFORM,
+                  field: str = '',
+                  cf1: float = None,
+                  cf2: float = None,
+                  cf3: float = None,
+                  amplitude: str = UNSET,
+                  follower: Boolean = OFF,
                   localCsys: int = None):
         """This method modifies the data for an existing ConcentratedForce object in the step where
         it is created.
@@ -166,7 +182,8 @@ class ConcentratedForce(Load):
         """
         pass
 
-    def setValuesInStep(self, stepName: str,
+    def setValuesInStep(self,
+                        stepName: str,
                         cf1: typing.Union[SymbolicConstant, float] = None,
                         cf2: typing.Union[SymbolicConstant, float] = None,
                         cf3: typing.Union[SymbolicConstant, float] = None,

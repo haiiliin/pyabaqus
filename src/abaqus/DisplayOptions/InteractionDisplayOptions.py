@@ -1,5 +1,7 @@
 from abaqusConstants import *
 
+from __init__ import *
+
 
 class InteractionDisplayOptions:
     """The InteractionDisplayOptions object stores settings that specify how assemblies are to
@@ -15,11 +17,15 @@ class InteractionDisplayOptions:
             session.viewports[name].layers[name].assemblyDisplay.interactionOptions
 
     """
-
-    def setValues(self, surfaceContact: Boolean = ON, selfContact: Boolean = ON,
-                  elasticFoundation: Boolean = ON, actuatorSensor: Boolean = ON,
-                  radiationAmbient: Boolean = ON, filmCondition: Boolean = ON,
-                  concentratedRadiationToAmbient: Boolean = ON, concentratedFilmCondition: Boolean = ON):
+    def setValues(self,
+                  surfaceContact: Boolean = ON,
+                  selfContact: Boolean = ON,
+                  elasticFoundation: Boolean = ON,
+                  actuatorSensor: Boolean = ON,
+                  radiationAmbient: Boolean = ON,
+                  filmCondition: Boolean = ON,
+                  concentratedRadiationToAmbient: Boolean = ON,
+                  concentratedFilmCondition: Boolean = ON):
         """This method modifies the InteractionDisplayOptions object.
         
         Parameters

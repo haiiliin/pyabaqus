@@ -1,6 +1,8 @@
 from abaqusConstants import *
 from .ContactProperty import ContactProperty
 
+from __init__ import *
+
 
 class IncidentWaveProperty(ContactProperty):
     """The IncidentWaveProperty object is an interaction property that defines the properties
@@ -22,19 +24,39 @@ class IncidentWaveProperty(ContactProperty):
             - CONWEP CHARGE PROPERTY
 
     """
-
-    def __init__(self, name: str, definition: SymbolicConstant = PLANAR,
-                 propagationModel: SymbolicConstant = ACOUSTIC, soundSpeed: float = None,
-                 fluidDensity: float = None, specificHeatRatio: float = None, gravity: float = None,
-                 atmosphericPressure: float = None, dragCoefficient: float = None,
-                 dragExponent: float = 2, waveEffects: Boolean = ON, chargeDensity: float = None,
-                 chargeMass: float = None, constantK1: float = None, constantK2: float = None,
-                 constantA: float = None, constantB: float = None, constantKc: float = None,
-                 duration: float = None, maximumSteps: int = 1500, relativeStepControl: float = None,
-                 absoluteStepControl: float = None, stepControlExponent: float = 0, genDecayA: float = 0,
-                 genDecayB: float = 0, genDecayC: float = 0, seedNumber: int = None,
-                 massTNT: float = None, massFactor: float = 1, lengthFactor: float = 1,
-                 timeFactor: float = 1, pressureFactor: float = 1):
+    def __init__(self,
+                 name: str,
+                 definition: SymbolicConstant = PLANAR,
+                 propagationModel: SymbolicConstant = ACOUSTIC,
+                 soundSpeed: float = None,
+                 fluidDensity: float = None,
+                 specificHeatRatio: float = None,
+                 gravity: float = None,
+                 atmosphericPressure: float = None,
+                 dragCoefficient: float = None,
+                 dragExponent: float = 2,
+                 waveEffects: Boolean = ON,
+                 chargeDensity: float = None,
+                 chargeMass: float = None,
+                 constantK1: float = None,
+                 constantK2: float = None,
+                 constantA: float = None,
+                 constantB: float = None,
+                 constantKc: float = None,
+                 duration: float = None,
+                 maximumSteps: int = 1500,
+                 relativeStepControl: float = None,
+                 absoluteStepControl: float = None,
+                 stepControlExponent: float = 0,
+                 genDecayA: float = 0,
+                 genDecayB: float = 0,
+                 genDecayC: float = 0,
+                 seedNumber: int = None,
+                 massTNT: float = None,
+                 massFactor: float = 1,
+                 lengthFactor: float = 1,
+                 timeFactor: float = 1,
+                 pressureFactor: float = 1):
         """This method creates an IncidentWaveProperty object.
 
         Notes
@@ -172,17 +194,38 @@ class IncidentWaveProperty(ContactProperty):
         super().__init__(name)
         pass
 
-    def setValues(self, definition: SymbolicConstant = PLANAR, propagationModel: SymbolicConstant = ACOUSTIC,
-                  soundSpeed: float = None, fluidDensity: float = None, specificHeatRatio: float = None,
-                  gravity: float = None, atmosphericPressure: float = None, dragCoefficient: float = None,
-                  dragExponent: float = 2, waveEffects: Boolean = ON, chargeDensity: float = None,
-                  chargeMass: float = None, constantK1: float = None, constantK2: float = None,
-                  constantA: float = None, constantB: float = None, constantKc: float = None,
-                  duration: float = None, maximumSteps: int = 1500, relativeStepControl: float = None,
-                  absoluteStepControl: float = None, stepControlExponent: float = 0, genDecayA: float = 0,
-                  genDecayB: float = 0, genDecayC: float = 0, seedNumber: int = None,
-                  massTNT: float = None, massFactor: float = 1, lengthFactor: float = 1,
-                  timeFactor: float = 1, pressureFactor: float = 1):
+    def setValues(self,
+                  definition: SymbolicConstant = PLANAR,
+                  propagationModel: SymbolicConstant = ACOUSTIC,
+                  soundSpeed: float = None,
+                  fluidDensity: float = None,
+                  specificHeatRatio: float = None,
+                  gravity: float = None,
+                  atmosphericPressure: float = None,
+                  dragCoefficient: float = None,
+                  dragExponent: float = 2,
+                  waveEffects: Boolean = ON,
+                  chargeDensity: float = None,
+                  chargeMass: float = None,
+                  constantK1: float = None,
+                  constantK2: float = None,
+                  constantA: float = None,
+                  constantB: float = None,
+                  constantKc: float = None,
+                  duration: float = None,
+                  maximumSteps: int = 1500,
+                  relativeStepControl: float = None,
+                  absoluteStepControl: float = None,
+                  stepControlExponent: float = 0,
+                  genDecayA: float = 0,
+                  genDecayB: float = 0,
+                  genDecayC: float = 0,
+                  seedNumber: int = None,
+                  massTNT: float = None,
+                  massFactor: float = 1,
+                  lengthFactor: float = 1,
+                  timeFactor: float = 1,
+                  pressureFactor: float = 1):
         """This method modifies the IncidentWaveProperty object.
         
         Parameters

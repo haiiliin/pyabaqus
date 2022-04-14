@@ -2,6 +2,8 @@ import typing
 
 from abaqusConstants import *
 
+from __init__ import *
+
 
 class Control:
     """The Control object is used to provide additional optional general solution controls.
@@ -16,22 +18,33 @@ class Control:
            mdb.models[name].steps[name].control
 
     """
-
-    def setValues(self, allowPropagation: Boolean = ON, resetDefaultValues: Boolean = OFF,
+    def setValues(self,
+                  allowPropagation: Boolean = ON,
+                  resetDefaultValues: Boolean = OFF,
                   discontinuous: Boolean = OFF,
                   constraints: typing.Union[SymbolicConstant, float] = DEFAULT,
                   lineSearch: typing.Union[SymbolicConstant, float] = DEFAULT,
-                  timeIncrementation: typing.Union[SymbolicConstant, float] = DEFAULT,
-                  directCyclic: typing.Union[SymbolicConstant, float] = DEFAULT,
-                  concentrationField: typing.Union[SymbolicConstant, float] = DEFAULT,
-                  displacementField: typing.Union[SymbolicConstant, float] = DEFAULT,
-                  electricalPotentialField: typing.Union[SymbolicConstant, float] = DEFAULT,
+                  timeIncrementation: typing.Union[SymbolicConstant,
+                                                   float] = DEFAULT,
+                  directCyclic: typing.Union[SymbolicConstant,
+                                             float] = DEFAULT,
+                  concentrationField: typing.Union[SymbolicConstant,
+                                                   float] = DEFAULT,
+                  displacementField: typing.Union[SymbolicConstant,
+                                                  float] = DEFAULT,
+                  electricalPotentialField: typing.Union[SymbolicConstant,
+                                                         float] = DEFAULT,
                   globalField: typing.Union[SymbolicConstant, float] = DEFAULT,
-                  hydrostaticFluidPressureField: typing.Union[SymbolicConstant, float] = DEFAULT,
-                  poreFluidPressureField: typing.Union[SymbolicConstant, float] = DEFAULT,
-                  rotationField: typing.Union[SymbolicConstant, float] = DEFAULT,
-                  temperatureField: typing.Union[SymbolicConstant, float] = DEFAULT,
-                  vcctLinearScaling: typing.Union[SymbolicConstant, float] = DEFAULT):
+                  hydrostaticFluidPressureField: typing.Union[SymbolicConstant,
+                                                              float] = DEFAULT,
+                  poreFluidPressureField: typing.Union[SymbolicConstant,
+                                                       float] = DEFAULT,
+                  rotationField: typing.Union[SymbolicConstant,
+                                              float] = DEFAULT,
+                  temperatureField: typing.Union[SymbolicConstant,
+                                                 float] = DEFAULT,
+                  vcctLinearScaling: typing.Union[SymbolicConstant,
+                                                  float] = DEFAULT):
         """This method modifies the Control object.
         
         Parameters

@@ -2,6 +2,8 @@ from abaqusConstants import *
 from .Constraint import Constraint
 from ..Region.Region import Region
 
+from __init__ import *
+
 
 class AdjustPoints(Constraint):
     """The AdjustPoints constraint object is used to adjust points (nodes) to a surface.
@@ -27,8 +29,8 @@ class AdjustPoints(Constraint):
 
     """
 
-    # A Boolean specifying whether the constraint is suppressed or not. The default value is 
-    # OFF. 
+    # A Boolean specifying whether the constraint is suppressed or not. The default value is
+    # OFF.
     suppressed: Boolean = OFF
 
     def __init__(self, name: str, surface: Region, controlPoints: Region):

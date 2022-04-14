@@ -1,3 +1,4 @@
+from __init__ import *
 
 
 class DesignResponse:
@@ -21,5 +22,5 @@ class DesignResponse:
 
     """
 
-    # A String specifying the design response repository key. 
+    # A String specifying the design response repository key.
     name: str = ''

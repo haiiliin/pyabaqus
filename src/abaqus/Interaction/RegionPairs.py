@@ -1,5 +1,7 @@
 from abaqusConstants import *
 
+from __init__ import *
+
 
 class RegionPairs:
     """The RegionPairs object stores the domain pair definition for ContactExp and ContactStd
@@ -20,8 +22,10 @@ class RegionPairs:
             - CONTACT EXCLUSIONS
 
     """
-
-    def setValuesInStep(self, stepName: str, useAllstar: Boolean = OFF, addPairs: SymbolicConstant = None,
+    def setValuesInStep(self,
+                        stepName: str,
+                        useAllstar: Boolean = OFF,
+                        addPairs: SymbolicConstant = None,
                         removePairs: SymbolicConstant = None):
         """This method allows addition and removal of domain pairs in a given step.
         

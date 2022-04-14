@@ -2,6 +2,8 @@ from abaqusConstants import *
 from .Constraint import Constraint
 from ..Region.Region import Region
 
+from __init__ import *
+
 
 class EmbeddedRegion(Constraint):
     """The EmbeddedRegion object allows you to embed a region of the model within a “host”
@@ -28,13 +30,18 @@ class EmbeddedRegion(Constraint):
 
     """
 
-    # A Boolean specifying whether the constraint is suppressed or not. The default value is 
-    # OFF. 
+    # A Boolean specifying whether the constraint is suppressed or not. The default value is
+    # OFF.
     suppressed: Boolean = OFF
 
-    def __init__(self, name: str, embeddedRegion: Region, hostRegion: Region,
-                 weightFactorTolerance: float = None, toleranceMethod: SymbolicConstant = BOTH,
-                 absoluteTolerance: float = 0, fractionalTolerance: float = 0):
+    def __init__(self,
+                 name: str,
+                 embeddedRegion: Region,
+                 hostRegion: Region,
+                 weightFactorTolerance: float = None,
+                 toleranceMethod: SymbolicConstant = BOTH,
+                 absoluteTolerance: float = 0,
+                 fractionalTolerance: float = 0):
         """This method creates a EmbeddedRegion object.
 
         Notes
@@ -80,8 +87,11 @@ class EmbeddedRegion(Constraint):
         super().__init__()
         pass
 
-    def setValues(self, weightFactorTolerance: float = None, toleranceMethod: SymbolicConstant = BOTH,
-                  absoluteTolerance: float = 0, fractionalTolerance: float = 0):
+    def setValues(self,
+                  weightFactorTolerance: float = None,
+                  toleranceMethod: SymbolicConstant = BOTH,
+                  absoluteTolerance: float = 0,
+                  fractionalTolerance: float = 0):
         """This method modifies the EmbeddedRegion object.
         
         Parameters

@@ -2,6 +2,8 @@ from abaqusConstants import *
 from .BrittleFailure import BrittleFailure
 from .BrittleShear import BrittleShear
 
+from __init__ import *
+
 
 class BrittleCracking:
     """The BrittleCracking object specifies cracking and postcracking properties for the
@@ -46,13 +48,16 @@ class BrittleCracking:
 
     """
 
-    # A BrittleShear object. 
-    brittleShear: BrittleShear = BrittleShear(((),))
+    # A BrittleShear object.
+    brittleShear: BrittleShear = BrittleShear(((), ))
 
-    # A BrittleFailure object. 
-    brittleFailure: BrittleFailure = BrittleFailure(((),))
+    # A BrittleFailure object.
+    brittleFailure: BrittleFailure = BrittleFailure(((), ))
 
-    def __init__(self, table: tuple, temperatureDependency: Boolean = OFF, dependencies: int = 0,
+    def __init__(self,
+                 table: tuple,
+                 temperatureDependency: Boolean = OFF,
+                 dependencies: int = 0,
                  type: SymbolicConstant = STRAIN):
         """This method creates a BrittleCracking object.
 

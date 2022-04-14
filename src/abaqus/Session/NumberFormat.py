@@ -1,5 +1,7 @@
 from abaqusConstants import *
 
+from __init__ import *
+
 
 class NumberFormat:
     """The NumberFormat object is a formatting template used to define formatting options for
@@ -20,8 +22,10 @@ class NumberFormat:
         session.journalOptions.geometryFormat
 
     """
-
-    def __init__(self, blankPad: Boolean = ON, format: SymbolicConstant = ENGINEERING, numDigits: int = 6,
+    def __init__(self,
+                 blankPad: Boolean = ON,
+                 format: SymbolicConstant = ENGINEERING,
+                 numDigits: int = 6,
                  precision: int = 0):
         """This method creates a NumberFormat object.
 

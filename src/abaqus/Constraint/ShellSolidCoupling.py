@@ -2,6 +2,8 @@ from abaqusConstants import *
 from .Constraint import Constraint
 from ..Region.Region import Region
 
+from __init__ import *
+
 
 class ShellSolidCoupling(Constraint):
     """The ShellSolidCoupling object defines two surfaces to be tied together for the duration
@@ -28,13 +30,18 @@ class ShellSolidCoupling(Constraint):
 
     """
 
-    # A Boolean specifying whether the constraint is suppressed or not. The default value is 
-    # OFF. 
+    # A Boolean specifying whether the constraint is suppressed or not. The default value is
+    # OFF.
     suppressed: Boolean = OFF
 
-    def __init__(self, name: str, shellEdge: Region, solidFace: Region,
-                 positionToleranceMethod: SymbolicConstant = COMPUTED, positionTolerance: float = 0,
-                 influenceDistanceMethod: SymbolicConstant = DEFAULT, influenceDistance: float = 0):
+    def __init__(self,
+                 name: str,
+                 shellEdge: Region,
+                 solidFace: Region,
+                 positionToleranceMethod: SymbolicConstant = COMPUTED,
+                 positionTolerance: float = 0,
+                 influenceDistanceMethod: SymbolicConstant = DEFAULT,
+                 influenceDistance: float = 0):
         """This method creates a ShellSolidCoupling object.
 
         Notes
@@ -75,8 +82,11 @@ class ShellSolidCoupling(Constraint):
         super().__init__()
         pass
 
-    def setValues(self, positionToleranceMethod: SymbolicConstant = COMPUTED, positionTolerance: float = 0,
-                  influenceDistanceMethod: SymbolicConstant = DEFAULT, influenceDistance: float = 0):
+    def setValues(self,
+                  positionToleranceMethod: SymbolicConstant = COMPUTED,
+                  positionTolerance: float = 0,
+                  influenceDistanceMethod: SymbolicConstant = DEFAULT,
+                  influenceDistance: float = 0):
         """This method modifies the ShellSolidCoupling object.
         
         Parameters

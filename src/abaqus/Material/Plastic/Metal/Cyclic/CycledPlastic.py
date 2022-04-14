@@ -1,5 +1,7 @@
 from abaqusConstants import *
 
+from __init__ import *
+
 
 class CycledPlastic:
     """The CycledPlastic object specifies cycled yield stress data for the ORNL constitutive
@@ -25,7 +27,6 @@ class CycledPlastic:
         - CYCLED PLASTIC
 
     """
-
     def __init__(self, table: tuple, temperatureDependency: Boolean = OFF):
         """This method creates a CycledPlastic object.
 

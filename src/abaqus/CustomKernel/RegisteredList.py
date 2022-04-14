@@ -1,5 +1,7 @@
 from .CommandRegister import CommandRegister
 
+from __init__ import *
+
 
 class RegisteredList(CommandRegister):
     """This class allows you to create a list that can be queried from the GUI and is capable
@@ -15,7 +17,6 @@ class RegisteredList(CommandRegister):
         import customKernel
 
     """
-
     def __init__(self):
         """This method creates a RegisteredList object.
 

@@ -2,6 +2,8 @@ from abaqusConstants import *
 from .GeometricRestriction import GeometricRestriction
 from ..Region.Region import Region
 
+from __init__ import *
+
 
 class BeadFixedRegion(GeometricRestriction):
     """The BeadFixedRegion object defines a fixed region geometric restriction.
@@ -17,8 +19,12 @@ class BeadFixedRegion(GeometricRestriction):
         mdb.models[name].optimizationTasks[name].geometricRestrictions[name]
 
     """
-
-    def __init__(self, name: str, region: Region, csys: int = None, u1: Boolean = OFF, u2: Boolean = OFF,
+    def __init__(self,
+                 name: str,
+                 region: Region,
+                 csys: int = None,
+                 u1: Boolean = OFF,
+                 u2: Boolean = OFF,
                  u3: Boolean = OFF):
         """This method creates a BeadFixedRegion object.
 
@@ -57,7 +63,11 @@ class BeadFixedRegion(GeometricRestriction):
         super().__init__()
         pass
 
-    def setValues(self, csys: int = None, u1: Boolean = OFF, u2: Boolean = OFF, u3: Boolean = OFF):
+    def setValues(self,
+                  csys: int = None,
+                  u1: Boolean = OFF,
+                  u2: Boolean = OFF,
+                  u3: Boolean = OFF):
         """This method modifies the BeadFixedRegion object.
         
         Parameters

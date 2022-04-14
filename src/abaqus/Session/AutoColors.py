@@ -1,3 +1,6 @@
+from __init__ import *
+
+
 class AutoColors:
     """The AutoColors object defines a color palette.
 
@@ -7,7 +10,6 @@ class AutoColors:
             session.autoColors
 
     """
-
     def setValues(self, colors: tuple):
         """This method changes the color palette.
         

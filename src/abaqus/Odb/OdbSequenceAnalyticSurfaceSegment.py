@@ -1,3 +1,4 @@
+from __init__ import *
 
 
 class OdbSequenceAnalyticSurfaceSegment:
@@ -15,7 +16,6 @@ class OdbSequenceAnalyticSurfaceSegment:
         session.odbs[name].steps[name].frames[i].fieldOutputs[name].values[i].instance.analyticSurface.segments
 
     """
-
     def __init__(self):
         """This method creates a OdbSequenceAnalyticSurfaceSegment object.
 

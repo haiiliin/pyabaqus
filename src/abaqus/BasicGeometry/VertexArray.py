@@ -1,6 +1,8 @@
 from abaqusConstants import *
 from .Vertex import Vertex
 
+from __init__ import *
+
 
 class VertexArray:
     """The VertexArray is a sequence of ConstrainedSketchVertex objects. If the part is modified, then
@@ -30,7 +32,6 @@ class VertexArray:
         mdb.models[name].rootAssembly.vertices
 
     """
-
     def __init__(self, vertices: list[Vertex]):
         """This method creates a VertexArray object.
 
@@ -114,7 +115,12 @@ class VertexArray:
         """
         pass
 
-    def getByBoundingBox(self, xMin: str = '', yMin: str = '', zMin: str = '', xMax: str = '', yMax: str = '',
+    def getByBoundingBox(self,
+                         xMin: str = '',
+                         yMin: str = '',
+                         zMin: str = '',
+                         xMax: str = '',
+                         yMax: str = '',
                          zMax: str = ''):
         """This method returns an array of vertex objects that lie within the specified bounding
         box.
@@ -141,7 +147,8 @@ class VertexArray:
         """
         pass
 
-    def getByBoundingCylinder(self, center1: tuple, center2: tuple, radius: str):
+    def getByBoundingCylinder(self, center1: tuple, center2: tuple,
+                              radius: str):
         """This method returns an array of vertex objects that lie within the specified bounding
         cylinder.
         

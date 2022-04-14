@@ -1,5 +1,7 @@
 from abaqusConstants import *
 
+from __init__ import *
+
 
 class ParameterColumn:
     """The ParameterColumn object is used to define the type of parameters that will
@@ -19,8 +21,11 @@ class ParameterColumn:
             - *PARAMETER TABLE
 
     """
-
-    def __init__(self, type: SymbolicConstant, unit: str = '', description: str = '', default: str = '',
+    def __init__(self,
+                 type: SymbolicConstant,
+                 unit: str = '',
+                 description: str = '',
+                 default: str = '',
                  allowedValues: str = ''):
         """ParameterColumn is a constructor method that creates a ParameterColumn object and stores
         it in the array data structure. It is accessible from the ParameterTable object using a

@@ -1,9 +1,10 @@
 from .ConstrainedSketchConstraint import ConstrainedSketchConstraint
 from ..ConstrainedSketchGeometry.ConstrainedSketchGeometry import ConstrainedSketchGeometry
 
+from __init__ import *
+
 
 class EqualRadiusConstraint(ConstrainedSketchConstraint):
-
     def __init__(self, entity1: ConstrainedSketchGeometry, entity2: str):
         """This method creates an equal radius constraint. This constraint applies to circles and
         arcs and constrains them such that their radii are equal.

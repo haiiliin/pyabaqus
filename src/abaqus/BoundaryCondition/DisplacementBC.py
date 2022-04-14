@@ -4,6 +4,8 @@ from abaqusConstants import *
 from .BoundaryCondition import BoundaryCondition
 from ..Region.Region import Region
 
+from __init__ import *
+
 
 class DisplacementBC(BoundaryCondition):
     """The DisplacementBC object stores the data for a displacement/rotation boundary
@@ -51,50 +53,57 @@ class DisplacementBC(BoundaryCondition):
 
     """
 
-    # A String specifying the boundary condition repository key. 
+    # A String specifying the boundary condition repository key.
     name: str = ''
 
-    # A SymbolicConstant specifying how the boundary condition is distributed spatially. 
-    # Possible values are UNIFORM, USER_DEFINED, FIELD, and DISCRETE_FIELD. The default value 
-    # is UNIFORM. 
+    # A SymbolicConstant specifying how the boundary condition is distributed spatially.
+    # Possible values are UNIFORM, USER_DEFINED, FIELD, and DISCRETE_FIELD. The default value
+    # is UNIFORM.
     distributionType: SymbolicConstant = UNIFORM
 
-    # A Boolean specifying whether the boundary condition should remain fixed at the current 
-    # values at the start of the step. The default value is OFF. 
+    # A Boolean specifying whether the boundary condition should remain fixed at the current
+    # values at the start of the step. The default value is OFF.
     fixed: Boolean = OFF
 
-    # A SymbolicConstant specifying how the boundary condition is defined in a BUCKLE 
-    # analysis. Possible values are NOT_APPLICABLE, STRESS_PERTURBATION, BUCKLING_MODES, and 
-    # PERTURBATION_AND_BUCKLING. The default value is NOT_APPLICABLE. 
+    # A SymbolicConstant specifying how the boundary condition is defined in a BUCKLE
+    # analysis. Possible values are NOT_APPLICABLE, STRESS_PERTURBATION, BUCKLING_MODES, and
+    # PERTURBATION_AND_BUCKLING. The default value is NOT_APPLICABLE.
     buckleCase: SymbolicConstant = NOT_APPLICABLE
 
-    # A String specifying the name of the AnalyticalField or DiscreteField object associated 
-    # with this boundary condition. The *fieldName* argument applies only when 
-    # *distributionType*=FIELD or *distributionType*=DISCRETE_FIELD. The default value is an 
-    # empty string. 
+    # A String specifying the name of the AnalyticalField or DiscreteField object associated
+    # with this boundary condition. The *fieldName* argument applies only when
+    # *distributionType*=FIELD or *distributionType*=DISCRETE_FIELD. The default value is an
+    # empty string.
     fieldName: str = ''
 
-    # A SymbolicConstant specifying the category of the boundary condition. Possible values 
-    # are MECHANICAL and THERMAL. 
+    # A SymbolicConstant specifying the category of the boundary condition. Possible values
+    # are MECHANICAL and THERMAL.
     category: SymbolicConstant = None
 
-    # A Region object specifying the region to which the boundary condition is applied. 
+    # A Region object specifying the region to which the boundary condition is applied.
     region: Region = Region()
 
-    # None or a DatumCsys object specifying the local coordinate system of the boundary 
-    # condition's degrees of freedom. If *localCsys*=None, the degrees of freedom are defined 
-    # in the global coordinate system. The default value is None. 
+    # None or a DatumCsys object specifying the local coordinate system of the boundary
+    # condition's degrees of freedom. If *localCsys*=None, the degrees of freedom are defined
+    # in the global coordinate system. The default value is None.
     localCsys: str = None
 
-    def __init__(self, name: str, createStepName: str, region: Region, fieldName: str = '',
+    def __init__(self,
+                 name: str,
+                 createStepName: str,
+                 region: Region,
+                 fieldName: str = '',
                  u1: typing.Union[SymbolicConstant, float] = UNSET,
                  u2: typing.Union[SymbolicConstant, float] = UNSET,
                  u3: typing.Union[SymbolicConstant, float] = UNSET,
                  ur1: typing.Union[SymbolicConstant, float] = UNSET,
                  ur2: typing.Union[SymbolicConstant, float] = UNSET,
-                 ur3: typing.Union[SymbolicConstant, float] = UNSET, fixed: Boolean = OFF,
-                 amplitude: str = UNSET, distributionType: SymbolicConstant = UNIFORM,
-                 localCsys: str = None, buckleCase: SymbolicConstant = NOT_APPLICABLE):
+                 ur3: typing.Union[SymbolicConstant, float] = UNSET,
+                 fixed: Boolean = OFF,
+                 amplitude: str = UNSET,
+                 distributionType: SymbolicConstant = UNIFORM,
+                 localCsys: str = None,
+                 buckleCase: SymbolicConstant = NOT_APPLICABLE):
         """This method creates a DisplacementBC object.
 
         Notes
@@ -171,14 +180,19 @@ class DisplacementBC(BoundaryCondition):
         super().__init__()
         pass
 
-    def setValues(self, fieldName: str = '', u1: typing.Union[SymbolicConstant, float] = UNSET,
+    def setValues(self,
+                  fieldName: str = '',
+                  u1: typing.Union[SymbolicConstant, float] = UNSET,
                   u2: typing.Union[SymbolicConstant, float] = UNSET,
                   u3: typing.Union[SymbolicConstant, float] = UNSET,
                   ur1: typing.Union[SymbolicConstant, float] = UNSET,
                   ur2: typing.Union[SymbolicConstant, float] = UNSET,
-                  ur3: typing.Union[SymbolicConstant, float] = UNSET, fixed: Boolean = OFF,
-                  amplitude: str = UNSET, distributionType: SymbolicConstant = UNIFORM,
-                  localCsys: str = None, buckleCase: SymbolicConstant = NOT_APPLICABLE):
+                  ur3: typing.Union[SymbolicConstant, float] = UNSET,
+                  fixed: Boolean = OFF,
+                  amplitude: str = UNSET,
+                  distributionType: SymbolicConstant = UNIFORM,
+                  localCsys: str = None,
+                  buckleCase: SymbolicConstant = NOT_APPLICABLE):
         """This method modifies the data for an existing DisplacementBC object in the step where it
         is created.
         
@@ -237,14 +251,16 @@ class DisplacementBC(BoundaryCondition):
         """
         pass
 
-    def setValuesInStep(self, stepName: str,
+    def setValuesInStep(self,
+                        stepName: str,
                         u1: typing.Union[SymbolicConstant, float] = SET,
                         u2: typing.Union[SymbolicConstant, float] = SET,
                         u3: typing.Union[SymbolicConstant, float] = SET,
                         ur1: typing.Union[SymbolicConstant, float] = SET,
                         ur2: typing.Union[SymbolicConstant, float] = SET,
                         ur3: typing.Union[SymbolicConstant, float] = SET,
-                        amplitude: str = '', buckleCase: SymbolicConstant = NOT_APPLICABLE):
+                        amplitude: str = '',
+                        buckleCase: SymbolicConstant = NOT_APPLICABLE):
         """This method modifies the propagating data for an existing DisplacementBC object in the
         specified step.
         

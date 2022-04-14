@@ -1,3 +1,4 @@
+from __init__ import *
 
 
 class EventSeriesType:
@@ -16,7 +17,6 @@ class EventSeriesType:
             - EVENT SERIES
 
     """
-
     def __init__(self, name: str, createStepName: str, fields: str = ''):
         """This method creates an EventSeriesType object.
 

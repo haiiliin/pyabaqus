@@ -1,3 +1,5 @@
+from __init__ import *
+
 
 class ContactControl:
     """The ContactControl object is the abstract base type for other ContactControl objects.

@@ -13,6 +13,8 @@ from .SurfaceFrictionAssignment import SurfaceFrictionAssignment
 from .SurfaceOffsetAssignment import SurfaceOffsetAssignment
 from .SurfaceThicknessAssignment import SurfaceThicknessAssignment
 
+from __init__ import *
+
 
 class ContactExp(Interaction):
     """The ContactExp object defines the contact domain and associated properties during
@@ -65,59 +67,76 @@ class ContactExp(Interaction):
 
     """
 
-    # A String specifying the repository key. 
+    # A String specifying the repository key.
     name: str = ''
 
-    # A Boolean specifying whether surface smoothing (geometric correction) is automatically 
-    # applied to all eligible surfaces. The default value is ON. 
+    # A Boolean specifying whether surface smoothing (geometric correction) is automatically
+    # applied to all eligible surfaces. The default value is ON.
     globalSmoothing: Boolean = ON
 
-    # A RegionPairs object specifying the domain pairs included in contact. 
+    # A RegionPairs object specifying the domain pairs included in contact.
     includedPairs: RegionPairs = RegionPairs()
 
-    # A RegionPairs object specifying the domain pairs excluded from contact. 
+    # A RegionPairs object specifying the domain pairs excluded from contact.
     excludedPairs: RegionPairs = RegionPairs()
 
-    # A ContactPropertyAssignment object specifying the contact property assignments in the 
-    # contact domain. 
-    contactPropertyAssignments: ContactPropertyAssignment = ContactPropertyAssignment()
+    # A ContactPropertyAssignment object specifying the contact property assignments in the
+    # contact domain.
+    contactPropertyAssignments: ContactPropertyAssignment = ContactPropertyAssignment(
+    )
 
-    # A SurfaceThicknessAssignment object specifying the surface thickness assignments in the 
-    # contact domain. 
-    surfaceThicknessAssignments: SurfaceThicknessAssignment = SurfaceThicknessAssignment()
+    # A SurfaceThicknessAssignment object specifying the surface thickness assignments in the
+    # contact domain.
+    surfaceThicknessAssignments: SurfaceThicknessAssignment = SurfaceThicknessAssignment(
+    )
 
-    # A SurfaceOffsetAssignment object specifying the surface offset fraction assignments in 
-    # the contact domain. 
-    surfaceOffsetAssignments: SurfaceOffsetAssignment = SurfaceOffsetAssignment()
+    # A SurfaceOffsetAssignment object specifying the surface offset fraction assignments in
+    # the contact domain.
+    surfaceOffsetAssignments: SurfaceOffsetAssignment = SurfaceOffsetAssignment(
+    )
 
-    # A SurfaceFeatureAssignment object specifying the surface feature angle assignments in 
-    # the contact domain. 
-    surfaceFeatureAssignments: SurfaceFeatureAssignment = SurfaceFeatureAssignment()
+    # A SurfaceFeatureAssignment object specifying the surface feature angle assignments in
+    # the contact domain.
+    surfaceFeatureAssignments: SurfaceFeatureAssignment = SurfaceFeatureAssignment(
+    )
 
-    # A SmoothingAssignment object specifying the surface smoothing assignments in the contact 
-    # domain. 
+    # A SmoothingAssignment object specifying the surface smoothing assignments in the contact
+    # domain.
     smoothingAssignments: SmoothingAssignment = SmoothingAssignment()
 
-    # A MainSecondaryAssignment object specifying the main-secondary assignments in the 
-    # contact domain. 
-    mainSecondaryAssignments: MainSecondaryAssignment = MainSecondaryAssignment()
+    # A MainSecondaryAssignment object specifying the main-secondary assignments in the
+    # contact domain.
+    mainSecondaryAssignments: MainSecondaryAssignment = MainSecondaryAssignment(
+    )
 
-    # A PolarityAssignments object specifying the polarity assignments in the contact domain. 
+    # A PolarityAssignments object specifying the polarity assignments in the contact domain.
     polarityAssignments: PolarityAssignments = PolarityAssignments()
 
     @typing.overload
-    def __init__(self, name: str, createStepName: str, useAllstar: Boolean = OFF,
-                 globalSmoothing: Boolean = ON, includedPairs: RegionPairs = RegionPairs(),
-                 excludedPairs: RegionPairs = RegionPairs(),
-                 contactPropertyAssignments: ContactPropertyAssignment = ContactPropertyAssignment(),
-                 surfaceThicknessAssignments: SurfaceThicknessAssignment = SurfaceThicknessAssignment(),
-                 surfaceOffsetAssignments: SurfaceOffsetAssignment = SurfaceOffsetAssignment(),
-                 surfaceFeatureAssignments: SurfaceFeatureAssignment = SurfaceFeatureAssignment(),
-                 smoothingAssignments: SmoothingAssignment = SmoothingAssignment(),
-                 surfaceCrushTriggerAssignments: SurfaceCrushTriggerAssignment = SurfaceCrushTriggerAssignment(),
-                 surfaceFrictionAssignments: SurfaceFrictionAssignment = SurfaceFrictionAssignment(),
-                 mainSecondaryAssignments: MainSecondaryAssignment = MainSecondaryAssignment(),
-                 polarityAssignments: PolarityAssignments = PolarityAssignments()):
+    def __init__(
+        self,
+        name: str,
+        createStepName: str,
+        useAllstar: Boolean = OFF,
+        globalSmoothing: Boolean = ON,
+        includedPairs: RegionPairs = RegionPairs(),
+        excludedPairs: RegionPairs = RegionPairs(),
+        contactPropertyAssignments:
+        ContactPropertyAssignment = ContactPropertyAssignment(),
+        surfaceThicknessAssignments:
+        SurfaceThicknessAssignment = SurfaceThicknessAssignment(),
+        surfaceOffsetAssignments:
+        SurfaceOffsetAssignment = SurfaceOffsetAssignment(),
+        surfaceFeatureAssignments:
+        SurfaceFeatureAssignment = SurfaceFeatureAssignment(),
+        smoothingAssignments: SmoothingAssignment = SmoothingAssignment(),
+        surfaceCrushTriggerAssignments:
+        SurfaceCrushTriggerAssignment = SurfaceCrushTriggerAssignment(),
+        surfaceFrictionAssignments:
+        SurfaceFrictionAssignment = SurfaceFrictionAssignment(),
+        mainSecondaryAssignments:
+        MainSecondaryAssignment = MainSecondaryAssignment(),
+        polarityAssignments: PolarityAssignments = PolarityAssignments()):
         """This method creates a ContactExp object.
 
         Notes
@@ -180,15 +199,24 @@ class ContactExp(Interaction):
         pass
 
     @typing.overload
-    def __init__(self, name: str, createStepName: str, globalSmoothing: Boolean = ON,
-                 surfaceCrushTriggerAssignments: typing.Union[SymbolicConstant, float] = TRIGGER,
-                 surfaceFrictionAssignments: typing.Union[SymbolicConstant, float] = GLOBAL,
-                 useAllstar: Boolean = OFF, includedPairs: SymbolicConstant = None,
+    def __init__(self,
+                 name: str,
+                 createStepName: str,
+                 globalSmoothing: Boolean = ON,
+                 surfaceCrushTriggerAssignments: typing.Union[SymbolicConstant,
+                                                              float] = TRIGGER,
+                 surfaceFrictionAssignments: typing.Union[SymbolicConstant,
+                                                          float] = GLOBAL,
+                 useAllstar: Boolean = OFF,
+                 includedPairs: SymbolicConstant = None,
                  excludedPairs: SymbolicConstant = None,
                  contactPropertyAssignments: SymbolicConstant = None,
-                 surfaceThicknessAssignments: typing.Union[SymbolicConstant, float] = ORIGINAL,
-                 surfaceOffsetAssignments: typing.Union[SymbolicConstant, float] = GLOBAL,
-                 surfaceFeatureAssignments: typing.Union[SymbolicConstant, float] = PERIMETER,
+                 surfaceThicknessAssignments: typing.Union[SymbolicConstant,
+                                                           float] = ORIGINAL,
+                 surfaceOffsetAssignments: typing.Union[SymbolicConstant,
+                                                        float] = GLOBAL,
+                 surfaceFeatureAssignments: typing.Union[SymbolicConstant,
+                                                         float] = PERIMETER,
                  smoothingAssignments: SymbolicConstant = None,
                  mainSecondaryAssignments: SymbolicConstant = None,
                  polarityAssignments: SymbolicConstant = None):

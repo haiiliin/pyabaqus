@@ -1,5 +1,7 @@
 from abaqusConstants import *
 
+from __init__ import *
+
 
 class XYReportOptions:
     """The XYReportOptions object stores settings used by the writeXYReport method when you
@@ -17,10 +19,15 @@ class XYReportOptions:
             session.xyReportOptions
 
     """
-
-    def setValues(self, pageWidth: int = 80, numDigits: int = 6, interpolation: Boolean = OFF,
-                  xyData: Boolean = ON, totals: Boolean = OFF, minMax: Boolean = OFF,
-                  pageWidthLimited: Boolean = OFF, numberFormat: SymbolicConstant = ENGINEERING,
+    def setValues(self,
+                  pageWidth: int = 80,
+                  numDigits: int = 6,
+                  interpolation: Boolean = OFF,
+                  xyData: Boolean = ON,
+                  totals: Boolean = OFF,
+                  minMax: Boolean = OFF,
+                  pageWidthLimited: Boolean = OFF,
+                  numberFormat: SymbolicConstant = ENGINEERING,
                   layout: SymbolicConstant = SINGLE_TABLE):
         """This method modifies the XYReportOptions object.
         

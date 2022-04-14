@@ -2,11 +2,16 @@ from abaqusConstants import *
 from .ConstrainedSketchDimension import ConstrainedSketchDimension
 from ..ConstrainedSketchGeometry.ConstrainedSketchGeometry import ConstrainedSketchGeometry
 
+from __init__ import *
+
 
 class AngularDimension(ConstrainedSketchDimension):
-
-    def __init__(self, line1: ConstrainedSketchGeometry, line2: ConstrainedSketchGeometry,
-                 textPoint: tuple[float], value: float = None, reference: Boolean = OFF):
+    def __init__(self,
+                 line1: ConstrainedSketchGeometry,
+                 line2: ConstrainedSketchGeometry,
+                 textPoint: tuple[float],
+                 value: float = None,
+                 reference: Boolean = OFF):
         """This method constructs a ConstrainedSketchDimension object between two
         ConstrainedSketchGeometry objects, with the given angle between them.
 

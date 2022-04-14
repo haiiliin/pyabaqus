@@ -2,6 +2,8 @@ from abaqusConstants import *
 from .AcisFile import AcisFile
 from ..Mdb.MdbBase import MdbBase
 
+from __init__ import *
+
 
 class AcisMdb(MdbBase):
     """The Mdb object is the high-level Abaqus model database. A model database stores models
@@ -16,7 +18,6 @@ class AcisMdb(MdbBase):
         mdb
 
     """
-
     @staticmethod
     def openAcis(fileName: str, scaleFromFile: Boolean = OFF):
         """This method creates an AcisFile object from a file containing ACIS-format geometry. This
@@ -52,7 +53,9 @@ class AcisMdb(MdbBase):
         return AcisFile()
 
     @staticmethod
-    def openCatia(fileName: str, topology: SymbolicConstant = None, convertUnits: SymbolicConstant = OFF,
+    def openCatia(fileName: str,
+                  topology: SymbolicConstant = None,
+                  convertUnits: SymbolicConstant = OFF,
                   combineBodies: Boolean = OFF):
         """This method creates an AcisFile object from a file containing V5-format geometry. This
         object is subsequently used by the PartFromGeometryFile method.
@@ -90,7 +93,9 @@ class AcisMdb(MdbBase):
         return AcisFile()
 
     @staticmethod
-    def openEnf(fileName: str, fileType: str, topology: SymbolicConstant = SOLID,
+    def openEnf(fileName: str,
+                fileType: str,
+                topology: SymbolicConstant = SOLID,
                 convertUnits: Boolean = OFF):
         """This method creates an AcisFile object from a file containing Elysium Neutral
         File-format geometry that was created by CATIA V5, I-DEAS, or Pro/ENGINEER. This object
@@ -130,9 +135,12 @@ class AcisMdb(MdbBase):
         return AcisFile()
 
     @staticmethod
-    def openIges(fileName: str, trimCurve: SymbolicConstant = DEFAULT,
-                 scaleFromFile: SymbolicConstant = OFF, msbo: Boolean = False,
-                 includedLayers: tuple = (), topology: SymbolicConstant = SOLID,
+    def openIges(fileName: str,
+                 trimCurve: SymbolicConstant = DEFAULT,
+                 scaleFromFile: SymbolicConstant = OFF,
+                 msbo: Boolean = False,
+                 includedLayers: tuple = (),
+                 topology: SymbolicConstant = SOLID,
                  uniteWires: SymbolicConstant = ON):
         """This method creates an AcisFile object from a file containing IGES-format geometry. This
         object is subsequently used by the PartFromGeometryFile method.

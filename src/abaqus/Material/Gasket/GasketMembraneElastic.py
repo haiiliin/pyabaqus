@@ -1,5 +1,7 @@
 from abaqusConstants import *
 
+from __init__ import *
+
 
 class GasketMembraneElastic:
     """The GasketMembraneElastic object defines the elastic parameters for the membrane shear
@@ -28,8 +30,10 @@ class GasketMembraneElastic:
         - GASKET ELASTICITY
 
     """
-
-    def __init__(self, table: tuple, temperatureDependency: Boolean = OFF, dependencies: int = 0):
+    def __init__(self,
+                 table: tuple,
+                 temperatureDependency: Boolean = OFF,
+                 dependencies: int = 0):
         """This method creates a GasketMembraneElastic object.
 
         Notes

@@ -13,21 +13,31 @@ from .DerivedComponent import DerivedComponent
 from .TangentialBehavior import TangentialBehavior
 from ..Section.SectionBase import SectionBase
 
+from __init__ import *
+
 
 class ConnectorSection(SectionBase):
-
-    def ConnectorDamage(self, coupling: SymbolicConstant = UNCOUPLED, criterion: SymbolicConstant = FORCE,
+    def ConnectorDamage(self,
+                        coupling: SymbolicConstant = UNCOUPLED,
+                        criterion: SymbolicConstant = FORCE,
                         initiationTemperature: Boolean = OFF,
                         initiationPotentialOperator: SymbolicConstant = SUM,
-                        initiationPotentialExponent: float = 2, initiationDependencies: int = 0,
-                        evolution: Boolean = ON, evolutionType: SymbolicConstant = MOTION_TYPE,
-                        softening: SymbolicConstant = LINEAR, useAffected: Boolean = OFF,
-                        degradation: SymbolicConstant = MAXIMUM, evolutionTemperature: Boolean = OFF,
-                        evolutionDependencies: int = 0, evolutionPotentialOperator: SymbolicConstant = SUM,
+                        initiationPotentialExponent: float = 2,
+                        initiationDependencies: int = 0,
+                        evolution: Boolean = ON,
+                        evolutionType: SymbolicConstant = MOTION_TYPE,
+                        softening: SymbolicConstant = LINEAR,
+                        useAffected: Boolean = OFF,
+                        degradation: SymbolicConstant = MAXIMUM,
+                        evolutionTemperature: Boolean = OFF,
+                        evolutionDependencies: int = 0,
+                        evolutionPotentialOperator: SymbolicConstant = SUM,
                         evolutionPotentialExponent: float = 2,
                         initiationPotentials: ConnectorPotentialArray = None,
                         evolutionPotentials: ConnectorPotentialArray = None,
-                        initiationTable: tuple = (), evolutionTable: tuple = (), affectedComponents: tuple = (),
+                        initiationTable: tuple = (),
+                        evolutionTable: tuple = (),
+                        affectedComponents: tuple = (),
                         components: tuple = ()):
         """This method creates a connector damage behavior option for a ConnectorSection object.
 
@@ -140,10 +150,15 @@ class ConnectorSection(SectionBase):
         self.behaviorOptions.append(option)
         return option
 
-    def ConnectorDamping(self, behavior: SymbolicConstant = LINEAR, coupling: SymbolicConstant = UNCOUPLED,
-                         dependencies: int = 0, temperatureDependency: Boolean = OFF,
-                         frequencyDependency: Boolean = OFF, table: tuple = (),
-                         independentComponents: tuple = (), components: tuple = ()):
+    def ConnectorDamping(self,
+                         behavior: SymbolicConstant = LINEAR,
+                         coupling: SymbolicConstant = UNCOUPLED,
+                         dependencies: int = 0,
+                         temperatureDependency: Boolean = OFF,
+                         frequencyDependency: Boolean = OFF,
+                         table: tuple = (),
+                         independentComponents: tuple = (),
+                         components: tuple = ()):
         """This method creates a connector damping behavior option for a ConnectorSection object.
 
         Notes
@@ -203,10 +218,15 @@ class ConnectorSection(SectionBase):
         self.behaviorOptions.append(option)
         return option
 
-    def ConnectorElasticity(self, behavior: SymbolicConstant = LINEAR, coupling: SymbolicConstant = UNCOUPLED,
-                            dependencies: int = 0, temperatureDependency: Boolean = OFF,
-                            frequencyDependency: Boolean = OFF, table: tuple = (),
-                            independentComponents: tuple = (), components: tuple = ()):
+    def ConnectorElasticity(self,
+                            behavior: SymbolicConstant = LINEAR,
+                            coupling: SymbolicConstant = UNCOUPLED,
+                            dependencies: int = 0,
+                            temperatureDependency: Boolean = OFF,
+                            frequencyDependency: Boolean = OFF,
+                            table: tuple = (),
+                            independentComponents: tuple = (),
+                            components: tuple = ()):
         """This method creates a connector elasticity behavior option for a ConnectorSection
         object.
 
@@ -270,8 +290,12 @@ class ConnectorSection(SectionBase):
         self.behaviorOptions.append(option)
         return option
 
-    def ConnectorFailure(self, releaseComponent: SymbolicConstant = ALL, minMotion: float = None,
-                         maxMotion: float = None, minForce: float = None, maxForce: float = None,
+    def ConnectorFailure(self,
+                         releaseComponent: SymbolicConstant = ALL,
+                         minMotion: float = None,
+                         maxMotion: float = None,
+                         minForce: float = None,
+                         maxForce: float = None,
                          components: tuple = ()):
         """This method creates a connector failure behavior option for a ConnectorSection object.
 
@@ -323,15 +347,24 @@ class ConnectorSection(SectionBase):
         self.behaviorOptions.append(option)
         return option
 
-    def ConnectorFriction(self, frictionModel: SymbolicConstant = PREDEFINED, slipStyle: SymbolicConstant = SPECIFY,
-                          tangentDirection: int = None, stickStiffness: float = None,
-                          componentType: SymbolicConstant = NO_INDEPENDENT_COMPONENTS,
-                          slipDependency: Boolean = OFF, temperatureDependency: Boolean = OFF,
-                          dependencies: int = 0, useContactForceComponent: Boolean = OFF,
-                          contactForceStyle: SymbolicConstant = COMPONENT_NUMBER, contactForceComponent: int = 0,
-                          forcePotentialOperator: SymbolicConstant = SUM, forcePotentialExponent: float = 2,
-                          connectorPotentials: ConnectorPotentialArray = None,
-                          table: tuple = (), independentComponents: tuple = ()):
+    def ConnectorFriction(
+        self,
+        frictionModel: SymbolicConstant = PREDEFINED,
+        slipStyle: SymbolicConstant = SPECIFY,
+        tangentDirection: int = None,
+        stickStiffness: float = None,
+        componentType: SymbolicConstant = NO_INDEPENDENT_COMPONENTS,
+        slipDependency: Boolean = OFF,
+        temperatureDependency: Boolean = OFF,
+        dependencies: int = 0,
+        useContactForceComponent: Boolean = OFF,
+        contactForceStyle: SymbolicConstant = COMPONENT_NUMBER,
+        contactForceComponent: int = 0,
+        forcePotentialOperator: SymbolicConstant = SUM,
+        forcePotentialExponent: float = 2,
+        connectorPotentials: ConnectorPotentialArray = None,
+        table: tuple = (),
+        independentComponents: tuple = ()):
         """This method creates a connector friction behavior option for a ConnectorSection object.
         Depending upon the arguments provided, the friction behavior can be Coulomb-like or
         hysteretic in nature.
@@ -448,8 +481,12 @@ class ConnectorSection(SectionBase):
         self.behaviorOptions.append(option)
         return option
 
-    def ConnectorLock(self, lockingComponent: SymbolicConstant = ALL, minMotion: float = None,
-                      maxMotion: float = None, minForce: float = None, maxForce: float = None,
+    def ConnectorLock(self,
+                      lockingComponent: SymbolicConstant = ALL,
+                      minMotion: float = None,
+                      maxMotion: float = None,
+                      minForce: float = None,
+                      maxForce: float = None,
                       components: tuple = ()):
         """This method creates a connector lock behavior option for a ConnectorSection.
 
@@ -502,14 +539,23 @@ class ConnectorSection(SectionBase):
         self.behaviorOptions.append(option)
         return option
 
-    def ConnectorPlasticity(self, coupling: SymbolicConstant = UNCOUPLED, isotropic: Boolean = ON,
-                            isotropicType: SymbolicConstant = TABULAR, isotropicTemperature: Boolean = OFF,
-                            isotropicDependencies: int = 0, kinematic: Boolean = OFF,
-                            kinematicType: SymbolicConstant = HALF_CYCLE, kinematicTemperature: Boolean = OFF,
-                            kinematicDependencies: int = 0, forcePotentialOperator: SymbolicConstant = SUM,
-                            forcePotentialExponent: float = 2,
-                            connectorPotentials: ConnectorPotentialArray = None,
-                            isotropicTable: tuple = (), kinematicTable: tuple = (), components: tuple = ()):
+    def ConnectorPlasticity(
+        self,
+        coupling: SymbolicConstant = UNCOUPLED,
+        isotropic: Boolean = ON,
+        isotropicType: SymbolicConstant = TABULAR,
+        isotropicTemperature: Boolean = OFF,
+        isotropicDependencies: int = 0,
+        kinematic: Boolean = OFF,
+        kinematicType: SymbolicConstant = HALF_CYCLE,
+        kinematicTemperature: Boolean = OFF,
+        kinematicDependencies: int = 0,
+        forcePotentialOperator: SymbolicConstant = SUM,
+        forcePotentialExponent: float = 2,
+        connectorPotentials: ConnectorPotentialArray = None,
+        isotropicTable: tuple = (),
+        kinematicTable: tuple = (),
+        components: tuple = ()):
         """This method creates a connector plasticity behavior option for a ConnectorSection
         object.
 
@@ -592,9 +638,14 @@ class ConnectorSection(SectionBase):
         self.behaviorOptions.append(option)
         return option
 
-    def ConnectorPotential(self, componentStyle: SymbolicConstant = COMPONENT_NUMBER, componentNumber: int = 0,
-                           sign: SymbolicConstant = POSITIVE, scaleFactor: float = 1, positiveExponent: float = 2,
-                           shiftFactor: float = 0, hFunction: SymbolicConstant = ABS):
+    def ConnectorPotential(self,
+                           componentStyle: SymbolicConstant = COMPONENT_NUMBER,
+                           componentNumber: int = 0,
+                           sign: SymbolicConstant = POSITIVE,
+                           scaleFactor: float = 1,
+                           positiveExponent: float = 2,
+                           shiftFactor: float = 0,
+                           hFunction: SymbolicConstant = ABS):
         """This method creates a connector potential object to be used in conjunction with an
         allowable connector behavior option.
 
@@ -648,7 +699,10 @@ class ConnectorSection(SectionBase):
         self.behaviorOptions.append(option)
         return option
 
-    def ConnectorStop(self, minMotion: float = None, maxMotion: float = None, components: tuple = ()):
+    def ConnectorStop(self,
+                      minMotion: float = None,
+                      maxMotion: float = None,
+                      components: tuple = ()):
         """This method creates a connector stop behavior option for a ConnectorSection object.
 
         Notes
@@ -717,11 +771,19 @@ class ConnectorSection(SectionBase):
         self.behaviorOptions.append(option)
         return option
 
-    def TangentialBehavior(self, formulation: SymbolicConstant = PENALTY, slipRateDependency: Boolean = OFF,
-                           pressureDependency: Boolean = OFF, temperatureDependency: Boolean = OFF,
-                           dependencies: int = 0, exponentialDecayDefinition: SymbolicConstant = COEFFICIENTS,
-                           shearStressLimit: float = None, maximumElasticSlip: SymbolicConstant = FRACTION,
-                           fraction: float = None, absoluteDistance: float = None, table: tuple = ()):
+    def TangentialBehavior(
+        self,
+        formulation: SymbolicConstant = PENALTY,
+        slipRateDependency: Boolean = OFF,
+        pressureDependency: Boolean = OFF,
+        temperatureDependency: Boolean = OFF,
+        dependencies: int = 0,
+        exponentialDecayDefinition: SymbolicConstant = COEFFICIENTS,
+        shearStressLimit: float = None,
+        maximumElasticSlip: SymbolicConstant = FRACTION,
+        fraction: float = None,
+        absoluteDistance: float = None,
+        table: tuple = ()):
         """This method creates a TangentialBehavior object.
 
         Notes

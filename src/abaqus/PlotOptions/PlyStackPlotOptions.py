@@ -1,5 +1,7 @@
 from abaqusConstants import *
 
+from __init__ import *
+
 
 class PlyStackPlotOptions:
     """The PlyStackPlotOptions object stores values and attributes associated with aViewport
@@ -12,24 +14,46 @@ class PlyStackPlotOptions:
             session.viewports[name].detailPlotOptions.plyStackPlotOptions
 
     """
-
-    def setValues(self, renderStyle: SymbolicConstant = SHADED, showEdges: Boolean = OFF,
-                  edgeStyle: SymbolicConstant = SOLID, edgeThickness: SymbolicConstant = VERY_THIN,
-                  plyDisplay: SymbolicConstant = UNSYMMETRIC, startLayer: int = 1, numLayers: int = 30,
-                  evenNumPlyColor: str = '', oddNumPlyColor: str = '', showFibers: Boolean = ON,
-                  fiberColor: str = '', fiberStyle: SymbolicConstant = SOLID,
-                  fiberThickness: SymbolicConstant = VERY_THIN, fiberSpacing: float = 0,
-                  showReferencePlane: Boolean = OFF, referenceSurfaceColor: str = '',
-                  translucency: Boolean = OFF, translucencyFactor: float = 0,
-                  translucencySort: Boolean = OFF, showReferenceOutline: Boolean = OFF,
-                  referenceOutlineColor: str = '', referenceOutlineStyle: SymbolicConstant = SOLID,
-                  referenceOutlineThickness: SymbolicConstant = VERY_THIN, allLabelsFont: str = '',
-                  showMaterialNames: Boolean = OFF, materialNamesColor: str = '',
-                  showOrientationNames: Boolean = OFF, orientationNamesColor: str = '',
-                  showStateBlock: Boolean = ON, stateBlockColor: str = '', showPlyNames: Boolean = ON,
-                  plyNamesColor: str = '', showThicknessLabels: Boolean = ON,
-                  thicknessLabelsColor: str = '', showIntPoints: Boolean = OFF, intPointsColor: str = '',
-                  sizeX: float = 1, sizeY: float = 1, sizeZ: float = 0):
+    def setValues(self,
+                  renderStyle: SymbolicConstant = SHADED,
+                  showEdges: Boolean = OFF,
+                  edgeStyle: SymbolicConstant = SOLID,
+                  edgeThickness: SymbolicConstant = VERY_THIN,
+                  plyDisplay: SymbolicConstant = UNSYMMETRIC,
+                  startLayer: int = 1,
+                  numLayers: int = 30,
+                  evenNumPlyColor: str = '',
+                  oddNumPlyColor: str = '',
+                  showFibers: Boolean = ON,
+                  fiberColor: str = '',
+                  fiberStyle: SymbolicConstant = SOLID,
+                  fiberThickness: SymbolicConstant = VERY_THIN,
+                  fiberSpacing: float = 0,
+                  showReferencePlane: Boolean = OFF,
+                  referenceSurfaceColor: str = '',
+                  translucency: Boolean = OFF,
+                  translucencyFactor: float = 0,
+                  translucencySort: Boolean = OFF,
+                  showReferenceOutline: Boolean = OFF,
+                  referenceOutlineColor: str = '',
+                  referenceOutlineStyle: SymbolicConstant = SOLID,
+                  referenceOutlineThickness: SymbolicConstant = VERY_THIN,
+                  allLabelsFont: str = '',
+                  showMaterialNames: Boolean = OFF,
+                  materialNamesColor: str = '',
+                  showOrientationNames: Boolean = OFF,
+                  orientationNamesColor: str = '',
+                  showStateBlock: Boolean = ON,
+                  stateBlockColor: str = '',
+                  showPlyNames: Boolean = ON,
+                  plyNamesColor: str = '',
+                  showThicknessLabels: Boolean = ON,
+                  thicknessLabelsColor: str = '',
+                  showIntPoints: Boolean = OFF,
+                  intPointsColor: str = '',
+                  sizeX: float = 1,
+                  sizeY: float = 1,
+                  sizeZ: float = 0):
         """This method modifies the PlyStackPlotOptions object.
         
         Parameters

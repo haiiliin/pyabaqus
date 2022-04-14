@@ -1,5 +1,7 @@
 from abaqusConstants import *
 
+from __init__ import *
+
 
 class CastIronCompressionHardening:
     """The CastIronCompressionHardening object specifies hardening for the Cast- Iron
@@ -28,8 +30,10 @@ class CastIronCompressionHardening:
         - CAST IRON COMPRESSION HARDENING
 
     """
-
-    def __init__(self, table: tuple, temperatureDependency: Boolean = OFF, dependencies: int = 0):
+    def __init__(self,
+                 table: tuple,
+                 temperatureDependency: Boolean = OFF,
+                 dependencies: int = 0):
         """This method creates a CastIronCompressionHardening object.
 
         Notes

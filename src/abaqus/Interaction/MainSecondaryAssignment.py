@@ -1,5 +1,7 @@
 from abaqusConstants import *
 
+from __init__ import *
+
 
 class MainSecondaryAssignment:
     """The MainSecondaryAssignment object stores the main-secondary assignment definition for
@@ -19,8 +21,8 @@ class MainSecondaryAssignment:
         - CONTACT FORMULATION
 
     """
-
-    def changeValuesInStep(self, stepName: str, index: int, value: SymbolicConstant):
+    def changeValuesInStep(self, stepName: str, index: int,
+                           value: SymbolicConstant):
         """This method allows modification of main-secondary assignments already defined on surface
         pairs in a given step.
         

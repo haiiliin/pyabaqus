@@ -13,6 +13,8 @@ from ..Filter.Filter import Filter
 from ..Material.Material import Material
 from ..Section.Section import Section
 
+from __init__ import *
+
 
 class OdbBase:
     """The Odb object is the in-memory representation of an output database (ODB) file.
@@ -59,49 +61,54 @@ class OdbBase:
 
     """
 
-    # A Boolean specifying whether the output database was opened with read-only access. 
+    # A Boolean specifying whether the output database was opened with read-only access.
     isReadOnly: Boolean = OFF
 
-    # A repository of Amplitude objects. 
+    # A repository of Amplitude objects.
     amplitudes: dict[str, Amplitude] = dict[str, Amplitude]()
 
-    # A repository of Filter objects. 
+    # A repository of Filter objects.
     filters: dict[str, Filter] = dict[str, Filter]()
 
-    # An OdbAssembly object. 
+    # An OdbAssembly object.
     rootAssembly: OdbAssembly = OdbAssembly()
 
-    # A JobData object. 
+    # A JobData object.
     jobData: JobData = JobData()
 
-    # A repository of OdbPart objects. 
+    # A repository of OdbPart objects.
     parts: dict[str, OdbPart] = dict[str, OdbPart]()
 
-    # A repository of Material objects. 
+    # A repository of Material objects.
     materials: dict[str, Material] = dict[str, Material]()
 
-    # A repository of OdbStep objects. 
+    # A repository of OdbStep objects.
     steps: dict[str, OdbStep] = dict[str, OdbStep]()
 
-    # A repository of Section objects. 
+    # A repository of Section objects.
     sections: dict[str, Section] = dict[str, Section]()
 
-    # A repository of SectionCategory objects. 
-    sectionCategories: dict[str, SectionCategory] = dict[str, SectionCategory]()
+    # A repository of SectionCategory objects.
+    sectionCategories: dict[str, SectionCategory] = dict[str,
+                                                         SectionCategory]()
 
-    # A SectorDefinition object. 
+    # A SectorDefinition object.
     sectorDefinition: SectorDefinition = SectorDefinition()
 
-    # A UserData object. 
+    # A UserData object.
     userData: UserData = UserData()
 
-    # A RepositorySupport object. 
+    # A RepositorySupport object.
     customData: RepositorySupport = RepositorySupport()
 
-    # A repository of Profile objects. 
+    # A repository of Profile objects.
     profiles: dict[str, Profile] = dict[str, Profile]()
 
-    def __init__(self, name: str, analysisTitle: str = '', description: str = '', path: str = ''):
+    def __init__(self,
+                 name: str,
+                 analysisTitle: str = '',
+                 description: str = '',
+                 path: str = ''):
         """This method creates a new Odb object.
 
         Notes

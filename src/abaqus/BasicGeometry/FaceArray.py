@@ -2,6 +2,7 @@ from abaqusConstants import *
 from .Face import Face
 
 
+from __init__ import *
 class FaceArray:
     """The FaceArray is a sequence of Face objects. If the part is modified, then FaceArray
     must be updated for that part. 

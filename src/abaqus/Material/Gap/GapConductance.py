@@ -1,5 +1,7 @@
 from abaqusConstants import *
 
+from __init__ import *
+
 
 class GapConductance:
     """The GapConductance object specifies conductive heat transfer between closely adjacent
@@ -29,8 +31,10 @@ class GapConductance:
         - GAP CONDUCTANCE
 
     """
-
-    def __init__(self, pressureDependency: Boolean = OFF, dependencies: int = 0, table: tuple = ()):
+    def __init__(self,
+                 pressureDependency: Boolean = OFF,
+                 dependencies: int = 0,
+                 table: tuple = ()):
         """This method creates a GapConductance object.
 
         Notes

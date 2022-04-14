@@ -1,5 +1,7 @@
 from abaqusConstants import *
 
+from __init__ import *
+
 
 class LoadDisplayOptions:
     """The LoadDisplayOptions object stores settings that specify how assemblies are to be
@@ -15,17 +17,36 @@ class LoadDisplayOptions:
             session.viewports[name].layers[name].assemblyDisplay.loadOptions
 
     """
-
-    def setValues(self, concentratedForce: str = ON, moment: str = ON, pressure: str = ON,
-                  pipePressure: str = ON, bodyForce: str = ON, lineLoad: str = ON, gravity: str = ON,
-                  boltLoad: str = ON, pegLoad: str = ON, connectorForce: str = ON,
-                  connectorMoment: str = ON, inertiaRelief: str = ON, rotationalIntertiaLoad: str = ON,
-                  coriolisForce: str = ON, bodyHeatFlux: str = ON, surfaceHeatFlux: str = ON,
-                  concentratedHeatFlux: str = ON, concentratedPoreFluid: str = ON,
-                  surfacePoreFluid: str = ON, hydroFluidFlow: str = ON, concentratedCharge: str = ON,
-                  concentratedCurrent: str = ON, surfaceCharge: str = ON, surfaceCurrent: str = ON,
-                  bodyCharge: str = ON, bodyCurrent: str = ON, inwardVolAccel: str = ON,
-                  bodyConcentrationFlux: str = ON, surfaceConcentrationFlux: str = ON,
+    def setValues(self,
+                  concentratedForce: str = ON,
+                  moment: str = ON,
+                  pressure: str = ON,
+                  pipePressure: str = ON,
+                  bodyForce: str = ON,
+                  lineLoad: str = ON,
+                  gravity: str = ON,
+                  boltLoad: str = ON,
+                  pegLoad: str = ON,
+                  connectorForce: str = ON,
+                  connectorMoment: str = ON,
+                  inertiaRelief: str = ON,
+                  rotationalIntertiaLoad: str = ON,
+                  coriolisForce: str = ON,
+                  bodyHeatFlux: str = ON,
+                  surfaceHeatFlux: str = ON,
+                  concentratedHeatFlux: str = ON,
+                  concentratedPoreFluid: str = ON,
+                  surfacePoreFluid: str = ON,
+                  hydroFluidFlow: str = ON,
+                  concentratedCharge: str = ON,
+                  concentratedCurrent: str = ON,
+                  surfaceCharge: str = ON,
+                  surfaceCurrent: str = ON,
+                  bodyCharge: str = ON,
+                  bodyCurrent: str = ON,
+                  inwardVolAccel: str = ON,
+                  bodyConcentrationFlux: str = ON,
+                  surfaceConcentrationFlux: str = ON,
                   concentratedConcentrationFlux: str = ON):
         """This method modifies the LoadDisplayOptions object.
         concentratedForce

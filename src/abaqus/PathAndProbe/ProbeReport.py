@@ -1,5 +1,7 @@
 from abaqusConstants import *
 
+from __init__ import *
+
 
 class ProbeReport:
     """The ProbeReport object is used to store settings associated with tabular reports of
@@ -19,10 +21,14 @@ class ProbeReport:
             session.probeReport
 
     """
-
-    def setValues(self, options: str = None, numColumns: int = 80, numDigits: int = 6,
-                  numFormat: SymbolicConstant = ENGINEERING, pageWidth: SymbolicConstant = NO_LIMIT,
-                  printTotal: Boolean = OFF, printMinMax: Boolean = OFF):
+    def setValues(self,
+                  options: str = None,
+                  numColumns: int = 80,
+                  numDigits: int = 6,
+                  numFormat: SymbolicConstant = ENGINEERING,
+                  pageWidth: SymbolicConstant = NO_LIMIT,
+                  printTotal: Boolean = OFF,
+                  printMinMax: Boolean = OFF):
         """This method modifies the ProbeReport object.
         
         Parameters

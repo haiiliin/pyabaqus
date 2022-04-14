@@ -1,5 +1,7 @@
 from abaqusConstants import *
 
+from __init__ import *
+
 
 class MeanFieldHomogenization:
     """The MeanFieldHomogenization object specifies the multiscale material definition.
@@ -19,9 +21,11 @@ class MeanFieldHomogenization:
         - MEAN FIELD HOMOGENIZATION
 
     """
-
-    def __init__(self, angleSubdivision: int = None, formulation: SymbolicConstant = MT,
-                 isotropization: SymbolicConstant = ALLISO, uniformMatrixStrain: SymbolicConstant = NO):
+    def __init__(self,
+                 angleSubdivision: int = None,
+                 formulation: SymbolicConstant = MT,
+                 isotropization: SymbolicConstant = ALLISO,
+                 uniformMatrixStrain: SymbolicConstant = NO):
         """This method creates a MeanFieldHomogenization object.
 
         Notes

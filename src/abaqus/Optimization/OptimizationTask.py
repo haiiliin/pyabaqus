@@ -42,13 +42,21 @@ from .TopologyRotationalSymmetry import TopologyRotationalSymmetry
 from .TurnControl import TurnControl
 from ..Region.Region import Region
 
+from __init__ import *
+
 
 class OptimizationTask(OptimizationTaskBase):
-
-    def SingleTermDesignResponse(self, name: str, identifier: str, csys: int = None, drivingRegion: str = None,
-                                 operation: SymbolicConstant = SUM, region: SymbolicConstant = MODEL,
-                                 shellLayer: SymbolicConstant = MAXIMUM, stepOperation: SymbolicConstant = SUM,
-                                 stepOptions: StepOptionArray = None) -> SingleTermDesignResponse:
+    def SingleTermDesignResponse(
+            self,
+            name: str,
+            identifier: str,
+            csys: int = None,
+            drivingRegion: str = None,
+            operation: SymbolicConstant = SUM,
+            region: SymbolicConstant = MODEL,
+            shellLayer: SymbolicConstant = MAXIMUM,
+            stepOperation: SymbolicConstant = SUM,
+            stepOptions: StepOptionArray = None) -> SingleTermDesignResponse:
         """This method creates a SingleTermDesignResponse object.
 
         Notes
@@ -91,14 +99,17 @@ class OptimizationTask(OptimizationTaskBase):
         -------
             A SingleTermDesignResponse object.
         """
-        self.designResponses[name] = singleTermDesignResponse = SingleTermDesignResponse(name, identifier, csys,
-                                                                                         drivingRegion, operation,
-                                                                                         region, shellLayer,
-                                                                                         stepOperation, stepOptions)
+        self.designResponses[
+            name] = singleTermDesignResponse = SingleTermDesignResponse(
+                name, identifier, csys, drivingRegion, operation, region,
+                shellLayer, stepOperation, stepOptions)
         return singleTermDesignResponse
 
-    def ObjectiveFunction(self, name: str, objectives: OptimizationObjectiveArray,
-                          target: SymbolicConstant = MINIMIZE) -> ObjectiveFunction:
+    def ObjectiveFunction(
+            self,
+            name: str,
+            objectives: OptimizationObjectiveArray,
+            target: SymbolicConstant = MINIMIZE) -> ObjectiveFunction:
         """This method creates an ObjectiveFunction object.
 
         Notes
@@ -128,11 +139,17 @@ class OptimizationTask(OptimizationTaskBase):
         InvalidNameError
         RangeError
         """
-        self.objectiveFunctions[name] = objectiveFunction = ObjectiveFunction(name, objectives, target)
+        self.objectiveFunctions[name] = objectiveFunction = ObjectiveFunction(
+            name, objectives, target)
         return objectiveFunction
 
-    def OptimizationConstraint(self, name: str, designResponse: str, restrictionValue: float,
-                               restrictionMethod: SymbolicConstant = ABSOLUTE_EQUAL) -> OptimizationConstraint:
+    def OptimizationConstraint(
+        self,
+        name: str,
+        designResponse: str,
+        restrictionValue: float,
+        restrictionMethod: SymbolicConstant = ABSOLUTE_EQUAL
+    ) -> OptimizationConstraint:
         """This method creates an OptimizationConstraint object.
 
         Notes
@@ -166,12 +183,17 @@ class OptimizationTask(OptimizationTaskBase):
         InvalidNameError
         RangeError
         """
-        self.optimizationConstraints[name] = optimizationConstraint = OptimizationConstraint(name, designResponse,
-                                                                                             restrictionValue,
-                                                                                             restrictionMethod)
+        self.optimizationConstraints[
+            name] = optimizationConstraint = OptimizationConstraint(
+                name, designResponse, restrictionValue, restrictionMethod)
         return optimizationConstraint
 
-    def BeadFixedRegion(self, name: str, region: Region, csys: int = None, u1: Boolean = OFF, u2: Boolean = OFF,
+    def BeadFixedRegion(self,
+                        name: str,
+                        region: Region,
+                        csys: int = None,
+                        u1: Boolean = OFF,
+                        u2: Boolean = OFF,
                         u3: Boolean = OFF) -> BeadFixedRegion:
         """This method creates a BeadFixedRegion object.
 
@@ -207,10 +229,16 @@ class OptimizationTask(OptimizationTaskBase):
         -------
             A BeadFixedRegion object.
         """
-        self.geometricRestrictions[name] = geometricRestriction = BeadFixedRegion(name, region, csys, u1, u2, u3)
+        self.geometricRestrictions[
+            name] = geometricRestriction = BeadFixedRegion(
+                name, region, csys, u1, u2, u3)
         return geometricRestriction
 
-    def BeadGrowth(self, name: str, region: Region, beadGrowth: float = 0, shrink: float = 0) -> BeadGrowth:
+    def BeadGrowth(self,
+                   name: str,
+                   region: Region,
+                   beadGrowth: float = 0,
+                   shrink: float = 0) -> BeadGrowth:
         """This method creates a BeadGrowth object.
 
         Notes
@@ -238,10 +266,12 @@ class OptimizationTask(OptimizationTaskBase):
         -------
             A BeadGrowth object.
         """
-        self.geometricRestrictions[name] = geometricRestriction = BeadGrowth(name, region, beadGrowth, shrink)
+        self.geometricRestrictions[name] = geometricRestriction = BeadGrowth(
+            name, region, beadGrowth, shrink)
         return geometricRestriction
 
-    def BeadPenetrationCheck(self, name: str, beadPenetrationCheckRegion: Region,
+    def BeadPenetrationCheck(self, name: str,
+                             beadPenetrationCheckRegion: Region,
                              region: Region) -> BeadPenetrationCheck:
         """This method creates a BeadPenetrationCheck object.
 
@@ -266,11 +296,15 @@ class OptimizationTask(OptimizationTaskBase):
         -------
             A BeadPenetrationCheck object.
         """
-        self.geometricRestrictions[name] = geometricRestriction = BeadPenetrationCheck(name, beadPenetrationCheckRegion,
-                                                                                       region)
+        self.geometricRestrictions[
+            name] = geometricRestriction = BeadPenetrationCheck(
+                name, beadPenetrationCheckRegion, region)
         return geometricRestriction
 
-    def BeadPlanarSymmetry(self, name: str, region: Region, axis: SymbolicConstant = AXIS_1,
+    def BeadPlanarSymmetry(self,
+                           name: str,
+                           region: Region,
+                           axis: SymbolicConstant = AXIS_1,
                            csys: int = None) -> BeadPlanarSymmetry:
         """This method creates a BeadPlanarSymmetry object.
 
@@ -300,10 +334,15 @@ class OptimizationTask(OptimizationTaskBase):
         -------
             A BeadPlanarSymmetry object.
         """
-        self.geometricRestrictions[name] = geometricRestriction = BeadPlanarSymmetry(name, region, axis, csys)
+        self.geometricRestrictions[
+            name] = geometricRestriction = BeadPlanarSymmetry(
+                name, region, axis, csys)
         return geometricRestriction
 
-    def BeadPointSymmetry(self, name: str, region: Region, csys: int = None) -> BeadPointSymmetry:
+    def BeadPointSymmetry(self,
+                          name: str,
+                          region: Region,
+                          csys: int = None) -> BeadPointSymmetry:
         """This method creates a BeadPointSymmetry object.
 
         Notes
@@ -329,10 +368,16 @@ class OptimizationTask(OptimizationTaskBase):
         -------
             A BeadPointSymmetry object.
         """
-        self.geometricRestrictions[name] = geometricRestriction = BeadPointSymmetry(name, region, csys)
+        self.geometricRestrictions[
+            name] = geometricRestriction = BeadPointSymmetry(
+                name, region, csys)
         return geometricRestriction
 
-    def BeadRotationalSymmetry(self, name: str, angle: float, region: Region, axis: SymbolicConstant = AXIS_1,
+    def BeadRotationalSymmetry(self,
+                               name: str,
+                               angle: float,
+                               region: Region,
+                               axis: SymbolicConstant = AXIS_1,
                                csys: int = None) -> BeadRotationalSymmetry:
         """This method creates a BeadRotationalSymmetry object.
 
@@ -364,14 +409,21 @@ class OptimizationTask(OptimizationTaskBase):
         -------
             A BeadRotationalSymmetry object.
         """
-        self.geometricRestrictions[name] = geometricRestriction = BeadRotationalSymmetry(name, angle, region, axis,
-                                                                                         csys)
+        self.geometricRestrictions[
+            name] = geometricRestriction = BeadRotationalSymmetry(
+                name, angle, region, axis, csys)
         return geometricRestriction
 
-    def DesignDirection(self, name: str, region: Region, csys: int = None, mainPoint: str = None,
+    def DesignDirection(self,
+                        name: str,
+                        region: Region,
+                        csys: int = None,
+                        mainPoint: str = None,
                         mainPointDetermination: SymbolicConstant = MAXIMUM,
                         movementRestriction: SymbolicConstant = VECTOR,
-                        presumeFeasibleRegionAtStart: Boolean = ON, u1: Boolean = ON, u2: Boolean = ON,
+                        presumeFeasibleRegionAtStart: Boolean = ON,
+                        u1: Boolean = ON,
+                        u2: Boolean = ON,
                         u3: Boolean = ON) -> DesignDirection:
         """This method creates a DesignDirection object.
 
@@ -426,18 +478,25 @@ class OptimizationTask(OptimizationTaskBase):
         -------
             A DesignDirection object.
         """
-        self.geometricRestrictions[name] = geometricRestriction = DesignDirection(name, region, csys, mainPoint,
-                                                                                  mainPointDetermination,
-                                                                                  movementRestriction,
-                                                                                  presumeFeasibleRegionAtStart, u1, u2,
-                                                                                  u3)
+        self.geometricRestrictions[
+            name] = geometricRestriction = DesignDirection(
+                name, region, csys, mainPoint, mainPointDetermination,
+                movementRestriction, presumeFeasibleRegionAtStart, u1, u2, u3)
         return geometricRestriction
 
-    def DrillControl(self, name: str, clientDirection: tuple, region: Region, csys: int = None,
-                     drawAngle: float = 0, mainPoint: str = None,
+    def DrillControl(self,
+                     name: str,
+                     clientDirection: tuple,
+                     region: Region,
+                     csys: int = None,
+                     drawAngle: float = 0,
+                     mainPoint: str = None,
                      mainPointDetermination: SymbolicConstant = MAXIMUM,
-                     presumeFeasibleRegionAtStart: Boolean = ON, tolerance1: float = 0,
-                     tolerance2: float = 0, tolerance3: float = 0, undercutTolerance: float = 0) -> DrillControl:
+                     presumeFeasibleRegionAtStart: Boolean = ON,
+                     tolerance1: float = 0,
+                     tolerance2: float = 0,
+                     tolerance3: float = 0,
+                     undercutTolerance: float = 0) -> DrillControl:
         """This method creates a DrillControl object.
 
         Notes
@@ -491,16 +550,20 @@ class OptimizationTask(OptimizationTaskBase):
         -------
             A DrillControl object.
         """
-        self.geometricRestrictions[name] = geometricRestriction = DrillControl(name, clientDirection, region, csys,
-                                                                               drawAngle, mainPoint,
-                                                                               mainPointDetermination,
-                                                                               presumeFeasibleRegionAtStart, tolerance1,
-                                                                               tolerance2, tolerance3,
-                                                                               undercutTolerance)
+        self.geometricRestrictions[name] = geometricRestriction = DrillControl(
+            name, clientDirection, region, csys, drawAngle, mainPoint,
+            mainPointDetermination, presumeFeasibleRegionAtStart, tolerance1,
+            tolerance2, tolerance3, undercutTolerance)
         return geometricRestriction
 
-    def FixedRegion(self, name: str, region: Region, csys: int = None, presumeFeasibleRegionAtStart: Boolean = ON,
-                    u1: Boolean = OFF, u2: Boolean = OFF, u3: Boolean = OFF) -> FixedRegion:
+    def FixedRegion(self,
+                    name: str,
+                    region: Region,
+                    csys: int = None,
+                    presumeFeasibleRegionAtStart: Boolean = ON,
+                    u1: Boolean = OFF,
+                    u2: Boolean = OFF,
+                    u3: Boolean = OFF) -> FixedRegion:
         """This method creates a FixedRegion object.
 
         Notes
@@ -540,8 +603,8 @@ class OptimizationTask(OptimizationTaskBase):
         -------
             A FixedRegion object.
         """
-        self.geometricRestrictions[name] = geometricRestriction = FixedRegion(name, region, csys,
-                                                                              presumeFeasibleRegionAtStart, u1, u2, u3)
+        self.geometricRestrictions[name] = geometricRestriction = FixedRegion(
+            name, region, csys, presumeFeasibleRegionAtStart, u1, u2, u3)
         return geometricRestriction
 
     def FrozenArea(self, name: str, region: Region = Region()) -> FrozenArea:
@@ -568,11 +631,16 @@ class OptimizationTask(OptimizationTaskBase):
         -------
             A FrozenArea object.
         """
-        self.geometricRestrictions[name] = geometricRestriction = FrozenArea(name, region)
+        self.geometricRestrictions[name] = geometricRestriction = FrozenArea(
+            name, region)
         return geometricRestriction
 
-    def Growth(self, name: str, region: Region, growth: float = 0,
-               presumeFeasibleRegionAtStart: Boolean = ON, shrink: float = 0) -> Growth:
+    def Growth(self,
+               name: str,
+               region: Region,
+               growth: float = 0,
+               presumeFeasibleRegionAtStart: Boolean = ON,
+               shrink: float = 0) -> Growth:
         """This method creates a Growth object.
 
         Notes
@@ -605,12 +673,16 @@ class OptimizationTask(OptimizationTaskBase):
         -------
             A Growth object.
         """
-        self.geometricRestrictions[name] = geometricRestriction = Growth(name, region, growth,
-                                                                         presumeFeasibleRegionAtStart, shrink)
+        self.geometricRestrictions[name] = geometricRestriction = Growth(
+            name, region, growth, presumeFeasibleRegionAtStart, shrink)
         return geometricRestriction
 
-    def PenetrationCheck(self, name: str, penetrationCheckRegion: Region, region: Region,
-                         presumeFeasibleRegionAtStart: Boolean = ON) -> PenetrationCheck:
+    def PenetrationCheck(
+            self,
+            name: str,
+            penetrationCheckRegion: Region,
+            region: Region,
+            presumeFeasibleRegionAtStart: Boolean = ON) -> PenetrationCheck:
         """This method creates a PenetrationCheck object.
 
         Notes
@@ -639,16 +711,26 @@ class OptimizationTask(OptimizationTaskBase):
         -------
             A PenetrationCheck object.
         """
-        self.geometricRestrictions[name] = geometricRestriction = PenetrationCheck(name, penetrationCheckRegion, region,
-                                                                                   presumeFeasibleRegionAtStart)
+        self.geometricRestrictions[
+            name] = geometricRestriction = PenetrationCheck(
+                name, penetrationCheckRegion, region,
+                presumeFeasibleRegionAtStart)
         return geometricRestriction
 
-    def ShapeDemoldControl(self, name: str, pullDirection: tuple, region: Region,
-                           collisionCheckRegion: SymbolicConstant = DEMOLD_REGION, csys: int = None,
-                           drawAngle: float = 0, mainPointDetermination: SymbolicConstant = MAXIMUM,
-                           presumeFeasibleRegionAtStart: Boolean = ON, tolerance1: float = 0,
-                           tolerance2: float = 0, tolerance3: float = 0,
-                           undercutTolerance: float = 0) -> ShapeDemoldControl:
+    def ShapeDemoldControl(
+            self,
+            name: str,
+            pullDirection: tuple,
+            region: Region,
+            collisionCheckRegion: SymbolicConstant = DEMOLD_REGION,
+            csys: int = None,
+            drawAngle: float = 0,
+            mainPointDetermination: SymbolicConstant = MAXIMUM,
+            presumeFeasibleRegionAtStart: Boolean = ON,
+            tolerance1: float = 0,
+            tolerance2: float = 0,
+            tolerance3: float = 0,
+            undercutTolerance: float = 0) -> ShapeDemoldControl:
         """This method creates a ShapeDemoldControl object.
 
         Notes
@@ -703,16 +785,21 @@ class OptimizationTask(OptimizationTaskBase):
         -------
             A ShapeDemoldControl object.
         """
-        self.geometricRestrictions[name] = geometricRestriction = ShapeDemoldControl(name, pullDirection, region,
-                                                                                     collisionCheckRegion, csys,
-                                                                                     drawAngle, mainPointDetermination,
-                                                                                     presumeFeasibleRegionAtStart,
-                                                                                     tolerance1, tolerance2, tolerance3,
-                                                                                     undercutTolerance)
+        self.geometricRestrictions[
+            name] = geometricRestriction = ShapeDemoldControl(
+                name, pullDirection, region, collisionCheckRegion, csys,
+                drawAngle, mainPointDetermination,
+                presumeFeasibleRegionAtStart, tolerance1, tolerance2,
+                tolerance3, undercutTolerance)
         return geometricRestriction
 
-    def ShapeMemberSize(self, name: str, region: Region, maxThickness: float = 0, minThickness: float = 0,
-                        sizeRestriction: SymbolicConstant = MINIMUM, assignNodeGroupRegion: str = OFF,
+    def ShapeMemberSize(self,
+                        name: str,
+                        region: Region,
+                        maxThickness: float = 0,
+                        minThickness: float = 0,
+                        sizeRestriction: SymbolicConstant = MINIMUM,
+                        assignNodeGroupRegion: str = OFF,
                         nodeGroupRegion: str = '') -> ShapeMemberSize:
         """This method creates a ShapeMemberSize object.
 
@@ -748,17 +835,23 @@ class OptimizationTask(OptimizationTaskBase):
         -------
             A ShapeMemberSize object.
         """
-        self.geometricRestrictions[name] = geometricRestriction = ShapeMemberSize(name, region, maxThickness,
-                                                                                  minThickness, sizeRestriction,
-                                                                                  assignNodeGroupRegion,
-                                                                                  nodeGroupRegion)
+        self.geometricRestrictions[
+            name] = geometricRestriction = ShapeMemberSize(
+                name, region, maxThickness, minThickness, sizeRestriction,
+                assignNodeGroupRegion, nodeGroupRegion)
         return geometricRestriction
 
-    def ShapePlanarSymmetry(self, name: str, clientDirection: tuple, region: Region,
-                            allowNonSymmetricMesh: Boolean = TRUE, csys: int = None,
+    def ShapePlanarSymmetry(self,
+                            name: str,
+                            clientDirection: tuple,
+                            region: Region,
+                            allowNonSymmetricMesh: Boolean = TRUE,
+                            csys: int = None,
                             mainPointDetermination: SymbolicConstant = MAXIMUM,
-                            presumeFeasibleRegionAtStart: Boolean = ON, tolerance1: float = 0,
-                            tolerance2: float = 0, tolerance3: float = 0) -> ShapePlanarSymmetry:
+                            presumeFeasibleRegionAtStart: Boolean = ON,
+                            tolerance1: float = 0,
+                            tolerance2: float = 0,
+                            tolerance3: float = 0) -> ShapePlanarSymmetry:
         """This method creates a ShapePlanarSymmetry object.
 
         Notes
@@ -808,18 +901,22 @@ class OptimizationTask(OptimizationTaskBase):
         -------
             A ShapePlanarSymmetry object.
         """
-        self.geometricRestrictions[name] = geometricRestriction = ShapePlanarSymmetry(name, clientDirection, region,
-                                                                                      allowNonSymmetricMesh, csys,
-                                                                                      mainPointDetermination,
-                                                                                      presumeFeasibleRegionAtStart,
-                                                                                      tolerance1, tolerance2,
-                                                                                      tolerance3)
+        self.geometricRestrictions[
+            name] = geometricRestriction = ShapePlanarSymmetry(
+                name, clientDirection, region, allowNonSymmetricMesh, csys,
+                mainPointDetermination, presumeFeasibleRegionAtStart,
+                tolerance1, tolerance2, tolerance3)
         return geometricRestriction
 
-    def ShapePointSymmetry(self, name: str, region: Region, csys: int = None,
+    def ShapePointSymmetry(self,
+                           name: str,
+                           region: Region,
+                           csys: int = None,
                            mainPointDetermination: SymbolicConstant = MAXIMUM,
-                           presumeFeasibleRegionAtStart: Boolean = ON, tolerance1: float = 0,
-                           tolerance2: float = 0, tolerance3: float = 0) -> ShapePointSymmetry:
+                           presumeFeasibleRegionAtStart: Boolean = ON,
+                           tolerance1: float = 0,
+                           tolerance2: float = 0,
+                           tolerance3: float = 0) -> ShapePointSymmetry:
         """This method creates a ShapePointSymmetry object.
 
         Notes
@@ -862,18 +959,28 @@ class OptimizationTask(OptimizationTaskBase):
         -------
             A ShapePointSymmetry object.
         """
-        self.geometricRestrictions[name] = geometricRestriction = ShapePointSymmetry(name, region, csys,
-                                                                                     mainPointDetermination,
-                                                                                     presumeFeasibleRegionAtStart,
-                                                                                     tolerance1, tolerance2, tolerance3)
+        self.geometricRestrictions[
+            name] = geometricRestriction = ShapePointSymmetry(
+                name, region, csys, mainPointDetermination,
+                presumeFeasibleRegionAtStart, tolerance1, tolerance2,
+                tolerance3)
         return geometricRestriction
 
-    def ShapeRotationalSymmetry(self, name: str, clientDirection: tuple, region: Region,
-                                allowNonSymmetricMesh: Boolean = TRUE, angle: float = 0, csys: int = None,
-                                mainPoint: str = None, mainPointDetermination: SymbolicConstant = MAXIMUM,
-                                presumeFeasibleRegionAtStart: Boolean = ON, startPoint: float = None,
-                                tolerance1: float = 0, tolerance2: float = 0,
-                                tolerance3: float = 0) -> ShapeRotationalSymmetry:
+    def ShapeRotationalSymmetry(
+            self,
+            name: str,
+            clientDirection: tuple,
+            region: Region,
+            allowNonSymmetricMesh: Boolean = TRUE,
+            angle: float = 0,
+            csys: int = None,
+            mainPoint: str = None,
+            mainPointDetermination: SymbolicConstant = MAXIMUM,
+            presumeFeasibleRegionAtStart: Boolean = ON,
+            startPoint: float = None,
+            tolerance1: float = 0,
+            tolerance2: float = 0,
+            tolerance3: float = 0) -> ShapeRotationalSymmetry:
         """This method creates a ShapeRotationalSymmetry object.
 
         Notes
@@ -932,16 +1039,16 @@ class OptimizationTask(OptimizationTaskBase):
         -------
             A ShapeRotationalSymmetry object.
         """
-        self.geometricRestrictions[name] = geometricRestriction = ShapeRotationalSymmetry(name, clientDirection, region,
-                                                                                          allowNonSymmetricMesh, angle,
-                                                                                          csys, mainPoint,
-                                                                                          mainPointDetermination,
-                                                                                          presumeFeasibleRegionAtStart,
-                                                                                          startPoint, tolerance1,
-                                                                                          tolerance2, tolerance3)
+        self.geometricRestrictions[
+            name] = geometricRestriction = ShapeRotationalSymmetry(
+                name, clientDirection, region, allowNonSymmetricMesh, angle,
+                csys, mainPoint, mainPointDetermination,
+                presumeFeasibleRegionAtStart, startPoint, tolerance1,
+                tolerance2, tolerance3)
         return geometricRestriction
 
-    def SizingClusterAreas(self, name: str, regions: tuple) -> SizingClusterAreas:
+    def SizingClusterAreas(self, name: str,
+                           regions: tuple) -> SizingClusterAreas:
         """This method creates a SizingClusterAreas object.
 
         Notes
@@ -964,11 +1071,18 @@ class OptimizationTask(OptimizationTaskBase):
         -------
             A SizingClusterAreas object.
         """
-        self.geometricRestrictions[name] = geometricRestriction = SizingClusterAreas(name, regions)
+        self.geometricRestrictions[
+            name] = geometricRestriction = SizingClusterAreas(name, regions)
         return geometricRestriction
 
-    def SizingCyclicSymmetry(self, name: str, region: Region, translation: float, axis: SymbolicConstant = AXIS_1,
-                             csys: int = None, ignoreFrozenArea: Boolean = OFF) -> SizingCyclicSymmetry:
+    def SizingCyclicSymmetry(
+            self,
+            name: str,
+            region: Region,
+            translation: float,
+            axis: SymbolicConstant = AXIS_1,
+            csys: int = None,
+            ignoreFrozenArea: Boolean = OFF) -> SizingCyclicSymmetry:
         """This method creates a SizingCyclicSymmetry object.
 
         Notes
@@ -1002,8 +1116,9 @@ class OptimizationTask(OptimizationTaskBase):
         -------
             A SizingCyclicSymmetry object.
         """
-        self.geometricRestrictions[name] = geometricRestriction = SizingCyclicSymmetry(name, region, translation, axis,
-                                                                                       csys, ignoreFrozenArea)
+        self.geometricRestrictions[
+            name] = geometricRestriction = SizingCyclicSymmetry(
+                name, region, translation, axis, csys, ignoreFrozenArea)
         return geometricRestriction
 
     def SizingFrozenArea(self, name: str, region: Region) -> SizingFrozenArea:
@@ -1028,10 +1143,12 @@ class OptimizationTask(OptimizationTaskBase):
         -------
             A SizingFrozenArea object.
         """
-        self.geometricRestrictions[name] = geometricRestriction = SizingFrozenArea(name, region)
+        self.geometricRestrictions[
+            name] = geometricRestriction = SizingFrozenArea(name, region)
         return geometricRestriction
 
-    def SizingMemberSize(self, name: str, region: Region, minWidth: float) -> SizingMemberSize:
+    def SizingMemberSize(self, name: str, region: Region,
+                         minWidth: float) -> SizingMemberSize:
         """This method creates a SizingMemberSize object.
 
         Notes
@@ -1057,11 +1174,18 @@ class OptimizationTask(OptimizationTaskBase):
         Raises
         ------
         """
-        self.geometricRestrictions[name] = geometricRestriction = SizingMemberSize(name, region, minWidth)
+        self.geometricRestrictions[
+            name] = geometricRestriction = SizingMemberSize(
+                name, region, minWidth)
         return geometricRestriction
 
-    def SizingPlanarSymmetry(self, name: str, region: Region, axis: SymbolicConstant = AXIS_1, csys: int = None,
-                             ignoreFrozenArea: Boolean = OFF) -> SizingPlanarSymmetry:
+    def SizingPlanarSymmetry(
+            self,
+            name: str,
+            region: Region,
+            axis: SymbolicConstant = AXIS_1,
+            csys: int = None,
+            ignoreFrozenArea: Boolean = OFF) -> SizingPlanarSymmetry:
         """This method creates a SizingPlanarSymmetry object.
 
         Notes
@@ -1092,12 +1216,17 @@ class OptimizationTask(OptimizationTaskBase):
         -------
             A SizingPlanarSymmetry object.
         """
-        self.geometricRestrictions[name] = geometricRestriction = SizingPlanarSymmetry(name, region, axis, csys,
-                                                                                       ignoreFrozenArea)
+        self.geometricRestrictions[
+            name] = geometricRestriction = SizingPlanarSymmetry(
+                name, region, axis, csys, ignoreFrozenArea)
         return geometricRestriction
 
-    def SizingPointSymmetry(self, name: str, region: Region, csys: int = None,
-                            ignoreFrozenArea: Boolean = OFF) -> SizingPointSymmetry:
+    def SizingPointSymmetry(
+            self,
+            name: str,
+            region: Region,
+            csys: int = None,
+            ignoreFrozenArea: Boolean = OFF) -> SizingPointSymmetry:
         """This method creates a SizingPointSymmetry object.
 
         Notes
@@ -1125,12 +1254,19 @@ class OptimizationTask(OptimizationTaskBase):
         -------
             A SizingPointSymmetry object.
         """
-        self.geometricRestrictions[name] = geometricRestriction = SizingPointSymmetry(name, region, csys,
-                                                                                      ignoreFrozenArea)
+        self.geometricRestrictions[
+            name] = geometricRestriction = SizingPointSymmetry(
+                name, region, csys, ignoreFrozenArea)
         return geometricRestriction
 
-    def SizingRotationalSymmetry(self, name: str, angle: float, region: Region, axis: SymbolicConstant = AXIS_1,
-                                 csys: int = None, ignoreFrozenArea: Boolean = OFF) -> SizingRotationalSymmetry:
+    def SizingRotationalSymmetry(
+            self,
+            name: str,
+            angle: float,
+            region: Region,
+            axis: SymbolicConstant = AXIS_1,
+            csys: int = None,
+            ignoreFrozenArea: Boolean = OFF) -> SizingRotationalSymmetry:
         """This method creates a SizingRotationalSymmetry object.
 
         Notes
@@ -1163,14 +1299,23 @@ class OptimizationTask(OptimizationTaskBase):
         -------
             A SizingRotationalSymmetry object.
         """
-        self.geometricRestrictions[name] = geometricRestriction = SizingRotationalSymmetry(name, angle, region, axis,
-                                                                                           csys, ignoreFrozenArea)
+        self.geometricRestrictions[
+            name] = geometricRestriction = SizingRotationalSymmetry(
+                name, angle, region, axis, csys, ignoreFrozenArea)
         return geometricRestriction
 
-    def SlideRegionControl(self, name: str, clientDirection: tuple, region: Region,
-                           approach: SymbolicConstant = FREE_FORM, csys: int = None, freeFormRegion: str = None,
-                           presumeFeasibleRegionAtStart: Boolean = ON, revolvedRegion: str = None,
-                           tolerance1: float = 0, tolerance2: float = 0, tolerance3: float = 0) -> SlideRegionControl:
+    def SlideRegionControl(self,
+                           name: str,
+                           clientDirection: tuple,
+                           region: Region,
+                           approach: SymbolicConstant = FREE_FORM,
+                           csys: int = None,
+                           freeFormRegion: str = None,
+                           presumeFeasibleRegionAtStart: Boolean = ON,
+                           revolvedRegion: str = None,
+                           tolerance1: float = 0,
+                           tolerance2: float = 0,
+                           tolerance3: float = 0) -> SlideRegionControl:
         """This method creates a SlideRegionControl object.
 
         Notes
@@ -1225,18 +1370,26 @@ class OptimizationTask(OptimizationTaskBase):
         -------
             A SlideRegionControl object.
         """
-        self.geometricRestrictions[name] = geometricRestriction = SlideRegionControl(name, clientDirection, region,
-                                                                                     approach, csys, freeFormRegion,
-                                                                                     presumeFeasibleRegionAtStart,
-                                                                                     revolvedRegion, tolerance1,
-                                                                                     tolerance2, tolerance3)
+        self.geometricRestrictions[
+            name] = geometricRestriction = SlideRegionControl(
+                name, clientDirection, region, approach, csys, freeFormRegion,
+                presumeFeasibleRegionAtStart, revolvedRegion, tolerance1,
+                tolerance2, tolerance3)
         return geometricRestriction
 
-    def StampControl(self, name: str, clientDirection: tuple, region: Region, csys: int = None,
-                     drawAngle: float = 0, mainPoint: str = None,
+    def StampControl(self,
+                     name: str,
+                     clientDirection: tuple,
+                     region: Region,
+                     csys: int = None,
+                     drawAngle: float = 0,
+                     mainPoint: str = None,
                      mainPointDetermination: SymbolicConstant = MAXIMUM,
-                     presumeFeasibleRegionAtStart: Boolean = ON, tolerance1: float = 0,
-                     tolerance2: float = 0, tolerance3: float = 0, undercutTolerance: float = 0) -> StampControl:
+                     presumeFeasibleRegionAtStart: Boolean = ON,
+                     tolerance1: float = 0,
+                     tolerance2: float = 0,
+                     tolerance3: float = 0,
+                     undercutTolerance: float = 0) -> StampControl:
         """This method creates a StampControl object.
 
         Notes
@@ -1289,16 +1442,20 @@ class OptimizationTask(OptimizationTaskBase):
         -------
             A StampControl object.
         """
-        self.geometricRestrictions[name] = geometricRestriction = StampControl(name, clientDirection, region, csys,
-                                                                               drawAngle, mainPoint,
-                                                                               mainPointDetermination,
-                                                                               presumeFeasibleRegionAtStart, tolerance1,
-                                                                               tolerance2, tolerance3,
-                                                                               undercutTolerance)
+        self.geometricRestrictions[name] = geometricRestriction = StampControl(
+            name, clientDirection, region, csys, drawAngle, mainPoint,
+            mainPointDetermination, presumeFeasibleRegionAtStart, tolerance1,
+            tolerance2, tolerance3, undercutTolerance)
         return geometricRestriction
 
-    def TopologyCyclicSymmetry(self, name: str, region: Region, translation: float, axis: SymbolicConstant = AXIS_1,
-                               csys: int = None, ignoreFrozenArea: Boolean = OFF) -> TopologyCyclicSymmetry:
+    def TopologyCyclicSymmetry(
+            self,
+            name: str,
+            region: Region,
+            translation: float,
+            axis: SymbolicConstant = AXIS_1,
+            csys: int = None,
+            ignoreFrozenArea: Boolean = OFF) -> TopologyCyclicSymmetry:
         """This method creates a TopologyCyclicSymmetry object.
 
         Notes
@@ -1334,13 +1491,21 @@ class OptimizationTask(OptimizationTaskBase):
         -------
             A TopologyCyclicSymmetry object.
         """
-        self.geometricRestrictions[name] = geometricRestriction = TopologyCyclicSymmetry(name, region, translation,
-                                                                                         axis, csys, ignoreFrozenArea)
+        self.geometricRestrictions[
+            name] = geometricRestriction = TopologyCyclicSymmetry(
+                name, region, translation, axis, csys, ignoreFrozenArea)
         return geometricRestriction
 
-    def TopologyDemoldControl(self, name: str, region: Region, csys: int = None, draftAngle: float = 0,
-                              collisionCheckRegion: SymbolicConstant = DEMOLD_REGION, pointRegion: Region = Region(),
-                              pullDirection: tuple = (), technique: SymbolicConstant = AUTO) -> TopologyDemoldControl:
+    def TopologyDemoldControl(
+            self,
+            name: str,
+            region: Region,
+            csys: int = None,
+            draftAngle: float = 0,
+            collisionCheckRegion: SymbolicConstant = DEMOLD_REGION,
+            pointRegion: Region = Region(),
+            pullDirection: tuple = (),
+            technique: SymbolicConstant = AUTO) -> TopologyDemoldControl:
         """This method creates a TopologyDemoldControl object.
 
         Notes
@@ -1384,14 +1549,20 @@ class OptimizationTask(OptimizationTaskBase):
         -------
             A TopologyDemoldControl object.
         """
-        self.geometricRestrictions[name] = geometricRestriction = TopologyDemoldControl(name, region, csys, draftAngle,
-                                                                                        collisionCheckRegion,
-                                                                                        pointRegion, pullDirection,
-                                                                                        technique)
+        self.geometricRestrictions[
+            name] = geometricRestriction = TopologyDemoldControl(
+                name, region, csys, draftAngle, collisionCheckRegion,
+                pointRegion, pullDirection, technique)
         return geometricRestriction
 
-    def TopologyMemberSize(self, name: str, region: Region, maxThickness: float = 0, minThickness: float = 0,
-                           separation: float = 0, sizeRestriction: SymbolicConstant = MINIMUM) -> TopologyMemberSize:
+    def TopologyMemberSize(
+            self,
+            name: str,
+            region: Region,
+            maxThickness: float = 0,
+            minThickness: float = 0,
+            separation: float = 0,
+            sizeRestriction: SymbolicConstant = MINIMUM) -> TopologyMemberSize:
         """This method creates a TopologyMemberSize object.
 
         Notes
@@ -1425,14 +1596,20 @@ class OptimizationTask(OptimizationTaskBase):
         -------
             A TopologyMemberSize object.
         """
-        self.geometricRestrictions[name] = geometricRestriction = TopologyMemberSize(name, region, maxThickness,
-                                                                                     minThickness, separation,
-                                                                                     sizeRestriction)
+        self.geometricRestrictions[
+            name] = geometricRestriction = TopologyMemberSize(
+                name, region, maxThickness, minThickness, separation,
+                sizeRestriction)
         return geometricRestriction
 
-    def TopologyMillingControl(self, name: str, millingDirections: tuple, region: Region, csys: int = None,
-                               millingCheckRegion: SymbolicConstant = MILLING_REGION,
-                               radius: float = None) -> TopologyMillingControl:
+    def TopologyMillingControl(
+            self,
+            name: str,
+            millingDirections: tuple,
+            region: Region,
+            csys: int = None,
+            millingCheckRegion: SymbolicConstant = MILLING_REGION,
+            radius: float = None) -> TopologyMillingControl:
         """This method creates a TopologyMillingControl object.
 
         Notes
@@ -1470,15 +1647,23 @@ class OptimizationTask(OptimizationTaskBase):
         -------
             A TopologyMillingControl object.
         """
-        self.geometricRestrictions[name] = geometricRestriction = TopologyMillingControl(name, millingDirections,
-                                                                                         region, csys,
-                                                                                         millingCheckRegion, radius)
+        self.geometricRestrictions[
+            name] = geometricRestriction = TopologyMillingControl(
+                name, millingDirections, region, csys, millingCheckRegion,
+                radius)
         return geometricRestriction
 
-    def TopologyOverhangControl(self, name: str, pullDirection: tuple, region: Region, csys: int = None,
-                                draftAngle: float = 45, overhangCheckRegion: SymbolicConstant = OVERHANG_REGION,
-                                pointRegion: Region = Region(), radius: float = None,
-                                technique: SymbolicConstant = AUTO) -> TopologyOverhangControl:
+    def TopologyOverhangControl(
+            self,
+            name: str,
+            pullDirection: tuple,
+            region: Region,
+            csys: int = None,
+            draftAngle: float = 45,
+            overhangCheckRegion: SymbolicConstant = OVERHANG_REGION,
+            pointRegion: Region = Region(),
+            radius: float = None,
+            technique: SymbolicConstant = AUTO) -> TopologyOverhangControl:
         """This method creates a TopologyOverhangControl object.
 
         Notes
@@ -1524,15 +1709,19 @@ class OptimizationTask(OptimizationTaskBase):
         -------
             A TopologyOverhangControl object.
         """
-        self.geometricRestrictions[name] = geometricRestriction = TopologyOverhangControl(name, pullDirection, region,
-                                                                                          csys, draftAngle,
-                                                                                          overhangCheckRegion,
-                                                                                          pointRegion, radius,
-                                                                                          technique)
+        self.geometricRestrictions[
+            name] = geometricRestriction = TopologyOverhangControl(
+                name, pullDirection, region, csys, draftAngle,
+                overhangCheckRegion, pointRegion, radius, technique)
         return geometricRestriction
 
-    def TopologyPlanarSymmetry(self, name: str, region: Region, axis: SymbolicConstant = AXIS_1, csys: int = None,
-                               ignoreFrozenArea: Boolean = OFF) -> TopologyPlanarSymmetry:
+    def TopologyPlanarSymmetry(
+            self,
+            name: str,
+            region: Region,
+            axis: SymbolicConstant = AXIS_1,
+            csys: int = None,
+            ignoreFrozenArea: Boolean = OFF) -> TopologyPlanarSymmetry:
         """This method creates a TopologyPlanarSymmetry object.
 
         Notes
@@ -1565,12 +1754,17 @@ class OptimizationTask(OptimizationTaskBase):
         -------
             A TopologyPlanarSymmetry object.
         """
-        self.geometricRestrictions[name] = geometricRestriction = TopologyPlanarSymmetry(name, region, axis, csys,
-                                                                                         ignoreFrozenArea)
+        self.geometricRestrictions[
+            name] = geometricRestriction = TopologyPlanarSymmetry(
+                name, region, axis, csys, ignoreFrozenArea)
         return geometricRestriction
 
-    def TopologyPointSymmetry(self, name: str, region: Region, csys: int = None,
-                              ignoreFrozenArea: Boolean = OFF) -> TopologyPointSymmetry:
+    def TopologyPointSymmetry(
+            self,
+            name: str,
+            region: Region,
+            csys: int = None,
+            ignoreFrozenArea: Boolean = OFF) -> TopologyPointSymmetry:
         """This method creates a TopologyPointSymmetry object.
 
         Notes
@@ -1600,12 +1794,19 @@ class OptimizationTask(OptimizationTaskBase):
         -------
             A TopologyPointSymmetry object.
         """
-        self.geometricRestrictions[name] = geometricRestriction = TopologyPointSymmetry(name, region, csys,
-                                                                                        ignoreFrozenArea)
+        self.geometricRestrictions[
+            name] = geometricRestriction = TopologyPointSymmetry(
+                name, region, csys, ignoreFrozenArea)
         return geometricRestriction
 
-    def TopologyRotationalSymmetry(self, name: str, angle: float, region: Region, axis: SymbolicConstant = AXIS_1,
-                                   csys: int = None, ignoreFrozenArea: Boolean = OFF) -> TopologyRotationalSymmetry:
+    def TopologyRotationalSymmetry(
+            self,
+            name: str,
+            angle: float,
+            region: Region,
+            axis: SymbolicConstant = AXIS_1,
+            csys: int = None,
+            ignoreFrozenArea: Boolean = OFF) -> TopologyRotationalSymmetry:
         """This method creates a TopologyRotationalSymmetry object.
 
         Notes
@@ -1640,14 +1841,22 @@ class OptimizationTask(OptimizationTaskBase):
         -------
             A TopologyRotationalSymmetry object.
         """
-        self.geometricRestrictions[name] = geometricRestriction = TopologyRotationalSymmetry(name, angle, region, axis,
-                                                                                             csys, ignoreFrozenArea)
+        self.geometricRestrictions[
+            name] = geometricRestriction = TopologyRotationalSymmetry(
+                name, angle, region, axis, csys, ignoreFrozenArea)
         return geometricRestriction
 
-    def TurnControl(self, name: str, clientDirection: tuple, region: Region, csys: int = None,
-                    mainPoint: str = None, mainPointDetermination: SymbolicConstant = MAXIMUM,
-                    presumeFeasibleRegionAtStart: Boolean = ON, tolerance1: float = 0,
-                    tolerance2: float = 0, tolerance3: float = 0) -> TurnControl:
+    def TurnControl(self,
+                    name: str,
+                    clientDirection: tuple,
+                    region: Region,
+                    csys: int = None,
+                    mainPoint: str = None,
+                    mainPointDetermination: SymbolicConstant = MAXIMUM,
+                    presumeFeasibleRegionAtStart: Boolean = ON,
+                    tolerance1: float = 0,
+                    tolerance2: float = 0,
+                    tolerance3: float = 0) -> TurnControl:
         """This method creates a TurnControl object.
 
         Notes
@@ -1697,8 +1906,8 @@ class OptimizationTask(OptimizationTaskBase):
         -------
             A TurnControl object.
         """
-        self.geometricRestrictions[name] = geometricRestriction = TurnControl(name, clientDirection, region, csys,
-                                                                              mainPoint, mainPointDetermination,
-                                                                              presumeFeasibleRegionAtStart, tolerance1,
-                                                                              tolerance2, tolerance3)
+        self.geometricRestrictions[name] = geometricRestriction = TurnControl(
+            name, clientDirection, region, csys, mainPoint,
+            mainPointDetermination, presumeFeasibleRegionAtStart, tolerance1,
+            tolerance2, tolerance3)
         return geometricRestriction

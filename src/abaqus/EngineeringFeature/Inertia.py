@@ -1,5 +1,7 @@
 from abaqusConstants import *
 
+from __init__ import *
+
 
 class Inertia:
     """The Inertia object is the abstract base type for HeatCapacitance, NonstructuralMass, and
@@ -25,10 +27,10 @@ class Inertia:
 
     """
 
-    # A String specifying the repository key. 
+    # A String specifying the repository key.
     name: str = ''
 
-    # A Boolean specifying whether the inertia is suppressed or not. The default value is OFF. 
+    # A Boolean specifying whether the inertia is suppressed or not. The default value is OFF.
     suppressed: Boolean = OFF
 
     def resume(self):

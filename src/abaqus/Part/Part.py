@@ -3,6 +3,8 @@ from ..Mesh.MeshPart import MeshPart
 from ..Property.PropertyPart import PropertyPart
 from ..Region.RegionPart import RegionPart
 
+from __init__ import *
+
 
 class Part(MeshEditPart, MeshPart, PropertyPart, RegionPart):
     """The Part object defines the physical attributes of a structure. Parts are instanced into

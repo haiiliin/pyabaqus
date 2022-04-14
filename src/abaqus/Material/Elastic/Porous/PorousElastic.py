@@ -1,5 +1,7 @@
 from abaqusConstants import *
 
+from __init__ import *
+
 
 class PorousElastic:
     """The PorousElastic object specifies elastic material properties for porous materials.
@@ -37,8 +39,10 @@ class PorousElastic:
         - POROUS ELASTIC
 
     """
-
-    def __init__(self, table: tuple, shear: SymbolicConstant = POISSON, temperatureDependency: Boolean = OFF,
+    def __init__(self,
+                 table: tuple,
+                 shear: SymbolicConstant = POISSON,
+                 temperatureDependency: Boolean = OFF,
                  dependencies: int = 0):
         """This method creates a PorousElastic object.
 

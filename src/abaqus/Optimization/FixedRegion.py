@@ -2,6 +2,8 @@ from abaqusConstants import *
 from .GeometricRestriction import GeometricRestriction
 from ..Region.Region import Region
 
+from __init__ import *
+
 
 class FixedRegion(GeometricRestriction):
     """The FixedRegion object defines a fixed region geometric restriction.
@@ -17,9 +19,14 @@ class FixedRegion(GeometricRestriction):
         mdb.models[name].optimizationTasks[name].geometricRestrictions[name]
 
     """
-
-    def __init__(self, name: str, region: Region, csys: int = None, presumeFeasibleRegionAtStart: Boolean = ON,
-                 u1: Boolean = OFF, u2: Boolean = OFF, u3: Boolean = OFF):
+    def __init__(self,
+                 name: str,
+                 region: Region,
+                 csys: int = None,
+                 presumeFeasibleRegionAtStart: Boolean = ON,
+                 u1: Boolean = OFF,
+                 u2: Boolean = OFF,
+                 u3: Boolean = OFF):
         """This method creates a FixedRegion object.
 
         Notes
@@ -62,8 +69,12 @@ class FixedRegion(GeometricRestriction):
         super().__init__()
         pass
 
-    def setValues(self, csys: int = None, presumeFeasibleRegionAtStart: Boolean = ON, u1: Boolean = OFF,
-                  u2: Boolean = OFF, u3: Boolean = OFF):
+    def setValues(self,
+                  csys: int = None,
+                  presumeFeasibleRegionAtStart: Boolean = ON,
+                  u1: Boolean = OFF,
+                  u2: Boolean = OFF,
+                  u3: Boolean = OFF):
         """This method modifies the FixedRegion object.
         
         Parameters

@@ -1,5 +1,7 @@
 from abaqusConstants import *
 
+from __init__ import *
+
 
 class SlidingTransitionAssignment:
     """The SlidingTransitionAssignment object stores the sliding transition assignment
@@ -19,8 +21,8 @@ class SlidingTransitionAssignment:
         - CONTACT FORMULATION
 
     """
-
-    def changeValuesInStep(self, stepName: str, index: int, value: SymbolicConstant):
+    def changeValuesInStep(self, stepName: str, index: int,
+                           value: SymbolicConstant):
         """This method allows you to modify sliding transition assignments already defined on
         surface pairs in a given step.
         

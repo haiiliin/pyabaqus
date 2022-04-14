@@ -1,5 +1,7 @@
 from abaqusConstants import *
 
+from __init__ import *
+
 
 class BrittleFailure:
     """The BrittleFailure object specifies the brittle failure of the material.
@@ -33,8 +35,10 @@ class BrittleFailure:
         - BRITTLE FAILURE
 
     """
-
-    def __init__(self, table: tuple, temperatureDependency: Boolean = OFF, dependencies: int = 0,
+    def __init__(self,
+                 table: tuple,
+                 temperatureDependency: Boolean = OFF,
+                 dependencies: int = 0,
                  failureCriteria: SymbolicConstant = UNIDIRECTIONAL):
         """This method creates a BrittleFailure object.
 

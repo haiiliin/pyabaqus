@@ -1,6 +1,8 @@
 from .GeometricRestriction import GeometricRestriction
 from ..Region.Region import Region
 
+from __init__ import *
+
 
 class FrozenArea(GeometricRestriction):
     """The FrozenArea object defines a frozen area geometric restriction.
@@ -16,7 +18,6 @@ class FrozenArea(GeometricRestriction):
         mdb.models[name].optimizationTasks[name].geometricRestrictions[name]
 
     """
-
     def __init__(self, name: str, region: Region = Region()):
         """This method creates a FrozenArea object.
 

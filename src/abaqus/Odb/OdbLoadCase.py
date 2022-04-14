@@ -1,3 +1,4 @@
+from __init__ import *
 
 
 class OdbLoadCase:
@@ -15,7 +16,6 @@ class OdbLoadCase:
         session.odbs[name].steps[name].loadCases[name]
 
     """
-
     def __init__(self, name: str):
         """This method creates an OdbLoadCase object.
 

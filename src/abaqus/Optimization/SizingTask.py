@@ -6,6 +6,8 @@ from .OptimizationConstraint import OptimizationConstraint
 from .OptimizationTask import OptimizationTask
 from .StopCondition import StopCondition
 
+from __init__ import *
+
 
 class SizingTask(OptimizationTask):
     """The SizingTask object defines a Sizing task.
@@ -35,28 +37,39 @@ class SizingTask(OptimizationTask):
 
     """
 
-    # A repository of DesignResponse objects. 
+    # A repository of DesignResponse objects.
     designResponses: dict[str, DesignResponse] = dict[str, DesignResponse]()
 
-    # A repository of ObjectiveFunction objects. 
-    objectiveFunctions: dict[str, ObjectiveFunction] = dict[str, ObjectiveFunction]()
+    # A repository of ObjectiveFunction objects.
+    objectiveFunctions: dict[str,
+                             ObjectiveFunction] = dict[str,
+                                                       ObjectiveFunction]()
 
-    # A repository of OptimizationConstraint objects. 
-    optimizationConstraints: dict[str, OptimizationConstraint] = dict[str, OptimizationConstraint]()
+    # A repository of OptimizationConstraint objects.
+    optimizationConstraints: dict[str, OptimizationConstraint] = dict[
+        str, OptimizationConstraint]()
 
-    # A repository of GeometricRestriction objects. 
-    geometricRestrictions: dict[str, GeometricRestriction] = dict[str, GeometricRestriction]()
+    # A repository of GeometricRestriction objects.
+    geometricRestrictions: dict[str, GeometricRestriction] = dict[
+        str, GeometricRestriction]()
 
-    # A repository of StopCondition objects. 
+    # A repository of StopCondition objects.
     stopConditions: dict[str, StopCondition] = dict[str, StopCondition]()
 
-    def __init__(self, name: str, abaqusSensitivities: Boolean = True,
+    def __init__(self,
+                 name: str,
+                 abaqusSensitivities: Boolean = True,
                  elementThicknessDeltaStopCriteria: float = 0,
-                 freezeBoundaryConditionRegions: Boolean = OFF, freezeLoadRegions: Boolean = ON,
-                 modeTrackingRegion: str = MODEL, numFulfilledStopCriteria: int = 2,
-                 numTrackedModes: int = 5, objectiveFunctionDeltaStopCriteria: float = 0,
-                 stopCriteriaDesignCycle: int = 4, thicknessMoveLimit: float = 0,
-                 thicknessUpdateStrategy: SymbolicConstant = NORMAL, groupOperator: Boolean = OFF):
+                 freezeBoundaryConditionRegions: Boolean = OFF,
+                 freezeLoadRegions: Boolean = ON,
+                 modeTrackingRegion: str = MODEL,
+                 numFulfilledStopCriteria: int = 2,
+                 numTrackedModes: int = 5,
+                 objectiveFunctionDeltaStopCriteria: float = 0,
+                 stopCriteriaDesignCycle: int = 4,
+                 thicknessMoveLimit: float = 0,
+                 thicknessUpdateStrategy: SymbolicConstant = NORMAL,
+                 groupOperator: Boolean = OFF):
         """This method creates a SizingTask object.
 
         Notes
@@ -115,12 +128,19 @@ class SizingTask(OptimizationTask):
         super().__init__()
         pass
 
-    def setValues(self, abaqusSensitivities: Boolean = True, elementThicknessDeltaStopCriteria: float = 0,
-                  freezeBoundaryConditionRegions: Boolean = OFF, freezeLoadRegions: Boolean = ON,
-                  modeTrackingRegion: str = MODEL, numFulfilledStopCriteria: int = 2,
-                  numTrackedModes: int = 5, objectiveFunctionDeltaStopCriteria: float = 0,
-                  stopCriteriaDesignCycle: int = 4, thicknessMoveLimit: float = 0,
-                  thicknessUpdateStrategy: SymbolicConstant = NORMAL, groupOperator: Boolean = OFF):
+    def setValues(self,
+                  abaqusSensitivities: Boolean = True,
+                  elementThicknessDeltaStopCriteria: float = 0,
+                  freezeBoundaryConditionRegions: Boolean = OFF,
+                  freezeLoadRegions: Boolean = ON,
+                  modeTrackingRegion: str = MODEL,
+                  numFulfilledStopCriteria: int = 2,
+                  numTrackedModes: int = 5,
+                  objectiveFunctionDeltaStopCriteria: float = 0,
+                  stopCriteriaDesignCycle: int = 4,
+                  thicknessMoveLimit: float = 0,
+                  thicknessUpdateStrategy: SymbolicConstant = NORMAL,
+                  groupOperator: Boolean = OFF):
         """This method modifies the SizingTask object.
         
         Parameters

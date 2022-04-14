@@ -1,5 +1,7 @@
 from abaqusConstants import *
 
+from __init__ import *
+
 
 class ViewportAnnotationOptions:
     """The ViewportAnnotationOptions object stores settings that control how annotations are
@@ -20,19 +22,38 @@ class ViewportAnnotationOptions:
             session.viewports[name].viewportAnnotationOptions
 
     """
-
-    def setValues(self, triad: Boolean = ON, triadPosition: int = None, triadColor: str = '',
-                  triadLabels: SymbolicConstant = NUMBERS, triadFont: str = '', triadSize: int = 4,
-                  legend: Boolean = ON, legendMinMax: Boolean = OFF, legendBox: Boolean = ON,
-                  legendDecimalPlaces: int = 3, legendPosition: int = None, legendFont: str = '',
-                  legendTextColor: str = '', legendBackgroundStyle: SymbolicConstant = TRANSPARENT,
-                  legendBackgroundColor: str = '', title: Boolean = ON, titleBox: Boolean = OFF,
-                  titlePosition: int = None, titleFont: str = '', titleTextColor: str = '',
-                  titleBackgroundStyle: SymbolicConstant = TRANSPARENT, titleBackgroundColor: str = '',
-                  state: Boolean = ON, stateBox: Boolean = OFF, statePosition: int = None,
-                  stateFont: str = '', stateTextColor: str = '',
-                  stateBackgroundStyle: SymbolicConstant = TRANSPARENT, stateBackgroundColor: str = '',
-                  compass: Boolean = ON, compassScale: float = 0,
+    def setValues(self,
+                  triad: Boolean = ON,
+                  triadPosition: int = None,
+                  triadColor: str = '',
+                  triadLabels: SymbolicConstant = NUMBERS,
+                  triadFont: str = '',
+                  triadSize: int = 4,
+                  legend: Boolean = ON,
+                  legendMinMax: Boolean = OFF,
+                  legendBox: Boolean = ON,
+                  legendDecimalPlaces: int = 3,
+                  legendPosition: int = None,
+                  legendFont: str = '',
+                  legendTextColor: str = '',
+                  legendBackgroundStyle: SymbolicConstant = TRANSPARENT,
+                  legendBackgroundColor: str = '',
+                  title: Boolean = ON,
+                  titleBox: Boolean = OFF,
+                  titlePosition: int = None,
+                  titleFont: str = '',
+                  titleTextColor: str = '',
+                  titleBackgroundStyle: SymbolicConstant = TRANSPARENT,
+                  titleBackgroundColor: str = '',
+                  state: Boolean = ON,
+                  stateBox: Boolean = OFF,
+                  statePosition: int = None,
+                  stateFont: str = '',
+                  stateTextColor: str = '',
+                  stateBackgroundStyle: SymbolicConstant = TRANSPARENT,
+                  stateBackgroundColor: str = '',
+                  compass: Boolean = ON,
+                  compassScale: float = 0,
                   compassPrivilegedPlane: SymbolicConstant = XZPLANE):
         """This method modifies the ViewportAnnotationOptions object.
         

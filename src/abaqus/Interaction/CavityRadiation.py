@@ -3,6 +3,8 @@ from .Interaction import Interaction
 from ..BasicGeometry.ModelDot import ModelDot
 from ..Region.RegionArray import RegionArray
 
+from __init__ import *
+
 
 class CavityRadiation(Interaction):
     """The CavityRadiation object defines cavities for thermal radiation heat transfer and
@@ -124,138 +126,161 @@ class CavityRadiation(Interaction):
 
     """
 
-    # A String specifying the repository key. 
+    # A String specifying the repository key.
     name: str = ''
 
-    # None or a Float specifying the reference ambient temperature value, θ0θ0. Specifying a 
-    # value indicates an open cavity. The default value is None. 
+    # None or a Float specifying the reference ambient temperature value, θ0θ0. Specifying a
+    # value indicates an open cavity. The default value is None.
     ambientTemp: float = None
 
-    # A Float specifying the facet area ratio above which the infinitesimal-to-finite area 
-    # approximation is used for viewfactor calculations. The default value is 64.0. 
+    # A Float specifying the facet area ratio above which the infinitesimal-to-finite area
+    # approximation is used for viewfactor calculations. The default value is 64.0.
     minInfinitesimalRatio: float = 64
 
-    # An Int specifying the number of Gauss integration points to be used along each edge when 
-    # the numerical integration of contour integrals is used for viewfactor calculations. One 
-    # to five integration points are allowed. The default value is 3. 
+    # An Int specifying the number of Gauss integration points to be used along each edge when
+    # the numerical integration of contour integrals is used for viewfactor calculations. One
+    # to five integration points are allowed. The default value is 3.
     numPointsPerEdge: int = 3
 
-    # A Float specifying the nondimensional distance-square value above which the lumped area 
-    # approximation is used for viewfactor calculations. The default value is 5.0. 
+    # A Float specifying the nondimensional distance-square value above which the lumped area
+    # approximation is used for viewfactor calculations. The default value is 5.0.
     minLumpedAreaDS: float = 5
 
-    # A Boolean specifying whether cyclic symmetry will be applied. This argument cannot be 
-    # specified for axisymmetric models. The default value is OFF. 
+    # A Boolean specifying whether cyclic symmetry will be applied. This argument cannot be
+    # specified for axisymmetric models. The default value is OFF.
     cyclicSymmetry: Boolean = OFF
 
-    # An Int specifying the number of cyclically similar images that compose the cavity formed 
-    # as a result of this symmetry. This argument applies only when *cyclicSymmetry*=ON. The 
-    # default value is 2. 
+    # An Int specifying the number of cyclically similar images that compose the cavity formed
+    # as a result of this symmetry. This argument applies only when *cyclicSymmetry*=ON. The
+    # default value is 2.
     cyclicImages: int = 2
 
-    # An Int specifying the number of periodic symmetries that will be applied. The default 
-    # value is 0. 
+    # An Int specifying the number of periodic symmetries that will be applied. The default
+    # value is 0.
     periodicSymmetries: int = 0
 
-    # An Int specifying the number of repetitions used in the numerical calculation of the 
-    # cavity viewfactors resulting from the first periodic symmetry. The result of this 
-    # symmetry is a cavity composed of the cavity surface defined in the model plus twice the 
-    # value of *periodicImages_1*. This argument applies only when *periodicSymmetries* is 
-    # greater than zero. The default value is 2. 
+    # An Int specifying the number of repetitions used in the numerical calculation of the
+    # cavity viewfactors resulting from the first periodic symmetry. The result of this
+    # symmetry is a cavity composed of the cavity surface defined in the model plus twice the
+    # value of *periodicImages_1*. This argument applies only when *periodicSymmetries* is
+    # greater than zero. The default value is 2.
     periodicImages_1: int = 2
 
-    # An Int specifying the number of repetitions used in the numerical calculation of the 
-    # cavity viewfactors resulting from the second periodic symmetry. The result of this 
-    # symmetry is a cavity composed of the cavity surface defined in the model plus twice the 
-    # value of *periodicImages_2*. This argument applies only when *periodicSymmetries* is 
-    # greater than one. The default value is 2. 
+    # An Int specifying the number of repetitions used in the numerical calculation of the
+    # cavity viewfactors resulting from the second periodic symmetry. The result of this
+    # symmetry is a cavity composed of the cavity surface defined in the model plus twice the
+    # value of *periodicImages_2*. This argument applies only when *periodicSymmetries* is
+    # greater than one. The default value is 2.
     periodicImages_2: int = 2
 
-    # An Int specifying the number of repetitions used in the numerical calculation of the 
-    # cavity viewfactors resulting from the third periodic symmetry. The result of this 
-    # symmetry is a cavity composed of the cavity surface defined in the model plus twice the 
-    # value of *periodicImages_3*. This argument applies only when *periodicSymmetries* = 3. 
-    # The default value is 2. 
+    # An Int specifying the number of repetitions used in the numerical calculation of the
+    # cavity viewfactors resulting from the third periodic symmetry. The result of this
+    # symmetry is a cavity composed of the cavity surface defined in the model plus twice the
+    # value of *periodicImages_3*. This argument applies only when *periodicSymmetries* = 3.
+    # The default value is 2.
     periodicImages_3: int = 2
 
-    # None or a Float specifying the Z value indicating the symmetry reference line in 
-    # axisymmetric models. This argument applies only for axisymmetric models, and when 
-    # *periodicSymmetries* = 1. The default value is None. 
+    # None or a Float specifying the Z value indicating the symmetry reference line in
+    # axisymmetric models. This argument applies only for axisymmetric models, and when
+    # *periodicSymmetries* = 1. The default value is None.
     periodicSymZ: float = None
 
-    # None or a Float specifying the Z value indicating the periodic distance in axisymmetric 
-    # models. This argument applies only for axisymmetric models, and when 
-    # *periodicSymmetries* = 1. The default value is None. 
+    # None or a Float specifying the Z value indicating the periodic distance in axisymmetric
+    # models. This argument applies only for axisymmetric models, and when
+    # *periodicSymmetries* = 1. The default value is None.
     periodicDistZ: float = None
 
-    # An Int specifying the number of reflection symmetries will be applied. The default value 
-    # is 0. 
+    # An Int specifying the number of reflection symmetries will be applied. The default value
+    # is 0.
     reflectionSymmetries: int = 0
 
-    # None or a Float specifying the Z value indicating the symmetry reference line in 
-    # axisymmetric models. This argument applies only for axisymmetric models, and when 
-    # *reflectionSymmetries* = 1. The default value is None. 
+    # None or a Float specifying the Z value indicating the symmetry reference line in
+    # axisymmetric models. This argument applies only for axisymmetric models, and when
+    # *reflectionSymmetries* = 1. The default value is None.
     reflectionSymZ: float = None
 
-    # A String specifying the name of the step in which the cavity radiation interaction 
-    # should be created. 
+    # A String specifying the name of the step in which the cavity radiation interaction
+    # should be created.
     createStepName: str = ''
 
-    # A RegionArray object specifying the surfaces for which radiation viewfactor control is 
-    # being specified. 
+    # A RegionArray object specifying the surfaces for which radiation viewfactor control is
+    # being specified.
     surfaces: RegionArray = RegionArray()
 
-    # A tuple of Strings specifying the names of the Cavity Radiation properties containing 
-    # the surface emissivity data. One name per specified surface. The emissivity data is 
-    # ignored when *surfaceReflection*=OFF. 
+    # A tuple of Strings specifying the names of the Cavity Radiation properties containing
+    # the surface emissivity data. One name per specified surface. The emissivity data is
+    # ignored when *surfaceReflection*=OFF.
     surfaceEmissivities: tuple = ()
 
-    # A ModelDot object specifying the rotation axis point. This argument applies only when 
-    # *cyclicSymmetry*=ON. 
+    # A ModelDot object specifying the rotation axis point. This argument applies only when
+    # *cyclicSymmetry*=ON.
     cyclicRotPt: ModelDot = ModelDot()
 
-    # A ModelDot object specifying the rotation axis end point. This argument applies only for 
-    # three-dimensional models, and only when *cyclicSymmetry*=ON. 
+    # A ModelDot object specifying the rotation axis end point. This argument applies only for
+    # three-dimensional models, and only when *cyclicSymmetry*=ON.
     cyclicRotEndPt: ModelDot = ModelDot()
 
-    # A ModelDot object specifying the symmetry axis end point. This argument applies only 
-    # when *cyclicSymmetry*=ON. 
+    # A ModelDot object specifying the symmetry axis end point. This argument applies only
+    # when *cyclicSymmetry*=ON.
     cyclicSymPt: ModelDot = ModelDot()
 
-    # A tuple of tuples of Floats specifying the two points of the vector that describes the 
-    # periodic distance for the first periodic symmetry. Each point is defined by a tuple of 
-    # three coordinates indicating its position. This argument applies only when 
-    # *periodicSymmetries* is greater than zero. The default value is an empty sequence. 
+    # A tuple of tuples of Floats specifying the two points of the vector that describes the
+    # periodic distance for the first periodic symmetry. Each point is defined by a tuple of
+    # three coordinates indicating its position. This argument applies only when
+    # *periodicSymmetries* is greater than zero. The default value is an empty sequence.
     periodicDistance_1: tuple = ()
 
-    # A tuple of tuples of Floats specifying the two points of the vector that describes the 
-    # periodic distance for the second periodic symmetry. Each point is defined by a tuple of 
-    # three coordinates indicating its position. This argument applies only when 
-    # *periodicSymmetries* is greater than one. The default value is an empty sequence. 
+    # A tuple of tuples of Floats specifying the two points of the vector that describes the
+    # periodic distance for the second periodic symmetry. Each point is defined by a tuple of
+    # three coordinates indicating its position. This argument applies only when
+    # *periodicSymmetries* is greater than one. The default value is an empty sequence.
     periodicDistance_2: tuple = ()
 
-    # A tuple of tuples of Floats specifying the two points of the vector that describes the 
-    # periodic distance for the third periodic symmetry. Each point is defined by a tuple of 
-    # three coordinates indicating its position. This argument applies only when 
-    # *periodicSymmetries* = 3. The default value is an empty sequence. 
+    # A tuple of tuples of Floats specifying the two points of the vector that describes the
+    # periodic distance for the third periodic symmetry. Each point is defined by a tuple of
+    # three coordinates indicating its position. This argument applies only when
+    # *periodicSymmetries* = 3. The default value is an empty sequence.
     periodicDistance_3: tuple = ()
 
-    def __init__(self, name: str, createStepName: str, surfaces: RegionArray, surfaceEmissivities: tuple = (),
-                 ambientTemp: float = None, blocking: SymbolicConstant = BLOCKING_ALL,
-                 blockingSurfaces: RegionArray = None, rangeOfView: float = None,
-                 surfaceReflection: Boolean = ON, viewfactorAccurTol: float = 0,
-                 minInfinitesimalRatio: float = 64, numPointsPerEdge: int = 3,
-                 minLumpedAreaDS: float = 5, cyclicSymmetry: Boolean = OFF, cyclicImages: int = 2,
-                 cyclicRotPt: ModelDot = ModelDot(), cyclicRotEndPt: ModelDot = ModelDot(),
-                 cyclicSymPt: ModelDot = ModelDot(), periodicSymmetries: int = 0,
-                 periodicImages_1: int = 2, periodicImages_2: int = 2, periodicImages_3: int = 2,
-                 periodicSymAxis_1: str = '', periodicSymAxis_2: str = '', periodicSymPlane_1: str = '',
-                 periodicSymPlane_2: str = '', periodicSymPlane_3: str = '',
-                 periodicDistance_1: tuple = (), periodicDistance_2: tuple = (),
-                 periodicDistance_3: tuple = (), periodicSymZ: float = None, periodicDistZ: float = None,
-                 reflectionSymmetries: int = 0, reflectionSymAxis_1: str = '',
-                 reflectionSymAxis_2: str = '', reflectionSymPlane_1: str = '',
-                 reflectionSymPlane_2: str = '', reflectionSymPlane_3: str = '',
+    def __init__(self,
+                 name: str,
+                 createStepName: str,
+                 surfaces: RegionArray,
+                 surfaceEmissivities: tuple = (),
+                 ambientTemp: float = None,
+                 blocking: SymbolicConstant = BLOCKING_ALL,
+                 blockingSurfaces: RegionArray = None,
+                 rangeOfView: float = None,
+                 surfaceReflection: Boolean = ON,
+                 viewfactorAccurTol: float = 0,
+                 minInfinitesimalRatio: float = 64,
+                 numPointsPerEdge: int = 3,
+                 minLumpedAreaDS: float = 5,
+                 cyclicSymmetry: Boolean = OFF,
+                 cyclicImages: int = 2,
+                 cyclicRotPt: ModelDot = ModelDot(),
+                 cyclicRotEndPt: ModelDot = ModelDot(),
+                 cyclicSymPt: ModelDot = ModelDot(),
+                 periodicSymmetries: int = 0,
+                 periodicImages_1: int = 2,
+                 periodicImages_2: int = 2,
+                 periodicImages_3: int = 2,
+                 periodicSymAxis_1: str = '',
+                 periodicSymAxis_2: str = '',
+                 periodicSymPlane_1: str = '',
+                 periodicSymPlane_2: str = '',
+                 periodicSymPlane_3: str = '',
+                 periodicDistance_1: tuple = (),
+                 periodicDistance_2: tuple = (),
+                 periodicDistance_3: tuple = (),
+                 periodicSymZ: float = None,
+                 periodicDistZ: float = None,
+                 reflectionSymmetries: int = 0,
+                 reflectionSymAxis_1: str = '',
+                 reflectionSymAxis_2: str = '',
+                 reflectionSymPlane_1: str = '',
+                 reflectionSymPlane_2: str = '',
+                 reflectionSymPlane_3: str = '',
                  reflectionSymZ: float = None):
         """This method creates a CavityRadiation object.
 
@@ -428,22 +453,42 @@ class CavityRadiation(Interaction):
         super().__init__()
         pass
 
-    def setValues(self, surfaceEmissivities: tuple = (), ambientTemp: float = None,
+    def setValues(self,
+                  surfaceEmissivities: tuple = (),
+                  ambientTemp: float = None,
                   blocking: SymbolicConstant = BLOCKING_ALL,
-                  blockingSurfaces: RegionArray = None, rangeOfView: float = None,
-                  surfaceReflection: Boolean = ON, viewfactorAccurTol: float = 0,
-                  minInfinitesimalRatio: float = 64, numPointsPerEdge: int = 3,
-                  minLumpedAreaDS: float = 5, cyclicSymmetry: Boolean = OFF, cyclicImages: int = 2,
-                  cyclicRotPt: ModelDot = ModelDot(), cyclicRotEndPt: ModelDot = ModelDot(),
-                  cyclicSymPt: ModelDot = ModelDot(), periodicSymmetries: int = 0,
-                  periodicImages_1: int = 2, periodicImages_2: int = 2, periodicImages_3: int = 2,
-                  periodicSymAxis_1: str = '', periodicSymAxis_2: str = '', periodicSymPlane_1: str = '',
-                  periodicSymPlane_2: str = '', periodicSymPlane_3: str = '',
-                  periodicDistance_1: tuple = (), periodicDistance_2: tuple = (),
-                  periodicDistance_3: tuple = (), periodicSymZ: float = None, periodicDistZ: float = None,
-                  reflectionSymmetries: int = 0, reflectionSymAxis_1: str = '',
-                  reflectionSymAxis_2: str = '', reflectionSymPlane_1: str = '',
-                  reflectionSymPlane_2: str = '', reflectionSymPlane_3: str = '',
+                  blockingSurfaces: RegionArray = None,
+                  rangeOfView: float = None,
+                  surfaceReflection: Boolean = ON,
+                  viewfactorAccurTol: float = 0,
+                  minInfinitesimalRatio: float = 64,
+                  numPointsPerEdge: int = 3,
+                  minLumpedAreaDS: float = 5,
+                  cyclicSymmetry: Boolean = OFF,
+                  cyclicImages: int = 2,
+                  cyclicRotPt: ModelDot = ModelDot(),
+                  cyclicRotEndPt: ModelDot = ModelDot(),
+                  cyclicSymPt: ModelDot = ModelDot(),
+                  periodicSymmetries: int = 0,
+                  periodicImages_1: int = 2,
+                  periodicImages_2: int = 2,
+                  periodicImages_3: int = 2,
+                  periodicSymAxis_1: str = '',
+                  periodicSymAxis_2: str = '',
+                  periodicSymPlane_1: str = '',
+                  periodicSymPlane_2: str = '',
+                  periodicSymPlane_3: str = '',
+                  periodicDistance_1: tuple = (),
+                  periodicDistance_2: tuple = (),
+                  periodicDistance_3: tuple = (),
+                  periodicSymZ: float = None,
+                  periodicDistZ: float = None,
+                  reflectionSymmetries: int = 0,
+                  reflectionSymAxis_1: str = '',
+                  reflectionSymAxis_2: str = '',
+                  reflectionSymPlane_1: str = '',
+                  reflectionSymPlane_2: str = '',
+                  reflectionSymPlane_3: str = '',
                   reflectionSymZ: float = None):
         """This method modifies the data for an existing CavityRadiation object in the step where
         it is created.
@@ -596,9 +641,13 @@ class CavityRadiation(Interaction):
         """
         pass
 
-    def setValuesInStep(self, stepName: str, blocking: SymbolicConstant = BLOCKING_ALL,
-                        blockingSurfaces: RegionArray = None, rangeOfView: float = None,
-                        surfaceReflection: Boolean = ON, viewfactorAccurTol: float = 0):
+    def setValuesInStep(self,
+                        stepName: str,
+                        blocking: SymbolicConstant = BLOCKING_ALL,
+                        blockingSurfaces: RegionArray = None,
+                        rangeOfView: float = None,
+                        surfaceReflection: Boolean = ON,
+                        viewfactorAccurTol: float = 0):
         """This method modifies the propagating data of an existing CavityRadiation object in the
         specified step.
         

@@ -1,5 +1,7 @@
 from abaqusConstants import *
 
+from __init__ import *
+
 
 class SmoothingAssignment:
     """The SmoothingAssignment object stores the surface smoothing assignment definition for
@@ -19,8 +21,8 @@ class SmoothingAssignment:
         - SURFACE PROPERTY ASSIGNMENT
 
     """
-
-    def changeValuesInStep(self, stepName: str, index: int, value: SymbolicConstant):
+    def changeValuesInStep(self, stepName: str, index: int,
+                           value: SymbolicConstant):
         """This method allows modification of surface smoothing assignments already defined on
         surfaces in a given step.
         

@@ -1,5 +1,7 @@
 from abaqusConstants import *
 
+from __init__ import *
+
 
 class PorousBulkModuli:
     """The PorousBulkModuli object defines bulk moduli for soils and rocks.
@@ -24,7 +26,6 @@ class PorousBulkModuli:
         - POROUS BULK MODULI
 
     """
-
     def __init__(self, table: tuple, temperatureDependency: Boolean = OFF):
         """This method creates a PorousBulkModuli object.
 

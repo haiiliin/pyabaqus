@@ -5,6 +5,8 @@ from ....TestData.SimpleShearTestData import SimpleShearTestData
 from ....TestData.UniaxialTestData import UniaxialTestData
 from ....TestData.VolumetricTestData import VolumetricTestData
 
+from __init__ import *
+
 
 class Hyperfoam:
     """The Hyperfoam object specifies elastic properties for a hyperelastic foam.
@@ -31,23 +33,27 @@ class Hyperfoam:
 
     """
 
-    # A BiaxialTestData object. 
-    biaxialTestData: BiaxialTestData = BiaxialTestData(((),))
+    # A BiaxialTestData object.
+    biaxialTestData: BiaxialTestData = BiaxialTestData(((), ))
 
-    # A VolumetricTestData object. 
-    volumetricTestData: VolumetricTestData = VolumetricTestData(((),))
+    # A VolumetricTestData object.
+    volumetricTestData: VolumetricTestData = VolumetricTestData(((), ))
 
-    # A PlanarTestData object. 
-    planarTestData: PlanarTestData = PlanarTestData(((),))
+    # A PlanarTestData object.
+    planarTestData: PlanarTestData = PlanarTestData(((), ))
 
-    # A SimpleShearTestData object. 
-    simpleShearTestData: SimpleShearTestData = SimpleShearTestData(((),))
+    # A SimpleShearTestData object.
+    simpleShearTestData: SimpleShearTestData = SimpleShearTestData(((), ))
 
-    # A UniaxialTestData object. 
-    uniaxialTestData: UniaxialTestData = UniaxialTestData(((),))
+    # A UniaxialTestData object.
+    uniaxialTestData: UniaxialTestData = UniaxialTestData(((), ))
 
-    def __init__(self, testData: Boolean = OFF, poisson: float = None, n: int = 1,
-                 temperatureDependency: Boolean = OFF, moduli: SymbolicConstant = LONG_TERM,
+    def __init__(self,
+                 testData: Boolean = OFF,
+                 poisson: float = None,
+                 n: int = 1,
+                 temperatureDependency: Boolean = OFF,
+                 moduli: SymbolicConstant = LONG_TERM,
                  table: tuple = ()):
         """This method creates a Hyperfoam object.
 

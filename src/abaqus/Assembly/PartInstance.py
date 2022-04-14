@@ -19,6 +19,8 @@ from ..Region.Skin import Skin
 from ..Region.Stringer import Stringer
 from ..Region.Surface import Surface
 
+from __init__ import *
+
 
 class PartInstance:
     """A PartInstance object is an instance of a Part object.
@@ -113,108 +115,112 @@ class PartInstance:
 
     """
 
-    # A String specifying the repository key. The name must be a valid Abaqus object name. 
+    # A String specifying the repository key. The name must be a valid Abaqus object name.
     name: str = ''
 
-    # A Boolean specifying whether the part instance is dependent or independent. If 
-    # *dependent*=OFF, the part instance is independent. The default value is OFF. 
+    # A Boolean specifying whether the part instance is dependent or independent. If
+    # *dependent*=OFF, the part instance is independent. The default value is OFF.
     dependent: Boolean = OFF
 
-    # A Boolean specifying whether the part instance is excluded from the simulation. If 
-    # *excludedFromSimulation*=ON, the part instance is excluded from the simulation. The 
-    # default value is OFF. 
+    # A Boolean specifying whether the part instance is excluded from the simulation. If
+    # *excludedFromSimulation*=ON, the part instance is excluded from the simulation. The
+    # default value is OFF.
     excludedFromSimulation: Boolean = OFF
 
-    # A Boolean specifying the validity of the geometry of the instance. The value is 
-    # computed, but it can be set to ON to perform feature and mesh operations on an invalid 
-    # instance. There is no guarantee that such operations will work if the instance was 
-    # originally invalid. 
+    # A Boolean specifying the validity of the geometry of the instance. The value is
+    # computed, but it can be set to ON to perform feature and mesh operations on an invalid
+    # instance. There is no guarantee that such operations will work if the instance was
+    # originally invalid.
     geometryValidity: Boolean = OFF
 
-    # A SymbolicConstant specifying the part type. Possible values are DEFORMABLE_BODY, 
-    # EULERIAN, DISCRETE_RIGID_SURFACE, and ANALYTIC_RIGID_SURFACE. 
+    # A SymbolicConstant specifying the part type. Possible values are DEFORMABLE_BODY,
+    # EULERIAN, DISCRETE_RIGID_SURFACE, and ANALYTIC_RIGID_SURFACE.
     analysisType: SymbolicConstant = None
 
-    # An Int specifying the reference node number. This member is valid only if 
-    # *analysisType*=DISCRETE_RIGID_SURFACE or ANALYTIC_RIGID_SURFACE. 
+    # An Int specifying the reference node number. This member is valid only if
+    # *analysisType*=DISCRETE_RIGID_SURFACE or ANALYTIC_RIGID_SURFACE.
     referenceNode: int = None
 
-    # A Part object specifying the instanced part. 
+    # A Part object specifying the instanced part.
     part: Part = None
 
-    # A repository of Set objects specifying the sets created on the part. For more 
-    # information, see [Region 
-    # commands](https://help.3ds.com/2022/english/DSSIMULIA_Established/SIMACAEKERRefMap/simaker-m-RegPyc-sb.htm?ContextScope=all). 
+    # A repository of Set objects specifying the sets created on the part. For more
+    # information, see [Region
+    # commands](https://help.3ds.com/2022/english/DSSIMULIA_Established/SIMACAEKERRefMap/simaker-m-RegPyc-sb.htm?ContextScope=all).
     sets: dict[str, Set] = dict[str, Set]()
 
-    # A repository of Surface objects specifying the surfaces created on the part. For more 
-    # information, see [Region 
-    # commands](https://help.3ds.com/2022/english/DSSIMULIA_Established/SIMACAEKERRefMap/simaker-m-RegPyc-sb.htm?ContextScope=all). 
+    # A repository of Surface objects specifying the surfaces created on the part. For more
+    # information, see [Region
+    # commands](https://help.3ds.com/2022/english/DSSIMULIA_Established/SIMACAEKERRefMap/simaker-m-RegPyc-sb.htm?ContextScope=all).
     surfaces: dict[str, Surface] = dict[str, Surface]()
 
-    # A repository of Skin objects specifying the skins created on the part. For more 
-    # information, see [Region 
-    # commands](https://help.3ds.com/2022/english/DSSIMULIA_Established/SIMACAEKERRefMap/simaker-m-RegPyc-sb.htm?ContextScope=all). 
+    # A repository of Skin objects specifying the skins created on the part. For more
+    # information, see [Region
+    # commands](https://help.3ds.com/2022/english/DSSIMULIA_Established/SIMACAEKERRefMap/simaker-m-RegPyc-sb.htm?ContextScope=all).
     skins: dict[str, Skin] = dict[str, Skin]()
 
-    # A repository of Stringer objects specifying the stringers created on the part. For more 
-    # information, see [Region 
-    # commands](https://help.3ds.com/2022/english/DSSIMULIA_Established/SIMACAEKERRefMap/simaker-m-RegPyc-sb.htm?ContextScope=all). 
+    # A repository of Stringer objects specifying the stringers created on the part. For more
+    # information, see [Region
+    # commands](https://help.3ds.com/2022/english/DSSIMULIA_Established/SIMACAEKERRefMap/simaker-m-RegPyc-sb.htm?ContextScope=all).
     stringers: dict[str, Stringer] = dict[str, Stringer]()
 
-    # A VertexArray object. 
+    # A VertexArray object.
     vertices: VertexArray = VertexArray([])
 
-    # An IgnoredVertexArray object. 
+    # An IgnoredVertexArray object.
     ignoredVertices: IgnoredVertexArray = IgnoredVertexArray()
 
-    # An EdgeArray object. 
+    # An EdgeArray object.
     edges: EdgeArray = EdgeArray([])
 
-    # An IgnoredEdgeArray object. 
+    # An IgnoredEdgeArray object.
     ignoredEdges: IgnoredEdgeArray = IgnoredEdgeArray()
 
-    # A FaceArray object. 
+    # A FaceArray object.
     faces: FaceArray = FaceArray([])
 
-    # A CellArray object. 
+    # A CellArray object.
     cells: CellArray = CellArray([])
 
-    # A repository of Datum objects. 
+    # A repository of Datum objects.
     datums: list[Datum] = list[Datum]()
 
-    # A MeshElementArray object. 
+    # A MeshElementArray object.
     elements: MeshElementArray = MeshElementArray([])
 
-    # A MeshNodeArray object. 
+    # A MeshNodeArray object.
     nodes: MeshNodeArray = MeshNodeArray([])
 
-    # A repository of MeshFace objects specifying all the element faces in the part instance. 
-    # For a given element and a given face index within that element, the corresponding 
-    # MeshFace object can be retrieved from the repository by using the key calculated as (i*8 
-    # + j), where i and j are zero-based element and face indices, respectively. 
+    # A repository of MeshFace objects specifying all the element faces in the part instance.
+    # For a given element and a given face index within that element, the corresponding
+    # MeshFace object can be retrieved from the repository by using the key calculated as (i*8
+    # + j), where i and j are zero-based element and face indices, respectively.
     elemFaces: dict[str, MeshFace] = dict[str, MeshFace]()
 
-    # A MeshFaceArray object. 
+    # A MeshFaceArray object.
     elementFaces: MeshFaceArray = MeshFaceArray([])
 
-    # A repository of MeshEdge objects specifying all the element edges in the part instance. 
-    # For a given element and a given edge index on a given face within that element, the 
-    # corresponding MeshEdge object can be retrieved from the repository by using the key 
-    # calculated as (i*32 + j*4 + k), where i, j, and k are zero-based element, face, and edge 
-    # indices, respectively. 
+    # A repository of MeshEdge objects specifying all the element edges in the part instance.
+    # For a given element and a given edge index on a given face within that element, the
+    # corresponding MeshEdge object can be retrieved from the repository by using the key
+    # calculated as (i*32 + j*4 + k), where i, j, and k are zero-based element, face, and edge
+    # indices, respectively.
     elemEdges: dict[str, MeshEdge] = dict[str, MeshEdge]()
 
-    # A MeshEdgeArray object. 
+    # A MeshEdgeArray object.
     elementEdges: MeshEdgeArray = MeshEdgeArray([])
 
-    # A repository of ReferencePoint objects. 
+    # A repository of ReferencePoint objects.
     referencePoints: dict[str, ReferencePoint] = dict[str, ReferencePoint]()
 
-    # A String specifying the name of the part from which the instance was created. 
+    # A String specifying the name of the part from which the instance was created.
     partName: str = ''
 
-    def __init__(self, name: str, part: Part, autoOffset: Boolean = OFF, dependent: Boolean = OFF):
+    def __init__(self,
+                 name: str,
+                 part: Part,
+                 autoOffset: Boolean = OFF,
+                 dependent: Boolean = OFF):
         """This method creates a PartInstance object and puts it into the instances repository.
 
         Notes
@@ -260,7 +266,10 @@ class PartInstance:
         self.elemEdges = part.elemEdges
         self.elementEdges = part.elementEdges
 
-    def InstanceFromBooleanCut(self, name: str, instanceToBeCut: str, cuttingInstances: tuple['PartInstance'],
+    def InstanceFromBooleanCut(self,
+                               name: str,
+                               instanceToBeCut: str,
+                               cuttingInstances: tuple['PartInstance'],
                                originalInstances: SymbolicConstant = SUPPRESS):
         """This method creates a PartInstance in the instances repository after subtracting or
         cutting the geometries of a group of part instances from that of a base part instance.
@@ -293,10 +302,16 @@ class PartInstance:
         """
         pass
 
-    def InstanceFromBooleanMerge(self, name: str, instances: tuple['PartInstance'], keepIntersections: Boolean = False,
-                                 originalInstances: SymbolicConstant = SUPPRESS, domain: SymbolicConstant = GEOMETRY,
-                                 mergeNodes: SymbolicConstant = BOUNDARY_ONLY, nodeMergingTolerance: float = None,
-                                 removeDuplicateElements: Boolean = True):
+    def InstanceFromBooleanMerge(
+            self,
+            name: str,
+            instances: tuple['PartInstance'],
+            keepIntersections: Boolean = False,
+            originalInstances: SymbolicConstant = SUPPRESS,
+            domain: SymbolicConstant = GEOMETRY,
+            mergeNodes: SymbolicConstant = BOUNDARY_ONLY,
+            nodeMergingTolerance: float = None,
+            removeDuplicateElements: Boolean = True):
         """This method creates a PartInstance in the instances repository after merging two or more
         part instances.
 
@@ -345,8 +360,14 @@ class PartInstance:
         """
         pass
 
-    def LinearInstancePattern(self, instanceList: tuple, number1: int, spacing1: float, number2: int, spacing2: float,
-                              direction1: tuple = (), direction2: tuple = ()):
+    def LinearInstancePattern(self,
+                              instanceList: tuple,
+                              number1: int,
+                              spacing1: float,
+                              number2: int,
+                              spacing2: float,
+                              direction1: tuple = (),
+                              direction2: tuple = ()):
         """This method creates multiple PartInstance objects in a linear pattern and puts them into
         the instances repository.
 
@@ -387,7 +408,11 @@ class PartInstance:
         """
         pass
 
-    def RadialInstancePattern(self, instanceList: tuple, number: int, totalAngle: float, point: tuple = (),
+    def RadialInstancePattern(self,
+                              instanceList: tuple,
+                              number: int,
+                              totalAngle: float,
+                              point: tuple = (),
                               axis: tuple = ()):
         """This method creates multiple PartInstance objects in a radial pattern and puts them into
         the instances repository.
@@ -451,7 +476,11 @@ class PartInstance:
         """
         pass
 
-    def Contact(self, movableList: tuple, fixedList: tuple, direction: tuple, clearance: float,
+    def Contact(self,
+                movableList: tuple,
+                fixedList: tuple,
+                direction: tuple,
+                clearance: float,
                 isFaceEdges: Boolean = OFF):
         """This method translates an instance along the specified direction until it is in contact
         with a fixed instance.
@@ -528,7 +557,8 @@ class PartInstance:
         """
         pass
 
-    def rotateAboutAxis(self, axisPoint: tuple, axisDirection: tuple, angle: float):
+    def rotateAboutAxis(self, axisPoint: tuple, axisDirection: tuple,
+                        angle: float):
         """This method translates an instance by the specified amount.
         
         Parameters
@@ -554,7 +584,11 @@ class PartInstance:
         """
         pass
 
-    def translateTo(self, movableList: tuple, fixedList: tuple, direction: tuple, clearance: float,
+    def translateTo(self,
+                    movableList: tuple,
+                    fixedList: tuple,
+                    direction: tuple,
+                    clearance: float,
                     vector: tuple = ()):
         """This method translates an instance along the specified direction until it is in contact
         with a fixed instance.

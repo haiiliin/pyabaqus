@@ -1,3 +1,6 @@
+from __init__ import *
+
+
 class DetonationPoint:
     """A DetonationPoint object specifies a suboption of the Eos object. The DetonationPoint
     object defines either isotropic linear elastic shear or linear viscous shear behavior 
@@ -24,7 +27,6 @@ class DetonationPoint:
         - DETONATION POINT
 
     """
-
     def __init__(self, table: tuple):
         """This method creates a DetonationPoint object.
 

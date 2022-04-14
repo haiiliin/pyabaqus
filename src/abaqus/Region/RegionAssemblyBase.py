@@ -1,6 +1,8 @@
 from abaqusConstants import *
 from ..Assembly.AssemblyBase import AssemblyBase
 
+from __init__ import *
+
 
 class RegionAssemblyBase(AssemblyBase):
     """The following commands operate on Assembly objects. For more information about the 
@@ -15,7 +17,6 @@ class RegionAssemblyBase(AssemblyBase):
             import regionToolset
 
     """
-
     def clashSets(self, arg1: str, arg2: str):
         """This command prints a message describing the relationship between the contents of two
         sets. Possible outcomes are:

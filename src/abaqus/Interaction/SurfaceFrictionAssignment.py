@@ -2,6 +2,8 @@ import typing
 
 from abaqusConstants import *
 
+from __init__ import *
+
 
 class SurfaceFrictionAssignment:
     """The SurfaceFrictionAssignment object stores the surface friction assignment definition
@@ -21,7 +23,6 @@ class SurfaceFrictionAssignment:
         - SURFACE PROPERTY ASSIGNMENT
 
     """
-
     def changeValuesInStep(self, stepName: str, index: int, value: float):
         """This method allows modification of surface friction assignments already defined on
         surfaces in a given step.
@@ -42,7 +43,8 @@ class SurfaceFrictionAssignment:
         """
         pass
 
-    def appendInStep(self, stepName: str, assignments: typing.Union[SymbolicConstant, float]):
+    def appendInStep(self, stepName: str,
+                     assignments: typing.Union[SymbolicConstant, float]):
         """This method allows addition of surface friction assignments to new surfaces in a given
         step.
         

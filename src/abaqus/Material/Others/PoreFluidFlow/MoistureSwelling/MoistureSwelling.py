@@ -1,5 +1,7 @@
 from ....Ratios import Ratios
 
+from __init__ import *
+
 
 class MoistureSwelling:
     """The MoistureSwelling object defines moisture-driven swelling.
@@ -24,8 +26,8 @@ class MoistureSwelling:
 
     """
 
-    # A Ratios object. 
-    ratios: Ratios = Ratios(((),))
+    # A Ratios object.
+    ratios: Ratios = Ratios(((), ))
 
     def __init__(self, table: tuple):
         """This method creates a MoistureSwelling object.

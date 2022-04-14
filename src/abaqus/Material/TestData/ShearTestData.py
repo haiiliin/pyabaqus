@@ -1,3 +1,6 @@
+from __init__ import *
+
+
 class ShearTestData:
     """The ShearTestData object specifies the normalized shear creep compliance or relaxation
     modulus as a function of time. 
@@ -17,7 +20,6 @@ class ShearTestData:
         - SHEAR TEST DATA
 
     """
-
     def __init__(self, table: tuple, shrinf: float = None):
         """This method creates a ShearTestData object.
 

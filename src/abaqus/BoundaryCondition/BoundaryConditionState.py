@@ -1,5 +1,7 @@
 from abaqusConstants import *
 
+from __init__ import *
+
 
 class BoundaryConditionState:
     """The BoundaryConditionState object is the abstract base type for other
@@ -41,8 +43,8 @@ class BoundaryConditionState:
 
     """
 
-    # A SymbolicConstant specifying the propagation state of the amplitude reference. Possible 
-    # values are UNSET, SET, UNCHANGED, FREED, and MODIFIED. 
+    # A SymbolicConstant specifying the propagation state of the amplitude reference. Possible
+    # values are UNSET, SET, UNCHANGED, FREED, and MODIFIED.
     amplitudeState: SymbolicConstant = None
 
     # A SymbolicConstant specifying the propagation state of the BoundaryConditionState object. Possible values are:
@@ -60,6 +62,6 @@ class BoundaryConditionState:
     # BUILT_INTO_MODES
     status: SymbolicConstant = None
 
-    # A String specifying the name of the amplitude reference. The String is empty if the 
-    # boundary condition has no amplitude reference. 
+    # A String specifying the name of the amplitude reference. The String is empty if the
+    # boundary condition has no amplitude reference.
     amplitude: str = ''

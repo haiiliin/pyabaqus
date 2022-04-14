@@ -1,5 +1,7 @@
 from abaqusConstants import *
 
+from __init__ import *
+
 
 class EventSeries:
     """The EventSeries object is used to define an event based on an already defined
@@ -20,9 +22,14 @@ class EventSeries:
             - EVENT SERIES
 
     """
-
-    def __init__(self, name: str, createStepName: str, eventSeriesType: str, transformType: str = NONE,
-                 timeSpan: str = STEP_TIME, transformations: str = '', fileName: str = '',
+    def __init__(self,
+                 name: str,
+                 createStepName: str,
+                 eventSeriesType: str,
+                 transformType: str = NONE,
+                 timeSpan: str = STEP_TIME,
+                 transformations: str = '',
+                 fileName: str = '',
                  data: str = ''):
         """This method creates an EventSeries object.
 
@@ -65,8 +72,12 @@ class EventSeries:
         """
         pass
 
-    def setValues(self, transformType: str = NONE, timeSpan: str = STEP_TIME, transformations: str = '',
-                  fileName: str = '', data: str = ''):
+    def setValues(self,
+                  transformType: str = NONE,
+                  timeSpan: str = STEP_TIME,
+                  transformations: str = '',
+                  fileName: str = '',
+                  data: str = ''):
         """This method modifies the EventSeries object.
         
         Parameters

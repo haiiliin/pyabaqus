@@ -1,3 +1,6 @@
+from __init__ import *
+
+
 class MpcConstraint:
     """The MpcConstraint object.
 
@@ -17,7 +20,7 @@ class MpcConstraint:
 
     """
 
-    # A String specifying the multipoint constraint name. This attribute is read-only. 
+    # A String specifying the multipoint constraint name. This attribute is read-only.
     name: str = ''
 
     def constraintData(self):

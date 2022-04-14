@@ -1,3 +1,6 @@
+from __init__ import *
+
+
 class SuperElasticHardening:
     """The SuperElasticHardening object specifies the dependence of the yield stress on the
     total strain to define the piecewise linear hardening of a martensite material model. 
@@ -21,7 +24,6 @@ class SuperElasticHardening:
         - SUPERELASTIC HARDENING
 
     """
-
     def __init__(self, table: tuple):
         """This method creates a SuperElasticHardening object.
 

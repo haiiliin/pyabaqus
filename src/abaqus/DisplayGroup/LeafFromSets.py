@@ -2,6 +2,8 @@ from abaqusConstants import *
 from .Leaf import Leaf
 from ..Region.Set import Set
 
+from __init__ import *
+
 
 class LeafFromSets(Leaf):
     """The LeafFromSets object can be used whenever a Leaf object is expected as an argument.
@@ -26,8 +28,8 @@ class LeafFromSets(Leaf):
 
     """
 
-    # A SymbolicConstant specifying the leaf type. Possible values are EMPTY_LEAF, 
-    # DEFAULT_MODEL, ALL_ELEMENTS, ALL_NODES, and ALL_SURFACES. 
+    # A SymbolicConstant specifying the leaf type. Possible values are EMPTY_LEAF,
+    # DEFAULT_MODEL, ALL_ELEMENTS, ALL_NODES, and ALL_SURFACES.
     leafType: SymbolicConstant = None
 
     def __init__(self, sets: tuple[Set]):

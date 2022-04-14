@@ -4,6 +4,8 @@ from abaqusConstants import *
 from .FieldOutput import FieldOutput
 from .OdbLoadCase import OdbLoadCase
 
+from __init__ import *
+
 
 class OdbFrame:
     """The domain of the OdbFrame object is taken from the parent step.
@@ -41,34 +43,37 @@ class OdbFrame:
 
     """
 
-    # An Int specifying the cyclic mode number associated with the data stored on this frame. 
-    # Only frequency analyses of cyclic symmetry models possess cyclic mode numbers. 
+    # An Int specifying the cyclic mode number associated with the data stored on this frame.
+    # Only frequency analyses of cyclic symmetry models possess cyclic mode numbers.
     cyclicModeNumber: int = None
 
-    # A SymbolicConstant specifying the domain of the step of which the frame is a member. 
-    # Possible values are TIME, FREQUENCY, and MODAL. 
+    # A SymbolicConstant specifying the domain of the step of which the frame is a member.
+    # Possible values are TIME, FREQUENCY, and MODAL.
     domain: SymbolicConstant = None
 
-    # A Float specifying the frequency. This member is valid only if *domain*=FREQUENCY or if 
-    # the *procedureType* member of the Step object=FREQUENCY. The default value is 0.0. 
+    # A Float specifying the frequency. This member is valid only if *domain*=FREQUENCY or if
+    # the *procedureType* member of the Step object=FREQUENCY. The default value is 0.0.
     frequency: float = 0
 
-    # An Int specifying the eigenmode. This member is valid only if *domain*=MODAL. 
+    # An Int specifying the eigenmode. This member is valid only if *domain*=MODAL.
     mode: int = None
 
-    # An OdbFrame object specifying the real or imaginary portion of the data corresponding to 
-    # this cyclic symmetry mode. 
+    # An OdbFrame object specifying the real or imaginary portion of the data corresponding to
+    # this cyclic symmetry mode.
     associatedFrame: 'OdbFrame' = None
 
-    # A repository of FieldOutput objects specifying the key to the *fieldOutputs*repository 
-    # is a String representing an output variable. 
+    # A repository of FieldOutput objects specifying the key to the *fieldOutputs*repository
+    # is a String representing an output variable.
     fieldOutputs: dict[str, FieldOutput] = dict[str, FieldOutput]()
 
-    # An OdbLoadCase object specifying the load case for the frame. 
+    # An OdbLoadCase object specifying the load case for the frame.
     loadCase: OdbLoadCase = OdbLoadCase('loadCase')
 
     @typing.overload
-    def __init__(self, incrementNumber: int, frameValue: float, description: str = ''):
+    def __init__(self,
+                 incrementNumber: int,
+                 frameValue: float,
+                 description: str = ''):
         """This method creates an OdbFrame object and appends it to the frame sequence.
 
         Notes
@@ -129,7 +134,10 @@ class OdbFrame:
         pass
 
     @typing.overload
-    def __init__(self, loadCase: OdbLoadCase, description: str = '', frequency: float = 0):
+    def __init__(self,
+                 loadCase: OdbLoadCase,
+                 description: str = '',
+                 frequency: float = 0):
         """This constructor creates an OdbFrame object for a specific load case and appends it to
         the frame sequence.
 
@@ -161,8 +169,13 @@ class OdbFrame:
         pass
 
     @typing.overload
-    def FieldOutput(self, name: str, description: str, type: SymbolicConstant, componentLabels: tuple = (),
-                    validInvariants: SymbolicConstant = None, isEngineeringTensor: Boolean = OFF):
+    def FieldOutput(self,
+                    name: str,
+                    description: str,
+                    type: SymbolicConstant,
+                    componentLabels: tuple = (),
+                    validInvariants: SymbolicConstant = None,
+                    isEngineeringTensor: Boolean = OFF):
         """This method creates a FieldOutput object.
 
         Notes
@@ -209,7 +222,10 @@ class OdbFrame:
         pass
 
     @typing.overload
-    def FieldOutput(self, field: 'FieldOutput', name: str = '', description: str = ''):
+    def FieldOutput(self,
+                    field: 'FieldOutput',
+                    name: str = '',
+                    description: str = ''):
         """This method creates a FieldOutput object from an existing FieldOutput object of the same
         output database.
 

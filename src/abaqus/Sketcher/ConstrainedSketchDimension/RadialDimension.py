@@ -2,11 +2,17 @@ from abaqusConstants import *
 from .ConstrainedSketchDimension import ConstrainedSketchDimension
 from ..ConstrainedSketchGeometry.ConstrainedSketchGeometry import ConstrainedSketchGeometry
 
+from __init__ import *
+
 
 class RadialDimension(ConstrainedSketchDimension):
-
-    def __init__(self, curve: ConstrainedSketchGeometry, textPoint: tuple[float], value: float = None,
-                 reference: Boolean = OFF, majorRadius: float = None, minorRadius: float = None):
+    def __init__(self,
+                 curve: ConstrainedSketchGeometry,
+                 textPoint: tuple[float],
+                 value: float = None,
+                 reference: Boolean = OFF,
+                 majorRadius: float = None,
+                 minorRadius: float = None):
         """This method constructs a ConstrainedSketchDimension object on a circular or elliptical
         arc. A radial dimension indicates the radius of an arc or circle or the major or minor
         radius of an ellipse.

@@ -2,9 +2,10 @@ from .Odb import Odb
 from .ScratchOdb import ScratchOdb
 from ..Session.SessionBase import SessionBase
 
+from __init__ import *
+
 
 class OdbSession(SessionBase):
-
     def ScratchOdb(self, odb: Odb) -> ScratchOdb:
         """This method creates a new ScratchOdb object.
 

@@ -1,5 +1,7 @@
 from ..Region.Region import Region
 
+from __init__ import *
+
 
 class IMAField:
     """A IMAField is an object used to define material instance name volume fractions for the
@@ -26,11 +28,11 @@ class IMAField:
 
     """
 
-    # A Region object specifying the sub-region of the selected part instance to which the 
-    # volume fractions will be applied. 
+    # A Region object specifying the sub-region of the selected part instance to which the
+    # volume fractions will be applied.
     region: Region = Region()
 
-    # A tuple of Strings specifying the name of the discrete fields that contain the volume 
-    # fraction data. The length of the tuple corresponds to the number of material instance 
-    # names, as established by the assigned Eulerian section. 
+    # A tuple of Strings specifying the name of the discrete fields that contain the volume
+    # fraction data. The length of the tuple corresponds to the number of material instance
+    # names, as established by the assigned Eulerian section.
     discFieldList: tuple = ()

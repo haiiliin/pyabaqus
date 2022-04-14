@@ -1,9 +1,10 @@
 from .ConstrainedSketchConstraint import ConstrainedSketchConstraint
 from ..ConstrainedSketchGeometry.ConstrainedSketchGeometry import ConstrainedSketchGeometry
 
+from __init__ import *
+
 
 class VerticalConstraint(ConstrainedSketchConstraint):
-
     def __init__(self, entity: ConstrainedSketchGeometry):
         """This method creates a vertical constraint. This constraint applies to a line and
         constrains it to be vertical.

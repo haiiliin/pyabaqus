@@ -1,3 +1,6 @@
+from __init__ import *
+
+
 class EosCompaction:
     """The EosCompaction object specifies material eos compaction.
 
@@ -16,8 +19,8 @@ class EosCompaction:
         - EOS COMPACTION
 
     """
-
-    def __init__(self, soundSpeed: float, porosity: float, pressure: float, compactionPressure: float):
+    def __init__(self, soundSpeed: float, porosity: float, pressure: float,
+                 compactionPressure: float):
         """This method creates an EosCompaction object.
 
         Notes

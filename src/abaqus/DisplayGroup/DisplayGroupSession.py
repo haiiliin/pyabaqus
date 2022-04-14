@@ -2,9 +2,10 @@ from .DisplayGroup import DisplayGroup
 from .Leaf import Leaf
 from ..Session.SessionBase import SessionBase
 
+from __init__ import *
+
 
 class DisplayGroupSession(SessionBase):
-
     def DisplayGroup(self, name: str, leaf: Leaf) -> DisplayGroup:
         """This method creates a DisplayGroup object.
 

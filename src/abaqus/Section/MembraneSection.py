@@ -2,6 +2,8 @@ from abaqusConstants import *
 from .RebarLayers import RebarLayers
 from .Section import Section
 
+from __init__ import *
+
 
 class MembraneSection(Section):
     """The MembraneSection object defines the properties of a membrane section.
@@ -28,12 +30,16 @@ class MembraneSection(Section):
 
     """
 
-    # A RebarLayers object specifying reinforcement properties. 
+    # A RebarLayers object specifying reinforcement properties.
     rebarLayers: RebarLayers = None
 
-    def __init__(self, name: str, material: str, thickness: float = 1,
+    def __init__(self,
+                 name: str,
+                 material: str,
+                 thickness: float = 1,
                  thicknessType: SymbolicConstant = UNIFORM,
-                 poissonDefinition: SymbolicConstant = DEFAULT, poisson: float = 0,
+                 poissonDefinition: SymbolicConstant = DEFAULT,
+                 poisson: float = 0,
                  thicknessField: str = ''):
         """This method creates a MembraneSection object.
 
@@ -86,8 +92,11 @@ class MembraneSection(Section):
         super().__init__()
         pass
 
-    def setValues(self, thickness: float = 1, thicknessType: SymbolicConstant = UNIFORM,
-                  poissonDefinition: SymbolicConstant = DEFAULT, poisson: float = 0,
+    def setValues(self,
+                  thickness: float = 1,
+                  thicknessType: SymbolicConstant = UNIFORM,
+                  poissonDefinition: SymbolicConstant = DEFAULT,
+                  poisson: float = 0,
                   thicknessField: str = ''):
         """This method modifies the MembraneSection object.
         

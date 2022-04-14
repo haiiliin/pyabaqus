@@ -1,5 +1,7 @@
 from abaqusConstants import *
 
+from __init__ import *
+
 
 class SpecificHeat:
     """The SpecificHeat object specifies a material's specific heat.
@@ -26,9 +28,11 @@ class SpecificHeat:
         - SPECIFIC HEAT
 
     """
-
-    def __init__(self, table: tuple, law: SymbolicConstant = CONSTANTVOLUME,
-                 temperatureDependency: Boolean = OFF, dependencies: int = 0):
+    def __init__(self,
+                 table: tuple,
+                 law: SymbolicConstant = CONSTANTVOLUME,
+                 temperatureDependency: Boolean = OFF,
+                 dependencies: int = 0):
         """This method creates a SpecificHeat object.
 
         Notes

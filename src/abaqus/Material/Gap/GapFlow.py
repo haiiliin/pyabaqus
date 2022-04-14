@@ -1,5 +1,7 @@
 from abaqusConstants import *
 
+from __init__ import *
+
 
 class GapFlow:
     """The GapFlow object specifies tangential flow constitutive parameters for pore pressure
@@ -50,9 +52,12 @@ class GapFlow:
         - GAP FLOW
 
     """
-
-    def __init__(self, table: tuple, kmax: float = None, temperatureDependency: Boolean = OFF,
-                 dependencies: int = 0, type: SymbolicConstant = NEWTONIAN):
+    def __init__(self,
+                 table: tuple,
+                 kmax: float = None,
+                 temperatureDependency: Boolean = OFF,
+                 dependencies: int = 0,
+                 type: SymbolicConstant = NEWTONIAN):
         """This method creates a GapFlow object.
 
         Notes

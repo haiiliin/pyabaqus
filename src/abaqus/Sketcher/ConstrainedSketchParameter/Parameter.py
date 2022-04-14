@@ -1,9 +1,14 @@
 from .ConstrainedSketchParameter import ConstrainedSketchParameter
 
+from __init__ import *
+
 
 class Parameter(ConstrainedSketchParameter):
-
-    def __init__(self, name: str, path: str = '', expression: str = '', previous: str = ''):
+    def __init__(self,
+                 name: str,
+                 path: str = '',
+                 expression: str = '',
+                 previous: str = ''):
         """This method creates a parameter and optionally associates a dimension with this
         parameter.
 

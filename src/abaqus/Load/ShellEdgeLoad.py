@@ -4,6 +4,8 @@ from abaqusConstants import *
 from .Load import Load
 from ..Region.Region import Region
 
+from __init__ import *
+
 
 class ShellEdgeLoad(Load):
     """The ShellEdgeLoad object defines shell edge loads on a region.
@@ -34,26 +36,37 @@ class ShellEdgeLoad(Load):
 
     """
 
-    # A String specifying the load repository key. 
+    # A String specifying the load repository key.
     name: str = ''
 
-    # A SymbolicConstant specifying how the shell edge load is distributed spatially. Possible 
-    # values are UNIFORM, USER_DEFINED, and FIELD. The default value is UNIFORM. 
+    # A SymbolicConstant specifying how the shell edge load is distributed spatially. Possible
+    # values are UNIFORM, USER_DEFINED, and FIELD. The default value is UNIFORM.
     distributionType: SymbolicConstant = UNIFORM
 
-    # A String specifying the name of the AnalyticalField object associated with this load. 
-    # The *field* argument applies only when *distributionType*=FIELD. The default value is an 
-    # empty string. 
+    # A String specifying the name of the AnalyticalField object associated with this load.
+    # The *field* argument applies only when *distributionType*=FIELD. The default value is an
+    # empty string.
     field: str = ''
 
-    # A Region object specifying the region to which the load is applied. 
+    # A Region object specifying the region to which the load is applied.
     region: Region = Region()
 
-    def __init__(self, name: str, createStepName: str, region: Region, magnitude: float,
-                 distributionType: SymbolicConstant = UNIFORM, field: str = '', amplitude: str = UNSET,
-                 angle: float = 0, axis: SymbolicConstant = AXIS_1, localCsys: int = GENERAL,
-                 userCsys: str = GENERAL, directionVector: tuple = (), follower: Boolean = ON,
-                 resultant: Boolean = OFF, traction: SymbolicConstant = NORMAL):
+    def __init__(self,
+                 name: str,
+                 createStepName: str,
+                 region: Region,
+                 magnitude: float,
+                 distributionType: SymbolicConstant = UNIFORM,
+                 field: str = '',
+                 amplitude: str = UNSET,
+                 angle: float = 0,
+                 axis: SymbolicConstant = AXIS_1,
+                 localCsys: int = GENERAL,
+                 userCsys: str = GENERAL,
+                 directionVector: tuple = (),
+                 follower: Boolean = ON,
+                 resultant: Boolean = OFF,
+                 traction: SymbolicConstant = NORMAL):
         """This method creates a ShellEdgeLoad object.
 
         Notes
@@ -129,10 +142,18 @@ class ShellEdgeLoad(Load):
         super().__init__()
         pass
 
-    def setValues(self, distributionType: SymbolicConstant = UNIFORM, field: str = '', amplitude: str = UNSET,
-                  angle: float = 0, axis: SymbolicConstant = AXIS_1, localCsys: int = GENERAL,
-                  userCsys: str = GENERAL, directionVector: tuple = (), follower: Boolean = ON,
-                  resultant: Boolean = OFF, traction: SymbolicConstant = NORMAL):
+    def setValues(self,
+                  distributionType: SymbolicConstant = UNIFORM,
+                  field: str = '',
+                  amplitude: str = UNSET,
+                  angle: float = 0,
+                  axis: SymbolicConstant = AXIS_1,
+                  localCsys: int = GENERAL,
+                  userCsys: str = GENERAL,
+                  directionVector: tuple = (),
+                  follower: Boolean = ON,
+                  resultant: Boolean = OFF,
+                  traction: SymbolicConstant = NORMAL):
         """This method modifies the data for an existing ShellEdgeLoad object in the step where it
         is created.
         
@@ -187,8 +208,10 @@ class ShellEdgeLoad(Load):
         """
         pass
 
-    def setValuesInStep(self, stepName: str,
-                        magnitude: typing.Union[SymbolicConstant, float] = None,
+    def setValuesInStep(self,
+                        stepName: str,
+                        magnitude: typing.Union[SymbolicConstant,
+                                                float] = None,
                         amplitude: str = ''):
         """This method modifies the propagating data for an existing ShellEdgeLoad object in the
         specified step.

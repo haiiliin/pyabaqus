@@ -12,6 +12,8 @@ from ..BasicGeometry.Vertex import Vertex
 from ..Mesh.MeshElement import MeshElement
 from ..Mesh.MeshNode import MeshNode
 
+from __init__ import *
+
 
 class RegionAssembly(RegionAssemblyBase):
     """An Assembly object is a container for instances of parts. The Assembly object has no
@@ -28,14 +30,28 @@ class RegionAssembly(RegionAssemblyBase):
         mdb.models[name].rootAssembly
 
     """
-
-    def Surface(self, side1Faces: tuple[Face] = None, side2Faces: tuple[Face] = None, side12Faces: tuple[Face] = None,
-                end1Edges: tuple[Face] = None, end2Edges: tuple[Face] = None, circumEdges: tuple[Face] = None,
-                side1Edges: tuple[Face] = None, side2Edges: tuple[Face] = None, face1Elements: tuple[Face] = None,
-                face2Elements: tuple[Face] = None, face3Elements: tuple[Face] = None, face4Elements: tuple[Face] = None,
-                face5Elements: tuple[Face] = None, face6Elements: tuple[Face] = None, side1Elements: tuple[Face] = None,
-                side2Elements: tuple[Face] = None, side12Elements: tuple[Face] = None, end1Elements: tuple[Face] = None,
-                end2Elements: tuple[Face] = None, circumElements: tuple[Face] = None, name: str = ''):
+    def Surface(self,
+                side1Faces: tuple[Face] = None,
+                side2Faces: tuple[Face] = None,
+                side12Faces: tuple[Face] = None,
+                end1Edges: tuple[Face] = None,
+                end2Edges: tuple[Face] = None,
+                circumEdges: tuple[Face] = None,
+                side1Edges: tuple[Face] = None,
+                side2Edges: tuple[Face] = None,
+                face1Elements: tuple[Face] = None,
+                face2Elements: tuple[Face] = None,
+                face3Elements: tuple[Face] = None,
+                face4Elements: tuple[Face] = None,
+                face5Elements: tuple[Face] = None,
+                face6Elements: tuple[Face] = None,
+                side1Elements: tuple[Face] = None,
+                side2Elements: tuple[Face] = None,
+                side12Elements: tuple[Face] = None,
+                end1Elements: tuple[Face] = None,
+                end2Elements: tuple[Face] = None,
+                circumElements: tuple[Face] = None,
+                name: str = ''):
         """This method creates a surface from a sequence of objects in a model database. The
         surface will apply to the sides specified by the arguments.For example
         surface=mdb.models['Model-1'].parts['Part-1'].Surface(side1Faces=side1Faces,
@@ -85,21 +101,33 @@ class RegionAssembly(RegionAssemblyBase):
         -------
             A Surface object.
         """
-        surface = Surface(side1Faces, side2Faces, side12Faces, end1Edges, end2Edges, circumEdges, side1Edges,
-                          side2Edges, face1Elements, face2Elements, face3Elements, face4Elements, face5Elements,
-                          face6Elements, side1Elements, side2Elements, side12Elements, end1Elements, end2Elements,
-                          circumElements, name)
+        surface = Surface(side1Faces, side2Faces, side12Faces, end1Edges,
+                          end2Edges, circumEdges, side1Edges, side2Edges,
+                          face1Elements, face2Elements, face3Elements,
+                          face4Elements, face5Elements, face6Elements,
+                          side1Elements, side2Elements, side12Elements,
+                          end1Elements, end2Elements, circumElements, name)
         self.surfaces[name] = surface
         self.allSurfaces[name] = surface
         return surface
 
     @typing.overload
-    def Set(self, name: str, nodes: tuple[MeshNode] = None, elements: tuple[MeshElement] = None,
-            region: Region = None, vertices: tuple[Vertex] = None, edges: tuple[Edge] = None,
-            faces: tuple[Face] = None, cells: tuple[Cell] = None, xVertices: tuple[Vertex] = None,
-            xEdges: tuple[Edge] = None, xFaces: tuple[Face] = None,
-            referencePoints: tuple[ReferencePoint] = (), skinFaces: tuple = (),
-            skinEdges: tuple = (), stringerEdges: tuple = ()):
+    def Set(self,
+            name: str,
+            nodes: tuple[MeshNode] = None,
+            elements: tuple[MeshElement] = None,
+            region: Region = None,
+            vertices: tuple[Vertex] = None,
+            edges: tuple[Edge] = None,
+            faces: tuple[Face] = None,
+            cells: tuple[Cell] = None,
+            xVertices: tuple[Vertex] = None,
+            xEdges: tuple[Edge] = None,
+            xFaces: tuple[Face] = None,
+            referencePoints: tuple[ReferencePoint] = (),
+            skinFaces: tuple = (),
+            skinEdges: tuple = (),
+            stringerEdges: tuple = ()):
         """This method creates a set from a sequence of objects in a model database.
 
         Notes

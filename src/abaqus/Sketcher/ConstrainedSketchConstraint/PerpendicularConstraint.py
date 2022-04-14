@@ -1,10 +1,12 @@
 from .ConstrainedSketchConstraint import ConstrainedSketchConstraint
 from ..ConstrainedSketchGeometry.ConstrainedSketchGeometry import ConstrainedSketchGeometry
 
+from __init__ import *
+
 
 class PerpendicularConstraint(ConstrainedSketchConstraint):
-
-    def __init__(self, entity1: ConstrainedSketchGeometry, entity2: ConstrainedSketchGeometry):
+    def __init__(self, entity1: ConstrainedSketchGeometry,
+                 entity2: ConstrainedSketchGeometry):
         """This method creates a perpendicular constraint. This constraint applies to different
         types of ConstrainedSketchGeometry objects and constrains them to be perpendicular to
         each other.

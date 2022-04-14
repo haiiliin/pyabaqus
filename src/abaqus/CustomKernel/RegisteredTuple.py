@@ -1,5 +1,7 @@
 from .CommandRegister import CommandRegister
 
+from __init__ import *
+
 
 class RegisteredTuple(CommandRegister):
     """This class allows you to create a tuple that can be queried from the GUI and is capable
@@ -15,7 +17,6 @@ class RegisteredTuple(CommandRegister):
         import customKernel
 
     """
-
     def __init__(self, tuple: tuple):
         """This method creates a RegisteredTuple object.
 

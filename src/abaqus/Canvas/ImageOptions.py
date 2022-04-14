@@ -1,5 +1,7 @@
 from abaqusConstants import *
 
+from __init__ import *
+
 
 class ImageOptions:
     """The ImageOptions object stores settings that control how an image is rendered in a
@@ -15,12 +17,17 @@ class ImageOptions:
             session.viewports[name].imageOptions
 
     """
-
-    def setValues(self, imageName: str = '', showImage: Boolean = OFF,
+    def setValues(self,
+                  imageName: str = '',
+                  showImage: Boolean = OFF,
                   positionMethod: SymbolicConstant = FIT_TO_VIEWPORT,
-                  fitMethod: SymbolicConstant = BEST_FIT, alignment: SymbolicConstant = CENTER,
-                  xScale: float = 1, yScale: float = 1, origin: tuple[float] = (),
-                  translucency: float = 1, options: str = None):
+                  fitMethod: SymbolicConstant = BEST_FIT,
+                  alignment: SymbolicConstant = CENTER,
+                  xScale: float = 1,
+                  yScale: float = 1,
+                  origin: tuple[float] = (),
+                  translucency: float = 1,
+                  options: str = None):
         """This method modifies the ImageOptions object.
         
         Parameters

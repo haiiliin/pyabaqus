@@ -1,5 +1,7 @@
 from abaqusConstants import *
 
+from __init__ import *
+
 
 class ImageAnimationOptions:
     """The ImageAnimationOptions object is used to store values and attributes associated with
@@ -16,9 +18,12 @@ class ImageAnimationOptions:
             session.imageAnimationOptions
 
     """
-
-    def setValues(self, frameRate: int = None, timeScale: int = None, vpDecorations: Boolean = ON,
-                  vpBackground: Boolean = OFF, compass: Boolean = OFF):
+    def setValues(self,
+                  frameRate: int = None,
+                  timeScale: int = None,
+                  vpDecorations: Boolean = ON,
+                  vpBackground: Boolean = OFF,
+                  compass: Boolean = OFF):
         """This method modifies the ImageAnimationOptions object.
         
         Parameters

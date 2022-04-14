@@ -1,6 +1,8 @@
 from .Interaction import Interaction
 from ..Region.Region import Region
 
+from __init__ import *
+
 
 class ElasticFoundation(Interaction):
     """The ElasticFoundation object defines a mechanical foundation.
@@ -19,8 +21,8 @@ class ElasticFoundation(Interaction):
         - FOUNDATION
 
     """
-
-    def __init__(self, name: str, createStepName: str, surface: Region, stiffness: float):
+    def __init__(self, name: str, createStepName: str, surface: Region,
+                 stiffness: float):
         """This method creates an ElasticFoundation object.
 
         Notes

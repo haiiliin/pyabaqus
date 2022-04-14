@@ -1,5 +1,7 @@
 from abaqusConstants import *
 
+from __init__ import *
+
 
 class Ratios:
     """The Ratios object specifies ratios that define anisotropic swelling.
@@ -30,8 +32,10 @@ class Ratios:
         - RATIOS
 
     """
-
-    def __init__(self, table: tuple, temperatureDependency: Boolean = OFF, dependencies: int = 0):
+    def __init__(self,
+                 table: tuple,
+                 temperatureDependency: Boolean = OFF,
+                 dependencies: int = 0):
         """This method creates a Ratios object.
 
         Notes

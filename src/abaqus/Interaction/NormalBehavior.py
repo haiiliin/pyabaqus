@@ -2,6 +2,8 @@ import typing
 
 from abaqusConstants import *
 
+from __init__ import *
+
 
 class NormalBehavior:
     """The NormalBehavior object specifies normal behavior for a contact interaction property.
@@ -27,15 +29,23 @@ class NormalBehavior:
         - SURFACE BEHAVIOR
 
     """
-
-    def __init__(self, contactStiffness: typing.Union[SymbolicConstant, float] = DEFAULT,
-                 pressureOverclosure: SymbolicConstant = HARD, allowSeparation: Boolean = ON,
-                 maxStiffness: float = None, table: tuple = (),
-                 constraintEnforcementMethod: SymbolicConstant = DEFAULT, overclosureFactor: float = 0,
-                 overclosureMeasure: float = 0, contactStiffnessScaleFactor: float = 1,
-                 initialStiffnessScaleFactor: float = 1, clearanceAtZeroContactPressure: float = 0,
-                 stiffnessBehavior: SymbolicConstant = LINEAR, stiffnessRatio: float = 0,
-                 upperQuadraticFactor: float = 0, lowerQuadraticRatio: float = 0):
+    def __init__(self,
+                 contactStiffness: typing.Union[SymbolicConstant,
+                                                float] = DEFAULT,
+                 pressureOverclosure: SymbolicConstant = HARD,
+                 allowSeparation: Boolean = ON,
+                 maxStiffness: float = None,
+                 table: tuple = (),
+                 constraintEnforcementMethod: SymbolicConstant = DEFAULT,
+                 overclosureFactor: float = 0,
+                 overclosureMeasure: float = 0,
+                 contactStiffnessScaleFactor: float = 1,
+                 initialStiffnessScaleFactor: float = 1,
+                 clearanceAtZeroContactPressure: float = 0,
+                 stiffnessBehavior: SymbolicConstant = LINEAR,
+                 stiffnessRatio: float = 0,
+                 upperQuadraticFactor: float = 0,
+                 lowerQuadraticRatio: float = 0):
         """This method creates a NormalBehavior object.
 
         Notes

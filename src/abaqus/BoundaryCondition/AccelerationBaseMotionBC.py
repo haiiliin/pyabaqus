@@ -3,6 +3,8 @@ from .BoundaryCondition import BoundaryCondition
 from ..Amplitude.CorrelationArray import CorrelationArray
 from ..Region.Region import Region
 
+from __init__ import *
+
 
 class AccelerationBaseMotionBC(BoundaryCondition):
     """The AccelerationBaseMotionBC object stores the data for an acceleration base motion
@@ -47,42 +49,49 @@ class AccelerationBaseMotionBC(BoundaryCondition):
 
     """
 
-    # A String specifying the boundary condition repository key. 
+    # A String specifying the boundary condition repository key.
     name: str = ''
 
-    # A Float specifying the scale factor for the amplitude curve. The default value is 1.0. 
+    # A Float specifying the scale factor for the amplitude curve. The default value is 1.0.
     amplitudeScaleFactor: float = 1
 
-    # A Boolean specifying whether to define the imaginary (out-of-plane) portion of the base 
-    # motion record given by amplitude definition. The default value is OFF. 
+    # A Boolean specifying whether to define the imaginary (out-of-plane) portion of the base
+    # motion record given by amplitude definition. The default value is OFF.
     useComplex: Boolean = OFF
 
-    # A ModelDot object specifying a tuple containing one center of rotation. The default 
-    # value is the global origin. This argument applies only when *dof*=UR1, UR2, or UR3. 
+    # A ModelDot object specifying a tuple containing one center of rotation. The default
+    # value is the global origin. This argument applies only when *dof*=UR1, UR2, or UR3.
     centerOfRotation: tuple = ()
 
-    # A CorrelationArray object. 
+    # A CorrelationArray object.
     correlation: CorrelationArray = CorrelationArray()
 
-    # A String specifying the name of the SecondaryBaseBC object associated with this boundary 
-    # condition. The default value is an empty string. 
+    # A String specifying the name of the SecondaryBaseBC object associated with this boundary
+    # condition. The default value is an empty string.
     secondaryBase: str = ''
 
-    # A SymbolicConstant specifying the category of the boundary condition. Possible values 
-    # are MECHANICAL and THERMAL. 
+    # A SymbolicConstant specifying the category of the boundary condition. Possible values
+    # are MECHANICAL and THERMAL.
     category: SymbolicConstant = None
 
-    # A Region object specifying the region to which the boundary condition is applied. 
+    # A Region object specifying the region to which the boundary condition is applied.
     region: Region = Region()
 
-    # None or a DatumCsys object specifying the local coordinate system of the boundary 
-    # condition's degrees of freedom. If *localCsys*=None, the degrees of freedom are defined 
-    # in the global coordinate system. The default value is None. 
+    # None or a DatumCsys object specifying the local coordinate system of the boundary
+    # condition's degrees of freedom. If *localCsys*=None, the degrees of freedom are defined
+    # in the global coordinate system. The default value is None.
     localCsys: str = None
 
-    def __init__(self, name: str, createStepName: str, dof: SymbolicConstant, amplitudeScaleFactor: float = 1,
-                 centerOfRotation: tuple = (), correlation: CorrelationArray = None,
-                 secondaryBase: str = '', useComplex: Boolean = OFF, amplitude: str = UNSET):
+    def __init__(self,
+                 name: str,
+                 createStepName: str,
+                 dof: SymbolicConstant,
+                 amplitudeScaleFactor: float = 1,
+                 centerOfRotation: tuple = (),
+                 correlation: CorrelationArray = None,
+                 secondaryBase: str = '',
+                 useComplex: Boolean = OFF,
+                 amplitude: str = UNSET):
         """This method creates a AccelerationBaseMotionBC object.
 
         Notes
@@ -128,9 +137,13 @@ class AccelerationBaseMotionBC(BoundaryCondition):
         super().__init__()
         pass
 
-    def setValues(self, amplitudeScaleFactor: float = 1, centerOfRotation: tuple = (),
-                  correlation: CorrelationArray = None, secondaryBase: str = '',
-                  useComplex: Boolean = OFF, amplitude: str = UNSET):
+    def setValues(self,
+                  amplitudeScaleFactor: float = 1,
+                  centerOfRotation: tuple = (),
+                  correlation: CorrelationArray = None,
+                  secondaryBase: str = '',
+                  useComplex: Boolean = OFF,
+                  amplitude: str = UNSET):
         """This method modifies the data for an existing AccelerationBaseMotionBC object in the
         step where it is created.
         

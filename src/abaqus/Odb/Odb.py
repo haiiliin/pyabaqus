@@ -7,11 +7,10 @@ from ..BeamSectionProfile.BeamSectionProfileOdb import BeamSectionProfileOdb
 from ..Filter.FilterOdb import FilterOdb
 from ..Material.MaterialOdb import MaterialOdb
 
+from __init__ import *
 
-class Odb(AmplitudeOdb,
-          FilterOdb,
-          MaterialOdb,
-          BeamSectionProfileOdb):
+
+class Odb(AmplitudeOdb, FilterOdb, MaterialOdb, BeamSectionProfileOdb):
     """The Odb object is the in-memory representation of an output database (ODB) file.
 
     Attributes
@@ -55,8 +54,8 @@ class Odb(AmplitudeOdb,
         session.odbs[name]
 
     """
-
-    def Part(self, name: str, embeddedSpace: SymbolicConstant, type: SymbolicConstant) -> OdbPart:
+    def Part(self, name: str, embeddedSpace: SymbolicConstant,
+             type: SymbolicConstant) -> OdbPart:
         """This method creates an OdbPart object. Nodes and elements are added to this object at a
         later stage.
 
@@ -86,8 +85,14 @@ class Odb(AmplitudeOdb,
         self.parts[name] = odbPart = OdbPart(name, embeddedSpace, type)
         return odbPart
 
-    def Step(self, name: str, description: str, domain: SymbolicConstant, timePeriod: float = 0,
-             previousStepName: str = '', procedure: str = '', totalTime: float = None) -> OdbStep:
+    def Step(self,
+             name: str,
+             description: str,
+             domain: SymbolicConstant,
+             timePeriod: float = 0,
+             previousStepName: str = '',
+             procedure: str = '',
+             totalTime: float = None) -> OdbStep:
         """This method creates an OdbStep object.
 
         Notes
@@ -181,8 +186,9 @@ class Odb(AmplitudeOdb,
             - If *previousStepName* is invalid:
               ValueError: previousStepName is invalid
         """
-        self.steps[name] = odbStep = OdbStep(name, description, domain, timePeriod, previousStepName, procedure,
-                                             totalTime)
+        self.steps[name] = odbStep = OdbStep(name, description, domain,
+                                             timePeriod, previousStepName,
+                                             procedure, totalTime)
         return odbStep
 
     def SectionCategory(self, name: str, description: str) -> SectionCategory:
@@ -207,5 +213,6 @@ class Odb(AmplitudeOdb,
         -------
             A SectionCategory object.
         """
-        self.sectionCategories[name] = sectionCategory = SectionCategory(name, description)
+        self.sectionCategories[name] = sectionCategory = SectionCategory(
+            name, description)
         return sectionCategory

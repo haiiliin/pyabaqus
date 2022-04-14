@@ -4,6 +4,8 @@ from abaqusConstants import *
 from .HistoryOutput import HistoryOutput
 from .HistoryPoint import HistoryPoint
 
+from __init__ import *
+
 
 class HistoryRegion:
     """The HistoryRegion object contains history data for a single location in the model.
@@ -27,14 +29,18 @@ class HistoryRegion:
 
     """
 
-    # A SymbolicConstant specifying the position of the history output. Possible values are 
-    # NODAL, INTEGRATION_POINT, WHOLE_ELEMENT, WHOLE_REGION, and WHOLE_MODEL. 
+    # A SymbolicConstant specifying the position of the history output. Possible values are
+    # NODAL, INTEGRATION_POINT, WHOLE_ELEMENT, WHOLE_REGION, and WHOLE_MODEL.
     position: SymbolicConstant = None
 
-    # A repository of HistoryOutput objects. 
+    # A repository of HistoryOutput objects.
     historyOutputs: dict[str, HistoryOutput] = dict[str, HistoryOutput]()
 
-    def __init__(self, name: str, description: str, point: HistoryPoint, loadCase: str = None):
+    def __init__(self,
+                 name: str,
+                 description: str,
+                 point: HistoryPoint,
+                 loadCase: str = None):
         """This method creates a HistoryRegion object.
 
         Notes
@@ -115,7 +121,10 @@ class HistoryRegion:
     def getSubset(self, *args, **kwargs):
         pass
 
-    def HistoryOutput(self, name: str, description: str, type: SymbolicConstant,
+    def HistoryOutput(self,
+                      name: str,
+                      description: str,
+                      type: SymbolicConstant,
                       validInvariants: SymbolicConstant = None):
         """This method creates a HistoryOutput object.
 
@@ -144,5 +153,6 @@ class HistoryRegion:
         -------
             A HistoryOutput object.
         """
-        self.historyOutputs[name] = historyOutput = HistoryOutput(name, description, type, validInvariants)
+        self.historyOutputs[name] = historyOutput = HistoryOutput(
+            name, description, type, validInvariants)
         return historyOutput

@@ -1,7 +1,9 @@
 from abaqusConstants import *
 
-class TextReprOptions:
+from __init__ import *
 
+
+class TextReprOptions:
     """The TextReprOptions object is used to configure the output of the Python `str()` command 
     within Abaqus/CAE. (The `str()` command is used by the Python print function.) The 
     TextReprOptions object stores the various settings that determine how objects are 
@@ -20,9 +22,11 @@ class TextReprOptions:
             session.textReprOptions
 
     """
-
-    def setValues(self, style: SymbolicConstant = None, maxRecursionDepth: SymbolicConstant = None, 
-                  maxRecursionString: str = '', maxElementsInSequence: SymbolicConstant = None):
+    def setValues(self,
+                  style: SymbolicConstant = None,
+                  maxRecursionDepth: SymbolicConstant = None,
+                  maxRecursionString: str = '',
+                  maxElementsInSequence: SymbolicConstant = None):
         """This method modifies the TextReprOptions object.
         
         Parameters
@@ -49,4 +53,3 @@ class TextReprOptions:
             '...'. 
         """
         pass
-

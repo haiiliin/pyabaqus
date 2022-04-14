@@ -2,6 +2,8 @@ from abaqusConstants import *
 from .PredefinedField import PredefinedField
 from ..Region.Region import Region
 
+from __init__ import *
+
 
 class Velocity(PredefinedField):
     """The Velocity object stores the data for an initial velocity predefined field.
@@ -20,9 +22,16 @@ class Velocity(PredefinedField):
         - INITIAL CONDITIONS
 
     """
-
-    def __init__(self, name: str, region: Region, velocity1: float, velocity2: float, velocity3: float,
-                 omega: float, axisBegin: tuple, axisEnd: tuple, field: str = '',
+    def __init__(self,
+                 name: str,
+                 region: Region,
+                 velocity1: float,
+                 velocity2: float,
+                 velocity3: float,
+                 omega: float,
+                 axisBegin: tuple,
+                 axisEnd: tuple,
+                 field: str = '',
                  distributionType: SymbolicConstant = MAGNITUDE):
         """This method creates a Velocity predefined field object.
 
@@ -69,7 +78,9 @@ class Velocity(PredefinedField):
         super().__init__()
         pass
 
-    def setValues(self, field: str = '', distributionType: SymbolicConstant = MAGNITUDE):
+    def setValues(self,
+                  field: str = '',
+                  distributionType: SymbolicConstant = MAGNITUDE):
         """This method modifies the Velocity object.
         
         Parameters

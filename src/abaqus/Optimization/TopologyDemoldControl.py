@@ -2,6 +2,8 @@ from abaqusConstants import *
 from .GeometricRestriction import GeometricRestriction
 from ..Region.Region import Region
 
+from __init__ import *
+
 
 class TopologyDemoldControl(GeometricRestriction):
     """The TopologyDemoldControl object defines a topology demold control geometric
@@ -18,10 +20,15 @@ class TopologyDemoldControl(GeometricRestriction):
         mdb.models[name].optimizationTasks[name].geometricRestrictions[name]
 
     """
-
-    def __init__(self, name: str, region: Region, csys: int = None, draftAngle: float = 0,
-                 collisionCheckRegion: SymbolicConstant = DEMOLD_REGION, pointRegion: Region = Region(),
-                 pullDirection: tuple = (), technique: SymbolicConstant = AUTO):
+    def __init__(self,
+                 name: str,
+                 region: Region,
+                 csys: int = None,
+                 draftAngle: float = 0,
+                 collisionCheckRegion: SymbolicConstant = DEMOLD_REGION,
+                 pointRegion: Region = Region(),
+                 pullDirection: tuple = (),
+                 technique: SymbolicConstant = AUTO):
         """This method creates a TopologyDemoldControl object.
 
         Notes
@@ -68,9 +75,13 @@ class TopologyDemoldControl(GeometricRestriction):
         super().__init__()
         pass
 
-    def setValues(self, csys: int = None, draftAngle: float = 0,
-                  collisionCheckRegion: SymbolicConstant = DEMOLD_REGION, pointRegion: Region = Region(),
-                  pullDirection: tuple = (), technique: SymbolicConstant = AUTO):
+    def setValues(self,
+                  csys: int = None,
+                  draftAngle: float = 0,
+                  collisionCheckRegion: SymbolicConstant = DEMOLD_REGION,
+                  pointRegion: Region = Region(),
+                  pullDirection: tuple = (),
+                  technique: SymbolicConstant = AUTO):
         """This method modifies the TopologyDemoldControl object.
         
         Parameters

@@ -6,6 +6,8 @@ from .Legend import Legend
 from .LineStyle import LineStyle
 from .TextStyle import TextStyle
 
+from __init__ import *
+
 
 class DefaultChartOptions:
     """The DefaultChartOptions object is used to hold on default chart and axis attributes. The
@@ -24,14 +26,20 @@ class DefaultChartOptions:
     """
     areaStyle: AreaStyle = AreaStyle()
 
-    def setValues(self, areaStyle: AreaStyle = AreaStyle(), aspectRatio: float = None,
-                  defaultAxis1Options: Axis = Axis(), defaultAxis2Options: Axis = Axis(),
-                  gridArea: Area = Area(), legend: Legend = Legend(),
+    def setValues(self,
+                  areaStyle: AreaStyle = AreaStyle(),
+                  aspectRatio: float = None,
+                  defaultAxis1Options: Axis = Axis(),
+                  defaultAxis2Options: Axis = Axis(),
+                  gridArea: Area = Area(),
+                  legend: Legend = Legend(),
                   majorAxis1GridStyle: LineStyle = LineStyle(),
                   majorAxis2GridStyle: LineStyle = LineStyle(),
                   minorAxis1GridStyle: LineStyle = LineStyle(),
-                  minorAxis2GridStyle: LineStyle = LineStyle(), tagAreaStyle: AreaStyle = AreaStyle(),
-                  tagBorder: LineStyle = LineStyle(), tagTextStyle: TextStyle = TextStyle(),
+                  minorAxis2GridStyle: LineStyle = LineStyle(),
+                  tagAreaStyle: AreaStyle = AreaStyle(),
+                  tagBorder: LineStyle = LineStyle(),
+                  tagTextStyle: TextStyle = TextStyle(),
                   useQuantityType: Boolean = ON):
         """This method modifies the DefaultChartOptions object.
         

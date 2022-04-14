@@ -1,6 +1,8 @@
 from .Section import Section
 from .TransverseShearShell import TransverseShearShell
 
+from __init__ import *
+
 
 class ShellSection(Section):
     """The ShellSection object defines the properties of a shell section. The ShellSection
@@ -28,8 +30,8 @@ class ShellSection(Section):
 
     """
 
-    # A String specifying the repository key. 
+    # A String specifying the repository key.
     name: str = ''
 
-    # A TransverseShearShell object specifying the transverse shear stiffness properties. 
+    # A TransverseShearShell object specifying the transverse shear stiffness properties.
     transverseShear: TransverseShearShell = None

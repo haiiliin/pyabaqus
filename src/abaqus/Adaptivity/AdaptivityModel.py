@@ -11,6 +11,8 @@ from ..Model.ModelBase import ModelBase
 from ..Odb.Odb import Odb
 from ..Region.Region import Region
 
+from __init__ import *
+
 
 class AdaptivityModel(ModelBase):
     """Abaqus creates a Model object named `Model-1` when a session is started.
@@ -24,7 +26,6 @@ class AdaptivityModel(ModelBase):
         mdb.models[name]
 
     """
-
     def adaptiveRemesh(self, odb: Odb):
         """This method remeshes the model using the active remesh rules in the model and the error
         indicator results from a previous analysis.
@@ -40,8 +41,12 @@ class AdaptivityModel(ModelBase):
         """
         pass
 
-    def AdaptiveMeshConstraint(self, name: str = '', category: SymbolicConstant = None, region: Region = Region(),
-                               localCsys: DatumCsys = None) -> AdaptiveMeshConstraint:
+    def AdaptiveMeshConstraint(
+            self,
+            name: str = '',
+            category: SymbolicConstant = None,
+            region: Region = Region(),
+            localCsys: DatumCsys = None) -> AdaptiveMeshConstraint:
         """The AdaptiveMeshConstraint object is the abstract base type for other Arbitrary
         Lagrangian Eularian (ALE) style AdaptiveMeshConstraint objects. The
         AdaptiveMeshConstraint object has no explicit constructor. The methods and members of
@@ -70,20 +75,29 @@ class AdaptivityModel(ModelBase):
              degrees of freedom. If *localCsys*=None, the degrees of freedom are defined  in the global coordinate
              system. The default value is None.
         """
-        self.adaptiveMeshConstraints[name] = adaptiveMeshConstraint = AdaptiveMeshConstraint(name, category, region,
-                                                                                             localCsys)
+        self.adaptiveMeshConstraints[
+            name] = adaptiveMeshConstraint = AdaptiveMeshConstraint(
+                name, category, region, localCsys)
         return adaptiveMeshConstraint
 
-    def AdaptiveMeshControl(self, name: str, remapping: SymbolicConstant = SECOND_ORDER_ADVECTION,
-                            smoothingAlgorithm: SymbolicConstant = GEOMETRY_ENHANCED,
-                            smoothingPriority: SymbolicConstant = UNIFORM, initialFeatureAngle: float = 30,
-                            transitionFeatureAngle: float = 30,
-                            momentumAdvection: SymbolicConstant = ELEMENT_CENTER_PROJECTION,
-                            meshingPredictor: SymbolicConstant = CURRENT, curvatureRefinement: float = 1,
-                            volumetricSmoothingWeight: float = 1, laplacianSmoothingWeight: float = 0,
-                            equipotentialSmoothingWeight: float = 0, meshConstraintAngle: float = 60,
-                            originalConfigurationProjectionWeight: float = 1,
-                            standardVolumetricSmoothingWeight: float = 0) -> AdaptiveMeshControl:
+    def AdaptiveMeshControl(
+            self,
+            name: str,
+            remapping: SymbolicConstant = SECOND_ORDER_ADVECTION,
+            smoothingAlgorithm: SymbolicConstant = GEOMETRY_ENHANCED,
+            smoothingPriority: SymbolicConstant = UNIFORM,
+            initialFeatureAngle: float = 30,
+            transitionFeatureAngle: float = 30,
+            momentumAdvection: SymbolicConstant = ELEMENT_CENTER_PROJECTION,
+            meshingPredictor: SymbolicConstant = CURRENT,
+            curvatureRefinement: float = 1,
+            volumetricSmoothingWeight: float = 1,
+            laplacianSmoothingWeight: float = 0,
+            equipotentialSmoothingWeight: float = 0,
+            meshConstraintAngle: float = 60,
+            originalConfigurationProjectionWeight: float = 1,
+            standardVolumetricSmoothingWeight: float = 0
+    ) -> AdaptiveMeshControl:
         """This method creates an AdaptiveMeshControl object.
 
         Notes
@@ -147,22 +161,31 @@ class AdaptivityModel(ModelBase):
         -------
             An AdaptiveMeshControl object
         """
-        self.adaptiveMeshControls[name] = adaptiveMeshControl = AdaptiveMeshControl(
-            name, remapping, smoothingAlgorithm, smoothingPriority, initialFeatureAngle, transitionFeatureAngle,
-            momentumAdvection, meshingPredictor, curvatureRefinement, volumetricSmoothingWeight,
-            laplacianSmoothingWeight, equipotentialSmoothingWeight, meshConstraintAngle,
-            originalConfigurationProjectionWeight, standardVolumetricSmoothingWeight)
+        self.adaptiveMeshControls[
+            name] = adaptiveMeshControl = AdaptiveMeshControl(
+                name, remapping, smoothingAlgorithm, smoothingPriority,
+                initialFeatureAngle, transitionFeatureAngle, momentumAdvection,
+                meshingPredictor, curvatureRefinement,
+                volumetricSmoothingWeight, laplacianSmoothingWeight,
+                equipotentialSmoothingWeight, meshConstraintAngle,
+                originalConfigurationProjectionWeight,
+                standardVolumetricSmoothingWeight)
         return adaptiveMeshControl
 
-    def DisplacementAdaptiveMeshConstraint(self, name: str, createStepName: str, region: Region,
-                                           u1: typing.Union[SymbolicConstant, float] = UNSET,
-                                           u2: typing.Union[SymbolicConstant, float] = UNSET,
-                                           u3: typing.Union[SymbolicConstant, float] = UNSET,
-                                           ur1: typing.Union[SymbolicConstant, float] = UNSET,
-                                           ur2: typing.Union[SymbolicConstant, float] = UNSET,
-                                           ur3: typing.Union[SymbolicConstant, float] = UNSET,
-                                           amplitude: str = UNSET, motionType: SymbolicConstant = INDEPENDENT,
-                                           localCsys: str = None) -> DisplacementAdaptiveMeshConstraint:
+    def DisplacementAdaptiveMeshConstraint(
+            self,
+            name: str,
+            createStepName: str,
+            region: Region,
+            u1: typing.Union[SymbolicConstant, float] = UNSET,
+            u2: typing.Union[SymbolicConstant, float] = UNSET,
+            u3: typing.Union[SymbolicConstant, float] = UNSET,
+            ur1: typing.Union[SymbolicConstant, float] = UNSET,
+            ur2: typing.Union[SymbolicConstant, float] = UNSET,
+            ur3: typing.Union[SymbolicConstant, float] = UNSET,
+            amplitude: str = UNSET,
+            motionType: SymbolicConstant = INDEPENDENT,
+            localCsys: str = None) -> DisplacementAdaptiveMeshConstraint:
         """This method creates a DisplacementAdaptiveMeshConstraint object.
 
         Notes
@@ -223,16 +246,28 @@ class AdaptivityModel(ModelBase):
         -------
             A DisplacementAdaptiveMeshConstraint object
         """
-        self.adaptiveMeshConstraints[name] = adaptiveMeshConstraint = DisplacementAdaptiveMeshConstraint(
-            name, createStepName, region, u1, u2, u3, ur1, ur2, ur3, amplitude, motionType, localCsys)
+        self.adaptiveMeshConstraints[
+            name] = adaptiveMeshConstraint = DisplacementAdaptiveMeshConstraint(
+                name, createStepName, region, u1, u2, u3, ur1, ur2, ur3,
+                amplitude, motionType, localCsys)
         return adaptiveMeshConstraint
 
-    def RemeshingRule(self, name: str, stepName: str, variables: tuple, description: str = '',
-                      region: SymbolicConstant = MODEL, sizingMethod: SymbolicConstant = DEFAULT,
-                      errorTarget: float = 0, maxSolutionErrorTarget: float = 0,
-                      minSolutionErrorTarget: float = 0, meshBias: int = 0, minElementSize: float = 0,
-                      maxElementSize: float = 0, outputFrequency: SymbolicConstant = LAST_INCREMENT,
-                      specifyMinSize: Boolean = OFF, specifyMaxSize: Boolean = ON,
+    def RemeshingRule(self,
+                      name: str,
+                      stepName: str,
+                      variables: tuple,
+                      description: str = '',
+                      region: SymbolicConstant = MODEL,
+                      sizingMethod: SymbolicConstant = DEFAULT,
+                      errorTarget: float = 0,
+                      maxSolutionErrorTarget: float = 0,
+                      minSolutionErrorTarget: float = 0,
+                      meshBias: int = 0,
+                      minElementSize: float = 0,
+                      maxElementSize: float = 0,
+                      outputFrequency: SymbolicConstant = LAST_INCREMENT,
+                      specifyMinSize: Boolean = OFF,
+                      specifyMaxSize: Boolean = ON,
                       coarseningFactor: SymbolicConstant = DEFAULT_LIMIT,
                       refinementFactor: SymbolicConstant = DEFAULT_LIMIT,
                       elementCountLimit: int = None) -> RemeshingRule:
@@ -318,23 +353,29 @@ class AdaptivityModel(ModelBase):
         -------
             A RemeshingRule object
         """
-        self.remeshingRules[name] = remeshingRule = RemeshingRule(name, stepName, variables, description, region,
-                                                                  sizingMethod, errorTarget, maxSolutionErrorTarget,
-                                                                  minSolutionErrorTarget, meshBias, minElementSize,
-                                                                  maxElementSize, outputFrequency, specifyMinSize,
-                                                                  specifyMaxSize, coarseningFactor, refinementFactor,
-                                                                  elementCountLimit)
+        self.remeshingRules[name] = remeshingRule = RemeshingRule(
+            name, stepName, variables, description, region, sizingMethod,
+            errorTarget, maxSolutionErrorTarget, minSolutionErrorTarget,
+            meshBias, minElementSize, maxElementSize, outputFrequency,
+            specifyMinSize, specifyMaxSize, coarseningFactor, refinementFactor,
+            elementCountLimit)
         return remeshingRule
 
-    def VelocityAdaptiveMeshConstraint(self, name: str, createStepName: str, region: Region,
-                                       v1: typing.Union[SymbolicConstant, float] = UNSET,
-                                       v2: typing.Union[SymbolicConstant, float] = UNSET,
-                                       v3: typing.Union[SymbolicConstant, float] = UNSET,
-                                       vr1: typing.Union[SymbolicConstant, float] = UNSET,
-                                       vr2: typing.Union[SymbolicConstant, float] = UNSET,
-                                       vr3: typing.Union[SymbolicConstant, float] = UNSET, amplitude: str = UNSET,
-                                       localCsys: str = None,
-                                       motionType: SymbolicConstant = INDEPENDENT) -> VelocityAdaptiveMeshConstraint:
+    def VelocityAdaptiveMeshConstraint(
+        self,
+        name: str,
+        createStepName: str,
+        region: Region,
+        v1: typing.Union[SymbolicConstant, float] = UNSET,
+        v2: typing.Union[SymbolicConstant, float] = UNSET,
+        v3: typing.Union[SymbolicConstant, float] = UNSET,
+        vr1: typing.Union[SymbolicConstant, float] = UNSET,
+        vr2: typing.Union[SymbolicConstant, float] = UNSET,
+        vr3: typing.Union[SymbolicConstant, float] = UNSET,
+        amplitude: str = UNSET,
+        localCsys: str = None,
+        motionType: SymbolicConstant = INDEPENDENT
+    ) -> VelocityAdaptiveMeshConstraint:
         """This method creates a VelocityAdaptiveMeshConstraint object.
 
         Notes
@@ -395,6 +436,8 @@ class AdaptivityModel(ModelBase):
         -------
             A VelocityAdaptiveMeshConstraint object
         """
-        self.adaptiveMeshConstraints[name] = adaptiveMeshConstraint = VelocityAdaptiveMeshConstraint(
-            name, createStepName, region, v1, v2, v3, vr1, vr2, vr3, amplitude, localCsys, motionType)
+        self.adaptiveMeshConstraints[
+            name] = adaptiveMeshConstraint = VelocityAdaptiveMeshConstraint(
+                name, createStepName, region, v1, v2, v3, vr1, vr2, vr3,
+                amplitude, localCsys, motionType)
         return adaptiveMeshConstraint

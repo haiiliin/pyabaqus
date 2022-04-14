@@ -1,9 +1,11 @@
 from .ConstrainedSketchGeometry import ConstrainedSketchGeometry
 
+from __init__ import *
+
 
 class Arc3Points(ConstrainedSketchGeometry):
-
-    def __init__(self, point1: tuple[float], point2: tuple[float], point3: tuple[float]):
+    def __init__(self, point1: tuple[float], point2: tuple[float],
+                 point3: tuple[float]):
         """This method constructs an arc using a two endpoints and an intermediate third point on
         the arc.
 

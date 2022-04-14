@@ -8,6 +8,8 @@ from .TimePoint import TimePoint
 from ..Model.ModelBase import ModelBase
 from ..Region.Region import Region
 
+from __init__ import *
+
 
 class OutputModel(ModelBase):
     """Abaqus creates a Model object named `Model-1` when a session is started.
@@ -21,19 +23,34 @@ class OutputModel(ModelBase):
         mdb.models[name]
 
     """
-
-    def FieldOutputRequest(self, name: str, createStepName: str, region: SymbolicConstant = MODEL,
-                           variables: SymbolicConstant = PRESELECT, frequency: SymbolicConstant = 1,
-                           modes: SymbolicConstant = ALL,
-                           timeInterval: typing.Union[SymbolicConstant, float] = EVERY_TIME_INCREMENT,
-                           numIntervals: int = 20, timeMarks: Boolean = OFF, boltLoad: str = '',
-                           sectionPoints: SymbolicConstant = DEFAULT, interactions: str = None,
-                           rebar: SymbolicConstant = EXCLUDE, filter: SymbolicConstant = None,
-                           directions: Boolean = ON, fasteners: str = '', assembledFastener: str = '',
-                           assembledFastenerSet: str = '', exteriorOnly: Boolean = OFF, layupNames: str = '',
-                           layupLocationMethod: str = SPECIFIED, outputAtPlyTop: Boolean = False,
-                           outputAtPlyMid: Boolean = True, outputAtPlyBottom: Boolean = False,
-                           position: SymbolicConstant = INTEGRATION_POINTS):
+    def FieldOutputRequest(
+            self,
+            name: str,
+            createStepName: str,
+            region: SymbolicConstant = MODEL,
+            variables: SymbolicConstant = PRESELECT,
+            frequency: SymbolicConstant = 1,
+            modes: SymbolicConstant = ALL,
+            timeInterval: typing.Union[SymbolicConstant,
+                                       float] = EVERY_TIME_INCREMENT,
+            numIntervals: int = 20,
+            timeMarks: Boolean = OFF,
+            boltLoad: str = '',
+            sectionPoints: SymbolicConstant = DEFAULT,
+            interactions: str = None,
+            rebar: SymbolicConstant = EXCLUDE,
+            filter: SymbolicConstant = None,
+            directions: Boolean = ON,
+            fasteners: str = '',
+            assembledFastener: str = '',
+            assembledFastenerSet: str = '',
+            exteriorOnly: Boolean = OFF,
+            layupNames: str = '',
+            layupLocationMethod: str = SPECIFIED,
+            outputAtPlyTop: Boolean = False,
+            outputAtPlyMid: Boolean = True,
+            outputAtPlyBottom: Boolean = False,
+            position: SymbolicConstant = INTEGRATION_POINTS):
         """This method creates a FieldOutputRequest object.
 
         Notes
@@ -127,26 +144,44 @@ class OutputModel(ModelBase):
         -------
             A FieldOutputRequest object.
         """
-        self.fieldOutputRequests[name] = FieldOutputRequest(name, createStepName, region, variables, frequency, modes,
-                                                            timeInterval, numIntervals, timeMarks, boltLoad,
-                                                            sectionPoints, interactions, rebar, filter, directions,
-                                                            fasteners, assembledFastener, assembledFastenerSet,
-                                                            exteriorOnly, layupNames, layupLocationMethod,
-                                                            outputAtPlyTop, outputAtPlyMid, outputAtPlyBottom, position)
+        self.fieldOutputRequests[name] = FieldOutputRequest(
+            name, createStepName, region, variables, frequency, modes,
+            timeInterval, numIntervals, timeMarks, boltLoad, sectionPoints,
+            interactions, rebar, filter, directions, fasteners,
+            assembledFastener, assembledFastenerSet, exteriorOnly, layupNames,
+            layupLocationMethod, outputAtPlyTop, outputAtPlyMid,
+            outputAtPlyBottom, position)
         return self.fieldOutputRequests[name]
 
-    def HistoryOutputRequest(self, name: str, createStepName: str, region: SymbolicConstant = MODEL,
-                             variables: SymbolicConstant = PRESELECT, frequency: SymbolicConstant = 1,
-                             modes: SymbolicConstant = ALL,
-                             timeInterval: typing.Union[SymbolicConstant, float] = EVERY_TIME_INCREMENT,
-                             numIntervals: int = 20, boltLoad: str = '', sectionPoints: SymbolicConstant = DEFAULT,
-                             stepName: str = '', interactions: str = None, contourIntegral: str = None,
-                             numberOfContours: int = 0, stressInitializationStep: str = None,
-                             contourType: SymbolicConstant = J_INTEGRAL, kFactorDirection: SymbolicConstant = MTS,
-                             rebar: SymbolicConstant = EXCLUDE, integratedOutputSection: str = '',
-                             springs: tuple = None, filter: SymbolicConstant = None, fasteners: str = '',
-                             assembledFastener: str = '', assembledFastenerSet: str = '', sensor: Boolean = OFF,
-                             useGlobal: Boolean = True):
+    def HistoryOutputRequest(
+            self,
+            name: str,
+            createStepName: str,
+            region: SymbolicConstant = MODEL,
+            variables: SymbolicConstant = PRESELECT,
+            frequency: SymbolicConstant = 1,
+            modes: SymbolicConstant = ALL,
+            timeInterval: typing.Union[SymbolicConstant,
+                                       float] = EVERY_TIME_INCREMENT,
+            numIntervals: int = 20,
+            boltLoad: str = '',
+            sectionPoints: SymbolicConstant = DEFAULT,
+            stepName: str = '',
+            interactions: str = None,
+            contourIntegral: str = None,
+            numberOfContours: int = 0,
+            stressInitializationStep: str = None,
+            contourType: SymbolicConstant = J_INTEGRAL,
+            kFactorDirection: SymbolicConstant = MTS,
+            rebar: SymbolicConstant = EXCLUDE,
+            integratedOutputSection: str = '',
+            springs: tuple = None,
+            filter: SymbolicConstant = None,
+            fasteners: str = '',
+            assembledFastener: str = '',
+            assembledFastenerSet: str = '',
+            sensor: Boolean = OFF,
+            useGlobal: Boolean = True):
         """This method creates a HistoryOutputRequest object.
 
         Notes
@@ -240,18 +275,24 @@ class OutputModel(ModelBase):
         -------
             A HistoryOutputRequest object.
         """
-        self.historyOutputRequests[name] = HistoryOutputRequest(name, createStepName, region, variables, frequency,
-                                                                modes, timeInterval, numIntervals, boltLoad,
-                                                                sectionPoints, stepName, interactions, contourIntegral,
-                                                                numberOfContours, stressInitializationStep, contourType,
-                                                                kFactorDirection, rebar, integratedOutputSection,
-                                                                springs, filter, fasteners, assembledFastener,
-                                                                assembledFastenerSet, sensor, useGlobal)
+        self.historyOutputRequests[name] = HistoryOutputRequest(
+            name, createStepName, region, variables, frequency, modes,
+            timeInterval, numIntervals, boltLoad, sectionPoints, stepName,
+            interactions, contourIntegral, numberOfContours,
+            stressInitializationStep, contourType, kFactorDirection, rebar,
+            integratedOutputSection, springs, filter, fasteners,
+            assembledFastener, assembledFastenerSet, sensor, useGlobal)
         return self.historyOutputRequests[name]
 
-    def IntegratedOutputSection(self, name: str, surface: Region = Region(), refPoint: SymbolicConstant = None,
-                                refPointAtCenter: Boolean = OFF, refPointMotion: SymbolicConstant = INDEPENDENT,
-                                localCsys: str = None, projectOrientation: Boolean = OFF) -> IntegratedOutputSection:
+    def IntegratedOutputSection(
+            self,
+            name: str,
+            surface: Region = Region(),
+            refPoint: SymbolicConstant = None,
+            refPointAtCenter: Boolean = OFF,
+            refPointMotion: SymbolicConstant = INDEPENDENT,
+            localCsys: str = None,
+            projectOrientation: Boolean = OFF) -> IntegratedOutputSection:
         """This method creates an IntegratedOutputSection object.
 
         Notes
@@ -298,8 +339,10 @@ class OutputModel(ModelBase):
         -------
             An IntegratedOutputSection object.
         """
-        self.integratedOutputSections[name] = integratedOutputSection = IntegratedOutputSection(
-            name, surface, refPoint, refPointAtCenter, refPointMotion, localCsys, projectOrientation)
+        self.integratedOutputSections[
+            name] = integratedOutputSection = IntegratedOutputSection(
+                name, surface, refPoint, refPointAtCenter, refPointMotion,
+                localCsys, projectOrientation)
         return integratedOutputSection
 
     def TimePoint(self, name: str, points: tuple) -> TimePoint:

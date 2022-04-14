@@ -13,6 +13,8 @@ from .SpectrumAmplitude import SpectrumAmplitude
 from .TabularAmplitude import TabularAmplitude
 from ..Odb.OdbBase import OdbBase
 
+from __init__ import *
+
 
 class AmplitudeOdb(OdbBase):
     """The Odb object is the in-memory representation of an output database (ODB) file.
@@ -27,8 +29,10 @@ class AmplitudeOdb(OdbBase):
         session.odbs[name]
 
     """
-
-    def ActuatorAmplitude(self, name: str, timeSpan: SymbolicConstant = STEP) -> ActuatorAmplitude:
+    def ActuatorAmplitude(
+            self,
+            name: str,
+            timeSpan: SymbolicConstant = STEP) -> ActuatorAmplitude:
         """This method creates a ActuatorAmplitude object.
 
         Notes
@@ -60,7 +64,12 @@ class AmplitudeOdb(OdbBase):
         self.amplitudes[name] = amplitude = ActuatorAmplitude(name, timeSpan)
         return amplitude
 
-    def DecayAmplitude(self, name: str, initial: float, maximum: float, start: float, decayTime: float,
+    def DecayAmplitude(self,
+                       name: str,
+                       initial: float,
+                       maximum: float,
+                       start: float,
+                       decayTime: float,
                        timeSpan: SymbolicConstant = STEP) -> DecayAmplitude:
         """This method creates a DecayAmplitude object.
 
@@ -98,12 +107,18 @@ class AmplitudeOdb(OdbBase):
         InvalidNameError
         RangeError
         """
-        self.amplitudes[name] = amplitude = DecayAmplitude(name, initial, maximum, start, decayTime, timeSpan)
+        self.amplitudes[name] = amplitude = DecayAmplitude(
+            name, initial, maximum, start, decayTime, timeSpan)
         return amplitude
 
-    def EquallySpacedAmplitude(self, name: str, fixedInterval: float, data: tuple, begin: float = 0,
-                               smooth: typing.Union[SymbolicConstant, float] = SOLVER_DEFAULT,
-                               timeSpan: SymbolicConstant = STEP) -> EquallySpacedAmplitude:
+    def EquallySpacedAmplitude(
+            self,
+            name: str,
+            fixedInterval: float,
+            data: tuple,
+            begin: float = 0,
+            smooth: typing.Union[SymbolicConstant, float] = SOLVER_DEFAULT,
+            timeSpan: SymbolicConstant = STEP) -> EquallySpacedAmplitude:
         """This method creates an EquallySpacedAmplitude object.
 
         Notes
@@ -145,11 +160,19 @@ class AmplitudeOdb(OdbBase):
         InvalidNameError
         RangeError
         """
-        self.amplitudes[name] = amplitude = EquallySpacedAmplitude(name, fixedInterval, data, begin, smooth, timeSpan)
+        self.amplitudes[name] = amplitude = EquallySpacedAmplitude(
+            name, fixedInterval, data, begin, smooth, timeSpan)
         return amplitude
 
-    def ModulatedAmplitude(self, name: str, initial: float, magnitude: float, start: float, frequency1: float,
-                           frequency2: float, timeSpan: SymbolicConstant = STEP) -> ModulatedAmplitude:
+    def ModulatedAmplitude(
+            self,
+            name: str,
+            initial: float,
+            magnitude: float,
+            start: float,
+            frequency1: float,
+            frequency2: float,
+            timeSpan: SymbolicConstant = STEP) -> ModulatedAmplitude:
         """This method creates a ModulatedAmplitude object.
 
         Notes
@@ -190,12 +213,18 @@ class AmplitudeOdb(OdbBase):
         InvalidNameError
         RangeError
         """
-        self.amplitudes[name] = amplitude = ModulatedAmplitude(name, initial, magnitude, start, frequency1, frequency2,
-                                                               timeSpan)
+        self.amplitudes[name] = amplitude = ModulatedAmplitude(
+            name, initial, magnitude, start, frequency1, frequency2, timeSpan)
         return amplitude
 
-    def PeriodicAmplitude(self, name: str, frequency: float, start: float, a_0: float, data: tuple,
-                          timeSpan: SymbolicConstant = STEP) -> PeriodicAmplitude:
+    def PeriodicAmplitude(
+            self,
+            name: str,
+            frequency: float,
+            start: float,
+            a_0: float,
+            data: tuple,
+            timeSpan: SymbolicConstant = STEP) -> PeriodicAmplitude:
         """This method creates a PeriodicAmplitude object.
 
         Notes
@@ -232,12 +261,19 @@ class AmplitudeOdb(OdbBase):
         InvalidNameError
         RangeError
         """
-        self.amplitudes[name] = amplitude = PeriodicAmplitude(name, frequency, start, a_0, data, timeSpan)
+        self.amplitudes[name] = amplitude = PeriodicAmplitude(
+            name, frequency, start, a_0, data, timeSpan)
         return amplitude
 
-    def PsdDefinition(self, name: str, data: tuple, unitType: SymbolicConstant = FORCE,
-                      referenceGravityAcceleration: float = 1, referenecePower: float = 0,
-                      user: Boolean = OFF, timeSpan: SymbolicConstant = STEP, amplitude: str = '') -> PsdDefinition:
+    def PsdDefinition(self,
+                      name: str,
+                      data: tuple,
+                      unitType: SymbolicConstant = FORCE,
+                      referenceGravityAcceleration: float = 1,
+                      referenecePower: float = 0,
+                      user: Boolean = OFF,
+                      timeSpan: SymbolicConstant = STEP,
+                      amplitude: str = '') -> PsdDefinition:
         """This method creates a PsdDefinition object.
 
         Notes
@@ -288,11 +324,16 @@ class AmplitudeOdb(OdbBase):
         InvalidNameError
         RangeError
         """
-        self.amplitudes[name] = amplitude = PsdDefinition(name, data, unitType, referenceGravityAcceleration,
-                                                          referenecePower, user, timeSpan, amplitude)
+        self.amplitudes[name] = amplitude = PsdDefinition(
+            name, data, unitType, referenceGravityAcceleration,
+            referenecePower, user, timeSpan, amplitude)
         return amplitude
 
-    def SmoothStepAmplitude(self, name: str, data: tuple, timeSpan: SymbolicConstant = STEP) -> SmoothStepAmplitude:
+    def SmoothStepAmplitude(
+            self,
+            name: str,
+            data: tuple,
+            timeSpan: SymbolicConstant = STEP) -> SmoothStepAmplitude:
         """This method creates a SmoothStepAmplitude object.
 
         Notes
@@ -324,11 +365,17 @@ class AmplitudeOdb(OdbBase):
         InvalidNameError
         RangeError
         """
-        self.amplitudes[name] = amplitude = SmoothStepAmplitude(name, data, timeSpan)
+        self.amplitudes[name] = amplitude = SmoothStepAmplitude(
+            name, data, timeSpan)
         return amplitude
 
-    def SolutionDependentAmplitude(self, name: str, initial: float = 1, minimum: float = 0, maximum: float = 1000,
-                                   timeSpan: SymbolicConstant = STEP) -> SolutionDependentAmplitude:
+    def SolutionDependentAmplitude(
+            self,
+            name: str,
+            initial: float = 1,
+            minimum: float = 0,
+            maximum: float = 1000,
+            timeSpan: SymbolicConstant = STEP) -> SolutionDependentAmplitude:
         """This method creates a SolutionDependentAmplitude object.
 
         Notes
@@ -366,14 +413,21 @@ class AmplitudeOdb(OdbBase):
         InvalidNameError
         RangeError
         """
-        self.amplitudes[name] = amplitude = SolutionDependentAmplitude(name, initial, minimum, maximum, timeSpan)
+        self.amplitudes[name] = amplitude = SolutionDependentAmplitude(
+            name, initial, minimum, maximum, timeSpan)
         return amplitude
 
-    def SpectrumAmplitude(self, name: str, method: SymbolicConstant, data: tuple,
+    def SpectrumAmplitude(self,
+                          name: str,
+                          method: SymbolicConstant,
+                          data: tuple,
                           specificationUnits: SymbolicConstant = ACCELERATION,
                           eventUnits: SymbolicConstant = EVENT_ACCELERATION,
-                          solution: SymbolicConstant = ABSOLUTE_VALUE, timeIncrement: float = 0,
-                          gravity: float = 1, criticalDamping: Boolean = OFF, timeSpan: SymbolicConstant = STEP,
+                          solution: SymbolicConstant = ABSOLUTE_VALUE,
+                          timeIncrement: float = 0,
+                          gravity: float = 1,
+                          criticalDamping: Boolean = OFF,
+                          timeSpan: SymbolicConstant = STEP,
                           amplitude: str = '') -> SpectrumAmplitude:
         """This method creates a SpectrumAmplitude object.
 
@@ -436,13 +490,17 @@ class AmplitudeOdb(OdbBase):
         InvalidNameError
         RangeError
         """
-        self.amplitudes[name] = amplitude = SpectrumAmplitude(name, method, data, specificationUnits, eventUnits,
-                                                              solution, timeIncrement, gravity, criticalDamping,
-                                                              timeSpan, amplitude)
+        self.amplitudes[name] = amplitude = SpectrumAmplitude(
+            name, method, data, specificationUnits, eventUnits, solution,
+            timeIncrement, gravity, criticalDamping, timeSpan, amplitude)
         return amplitude
 
-    def TabularAmplitude(self, name: str, data: tuple, smooth: typing.Union[SymbolicConstant, float] = SOLVER_DEFAULT,
-                         timeSpan: SymbolicConstant = STEP) -> TabularAmplitude:
+    def TabularAmplitude(
+            self,
+            name: str,
+            data: tuple,
+            smooth: typing.Union[SymbolicConstant, float] = SOLVER_DEFAULT,
+            timeSpan: SymbolicConstant = STEP) -> TabularAmplitude:
         """This method creates a TabularAmplitude object.
 
         Notes
@@ -479,6 +537,6 @@ class AmplitudeOdb(OdbBase):
         InvalidNameError
         RangeError
         """
-        self.amplitudes[name] = amplitude = TabularAmplitude(name, data, smooth, timeSpan)
+        self.amplitudes[name] = amplitude = TabularAmplitude(
+            name, data, smooth, timeSpan)
         return amplitude
-

@@ -1,3 +1,6 @@
+from __init__ import *
+
+
 class DamageStabilization:
     """The DamageStabilization object specifies the viscosity coefficients for the damage model
     for fiber-reinforced materials. 
@@ -43,9 +46,8 @@ class DamageStabilization:
         - DAMAGE STABILIZATION
 
     """
-
-    def __init__(self, fiberTensileCoeff: float, fiberCompressiveCoeff: float, matrixTensileCoeff: float,
-                 matrixCompressiveCoeff: float):
+    def __init__(self, fiberTensileCoeff: float, fiberCompressiveCoeff: float,
+                 matrixTensileCoeff: float, matrixCompressiveCoeff: float):
         """This method creates a DamageStabilization object.
 
         Notes

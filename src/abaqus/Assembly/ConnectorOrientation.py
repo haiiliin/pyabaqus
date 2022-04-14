@@ -3,6 +3,7 @@ from ..Datum.DatumCsys import DatumCsys
 from ..Region.Set import Set
 
 
+from __init__ import *
 class ConnectorOrientation:
     """The ConnectorOrientation object is used to assign a connector orientation to a
     connector. 

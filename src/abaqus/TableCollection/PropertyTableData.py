@@ -1,5 +1,7 @@
 from abaqusConstants import *
 
+from __init__ import *
+
 
 class PropertyTableData:
     """A PropertyTableData is an object that is used to specify the property table of the
@@ -20,10 +22,14 @@ class PropertyTableData:
             - PROPERTY TABLE
 
     """
-
-    def __init__(self, label: str = '', regularize: SymbolicConstant = None,
-                 extrapolate: SymbolicConstant = None, isTemp: Boolean = OFF, fieldNums: int = None,
-                 regularizeTolerance: str = '', data: str = ''):
+    def __init__(self,
+                 label: str = '',
+                 regularize: SymbolicConstant = None,
+                 extrapolate: SymbolicConstant = None,
+                 isTemp: Boolean = OFF,
+                 fieldNums: int = None,
+                 regularizeTolerance: str = '',
+                 data: str = ''):
         """This method creates a PropertyTableData object.
 
         Notes

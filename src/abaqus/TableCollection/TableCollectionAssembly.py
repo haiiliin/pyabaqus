@@ -3,6 +3,8 @@ from .ElementProgressiveActivation import ElementProgressiveActivation
 from ..Assembly.AssemblyBase import AssemblyBase
 from ..Region.Region import Region
 
+from __init__ import *
+
 
 class TableCollectionAssembly(AssemblyBase):
     """An Assembly object is a container for instances of parts. The Assembly object has no
@@ -20,10 +22,18 @@ class TableCollectionAssembly(AssemblyBase):
 
     """
 
-    elementProgressiveActivations: dict[str, ElementProgressiveActivation] = dict[str, ElementProgressiveActivation]()
+    elementProgressiveActivations: dict[str,
+                                        ElementProgressiveActivation] = dict[
+                                            str,
+                                            ElementProgressiveActivation]()
 
-    def ElementProgressiveActivation(self, name: str, elset: Region = Region(), deformation: Boolean = OFF,
-                                     freeSurfaceType: SymbolicConstant = NONE) -> ElementProgressiveActivation:
+    def ElementProgressiveActivation(
+        self,
+        name: str,
+        elset: Region = Region(),
+        deformation: Boolean = OFF,
+        freeSurfaceType: SymbolicConstant = NONE
+    ) -> ElementProgressiveActivation:
         """This method creates an ElementProgressiveActivation object and places it in the
         elementProgressiveActivation repository.
 
@@ -61,6 +71,7 @@ class TableCollectionAssembly(AssemblyBase):
         ------
             AbaqusException: If the region does not contain only elements.
         """
-        self.elementProgressiveActivations[name] = elementProgressiveActivation = ElementProgressiveActivation(
-            name, elset, deformation, freeSurfaceType)
+        self.elementProgressiveActivations[
+            name] = elementProgressiveActivation = ElementProgressiveActivation(
+                name, elset, deformation, freeSurfaceType)
         return elementProgressiveActivation

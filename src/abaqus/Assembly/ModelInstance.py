@@ -9,10 +9,15 @@ from ..Mesh.MeshNodeArray import MeshNodeArray
 from ..Region.Set import Set
 from ..Region.Surface import Surface
 
-
 # prevent circular imports
+from __init__ import *
+
+
 class Model:
     pass
+
+
+from __init__ import *
 
 
 class ModelInstance:
@@ -52,32 +57,32 @@ class ModelInstance:
 
     """
 
-    # A repository of Set objects specifying the sets created on the assembly. For more 
-    # information, see [Region 
-    # commands](https://help.3ds.com/2022/english/DSSIMULIA_Established/SIMACAEKERRefMap/simaker-m-RegPyc-sb.htm?ContextScope=all). 
+    # A repository of Set objects specifying the sets created on the assembly. For more
+    # information, see [Region
+    # commands](https://help.3ds.com/2022/english/DSSIMULIA_Established/SIMACAEKERRefMap/simaker-m-RegPyc-sb.htm?ContextScope=all).
     sets: dict[str, Set] = dict[str, Set]()
 
-    # A repository of Surface objects specifying the surfaces created on the assembly. For 
-    # more information, see [Region 
-    # commands](https://help.3ds.com/2022/english/DSSIMULIA_Established/SIMACAEKERRefMap/simaker-m-RegPyc-sb.htm?ContextScope=all). 
+    # A repository of Surface objects specifying the surfaces created on the assembly. For
+    # more information, see [Region
+    # commands](https://help.3ds.com/2022/english/DSSIMULIA_Established/SIMACAEKERRefMap/simaker-m-RegPyc-sb.htm?ContextScope=all).
     surfaces: dict[str, Surface] = dict[str, Surface]()
 
-    # A VertexArray object. 
+    # A VertexArray object.
     vertices: VertexArray = VertexArray([])
 
-    # An EdgeArray object. 
+    # An EdgeArray object.
     edges: EdgeArray = EdgeArray([])
 
-    # A MeshElementArray object. 
+    # A MeshElementArray object.
     elements: MeshElementArray = MeshElementArray([])
 
-    # A MeshNodeArray object. 
+    # A MeshNodeArray object.
     nodes: MeshNodeArray = MeshNodeArray([])
 
-    # A repository of Datum objects. 
+    # A repository of Datum objects.
     datums: dict[str, Datum] = dict[str, Datum]()
 
-    # A repository of ReferencePoint objects. 
+    # A repository of ReferencePoint objects.
     referencePoints: dict[str, ReferencePoint] = dict[str, ReferencePoint]()
 
     def __init__(self, name: str, model: Model, autoOffset: Boolean = OFF):

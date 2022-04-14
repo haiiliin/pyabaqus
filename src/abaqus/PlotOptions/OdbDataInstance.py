@@ -1,3 +1,6 @@
+from __init__ import *
+
+
 class OdbDataInstance:
     """The OdbDataInstance object instance data.
 
@@ -17,5 +20,5 @@ class OdbDataInstance:
 
     """
 
-    # A String specifying the instance name. This attribute is read-only. 
+    # A String specifying the instance name. This attribute is read-only.
     name: str = ''

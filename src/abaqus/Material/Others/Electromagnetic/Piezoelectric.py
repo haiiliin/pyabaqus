@@ -1,5 +1,7 @@
 from abaqusConstants import *
 
+from __init__ import *
+
 
 class Piezoelectric:
     """The Piezoelectric object specifies piezoelectric material properties.
@@ -66,8 +68,10 @@ class Piezoelectric:
         - PIEZOELECTRIC
 
     """
-
-    def __init__(self, table: tuple, type: SymbolicConstant = STRESS, temperatureDependency: Boolean = OFF,
+    def __init__(self,
+                 table: tuple,
+                 type: SymbolicConstant = STRESS,
+                 temperatureDependency: Boolean = OFF,
                  dependencies: int = 0):
         """This method creates a Piezoelectric object.
 

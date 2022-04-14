@@ -1,5 +1,7 @@
 from abaqusConstants import *
 
+from __init__ import *
+
 
 class FailureRatios:
     """The FailureRatios object specifies the shape of the failure surface for a Concrete
@@ -30,8 +32,10 @@ class FailureRatios:
         - FAILURE RATIOS
 
     """
-
-    def __init__(self, table: tuple, temperatureDependency: Boolean = OFF, dependencies: int = 0):
+    def __init__(self,
+                 table: tuple,
+                 temperatureDependency: Boolean = OFF,
+                 dependencies: int = 0):
         """This method creates a FailureRatios object.
 
         Notes

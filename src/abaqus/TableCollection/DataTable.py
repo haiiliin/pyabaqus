@@ -1,3 +1,4 @@
+from __init__ import *
 
 
 class DataTable:
@@ -28,10 +29,10 @@ class DataTable:
 
     """
 
-    # A String specifying the label of the data table. 
+    # A String specifying the label of the data table.
     label: str = ''
 
-    # A DataColumnArray specifying all the dataColumns in the DataTable object. 
+    # A DataColumnArray specifying all the dataColumns in the DataTable object.
     columns: str = ''
 
     def __init__(self, label: str):

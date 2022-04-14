@@ -1,6 +1,8 @@
 from abaqusConstants import *
 from .ContactArea import ContactArea
 
+from __init__ import *
+
 
 class GasketThicknessBehavior:
     """The GasketThicknessBehavior object defines the behavior in the thickness direction for a
@@ -70,14 +72,21 @@ class GasketThicknessBehavior:
 
     """
 
-    # A ContactArea object. 
-    contactArea: ContactArea = ContactArea(((),))
+    # A ContactArea object.
+    contactArea: ContactArea = ContactArea(((), ))
 
-    def __init__(self, table: tuple, temperatureDependency: Boolean = OFF, dependencies: int = 0,
-                 tensileStiffnessFactor: float = None, type: SymbolicConstant = ELASTIC_PLASTIC,
-                 unloadingDependencies: int = 0, unloadingTemperatureDependency: Boolean = OFF,
-                 variableUnits: SymbolicConstant = STRESS, yieldOnset: float = 0,
-                 yieldOnsetMethod: SymbolicConstant = RELATIVE_SLOPE_DROP, unloadingTable: tuple = ()):
+    def __init__(self,
+                 table: tuple,
+                 temperatureDependency: Boolean = OFF,
+                 dependencies: int = 0,
+                 tensileStiffnessFactor: float = None,
+                 type: SymbolicConstant = ELASTIC_PLASTIC,
+                 unloadingDependencies: int = 0,
+                 unloadingTemperatureDependency: Boolean = OFF,
+                 variableUnits: SymbolicConstant = STRESS,
+                 yieldOnset: float = 0,
+                 yieldOnsetMethod: SymbolicConstant = RELATIVE_SLOPE_DROP,
+                 unloadingTable: tuple = ()):
         """This method creates a GasketThicknessBehavior object.
 
         Notes

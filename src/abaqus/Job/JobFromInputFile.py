@@ -2,6 +2,8 @@ from abaqusConstants import *
 from .Job import Job
 from .MessageArray import MessageArray
 
+from __init__ import *
+
 
 class JobFromInputFile(Job):
     """The JobFromInputFile object defines a Job object which analyzes a model contained in an
@@ -38,35 +40,46 @@ class JobFromInputFile(Job):
 
     """
 
-    # A Boolean specifying whether to retrieve the recommended memory settings from the last 
-    # datacheck or analysis run and use those values in subsequent submissions. The default 
-    # value is ON. 
+    # A Boolean specifying whether to retrieve the recommended memory settings from the last
+    # datacheck or analysis run and use those values in subsequent submissions. The default
+    # value is ON.
     getMemoryFromAnalysis: Boolean = ON
 
-    # A SymbolicConstant specifying whether the job will be analyzed by Abaqus/Standard or 
-    # Abaqus/Explicit. Possible values are STANDARD, EXPLICIT, and UNKNOWN.If the object has 
-    # the type JobFromInputFile, *analysis*=UNKNOWN. 
+    # A SymbolicConstant specifying whether the job will be analyzed by Abaqus/Standard or
+    # Abaqus/Explicit. Possible values are STANDARD, EXPLICIT, and UNKNOWN.If the object has
+    # the type JobFromInputFile, *analysis*=UNKNOWN.
     analysis: SymbolicConstant = None
 
-    # A SymbolicConstant specifying the status of the analysis. Possible values are SUBMITTED, 
-    # RUNNING, ABORTED, TERMINATED, COMPLETED, CHECK_RUNNING, and CHECK_COMPLETED.If the 
-    # *message* member is empty, *status* is set to NONE. 
+    # A SymbolicConstant specifying the status of the analysis. Possible values are SUBMITTED,
+    # RUNNING, ABORTED, TERMINATED, COMPLETED, CHECK_RUNNING, and CHECK_COMPLETED.If the
+    # *message* member is empty, *status* is set to NONE.
     status: SymbolicConstant = None
 
-    # A MessageArray object specifying the messages received during an analysis. 
+    # A MessageArray object specifying the messages received during an analysis.
     messages: MessageArray = MessageArray()
 
-    # A tuple of Strings specifying the environment variables and their values. 
+    # A tuple of Strings specifying the environment variables and their values.
     environment: tuple = ()
 
-    def __init__(self, name: str, inputFileName: str, type: SymbolicConstant = ANALYSIS, queue: str = '',
-                 waitHours: int = 0, waitMinutes: int = 0, atTime: str = '', scratch: str = '',
-                 userSubroutine: str = '', numCpus: int = 1, memory: int = 90,
+    def __init__(self,
+                 name: str,
+                 inputFileName: str,
+                 type: SymbolicConstant = ANALYSIS,
+                 queue: str = '',
+                 waitHours: int = 0,
+                 waitMinutes: int = 0,
+                 atTime: str = '',
+                 scratch: str = '',
+                 userSubroutine: str = '',
+                 numCpus: int = 1,
+                 memory: int = 90,
                  memoryUnits: SymbolicConstant = PERCENTAGE,
                  explicitPrecision: SymbolicConstant = SINGLE,
                  nodalOutputPrecision: SymbolicConstant = SINGLE,
-                 parallelizationMethodExplicit: SymbolicConstant = DOMAIN, numDomains: int = 1,
-                 activateLoadBalancing: Boolean = OFF, multiprocessingMode: SymbolicConstant = DEFAULT,
+                 parallelizationMethodExplicit: SymbolicConstant = DOMAIN,
+                 numDomains: int = 1,
+                 activateLoadBalancing: Boolean = OFF,
+                 multiprocessingMode: SymbolicConstant = DEFAULT,
                  licenseType: SymbolicConstant = DEFAULT):
         """This method creates an analysis job using an input file for the model definition.
 
@@ -167,13 +180,23 @@ class JobFromInputFile(Job):
         super().__init__()
         pass
 
-    def setValues(self, type: SymbolicConstant = ANALYSIS, queue: str = '', waitHours: int = 0,
-                  waitMinutes: int = 0, atTime: str = '', scratch: str = '', userSubroutine: str = '',
-                  numCpus: int = 1, memory: int = 90, memoryUnits: SymbolicConstant = PERCENTAGE,
+    def setValues(self,
+                  type: SymbolicConstant = ANALYSIS,
+                  queue: str = '',
+                  waitHours: int = 0,
+                  waitMinutes: int = 0,
+                  atTime: str = '',
+                  scratch: str = '',
+                  userSubroutine: str = '',
+                  numCpus: int = 1,
+                  memory: int = 90,
+                  memoryUnits: SymbolicConstant = PERCENTAGE,
                   explicitPrecision: SymbolicConstant = SINGLE,
                   nodalOutputPrecision: SymbolicConstant = SINGLE,
-                  parallelizationMethodExplicit: SymbolicConstant = DOMAIN, numDomains: int = 1,
-                  activateLoadBalancing: Boolean = OFF, multiprocessingMode: SymbolicConstant = DEFAULT,
+                  parallelizationMethodExplicit: SymbolicConstant = DOMAIN,
+                  numDomains: int = 1,
+                  activateLoadBalancing: Boolean = OFF,
+                  multiprocessingMode: SymbolicConstant = DEFAULT,
                   licenseType: SymbolicConstant = DEFAULT):
         """This method modifies the JobFromInputFile object.
         

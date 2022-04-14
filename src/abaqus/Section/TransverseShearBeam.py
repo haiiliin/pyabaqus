@@ -2,6 +2,8 @@ import typing
 
 from abaqusConstants import *
 
+from __init__ import *
+
 
 class TransverseShearBeam:
     """The TransverseShearBeam object defines the transverse shear stiffness properties of a beam section. 
@@ -21,9 +23,12 @@ class TransverseShearBeam:
         - TRANSVERSE SHEAR STIFFNESS
 
     """
-
-    def __init__(self, scfDefinition: SymbolicConstant, k23: float = None, k13: float = None,
-                 slendernessCompensation: typing.Union[SymbolicConstant, float] = 0):
+    def __init__(self,
+                 scfDefinition: SymbolicConstant,
+                 k23: float = None,
+                 k13: float = None,
+                 slendernessCompensation: typing.Union[SymbolicConstant,
+                                                       float] = 0):
         """This method creates a TransverseShearBeam object.
 
         Notes

@@ -1,5 +1,7 @@
 from abaqusConstants import *
 
+from __init__ import *
+
 
 class Potential:
     """The Potential object defines an anisotropic yield/creep model.
@@ -35,8 +37,10 @@ class Potential:
         - POTENTIAL
 
     """
-
-    def __init__(self, table: tuple, temperatureDependency: Boolean = OFF, dependencies: int = 0):
+    def __init__(self,
+                 table: tuple,
+                 temperatureDependency: Boolean = OFF,
+                 dependencies: int = 0):
         """This method creates a Potential object.
 
         Notes

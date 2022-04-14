@@ -1,6 +1,8 @@
 from abaqusConstants import *
 from .Amplitude import Amplitude
 
+from __init__ import *
+
 
 class PeriodicAmplitude(Amplitude):
     """The PeriodicAmplitude object defines an amplitude curve using a Fourier series.
@@ -21,8 +23,12 @@ class PeriodicAmplitude(Amplitude):
         - AMPLITUDE
 
     """
-
-    def __init__(self, name: str, frequency: float, start: float, a_0: float, data: tuple,
+    def __init__(self,
+                 name: str,
+                 frequency: float,
+                 start: float,
+                 a_0: float,
+                 data: tuple,
                  timeSpan: SymbolicConstant = STEP):
         """This method creates a PeriodicAmplitude object.
 

@@ -3,6 +3,8 @@ from ..BasicGeometry.EdgeArray import EdgeArray
 from ..Mesh.MeshEdge import MeshEdge
 from ..Mesh.MeshElementArray import MeshElementArray
 
+from __init__ import *
+
 
 class Stringer:
     """The Stringer object stores information on stringer reinforcements created on entities.
@@ -29,13 +31,16 @@ class Stringer:
 
     """
 
-    # A MeshElementArray object. 
+    # A MeshElementArray object.
     elements: MeshElementArray = MeshElementArray([])
 
-    # An EdgeArray object. 
+    # An EdgeArray object.
     edges: EdgeArray = EdgeArray([])
 
-    def __init__(self, name: str, edges: tuple[Edge] = (), elementEdges: tuple[MeshEdge] = ()):
+    def __init__(self,
+                 name: str,
+                 edges: tuple[Edge] = (),
+                 elementEdges: tuple[MeshEdge] = ()):
         """This method creates a stringer from a sequence of objects in a model database. At least
         one of the optional arguments needs to be specified.
 
@@ -64,7 +69,10 @@ class Stringer:
         """
         pass
 
-    def EditStringer(self, name: str, edges: tuple[Edge] = (), elementEdges: tuple[MeshEdge] = ()):
+    def EditStringer(self,
+                     name: str,
+                     edges: tuple[Edge] = (),
+                     elementEdges: tuple[MeshEdge] = ()):
         """This method modifies underlying entities of the selected stringer. At least one of the
         optional arguments needs to be specified.
 

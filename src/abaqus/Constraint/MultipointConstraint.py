@@ -2,6 +2,8 @@ from abaqusConstants import *
 from .Constraint import Constraint
 from ..Region.Region import Region
 
+from __init__ import *
+
 
 class MultipointConstraint(Constraint):
     """The MultipointConstraint object defines a constraint between a group of
@@ -28,12 +30,18 @@ class MultipointConstraint(Constraint):
 
     """
 
-    # A Boolean specifying whether the constraint is suppressed or not. The default value is 
-    # OFF. 
+    # A Boolean specifying whether the constraint is suppressed or not. The default value is
+    # OFF.
     suppressed: Boolean = OFF
 
-    def __init__(self, name: str, surface: Region, controlPoint: Region, mpcType: SymbolicConstant,
-                 csys: str = None, userType: int = 0, userMode: SymbolicConstant = DOF_MODE_MPC):
+    def __init__(self,
+                 name: str,
+                 surface: Region,
+                 controlPoint: Region,
+                 mpcType: SymbolicConstant,
+                 csys: str = None,
+                 userType: int = 0,
+                 userMode: SymbolicConstant = DOF_MODE_MPC):
         """This method creates a MultipointConstraint object.
 
         Notes
@@ -77,7 +85,10 @@ class MultipointConstraint(Constraint):
         super().__init__()
         pass
 
-    def setValues(self, csys: str = None, userType: int = 0, userMode: SymbolicConstant = DOF_MODE_MPC):
+    def setValues(self,
+                  csys: str = None,
+                  userType: int = 0,
+                  userMode: SymbolicConstant = DOF_MODE_MPC):
         """This method modifies the MultipointConstraint object.
         
         Parameters

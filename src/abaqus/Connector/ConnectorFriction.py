@@ -5,6 +5,8 @@ from .ConnectorPotentialArray import ConnectorPotentialArray
 from .DerivedComponent import DerivedComponent
 from .TangentialBehavior import TangentialBehavior
 
+from __init__ import *
+
 
 class ConnectorFriction(ConnectorBehaviorOption):
     """The ConnectorFriction object defines Coulomb-like or hysteretic friction behavior for
@@ -40,28 +42,36 @@ class ConnectorFriction(ConnectorBehaviorOption):
 
     """
 
-    # A TangentialBehavior object. 
+    # A TangentialBehavior object.
     tangentialBehavior: TangentialBehavior = TangentialBehavior()
 
-    # A DerivedComponent object specifying the DerivedComponent used to compute the contact 
-    # force component direction. This argument applies only if 
-    # *frictionModel*=USER_CUSTOMIZED, if *useContactForceComponent*=ON, and if 
-    # *contactForceStyle*=DERIVED_COMPONENT. 
+    # A DerivedComponent object specifying the DerivedComponent used to compute the contact
+    # force component direction. This argument applies only if
+    # *frictionModel*=USER_CUSTOMIZED, if *useContactForceComponent*=ON, and if
+    # *contactForceStyle*=DERIVED_COMPONENT.
     derivedComponent: DerivedComponent = DerivedComponent()
 
-    # A ConnectorOptions object specifying the ConnectorOptions used to define tabular options 
-    # for this ConnectorBehaviorOption. 
+    # A ConnectorOptions object specifying the ConnectorOptions used to define tabular options
+    # for this ConnectorBehaviorOption.
     options: ConnectorOptions = ConnectorOptions()
 
-    def __init__(self, frictionModel: SymbolicConstant = PREDEFINED, slipStyle: SymbolicConstant = SPECIFY,
-                 tangentDirection: int = None, stickStiffness: float = None,
+    def __init__(self,
+                 frictionModel: SymbolicConstant = PREDEFINED,
+                 slipStyle: SymbolicConstant = SPECIFY,
+                 tangentDirection: int = None,
+                 stickStiffness: float = None,
                  componentType: SymbolicConstant = NO_INDEPENDENT_COMPONENTS,
-                 slipDependency: Boolean = OFF, temperatureDependency: Boolean = OFF,
-                 dependencies: int = 0, useContactForceComponent: Boolean = OFF,
-                 contactForceStyle: SymbolicConstant = COMPONENT_NUMBER, contactForceComponent: int = 0,
-                 forcePotentialOperator: SymbolicConstant = SUM, forcePotentialExponent: float = 2,
+                 slipDependency: Boolean = OFF,
+                 temperatureDependency: Boolean = OFF,
+                 dependencies: int = 0,
+                 useContactForceComponent: Boolean = OFF,
+                 contactForceStyle: SymbolicConstant = COMPONENT_NUMBER,
+                 contactForceComponent: int = 0,
+                 forcePotentialOperator: SymbolicConstant = SUM,
+                 forcePotentialExponent: float = 2,
                  connectorPotentials: ConnectorPotentialArray = None,
-                 table: tuple = (), independentComponents: tuple = ()):
+                 table: tuple = (),
+                 independentComponents: tuple = ()):
         """This method creates a connector friction behavior option for a ConnectorSection object.
         Depending upon the arguments provided, the friction behavior can be Coulomb-like or
         hysteretic in nature.

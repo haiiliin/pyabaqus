@@ -3,6 +3,8 @@ from .PredefinedField import PredefinedField
 from ..Assembly.PartInstanceArray import PartInstanceArray
 from ..Region.Region import Region
 
+from __init__ import *
+
 
 class MaterialAssignment(PredefinedField):
     """The MaterialAssignment object stores the data for an initial material assignment
@@ -28,11 +30,16 @@ class MaterialAssignment(PredefinedField):
 
     """
 
-    # A Region object specifying the region to which the predefined field is applied. 
+    # A Region object specifying the region to which the predefined field is applied.
     region: Region = Region()
 
-    def __init__(self, name: str, instanceList: PartInstanceArray, useFields: Boolean = OFF,
-                 assignmentList: tuple = (), fieldList: tuple = (), colorList: tuple = ()):
+    def __init__(self,
+                 name: str,
+                 instanceList: PartInstanceArray,
+                 useFields: Boolean = OFF,
+                 assignmentList: tuple = (),
+                 fieldList: tuple = (),
+                 colorList: tuple = ()):
         """This method creates a MaterialAssignment predefined field object.
 
         Notes
@@ -77,7 +84,10 @@ class MaterialAssignment(PredefinedField):
         super().__init__()
         pass
 
-    def setValues(self, useFields: Boolean = OFF, assignmentList: tuple = (), fieldList: tuple = (),
+    def setValues(self,
+                  useFields: Boolean = OFF,
+                  assignmentList: tuple = (),
+                  fieldList: tuple = (),
                   colorList: tuple = ()):
         """This method modifies the MaterialAssignment object.
         

@@ -1,5 +1,7 @@
 from abaqusConstants import *
 
+from __init__ import *
+
 
 class Regularization:
     """The Regularization object defines the tolerance to be used for regularizing material
@@ -20,8 +22,9 @@ class Regularization:
         - DASHPOT
 
     """
-
-    def __init__(self, rtol: float = 0, strainRateRegularization: SymbolicConstant = LOGARITHMIC):
+    def __init__(self,
+                 rtol: float = 0,
+                 strainRateRegularization: SymbolicConstant = LOGARITHMIC):
         """This method creates a Regularization object.
 
         Notes

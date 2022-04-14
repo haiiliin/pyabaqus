@@ -1,10 +1,12 @@
 from .ConstrainedSketchConstraint import ConstrainedSketchConstraint
 from ..ConstrainedSketchGeometry.ConstrainedSketchGeometry import ConstrainedSketchGeometry
 
+from __init__ import *
+
 
 class TangentConstraint(ConstrainedSketchConstraint):
-
-    def __init__(self, entity1: ConstrainedSketchGeometry, entity2: ConstrainedSketchGeometry):
+    def __init__(self, entity1: ConstrainedSketchGeometry,
+                 entity2: ConstrainedSketchGeometry):
         """This method creates a tangent constraint. This constraint applies to different types of
         ConstrainedSketchGeometry objects and constrains them to remain tangential.
 

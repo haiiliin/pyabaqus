@@ -2,6 +2,8 @@ from abaqusConstants import *
 from .Constraint import Constraint
 from ..Region.Region import Region
 
+from __init__ import *
+
 
 class RigidBody(Constraint):
     """The RigidBody object constrains all the degrees of freedom on the specified regions to
@@ -28,12 +30,18 @@ class RigidBody(Constraint):
 
     """
 
-    # A Boolean specifying whether the constraint is suppressed or not. The default value is 
-    # OFF. 
+    # A Boolean specifying whether the constraint is suppressed or not. The default value is
+    # OFF.
     suppressed: Boolean = OFF
 
-    def __init__(self, name: str, refPointRegion: Region, bodyRegion: str = None, tieRegion: str = None,
-                 pinRegion: str = None, surfaceRegion: str = None, refPointAtCOM: Boolean = OFF,
+    def __init__(self,
+                 name: str,
+                 refPointRegion: Region,
+                 bodyRegion: str = None,
+                 tieRegion: str = None,
+                 pinRegion: str = None,
+                 surfaceRegion: str = None,
+                 refPointAtCOM: Boolean = OFF,
                  isothermal: Boolean = OFF):
         """This method creates a RigidBody object.
 
@@ -77,8 +85,13 @@ class RigidBody(Constraint):
         super().__init__()
         pass
 
-    def setValues(self, bodyRegion: str = None, tieRegion: str = None, pinRegion: str = None,
-                  surfaceRegion: str = None, refPointAtCOM: Boolean = OFF, isothermal: Boolean = OFF):
+    def setValues(self,
+                  bodyRegion: str = None,
+                  tieRegion: str = None,
+                  pinRegion: str = None,
+                  surfaceRegion: str = None,
+                  refPointAtCOM: Boolean = OFF,
+                  isothermal: Boolean = OFF):
         """This method modifies the RigidBody object.
         
         Parameters

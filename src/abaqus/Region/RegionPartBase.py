@@ -1,6 +1,8 @@
 from abaqusConstants import *
 from ..Part.PartBase import PartBase
 
+from __init__ import *
+
 
 class RegionPartBase(PartBase):
     """The following commands operate on Part objects. For more information about the Part 
@@ -15,7 +17,6 @@ class RegionPartBase(PartBase):
             import regionToolset
 
     """
-
     def clashSets(self, arg1: str, arg2: str):
         """This command prints a message describing the relationship between the contents of two
         sets. Possible outcomes are:

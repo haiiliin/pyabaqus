@@ -1,5 +1,7 @@
 from abaqusConstants import *
 
+from __init__ import *
+
 
 class SelectedProbeValues:
     """The SelectedProbeValues object has no constructor. The SelectedProbeValues object is
@@ -28,15 +30,15 @@ class SelectedProbeValues:
 
     """
 
-    # An Int specifying the length of the *values* member. 
+    # An Int specifying the length of the *values* member.
     length: int = None
 
-    # A Boolean specifying whether any probe values have been selected (as is necessary prior 
-    # to writing to a file). 
+    # A Boolean specifying whether any probe values have been selected (as is necessary prior
+    # to writing to a file).
     fieldOutputAvailable: Boolean = OFF
 
-    # A tuple of tuples of Floats specifying the selected probe values. 
+    # A tuple of tuples of Floats specifying the selected probe values.
     values: float = None
 
-    # A tuple of Floats specifying the last sequence of the *values* member. 
+    # A tuple of Floats specifying the last sequence of the *values* member.
     lastValues: tuple = ()

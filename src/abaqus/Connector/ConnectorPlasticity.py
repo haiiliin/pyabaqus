@@ -3,6 +3,8 @@ from .ConnectorBehaviorOption import ConnectorBehaviorOption
 from .ConnectorOptions import ConnectorOptions
 from .ConnectorPotentialArray import ConnectorPotentialArray
 
+from __init__ import *
+
 
 class ConnectorPlasticity(ConnectorBehaviorOption):
     """The ConnectorPlasticity object defines Plastic behavior for one or more components of a
@@ -79,22 +81,30 @@ class ConnectorPlasticity(ConnectorBehaviorOption):
 
     """
 
-    # A ConnectorOptions object specifying the ConnectorOptions used to define tabular options 
-    # for the isotropic hardening table. 
+    # A ConnectorOptions object specifying the ConnectorOptions used to define tabular options
+    # for the isotropic hardening table.
     isotropicOptions: ConnectorOptions = ConnectorOptions()
 
-    # A ConnectorOptions object specifying the ConnectorOptions used to define tabular options 
-    # for the kinematic hardening table. 
+    # A ConnectorOptions object specifying the ConnectorOptions used to define tabular options
+    # for the kinematic hardening table.
     kinematicOptions: ConnectorOptions = ConnectorOptions()
 
-    def __init__(self, coupling: SymbolicConstant = UNCOUPLED, isotropic: Boolean = ON,
-                 isotropicType: SymbolicConstant = TABULAR, isotropicTemperature: Boolean = OFF,
-                 isotropicDependencies: int = 0, kinematic: Boolean = OFF,
-                 kinematicType: SymbolicConstant = HALF_CYCLE, kinematicTemperature: Boolean = OFF,
-                 kinematicDependencies: int = 0, forcePotentialOperator: SymbolicConstant = SUM,
+    def __init__(self,
+                 coupling: SymbolicConstant = UNCOUPLED,
+                 isotropic: Boolean = ON,
+                 isotropicType: SymbolicConstant = TABULAR,
+                 isotropicTemperature: Boolean = OFF,
+                 isotropicDependencies: int = 0,
+                 kinematic: Boolean = OFF,
+                 kinematicType: SymbolicConstant = HALF_CYCLE,
+                 kinematicTemperature: Boolean = OFF,
+                 kinematicDependencies: int = 0,
+                 forcePotentialOperator: SymbolicConstant = SUM,
                  forcePotentialExponent: float = 2,
                  connectorPotentials: ConnectorPotentialArray = None,
-                 isotropicTable: tuple = (), kinematicTable: tuple = (), components: tuple = ()):
+                 isotropicTable: tuple = (),
+                 kinematicTable: tuple = (),
+                 components: tuple = ()):
         """This method creates a connector plasticity behavior option for a ConnectorSection
         object.
 

@@ -1,3 +1,6 @@
+from __init__ import *
+
+
 class SectionPoint:
     """The SectionPoint object describes the location of a section point within a section
     category. 
@@ -32,7 +35,6 @@ class SectionPoint:
         session.odbs[name].steps[name].frames[i].fieldOutputs[name].values[i].sectionPoint
 
     """
-
     def __init__(self, number: int, description: str):
         """This method creates a SectionPoint object.
 

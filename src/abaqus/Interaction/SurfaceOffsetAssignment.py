@@ -2,6 +2,8 @@ import typing
 
 from abaqusConstants import *
 
+from __init__ import *
+
 
 class SurfaceOffsetAssignment:
     """The SurfaceOffsetAssignment object stores the surface offset fraction assignment
@@ -21,8 +23,8 @@ class SurfaceOffsetAssignment:
         - SURFACE PROPERTY ASSIGNMENT
 
     """
-
-    def changeValuesInStep(self, stepName: str, index: int, value: typing.Union[SymbolicConstant, float]):
+    def changeValuesInStep(self, stepName: str, index: int,
+                           value: typing.Union[SymbolicConstant, float]):
         """This method allows modification of surface offset fraction assignments already defined
         on surfaces in a given step.
         
@@ -42,7 +44,8 @@ class SurfaceOffsetAssignment:
         """
         pass
 
-    def appendInStep(self, stepName: str, assignments: typing.Union[SymbolicConstant, float]):
+    def appendInStep(self, stepName: str,
+                     assignments: typing.Union[SymbolicConstant, float]):
         """This method allows addition of surface offset fraction assignments to new surfaces in a
         given step.
         

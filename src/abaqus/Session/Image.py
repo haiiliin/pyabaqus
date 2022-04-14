@@ -1,3 +1,6 @@
+from __init__ import *
+
+
 class Image:
     """The Image object is used to store color values and attributes associated with a raster
     file. Upon creation, the Image object is added to the session.images repository. 
@@ -11,7 +14,6 @@ class Image:
         session.images[name]
 
     """
-
     def __init__(self, name: str, fileName: str):
         """This method creates an Image object from the contents of the specified file.
 
@@ -48,7 +50,8 @@ class Image:
         """
         pass
 
-    def ImageFromMovie(self, name: str, movieName: str, frame: int, time: float):
+    def ImageFromMovie(self, name: str, movieName: str, frame: int,
+                       time: float):
         """This method creates an Image object from a given frame of an existing Movie object.
         
         Parameters

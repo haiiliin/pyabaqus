@@ -1,3 +1,6 @@
+from __init__ import *
+
+
 class OdbDataElementSet:
     """The OdbDataElementSet object stores element set data.
 
@@ -20,9 +23,9 @@ class OdbDataElementSet:
 
     """
 
-    # A String specifying the set name. This attribute is read-only. 
+    # A String specifying the set name. This attribute is read-only.
     name: str = ''
 
-    # A String-to-tuple-of-Ints Dictionary specifying the elements in the set. This attribute 
-    # is read-only. 
+    # A String-to-tuple-of-Ints Dictionary specifying the elements in the set. This attribute
+    # is read-only.
     elements: str = ''

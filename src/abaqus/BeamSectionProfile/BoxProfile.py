@@ -1,9 +1,10 @@
 from abaqusConstants import *
 from .Profile import Profile
 
+from __init__ import *
+
 
 class BoxProfile(Profile):
-
     """The BoxProfile object defines the properties of a box profile. 
     The BoxProfile object is derived from the Profile object. 
 
@@ -22,9 +23,15 @@ class BoxProfile(Profile):
         - BEAM SECTION
 
     """
-
-    def __init__(self, name: str, a: float, b: float, uniformThickness: Boolean, t1: float, t2: float = 0, 
-                 t3: float = 0, t4: float = 0):
+    def __init__(self,
+                 name: str,
+                 a: float,
+                 b: float,
+                 uniformThickness: Boolean,
+                 t1: float,
+                 t2: float = 0,
+                 t3: float = 0,
+                 t4: float = 0):
         """This method creates a BoxProfile object.
 
         Notes
@@ -94,4 +101,3 @@ class BoxProfile(Profile):
             
         """
         pass
-

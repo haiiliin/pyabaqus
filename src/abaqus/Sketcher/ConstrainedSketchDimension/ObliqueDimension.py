@@ -2,11 +2,16 @@ from abaqusConstants import *
 from .ConstrainedSketchDimension import ConstrainedSketchDimension
 from ..ConstrainedSketchVertex.ConstrainedSketchVertex import ConstrainedSketchVertex
 
+from __init__ import *
+
 
 class ObliqueDimension(ConstrainedSketchDimension):
-
-    def __init__(self, vertex1: ConstrainedSketchVertex, vertex2: ConstrainedSketchVertex,
-                 textPoint: tuple[float], value: float = None, reference: Boolean = OFF):
+    def __init__(self,
+                 vertex1: ConstrainedSketchVertex,
+                 vertex2: ConstrainedSketchVertex,
+                 textPoint: tuple[float],
+                 value: float = None,
+                 reference: Boolean = OFF):
         """This method constructs a ConstrainedSketchDimension object between two vertices. An
         oblique dimension indicates the distance between two vertices.
 

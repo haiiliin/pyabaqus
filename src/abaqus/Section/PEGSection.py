@@ -1,5 +1,7 @@
 from .Section import Section
 
+from __init__ import *
+
 
 class PEGSection(Section):
     """The PEGSection object defines the properties of a solid section.
@@ -20,8 +22,11 @@ class PEGSection(Section):
         - SOLID SECTION
 
     """
-
-    def __init__(self, name: str, material: str, thickness: float = 1, wedgeAngle1: float = 0,
+    def __init__(self,
+                 name: str,
+                 material: str,
+                 thickness: float = 1,
+                 wedgeAngle1: float = 0,
                  wedgeAngle2: float = 0):
         """This method creates a PEGSection object.
 
@@ -62,7 +67,10 @@ class PEGSection(Section):
         super().__init__()
         pass
 
-    def setValues(self, thickness: float = 1, wedgeAngle1: float = 0, wedgeAngle2: float = 0):
+    def setValues(self,
+                  thickness: float = 1,
+                  wedgeAngle1: float = 0,
+                  wedgeAngle2: float = 0):
         """This method modifies the PEGSection object.
         
         Parameters

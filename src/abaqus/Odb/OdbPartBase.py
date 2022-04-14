@@ -14,6 +14,8 @@ from .SectionCategory import SectionCategory
 from ..Property.MaterialOrientationArray import MaterialOrientationArray
 from ..Property.SectionAssignmentArray import SectionAssignmentArray
 
+from __init__ import *
+
 
 class OdbPartBase:
     """The OdbPart object is similar to the kernel Part object and contains nodes and elements,
@@ -55,40 +57,41 @@ class OdbPartBase:
 
     """
 
-    # An OdbMeshNodeArray object. 
+    # An OdbMeshNodeArray object.
     nodes: OdbMeshNodeArray = OdbMeshNodeArray()
 
-    # An OdbMeshElementArray object. 
+    # An OdbMeshElementArray object.
     elements: OdbMeshElementArray = OdbMeshElementArray()
 
-    # A repository of OdbSet objects specifying node sets. 
+    # A repository of OdbSet objects specifying node sets.
     nodeSets: dict[str, OdbSet] = dict[str, OdbSet]()
 
-    # A repository of OdbSet objects specifying element sets. 
+    # A repository of OdbSet objects specifying element sets.
     elementSets: dict[str, OdbSet] = dict[str, OdbSet]()
 
-    # A repository of OdbSet objects specifying surfaces. 
+    # A repository of OdbSet objects specifying surfaces.
     surfaces: dict[str, OdbSet] = dict[str, OdbSet]()
 
-    # A SectionAssignmentArray object. 
+    # A SectionAssignmentArray object.
     sectionAssignments: SectionAssignmentArray = SectionAssignmentArray()
 
-    # A BeamOrientationArray object. 
+    # A BeamOrientationArray object.
     beamOrientations: BeamOrientationArray = BeamOrientationArray()
 
-    # A MaterialOrientationArray object. 
+    # A MaterialOrientationArray object.
     materialOrientations: MaterialOrientationArray = MaterialOrientationArray()
 
-    # A RebarOrientationArray object. 
+    # A RebarOrientationArray object.
     rebarOrientations: RebarOrientationArray = RebarOrientationArray()
 
-    # An OdbRigidBodyArray object. 
+    # An OdbRigidBodyArray object.
     rigidBodies: OdbRigidBodyArray = OdbRigidBodyArray()
 
-    # An AnalyticSurface object specifying analytic Surface defined on the instance. 
+    # An AnalyticSurface object specifying analytic Surface defined on the instance.
     analyticSurface: AnalyticSurface = AnalyticSurface()
 
-    def __init__(self, name: str, embeddedSpace: SymbolicConstant, type: SymbolicConstant):
+    def __init__(self, name: str, embeddedSpace: SymbolicConstant,
+                 type: SymbolicConstant):
         """This method creates an OdbPart object. Nodes and elements are added to this object at a
         later stage.
 
@@ -118,7 +121,11 @@ class OdbPartBase:
         pass
 
     @typing.overload
-    def addElements(self, labels: tuple, connectivity: tuple, type: str, elementSetName: str = '',
+    def addElements(self,
+                    labels: tuple,
+                    connectivity: tuple,
+                    type: str,
+                    elementSetName: str = '',
                     sectionCategory: SectionCategory = None):
         """This method adds elements to an OdbPart object using element labels and nodal
         connectivity.
@@ -141,7 +148,10 @@ class OdbPartBase:
         pass
 
     @typing.overload
-    def addElements(self, elementData: tuple, type: str, elementSetName: str = None,
+    def addElements(self,
+                    elementData: tuple,
+                    type: str,
+                    elementSetName: str = None,
                     sectionCategory: SectionCategory = None):
         """This method adds elements to an OdbPart object using a sequence of element labels and
         nodal connectivity.
@@ -166,7 +176,10 @@ class OdbPartBase:
         pass
 
     @typing.overload
-    def addNodes(self, labels: tuple, coordinates: tuple, nodeSetName: str = None):
+    def addNodes(self,
+                 labels: tuple,
+                 coordinates: tuple,
+                 nodeSetName: str = None):
         """This method adds nodes to an OdbPart object using node labels and coordinates.
         Warning:Adding nodes not in ascending order of their labels may cause Abaqus/Viewer to
         plot contours incorrectly.
@@ -202,7 +215,8 @@ class OdbPartBase:
     def addNodes(self, *args, **kwargs):
         pass
 
-    def assignBeamOrientation(self, region: str, method: SymbolicConstant, vector: tuple):
+    def assignBeamOrientation(self, region: str, method: SymbolicConstant,
+                              vector: tuple):
         """This method assigns a beam section orientation to a region of a part instance.
         
         Parameters
@@ -218,7 +232,10 @@ class OdbPartBase:
         """
         pass
 
-    def assignMaterialOrientation(self, region: str, localCSys: OdbDatumCsys, axis: SymbolicConstant = AXIS_1,
+    def assignMaterialOrientation(self,
+                                  region: str,
+                                  localCSys: OdbDatumCsys,
+                                  axis: SymbolicConstant = AXIS_1,
                                   angle: float = 0,
                                   stackDirection: SymbolicConstant = STACK_3):
         """This method assigns a material orientation to a region of a part instance.
@@ -244,7 +261,10 @@ class OdbPartBase:
         """
         pass
 
-    def assignRebarOrientation(self, region: str, localCsys: OdbDatumCsys, axis: SymbolicConstant = AXIS_1,
+    def assignRebarOrientation(self,
+                               region: str,
+                               localCsys: OdbDatumCsys,
+                               axis: SymbolicConstant = AXIS_1,
                                angle: float = 0):
         """This method assigns a rebar reference orientation to a region of a part instance.
         
@@ -303,7 +323,10 @@ class OdbPartBase:
         """
         pass
 
-    def AnalyticRigidSurf2DPlanar(self, name: str, profile: tuple[AnalyticSurfaceSegment], filletRadius: str = 0):
+    def AnalyticRigidSurf2DPlanar(self,
+                                  name: str,
+                                  profile: tuple[AnalyticSurfaceSegment],
+                                  filletRadius: str = 0):
         """This method is used to define a two-dimensional AnalyticSurface object on the part
         object.
         
@@ -326,7 +349,10 @@ class OdbPartBase:
         """
         pass
 
-    def AnalyticRigidSurfExtrude(self, name: str, profile: tuple[AnalyticSurfaceSegment], filletRadius: str = 0):
+    def AnalyticRigidSurfExtrude(self,
+                                 name: str,
+                                 profile: tuple[AnalyticSurfaceSegment],
+                                 filletRadius: str = 0):
         """This method is used to define a three-dimensional cylindrical AnalyticSurface on the
         part object.
         
@@ -349,7 +375,10 @@ class OdbPartBase:
         """
         pass
 
-    def AnalyticRigidSurfRevolve(self, name: str, profile: tuple[AnalyticSurfaceSegment], filletRadius: str = 0):
+    def AnalyticRigidSurfRevolve(self,
+                                 name: str,
+                                 profile: tuple[AnalyticSurfaceSegment],
+                                 filletRadius: str = 0):
         """This method is used to define a three-dimensional AnalyticSurface of revolution on the
         part object.
         

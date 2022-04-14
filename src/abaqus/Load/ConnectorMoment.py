@@ -4,6 +4,8 @@ from abaqusConstants import *
 from .Load import Load
 from ..Region.Region import Region
 
+from __init__ import *
+
 
 class ConnectorMoment(Load):
     """The ConnectorMoment object stores the data for a connector moment.
@@ -36,25 +38,32 @@ class ConnectorMoment(Load):
 
     """
 
-    # A String specifying the load repository key. 
+    # A String specifying the load repository key.
     name: str = ''
 
-    # A String specifying the name of the assembled fastener to which the load will be 
-    # applied. This argument is not valid when *region* is specified. When this argument is 
-    # specified, *fastenerSetName* must also be specified. The default value is an empty 
-    # string. 
+    # A String specifying the name of the assembled fastener to which the load will be
+    # applied. This argument is not valid when *region* is specified. When this argument is
+    # specified, *fastenerSetName* must also be specified. The default value is an empty
+    # string.
     fastenerName: str = ''
 
-    # A String specifying the assembled fastener template model set to which the load will be 
-    # applied. This argument is not valid when *region* is specified. When this argument is 
-    # specified, *fastenerName* must also be specified. The default value is an empty string. 
+    # A String specifying the assembled fastener template model set to which the load will be
+    # applied. This argument is not valid when *region* is specified. When this argument is
+    # specified, *fastenerName* must also be specified. The default value is an empty string.
     fastenerSetName: str = ''
 
-    # A Region object specifying the region to which the load is applied. 
+    # A Region object specifying the region to which the load is applied.
     region: Region = Region()
 
-    def __init__(self, name: str, createStepName: str, region: str = '', fastenerName: str = '',
-                 fastenerSetName: str = '', m1: float = None, m2: float = None, m3: float = None,
+    def __init__(self,
+                 name: str,
+                 createStepName: str,
+                 region: str = '',
+                 fastenerName: str = '',
+                 fastenerSetName: str = '',
+                 m1: float = None,
+                 m2: float = None,
+                 m3: float = None,
                  amplitude: str = UNSET):
         """This method creates a ConnectorMoment object on a wire region. Alternatively, the load
         may also be applied to a wire set referenced from an assembled fastener template model.
@@ -106,8 +115,14 @@ class ConnectorMoment(Load):
         super().__init__()
         pass
 
-    def setValues(self, region: str = '', fastenerName: str = '', fastenerSetName: str = '', m1: float = None,
-                  m2: float = None, m3: float = None, amplitude: str = UNSET):
+    def setValues(self,
+                  region: str = '',
+                  fastenerName: str = '',
+                  fastenerSetName: str = '',
+                  m1: float = None,
+                  m2: float = None,
+                  m3: float = None,
+                  amplitude: str = UNSET):
         """This method modifies the data for an existing ConnectorMoment object in the step where
         it is created.
         
@@ -141,7 +156,8 @@ class ConnectorMoment(Load):
         """
         pass
 
-    def setValuesInStep(self, stepName: str,
+    def setValuesInStep(self,
+                        stepName: str,
                         m1: typing.Union[SymbolicConstant, float] = None,
                         m2: typing.Union[SymbolicConstant, float] = None,
                         m3: typing.Union[SymbolicConstant, float] = None,

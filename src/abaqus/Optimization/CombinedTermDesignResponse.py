@@ -1,6 +1,8 @@
 from abaqusConstants import *
 from .DesignResponse import DesignResponse
 
+from __init__ import *
+
 
 class CombinedTermDesignResponse(DesignResponse):
     """The CombinedTermDesignResponse object defines a combined-term design response.
@@ -16,10 +18,16 @@ class CombinedTermDesignResponse(DesignResponse):
         mdb.models[name].optimizationTasks[name].designResponses[name]
 
     """
-
-    def __init__(self, name: str, terms: tuple, filterMaxRadius: str = None, filterExponent: float = 1,
-                 filterRadiusReduction: float = 0, highCutOff: str = None, lowCutOff: float = 0,
-                 method: SymbolicConstant = ADD, weights: tuple = ()):
+    def __init__(self,
+                 name: str,
+                 terms: tuple,
+                 filterMaxRadius: str = None,
+                 filterExponent: float = 1,
+                 filterRadiusReduction: float = 0,
+                 highCutOff: str = None,
+                 lowCutOff: float = 0,
+                 method: SymbolicConstant = ADD,
+                 weights: tuple = ()):
         """This method creates a CombinedTermDesignResponse object.
 
         Notes
@@ -97,9 +105,14 @@ class CombinedTermDesignResponse(DesignResponse):
         super().__init__()
         pass
 
-    def setValues(self, filterMaxRadius: str = None, filterExponent: float = 1,
-                  filterRadiusReduction: float = 0, highCutOff: str = None, lowCutOff: float = 0,
-                  method: SymbolicConstant = ADD, weights: tuple = ()):
+    def setValues(self,
+                  filterMaxRadius: str = None,
+                  filterExponent: float = 1,
+                  filterRadiusReduction: float = 0,
+                  highCutOff: str = None,
+                  lowCutOff: float = 0,
+                  method: SymbolicConstant = ADD,
+                  weights: tuple = ()):
         """This method modifies the CombinedTermDesignResponse object.
         
         Parameters

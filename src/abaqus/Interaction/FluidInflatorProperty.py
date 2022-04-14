@@ -1,5 +1,7 @@
 from .ContactProperty import ContactProperty
 
+from __init__ import *
+
 
 class FluidInflatorProperty(ContactProperty):
     """The FluidInflatorProperty object is an interaction property that defines a fluid
@@ -39,10 +41,17 @@ class FluidInflatorProperty(ContactProperty):
         - FLUID INFLATOR PROPERTY
 
     """
-
-    def __init__(self, name: str, definition: str, effectiveArea: float, tankVolume: float,
-                 dischargeCoefficient: float = None, dataTable: tuple = (), numFluids: int = None,
-                 mixtureType: str = '', inflationTime: tuple = (), fluidbehaviorName: tuple = (),
+    def __init__(self,
+                 name: str,
+                 definition: str,
+                 effectiveArea: float,
+                 tankVolume: float,
+                 dischargeCoefficient: float = None,
+                 dataTable: tuple = (),
+                 numFluids: int = None,
+                 mixtureType: str = '',
+                 inflationTime: tuple = (),
+                 fluidbehaviorName: tuple = (),
                  massFraction: tuple = ()):
         """This method creates a FluidInflatorProperty object.
 
@@ -95,8 +104,13 @@ class FluidInflatorProperty(ContactProperty):
         super().__init__(name)
         pass
 
-    def setValues(self, dischargeCoefficient: float = None, dataTable: tuple = (), numFluids: int = None,
-                  mixtureType: str = '', inflationTime: tuple = (), fluidbehaviorName: tuple = (),
+    def setValues(self,
+                  dischargeCoefficient: float = None,
+                  dataTable: tuple = (),
+                  numFluids: int = None,
+                  mixtureType: str = '',
+                  inflationTime: tuple = (),
+                  fluidbehaviorName: tuple = (),
                   massFraction: tuple = ()):
         """This method modifies the FluidInflatorProperty object.
         

@@ -1,5 +1,7 @@
 from abaqusConstants import *
 
+from __init__ import *
+
 
 class ConcreteCompressionHardening:
     """The ConcreteCompressionHardening object specifies hardening for the concrete damaged
@@ -29,8 +31,10 @@ class ConcreteCompressionHardening:
         - CONCRETE COMPRESSION HARDENING
 
     """
-
-    def __init__(self, table: tuple, rate: Boolean = OFF, temperatureDependency: Boolean = OFF,
+    def __init__(self,
+                 table: tuple,
+                 rate: Boolean = OFF,
+                 temperatureDependency: Boolean = OFF,
                  dependencies: int = 0):
         """This method creates a ConcreteCompressionHardening object.
 

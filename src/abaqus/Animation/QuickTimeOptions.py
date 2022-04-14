@@ -1,5 +1,7 @@
 from abaqusConstants import *
 
+from __init__ import *
+
 
 class QuickTimeOptions:
     """The QuickTimeOptions object is used to store values and attributes to be used in
@@ -16,9 +18,10 @@ class QuickTimeOptions:
             session.quickTimeOptions
 
     """
-
-    def setValues(self, compressionMethod: SymbolicConstant = RLE24,
-                  sizeDefinition: SymbolicConstant = SIZE_ON_SCREEN, imageSize: int = None):
+    def setValues(self,
+                  compressionMethod: SymbolicConstant = RLE24,
+                  sizeDefinition: SymbolicConstant = SIZE_ON_SCREEN,
+                  imageSize: int = None):
         """This method modifies the QuickTimeOptions object.
         
         Parameters

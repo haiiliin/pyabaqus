@@ -1,3 +1,6 @@
+from __init__ import *
+
+
 class OdbModelFieldVarList:
     """The read-only OdbModelFieldVarList object lists all variables available for the model in
     the current OdbDisplay object. 

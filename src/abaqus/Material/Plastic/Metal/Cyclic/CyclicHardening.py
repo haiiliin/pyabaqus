@@ -1,5 +1,7 @@
 from abaqusConstants import *
 
+from __init__ import *
+
 
 class CyclicHardening:
     """The CyclicHardening object defines the evolution of the elastic domain for the nonlinear
@@ -29,8 +31,10 @@ class CyclicHardening:
         - CYCLIC HARDENING
 
     """
-
-    def __init__(self, table: tuple, temperatureDependency: Boolean = OFF, dependencies: int = 0,
+    def __init__(self,
+                 table: tuple,
+                 temperatureDependency: Boolean = OFF,
+                 dependencies: int = 0,
                  parameters: Boolean = OFF):
         """This method creates a CyclicHardening object.
 

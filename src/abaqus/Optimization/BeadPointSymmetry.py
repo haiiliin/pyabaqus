@@ -1,6 +1,8 @@
 from .GeometricRestriction import GeometricRestriction
 from ..Region.Region import Region
 
+from __init__ import *
+
 
 class BeadPointSymmetry(GeometricRestriction):
     """The BeadPointSymmetry object defines a point symmetry geometric restriction.
@@ -16,7 +18,6 @@ class BeadPointSymmetry(GeometricRestriction):
         mdb.models[name].optimizationTasks[name].geometricRestrictions[name]
 
     """
-
     def __init__(self, name: str, region: Region, csys: int = None):
         """This method creates a BeadPointSymmetry object.
 

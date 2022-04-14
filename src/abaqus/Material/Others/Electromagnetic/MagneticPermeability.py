@@ -1,5 +1,7 @@
 from abaqusConstants import *
 
+from __init__ import *
+
 
 class MagneticPermeability:
     """The MagneticPermeability object specifies magnetic permeability.
@@ -63,10 +65,15 @@ class MagneticPermeability:
         - MAGNETIC PERMEABILITY
 
     """
-
-    def __init__(self, table: tuple, table2: tuple, table3: tuple, type: SymbolicConstant = ISOTROPIC,
-                 frequencyDependency: Boolean = OFF, temperatureDependency: Boolean = OFF,
-                 dependencies: int = 0, nonlinearBH: Boolean = OFF):
+    def __init__(self,
+                 table: tuple,
+                 table2: tuple,
+                 table3: tuple,
+                 type: SymbolicConstant = ISOTROPIC,
+                 frequencyDependency: Boolean = OFF,
+                 temperatureDependency: Boolean = OFF,
+                 dependencies: int = 0,
+                 nonlinearBH: Boolean = OFF):
         """This method creates a MagneticPermeability object.
 
         Notes

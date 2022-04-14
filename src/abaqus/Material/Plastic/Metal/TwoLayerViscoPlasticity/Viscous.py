@@ -1,6 +1,8 @@
 from abaqusConstants import *
 from ...Potential import Potential
 
+from __init__ import *
+
 
 class Viscous:
     """The Viscous object specifies the viscous properties for a two-layer viscoplastic
@@ -83,11 +85,15 @@ class Viscous:
 
     """
 
-    # A Potential object. 
-    potential: Potential = Potential(((),))
+    # A Potential object.
+    potential: Potential = Potential(((), ))
 
-    def __init__(self, table: tuple, law: SymbolicConstant = STRAIN, temperatureDependency: Boolean = OFF,
-                 dependencies: int = 0, time: SymbolicConstant = TOTAL):
+    def __init__(self,
+                 table: tuple,
+                 law: SymbolicConstant = STRAIN,
+                 temperatureDependency: Boolean = OFF,
+                 dependencies: int = 0,
+                 time: SymbolicConstant = TOTAL):
         """This method creates a Viscous object.
 
         Notes

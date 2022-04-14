@@ -1,6 +1,8 @@
 from abaqusConstants import *
 from .ContactStabilization import ContactStabilization
 
+from __init__ import *
+
 
 class StdStabilization(ContactStabilization):
     """The StdStabilization object is used in conjunction with ContactStd in Abaqus/Standard
@@ -20,9 +22,13 @@ class StdStabilization(ContactStabilization):
         - CONTACT STABILIZATION
 
     """
-
-    def __init__(self, name: str, zeroDistance: float = None, reductionFactor: float = 0,
-                 scaleFactor: float = 1, tangentialFactor: float = 0, amplitude: str = '',
+    def __init__(self,
+                 name: str,
+                 zeroDistance: float = None,
+                 reductionFactor: float = 0,
+                 scaleFactor: float = 1,
+                 tangentialFactor: float = 0,
+                 amplitude: str = '',
                  reset: Boolean = OFF):
         """This method creates a StdStabilization object.
 
@@ -69,8 +75,13 @@ class StdStabilization(ContactStabilization):
         super().__init__()
         pass
 
-    def setValues(self, zeroDistance: float = None, reductionFactor: float = 0, scaleFactor: float = 1,
-                  tangentialFactor: float = 0, amplitude: str = '', reset: Boolean = OFF):
+    def setValues(self,
+                  zeroDistance: float = None,
+                  reductionFactor: float = 0,
+                  scaleFactor: float = 1,
+                  tangentialFactor: float = 0,
+                  amplitude: str = '',
+                  reset: Boolean = OFF):
         """This method modifies the StdStabilization object.
         
         Parameters

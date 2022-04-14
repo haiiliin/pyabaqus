@@ -2,6 +2,8 @@ from abaqusConstants import *
 from .CDCTerm import CDCTerm
 from .CDCTermArray import CDCTermArray
 
+from __init__ import *
+
 
 class DerivedComponent:
     """A DerivedComponent object describes user-customized components for use in defining
@@ -34,7 +36,7 @@ class DerivedComponent:
 
     """
 
-    # A CDCTermArray object. 
+    # A CDCTermArray object.
     cdcTerms: CDCTermArray = CDCTermArray()
 
     def __init__(self):
@@ -74,10 +76,16 @@ class DerivedComponent:
         """
         pass
 
-    def CDCTerm(self, intrinsicComponents: tuple, table: tuple, termOperator: SymbolicConstant = RSS,
-                termSign: SymbolicConstant = POSITIVE, localDependency: Boolean = OFF,
-                indepCompType: SymbolicConstant = POSITION, indepComponents: tuple = (),
-                tempDependency: Boolean = OFF, fieldDependencies: int = 0) -> CDCTerm:
+    def CDCTerm(self,
+                intrinsicComponents: tuple,
+                table: tuple,
+                termOperator: SymbolicConstant = RSS,
+                termSign: SymbolicConstant = POSITIVE,
+                localDependency: Boolean = OFF,
+                indepCompType: SymbolicConstant = POSITION,
+                indepComponents: tuple = (),
+                tempDependency: Boolean = OFF,
+                fieldDependencies: int = 0) -> CDCTerm:
         """This method creates a CDCTerm object.
 
         Notes
@@ -145,7 +153,8 @@ class DerivedComponent:
         ------
             ValueError and TextError.
         """
-        cDCTerm = CDCTerm(intrinsicComponents, table, termOperator, termSign, localDependency,
-                          indepCompType, indepComponents, tempDependency, fieldDependencies)
+        cDCTerm = CDCTerm(intrinsicComponents, table, termOperator, termSign,
+                          localDependency, indepCompType, indepComponents,
+                          tempDependency, fieldDependencies)
         self.cdcTerms.append(cDCTerm)
         return cDCTerm

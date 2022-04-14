@@ -1,9 +1,10 @@
 from .ConstrainedSketchConstraint import ConstrainedSketchConstraint
 from ..ConstrainedSketchGeometry.ConstrainedSketchGeometry import ConstrainedSketchGeometry
 
+from __init__ import *
+
 
 class FixedConstraint(ConstrainedSketchConstraint):
-
     def __init__(self, entity: ConstrainedSketchGeometry):
         """This method creates a fixed constraint. This constraint applies to a
         ConstrainedSketchGeometry object or a ConstrainedSketchVertex object and constrains them to be fixed in

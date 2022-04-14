@@ -1,6 +1,8 @@
 from abaqusConstants import *
 from .Filter import Filter
 
+from __init__ import *
+
 
 class Chebyshev2Filter(Filter):
     """The Chebyshev2Filter object defines a Chebyshev type 2 filter.
@@ -21,9 +23,14 @@ class Chebyshev2Filter(Filter):
         - FILTER
 
     """
-
-    def __init__(self, name: str, cutoffFrequency: float, rippleFactor: float = 0, order: int = 2,
-                 operation: SymbolicConstant = NONE, halt: Boolean = OFF, limit: float = None,
+    def __init__(self,
+                 name: str,
+                 cutoffFrequency: float,
+                 rippleFactor: float = 0,
+                 order: int = 2,
+                 operation: SymbolicConstant = NONE,
+                 halt: Boolean = OFF,
+                 limit: float = None,
                  invariant: SymbolicConstant = NONE):
         """This method creates a Chebyshev2Filter object.
 
@@ -77,8 +84,13 @@ class Chebyshev2Filter(Filter):
         super().__init__()
         pass
 
-    def setValues(self, rippleFactor: float = 0, order: int = 2, operation: SymbolicConstant = NONE,
-                  halt: Boolean = OFF, limit: float = None, invariant: SymbolicConstant = NONE):
+    def setValues(self,
+                  rippleFactor: float = 0,
+                  order: int = 2,
+                  operation: SymbolicConstant = NONE,
+                  halt: Boolean = OFF,
+                  limit: float = None,
+                  invariant: SymbolicConstant = NONE):
         """This method modifies the Chebyshev2Filter object.
         
         Parameters

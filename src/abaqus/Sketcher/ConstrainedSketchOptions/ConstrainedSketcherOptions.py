@@ -1,5 +1,7 @@
 from abaqusConstants import *
 
+from __init__ import *
+
 
 class ConstrainedSketcherOptions:
     """The ConstrainedSketcherOptions object is used to store values and attributes which will
@@ -16,12 +18,17 @@ class ConstrainedSketcherOptions:
             session.sketcherOptions
 
     """
-
-    def setValues(self, constructionGeometry: Boolean = ON, gridSnap: Boolean = ON, preselection: Boolean = ON,
-                  addImpliedConstraints: Boolean = ON, maxCoplanarEntities: int = 300,
-                  autoConstrainAngularTolerance: float = 0, autoConstrainLinearTolerance: float = None,
+    def setValues(self,
+                  constructionGeometry: Boolean = ON,
+                  gridSnap: Boolean = ON,
+                  preselection: Boolean = ON,
+                  addImpliedConstraints: Boolean = ON,
+                  maxCoplanarEntities: int = 300,
+                  autoConstrainAngularTolerance: float = 0,
+                  autoConstrainLinearTolerance: float = None,
                   autoConstrainOptions: SymbolicConstant = None,
-                  dragMethod: SymbolicConstant = MINIMUM_MOVE, editMethod: SymbolicConstant = STANDARD):
+                  dragMethod: SymbolicConstant = MINIMUM_MOVE,
+                  editMethod: SymbolicConstant = STANDARD):
         """This method modifies the ConstrainedSketchOptions object.
         
         Parameters

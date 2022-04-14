@@ -11,9 +11,12 @@ from ..Assembly.PartInstanceArray import PartInstanceArray
 from ..Model.ModelBase import ModelBase
 from ..Region.Region import Region
 
+from __init__ import *
 
-class PredefinedFieldModel(ModelBase, Field, FluidCavityPressure, InitialState, KinematicHardening, MaterialAssignment,
-                           Stress, Temperature, Velocity):
+
+class PredefinedFieldModel(ModelBase, Field, FluidCavityPressure, InitialState,
+                           KinematicHardening, MaterialAssignment, Stress,
+                           Temperature, Velocity):
     """Abaqus creates a Model object named `Model-1` when a session is started.
 
     Notes
@@ -25,14 +28,24 @@ class PredefinedFieldModel(ModelBase, Field, FluidCavityPressure, InitialState, 
         mdb.models[name]
 
     """
-
-    def Field(self, name: str, createStepName: str, region: Region, outputVariable: str = '',
-              fieldVariableNum: int = None, distributionType: SymbolicConstant = UNIFORM,
-              crossSectionDistribution: SymbolicConstant = CONSTANT_THROUGH_THICKNESS,
-              field: str = '', amplitude: str = UNSET, fileName: str = '',
-              beginStep: SymbolicConstant = None, beginIncrement: SymbolicConstant = None,
-              endStep: SymbolicConstant = None, endIncrement: SymbolicConstant = None,
-              interpolate: SymbolicConstant = OFF, magnitudes: str = '') -> Field:
+    def Field(self,
+              name: str,
+              createStepName: str,
+              region: Region,
+              outputVariable: str = '',
+              fieldVariableNum: int = None,
+              distributionType: SymbolicConstant = UNIFORM,
+              crossSectionDistribution:
+              SymbolicConstant = CONSTANT_THROUGH_THICKNESS,
+              field: str = '',
+              amplitude: str = UNSET,
+              fileName: str = '',
+              beginStep: SymbolicConstant = None,
+              beginIncrement: SymbolicConstant = None,
+              endStep: SymbolicConstant = None,
+              endIncrement: SymbolicConstant = None,
+              interpolate: SymbolicConstant = OFF,
+              magnitudes: str = '') -> Field:
         """This method creates a Field object.
 
         Notes
@@ -127,14 +140,15 @@ class PredefinedFieldModel(ModelBase, Field, FluidCavityPressure, InitialState, 
         -------
             A Field object.
         """
-        self.predefinedFields[name] = predefinedField = Field(name, createStepName, region, outputVariable,
-                                                              fieldVariableNum, distributionType,
-                                                              crossSectionDistribution, field, amplitude, fileName,
-                                                              beginStep, beginIncrement, endStep, endIncrement,
-                                                              interpolate, magnitudes)
+        self.predefinedFields[name] = predefinedField = Field(
+            name, createStepName, region, outputVariable, fieldVariableNum,
+            distributionType, crossSectionDistribution, field, amplitude,
+            fileName, beginStep, beginIncrement, endStep, endIncrement,
+            interpolate, magnitudes)
         return predefinedField
 
-    def FluidCavityPressure(self, name: str, fluidCavity: str, fluidPressure: float) -> FluidCavityPressure:
+    def FluidCavityPressure(self, name: str, fluidCavity: str,
+                            fluidPressure: float) -> FluidCavityPressure:
         """This method creates a FluidCavityPressure object.
 
         Notes
@@ -158,12 +172,18 @@ class PredefinedFieldModel(ModelBase, Field, FluidCavityPressure, InitialState, 
         -------
             A FluidCavityPressure object.
         """
-        self.predefinedFields[name] = predefinedField = FluidCavityPressure(name, fluidCavity, fluidPressure)
+        self.predefinedFields[name] = predefinedField = FluidCavityPressure(
+            name, fluidCavity, fluidPressure)
         return predefinedField
 
-    def InitialState(self, name: str, instances: PartInstanceArray, fileName: str,
-                     endStep: SymbolicConstant = LAST_STEP, endIncrement: SymbolicConstant = STEP_END,
-                     updateReferenceConfiguration: Boolean = OFF) -> InitialState:
+    def InitialState(
+            self,
+            name: str,
+            instances: PartInstanceArray,
+            fileName: str,
+            endStep: SymbolicConstant = LAST_STEP,
+            endIncrement: SymbolicConstant = STEP_END,
+            updateReferenceConfiguration: Boolean = OFF) -> InitialState:
         """This method creates an InitialState predefined field object.
 
         Notes
@@ -199,14 +219,23 @@ class PredefinedFieldModel(ModelBase, Field, FluidCavityPressure, InitialState, 
         -------
             An InitialState object.
         """
-        self.predefinedFields[name] = predefinedField = InitialState(name, instances, fileName, endStep, endIncrement,
-                                                                     updateReferenceConfiguration)
+        self.predefinedFields[name] = predefinedField = InitialState(
+            name, instances, fileName, endStep, endIncrement,
+            updateReferenceConfiguration)
         return predefinedField
 
-    def KinematicHardening(self, name: str, region: Region, numBackStress: int = 1, equivPlasticStrain: tuple = (),
-                           backStress: tuple = (), sectPtNum: tuple = (),
-                           definition: SymbolicConstant = KINEMATIC_HARDENING, rebarLayerNames: tuple = (),
-                           distributionType: SymbolicConstant = MAGNITUDE) -> KinematicHardening:
+    def KinematicHardening(
+            self,
+            name: str,
+            region: Region,
+            numBackStress: int = 1,
+            equivPlasticStrain: tuple = (),
+            backStress: tuple = (),
+            sectPtNum: tuple = (),
+            definition: SymbolicConstant = KINEMATIC_HARDENING,
+            rebarLayerNames: tuple = (),
+            distributionType: SymbolicConstant = MAGNITUDE
+    ) -> KinematicHardening:
         """This method creates a KinematicHardening object.
 
         Notes
@@ -248,15 +277,20 @@ class PredefinedFieldModel(ModelBase, Field, FluidCavityPressure, InitialState, 
         -------
             A KinematicHardening object.
         """
-        self.predefinedFields[name] = predefinedField = KinematicHardening(name, region, numBackStress,
-                                                                           equivPlasticStrain, backStress, sectPtNum,
-                                                                           definition, rebarLayerNames,
-                                                                           distributionType)
+        self.predefinedFields[name] = predefinedField = KinematicHardening(
+            name, region, numBackStress, equivPlasticStrain, backStress,
+            sectPtNum, definition, rebarLayerNames, distributionType)
         return predefinedField
 
-    def MaterialAssignment(self, name: str, instanceList: PartInstanceArray, useFields: Boolean = OFF,
-                           assignmentList: tuple = (), fieldList: tuple = (),
-                           colorList: tuple = ()) -> MaterialAssignment:
+    def MaterialAssignment(
+        self,
+        name: str,
+        instanceList: PartInstanceArray,
+        useFields: Boolean = OFF,
+        assignmentList: tuple = (),
+        fieldList: tuple = (),
+        colorList: tuple = ()
+    ) -> MaterialAssignment:
         """This method creates a MaterialAssignment predefined field object.
 
         Notes
@@ -298,13 +332,21 @@ class PredefinedFieldModel(ModelBase, Field, FluidCavityPressure, InitialState, 
         -------
             A MaterialAssignment object.
         """
-        self.predefinedFields[name] = predefinedField = MaterialAssignment(name, instanceList, useFields,
-                                                                           assignmentList, fieldList, colorList)
+        self.predefinedFields[name] = predefinedField = MaterialAssignment(
+            name, instanceList, useFields, assignmentList, fieldList,
+            colorList)
         return predefinedField
 
-    def Stress(self, name: str, region: Region, distributionType: SymbolicConstant = UNIFORM,
-               sigma11: float = None, sigma22: float = None, sigma33: float = None,
-               sigma12: float = None, sigma13: float = None, sigma23: float = None) -> Stress:
+    def Stress(self,
+               name: str,
+               region: Region,
+               distributionType: SymbolicConstant = UNIFORM,
+               sigma11: float = None,
+               sigma22: float = None,
+               sigma33: float = None,
+               sigma12: float = None,
+               sigma13: float = None,
+               sigma23: float = None) -> Stress:
         """This method creates a Stress predefined field object.
 
         Notes
@@ -342,18 +384,29 @@ class PredefinedFieldModel(ModelBase, Field, FluidCavityPressure, InitialState, 
         -------
             A Stress object.
         """
-        self.predefinedFields[name] = predefinedField = Stress(name, region, distributionType, sigma11, sigma22,
-                                                               sigma33, sigma12, sigma13, sigma23)
+        self.predefinedFields[name] = predefinedField = Stress(
+            name, region, distributionType, sigma11, sigma22, sigma33, sigma12,
+            sigma13, sigma23)
         return predefinedField
 
-    def Temperature(self, name: str, createStepName: str, region: Region,
+    def Temperature(self,
+                    name: str,
+                    createStepName: str,
+                    region: Region,
                     distributionType: SymbolicConstant = UNIFORM,
-                    crossSectionDistribution: SymbolicConstant = CONSTANT_THROUGH_THICKNESS,
-                    field: str = '', amplitude: str = UNSET, fileName: str = '',
-                    beginStep: SymbolicConstant = None, beginIncrement: SymbolicConstant = None,
-                    endStep: SymbolicConstant = None, endIncrement: SymbolicConstant = None,
-                    interpolate: SymbolicConstant = OFF, magnitudes: str = '',
-                    absoluteExteriorTolerance: float = 0, exteriorTolerance: float = 0) -> Temperature:
+                    crossSectionDistribution:
+                    SymbolicConstant = CONSTANT_THROUGH_THICKNESS,
+                    field: str = '',
+                    amplitude: str = UNSET,
+                    fileName: str = '',
+                    beginStep: SymbolicConstant = None,
+                    beginIncrement: SymbolicConstant = None,
+                    endStep: SymbolicConstant = None,
+                    endIncrement: SymbolicConstant = None,
+                    interpolate: SymbolicConstant = OFF,
+                    magnitudes: str = '',
+                    absoluteExteriorTolerance: float = 0,
+                    exteriorTolerance: float = 0) -> Temperature:
         """This method creates a Temperature object.
 
         Notes
@@ -450,15 +503,23 @@ class PredefinedFieldModel(ModelBase, Field, FluidCavityPressure, InitialState, 
         -------
             A Temperature object.
         """
-        self.predefinedFields[name] = predefinedField = Temperature(name, createStepName, region, distributionType,
-                                                                    crossSectionDistribution, field, amplitude,
-                                                                    fileName, beginStep, beginIncrement, endStep,
-                                                                    endIncrement, interpolate, magnitudes,
-                                                                    absoluteExteriorTolerance, exteriorTolerance)
+        self.predefinedFields[name] = predefinedField = Temperature(
+            name, createStepName, region, distributionType,
+            crossSectionDistribution, field, amplitude, fileName, beginStep,
+            beginIncrement, endStep, endIncrement, interpolate, magnitudes,
+            absoluteExteriorTolerance, exteriorTolerance)
         return predefinedField
 
-    def Velocity(self, name: str, region: Region, velocity1: float, velocity2: float, velocity3: float,
-                 omega: float, axisBegin: tuple, axisEnd: tuple, field: str = '',
+    def Velocity(self,
+                 name: str,
+                 region: Region,
+                 velocity1: float,
+                 velocity2: float,
+                 velocity3: float,
+                 omega: float,
+                 axisBegin: tuple,
+                 axisEnd: tuple,
+                 field: str = '',
                  distributionType: SymbolicConstant = MAGNITUDE) -> Velocity:
         """This method creates a Velocity predefined field object.
 
@@ -502,6 +563,7 @@ class PredefinedFieldModel(ModelBase, Field, FluidCavityPressure, InitialState, 
         -------
             A Velocity object.
         """
-        self.predefinedFields[name] = predefinedField = Velocity(name, region, velocity1, velocity2, velocity3, omega,
-                                                                 axisBegin, axisEnd, field, distributionType)
+        self.predefinedFields[name] = predefinedField = Velocity(
+            name, region, velocity1, velocity2, velocity3, omega, axisBegin,
+            axisEnd, field, distributionType)
         return predefinedField

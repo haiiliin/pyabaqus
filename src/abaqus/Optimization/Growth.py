@@ -2,6 +2,8 @@ from abaqusConstants import *
 from .GeometricRestriction import GeometricRestriction
 from ..Region.Region import Region
 
+from __init__ import *
+
 
 class Growth(GeometricRestriction):
     """The Growth object defines a growth geometric restriction.
@@ -17,9 +19,12 @@ class Growth(GeometricRestriction):
         mdb.models[name].optimizationTasks[name].geometricRestrictions[name]
 
     """
-
-    def __init__(self, name: str, region: Region, growth: float = 0,
-                 presumeFeasibleRegionAtStart: Boolean = ON, shrink: float = 0):
+    def __init__(self,
+                 name: str,
+                 region: Region,
+                 growth: float = 0,
+                 presumeFeasibleRegionAtStart: Boolean = ON,
+                 shrink: float = 0):
         """This method creates a Growth object.
 
         Notes
@@ -55,7 +60,10 @@ class Growth(GeometricRestriction):
         super().__init__()
         pass
 
-    def setValues(self, growth: float = 0, presumeFeasibleRegionAtStart: Boolean = ON, shrink: float = 0):
+    def setValues(self,
+                  growth: float = 0,
+                  presumeFeasibleRegionAtStart: Boolean = ON,
+                  shrink: float = 0):
         """This method modifies the Growth object.
         
         Parameters

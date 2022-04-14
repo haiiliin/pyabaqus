@@ -1,5 +1,7 @@
 from abaqusConstants import *
 
+from __init__ import *
+
 
 class MonitorMgr:
     """An instance of the MonitorMgr object is created when you import the abaqus module. No
@@ -16,8 +18,10 @@ class MonitorMgr:
             monitorManager
 
     """
-
-    def addMessageCallback(self, jobName: str, messageType: SymbolicConstant, callback: SymbolicConstant,
+    def addMessageCallback(self,
+                           jobName: str,
+                           messageType: SymbolicConstant,
+                           callback: SymbolicConstant,
                            userData: str = ''):
         """This method specifies a callback function that will be called when the specified message
         is received from the analysis product.
@@ -42,7 +46,9 @@ class MonitorMgr:
         """
         pass
 
-    def removeMessageCallback(self, jobName: str, messageType: SymbolicConstant, callback: str, userData: str):
+    def removeMessageCallback(self, jobName: str,
+                              messageType: SymbolicConstant, callback: str,
+                              userData: str):
         """This method removes a callback function. You specify the callback function to remove
         using the same arguments you used to add the callback.
         

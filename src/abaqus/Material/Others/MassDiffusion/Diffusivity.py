@@ -2,6 +2,8 @@ from abaqusConstants import *
 from .PressureEffect import PressureEffect
 from .SoretEffect import SoretEffect
 
+from __init__ import *
+
 
 class Diffusivity:
     """The Diffusivity object specifies mass diffusivity.
@@ -52,14 +54,18 @@ class Diffusivity:
 
     """
 
-    # A PressureEffect object. 
-    pressureEffect: PressureEffect = PressureEffect(((),))
+    # A PressureEffect object.
+    pressureEffect: PressureEffect = PressureEffect(((), ))
 
-    # A SoretEffect object. 
-    soretEffect: SoretEffect = SoretEffect(((),))
+    # A SoretEffect object.
+    soretEffect: SoretEffect = SoretEffect(((), ))
 
-    def __init__(self, table: tuple, type: SymbolicConstant = ISOTROPIC, law: SymbolicConstant = GENERAL,
-                 temperatureDependency: Boolean = OFF, dependencies: int = 0):
+    def __init__(self,
+                 table: tuple,
+                 type: SymbolicConstant = ISOTROPIC,
+                 law: SymbolicConstant = GENERAL,
+                 temperatureDependency: Boolean = OFF,
+                 dependencies: int = 0):
         """This method creates a Diffusivity object.
 
         Notes

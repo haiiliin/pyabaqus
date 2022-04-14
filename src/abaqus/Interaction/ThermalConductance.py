@@ -1,5 +1,7 @@
 from abaqusConstants import *
 
+from __init__ import *
+
 
 class ThermalConductance:
     """The ThermalConductance object specifies thermal conductance for a contact interaction
@@ -36,12 +38,17 @@ class ThermalConductance:
         - GAP CONDUCTANCE
 
     """
-
-    def __init__(self, definition: SymbolicConstant = TABULAR, clearanceDependency: Boolean = ON,
-                 pressureDependency: Boolean = OFF, temperatureDependencyC: Boolean = OFF,
-                 massFlowRateDependencyC: Boolean = OFF, dependenciesC: int = 0,
-                 clearanceDepTable: tuple = (), temperatureDependencyP: Boolean = OFF,
-                 massFlowRateDependencyP: Boolean = OFF, dependenciesP: int = 0,
+    def __init__(self,
+                 definition: SymbolicConstant = TABULAR,
+                 clearanceDependency: Boolean = ON,
+                 pressureDependency: Boolean = OFF,
+                 temperatureDependencyC: Boolean = OFF,
+                 massFlowRateDependencyC: Boolean = OFF,
+                 dependenciesC: int = 0,
+                 clearanceDepTable: tuple = (),
+                 temperatureDependencyP: Boolean = OFF,
+                 massFlowRateDependencyP: Boolean = OFF,
+                 dependenciesP: int = 0,
                  pressureDepTable: tuple = ()):
         """This method creates a ThermalConductance object.
 

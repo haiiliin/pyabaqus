@@ -1,5 +1,7 @@
 from abaqusConstants import *
 
+from __init__ import *
+
 
 class DruckerPragerHardening:
     """The DruckerPragerHardening object specifies hardening for Drucker-Prager plasticity
@@ -29,9 +31,12 @@ class DruckerPragerHardening:
         - DRUCKER PRAGER HARDENING
 
     """
-
-    def __init__(self, table: tuple, type: SymbolicConstant = COMPRESSION, rate: Boolean = OFF,
-                 temperatureDependency: Boolean = OFF, dependencies: int = 0):
+    def __init__(self,
+                 table: tuple,
+                 type: SymbolicConstant = COMPRESSION,
+                 rate: Boolean = OFF,
+                 temperatureDependency: Boolean = OFF,
+                 dependencies: int = 0):
         """This method creates a DruckerPragerHardening object.
 
         Notes

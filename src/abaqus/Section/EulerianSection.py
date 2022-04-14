@@ -1,5 +1,7 @@
 from .Section import Section
 
+from __init__ import *
+
 
 class EulerianSection(Section):
     """The EulerianSection object defines the properties of a Eulerian section.
@@ -20,7 +22,6 @@ class EulerianSection(Section):
         - EULERIAN SECTION
 
     """
-
     def __init__(self, name: str, data: str):
         """This method creates a EulerianSection object.
 

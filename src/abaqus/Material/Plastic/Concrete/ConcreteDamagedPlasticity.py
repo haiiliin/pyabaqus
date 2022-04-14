@@ -4,6 +4,8 @@ from .ConcreteCompressionHardening import ConcreteCompressionHardening
 from .ConcreteTensionDamage import ConcreteTensionDamage
 from .ConcreteTensionStiffening import ConcreteTensionStiffening
 
+from __init__ import *
+
 
 class ConcreteDamagedPlasticity:
     """The ConcreteDamagedPlasticity object specifies the concrete damaged plasticity model.
@@ -36,19 +38,26 @@ class ConcreteDamagedPlasticity:
 
     """
 
-    # A ConcreteCompressionHardening object. 
-    concreteCompressionHardening: ConcreteCompressionHardening = ConcreteCompressionHardening(((),))
+    # A ConcreteCompressionHardening object.
+    concreteCompressionHardening: ConcreteCompressionHardening = ConcreteCompressionHardening(
+        ((), ))
 
-    # A ConcreteTensionStiffening object. 
-    concreteTensionStiffening: ConcreteTensionStiffening = ConcreteTensionStiffening(((),))
+    # A ConcreteTensionStiffening object.
+    concreteTensionStiffening: ConcreteTensionStiffening = ConcreteTensionStiffening(
+        ((), ))
 
-    # A ConcreteCompressionDamage object. 
-    concreteCompressionDamage: ConcreteCompressionDamage = ConcreteCompressionDamage(((),))
+    # A ConcreteCompressionDamage object.
+    concreteCompressionDamage: ConcreteCompressionDamage = ConcreteCompressionDamage(
+        ((), ))
 
-    # A ConcreteTensionDamage object. 
-    concreteTensionDamage: ConcreteTensionDamage = ConcreteTensionDamage(((),))
+    # A ConcreteTensionDamage object.
+    concreteTensionDamage: ConcreteTensionDamage = ConcreteTensionDamage(
+        ((), ))
 
-    def __init__(self, table: tuple, temperatureDependency: Boolean = OFF, dependencies: int = 0):
+    def __init__(self,
+                 table: tuple,
+                 temperatureDependency: Boolean = OFF,
+                 dependencies: int = 0):
         """This method creates a ConcreteDamagedPlasticity object.
 
         Notes

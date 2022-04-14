@@ -1,9 +1,11 @@
 from .ConstrainedSketchGeometry import ConstrainedSketchGeometry
 
+from __init__ import *
+
 
 class EllipseByCenterPerimeter(ConstrainedSketchGeometry):
-
-    def __init__(self, center: tuple[float], axisPoint1: tuple[float], axisPoint2: tuple[float]):
+    def __init__(self, center: tuple[float], axisPoint1: tuple[float],
+                 axisPoint2: tuple[float]):
         """This method constructs an ellipse using a center point, a major axis point, and a minor
         axis point. The ellipse is added to the geometry repository of the ConstrainedSketch
         object.

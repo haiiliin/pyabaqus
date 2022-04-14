@@ -1,6 +1,8 @@
 from abaqusConstants import *
 from .Constraint import Constraint
 
+from __init__ import *
+
 
 class Equation(Constraint):
     """The Equation object defines a linear multi-point constraint between a set of degrees of
@@ -27,8 +29,8 @@ class Equation(Constraint):
 
     """
 
-    # A Boolean specifying whether the constraint is suppressed or not. The default value is 
-    # OFF. 
+    # A Boolean specifying whether the constraint is suppressed or not. The default value is
+    # OFF.
     suppressed: Boolean = OFF
 
     def __init__(self, name: str, terms: tuple):

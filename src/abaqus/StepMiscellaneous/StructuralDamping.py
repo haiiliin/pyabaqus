@@ -1,5 +1,7 @@
 from .StructuralDampingComponentArray import StructuralDampingComponentArray
 
+from __init__ import *
+
 
 class StructuralDamping:
     """A StructuralDamping object contains structural damping parameters.
@@ -20,5 +22,6 @@ class StructuralDamping:
 
     """
 
-    # A StructuralDampingComponentArray object. 
-    components: StructuralDampingComponentArray = StructuralDampingComponentArray()
+    # A StructuralDampingComponentArray object.
+    components: StructuralDampingComponentArray = StructuralDampingComponentArray(
+    )

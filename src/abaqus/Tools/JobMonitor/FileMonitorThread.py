@@ -2,6 +2,8 @@ import os
 
 from PyQt5.QtCore import QThread, pyqtSignal
 
+from __init__ import *
+
 
 class FileMonitorThread(QThread):
     readyReadStatusFile = pyqtSignal(object)
@@ -24,8 +26,10 @@ class FileMonitorThread(QThread):
         self.generateFilePaths()
 
     def generateFilePaths(self):
-        self.statusFilePath = os.path.join(self.workDirectory, self.jobName) + '.sta'
-        self.messageFilePath = os.path.join(self.workDirectory, self.jobName) + '.msg'
+        self.statusFilePath = os.path.join(self.workDirectory,
+                                           self.jobName) + '.sta'
+        self.messageFilePath = os.path.join(self.workDirectory,
+                                            self.jobName) + '.msg'
 
     def run(self) -> None:
         while True:

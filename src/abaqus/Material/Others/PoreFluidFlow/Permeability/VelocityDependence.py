@@ -1,3 +1,6 @@
+from __init__ import *
+
+
 class VelocityDependence:
     """The VelocityDependence object specifies the dependence of the permeability of a material
     on the velocity of fluid flow. 
@@ -21,7 +24,6 @@ class VelocityDependence:
         - PERMEABILITY
 
     """
-
     def __init__(self, table: tuple):
         """This method creates a VelocityDependence object.
 

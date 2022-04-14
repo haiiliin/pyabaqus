@@ -1,5 +1,7 @@
 from abaqusConstants import *
 
+from __init__ import *
+
 
 class PlanarTestData:
     """The PlanarTestData object specifies planar test (or pure shear) data (compression and/or
@@ -33,9 +35,12 @@ class PlanarTestData:
         - PLANAR TEST DATA
 
     """
-
-    def __init__(self, table: tuple, smoothing: int = None, lateralNominalStrain: Boolean = OFF,
-                 temperatureDependency: Boolean = OFF, dependencies: int = 0):
+    def __init__(self,
+                 table: tuple,
+                 smoothing: int = None,
+                 lateralNominalStrain: Boolean = OFF,
+                 temperatureDependency: Boolean = OFF,
+                 dependencies: int = 0):
         """This method creates a PlanarTestData object.
 
         Notes

@@ -1,3 +1,6 @@
+from __init__ import *
+
+
 class HeatGeneration:
     """The HeatGeneration object includes volumetric heat generation in heat transfer analyses.
 
@@ -16,7 +19,6 @@ class HeatGeneration:
         - HEAT GENERATION
 
     """
-
     def __init__(self):
         """This method creates a HeatGeneration object.
 

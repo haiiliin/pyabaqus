@@ -2,6 +2,8 @@ from abaqusConstants import *
 from .GeometricRestriction import GeometricRestriction
 from ..Region.Region import Region
 
+from __init__ import *
+
 
 class BeadRotationalSymmetry(GeometricRestriction):
     """The BeadRotationalSymmetry object defines a bead rotational symmetry geometric
@@ -18,8 +20,11 @@ class BeadRotationalSymmetry(GeometricRestriction):
         mdb.models[name].optimizationTasks[name].geometricRestrictions[name]
 
     """
-
-    def __init__(self, name: str, angle: float, region: Region, axis: SymbolicConstant = AXIS_1,
+    def __init__(self,
+                 name: str,
+                 angle: float,
+                 region: Region,
+                 axis: SymbolicConstant = AXIS_1,
                  csys: int = None):
         """This method creates a BeadRotationalSymmetry object.
 

@@ -1,6 +1,8 @@
 from abaqusConstants import *
 from .Section import Section
 
+from __init__ import *
+
 
 class MPCSection(Section):
     """The MPCSection object defines the properties of a multi-point constraint section.
@@ -21,8 +23,10 @@ class MPCSection(Section):
         - MPC
 
     """
-
-    def __init__(self, name: str, mpcType: SymbolicConstant, userMode: SymbolicConstant = DOF_MODE,
+    def __init__(self,
+                 name: str,
+                 mpcType: SymbolicConstant,
+                 userMode: SymbolicConstant = DOF_MODE,
                  userType: int = 0):
         """This method creates a MPCSection object.
 

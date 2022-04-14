@@ -4,6 +4,8 @@ from .Chart import Chart
 from .Title import Title
 from .XYCurve import XYCurve
 
+from __init__ import *
+
 
 class XYPlotBase:
     """The XYPlot object is used to display Chart objects.
@@ -34,21 +36,21 @@ class XYPlotBase:
 
     """
 
-    # An Area object specifying position, padding, background and borders of the XYPlot 
-    # object. 
+    # An Area object specifying position, padding, background and borders of the XYPlot
+    # object.
     area: Area = Area()
 
-    # A Title object specifying the title of the XYPlot object. 
+    # A Title object specifying the title of the XYPlot object.
     title: Title = Title()
 
-    # A repository of Chart objects. 
+    # A repository of Chart objects.
     charts: dict[str, Chart] = dict[str, Chart]()
 
-    # A repository of XYCurve objects. 
+    # A repository of XYCurve objects.
     curves: dict[str, XYCurve] = dict[str, XYCurve]()
 
-    # A tuple of Floats specifying a transformation matrix used to scale or pan along the axes 
-    # of the active Chart object of this XYPlot. 
+    # A tuple of Floats specifying a transformation matrix used to scale or pan along the axes
+    # of the active Chart object of this XYPlot.
     transform: float = None
 
     def __init__(self, name: str):

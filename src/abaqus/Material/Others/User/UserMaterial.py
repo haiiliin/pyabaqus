@@ -1,5 +1,7 @@
 from abaqusConstants import *
 
+from __init__ import *
+
 
 class UserMaterial:
     """The UserMaterial object defines material constants for use in subroutines UMAT, UMATHT,
@@ -20,9 +22,12 @@ class UserMaterial:
         - USER MATERIAL
 
     """
-
-    def __init__(self, type: SymbolicConstant = MECHANICAL, unsymm: Boolean = OFF,
-                 mechanicalConstants: tuple = (), thermalConstants: tuple = (), effmod: Boolean = OFF,
+    def __init__(self,
+                 type: SymbolicConstant = MECHANICAL,
+                 unsymm: Boolean = OFF,
+                 mechanicalConstants: tuple = (),
+                 thermalConstants: tuple = (),
+                 effmod: Boolean = OFF,
                  hybridFormulation: SymbolicConstant = INCREMENTAL):
         """This method creates a UserMaterial object.
 

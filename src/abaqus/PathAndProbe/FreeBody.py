@@ -1,5 +1,7 @@
 from abaqusConstants import *
 
+from __init__ import *
+
 
 class FreeBody:
     """The FreeBody object defines a section across which resultant forces and moments are
@@ -15,10 +17,14 @@ class FreeBody:
         session.freeBodies[name]
 
     """
-
-    def FreeBodyFromEdges(self, name: str, edges: str, summationLoc: SymbolicConstant = CENTROID,
-                          summationPoint: tuple = (), componentResolution: SymbolicConstant = NORMAL_TANGENTIAL,
-                          csysName: str = ''):
+    def FreeBodyFromEdges(
+            self,
+            name: str,
+            edges: str,
+            summationLoc: SymbolicConstant = CENTROID,
+            summationPoint: tuple = (),
+            componentResolution: SymbolicConstant = NORMAL_TANGENTIAL,
+            csysName: str = ''):
         """This method creates a FreeBody object and places it in the freeBodies repository.
 
         Notes
@@ -52,9 +58,14 @@ class FreeBody:
         """
         pass
 
-    def FreeBodyFromFaces(self, name: str, faces: str, summationLoc: SymbolicConstant = CENTROID,
-                          summationPoint: tuple = (), componentResolution: SymbolicConstant = NORMAL_TANGENTIAL,
-                          csysName: str = ''):
+    def FreeBodyFromFaces(
+            self,
+            name: str,
+            faces: str,
+            summationLoc: SymbolicConstant = CENTROID,
+            summationPoint: tuple = (),
+            componentResolution: SymbolicConstant = NORMAL_TANGENTIAL,
+            csysName: str = ''):
         """This method creates a FreeBody object and places it in the freeBodies repository.
 
         Notes
@@ -88,9 +99,15 @@ class FreeBody:
         """
         pass
 
-    def FreeBodyFromNodesElements(self, name: str, elements: str, nodes: str, summationLoc: SymbolicConstant = CENTROID,
-                                  summationPoint: tuple = (), componentResolution: SymbolicConstant = NORMAL_TANGENTIAL,
-                                  csysName: str = ''):
+    def FreeBodyFromNodesElements(
+            self,
+            name: str,
+            elements: str,
+            nodes: str,
+            summationLoc: SymbolicConstant = CENTROID,
+            summationPoint: tuple = (),
+            componentResolution: SymbolicConstant = NORMAL_TANGENTIAL,
+            csysName: str = ''):
         """This method creates a FreeBody object and places it in the freeBodies repository.
 
         Notes

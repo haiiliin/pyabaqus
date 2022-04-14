@@ -1,6 +1,8 @@
 from abaqusConstants import *
 from .Filter import Filter
 
+from __init__ import *
+
 
 class OperatorFilter(Filter):
     """The OperatorFilter object defines an operator filter.
@@ -21,9 +23,14 @@ class OperatorFilter(Filter):
         - FILTER
 
     """
-
-    def __init__(self, name: str, cutoffFrequency: float, order: int = 2, operation: SymbolicConstant = NONE,
-                 halt: Boolean = OFF, limit: float = None, invariant: SymbolicConstant = NONE):
+    def __init__(self,
+                 name: str,
+                 cutoffFrequency: float,
+                 order: int = 2,
+                 operation: SymbolicConstant = NONE,
+                 halt: Boolean = OFF,
+                 limit: float = None,
+                 invariant: SymbolicConstant = NONE):
         """This method creates an OperatorFilter object.
 
         Notes
@@ -73,8 +80,12 @@ class OperatorFilter(Filter):
         super().__init__()
         pass
 
-    def setValues(self, order: int = 2, operation: SymbolicConstant = NONE, halt: Boolean = OFF,
-                  limit: float = None, invariant: SymbolicConstant = NONE):
+    def setValues(self,
+                  order: int = 2,
+                  operation: SymbolicConstant = NONE,
+                  halt: Boolean = OFF,
+                  limit: float = None,
+                  invariant: SymbolicConstant = NONE):
         """This method modifies the OperatorFilter object.
         
         Parameters

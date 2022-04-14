@@ -1,5 +1,7 @@
 from abaqusConstants import *
 
+from __init__ import *
+
 
 class TensileFailure:
     """The TensileFailure object specifies the material tensile failure.
@@ -28,9 +30,12 @@ class TensileFailure:
         - TENSILE FAILURE
 
     """
-
-    def tensileFailure(self, table: tuple, dependencies: int = 0, temperatureDependency: Boolean = OFF,
-                       elementDeletion: Boolean = True, pressure: SymbolicConstant = None,
+    def tensileFailure(self,
+                       table: tuple,
+                       dependencies: int = 0,
+                       temperatureDependency: Boolean = OFF,
+                       elementDeletion: Boolean = True,
+                       pressure: SymbolicConstant = None,
                        shear: SymbolicConstant = None):
         """This method creates a tensileFailure object.
 

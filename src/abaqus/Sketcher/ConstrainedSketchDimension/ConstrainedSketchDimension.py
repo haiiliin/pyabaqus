@@ -1,3 +1,6 @@
+from __init__ import *
+
+
 class ConstrainedSketchDimension:
     """The ConstrainedSketchDimension object stores the dimensions associated with a sketch.
 

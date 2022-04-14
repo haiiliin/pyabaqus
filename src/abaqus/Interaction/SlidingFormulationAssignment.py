@@ -1,5 +1,7 @@
 from abaqusConstants import *
 
+from __init__ import *
+
 
 class SlidingFormulationAssignment:
     """The SlidingFormulationAssignment object stores the sliding formulation assignment
@@ -19,8 +21,8 @@ class SlidingFormulationAssignment:
         - CONTACT FORMULATION
 
     """
-
-    def changeValuesInStep(self, stepName: str, index: int, value: SymbolicConstant):
+    def changeValuesInStep(self, stepName: str, index: int,
+                           value: SymbolicConstant):
         """This method allows you to modify sliding formulation assignments already defined on
         surface pairs in a given step.
         

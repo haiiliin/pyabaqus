@@ -1,10 +1,12 @@
 from .ConstrainedSketchConstraint import ConstrainedSketchConstraint
 from ..ConstrainedSketchGeometry.ConstrainedSketchGeometry import ConstrainedSketchGeometry
 
+from __init__ import *
+
 
 class EqualLengthConstraint(ConstrainedSketchConstraint):
-
-    def __init__(self, entity1: ConstrainedSketchGeometry, entity2: ConstrainedSketchGeometry):
+    def __init__(self, entity1: ConstrainedSketchGeometry,
+                 entity2: ConstrainedSketchGeometry):
         """This method creates an equal length constraint. This constraint applies to lines and
         constrains them such that their lengths are equal.
 

@@ -1,7 +1,9 @@
 from .Profile import Profile
 
-class ArbitraryProfile(Profile):
+from __init__ import *
 
+
+class ArbitraryProfile(Profile):
     """The ArbitraryProfile object defines the properties of an arbitrary profile. 
     The ArbitraryProfile object is derived from the Profile object. 
 
@@ -29,7 +31,6 @@ class ArbitraryProfile(Profile):
         - BEAM SECTION
 
     """
-
     def __init__(self, name: str, table: tuple):
         """This method creates a ArbitraryProfile object.
 
@@ -70,4 +71,3 @@ class ArbitraryProfile(Profile):
             
         """
         pass
-

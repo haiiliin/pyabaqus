@@ -1,5 +1,7 @@
 from abaqusConstants import *
 
+from __init__ import *
+
 
 class TiffOptions:
     """The TiffOptions object stores the settings that Abaqus uses when printing in TIFF
@@ -12,7 +14,6 @@ class TiffOptions:
             session.tiffOptions
 
     """
-
     def setValues(self, imageSize: SymbolicConstant = SIZE_ON_SCREEN):
         """This method modifies the TiffOptions object.
         

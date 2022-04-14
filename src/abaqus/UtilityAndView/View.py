@@ -1,5 +1,7 @@
 from abaqusConstants import *
 
+from __init__ import *
+
 
 class View:
     """The Session and Viewport View objects store view settings for custom (both predefined
@@ -36,23 +38,33 @@ class View:
 
     """
 
-    # A Float specifying the width in viewport millimeters of the bounding rectangle around 
-    # the viewport contents. This value does not include annotations or symbols and it is not 
-    # clipped to the size of the viewport window. 
+    # A Float specifying the width in viewport millimeters of the bounding rectangle around
+    # the viewport contents. This value does not include annotations or symbols and it is not
+    # clipped to the size of the viewport window.
     displayedObjectScreenWidth: float = None
 
-    # A Float specifying the height in viewport millimeters of the bounding rectangle around 
-    # the viewport contents. This value does not include annotations or symbols and it is not 
-    # clipped to the size of the viewport window. 
+    # A Float specifying the height in viewport millimeters of the bounding rectangle around
+    # the viewport contents. This value does not include annotations or symbols and it is not
+    # clipped to the size of the viewport window.
     displayedObjectScreenHeight: float = None
 
-    # A tuple of Floats specifying a transformation matrix used to position the contents of 
-    # the Layer within a viewport. 
+    # A tuple of Floats specifying a transformation matrix used to position the contents of
+    # the Layer within a viewport.
     layerTransform: float = None
 
-    def __init__(self, name: str, nearPlane: float, farPlane: float, width: float, height: float,
-                 projection: SymbolicConstant, cameraPosition: tuple, cameraUpVector: tuple,
-                 cameraTarget: tuple, viewOffsetX: float, viewOffsetY: float, autoFit: Boolean,
+    def __init__(self,
+                 name: str,
+                 nearPlane: float,
+                 farPlane: float,
+                 width: float,
+                 height: float,
+                 projection: SymbolicConstant,
+                 cameraPosition: tuple,
+                 cameraUpVector: tuple,
+                 cameraTarget: tuple,
+                 viewOffsetX: float,
+                 viewOffsetY: float,
+                 autoFit: Boolean,
                  movieMode: Boolean = OFF):
         """This method creates a View object.
         Note:All dimensions and coordinates are specified in the model coordinate system.
@@ -151,7 +163,10 @@ class View:
         """
         pass
 
-    def pan(self, xFraction: float = 0, yFraction: float = 0, asMovie: Boolean = OFF,
+    def pan(self,
+            xFraction: float = 0,
+            yFraction: float = 0,
+            asMovie: Boolean = OFF,
             drawImmediately: Boolean = False):
         """This method pans the view in the viewport using absolute, not relative, mode.
         
@@ -192,8 +207,13 @@ class View:
         """
         pass
 
-    def rotate(self, xAngle: float = 0, yAngle: float = 0, zAngle: float = 0, mode: SymbolicConstant = MODEL,
-               asMovie: Boolean = OFF, drawImmediately: Boolean = False):
+    def rotate(self,
+               xAngle: float = 0,
+               yAngle: float = 0,
+               zAngle: float = 0,
+               mode: SymbolicConstant = MODEL,
+               asMovie: Boolean = OFF,
+               drawImmediately: Boolean = False):
         """This method rotates the view in the viewport. If a center of rotation has been
         previously specified and *asMovie* is OFF then this method will honor that rotation
         center.
@@ -222,7 +242,10 @@ class View:
         """
         pass
 
-    def setLayerTransform(self, layerTransform: tuple = (), options: 'View' = None, drawImmediately: Boolean = False):
+    def setLayerTransform(self,
+                          layerTransform: tuple = (),
+                          options: 'View' = None,
+                          drawImmediately: Boolean = False):
         """This method modifies the transformation used to position a Layer.
         Note:This method is not available for Session and Viewport Views.
         
@@ -242,7 +265,9 @@ class View:
         """
         pass
 
-    def setProjection(self, projection: SymbolicConstant, drawImmediately: Boolean = False):
+    def setProjection(self,
+                      projection: SymbolicConstant,
+                      drawImmediately: Boolean = False):
         """This method modifies the appearance of three-dimensional models in the viewport.
         Choosing PERSPECTIVE makes a model appear more realistic by decreasing the apparent size
         of features that are farther away from the viewing point.
@@ -297,7 +322,10 @@ class View:
         """
         pass
 
-    def setViewpoint(self, viewVector: tuple, cameraUpVector: tuple = (), drawImmediately: Boolean = False):
+    def setViewpoint(self,
+                     viewVector: tuple,
+                     cameraUpVector: tuple = (),
+                     drawImmediately: Boolean = False):
         """This method sets the camera's position in the viewport.
         Note:This method is not available for a Layer View.
         
@@ -317,7 +345,10 @@ class View:
         """
         pass
 
-    def zoom(self, zoomFactor: float, mode: SymbolicConstant = ABSOLUTE, asMovie: Boolean = OFF,
+    def zoom(self,
+             zoomFactor: float,
+             mode: SymbolicConstant = ABSOLUTE,
+             asMovie: Boolean = OFF,
              drawImmediately: Boolean = False):
         """This method magnifies the view in the viewport.
         
@@ -346,7 +377,10 @@ class View:
         """
         pass
 
-    def zoomRectangle(self, point1: tuple[float], point2: tuple[float], drawImmediately: Boolean = False):
+    def zoomRectangle(self,
+                      point1: tuple[float],
+                      point2: tuple[float],
+                      drawImmediately: Boolean = False):
         """This method fills the viewport with the graphics located within the given rectangle.
         
         Parameters

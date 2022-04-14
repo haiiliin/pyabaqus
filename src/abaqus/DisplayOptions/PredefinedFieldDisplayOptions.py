@@ -1,5 +1,7 @@
 from abaqusConstants import *
 
+from __init__ import *
+
 
 class PredefinedFieldDisplayOptions:
     """The PredefinedFieldDisplayOptions object stores settings that specify how assemblies are
@@ -15,9 +17,12 @@ class PredefinedFieldDisplayOptions:
             session.viewports[name].layers[name].assemblyDisplay.predefinedFieldOptions
 
     """
-
-    def setValues(self, temperatureField: Boolean = ON, velocityField: Boolean = ON, generalField: Boolean = ON,
-                  stressField: Boolean = ON, hardeningField: Boolean = ON):
+    def setValues(self,
+                  temperatureField: Boolean = ON,
+                  velocityField: Boolean = ON,
+                  generalField: Boolean = ON,
+                  stressField: Boolean = ON,
+                  hardeningField: Boolean = ON):
         """This method modifies the PredefinedFieldDisplayOptions object.
         
         Parameters

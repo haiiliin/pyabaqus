@@ -1,3 +1,4 @@
+from __init__ import *
 
 
 class Repository(dict):
@@ -20,7 +21,6 @@ class Repository(dict):
     - 
     [changeKey(...)](https://help.3ds.com/2022/english/DSSIMULIA_Established/SIMACAEKERRefMap/simaker-c-utlrepositorypyc.htm?ContextScope=all#simaker-utlrepositorychangekeypyc)     
     """
-
     def changeKey(self, fromName: str, toName: str):
         """This method changes the name of a key in a repository and the *name* member of the value
         object.

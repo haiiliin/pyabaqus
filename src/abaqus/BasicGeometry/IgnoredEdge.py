@@ -1,3 +1,6 @@
+from __init__ import *
+
+
 class IgnoredEdge:
     """An IgnoredEdge object is a one-dimensional region of geometry that has been abstracted
     away by a virtual topology feature. 
@@ -24,11 +27,11 @@ class IgnoredEdge:
 
     """
 
-    # An Int specifying the index of the IgnoredEdge in the IgnoredEdgeArray. 
+    # An Int specifying the index of the IgnoredEdge in the IgnoredEdgeArray.
     index: int = None
 
-    # A tuple of Floats specifying the *X*-, *Y*-, and *Z*-coordinates of a point located on 
-    # the edge. 
+    # A tuple of Floats specifying the *X*-, *Y*-, and *Z*-coordinates of a point located on
+    # the edge.
     pointOn: float = None
 
     def getSize(self, printResults: str = True):

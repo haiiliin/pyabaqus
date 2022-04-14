@@ -1,5 +1,7 @@
 from .CommandRegister import CommandRegister
 
+from __init__ import *
+
 
 class RepositorySupport(CommandRegister):
     """The RepositorySupport is a base class from which you can derive your own classes that
@@ -19,7 +21,6 @@ class RepositorySupport(CommandRegister):
         session.odbs[name].customData
 
     """
-
     def __init__(self):
         """This method creates a RepositorySupport object.
 

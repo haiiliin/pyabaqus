@@ -1,5 +1,7 @@
 from abaqusConstants import *
 
+from __init__ import *
+
 
 class CaeKerPrefs:
     """The CaeKerPrefs object contains the details of the sessionOptions.
@@ -21,8 +23,8 @@ class CaeKerPrefs:
 
     """
 
-    # A String specifying the path to the preferences file that the CaeKerPrefs object 
-    # represents. 
+    # A String specifying the path to the preferences file that the CaeKerPrefs object
+    # represents.
     fileName: str = ''
 
     def save(self, backupFile: Boolean = OFF):

@@ -3,10 +3,15 @@ from .PartInstance import PartInstance
 
 # from ..Model.ModelBase import ModelBase
 
-
 # Prevent circular import
+from __init__ import *
+
+
 class ModelBase:
     pass
+
+
+from __init__ import *
 
 
 class AssemblyModel(ModelBase):
@@ -21,7 +26,6 @@ class AssemblyModel(ModelBase):
         mdb.models[name]
 
     """
-
     def Instance(self, name: str, objectToCopy: PartInstance):
         """This method copies a PartInstance object from the specified model and creates a new
         PartInstance object.
@@ -47,7 +51,9 @@ class AssemblyModel(ModelBase):
         """
         return self
 
-    def convertAllSketches(self, regenerate: Boolean = True, convertReversedSketches: Boolean = True):
+    def convertAllSketches(self,
+                           regenerate: Boolean = True,
+                           convertReversedSketches: Boolean = True):
         """This method converts all sketches from Abaqus 6.5 or earlier to the equivalent
         ConstrainedSketch objects.
         

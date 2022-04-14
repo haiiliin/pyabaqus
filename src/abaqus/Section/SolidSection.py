@@ -1,5 +1,7 @@
 from .Section import Section
 
+from __init__ import *
+
 
 class SolidSection(Section):
     """The ShellSection object defines the properties of a shell section. The ShellSection
@@ -25,5 +27,5 @@ class SolidSection(Section):
 
     """
 
-    # A String specifying the repository key. 
+    # A String specifying the repository key.
     name: str = ''

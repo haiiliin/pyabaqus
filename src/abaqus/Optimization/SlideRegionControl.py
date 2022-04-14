@@ -2,6 +2,8 @@ from abaqusConstants import *
 from .GeometricRestriction import GeometricRestriction
 from ..Region.Region import Region
 
+from __init__ import *
+
 
 class SlideRegionControl(GeometricRestriction):
     """The SlideRegionControl object defines a slide region control geometric restriction.
@@ -17,11 +19,18 @@ class SlideRegionControl(GeometricRestriction):
         mdb.models[name].optimizationTasks[name].geometricRestrictions[name]
 
     """
-
-    def __init__(self, name: str, clientDirection: tuple, region: Region,
-                 approach: SymbolicConstant = FREE_FORM, csys: int = None, freeFormRegion: str = None,
-                 presumeFeasibleRegionAtStart: Boolean = ON, revolvedRegion: str = None,
-                 tolerance1: float = 0, tolerance2: float = 0, tolerance3: float = 0):
+    def __init__(self,
+                 name: str,
+                 clientDirection: tuple,
+                 region: Region,
+                 approach: SymbolicConstant = FREE_FORM,
+                 csys: int = None,
+                 freeFormRegion: str = None,
+                 presumeFeasibleRegionAtStart: Boolean = ON,
+                 revolvedRegion: str = None,
+                 tolerance1: float = 0,
+                 tolerance2: float = 0,
+                 tolerance3: float = 0):
         """This method creates a SlideRegionControl object.
 
         Notes
@@ -79,9 +88,15 @@ class SlideRegionControl(GeometricRestriction):
         super().__init__()
         pass
 
-    def setValues(self, approach: SymbolicConstant = FREE_FORM, csys: int = None, freeFormRegion: str = None,
-                  presumeFeasibleRegionAtStart: Boolean = ON, revolvedRegion: str = None,
-                  tolerance1: float = 0, tolerance2: float = 0, tolerance3: float = 0):
+    def setValues(self,
+                  approach: SymbolicConstant = FREE_FORM,
+                  csys: int = None,
+                  freeFormRegion: str = None,
+                  presumeFeasibleRegionAtStart: Boolean = ON,
+                  revolvedRegion: str = None,
+                  tolerance1: float = 0,
+                  tolerance2: float = 0,
+                  tolerance3: float = 0):
         """This method modifies the SlideRegionControl object.
         
         Parameters

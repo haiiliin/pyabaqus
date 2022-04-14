@@ -2,6 +2,8 @@ from abaqusConstants import *
 from .GeometricRestriction import GeometricRestriction
 from ..Region.Region import Region
 
+from __init__ import *
+
 
 class PenetrationCheck(GeometricRestriction):
     """The PenetrationCheck object defines a penetration check geometric restriction.
@@ -18,8 +20,10 @@ class PenetrationCheck(GeometricRestriction):
         mdb.models[name].optimizationTasks[name].geometricRestrictions[name]
 
     """
-
-    def __init__(self, name: str, penetrationCheckRegion: Region, region: Region,
+    def __init__(self,
+                 name: str,
+                 penetrationCheckRegion: Region,
+                 region: Region,
                  presumeFeasibleRegionAtStart: Boolean = ON):
         """This method creates a PenetrationCheck object.
 

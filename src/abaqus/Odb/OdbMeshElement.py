@@ -1,6 +1,8 @@
 from abaqusConstants import *
 from .SectionCategory import SectionCategory
 
+from __init__ import *
+
 
 class OdbMeshElement:
     """OdbMeshElement objects are created with the part.addElements or rootAssembly.addElements
@@ -51,29 +53,32 @@ class OdbMeshElement:
 
     """
 
-    # An Int specifying the element label. 
+    # An Int specifying the element label.
     label: int = None
 
-    # A String specifying the element type. 
+    # A String specifying the element type.
     type: str = ''
 
-    # A SectionCategory object specifying the element section properties. 
+    # A SectionCategory object specifying the element section properties.
     sectionCategory: SectionCategory = None
 
-    # A tuple of Ints specifying the element connectivity. For connector elements connected to 
-    # ground, the other node is repeated in the connectivity data. The position of the ground 
-    # node cannot be ascertained. This is a limitation. It is important to note the difference 
-    # with MeshElement object of MDB where the connectivity is node indices instead of node 
-    # labels. 
+    # A tuple of Ints specifying the element connectivity. For connector elements connected to
+    # ground, the other node is repeated in the connectivity data. The position of the ground
+    # node cannot be ascertained. This is a limitation. It is important to note the difference
+    # with MeshElement object of MDB where the connectivity is node indices instead of node
+    # labels.
     connectivity: int = None
 
-    # A tuple of Strings specifying the instance names for nodes in the element connectivity. 
+    # A tuple of Strings specifying the instance names for nodes in the element connectivity.
     instanceNames: tuple = ()
 
-    # A String specifying the instance name. 
+    # A String specifying the instance name.
     instanceName: str = ''
 
-    def getNormal(self, faceIndex: str, stepName: str = '', frameValue: str = '',
+    def getNormal(self,
+                  faceIndex: str,
+                  stepName: str = '',
+                  frameValue: str = '',
                   match: SymbolicConstant = CLOSEST):
         """This method returns the normal direction for the element face.
         

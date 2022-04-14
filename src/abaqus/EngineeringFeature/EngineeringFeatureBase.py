@@ -4,6 +4,8 @@ from .Inertia import Inertia
 from .SpringDashpot import SpringDashpot
 from ..Region.Region import Region
 
+from __init__ import *
+
 
 class EngineeringFeatureBase:
     """The EngineeringFeature object is a container for various specific engineering feature
@@ -33,16 +35,16 @@ class EngineeringFeatureBase:
 
     """
 
-    # A repository of Inertia objects. 
+    # A repository of Inertia objects.
     inertias: dict[str, Inertia] = dict[str, Inertia]()
 
-    # A repository of Crack objects. 
+    # A repository of Crack objects.
     cracks: dict[str, Crack] = dict[str, Crack]()
 
-    # A repository of Fastener objects. 
+    # A repository of Fastener objects.
     fasteners: dict[str, Fastener] = dict[str, Fastener]()
 
-    # A repository of SpringDashpot objects. 
+    # A repository of SpringDashpot objects.
     springDashpots: dict[str, SpringDashpot] = dict[str, SpringDashpot]()
 
     def assignSeam(self, regions: tuple[Region]):

@@ -1,5 +1,7 @@
 from abaqusConstants import *
 
+from __init__ import *
+
 
 class Dielectric:
     """The Dielectric object specifies dielectric material properties.
@@ -49,9 +51,12 @@ class Dielectric:
         - DIELECTRIC
 
     """
-
-    def __init__(self, table: tuple, type: SymbolicConstant = ISOTROPIC, frequencyDependency: Boolean = OFF,
-                 temperatureDependency: Boolean = OFF, dependencies: int = 0):
+    def __init__(self,
+                 table: tuple,
+                 type: SymbolicConstant = ISOTROPIC,
+                 frequencyDependency: Boolean = OFF,
+                 temperatureDependency: Boolean = OFF,
+                 dependencies: int = 0):
         """This method creates a Dielectric object.
 
         Notes

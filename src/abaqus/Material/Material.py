@@ -57,6 +57,8 @@ from .Plastic.Plastic import Plastic
 from .Plastic.Swelling.Swelling import Swelling
 from .Regularization import Regularization
 
+from __init__ import *
+
 
 class Material(MaterialBase):
     """A Material object is the object used to specify a material. The Material object stores
@@ -228,10 +230,16 @@ class Material(MaterialBase):
         - MATERIAL
 
     """
-
-    def AcousticMedium(self, acousticVolumetricDrag: Boolean = OFF, temperatureDependencyB: Boolean = OFF,
-                       temperatureDependencyV: Boolean = OFF, dependenciesB: int = 0, dependenciesV: int = 0,
-                       bulkTable: tuple = (), volumetricTable: tuple = ()) -> AcousticMedium:
+    def AcousticMedium(
+        self,
+        acousticVolumetricDrag: Boolean = OFF,
+        temperatureDependencyB: Boolean = OFF,
+        temperatureDependencyV: Boolean = OFF,
+        dependenciesB: int = 0,
+        dependenciesV: int = 0,
+        bulkTable: tuple = (),
+        volumetricTable: tuple = ()
+    ) -> AcousticMedium:
         """This method creates an AcousticMedium object.
 
         Notes
@@ -285,11 +293,17 @@ class Material(MaterialBase):
         ------
         RangeError
         """
-        self.acousticMedium = AcousticMedium(acousticVolumetricDrag, temperatureDependencyB, temperatureDependencyV,
-                                             dependenciesB, dependenciesV, bulkTable, volumetricTable)
+        self.acousticMedium = AcousticMedium(acousticVolumetricDrag,
+                                             temperatureDependencyB,
+                                             temperatureDependencyV,
+                                             dependenciesB, dependenciesV,
+                                             bulkTable, volumetricTable)
         return self.acousticMedium
 
-    def BrittleCracking(self, table: tuple, temperatureDependency: Boolean = OFF, dependencies: int = 0,
+    def BrittleCracking(self,
+                        table: tuple,
+                        temperatureDependency: Boolean = OFF,
+                        dependencies: int = 0,
                         type: SymbolicConstant = STRAIN) -> BrittleCracking:
         """This method creates a BrittleCracking object.
 
@@ -318,10 +332,14 @@ class Material(MaterialBase):
         -------
             A BrittleCracking object.
         """
-        self.brittleCracking = BrittleCracking(table, temperatureDependency, dependencies, type)
+        self.brittleCracking = BrittleCracking(table, temperatureDependency,
+                                               dependencies, type)
         return self.brittleCracking
 
-    def CapPlasticity(self, table: tuple, temperatureDependency: Boolean = OFF, dependencies: int = 0) -> CapPlasticity:
+    def CapPlasticity(self,
+                      table: tuple,
+                      temperatureDependency: Boolean = OFF,
+                      dependencies: int = 0) -> CapPlasticity:
         """This method creates a CapPlasticity object.
 
         Notes
@@ -350,10 +368,13 @@ class Material(MaterialBase):
         ------
         RangeError
         """
-        self.capPlasticity = CapPlasticity(table, temperatureDependency, dependencies)
+        self.capPlasticity = CapPlasticity(table, temperatureDependency,
+                                           dependencies)
         return self.capPlasticity
 
-    def CastIronPlasticity(self, table: tuple, temperatureDependency: Boolean = OFF,
+    def CastIronPlasticity(self,
+                           table: tuple,
+                           temperatureDependency: Boolean = OFF,
                            dependencies: int = 0) -> CastIronPlasticity:
         """This method creates a CastIronPlasticity object.
 
@@ -383,11 +404,17 @@ class Material(MaterialBase):
         ------
         RangeError
         """
-        self.castIronPlasticity = CastIronPlasticity(table, temperatureDependency, dependencies)
+        self.castIronPlasticity = CastIronPlasticity(table,
+                                                     temperatureDependency,
+                                                     dependencies)
         return self.castIronPlasticity
 
-    def ClayPlasticity(self, table: tuple, intercept: float = None, hardening: SymbolicConstant = EXPONENTIAL,
-                       temperatureDependency: Boolean = OFF, dependencies: int = 0) -> ClayPlasticity:
+    def ClayPlasticity(self,
+                       table: tuple,
+                       intercept: float = None,
+                       hardening: SymbolicConstant = EXPONENTIAL,
+                       temperatureDependency: Boolean = OFF,
+                       dependencies: int = 0) -> ClayPlasticity:
         """This method creates a ClayPlasticity object.
 
         Notes
@@ -423,10 +450,15 @@ class Material(MaterialBase):
         ------
         RangeError
         """
-        self.clayPlasticity = ClayPlasticity(table, intercept, hardening, temperatureDependency, dependencies)
+        self.clayPlasticity = ClayPlasticity(table, intercept, hardening,
+                                             temperatureDependency,
+                                             dependencies)
         return self.clayPlasticity
 
-    def Concrete(self, table: tuple, temperatureDependency: Boolean = OFF, dependencies: int = 0) -> Concrete:
+    def Concrete(self,
+                 table: tuple,
+                 temperatureDependency: Boolean = OFF,
+                 dependencies: int = 0) -> Concrete:
         """This method creates a Concrete object.
 
         Notes
@@ -458,8 +490,11 @@ class Material(MaterialBase):
         self.concrete = Concrete(table, temperatureDependency, dependencies)
         return self.concrete
 
-    def ConcreteDamagedPlasticity(self, table: tuple, temperatureDependency: Boolean = OFF,
-                                  dependencies: int = 0) -> ConcreteDamagedPlasticity:
+    def ConcreteDamagedPlasticity(
+            self,
+            table: tuple,
+            temperatureDependency: Boolean = OFF,
+            dependencies: int = 0) -> ConcreteDamagedPlasticity:
         """This method creates a ConcreteDamagedPlasticity object.
 
         Notes
@@ -488,10 +523,14 @@ class Material(MaterialBase):
         ------
         RangeError
         """
-        self.concreteDamagedPlasticity = ConcreteDamagedPlasticity(table, temperatureDependency, dependencies)
+        self.concreteDamagedPlasticity = ConcreteDamagedPlasticity(
+            table, temperatureDependency, dependencies)
         return self.concreteDamagedPlasticity
 
-    def Conductivity(self, table: tuple, type: SymbolicConstant = ISOTROPIC, temperatureDependency: Boolean = OFF,
+    def Conductivity(self,
+                     table: tuple,
+                     type: SymbolicConstant = ISOTROPIC,
+                     temperatureDependency: Boolean = OFF,
                      dependencies: int = 0) -> Conductivity:
         """This method creates a Conductivity object.
 
@@ -524,11 +563,16 @@ class Material(MaterialBase):
         ------
         RangeError
         """
-        self.conductivity = Conductivity(table, type, temperatureDependency, dependencies)
+        self.conductivity = Conductivity(table, type, temperatureDependency,
+                                         dependencies)
         return self.conductivity
 
-    def Creep(self, table: tuple, law: SymbolicConstant = STRAIN, temperatureDependency: Boolean = OFF,
-              dependencies: int = 0, time: SymbolicConstant = TOTAL) -> Creep:
+    def Creep(self,
+              table: tuple,
+              law: SymbolicConstant = STRAIN,
+              temperatureDependency: Boolean = OFF,
+              dependencies: int = 0,
+              time: SymbolicConstant = TOTAL) -> Creep:
         """This method creates a Creep object.
 
         Notes
@@ -564,11 +608,15 @@ class Material(MaterialBase):
         ------
         RangeError
         """
-        self.creep = Creep(table, law, temperatureDependency, dependencies, time)
+        self.creep = Creep(table, law, temperatureDependency, dependencies,
+                           time)
         return self.creep
 
-    def CrushableFoam(self, table: tuple, hardening: SymbolicConstant = VOLUMETRIC,
-                      temperatureDependency: Boolean = OFF, dependencies: int = 0) -> CrushableFoam:
+    def CrushableFoam(self,
+                      table: tuple,
+                      hardening: SymbolicConstant = VOLUMETRIC,
+                      temperatureDependency: Boolean = OFF,
+                      dependencies: int = 0) -> CrushableFoam:
         """This method creates a CrushableFoam object.
 
         Notes
@@ -600,10 +648,15 @@ class Material(MaterialBase):
         ------
         RangeError
         """
-        self.crushableFoam = CrushableFoam(table, hardening, temperatureDependency, dependencies)
+        self.crushableFoam = CrushableFoam(table, hardening,
+                                           temperatureDependency, dependencies)
         return self.crushableFoam
 
-    def Damping(self, alpha: float = 0, beta: float = 0, composite: float = 0, structural: float = 0) -> Damping:
+    def Damping(self,
+                alpha: float = 0,
+                beta: float = 0,
+                composite: float = 0,
+                structural: float = 0) -> Damping:
         """This method creates a Damping object.
 
         Notes
@@ -642,7 +695,10 @@ class Material(MaterialBase):
         self.damping = Damping(alpha, beta, composite, structural)
         return self.damping
 
-    def DeformationPlasticity(self, table: tuple, temperatureDependency: Boolean = OFF) -> DeformationPlasticity:
+    def DeformationPlasticity(
+            self,
+            table: tuple,
+            temperatureDependency: Boolean = OFF) -> DeformationPlasticity:
         """This method creates a DeformationPlasticity object.
 
         Notes
@@ -669,11 +725,16 @@ class Material(MaterialBase):
         ------
         RangeError
         """
-        self.deformationPlasticity = DeformationPlasticity(table, temperatureDependency)
+        self.deformationPlasticity = DeformationPlasticity(
+            table, temperatureDependency)
         return self.deformationPlasticity
 
-    def Density(self, table: tuple, temperatureDependency: Boolean = OFF, dependencies: int = 0,
-                distributionType: SymbolicConstant = UNIFORM, fieldName: str = '') -> Density:
+    def Density(self,
+                table: tuple,
+                temperatureDependency: Boolean = OFF,
+                dependencies: int = 0,
+                distributionType: SymbolicConstant = UNIFORM,
+                fieldName: str = '') -> Density:
         """This method creates a Density object.
 
         Notes
@@ -717,7 +778,8 @@ class Material(MaterialBase):
         ------
         RangeError
         """
-        self.density = Density(table, temperatureDependency, dependencies, distributionType, fieldName)
+        self.density = Density(table, temperatureDependency, dependencies,
+                               distributionType, fieldName)
         return self.density
 
     def Depvar(self, deleteVar: int = 0, n: int = 0) -> Depvar:
@@ -752,8 +814,12 @@ class Material(MaterialBase):
         self.depvar = Depvar(deleteVar, n)
         return self.depvar
 
-    def Dielectric(self, table: tuple, type: SymbolicConstant = ISOTROPIC, frequencyDependency: Boolean = OFF,
-                   temperatureDependency: Boolean = OFF, dependencies: int = 0) -> Dielectric:
+    def Dielectric(self,
+                   table: tuple,
+                   type: SymbolicConstant = ISOTROPIC,
+                   frequencyDependency: Boolean = OFF,
+                   temperatureDependency: Boolean = OFF,
+                   dependencies: int = 0) -> Dielectric:
         """This method creates a Dielectric object.
 
         Notes
@@ -783,11 +849,16 @@ class Material(MaterialBase):
         -------
             A Dielectric object.
         """
-        self.dielectric = Dielectric(table, type, frequencyDependency, temperatureDependency, dependencies)
+        self.dielectric = Dielectric(table, type, frequencyDependency,
+                                     temperatureDependency, dependencies)
         return self.dielectric
 
-    def Diffusivity(self, table: tuple, type: SymbolicConstant = ISOTROPIC, law: SymbolicConstant = GENERAL,
-                    temperatureDependency: Boolean = OFF, dependencies: int = 0) -> Diffusivity:
+    def Diffusivity(self,
+                    table: tuple,
+                    type: SymbolicConstant = ISOTROPIC,
+                    law: SymbolicConstant = GENERAL,
+                    temperatureDependency: Boolean = OFF,
+                    dependencies: int = 0) -> Diffusivity:
         """This method creates a Diffusivity object.
 
         Notes
@@ -822,11 +893,16 @@ class Material(MaterialBase):
         ------
         RangeError
         """
-        self.diffusivity = Diffusivity(table, type, law, temperatureDependency, dependencies)
+        self.diffusivity = Diffusivity(table, type, law, temperatureDependency,
+                                       dependencies)
         return self.diffusivity
 
-    def DruckerPrager(self, table: tuple, shearCriterion: SymbolicConstant = LINEAR, eccentricity: float = 0,
-                      testData: Boolean = OFF, temperatureDependency: Boolean = OFF,
+    def DruckerPrager(self,
+                      table: tuple,
+                      shearCriterion: SymbolicConstant = LINEAR,
+                      eccentricity: float = 0,
+                      testData: Boolean = OFF,
+                      temperatureDependency: Boolean = OFF,
                       dependencies: int = 0) -> DruckerPrager:
         """This method creates a DruckerPrager object.
 
@@ -870,12 +946,18 @@ class Material(MaterialBase):
         ------
         RangeError
         """
-        self.druckerPrager = DruckerPrager(table, shearCriterion, eccentricity, testData, temperatureDependency,
+        self.druckerPrager = DruckerPrager(table, shearCriterion, eccentricity,
+                                           testData, temperatureDependency,
                                            dependencies)
         return self.druckerPrager
 
-    def Elastic(self, table: tuple, type: SymbolicConstant = ISOTROPIC, noCompression: Boolean = OFF,
-                noTension: Boolean = OFF, temperatureDependency: Boolean = OFF, dependencies: int = 0,
+    def Elastic(self,
+                table: tuple,
+                type: SymbolicConstant = ISOTROPIC,
+                noCompression: Boolean = OFF,
+                noTension: Boolean = OFF,
+                temperatureDependency: Boolean = OFF,
+                dependencies: int = 0,
                 moduli: SymbolicConstant = LONG_TERM) -> Elastic:
         """This method creates an Elastic object.
 
@@ -1026,12 +1108,17 @@ class Material(MaterialBase):
         ------
         RangeError
         """
-        self.elastic = Elastic(table, type, noCompression, noTension, temperatureDependency, dependencies, moduli)
+        self.elastic = Elastic(table, type, noCompression, noTension,
+                               temperatureDependency, dependencies, moduli)
         return self.elastic
 
-    def ElectricalConductivity(self, table: tuple, type: SymbolicConstant = ISOTROPIC,
-                               frequencyDependency: Boolean = OFF,
-                               temperatureDependency: Boolean = OFF, dependencies: int = 0) -> ElectricalConductivity:
+    def ElectricalConductivity(
+            self,
+            table: tuple,
+            type: SymbolicConstant = ISOTROPIC,
+            frequencyDependency: Boolean = OFF,
+            temperatureDependency: Boolean = OFF,
+            dependencies: int = 0) -> ElectricalConductivity:
         """This method creates an ElectricalConductivity object.
 
         Notes
@@ -1065,14 +1152,23 @@ class Material(MaterialBase):
         ------
         RangeError
         """
-        self.electricalConductivity = ElectricalConductivity(table, type, frequencyDependency, temperatureDependency,
-                                                             dependencies)
+        self.electricalConductivity = ElectricalConductivity(
+            table, type, frequencyDependency, temperatureDependency,
+            dependencies)
         return self.electricalConductivity
 
-    def Eos(self, type: SymbolicConstant = IDEALGAS, temperatureDependency: Boolean = OFF,
-            dependencies: int = 0, detonationEnergy: float = 0, solidTable: tuple = (),
-            gasTable: tuple = (), reactionTable: tuple = (), gasSpecificTable: tuple = (),
-            table: tuple = ()) -> Eos:
+    def Eos(
+        self,
+        type: SymbolicConstant = IDEALGAS,
+        temperatureDependency: Boolean = OFF,
+        dependencies: int = 0,
+        detonationEnergy: float = 0,
+        solidTable: tuple = (),
+        gasTable: tuple = (),
+        reactionTable: tuple = (),
+        gasSpecificTable: tuple = (),
+        table: tuple = ()
+    ) -> Eos:
         """This method creates an Eos object.
 
         Notes
@@ -1148,12 +1244,18 @@ class Material(MaterialBase):
         Raises
         ------
         """
-        self.eos = Eos(type, temperatureDependency, dependencies, detonationEnergy, solidTable, gasTable, reactionTable,
+        self.eos = Eos(type, temperatureDependency, dependencies,
+                       detonationEnergy, solidTable, gasTable, reactionTable,
                        gasSpecificTable, table)
         return self.eos
 
-    def Expansion(self, type: SymbolicConstant = ISOTROPIC, userSubroutine: Boolean = OFF, zero: float = 0,
-                  temperatureDependency: Boolean = OFF, dependencies: int = 0, table: tuple = ()) -> Expansion:
+    def Expansion(self,
+                  type: SymbolicConstant = ISOTROPIC,
+                  userSubroutine: Boolean = OFF,
+                  zero: float = 0,
+                  temperatureDependency: Boolean = OFF,
+                  dependencies: int = 0,
+                  table: tuple = ()) -> Expansion:
         """This method creates an Expansion object.
 
         Notes
@@ -1192,11 +1294,16 @@ class Material(MaterialBase):
         ------
         RangeError
         """
-        self.expansion = Expansion(type, userSubroutine, zero, temperatureDependency, dependencies, table)
+        self.expansion = Expansion(type, userSubroutine, zero,
+                                   temperatureDependency, dependencies, table)
         return self.expansion
 
-    def FluidLeakoff(self, temperatureDependency: Boolean = OFF, dependencies: int = 0,
-                     type: SymbolicConstant = COEFFICIENTS, table: tuple = ()) -> FluidLeakoff:
+    def FluidLeakoff(
+        self,
+        temperatureDependency: Boolean = OFF,
+        dependencies: int = 0,
+        type: SymbolicConstant = COEFFICIENTS,
+        table: tuple = ()) -> FluidLeakoff:
         """This method creates a FluidLeakoff object.
 
         Notes
@@ -1225,11 +1332,16 @@ class Material(MaterialBase):
         -------
             A FluidLeakoff object.
         """
-        self.fluidLeakoff = FluidLeakoff(temperatureDependency, dependencies, type, table)
+        self.fluidLeakoff = FluidLeakoff(temperatureDependency, dependencies,
+                                         type, table)
         return self.fluidLeakoff
 
-    def GapFlow(self, table: tuple, kmax: float = None, temperatureDependency: Boolean = OFF,
-                dependencies: int = 0, type: SymbolicConstant = NEWTONIAN) -> GapFlow:
+    def GapFlow(self,
+                table: tuple,
+                kmax: float = None,
+                temperatureDependency: Boolean = OFF,
+                dependencies: int = 0,
+                type: SymbolicConstant = NEWTONIAN) -> GapFlow:
         """This method creates a GapFlow object.
 
         Notes
@@ -1261,10 +1373,13 @@ class Material(MaterialBase):
         -------
             A GapFlow object.
         """
-        self.gapFlow = GapFlow(table, kmax, temperatureDependency, dependencies, type)
+        self.gapFlow = GapFlow(table, kmax, temperatureDependency,
+                               dependencies, type)
         return self.gapFlow
 
-    def GasketMembraneElastic(self, table: tuple, temperatureDependency: Boolean = OFF,
+    def GasketMembraneElastic(self,
+                              table: tuple,
+                              temperatureDependency: Boolean = OFF,
                               dependencies: int = 0) -> GasketMembraneElastic:
         """This method creates a GasketMembraneElastic object.
 
@@ -1294,15 +1409,24 @@ class Material(MaterialBase):
         ------
         RangeError
         """
-        self.gasketMembraneElastic = GasketMembraneElastic(table, temperatureDependency, dependencies)
+        self.gasketMembraneElastic = GasketMembraneElastic(
+            table, temperatureDependency, dependencies)
         return self.gasketMembraneElastic
 
-    def GasketThicknessBehavior(self, table: tuple, temperatureDependency: Boolean = OFF, dependencies: int = 0,
-                                tensileStiffnessFactor: float = None, type: SymbolicConstant = ELASTIC_PLASTIC,
-                                unloadingDependencies: int = 0, unloadingTemperatureDependency: Boolean = OFF,
-                                variableUnits: SymbolicConstant = STRESS, yieldOnset: float = 0,
-                                yieldOnsetMethod: SymbolicConstant = RELATIVE_SLOPE_DROP,
-                                unloadingTable: tuple = ()) -> GasketThicknessBehavior:
+    def GasketThicknessBehavior(
+        self,
+        table: tuple,
+        temperatureDependency: Boolean = OFF,
+        dependencies: int = 0,
+        tensileStiffnessFactor: float = None,
+        type: SymbolicConstant = ELASTIC_PLASTIC,
+        unloadingDependencies: int = 0,
+        unloadingTemperatureDependency: Boolean = OFF,
+        variableUnits: SymbolicConstant = STRESS,
+        yieldOnset: float = 0,
+        yieldOnsetMethod: SymbolicConstant = RELATIVE_SLOPE_DROP,
+        unloadingTable: tuple = ()
+    ) -> GasketThicknessBehavior:
         """This method creates a GasketThicknessBehavior object.
 
         Notes
@@ -1363,15 +1487,18 @@ class Material(MaterialBase):
         ------
         RangeError
         """
-        self.gasketThicknessBehavior = GasketThicknessBehavior(table, temperatureDependency, dependencies,
-                                                               tensileStiffnessFactor, type, unloadingDependencies,
-                                                               unloadingTemperatureDependency, variableUnits,
-                                                               yieldOnset, yieldOnsetMethod, unloadingTable)
+        self.gasketThicknessBehavior = GasketThicknessBehavior(
+            table, temperatureDependency, dependencies, tensileStiffnessFactor,
+            type, unloadingDependencies, unloadingTemperatureDependency,
+            variableUnits, yieldOnset, yieldOnsetMethod, unloadingTable)
         return self.gasketThicknessBehavior
 
-    def GasketTransverseShearElastic(self, table: tuple, variableUnits: SymbolicConstant = STRESS,
-                                     temperatureDependency: Boolean = OFF,
-                                     dependencies: int = 0) -> GasketTransverseShearElastic:
+    def GasketTransverseShearElastic(
+            self,
+            table: tuple,
+            variableUnits: SymbolicConstant = STRESS,
+            temperatureDependency: Boolean = OFF,
+            dependencies: int = 0) -> GasketTransverseShearElastic:
         """This method creates a GasketTransverseShearElastic object.
 
         Notes
@@ -1403,8 +1530,8 @@ class Material(MaterialBase):
         ------
         RangeError
         """
-        self.gasketTransverseShearElastic = GasketTransverseShearElastic(table, variableUnits, temperatureDependency,
-                                                                         dependencies)
+        self.gasketTransverseShearElastic = GasketTransverseShearElastic(
+            table, variableUnits, temperatureDependency, dependencies)
         return self.gasketTransverseShearElastic
 
     def Gel(self, table: tuple) -> Gel:
@@ -1431,16 +1558,26 @@ class Material(MaterialBase):
         self.gel = Gel(table)
         return self.gel
 
-    def Hyperelastic(self, table: tuple, type: SymbolicConstant = UNKNOWN,
-                     moduliTimeScale: SymbolicConstant = LONG_TERM, temperatureDependency: Boolean = OFF,
-                     n: int = 1, beta: typing.Union[SymbolicConstant, float] = FITTED_VALUE,
-                     testData: Boolean = ON, compressible: Boolean = OFF, properties: int = 0,
+    def Hyperelastic(self,
+                     table: tuple,
+                     type: SymbolicConstant = UNKNOWN,
+                     moduliTimeScale: SymbolicConstant = LONG_TERM,
+                     temperatureDependency: Boolean = OFF,
+                     n: int = 1,
+                     beta: typing.Union[SymbolicConstant,
+                                        float] = FITTED_VALUE,
+                     testData: Boolean = ON,
+                     compressible: Boolean = OFF,
+                     properties: int = 0,
                      deviatoricResponse: SymbolicConstant = UNIAXIAL,
-                     volumetricResponse: SymbolicConstant = DEFAULT, poissonRatio: float = 0,
+                     volumetricResponse: SymbolicConstant = DEFAULT,
+                     poissonRatio: float = 0,
                      materialType: SymbolicConstant = ISOTROPIC,
                      anisotropicType: SymbolicConstant = FUNG_ANISOTROPIC,
-                     formulation: SymbolicConstant = STRAIN, behaviorType: SymbolicConstant = INCOMPRESSIBLE,
-                     dependencies: int = 0, localDirections: int = 0) -> Hyperelastic:
+                     formulation: SymbolicConstant = STRAIN,
+                     behaviorType: SymbolicConstant = INCOMPRESSIBLE,
+                     dependencies: int = 0,
+                     localDirections: int = 0) -> Hyperelastic:
         """This method creates a Hyperelastic object.
 
         Notes
@@ -1523,15 +1660,21 @@ class Material(MaterialBase):
         InvalidNameError
         RangeError 
         """
-        self.hyperelastic = Hyperelastic(table, type, moduliTimeScale, temperatureDependency, n, beta, testData,
-                                         compressible, properties, deviatoricResponse, volumetricResponse, poissonRatio,
-                                         materialType, anisotropicType, formulation, behaviorType, dependencies,
-                                         localDirections)
+        self.hyperelastic = Hyperelastic(
+            table, type, moduliTimeScale, temperatureDependency, n, beta,
+            testData, compressible, properties, deviatoricResponse,
+            volumetricResponse, poissonRatio, materialType, anisotropicType,
+            formulation, behaviorType, dependencies, localDirections)
         return self.hyperelastic
 
-    def Hyperfoam(self, testData: Boolean = OFF, poisson: float = None, n: int = 1,
-                  temperatureDependency: Boolean = OFF, moduli: SymbolicConstant = LONG_TERM,
-                  table: tuple = ()) -> Hyperfoam:
+    def Hyperfoam(
+        self,
+        testData: Boolean = OFF,
+        poisson: float = None,
+        n: int = 1,
+        temperatureDependency: Boolean = OFF,
+        moduli: SymbolicConstant = LONG_TERM,
+        table: tuple = ()) -> Hyperfoam:
         """This method creates a Hyperfoam object.
 
         Notes
@@ -1570,7 +1713,8 @@ class Material(MaterialBase):
         ------
         RangeError
         """
-        self.hyperfoam = Hyperfoam(testData, poisson, n, temperatureDependency, moduli, table)
+        self.hyperfoam = Hyperfoam(testData, poisson, n, temperatureDependency,
+                                   moduli, table)
         return self.hyperfoam
 
     def Hypoelastic(self, table: tuple, user: Boolean = OFF) -> Hypoelastic:
@@ -1600,7 +1744,8 @@ class Material(MaterialBase):
         self.hypoelastic = Hypoelastic(table, user)
         return self.hypoelastic
 
-    def InelasticHeatFraction(self, fraction: float = 0) -> InelasticHeatFraction:
+    def InelasticHeatFraction(self,
+                              fraction: float = 0) -> InelasticHeatFraction:
         """This method creates an InelasticHeatFraction object.
 
         Notes
@@ -1687,9 +1832,13 @@ class Material(MaterialBase):
         self.latentHeat = LatentHeat(table)
         return self.latentHeat
 
-    def LowDensityFoam(self, elementRemoval: Boolean = OFF, maxAllowablePrincipalStress: float = None,
+    def LowDensityFoam(self,
+                       elementRemoval: Boolean = OFF,
+                       maxAllowablePrincipalStress: float = None,
                        extrapolateStressStrainCurve: Boolean = OFF,
-                       strainRateType: SymbolicConstant = VOLUMETRIC, mu0: float = None, mu1: float = 0,
+                       strainRateType: SymbolicConstant = VOLUMETRIC,
+                       mu0: float = None,
+                       mu1: float = 0,
                        alpha: float = 2) -> LowDensityFoam:
         """This method creates a LowDensityFoam object.
 
@@ -1732,13 +1881,22 @@ class Material(MaterialBase):
         ------
         RangeError
         """
-        self.lowDensityFoam = LowDensityFoam(elementRemoval, maxAllowablePrincipalStress, extrapolateStressStrainCurve,
+        self.lowDensityFoam = LowDensityFoam(elementRemoval,
+                                             maxAllowablePrincipalStress,
+                                             extrapolateStressStrainCurve,
                                              strainRateType, mu0, mu1, alpha)
         return self.lowDensityFoam
 
-    def MagneticPermeability(self, table: tuple, table2: tuple, table3: tuple, type: SymbolicConstant = ISOTROPIC,
-                             frequencyDependency: Boolean = OFF, temperatureDependency: Boolean = OFF,
-                             dependencies: int = 0, nonlinearBH: Boolean = OFF) -> MagneticPermeability:
+    def MagneticPermeability(
+            self,
+            table: tuple,
+            table2: tuple,
+            table3: tuple,
+            type: SymbolicConstant = ISOTROPIC,
+            frequencyDependency: Boolean = OFF,
+            temperatureDependency: Boolean = OFF,
+            dependencies: int = 0,
+            nonlinearBH: Boolean = OFF) -> MagneticPermeability:
         """This method creates a MagneticPermeability object.
 
         Notes
@@ -1785,14 +1943,19 @@ class Material(MaterialBase):
         ------
         RangeError
         """
-        self.magneticPermeability = MagneticPermeability(table, table2, table3, type, frequencyDependency,
-                                                         temperatureDependency, dependencies, nonlinearBH)
+        self.magneticPermeability = MagneticPermeability(
+            table, table2, table3, type, frequencyDependency,
+            temperatureDependency, dependencies, nonlinearBH)
         return self.magneticPermeability
 
-    def MohrCoulombPlasticity(self, table: tuple, deviatoricEccentricity: float = None,
-                              meridionalEccentricity: float = 0,
-                              temperatureDependency: Boolean = OFF, dependencies: int = 0,
-                              useTensionCutoff: Boolean = OFF) -> MohrCoulombPlasticity:
+    def MohrCoulombPlasticity(
+            self,
+            table: tuple,
+            deviatoricEccentricity: float = None,
+            meridionalEccentricity: float = 0,
+            temperatureDependency: Boolean = OFF,
+            dependencies: int = 0,
+            useTensionCutoff: Boolean = OFF) -> MohrCoulombPlasticity:
         """This method creates a MohrCoulombPlasticity object.
 
         Notes
@@ -1831,8 +1994,9 @@ class Material(MaterialBase):
         ------
         RangeError
         """
-        self.mohrCoulombPlasticity = MohrCoulombPlasticity(table, deviatoricEccentricity, meridionalEccentricity,
-                                                           temperatureDependency, dependencies, useTensionCutoff)
+        self.mohrCoulombPlasticity = MohrCoulombPlasticity(
+            table, deviatoricEccentricity, meridionalEccentricity,
+            temperatureDependency, dependencies, useTensionCutoff)
         return self.mohrCoulombPlasticity
 
     def MoistureSwelling(self, table: tuple) -> MoistureSwelling:
@@ -1859,8 +2023,12 @@ class Material(MaterialBase):
         self.moistureSwelling = MoistureSwelling(table)
         return self.moistureSwelling
 
-    def Permeability(self, specificWeight: float, inertialDragCoefficient: float, table: tuple,
-                     type: SymbolicConstant = ISOTROPIC, temperatureDependency: Boolean = OFF,
+    def Permeability(self,
+                     specificWeight: float,
+                     inertialDragCoefficient: float,
+                     table: tuple,
+                     type: SymbolicConstant = ISOTROPIC,
+                     temperatureDependency: Boolean = OFF,
                      dependencies: int = 0) -> Permeability:
         """This method creates a Permeability object.
 
@@ -1897,11 +2065,15 @@ class Material(MaterialBase):
         ------
         RangeError
         """
-        self.permeability = Permeability(specificWeight, inertialDragCoefficient, table, type, temperatureDependency,
-                                         dependencies)
+        self.permeability = Permeability(specificWeight,
+                                         inertialDragCoefficient, table, type,
+                                         temperatureDependency, dependencies)
         return self.permeability
 
-    def Piezoelectric(self, table: tuple, type: SymbolicConstant = STRESS, temperatureDependency: Boolean = OFF,
+    def Piezoelectric(self,
+                      table: tuple,
+                      type: SymbolicConstant = STRESS,
+                      temperatureDependency: Boolean = OFF,
                       dependencies: int = 0) -> Piezoelectric:
         """This method creates a Piezoelectric object.
 
@@ -1930,12 +2102,19 @@ class Material(MaterialBase):
         -------
             A Piezoelectric object.
         """
-        self.piezoelectric = Piezoelectric(table, type, temperatureDependency, dependencies)
+        self.piezoelectric = Piezoelectric(table, type, temperatureDependency,
+                                           dependencies)
         return self.piezoelectric
 
-    def Plastic(self, table: tuple, hardening: SymbolicConstant = ISOTROPIC, rate: Boolean = OFF,
-                dataType: SymbolicConstant = HALF_CYCLE, strainRangeDependency: Boolean = OFF,
-                numBackstresses: int = 1, temperatureDependency: Boolean = OFF, dependencies: int = 0) -> Plastic:
+    def Plastic(self,
+                table: tuple,
+                hardening: SymbolicConstant = ISOTROPIC,
+                rate: Boolean = OFF,
+                dataType: SymbolicConstant = HALF_CYCLE,
+                strainRangeDependency: Boolean = OFF,
+                numBackstresses: int = 1,
+                temperatureDependency: Boolean = OFF,
+                dependencies: int = 0) -> Plastic:
         """This method creates a Plastic object.
 
         Notes
@@ -1979,11 +2158,15 @@ class Material(MaterialBase):
         ------
         RangeError
         """
-        self.plastic = Plastic(table, hardening, rate, dataType, strainRangeDependency, numBackstresses,
+        self.plastic = Plastic(table, hardening, rate, dataType,
+                               strainRangeDependency, numBackstresses,
                                temperatureDependency, dependencies)
         return self.plastic
 
-    def PoreFluidExpansion(self, table: tuple, zero: float = 0, temperatureDependency: Boolean = OFF,
+    def PoreFluidExpansion(self,
+                           table: tuple,
+                           zero: float = 0,
+                           temperatureDependency: Boolean = OFF,
                            dependencies: int = 0) -> PoreFluidExpansion:
         """This method creates a PoreFluidExpansion object.
 
@@ -2015,10 +2198,15 @@ class Material(MaterialBase):
         ------
         RangeError
         """
-        self.poreFluidExpansion = PoreFluidExpansion(table, zero, temperatureDependency, dependencies)
+        self.poreFluidExpansion = PoreFluidExpansion(table, zero,
+                                                     temperatureDependency,
+                                                     dependencies)
         return self.poreFluidExpansion
 
-    def PorousBulkModuli(self, table: tuple, temperatureDependency: Boolean = OFF) -> PorousBulkModuli:
+    def PorousBulkModuli(
+            self,
+            table: tuple,
+            temperatureDependency: Boolean = OFF) -> PorousBulkModuli:
         """This method creates a PorousBulkModuli object.
 
         Notes
@@ -2044,7 +2232,10 @@ class Material(MaterialBase):
         self.porousBulkModuli = PorousBulkModuli(table, temperatureDependency)
         return self.porousBulkModuli
 
-    def PorousElastic(self, table: tuple, shear: SymbolicConstant = POISSON, temperatureDependency: Boolean = OFF,
+    def PorousElastic(self,
+                      table: tuple,
+                      shear: SymbolicConstant = POISSON,
+                      temperatureDependency: Boolean = OFF,
                       dependencies: int = 0) -> PorousElastic:
         """This method creates a PorousElastic object.
 
@@ -2077,10 +2268,14 @@ class Material(MaterialBase):
         ------
         RangeError
         """
-        self.porousElastic = PorousElastic(table, shear, temperatureDependency, dependencies)
+        self.porousElastic = PorousElastic(table, shear, temperatureDependency,
+                                           dependencies)
         return self.porousElastic
 
-    def PorousMetalPlasticity(self, table: tuple, relativeDensity: float = None, temperatureDependency: Boolean = OFF,
+    def PorousMetalPlasticity(self,
+                              table: tuple,
+                              relativeDensity: float = None,
+                              temperatureDependency: Boolean = OFF,
                               dependencies: int = 0) -> PorousMetalPlasticity:
         """This method creates a PorousMetalPlasticity object.
 
@@ -2113,11 +2308,15 @@ class Material(MaterialBase):
         ------
         RangeError
         """
-        self.porousMetalPlasticity = PorousMetalPlasticity(table, relativeDensity, temperatureDependency, dependencies)
+        self.porousMetalPlasticity = PorousMetalPlasticity(
+            table, relativeDensity, temperatureDependency, dependencies)
         return self.porousMetalPlasticity
 
-    def Regularization(self, rtol: float = 0,
-                       strainRateRegularization: SymbolicConstant = LOGARITHMIC) -> Regularization:
+    def Regularization(
+        self,
+        rtol: float = 0,
+        strainRateRegularization: SymbolicConstant = LOGARITHMIC
+    ) -> Regularization:
         """This method creates a Regularization object.
 
         Notes
@@ -2150,7 +2349,10 @@ class Material(MaterialBase):
         self.regularization = Regularization(rtol, strainRateRegularization)
         return self.regularization
 
-    def Solubility(self, table: tuple, temperatureDependency: Boolean = OFF, dependencies: int = 0) -> Solubility:
+    def Solubility(self,
+                   table: tuple,
+                   temperatureDependency: Boolean = OFF,
+                   dependencies: int = 0) -> Solubility:
         """This method creates a Solubility object.
 
         Notes
@@ -2179,12 +2381,17 @@ class Material(MaterialBase):
         ------
         RangeError
         """
-        self.solubility = Solubility(table, temperatureDependency, dependencies)
+        self.solubility = Solubility(table, temperatureDependency,
+                                     dependencies)
         return self.solubility
 
-    def Sorption(self, absorptionTable: tuple, lawAbsorption: SymbolicConstant = TABULAR,
-                 exsorption: Boolean = OFF, lawExsorption: SymbolicConstant = TABULAR,
-                 scanning: float = 0, exsorptionTable: tuple = ()) -> Sorption:
+    def Sorption(self,
+                 absorptionTable: tuple,
+                 lawAbsorption: SymbolicConstant = TABULAR,
+                 exsorption: Boolean = OFF,
+                 lawExsorption: SymbolicConstant = TABULAR,
+                 scanning: float = 0,
+                 exsorptionTable: tuple = ()) -> Sorption:
         """This method creates a Sorption object.
 
         Notes
@@ -2224,11 +2431,15 @@ class Material(MaterialBase):
         ------
         RangeError
         """
-        self.sorption = Sorption(absorptionTable, lawAbsorption, exsorption, lawExsorption, scanning, exsorptionTable)
+        self.sorption = Sorption(absorptionTable, lawAbsorption, exsorption,
+                                 lawExsorption, scanning, exsorptionTable)
         return self.sorption
 
-    def SpecificHeat(self, table: tuple, law: SymbolicConstant = CONSTANTVOLUME,
-                     temperatureDependency: Boolean = OFF, dependencies: int = 0) -> SpecificHeat:
+    def SpecificHeat(self,
+                     table: tuple,
+                     law: SymbolicConstant = CONSTANTVOLUME,
+                     temperatureDependency: Boolean = OFF,
+                     dependencies: int = 0) -> SpecificHeat:
         """This method creates a SpecificHeat object.
 
         Notes
@@ -2260,10 +2471,14 @@ class Material(MaterialBase):
         ------
         RangeError
         """
-        self.specificHeat = SpecificHeat(table, law, temperatureDependency, dependencies)
+        self.specificHeat = SpecificHeat(table, law, temperatureDependency,
+                                         dependencies)
         return self.specificHeat
 
-    def Swelling(self, table: tuple, law: SymbolicConstant = INPUT, temperatureDependency: Boolean = OFF,
+    def Swelling(self,
+                 table: tuple,
+                 law: SymbolicConstant = INPUT,
+                 temperatureDependency: Boolean = OFF,
                  dependencies: int = 0) -> Swelling:
         """This method creates a Swelling object.
 
@@ -2297,12 +2512,18 @@ class Material(MaterialBase):
         ------
         RangeError
         """
-        self.swelling = Swelling(table, law, temperatureDependency, dependencies)
+        self.swelling = Swelling(table, law, temperatureDependency,
+                                 dependencies)
         return self.swelling
 
-    def UserMaterial(self, type: SymbolicConstant = MECHANICAL, unsymm: Boolean = OFF,
-                     mechanicalConstants: tuple = (), thermalConstants: tuple = (), effmod: Boolean = OFF,
-                     hybridFormulation: SymbolicConstant = INCREMENTAL) -> UserMaterial:
+    def UserMaterial(
+            self,
+            type: SymbolicConstant = MECHANICAL,
+            unsymm: Boolean = OFF,
+            mechanicalConstants: tuple = (),
+            thermalConstants: tuple = (),
+            effmod: Boolean = OFF,
+            hybridFormulation: SymbolicConstant = INCREMENTAL) -> UserMaterial:
         """This method creates a UserMaterial object.
 
         Notes
@@ -2349,7 +2570,9 @@ class Material(MaterialBase):
         ------
         RangeError
         """
-        self.userMaterial = UserMaterial(type, unsymm, mechanicalConstants, thermalConstants, effmod, hybridFormulation)
+        self.userMaterial = UserMaterial(type, unsymm, mechanicalConstants,
+                                         thermalConstants, effmod,
+                                         hybridFormulation)
         return self.userMaterial
 
     def UserOutputVariables(self, n: int = 0) -> UserOutputVariables:
@@ -2381,10 +2604,17 @@ class Material(MaterialBase):
         self.userOutputVariables = UserOutputVariables(n)
         return self.userOutputVariables
 
-    def Viscoelastic(self, domain: SymbolicConstant, table: tuple, frequency: SymbolicConstant = FORMULA,
-                     type: SymbolicConstant = ISOTROPIC, preload: SymbolicConstant = NONE,
-                     time: SymbolicConstant = PRONY, errtol: float = 0, nmax: int = 13,
-                     volumetricTable: tuple = ()) -> Viscoelastic:
+    def Viscoelastic(
+        self,
+        domain: SymbolicConstant,
+        table: tuple,
+        frequency: SymbolicConstant = FORMULA,
+        type: SymbolicConstant = ISOTROPIC,
+        preload: SymbolicConstant = NONE,
+        time: SymbolicConstant = PRONY,
+        errtol: float = 0,
+        nmax: int = 13,
+        volumetricTable: tuple = ()) -> Viscoelastic:
         """This method creates a Viscoelastic object.
 
         Notes
@@ -2443,10 +2673,15 @@ class Material(MaterialBase):
         ------
         RangeError
         """
-        self.viscoelastic = Viscoelastic(domain, table, frequency, type, preload, time, errtol, nmax, volumetricTable)
+        self.viscoelastic = Viscoelastic(domain, table, frequency, type,
+                                         preload, time, errtol, nmax,
+                                         volumetricTable)
         return self.viscoelastic
 
-    def Viscosity(self, table: tuple, type: SymbolicConstant = NEWTONIAN, temperatureDependency: Boolean = OFF,
+    def Viscosity(self,
+                  table: tuple,
+                  type: SymbolicConstant = NEWTONIAN,
+                  temperatureDependency: Boolean = OFF,
                   dependencies: int = 0) -> Viscosity:
         """This method creates a Viscosity object.
 
@@ -2478,11 +2713,16 @@ class Material(MaterialBase):
         ------
         RangeError
         """
-        self.viscosity = Viscosity(table, type, temperatureDependency, dependencies)
+        self.viscosity = Viscosity(table, type, temperatureDependency,
+                                   dependencies)
         return self.viscosity
 
-    def Viscous(self, table: tuple, law: SymbolicConstant = STRAIN, temperatureDependency: Boolean = OFF,
-                dependencies: int = 0, time: SymbolicConstant = TOTAL) -> Viscous:
+    def Viscous(self,
+                table: tuple,
+                law: SymbolicConstant = STRAIN,
+                temperatureDependency: Boolean = OFF,
+                dependencies: int = 0,
+                time: SymbolicConstant = TOTAL) -> Viscous:
         """This method creates a Viscous object.
 
         Notes
@@ -2514,5 +2754,6 @@ class Material(MaterialBase):
         -------
             A Viscous object.
         """
-        self.viscous = Viscous(table, law, temperatureDependency, dependencies, time)
+        self.viscous = Viscous(table, law, temperatureDependency, dependencies,
+                               time)
         return self.viscous

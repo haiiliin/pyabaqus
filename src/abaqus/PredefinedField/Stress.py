@@ -2,6 +2,8 @@ from abaqusConstants import *
 from .PredefinedField import PredefinedField
 from ..Region.Region import Region
 
+from __init__ import *
+
 
 class Stress(PredefinedField):
     """The Stress object stores the data for an initial stress predefined field.
@@ -20,10 +22,16 @@ class Stress(PredefinedField):
         - INITIAL CONDITIONS
 
     """
-
-    def __init__(self, name: str, region: Region, distributionType: SymbolicConstant = UNIFORM,
-                 sigma11: float = None, sigma22: float = None, sigma33: float = None,
-                 sigma12: float = None, sigma13: float = None, sigma23: float = None):
+    def __init__(self,
+                 name: str,
+                 region: Region,
+                 distributionType: SymbolicConstant = UNIFORM,
+                 sigma11: float = None,
+                 sigma22: float = None,
+                 sigma33: float = None,
+                 sigma12: float = None,
+                 sigma13: float = None,
+                 sigma23: float = None):
         """This method creates a Stress predefined field object.
 
         Notes
@@ -64,9 +72,14 @@ class Stress(PredefinedField):
         super().__init__()
         pass
 
-    def setValues(self, distributionType: SymbolicConstant = UNIFORM, sigma11: float = None,
-                  sigma22: float = None, sigma33: float = None, sigma12: float = None,
-                  sigma13: float = None, sigma23: float = None):
+    def setValues(self,
+                  distributionType: SymbolicConstant = UNIFORM,
+                  sigma11: float = None,
+                  sigma22: float = None,
+                  sigma33: float = None,
+                  sigma12: float = None,
+                  sigma13: float = None,
+                  sigma23: float = None):
         """This method modifies the Stress object.
         
         Parameters

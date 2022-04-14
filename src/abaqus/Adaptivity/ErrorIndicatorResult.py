@@ -1,5 +1,7 @@
 from .RuleResult import RuleResult
 
+from __init__ import *
+
 
 class ErrorIndicatorResult(RuleResult):
     """The ErrorIndicatorResult object contains result information corresponding to an error
@@ -15,7 +17,6 @@ class ErrorIndicatorResult(RuleResult):
         mdb.adaptivityProcesses[name].iterations[i].ruleResults[name].indicatorResults[name]
 
     """
-
     def __init__(self, name: str, results: str):
         """This method creates an ErrorIndicatorResult with data for an error indicator variable in
         a RemeshingRule for a given adaptivity iteration.

@@ -2,6 +2,8 @@ from abaqusConstants import *
 from .BoundaryCondition import BoundaryCondition
 from ..Region.Region import Region
 
+from __init__ import *
+
 
 class MagneticVectorPotentialBC(BoundaryCondition):
     """The MagneticVectorPotentialBC object stores the data for a magnetic vector potential
@@ -36,28 +38,34 @@ class MagneticVectorPotentialBC(BoundaryCondition):
 
     """
 
-    # A String specifying the boundary condition repository key. 
+    # A String specifying the boundary condition repository key.
     name: str = ''
 
-    # A SymbolicConstant specifying how the boundary condition is distributed spatially. 
-    # Possible values are UNIFORM and USER_DEFINED. The default value is UNIFORM. 
+    # A SymbolicConstant specifying how the boundary condition is distributed spatially.
+    # Possible values are UNIFORM and USER_DEFINED. The default value is UNIFORM.
     distributionType: SymbolicConstant = UNIFORM
 
-    # A SymbolicConstant specifying the category of the boundary condition. Possible values 
-    # are MECHANICAL and THERMAL. 
+    # A SymbolicConstant specifying the category of the boundary condition. Possible values
+    # are MECHANICAL and THERMAL.
     category: SymbolicConstant = None
 
-    # A Region object specifying the region to which the boundary condition is applied. 
+    # A Region object specifying the region to which the boundary condition is applied.
     region: Region = Region()
 
-    # None or a DatumCsys object specifying the local coordinate system of the boundary 
-    # condition's degrees of freedom. If *localCsys*=None, the degrees of freedom are defined 
-    # in the global coordinate system. The default value is None. 
+    # None or a DatumCsys object specifying the local coordinate system of the boundary
+    # condition's degrees of freedom. If *localCsys*=None, the degrees of freedom are defined
+    # in the global coordinate system. The default value is None.
     localCsys: str = None
 
-    def __init__(self, name: str, createStepName: str, region: Region, component1: SymbolicConstant = None,
-                 component2: SymbolicConstant = UNSET, component3: SymbolicConstant = UNSET,
-                 amplitude: str = UNSET, distributionType: SymbolicConstant = UNIFORM,
+    def __init__(self,
+                 name: str,
+                 createStepName: str,
+                 region: Region,
+                 component1: SymbolicConstant = None,
+                 component2: SymbolicConstant = UNSET,
+                 component3: SymbolicConstant = UNSET,
+                 amplitude: str = UNSET,
+                 distributionType: SymbolicConstant = UNIFORM,
                  localCsys: str = None):
         """This method creates a MagneticVectorPotentialBC object.
 
@@ -109,9 +117,13 @@ class MagneticVectorPotentialBC(BoundaryCondition):
         super().__init__()
         pass
 
-    def setValues(self, component1: SymbolicConstant = None, component2: SymbolicConstant = UNSET,
-                  component3: SymbolicConstant = UNSET, amplitude: str = UNSET,
-                  distributionType: SymbolicConstant = UNIFORM, localCsys: str = None):
+    def setValues(self,
+                  component1: SymbolicConstant = None,
+                  component2: SymbolicConstant = UNSET,
+                  component3: SymbolicConstant = UNSET,
+                  amplitude: str = UNSET,
+                  distributionType: SymbolicConstant = UNIFORM,
+                  localCsys: str = None):
         """This method modifies the data for an existing MagneticVectorPotentialBC object in the
         step where it is created.
         
@@ -144,8 +156,12 @@ class MagneticVectorPotentialBC(BoundaryCondition):
         """
         pass
 
-    def setValuesInStep(self, stepName: str, component1: SymbolicConstant = None, component2: SymbolicConstant = None,
-                        component3: SymbolicConstant = None, amplitude: str = ''):
+    def setValuesInStep(self,
+                        stepName: str,
+                        component1: SymbolicConstant = None,
+                        component2: SymbolicConstant = None,
+                        component3: SymbolicConstant = None,
+                        amplitude: str = ''):
         """This method modifies the propagating data for an existing MagneticVectorPotentialBC
         object in the specified step.
         

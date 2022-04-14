@@ -1,6 +1,8 @@
 from abaqusConstants import *
 from ..Region.Set import Set
 
+from __init__ import *
+
 
 class SectionAssignment:
     """The SectionAssignment object is used to specify a section assignment on an assembly or
@@ -30,12 +32,17 @@ class SectionAssignment:
 
     """
 
-    # A Boolean specifying whether the section assignment is suppressed or not. The default 
-    # value is OFF. 
+    # A Boolean specifying whether the section assignment is suppressed or not. The default
+    # value is OFF.
     suppressed: Boolean = OFF
 
-    def __init__(self, region: Set, sectionName: str, thicknessAssignment: SymbolicConstant = FROM_SECTION,
-                 offset: float = 0, offsetType: SymbolicConstant = SINGLE_VALUE, offsetField: str = ''):
+    def __init__(self,
+                 region: Set,
+                 sectionName: str,
+                 thicknessAssignment: SymbolicConstant = FROM_SECTION,
+                 offset: float = 0,
+                 offsetType: SymbolicConstant = SINGLE_VALUE,
+                 offsetField: str = ''):
         """This method creates a SectionAssignment object.
 
         Notes

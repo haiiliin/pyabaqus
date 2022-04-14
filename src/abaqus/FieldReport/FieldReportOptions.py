@@ -1,6 +1,8 @@
 from abaqusConstants import *
 from ..Session.NumberFormat import NumberFormat
 
+from __init__ import *
+
 
 class FieldReportOptions:
     """The FieldReportOptions object stores settings used by the writeFieldReport method when
@@ -27,10 +29,16 @@ class FieldReportOptions:
     # Format of the number
     numberFormat: NumberFormat = NumberFormat()
 
-    def setValues(self, numColumns: int = 80, numberFormat: NumberFormat = NumberFormat(),
-                  printXYData: Boolean = ON, printTotal: Boolean = ON, printMinMax: Boolean = ON,
-                  pageWidth: SymbolicConstant = NO_LIMIT, columnLayout: SymbolicConstant = SINGLE_TABLE,
-                  sort: SymbolicConstant = ASCENDING, printLocalCSYS: Boolean = OFF):
+    def setValues(self,
+                  numColumns: int = 80,
+                  numberFormat: NumberFormat = NumberFormat(),
+                  printXYData: Boolean = ON,
+                  printTotal: Boolean = ON,
+                  printMinMax: Boolean = ON,
+                  pageWidth: SymbolicConstant = NO_LIMIT,
+                  columnLayout: SymbolicConstant = SINGLE_TABLE,
+                  sort: SymbolicConstant = ASCENDING,
+                  printLocalCSYS: Boolean = OFF):
         """This method modifies the FieldReportOptions object.
         
         Parameters
@@ -70,7 +78,10 @@ class FieldReportOptions:
         """
         pass
 
-    def NumberFormat(self, blankPad: Boolean = ON, format: SymbolicConstant = ENGINEERING, numDigits: int = 6,
+    def NumberFormat(self,
+                     blankPad: Boolean = ON,
+                     format: SymbolicConstant = ENGINEERING,
+                     numDigits: int = 6,
                      precision: int = 0) -> NumberFormat:
         """This method creates a NumberFormat object.
 
@@ -105,5 +116,6 @@ class FieldReportOptions:
         -------
             A NumberFormat object.
         """
-        self.numberFormat = numberFormat = NumberFormat(blankPad, format, numDigits, precision)
+        self.numberFormat = numberFormat = NumberFormat(
+            blankPad, format, numDigits, precision)
         return numberFormat

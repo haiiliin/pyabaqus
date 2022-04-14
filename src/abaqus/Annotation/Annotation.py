@@ -1,3 +1,4 @@
+from __init__ import *
 
 
 class Annotation:
@@ -23,7 +24,7 @@ class Annotation:
 
     """
 
-    # A String specifying the annotation repository key. 
+    # A String specifying the annotation repository key.
     name: str = ''
 
     def bringToFront(self):

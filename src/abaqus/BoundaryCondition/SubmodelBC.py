@@ -2,6 +2,8 @@ from abaqusConstants import *
 from .BoundaryCondition import BoundaryCondition
 from ..Region.Region import Region
 
+from __init__ import *
+
 
 class SubmodelBC(BoundaryCondition):
     """The SubmodelBC object stores the data for a submodel boundary condition.
@@ -47,44 +49,54 @@ class SubmodelBC(BoundaryCondition):
 
     """
 
-    # A String specifying the boundary condition repository key. 
+    # A String specifying the boundary condition repository key.
     name: str = ''
 
-    # A Float specifying the thickness of the shell in the global model. This argument is 
-    # required for shell-to-solid submodeling and is not applicable to other submodels. The 
-    # default value is 0.0. 
+    # A Float specifying the thickness of the shell in the global model. This argument is
+    # required for shell-to-solid submodeling and is not applicable to other submodels. The
+    # default value is 0.0.
     shellThickness: float = 0
 
-    # None or a Float specifying the absolute value by which a driven node of the submodel can 
-    # lie outside the region of the elements of the global model. The default value is None. 
+    # None or a Float specifying the absolute value by which a driven node of the submodel can
+    # lie outside the region of the elements of the global model. The default value is None.
     absoluteExteriorTolerance: float = None
 
-    # None or a Float specifying the fraction of the average element size in the global model 
-    # by which a driven node of the submodel can lie outside the region of the elements of the 
-    # global model. The default value is 0.05. 
+    # None or a Float specifying the fraction of the average element size in the global model
+    # by which a driven node of the submodel can lie outside the region of the elements of the
+    # global model. The default value is 0.05.
     exteriorTolerance: float = 0
 
-    # A String specifying the element set in the global model that will be searched for 
-    # elements whose responses will be used to drive the submodel. An empty string indicates 
-    # that the entire global model will be searched. The default value is an empty string. 
+    # A String specifying the element set in the global model that will be searched for
+    # elements whose responses will be used to drive the submodel. An empty string indicates
+    # that the entire global model will be searched. The default value is an empty string.
     globalDrivingRegion: str = ''
 
-    # A SymbolicConstant specifying the category of the boundary condition. Possible values 
-    # are MECHANICAL and THERMAL. 
+    # A SymbolicConstant specifying the category of the boundary condition. Possible values
+    # are MECHANICAL and THERMAL.
     category: SymbolicConstant = None
 
-    # A Region object specifying the region to which the boundary condition is applied. 
+    # A Region object specifying the region to which the boundary condition is applied.
     region: Region = Region()
 
-    # None or a DatumCsys object specifying the local coordinate system of the boundary 
-    # condition's degrees of freedom. If *localCsys*=None, the degrees of freedom are defined 
-    # in the global coordinate system. The default value is None. 
+    # None or a DatumCsys object specifying the local coordinate system of the boundary
+    # condition's degrees of freedom. If *localCsys*=None, the degrees of freedom are defined
+    # in the global coordinate system. The default value is None.
     localCsys: str = None
 
-    def __init__(self, name: str, createStepName: str, region: Region, dof: tuple, globalStep: str,
-                 timeScale: Boolean, shellThickness: float, globalDrivingRegion: str = '',
-                 absoluteExteriorTolerance: float = None, exteriorTolerance: float = 0,
-                 localCsys: str = None, globalIncrement: int = 0, centerZoneSize: float = None,
+    def __init__(self,
+                 name: str,
+                 createStepName: str,
+                 region: Region,
+                 dof: tuple,
+                 globalStep: str,
+                 timeScale: Boolean,
+                 shellThickness: float,
+                 globalDrivingRegion: str = '',
+                 absoluteExteriorTolerance: float = None,
+                 exteriorTolerance: float = 0,
+                 localCsys: str = None,
+                 globalIncrement: int = 0,
+                 centerZoneSize: float = None,
                  intersectionOnly: Boolean = OFF):
         """This method creates a SubmodelBC object.
 
@@ -154,9 +166,14 @@ class SubmodelBC(BoundaryCondition):
         super().__init__()
         pass
 
-    def setValues(self, globalDrivingRegion: str = '', absoluteExteriorTolerance: float = None,
-                  exteriorTolerance: float = 0, localCsys: str = None, globalIncrement: int = 0,
-                  centerZoneSize: float = None, intersectionOnly: Boolean = OFF):
+    def setValues(self,
+                  globalDrivingRegion: str = '',
+                  absoluteExteriorTolerance: float = None,
+                  exteriorTolerance: float = 0,
+                  localCsys: str = None,
+                  globalIncrement: int = 0,
+                  centerZoneSize: float = None,
+                  intersectionOnly: Boolean = OFF):
         """This method modifies the data for an existing SubmodelBC object in the step where it is
         created.
         
@@ -192,8 +209,13 @@ class SubmodelBC(BoundaryCondition):
         """
         pass
 
-    def setValuesInStep(self, stepName: str, fixed: Boolean = ON, dof: tuple = (), globalStep: str = '',
-                        globalIncrement: int = 0, centerZoneSize: float = None):
+    def setValuesInStep(self,
+                        stepName: str,
+                        fixed: Boolean = ON,
+                        dof: tuple = (),
+                        globalStep: str = '',
+                        globalIncrement: int = 0,
+                        centerZoneSize: float = None):
         """This method modifies the propagating data for an existing SubmodelBC object in the
         specified step.
         

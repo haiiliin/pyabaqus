@@ -1,5 +1,7 @@
 from abaqusConstants import *
 
+from __init__ import *
+
 
 class StopCondition:
     """The StopCondition object is the abstract base type for other StopCondition objects. The
@@ -25,9 +27,9 @@ class StopCondition:
 
     """
 
-    # A String specifying the stop condition repository key. 
+    # A String specifying the stop condition repository key.
     name: str = ''
 
-    # The SymbolicConstant MODEL or a Region object specifying the region to which the stop 
-    # condition is applied. The default value is MODEL. 
+    # The SymbolicConstant MODEL or a Region object specifying the region to which the stop
+    # condition is applied. The default value is MODEL.
     region: SymbolicConstant = MODEL

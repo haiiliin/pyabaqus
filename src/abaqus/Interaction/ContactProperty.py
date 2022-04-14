@@ -14,6 +14,8 @@ from .NormalBehavior import NormalBehavior
 from .Radiation import Radiation
 from .ThermalConductance import ThermalConductance
 
+from __init__ import *
+
 
 class ContactProperty(InteractionProperty):
     """The ContactProperty object defines a contact interaction property.
@@ -58,38 +60,39 @@ class ContactProperty(InteractionProperty):
 
     """
 
-    # A ContactTangentialBehavior object. 
+    # A ContactTangentialBehavior object.
     tangentialBehavior: ContactTangentialBehavior = ContactTangentialBehavior()
 
-    # A NormalBehavior object. 
+    # A NormalBehavior object.
     normalBehavior: NormalBehavior = NormalBehavior()
 
-    # A ContactDamping object. 
+    # A ContactDamping object.
     damping: ContactDamping = ContactDamping()
 
-    # A ContactDamage object. 
-    damage: ContactDamage = ContactDamage(((),))
+    # A ContactDamage object.
+    damage: ContactDamage = ContactDamage(((), ))
 
-    # A FractureCriterion object. 
-    fractureCriterion: FractureCriterion = FractureCriterion(((),))
+    # A FractureCriterion object.
+    fractureCriterion: FractureCriterion = FractureCriterion(((), ))
 
-    # A CohesiveBehavior object. 
+    # A CohesiveBehavior object.
     cohesiveBehavior: CohesiveBehavior = CohesiveBehavior()
 
-    # A ThermalConductance object. 
+    # A ThermalConductance object.
     thermalConductance: ThermalConductance = ThermalConductance()
 
-    # A GapHeatGeneration object. 
+    # A GapHeatGeneration object.
     heatGeneration: GapHeatGeneration = GapHeatGeneration()
 
-    # A Radiation object. 
+    # A Radiation object.
     radiation: Radiation = None
 
-    # A GeometricProperties object. 
+    # A GeometricProperties object.
     geometricProperties: GeometricProperties = GeometricProperties()
 
-    # A GapElectricalConductance object. 
-    electricalConductance: GapElectricalConductance = GapElectricalConductance()
+    # A GapElectricalConductance object.
+    electricalConductance: GapElectricalConductance = GapElectricalConductance(
+    )
 
     def __init__(self, name: str):
         """This method creates a ContactProperty object.
@@ -114,14 +117,23 @@ class ContactProperty(InteractionProperty):
         super().__init__()
         pass
 
-    def TangentialBehavior(self, formulation: SymbolicConstant = FRICTIONLESS,
-                           directionality: SymbolicConstant = ISOTROPIC, slipRateDependency: Boolean = OFF,
-                           pressureDependency: Boolean = OFF, temperatureDependency: Boolean = OFF,
-                           dependencies: int = 0, exponentialDecayDefinition: SymbolicConstant = COEFFICIENTS,
-                           table: tuple = (), shearStressLimit: float = None,
-                           maximumElasticSlip: SymbolicConstant = FRACTION, fraction: float = 0,
-                           absoluteDistance: float = 0, elasticSlipStiffness: float = None,
-                           nStateDependentVars: int = 0, useProperties: Boolean = OFF):
+    def TangentialBehavior(
+            self,
+            formulation: SymbolicConstant = FRICTIONLESS,
+            directionality: SymbolicConstant = ISOTROPIC,
+            slipRateDependency: Boolean = OFF,
+            pressureDependency: Boolean = OFF,
+            temperatureDependency: Boolean = OFF,
+            dependencies: int = 0,
+            exponentialDecayDefinition: SymbolicConstant = COEFFICIENTS,
+            table: tuple = (),
+            shearStressLimit: float = None,
+            maximumElasticSlip: SymbolicConstant = FRACTION,
+            fraction: float = 0,
+            absoluteDistance: float = 0,
+            elasticSlipStiffness: float = None,
+            nStateDependentVars: int = 0,
+            useProperties: Boolean = OFF):
         """This method creates a ContactTangentialBehavior object.
 
         Notes
@@ -179,21 +191,31 @@ class ContactProperty(InteractionProperty):
         -------
             A ContactTangentialBehavior object.
         """
-        self.tangentialBehavior = ContactTangentialBehavior(formulation, directionality, slipRateDependency,
-                                                            pressureDependency, temperatureDependency, dependencies,
-                                                            exponentialDecayDefinition, table, shearStressLimit,
-                                                            maximumElasticSlip, fraction, absoluteDistance,
-                                                            elasticSlipStiffness, nStateDependentVars, useProperties)
+        self.tangentialBehavior = ContactTangentialBehavior(
+            formulation, directionality, slipRateDependency,
+            pressureDependency, temperatureDependency, dependencies,
+            exponentialDecayDefinition, table, shearStressLimit,
+            maximumElasticSlip, fraction, absoluteDistance,
+            elasticSlipStiffness, nStateDependentVars, useProperties)
         return self.tangentialBehavior
 
-    def NormalBehavior(self, contactStiffness: typing.Union[SymbolicConstant, float] = DEFAULT,
-                       pressureOverclosure: SymbolicConstant = HARD, allowSeparation: Boolean = ON,
-                       maxStiffness: float = None, table: tuple = (),
-                       constraintEnforcementMethod: SymbolicConstant = DEFAULT, overclosureFactor: float = 0,
-                       overclosureMeasure: float = 0, contactStiffnessScaleFactor: float = 1,
-                       initialStiffnessScaleFactor: float = 1, clearanceAtZeroContactPressure: float = 0,
-                       stiffnessBehavior: SymbolicConstant = LINEAR, stiffnessRatio: float = 0,
-                       upperQuadraticFactor: float = 0, lowerQuadraticRatio: float = 0):
+    def NormalBehavior(self,
+                       contactStiffness: typing.Union[SymbolicConstant,
+                                                      float] = DEFAULT,
+                       pressureOverclosure: SymbolicConstant = HARD,
+                       allowSeparation: Boolean = ON,
+                       maxStiffness: float = None,
+                       table: tuple = (),
+                       constraintEnforcementMethod: SymbolicConstant = DEFAULT,
+                       overclosureFactor: float = 0,
+                       overclosureMeasure: float = 0,
+                       contactStiffnessScaleFactor: float = 1,
+                       initialStiffnessScaleFactor: float = 1,
+                       clearanceAtZeroContactPressure: float = 0,
+                       stiffnessBehavior: SymbolicConstant = LINEAR,
+                       stiffnessRatio: float = 0,
+                       upperQuadraticFactor: float = 0,
+                       lowerQuadraticRatio: float = 0):
         """This method creates a NormalBehavior object.
 
         Notes
@@ -268,16 +290,21 @@ class ContactProperty(InteractionProperty):
         -------
             A NormalBehavior object.
         """
-        self.normalBehavior = NormalBehavior(contactStiffness, pressureOverclosure, allowSeparation, maxStiffness,
-                                             table, constraintEnforcementMethod, overclosureFactor, overclosureMeasure,
-                                             contactStiffnessScaleFactor, initialStiffnessScaleFactor,
-                                             clearanceAtZeroContactPressure, stiffnessBehavior, stiffnessRatio,
-                                             upperQuadraticFactor, lowerQuadraticRatio)
+        self.normalBehavior = NormalBehavior(
+            contactStiffness, pressureOverclosure, allowSeparation,
+            maxStiffness, table, constraintEnforcementMethod,
+            overclosureFactor, overclosureMeasure, contactStiffnessScaleFactor,
+            initialStiffnessScaleFactor, clearanceAtZeroContactPressure,
+            stiffnessBehavior, stiffnessRatio, upperQuadraticFactor,
+            lowerQuadraticRatio)
         return self.normalBehavior
 
-    def Damping(self, definition: SymbolicConstant = DAMPING_COEFFICIENT,
-                tangentFraction: typing.Union[SymbolicConstant, float] = DEFAULT,
-                clearanceDependence: SymbolicConstant = STEP, table: tuple = ()):
+    def Damping(self,
+                definition: SymbolicConstant = DAMPING_COEFFICIENT,
+                tangentFraction: typing.Union[SymbolicConstant,
+                                              float] = DEFAULT,
+                clearanceDependence: SymbolicConstant = STEP,
+                table: tuple = ()):
         """This method creates a ContactDamping object.
 
         Notes
@@ -309,16 +336,27 @@ class ContactProperty(InteractionProperty):
         -------
             A ContactDamping object.
         """
-        self.damping = ContactDamping(definition, tangentFraction, clearanceDependence, table)
+        self.damping = ContactDamping(definition, tangentFraction,
+                                      clearanceDependence, table)
         return self.damping
 
-    def Damage(self, initTable: tuple, criterion: SymbolicConstant = MAX_STRESS, initTempDep: Boolean = OFF,
-               initDependencies: int = 0, useEvolution: Boolean = OFF,
-               evolutionType: SymbolicConstant = DISPLACEMENT, softening: SymbolicConstant = LINEAR,
-               useMixedMode: Boolean = OFF, mixedModeType: SymbolicConstant = TABULAR,
-               modeMixRatio: SymbolicConstant = ENERGY, exponent: float = None,
-               evolTempDep: Boolean = OFF, evolDependencies: int = 0, evolTable: tuple = (),
-               useStabilization: Boolean = OFF, viscosityCoef: float = None):
+    def Damage(self,
+               initTable: tuple,
+               criterion: SymbolicConstant = MAX_STRESS,
+               initTempDep: Boolean = OFF,
+               initDependencies: int = 0,
+               useEvolution: Boolean = OFF,
+               evolutionType: SymbolicConstant = DISPLACEMENT,
+               softening: SymbolicConstant = LINEAR,
+               useMixedMode: Boolean = OFF,
+               mixedModeType: SymbolicConstant = TABULAR,
+               modeMixRatio: SymbolicConstant = ENERGY,
+               exponent: float = None,
+               evolTempDep: Boolean = OFF,
+               evolDependencies: int = 0,
+               evolTable: tuple = (),
+               useStabilization: Boolean = OFF,
+               viscosityCoef: float = None):
         """This method creates a ContactDamage object.
 
         Notes
@@ -392,16 +430,24 @@ class ContactProperty(InteractionProperty):
         -------
             A ContactDamage object.
         """
-        self.damage = ContactDamage(initTable, criterion, initTempDep, initDependencies, useEvolution, evolutionType,
-                                    softening, useMixedMode, mixedModeType, modeMixRatio, exponent, evolTempDep,
-                                    evolDependencies, evolTable, useStabilization, viscosityCoef)
+        self.damage = ContactDamage(initTable, criterion, initTempDep,
+                                    initDependencies, useEvolution,
+                                    evolutionType, softening, useMixedMode,
+                                    mixedModeType, modeMixRatio, exponent,
+                                    evolTempDep, evolDependencies, evolTable,
+                                    useStabilization, viscosityCoef)
         return self.damage
 
-    def FractureCriterion(self, initTable: tuple, type: SymbolicConstant = VCCT,
-                          mixedModeBehavior: SymbolicConstant = BK, temperatureDependency: Boolean = OFF,
-                          dependencies: int = 0, tolerance: float = 0,
+    def FractureCriterion(self,
+                          initTable: tuple,
+                          type: SymbolicConstant = VCCT,
+                          mixedModeBehavior: SymbolicConstant = BK,
+                          temperatureDependency: Boolean = OFF,
+                          dependencies: int = 0,
+                          tolerance: float = 0,
                           specifyUnstableCrackProp: SymbolicConstant = OFF,
-                          unstableTolerance: typing.Union[SymbolicConstant, float] = DEFAULT):
+                          unstableTolerance: typing.Union[SymbolicConstant,
+                                                          float] = DEFAULT):
         """This method creates a FractureCriterion object.
 
         Notes
@@ -443,13 +489,22 @@ class ContactProperty(InteractionProperty):
         -------
             A FractureCriterion object.
         """
-        self.fractureCriterion = FractureCriterion(initTable, type, mixedModeBehavior, temperatureDependency,
-                                                   dependencies, tolerance, specifyUnstableCrackProp, unstableTolerance)
+        self.fractureCriterion = FractureCriterion(initTable, type,
+                                                   mixedModeBehavior,
+                                                   temperatureDependency,
+                                                   dependencies, tolerance,
+                                                   specifyUnstableCrackProp,
+                                                   unstableTolerance)
         return self.fractureCriterion
 
-    def CohesiveBehavior(self, repeatedContacts: Boolean = OFF, eligibility: SymbolicConstant = ALL_NODES,
-                         defaultPenalties: Boolean = ON, coupling: SymbolicConstant = UNCOUPLED,
-                         temperatureDependency: Boolean = OFF, dependencies: int = 0, table: tuple = ()):
+    def CohesiveBehavior(self,
+                         repeatedContacts: Boolean = OFF,
+                         eligibility: SymbolicConstant = ALL_NODES,
+                         defaultPenalties: Boolean = ON,
+                         coupling: SymbolicConstant = UNCOUPLED,
+                         temperatureDependency: Boolean = OFF,
+                         dependencies: int = 0,
+                         table: tuple = ()):
         """This method creates a CohesiveBehavior object.
 
         Notes
@@ -490,15 +545,23 @@ class ContactProperty(InteractionProperty):
         -------
             A CohesiveBehavior object.
         """
-        self.cohesiveBehavior = CohesiveBehavior(repeatedContacts, eligibility, defaultPenalties, coupling,
-                                                 temperatureDependency, dependencies, table)
+        self.cohesiveBehavior = CohesiveBehavior(repeatedContacts, eligibility,
+                                                 defaultPenalties, coupling,
+                                                 temperatureDependency,
+                                                 dependencies, table)
         return self.cohesiveBehavior
 
-    def ThermalConductance(self, definition: SymbolicConstant = TABULAR, clearanceDependency: Boolean = ON,
-                           pressureDependency: Boolean = OFF, temperatureDependencyC: Boolean = OFF,
-                           massFlowRateDependencyC: Boolean = OFF, dependenciesC: int = 0,
-                           clearanceDepTable: tuple = (), temperatureDependencyP: Boolean = OFF,
-                           massFlowRateDependencyP: Boolean = OFF, dependenciesP: int = 0,
+    def ThermalConductance(self,
+                           definition: SymbolicConstant = TABULAR,
+                           clearanceDependency: Boolean = ON,
+                           pressureDependency: Boolean = OFF,
+                           temperatureDependencyC: Boolean = OFF,
+                           massFlowRateDependencyC: Boolean = OFF,
+                           dependenciesC: int = 0,
+                           clearanceDepTable: tuple = (),
+                           temperatureDependencyP: Boolean = OFF,
+                           massFlowRateDependencyP: Boolean = OFF,
+                           dependenciesP: int = 0,
                            pressureDepTable: tuple = ()):
         """This method creates a ThermalConductance object.
 
@@ -548,13 +611,16 @@ class ContactProperty(InteractionProperty):
         -------
             A ThermalConductance object.
         """
-        self.thermalConductance = ThermalConductance(definition, clearanceDependency, pressureDependency,
-                                                     temperatureDependencyC, massFlowRateDependencyC, dependenciesC,
-                                                     clearanceDepTable, temperatureDependencyP, massFlowRateDependencyP,
-                                                     dependenciesP, pressureDepTable)
+        self.thermalConductance = ThermalConductance(
+            definition, clearanceDependency, pressureDependency,
+            temperatureDependencyC, massFlowRateDependencyC, dependenciesC,
+            clearanceDepTable, temperatureDependencyP, massFlowRateDependencyP,
+            dependenciesP, pressureDepTable)
         return self.thermalConductance
 
-    def HeatGeneration(self, conversionFraction: float = 1, secondaryFraction: float = 0):
+    def HeatGeneration(self,
+                       conversionFraction: float = 1,
+                       secondaryFraction: float = 0):
         """This method creates a GapHeatGeneration object.
 
         Notes
@@ -578,10 +644,12 @@ class ContactProperty(InteractionProperty):
         -------
             A GapHeatGeneration object.
         """
-        self.heatGeneration = GapHeatGeneration(conversionFraction, secondaryFraction)
+        self.heatGeneration = GapHeatGeneration(conversionFraction,
+                                                secondaryFraction)
         return self.heatGeneration
 
-    def Radiation(self, mainEmissivity: float, secondaryEmissivity: float, table: tuple):
+    def Radiation(self, mainEmissivity: float, secondaryEmissivity: float,
+                  table: tuple):
         """This method creates a Radiation object.
 
         Notes
@@ -609,9 +677,14 @@ class ContactProperty(InteractionProperty):
         self.radiation = Radiation(mainEmissivity, secondaryEmissivity, table)
         return self.radiation
 
-    def GeometricProperties(self, contactArea: float = 1, padThickness: float = None, trackingThickness: float = None,
-                            dependentVariables: int = 0, numProperties: int = 0,
-                            useUnsymmetricEqunProcedure: Boolean = OFF, modelType: SymbolicConstant = None):
+    def GeometricProperties(self,
+                            contactArea: float = 1,
+                            padThickness: float = None,
+                            trackingThickness: float = None,
+                            dependentVariables: int = 0,
+                            numProperties: int = 0,
+                            useUnsymmetricEqunProcedure: Boolean = OFF,
+                            modelType: SymbolicConstant = None):
         """This method creates a GeometricProperties object.
 
         Notes
@@ -655,14 +728,20 @@ class ContactProperty(InteractionProperty):
         -------
             A GeometricProperties object.
         """
-        self.geometricProperties = GeometricProperties(contactArea, padThickness, trackingThickness, dependentVariables,
-                                                       numProperties, useUnsymmetricEqunProcedure, modelType)
+        self.geometricProperties = GeometricProperties(
+            contactArea, padThickness, trackingThickness, dependentVariables,
+            numProperties, useUnsymmetricEqunProcedure, modelType)
         return self.geometricProperties
 
-    def ElectricalConductance(self, definition: SymbolicConstant = TABULAR, clearanceDependency: Boolean = ON,
-                              pressureDependency: Boolean = OFF, temperatureDependencyC: Boolean = OFF,
-                              dependenciesC: int = 0, clearanceDepTable: tuple = (),
-                              temperatureDependencyP: Boolean = OFF, dependenciesP: int = 0,
+    def ElectricalConductance(self,
+                              definition: SymbolicConstant = TABULAR,
+                              clearanceDependency: Boolean = ON,
+                              pressureDependency: Boolean = OFF,
+                              temperatureDependencyC: Boolean = OFF,
+                              dependenciesC: int = 0,
+                              clearanceDepTable: tuple = (),
+                              temperatureDependencyP: Boolean = OFF,
+                              dependenciesP: int = 0,
                               pressureDepTable: tuple = ()):
         """This method creates a GapElectricalConductance object.
 
@@ -706,7 +785,8 @@ class ContactProperty(InteractionProperty):
         -------
             A GapElectricalConductance object.
         """
-        self.electricalConductance = GapElectricalConductance(definition, clearanceDependency, pressureDependency,
-                                                              temperatureDependencyC, dependenciesC, clearanceDepTable,
-                                                              temperatureDependencyP, dependenciesP, pressureDepTable)
+        self.electricalConductance = GapElectricalConductance(
+            definition, clearanceDependency, pressureDependency,
+            temperatureDependencyC, dependenciesC, clearanceDepTable,
+            temperatureDependencyP, dependenciesP, pressureDepTable)
         return self.electricalConductance

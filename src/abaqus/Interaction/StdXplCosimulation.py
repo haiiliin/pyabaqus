@@ -2,6 +2,8 @@ from abaqusConstants import *
 from .Interaction import Interaction
 from ..Region.Region import Region
 
+from __init__ import *
+
 
 class StdXplCosimulation(Interaction):
     """The StdXplCosimulation object defines co-simulation behavior between Abaqus/Standard and
@@ -18,9 +20,12 @@ class StdXplCosimulation(Interaction):
         mdb.models[name].interactions[name]
 
     """
-
-    def __init__(self, name: str, createStepName: str, region: Region,
-                 incrementation: SymbolicConstant = ALLOW_SUBCYCLING, stepSize: float = 0,
+    def __init__(self,
+                 name: str,
+                 createStepName: str,
+                 region: Region,
+                 incrementation: SymbolicConstant = ALLOW_SUBCYCLING,
+                 stepSize: float = 0,
                  stepSizeDefinition: SymbolicConstant = DEFAULT):
         """This method creates a StdXplCosimulation object.
 
@@ -62,7 +67,9 @@ class StdXplCosimulation(Interaction):
         super().__init__()
         pass
 
-    def setValues(self, incrementation: SymbolicConstant = ALLOW_SUBCYCLING, stepSize: float = 0,
+    def setValues(self,
+                  incrementation: SymbolicConstant = ALLOW_SUBCYCLING,
+                  stepSize: float = 0,
                   stepSizeDefinition: SymbolicConstant = DEFAULT):
         """This method modifies the StdXplCosimulation object.
         

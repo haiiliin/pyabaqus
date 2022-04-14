@@ -2,6 +2,8 @@ from abaqusConstants import *
 from .Fastener import Fastener
 from ..Region.Region import Region
 
+from __init__ import *
+
 
 class AssembledFastener(Fastener):
     """The AssembledFastener object defines an assembled fastener.
@@ -26,13 +28,21 @@ class AssembledFastener(Fastener):
 
     """
 
-    # A Boolean specifying whether the fastener is suppressed or not. The default value is 
-    # OFF. 
+    # A Boolean specifying whether the fastener is suppressed or not. The default value is
+    # OFF.
     suppressed: Boolean = OFF
 
-    def __init__(self, name: str, region: Region, templateModel: str, controlSet: Region,
-                 templateSurfaces: tuple, assignedSurfaces: tuple, propertyPrefix: str,
-                 orientMethod: SymbolicConstant = NORMALS, localCsys: int = None, scriptName: str = ''):
+    def __init__(self,
+                 name: str,
+                 region: Region,
+                 templateModel: str,
+                 controlSet: Region,
+                 templateSurfaces: tuple,
+                 assignedSurfaces: tuple,
+                 propertyPrefix: str,
+                 orientMethod: SymbolicConstant = NORMALS,
+                 localCsys: int = None,
+                 scriptName: str = ''):
         """This method creates an AssembledFastener object. Although the constructor is available
         both for parts and for the assembly, AssembledFastener objects are currently supported
         only under the assembly.
@@ -87,7 +97,10 @@ class AssembledFastener(Fastener):
         super().__init__()
         pass
 
-    def setValues(self, orientMethod: SymbolicConstant = NORMALS, localCsys: int = None, scriptName: str = ''):
+    def setValues(self,
+                  orientMethod: SymbolicConstant = NORMALS,
+                  localCsys: int = None,
+                  scriptName: str = ''):
         """This method modifies the AssembledFastener object.
         
         Parameters

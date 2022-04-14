@@ -1,5 +1,7 @@
 from abaqusConstants import *
 
+from __init__ import *
+
 
 class SoretEffect:
     """The SoretEffect object defines temperature gradient driven mass diffusion.
@@ -27,8 +29,10 @@ class SoretEffect:
         - KAPPA
 
     """
-
-    def __init__(self, table: tuple, temperatureDependency: Boolean = OFF, dependencies: int = 0):
+    def __init__(self,
+                 table: tuple,
+                 temperatureDependency: Boolean = OFF,
+                 dependencies: int = 0):
         """This method creates a SoretEffect object.
 
         Notes

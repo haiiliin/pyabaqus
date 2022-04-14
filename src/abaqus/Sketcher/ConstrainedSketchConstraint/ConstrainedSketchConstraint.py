@@ -1,3 +1,6 @@
+from __init__ import *
+
+
 class ConstrainedSketchConstraint:
     """The ConstrainedSketchConstraint object stores the constraints associated with a sketch.
 

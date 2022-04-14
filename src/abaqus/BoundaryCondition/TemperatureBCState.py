@@ -1,6 +1,8 @@
 from abaqusConstants import *
 from .BoundaryConditionState import BoundaryConditionState
 
+from __init__ import *
+
 
 class TemperatureBCState(BoundaryConditionState):
     """The TemperatureBCState object stores the propagating data for a temperature boundary
@@ -58,23 +60,23 @@ class TemperatureBCState(BoundaryConditionState):
 
     """
 
-    # A Float specifying the temperature magnitude. 
+    # A Float specifying the temperature magnitude.
     magnitude: float = None
 
-    # A SymbolicConstant specifying the propagation state of the temperature magnitude. 
-    # Possible values are UNSET, SET, UNCHANGED, FREED, and MODIFIED. 
+    # A SymbolicConstant specifying the propagation state of the temperature magnitude.
+    # Possible values are UNSET, SET, UNCHANGED, FREED, and MODIFIED.
     magnitudeState: SymbolicConstant = None
 
-    # A SymbolicConstant specifying the propagation state of the *dof* member. Possible values 
-    # are SET and UNCHANGED. 
+    # A SymbolicConstant specifying the propagation state of the *dof* member. Possible values
+    # are SET and UNCHANGED.
     dofState: SymbolicConstant = None
 
-    # A tuple of Ints specifying the degrees of freedom to which the boundary condition is 
-    # applied. 
+    # A tuple of Ints specifying the degrees of freedom to which the boundary condition is
+    # applied.
     dof: int = None
 
-    # A SymbolicConstant specifying the propagation state of the amplitude reference. Possible 
-    # values are UNSET, SET, UNCHANGED, FREED, and MODIFIED. 
+    # A SymbolicConstant specifying the propagation state of the amplitude reference. Possible
+    # values are UNSET, SET, UNCHANGED, FREED, and MODIFIED.
     amplitudeState: SymbolicConstant = None
 
     # A SymbolicConstant specifying the propagation state of the BoundaryConditionState object. Possible values are:
@@ -92,6 +94,6 @@ class TemperatureBCState(BoundaryConditionState):
     # BUILT_INTO_MODES
     status: SymbolicConstant = None
 
-    # A String specifying the name of the amplitude reference. The String is empty if the 
-    # boundary condition has no amplitude reference. 
+    # A String specifying the name of the amplitude reference. The String is empty if the
+    # boundary condition has no amplitude reference.
     amplitude: str = ''

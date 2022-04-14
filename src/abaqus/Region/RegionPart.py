@@ -16,6 +16,8 @@ from ..Mesh.MeshElement import MeshElement
 from ..Mesh.MeshFace import MeshFace
 from ..Mesh.MeshNode import MeshNode
 
+from __init__ import *
+
 
 class RegionPart(RegionPartBase):
     """The following commands operate on Part objects. For more information about the Part 
@@ -143,21 +145,35 @@ class RegionPart(RegionPartBase):
         surf: Surface
             A Surface object
         """
-        surface = Surface(side1Faces, side2Faces, side12Faces, end1Edges, end2Edges, circumEdges, side1Edges,
-                          side2Edges, face1Elements, face2Elements, face3Elements, face4Elements, face5Elements,
-                          face6Elements, side1Elements, side2Elements, side12Elements, end1Elements, end2Elements,
-                          circumElements, name)
+        surface = Surface(side1Faces, side2Faces, side12Faces, end1Edges,
+                          end2Edges, circumEdges, side1Edges, side2Edges,
+                          face1Elements, face2Elements, face3Elements,
+                          face4Elements, face5Elements, face6Elements,
+                          side1Elements, side2Elements, side12Elements,
+                          end1Elements, end2Elements, circumElements, name)
         self.surfaces[name] = surface
         self.allSurfaces[name] = surface
         return surface
 
     @typing.overload
-    def Set(self, name: str, nodes: tuple[MeshNode] = None, elements: tuple[MeshElement] = None,
-            region: Region = None, vertices: tuple[Vertex] = None, edges: tuple[Edge] = None,
-            faces: tuple[Face] = None, cells: tuple[Cell] = None, xVertices: tuple[Vertex] = None,
-            xEdges: tuple[Edge] = None, xFaces: tuple[Face] = None,
-            referencePoints: tuple[ReferencePoint] = (), skinFaces: tuple = (),
-            skinEdges: tuple = (), stringerEdges: tuple = ()) -> Set:
+    def Set(
+        self,
+        name: str,
+        nodes: tuple[MeshNode] = None,
+        elements: tuple[MeshElement] = None,
+        region: Region = None,
+        vertices: tuple[Vertex] = None,
+        edges: tuple[Edge] = None,
+        faces: tuple[Face] = None,
+        cells: tuple[Cell] = None,
+        xVertices: tuple[Vertex] = None,
+        xEdges: tuple[Edge] = None,
+        xFaces: tuple[Face] = None,
+        referencePoints: tuple[ReferencePoint] = (),
+        skinFaces: tuple = (),
+        skinEdges: tuple = (),
+        stringerEdges: tuple = ()
+    ) -> Set:
         """This method creates a set from a sequence of objects in a model database.
 
         Notes
@@ -267,8 +283,14 @@ class RegionPart(RegionPartBase):
         self.sets[name] = aSet = Set(name, *args, **kwargs)
         return aSet
 
-    def Skin(self, name: str, faces: tuple[Face] = (), edges: tuple[Edge] = (),
-             elementFaces: tuple[MeshFace] = (), elementEdges: tuple[MeshEdge] = ()) -> Skin:
+    def Skin(
+        self,
+        name: str,
+        faces: tuple[Face] = (),
+        edges: tuple[Edge] = (),
+        elementFaces: tuple[MeshFace] = (),
+        elementEdges: tuple[MeshEdge] = ()
+    ) -> Skin:
         """This method creates a skin from a sequence of objects in a model database. At least one
         of the optional arguments needs to be specified.
 
@@ -302,11 +324,18 @@ class RegionPart(RegionPartBase):
         skin: Skin
             A Skin object
         """
-        self.skins[name] = skin = Skin(name, faces, edges, elementFaces, elementEdges)
+        self.skins[name] = skin = Skin(name, faces, edges, elementFaces,
+                                       elementEdges)
         return skin
 
-    def EditSkin(self, name: str = '', faces: tuple[Face] = (), edges: tuple[Edge] = (),
-                 elementFaces: tuple[MeshFace] = (), elementEdges: tuple[MeshEdge] = ()) -> Skin:
+    def EditSkin(
+        self,
+        name: str = '',
+        faces: tuple[Face] = (),
+        edges: tuple[Edge] = (),
+        elementFaces: tuple[MeshFace] = (),
+        elementEdges: tuple[MeshEdge] = ()
+    ) -> Skin:
         """This method modifies underlying entities of the selected skin. At least one of the
         optional arguments needs to be specified.
 
@@ -340,10 +369,16 @@ class RegionPart(RegionPartBase):
         skin: Skin
             A Skin object
         """
-        self.skins[name] = skin = Skin(name, faces, edges, elementFaces, elementEdges)
+        self.skins[name] = skin = Skin(name, faces, edges, elementFaces,
+                                       elementEdges)
         return skin
 
-    def Stringer(self, name: str, edges: tuple[Edge] = (), elementEdges: tuple[MeshEdge] = ()) -> Stringer:
+    def Stringer(
+        self,
+        name: str,
+        edges: tuple[Edge] = (),
+        elementEdges: tuple[MeshEdge] = ()
+    ) -> Stringer:
         """This method creates a stringer from a sequence of objects in a model database. At least
         one of the optional arguments needs to be specified.
 

@@ -1,6 +1,8 @@
 from abaqusConstants import *
 from .MeshNode import MeshNode
 
+from __init__ import *
+
 
 class MeshElement:
     """The MeshElement object refers to an element of a native mesh or an orphan mesh. A
@@ -55,21 +57,24 @@ class MeshElement:
 
     """
 
-    # An Int specifying the element label. 
+    # An Int specifying the element label.
     label: int = None
 
-    # A SymbolicConstant specifying the Abaqus element code. 
+    # A SymbolicConstant specifying the Abaqus element code.
     type: SymbolicConstant = None
 
-    # A String specifying the name of the part instance that owns this element. 
+    # A String specifying the name of the part instance that owns this element.
     instanceName: str = ''
 
-    # A tuple of Ints specifying the internal node indices that define the nodal connectivity. 
-    # It is important to note the difference with OdbMeshElement object of ODB where the 
-    # connectivity is node labels instead of node indices. 
+    # A tuple of Ints specifying the internal node indices that define the nodal connectivity.
+    # It is important to note the difference with OdbMeshElement object of ODB where the
+    # connectivity is node labels instead of node indices.
     connectivity: int = None
 
-    def Element(self, nodes: tuple[MeshNode], elemShape: SymbolicConstant, label: int = None):
+    def Element(self,
+                nodes: tuple[MeshNode],
+                elemShape: SymbolicConstant,
+                label: int = None):
         """This method creates an element on an orphan mesh part from a sequence of nodes.
 
         Notes

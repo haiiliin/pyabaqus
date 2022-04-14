@@ -1,5 +1,7 @@
 from abaqusConstants import *
 
+from __init__ import *
+
 
 class IgnoredEdgeArray:
     """The IgnoredEdgeArray is a sequence of IgnoredEdge objects. If the part is modified, then
@@ -18,7 +20,6 @@ class IgnoredEdgeArray:
             mdb.models[name].rootAssembly.instances[name].ignoredEdges
 
     """
-
     def findAt(self, coordinates: tuple, printWarning: Boolean = True):
         """This method returns the object or objects in the IgnoredEdgeArray located at the given
         coordinates.

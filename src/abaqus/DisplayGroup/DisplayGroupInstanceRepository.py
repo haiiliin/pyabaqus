@@ -1,5 +1,7 @@
 from abaqusConstants import *
 
+from __init__ import *
+
 
 class DisplayGroupInstanceRepository:
     """The DisplayGroupInstanceRepository object stores DisplayGroupInstance objects. In
@@ -17,7 +19,6 @@ class DisplayGroupInstanceRepository:
             session.viewports[name].odbDisplay.displayGroupInstances
 
     """
-
     def syncOptions(self, name: str, updateInstances: Boolean = ON):
         """This method synchronizes the display options stored on the OdbDisplay object with the
         display options stored on the DisplayGroupInstance object.

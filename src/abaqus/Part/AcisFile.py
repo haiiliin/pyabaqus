@@ -1,5 +1,7 @@
 from abaqusConstants import *
 
+from __init__ import *
+
 
 class AcisFile:
     """The AcisFile object is a file object used to open ACIS-, STEP-, and IGES-format files.
@@ -19,7 +21,7 @@ class AcisFile:
 
     """
 
-    # An Int specifying the number of parts in the object. 
+    # An Int specifying the number of parts in the object.
     numberOfParts: int = None
 
     def openAcis(self, fileName: str, scaleFromFile: Boolean = OFF):
@@ -55,7 +57,10 @@ class AcisFile:
         """
         pass
 
-    def openCatia(self, fileName: str, topology: SymbolicConstant = None, convertUnits: SymbolicConstant = OFF,
+    def openCatia(self,
+                  fileName: str,
+                  topology: SymbolicConstant = None,
+                  convertUnits: SymbolicConstant = OFF,
                   combineBodies: Boolean = OFF):
         """This method creates an AcisFile object from a file containing V5-format geometry. This
         object is subsequently used by the PartFromGeometryFile method.
@@ -92,7 +97,10 @@ class AcisFile:
         """
         pass
 
-    def openEnf(self, fileName: str, fileType: str, topology: SymbolicConstant = SOLID,
+    def openEnf(self,
+                fileName: str,
+                fileType: str,
+                topology: SymbolicConstant = SOLID,
                 convertUnits: Boolean = OFF):
         """This method creates an AcisFile object from a file containing Elysium Neutral
         File-format geometry that was created by CATIA V5, I-DEAS, or Pro/ENGINEER. This object
@@ -131,9 +139,13 @@ class AcisFile:
         """
         pass
 
-    def openIges(self, fileName: str, trimCurve: SymbolicConstant = DEFAULT,
-                 scaleFromFile: SymbolicConstant = OFF, msbo: Boolean = False,
-                 includedLayers: tuple = (), topology: SymbolicConstant = SOLID,
+    def openIges(self,
+                 fileName: str,
+                 trimCurve: SymbolicConstant = DEFAULT,
+                 scaleFromFile: SymbolicConstant = OFF,
+                 msbo: Boolean = False,
+                 includedLayers: tuple = (),
+                 topology: SymbolicConstant = SOLID,
                  uniteWires: SymbolicConstant = ON):
         """This method creates an AcisFile object from a file containing IGES-format geometry. This
         object is subsequently used by the PartFromGeometryFile method.
@@ -278,7 +290,9 @@ class AcisFile:
         """
         pass
 
-    def openSolidworks(self, fileName: str, topology: SymbolicConstant = SOLID):
+    def openSolidworks(self,
+                       fileName: str,
+                       topology: SymbolicConstant = SOLID):
         """This method creates an AcisFile object from a file containing Solidworks format
         geometry. This object is subsequently used by the PartFromGeometryFile method.
 

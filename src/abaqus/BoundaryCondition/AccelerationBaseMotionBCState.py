@@ -1,6 +1,8 @@
 from abaqusConstants import *
 from .BoundaryConditionState import BoundaryConditionState
 
+from __init__ import *
+
 
 class AccelerationBaseMotionBCState(BoundaryConditionState):
     """The AccelerationBaseMotionBCState object stores the propagating data for a velocity base
@@ -48,8 +50,8 @@ class AccelerationBaseMotionBCState(BoundaryConditionState):
 
     """
 
-    # A SymbolicConstant specifying the propagation state of the amplitude reference. Possible 
-    # values are UNSET, SET, UNCHANGED, FREED, and MODIFIED. 
+    # A SymbolicConstant specifying the propagation state of the amplitude reference. Possible
+    # values are UNSET, SET, UNCHANGED, FREED, and MODIFIED.
     amplitudeState: SymbolicConstant = None
 
     # A SymbolicConstant specifying the propagation state of the BoundaryConditionState object. Possible values are:
@@ -67,6 +69,6 @@ class AccelerationBaseMotionBCState(BoundaryConditionState):
     # BUILT_INTO_MODES
     status: SymbolicConstant = None
 
-    # A String specifying the name of the amplitude reference. The String is empty if the 
-    # boundary condition has no amplitude reference. 
+    # A String specifying the name of the amplitude reference. The String is empty if the
+    # boundary condition has no amplitude reference.
     amplitude: str = ''

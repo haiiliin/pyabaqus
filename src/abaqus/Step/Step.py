@@ -2,6 +2,8 @@ from ..Adaptivity.AdaptivityStep import AdaptivityStep
 from ..StepOutput.OutputStep import OutputStep
 from ..TableCollection.TableCollectionStep import TableCollectionStep
 
+from __init__ import *
+
 
 class Step(AdaptivityStep, OutputStep, TableCollectionStep):
     """The Step object stores the parameters that determine the context of the step. The Step

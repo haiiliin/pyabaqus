@@ -1,5 +1,7 @@
 from abaqusConstants import *
 
+from __init__ import *
+
 
 class Light:
     """The Light object stores settings that control how objects are lit when the *renderStyle*
@@ -14,9 +16,13 @@ class Light:
             session.viewports[name].lightOptions.lights[i]
 
     """
-
-    def setValues(self, enabled: Boolean = OFF, type: SymbolicConstant = DIRECTIONAL, latitude: float = 0,
-                  longitude: float = 0, diffuseColor: str = '', specularColor: str = ''):
+    def setValues(self,
+                  enabled: Boolean = OFF,
+                  type: SymbolicConstant = DIRECTIONAL,
+                  latitude: float = 0,
+                  longitude: float = 0,
+                  diffuseColor: str = '',
+                  specularColor: str = ''):
         """This method modifies the Light object.
         
         Parameters

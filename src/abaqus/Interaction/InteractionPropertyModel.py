@@ -10,11 +10,16 @@ from .FluidInflatorProperty import FluidInflatorProperty
 from .IncidentWaveProperty import IncidentWaveProperty
 from ..Model.ModelBase import ModelBase
 
+from __init__ import *
+
 
 class InteractionPropertyModel(ModelBase):
-
-    def AcousticImpedanceProp(self, name: str, tableType: SymbolicConstant, table: tuple,
-                              frequencyDependency: Boolean = OFF) -> AcousticImpedanceProp:
+    def AcousticImpedanceProp(
+            self,
+            name: str,
+            tableType: SymbolicConstant,
+            table: tuple,
+            frequencyDependency: Boolean = OFF) -> AcousticImpedanceProp:
         """This method creates an AcousticImpedanceProp object.
 
         Notes
@@ -47,12 +52,17 @@ class InteractionPropertyModel(ModelBase):
         -------
             An AcousticImpedanceProp object.
         """
-        self.interactionProperties[name] = interactionProperty = AcousticImpedanceProp(name, tableType, table,
-                                                                                       frequencyDependency)
+        self.interactionProperties[
+            name] = interactionProperty = AcousticImpedanceProp(
+                name, tableType, table, frequencyDependency)
         return interactionProperty
 
-    def ActuatorSensorProp(self, name: str, realProperties: tuple = (),
-                           integerProperties: tuple = ()) -> ActuatorSensorProp:
+    def ActuatorSensorProp(
+        self,
+        name: str,
+        realProperties: tuple = (),
+        integerProperties: tuple = ()
+    ) -> ActuatorSensorProp:
         """This method creates an ActuatorSensorProp object.
 
         Notes
@@ -78,12 +88,17 @@ class InteractionPropertyModel(ModelBase):
         -------
             An ActuatorSensorProp object.
         """
-        self.interactionProperties[name] = interactionProperty = ActuatorSensorProp(name, realProperties,
-                                                                                    integerProperties)
+        self.interactionProperties[
+            name] = interactionProperty = ActuatorSensorProp(
+                name, realProperties, integerProperties)
         return interactionProperty
 
-    def CavityRadiationProp(self, name: str, temperatureDependency: Boolean = OFF, dependencies: int = 0,
-                            property: tuple = ()) -> CavityRadiationProp:
+    def CavityRadiationProp(
+        self,
+        name: str,
+        temperatureDependency: Boolean = OFF,
+        dependencies: int = 0,
+        property: tuple = ()) -> CavityRadiationProp:
         """This method creates a CavityRadiationProp object.
 
         Notes
@@ -111,8 +126,9 @@ class InteractionPropertyModel(ModelBase):
         -------
             A CavityRadiationProp object.
         """
-        self.interactionProperties[name] = interactionProperty = CavityRadiationProp(name, temperatureDependency,
-                                                                                     dependencies, property)
+        self.interactionProperties[
+            name] = interactionProperty = CavityRadiationProp(
+                name, temperatureDependency, dependencies, property)
         return interactionProperty
 
     def ContactProperty(self, name: str) -> ContactProperty:
@@ -135,11 +151,16 @@ class InteractionPropertyModel(ModelBase):
         -------
             A ContactProperty object.
         """
-        self.interactionProperties[name] = interactionProperty = ContactProperty(name)
+        self.interactionProperties[
+            name] = interactionProperty = ContactProperty(name)
         return interactionProperty
 
-    def FilmConditionProp(self, name: str, temperatureDependency: Boolean = OFF, dependencies: int = 0,
-                          property: tuple = ()) -> FilmConditionProp:
+    def FilmConditionProp(
+        self,
+        name: str,
+        temperatureDependency: Boolean = OFF,
+        dependencies: int = 0,
+        property: tuple = ()) -> FilmConditionProp:
         """This method creates a FilmConditionProp object.
 
         Notes
@@ -170,19 +191,32 @@ class InteractionPropertyModel(ModelBase):
         -------
             A FilmConditionProp object.
         """
-        self.interactionProperties[name] = interactionProperty = FilmConditionProp(name, temperatureDependency,
-                                                                                   dependencies, property)
+        self.interactionProperties[
+            name] = interactionProperty = FilmConditionProp(
+                name, temperatureDependency, dependencies, property)
         return interactionProperty
 
-    def FluidCavityProperty(self, name: str, definition: SymbolicConstant = HYDRAULIC, fluidDensity: float = None,
-                            molecularWeight: float = None, useExpansion: Boolean = OFF,
-                            expansionTempDep: Boolean = OFF, expansionDependencies: int = 0,
-                            referenceTemperature: float = 0, expansionTable: tuple = (),
-                            useBulkModulus: Boolean = OFF, bulkModulusTempDep: Boolean = OFF,
-                            bulkModulusDependencies: int = 0, bulkModulusTable: tuple = (),
-                            useCapacity: Boolean = OFF, capacityType: SymbolicConstant = POLYNOMIAL,
-                            capacityTempDep: Boolean = OFF, capacityDependencies: int = 0,
-                            capacityTable: tuple = ()) -> FluidCavityProperty:
+    def FluidCavityProperty(
+        self,
+        name: str,
+        definition: SymbolicConstant = HYDRAULIC,
+        fluidDensity: float = None,
+        molecularWeight: float = None,
+        useExpansion: Boolean = OFF,
+        expansionTempDep: Boolean = OFF,
+        expansionDependencies: int = 0,
+        referenceTemperature: float = 0,
+        expansionTable: tuple = (),
+        useBulkModulus: Boolean = OFF,
+        bulkModulusTempDep: Boolean = OFF,
+        bulkModulusDependencies: int = 0,
+        bulkModulusTable: tuple = (),
+        useCapacity: Boolean = OFF,
+        capacityType: SymbolicConstant = POLYNOMIAL,
+        capacityTempDep: Boolean = OFF,
+        capacityDependencies: int = 0,
+        capacityTable: tuple = ()
+    ) -> FluidCavityProperty:
         """This method creates a FluidCavityProperty object.
 
         Notes
@@ -290,23 +324,24 @@ class InteractionPropertyModel(ModelBase):
         -------
             A FluidCavityProperty object.
         """
-        self.interactionProperties[name] = interactionProperty = FluidCavityProperty(name, definition, fluidDensity,
-                                                                                     molecularWeight, useExpansion,
-                                                                                     expansionTempDep,
-                                                                                     expansionDependencies,
-                                                                                     referenceTemperature,
-                                                                                     expansionTable, useBulkModulus,
-                                                                                     bulkModulusTempDep,
-                                                                                     bulkModulusDependencies,
-                                                                                     bulkModulusTable, useCapacity,
-                                                                                     capacityType, capacityTempDep,
-                                                                                     capacityDependencies,
-                                                                                     capacityTable)
+        self.interactionProperties[
+            name] = interactionProperty = FluidCavityProperty(
+                name, definition, fluidDensity, molecularWeight, useExpansion,
+                expansionTempDep, expansionDependencies, referenceTemperature,
+                expansionTable, useBulkModulus, bulkModulusTempDep,
+                bulkModulusDependencies, bulkModulusTable, useCapacity,
+                capacityType, capacityTempDep, capacityDependencies,
+                capacityTable)
         return interactionProperty
 
-    def FluidExchangeProperty(self, name: str, dataTable: tuple, definition: SymbolicConstant = BULK_VISCOSITY,
-                              pressureDependency: Boolean = OFF, temperatureDependency: Boolean = OFF,
-                              fieldDependencies: int = 0) -> FluidExchangeProperty:
+    def FluidExchangeProperty(
+            self,
+            name: str,
+            dataTable: tuple,
+            definition: SymbolicConstant = BULK_VISCOSITY,
+            pressureDependency: Boolean = OFF,
+            temperatureDependency: Boolean = OFF,
+            fieldDependencies: int = 0) -> FluidExchangeProperty:
         """This method creates a FluidExchangeProperty object.
 
         Notes
@@ -383,16 +418,26 @@ class InteractionPropertyModel(ModelBase):
         -------
             A FluidExchangeProperty object.
         """
-        self.interactionProperties[name] = interactionProperty = FluidExchangeProperty(name, dataTable, definition,
-                                                                                       pressureDependency,
-                                                                                       temperatureDependency,
-                                                                                       fieldDependencies)
+        self.interactionProperties[
+            name] = interactionProperty = FluidExchangeProperty(
+                name, dataTable, definition, pressureDependency,
+                temperatureDependency, fieldDependencies)
         return interactionProperty
 
-    def FluidInflatorProperty(self, name: str, definition: str, effectiveArea: float, tankVolume: float,
-                              dischargeCoefficient: float = None, dataTable: tuple = (), numFluids: int = None,
-                              mixtureType: str = '', inflationTime: tuple = (), fluidbehaviorName: tuple = (),
-                              massFraction: tuple = ()) -> FluidInflatorProperty:
+    def FluidInflatorProperty(
+        self,
+        name: str,
+        definition: str,
+        effectiveArea: float,
+        tankVolume: float,
+        dischargeCoefficient: float = None,
+        dataTable: tuple = (),
+        numFluids: int = None,
+        mixtureType: str = '',
+        inflationTime: tuple = (),
+        fluidbehaviorName: tuple = (),
+        massFraction: tuple = ()
+    ) -> FluidInflatorProperty:
         """This method creates a FluidInflatorProperty object.
 
         Notes
@@ -441,25 +486,47 @@ class InteractionPropertyModel(ModelBase):
         -------
             A FluidInflatorProperty object.
         """
-        self.interactionProperties[name] = interactionProperty = FluidInflatorProperty(name, definition, effectiveArea,
-                                                                                       tankVolume, dischargeCoefficient,
-                                                                                       dataTable, numFluids,
-                                                                                       mixtureType, inflationTime,
-                                                                                       fluidbehaviorName, massFraction)
+        self.interactionProperties[
+            name] = interactionProperty = FluidInflatorProperty(
+                name, definition, effectiveArea, tankVolume,
+                dischargeCoefficient, dataTable, numFluids, mixtureType,
+                inflationTime, fluidbehaviorName, massFraction)
         return interactionProperty
 
-    def IncidentWaveProperty(self, name: str, definition: SymbolicConstant = PLANAR,
-                             propagationModel: SymbolicConstant = ACOUSTIC, soundSpeed: float = None,
-                             fluidDensity: float = None, specificHeatRatio: float = None, gravity: float = None,
-                             atmosphericPressure: float = None, dragCoefficient: float = None,
-                             dragExponent: float = 2, waveEffects: Boolean = ON, chargeDensity: float = None,
-                             chargeMass: float = None, constantK1: float = None, constantK2: float = None,
-                             constantA: float = None, constantB: float = None, constantKc: float = None,
-                             duration: float = None, maximumSteps: int = 1500, relativeStepControl: float = None,
-                             absoluteStepControl: float = None, stepControlExponent: float = 0, genDecayA: float = 0,
-                             genDecayB: float = 0, genDecayC: float = 0, seedNumber: int = None,
-                             massTNT: float = None, massFactor: float = 1, lengthFactor: float = 1,
-                             timeFactor: float = 1, pressureFactor: float = 1) -> IncidentWaveProperty:
+    def IncidentWaveProperty(
+            self,
+            name: str,
+            definition: SymbolicConstant = PLANAR,
+            propagationModel: SymbolicConstant = ACOUSTIC,
+            soundSpeed: float = None,
+            fluidDensity: float = None,
+            specificHeatRatio: float = None,
+            gravity: float = None,
+            atmosphericPressure: float = None,
+            dragCoefficient: float = None,
+            dragExponent: float = 2,
+            waveEffects: Boolean = ON,
+            chargeDensity: float = None,
+            chargeMass: float = None,
+            constantK1: float = None,
+            constantK2: float = None,
+            constantA: float = None,
+            constantB: float = None,
+            constantKc: float = None,
+            duration: float = None,
+            maximumSteps: int = 1500,
+            relativeStepControl: float = None,
+            absoluteStepControl: float = None,
+            stepControlExponent: float = 0,
+            genDecayA: float = 0,
+            genDecayB: float = 0,
+            genDecayC: float = 0,
+            seedNumber: int = None,
+            massTNT: float = None,
+            massFactor: float = 1,
+            lengthFactor: float = 1,
+            timeFactor: float = 1,
+            pressureFactor: float = 1) -> IncidentWaveProperty:
         """This method creates an IncidentWaveProperty object.
 
         Notes
@@ -594,19 +661,14 @@ class InteractionPropertyModel(ModelBase):
         -------
             An IncidentWaveProperty object.
         """
-        self.interactionProperties[name] = interactionProperty = IncidentWaveProperty(name, definition,
-                                                                                      propagationModel, soundSpeed,
-                                                                                      fluidDensity, specificHeatRatio,
-                                                                                      gravity, atmosphericPressure,
-                                                                                      dragCoefficient, dragExponent,
-                                                                                      waveEffects, chargeDensity,
-                                                                                      chargeMass, constantK1,
-                                                                                      constantK2, constantA, constantB,
-                                                                                      constantKc, duration,
-                                                                                      maximumSteps, relativeStepControl,
-                                                                                      absoluteStepControl,
-                                                                                      stepControlExponent, genDecayA,
-                                                                                      genDecayB, genDecayC, seedNumber,
-                                                                                      massTNT, massFactor, lengthFactor,
-                                                                                      timeFactor, pressureFactor)
+        self.interactionProperties[
+            name] = interactionProperty = IncidentWaveProperty(
+                name, definition, propagationModel, soundSpeed, fluidDensity,
+                specificHeatRatio, gravity, atmosphericPressure,
+                dragCoefficient, dragExponent, waveEffects, chargeDensity,
+                chargeMass, constantK1, constantK2, constantA, constantB,
+                constantKc, duration, maximumSteps, relativeStepControl,
+                absoluteStepControl, stepControlExponent, genDecayA, genDecayB,
+                genDecayC, seedNumber, massTNT, massFactor, lengthFactor,
+                timeFactor, pressureFactor)
         return interactionProperty

@@ -2,6 +2,8 @@ from abaqusConstants import *
 from .DesignResponse import DesignResponse
 from .StepOptionArray import StepOptionArray
 
+from __init__ import *
+
 
 class SingleTermDesignResponse(DesignResponse):
     """The SingleTermDesignResponse object defines a single-term design response.
@@ -17,10 +19,15 @@ class SingleTermDesignResponse(DesignResponse):
         mdb.models[name].optimizationTasks[name].designResponses[name]
 
     """
-
-    def __init__(self, name: str, identifier: str, csys: int = None, drivingRegion: str = None,
-                 operation: SymbolicConstant = SUM, region: SymbolicConstant = MODEL,
-                 shellLayer: SymbolicConstant = MAXIMUM, stepOperation: SymbolicConstant = SUM,
+    def __init__(self,
+                 name: str,
+                 identifier: str,
+                 csys: int = None,
+                 drivingRegion: str = None,
+                 operation: SymbolicConstant = SUM,
+                 region: SymbolicConstant = MODEL,
+                 shellLayer: SymbolicConstant = MAXIMUM,
+                 stepOperation: SymbolicConstant = SUM,
                  stepOptions: StepOptionArray = None):
         """This method creates a SingleTermDesignResponse object.
 
@@ -67,9 +74,14 @@ class SingleTermDesignResponse(DesignResponse):
         super().__init__()
         pass
 
-    def setValues(self, csys: int = None, drivingRegion: str = None, operation: SymbolicConstant = SUM,
-                  region: SymbolicConstant = MODEL, shellLayer: SymbolicConstant = MAXIMUM,
-                  stepOperation: SymbolicConstant = SUM, stepOptions: StepOptionArray = None):
+    def setValues(self,
+                  csys: int = None,
+                  drivingRegion: str = None,
+                  operation: SymbolicConstant = SUM,
+                  region: SymbolicConstant = MODEL,
+                  shellLayer: SymbolicConstant = MAXIMUM,
+                  stepOperation: SymbolicConstant = SUM,
+                  stepOptions: StepOptionArray = None):
         """This method modifies the SingleTermDesignResponse object.
         
         Parameters

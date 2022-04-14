@@ -1,5 +1,7 @@
 from abaqusConstants import *
 
+from __init__ import *
+
 
 class ElemType:
     """The ElemType object is an argument object used as an argument in the setElementType
@@ -14,20 +16,34 @@ class ElemType:
         import mesh
 
     """
-
-    def __init__(self, elemCode: SymbolicConstant, elemLibrary: SymbolicConstant = STANDARD,
-                 hourglassStiffness: float = 0, bendingHourglass: float = 0,
-                 drillingHourglass: float = 0, kinematicSplit: SymbolicConstant = AVERAGE_STRAIN,
-                 distortionControl: Boolean = OFF, lengthRatio: float = ON,
-                 secondOrderAccuracy: Boolean = OFF, hourglassControl: SymbolicConstant = ENHANCED,
-                 weightFactor: float = 0, displacementHourglass: float = 1,
-                 rotationalHourglass: float = 1, outOfPlaneDisplacementHourglass: float = 1,
+    def __init__(self,
+                 elemCode: SymbolicConstant,
+                 elemLibrary: SymbolicConstant = STANDARD,
+                 hourglassStiffness: float = 0,
+                 bendingHourglass: float = 0,
+                 drillingHourglass: float = 0,
+                 kinematicSplit: SymbolicConstant = AVERAGE_STRAIN,
+                 distortionControl: Boolean = OFF,
+                 lengthRatio: float = ON,
+                 secondOrderAccuracy: Boolean = OFF,
+                 hourglassControl: SymbolicConstant = ENHANCED,
+                 weightFactor: float = 0,
+                 displacementHourglass: float = 1,
+                 rotationalHourglass: float = 1,
+                 outOfPlaneDisplacementHourglass: float = 1,
                  elemDeletion: SymbolicConstant = DEFAULT,
-                 particleConversion: SymbolicConstant = DEFAULT, particleConversionThreshold: float = 0,
-                 particleConversionPPD: int = 1, particleConversionKernel: SymbolicConstant = CUBIC,
-                 maxDegradation: float = None, viscosity: float = 0, linearBulkViscosity: float = 1,
-                 quadraticBulkViscosity: float = 1, numFourierModes: int = 1, nodeOffset: int = None,
-                 linearKinematicCtrl: float = None, initialGapOpening: float = None):
+                 particleConversion: SymbolicConstant = DEFAULT,
+                 particleConversionThreshold: float = 0,
+                 particleConversionPPD: int = 1,
+                 particleConversionKernel: SymbolicConstant = CUBIC,
+                 maxDegradation: float = None,
+                 viscosity: float = 0,
+                 linearBulkViscosity: float = 1,
+                 quadraticBulkViscosity: float = 1,
+                 numFourierModes: int = 1,
+                 nodeOffset: int = None,
+                 linearKinematicCtrl: float = None,
+                 initialGapOpening: float = None):
         """This method creates an ElemType object.
 
         Notes

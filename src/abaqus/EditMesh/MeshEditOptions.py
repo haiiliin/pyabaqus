@@ -1,5 +1,7 @@
 from abaqusConstants import *
 
+from __init__ import *
+
 
 class MeshEditOptions:
     """The MeshEditOptions object stores settings that specify the behavior when editing meshes
@@ -13,8 +15,10 @@ class MeshEditOptions:
             mdb.meshEditOptions
 
     """
-
-    def setValues(self, maxUndoCacheElements: float = 0, enableUndo: Boolean = OFF, _suspendUndo: Boolean = OFF):
+    def setValues(self,
+                  maxUndoCacheElements: float = 0,
+                  enableUndo: Boolean = OFF,
+                  _suspendUndo: Boolean = OFF):
         """This method modifies the MeshEditOptions object.
         
         Parameters

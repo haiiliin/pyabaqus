@@ -1,5 +1,7 @@
 from abaqusConstants import *
 
+from __init__ import *
+
 
 class OptionArg:
     """The OptionArg object is used to store values and attributes as a temporary object to be
@@ -24,12 +26,17 @@ class OptionArg:
         session.viewports[name].odbDisplay.viewCutOptions.onOptions
 
     """
-
-    def __init__(self, renderStyle: SymbolicConstant = WIREFRAME, visibleEdges: SymbolicConstant = FEATURE,
-                 edgeColorWireHide: str = '', edgeColorFillShade: str = '',
+    def __init__(self,
+                 renderStyle: SymbolicConstant = WIREFRAME,
+                 visibleEdges: SymbolicConstant = FEATURE,
+                 edgeColorWireHide: str = '',
+                 edgeColorFillShade: str = '',
                  edgeLineStyle: SymbolicConstant = SOLID,
-                 edgeLineThickness: SymbolicConstant = VERY_THIN, colorCodeOverride: Boolean = ON,
-                 fillColor: str = '', translucency: Boolean = OFF, translucencyFactor: float = 0):
+                 edgeLineThickness: SymbolicConstant = VERY_THIN,
+                 colorCodeOverride: Boolean = ON,
+                 fillColor: str = '',
+                 translucency: Boolean = OFF,
+                 translucencyFactor: float = 0):
         """This method creates an OptionArg object.
 
         Notes

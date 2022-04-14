@@ -1,3 +1,4 @@
+from __init__ import *
 
 
 class SurfaceBeamSmoothingAssignment:
@@ -18,7 +19,6 @@ class SurfaceBeamSmoothingAssignment:
         - SURFACE PROPERTY ASSIGNMENT
 
     """
-
     def changeValuesInStep(self, stepName: str, index: int, value: float):
         """This method allows modification of surface beam smoothing assignments already defined on
         surfaces in a given step.

@@ -3,6 +3,8 @@ from .FailureRatios import FailureRatios
 from .ShearRetention import ShearRetention
 from .TensionStiffening import TensionStiffening
 
+from __init__ import *
+
 
 class Concrete:
     """The Concrete object defines concrete properties beyond the elastic range.
@@ -31,16 +33,19 @@ class Concrete:
 
     """
 
-    # A FailureRatios object. 
-    failureRatios: FailureRatios = FailureRatios(((),))
+    # A FailureRatios object.
+    failureRatios: FailureRatios = FailureRatios(((), ))
 
-    # A ShearRetention object. 
-    shearRetention: ShearRetention = ShearRetention(((),))
+    # A ShearRetention object.
+    shearRetention: ShearRetention = ShearRetention(((), ))
 
-    # A TensionStiffening object. 
-    tensionStiffening: TensionStiffening = TensionStiffening(((),))
+    # A TensionStiffening object.
+    tensionStiffening: TensionStiffening = TensionStiffening(((), ))
 
-    def __init__(self, table: tuple, temperatureDependency: Boolean = OFF, dependencies: int = 0):
+    def __init__(self,
+                 table: tuple,
+                 temperatureDependency: Boolean = OFF,
+                 dependencies: int = 0):
         """This method creates a Concrete object.
 
         Notes

@@ -1,8 +1,9 @@
 from .ConstrainedSketchGeometry import ConstrainedSketchGeometry
 
+from __init__ import *
+
 
 class Line(ConstrainedSketchGeometry):
-
     def __init__(self, point1: tuple[float], point2: tuple[float]):
         """This method creates a line between two given points.
 

@@ -1,5 +1,7 @@
 from abaqusConstants import *
 
+from __init__ import *
+
 
 class AcousticMedium:
     """The AcousticMedium object specifies the acoustic properties of a material.
@@ -19,10 +21,14 @@ class AcousticMedium:
         - ACOUSTIC MEDIUM
 
     """
-
-    def __init__(self, acousticVolumetricDrag: Boolean = OFF, temperatureDependencyB: Boolean = OFF,
-                 temperatureDependencyV: Boolean = OFF, dependenciesB: int = 0, dependenciesV: int = 0,
-                 bulkTable: tuple = (), volumetricTable: tuple = ()):
+    def __init__(self,
+                 acousticVolumetricDrag: Boolean = OFF,
+                 temperatureDependencyB: Boolean = OFF,
+                 temperatureDependencyV: Boolean = OFF,
+                 dependenciesB: int = 0,
+                 dependenciesV: int = 0,
+                 bulkTable: tuple = (),
+                 volumetricTable: tuple = ()):
         """This method creates an AcousticMedium object.
 
         Notes

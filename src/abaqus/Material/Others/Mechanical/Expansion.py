@@ -1,5 +1,7 @@
 from abaqusConstants import *
 
+from __init__ import *
+
 
 class Expansion:
     """The Expansion object specifies thermal expansion.
@@ -47,9 +49,13 @@ class Expansion:
         - EXPANSION
 
     """
-
-    def __init__(self, type: SymbolicConstant = ISOTROPIC, userSubroutine: Boolean = OFF, zero: float = 0,
-                 temperatureDependency: Boolean = OFF, dependencies: int = 0, table: tuple = ()):
+    def __init__(self,
+                 type: SymbolicConstant = ISOTROPIC,
+                 userSubroutine: Boolean = OFF,
+                 zero: float = 0,
+                 temperatureDependency: Boolean = OFF,
+                 dependencies: int = 0,
+                 table: tuple = ()):
         """This method creates an Expansion object.
 
         Notes

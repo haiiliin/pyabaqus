@@ -1,6 +1,8 @@
 from .GeometricRestriction import GeometricRestriction
 from ..Region.Region import Region
 
+from __init__ import *
+
 
 class BeadGrowth(GeometricRestriction):
     """The BeadGrowth object defines a growth geometric restriction.
@@ -16,8 +18,11 @@ class BeadGrowth(GeometricRestriction):
         mdb.models[name].optimizationTasks[name].geometricRestrictions[name]
 
     """
-
-    def __init__(self, name: str, region: Region, beadGrowth: float = 0, shrink: float = 0):
+    def __init__(self,
+                 name: str,
+                 region: Region,
+                 beadGrowth: float = 0,
+                 shrink: float = 0):
         """This method creates a BeadGrowth object.
 
         Notes

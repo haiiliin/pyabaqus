@@ -2,6 +2,8 @@ import typing
 
 from abaqusConstants import *
 
+from __init__ import *
+
 
 class ViewCut:
     """The ViewCut object is used to store values and attributes associate with ViewCut type
@@ -56,56 +58,62 @@ class ViewCut:
 
     """
 
-    # A Float specifying the rotation angle of the cut defined with a *shape* set to PLANE. 
+    # A Float specifying the rotation angle of the cut defined with a *shape* set to PLANE.
     angle: float = None
 
-    # A SymbolicConstant specifying the type of motion for the cut defined with a *shape* set 
-    # to PLANE. Possible values are TRANSLATE and ROTATE. The default value is TRANSLATE. 
+    # A SymbolicConstant specifying the type of motion for the cut defined with a *shape* set
+    # to PLANE. Possible values are TRANSLATE and ROTATE. The default value is TRANSLATE.
     motion: SymbolicConstant = TRANSLATE
 
-    # A Float specifying the position of the cut defined with a *shape* set to PLANE. 
+    # A Float specifying the position of the cut defined with a *shape* set to PLANE.
     position: float = None
 
-    # A Float specifying the radius of the cut defined with a *shape* set to CYLINDER or 
-    # SPHERE. 
+    # A Float specifying the radius of the cut defined with a *shape* set to CYLINDER or
+    # SPHERE.
     radius: float = None
 
-    # A SymbolicConstant specifying the rotation axis for the cut defined with a *shape* set 
-    # to PLANE. Possible values are AXIS_1, AXIS_2, and AXIS_3. The default value is AXIS_2. 
+    # A SymbolicConstant specifying the rotation axis for the cut defined with a *shape* set
+    # to PLANE. Possible values are AXIS_1, AXIS_2, and AXIS_3. The default value is AXIS_2.
     rotationAxis: SymbolicConstant = AXIS_2
 
-    # A Float specifying the value of the cut defined with a *shape* set to ISOSURFACE. 
+    # A Float specifying the value of the cut defined with a *shape* set to ISOSURFACE.
     value: float = None
 
-    # A Boolean specifying whether to display the model above the cut. The default value is 
-    # OFF. 
+    # A Boolean specifying whether to display the model above the cut. The default value is
+    # OFF.
     showModelAboveCut: Boolean = OFF
 
-    # A Boolean specifying whether to display the model on the cut. The default value is ON. 
+    # A Boolean specifying whether to display the model on the cut. The default value is ON.
     showModelOnCut: Boolean = ON
 
-    # A Boolean specifying whether to display the model below the cut. The default value is 
-    # ON. 
+    # A Boolean specifying whether to display the model below the cut. The default value is
+    # ON.
     showModelBelowCut: Boolean = ON
 
-    # A Boolean specifying whether to display the free body cut. The default value is OFF. 
+    # A Boolean specifying whether to display the free body cut. The default value is OFF.
     showFreeBodyCut: Boolean = OFF
 
-    # A Boolean specifying whether the cut is displayed. 
+    # A Boolean specifying whether the cut is displayed.
     active: Boolean = OFF
 
-    # A pair of Floats specifying the acceptable range for positioning the cut. 
+    # A pair of Floats specifying the acceptable range for positioning the cut.
     cutRange: tuple[float] = ()
 
-    # A Float returning the cross-sectional area of the cut when *showFreeBodyCut* is set to 
-    # ON. 
+    # A Float returning the cross-sectional area of the cut when *showFreeBodyCut* is set to
+    # ON.
     crossSectionalArea: float = None
 
-    def __init__(self, name: str, shape: SymbolicConstant, origin: tuple,
+    def __init__(self,
+                 name: str,
+                 shape: SymbolicConstant,
+                 origin: tuple,
                  normal: typing.Union[SymbolicConstant, float],
-                 axis2: typing.Union[SymbolicConstant, float], csysName: str,
-                 cylinderAxis: typing.Union[SymbolicConstant, float], followDeformation: Boolean = OFF,
-                 overrideAveraging: Boolean = ON, referenceFrame: SymbolicConstant = FIRST_FRAME):
+                 axis2: typing.Union[SymbolicConstant, float],
+                 csysName: str,
+                 cylinderAxis: typing.Union[SymbolicConstant, float],
+                 followDeformation: Boolean = OFF,
+                 overrideAveraging: Boolean = ON,
+                 referenceFrame: SymbolicConstant = FIRST_FRAME):
         """This method creates a ViewCut object.
 
         Notes
@@ -168,15 +176,24 @@ class ViewCut:
         """
         pass
 
-    def setValues(self, angle: float = None, motion: SymbolicConstant = TRANSLATE, position: float = None,
-                  radius: float = None, rotationAxis: SymbolicConstant = AXIS_2, value: float = None,
-                  showModelAboveCut: Boolean = OFF, showModelOnCut: Boolean = ON,
-                  showModelBelowCut: Boolean = ON, showFreeBodyCut: Boolean = OFF, csysName: str = '',
+    def setValues(self,
+                  angle: float = None,
+                  motion: SymbolicConstant = TRANSLATE,
+                  position: float = None,
+                  radius: float = None,
+                  rotationAxis: SymbolicConstant = AXIS_2,
+                  value: float = None,
+                  showModelAboveCut: Boolean = OFF,
+                  showModelOnCut: Boolean = ON,
+                  showModelBelowCut: Boolean = ON,
+                  showFreeBodyCut: Boolean = OFF,
+                  csysName: str = '',
                   origin: tuple = (),
                   normal: typing.Union[SymbolicConstant, float] = AXIS_1,
                   axis2: typing.Union[SymbolicConstant, float] = AXIS_2,
                   cylinderAxis: typing.Union[SymbolicConstant, float] = AXIS_3,
-                  followDeformation: Boolean = OFF, overrideAveraging: Boolean = ON,
+                  followDeformation: Boolean = OFF,
+                  overrideAveraging: Boolean = ON,
                   referenceFrame: SymbolicConstant = FIRST_FRAME):
         """This method modifies the ViewCut object.
         

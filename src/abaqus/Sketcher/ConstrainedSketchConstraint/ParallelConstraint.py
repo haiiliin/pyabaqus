@@ -1,10 +1,12 @@
 from .ConstrainedSketchConstraint import ConstrainedSketchConstraint
 from ..ConstrainedSketchGeometry.ConstrainedSketchGeometry import ConstrainedSketchGeometry
 
+from __init__ import *
+
 
 class ParallelConstraint(ConstrainedSketchConstraint):
-
-    def __init__(self, entity1: ConstrainedSketchGeometry, entity2: ConstrainedSketchGeometry):
+    def __init__(self, entity1: ConstrainedSketchGeometry,
+                 entity2: ConstrainedSketchGeometry):
         """This method creates a parallel constraint. This constraint applies to lines and
         constrains them to be parallel.
 

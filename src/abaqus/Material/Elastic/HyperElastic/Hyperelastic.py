@@ -7,6 +7,8 @@ from ...TestData.PlanarTestData import PlanarTestData
 from ...TestData.UniaxialTestData import UniaxialTestData
 from ...TestData.VolumetricTestData import VolumetricTestData
 
+from __init__ import *
+
 
 class Hyperelastic:
     """The Hyperelastic object specifies elastic properties for approximately incompressible
@@ -72,31 +74,40 @@ class Hyperelastic:
 
     """
 
-    # A BiaxialTestData object. 
-    biaxialTestData: BiaxialTestData = BiaxialTestData(((),))
+    # A BiaxialTestData object.
+    biaxialTestData: BiaxialTestData = BiaxialTestData(((), ))
 
-    # A PlanarTestData object. 
-    planarTestData: PlanarTestData = PlanarTestData(((),))
+    # A PlanarTestData object.
+    planarTestData: PlanarTestData = PlanarTestData(((), ))
 
-    # A UniaxialTestData object. 
-    uniaxialTestData: UniaxialTestData = UniaxialTestData(((),))
+    # A UniaxialTestData object.
+    uniaxialTestData: UniaxialTestData = UniaxialTestData(((), ))
 
-    # A VolumetricTestData object. 
-    volumetricTestData: VolumetricTestData = VolumetricTestData(((),))
+    # A VolumetricTestData object.
+    volumetricTestData: VolumetricTestData = VolumetricTestData(((), ))
 
-    # A Hysteresis object. 
-    hysteresis: Hysteresis = Hysteresis(((),))
+    # A Hysteresis object.
+    hysteresis: Hysteresis = Hysteresis(((), ))
 
-    def __init__(self, table: tuple, type: SymbolicConstant = UNKNOWN,
-                 moduliTimeScale: SymbolicConstant = LONG_TERM, temperatureDependency: Boolean = OFF,
-                 n: int = 1, beta: typing.Union[SymbolicConstant, float] = FITTED_VALUE,
-                 testData: Boolean = ON, compressible: Boolean = OFF, properties: int = 0,
+    def __init__(self,
+                 table: tuple,
+                 type: SymbolicConstant = UNKNOWN,
+                 moduliTimeScale: SymbolicConstant = LONG_TERM,
+                 temperatureDependency: Boolean = OFF,
+                 n: int = 1,
+                 beta: typing.Union[SymbolicConstant, float] = FITTED_VALUE,
+                 testData: Boolean = ON,
+                 compressible: Boolean = OFF,
+                 properties: int = 0,
                  deviatoricResponse: SymbolicConstant = UNIAXIAL,
-                 volumetricResponse: SymbolicConstant = DEFAULT, poissonRatio: float = 0,
+                 volumetricResponse: SymbolicConstant = DEFAULT,
+                 poissonRatio: float = 0,
                  materialType: SymbolicConstant = ISOTROPIC,
                  anisotropicType: SymbolicConstant = FUNG_ANISOTROPIC,
-                 formulation: SymbolicConstant = STRAIN, behaviorType: SymbolicConstant = INCOMPRESSIBLE,
-                 dependencies: int = 0, localDirections: int = 0):
+                 formulation: SymbolicConstant = STRAIN,
+                 behaviorType: SymbolicConstant = INCOMPRESSIBLE,
+                 dependencies: int = 0,
+                 localDirections: int = 0):
         """This method creates a Hyperelastic object.
 
         Notes

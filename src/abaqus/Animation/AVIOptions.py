@@ -1,5 +1,7 @@
 from abaqusConstants import *
 
+from __init__ import *
+
 
 class AVIOptions:
     """The AVIOptions object is used to store values and attributes to be used in generating
@@ -16,9 +18,11 @@ class AVIOptions:
             session.aviOptions
 
     """
-
-    def setValues(self, compressionMethod: SymbolicConstant = RLE8, compressionQuality: int = None,
-                  codecOptions: str = '', sizeDefinition: SymbolicConstant = SIZE_ON_SCREEN,
+    def setValues(self,
+                  compressionMethod: SymbolicConstant = RLE8,
+                  compressionQuality: int = None,
+                  codecOptions: str = '',
+                  sizeDefinition: SymbolicConstant = SIZE_ON_SCREEN,
                   imageSize: int = None):
         """This method modifies the AVIOptions object.
         

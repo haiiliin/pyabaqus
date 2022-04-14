@@ -1,6 +1,8 @@
 from abaqusConstants import *
 from .NumberFormat import NumberFormat
 
+from __init__ import *
+
 
 class JournalOptions:
     """A JournalOptions object specifies how to record selection of geometry in the journal and
@@ -26,7 +28,8 @@ class JournalOptions:
     # Format of the number
     numberFormat: NumberFormat = NumberFormat()
 
-    def setValues(self, replayGeometry: SymbolicConstant = COMPRESSEDINDEX,
+    def setValues(self,
+                  replayGeometry: SymbolicConstant = COMPRESSEDINDEX,
                   recoverGeometry: SymbolicConstant = COMPRESSEDINDEX,
                   defaultFormat: NumberFormat = NumberFormat(),
                   fieldReportFormat: NumberFormat = NumberFormat(),
@@ -55,7 +58,10 @@ class JournalOptions:
         """
         pass
 
-    def NumberFormat(self, blankPad: Boolean = ON, format: SymbolicConstant = ENGINEERING, numDigits: int = 6,
+    def NumberFormat(self,
+                     blankPad: Boolean = ON,
+                     format: SymbolicConstant = ENGINEERING,
+                     numDigits: int = 6,
                      precision: int = 0) -> NumberFormat:
         """This method creates a NumberFormat object.
 
@@ -90,5 +96,6 @@ class JournalOptions:
         -------
             A NumberFormat object.
         """
-        self.numberFormat = numberFormat = NumberFormat(blankPad, format, numDigits, precision)
+        self.numberFormat = numberFormat = NumberFormat(
+            blankPad, format, numDigits, precision)
         return numberFormat

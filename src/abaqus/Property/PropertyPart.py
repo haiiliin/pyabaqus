@@ -8,11 +8,17 @@ from ..Part.PartBase import PartBase
 from ..Region.Set import Set
 from ..Region.Surface import Surface
 
+from __init__ import *
+
 
 class PropertyPart(PartBase):
-
-    def CompositeLayup(self, name: str, description: str = '', offsetType: SymbolicConstant = GLOBAL,
-                       offsetField: str = '', offsetValues: float = 0, elementType: SymbolicConstant = SHELL,
+    def CompositeLayup(self,
+                       name: str,
+                       description: str = '',
+                       offsetType: SymbolicConstant = GLOBAL,
+                       offsetField: str = '',
+                       offsetValues: float = 0,
+                       elementType: SymbolicConstant = SHELL,
                        symmetric: Boolean = OFF) -> CompositeLayup:
         """This method creates a CompositeLayup object.
 
@@ -57,12 +63,18 @@ class PropertyPart(PartBase):
         ------
             AbaqusException.
         """
-        self.compositeLayups[name] = compositeLayup = CompositeLayup(name, description, offsetType, offsetField,
-                                                                     offsetValues, elementType, symmetric)
+        self.compositeLayups[name] = compositeLayup = CompositeLayup(
+            name, description, offsetType, offsetField, offsetValues,
+            elementType, symmetric)
         return compositeLayup
 
-    def SectionAssignment(self, region: Set, sectionName: str, thicknessAssignment: SymbolicConstant = FROM_SECTION,
-                          offset: float = 0, offsetType: SymbolicConstant = SINGLE_VALUE, offsetField: str = ''):
+    def SectionAssignment(self,
+                          region: Set,
+                          sectionName: str,
+                          thicknessAssignment: SymbolicConstant = FROM_SECTION,
+                          offset: float = 0,
+                          offsetType: SymbolicConstant = SINGLE_VALUE,
+                          offsetField: str = ''):
         """This method creates a SectionAssignment object.
 
         Notes
@@ -99,22 +111,34 @@ class PropertyPart(PartBase):
         assignment: SectionAssignment
             A SectionAssignment object
         """
-        sectionAssignment = SectionAssignment(region, sectionName, thicknessAssignment, offset, offsetType, offsetField)
+        sectionAssignment = SectionAssignment(region, sectionName,
+                                              thicknessAssignment, offset,
+                                              offsetType, offsetField)
         self.sectionAssignments.append(sectionAssignment)
         return sectionAssignment
 
-    def MaterialOrientation(self, region: Set = None, localCsys: DatumCsys = DatumCsys(),
-                            axis: SymbolicConstant = AXIS_1, angle: float = 0,
-                            stackDirection: SymbolicConstant = STACK_3, fieldName: str = '',
-                            orientationType: SymbolicConstant = GLOBAL,
-                            normalAxisDirection: SymbolicConstant = AXIS_3,
-                            normalAxisDefinition: SymbolicConstant = NORMAL_VECTOR,
-                            normalAxisRegion: Surface = None, normalAxisDatum: DatumAxis = DatumAxis(),
-                            flipNormalDirection: Boolean = OFF, normalAxisVector: tuple = (),
-                            primaryAxisDirection: SymbolicConstant = AXIS_1,
-                            primaryAxisDefinition: SymbolicConstant = PRIMARY_VECTOR,
-                            primaryAxisRegion: Set = None, primaryAxisDatum: DatumAxis = DatumAxis(),
-                            flipPrimaryDirection: Boolean = OFF, primaryAxisVector: tuple = ()) -> MaterialOrientation:
+    def MaterialOrientation(
+        self,
+        region: Set = None,
+        localCsys: DatumCsys = DatumCsys(),
+        axis: SymbolicConstant = AXIS_1,
+        angle: float = 0,
+        stackDirection: SymbolicConstant = STACK_3,
+        fieldName: str = '',
+        orientationType: SymbolicConstant = GLOBAL,
+        normalAxisDirection: SymbolicConstant = AXIS_3,
+        normalAxisDefinition: SymbolicConstant = NORMAL_VECTOR,
+        normalAxisRegion: Surface = None,
+        normalAxisDatum: DatumAxis = DatumAxis(),
+        flipNormalDirection: Boolean = OFF,
+        normalAxisVector: tuple = (),
+        primaryAxisDirection: SymbolicConstant = AXIS_1,
+        primaryAxisDefinition: SymbolicConstant = PRIMARY_VECTOR,
+        primaryAxisRegion: Set = None,
+        primaryAxisDatum: DatumAxis = DatumAxis(),
+        flipPrimaryDirection: Boolean = OFF,
+        primaryAxisVector: tuple = ()
+    ) -> MaterialOrientation:
         """This method creates a MaterialOrientation object.
 
         Notes
@@ -198,11 +222,12 @@ class PropertyPart(PartBase):
         orientation: MaterialOrientation
             A MaterialOrientation object.
         """
-        materialOrientation = MaterialOrientation(region, localCsys, axis, angle, stackDirection, fieldName,
-                                                  orientationType, normalAxisDirection, normalAxisDefinition,
-                                                  normalAxisRegion, normalAxisDatum, flipNormalDirection,
-                                                  normalAxisVector, primaryAxisDirection, primaryAxisDefinition,
-                                                  primaryAxisRegion, primaryAxisDatum, flipPrimaryDirection,
-                                                  primaryAxisVector)
+        materialOrientation = MaterialOrientation(
+            region, localCsys, axis, angle, stackDirection, fieldName,
+            orientationType, normalAxisDirection, normalAxisDefinition,
+            normalAxisRegion, normalAxisDatum, flipNormalDirection,
+            normalAxisVector, primaryAxisDirection, primaryAxisDefinition,
+            primaryAxisRegion, primaryAxisDatum, flipPrimaryDirection,
+            primaryAxisVector)
         self.materialOrientations.append(materialOrientation)
         return materialOrientation

@@ -3,6 +3,8 @@ import typing
 from abaqusConstants import *
 from .Annotation import Annotation
 
+from __init__ import *
+
 
 class Arrow(Annotation):
     """The Arrow object stores the visual settings and location of an arrow annotation.
@@ -20,13 +22,21 @@ class Arrow(Annotation):
         session.viewports[name].annotationsToPlot[i]
 
     """
-
-    def __init__(self, name: str, startPoint: tuple[float] = (), endPoint: tuple[float] = (),
-                 startAnchor: typing.Union[SymbolicConstant, float] = BOTTOM_LEFT,
-                 endAnchor: typing.Union[SymbolicConstant, float] = BOTTOM_LEFT,
-                 startHeadStyle: SymbolicConstant = NONE, endHeadStyle: SymbolicConstant = FILLED_ARROW,
-                 startGap: float = 0, endGap: float = 0, color: str = '',
-                 lineStyle: SymbolicConstant = SOLID, lineThickness: SymbolicConstant = VERY_THIN):
+    def __init__(self,
+                 name: str,
+                 startPoint: tuple[float] = (),
+                 endPoint: tuple[float] = (),
+                 startAnchor: typing.Union[SymbolicConstant,
+                                           float] = BOTTOM_LEFT,
+                 endAnchor: typing.Union[SymbolicConstant,
+                                         float] = BOTTOM_LEFT,
+                 startHeadStyle: SymbolicConstant = NONE,
+                 endHeadStyle: SymbolicConstant = FILLED_ARROW,
+                 startGap: float = 0,
+                 endGap: float = 0,
+                 color: str = '',
+                 lineStyle: SymbolicConstant = SOLID,
+                 lineThickness: SymbolicConstant = VERY_THIN):
         """This method creates an Arrow object.
 
         Notes
@@ -154,12 +164,20 @@ class Arrow(Annotation):
         """
         pass
 
-    def setValues(self, startPoint: tuple[float] = (), endPoint: tuple[float] = (),
-                  startAnchor: typing.Union[SymbolicConstant, float] = BOTTOM_LEFT,
-                  endAnchor: typing.Union[SymbolicConstant, float] = BOTTOM_LEFT,
-                  startHeadStyle: SymbolicConstant = NONE, endHeadStyle: SymbolicConstant = FILLED_ARROW,
-                  startGap: float = 0, endGap: float = 0, color: str = '',
-                  lineStyle: SymbolicConstant = SOLID, lineThickness: SymbolicConstant = VERY_THIN):
+    def setValues(self,
+                  startPoint: tuple[float] = (),
+                  endPoint: tuple[float] = (),
+                  startAnchor: typing.Union[SymbolicConstant,
+                                            float] = BOTTOM_LEFT,
+                  endAnchor: typing.Union[SymbolicConstant,
+                                          float] = BOTTOM_LEFT,
+                  startHeadStyle: SymbolicConstant = NONE,
+                  endHeadStyle: SymbolicConstant = FILLED_ARROW,
+                  startGap: float = 0,
+                  endGap: float = 0,
+                  color: str = '',
+                  lineStyle: SymbolicConstant = SOLID,
+                  lineThickness: SymbolicConstant = VERY_THIN):
         """This method modifies the Arrow object.
         
         Parameters

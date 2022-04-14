@@ -1,6 +1,8 @@
 from .Area import Area
 from .Title import Title
 
+from __init__ import *
+
 
 class DefaultPlot:
     """The DefaultPlot object is used to hold on default plot attributes. The DefaultPlot
@@ -27,10 +29,10 @@ class DefaultPlot:
 
     """
 
-    # An Area object specifying an Area used to hold on to the default display properties for 
-    # the plot area. 
+    # An Area object specifying an Area used to hold on to the default display properties for
+    # the plot area.
     area: Area = Area()
 
-    # A Title object specifying a Title object used to hold on to the default properties of 
-    # the XY-Plot title. 
+    # A Title object specifying a Title object used to hold on to the default properties of
+    # the XY-Plot title.
     title: Title = Title()

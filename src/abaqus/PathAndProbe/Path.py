@@ -2,6 +2,8 @@ import typing
 
 from abaqusConstants import *
 
+from __init__ import *
+
 
 class Path:
     """The Path object defines a line through your model by specifying a series of nodes or
@@ -25,14 +27,16 @@ class Path:
 
     """
 
-    # If *type*=NODE_LIST, *coordinates* is a sequence of tuples of three Floats. This can be 
-    # used as the value for the *expression* argument when creating a Path object of *type* = 
-    # POINT_LIST. 
+    # If *type*=NODE_LIST, *coordinates* is a sequence of tuples of three Floats. This can be
+    # used as the value for the *expression* argument when creating a Path object of *type* =
+    # POINT_LIST.
     coordinates: list[tuple[float]] = []
 
     def __init__(self, name: str, type: SymbolicConstant, expression: tuple,
-                 circleDefinition: SymbolicConstant, numSegments: int, startAngle: float,
-                 endAngle: float, radius: typing.Union[SymbolicConstant, float], radialAngle: float,
+                 circleDefinition: SymbolicConstant, numSegments: int,
+                 startAngle: float, endAngle: float,
+                 radius: typing.Union[SymbolicConstant,
+                                      float], radialAngle: float,
                  startRadius: typing.Union[SymbolicConstant, float],
                  endRadius: typing.Union[SymbolicConstant, float]):
         """This method creates a Path object.

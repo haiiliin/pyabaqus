@@ -2,6 +2,8 @@ from abaqusConstants import *
 from .Interaction import Interaction
 from ..Region.RegionArray import RegionArray
 
+from __init__ import *
+
 
 class PressurePenetration(Interaction):
     """The PressurePenetration object defines pressure penetration loading simulated with
@@ -38,27 +40,34 @@ class PressurePenetration(Interaction):
 
     """
 
-    # A String specifying the repository key. 
+    # A String specifying the repository key.
     name: str = ''
 
-    # A String specifying the name of the step in which the PressurePenetration object is 
-    # created. 
+    # A String specifying the name of the step in which the PressurePenetration object is
+    # created.
     createStepName: str = ''
 
-    # A String specifying the name of the Surface-to-surface contact (Standard) interaction. 
+    # A String specifying the name of the Surface-to-surface contact (Standard) interaction.
     contactInteraction: str = ''
 
-    # A RegionArray object specifying the points on the main surface that are exposed to the 
-    # fluid. 
+    # A RegionArray object specifying the points on the main surface that are exposed to the
+    # fluid.
     mainPoints: RegionArray = RegionArray()
 
-    # A RegionArray object specifying the points on the secondary surface that are exposed to 
-    # the fluid. 
+    # A RegionArray object specifying the points on the secondary surface that are exposed to
+    # the fluid.
     secondaryPoints: RegionArray = RegionArray()
 
-    def __init__(self, name: str, createStepName: str, contactInteraction: str, mainPoints: RegionArray,
-                 secondaryPoints: RegionArray, penetrationPressure: float, criticalPressure: float,
-                 amplitude: str = UNSET, penetrationTime: float = 0):
+    def __init__(self,
+                 name: str,
+                 createStepName: str,
+                 contactInteraction: str,
+                 mainPoints: RegionArray,
+                 secondaryPoints: RegionArray,
+                 penetrationPressure: float,
+                 criticalPressure: float,
+                 amplitude: str = UNSET,
+                 penetrationTime: float = 0):
         """This method creates a PressurePenetration object.
 
         Notes
@@ -123,8 +132,12 @@ class PressurePenetration(Interaction):
         """
         pass
 
-    def setValuesInStep(self, stepName: str, penetrationPressure: float = None, criticalPressure: float = None,
-                        amplitude: str = '', penetrationTime: float = 0):
+    def setValuesInStep(self,
+                        stepName: str,
+                        penetrationPressure: float = None,
+                        criticalPressure: float = None,
+                        amplitude: str = '',
+                        penetrationTime: float = 0):
         """This method modifies the propagating data for an existing PressurePenetration object in
         the specified step.
         

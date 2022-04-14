@@ -1,3 +1,4 @@
+from __init__ import *
 
 
 class Radiation:
@@ -16,8 +17,8 @@ class Radiation:
         - GAP RADIATION
 
     """
-
-    def __init__(self, mainEmissivity: float, secondaryEmissivity: float, table: tuple):
+    def __init__(self, mainEmissivity: float, secondaryEmissivity: float,
+                 table: tuple):
         """This method creates a Radiation object.
 
         Notes

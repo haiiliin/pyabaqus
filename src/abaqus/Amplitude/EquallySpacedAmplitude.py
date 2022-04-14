@@ -4,6 +4,8 @@ from abaqusConstants import *
 from .Amplitude import Amplitude
 from .BaselineCorrection import BaselineCorrection
 
+from __init__ import *
+
 
 class EquallySpacedAmplitude(Amplitude):
     """The EquallySpacedAmplitude object defines a list of amplitude values at fixed time
@@ -31,11 +33,16 @@ class EquallySpacedAmplitude(Amplitude):
 
     """
 
-    # A BaselineCorrection object. 
+    # A BaselineCorrection object.
     baselineCorrection: BaselineCorrection = BaselineCorrection()
 
-    def __init__(self, name: str, fixedInterval: float, data: tuple, begin: float = 0,
-                 smooth: typing.Union[SymbolicConstant, float] = SOLVER_DEFAULT,
+    def __init__(self,
+                 name: str,
+                 fixedInterval: float,
+                 data: tuple,
+                 begin: float = 0,
+                 smooth: typing.Union[SymbolicConstant,
+                                      float] = SOLVER_DEFAULT,
                  timeSpan: SymbolicConstant = STEP):
         """This method creates an EquallySpacedAmplitude object.
 
@@ -81,7 +88,10 @@ class EquallySpacedAmplitude(Amplitude):
         super().__init__()
         pass
 
-    def setValues(self, begin: float = 0, smooth: typing.Union[SymbolicConstant, float] = SOLVER_DEFAULT,
+    def setValues(self,
+                  begin: float = 0,
+                  smooth: typing.Union[SymbolicConstant,
+                                       float] = SOLVER_DEFAULT,
                   timeSpan: SymbolicConstant = STEP):
         """This method modifies the EquallySpacedAmplitude object.
         

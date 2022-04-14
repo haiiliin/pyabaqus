@@ -1,3 +1,6 @@
+from __init__ import *
+
+
 class ConstrainedSketchVertex:
     """The ConstrainedSketchVertex object stores the vertex position.
 
@@ -13,7 +16,7 @@ class ConstrainedSketchVertex:
 
     """
 
-    # A tuple of Floats specifying the*X*-, *Y*-, and *Z*-coordinates of the sketch vertex. 
+    # A tuple of Floats specifying the*X*-, *Y*-, and *Z*-coordinates of the sketch vertex.
     coords: float = None
 
     def Spot(self, point: tuple[float]):

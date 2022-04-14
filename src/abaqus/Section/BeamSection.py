@@ -2,6 +2,8 @@ from abaqusConstants import *
 from .Section import Section
 from .TransverseShearBeam import TransverseShearBeam
 
+from __init__ import *
+
 
 class BeamSection(Section):
     """The BeamSection object defines the properties of a beam section.
@@ -44,19 +46,39 @@ class BeamSection(Section):
 
     """
 
-    # A TransverseShearBeam object specifying the transverse shear stiffness properties. 
-    beamTransverseShear: TransverseShearBeam = TransverseShearBeam(ANALYSIS_DEFAULT)
+    # A TransverseShearBeam object specifying the transverse shear stiffness properties.
+    beamTransverseShear: TransverseShearBeam = TransverseShearBeam(
+        ANALYSIS_DEFAULT)
 
-    def __init__(self, name: str, integration: SymbolicConstant, profile: str, poissonRatio: float = 0,
-                 thermalExpansion: Boolean = OFF, temperatureDependency: Boolean = OFF,
-                 dependencies: int = 0, density: float = None, referenceTemperature: float = None,
-                 temperatureVar: SymbolicConstant = LINEAR, alphaDamping: float = 0,
-                 betaDamping: float = 0, compositeDamping: float = 0, useFluidInertia: Boolean = OFF,
-                 submerged: SymbolicConstant = FULLY, fluidMassDensity: float = None,
-                 crossSectionRadius: float = None, lateralMassCoef: float = 1, axialMassCoef: float = 0,
-                 massOffsetX: float = 0, massOffsetY: float = 0, beamShape: SymbolicConstant = CONSTANT,
-                 material: str = '', table: tuple = (), outputPts: tuple = (),
-                 centroid: tuple[float] = (), shearCenter: tuple[float] = (), profileEnd: str = ''):
+    def __init__(self,
+                 name: str,
+                 integration: SymbolicConstant,
+                 profile: str,
+                 poissonRatio: float = 0,
+                 thermalExpansion: Boolean = OFF,
+                 temperatureDependency: Boolean = OFF,
+                 dependencies: int = 0,
+                 density: float = None,
+                 referenceTemperature: float = None,
+                 temperatureVar: SymbolicConstant = LINEAR,
+                 alphaDamping: float = 0,
+                 betaDamping: float = 0,
+                 compositeDamping: float = 0,
+                 useFluidInertia: Boolean = OFF,
+                 submerged: SymbolicConstant = FULLY,
+                 fluidMassDensity: float = None,
+                 crossSectionRadius: float = None,
+                 lateralMassCoef: float = 1,
+                 axialMassCoef: float = 0,
+                 massOffsetX: float = 0,
+                 massOffsetY: float = 0,
+                 beamShape: SymbolicConstant = CONSTANT,
+                 material: str = '',
+                 table: tuple = (),
+                 outputPts: tuple = (),
+                 centroid: tuple[float] = (),
+                 shearCenter: tuple[float] = (),
+                 profileEnd: str = ''):
         """This method creates a BeamSection object.
 
         Notes
@@ -165,16 +187,32 @@ class BeamSection(Section):
         super().__init__()
         pass
 
-    def setValues(self, poissonRatio: float = 0, thermalExpansion: Boolean = OFF,
-                  temperatureDependency: Boolean = OFF, dependencies: int = 0, density: float = None,
-                  referenceTemperature: float = None, temperatureVar: SymbolicConstant = LINEAR,
-                  alphaDamping: float = 0, betaDamping: float = 0, compositeDamping: float = 0,
-                  useFluidInertia: Boolean = OFF, submerged: SymbolicConstant = FULLY,
-                  fluidMassDensity: float = None, crossSectionRadius: float = None,
-                  lateralMassCoef: float = 1, axialMassCoef: float = 0, massOffsetX: float = 0,
-                  massOffsetY: float = 0, beamShape: SymbolicConstant = CONSTANT, material: str = '',
-                  table: tuple = (), outputPts: tuple = (), centroid: tuple[float] = (),
-                  shearCenter: tuple[float] = (), profileEnd: str = ''):
+    def setValues(self,
+                  poissonRatio: float = 0,
+                  thermalExpansion: Boolean = OFF,
+                  temperatureDependency: Boolean = OFF,
+                  dependencies: int = 0,
+                  density: float = None,
+                  referenceTemperature: float = None,
+                  temperatureVar: SymbolicConstant = LINEAR,
+                  alphaDamping: float = 0,
+                  betaDamping: float = 0,
+                  compositeDamping: float = 0,
+                  useFluidInertia: Boolean = OFF,
+                  submerged: SymbolicConstant = FULLY,
+                  fluidMassDensity: float = None,
+                  crossSectionRadius: float = None,
+                  lateralMassCoef: float = 1,
+                  axialMassCoef: float = 0,
+                  massOffsetX: float = 0,
+                  massOffsetY: float = 0,
+                  beamShape: SymbolicConstant = CONSTANT,
+                  material: str = '',
+                  table: tuple = (),
+                  outputPts: tuple = (),
+                  centroid: tuple[float] = (),
+                  shearCenter: tuple[float] = (),
+                  profileEnd: str = ''):
         """This method modifies the BeamSection object.
         
         Parameters

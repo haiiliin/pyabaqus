@@ -1,6 +1,8 @@
 from abaqusConstants import *
 from ..Region.Region import Region
 
+from __init__ import *
+
 
 class ElementProgressiveActivation:
     """The ElementProgressiveActivation object is used to specify elements that can be
@@ -18,8 +20,10 @@ class ElementProgressiveActivation:
         - *ELEMENT PROGRESSIVE ACTIVATION
 
     """
-
-    def __init__(self, name: str, elset: Region = Region(), deformation: Boolean = OFF,
+    def __init__(self,
+                 name: str,
+                 elset: Region = Region(),
+                 deformation: Boolean = OFF,
                  freeSurfaceType: SymbolicConstant = NONE):
         """This method creates an ElementProgressiveActivation object and places it in the
         elementProgressiveActivation repository.

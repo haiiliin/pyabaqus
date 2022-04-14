@@ -1,6 +1,8 @@
 from abaqusConstants import *
 from .ContactProperty import ContactProperty
 
+from __init__ import *
+
 
 class FilmConditionProp(ContactProperty):
     """The FilmConditionProp object is an interaction property that defines a film coefficient
@@ -20,8 +22,10 @@ class FilmConditionProp(ContactProperty):
         - FILM PROPERTY
 
     """
-
-    def __init__(self, name: str, temperatureDependency: Boolean = OFF, dependencies: int = 0,
+    def __init__(self,
+                 name: str,
+                 temperatureDependency: Boolean = OFF,
+                 dependencies: int = 0,
                  property: tuple = ()):
         """This method creates a FilmConditionProp object.
 
@@ -56,7 +60,10 @@ class FilmConditionProp(ContactProperty):
         super().__init__(name)
         pass
 
-    def setValues(self, temperatureDependency: Boolean = OFF, dependencies: int = 0, property: tuple = ()):
+    def setValues(self,
+                  temperatureDependency: Boolean = OFF,
+                  dependencies: int = 0,
+                  property: tuple = ()):
         """This method modifies the FilmConditionProp object.
         
         Parameters

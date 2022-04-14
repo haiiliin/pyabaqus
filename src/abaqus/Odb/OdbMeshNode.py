@@ -1,3 +1,6 @@
+from __init__ import *
+
+
 class OdbMeshNode:
     """OdbMeshNode objects are created with the part.addNodes method.
 
@@ -31,9 +34,9 @@ class OdbMeshNode:
 
     """
 
-    # An Int specifying the node label. 
+    # An Int specifying the node label.
     label: int = None
 
-    # A tuple of Floats specifying the nodal coordinates in the global Cartesian coordinate 
-    # system. 
+    # A tuple of Floats specifying the nodal coordinates in the global Cartesian coordinate
+    # system.
     coordinates: float = None

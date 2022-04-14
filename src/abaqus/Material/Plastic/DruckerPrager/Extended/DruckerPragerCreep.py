@@ -1,5 +1,7 @@
 from abaqusConstants import *
 
+from __init__ import *
+
 
 class DruckerPragerCreep:
     """The DruckerPragerCreep object specifies creep for Drucker-Prager plasticity models.
@@ -38,8 +40,10 @@ class DruckerPragerCreep:
         - DRUCKER PRAGER CREEP
 
     """
-
-    def __init__(self, table: tuple, law: SymbolicConstant = STRAIN, temperatureDependency: Boolean = OFF,
+    def __init__(self,
+                 table: tuple,
+                 law: SymbolicConstant = STRAIN,
+                 temperatureDependency: Boolean = OFF,
                  dependencies: int = 0):
         """This method creates a DruckerPragerCreep object.
 

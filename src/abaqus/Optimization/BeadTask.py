@@ -5,6 +5,8 @@ from .ObjectiveFunction import ObjectiveFunction
 from .OptimizationConstraint import OptimizationConstraint
 from .OptimizationTask import OptimizationTask
 
+from __init__ import *
+
 
 class BeadTask(OptimizationTask):
     """The BeadTask object defines a bead task.
@@ -32,29 +34,45 @@ class BeadTask(OptimizationTask):
 
     """
 
-    # A repository of DesignResponse objects. 
+    # A repository of DesignResponse objects.
     designResponses: dict[str, DesignResponse] = dict[str, DesignResponse]()
 
-    # A repository of ObjectiveFunction objects. 
-    objectiveFunctions: dict[str, ObjectiveFunction] = dict[str, ObjectiveFunction]()
+    # A repository of ObjectiveFunction objects.
+    objectiveFunctions: dict[str,
+                             ObjectiveFunction] = dict[str,
+                                                       ObjectiveFunction]()
 
-    # A repository of OptimizationConstraint objects. 
-    optimizationConstraints: dict[str, OptimizationConstraint] = dict[str, OptimizationConstraint]()
+    # A repository of OptimizationConstraint objects.
+    optimizationConstraints: dict[str, OptimizationConstraint] = dict[
+        str, OptimizationConstraint]()
 
-    # A repository of GeometricRestriction objects. 
-    geometricRestrictions: dict[str, GeometricRestriction] = dict[str, GeometricRestriction]()
+    # A repository of GeometricRestriction objects.
+    geometricRestrictions: dict[str, GeometricRestriction] = dict[
+        str, GeometricRestriction]()
 
-    def __init__(self, name: str, abaqusSensitivities: Boolean = True,
-                 algorithm: SymbolicConstant = GENERAL_OPTIMIZATION, areBCRegionsFrozen: Boolean = OFF,
-                 beadIter: str = 1, beadMaxMembraneStress: str = 0, beadMinStress: str = 0,
-                 beadPerturbation: str = 0, beadWidth: SymbolicConstant = DEFAULT, curveSmooth: str = 5,
-                 filterRadius: str = 4, filterRadiusBy: SymbolicConstant = VALUE,
-                 flipNormalDir: Boolean = OFF, frozenBoundaryConditionRegion: SymbolicConstant = MODEL,
+    def __init__(self,
+                 name: str,
+                 abaqusSensitivities: Boolean = True,
+                 algorithm: SymbolicConstant = GENERAL_OPTIMIZATION,
+                 areBCRegionsFrozen: Boolean = OFF,
+                 beadIter: str = 1,
+                 beadMaxMembraneStress: str = 0,
+                 beadMinStress: str = 0,
+                 beadPerturbation: str = 0,
+                 beadWidth: SymbolicConstant = DEFAULT,
+                 curveSmooth: str = 5,
+                 filterRadius: str = 4,
+                 filterRadiusBy: SymbolicConstant = VALUE,
+                 flipNormalDir: Boolean = OFF,
+                 frozenBoundaryConditionRegion: SymbolicConstant = MODEL,
                  isSensCalcOnlyOnDesignNodes: Boolean = OFF,
-                 modeTrackingRegion: SymbolicConstant = MODEL, nodalMoveLimit: float = 0,
+                 modeTrackingRegion: SymbolicConstant = MODEL,
+                 nodalMoveLimit: float = 0,
                  nodeSmooth: SymbolicConstant = DEFAULT,
-                 nodeUpdateStrategy: SymbolicConstant = CONSERVATIVE, numTrackedModes: int = 5,
-                 updateShapeBasisVectors: SymbolicConstant = EVERY_CYCLE, groupOperator: Boolean = OFF):
+                 nodeUpdateStrategy: SymbolicConstant = CONSERVATIVE,
+                 numTrackedModes: int = 5,
+                 updateShapeBasisVectors: SymbolicConstant = EVERY_CYCLE,
+                 groupOperator: Boolean = OFF):
         """This method creates a BeadTask object.
 
         Notes
@@ -142,17 +160,28 @@ class BeadTask(OptimizationTask):
         super().__init__()
         pass
 
-    def setValues(self, abaqusSensitivities: Boolean = True, algorithm: SymbolicConstant = GENERAL_OPTIMIZATION,
-                  areBCRegionsFrozen: Boolean = OFF, beadIter: str = 1, beadMaxMembraneStress: str = 0,
-                  beadMinStress: str = 0, beadPerturbation: str = 0,
-                  beadWidth: SymbolicConstant = DEFAULT, curveSmooth: str = 5, filterRadius: str = 4,
-                  filterRadiusBy: SymbolicConstant = VALUE, flipNormalDir: Boolean = OFF,
+    def setValues(self,
+                  abaqusSensitivities: Boolean = True,
+                  algorithm: SymbolicConstant = GENERAL_OPTIMIZATION,
+                  areBCRegionsFrozen: Boolean = OFF,
+                  beadIter: str = 1,
+                  beadMaxMembraneStress: str = 0,
+                  beadMinStress: str = 0,
+                  beadPerturbation: str = 0,
+                  beadWidth: SymbolicConstant = DEFAULT,
+                  curveSmooth: str = 5,
+                  filterRadius: str = 4,
+                  filterRadiusBy: SymbolicConstant = VALUE,
+                  flipNormalDir: Boolean = OFF,
                   frozenBoundaryConditionRegion: SymbolicConstant = MODEL,
                   isSensCalcOnlyOnDesignNodes: Boolean = OFF,
-                  modeTrackingRegion: SymbolicConstant = MODEL, nodalMoveLimit: float = 0,
+                  modeTrackingRegion: SymbolicConstant = MODEL,
+                  nodalMoveLimit: float = 0,
                   nodeSmooth: SymbolicConstant = DEFAULT,
-                  nodeUpdateStrategy: SymbolicConstant = CONSERVATIVE, numTrackedModes: int = 5,
-                  updateShapeBasisVectors: SymbolicConstant = EVERY_CYCLE, groupOperator: Boolean = OFF):
+                  nodeUpdateStrategy: SymbolicConstant = CONSERVATIVE,
+                  numTrackedModes: int = 5,
+                  updateShapeBasisVectors: SymbolicConstant = EVERY_CYCLE,
+                  groupOperator: Boolean = OFF):
         """This method modifies the BeadTask object.
         
         Parameters

@@ -3,11 +3,18 @@ from .OdbMeshNode import OdbMeshNode
 from .OdbPartBase import OdbPartBase
 from .OdbSet import OdbSet
 
+from __init__ import *
+
 
 class OdbPart(OdbPartBase):
-
-    def RigidBody(self, referenceNode: str, position: str = INPUT, isothermal: Boolean = OFF, elset: str = '',
-                  pinNodes: str = '', tieNodes: str = '', analyticSurface: str = ''):
+    def RigidBody(self,
+                  referenceNode: str,
+                  position: str = INPUT,
+                  isothermal: Boolean = OFF,
+                  elset: str = '',
+                  pinNodes: str = '',
+                  tieNodes: str = '',
+                  analyticSurface: str = ''):
         """This method defines an OdbRigidBody on the part object.
         
         Parameters

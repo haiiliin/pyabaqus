@@ -7,6 +7,8 @@ from ..Job.Job import Job
 from ..Job.OptimizationProcess import OptimizationProcess
 from ..Model.Model import Model
 
+from __init__ import *
+
 
 class MdbBase:
     """The Mdb object is the high-level Abaqus model database. A model database stores models
@@ -47,36 +49,39 @@ class MdbBase:
 
     """
 
-    # An Int specifying the release number of the Mdb object in memory. 
+    # An Int specifying the release number of the Mdb object in memory.
     version: int = None
 
-    # A Float specifying the value of a counter associated with the Mdb object. The counter 
-    # indicates when the Mdb object was last changed. 
+    # A Float specifying the value of a counter associated with the Mdb object. The counter
+    # indicates when the Mdb object was last changed.
     lastChangedCount: float = None
 
-    # A repository of Job objects. 
+    # A repository of Job objects.
     jobs: dict[str, Job] = dict[str, Job]()
 
-    # A repository of AdaptivityProcess objects. 
-    adaptivityProcesses: dict[str, AdaptivityProcess] = dict[str, AdaptivityProcess]()
+    # A repository of AdaptivityProcess objects.
+    adaptivityProcesses: dict[str,
+                              AdaptivityProcess] = dict[str,
+                                                        AdaptivityProcess]()
 
-    # A repository of Coexecution objects. 
+    # A repository of Coexecution objects.
     coexecutions: dict[str, Coexecution] = dict[str, Coexecution]()
 
-    # A repository of OptimizationProcess objects. 
-    optimizationProcesses: dict[str, OptimizationProcess] = dict[str, OptimizationProcess]()
+    # A repository of OptimizationProcess objects.
+    optimizationProcesses: dict[str, OptimizationProcess] = dict[
+        str, OptimizationProcess]()
 
-    # A MeshEditOptions object specifying the undo/redo behavior when editing meshes on parts 
-    # or part instances. 
+    # A MeshEditOptions object specifying the undo/redo behavior when editing meshes on parts
+    # or part instances.
     meshEditOptions: MeshEditOptions = MeshEditOptions()
 
-    # A repository of Model objects. 
+    # A repository of Model objects.
     models: dict[str, Model] = dict[str, Model]()
 
-    # A RepositorySupport object. 
+    # A RepositorySupport object.
     customData: RepositorySupport = RepositorySupport()
 
-    # A repository of Annotation objects. 
+    # A repository of Annotation objects.
     annotations: dict[str, Annotation] = dict[str, Annotation]()
 
     def __init__(self, pathName: str = ''):

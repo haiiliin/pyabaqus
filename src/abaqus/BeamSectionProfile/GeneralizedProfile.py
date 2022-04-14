@@ -1,7 +1,9 @@
 from .Profile import Profile
 
-class GeneralizedProfile(Profile):
+from __init__ import *
 
+
+class GeneralizedProfile(Profile):
     """The GeneralizedProfile object defines the properties of a profile via its area, moment 
     of inertia, etc. 
     The GeneralizedProfile object is derived from the Profile object. 
@@ -21,9 +23,8 @@ class GeneralizedProfile(Profile):
         - BEAM GENERAL SECTION
 
     """
-
-    def __init__(self, name: str, area: float, i11: float, i12: float, i22: float, j: float, gammaO: float, 
-                 gammaW: float):
+    def __init__(self, name: str, area: float, i11: float, i12: float,
+                 i22: float, j: float, gammaO: float, gammaW: float):
         """This method creates a GeneralizedProfile object.
 
         Notes
@@ -75,4 +76,3 @@ class GeneralizedProfile(Profile):
             
         """
         pass
-

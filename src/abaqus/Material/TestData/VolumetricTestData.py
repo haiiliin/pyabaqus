@@ -1,5 +1,7 @@
 from abaqusConstants import *
 
+from __init__ import *
+
 
 class VolumetricTestData:
     """The VolumetricTestData object provides volumetric test data.
@@ -35,9 +37,12 @@ class VolumetricTestData:
         - VOLUMETRIC TEST DATA
 
     """
-
-    def __init__(self, table: tuple, volinf: float = None, smoothing: int = None,
-                 temperatureDependency: Boolean = OFF, dependencies: int = 0):
+    def __init__(self,
+                 table: tuple,
+                 volinf: float = None,
+                 smoothing: int = None,
+                 temperatureDependency: Boolean = OFF,
+                 dependencies: int = 0):
         """This method creates a VolumetricTestData object.
 
         Notes

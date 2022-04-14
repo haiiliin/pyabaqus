@@ -2,6 +2,8 @@ import typing
 
 from abaqusConstants import *
 
+from __init__ import *
+
 
 class PageSetupOptions:
     """The PageSetupOptions object stores the settings that Abaqus uses when printing using a
@@ -14,11 +16,17 @@ class PageSetupOptions:
             session.pageSetupOptions
 
     """
-
-    def setValues(self, imageSize: typing.Union[SymbolicConstant, float] = FIT_TO_PAGE,
-                  units: SymbolicConstant = INCHES, quality: SymbolicConstant = MEDIUM,
-                  topMargin: float = 0, bottomMargin: float = 0, leftMargin: float = 0,
-                  rightMargin: float = 0, orientation: SymbolicConstant = PORTRAIT, logo: Boolean = ON,
+    def setValues(self,
+                  imageSize: typing.Union[SymbolicConstant,
+                                          float] = FIT_TO_PAGE,
+                  units: SymbolicConstant = INCHES,
+                  quality: SymbolicConstant = MEDIUM,
+                  topMargin: float = 0,
+                  bottomMargin: float = 0,
+                  leftMargin: float = 0,
+                  rightMargin: float = 0,
+                  orientation: SymbolicConstant = PORTRAIT,
+                  logo: Boolean = ON,
                   date: Boolean = ON):
         """This method modifies the PageSetupOptions object.
         

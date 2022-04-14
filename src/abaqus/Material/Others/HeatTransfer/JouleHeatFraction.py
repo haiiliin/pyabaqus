@@ -1,3 +1,6 @@
+from __init__ import *
+
+
 class JouleHeatFraction:
     """The JouleHeatFraction object defines the fraction of electric energy released as heat.
 
@@ -16,7 +19,6 @@ class JouleHeatFraction:
         - JOULE HEAT FRACTION
 
     """
-
     def __init__(self, fraction: float = 1):
         """This method creates a JouleHeatFraction object.
 

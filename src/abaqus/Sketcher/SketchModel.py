@@ -1,6 +1,8 @@
 from .ConstrainedSketch import ConstrainedSketch
 from ..Model.ModelBase import ModelBase
 
+from __init__ import *
+
 
 class SketchModel(ModelBase):
     """Abaqus creates a Model object named `Model-1` when a session is started.
@@ -14,9 +16,12 @@ class SketchModel(ModelBase):
         mdb.models[name]
 
     """
-
-    def ConstrainedSketch(self, name: str, sheetSize: float, gridSpacing: float = None, 
-                          transform: tuple = ()) -> ConstrainedSketch:
+    def ConstrainedSketch(
+        self,
+        name: str,
+        sheetSize: float,
+        gridSpacing: float = None,
+        transform: tuple = ()) -> ConstrainedSketch:
         """This method creates a ConstrainedSketch object. If the sketch cannot be created, the
         method returns None.
 
@@ -50,5 +55,6 @@ class SketchModel(ModelBase):
         sketch: ConstrainedSketch
             A ConstrainedSketch object.
         """
-        self.sketches[name] = sketch = ConstrainedSketch(name, sheetSize, gridSpacing, transform)
+        self.sketches[name] = sketch = ConstrainedSketch(
+            name, sheetSize, gridSpacing, transform)
         return sketch

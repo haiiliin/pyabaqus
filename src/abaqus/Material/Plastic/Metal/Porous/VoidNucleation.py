@@ -1,5 +1,7 @@
 from abaqusConstants import *
 
+from __init__ import *
+
 
 class VoidNucleation:
     """The VoidNucleation object defines the nucleation of voids in a porous material.
@@ -28,8 +30,10 @@ class VoidNucleation:
         - VOID NUCLEATION
 
     """
-
-    def __init__(self, table: tuple, temperatureDependency: Boolean = OFF, dependencies: int = 0):
+    def __init__(self,
+                 table: tuple,
+                 temperatureDependency: Boolean = OFF,
+                 dependencies: int = 0):
         """This method creates a VoidNucleation object.
 
         Notes

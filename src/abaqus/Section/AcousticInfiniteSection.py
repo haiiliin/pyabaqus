@@ -1,5 +1,7 @@
 from .Section import Section
 
+from __init__ import *
+
 
 class AcousticInfiniteSection(Section):
     """The AcousticInfiniteSection object defines the properties of an acoustic section.
@@ -20,8 +22,11 @@ class AcousticInfiniteSection(Section):
         - SOLID SECTION
 
     """
-
-    def __init__(self, name: str, material: str, thickness: float = 1, order: int = 10):
+    def __init__(self,
+                 name: str,
+                 material: str,
+                 thickness: float = 1,
+                 order: int = 10):
         """This method creates an AcousticInfiniteSection object.
 
         Notes

@@ -1,5 +1,7 @@
 from abaqusConstants import *
 
+from __init__ import *
+
 
 class OptimizationProcess:
     """The OptimizationProcess object defines a process to perform an optimization of a model
@@ -15,10 +17,17 @@ class OptimizationProcess:
         mdb.optimizationProcesses[name]
 
     """
-
-    def __init__(self, name: str, model: str, task: str, prototypeJob: str, description: str = '',
-                 maxDesignCycle: int = 15, dataSaveFrequency: str = OPT_DATASAVE_SPECIFY_CYCLE,
-                 saveInitial: Boolean = True, saveFirst: Boolean = True, saveLast: Boolean = True,
+    def __init__(self,
+                 name: str,
+                 model: str,
+                 task: str,
+                 prototypeJob: str,
+                 description: str = '',
+                 maxDesignCycle: int = 15,
+                 dataSaveFrequency: str = OPT_DATASAVE_SPECIFY_CYCLE,
+                 saveInitial: Boolean = True,
+                 saveFirst: Boolean = True,
+                 saveLast: Boolean = True,
                  saveEvery: int = None):
         """This method creates an OptimizationProcess object.
 
@@ -103,9 +112,16 @@ class OptimizationProcess:
         """
         pass
 
-    def extract(self, outputFileName: str, designCycle: str, isoValue: str = 0, smoothCycles: str = 5,
-                reductionPercent: str = 0, reductionAngle: str = '', targetVolume: str = 0,
-                extractFormat: tuple = OPT_EXTRACT_SMOOTH_ABAQUS_INPUT_FILE, resultFiltering: str = OFF,
+    def extract(self,
+                outputFileName: str,
+                designCycle: str,
+                isoValue: str = 0,
+                smoothCycles: str = 5,
+                reductionPercent: str = 0,
+                reductionAngle: str = '',
+                targetVolume: str = 0,
+                extractFormat: tuple = OPT_EXTRACT_SMOOTH_ABAQUS_INPUT_FILE,
+                resultFiltering: str = OFF,
                 instances: str = ''):
         """This method extracts a surface mesh from the optimized model.
         
@@ -149,9 +165,14 @@ class OptimizationProcess:
         """
         pass
 
-    def setValues(self, description: str = '', maxDesignCycle: int = 15,
-                  dataSaveFrequency: str = OPT_DATASAVE_SPECIFY_CYCLE, saveInitial: Boolean = True,
-                  saveFirst: Boolean = True, saveLast: Boolean = True, saveEvery: int = None):
+    def setValues(self,
+                  description: str = '',
+                  maxDesignCycle: int = 15,
+                  dataSaveFrequency: str = OPT_DATASAVE_SPECIFY_CYCLE,
+                  saveInitial: Boolean = True,
+                  saveFirst: Boolean = True,
+                  saveLast: Boolean = True,
+                  saveEvery: int = None):
         """This method modifies the OptimizationProcess object.
         
         Parameters

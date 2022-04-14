@@ -1,5 +1,7 @@
 from abaqusConstants import *
 
+from __init__ import *
+
 
 class SvgOptions:
     """The SvgOptions object stores the settings that Abaqus uses when printing in SVG format.
@@ -12,7 +14,6 @@ class SvgOptions:
             session.svgOptions
 
     """
-
     def setValues(self, imageSize: SymbolicConstant = SIZE_ON_SCREEN):
         """This method modifies the SvgOptions object.
         

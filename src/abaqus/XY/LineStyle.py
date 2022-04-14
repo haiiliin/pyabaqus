@@ -1,5 +1,7 @@
 from abaqusConstants import *
 
+from __init__ import *
+
 
 class LineStyle:
     """The LineStyle object is used to define the line style to be used for drawing XY-Plot
@@ -64,8 +66,10 @@ class LineStyle:
         session.xyPlots[name].title.area.border
 
     """
-
-    def __init__(self, color: str = '', show: Boolean = ON, style: SymbolicConstant = SOLID,
+    def __init__(self,
+                 color: str = '',
+                 show: Boolean = ON,
+                 style: SymbolicConstant = SOLID,
                  thickness: float = 0):
         """This method creates a LineStyle.
 
@@ -104,7 +108,10 @@ class LineStyle:
         """
         pass
 
-    def setValues(self, color: str = '', show: Boolean = ON, style: SymbolicConstant = SOLID,
+    def setValues(self,
+                  color: str = '',
+                  show: Boolean = ON,
+                  style: SymbolicConstant = SOLID,
                   thickness: float = 0):
         """This method modifies the LineStyle object.
         

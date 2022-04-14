@@ -15,6 +15,8 @@ from ..DisplayGroup.DisplayGroup import DisplayGroup
 from ..DisplayGroup.DisplayGroupInstance import DisplayGroupInstance
 from ..DisplayGroup.Leaf import Leaf
 
+from __init__ import *
+
 
 class AssemblyDisplayOptions:
     """The AssemblyDisplayOptions object stores settings that specify how assemblies are to be
@@ -116,127 +118,146 @@ class AssemblyDisplayOptions:
 
     """
 
-    # A Boolean specifying whether boundary conditions are shown. The default value is OFF. 
+    # A Boolean specifying whether boundary conditions are shown. The default value is OFF.
     bcs: Boolean = OFF
 
-    # A Boolean specifying whether connectors are shown. The default value is OFF. 
+    # A Boolean specifying whether connectors are shown. The default value is OFF.
     connectors: Boolean = OFF
 
-    # A Boolean specifying whether the connector end points are shown. This member is 
-    # applicable only if *connectors*=ON. The default value is ON. 
+    # A Boolean specifying whether the connector end points are shown. This member is
+    # applicable only if *connectors*=ON. The default value is ON.
     cnxEndPoints: Boolean = ON
 
-    # A Boolean specifying whether the connector local coordinate system axes are shown. This 
-    # member is applicable only if *connectors*=ON. The default value is ON. 
+    # A Boolean specifying whether the connector local coordinate system axes are shown. This
+    # member is applicable only if *connectors*=ON. The default value is ON.
     cnxLocalAxes: Boolean = ON
 
-    # A Boolean specifying whether the connector section type labels are shown. This member is 
-    # applicable only if *connectors*=ON. The default value is ON. 
+    # A Boolean specifying whether the connector section type labels are shown. This member is
+    # applicable only if *connectors*=ON. The default value is ON.
     cnxTypeLabels: Boolean = ON
 
-    # A Boolean specifying whether the tag information is displayed along with the connector 
-    # section type labels. This member is applicable only if *connectors*=ON and if 
-    # *cnxTypeLabels*=ON. The default value is OFF. 
+    # A Boolean specifying whether the tag information is displayed along with the connector
+    # section type labels. This member is applicable only if *connectors*=ON and if
+    # *cnxTypeLabels*=ON. The default value is OFF.
     cnxTagDisplay: Boolean = OFF
 
-    # A Boolean specifying whether constraints are shown. The default value is OFF. 
+    # A Boolean specifying whether constraints are shown. The default value is OFF.
     constraints: Boolean = OFF
 
-    # A Boolean specifying whether to display engineering features. The default value is OFF. 
+    # A Boolean specifying whether to display engineering features. The default value is OFF.
     engineeringFeatures: Boolean = OFF
 
-    # A Boolean specifying whether geometric restrictions are shown. The default value is OFF. 
+    # A Boolean specifying whether geometric restrictions are shown. The default value is OFF.
     geometricRestrictions: Boolean = OFF
 
-    # A Boolean specifying whether to render the beam profiles. The default value is OFF. 
+    # A Boolean specifying whether to render the beam profiles. The default value is OFF.
     renderBeamProfiles: Boolean = OFF
 
-    # A Float specifying the beam profile scale factor. The beamScaleFactor must be greater 
-    # than zero. The default value is 1.0. 
+    # A Float specifying the beam profile scale factor. The beamScaleFactor must be greater
+    # than zero. The default value is 1.0.
     beamScaleFactor: float = 1
 
-    # A Boolean specifying whether fields and initial conditions are shown. The default value 
-    # is OFF. 
+    # A Boolean specifying whether fields and initial conditions are shown. The default value
+    # is OFF.
     predefinedFields: Boolean = OFF
 
-    # A Boolean specifying whether interactions are shown. The default value is OFF. 
+    # A Boolean specifying whether interactions are shown. The default value is OFF.
     interactions: Boolean = OFF
 
-    # A Boolean specifying whether loads are shown. The default value is OFF. 
+    # A Boolean specifying whether loads are shown. The default value is OFF.
     loads: Boolean = OFF
 
-    # A Boolean specifying whether the mesh is shown. The default value is OFF. 
+    # A Boolean specifying whether the mesh is shown. The default value is OFF.
     mesh: Boolean = OFF
 
-    # A Boolean specifying whether optimization tasks are shown. The default value is OFF. 
+    # A Boolean specifying whether optimization tasks are shown. The default value is OFF.
     optimizationTasks: Boolean = OFF
 
-    # A Boolean specifying whether stop conditions are shown. The default value is OFF. 
+    # A Boolean specifying whether stop conditions are shown. The default value is OFF.
     stopConditions: Boolean = OFF
 
-    # A SymbolicConstant specifying how the image in the viewport is rendered. Possible values 
-    # are WIREFRAME, HIDDEN, SHADED, and FILLED. The default value is WIREFRAME. 
+    # A SymbolicConstant specifying how the image in the viewport is rendered. Possible values
+    # are WIREFRAME, HIDDEN, SHADED, and FILLED. The default value is WIREFRAME.
     renderStyle: SymbolicConstant = WIREFRAME
 
-    # A BCDisplayOptions object. 
+    # A BCDisplayOptions object.
     bcOptions: BCDisplayOptions = BCDisplayOptions()
 
-    # A ConstraintDisplayOptions object. 
+    # A ConstraintDisplayOptions object.
     constraintOptions: ConstraintDisplayOptions = ConstraintDisplayOptions()
 
-    # A DisplayGroup object specifying the current display group and referring to an object in 
-    # the *displayGroups* member of Session. 
+    # A DisplayGroup object specifying the current display group and referring to an object in
+    # the *displayGroups* member of Session.
     displayGroup: DisplayGroup = DisplayGroup('dg', Leaf(EMPTY_LEAF))
 
-    # A repository of DisplayGroupInstance objects. 
-    displayGroupInstances: dict[str, DisplayGroupInstance] = dict[str, DisplayGroupInstance]()
+    # A repository of DisplayGroupInstance objects.
+    displayGroupInstances: dict[str, DisplayGroupInstance] = dict[
+        str, DisplayGroupInstance]()
 
-    # An EngineeringFeatureDisplayOptions object. 
-    engineeringFeatureOptions: EngineeringFeatureDisplayOptions = EngineeringFeatureDisplayOptions()
+    # An EngineeringFeatureDisplayOptions object.
+    engineeringFeatureOptions: EngineeringFeatureDisplayOptions = EngineeringFeatureDisplayOptions(
+    )
 
-    # A PredefinedFieldDisplayOptions object. 
-    predefinedFieldOptions: PredefinedFieldDisplayOptions = PredefinedFieldDisplayOptions()
+    # A PredefinedFieldDisplayOptions object.
+    predefinedFieldOptions: PredefinedFieldDisplayOptions = PredefinedFieldDisplayOptions(
+    )
 
-    # A GeometricRestrictionDisplayOptions object. 
-    geometricRestrictionOptions: GeometricRestrictionDisplayOptions = GeometricRestrictionDisplayOptions()
+    # A GeometricRestrictionDisplayOptions object.
+    geometricRestrictionOptions: GeometricRestrictionDisplayOptions = GeometricRestrictionDisplayOptions(
+    )
 
-    # A GeometryDisplayOptions object. 
+    # A GeometryDisplayOptions object.
     geometryOptions: GeometryDisplayOptions = GeometryDisplayOptions()
 
-    # An InteractionDisplayOptions object. 
+    # An InteractionDisplayOptions object.
     interactionOptions: InteractionDisplayOptions = InteractionDisplayOptions()
 
-    # A LoadDisplayOptions object. 
+    # A LoadDisplayOptions object.
     loadOptions: LoadDisplayOptions = LoadDisplayOptions()
 
-    # A MeshDisplayOptions object. 
+    # A MeshDisplayOptions object.
     meshOptions: MeshDisplayOptions = MeshDisplayOptions()
 
-    # An OptimizationTaskDisplayOptions object. 
-    optimizationTaskOptions: OptimizationTaskDisplayOptions = OptimizationTaskDisplayOptions()
+    # An OptimizationTaskDisplayOptions object.
+    optimizationTaskOptions: OptimizationTaskDisplayOptions = OptimizationTaskDisplayOptions(
+    )
 
-    # A StopConditionDisplayOptions object. 
-    stopConditionOptions: StopConditionDisplayOptions = StopConditionDisplayOptions()
+    # A StopConditionDisplayOptions object.
+    stopConditionOptions: StopConditionDisplayOptions = StopConditionDisplayOptions(
+    )
 
-    # A SymbolDisplayOptions object. 
+    # A SymbolDisplayOptions object.
     symbolOptions: SymbolDisplayOptions = SymbolDisplayOptions()
 
-    # A tuple of Strings specifying the names of the part instances that are visible in the 
-    # viewport. The default value is an empty sequence. 
+    # A tuple of Strings specifying the names of the part instances that are visible in the
+    # viewport. The default value is an empty sequence.
     visibleInstances: tuple = ()
 
-    # A String specifying the step for which objects are to be displayed. Possible values are 
-    # any valid step name. The default value is "Initial". 
+    # A String specifying the step for which objects are to be displayed. Possible values are
+    # any valid step name. The default value is "Initial".
     step: str = ''
 
-    def setValues(self, visibleInstances: tuple = (), step: str = '', renderStyle: SymbolicConstant = WIREFRAME,
-                  mesh: Boolean = OFF, loads: Boolean = OFF, bcs: Boolean = OFF,
-                  interactions: Boolean = OFF, constraints: Boolean = OFF, connectors: Boolean = OFF,
-                  cnxEndPoints: Boolean = ON, cnxLocalAxes: Boolean = ON, cnxTypeLabels: Boolean = ON,
-                  cnxTagDisplay: Boolean = OFF, predefinedFields: Boolean = OFF,
-                  visibleDisplayGroups: tuple[DisplayGroup] = (), engineeringFeatures: Boolean = OFF,
-                  renderBeamProfiles: Boolean = OFF, beamScaleFactor: float = 1,
-                  optimizationTasks: Boolean = OFF, geometricRestrictions: Boolean = OFF,
+    def setValues(self,
+                  visibleInstances: tuple = (),
+                  step: str = '',
+                  renderStyle: SymbolicConstant = WIREFRAME,
+                  mesh: Boolean = OFF,
+                  loads: Boolean = OFF,
+                  bcs: Boolean = OFF,
+                  interactions: Boolean = OFF,
+                  constraints: Boolean = OFF,
+                  connectors: Boolean = OFF,
+                  cnxEndPoints: Boolean = ON,
+                  cnxLocalAxes: Boolean = ON,
+                  cnxTypeLabels: Boolean = ON,
+                  cnxTagDisplay: Boolean = OFF,
+                  predefinedFields: Boolean = OFF,
+                  visibleDisplayGroups: tuple[DisplayGroup] = (),
+                  engineeringFeatures: Boolean = OFF,
+                  renderBeamProfiles: Boolean = OFF,
+                  beamScaleFactor: float = 1,
+                  optimizationTasks: Boolean = OFF,
+                  geometricRestrictions: Boolean = OFF,
                   stopConditions: Boolean = OFF):
         """This method modifies the AssemblyDisplayOptions object.
         

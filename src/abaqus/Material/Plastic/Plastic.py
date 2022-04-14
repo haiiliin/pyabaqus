@@ -7,6 +7,8 @@ from .Metal.RateDependent.RateDependent import RateDependent
 from .Potential import Potential
 from .TensileFailure import TensileFailure
 
+from __init__ import *
+
 
 class Plastic:
     """The Plastic object specifies a metal plasticity model.
@@ -69,30 +71,36 @@ class Plastic:
 
     """
 
-    # A RateDependent object. 
-    rateDependent: RateDependent = RateDependent(((),))
+    # A RateDependent object.
+    rateDependent: RateDependent = RateDependent(((), ))
 
-    # A Potential object. 
-    potential: Potential = Potential(((),))
+    # A Potential object.
+    potential: Potential = Potential(((), ))
 
-    # A CyclicHardening object. 
-    cyclicHardening: CyclicHardening = CyclicHardening(((),))
+    # A CyclicHardening object.
+    cyclicHardening: CyclicHardening = CyclicHardening(((), ))
 
-    # An Ornl object. 
+    # An Ornl object.
     ornl: Ornl = Ornl()
 
-    # A CycledPlastic object. 
-    cycledPlastic: CycledPlastic = CycledPlastic(((),))
+    # A CycledPlastic object.
+    cycledPlastic: CycledPlastic = CycledPlastic(((), ))
 
-    # An AnnealTemperature object. 
-    annealTemperature: AnnealTemperature = AnnealTemperature(((),))
+    # An AnnealTemperature object.
+    annealTemperature: AnnealTemperature = AnnealTemperature(((), ))
 
-    # A TensileFailure object. 
+    # A TensileFailure object.
     tensileFailure: TensileFailure = TensileFailure()
 
-    def __init__(self, table: tuple, hardening: SymbolicConstant = ISOTROPIC, rate: Boolean = OFF,
-                 dataType: SymbolicConstant = HALF_CYCLE, strainRangeDependency: Boolean = OFF,
-                 numBackstresses: int = 1, temperatureDependency: Boolean = OFF, dependencies: int = 0):
+    def __init__(self,
+                 table: tuple,
+                 hardening: SymbolicConstant = ISOTROPIC,
+                 rate: Boolean = OFF,
+                 dataType: SymbolicConstant = HALF_CYCLE,
+                 strainRangeDependency: Boolean = OFF,
+                 numBackstresses: int = 1,
+                 temperatureDependency: Boolean = OFF,
+                 dependencies: int = 0):
         """This method creates a Plastic object.
 
         Notes

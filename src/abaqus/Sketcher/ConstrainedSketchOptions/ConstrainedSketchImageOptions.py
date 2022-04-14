@@ -1,5 +1,7 @@
 from abaqusConstants import *
 
+from __init__ import *
+
 
 class ConstrainedSketchImageOptions:
     """The ConstrainedSketchImageOptions object is used to store values and attributes
@@ -16,9 +18,13 @@ class ConstrainedSketchImageOptions:
             mdb.models[name].sketches[name].imageOptions
 
     """
-
-    def setValues(self, imageName: str = '', showImage: Boolean = OFF, origin: tuple[float] = (),
-                  xScale: float = 1, yScale: float = 1, translucency: float = 1):
+    def setValues(self,
+                  imageName: str = '',
+                  showImage: Boolean = OFF,
+                  origin: tuple[float] = (),
+                  xScale: float = 1,
+                  yScale: float = 1,
+                  translucency: float = 1):
         """This method modifies the ConstrainedSketchOptions object.
         
         Parameters

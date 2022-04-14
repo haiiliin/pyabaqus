@@ -1,3 +1,6 @@
+from __init__ import *
+
+
 class RayleighDampingByFrequencyComponent:
     """A RayleighDampingByFrequencyComponent object is used to define Rayleigh damping over a
     range of frequencies. 
@@ -22,11 +25,11 @@ class RayleighDampingByFrequencyComponent:
 
     """
 
-    # A Float specifying the frequency value in cycles/time. 
+    # A Float specifying the frequency value in cycles/time.
     frequency: float = None
 
-    # A Float specifying the mass proportional damping, αM. 
+    # A Float specifying the mass proportional damping, αM.
     alpha: float = None
 
-    # A Float specifying the stiffness proportional damping, βM. 
+    # A Float specifying the stiffness proportional damping, βM.
     beta: float = None

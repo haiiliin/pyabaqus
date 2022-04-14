@@ -2,6 +2,8 @@ from abaqusConstants import *
 from .GeometricRestriction import GeometricRestriction
 from ..Region.Region import Region
 
+from __init__ import *
+
 
 class BeadPlanarSymmetry(GeometricRestriction):
     """The BeadPlanarSymmetry object defines a bead planar symmetry geometric restriction.
@@ -17,8 +19,11 @@ class BeadPlanarSymmetry(GeometricRestriction):
         mdb.models[name].optimizationTasks[name].geometricRestrictions[name]
 
     """
-
-    def __init__(self, name: str, region: Region, axis: SymbolicConstant = AXIS_1, csys: int = None):
+    def __init__(self,
+                 name: str,
+                 region: Region,
+                 axis: SymbolicConstant = AXIS_1,
+                 csys: int = None):
         """This method creates a BeadPlanarSymmetry object.
 
         Notes

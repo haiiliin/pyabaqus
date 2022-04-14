@@ -1,3 +1,6 @@
+from __init__ import *
+
+
 class OdbAnalysisWarning:
     """The OdbAnalysisWarning object stores the description of different warnings encountered
     during the analysis. 

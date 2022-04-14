@@ -8,11 +8,12 @@ from .OdbPart import OdbPart
 from .OdbRigidBody import OdbRigidBody
 from .OdbSet import OdbSet
 
+from __init__ import *
+
 
 class OdbAssembly(OdbAssemblyBase):
-
-    def DatumCsysByThreePoints(self, name: str, coordSysType: SymbolicConstant, origin: tuple, point1: tuple,
-                               point2: tuple):
+    def DatumCsysByThreePoints(self, name: str, coordSysType: SymbolicConstant,
+                               origin: tuple, point1: tuple, point2: tuple):
         """This method creates an OdbDatumCsys object using three points. A datum coordinate system
         created with this method results in a fixed system.
 
@@ -46,7 +47,8 @@ class OdbAssembly(OdbAssemblyBase):
         self.datumCsyses[name] = datumCsys = OdbDatumCsys()
         return datumCsys
 
-    def DatumCsysByThreeNodes(self, name: str, coordSysType: SymbolicConstant, origin: OdbMeshNode, point1: OdbMeshNode,
+    def DatumCsysByThreeNodes(self, name: str, coordSysType: SymbolicConstant,
+                              origin: OdbMeshNode, point1: OdbMeshNode,
                               point2: OdbMeshNode):
         """This method creates an OdbDatumCsys object using the coordinates of three OdbMeshNode
         objects. A datum coordinate system created with this method results in a system that
@@ -84,8 +86,9 @@ class OdbAssembly(OdbAssemblyBase):
         self.datumCsyses[name] = datumCsys = OdbDatumCsys()
         return datumCsys
 
-    def DatumCsysByThreeCircNodes(self, name: str, coordSysType: SymbolicConstant, node1Arc: OdbMeshNode,
-                                  node2Arc: OdbMeshNode,
+    def DatumCsysByThreeCircNodes(self, name: str,
+                                  coordSysType: SymbolicConstant,
+                                  node1Arc: OdbMeshNode, node2Arc: OdbMeshNode,
                                   node3Arc: OdbMeshNode):
         """This method is convenient to use where there are no nodes along the axis of a hollow
         cylinder or at the center of a hollow sphere. The three nodes that you provide as
@@ -123,7 +126,8 @@ class OdbAssembly(OdbAssemblyBase):
         self.datumCsyses[name] = datumCsys = OdbDatumCsys()
         return datumCsys
 
-    def DatumCsysBy6dofNode(self, name: str, coordSysType: SymbolicConstant, origin: OdbMeshNode):
+    def DatumCsysBy6dofNode(self, name: str, coordSysType: SymbolicConstant,
+                            origin: OdbMeshNode):
         """A datum coordinate system created with this method results in a system that follows the
         position of a node. The node location defines the origin of the datum coordinate system.
         The rotational displacement (UR1, UR2, UR3) of the node defines the orientation of the
@@ -181,7 +185,10 @@ class OdbAssembly(OdbAssemblyBase):
         self.datumCsyses[name] = datumCsys = OdbDatumCsys()
         return datumCsys
 
-    def Instance(self, name: str, object: OdbPart, localCoordSystem: tuple = ()) -> OdbInstance:
+    def Instance(self,
+                 name: str,
+                 object: OdbPart,
+                 localCoordSystem: tuple = ()) -> OdbInstance:
         """This method creates an OdbInstance object from an OdbPart object.
 
         Notes
@@ -216,14 +223,20 @@ class OdbAssembly(OdbAssemblyBase):
         -------
             An OdbInstance object.
         """
-        self.instances[name] = odbInstance = OdbInstance(name, object, localCoordSystem)
+        self.instances[name] = odbInstance = OdbInstance(
+            name, object, localCoordSystem)
         return odbInstance
 
-    def OdbRigidBody(self, referenceNode: OdbSet, position: SymbolicConstant = INPUT, isothermal: Boolean = ON,
-                     elements: OdbSet = OdbSet('set', tuple[OdbMeshNode]()),
-                     tieNodes: OdbSet = OdbSet('set', tuple[OdbMeshNode]()),
-                     pinNodes: OdbSet = OdbSet('set', tuple[OdbMeshNode]()),
-                     analyticSurface: AnalyticSurface = AnalyticSurface()) -> OdbRigidBody:
+    def OdbRigidBody(
+        self,
+        referenceNode: OdbSet,
+        position: SymbolicConstant = INPUT,
+        isothermal: Boolean = ON,
+        elements: OdbSet = OdbSet('set', tuple[OdbMeshNode]()),
+        tieNodes: OdbSet = OdbSet('set', tuple[OdbMeshNode]()),
+        pinNodes: OdbSet = OdbSet('set', tuple[OdbMeshNode]()),
+        analyticSurface: AnalyticSurface = AnalyticSurface()
+    ) -> OdbRigidBody:
         """This method creates a OdbRigidBody object.
 
         Notes
@@ -264,7 +277,9 @@ class OdbAssembly(OdbAssemblyBase):
         -------
             An OdbRigidBody object.
         """
-        odbRigidBody = OdbRigidBody(referenceNode, position, isothermal, elements, tieNodes, pinNodes, analyticSurface)
+        odbRigidBody = OdbRigidBody(referenceNode, position, isothermal,
+                                    elements, tieNodes, pinNodes,
+                                    analyticSurface)
         self.rigidBodies.append(odbRigidBody)
         return odbRigidBody
 

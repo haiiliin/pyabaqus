@@ -2,6 +2,8 @@ from abaqusConstants import *
 from ..Metal.ORNL.Ornl import Ornl
 from ..Potential import Potential
 
+from __init__ import *
+
 
 class Creep:
     """The Creep object defines a creep law.
@@ -81,14 +83,18 @@ class Creep:
 
     """
 
-    # An Ornl object. 
+    # An Ornl object.
     ornl: Ornl = Ornl()
 
-    # A Potential object. 
-    potential: Potential = Potential(((),))
+    # A Potential object.
+    potential: Potential = Potential(((), ))
 
-    def __init__(self, table: tuple, law: SymbolicConstant = STRAIN, temperatureDependency: Boolean = OFF,
-                 dependencies: int = 0, time: SymbolicConstant = TOTAL):
+    def __init__(self,
+                 table: tuple,
+                 law: SymbolicConstant = STRAIN,
+                 temperatureDependency: Boolean = OFF,
+                 dependencies: int = 0,
+                 time: SymbolicConstant = TOTAL):
         """This method creates a Creep object.
 
         Notes

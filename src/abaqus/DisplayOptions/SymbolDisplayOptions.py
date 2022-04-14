@@ -1,5 +1,7 @@
 from abaqusConstants import *
 
+from __init__ import *
+
 
 class SymbolDisplayOptions:
     """The SymbolDisplayOptions object stores settings that specify how the assembly is
@@ -13,9 +15,13 @@ class SymbolDisplayOptions:
             session.viewports[name].layers[name].assemblyDisplay.symbolOptions
 
     """
-
-    def setValues(self, otherSymbolSize: int = 12, arrowSymbolSize: int = 12, faceSymbolDensity: int = 5,
-                  edgeSymbolDensity: int = 5, meshSymbolFraction: float = 1, showFields: Boolean = ON):
+    def setValues(self,
+                  otherSymbolSize: int = 12,
+                  arrowSymbolSize: int = 12,
+                  faceSymbolDensity: int = 5,
+                  edgeSymbolDensity: int = 5,
+                  meshSymbolFraction: float = 1,
+                  showFields: Boolean = ON):
         """This method modifies the SymbolDisplayOptions object.
         
         Parameters

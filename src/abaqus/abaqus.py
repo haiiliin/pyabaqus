@@ -9,9 +9,10 @@ from .Odb.Odb import Odb
 from .Session.Session import Session as AbaqusSession
 from .Tools.JobMonitor.JobMonitor import JobMonitor
 
+from __init__ import *
+
 
 class Mdb(AbaqusMdb):
-
     def __init__(self, pathName: str = ''):
         super().__init__(pathName)
 
@@ -22,20 +23,26 @@ class Mdb(AbaqusMdb):
         abaqus = 'abaqus'
         if 'ABAQUS_BAT_PATH' in os.environ.keys():
             abaqus = os.environ['ABAQUS_BAT_PATH']
-        os.system('cd {}'.format(os.path.basename(os.path.abspath(sys.argv[0]))))
-        os.system('{} cae -noGUI {}'.format(abaqus, os.path.abspath(sys.argv[0])))
-        
+        os.system('cd {}'.format(os.path.basename(os.path.abspath(
+            sys.argv[0]))))
+        os.system('{} cae -noGUI {}'.format(abaqus,
+                                            os.path.abspath(sys.argv[0])))
+
+
+from __init__ import *
+
 
 class Session(AbaqusSession):
-    
     def openOdb(self, name: str, *args, **kwargs) -> Odb:
         self.odbs[name] = odb = Odb(name, *args, **kwargs)
 
         abaqus = 'abaqus'
         if 'ABAQUS_BAT_PATH' in os.environ.keys():
             abaqus = os.environ['ABAQUS_BAT_PATH']
-        os.system('cd {}'.format(os.path.basename(os.path.abspath(sys.argv[0]))))
-        os.system('{} cae database={} script={}'.format(abaqus, os.path.abspath(name), os.path.abspath(sys.argv[0])))
+        os.system('cd {}'.format(os.path.basename(os.path.abspath(
+            sys.argv[0]))))
+        os.system('{} cae database={} script={}'.format(
+            abaqus, os.path.abspath(name), os.path.abspath(sys.argv[0])))
         self.exit()
         return odb
 
@@ -72,10 +79,15 @@ def extractOutputData(odb: str, script: str):
     abaqus = 'abaqus'
     if 'ABAQUS_BAT_PATH' in os.environ.keys():
         abaqus = os.environ['ABAQUS_BAT_PATH']
-    os.system('{} cae database={} script={}'.format(abaqus, os.path.abspath(odb), os.path.abspath(script)))
+    os.system('{} cae database={} script={}'.format(abaqus,
+                                                    os.path.abspath(odb),
+                                                    os.path.abspath(script)))
 
 
-def submitJobByInputFile(inputFile: str, userSubroutine: str = None, options: str = 'int', showStatus: bool = True):
+def submitJobByInputFile(inputFile: str,
+                         userSubroutine: str = None,
+                         options: str = 'int',
+                         showStatus: bool = True):
     """Submit job by input file, can not execute in Python environment of Abaqus
 
     Parameters
@@ -101,14 +113,20 @@ def submitJobByInputFile(inputFile: str, userSubroutine: str = None, options: st
     jobName = os.path.basename(absInputFilePath.replace('.inp', ''))
 
     if showStatus:
-        monitorThread = Thread(target=_jobMonitor, args=(workDirectory, jobName))
+        monitorThread = Thread(target=_jobMonitor,
+                               args=(workDirectory, jobName))
         monitorThread.start()
-    abaqusThread = Thread(target=_runAbaqus, args=(userSubroutine, abaqus, workDirectory, jobName, options))
+    abaqusThread = Thread(target=_runAbaqus,
+                          args=(userSubroutine, abaqus, workDirectory, jobName,
+                                options))
     abaqusThread.start()
 
-def _runAbaqus(userSubroutine: str, abaqus: str, workDirectory: str, jobName: str, options: str):
+
+def _runAbaqus(userSubroutine: str, abaqus: str, workDirectory: str,
+               jobName: str, options: str):
     if userSubroutine is not None:
-        commandLine = "{} job={} user={} {}".format(abaqus, jobName, userSubroutine, options)
+        commandLine = "{} job={} user={} {}".format(abaqus, jobName,
+                                                    userSubroutine, options)
     else:
         commandLine = "{} job={} {}".format(abaqus, jobName, options)
     os.system('cd {}'.format(workDirectory))
@@ -118,7 +136,8 @@ def _runAbaqus(userSubroutine: str, abaqus: str, workDirectory: str, jobName: st
 def _jobMonitor(workDirectory: str, jobName: str):
     app = QApplication(sys.argv)
     monitor = JobMonitor()
-    monitor.setWindowIcon(QApplication.style().standardIcon(QStyle.SP_TitleBarMenuButton))
+    monitor.setWindowIcon(QApplication.style().standardIcon(
+        QStyle.SP_TitleBarMenuButton))
     monitor.setWorkDirectory(workDirectory)
     monitor.setJobName(jobName)
     monitor.show()

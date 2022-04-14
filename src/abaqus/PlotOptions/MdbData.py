@@ -1,6 +1,8 @@
 from .MdbDataInstance import MdbDataInstance
 from .MdbDataStep import MdbDataStep
 
+from __init__ import *
+
 
 class MdbData:
     """The MdbData object has no constructor. Abaqus creates an MdbData object when a cae file
@@ -29,13 +31,13 @@ class MdbData:
 
     """
 
-    # A tuple of (String, Float) tuples specifying the stepName and the stepPeriod. 
+    # A tuple of (String, Float) tuples specifying the stepName and the stepPeriod.
     stepPeriods: float = None
 
-    # A repository of MdbDataStep objects specifying the list of steps. The repository is 
-    # read-only. 
+    # A repository of MdbDataStep objects specifying the list of steps. The repository is
+    # read-only.
     steps: dict[str, MdbDataStep] = dict[str, MdbDataStep]()
 
-    # A repository of MdbDataInstance objects specifying the list of instances. The repository 
-    # is read-only. 
+    # A repository of MdbDataInstance objects specifying the list of instances. The repository
+    # is read-only.
     instances: dict[str, MdbDataInstance] = dict[str, MdbDataInstance]()

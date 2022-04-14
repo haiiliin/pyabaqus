@@ -1,7 +1,11 @@
 from abaqusConstants import *
+from __init__ import *
 
 
 class Cell:
+    from .CellArray import CellArray
+    from Mesh.MeshNodeArray import MeshNodeArray
+    from Mesh.MeshElementArray import MeshElementArray
     """Cells are volumetric regions of geometry.
 
     Attributes
@@ -43,25 +47,25 @@ class Cell:
 
     """
 
-    # An Int specifying the index of the cell in the CellArray. 
+    # An Int specifying the index of the cell in the CellArray.
     index: int = None
 
-    # A Boolean specifying whether the cell belongs to the reference representation of the 
-    # Part or Instance. 
+    # A Boolean specifying whether the cell belongs to the reference representation of the
+    # Part or Instance.
     isReferenceRep: Boolean = OFF
 
-    # A tuple of Floats specifying the *X*-, *Y*-, and *Z*-coordinates of a point located on 
-    # the cell. 
+    # A tuple of Floats specifying the *X*-, *Y*-, and *Z*-coordinates of a point located on
+    # the cell.
     pointOn: float = None
 
-    # A tuple of Floats specifying the name of the feature that created this cell. 
+    # A tuple of Floats specifying the name of the feature that created this cell.
     featureName: float = None
 
-    # A tuple of Floats specifying the name of the part instance for this cell (if 
-    # applicable). 
+    # A tuple of Floats specifying the name of the part instance for this cell (if
+    # applicable).
     instanceName: float = None
 
-    def getSize(self, printResults: Boolean = True):
+    def getSize(self, printResults: Boolean = True) -> float:
         """This method returns a Float indicating the volume of the cell.
         
         Parameters
@@ -77,7 +81,7 @@ class Cell:
         """
         pass
 
-    def getFaces(self):
+    def getFaces(self) -> Tuple[int]:
         """This method returns a sequence consisting of the face IDs of the faces which bound the
         cell.
 
@@ -88,7 +92,7 @@ class Cell:
         """
         pass
 
-    def getEdges(self):
+    def getEdges(self) -> Tuple[int]:
         """This method returns a sequence consisting of the edge IDs of the edges on the cell.
 
         Returns
@@ -98,7 +102,7 @@ class Cell:
         """
         pass
 
-    def getVertices(self):
+    def getVertices(self) -> Tuple[int]:
         """This method returns a sequence consisting of the vertex IDs of the vertices on the cell.
 
         Returns
@@ -108,7 +112,7 @@ class Cell:
         """
         pass
 
-    def getAdjacentCells(self):
+    def getAdjacentCells(self) -> CellArray:
         """This method returns an array of cell objects that share at least one face of the cell.
 
         Returns
@@ -118,7 +122,7 @@ class Cell:
         """
         pass
 
-    def getNodes(self):
+    def getNodes(self) -> MeshNodeArray:
         """This method returns an array of node objects that are associated with the cell.
 
         Returns
@@ -128,7 +132,7 @@ class Cell:
         """
         pass
 
-    def getElements(self):
+    def getElements(self) -> MeshElementArray:
         """This method returns an array of element objects that are associated with the cell.
 
         Returns
@@ -138,7 +142,7 @@ class Cell:
         """
         pass
 
-    def getCADAttributes(self):
+    def getCADAttributes(self) -> List[str]:
         """This method returns an array of CAD attribute strings associated with the cell when the
         part was created from CAD data.
 

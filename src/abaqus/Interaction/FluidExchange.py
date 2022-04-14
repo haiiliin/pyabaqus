@@ -1,6 +1,8 @@
 from abaqusConstants import *
 from .Interaction import Interaction
 
+from __init__ import *
+
 
 class FluidExchange(Interaction):
     """The FluidExchange object is used to define fluid exchange between two fluid cavities or
@@ -20,9 +22,13 @@ class FluidExchange(Interaction):
         - FLUID EXCHANGE
 
     """
-
-    def __init__(self, name: str, createStepName: str, firstCavity: str, interactionProperty: str,
-                 definition: SymbolicConstant = TO_ENVIRONMENT, secondCavity: str = '',
+    def __init__(self,
+                 name: str,
+                 createStepName: str,
+                 firstCavity: str,
+                 interactionProperty: str,
+                 definition: SymbolicConstant = TO_ENVIRONMENT,
+                 secondCavity: str = '',
                  exchangeArea: float = 1):
         """This method creates an FluidExchange object.
 
@@ -61,7 +67,9 @@ class FluidExchange(Interaction):
         super().__init__()
         pass
 
-    def setValues(self, definition: SymbolicConstant = TO_ENVIRONMENT, secondCavity: str = '',
+    def setValues(self,
+                  definition: SymbolicConstant = TO_ENVIRONMENT,
+                  secondCavity: str = '',
                   exchangeArea: float = 1):
         """This method modifies the FluidExchange object.
         

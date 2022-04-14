@@ -1,5 +1,7 @@
 from .SolidSection import SolidSection
 
+from __init__ import *
+
 
 class HomogeneousSolidSection(SolidSection):
     """The HomogeneousSolidSection object defines the properties of a solid section.
@@ -20,7 +22,6 @@ class HomogeneousSolidSection(SolidSection):
         - SOLID SECTION
 
     """
-
     def __init__(self, name: str, material: str, thickness: float = 1):
         """This method creates a HomogeneousSolidSection object.
 

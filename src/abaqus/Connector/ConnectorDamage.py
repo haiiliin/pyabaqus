@@ -3,6 +3,8 @@ from .ConnectorBehaviorOption import ConnectorBehaviorOption
 from .ConnectorOptions import ConnectorOptions
 from .ConnectorPotentialArray import ConnectorPotentialArray
 
+from __init__ import *
+
 
 class ConnectorDamage(ConnectorBehaviorOption):
     """The ConnectorDamage object defines damage behavior for one or more components of a
@@ -96,26 +98,35 @@ class ConnectorDamage(ConnectorBehaviorOption):
 
     """
 
-    # A ConnectorOptions object specifying the ConnectorOptions used to define tabular options 
-    # for the damage initiation table. 
+    # A ConnectorOptions object specifying the ConnectorOptions used to define tabular options
+    # for the damage initiation table.
     initiationOptions: ConnectorOptions = ConnectorOptions()
 
-    # A ConnectorOptions object specifying the ConnectorOptions used to define tabular options 
-    # for the damage evolution table. 
+    # A ConnectorOptions object specifying the ConnectorOptions used to define tabular options
+    # for the damage evolution table.
     evolutionOptions: ConnectorOptions = ConnectorOptions()
 
-    def __init__(self, coupling: SymbolicConstant = UNCOUPLED, criterion: SymbolicConstant = FORCE,
+    def __init__(self,
+                 coupling: SymbolicConstant = UNCOUPLED,
+                 criterion: SymbolicConstant = FORCE,
                  initiationTemperature: Boolean = OFF,
                  initiationPotentialOperator: SymbolicConstant = SUM,
-                 initiationPotentialExponent: float = 2, initiationDependencies: int = 0,
-                 evolution: Boolean = ON, evolutionType: SymbolicConstant = MOTION_TYPE,
-                 softening: SymbolicConstant = LINEAR, useAffected: Boolean = OFF,
-                 degradation: SymbolicConstant = MAXIMUM, evolutionTemperature: Boolean = OFF,
-                 evolutionDependencies: int = 0, evolutionPotentialOperator: SymbolicConstant = SUM,
+                 initiationPotentialExponent: float = 2,
+                 initiationDependencies: int = 0,
+                 evolution: Boolean = ON,
+                 evolutionType: SymbolicConstant = MOTION_TYPE,
+                 softening: SymbolicConstant = LINEAR,
+                 useAffected: Boolean = OFF,
+                 degradation: SymbolicConstant = MAXIMUM,
+                 evolutionTemperature: Boolean = OFF,
+                 evolutionDependencies: int = 0,
+                 evolutionPotentialOperator: SymbolicConstant = SUM,
                  evolutionPotentialExponent: float = 2,
                  initiationPotentials: ConnectorPotentialArray = None,
                  evolutionPotentials: ConnectorPotentialArray = None,
-                 initiationTable: tuple = (), evolutionTable: tuple = (), affectedComponents: tuple = (),
+                 initiationTable: tuple = (),
+                 evolutionTable: tuple = (),
+                 affectedComponents: tuple = (),
                  components: tuple = ()):
         """This method creates a connector damage behavior option for a ConnectorSection object.
 

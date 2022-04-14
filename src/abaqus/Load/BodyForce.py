@@ -4,6 +4,8 @@ from abaqusConstants import *
 from .Load import Load
 from ..Region.Region import Region
 
+from __init__ import *
+
 
 class BodyForce(Load):
     """The BodyForce object defines a distributed load.
@@ -37,24 +39,31 @@ class BodyForce(Load):
 
     """
 
-    # A String specifying the load repository key. 
+    # A String specifying the load repository key.
     name: str = ''
 
-    # A SymbolicConstant specifying how the load is distributed spatially. Possible values are 
-    # UNIFORM, USER_DEFINED, and FIELD. The default value is UNIFORM. 
+    # A SymbolicConstant specifying how the load is distributed spatially. Possible values are
+    # UNIFORM, USER_DEFINED, and FIELD. The default value is UNIFORM.
     distributionType: SymbolicConstant = UNIFORM
 
-    # A String specifying the name of the AnalyticalField object associated with this load. 
-    # The *field* argument applies only when *distributionType*=FIELD. The default value is an 
-    # empty string. 
+    # A String specifying the name of the AnalyticalField object associated with this load.
+    # The *field* argument applies only when *distributionType*=FIELD. The default value is an
+    # empty string.
     field: str = ''
 
-    # A Region object specifying the region to which the load is applied. 
+    # A Region object specifying the region to which the load is applied.
     region: Region = Region()
 
-    def __init__(self, name: str, createStepName: str, region: Region, field: str = '',
-                 distributionType: SymbolicConstant = UNIFORM, comp1: float = None, comp2: float = None,
-                 comp3: float = None, amplitude: str = UNSET):
+    def __init__(self,
+                 name: str,
+                 createStepName: str,
+                 region: Region,
+                 field: str = '',
+                 distributionType: SymbolicConstant = UNIFORM,
+                 comp1: float = None,
+                 comp2: float = None,
+                 comp3: float = None,
+                 amplitude: str = UNSET):
         """This method creates a BodyForce object.
 
         Notes
@@ -100,8 +109,13 @@ class BodyForce(Load):
         super().__init__()
         pass
 
-    def setValues(self, field: str = '', distributionType: SymbolicConstant = UNIFORM, comp1: float = None,
-                  comp2: float = None, comp3: float = None, amplitude: str = UNSET):
+    def setValues(self,
+                  field: str = '',
+                  distributionType: SymbolicConstant = UNIFORM,
+                  comp1: float = None,
+                  comp2: float = None,
+                  comp3: float = None,
+                  amplitude: str = UNSET):
         """This method modifies the data for an existing BodyForce object in the step where it is
         created.
         
@@ -129,7 +143,8 @@ class BodyForce(Load):
         """
         pass
 
-    def setValuesInStep(self, stepName: str,
+    def setValuesInStep(self,
+                        stepName: str,
                         comp1: typing.Union[SymbolicConstant, float] = None,
                         comp2: typing.Union[SymbolicConstant, float] = None,
                         comp3: typing.Union[SymbolicConstant, float] = None,

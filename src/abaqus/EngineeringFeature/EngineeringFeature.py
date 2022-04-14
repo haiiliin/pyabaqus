@@ -16,12 +16,20 @@ from .XFEMCrack import XFEMCrack
 from ..Region.Region import Region
 from ..Region.RegionArray import RegionArray
 
+from __init__ import *
+
 
 class EngineeringFeature(EngineeringFeatureBase):
-
-    def AssembledFastener(self, name: str, region: Region, templateModel: str, controlSet: Region,
-                          templateSurfaces: tuple, assignedSurfaces: tuple, propertyPrefix: str,
-                          orientMethod: SymbolicConstant = NORMALS, localCsys: int = None,
+    def AssembledFastener(self,
+                          name: str,
+                          region: Region,
+                          templateModel: str,
+                          controlSet: Region,
+                          templateSurfaces: tuple,
+                          assignedSurfaces: tuple,
+                          propertyPrefix: str,
+                          orientMethod: SymbolicConstant = NORMALS,
+                          localCsys: int = None,
                           scriptName: str = '') -> AssembledFastener:
         """This method creates an AssembledFastener object. Although the constructor is available
         both for parts and for the assembly, AssembledFastener objects are currently supported
@@ -74,16 +82,26 @@ class EngineeringFeature(EngineeringFeatureBase):
         -------
             An AssembledFastener object.
         """
-        self.fasteners[name] = assembledFastener = AssembledFastener(name, region, templateModel, controlSet,
-                                                                     templateSurfaces, assignedSurfaces, propertyPrefix,
-                                                                     orientMethod, localCsys, scriptName)
+        self.fasteners[name] = assembledFastener = AssembledFastener(
+            name, region, templateModel, controlSet, templateSurfaces,
+            assignedSurfaces, propertyPrefix, orientMethod, localCsys,
+            scriptName)
         return assembledFastener
 
-    def ContourIntegral(self, name: str, crackFront: RegionArray, crackTip: RegionArray,
-                        extensionDirectionMethod: SymbolicConstant, symmetric: Boolean = OFF,
-                        listOfRegions: Boolean = OFF, crackFrontName: str = '', crackTipName: str = '',
-                        crackNormal: tuple = (), qVectors: tuple = (), midNodePosition: float = 0,
-                        collapsedElementAtTip: SymbolicConstant = NONE) -> ContourIntegral:
+    def ContourIntegral(
+            self,
+            name: str,
+            crackFront: RegionArray,
+            crackTip: RegionArray,
+            extensionDirectionMethod: SymbolicConstant,
+            symmetric: Boolean = OFF,
+            listOfRegions: Boolean = OFF,
+            crackFrontName: str = '',
+            crackTipName: str = '',
+            crackNormal: tuple = (),
+            qVectors: tuple = (),
+            midNodePosition: float = 0,
+            collapsedElementAtTip: SymbolicConstant = NONE) -> ContourIntegral:
         """This method creates a ContourIntegral object. Although the constructor is available both
         for parts and for the assembly, ContourIntegral objects are currently supported only
         under the assembly.
@@ -149,14 +167,18 @@ class EngineeringFeature(EngineeringFeatureBase):
         -------
             A ContourIntegral object.
         """
-        self.cracks[name] = contourIntegral = ContourIntegral(name, crackFront, crackTip, extensionDirectionMethod,
-                                                              symmetric, listOfRegions, crackFrontName, crackTipName,
-                                                              crackNormal, qVectors, midNodePosition,
-                                                              collapsedElementAtTip)
+        self.cracks[name] = contourIntegral = ContourIntegral(
+            name, crackFront, crackTip, extensionDirectionMethod, symmetric,
+            listOfRegions, crackFrontName, crackTipName, crackNormal, qVectors,
+            midNodePosition, collapsedElementAtTip)
         return contourIntegral
 
-    def DebondVCCT(self, name: str, initiationStep: str, surfToSurfInteraction: str,
-                   debondingForceAmplitude: SymbolicConstant = STEP, printToDATFrequency: int = 1) -> DebondVCCT:
+    def DebondVCCT(self,
+                   name: str,
+                   initiationStep: str,
+                   surfToSurfInteraction: str,
+                   debondingForceAmplitude: SymbolicConstant = STEP,
+                   printToDATFrequency: int = 1) -> DebondVCCT:
         """This method creates a DebondVCCT object. Although the constructor is available both for
         parts and for the assembly, DebondVCCT objects are currently supported only under the
         assembly.
@@ -191,13 +213,22 @@ class EngineeringFeature(EngineeringFeatureBase):
         -------
             A DebondVCCT object.
         """
-        self.cracks[name] = debondVCCT = DebondVCCT(name, initiationStep, surfToSurfInteraction,
-                                                    debondingForceAmplitude, printToDATFrequency)
+        self.cracks[name] = debondVCCT = DebondVCCT(name, initiationStep,
+                                                    surfToSurfInteraction,
+                                                    debondingForceAmplitude,
+                                                    printToDATFrequency)
         return debondVCCT
 
-    def DiscreteFastener(self, name: str, region: Region, influenceRadius: typing.Union[SymbolicConstant, float],
-                         ur1: Boolean = ON, ur2: Boolean = ON, ur3: Boolean = ON,
-                         coupling: SymbolicConstant = CONTINUUM, weightingMethod: SymbolicConstant = UNIFORM,
+    def DiscreteFastener(self,
+                         name: str,
+                         region: Region,
+                         influenceRadius: typing.Union[SymbolicConstant,
+                                                       float],
+                         ur1: Boolean = ON,
+                         ur2: Boolean = ON,
+                         ur3: Boolean = ON,
+                         coupling: SymbolicConstant = CONTINUUM,
+                         weightingMethod: SymbolicConstant = UNIFORM,
                          localCsys: int = None) -> DiscreteFastener:
         """This method creates a DiscreteFastener object. Although the constructor is available
         both for parts and for the assembly, DiscreteFastener objects are currently supported
@@ -250,11 +281,16 @@ class EngineeringFeature(EngineeringFeatureBase):
         -------
             A DiscreteFastener object.
         """
-        self.fasteners[name] = discreteFastener = DiscreteFastener(name, region, influenceRadius, ur1, ur2, ur3,
-                                                                   coupling, weightingMethod, localCsys)
+        self.fasteners[name] = discreteFastener = DiscreteFastener(
+            name, region, influenceRadius, ur1, ur2, ur3, coupling,
+            weightingMethod, localCsys)
         return discreteFastener
 
-    def HeatCapacitance(self, name: str, region: Region, table: tuple, temperatureDependency: Boolean = OFF,
+    def HeatCapacitance(self,
+                        name: str,
+                        region: Region,
+                        table: tuple,
+                        temperatureDependency: Boolean = OFF,
                         dependencies: int = 0) -> HeatCapacitance:
         """This method creates a HeatCapacitance object.
 
@@ -285,12 +321,18 @@ class EngineeringFeature(EngineeringFeatureBase):
         -------
             A HeatCapacitance object.
         """
-        self.inertias[name] = heatCapacitance = HeatCapacitance(name, region, table, temperatureDependency,
-                                                                dependencies)
+        self.inertias[name] = heatCapacitance = HeatCapacitance(
+            name, region, table, temperatureDependency, dependencies)
         return heatCapacitance
 
-    def NonstructuralMass(self, name: str, region: Region, units: SymbolicConstant, magnitude: float,
-                          distribution: SymbolicConstant = MASS_PROPORTIONAL) -> NonstructuralMass:
+    def NonstructuralMass(
+        self,
+        name: str,
+        region: Region,
+        units: SymbolicConstant,
+        magnitude: float,
+        distribution: SymbolicConstant = MASS_PROPORTIONAL
+    ) -> NonstructuralMass:
         """This method creates a NonstructuralMass object.
 
         Notes
@@ -322,22 +364,40 @@ class EngineeringFeature(EngineeringFeatureBase):
         -------
             A NonstructuralMass object.
         """
-        self.inertias[name] = nonstructuralMass = NonstructuralMass(name, region, units, magnitude, distribution)
+        self.inertias[name] = nonstructuralMass = NonstructuralMass(
+            name, region, units, magnitude, distribution)
         return nonstructuralMass
 
-    def PointFastener(self, name: str, region: Region, physicalRadius: float, directionVector: tuple = None,
-                      targetSurfaces: RegionArray = MODEL, ur1: Boolean = ON, ur2: Boolean = ON,
-                      ur3: Boolean = ON, attachmentMethod: SymbolicConstant = FACETOFACE,
-                      influenceRadius: typing.Union[SymbolicConstant, float] = DEFAULT,
-                      searchRadius: typing.Union[SymbolicConstant, float] = DEFAULT,
-                      maximumLayers: SymbolicConstant = ALL, coupling: SymbolicConstant = CONTINUUM,
-                      weightingMethod: SymbolicConstant = UNIFORM, additionalMass: float = 0,
-                      adjustOrientation: Boolean = ON, localCsys: int = None,
-                      connectionType: SymbolicConstant = CONNECTOR, sectionName: str = '',
-                      connectorOrientationLocalCsys1: int = None, axis1: SymbolicConstant = AXIS_1,
-                      angle1: float = 0, orient2SameAs1: Boolean = ON,
-                      connectorOrientationLocalCsys2: int = None, axis2: SymbolicConstant = AXIS_1,
-                      angle2: float = 0, unsorted: Boolean = OFF) -> PointFastener:
+    def PointFastener(self,
+                      name: str,
+                      region: Region,
+                      physicalRadius: float,
+                      directionVector: tuple = None,
+                      targetSurfaces: RegionArray = MODEL,
+                      ur1: Boolean = ON,
+                      ur2: Boolean = ON,
+                      ur3: Boolean = ON,
+                      attachmentMethod: SymbolicConstant = FACETOFACE,
+                      influenceRadius: typing.Union[SymbolicConstant,
+                                                    float] = DEFAULT,
+                      searchRadius: typing.Union[SymbolicConstant,
+                                                 float] = DEFAULT,
+                      maximumLayers: SymbolicConstant = ALL,
+                      coupling: SymbolicConstant = CONTINUUM,
+                      weightingMethod: SymbolicConstant = UNIFORM,
+                      additionalMass: float = 0,
+                      adjustOrientation: Boolean = ON,
+                      localCsys: int = None,
+                      connectionType: SymbolicConstant = CONNECTOR,
+                      sectionName: str = '',
+                      connectorOrientationLocalCsys1: int = None,
+                      axis1: SymbolicConstant = AXIS_1,
+                      angle1: float = 0,
+                      orient2SameAs1: Boolean = ON,
+                      connectorOrientationLocalCsys2: int = None,
+                      axis2: SymbolicConstant = AXIS_1,
+                      angle2: float = 0,
+                      unsorted: Boolean = OFF) -> PointFastener:
         """This method creates a PointFastener object. Although the constructor is available both
         for parts and for the assembly, PointFastener objects are currently supported only under
         the assembly.
@@ -457,19 +517,30 @@ class EngineeringFeature(EngineeringFeatureBase):
         -------
             A PointFastener object.
         """
-        self.fasteners[name] = pointFastener = PointFastener(name, region, physicalRadius, directionVector,
-                                                             targetSurfaces, ur1, ur2, ur3, attachmentMethod,
-                                                             influenceRadius, searchRadius, maximumLayers, coupling,
-                                                             weightingMethod, additionalMass, adjustOrientation,
-                                                             localCsys, connectionType, sectionName,
-                                                             connectorOrientationLocalCsys1, axis1, angle1,
-                                                             orient2SameAs1, connectorOrientationLocalCsys2, axis2,
-                                                             angle2, unsorted)
+        self.fasteners[name] = pointFastener = PointFastener(
+            name, region, physicalRadius, directionVector, targetSurfaces, ur1,
+            ur2, ur3, attachmentMethod, influenceRadius, searchRadius,
+            maximumLayers, coupling, weightingMethod, additionalMass,
+            adjustOrientation, localCsys, connectionType, sectionName,
+            connectorOrientationLocalCsys1, axis1, angle1, orient2SameAs1,
+            connectorOrientationLocalCsys2, axis2, angle2, unsorted)
         return pointFastener
 
-    def PointMassInertia(self, name: str, region: Region, mass: float = 0, mass1: float = 0, mass2: float = 0,
-                         mass3: float = 0, i11: float = 0, i22: float = 0, i33: float = 0, i12: float = 0,
-                         i13: float = 0, i23: float = 0, localCsys: str = None, alpha: float = 0,
+    def PointMassInertia(self,
+                         name: str,
+                         region: Region,
+                         mass: float = 0,
+                         mass1: float = 0,
+                         mass2: float = 0,
+                         mass3: float = 0,
+                         i11: float = 0,
+                         i22: float = 0,
+                         i33: float = 0,
+                         i12: float = 0,
+                         i13: float = 0,
+                         i23: float = 0,
+                         localCsys: str = None,
+                         alpha: float = 0,
                          composite: float = 0) -> PointMassInertia:
         """This method creates a PointMassInertia object.
 
@@ -531,13 +602,21 @@ class EngineeringFeature(EngineeringFeatureBase):
         -------
             A PointMassInertia object.
         """
-        self.inertias[name] = pointMassInertia = PointMassInertia(name, region, mass, mass1, mass2, mass3, i11, i22,
-                                                                  i33, i12, i13, i23, localCsys, alpha, composite)
+        self.inertias[name] = pointMassInertia = PointMassInertia(
+            name, region, mass, mass1, mass2, mass3, i11, i22, i33, i12, i13,
+            i23, localCsys, alpha, composite)
         return pointMassInertia
 
-    def SpringDashpotToGround(self, name: str, region: Region, dof: int, orientation: str = None,
-                              springBehavior: Boolean = OFF, dashpotBehavior: Boolean = OFF,
-                              springStiffness: float = 0, dashpotCoefficient: float = 0) -> SpringDashpotToGround:
+    def SpringDashpotToGround(
+            self,
+            name: str,
+            region: Region,
+            dof: int,
+            orientation: str = None,
+            springBehavior: Boolean = OFF,
+            dashpotBehavior: Boolean = OFF,
+            springStiffness: float = 0,
+            dashpotCoefficient: float = 0) -> SpringDashpotToGround:
         """This method creates a SpringDashpotToGround object.
 
         Notes
@@ -582,14 +661,24 @@ class EngineeringFeature(EngineeringFeatureBase):
         -------
             A SpringDashpotToGround object.
         """
-        self.springDashpots[name] = springDashpotToGround = SpringDashpotToGround(name, region, dof, orientation,
-                                                                                  springBehavior, dashpotBehavior,
-                                                                                  springStiffness, dashpotCoefficient)
+        self.springDashpots[
+            name] = springDashpotToGround = SpringDashpotToGround(
+                name, region, dof, orientation, springBehavior,
+                dashpotBehavior, springStiffness, dashpotCoefficient)
         return springDashpotToGround
 
-    def TwoPointSpringDashpot(self, name: str, regionPairs: tuple, axis: SymbolicConstant, dof1: int = 0, dof2: int = 0,
-                              orientation: str = None, springBehavior: Boolean = OFF, dashpotBehavior: Boolean = OFF,
-                              springStiffness: float = 0, dashpotCoefficient: float = 0) -> TwoPointSpringDashpot:
+    def TwoPointSpringDashpot(
+            self,
+            name: str,
+            regionPairs: tuple,
+            axis: SymbolicConstant,
+            dof1: int = 0,
+            dof2: int = 0,
+            orientation: str = None,
+            springBehavior: Boolean = OFF,
+            dashpotBehavior: Boolean = OFF,
+            springStiffness: float = 0,
+            dashpotCoefficient: float = 0) -> TwoPointSpringDashpot:
         """This method creates a TwoPointSpringDashpot object.
 
         Notes
@@ -645,16 +734,25 @@ class EngineeringFeature(EngineeringFeatureBase):
         -------
             A TwoPointSpringDashpot object.
         """
-        self.springDashpots[name] = twoPointSpringDashpot = TwoPointSpringDashpot(name, regionPairs, axis, dof1, dof2,
-                                                                                  orientation, springBehavior,
-                                                                                  dashpotBehavior, springStiffness,
-                                                                                  dashpotCoefficient)
+        self.springDashpots[
+            name] = twoPointSpringDashpot = TwoPointSpringDashpot(
+                name, regionPairs, axis, dof1, dof2, orientation,
+                springBehavior, dashpotBehavior, springStiffness,
+                dashpotCoefficient)
         return twoPointSpringDashpot
 
-    def XFEMCrack(self, name: str, crackDomain: Region, allowCrackGrowth: Boolean = ON,
-                  crackLocation: Region = Region(), singularityCalcRadius: float = None,
-                  interactionProperty: str = '', elemId: tuple = (), nodeId: tuple = (),
-                  hasCrackFront: tuple = (), crackPlaneDist: tuple = (), crackFrontDist: tuple = (),
+    def XFEMCrack(self,
+                  name: str,
+                  crackDomain: Region,
+                  allowCrackGrowth: Boolean = ON,
+                  crackLocation: Region = Region(),
+                  singularityCalcRadius: float = None,
+                  interactionProperty: str = '',
+                  elemId: tuple = (),
+                  nodeId: tuple = (),
+                  hasCrackFront: tuple = (),
+                  crackPlaneDist: tuple = (),
+                  crackFrontDist: tuple = (),
                   autoDetectValue: str = '') -> XFEMCrack:
         """This method creates a XFEMCrack object. Although the constructor is available both for
         parts and for the assembly, XFEMCrack objects are currently supported only under the
@@ -714,7 +812,8 @@ class EngineeringFeature(EngineeringFeatureBase):
         -------
             A XFEMCrack object.
         """
-        self.cracks[name] = xFEMCrack = XFEMCrack(name, crackDomain, allowCrackGrowth, crackLocation,
-                                                  singularityCalcRadius, interactionProperty, elemId, nodeId,
-                                                  hasCrackFront, crackPlaneDist, crackFrontDist, autoDetectValue)
+        self.cracks[name] = xFEMCrack = XFEMCrack(
+            name, crackDomain, allowCrackGrowth, crackLocation,
+            singularityCalcRadius, interactionProperty, elemId, nodeId,
+            hasCrackFront, crackPlaneDist, crackFrontDist, autoDetectValue)
         return xFEMCrack

@@ -1,5 +1,7 @@
 from .DirectDampingComponentArray import DirectDampingComponentArray
 
+from __init__ import *
+
 
 class DirectDamping:
     """A DirectDamping object contains direct modal damping parameters.
@@ -20,5 +22,5 @@ class DirectDamping:
 
     """
 
-    # A DirectDampingComponentArray object. 
+    # A DirectDampingComponentArray object.
     components: DirectDampingComponentArray = DirectDampingComponentArray()

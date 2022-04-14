@@ -1,6 +1,8 @@
 from abaqusConstants import *
 from .Leaf import Leaf
 
+from __init__ import *
+
 
 class LeafFromElementVarRange(Leaf):
     """The LeafFromElementVarRange object can be used whenever a Leaf object is expected as an
@@ -25,11 +27,14 @@ class LeafFromElementVarRange(Leaf):
 
     """
 
-    # A SymbolicConstant specifying the leaf type. Possible values are EMPTY_LEAF, 
-    # DEFAULT_MODEL, ALL_ELEMENTS, ALL_NODES, and ALL_SURFACES. 
+    # A SymbolicConstant specifying the leaf type. Possible values are EMPTY_LEAF,
+    # DEFAULT_MODEL, ALL_ELEMENTS, ALL_NODES, and ALL_SURFACES.
     leafType: SymbolicConstant = None
 
-    def __init__(self, minimumRange: float = None, maximumRange: float = 3, insideRange: Boolean = ON):
+    def __init__(self,
+                 minimumRange: float = None,
+                 maximumRange: float = 3,
+                 insideRange: Boolean = ON):
         """This method creates a Leaf object from elements with values lying in a variable range.
 
         Notes

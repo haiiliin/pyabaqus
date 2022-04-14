@@ -1,5 +1,7 @@
 from abaqusConstants import *
 
+from __init__ import *
+
 
 class MeanFieldVoid:
     """The MeanFieldVoid object specifies the void inclusion property.
@@ -26,12 +28,19 @@ class MeanFieldVoid:
         - CONSTITUENT
 
     """
-
-    def __init__(self, name: str, table: tuple, material: str = '', isotropizationCoefficient: float = None,
-                 volumeFractionType: SymbolicConstant = UNIFORM, volumeFractionFieldName: str = '',
-                 aspectRatioType: SymbolicConstant = UNIFORM, aspectRatioFieldName: str = '',
-                 orientationTensorType: SymbolicConstant = UNIFORM, orientationTensorFieldName: str = '',
-                 shape: SymbolicConstant = SPHERE, direction: SymbolicConstant = None,
+    def __init__(self,
+                 name: str,
+                 table: tuple,
+                 material: str = '',
+                 isotropizationCoefficient: float = None,
+                 volumeFractionType: SymbolicConstant = UNIFORM,
+                 volumeFractionFieldName: str = '',
+                 aspectRatioType: SymbolicConstant = UNIFORM,
+                 aspectRatioFieldName: str = '',
+                 orientationTensorType: SymbolicConstant = UNIFORM,
+                 orientationTensorFieldName: str = '',
+                 shape: SymbolicConstant = SPHERE,
+                 direction: SymbolicConstant = None,
                  strainConcentrationTensor: tuple = (),
                  temperatureGradientConcentrationTensor: tuple = ()):
         """This method creates a MeanFieldVoid object.

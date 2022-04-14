@@ -1,3 +1,6 @@
+from __init__ import *
+
+
 class PorousFailureCriteria:
     """The PorousFailureCriteria object specifies the material failure criteria for a porous
     metal. 
@@ -17,7 +20,6 @@ class PorousFailureCriteria:
         - POROUS FAILURE CRITERIA
 
     """
-
     def __init__(self, fraction: float = 1, criticalFraction: float = 1):
         """This method creates a PorousFailureCriteria object.
 

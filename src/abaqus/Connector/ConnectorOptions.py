@@ -1,5 +1,7 @@
 from abaqusConstants import *
 
+from __init__ import *
+
 
 class ConnectorOptions:
     """The ConnectorOptions object is used to define various options for connector behaviors.
@@ -51,11 +53,15 @@ class ConnectorOptions:
             - CONNECTOR PLASTICITY
 
     """
-
-    def __init__(self, useBehRegSettings: Boolean = ON, regularize: Boolean = ON,
-                 defaultTolerance: Boolean = ON, regularization: float = 0,
-                 defaultRateFactor: Boolean = ON, rateFactor: float = 0,
-                 interpolation: SymbolicConstant = LINEAR, useBehExtSettings: Boolean = ON,
+    def __init__(self,
+                 useBehRegSettings: Boolean = ON,
+                 regularize: Boolean = ON,
+                 defaultTolerance: Boolean = ON,
+                 regularization: float = 0,
+                 defaultRateFactor: Boolean = ON,
+                 rateFactor: float = 0,
+                 interpolation: SymbolicConstant = LINEAR,
+                 useBehExtSettings: Boolean = ON,
                  extrapolation: SymbolicConstant = CONSTANT):
         """This method creates a connector options object to be used in conjunction with an
         allowable connector behavior option, derived component term, or connector section.

@@ -3,6 +3,8 @@ from .TransverseShearBeam import TransverseShearBeam
 from .TransverseShearShell import TransverseShearShell
 from ..Connector.ConnectorBehaviorOptionArray import ConnectorBehaviorOptionArray
 
+from __init__ import *
+
 
 class SectionBase:
     """The Section object defines the properties of a section. The Section object is the
@@ -35,13 +37,15 @@ class SectionBase:
     """
 
     # A ConnectorBehaviorOptionArray object.
-    behaviorOptions: ConnectorBehaviorOptionArray = ConnectorBehaviorOptionArray()
+    behaviorOptions: ConnectorBehaviorOptionArray = ConnectorBehaviorOptionArray(
+    )
 
-    # A String specifying the repository key. 
+    # A String specifying the repository key.
     name: str = ''
 
     # A TransverseShearBeam object.
-    beamTransverseShear: TransverseShearBeam = TransverseShearBeam(ANALYSIS_DEFAULT)
+    beamTransverseShear: TransverseShearBeam = TransverseShearBeam(
+        ANALYSIS_DEFAULT)
 
     # A TransverseShearShell object.
     transverseShear: TransverseShearShell = TransverseShearShell(0, 0, 0)

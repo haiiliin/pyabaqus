@@ -5,6 +5,8 @@ from .Chebyshev2Filter import Chebyshev2Filter
 from .OperatorFilter import OperatorFilter
 from ..Model.ModelBase import ModelBase
 
+from __init__ import *
+
 
 class FilterModel(ModelBase):
     """Abaqus creates a Model object named `Model-1` when a session is started.
@@ -18,10 +20,15 @@ class FilterModel(ModelBase):
         mdb.models[name]
 
     """
-
-    def ButterworthFilter(self, name: str, cutoffFrequency: float, order: int = 2, operation: SymbolicConstant = NONE,
-                          halt: Boolean = OFF, limit: float = None,
-                          invariant: SymbolicConstant = NONE) -> ButterworthFilter:
+    def ButterworthFilter(
+            self,
+            name: str,
+            cutoffFrequency: float,
+            order: int = 2,
+            operation: SymbolicConstant = NONE,
+            halt: Boolean = OFF,
+            limit: float = None,
+            invariant: SymbolicConstant = NONE) -> ButterworthFilter:
         """This method creates a ButterworthFilter object.
 
         Notes
@@ -68,13 +75,20 @@ class FilterModel(ModelBase):
         InvalidNameError
         RangeError
         """
-        self.filters[name] = butterworthFilter = ButterworthFilter(name, cutoffFrequency, order, operation, halt, limit,
-                                                                   invariant)
+        self.filters[name] = butterworthFilter = ButterworthFilter(
+            name, cutoffFrequency, order, operation, halt, limit, invariant)
         return butterworthFilter
 
-    def Chebyshev1Filter(self, name: str, cutoffFrequency: float, rippleFactor: float = 0, order: int = 2,
-                         operation: SymbolicConstant = NONE, halt: Boolean = OFF, limit: float = None,
-                         invariant: SymbolicConstant = NONE) -> Chebyshev1Filter:
+    def Chebyshev1Filter(
+            self,
+            name: str,
+            cutoffFrequency: float,
+            rippleFactor: float = 0,
+            order: int = 2,
+            operation: SymbolicConstant = NONE,
+            halt: Boolean = OFF,
+            limit: float = None,
+            invariant: SymbolicConstant = NONE) -> Chebyshev1Filter:
         """This method creates a Chebyshev1Filter object.
 
         Notes
@@ -124,13 +138,21 @@ class FilterModel(ModelBase):
         InvalidNameError
         RangeError
         """
-        self.filters[name] = chebyshev1Filter = Chebyshev1Filter(name, cutoffFrequency, rippleFactor, order, operation,
-                                                                 halt, limit, invariant)
+        self.filters[name] = chebyshev1Filter = Chebyshev1Filter(
+            name, cutoffFrequency, rippleFactor, order, operation, halt, limit,
+            invariant)
         return chebyshev1Filter
 
-    def Chebyshev2Filter(self, name: str, cutoffFrequency: float, rippleFactor: float = 0, order: int = 2,
-                         operation: SymbolicConstant = NONE, halt: Boolean = OFF, limit: float = None,
-                         invariant: SymbolicConstant = NONE) -> Chebyshev2Filter:
+    def Chebyshev2Filter(
+            self,
+            name: str,
+            cutoffFrequency: float,
+            rippleFactor: float = 0,
+            order: int = 2,
+            operation: SymbolicConstant = NONE,
+            halt: Boolean = OFF,
+            limit: float = None,
+            invariant: SymbolicConstant = NONE) -> Chebyshev2Filter:
         """This method creates a Chebyshev2Filter object.
 
         Notes
@@ -180,12 +202,19 @@ class FilterModel(ModelBase):
         InvalidNameError
         RangeError
         """
-        self.filters[name] = chebyshev2Filter = Chebyshev2Filter(name, cutoffFrequency, rippleFactor, order, operation,
-                                                                 halt, limit, invariant)
+        self.filters[name] = chebyshev2Filter = Chebyshev2Filter(
+            name, cutoffFrequency, rippleFactor, order, operation, halt, limit,
+            invariant)
         return chebyshev2Filter
 
-    def OperatorFilter(self, name: str, cutoffFrequency: float, order: int = 2, operation: SymbolicConstant = NONE,
-                       halt: Boolean = OFF, limit: float = None, invariant: SymbolicConstant = NONE) -> OperatorFilter:
+    def OperatorFilter(self,
+                       name: str,
+                       cutoffFrequency: float,
+                       order: int = 2,
+                       operation: SymbolicConstant = NONE,
+                       halt: Boolean = OFF,
+                       limit: float = None,
+                       invariant: SymbolicConstant = NONE) -> OperatorFilter:
         """This method creates an OperatorFilter object.
 
         Notes
@@ -232,6 +261,6 @@ class FilterModel(ModelBase):
         InvalidNameError
         RangeError
         """
-        self.filters[name] = operatorFilter = OperatorFilter(name, cutoffFrequency, order, operation, halt, limit,
-                                                             invariant)
+        self.filters[name] = operatorFilter = OperatorFilter(
+            name, cutoffFrequency, order, operation, halt, limit, invariant)
         return operatorFilter

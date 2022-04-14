@@ -1,3 +1,6 @@
+from __init__ import *
+
+
 class CombinedTestData:
     """The CombinedTestData object specifies simultaneously the normalized shear and bulk
     compliances or relaxation moduli as functions of time. 
@@ -27,8 +30,10 @@ class CombinedTestData:
         - COMBINED TEST DATA
 
     """
-
-    def __init__(self, table: tuple, volinf: float = None, shrinf: float = None):
+    def __init__(self,
+                 table: tuple,
+                 volinf: float = None,
+                 shrinf: float = None):
         """This method creates a CombinedTestData object.
 
         Notes

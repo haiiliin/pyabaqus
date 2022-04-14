@@ -1,6 +1,8 @@
 from abaqusConstants import *
 from .InteractionState import InteractionState
 
+from __init__ import *
+
 
 class FluidExchangeState(InteractionState):
     """The FluidExchangeState object stores the propagating data for an FluidExchange object.
@@ -35,15 +37,15 @@ class FluidExchangeState(InteractionState):
 
     """
 
-    # A SymbolicConstant specifying the propagation state of the InteractionState object. 
-    # Possible values are: 
-    # - NOT_YET_ACTIVE 
-    # - CREATED 
-    # - PROPAGATED 
-    # - MODIFIED 
-    # - DEACTIVATED 
-    # - NO_LONGER_ACTIVE 
-    # - TYPE_NOT_APPLICABLE 
-    # - INSTANCE_NOT_APPLICABLE 
-    # - BUILT_INTO_BASE_STATE 
+    # A SymbolicConstant specifying the propagation state of the InteractionState object.
+    # Possible values are:
+    # - NOT_YET_ACTIVE
+    # - CREATED
+    # - PROPAGATED
+    # - MODIFIED
+    # - DEACTIVATED
+    # - NO_LONGER_ACTIVE
+    # - TYPE_NOT_APPLICABLE
+    # - INSTANCE_NOT_APPLICABLE
+    # - BUILT_INTO_BASE_STATE
     status: SymbolicConstant = None

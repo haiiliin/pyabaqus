@@ -1,5 +1,7 @@
 from abaqusConstants import *
 
+from __init__ import *
+
 
 class ImageAnimation:
     """The ImageAnimation object is used to build frame by frame animation.
@@ -20,7 +22,7 @@ class ImageAnimation:
 
     """
 
-    # A String specifying the file to which the animation frames is to be written. 
+    # A String specifying the file to which the animation frames is to be written.
     fileName: str = ''
 
     def __init__(self, fileName: str, format: SymbolicConstant):

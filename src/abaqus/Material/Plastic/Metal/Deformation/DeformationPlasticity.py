@@ -1,5 +1,7 @@
 from abaqusConstants import *
 
+from __init__ import *
+
 
 class DeformationPlasticity:
     """The DeformationPlasticity object specifies the deformation plasticity model.
@@ -27,7 +29,6 @@ class DeformationPlasticity:
         - DEFORMATION PLASTICITY
 
     """
-
     def __init__(self, table: tuple, temperatureDependency: Boolean = OFF):
         """This method creates a DeformationPlasticity object.
 

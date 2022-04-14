@@ -1,5 +1,7 @@
 from .RayleighDampingComponentArray import RayleighDampingComponentArray
 
+from __init__ import *
+
 
 class RayleighDamping:
     """A RayleighDamping object contains Rayleigh Damping parameters.
@@ -20,5 +22,5 @@ class RayleighDamping:
 
     """
 
-    # A RayleighDampingComponentArray object. 
+    # A RayleighDampingComponentArray object.
     components: RayleighDampingComponentArray = RayleighDampingComponentArray()

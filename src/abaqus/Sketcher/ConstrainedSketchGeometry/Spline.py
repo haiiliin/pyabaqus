@@ -1,9 +1,10 @@
 from abaqusConstants import *
 from .ConstrainedSketchGeometry import ConstrainedSketchGeometry
 
+from __init__ import *
+
 
 class Spline(ConstrainedSketchGeometry):
-
     def __init__(self, points: tuple, constrainPoints: Boolean = True):
         """This method creates a spline curve running through a sequence of points.
 

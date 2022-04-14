@@ -1,5 +1,7 @@
 from abaqusConstants import *
 
+from __init__ import *
+
 
 class CohesiveBehavior:
     """The CohesiveBehaviour
@@ -38,10 +40,14 @@ class CohesiveBehavior:
         - COHESIVE BEHAVIOR
 
     """
-
-    def __init__(self, repeatedContacts: Boolean = OFF, eligibility: SymbolicConstant = ALL_NODES,
-                 defaultPenalties: Boolean = ON, coupling: SymbolicConstant = UNCOUPLED,
-                 temperatureDependency: Boolean = OFF, dependencies: int = 0, table: tuple = ()):
+    def __init__(self,
+                 repeatedContacts: Boolean = OFF,
+                 eligibility: SymbolicConstant = ALL_NODES,
+                 defaultPenalties: Boolean = ON,
+                 coupling: SymbolicConstant = UNCOUPLED,
+                 temperatureDependency: Boolean = OFF,
+                 dependencies: int = 0,
+                 table: tuple = ()):
         """This method creates a CohesiveBehavior object.
 
         Notes

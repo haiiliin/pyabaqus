@@ -2,10 +2,12 @@ from .ConstrainedSketchConstraint import ConstrainedSketchConstraint
 from ..ConstrainedSketchGeometry.ConstrainedSketchGeometry import ConstrainedSketchGeometry
 from ...BasicGeometry.Vertex import Vertex
 
+from __init__ import *
+
 
 class EqualDistanceConstraint(ConstrainedSketchConstraint):
-
-    def __init__(self, entity1: str, entity2: ConstrainedSketchGeometry, midpoint: Vertex):
+    def __init__(self, entity1: str, entity2: ConstrainedSketchGeometry,
+                 midpoint: Vertex):
         """This method creates an equal distance constraint. This constraint can be applied between
         a midpoint ConstrainedSketchVertex object and any other two ConstrainedSketchVertex objects or between a midpoint ConstrainedSketchVertex
         object and two ConstrainedSketchGeometry objects that are lines. The equal distance

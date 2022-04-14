@@ -2,6 +2,8 @@ from abaqusConstants import *
 from .BoundaryCondition import BoundaryCondition
 from ..Region.Region import Region
 
+from __init__ import *
+
 
 class RetainedNodalDofsBC(BoundaryCondition):
     """The RetainedNodalDofsBC object stores the data for a retained nodal dofs boundary
@@ -33,23 +35,31 @@ class RetainedNodalDofsBC(BoundaryCondition):
 
     """
 
-    # A String specifying the boundary condition repository key. 
+    # A String specifying the boundary condition repository key.
     name: str = ''
 
-    # A SymbolicConstant specifying the category of the boundary condition. Possible values 
-    # are MECHANICAL and THERMAL. 
+    # A SymbolicConstant specifying the category of the boundary condition. Possible values
+    # are MECHANICAL and THERMAL.
     category: SymbolicConstant = None
 
-    # A Region object specifying the region to which the boundary condition is applied. 
+    # A Region object specifying the region to which the boundary condition is applied.
     region: Region = Region()
 
-    # None or a DatumCsys object specifying the local coordinate system of the boundary 
-    # condition's degrees of freedom. If *localCsys*=None, the degrees of freedom are defined 
-    # in the global coordinate system. The default value is None. 
+    # None or a DatumCsys object specifying the local coordinate system of the boundary
+    # condition's degrees of freedom. If *localCsys*=None, the degrees of freedom are defined
+    # in the global coordinate system. The default value is None.
     localCsys: str = None
 
-    def __init__(self, name: str, createStepName: str, region: Region, u1: Boolean = OFF, u2: Boolean = OFF,
-                 u3: Boolean = OFF, ur1: Boolean = OFF, ur2: Boolean = OFF, ur3: Boolean = OFF):
+    def __init__(self,
+                 name: str,
+                 createStepName: str,
+                 region: Region,
+                 u1: Boolean = OFF,
+                 u2: Boolean = OFF,
+                 u3: Boolean = OFF,
+                 ur1: Boolean = OFF,
+                 ur2: Boolean = OFF,
+                 ur3: Boolean = OFF):
         """This method creates a RetainedNodalDofsBC object.
 
         Notes
@@ -97,8 +107,13 @@ class RetainedNodalDofsBC(BoundaryCondition):
         super().__init__()
         pass
 
-    def setValues(self, u1: Boolean = OFF, u2: Boolean = OFF, u3: Boolean = OFF, ur1: Boolean = OFF,
-                  ur2: Boolean = OFF, ur3: Boolean = OFF):
+    def setValues(self,
+                  u1: Boolean = OFF,
+                  u2: Boolean = OFF,
+                  u3: Boolean = OFF,
+                  ur1: Boolean = OFF,
+                  ur2: Boolean = OFF,
+                  ur3: Boolean = OFF):
         """This method modifies the data for an existing RetainedNodalDofsBC object in the step
         where it is created.
         
@@ -128,8 +143,14 @@ class RetainedNodalDofsBC(BoundaryCondition):
         """
         pass
 
-    def setValuesInStep(self, stepName: str, u1: Boolean = OFF, u2: Boolean = OFF, u3: Boolean = OFF,
-                        ur1: Boolean = OFF, ur2: Boolean = OFF, ur3: Boolean = OFF):
+    def setValuesInStep(self,
+                        stepName: str,
+                        u1: Boolean = OFF,
+                        u2: Boolean = OFF,
+                        u3: Boolean = OFF,
+                        ur1: Boolean = OFF,
+                        ur2: Boolean = OFF,
+                        ur3: Boolean = OFF):
         """This method modifies the propagating data for an existing RetainedNodalDofsBC object in
         the specified step.
         

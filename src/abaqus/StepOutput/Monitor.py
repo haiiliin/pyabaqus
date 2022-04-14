@@ -1,5 +1,7 @@
 from abaqusConstants import *
 
+from __init__ import *
+
 
 class Monitor:
     """The Monitor object defines a degree of freedom to monitor.
@@ -17,7 +19,6 @@ class Monitor:
         - MONITOR
 
     """
-
     def __init__(self, node: str, dof: SymbolicConstant, frequency: int):
         """This method creates a request for a degree of freedom to be monitored in a general or
         modal procedure.

@@ -4,10 +4,15 @@ from abaqusConstants import *
 from .QuantityType import QuantityType
 from ..PathAndProbe.Path import Path
 
-
 # prevent circular imports
+from __init__ import *
+
+
 class Odb:
     pass
+
+
+from __init__ import *
 
 
 class XYData:
@@ -54,20 +59,27 @@ class XYData:
 
     """
 
-    # A SymbolicConstant specifying the source type of the XYData object. Possible values are 
-    # FROM_ODB, FROM_KEYBOARD, FROM_ASCII_FILE, FROM_OPERATION, and FROM_USER_DEFINED. 
+    # A SymbolicConstant specifying the source type of the XYData object. Possible values are
+    # FROM_ODB, FROM_KEYBOARD, FROM_ASCII_FILE, FROM_OPERATION, and FROM_USER_DEFINED.
     sourceType: SymbolicConstant = None
 
-    # A String specifying the source file name of the XYData object. 
+    # A String specifying the source file name of the XYData object.
     fileName: str = ''
 
-    # A String specifying the complete description of the XYData object. 
+    # A String specifying the complete description of the XYData object.
     description: str = ''
 
     @typing.overload
-    def __init__(self, data: tuple, name: str = '', sourceDescription: str = '', contentDescription: str = '',
-                 positionDescription: str = '', legendLabel: str = '', xValuesLabel: str = '',
-                 yValuesLabel: str = '', axis1QuantityType: QuantityType = QuantityType(),
+    def __init__(self,
+                 data: tuple,
+                 name: str = '',
+                 sourceDescription: str = '',
+                 contentDescription: str = '',
+                 positionDescription: str = '',
+                 legendLabel: str = '',
+                 xValuesLabel: str = '',
+                 yValuesLabel: str = '',
+                 axis1QuantityType: QuantityType = QuantityType(),
                  axis2QuantityType: QuantityType = QuantityType()):
         """This method creates an XYData object from a sequence of *X–Y* data pairs.
 
@@ -147,11 +159,19 @@ class XYData:
     def __init__(self, *args, **kwargs):
         pass
 
-    def XYDataFromFile(self, fileName: str, name: str = '', sourceDescription: str = '',
-                       contentDescription: str = '', positionDescription: str = '', legendLabel: str = '',
-                       xValuesLabel: str = '', yValuesLabel: str = '',
+    def XYDataFromFile(self,
+                       fileName: str,
+                       name: str = '',
+                       sourceDescription: str = '',
+                       contentDescription: str = '',
+                       positionDescription: str = '',
+                       legendLabel: str = '',
+                       xValuesLabel: str = '',
+                       yValuesLabel: str = '',
                        axis1QuantityType: QuantityType = QuantityType(),
-                       axis2QuantityType: QuantityType = QuantityType(), xField: int = 1, yField: int = 2,
+                       axis2QuantityType: QuantityType = QuantityType(),
+                       xField: int = 1,
+                       yField: int = 2,
                        skipFrequency: int = None):
         """This method creates an XYData object from data in an ASCII file.
 
@@ -217,10 +237,19 @@ class XYData:
         """
         pass
 
-    def XYDataFromHistory(self, odb: Odb, outputVariableName: str, steps: tuple, name: str = '',
-                          sourceDescription: str = '', contentDescription: str = '',
-                          positionDescription: str = '', legendLabel: str = '', skipFrequency: int = None,
-                          numericForm: SymbolicConstant = REAL, complexAngle: float = 0, stepTuple: int = None):
+    def XYDataFromHistory(self,
+                          odb: Odb,
+                          outputVariableName: str,
+                          steps: tuple,
+                          name: str = '',
+                          sourceDescription: str = '',
+                          contentDescription: str = '',
+                          positionDescription: str = '',
+                          legendLabel: str = '',
+                          skipFrequency: int = None,
+                          numericForm: SymbolicConstant = REAL,
+                          complexAngle: float = 0,
+                          stepTuple: int = None):
         """This method creates an XYData object by reading history data from an Odb object.
 
         Notes
@@ -283,10 +312,18 @@ class XYData:
         """
         pass
 
-    def xyDataListFromField(self, odb: Odb, outputPosition: SymbolicConstant, variable: tuple[tuple],
-                            elementSets: tuple = (), elementLabels: tuple = (), nodeSets: tuple = (),
-                            nodeLabels: tuple = (), numericForm: SymbolicConstant = REAL, complexAngle: float = 0,
-                            operator: SymbolicConstant = None) -> list['XYData']:
+    def xyDataListFromField(
+            self,
+            odb: Odb,
+            outputPosition: SymbolicConstant,
+            variable: tuple[tuple],
+            elementSets: tuple = (),
+            elementLabels: tuple = (),
+            nodeSets: tuple = (),
+            nodeLabels: tuple = (),
+            numericForm: SymbolicConstant = REAL,
+            complexAngle: float = 0,
+            operator: SymbolicConstant = None) -> list['XYData']:
         """This method creates a list of XYData objects by reading field data from an Odb object.
 
         Notes
@@ -373,8 +410,14 @@ class XYData:
         """
         pass
 
-    def XYDataFromFreeBody(self, odb: Odb, force: Boolean = ON, moment: Boolean = OFF, heatFlowRate: Boolean = OFF,
-                           resultant: Boolean = ON, comp1: Boolean = OFF, comp2: Boolean = OFF,
+    def XYDataFromFreeBody(self,
+                           odb: Odb,
+                           force: Boolean = ON,
+                           moment: Boolean = OFF,
+                           heatFlowRate: Boolean = OFF,
+                           resultant: Boolean = ON,
+                           comp1: Boolean = OFF,
+                           comp2: Boolean = OFF,
                            comp3: Boolean = OFF):
         """This method creates a list of XYData objects by computing free body data from an Odb
         object.
@@ -423,9 +466,16 @@ class XYData:
         """
         pass
 
-    def XYDataFromShellThickness(self, odb: Odb, outputPosition: SymbolicConstant, variable: SymbolicConstant,
-                                 elementSets: tuple = (), elementLabels: tuple = (), nodeSets: tuple = (),
-                                 nodeLabels: tuple = (), numericForm: SymbolicConstant = REAL, complexAngle: float = 0):
+    def XYDataFromShellThickness(self,
+                                 odb: Odb,
+                                 outputPosition: SymbolicConstant,
+                                 variable: SymbolicConstant,
+                                 elementSets: tuple = (),
+                                 elementLabels: tuple = (),
+                                 nodeSets: tuple = (),
+                                 nodeLabels: tuple = (),
+                                 numericForm: SymbolicConstant = REAL,
+                                 complexAngle: float = 0):
         """This method creates a list of XYData objects by reading through the thickness field data
         from an Odb object.
 
@@ -504,13 +554,25 @@ class XYData:
         """
         pass
 
-    def XYDataFromPath(self, path: Path, name: str, includeIntersections: Boolean, shape: SymbolicConstant,
-                       pathStyle: SymbolicConstant, numIntervals: int, labelType: SymbolicConstant,
-                       viewport: str = '', removeDuplicateXYPairs: Boolean = True,
-                       includeAllElements: Boolean = False, step: int = None, frame: int = None,
-                       variable: SymbolicConstant = None, deformedMag: float = None,
-                       numericForm: SymbolicConstant = REAL, complexAngle: float = 0,
-                       projectOntoMesh: Boolean = False, projectionTolerance: float = 0):
+    def XYDataFromPath(self,
+                       path: Path,
+                       name: str,
+                       includeIntersections: Boolean,
+                       shape: SymbolicConstant,
+                       pathStyle: SymbolicConstant,
+                       numIntervals: int,
+                       labelType: SymbolicConstant,
+                       viewport: str = '',
+                       removeDuplicateXYPairs: Boolean = True,
+                       includeAllElements: Boolean = False,
+                       step: int = None,
+                       frame: int = None,
+                       variable: SymbolicConstant = None,
+                       deformedMag: float = None,
+                       numericForm: SymbolicConstant = REAL,
+                       complexAngle: float = 0,
+                       projectOntoMesh: Boolean = False,
+                       projectionTolerance: float = 0):
         """This method creates an XYData object from path information.
 
         Notes
@@ -633,9 +695,14 @@ class XYData:
         """
         pass
 
-    def setValues(self, sourceDescription: str = '', contentDescription: str = '',
-                  positionDescription: str = '', legendLabel: str = '', xValuesLabel: str = '',
-                  yValuesLabel: str = '', axis1QuantityType: QuantityType = QuantityType(),
+    def setValues(self,
+                  sourceDescription: str = '',
+                  contentDescription: str = '',
+                  positionDescription: str = '',
+                  legendLabel: str = '',
+                  xValuesLabel: str = '',
+                  yValuesLabel: str = '',
+                  axis1QuantityType: QuantityType = QuantityType(),
                   axis2QuantityType: QuantityType = QuantityType()):
         """This method modifies the XYData object.
         

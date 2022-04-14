@@ -1,9 +1,14 @@
 # from .ErrorIndicatorResult import ErrorIndicatorResult
 
-
 # Prevent circular import
+from __init__ import *
+
+
 class ErrorIndicatorResult:
     pass
+
+
+from __init__ import *
 
 
 class RuleResult:
@@ -20,9 +25,12 @@ class RuleResult:
         mdb.adaptivityProcesses[name].iterations[i].ruleResults[name]
 
     """
-
-    def __init__(self, name: str, indicatorResults: dict[str, ErrorIndicatorResult], numElems: int,
-                 minSizeElemCount: int, satisfiedVars: tuple = ()):
+    def __init__(self,
+                 name: str,
+                 indicatorResults: dict[str, ErrorIndicatorResult],
+                 numElems: int,
+                 minSizeElemCount: int,
+                 satisfiedVars: tuple = ()):
         """This method creates a RuleResult with data for a RemeshingRule for a given adaptivity
         iteration.
 

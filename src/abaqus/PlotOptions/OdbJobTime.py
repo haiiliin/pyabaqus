@@ -1,3 +1,6 @@
+from __init__ import *
+
+
 class OdbJobTime:
     """The OdbJobTime object stores the analysis time of a job.
 
@@ -21,11 +24,11 @@ class OdbJobTime:
 
     """
 
-    # A float specifying the systemtime for the analysis. This attribute is read-only. 
+    # A float specifying the systemtime for the analysis. This attribute is read-only.
     systemTime: str = ''
 
-    # A float specifying the usertime for the analysis. This attribute is read-only. 
+    # A float specifying the usertime for the analysis. This attribute is read-only.
     userTime: str = ''
 
-    # A float specifying the wallclocktime for the analysis. This attribute is read-only. 
+    # A float specifying the wallclocktime for the analysis. This attribute is read-only.
     wallclockTime: str = ''

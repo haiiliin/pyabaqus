@@ -1,5 +1,7 @@
 from abaqusConstants import *
 
+from __init__ import *
+
 
 class TextStyle:
     """The TextStyle object is used to store the text properties to be used for drawing XY-plot
@@ -39,8 +41,11 @@ class TextStyle:
         session.xyPlots[name].title.titleStyle
 
     """
-
-    def __init__(self, color: str = '', show: Boolean = ON, font: str = '', rotationAngle: float = 0):
+    def __init__(self,
+                 color: str = '',
+                 show: Boolean = ON,
+                 font: str = '',
+                 rotationAngle: float = 0):
         """This method creates a TextStyle.
 
         Notes
@@ -77,7 +82,11 @@ class TextStyle:
         """
         pass
 
-    def setValues(self, color: str = '', show: Boolean = ON, font: str = '', rotationAngle: float = 0):
+    def setValues(self,
+                  color: str = '',
+                  show: Boolean = ON,
+                  font: str = '',
+                  rotationAngle: float = 0):
         """This method modifies the TextStyle object.
         
         Parameters

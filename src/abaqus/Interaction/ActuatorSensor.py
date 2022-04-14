@@ -2,6 +2,8 @@ from abaqusConstants import *
 from .Interaction import Interaction
 from ..Region.Region import Region
 
+from __init__ import *
+
 
 class ActuatorSensor(Interaction):
     """The ActuatorSensor object defines a single point actuator where the actuation is
@@ -24,9 +26,9 @@ class ActuatorSensor(Interaction):
             - INITIAL CONDITIONS
 
     """
-
-    def __init__(self, name: str, createStepName: str, point: Region, interactionProperty: str,
-                 noCoordComponents: int, unsymm: Boolean, noSolutionDepVar: int, userSubUel: str,
+    def __init__(self, name: str, createStepName: str, point: Region,
+                 interactionProperty: str, noCoordComponents: int,
+                 unsymm: Boolean, noSolutionDepVar: int, userSubUel: str,
                  dof: str, solutionDepVars: tuple):
         """This method creates an ActuatorSensor object.
 

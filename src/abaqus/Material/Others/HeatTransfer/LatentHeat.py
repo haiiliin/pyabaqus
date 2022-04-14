@@ -1,3 +1,6 @@
+from __init__ import *
+
+
 class LatentHeat:
     """The LatentHeat object specifies a material's latent heat.
 
@@ -21,7 +24,6 @@ class LatentHeat:
         - LATENT HEAT
 
     """
-
     def __init__(self, table: tuple):
         """This method creates a LatentHeat object.
 

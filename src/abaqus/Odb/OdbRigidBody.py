@@ -3,6 +3,8 @@ from .AnalyticSurface import AnalyticSurface
 from .OdbMeshNode import OdbMeshNode
 from .OdbSet import OdbSet
 
+from __init__ import *
+
 
 class OdbRigidBody:
     """The Rigid body object is used to bind a set of elements and/or a set of nodes and/or an
@@ -21,8 +23,10 @@ class OdbRigidBody:
         session.odbs[name].steps[name].frames[i].fieldOutputs[name].values[i].instance.rigidBodies[i]
 
     """
-
-    def __init__(self, referenceNode: OdbSet, position: SymbolicConstant = INPUT, isothermal: Boolean = ON,
+    def __init__(self,
+                 referenceNode: OdbSet,
+                 position: SymbolicConstant = INPUT,
+                 isothermal: Boolean = ON,
                  elements: OdbSet = OdbSet('set', tuple[OdbMeshNode]()),
                  tieNodes: OdbSet = OdbSet('set', tuple[OdbMeshNode]()),
                  pinNodes: OdbSet = OdbSet('set', tuple[OdbMeshNode]()),

@@ -2,6 +2,8 @@ from abaqusConstants import *
 from .Interaction import Interaction
 from ..Region.Region import Region
 
+from __init__ import *
+
 
 class ModelChange(Interaction):
     """The ModelChange object defines model change interactions for element removal and
@@ -21,10 +23,14 @@ class ModelChange(Interaction):
         - MODEL CHANGE
 
     """
-
-    def __init__(self, name: str, createStepName: str, isRestart: Boolean = OFF,
-                 regionType: SymbolicConstant = GEOMETRY, region: Region = Region(),
-                 activeInStep: Boolean = OFF, includeStrain: Boolean = OFF):
+    def __init__(self,
+                 name: str,
+                 createStepName: str,
+                 isRestart: Boolean = OFF,
+                 regionType: SymbolicConstant = GEOMETRY,
+                 region: Region = Region(),
+                 activeInStep: Boolean = OFF,
+                 includeStrain: Boolean = OFF):
         """This method creates a ModelChange object.
 
         Notes
@@ -67,8 +73,12 @@ class ModelChange(Interaction):
         super().__init__()
         pass
 
-    def setValues(self, isRestart: Boolean = OFF, regionType: SymbolicConstant = GEOMETRY,
-                  region: Region = Region(), activeInStep: Boolean = OFF, includeStrain: Boolean = OFF):
+    def setValues(self,
+                  isRestart: Boolean = OFF,
+                  regionType: SymbolicConstant = GEOMETRY,
+                  region: Region = Region(),
+                  activeInStep: Boolean = OFF,
+                  includeStrain: Boolean = OFF):
         """This method modifies the data for an existing ModelChange object in the step where it is
         created.
         
@@ -95,7 +105,10 @@ class ModelChange(Interaction):
         """
         pass
 
-    def setValuesInStep(self, stepName: str, activeInStep: Boolean = OFF, includeStrain: Boolean = OFF):
+    def setValuesInStep(self,
+                        stepName: str,
+                        activeInStep: Boolean = OFF,
+                        includeStrain: Boolean = OFF):
         """This method modifies the propagating data of an existing ModelChange object in the
         specified step.
         

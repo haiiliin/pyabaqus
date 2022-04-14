@@ -1,3 +1,6 @@
+from __init__ import *
+
+
 class BaselineCorrection:
     """The BaselineCorrection object modifies an acceleration history to minimize the overall
     drift of the displacement obtained from the time integration of the given acceleration. 
@@ -17,7 +20,6 @@ class BaselineCorrection:
         - BASELINE CORRECTION
 
     """
-
     def __init__(self, intervals: tuple = ()):
         """This method creates a BaselineCorrection object.
 

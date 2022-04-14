@@ -1,6 +1,8 @@
 from abaqusConstants import *
 from .Edge import Edge
 
+from __init__ import *
+
 
 class InterestingPoint:
     """Interesting points can be located at the following:
@@ -20,7 +22,6 @@ class InterestingPoint:
         import assembly
 
     """
-
     def __init__(self, edge: Edge, rule: SymbolicConstant):
         """This method creates an interesting point along an edge. An InterestingPoint is a
         temporary object.

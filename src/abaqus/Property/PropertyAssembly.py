@@ -3,6 +3,8 @@ from .SectionAssignment import SectionAssignment
 from ..Assembly.AssemblyBase import AssemblyBase
 from ..Region.Set import Set
 
+from __init__ import *
+
 
 class PropertyAssembly(AssemblyBase):
     """An Assembly object is a container for instances of parts. The Assembly object has no
@@ -19,9 +21,13 @@ class PropertyAssembly(AssemblyBase):
         mdb.models[name].rootAssembly
 
     """
-
-    def SectionAssignment(self, region: Set, sectionName: str, thicknessAssignment: SymbolicConstant = FROM_SECTION,
-                          offset: float = 0, offsetType: SymbolicConstant = SINGLE_VALUE, offsetField: str = ''):
+    def SectionAssignment(self,
+                          region: Set,
+                          sectionName: str,
+                          thicknessAssignment: SymbolicConstant = FROM_SECTION,
+                          offset: float = 0,
+                          offsetType: SymbolicConstant = SINGLE_VALUE,
+                          offsetField: str = ''):
         """This method creates a SectionAssignment object.
 
         Notes
@@ -57,6 +63,8 @@ class PropertyAssembly(AssemblyBase):
         -------
             A SectionAssignment object.
         """
-        sectionAssignment = SectionAssignment(region, sectionName, thicknessAssignment, offset, offsetType, offsetField)
+        sectionAssignment = SectionAssignment(region, sectionName,
+                                              thicknessAssignment, offset,
+                                              offsetType, offsetField)
         self.sectionAssignments.append(sectionAssignment)
         return sectionAssignment

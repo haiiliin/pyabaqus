@@ -1,6 +1,8 @@
 from abaqusConstants import *
 from .Leaf import Leaf
 
+from __init__ import *
+
 
 class LeafFromConstraintNames(Leaf):
     """The LeafFromConstraintNames object can be used whenever a Leaf object is expected as an
@@ -26,8 +28,8 @@ class LeafFromConstraintNames(Leaf):
 
     """
 
-    # A SymbolicConstant specifying the leaf type. Possible values are TIE, 
-    # SHELL_TO_SOLID_COUPLING, DISTRIBUTING_COUPLING, KINEMATIC_COUPLING, RIGID_BODY, and MPC. 
+    # A SymbolicConstant specifying the leaf type. Possible values are TIE,
+    # SHELL_TO_SOLID_COUPLING, DISTRIBUTING_COUPLING, KINEMATIC_COUPLING, RIGID_BODY, and MPC.
     leafType: SymbolicConstant = None
 
     def __init__(self, name: tuple, type: SymbolicConstant):

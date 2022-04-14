@@ -1,3 +1,5 @@
+from __init__ import *
+
 
 class AnnealTemperature:
     """The AnnealTemperature object specifies the material annealing temperature.
@@ -24,7 +26,6 @@ class AnnealTemperature:
         - ANNEAL TEMPERATURE
 
     """
-
     def __init__(self, table: tuple, dependencies: int = 0):
         """This method creates an AnnealTemperature object.
 

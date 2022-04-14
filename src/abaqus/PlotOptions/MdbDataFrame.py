@@ -1,3 +1,6 @@
+from __init__ import *
+
+
 class MdbDataFrame:
     """The MdbDataFrame object. There is one and only MdbDataFrame in a MdbDataStep.
 

@@ -1,6 +1,8 @@
 from abaqusConstants import *
 from .OdbMeshNode import OdbMeshNode
 
+from __init__ import *
+
 
 class OdbDatumCsys:
     """The OdbDatumCsys object contains a coordinate system that can be stored in an output
@@ -37,28 +39,28 @@ class OdbDatumCsys:
 
     """
 
-    # A String specifying the repository key. 
+    # A String specifying the repository key.
     name: str = ''
 
-    # A SymbolicConstant specifying the type of coordinate system. Possible values are 
-    # CARTESIAN, CYLINDRICAL, and SPHERICAL. 
+    # A SymbolicConstant specifying the type of coordinate system. Possible values are
+    # CARTESIAN, CYLINDRICAL, and SPHERICAL.
     coordSysType: SymbolicConstant = None
 
-    # A tuple of Floats specifying the coordinates of the origin of the datum coordinate 
-    # system. 
+    # A tuple of Floats specifying the coordinates of the origin of the datum coordinate
+    # system.
     origin: float = None
 
-    # A tuple of Floats specifying a point on the *X*-axis. 
+    # A tuple of Floats specifying a point on the *X*-axis.
     xAxis: float = None
 
-    # A tuple of Floats specifying a point on the *Y*-axis. 
+    # A tuple of Floats specifying a point on the *Y*-axis.
     yAxis: float = None
 
-    # A tuple of Floats specifying a point on the *Z*-axis. 
+    # A tuple of Floats specifying a point on the *Z*-axis.
     zAxis: float = None
 
-    def DatumCsysByThreePoints(self, name: str, coordSysType: SymbolicConstant, origin: tuple, point1: tuple,
-                               point2: tuple):
+    def DatumCsysByThreePoints(self, name: str, coordSysType: SymbolicConstant,
+                               origin: tuple, point1: tuple, point2: tuple):
         """This method creates an OdbDatumCsys object using three points. A datum coordinate system
         created with this method results in a fixed system.
 
@@ -91,7 +93,8 @@ class OdbDatumCsys:
         """
         pass
 
-    def DatumCsysByThreeNodes(self, name: str, coordSysType: SymbolicConstant, origin: OdbMeshNode, point1: OdbMeshNode,
+    def DatumCsysByThreeNodes(self, name: str, coordSysType: SymbolicConstant,
+                              origin: OdbMeshNode, point1: OdbMeshNode,
                               point2: OdbMeshNode):
         """This method creates an OdbDatumCsys object using the coordinates of three OdbMeshNode
         objects. A datum coordinate system created with this method results in a system that
@@ -128,8 +131,9 @@ class OdbDatumCsys:
         """
         pass
 
-    def DatumCsysByThreeCircNodes(self, name: str, coordSysType: SymbolicConstant, node1Arc: OdbMeshNode,
-                                  node2Arc: OdbMeshNode,
+    def DatumCsysByThreeCircNodes(self, name: str,
+                                  coordSysType: SymbolicConstant,
+                                  node1Arc: OdbMeshNode, node2Arc: OdbMeshNode,
                                   node3Arc: OdbMeshNode):
         """This method is convenient to use where there are no nodes along the axis of a hollow
         cylinder or at the center of a hollow sphere. The three nodes that you provide as
@@ -166,7 +170,8 @@ class OdbDatumCsys:
         """
         pass
 
-    def DatumCsysBy6dofNode(self, name: str, coordSysType: SymbolicConstant, origin: OdbMeshNode):
+    def DatumCsysBy6dofNode(self, name: str, coordSysType: SymbolicConstant,
+                            origin: OdbMeshNode):
         """A datum coordinate system created with this method results in a system that follows the
         position of a node. The node location defines the origin of the datum coordinate system.
         The rotational displacement (UR1, UR2, UR3) of the node defines the orientation of the

@@ -2,6 +2,8 @@ from ..TableCollection.DataTable import DataTable
 from ..TableCollection.ParameterTable import ParameterTable
 from ..TableCollection.PropertyTable import PropertyTable
 
+from __init__ import *
+
 
 class TableCollection:
     """A TableCollection is an object used to define the containers that encapsulate the
@@ -29,10 +31,10 @@ class TableCollection:
 
     """
 
-    # A repository of the PropertyTable object. 
+    # A repository of the PropertyTable object.
     propertyTables: dict[str, PropertyTable] = dict[str, PropertyTable]()
 
-    # A repository of the ParameterTable object 
+    # A repository of the ParameterTable object
     parameterTables: dict[str, ParameterTable] = dict[str, ParameterTable]()
 
     # sequence of the DataTable object
@@ -113,7 +115,10 @@ class TableCollection:
         self.parameterTables[name] = parameterTable = ParameterTable(name)
         return parameterTable
 
-    def PropertyTable(self, name: str, properties: str, variables: str = '') -> PropertyTable:
+    def PropertyTable(self,
+                      name: str,
+                      properties: str,
+                      variables: str = '') -> PropertyTable:
         """This method creates a PropertyTable object.
 
         Notes
@@ -142,5 +147,6 @@ class TableCollection:
         ------
             RangeError.
         """
-        self.propertyTables[name] = propertyTable = PropertyTable(name, properties, variables)
+        self.propertyTables[name] = propertyTable = PropertyTable(
+            name, properties, variables)
         return propertyTable

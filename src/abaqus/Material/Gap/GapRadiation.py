@@ -1,3 +1,6 @@
+from __init__ import *
+
+
 class GapRadiation:
     """The GapRadiation object specifies radiative heat transfer between closely adjacent
     surfaces. 
@@ -22,8 +25,8 @@ class GapRadiation:
         - GAP RADIATION
 
     """
-
-    def __init__(self, mainSurfaceEmissivity: float, secondarySurfaceEmissivity: float, table: tuple):
+    def __init__(self, mainSurfaceEmissivity: float,
+                 secondarySurfaceEmissivity: float, table: tuple):
         """This method creates a GapRadiation object.
 
         Notes

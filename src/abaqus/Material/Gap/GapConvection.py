@@ -1,5 +1,7 @@
 from abaqusConstants import *
 
+from __init__ import *
+
 
 class GapConvection:
     """The GapConvection object specifies the Nusselt number (Nu) to calculate the convective
@@ -29,8 +31,10 @@ class GapConvection:
         - GAP CONVECTION
 
     """
-
-    def __init__(self, type: str, table: tuple = (), temperatureDependency: Boolean = OFF,
+    def __init__(self,
+                 type: str,
+                 table: tuple = (),
+                 temperatureDependency: Boolean = OFF,
                  dependencies: int = 0):
         """This method creates a GapConvection object.
 

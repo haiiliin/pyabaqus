@@ -2,12 +2,21 @@ from abaqusConstants import *
 from .Queue import Queue
 from ..Session.SessionBase import SessionBase
 
+from __init__ import *
+
 
 class JobSession(SessionBase):
-
-    def Queue(self, name: str, queueName: str, hostName: str = '', fileCopy: Boolean = ON,
-              directory: str = '', driver: str = '', remotePlatform: SymbolicConstant = 'Linux',
-              filesToCopy: str = ALL, deleteAfterCopy: Boolean = OFF, description: str = '') -> Queue:
+    def Queue(self,
+              name: str,
+              queueName: str,
+              hostName: str = '',
+              fileCopy: Boolean = ON,
+              directory: str = '',
+              driver: str = '',
+              remotePlatform: SymbolicConstant = 'Linux',
+              filesToCopy: str = ALL,
+              deleteAfterCopy: Boolean = OFF,
+              description: str = '') -> Queue:
         """This method creates a Queue object.
         Note:Remote queues are available only on Linux platforms.
 
@@ -60,6 +69,8 @@ class JobSession(SessionBase):
             - If *fileCopy*=ON and *directory* is empty:
               Directory in which to run the job on the remote computer is not set.
         """
-        self.queues[name] = queue = Queue(name, queueName, hostName, fileCopy, directory, driver, remotePlatform,
-                                          filesToCopy, deleteAfterCopy, description)
+        self.queues[name] = queue = Queue(name, queueName, hostName, fileCopy,
+                                          directory, driver, remotePlatform,
+                                          filesToCopy, deleteAfterCopy,
+                                          description)
         return queue

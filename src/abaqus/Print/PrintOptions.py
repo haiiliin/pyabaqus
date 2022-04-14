@@ -1,5 +1,7 @@
 from abaqusConstants import *
 
+from __init__ import *
+
 
 class PrintOptions:
     """The PrintOptions object stores the common settings that Abaqus uses for all print
@@ -12,10 +14,14 @@ class PrintOptions:
             session.printOptions
 
     """
-
-    def setValues(self, rendition: SymbolicConstant = COLOR, vpDecorations: Boolean = ON,
-                  vpBackground: Boolean = OFF, compass: Boolean = OFF, printCommand: str = '',
-                  deleteTemporaryFiles: Boolean = ON, reduceColors: Boolean = OFF):
+    def setValues(self,
+                  rendition: SymbolicConstant = COLOR,
+                  vpDecorations: Boolean = ON,
+                  vpBackground: Boolean = OFF,
+                  compass: Boolean = OFF,
+                  printCommand: str = '',
+                  deleteTemporaryFiles: Boolean = ON,
+                  reduceColors: Boolean = OFF):
         """This method modifies the PrintOptions object.
         
         Parameters

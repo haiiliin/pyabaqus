@@ -1,5 +1,7 @@
 from ..Region.Region import Region
 
+from __init__ import *
+
 
 class AdaptiveMeshDomain:
     """The AdaptiveMeshDomain object defines the region and controls that govern an Arbitrary
@@ -15,8 +17,11 @@ class AdaptiveMeshDomain:
         mdb.models[name].steps[name].adaptiveMeshDomains[name]
 
     """
-
-    def __init__(self, region: Region, controls: str = '', frequency: int = 10, initialMeshSweeps: int = 5,
+    def __init__(self,
+                 region: Region,
+                 controls: str = '',
+                 frequency: int = 10,
+                 initialMeshSweeps: int = 5,
                  meshSweeps: int = 1):
         """This method creates an AdaptiveMeshDomain object.
 

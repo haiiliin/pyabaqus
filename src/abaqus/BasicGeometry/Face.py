@@ -1,7 +1,11 @@
 from abaqusConstants import *
-
+from __init__ import *
 
 class Face:
+    from Mesh.MeshElementArray import MeshElementArray
+    from Mesh.MeshFaceArray import MeshFaceArray
+    from Mesh.MeshNodeArray import MeshNodeArray
+    from .FaceArray import FaceArray
     """Faces are two-dimensional regions of geometry.
 
     Attributes
@@ -54,27 +58,27 @@ class Face:
 
     """
 
-    # An Int specifying the index of the face in the FaceArray. 
+    # An Int specifying the index of the face in the FaceArray.
     index: int = None
 
-    # A Boolean specifying whether the face belongs to the reference representation of the 
-    # Part or Instance. 
+    # A Boolean specifying whether the face belongs to the reference representation of the
+    # Part or Instance.
     isReferenceRep: Boolean = OFF
 
-    # A tuple of tuples of Floats specifying the coordinates. For a face of a shell *pointOn* 
-    # specifies the *X*-, *Y*-, and *Z*-coordinates of a point located on the face and the 
-    # *X*-, *Y*-, and *Z*-components of the normal to the face.For a face of a solid *pointOn* 
-    # specifies the *X*-, *Y*-, and *Z*-coordinates of a point located on the face. 
+    # A tuple of tuples of Floats specifying the coordinates. For a face of a shell *pointOn*
+    # specifies the *X*-, *Y*-, and *Z*-coordinates of a point located on the face and the
+    # *X*-, *Y*-, and *Z*-components of the normal to the face.For a face of a solid *pointOn*
+    # specifies the *X*-, *Y*-, and *Z*-coordinates of a point located on the face.
     pointOn: float = None
 
-    # A tuple of Floats specifying the name of the feature that created this face. 
+    # A tuple of Floats specifying the name of the feature that created this face.
     featureName: float = None
 
-    # A tuple of Floats specifying the name of the part instance for this face (if 
-    # applicable). 
+    # A tuple of Floats specifying the name of the part instance for this face (if
+    # applicable).
     instanceName: float = None
 
-    def getCentroid(self):
+    def getCentroid(self) -> COORDINATE_3D:
         """This method returns the centroid of a face.
 
         Returns
@@ -85,7 +89,7 @@ class Face:
         """
         pass
 
-    def getCurvature(self, point: tuple, uParam: float, vParam: float):
+    def getCurvature(self, point: tuple, uParam: float, vParam: float) -> Dict:
         """This method returns information about the curvature at a location on the face.
         
         Parameters
@@ -113,7 +117,7 @@ class Face:
         """
         pass
 
-    def getElements(self):
+    def getElements(self) -> MeshElementArray:
         """This method returns an array of element objects that are associated with the face.
 
         Returns
@@ -123,7 +127,9 @@ class Face:
         """
         pass
 
-    def getElementFaces(self, faceSide: SymbolicConstant = BOTH_SIDES):
+    def getElementFaces(self,
+                        faceSide: SymbolicConstant = BOTH_SIDES
+                        ) -> MeshFaceArray:
         """This method returns an array of mesh face objects. Each mesh face object contains the
         element label and the side of the element that lies on the geometric face.
         
@@ -141,7 +147,8 @@ class Face:
         """
         pass
 
-    def getNodes(self, faceSide: SymbolicConstant = BOTH_SIDES):
+    def getNodes(self,
+                 faceSide: SymbolicConstant = BOTH_SIDES) -> MeshNodeArray:
         """This method returns an array of mesh node objects. Each mesh node object contains the
         label of the node that lies on the geometric face.
         
@@ -161,7 +168,7 @@ class Face:
         """
         pass
 
-    def getNormal(self, point: tuple = ()):
+    def getNormal(self, point: tuple = ()) -> COORDINATE_3D:
         """This method returns the normal to a face at the location specified by the *pointOn*
         member. The normal at a different location on the face can be obtained by specifying the
         optional *point* argument.
@@ -186,7 +193,7 @@ class Face:
         """
         pass
 
-    def getSize(self, printResults: str = True):
+    def getSize(self, printResults: str = True) -> float:
         """This method returns a Float indicating the area of the face.
         
         Parameters
@@ -201,7 +208,7 @@ class Face:
         """
         pass
 
-    def getEdges(self):
+    def getEdges(self) -> Tuple[int, ]:
         """This method returns a sequence consisting of the edge ids of the edges on the face.
 
         Returns
@@ -211,7 +218,7 @@ class Face:
         """
         pass
 
-    def getVertices(self):
+    def getVertices(self) -> Tuple[int, ]:
         """This method returns a sequence consisting of the vertex ids of the vertices of the face.
 
         Returns
@@ -221,7 +228,7 @@ class Face:
         """
         pass
 
-    def getCells(self):
+    def getCells(self) -> Tuple[int, ]:
         """This method returns a sequence consisting of the cell ids of the cells to which this
         face belongs.
 
@@ -232,7 +239,7 @@ class Face:
         """
         pass
 
-    def getAdjacentFaces(self):
+    def getAdjacentFaces(self) -> FaceArray:
         """This method returns an array of face objects that share at least one edge of the face.
 
         Returns
@@ -242,7 +249,7 @@ class Face:
         """
         pass
 
-    def getFacesByFaceAngle(self, angle: str):
+    def getFacesByFaceAngle(self, angle: str) -> FaceArray:
         """This method returns an array of Face objects that are obtained by recursively finding
         adjacent faces that are at an angle of less than or equal to the specified angle.
         
@@ -258,7 +265,7 @@ class Face:
         """
         pass
 
-    def getFacesByCurvature(self):
+    def getFacesByCurvature(self) -> FaceArray:
         """This method returns an array of Face objects that are obtained by recursively finding
         adjacent faces that share the same curvature.
 
@@ -269,7 +276,7 @@ class Face:
         """
         pass
 
-    def isNormalFlipped(self):
+    def isNormalFlipped(self) -> bool:
         """This method determines whether the normal to the face is flipped from its default
         direction by the use of the flipNormal method on a Part object.
 
@@ -280,7 +287,7 @@ class Face:
         """
         pass
 
-    def getCADAttributes(self):
+    def getCADAttributes(self) -> List[str]:
         """This method returns an array of CAD attribute strings associated with the Face when the
         part was created from CAD data.
 

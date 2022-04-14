@@ -1,7 +1,9 @@
 from .Profile import Profile
 
-class HexagonalProfile(Profile):
+from __init__ import *
 
+
+class HexagonalProfile(Profile):
     """The HexagonalProfile object defines the properties of a hexagonal profile. 
     The HexagonalProfile object is derived from the Profile object. 
 
@@ -20,7 +22,6 @@ class HexagonalProfile(Profile):
         - BEAM SECTION
 
     """
-
     def __init__(self, name: str, r: float, t: float):
         """This method creates a HexagonalProfile object.
 
@@ -66,4 +67,3 @@ class HexagonalProfile(Profile):
             
         """
         pass
-

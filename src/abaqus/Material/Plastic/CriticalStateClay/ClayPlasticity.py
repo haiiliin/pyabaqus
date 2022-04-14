@@ -1,6 +1,8 @@
 from abaqusConstants import *
 from .ClayHardening import ClayHardening
 
+from __init__ import *
+
 
 class ClayPlasticity:
     """The ClayPlasticity object specifies the extended Cam-clay plasticity model.
@@ -42,11 +44,15 @@ class ClayPlasticity:
 
     """
 
-    # A ClayHardening object. 
-    clayHardening: ClayHardening = ClayHardening(((),))
+    # A ClayHardening object.
+    clayHardening: ClayHardening = ClayHardening(((), ))
 
-    def __init__(self, table: tuple, intercept: float = None, hardening: SymbolicConstant = EXPONENTIAL,
-                 temperatureDependency: Boolean = OFF, dependencies: int = 0):
+    def __init__(self,
+                 table: tuple,
+                 intercept: float = None,
+                 hardening: SymbolicConstant = EXPONENTIAL,
+                 temperatureDependency: Boolean = OFF,
+                 dependencies: int = 0):
         """This method creates a ClayPlasticity object.
 
         Notes

@@ -4,6 +4,8 @@ from .Field import Field
 from ..Assembly.PartInstance import PartInstance
 from ..Region.Region import Region
 
+from __init__ import *
+
 
 class DiscreteField(Field):
     """The DiscreteField object defines a varying field whose values correspond to distinct
@@ -20,11 +22,16 @@ class DiscreteField(Field):
         mdb.models[name].discreteFields[name]
 
     """
-
-    def __init__(self, name: str, defaultValues: tuple, fieldType: SymbolicConstant,
-                 location: SymbolicConstant = NODES, dataWidth: int = 1,
-                 data: DataTableArray = None, description: str = '',
-                 orientationType: SymbolicConstant = CARTESIAN, partLevelOrientation: Boolean = OFF):
+    def __init__(self,
+                 name: str,
+                 defaultValues: tuple,
+                 fieldType: SymbolicConstant,
+                 location: SymbolicConstant = NODES,
+                 dataWidth: int = 1,
+                 data: DataTableArray = None,
+                 description: str = '',
+                 orientationType: SymbolicConstant = CARTESIAN,
+                 partLevelOrientation: Boolean = OFF):
         """This method creates a DiscreteField object.
 
         Notes
@@ -72,8 +79,13 @@ class DiscreteField(Field):
         super().__init__()
         pass
 
-    def DiscreteFieldByVolumeFraction(self, name: str, eulerianInstance: PartInstance, referenceInstance: PartInstance,
-                                      accuracy: str = MEDIUM, materialLocation: str = INSIDE, description: str = '',
+    def DiscreteFieldByVolumeFraction(self,
+                                      name: str,
+                                      eulerianInstance: PartInstance,
+                                      referenceInstance: PartInstance,
+                                      accuracy: str = MEDIUM,
+                                      materialLocation: str = INSIDE,
+                                      description: str = '',
                                       scaleFactor: str = ''):
         """This method creates a DiscreteField object that represents the volume fraction of each
         element of an Eulerian Instance that is occupied by a reference instance.
@@ -118,7 +130,8 @@ class DiscreteField(Field):
         """
         pass
 
-    def DiscreteFieldFromAnalytic(self, name: str, location: SymbolicConstant, analyticFieldName: str, region: Region):
+    def DiscreteFieldFromAnalytic(self, name: str, location: SymbolicConstant,
+                                  analyticFieldName: str, region: Region):
         """This method creates a DiscreteField object from a AnalyticalField object.
 
         Notes
@@ -151,9 +164,13 @@ class DiscreteField(Field):
         """
         pass
 
-    def setValues(self, location: SymbolicConstant = NODES, dataWidth: int = 1,
-                  data: DataTableArray = None, description: str = '',
-                  orientationType: SymbolicConstant = CARTESIAN, partLevelOrientation: Boolean = OFF):
+    def setValues(self,
+                  location: SymbolicConstant = NODES,
+                  dataWidth: int = 1,
+                  data: DataTableArray = None,
+                  description: str = '',
+                  orientationType: SymbolicConstant = CARTESIAN,
+                  partLevelOrientation: Boolean = OFF):
         """This method modifies the DiscreteField object.
         
         Parameters

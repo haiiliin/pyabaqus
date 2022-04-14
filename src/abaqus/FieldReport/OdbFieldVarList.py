@@ -1,3 +1,5 @@
+from __init__ import *
+
 
 class OdbFieldVarList(list[str]):
     """The read-only OdbFieldVarList object is a sequence listing all variables available for

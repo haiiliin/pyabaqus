@@ -1,5 +1,7 @@
 from abaqusConstants import *
 
+from __init__ import *
+
 
 class IgnoredVertexArray:
     """The IgnoredVertexArray is a sequence of IgnoredVertex objects. If the part is modified,
@@ -18,7 +20,6 @@ class IgnoredVertexArray:
             mdb.models[name].rootAssembly.instances[name].ignoredVertices
 
     """
-
     def findAt(self, coordinates: tuple, printWarning: Boolean = True):
         """This method returns the object or objects in the IgnoredVertexArray located at the given
         coordinates.

@@ -8,8 +8,11 @@ from ..Region.RegionAssembly import RegionAssembly
 from ..Region.Set import Set
 from ..TableCollection.TableCollectionAssembly import TableCollectionAssembly
 
+from __init__ import *
 
-class Assembly(MeshEditAssembly, MeshAssembly, PropertyAssembly, RegionAssembly, TableCollectionAssembly):
+
+class Assembly(MeshEditAssembly, MeshAssembly, PropertyAssembly,
+               RegionAssembly, TableCollectionAssembly):
     """An Assembly object is a container for instances of parts. The Assembly object has no
     constructor command. Abaqus creates the *rootAssembly* member when a Model object is 
     created. 
@@ -93,10 +96,15 @@ class Assembly(MeshEditAssembly, MeshAssembly, PropertyAssembly, RegionAssembly,
         mdb.models[name].rootAssembly
 
     """
-
-    def ConnectorOrientation(self, region: Set, localCsys1: DatumCsys = DatumCsys(), axis1: SymbolicConstant = AXIS_1,
-                             angle1: float = 0, orient2sameAs1: Boolean = ON, localCsys2: DatumCsys = DatumCsys(),
-                             axis2: SymbolicConstant = AXIS_1, angle2: float = 0) -> ConnectorOrientation:
+    def ConnectorOrientation(self,
+                             region: Set,
+                             localCsys1: DatumCsys = DatumCsys(),
+                             axis1: SymbolicConstant = AXIS_1,
+                             angle1: float = 0,
+                             orient2sameAs1: Boolean = ON,
+                             localCsys2: DatumCsys = DatumCsys(),
+                             axis2: SymbolicConstant = AXIS_1,
+                             angle2: float = 0) -> ConnectorOrientation:
         """This method creates a ConnectorOrientation object.
 
         Notes
@@ -138,7 +146,8 @@ class Assembly(MeshEditAssembly, MeshAssembly, PropertyAssembly, RegionAssembly,
         -------
             A ConnectorOrientation object.
         """
-        connectorOrientation = ConnectorOrientation(region, localCsys1, axis1, angle1, orient2sameAs1, localCsys2,
-                                                    axis2, angle2)
+        connectorOrientation = ConnectorOrientation(region, localCsys1, axis1,
+                                                    angle1, orient2sameAs1,
+                                                    localCsys2, axis2, angle2)
         self.connectorOrientations.append(connectorOrientation)
         return connectorOrientation

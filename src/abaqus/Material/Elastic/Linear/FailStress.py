@@ -1,5 +1,7 @@
 from abaqusConstants import *
 
+from __init__ import *
+
 
 class FailStress:
     """The FailStress object defines parameters for stress-based failure measures.
@@ -32,8 +34,10 @@ class FailStress:
         - FAIL STRESS
 
     """
-
-    def __init__(self, table: tuple, temperatureDependency: Boolean = OFF, dependencies: int = 0):
+    def __init__(self,
+                 table: tuple,
+                 temperatureDependency: Boolean = OFF,
+                 dependencies: int = 0):
         """This method creates a FailStress object.
 
         Notes

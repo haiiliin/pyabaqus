@@ -1,7 +1,9 @@
 from .Profile import Profile
 
-class LProfile(Profile):
+from __init__ import *
 
+
+class LProfile(Profile):
     """The LProfile object defines the properties of a L profile. 
     The LProfile object is derived from the Profile object. 
 
@@ -20,7 +22,6 @@ class LProfile(Profile):
         - BEAM SECTION
 
     """
-
     def __init__(self, name: str, a: float, b: float, t1: float, t2: float):
         """This method creates a LProfile object.
 
@@ -71,4 +72,3 @@ class LProfile(Profile):
             
         """
         pass
-

@@ -1,7 +1,9 @@
 from .Profile import Profile
 
-class TrapezoidalProfile(Profile):
+from __init__ import *
 
+
+class TrapezoidalProfile(Profile):
     """The TrapezoidalProfile object defines the properties of a trapezoidal profile. 
     The TrapezoidalProfile object is derived from the Profile object. 
 
@@ -20,7 +22,6 @@ class TrapezoidalProfile(Profile):
         - BEAM SECTION
 
     """
-
     def __init__(self, name: str, a: float, b: float, c: float, d: float):
         """This method creates a TrapezoidalProfile object.
 
@@ -69,4 +70,3 @@ class TrapezoidalProfile(Profile):
             
         """
         pass
-

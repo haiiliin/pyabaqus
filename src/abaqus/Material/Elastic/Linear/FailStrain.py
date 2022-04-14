@@ -1,5 +1,7 @@
 from abaqusConstants import *
 
+from __init__ import *
+
 
 class FailStrain:
     """The FailStrain object defines parameters for strain-based failure measures.
@@ -30,8 +32,10 @@ class FailStrain:
         - FAIL STRAIN
 
     """
-
-    def __init__(self, table: tuple, temperatureDependency: Boolean = OFF, dependencies: int = 0):
+    def __init__(self,
+                 table: tuple,
+                 temperatureDependency: Boolean = OFF,
+                 dependencies: int = 0):
         """This method creates a FailStrain object.
 
         Notes

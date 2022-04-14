@@ -1,6 +1,8 @@
 from .GeometricRestriction import GeometricRestriction
 from ..Region.Region import Region
 
+from __init__ import *
+
 
 class BeadPenetrationCheck(GeometricRestriction):
     """The BeadPenetrationCheck object defines a penetration check geometric restriction.
@@ -16,8 +18,8 @@ class BeadPenetrationCheck(GeometricRestriction):
         mdb.models[name].optimizationTasks[name].geometricRestrictions[name]
 
     """
-
-    def __init__(self, name: str, beadPenetrationCheckRegion: Region, region: Region):
+    def __init__(self, name: str, beadPenetrationCheckRegion: Region,
+                 region: Region):
         """This method creates a BeadPenetrationCheck object.
 
         Notes

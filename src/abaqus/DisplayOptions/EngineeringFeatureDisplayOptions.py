@@ -1,5 +1,7 @@
 from abaqusConstants import *
 
+from __init__ import *
+
 
 class EngineeringFeatureDisplayOptions:
     """The EngineeringFeatureDisplayOptions object stores settings that specify how assemblies
@@ -18,10 +20,13 @@ class EngineeringFeatureDisplayOptions:
             session.viewports[name].partDisplay.engineeringFeatureOptions
 
     """
-
-    def setValues(self, pointMassInertia: Boolean = ON, nonstructuralMass: Boolean = ON,
-                  heatCapacitance: Boolean = ON, contourIntegral: Boolean = ON,
-                  springToGround: Boolean = ON, twoPointSpring: Boolean = ON):
+    def setValues(self,
+                  pointMassInertia: Boolean = ON,
+                  nonstructuralMass: Boolean = ON,
+                  heatCapacitance: Boolean = ON,
+                  contourIntegral: Boolean = ON,
+                  springToGround: Boolean = ON,
+                  twoPointSpring: Boolean = ON):
         """This method modifies the EngineeringFeatureDisplayOptions object.
         
         Parameters

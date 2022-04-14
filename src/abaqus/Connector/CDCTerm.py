@@ -1,6 +1,8 @@
 from abaqusConstants import *
 from .ConnectorOptions import ConnectorOptions
 
+from __init__ import *
+
 
 class CDCTerm:
     """The CDCTerm object is used to create contributing terms for a DerivedComponent object.
@@ -30,14 +32,20 @@ class CDCTerm:
 
     """
 
-    # A ConnectorOptions object specifying the ConnectorOptions used to define tabular options 
-    # for this ConnectorBehaviorOption. 
+    # A ConnectorOptions object specifying the ConnectorOptions used to define tabular options
+    # for this ConnectorBehaviorOption.
     options: ConnectorOptions = ConnectorOptions()
 
-    def __init__(self, intrinsicComponents: tuple, table: tuple, termOperator: SymbolicConstant = RSS,
-                 termSign: SymbolicConstant = POSITIVE, localDependency: Boolean = OFF,
-                 indepCompType: SymbolicConstant = POSITION, indepComponents: tuple = (),
-                 tempDependency: Boolean = OFF, fieldDependencies: int = 0):
+    def __init__(self,
+                 intrinsicComponents: tuple,
+                 table: tuple,
+                 termOperator: SymbolicConstant = RSS,
+                 termSign: SymbolicConstant = POSITIVE,
+                 localDependency: Boolean = OFF,
+                 indepCompType: SymbolicConstant = POSITION,
+                 indepComponents: tuple = (),
+                 tempDependency: Boolean = OFF,
+                 fieldDependencies: int = 0):
         """This method creates a CDCTerm object.
 
         Notes
@@ -116,11 +124,17 @@ class CDCTerm:
         """
         pass
 
-    def ConnectorOptions(self, useBehRegSettings: Boolean = ON, regularize: Boolean = ON,
-                         defaultTolerance: Boolean = ON, regularization: float = 0,
-                         defaultRateFactor: Boolean = ON, rateFactor: float = 0,
-                         interpolation: SymbolicConstant = LINEAR, useBehExtSettings: Boolean = ON,
-                         extrapolation: SymbolicConstant = CONSTANT) -> ConnectorOptions:
+    def ConnectorOptions(
+            self,
+            useBehRegSettings: Boolean = ON,
+            regularize: Boolean = ON,
+            defaultTolerance: Boolean = ON,
+            regularization: float = 0,
+            defaultRateFactor: Boolean = ON,
+            rateFactor: float = 0,
+            interpolation: SymbolicConstant = LINEAR,
+            useBehExtSettings: Boolean = ON,
+            extrapolation: SymbolicConstant = CONSTANT) -> ConnectorOptions:
         """This method creates a connector options object to be used in conjunction with an
         allowable connector behavior option, derived component term, or connector section.
 
@@ -189,7 +203,8 @@ class CDCTerm:
         ------
             ValueError and TextError.
         """
-        self.options = connectorOptions = ConnectorOptions(useBehRegSettings, regularize, defaultTolerance,
-                                                           regularization, defaultRateFactor, rateFactor, interpolation,
-                                                           useBehExtSettings, extrapolation)
+        self.options = connectorOptions = ConnectorOptions(
+            useBehRegSettings, regularize, defaultTolerance, regularization,
+            defaultRateFactor, rateFactor, interpolation, useBehExtSettings,
+            extrapolation)
         return connectorOptions

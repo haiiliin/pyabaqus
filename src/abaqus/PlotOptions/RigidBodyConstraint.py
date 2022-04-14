@@ -1,3 +1,6 @@
+from __init__ import *
+
+
 class RigidBodyConstraint:
     """The RigidBodyConstraint object.
 
@@ -17,7 +20,7 @@ class RigidBodyConstraint:
 
     """
 
-    # A String specifying the rigidbody constraint name. This attribute is read-only. 
+    # A String specifying the rigidbody constraint name. This attribute is read-only.
     name: str = ''
 
     def constraintData(self):

@@ -1,5 +1,7 @@
 from abaqusConstants import *
 
+from __init__ import *
+
 
 class ContactPropertyAssignment:
     """The ContactPropertyAssignment object stores the contact property assignment definition
@@ -19,7 +21,6 @@ class ContactPropertyAssignment:
         - CONTACT PROPERTY ASSIGNMENT
 
     """
-
     def changeValuesInStep(self, stepName: str, index: int, value: str):
         """This method allows modification of contact property assignments to domain pairs already
         defined in a given step.

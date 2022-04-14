@@ -1,3 +1,6 @@
+from __init__ import *
+
+
 class UserDefinedField:
     """The UserDefinedField object redefines field variables at a material point.
 
@@ -16,7 +19,6 @@ class UserDefinedField:
         - USER DEFINED FIELD
 
     """
-
     def __init__(self):
         """This method defines a UserDefinedField object.
 

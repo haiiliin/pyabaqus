@@ -1,5 +1,7 @@
 from abaqusConstants import *
 
+from __init__ import *
+
 
 class OptimizationConstraint:
     """The OptimizationConstraint object constrains an optimization from making changes to the
@@ -15,8 +17,10 @@ class OptimizationConstraint:
         mdb.models[name].optimizationTasks[name].optimizationConstraints[name]
 
     """
-
-    def __init__(self, name: str, designResponse: str, restrictionValue: float,
+    def __init__(self,
+                 name: str,
+                 designResponse: str,
+                 restrictionValue: float,
                  restrictionMethod: SymbolicConstant = ABSOLUTE_EQUAL):
         """This method creates an OptimizationConstraint object.
 

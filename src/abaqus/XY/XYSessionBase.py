@@ -1,6 +1,8 @@
 from abaqusConstants import *
 from ..Session.SessionBase import SessionBase
 
+from __init__ import *
+
 
 class XYSessionBase(SessionBase):
     """The following commands operate on Session objects. For more information about the 
@@ -15,14 +17,27 @@ class XYSessionBase(SessionBase):
             import visualization
 
     """
-
-    def linearizeStress(self, name: str, path: str, startPoint: str, endPoint: str, modelShape: SymbolicConstant,
-                        components: tuple, xyMembraneComps: tuple, xyBendingComps: tuple,
-                        invariantBendingComps: tuple = (), intervals: int = 40, radiusOfCurvature: float = None,
-                        oopRadiusOfCurvature: float = None, curvatureCorrection: Boolean = OFF,
-                        curvatureCsys: str = '', useCurvatureCsysForOrient: Boolean = OFF,
-                        saveXy: Boolean = OFF, writeReport: Boolean = OFF, reportFile: str = '',
-                        appendToFile: Boolean = OFF, saveToPath: Boolean = OFF):
+    def linearizeStress(self,
+                        name: str,
+                        path: str,
+                        startPoint: str,
+                        endPoint: str,
+                        modelShape: SymbolicConstant,
+                        components: tuple,
+                        xyMembraneComps: tuple,
+                        xyBendingComps: tuple,
+                        invariantBendingComps: tuple = (),
+                        intervals: int = 40,
+                        radiusOfCurvature: float = None,
+                        oopRadiusOfCurvature: float = None,
+                        curvatureCorrection: Boolean = OFF,
+                        curvatureCsys: str = '',
+                        useCurvatureCsysForOrient: Boolean = OFF,
+                        saveXy: Boolean = OFF,
+                        writeReport: Boolean = OFF,
+                        reportFile: str = '',
+                        appendToFile: Boolean = OFF,
+                        saveToPath: Boolean = OFF):
         """This method is used to perform stress linearization along a defined stress line.
         
         Parameters

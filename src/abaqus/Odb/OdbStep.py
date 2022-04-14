@@ -6,10 +6,15 @@ from .OdbFrame import OdbFrame
 from .OdbLoadCase import OdbLoadCase
 from .OdbStepBase import OdbStepBase
 
+from __init__ import *
+
 
 class OdbStep(OdbStepBase):
-
-    def HistoryRegion(self, name: str, description: str, point: HistoryPoint, loadCase: str = None) -> HistoryRegion:
+    def HistoryRegion(self,
+                      name: str,
+                      description: str,
+                      point: HistoryPoint,
+                      loadCase: str = None) -> HistoryRegion:
         """This method creates a HistoryRegion object.
 
         Notes
@@ -36,11 +41,15 @@ class OdbStep(OdbStepBase):
         -------
             A HistoryRegion object.
         """
-        self.historyRegions[name] = historyRegion = HistoryRegion(name, description, point, loadCase)
+        self.historyRegions[name] = historyRegion = HistoryRegion(
+            name, description, point, loadCase)
         return historyRegion
 
     @typing.overload
-    def Frame(self, incrementNumber: int, frameValue: float, description: str = '') -> OdbFrame:
+    def Frame(self,
+              incrementNumber: int,
+              frameValue: float,
+              description: str = '') -> OdbFrame:
         """This method creates an OdbFrame object and appends it to the frame sequence.
 
         Notes
@@ -71,7 +80,10 @@ class OdbStep(OdbStepBase):
         pass
 
     @typing.overload
-    def Frame(self, mode: int, frequency: float, description: str = '') -> OdbFrame:
+    def Frame(self,
+              mode: int,
+              frequency: float,
+              description: str = '') -> OdbFrame:
         """This constructor creates an OdbFrame object in the frequency domain and appends it to
         the frame sequence. The arguments to the constructor are valid only when
         *domain*=FREQUENCY or *domain*=MODAL.
@@ -101,7 +113,10 @@ class OdbStep(OdbStepBase):
         pass
 
     @typing.overload
-    def Frame(self, loadCase: OdbLoadCase, description: str = '', frequency: float = 0) -> OdbFrame:
+    def Frame(self,
+              loadCase: OdbLoadCase,
+              description: str = '',
+              frequency: float = 0) -> OdbFrame:
         """This constructor creates an OdbFrame object for a specific load case and appends it to
         the frame sequence.
 

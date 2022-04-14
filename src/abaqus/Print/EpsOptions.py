@@ -2,6 +2,8 @@ import typing
 
 from abaqusConstants import *
 
+from __init__ import *
+
 
 class EpsOptions:
     """The EpsOptions object stores the settings that Abaqus uses when printing using
@@ -14,10 +16,13 @@ class EpsOptions:
             session.epsOptions
 
     """
-
-    def setValues(self, imageSize: typing.Union[SymbolicConstant, float] = SIZE_ON_SCREEN,
-                  units: SymbolicConstant = INCHES, resolution: SymbolicConstant = DPI_150,
-                  fontType: SymbolicConstant = PS_IF_AVAILABLE, imageFormat: SymbolicConstant = VECTOR,
+    def setValues(self,
+                  imageSize: typing.Union[SymbolicConstant,
+                                          float] = SIZE_ON_SCREEN,
+                  units: SymbolicConstant = INCHES,
+                  resolution: SymbolicConstant = DPI_150,
+                  fontType: SymbolicConstant = PS_IF_AVAILABLE,
+                  imageFormat: SymbolicConstant = VECTOR,
                   shadingQuality: SymbolicConstant = MEDIUM):
         """This method modifies the EpsOptions object.
         

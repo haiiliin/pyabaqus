@@ -1,5 +1,7 @@
 from abaqusConstants import *
 
+from __init__ import *
+
 
 class AdaptiveMeshControl:
     """The AdaptiveMeshControl object is used to control various aspects of Arbitrary
@@ -16,17 +18,23 @@ class AdaptiveMeshControl:
         mdb.models[name].adaptiveMeshControls[name]
 
     """
-
-    def __init__(self, name: str, remapping: SymbolicConstant = SECOND_ORDER_ADVECTION,
-                 smoothingAlgorithm: SymbolicConstant = GEOMETRY_ENHANCED,
-                 smoothingPriority: SymbolicConstant = UNIFORM, initialFeatureAngle: float = 30,
-                 transitionFeatureAngle: float = 30,
-                 momentumAdvection: SymbolicConstant = ELEMENT_CENTER_PROJECTION,
-                 meshingPredictor: SymbolicConstant = CURRENT, curvatureRefinement: float = 1,
-                 volumetricSmoothingWeight: float = 1, laplacianSmoothingWeight: float = 0,
-                 equipotentialSmoothingWeight: float = 0, meshConstraintAngle: float = 60,
-                 originalConfigurationProjectionWeight: float = 1,
-                 standardVolumetricSmoothingWeight: float = 0):
+    def __init__(
+            self,
+            name: str,
+            remapping: SymbolicConstant = SECOND_ORDER_ADVECTION,
+            smoothingAlgorithm: SymbolicConstant = GEOMETRY_ENHANCED,
+            smoothingPriority: SymbolicConstant = UNIFORM,
+            initialFeatureAngle: float = 30,
+            transitionFeatureAngle: float = 30,
+            momentumAdvection: SymbolicConstant = ELEMENT_CENTER_PROJECTION,
+            meshingPredictor: SymbolicConstant = CURRENT,
+            curvatureRefinement: float = 1,
+            volumetricSmoothingWeight: float = 1,
+            laplacianSmoothingWeight: float = 0,
+            equipotentialSmoothingWeight: float = 0,
+            meshConstraintAngle: float = 60,
+            originalConfigurationProjectionWeight: float = 1,
+            standardVolumetricSmoothingWeight: float = 0):
         """This method creates an AdaptiveMeshControl object.
 
         Notes
@@ -96,16 +104,22 @@ class AdaptiveMeshControl:
         """
         pass
 
-    def setValues(self, remapping: SymbolicConstant = SECOND_ORDER_ADVECTION,
-                  smoothingAlgorithm: SymbolicConstant = GEOMETRY_ENHANCED,
-                  smoothingPriority: SymbolicConstant = UNIFORM, initialFeatureAngle: float = 30,
-                  transitionFeatureAngle: float = 30,
-                  momentumAdvection: SymbolicConstant = ELEMENT_CENTER_PROJECTION,
-                  meshingPredictor: SymbolicConstant = CURRENT, curvatureRefinement: float = 1,
-                  volumetricSmoothingWeight: float = 1, laplacianSmoothingWeight: float = 0,
-                  equipotentialSmoothingWeight: float = 0, meshConstraintAngle: float = 60,
-                  originalConfigurationProjectionWeight: float = 1,
-                  standardVolumetricSmoothingWeight: float = 0):
+    def setValues(
+            self,
+            remapping: SymbolicConstant = SECOND_ORDER_ADVECTION,
+            smoothingAlgorithm: SymbolicConstant = GEOMETRY_ENHANCED,
+            smoothingPriority: SymbolicConstant = UNIFORM,
+            initialFeatureAngle: float = 30,
+            transitionFeatureAngle: float = 30,
+            momentumAdvection: SymbolicConstant = ELEMENT_CENTER_PROJECTION,
+            meshingPredictor: SymbolicConstant = CURRENT,
+            curvatureRefinement: float = 1,
+            volumetricSmoothingWeight: float = 1,
+            laplacianSmoothingWeight: float = 0,
+            equipotentialSmoothingWeight: float = 0,
+            meshConstraintAngle: float = 60,
+            originalConfigurationProjectionWeight: float = 1,
+            standardVolumetricSmoothingWeight: float = 0):
         """This method modifies the AdaptiveMeshControl object.
         
         Parameters

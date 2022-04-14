@@ -1,5 +1,7 @@
 from abaqusConstants import *
 
+from __init__ import *
+
 
 class FeatureOptions:
     """The FeatureOptions object stores the options that control the behavior of feature
@@ -15,8 +17,9 @@ class FeatureOptions:
             mdb.models[name].featureOptions
 
     """
-
-    def setValues(self, checkSelfIntersection: Boolean = ON, autoCaching: Boolean = ON,
+    def setValues(self,
+                  checkSelfIntersection: Boolean = ON,
+                  autoCaching: Boolean = ON,
                   maxCachedStates: int = 5):
         """This method modifies the FeatureOptions object for the specified model.
         

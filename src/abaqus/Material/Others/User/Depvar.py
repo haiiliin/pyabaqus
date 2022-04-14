@@ -1,3 +1,6 @@
+from __init__ import *
+
+
 class Depvar:
     """The Depvar object specifies solution-dependent state variables.
 
@@ -16,7 +19,6 @@ class Depvar:
         - DEPVAR
 
     """
-
     def __init__(self, deleteVar: int = 0, n: int = 0):
         """This method creates a Depvar object.
 

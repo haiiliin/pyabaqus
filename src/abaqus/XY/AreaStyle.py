@@ -1,5 +1,7 @@
 from abaqusConstants import *
 
+from __init__ import *
+
 
 class AreaStyle:
     """The AreaStyle object is used to define how areas are to be filled when drawing XY-plot
@@ -32,8 +34,10 @@ class AreaStyle:
         session.xyPlots[name].title.area.style
 
     """
-
-    def __init__(self, color: str = '', fill: Boolean = ON, style: SymbolicConstant = SOLID):
+    def __init__(self,
+                 color: str = '',
+                 fill: Boolean = ON,
+                 style: SymbolicConstant = SOLID):
         """This method creates an AreaStyle.
 
         Notes
@@ -67,7 +71,10 @@ class AreaStyle:
         """
         pass
 
-    def setValues(self, color: str = '', fill: Boolean = ON, style: SymbolicConstant = SOLID):
+    def setValues(self,
+                  color: str = '',
+                  fill: Boolean = ON,
+                  style: SymbolicConstant = SOLID):
         """This method modifies the AreaStyle object.
         
         Parameters

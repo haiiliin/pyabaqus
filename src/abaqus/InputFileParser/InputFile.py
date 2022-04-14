@@ -1,5 +1,7 @@
 from abaqusConstants import *
 
+from __init__ import *
+
 
 class InputFile:
     """The InputFile object is used to store the definitions in an Abaqus input file. InputFile
@@ -28,18 +30,18 @@ class InputFile:
 
     """
 
-    # A String specifying the source file name of the Abaqus input file. 
+    # A String specifying the source file name of the Abaqus input file.
     file: str = ''
 
-    # A String specifying the directory where the input file is located. 
+    # A String specifying the directory where the input file is located.
     directory: str = ''
 
-    # A sequence of Strings specifying any additional input files included in the specified 
-    # input file. 
+    # A sequence of Strings specifying any additional input files included in the specified
+    # input file.
     includes: tuple = ()
 
-    # A sequence of Strings for input files included in the specified input file that could 
-    # not be located. 
+    # A sequence of Strings for input files included in the specified input file that could
+    # not be located.
     missingIncludes: tuple = ()
 
     def __init__(self, file: str, directory: str = ''):
@@ -66,7 +68,10 @@ class InputFile:
         """
         pass
 
-    def parse(self, organize: Boolean = False, verbose: Boolean = False, bulk: Boolean = True,
+    def parse(self,
+              organize: Boolean = False,
+              verbose: Boolean = False,
+              bulk: Boolean = True,
               usePyArray: Boolean = False):
         """This method parses the input file associated with the InputFile object.
         

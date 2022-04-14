@@ -1,5 +1,7 @@
 from abaqusConstants import *
 from .Edge import Edge
+from __future__ import annotations
+from __init__ import *
 
 
 class EdgeArray:
@@ -39,7 +41,6 @@ class EdgeArray:
         mdb.models[name].rootAssembly.surfaces[name].edges
 
     """
-
     def __init__(self, edges: list[Edge]):
         """This method creates an EdgeArray object.
 
@@ -63,7 +64,9 @@ class EdgeArray:
         """
         pass
 
-    def findAt(self, coordinates: tuple, printWarning: Boolean = True):
+    def findAt(self,
+               coordinates: tuple,
+               printWarning: Boolean = True) -> Union[Edge, EdgeArray]:
         """This method returns the object or objects in the EdgeArray located at the given
         coordinates.
         findAt initially uses the ACIS tolerance of 1E-6. As a result, findAt returns any edge
@@ -98,7 +101,11 @@ class EdgeArray:
         """
         pass
 
-    def getClosest(self, coordinates: tuple, searchTolerance: str = ''):
+    def getClosest(
+            self,
+            coordinates: Union[COORDINATE_3D, Tuple[COORDINATE_3D, ]],
+            searchTolerance: float = 0
+    ) -> Dict[Tuple:Tuple[Edge, COORDINATE_3D]]:
         """This method returns an object or objects in the EdgeArray closest to the given set of
         points, where the given points need not lie on the edges in the EdgeArray.
         
@@ -127,7 +134,7 @@ class EdgeArray:
         """
         pass
 
-    def getSequenceFromMask(self, mask: str):
+    def getSequenceFromMask(self, mask: str) -> Union[Edge, EdgeArray]:
         """This method returns the object or objects in the EdgeArray identified using the
         specified *mask*. This command is generated when the JournalOptions are set to
         COMPRESSEDINDEX. When a large number of objects are involved, this method is highly
@@ -150,7 +157,7 @@ class EdgeArray:
         """
         pass
 
-    def getMask(self):
+    def getMask(self) -> str:
         """This method returns a string specifying the object or objects.
 
         Returns
@@ -160,8 +167,13 @@ class EdgeArray:
         """
         pass
 
-    def getByBoundingBox(self, xMin: str = '', yMin: str = '', zMin: str = '', xMax: str = '', yMax: str = '',
-                         zMax: str = ''):
+    def getByBoundingBox(self,
+                         xMin: str = '',
+                         yMin: str = '',
+                         zMin: str = '',
+                         xMax: str = '',
+                         yMax: str = '',
+                         zMax: str = '') -> EdgeArray:
         """This method returns an array of edge objects that lie within the specified bounding box.
         
         Parameters
@@ -186,7 +198,8 @@ class EdgeArray:
         """
         pass
 
-    def getByBoundingCylinder(self, center1: tuple, center2: tuple, radius: str):
+    def getByBoundingCylinder(self, center1: tuple, center2: tuple,
+                              radius: str) -> EdgeArray:
         """This method returns an array of edge objects that lie within the specified bounding
         cylinder.
         
@@ -208,7 +221,7 @@ class EdgeArray:
         """
         pass
 
-    def getByBoundingSphere(self, center: tuple, radius: str):
+    def getByBoundingSphere(self, center: tuple, radius: str) -> EdgeArray:
         """This method returns an array of edge objects that lie within the specified bounding
         sphere.
         
@@ -226,7 +239,8 @@ class EdgeArray:
         """
         pass
 
-    def getBoundingBox(self):
+    def getBoundingBox(
+            self) -> Dict["low":COORDINATE_3D, "high":COORDINATE_3D]:
         """This method returns a dictionary of two tuples representing minimum and maximum boundary
         values of the bounding box of the minimum size containing the edge sequence.
 

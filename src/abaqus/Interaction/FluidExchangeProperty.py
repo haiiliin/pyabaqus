@@ -1,6 +1,8 @@
 from abaqusConstants import *
 from .ContactProperty import ContactProperty
 
+from __init__ import *
+
 
 class FluidExchangeProperty(ContactProperty):
     """The FluidExchangeProperty object is an interaction property that defines the fluid
@@ -21,9 +23,12 @@ class FluidExchangeProperty(ContactProperty):
         - FLUID EXCHANGE PROPERTY
 
     """
-
-    def __init__(self, name: str, dataTable: tuple, definition: SymbolicConstant = BULK_VISCOSITY,
-                 pressureDependency: Boolean = OFF, temperatureDependency: Boolean = OFF,
+    def __init__(self,
+                 name: str,
+                 dataTable: tuple,
+                 definition: SymbolicConstant = BULK_VISCOSITY,
+                 pressureDependency: Boolean = OFF,
+                 temperatureDependency: Boolean = OFF,
                  fieldDependencies: int = 0):
         """This method creates a FluidExchangeProperty object.
 
@@ -104,8 +109,11 @@ class FluidExchangeProperty(ContactProperty):
         super().__init__(name)
         pass
 
-    def setValues(self, definition: SymbolicConstant = BULK_VISCOSITY, pressureDependency: Boolean = OFF,
-                  temperatureDependency: Boolean = OFF, fieldDependencies: int = 0):
+    def setValues(self,
+                  definition: SymbolicConstant = BULK_VISCOSITY,
+                  pressureDependency: Boolean = OFF,
+                  temperatureDependency: Boolean = OFF,
+                  fieldDependencies: int = 0):
         """This method modifies the FluidExchangeProperty object.
         
         Parameters

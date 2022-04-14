@@ -1,3 +1,4 @@
+from __init__ import *
 
 
 class SymbolicConstant:
@@ -24,7 +25,6 @@ class SymbolicConstant:
         from abaqusConstants import *
 
     """
-
     def __init__(self, text: str):
         """The SymbolicConstant method creates a SymbolicConstant object.
 

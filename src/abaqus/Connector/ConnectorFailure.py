@@ -1,6 +1,8 @@
 from abaqusConstants import *
 from .ConnectorBehaviorOption import ConnectorBehaviorOption
 
+from __init__ import *
+
 
 class ConnectorFailure(ConnectorBehaviorOption):
     """The ConnectorFailure object defines failure criteria for one or more components of a
@@ -22,9 +24,12 @@ class ConnectorFailure(ConnectorBehaviorOption):
         - CONNECTOR FAILURE
 
     """
-
-    def __init__(self, releaseComponent: SymbolicConstant = ALL, minMotion: float = None,
-                 maxMotion: float = None, minForce: float = None, maxForce: float = None,
+    def __init__(self,
+                 releaseComponent: SymbolicConstant = ALL,
+                 minMotion: float = None,
+                 maxMotion: float = None,
+                 minForce: float = None,
+                 maxForce: float = None,
                  components: tuple = ()):
         """This method creates a connector failure behavior option for a ConnectorSection object.
 

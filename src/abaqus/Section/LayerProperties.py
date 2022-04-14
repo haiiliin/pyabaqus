@@ -1,3 +1,4 @@
+from __init__ import *
 
 
 class LayerProperties:
@@ -20,10 +21,16 @@ class LayerProperties:
         - REBAR LAYER
 
     """
-
-    def __init__(self, barArea: float, orientationAngle: float, layerName: str, material: str,
-                 barSpacing: float = 0, layerPosition: float = 0, spacingAngle: float = 0,
-                 extensionRatio: float = 0, radius: float = 0):
+    def __init__(self,
+                 barArea: float,
+                 orientationAngle: float,
+                 layerName: str,
+                 material: str,
+                 barSpacing: float = 0,
+                 layerPosition: float = 0,
+                 spacingAngle: float = 0,
+                 extensionRatio: float = 0,
+                 radius: float = 0):
         """This method creates a LayerProperties object.
 
         Notes

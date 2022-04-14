@@ -1,5 +1,7 @@
 from abaqusConstants import *
 
+from __init__ import *
+
 
 class OptimizationTaskDisplayOptions:
     """The OptimizationTaskDisplayOptions object stores settings that specify how assemblies
@@ -15,7 +17,6 @@ class OptimizationTaskDisplayOptions:
             session.viewports[name].layers[name].assemblyDisplay.optimizationTaskOptions
 
     """
-
     def setValues(self, topologyTask: Boolean = ON, shapeTask: Boolean = ON):
         """This method modifies the OptimizationTaskDisplayOptions object.
         

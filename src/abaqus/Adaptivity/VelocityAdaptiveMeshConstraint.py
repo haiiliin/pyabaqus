@@ -4,6 +4,8 @@ from abaqusConstants import *
 from .AdaptiveMeshConstraint import AdaptiveMeshConstraint
 from ..Region.Region import Region
 
+from __init__ import *
+
 
 class VelocityAdaptiveMeshConstraint(AdaptiveMeshConstraint):
     """The VelocityAdaptiveMeshConstraint object stores the data for an Arbitrary Lagrangian
@@ -36,29 +38,34 @@ class VelocityAdaptiveMeshConstraint(AdaptiveMeshConstraint):
 
     """
 
-    # A String specifying the adaptive mesh constraint repository key. 
+    # A String specifying the adaptive mesh constraint repository key.
     name: str = ''
 
-    # A SymbolicConstant specifying the category of the adaptive mesh constraint. Possible 
-    # values are MECHANICAL and THERMAL. 
+    # A SymbolicConstant specifying the category of the adaptive mesh constraint. Possible
+    # values are MECHANICAL and THERMAL.
     category: SymbolicConstant = None
 
-    # A Region object specifying the region to which the adaptive mesh constraint is applied. 
+    # A Region object specifying the region to which the adaptive mesh constraint is applied.
     region: Region = Region()
 
-    # None or a DatumCsys object specifying the local coordinate system of the adaptive mesh 
-    # constraint's degrees of freedom. If *localCsys*=None, the degrees of freedom are defined 
-    # in the global coordinate system. The default value is None. 
+    # None or a DatumCsys object specifying the local coordinate system of the adaptive mesh
+    # constraint's degrees of freedom. If *localCsys*=None, the degrees of freedom are defined
+    # in the global coordinate system. The default value is None.
     localCsys: str = None
 
-    def __init__(self, name: str, createStepName: str, region: Region,
+    def __init__(self,
+                 name: str,
+                 createStepName: str,
+                 region: Region,
                  v1: typing.Union[SymbolicConstant, float] = UNSET,
                  v2: typing.Union[SymbolicConstant, float] = UNSET,
                  v3: typing.Union[SymbolicConstant, float] = UNSET,
                  vr1: typing.Union[SymbolicConstant, float] = UNSET,
                  vr2: typing.Union[SymbolicConstant, float] = UNSET,
-                 vr3: typing.Union[SymbolicConstant, float] = UNSET, amplitude: str = UNSET,
-                 localCsys: str = None, motionType: SymbolicConstant = INDEPENDENT):
+                 vr3: typing.Union[SymbolicConstant, float] = UNSET,
+                 amplitude: str = UNSET,
+                 localCsys: str = None,
+                 motionType: SymbolicConstant = INDEPENDENT):
         """This method creates a VelocityAdaptiveMeshConstraint object.
 
         Notes
@@ -122,13 +129,16 @@ class VelocityAdaptiveMeshConstraint(AdaptiveMeshConstraint):
         super().__init__()
         pass
 
-    def setValues(self, v1: typing.Union[SymbolicConstant, float] = UNSET,
+    def setValues(self,
+                  v1: typing.Union[SymbolicConstant, float] = UNSET,
                   v2: typing.Union[SymbolicConstant, float] = UNSET,
                   v3: typing.Union[SymbolicConstant, float] = UNSET,
                   vr1: typing.Union[SymbolicConstant, float] = UNSET,
                   vr2: typing.Union[SymbolicConstant, float] = UNSET,
-                  vr3: typing.Union[SymbolicConstant, float] = UNSET, amplitude: str = UNSET,
-                  localCsys: str = None, motionType: SymbolicConstant = INDEPENDENT):
+                  vr3: typing.Union[SymbolicConstant, float] = UNSET,
+                  amplitude: str = UNSET,
+                  localCsys: str = None,
+                  motionType: SymbolicConstant = INDEPENDENT):
         """This method modifies the data for an existing VelocityAdaptiveMeshConstraint object in
         the step where it is created.
         
@@ -173,7 +183,8 @@ class VelocityAdaptiveMeshConstraint(AdaptiveMeshConstraint):
         """
         pass
 
-    def setValuesInStep(self, stepName: str,
+    def setValuesInStep(self,
+                        stepName: str,
                         v1: typing.Union[SymbolicConstant, float] = None,
                         v2: typing.Union[SymbolicConstant, float] = None,
                         v3: typing.Union[SymbolicConstant, float] = None,

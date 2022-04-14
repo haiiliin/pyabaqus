@@ -13,6 +13,8 @@ from ..BasicGeometry.IgnoredVertex import IgnoredVertex
 from ..Datum.DatumCsys import DatumCsys
 from ..Part.PartBase import PartBase
 
+from __init__ import *
+
 
 class MeshPart(PartBase):
     """The following commands operate on Part objects. For more information about the Part 
@@ -27,7 +29,6 @@ class MeshPart(PartBase):
         import mesh
 
     """
-
     def assignStackDirection(self, cells: tuple[Cell], referenceRegion: Face):
         """This method assigns a stack direction to geometric cells. The stack direction will be
         used to orient the elements during mesh generation.
@@ -41,8 +42,11 @@ class MeshPart(PartBase):
         """
         pass
 
-    def associateMeshWithGeometry(self, geometricEntity: str, elements: tuple[MeshElement] = (),
-                                  elemFaces: tuple[MeshFace] = (), elemEdges: tuple[MeshEdge] = (),
+    def associateMeshWithGeometry(self,
+                                  geometricEntity: str,
+                                  elements: tuple[MeshElement] = (),
+                                  elemFaces: tuple[MeshFace] = (),
+                                  elemEdges: tuple[MeshEdge] = (),
                                   node: MeshNode = MeshNode((0, 0, 0))):
         """This method associates a geometric entity with mesh entities that are either orphan
         elements, bounds orphan elements, or were created using the bottom-up meshing technique.
@@ -70,14 +74,23 @@ class MeshPart(PartBase):
         """
         pass
 
-    def createVirtualTopology(self, regions: tuple[Face] = (), mergeShortEdges: Boolean = False,
-                              shortEdgeThreshold: float = None, mergeSmallFaces: Boolean = False,
-                              smallFaceAreaThreshold: float = None, mergeSliverFaces: Boolean = False,
-                              faceAspectRatioThreshold: float = None, mergeSmallAngleFaces: Boolean = False,
-                              smallFaceCornerAngleThreshold: float = None, mergeThinStairFaces: Boolean = False,
-                              thinStairFaceThreshold: float = None, ignoreRedundantEntities: Boolean = False,
-                              cornerAngleTolerance: float = 30, applyBlendControls: Boolean = False,
-                              blendSubtendedAngleTolerance: float = None, blendRadiusTolerance: float = None):
+    def createVirtualTopology(self,
+                              regions: tuple[Face] = (),
+                              mergeShortEdges: Boolean = False,
+                              shortEdgeThreshold: float = None,
+                              mergeSmallFaces: Boolean = False,
+                              smallFaceAreaThreshold: float = None,
+                              mergeSliverFaces: Boolean = False,
+                              faceAspectRatioThreshold: float = None,
+                              mergeSmallAngleFaces: Boolean = False,
+                              smallFaceCornerAngleThreshold: float = None,
+                              mergeThinStairFaces: Boolean = False,
+                              thinStairFaceThreshold: float = None,
+                              ignoreRedundantEntities: Boolean = False,
+                              cornerAngleTolerance: float = 30,
+                              applyBlendControls: Boolean = False,
+                              blendSubtendedAngleTolerance: float = None,
+                              blendRadiusTolerance: float = None):
         """This method creates a virtual topology feature by automatically merging faces and edges
         based on a set of geometric parameters. The edges and vertices that are being merged
         will be ignored during mesh generation.
@@ -182,7 +195,10 @@ class MeshPart(PartBase):
         """
         pass
 
-    def deleteMeshAssociationWithGeometry(self, geometricEntities: tuple[Cell], addBoundingEntities: Boolean = False):
+    def deleteMeshAssociationWithGeometry(
+            self,
+            geometricEntities: tuple[Cell],
+            addBoundingEntities: Boolean = False):
         """This method deletes the association of geometric entities with mesh entities.
         
         Parameters
@@ -217,8 +233,11 @@ class MeshPart(PartBase):
         """
         pass
 
-    def generateMesh(self, regions: tuple['Part'] = (), seedConstraintOverride: Boolean = OFF,
-                     meshTechniqueOverride: Boolean = OFF, boundaryPreview: Boolean = OFF,
+    def generateMesh(self,
+                     regions: tuple['Part'] = (),
+                     seedConstraintOverride: Boolean = OFF,
+                     meshTechniqueOverride: Boolean = OFF,
+                     boundaryPreview: Boolean = OFF,
                      boundaryMeshOverride: Boolean = OFF):
         """This method generates a mesh in the given parts or regions.
         
@@ -246,10 +265,16 @@ class MeshPart(PartBase):
         """
         pass
 
-    def generateBottomUpExtrudedMesh(self, cell: Cell, numberOfLayers: int, extrudeVector: tuple,
+    def generateBottomUpExtrudedMesh(self,
+                                     cell: Cell,
+                                     numberOfLayers: int,
+                                     extrudeVector: tuple,
                                      geometrySourceSide: str = '',
-                                     elemFacesSourceSide: tuple[MeshFace] = (), elemSourceSide: tuple = (),
-                                     depth: float = None, targetSide: str = '', biasRatio: float = 1,
+                                     elemFacesSourceSide: tuple[MeshFace] = (),
+                                     elemSourceSide: tuple = (),
+                                     depth: float = None,
+                                     targetSide: str = '',
+                                     biasRatio: float = 1,
                                      extendElementSets: Boolean = False):
         """This method generates solid elements by extruding a 2D mesh along a vector, either on an
         orphan mesh or within a cell region using a bottom-up technique.
@@ -292,12 +317,18 @@ class MeshPart(PartBase):
         """
         pass
 
-    def generateBottomUpSweptMesh(self, cell: Cell, geometrySourceSide: str = '',
-                                  elemFacesSourceSide: tuple[MeshFace] = (),
-                                  elemSourceSide: tuple = (), geometryConnectingSides: str = '',
-                                  elemFacesConnectingSides: tuple[MeshFace] = (), elemConnectingSides: tuple = (),
-                                  targetSide: Face = Face(), numberOfLayers: int = None,
-                                  extendElementSets: Boolean = False):
+    def generateBottomUpSweptMesh(
+            self,
+            cell: Cell,
+            geometrySourceSide: str = '',
+            elemFacesSourceSide: tuple[MeshFace] = (),
+            elemSourceSide: tuple = (),
+            geometryConnectingSides: str = '',
+            elemFacesConnectingSides: tuple[MeshFace] = (),
+            elemConnectingSides: tuple = (),
+            targetSide: Face = Face(),
+            numberOfLayers: int = None,
+            extendElementSets: Boolean = False):
         """This method generates solid elements by sweeping a 2D mesh, either on an orphan mesh or
         within a cell region using a bottom-up technique.
         
@@ -334,10 +365,15 @@ class MeshPart(PartBase):
         """
         pass
 
-    def generateBottomUpRevolvedMesh(self, cell: Cell, numberOfLayers: int, axisOfRevolution: tuple,
+    def generateBottomUpRevolvedMesh(self,
+                                     cell: Cell,
+                                     numberOfLayers: int,
+                                     axisOfRevolution: tuple,
                                      angleOfRevolution: float,
-                                     geometrySourceSide: str = '', elemFacesSourceSide: tuple[MeshFace] = (),
-                                     elemSourceSide: tuple = (), extendElementSets: Boolean = False):
+                                     geometrySourceSide: str = '',
+                                     elemFacesSourceSide: tuple[MeshFace] = (),
+                                     elemSourceSide: tuple = (),
+                                     extendElementSets: Boolean = False):
         """This method generates solid elements by revolving a 2D mesh around an axis, either on an
         orphan mesh or within a cell region using a bottom-up technique.
         
@@ -373,7 +409,8 @@ class MeshPart(PartBase):
         """
         pass
 
-    def getEdgeSeeds(self, edge: Edge, attribute: typing.Union[SymbolicConstant, float]):
+    def getEdgeSeeds(self, edge: Edge,
+                     attribute: typing.Union[SymbolicConstant, float]):
         """This method returns an edge seed parameter for a specified edge of a part.
         
         Parameters
@@ -647,9 +684,17 @@ class MeshPart(PartBase):
         """
         pass
 
-    def seedEdgeByBias(self, biasMethod: SymbolicConstant, end1Edges: tuple[Edge], end2Edges: tuple[Edge],
-                       centerEdges: tuple[Edge], endEdges: tuple[Edge], ratio: float, number: int,
-                       minSize: float, maxSize: float, constraint: SymbolicConstant = FREE):
+    def seedEdgeByBias(self,
+                       biasMethod: SymbolicConstant,
+                       end1Edges: tuple[Edge],
+                       end2Edges: tuple[Edge],
+                       centerEdges: tuple[Edge],
+                       endEdges: tuple[Edge],
+                       ratio: float,
+                       number: int,
+                       minSize: float,
+                       maxSize: float,
+                       constraint: SymbolicConstant = FREE):
         """This method seeds the given edges nonuniformly using the specified number of elements
         and bias ratio or the specified minimum and maximum element sizes.
         
@@ -701,7 +746,10 @@ class MeshPart(PartBase):
         """
         pass
 
-    def seedEdgeByNumber(self, edges: tuple[Edge], number: int, constraint: SymbolicConstant = FREE):
+    def seedEdgeByNumber(self,
+                         edges: tuple[Edge],
+                         number: int,
+                         constraint: SymbolicConstant = FREE):
         """This method seeds the given edges uniformly based on the number of elements along the
         edges.
         
@@ -723,8 +771,12 @@ class MeshPart(PartBase):
         """
         pass
 
-    def seedEdgeBySize(self, edges: tuple[Edge], size: float, deviationFactor: float = None,
-                       minSizeFactor: float = None, constraint: SymbolicConstant = FREE):
+    def seedEdgeBySize(self,
+                       edges: tuple[Edge],
+                       size: float,
+                       deviationFactor: float = None,
+                       minSizeFactor: float = None,
+                       constraint: SymbolicConstant = FREE):
         """This method seeds the given edges either uniformly or following edge curvature
         distribution, based on the desired element size.
         
@@ -751,7 +803,10 @@ class MeshPart(PartBase):
         """
         pass
 
-    def seedPart(self, size: float, deviationFactor: float = None, minSizeFactor: float = None,
+    def seedPart(self,
+                 size: float,
+                 deviationFactor: float = None,
+                 minSizeFactor: float = None,
                  constraint: SymbolicConstant = FREE):
         """This method assigns global edge seeds to the given parts.
         
@@ -773,8 +828,13 @@ class MeshPart(PartBase):
         """
         pass
 
-    def setBoundaryLayerControls(self, regions: tuple[Cell], firstElemSize: float, growthFactor: float, numLayers: int,
-                                 inactiveFaces: tuple[Face] = (), setName: str = ''):
+    def setBoundaryLayerControls(self,
+                                 regions: tuple[Cell],
+                                 firstElemSize: float,
+                                 growthFactor: float,
+                                 numLayers: int,
+                                 inactiveFaces: tuple[Face] = (),
+                                 setName: str = ''):
         """This method sets the control parameters for boundary layer mesh for the specified
         regions.
         
@@ -842,9 +902,14 @@ class MeshPart(PartBase):
         """
         pass
 
-    def setMeshControls(self, regions: tuple, elemShape: SymbolicConstant = None, technique: SymbolicConstant = None,
-                        algorithm: SymbolicConstant = None, minTransition: Boolean = ON,
-                        sizeGrowth: SymbolicConstant = None, allowMapped: Boolean = OFF):
+    def setMeshControls(self,
+                        regions: tuple,
+                        elemShape: SymbolicConstant = None,
+                        technique: SymbolicConstant = None,
+                        algorithm: SymbolicConstant = None,
+                        minTransition: Boolean = ON,
+                        sizeGrowth: SymbolicConstant = None,
+                        allowMapped: Boolean = OFF):
         """This method sets the mesh control parameters for the specified regions.
         
         Parameters
@@ -927,8 +992,11 @@ class MeshPart(PartBase):
         """
         pass
 
-    def verifyMeshQuality(self, criterion: SymbolicConstant, threshold: float = None,
-                          elemShape: SymbolicConstant = None, regions: tuple = ()):
+    def verifyMeshQuality(self,
+                          criterion: SymbolicConstant,
+                          threshold: float = None,
+                          elemShape: SymbolicConstant = None,
+                          regions: tuple = ()):
         """This method tests the mesh quality of a part and returns poor-quality elements.
         
         Parameters
@@ -999,7 +1067,10 @@ class MeshPart(PartBase):
         """
         pass
 
-    def Node(self, coordinates: tuple, localCsys: DatumCsys = DatumCsys(), label: int = None):
+    def Node(self,
+             coordinates: tuple,
+             localCsys: DatumCsys = DatumCsys(),
+             label: int = None):
         """This method creates a node on an orphan mesh part.
 
         Notes

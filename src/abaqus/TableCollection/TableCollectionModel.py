@@ -3,6 +3,8 @@ from .EventSeries import EventSeries
 from .EventSeriesType import EventSeriesType
 from ..Model.ModelBase import ModelBase
 
+from __init__ import *
+
 
 class TableCollectionModel(ModelBase):
     """Abaqus creates a Model object named `Model-1` when a session is started.
@@ -16,9 +18,14 @@ class TableCollectionModel(ModelBase):
         mdb.models[name]
 
     """
-
-    def EventSeries(self, name: str, createStepName: str, eventSeriesType: str, transformType: str = NONE,
-                    timeSpan: str = STEP_TIME, transformations: str = '', fileName: str = '',
+    def EventSeries(self,
+                    name: str,
+                    createStepName: str,
+                    eventSeriesType: str,
+                    transformType: str = NONE,
+                    timeSpan: str = STEP_TIME,
+                    transformations: str = '',
+                    fileName: str = '',
                     data: str = '') -> EventSeries:
         """This method creates an EventSeries object.
 
@@ -59,11 +66,15 @@ class TableCollectionModel(ModelBase):
         ------
             RangeError.
         """
-        self.eventSeriesDatas[name] = eventSeries = EventSeries(name, createStepName, eventSeriesType, transformType,
-                                                                timeSpan, transformations, fileName, data)
+        self.eventSeriesDatas[name] = eventSeries = EventSeries(
+            name, createStepName, eventSeriesType, transformType, timeSpan,
+            transformations, fileName, data)
         return eventSeries
 
-    def EventSeriesType(self, name: str, createStepName: str, fields: str = '') -> EventSeriesType:
+    def EventSeriesType(self,
+                        name: str,
+                        createStepName: str,
+                        fields: str = '') -> EventSeriesType:
         """This method creates an EventSeriesType object.
 
         Notes
@@ -91,5 +102,6 @@ class TableCollectionModel(ModelBase):
         ------
             RangeError.
         """
-        self.eventSeriesTypes[name] = eventSeriesType = EventSeriesType(name, createStepName, fields)
+        self.eventSeriesTypes[name] = eventSeriesType = EventSeriesType(
+            name, createStepName, fields)
         return eventSeriesType

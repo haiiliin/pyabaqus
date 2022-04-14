@@ -1,5 +1,7 @@
 from abaqusConstants import *
 
+from __init__ import *
+
 
 class PolarityAssignments:
     """The PolarityAssignments object stores the polarity assignment definition for surfaces in
@@ -18,8 +20,8 @@ class PolarityAssignments:
         - CONTACT FORMULATION
 
     """
-
-    def changeValuesInStep(self, stepName: str, index: int, value: SymbolicConstant):
+    def changeValuesInStep(self, stepName: str, index: int,
+                           value: SymbolicConstant):
         """This method allows you to modify polarity assignments already defined on surface pairs
         in a given step.
         

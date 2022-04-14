@@ -2,6 +2,8 @@ from abaqusConstants import *
 from .GeometricRestriction import GeometricRestriction
 from ..Region.Region import Region
 
+from __init__ import *
+
 
 class SizingPlanarSymmetry(GeometricRestriction):
     """The SizingPlanarSymmetry object defines a sizing planar symmetry geometric restriction.
@@ -17,8 +19,11 @@ class SizingPlanarSymmetry(GeometricRestriction):
         mdb.models[name].optimizationTasks[name].geometricRestrictions[name]
 
     """
-
-    def __init__(self, name: str, region: Region, axis: SymbolicConstant = AXIS_1, csys: int = None,
+    def __init__(self,
+                 name: str,
+                 region: Region,
+                 axis: SymbolicConstant = AXIS_1,
+                 csys: int = None,
                  ignoreFrozenArea: Boolean = OFF):
         """This method creates a SizingPlanarSymmetry object.
 

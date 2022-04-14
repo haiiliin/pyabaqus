@@ -1,5 +1,7 @@
 from .Annotation import Annotation
 
+from __init__ import *
+
 
 class AnnotationsToPlotArray(list[Annotation]):
     """The AnnotationsToPlotArray object is a sequence that stores references to plotted
@@ -16,7 +18,6 @@ class AnnotationsToPlotArray(list[Annotation]):
             session.viewports[name].annotationsToPlot
 
     """
-
     def bringForward(self, index: str):
         """This method brings the Annotation object one position forward in the
         AnnotationsToPlotArray sequence.

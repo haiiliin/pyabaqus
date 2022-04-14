@@ -1,5 +1,7 @@
 from .Section import Section
 
+from __init__ import *
+
 
 class TrussSection(Section):
     """The TrussSection object defines the properties of a truss section.
@@ -20,7 +22,6 @@ class TrussSection(Section):
         - SOLID SECTION
 
     """
-
     def __init__(self, name: str, material: str, area: float = 1):
         """This method creates a TrussSection object.
 

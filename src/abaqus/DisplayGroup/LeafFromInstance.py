@@ -2,6 +2,8 @@ from abaqusConstants import *
 from .Leaf import Leaf
 from ..Assembly.PartInstance import PartInstance
 
+from __init__ import *
+
 
 class LeafFromInstance(Leaf):
     """The LeafFromInstance object can be used whenever a Leaf object is expected as an
@@ -26,8 +28,8 @@ class LeafFromInstance(Leaf):
 
     """
 
-    # A SymbolicConstant specifying the leaf type. Possible values are EMPTY_LEAF, 
-    # DEFAULT_MODEL, ALL_ELEMENTS, ALL_NODES, and ALL_SURFACES. 
+    # A SymbolicConstant specifying the leaf type. Possible values are EMPTY_LEAF,
+    # DEFAULT_MODEL, ALL_ELEMENTS, ALL_NODES, and ALL_SURFACES.
     leafType: SymbolicConstant = None
 
     def __init__(self, instances: PartInstance):

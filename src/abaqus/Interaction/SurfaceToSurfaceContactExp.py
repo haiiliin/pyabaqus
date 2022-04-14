@@ -5,6 +5,8 @@ from .Interaction import Interaction
 from ..Datum.DatumAxis import DatumAxis
 from ..Region.Region import Region
 
+from __init__ import *
+
 
 class SurfaceToSurfaceContactExp(Interaction):
     """The SurfaceToSurfaceContactExp object defines surface-to-surface contact during an
@@ -21,17 +23,27 @@ class SurfaceToSurfaceContactExp(Interaction):
         mdb.models[name].interactions[name]
 
     """
-
-    def __init__(self, name: str, createStepName: str, main: Region, secondary: Region,
-                 sliding: SymbolicConstant, interactionProperty: str,
+    def __init__(self,
+                 name: str,
+                 createStepName: str,
+                 main: Region,
+                 secondary: Region,
+                 sliding: SymbolicConstant,
+                 interactionProperty: str,
                  mechanicalConstraint: SymbolicConstant = KINEMATIC,
-                 weightingFactorType: SymbolicConstant = DEFAULT, weightingFactor: float = 0,
+                 weightingFactorType: SymbolicConstant = DEFAULT,
+                 weightingFactor: float = 0,
                  contactControls: str = '',
-                 initialClearance: typing.Union[SymbolicConstant, float] = OMIT,
-                 halfThreadAngle: str = None, pitch: str = None,
-                 majorBoltDiameter: typing.Union[SymbolicConstant, float] = COMPUTED,
-                 meanBoltDiameter: typing.Union[SymbolicConstant, float] = COMPUTED,
-                 datumAxis: DatumAxis = DatumAxis(), useReverseDatumAxis: Boolean = OFF,
+                 initialClearance: typing.Union[SymbolicConstant,
+                                                float] = OMIT,
+                 halfThreadAngle: str = None,
+                 pitch: str = None,
+                 majorBoltDiameter: typing.Union[SymbolicConstant,
+                                                 float] = COMPUTED,
+                 meanBoltDiameter: typing.Union[SymbolicConstant,
+                                                float] = COMPUTED,
+                 datumAxis: DatumAxis = DatumAxis(),
+                 useReverseDatumAxis: Boolean = OFF,
                  clearanceRegion: Region = Region()):
         """This method creates a SurfaceToSurfaceContactExp object.
 
@@ -110,14 +122,21 @@ class SurfaceToSurfaceContactExp(Interaction):
         """
         pass
 
-    def setValues(self, mechanicalConstraint: SymbolicConstant = KINEMATIC,
-                  weightingFactorType: SymbolicConstant = DEFAULT, weightingFactor: float = 0,
+    def setValues(self,
+                  mechanicalConstraint: SymbolicConstant = KINEMATIC,
+                  weightingFactorType: SymbolicConstant = DEFAULT,
+                  weightingFactor: float = 0,
                   contactControls: str = '',
-                  initialClearance: typing.Union[SymbolicConstant, float] = OMIT,
-                  halfThreadAngle: str = None, pitch: str = None,
-                  majorBoltDiameter: typing.Union[SymbolicConstant, float] = COMPUTED,
-                  meanBoltDiameter: typing.Union[SymbolicConstant, float] = COMPUTED,
-                  datumAxis: DatumAxis = DatumAxis(), useReverseDatumAxis: Boolean = OFF,
+                  initialClearance: typing.Union[SymbolicConstant,
+                                                 float] = OMIT,
+                  halfThreadAngle: str = None,
+                  pitch: str = None,
+                  majorBoltDiameter: typing.Union[SymbolicConstant,
+                                                  float] = COMPUTED,
+                  meanBoltDiameter: typing.Union[SymbolicConstant,
+                                                 float] = COMPUTED,
+                  datumAxis: DatumAxis = DatumAxis(),
+                  useReverseDatumAxis: Boolean = OFF,
                   clearanceRegion: Region = Region()):
         """This method modifies the data for an existing SurfaceToSurfaceContactExp object in the
         step where it is created.
@@ -163,7 +182,10 @@ class SurfaceToSurfaceContactExp(Interaction):
         """
         pass
 
-    def setValuesInStep(self, stepName: str, interactionProperty: str = '', contactControls: str = ''):
+    def setValuesInStep(self,
+                        stepName: str,
+                        interactionProperty: str = '',
+                        contactControls: str = ''):
         """This method modifies the propagating data for an existing SurfaceToSurfaceContactExp
         object in the specified step.
         

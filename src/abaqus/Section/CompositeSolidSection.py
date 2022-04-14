@@ -2,6 +2,8 @@ from abaqusConstants import *
 from .Section import Section
 from .SectionLayerArray import SectionLayerArray
 
+from __init__ import *
+
 
 class CompositeSolidSection(Section):
     """The CompositeSolidSection object defines the properties of a composite solid section.
@@ -22,8 +24,11 @@ class CompositeSolidSection(Section):
         - SOLID SECTION
 
     """
-
-    def __init__(self, name: str, layup: SectionLayerArray, symmetric: Boolean = OFF, layupName: str = ''):
+    def __init__(self,
+                 name: str,
+                 layup: SectionLayerArray,
+                 symmetric: Boolean = OFF,
+                 layupName: str = ''):
         """This method creates a CompositeSolidSection object.
 
         Notes

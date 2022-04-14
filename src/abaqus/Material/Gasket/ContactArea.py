@@ -1,5 +1,7 @@
 from abaqusConstants import *
 
+from __init__ import *
+
 
 class ContactArea:
     """A ContactArea object specifies a suboption of gasket thickness behavior when
@@ -30,8 +32,10 @@ class ContactArea:
         - GASKET CONTACT AREA
 
     """
-
-    def __init__(self, table: tuple, temperatureDependency: Boolean = OFF, dependencies: int = 0):
+    def __init__(self,
+                 table: tuple,
+                 temperatureDependency: Boolean = OFF,
+                 dependencies: int = 0):
         """This method creates a ContactArea object.
 
         Notes

@@ -3,6 +3,8 @@ from ..BasicGeometry.Face import Face
 from ..Feature.Feature import Feature as FeatureBase
 from ..Mesh.MeshFace import MeshFace
 
+from __init__ import *
+
 
 class Feature(FeatureBase):
     """The following commands operate on Feature objects. For more information about the 
@@ -17,15 +19,22 @@ class Feature(FeatureBase):
         import assembly
 
     """
-
     @staticmethod
-    def AttachmentLines(name: str, points: int, sourceFaces: tuple[Face], sourceElementFaces: tuple[MeshFace],
-                        targetFaces: tuple[Face], targetElementFaces: tuple[MeshFace],
-                        projectionMethod: SymbolicConstant = PROJECT_BY_PROXIMITY,
-                        projectionDirStartPt: float = None, projectionDirEndPt: float = None,
-                        sourceToTargetProjMethod: SymbolicConstant = PROJECT_BY_NUMBER,
-                        numProjections: str = '', projectionDistance: str = '',
-                        flipSourceToTargetDirection: Boolean = OFF, setName: str = '') -> 'Feature':
+    def AttachmentLines(
+            name: str,
+            points: int,
+            sourceFaces: tuple[Face],
+            sourceElementFaces: tuple[MeshFace],
+            targetFaces: tuple[Face],
+            targetElementFaces: tuple[MeshFace],
+            projectionMethod: SymbolicConstant = PROJECT_BY_PROXIMITY,
+            projectionDirStartPt: float = None,
+            projectionDirEndPt: float = None,
+            sourceToTargetProjMethod: SymbolicConstant = PROJECT_BY_NUMBER,
+            numProjections: str = '',
+            projectionDistance: str = '',
+            flipSourceToTargetDirection: Boolean = OFF,
+            setName: str = '') -> 'Feature':
         """This method creates a Feature object by creating attachment lines between the given set
         of source and target faces. The given points are first projected onto the source faces
         using the specified projection method. The points are then projected normal to the
@@ -159,7 +168,8 @@ class Feature(FeatureBase):
         return Feature()
 
     @staticmethod
-    def EdgeToEdge(movableAxis: str, fixedAxis: str, flip: Boolean, clearance: float) -> 'Feature':
+    def EdgeToEdge(movableAxis: str, fixedAxis: str, flip: Boolean,
+                   clearance: float) -> 'Feature':
         """This method moves an instance so that its edge is parallel to an edge of a fixed
         instance.
 
@@ -197,7 +207,8 @@ class Feature(FeatureBase):
         return Feature()
 
     @staticmethod
-    def FaceToFace(movablePlane: str, fixedPlane: str, flip: Boolean, clearance: float) -> 'Feature':
+    def FaceToFace(movablePlane: str, fixedPlane: str, flip: Boolean,
+                   clearance: float) -> 'Feature':
         """This method moves an instance so that its face is coincident with a face of a fixed
         instance.
 
@@ -264,7 +275,8 @@ class Feature(FeatureBase):
         return Feature()
 
     @staticmethod
-    def ParallelEdge(movableAxis: str, fixedAxis: str, flip: Boolean) -> 'Feature':
+    def ParallelEdge(movableAxis: str, fixedAxis: str,
+                     flip: Boolean) -> 'Feature':
         """This method moves an instance so that its edge is parallel to an edge of a fixed
         instance.
 
@@ -299,7 +311,8 @@ class Feature(FeatureBase):
         return Feature()
 
     @staticmethod
-    def ParallelFace(movablePlane: str, fixedPlane: str, flip: Boolean) -> 'Feature':
+    def ParallelFace(movablePlane: str, fixedPlane: str,
+                     flip: Boolean) -> 'Feature':
         """This method moves an instance so that its face is parallel to a face of a fixed
         instance.
 

@@ -1,5 +1,7 @@
 from abaqusConstants import *
 
+from __init__ import *
+
 
 class Leaf:
     """Leaf objects are used to specify the items in a display group. Leaf objects are
@@ -19,7 +21,6 @@ class Leaf:
         import displayGroupOdbToolset
 
     """
-
     def __init__(self, leafType: SymbolicConstant):
         """This method creates a Leaf object.
 

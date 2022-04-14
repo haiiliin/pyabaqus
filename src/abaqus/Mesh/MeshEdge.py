@@ -1,5 +1,7 @@
 from .MeshElementArray import MeshElementArray
 
+from __init__ import *
+
 
 class MeshEdge:
     """The MeshEdge object refers to an element edge. It has no constructor or members. A
@@ -22,7 +24,6 @@ class MeshEdge:
             mdb.models[name].rootAssembly.instances[name].elementEdges[i]
 
     """
-
     def getElements(self):
         """This method returns a tuple of elements that share the element edge.
 
@@ -32,7 +33,9 @@ class MeshEdge:
         """
         pass
 
-    def getElementsViaTopology(self, domain: MeshElementArray = MeshElementArray([])):
+    def getElementsViaTopology(self,
+                               domain: MeshElementArray = MeshElementArray(
+                                   [])):
         """This method returns an array of MeshElement objects that are obtained by recursively
         finding adjacent elements via topology.
         
@@ -48,7 +51,8 @@ class MeshEdge:
         """
         pass
 
-    def getNodesViaTopology(self, domain: MeshElementArray = MeshElementArray([])):
+    def getNodesViaTopology(self,
+                            domain: MeshElementArray = MeshElementArray([])):
         """This method returns an array of MeshNode objects that lie along element edges
         topologically in line with the element edge.
         

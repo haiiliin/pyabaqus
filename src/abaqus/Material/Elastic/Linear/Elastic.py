@@ -2,6 +2,8 @@ from abaqusConstants import *
 from .FailStrain import FailStrain
 from .FailStress import FailStress
 
+from __init__ import *
+
 
 class Elastic:
     """The Elastic object specifies elastic material properties.
@@ -123,14 +125,19 @@ class Elastic:
 
     """
 
-    # A FailStress object. 
-    failStress: FailStress = FailStress(((),))
+    # A FailStress object.
+    failStress: FailStress = FailStress(((), ))
 
-    # A FailStrain object. 
-    failStrain: FailStrain = FailStrain(((),))
+    # A FailStrain object.
+    failStrain: FailStrain = FailStrain(((), ))
 
-    def __init__(self, table: tuple, type: SymbolicConstant = ISOTROPIC, noCompression: Boolean = OFF,
-                 noTension: Boolean = OFF, temperatureDependency: Boolean = OFF, dependencies: int = 0,
+    def __init__(self,
+                 table: tuple,
+                 type: SymbolicConstant = ISOTROPIC,
+                 noCompression: Boolean = OFF,
+                 noTension: Boolean = OFF,
+                 temperatureDependency: Boolean = OFF,
+                 dependencies: int = 0,
                  moduli: SymbolicConstant = LONG_TERM):
         """This method creates an Elastic object.
 

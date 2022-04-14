@@ -2,6 +2,8 @@ from abaqusConstants import *
 from .Section import Section
 from ..Connector.ConnectorBehaviorOptionArray import ConnectorBehaviorOptionArray
 
+from __init__ import *
+
 
 class ConnectorSection(Section):
     """A ConnectorSection object describes the connection type and the behavior of a connector.
@@ -24,15 +26,24 @@ class ConnectorSection(Section):
             - CONNECTOR CONSTITUTIVE REFERENCE
 
     """
-
-    def __init__(self, name: str, assembledType: SymbolicConstant = NONE,
-                 rotationalType: SymbolicConstant = NONE, translationalType: SymbolicConstant = NONE,
-                 integration: SymbolicConstant = UNSPECIFIED, u1ReferenceLength: float = None,
-                 u2ReferenceLength: float = None, u3ReferenceLength: float = None,
-                 ur1ReferenceAngle: float = None, ur2ReferenceAngle: float = None,
-                 ur3ReferenceAngle: float = None, massPerLength: float = None,
-                 contactAngle: float = None, materialFlowFactor: float = 1, regularize: Boolean = ON,
-                 defaultTolerance: Boolean = ON, regularization: float = 0,
+    def __init__(self,
+                 name: str,
+                 assembledType: SymbolicConstant = NONE,
+                 rotationalType: SymbolicConstant = NONE,
+                 translationalType: SymbolicConstant = NONE,
+                 integration: SymbolicConstant = UNSPECIFIED,
+                 u1ReferenceLength: float = None,
+                 u2ReferenceLength: float = None,
+                 u3ReferenceLength: float = None,
+                 ur1ReferenceAngle: float = None,
+                 ur2ReferenceAngle: float = None,
+                 ur3ReferenceAngle: float = None,
+                 massPerLength: float = None,
+                 contactAngle: float = None,
+                 materialFlowFactor: float = 1,
+                 regularize: Boolean = ON,
+                 defaultTolerance: Boolean = ON,
+                 regularization: float = 0,
                  extrapolation: SymbolicConstant = CONSTANT,
                  behaviorOptions: ConnectorBehaviorOptionArray = None):
         """This method creates a ConnectorSection object.
@@ -138,13 +149,23 @@ class ConnectorSection(Section):
         super().__init__()
         pass
 
-    def setValues(self, assembledType: SymbolicConstant = NONE, rotationalType: SymbolicConstant = NONE,
-                  translationalType: SymbolicConstant = NONE, integration: SymbolicConstant = UNSPECIFIED,
-                  u1ReferenceLength: float = None, u2ReferenceLength: float = None,
-                  u3ReferenceLength: float = None, ur1ReferenceAngle: float = None,
-                  ur2ReferenceAngle: float = None, ur3ReferenceAngle: float = None,
-                  massPerLength: float = None, contactAngle: float = None, materialFlowFactor: float = 1,
-                  regularize: Boolean = ON, defaultTolerance: Boolean = ON, regularization: float = 0,
+    def setValues(self,
+                  assembledType: SymbolicConstant = NONE,
+                  rotationalType: SymbolicConstant = NONE,
+                  translationalType: SymbolicConstant = NONE,
+                  integration: SymbolicConstant = UNSPECIFIED,
+                  u1ReferenceLength: float = None,
+                  u2ReferenceLength: float = None,
+                  u3ReferenceLength: float = None,
+                  ur1ReferenceAngle: float = None,
+                  ur2ReferenceAngle: float = None,
+                  ur3ReferenceAngle: float = None,
+                  massPerLength: float = None,
+                  contactAngle: float = None,
+                  materialFlowFactor: float = 1,
+                  regularize: Boolean = ON,
+                  defaultTolerance: Boolean = ON,
+                  regularization: float = 0,
                   extrapolation: SymbolicConstant = CONSTANT,
                   behaviorOptions: ConnectorBehaviorOptionArray = None):
         """This method modifies the ConnectorSection object.

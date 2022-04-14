@@ -4,6 +4,8 @@ from abaqusConstants import *
 from .BoundaryCondition import BoundaryCondition
 from ..Region.Region import Region
 
+from __init__ import *
+
 
 class ConnVelocityBC(BoundaryCondition):
     """The ConnVelocityBC object stores the data for a connector velocity boundary condition.
@@ -47,44 +49,50 @@ class ConnVelocityBC(BoundaryCondition):
 
     """
 
-    # A String specifying the boundary condition repository key. 
+    # A String specifying the boundary condition repository key.
     name: str = ''
 
-    # A SymbolicConstant specifying how the boundary condition is distributed spatially. 
-    # Possible values are UNIFORM and USER_DEFINED. The default value is UNIFORM. 
+    # A SymbolicConstant specifying how the boundary condition is distributed spatially.
+    # Possible values are UNIFORM and USER_DEFINED. The default value is UNIFORM.
     distributionType: SymbolicConstant = UNIFORM
 
-    # A String specifying the name of the assembled fastener to which the boundary condition 
-    # will be applied. This argument is not valid when *region* is specified. When this 
-    # argument is specified, *fastenerSetName* must also be specified. The default value is an 
-    # empty string. 
+    # A String specifying the name of the assembled fastener to which the boundary condition
+    # will be applied. This argument is not valid when *region* is specified. When this
+    # argument is specified, *fastenerSetName* must also be specified. The default value is an
+    # empty string.
     fastenerName: str = ''
 
-    # A String specifying the assembled fastener template model set to which the boundary 
-    # condition will be applied. This argument is not valid when *region* is specified. When 
-    # this argument is specified, *fastenerName* must also be specified. The default value is 
-    # an empty string. 
+    # A String specifying the assembled fastener template model set to which the boundary
+    # condition will be applied. This argument is not valid when *region* is specified. When
+    # this argument is specified, *fastenerName* must also be specified. The default value is
+    # an empty string.
     fastenerSetName: str = ''
 
-    # A SymbolicConstant specifying the category of the boundary condition. Possible values 
-    # are MECHANICAL and THERMAL. 
+    # A SymbolicConstant specifying the category of the boundary condition. Possible values
+    # are MECHANICAL and THERMAL.
     category: SymbolicConstant = None
 
-    # A Region object specifying the region to which the boundary condition is applied. 
+    # A Region object specifying the region to which the boundary condition is applied.
     region: Region = Region()
 
-    # None or a DatumCsys object specifying the local coordinate system of the boundary 
-    # condition's degrees of freedom. If *localCsys*=None, the degrees of freedom are defined 
-    # in the global coordinate system. The default value is None. 
+    # None or a DatumCsys object specifying the local coordinate system of the boundary
+    # condition's degrees of freedom. If *localCsys*=None, the degrees of freedom are defined
+    # in the global coordinate system. The default value is None.
     localCsys: str = None
 
-    def __init__(self, name: str, createStepName: str, region: str = '', fastenerName: str = '',
-                 fastenerSetName: str = '', v1: typing.Union[SymbolicConstant, float] = UNSET,
+    def __init__(self,
+                 name: str,
+                 createStepName: str,
+                 region: str = '',
+                 fastenerName: str = '',
+                 fastenerSetName: str = '',
+                 v1: typing.Union[SymbolicConstant, float] = UNSET,
                  v2: typing.Union[SymbolicConstant, float] = UNSET,
                  v3: typing.Union[SymbolicConstant, float] = UNSET,
                  vr1: typing.Union[SymbolicConstant, float] = UNSET,
                  vr2: typing.Union[SymbolicConstant, float] = UNSET,
-                 vr3: typing.Union[SymbolicConstant, float] = UNSET, amplitude: str = UNSET,
+                 vr3: typing.Union[SymbolicConstant, float] = UNSET,
+                 amplitude: str = UNSET,
                  distributionType: SymbolicConstant = UNIFORM):
         """This method creates a ConnVelocityBC object on a wire region. Alternatively, the
         boundary condition may also be applied to a wire set referenced from an assembled
@@ -158,13 +166,17 @@ class ConnVelocityBC(BoundaryCondition):
         super().__init__()
         pass
 
-    def setValues(self, region: str = '', fastenerName: str = '', fastenerSetName: str = '',
+    def setValues(self,
+                  region: str = '',
+                  fastenerName: str = '',
+                  fastenerSetName: str = '',
                   v1: typing.Union[SymbolicConstant, float] = UNSET,
                   v2: typing.Union[SymbolicConstant, float] = UNSET,
                   v3: typing.Union[SymbolicConstant, float] = UNSET,
                   vr1: typing.Union[SymbolicConstant, float] = UNSET,
                   vr2: typing.Union[SymbolicConstant, float] = UNSET,
-                  vr3: typing.Union[SymbolicConstant, float] = UNSET, amplitude: str = UNSET,
+                  vr3: typing.Union[SymbolicConstant, float] = UNSET,
+                  amplitude: str = UNSET,
                   distributionType: SymbolicConstant = UNIFORM):
         """This method modifies the data for an existing ConnVelocityBC object in the step where it
         is created.
@@ -220,7 +232,8 @@ class ConnVelocityBC(BoundaryCondition):
         """
         pass
 
-    def setValuesInStep(self, stepName: str,
+    def setValuesInStep(self,
+                        stepName: str,
                         v1: typing.Union[SymbolicConstant, float] = SET,
                         v2: typing.Union[SymbolicConstant, float] = SET,
                         v3: typing.Union[SymbolicConstant, float] = SET,

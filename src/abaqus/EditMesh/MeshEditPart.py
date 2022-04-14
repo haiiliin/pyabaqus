@@ -9,9 +9,14 @@ from ..Mesh.MeshNode import MeshNode
 from ..Part.PartBase import PartBase
 from ..Region.Region import Region
 
+from __init__ import *
+
 
 class Node(MeshNode):
     pass
+
+
+from __init__ import *
 
 
 class MeshEditPart(PartBase):
@@ -27,7 +32,6 @@ class MeshEditPart(PartBase):
             import meshEdit
 
     """
-
     def adjustMidsideNode(self, cornerNodes: tuple[Node], parameter: float):
         """This method is used to adjust the midside node of second-order elements of an orphan
         mesh part.
@@ -44,8 +48,13 @@ class MeshEditPart(PartBase):
         """
         pass
 
-    def cleanMesh(self, mergeTolerance: float, growEdges: Boolean = OFF, elements: str = '', refEdge: str = '',
-                  thicknessDir: float = None, moveLayers: Boolean = False):
+    def cleanMesh(self,
+                  mergeTolerance: float,
+                  growEdges: Boolean = OFF,
+                  elements: str = '',
+                  refEdge: str = '',
+                  thicknessDir: float = None,
+                  moveLayers: Boolean = False):
         """This method is used to collapse short element edges and delete collapsed elements, or
         grow short element edges, on an orphan mesh part composed of linear elements.
         
@@ -112,7 +121,9 @@ class MeshEditPart(PartBase):
         """
         pass
 
-    def deleteElement(self, elements: tuple[MeshElement], deleteUnreferencedNodes: Boolean = OFF):
+    def deleteElement(self,
+                      elements: tuple[MeshElement],
+                      deleteUnreferencedNodes: Boolean = OFF):
         """This method deletes the given elements from an orphan mesh part or an Abaqus native
         mesh. If the elements belong to an Abaqus native mesh then the elements must have been
         generated using the bottom-up meshing technique.
@@ -127,7 +138,9 @@ class MeshEditPart(PartBase):
         """
         pass
 
-    def deleteNode(self, nodes: tuple[MeshNode], deleteUnreferencedNodes: Boolean = OFF):
+    def deleteNode(self,
+                   nodes: tuple[MeshNode],
+                   deleteUnreferencedNodes: Boolean = OFF):
         """This method deletes the given nodes from an orphan mesh part.
         
         Parameters
@@ -141,9 +154,16 @@ class MeshEditPart(PartBase):
         """
         pass
 
-    def editNode(self, nodes: tuple[MeshNode], coordinate1: float = None, coordinate2: float = None,
-                 coordinate3: float = None, coordinates: tuple = (), offset1: float = None,
-                 offset2: float = None, offset3: float = None, localCsys: DatumCsys = DatumCsys(),
+    def editNode(self,
+                 nodes: tuple[MeshNode],
+                 coordinate1: float = None,
+                 coordinate2: float = None,
+                 coordinate3: float = None,
+                 coordinates: tuple = (),
+                 offset1: float = None,
+                 offset2: float = None,
+                 offset3: float = None,
+                 localCsys: DatumCsys = DatumCsys(),
                  projectToGeometry: Boolean = ON):
         """This method changes the coordinates of the given nodes on an orphan mesh part or on an
         Abaqus native mesh.
@@ -218,10 +238,18 @@ class MeshEditPart(PartBase):
         """
         pass
 
-    def generateMeshByOffset(self, region: Region, meshType: str, totalThickness: float, distanceBetweenLayers: float,
-                             numLayers: int, offsetDirection: str = OUTWARD, initialOffset: float = 0.0,
-                             shareNodes: str = False, deleteBaseElements: Boolean = False,
-                             constantThicknessCorners: Boolean = False, extendElementSets: Boolean = False):
+    def generateMeshByOffset(self,
+                             region: Region,
+                             meshType: str,
+                             totalThickness: float,
+                             distanceBetweenLayers: float,
+                             numLayers: int,
+                             offsetDirection: str = OUTWARD,
+                             initialOffset: float = 0.0,
+                             shareNodes: str = False,
+                             deleteBaseElements: Boolean = False,
+                             constantThicknessCorners: Boolean = False,
+                             extendElementSets: Boolean = False):
         """This method generates a solid or shell mesh from an orphan mesh surface by generating
         layers of elements that propagate out normal to the surface boundary.
         
@@ -279,7 +307,10 @@ class MeshEditPart(PartBase):
         pass
 
     @typing.overload
-    def mergeNodes(self, nodes: tuple[Node], tolerance: float = None, removeDuplicateElements: Boolean = True,
+    def mergeNodes(self,
+                   nodes: tuple[Node],
+                   tolerance: float = None,
+                   removeDuplicateElements: Boolean = True,
                    keepHighLabels: Boolean = False):
         """Merge the nodes of an orphan mesh part, or nodes that were generated using the bottom-up
         meshing technique.
@@ -303,7 +334,10 @@ class MeshEditPart(PartBase):
         pass
 
     @typing.overload
-    def mergeNodes(self, node1: MeshNode, node2: MeshNode, removeDuplicateElements: Boolean = True,
+    def mergeNodes(self,
+                   node1: MeshNode,
+                   node2: MeshNode,
+                   removeDuplicateElements: Boolean = True,
                    keepHighLabels: Boolean = False):
         """Merge two nodes of an orphan mesh part or an Abaqus native mesh. If the nodes belong to
         an Abaqus native mesh then at least one of the two nodes must have been generated using
@@ -328,7 +362,8 @@ class MeshEditPart(PartBase):
     def mergeNodes(self, *args, **kwargs):
         pass
 
-    def orientElements(self, pickedElements: tuple[MeshElement], referenceRegion: MeshFace):
+    def orientElements(self, pickedElements: tuple[MeshElement],
+                       referenceRegion: MeshFace):
         """This method orients the stack direction of elements in a continuum shell or gasket mesh.
         
         Parameters
@@ -346,7 +381,11 @@ class MeshEditPart(PartBase):
         """
         pass
 
-    def renumberElement(self, elements: tuple = (), startLabel: int = None, increment: int = None, offset: int = None,
+    def renumberElement(self,
+                        elements: tuple = (),
+                        startLabel: int = None,
+                        increment: int = None,
+                        offset: int = None,
                         labels: str = ''):
         """This method assigns new labels to orphan mesh elements.
         
@@ -379,7 +418,11 @@ class MeshEditPart(PartBase):
         """
         pass
 
-    def renumberNode(self, nodes: tuple = (), startLabel: int = None, increment: int = None, offset: int = None,
+    def renumberNode(self,
+                     nodes: tuple = (),
+                     startLabel: int = None,
+                     increment: int = None,
+                     offset: int = None,
                      labels: str = ''):
         """This method assigns new labels to orphan mesh nodes.
         
@@ -448,7 +491,10 @@ class MeshEditPart(PartBase):
         """
         pass
 
-    def subdivideElement(self, elements: str = '', divisionNumber: int = None, face: MeshFace = MeshFace(),
+    def subdivideElement(self,
+                         elements: str = '',
+                         divisionNumber: int = None,
+                         face: MeshFace = MeshFace(),
                          edge: MeshEdge = MeshEdge()):
         """Subdivide a selection of elements on an orphan mesh part in one or more directions.
         

@@ -1,3 +1,6 @@
+from __init__ import *
+
+
 class TriaxialTestData:
     """The TriaxialTestData object provides triaxial test data.
 
@@ -20,8 +23,11 @@ class TriaxialTestData:
         - TRIAXIAL TEST DATA
 
     """
-
-    def __init__(self, table: tuple, a: float = None, b: float = None, pt: float = None):
+    def __init__(self,
+                 table: tuple,
+                 a: float = None,
+                 b: float = None,
+                 pt: float = None):
         """This method creates a TriaxialTestData object.
 
         Notes

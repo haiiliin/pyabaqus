@@ -1,5 +1,7 @@
 from abaqusConstants import *
 
+from __init__ import *
+
 
 class CaeGuiPrefs:
     """The CaeGuiPrefs object contains the details of the graphical preferences in a
@@ -21,7 +23,7 @@ class CaeGuiPrefs:
 
     """
 
-    # A String specifying the path to the preferences file. 
+    # A String specifying the path to the preferences file.
     fileName: str = ''
 
     def save(self, backupFile: Boolean = OFF):

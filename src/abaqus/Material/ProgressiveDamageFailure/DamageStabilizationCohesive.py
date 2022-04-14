@@ -1,3 +1,6 @@
+from __init__ import *
+
+
 class DamageStabilizationCohesive:
     """The DamageStabilizationCohesive object specifies the viscosity coefficients for the
     damage model for surface-based cohesive behavior or enriched cohesive behavior. 
@@ -43,7 +46,6 @@ class DamageStabilizationCohesive:
         - DAMAGE STABILIZATION
 
     """
-
     def __init__(self, cohesiveCoeff: float = None):
         """This method creates a DamageStabilizationCohesive object.
 

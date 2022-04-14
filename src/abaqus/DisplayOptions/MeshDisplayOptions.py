@@ -1,5 +1,7 @@
 from abaqusConstants import *
 
+from __init__ import *
+
 
 class MeshDisplayOptions:
     """The MeshDisplayOptions object stores settings that specify how the assembly is displayed
@@ -17,10 +19,14 @@ class MeshDisplayOptions:
             session.viewports[name].partDisplay.meshOptions
 
     """
-
-    def setValues(self, nodeLabels: Boolean = OFF, elementLabels: Boolean = OFF,
-                  meshVisibleEdges: SymbolicConstant = EXTERIOR, featureAngle: float = 20,
-                  meshEdgesInShaded: Boolean = ON, meshTechnique: Boolean = OFF, seeds: Boolean = OFF):
+    def setValues(self,
+                  nodeLabels: Boolean = OFF,
+                  elementLabels: Boolean = OFF,
+                  meshVisibleEdges: SymbolicConstant = EXTERIOR,
+                  featureAngle: float = 20,
+                  meshEdgesInShaded: Boolean = ON,
+                  meshTechnique: Boolean = OFF,
+                  seeds: Boolean = OFF):
         """This method modifies the MeshDisplayOptions object.
         
         Parameters

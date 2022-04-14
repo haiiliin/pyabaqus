@@ -1,5 +1,7 @@
 from abaqusConstants import *
 
+from __init__ import *
+
 
 class GasketTransverseShearElastic:
     """The GasketTransverseShearElastic object defines the elastic parameters for the
@@ -27,9 +29,11 @@ class GasketTransverseShearElastic:
         - GASKET ELASTICITY
 
     """
-
-    def __init__(self, table: tuple, variableUnits: SymbolicConstant = STRESS,
-                 temperatureDependency: Boolean = OFF, dependencies: int = 0):
+    def __init__(self,
+                 table: tuple,
+                 variableUnits: SymbolicConstant = STRESS,
+                 temperatureDependency: Boolean = OFF,
+                 dependencies: int = 0):
         """This method creates a GasketTransverseShearElastic object.
 
         Notes

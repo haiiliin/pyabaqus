@@ -1,6 +1,8 @@
 from abaqusConstants import *
 from ...Ratios import Ratios
 
+from __init__ import *
+
 
 class Swelling:
     """The Swelling object specifies time-dependent volumetric swelling for a material.
@@ -28,10 +30,13 @@ class Swelling:
 
     """
 
-    # A Ratios object. 
-    ratios: Ratios = Ratios(((),))
+    # A Ratios object.
+    ratios: Ratios = Ratios(((), ))
 
-    def __init__(self, table: tuple, law: SymbolicConstant = INPUT, temperatureDependency: Boolean = OFF,
+    def __init__(self,
+                 table: tuple,
+                 law: SymbolicConstant = INPUT,
+                 temperatureDependency: Boolean = OFF,
                  dependencies: int = 0):
         """This method creates a Swelling object.
 

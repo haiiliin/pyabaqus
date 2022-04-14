@@ -1,5 +1,7 @@
 from .Odb import Odb
 
+from __init__ import *
+
 
 class ScratchOdb:
     """A scratch output database is associated with an open output database and is used to
@@ -18,7 +20,6 @@ class ScratchOdb:
         session.scratchOdbs[name]
 
     """
-
     def __init__(self, odb: Odb):
         """This method creates a new ScratchOdb object.
 

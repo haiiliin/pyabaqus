@@ -2,6 +2,8 @@ from abaqusConstants import *
 from ..Model.ModelBase import ModelBase
 from ..Part.Part import Part
 
+from __init__ import *
+
 
 class PartModel(ModelBase):
     """Abaqus creates a Model object named `Model-1` when a session is started.
@@ -15,8 +17,10 @@ class PartModel(ModelBase):
         mdb.models[name]
 
     """
-
-    def Part(self, name: str, dimensionality: SymbolicConstant, type: SymbolicConstant,
+    def Part(self,
+             name: str,
+             dimensionality: SymbolicConstant,
+             type: SymbolicConstant,
              twist: Boolean = OFF):
         """This method creates a Part object and places it in the parts repository.
 

@@ -2,6 +2,8 @@ from abaqusConstants import *
 from .GeometricRestriction import GeometricRestriction
 from ..Region.Region import Region
 
+from __init__ import *
+
 
 class TopologyRotationalSymmetry(GeometricRestriction):
     """The TopologyRotationalSymmetry object defines a topology rotational symmetry geometric
@@ -18,9 +20,13 @@ class TopologyRotationalSymmetry(GeometricRestriction):
         mdb.models[name].optimizationTasks[name].geometricRestrictions[name]
 
     """
-
-    def __init__(self, name: str, angle: float, region: Region, axis: SymbolicConstant = AXIS_1,
-                 csys: int = None, ignoreFrozenArea: Boolean = OFF):
+    def __init__(self,
+                 name: str,
+                 angle: float,
+                 region: Region,
+                 axis: SymbolicConstant = AXIS_1,
+                 csys: int = None,
+                 ignoreFrozenArea: Boolean = OFF):
         """This method creates a TopologyRotationalSymmetry object.
 
         Notes
@@ -58,7 +64,10 @@ class TopologyRotationalSymmetry(GeometricRestriction):
         super().__init__()
         pass
 
-    def setValues(self, axis: SymbolicConstant = AXIS_1, csys: int = None, ignoreFrozenArea: Boolean = OFF):
+    def setValues(self,
+                  axis: SymbolicConstant = AXIS_1,
+                  csys: int = None,
+                  ignoreFrozenArea: Boolean = OFF):
         """This method modifies the TopologyRotationalSymmetry object.
         
         Parameters

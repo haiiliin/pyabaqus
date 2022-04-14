@@ -1,5 +1,7 @@
 from abaqusConstants import *
 
+from __init__ import *
+
 
 class DamageEvolution:
     """The DamageEvolution object specifies material properties to define the evolution of
@@ -139,11 +141,15 @@ class DamageEvolution:
         - DAMAGE EVOLUTION
 
     """
-
-    def __init__(self, type: SymbolicConstant, table: tuple, degradation: SymbolicConstant = MAXIMUM,
-                 temperatureDependency: Boolean = OFF, dependencies: int = 0,
+    def __init__(self,
+                 type: SymbolicConstant,
+                 table: tuple,
+                 degradation: SymbolicConstant = MAXIMUM,
+                 temperatureDependency: Boolean = OFF,
+                 dependencies: int = 0,
                  mixedModeBehavior: SymbolicConstant = MODE_INDEPENDENT,
-                 modeMixRatio: SymbolicConstant = ENERGY, power: float = None,
+                 modeMixRatio: SymbolicConstant = ENERGY,
+                 power: float = None,
                  softening: SymbolicConstant = LINEAR):
         """This method creates a DamageEvolution object.
 

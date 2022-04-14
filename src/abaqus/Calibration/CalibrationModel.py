@@ -1,6 +1,8 @@
 from ..Calibration.Calibration import Calibration
 from ..Model.ModelBase import ModelBase
 
+from __init__ import *
+
 
 class CalibrationModel(ModelBase):
     """Abaqus creates a Model object named `Model-1` when a session is started.
@@ -14,7 +16,6 @@ class CalibrationModel(ModelBase):
         mdb.models[name]
 
     """
-
     def Calibration(self, name: str) -> Calibration:
         """This method creates a Calibration object.
 

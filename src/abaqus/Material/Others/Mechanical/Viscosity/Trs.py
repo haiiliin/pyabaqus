@@ -1,5 +1,7 @@
 from abaqusConstants import *
 
+from __init__ import *
+
 
 class Trs:
     """The Trs object defines the temperature-time shift for time history viscoelastic
@@ -27,7 +29,6 @@ class Trs:
         - TRS
 
     """
-
     def __init__(self, definition: SymbolicConstant = WLF, table: tuple = ()):
         """This method creates a Trs object.
 

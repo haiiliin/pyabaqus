@@ -2,6 +2,8 @@ from abaqusConstants import *
 from .GeometricRestriction import GeometricRestriction
 from ..Region.Region import Region
 
+from __init__ import *
+
 
 class TopologyPointSymmetry(GeometricRestriction):
     """The TopologyPointSymmetry object defines a topology point symmetry geometric
@@ -18,8 +20,11 @@ class TopologyPointSymmetry(GeometricRestriction):
         mdb.models[name].optimizationTasks[name].geometricRestrictions[name]
 
     """
-
-    def __init__(self, name: str, region: Region, csys: int = None, ignoreFrozenArea: Boolean = OFF):
+    def __init__(self,
+                 name: str,
+                 region: Region,
+                 csys: int = None,
+                 ignoreFrozenArea: Boolean = OFF):
         """This method creates a TopologyPointSymmetry object.
 
         Notes

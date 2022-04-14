@@ -2,6 +2,8 @@ from abaqusConstants import *
 from .Interaction import Interaction
 from ..Region.Region import Region
 
+from __init__ import *
+
 
 class SelfContactStd(Interaction):
     """The SelfContactStd object defines self-contact during an Abaqus/Standard analysis.
@@ -31,21 +33,27 @@ class SelfContactStd(Interaction):
 
     """
 
-    # A SymbolicConstant specifying the choice of contact tracking algorithm. The STATE 
-    # tracking algorithm uses only normal projections and is specified by using ONE_CONFIG. 
-    # The PATH tracking algorithm uses crossing and normal projections and is specified by 
-    # using TWO_CONFIG. Possible values are ONE_CONFIG and TWO_CONFIG. The default value is 
-    # TWO_CONFIG.This argument is valid only when *enforcement*=SURFACE_TO_SURFACE. 
+    # A SymbolicConstant specifying the choice of contact tracking algorithm. The STATE
+    # tracking algorithm uses only normal projections and is specified by using ONE_CONFIG.
+    # The PATH tracking algorithm uses crossing and normal projections and is specified by
+    # using TWO_CONFIG. Possible values are ONE_CONFIG and TWO_CONFIG. The default value is
+    # TWO_CONFIG.This argument is valid only when *enforcement*=SURFACE_TO_SURFACE.
     contactTracking: SymbolicConstant = TWO_CONFIG
 
-    # A SymbolicConstant specifying the manner in which mid-face constraints are employed. 
-    # Possible values are SELECTIVE, NEVER, and ALWAYS. The default value is SELECTIVE.This 
-    # argument is valid only when *enforcement*=NODE_TO_SURFACE. 
+    # A SymbolicConstant specifying the manner in which mid-face constraints are employed.
+    # Possible values are SELECTIVE, NEVER, and ALWAYS. The default value is SELECTIVE.This
+    # argument is valid only when *enforcement*=NODE_TO_SURFACE.
     supplementaryContact: SymbolicConstant = SELECTIVE
 
-    def __init__(self, name: str, createStepName: str, surface: Region, interactionProperty: str,
-                 enforcement: SymbolicConstant = SURFACE_TO_SURFACE, thickness: Boolean = ON,
-                 smooth: float = 0, contactControls: str = ''):
+    def __init__(self,
+                 name: str,
+                 createStepName: str,
+                 surface: Region,
+                 interactionProperty: str,
+                 enforcement: SymbolicConstant = SURFACE_TO_SURFACE,
+                 thickness: Boolean = ON,
+                 smooth: float = 0,
+                 contactControls: str = ''):
         """This method creates a SelfContactStd object.
 
         Notes
@@ -89,8 +97,11 @@ class SelfContactStd(Interaction):
         super().__init__()
         pass
 
-    def setValues(self, enforcement: SymbolicConstant = SURFACE_TO_SURFACE, thickness: Boolean = ON,
-                  smooth: float = 0, contactControls: str = ''):
+    def setValues(self,
+                  enforcement: SymbolicConstant = SURFACE_TO_SURFACE,
+                  thickness: Boolean = ON,
+                  smooth: float = 0,
+                  contactControls: str = ''):
         """This method modifies the data for an existing SelfContactStd object in the step where it
         is created.
         
@@ -113,7 +124,10 @@ class SelfContactStd(Interaction):
         """
         pass
 
-    def setValuesInStep(self, stepName: str, interactionProperty: str = '', contactControls: str = ''):
+    def setValuesInStep(self,
+                        stepName: str,
+                        interactionProperty: str = '',
+                        contactControls: str = ''):
         """This method modifies the propagating data of an existing SelfContactStd object in the
         specified step.
         

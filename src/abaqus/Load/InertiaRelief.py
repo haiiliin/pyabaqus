@@ -2,6 +2,8 @@ from abaqusConstants import *
 from .Load import Load
 from ..Region.Region import Region
 
+from __init__ import *
+
 
 class InertiaRelief(Load):
     """The InertiaRelief object defines an inertia relief load.
@@ -30,20 +32,28 @@ class InertiaRelief(Load):
 
     """
 
-    # A String specifying the load repository key. 
+    # A String specifying the load repository key.
     name: str = ''
 
-    # None or a DatumCsys object specifying the local coordinate system of the rigid body 
-    # degrees of freedom for the inertia relief load. If *localCoordinates*=None, the free 
-    # directions are defined in the global coordinate system. When this member is queried, it 
-    # returns an Int. The default value is None. 
+    # None or a DatumCsys object specifying the local coordinate system of the rigid body
+    # degrees of freedom for the inertia relief load. If *localCoordinates*=None, the free
+    # directions are defined in the global coordinate system. When this member is queried, it
+    # returns an Int. The default value is None.
     localCoordinates: int = None
 
-    # A Region object specifying the region to which the load is applied. 
+    # A Region object specifying the region to which the load is applied.
     region: Region = Region()
 
-    def __init__(self, name: str, createStepName: str, u1: Boolean = OFF, u2: Boolean = OFF, u3: Boolean = OFF,
-                 ur1: Boolean = OFF, ur2: Boolean = OFF, ur3: Boolean = OFF, referencePoint: tuple = (),
+    def __init__(self,
+                 name: str,
+                 createStepName: str,
+                 u1: Boolean = OFF,
+                 u2: Boolean = OFF,
+                 u3: Boolean = OFF,
+                 ur1: Boolean = OFF,
+                 ur2: Boolean = OFF,
+                 ur3: Boolean = OFF,
+                 referencePoint: tuple = (),
                  localCoordinates: int = None):
         """This method creates an InertiaRelief object.
 
@@ -94,8 +104,14 @@ class InertiaRelief(Load):
         super().__init__()
         pass
 
-    def setValues(self, u1: Boolean = OFF, u2: Boolean = OFF, u3: Boolean = OFF, ur1: Boolean = OFF,
-                  ur2: Boolean = OFF, ur3: Boolean = OFF, referencePoint: tuple = (),
+    def setValues(self,
+                  u1: Boolean = OFF,
+                  u2: Boolean = OFF,
+                  u3: Boolean = OFF,
+                  ur1: Boolean = OFF,
+                  ur2: Boolean = OFF,
+                  ur3: Boolean = OFF,
+                  referencePoint: tuple = (),
                   localCoordinates: int = None):
         """This method modifies the data for an existing InertiaRelief object in the step where it
         is created.
@@ -130,8 +146,15 @@ class InertiaRelief(Load):
         """
         pass
 
-    def setValuesInStep(self, stepName: str, u1: Boolean = OFF, u2: Boolean = OFF, u3: Boolean = OFF,
-                        ur1: Boolean = OFF, ur2: Boolean = OFF, ur3: Boolean = OFF, referencePoint: tuple = (),
+    def setValuesInStep(self,
+                        stepName: str,
+                        u1: Boolean = OFF,
+                        u2: Boolean = OFF,
+                        u3: Boolean = OFF,
+                        ur1: Boolean = OFF,
+                        ur2: Boolean = OFF,
+                        ur3: Boolean = OFF,
+                        referencePoint: tuple = (),
                         fixed: Boolean = OFF):
         """This method modifies the propagating data for an existing InertiaRelief object in the
         specified step.

@@ -2,6 +2,8 @@ from abaqusConstants import *
 from .Load import Load
 from ..Region.Region import Region
 
+from __init__ import *
+
 
 class BodyConcentrationFlux(Load):
     """The BodyConcentrationFlux object defines body concentration flux from a region or into a
@@ -33,23 +35,29 @@ class BodyConcentrationFlux(Load):
 
     """
 
-    # A String specifying the load repository key. 
+    # A String specifying the load repository key.
     name: str = ''
 
-    # A SymbolicConstant specifying how the body concentration flux is distributed spatially. 
-    # Possible values are UNIFORM, USER_DEFINED, and FIELD. The default value is UNIFORM. 
+    # A SymbolicConstant specifying how the body concentration flux is distributed spatially.
+    # Possible values are UNIFORM, USER_DEFINED, and FIELD. The default value is UNIFORM.
     distributionType: SymbolicConstant = UNIFORM
 
-    # A String specifying the name of the AnalyticalField object associated with this load. 
-    # The *field* argument applies only when *distributionType*=FIELD. The default value is an 
-    # empty string. 
+    # A String specifying the name of the AnalyticalField object associated with this load.
+    # The *field* argument applies only when *distributionType*=FIELD. The default value is an
+    # empty string.
     field: str = ''
 
-    # A Region object specifying the region to which the load is applied. 
+    # A Region object specifying the region to which the load is applied.
     region: Region = Region()
 
-    def __init__(self, name: str, createStepName: str, region: Region, magnitude: float, field: str = '',
-                 distributionType: SymbolicConstant = UNIFORM, amplitude: str = UNSET):
+    def __init__(self,
+                 name: str,
+                 createStepName: str,
+                 region: Region,
+                 magnitude: float,
+                 field: str = '',
+                 distributionType: SymbolicConstant = UNIFORM,
+                 amplitude: str = UNSET):
         """This method creates a BodyConcentrationFlux object.
 
         Notes
@@ -90,7 +98,10 @@ class BodyConcentrationFlux(Load):
         super().__init__()
         pass
 
-    def setValues(self, field: str = '', distributionType: SymbolicConstant = UNIFORM, amplitude: str = UNSET):
+    def setValues(self,
+                  field: str = '',
+                  distributionType: SymbolicConstant = UNIFORM,
+                  amplitude: str = UNSET):
         """This method modifies the data for an existing BodyConcentrationFlux object in the step
         where it is created.
         
@@ -110,7 +121,10 @@ class BodyConcentrationFlux(Load):
         """
         pass
 
-    def setValuesInStep(self, stepName: str, magnitude: float = None, amplitude: str = ''):
+    def setValuesInStep(self,
+                        stepName: str,
+                        magnitude: float = None,
+                        amplitude: str = ''):
         """This method modifies the propagating data for an existing BodyConcentrationFlux object
         in the specified step.
         

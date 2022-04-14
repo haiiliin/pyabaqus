@@ -4,6 +4,8 @@ from abaqusConstants import *
 from .Load import Load
 from ..Region.Region import Region
 
+from __init__ import *
+
 
 class LineLoad(Load):
     """The LineLoad object stores the data of an applied line load.
@@ -37,28 +39,35 @@ class LineLoad(Load):
 
     """
 
-    # A String specifying the load repository key. 
+    # A String specifying the load repository key.
     name: str = ''
 
-    # A SymbolicConstant specifying how the load is distributed spatially. Possible values are 
-    # UNIFORM, USER_DEFINED, and FIELD. The default value is UNIFORM. 
+    # A SymbolicConstant specifying how the load is distributed spatially. Possible values are
+    # UNIFORM, USER_DEFINED, and FIELD. The default value is UNIFORM.
     distributionType: SymbolicConstant = UNIFORM
 
-    # A SymbolicConstant specifying whether the load is applied in a global or the beam local 
-    # frame of reference. Possible values are GLOBAL and LOCAL. The default value is GLOBAL. 
+    # A SymbolicConstant specifying whether the load is applied in a global or the beam local
+    # frame of reference. Possible values are GLOBAL and LOCAL. The default value is GLOBAL.
     system: SymbolicConstant = GLOBAL
 
-    # A String specifying the name of the AnalyticalField object associated with this load. 
-    # The *field* argument applies only when *distributionType*=FIELD. The default value is an 
-    # empty string. 
+    # A String specifying the name of the AnalyticalField object associated with this load.
+    # The *field* argument applies only when *distributionType*=FIELD. The default value is an
+    # empty string.
     field: str = ''
 
-    # A Region object specifying the region to which the load is applied. 
+    # A Region object specifying the region to which the load is applied.
     region: Region = Region()
 
-    def __init__(self, name: str, createStepName: str, region: Region,
-                 distributionType: SymbolicConstant = UNIFORM, field: str = '', comp1: float = None,
-                 comp2: float = None, comp3: float = None, amplitude: str = UNSET,
+    def __init__(self,
+                 name: str,
+                 createStepName: str,
+                 region: Region,
+                 distributionType: SymbolicConstant = UNIFORM,
+                 field: str = '',
+                 comp1: float = None,
+                 comp2: float = None,
+                 comp3: float = None,
+                 amplitude: str = UNSET,
                  system: SymbolicConstant = GLOBAL):
         """This method creates a LineLoad object.
 
@@ -109,8 +118,13 @@ class LineLoad(Load):
         super().__init__()
         pass
 
-    def setValues(self, distributionType: SymbolicConstant = UNIFORM, field: str = '', comp1: float = None,
-                  comp2: float = None, comp3: float = None, amplitude: str = UNSET,
+    def setValues(self,
+                  distributionType: SymbolicConstant = UNIFORM,
+                  field: str = '',
+                  comp1: float = None,
+                  comp2: float = None,
+                  comp3: float = None,
+                  amplitude: str = UNSET,
                   system: SymbolicConstant = GLOBAL):
         """This method modifies the data for an existing LineLoad object in the step where it is
         created.
@@ -143,7 +157,8 @@ class LineLoad(Load):
         """
         pass
 
-    def setValuesInStep(self, stepName: str,
+    def setValuesInStep(self,
+                        stepName: str,
                         comp1: typing.Union[SymbolicConstant, float] = None,
                         comp2: typing.Union[SymbolicConstant, float] = None,
                         comp3: typing.Union[SymbolicConstant, float] = None,

@@ -1,6 +1,8 @@
 from abaqusConstants import *
 from .Amplitude import Amplitude
 
+from __init__ import *
+
 
 class PsdDefinition(Amplitude):
     """The PsdDefinition object defines the cross-spectral density frequency function for
@@ -22,10 +24,15 @@ class PsdDefinition(Amplitude):
         - PSD-DEFINITION
 
     """
-
-    def __init__(self, name: str, data: tuple, unitType: SymbolicConstant = FORCE,
-                 referenceGravityAcceleration: float = 1, referenecePower: float = 0,
-                 user: Boolean = OFF, timeSpan: SymbolicConstant = STEP, amplitude: str = ''):
+    def __init__(self,
+                 name: str,
+                 data: tuple,
+                 unitType: SymbolicConstant = FORCE,
+                 referenceGravityAcceleration: float = 1,
+                 referenecePower: float = 0,
+                 user: Boolean = OFF,
+                 timeSpan: SymbolicConstant = STEP,
+                 amplitude: str = ''):
         """This method creates a PsdDefinition object.
 
         Notes
@@ -79,8 +86,12 @@ class PsdDefinition(Amplitude):
         super().__init__()
         pass
 
-    def setValues(self, unitType: SymbolicConstant = FORCE, referenceGravityAcceleration: float = 1,
-                  referenecePower: float = 0, user: Boolean = OFF, timeSpan: SymbolicConstant = STEP,
+    def setValues(self,
+                  unitType: SymbolicConstant = FORCE,
+                  referenceGravityAcceleration: float = 1,
+                  referenecePower: float = 0,
+                  user: Boolean = OFF,
+                  timeSpan: SymbolicConstant = STEP,
                   amplitude: str = ''):
         """This method modifies the PsdDefinition object.
         

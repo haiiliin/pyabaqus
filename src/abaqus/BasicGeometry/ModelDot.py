@@ -1,3 +1,6 @@
+from __init__ import *
+
+
 class ModelDot:
     """The ModelDot object can be used to access an actual MeshNode, ReferencePoint, or ConstrainedSketchVertex
     object. 

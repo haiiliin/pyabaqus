@@ -1,8 +1,9 @@
 from .ConstrainedSketchVertex import ConstrainedSketchVertex
 
+from __init__ import *
+
 
 class Spot(ConstrainedSketchVertex):
-
     def __init__(self, point: tuple[float]):
         """This method creates a spot (construction point) located at the specified coordinates.
 

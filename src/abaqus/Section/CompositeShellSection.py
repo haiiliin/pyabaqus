@@ -4,6 +4,8 @@ from .RebarLayers import RebarLayers
 from .SectionLayerArray import SectionLayerArray
 from .TransverseShearShell import TransverseShearShell
 
+from __init__ import *
+
 
 class CompositeShellSection(GeometryShellSection):
     """The CompositeShellSection object defines the properties of a composite shell section.
@@ -34,19 +36,30 @@ class CompositeShellSection(GeometryShellSection):
 
     """
 
-    # A RebarLayers object specifying reinforcement properties. 
+    # A RebarLayers object specifying reinforcement properties.
     rebarLayers: RebarLayers = None
 
-    # A TransverseShearShell object specifying the transverse shear stiffness properties. 
+    # A TransverseShearShell object specifying the transverse shear stiffness properties.
     transverseShear: TransverseShearShell = None
 
-    def __init__(self, name: str, layup: SectionLayerArray, symmetric: Boolean = OFF,
-                 thicknessType: SymbolicConstant = UNIFORM, preIntegrate: Boolean = OFF,
-                 poissonDefinition: SymbolicConstant = DEFAULT, poisson: float = 0,
-                 integrationRule: SymbolicConstant = SIMPSON, temperature: SymbolicConstant = GRADIENT,
-                 idealization: SymbolicConstant = NO_IDEALIZATION, nTemp: int = None,
-                 thicknessModulus: float = None, useDensity: Boolean = OFF, density: float = 0,
-                 layupName: str = '', thicknessField: str = '', nodalThicknessField: str = ''):
+    def __init__(self,
+                 name: str,
+                 layup: SectionLayerArray,
+                 symmetric: Boolean = OFF,
+                 thicknessType: SymbolicConstant = UNIFORM,
+                 preIntegrate: Boolean = OFF,
+                 poissonDefinition: SymbolicConstant = DEFAULT,
+                 poisson: float = 0,
+                 integrationRule: SymbolicConstant = SIMPSON,
+                 temperature: SymbolicConstant = GRADIENT,
+                 idealization: SymbolicConstant = NO_IDEALIZATION,
+                 nTemp: int = None,
+                 thicknessModulus: float = None,
+                 useDensity: Boolean = OFF,
+                 density: float = 0,
+                 layupName: str = '',
+                 thicknessField: str = '',
+                 nodalThicknessField: str = ''):
         """This method creates a CompositeShellSection object.
 
         Notes
@@ -131,13 +144,22 @@ class CompositeShellSection(GeometryShellSection):
         super().__init__()
         pass
 
-    def setValues(self, symmetric: Boolean = OFF, thicknessType: SymbolicConstant = UNIFORM,
-                  preIntegrate: Boolean = OFF, poissonDefinition: SymbolicConstant = DEFAULT,
-                  poisson: float = 0, integrationRule: SymbolicConstant = SIMPSON,
+    def setValues(self,
+                  symmetric: Boolean = OFF,
+                  thicknessType: SymbolicConstant = UNIFORM,
+                  preIntegrate: Boolean = OFF,
+                  poissonDefinition: SymbolicConstant = DEFAULT,
+                  poisson: float = 0,
+                  integrationRule: SymbolicConstant = SIMPSON,
                   temperature: SymbolicConstant = GRADIENT,
-                  idealization: SymbolicConstant = NO_IDEALIZATION, nTemp: int = None,
-                  thicknessModulus: float = None, useDensity: Boolean = OFF, density: float = 0,
-                  layupName: str = '', thicknessField: str = '', nodalThicknessField: str = ''):
+                  idealization: SymbolicConstant = NO_IDEALIZATION,
+                  nTemp: int = None,
+                  thicknessModulus: float = None,
+                  useDensity: Boolean = OFF,
+                  density: float = 0,
+                  layupName: str = '',
+                  thicknessField: str = '',
+                  nodalThicknessField: str = ''):
         """This method modifies the CompositeShellSection object.
         
         Parameters

@@ -1,5 +1,7 @@
 from .CompositeDampingComponentArray import CompositeDampingComponentArray
 
+from __init__ import *
+
 
 class CompositeDamping:
     """A CompositeDamping object contains composite modal damping parameters.
@@ -20,5 +22,6 @@ class CompositeDamping:
 
     """
 
-    # A CompositeDampingComponentArray object. 
-    components: CompositeDampingComponentArray = CompositeDampingComponentArray()
+    # A CompositeDampingComponentArray object.
+    components: CompositeDampingComponentArray = CompositeDampingComponentArray(
+    )

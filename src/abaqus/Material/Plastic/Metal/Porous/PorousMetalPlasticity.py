@@ -2,6 +2,8 @@ from abaqusConstants import *
 from .PorousFailureCriteria import PorousFailureCriteria
 from .VoidNucleation import VoidNucleation
 
+from __init__ import *
+
 
 class PorousMetalPlasticity:
     """The PorousMetalPlasticity object specifies a porous metal plasticity model.
@@ -31,13 +33,16 @@ class PorousMetalPlasticity:
 
     """
 
-    # A PorousFailureCriteria object. 
+    # A PorousFailureCriteria object.
     porousFailureCriteria: PorousFailureCriteria = PorousFailureCriteria()
 
-    # A VoidNucleation object. 
-    voidNucleation: VoidNucleation = VoidNucleation(((),))
+    # A VoidNucleation object.
+    voidNucleation: VoidNucleation = VoidNucleation(((), ))
 
-    def __init__(self, table: tuple, relativeDensity: float = None, temperatureDependency: Boolean = OFF,
+    def __init__(self,
+                 table: tuple,
+                 relativeDensity: float = None,
+                 temperatureDependency: Boolean = OFF,
                  dependencies: int = 0):
         """This method creates a PorousMetalPlasticity object.
 

@@ -1,3 +1,5 @@
+from __init__ import *
+
 
 class Datum:
     """The Datum object is the abstract base type for other Datum objects. The Datum object has

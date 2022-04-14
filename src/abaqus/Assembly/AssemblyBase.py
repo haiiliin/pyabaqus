@@ -24,6 +24,8 @@ from ..Region.Skin import Skin
 from ..Region.Stringer import Stringer
 from ..Region.Surface import Surface
 
+from __init__ import *
+
 
 class AssemblyBase(Feature):
     """An Assembly object is a container for instances of parts. The Assembly object has no
@@ -114,105 +116,111 @@ class AssemblyBase(Feature):
 
     """
 
-    # An Int specifying that feature parameters have been modified but that the assembly has 
-    # not been regenerated. Possible values are 0 and 1. 
+    # An Int specifying that feature parameters have been modified but that the assembly has
+    # not been regenerated. Possible values are 0 and 1.
     isOutOfDate: int = None
 
-    # A Float specifying which gives an indication when the assembly was last modified. 
+    # A Float specifying which gives an indication when the assembly was last modified.
     timeStamp: float = None
 
-    # An Int specifying whether the assembly is locked or not. Possible values are 0 and 1. 
+    # An Int specifying whether the assembly is locked or not. Possible values are 0 and 1.
     isLocked: int = None
 
-    # A Boolean specifying whether the positioning constraints in the assembly should be 
-    # regenerated together before regenerating other assembly features. The default value is 
-    # ON.If the assembly has position constraint features and you modify the value of 
-    # *regenerateConstraintsTogether*, Abaqus/CAE will regenerate the assembly features. 
+    # A Boolean specifying whether the positioning constraints in the assembly should be
+    # regenerated together before regenerating other assembly features. The default value is
+    # ON.If the assembly has position constraint features and you modify the value of
+    # *regenerateConstraintsTogether*, Abaqus/CAE will regenerate the assembly features.
     regenerateConstraintsTogether: Boolean = ON
 
-    # A VertexArray object specifying all the vertices existing at the assembly level. This 
-    # member does not provide access to the vertices at the instance level. 
+    # A VertexArray object specifying all the vertices existing at the assembly level. This
+    # member does not provide access to the vertices at the instance level.
     vertices: VertexArray = VertexArray([])
 
-    # An EdgeArray object specifying all the edges existing at the assembly level. This member 
-    # does not provide access to the edges at the instance level. 
+    # An EdgeArray object specifying all the edges existing at the assembly level. This member
+    # does not provide access to the edges at the instance level.
     edges: EdgeArray = EdgeArray([])
 
-    # A MeshElementArray object specifying all the elements existing at the assembly level. 
-    # This member does not provide access to the elements at the instance level. 
+    # A MeshElementArray object specifying all the elements existing at the assembly level.
+    # This member does not provide access to the elements at the instance level.
     elements: MeshElementArray = MeshElementArray([])
 
-    # A MeshNodeArray object specifying all the nodes existing at the assembly level. This 
-    # member does not provide access to the nodes at the instance level. 
+    # A MeshNodeArray object specifying all the nodes existing at the assembly level. This
+    # member does not provide access to the nodes at the instance level.
     nodes: MeshNodeArray = MeshNodeArray([])
 
-    # A repository of PartInstance objects. 
+    # A repository of PartInstance objects.
     instances: dict[str, PartInstance] = dict[str, PartInstance]()
 
-    # A repository of Datum objects specifying all Datum objects in the assembly. 
+    # A repository of Datum objects specifying all Datum objects in the assembly.
     datums: list[Datum] = list[Datum]()
 
-    # A repository of Feature objects specifying all Feature objects in the assembly. 
+    # A repository of Feature objects specifying all Feature objects in the assembly.
     features: dict[str, Feature] = dict[str, Feature]()
 
-    # A repository of Feature objects specifying all Feature objects in the assembly.The 
-    # Feature objects in the featuresById repository are the same as the Feature objects in 
-    # the features repository. However, the key to the objects in the featuresById repository 
-    # is an integer specifying the *ID*, whereas the key to the objects in the features 
-    # repository is a string specifying the *name*. 
+    # A repository of Feature objects specifying all Feature objects in the assembly.The
+    # Feature objects in the featuresById repository are the same as the Feature objects in
+    # the features repository. However, the key to the objects in the featuresById repository
+    # is an integer specifying the *ID*, whereas the key to the objects in the features
+    # repository is a string specifying the *name*.
     featuresById: dict[str, Feature] = dict[str, Feature]()
 
-    # A repository of Surface objects specifying for more information, see [Region 
-    # commands](https://help.3ds.com/2022/english/DSSIMULIA_Established/SIMACAEKERRefMap/simaker-m-RegPyc-sb.htm?ContextScope=all). 
+    # A repository of Surface objects specifying for more information, see [Region
+    # commands](https://help.3ds.com/2022/english/DSSIMULIA_Established/SIMACAEKERRefMap/simaker-m-RegPyc-sb.htm?ContextScope=all).
     surfaces: dict[str, Surface] = dict[str, Surface]()
 
-    # A repository of Surface objects specifying for more information, see [Region 
-    # commands](https://help.3ds.com/2022/english/DSSIMULIA_Established/SIMACAEKERRefMap/simaker-m-RegPyc-sb.htm?ContextScope=all). 
+    # A repository of Surface objects specifying for more information, see [Region
+    # commands](https://help.3ds.com/2022/english/DSSIMULIA_Established/SIMACAEKERRefMap/simaker-m-RegPyc-sb.htm?ContextScope=all).
     allSurfaces: dict[str, Surface] = dict[str, Surface]()
 
-    # A repository of Surface objects specifying picked regions. 
+    # A repository of Surface objects specifying picked regions.
     allInternalSurfaces: dict[str, Surface] = dict[str, Surface]()
 
-    # A repository of Set objects. 
+    # A repository of Set objects.
     sets: dict[str, Set] = dict[str, Set]()
 
-    # A repository of Set objects specifying for more information, see [Region 
-    # commands](https://help.3ds.com/2022/english/DSSIMULIA_Established/SIMACAEKERRefMap/simaker-m-RegPyc-sb.htm?ContextScope=all). 
+    # A repository of Set objects specifying for more information, see [Region
+    # commands](https://help.3ds.com/2022/english/DSSIMULIA_Established/SIMACAEKERRefMap/simaker-m-RegPyc-sb.htm?ContextScope=all).
     allSets: dict[str, Set] = dict[str, Set]()
 
-    # A repository of Set objects specifying picked regions. 
+    # A repository of Set objects specifying picked regions.
     allInternalSets: dict[str, Set] = dict[str, Set]()
 
-    # A repository of Skin objects specifying the skins created on the assembly. 
+    # A repository of Skin objects specifying the skins created on the assembly.
     skins: dict[str, Skin] = dict[str, Skin]()
 
-    # A repository of Stringer objects specifying the stringers created on the assembly. 
+    # A repository of Stringer objects specifying the stringers created on the assembly.
     stringers: dict[str, Stringer] = dict[str, Stringer]()
 
-    # A repository of ReferencePoint objects. 
+    # A repository of ReferencePoint objects.
     referencePoints: dict[str, ReferencePoint] = dict[str, ReferencePoint]()
 
-    # A repository of ModelInstance objects. 
+    # A repository of ModelInstance objects.
     modelInstances: dict[str, ModelInstance] = dict[str, ModelInstance]()
 
-    # A PartInstance object specifying the PartInstances and A ModelInstance object specifying 
-    # the ModelInstances. 
-    allInstances: dict[str, typing.Union[PartInstance, ModelInstance]] = dict[str, typing.Union[PartInstance, ModelInstance]]()
+    # A PartInstance object specifying the PartInstances and A ModelInstance object specifying
+    # the ModelInstances.
+    allInstances: dict[str, typing.Union[PartInstance, ModelInstance]] = dict[
+        str, typing.Union[PartInstance, ModelInstance]]()
 
-    # An EngineeringFeature object. 
+    # An EngineeringFeature object.
     engineeringFeatures: EngineeringFeature = EngineeringFeature()
 
-    # A String specifying the name of the model to which the assembly belongs. 
+    # A String specifying the name of the model to which the assembly belongs.
     modelName: str = ''
 
-    # A ConnectorOrientationArray object. 
-    connectorOrientations: ConnectorOrientationArray = ConnectorOrientationArray()
+    # A ConnectorOrientationArray object.
+    connectorOrientations: ConnectorOrientationArray = ConnectorOrientationArray(
+    )
 
-    # A SectionAssignmentArray object. 
+    # A SectionAssignmentArray object.
     sectionAssignments: SectionAssignmentArray = SectionAssignmentArray()
 
     @typing.overload
-    def Instance(self, name: str, part: Part, autoOffset: Boolean = OFF, dependent: Boolean = OFF) -> PartInstance:
+    def Instance(self,
+                 name: str,
+                 part: Part,
+                 autoOffset: Boolean = OFF,
+                 dependent: Boolean = OFF) -> PartInstance:
         """This method creates a PartInstance object and puts it into the instances repository.
 
         Notes
@@ -244,7 +252,10 @@ class AssemblyBase(Feature):
         pass
 
     @typing.overload
-    def Instance(self, name: str, model: AssemblyModel, autoOffset: Boolean = OFF) -> ModelInstance:
+    def Instance(self,
+                 name: str,
+                 model: AssemblyModel,
+                 autoOffset: Boolean = OFF) -> ModelInstance:
         """This method creates a ModelInstance object and puts it into the instances repository.
 
         Notes
@@ -272,7 +283,8 @@ class AssemblyBase(Feature):
         """
         pass
 
-    def Instance(self, name: str, *args, **kwargs) -> typing.Union[PartInstance, ModelInstance]:
+    def Instance(self, name: str, *args,
+                 **kwargs) -> typing.Union[PartInstance, ModelInstance]:
         """This method creates a PartInstance object and puts it into the instances repository.
 
         Notes
@@ -301,7 +313,8 @@ class AssemblyBase(Feature):
         -------
             A PartInstance object.
         """
-        if 'part' in kwargs.keys() or (len(args) > 0 and isinstance(args[0], Part)):
+        if 'part' in kwargs.keys() or (len(args) > 0
+                                       and isinstance(args[0], Part)):
             instance = PartInstance(name, *args, **kwargs)
         else:
             instance = ModelInstance(name, *args, **kwargs)
@@ -338,7 +351,8 @@ class AssemblyBase(Feature):
         """
         pass
 
-    def excludeFromSimulation(self, instances: tuple[PartInstance], exclude: str):
+    def excludeFromSimulation(self, instances: tuple[PartInstance],
+                              exclude: str):
         """This method excludes the specified part instances from the analysis.
         
         Parameters
@@ -356,9 +370,16 @@ class AssemblyBase(Feature):
         """
         pass
 
-    def getMassProperties(self, regions: str = '', relativeAccuracy: SymbolicConstant = LOW, useMesh: Boolean = False,
-                          specifyDensity: Boolean = False, density: str = '', specifyThickness: Boolean = False,
-                          thickness: str = '', miAboutCenterOfMass: Boolean = True, miAboutPoint: tuple = ()):
+    def getMassProperties(self,
+                          regions: str = '',
+                          relativeAccuracy: SymbolicConstant = LOW,
+                          useMesh: Boolean = False,
+                          specifyDensity: Boolean = False,
+                          density: str = '',
+                          specifyThickness: Boolean = False,
+                          thickness: str = '',
+                          miAboutCenterOfMass: Boolean = True,
+                          miAboutPoint: tuple = ()):
         """This method returns the mass properties of the assembly, or instances or regions. Only
         beams, trusses, shells, solids, point, nonstructural mass, and rotary inertia elements
         are supported.
@@ -464,7 +485,12 @@ class AssemblyBase(Feature):
         """
         pass
 
-    def getAngle(self, plane1: str, plane2: str, line1: str, line2: str, commonVertex: str = ''):
+    def getAngle(self,
+                 plane1: str,
+                 plane2: str,
+                 line1: str,
+                 line2: str,
+                 commonVertex: str = ''):
         """This method returns the angle between the specified entities.
         
         Parameters
@@ -510,7 +536,10 @@ class AssemblyBase(Feature):
         """
         pass
 
-    def getDistance(self, entity1: str, entity2: str, printResults: Boolean = OFF):
+    def getDistance(self,
+                    entity1: str,
+                    entity2: str,
+                    printResults: Boolean = OFF):
         """Depending on the arguments provided, this method returns one of the following:
             - The distance between two points.
             - The minimum distance between a point and an edge.
@@ -705,9 +734,12 @@ class AssemblyBase(Feature):
         """
         pass
 
-    def projectReferencesOntoSketch(self, sketch: str, filter: SymbolicConstant = ALL_EDGES,
+    def projectReferencesOntoSketch(self,
+                                    sketch: str,
+                                    filter: SymbolicConstant = ALL_EDGES,
                                     upToFeature: Feature = Feature(),
-                                    edges: tuple = (), vertices: tuple = ()):
+                                    edges: tuple = (),
+                                    vertices: tuple = ()):
         """This method projects the specified edges, vertices, and datum points from the assembly
         onto the specified ConstrainedSketch object. The edges, vertices, and datum points
         appear on the sketch as reference geometry.
@@ -783,7 +815,8 @@ class AssemblyBase(Feature):
         """
         pass
 
-    def rotate(self, instanceList: tuple, axisPoint: tuple, axisDirection: tuple, angle: float):
+    def rotate(self, instanceList: tuple, axisPoint: tuple,
+               axisDirection: tuple, angle: float):
         """This method rotates given instances by the specified amount.
         
         Parameters
@@ -873,7 +906,10 @@ class AssemblyBase(Feature):
         """
         pass
 
-    def writeCADParameters(self, paramFile: str, modifiedParams: tuple = (), updatePaths: str = ''):
+    def writeCADParameters(self,
+                           paramFile: str,
+                           modifiedParams: tuple = (),
+                           updatePaths: str = ''):
         """This method writes the parameters that were imported from the CAD system to a parameter
         file.
         
@@ -903,7 +939,9 @@ class AssemblyBase(Feature):
         """
         pass
 
-    def setMeshNumberingControl(self, instances: tuple[PartInstance], startNodeLabel: int = None,
+    def setMeshNumberingControl(self,
+                                instances: tuple[PartInstance],
+                                startNodeLabel: int = None,
                                 startElemLabel: int = None):
         """This method changes the start node and/or element labels on the specified independent
         part instances before or after Abaqus/CAE generates the meshes. For the meshed
@@ -921,9 +959,13 @@ class AssemblyBase(Feature):
         """
         pass
 
-    def copyMeshPattern(self, elements: tuple[MeshElement] = (), faces: tuple[Face] = (),
-                        elemFaces: tuple[MeshFace] = (), targetFace: MeshFace = MeshFace(),
-                        nodes: tuple[MeshNode] = (), coordinates: tuple = ()):
+    def copyMeshPattern(self,
+                        elements: tuple[MeshElement] = (),
+                        faces: tuple[Face] = (),
+                        elemFaces: tuple[MeshFace] = (),
+                        targetFace: MeshFace = MeshFace(),
+                        nodes: tuple[MeshNode] = (),
+                        coordinates: tuple = ()):
         """This method copies a mesh pattern from a source region consisting of a set of shell
         elements or element faces onto a target face, mapping nodes and elements in a one-one
         correspondence between source and target.

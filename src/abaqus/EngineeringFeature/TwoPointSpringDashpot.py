@@ -1,6 +1,8 @@
 from abaqusConstants import *
 from .SpringDashpot import SpringDashpot
 
+from __init__ import *
+
 
 class TwoPointSpringDashpot(SpringDashpot):
     """The TwoPointSpringDashpot object defines springs and/or dashpots between two points on a
@@ -31,13 +33,21 @@ class TwoPointSpringDashpot(SpringDashpot):
 
     """
 
-    # A Boolean specifying whether the spring/dashpot is suppressed or not. The default value 
-    # is OFF. 
+    # A Boolean specifying whether the spring/dashpot is suppressed or not. The default value
+    # is OFF.
     suppressed: Boolean = OFF
 
-    def __init__(self, name: str, regionPairs: tuple, axis: SymbolicConstant, dof1: int = 0, dof2: int = 0,
-                 orientation: str = None, springBehavior: Boolean = OFF, dashpotBehavior: Boolean = OFF,
-                 springStiffness: float = 0, dashpotCoefficient: float = 0):
+    def __init__(self,
+                 name: str,
+                 regionPairs: tuple,
+                 axis: SymbolicConstant,
+                 dof1: int = 0,
+                 dof2: int = 0,
+                 orientation: str = None,
+                 springBehavior: Boolean = OFF,
+                 dashpotBehavior: Boolean = OFF,
+                 springStiffness: float = 0,
+                 dashpotCoefficient: float = 0):
         """This method creates a TwoPointSpringDashpot object.
 
         Notes
@@ -96,8 +106,13 @@ class TwoPointSpringDashpot(SpringDashpot):
         super().__init__()
         pass
 
-    def setValues(self, dof1: int = 0, dof2: int = 0, orientation: str = None, springBehavior: Boolean = OFF,
-                  dashpotBehavior: Boolean = OFF, springStiffness: float = 0,
+    def setValues(self,
+                  dof1: int = 0,
+                  dof2: int = 0,
+                  orientation: str = None,
+                  springBehavior: Boolean = OFF,
+                  dashpotBehavior: Boolean = OFF,
+                  springStiffness: float = 0,
                   dashpotCoefficient: float = 0):
         """This method modifies the TwoPointSpringDashpot object.
         

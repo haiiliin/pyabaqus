@@ -1,3 +1,6 @@
+from __init__ import *
+
+
 class Damping:
     """The Damping object specifies material damping.
 
@@ -16,8 +19,11 @@ class Damping:
         - DAMPING
 
     """
-
-    def __init__(self, alpha: float = 0, beta: float = 0, composite: float = 0, structural: float = 0):
+    def __init__(self,
+                 alpha: float = 0,
+                 beta: float = 0,
+                 composite: float = 0,
+                 structural: float = 0):
         """This method creates a Damping object.
 
         Notes

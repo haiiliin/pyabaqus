@@ -1,5 +1,7 @@
 from abaqusConstants import *
 
+from __init__ import *
+
 
 class LoadCase:
     """The LoadCase object is used to define the loads and constraints comprising a particular
@@ -23,11 +25,14 @@ class LoadCase:
 
     """
 
-    # A Boolean specifying whether the load case is suppressed or not. The default value is 
-    # OFF. 
+    # A Boolean specifying whether the load case is suppressed or not. The default value is
+    # OFF.
     suppressed: Boolean = OFF
 
-    def __init__(self, name: str, boundaryConditions: tuple = (), loads: tuple = (),
+    def __init__(self,
+                 name: str,
+                 boundaryConditions: tuple = (),
+                 loads: tuple = (),
                  includeActiveBaseStateBC: Boolean = ON):
         """This method creates a load case in a step.
 
@@ -70,7 +75,9 @@ class LoadCase:
         """
         pass
 
-    def setValues(self, boundaryConditions: tuple = (), loads: tuple = (),
+    def setValues(self,
+                  boundaryConditions: tuple = (),
+                  loads: tuple = (),
                   includeActiveBaseStateBC: Boolean = ON):
         """This method modifies the LoadCase object.
         

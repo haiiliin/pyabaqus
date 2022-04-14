@@ -22,6 +22,8 @@ from .TrussSection import TrussSection
 from ..Connector.ConnectorBehaviorOptionArray import ConnectorBehaviorOptionArray
 from ..Model.ModelBase import ModelBase
 
+from __init__ import *
+
 
 class SectionModel(ModelBase):
     """Abaqus creates a Model object named `Model-1` when a session is started.
@@ -35,8 +37,10 @@ class SectionModel(ModelBase):
         mdb.models[name]
 
     """
-
-    def AcousticInfiniteSection(self, name: str, material: str, thickness: float = 1,
+    def AcousticInfiniteSection(self,
+                                name: str,
+                                material: str,
+                                thickness: float = 1,
                                 order: int = 10) -> AcousticInfiniteSection:
         """This method creates an AcousticInfiniteSection object.
 
@@ -72,10 +76,14 @@ class SectionModel(ModelBase):
         InvalidNameError
         RangeError
         """
-        self.sections[name] = section = AcousticInfiniteSection(name, material, thickness, order)
+        self.sections[name] = section = AcousticInfiniteSection(
+            name, material, thickness, order)
         return section
 
-    def AcousticInterfaceSection(self, name: str, thickness: float = 1) -> AcousticInterfaceSection:
+    def AcousticInterfaceSection(self,
+                                 name: str,
+                                 thickness: float = 1
+                                 ) -> AcousticInterfaceSection:
         """This method creates an AcousticInterfaceSection object.
 
         Notes
@@ -104,19 +112,39 @@ class SectionModel(ModelBase):
         InvalidNameError
         RangeError
         """
-        self.sections[name] = section = AcousticInterfaceSection(name, thickness)
+        self.sections[name] = section = AcousticInterfaceSection(
+            name, thickness)
         return section
 
-    def BeamSection(self, name: str, integration: SymbolicConstant, profile: str, poissonRatio: float = 0,
-                    thermalExpansion: Boolean = OFF, temperatureDependency: Boolean = OFF,
-                    dependencies: int = 0, density: float = None, referenceTemperature: float = None,
-                    temperatureVar: SymbolicConstant = LINEAR, alphaDamping: float = 0,
-                    betaDamping: float = 0, compositeDamping: float = 0, useFluidInertia: Boolean = OFF,
-                    submerged: SymbolicConstant = FULLY, fluidMassDensity: float = None,
-                    crossSectionRadius: float = None, lateralMassCoef: float = 1, axialMassCoef: float = 0,
-                    massOffsetX: float = 0, massOffsetY: float = 0, beamShape: SymbolicConstant = CONSTANT,
-                    material: str = '', table: tuple = (), outputPts: tuple = (),
-                    centroid: tuple[float] = (), shearCenter: tuple[float] = (), profileEnd: str = '') -> BeamSection:
+    def BeamSection(self,
+                    name: str,
+                    integration: SymbolicConstant,
+                    profile: str,
+                    poissonRatio: float = 0,
+                    thermalExpansion: Boolean = OFF,
+                    temperatureDependency: Boolean = OFF,
+                    dependencies: int = 0,
+                    density: float = None,
+                    referenceTemperature: float = None,
+                    temperatureVar: SymbolicConstant = LINEAR,
+                    alphaDamping: float = 0,
+                    betaDamping: float = 0,
+                    compositeDamping: float = 0,
+                    useFluidInertia: Boolean = OFF,
+                    submerged: SymbolicConstant = FULLY,
+                    fluidMassDensity: float = None,
+                    crossSectionRadius: float = None,
+                    lateralMassCoef: float = 1,
+                    axialMassCoef: float = 0,
+                    massOffsetX: float = 0,
+                    massOffsetY: float = 0,
+                    beamShape: SymbolicConstant = CONSTANT,
+                    material: str = '',
+                    table: tuple = (),
+                    outputPts: tuple = (),
+                    centroid: tuple[float] = (),
+                    shearCenter: tuple[float] = (),
+                    profileEnd: str = '') -> BeamSection:
         """This method creates a BeamSection object.
 
         Notes
@@ -222,17 +250,24 @@ class SectionModel(ModelBase):
         -------
             A BeamSection object.
         """
-        self.sections[name] = section = BeamSection(name, integration, profile, poissonRatio, thermalExpansion,
-                                                    temperatureDependency, dependencies, density, referenceTemperature,
-                                                    temperatureVar, alphaDamping, betaDamping, compositeDamping,
-                                                    useFluidInertia, submerged, fluidMassDensity, crossSectionRadius,
-                                                    lateralMassCoef, axialMassCoef, massOffsetX, massOffsetY, beamShape,
-                                                    material, table, outputPts, centroid, shearCenter, profileEnd)
+        self.sections[name] = section = BeamSection(
+            name, integration, profile, poissonRatio, thermalExpansion,
+            temperatureDependency, dependencies, density, referenceTemperature,
+            temperatureVar, alphaDamping, betaDamping, compositeDamping,
+            useFluidInertia, submerged, fluidMassDensity, crossSectionRadius,
+            lateralMassCoef, axialMassCoef, massOffsetX, massOffsetY,
+            beamShape, material, table, outputPts, centroid, shearCenter,
+            profileEnd)
         return section
 
-    def CohesiveSection(self, name: str, response: SymbolicConstant, material: str,
-                        initialThicknessType: SymbolicConstant = SOLVER_DEFAULT, initialThickness: float = 1,
-                        outOfPlaneThickness: float = None) -> CohesiveSection:
+    def CohesiveSection(
+            self,
+            name: str,
+            response: SymbolicConstant,
+            material: str,
+            initialThicknessType: SymbolicConstant = SOLVER_DEFAULT,
+            initialThickness: float = 1,
+            outOfPlaneThickness: float = None) -> CohesiveSection:
         """This method creates a CohesiveSection object.
 
         Notes
@@ -275,18 +310,30 @@ class SectionModel(ModelBase):
         ------
             RangeError and InvalidNameError.
         """
-        self.sections[name] = section = CohesiveSection(name, response, material, initialThicknessType,
-                                                        initialThickness, outOfPlaneThickness)
+        self.sections[name] = section = CohesiveSection(
+            name, response, material, initialThicknessType, initialThickness,
+            outOfPlaneThickness)
         return section
 
-    def CompositeShellSection(self, name: str, layup: SectionLayerArray, symmetric: Boolean = OFF,
-                              thicknessType: SymbolicConstant = UNIFORM, preIntegrate: Boolean = OFF,
-                              poissonDefinition: SymbolicConstant = DEFAULT, poisson: float = 0,
-                              integrationRule: SymbolicConstant = SIMPSON, temperature: SymbolicConstant = GRADIENT,
-                              idealization: SymbolicConstant = NO_IDEALIZATION, nTemp: int = None,
-                              thicknessModulus: float = None, useDensity: Boolean = OFF, density: float = 0,
-                              layupName: str = '', thicknessField: str = '',
-                              nodalThicknessField: str = '') -> CompositeShellSection:
+    def CompositeShellSection(
+            self,
+            name: str,
+            layup: SectionLayerArray,
+            symmetric: Boolean = OFF,
+            thicknessType: SymbolicConstant = UNIFORM,
+            preIntegrate: Boolean = OFF,
+            poissonDefinition: SymbolicConstant = DEFAULT,
+            poisson: float = 0,
+            integrationRule: SymbolicConstant = SIMPSON,
+            temperature: SymbolicConstant = GRADIENT,
+            idealization: SymbolicConstant = NO_IDEALIZATION,
+            nTemp: int = None,
+            thicknessModulus: float = None,
+            useDensity: Boolean = OFF,
+            density: float = 0,
+            layupName: str = '',
+            thicknessField: str = '',
+            nodalThicknessField: str = '') -> CompositeShellSection:
         """This method creates a CompositeShellSection object.
 
         Notes
@@ -368,13 +415,17 @@ class SectionModel(ModelBase):
         -------
             A CompositeShellSection object.
         """
-        self.sections[name] = section = CompositeShellSection(name, layup, symmetric, thicknessType, preIntegrate,
-                                                              poissonDefinition, poisson, integrationRule, temperature,
-                                                              idealization, nTemp, thicknessModulus, useDensity,
-                                                              density, layupName, thicknessField, nodalThicknessField)
+        self.sections[name] = section = CompositeShellSection(
+            name, layup, symmetric, thicknessType, preIntegrate,
+            poissonDefinition, poisson, integrationRule, temperature,
+            idealization, nTemp, thicknessModulus, useDensity, density,
+            layupName, thicknessField, nodalThicknessField)
         return section
 
-    def CompositeSolidSection(self, name: str, layup: SectionLayerArray, symmetric: Boolean = OFF,
+    def CompositeSolidSection(self,
+                              name: str,
+                              layup: SectionLayerArray,
+                              symmetric: Boolean = OFF,
                               layupName: str = '') -> CompositeSolidSection:
         """This method creates a CompositeSolidSection object.
 
@@ -404,19 +455,32 @@ class SectionModel(ModelBase):
         -------
             A CompositeSolidSection object.
         """
-        self.sections[name] = section = CompositeSolidSection(name, layup, symmetric, layupName)
+        self.sections[name] = section = CompositeSolidSection(
+            name, layup, symmetric, layupName)
         return section
 
-    def ConnectorSection(self, name: str, assembledType: SymbolicConstant = NONE,
-                         rotationalType: SymbolicConstant = NONE, translationalType: SymbolicConstant = NONE,
-                         integration: SymbolicConstant = UNSPECIFIED, u1ReferenceLength: float = None,
-                         u2ReferenceLength: float = None, u3ReferenceLength: float = None,
-                         ur1ReferenceAngle: float = None, ur2ReferenceAngle: float = None,
-                         ur3ReferenceAngle: float = None, massPerLength: float = None,
-                         contactAngle: float = None, materialFlowFactor: float = 1, regularize: Boolean = ON,
-                         defaultTolerance: Boolean = ON, regularization: float = 0,
-                         extrapolation: SymbolicConstant = CONSTANT,
-                         behaviorOptions: ConnectorBehaviorOptionArray = None) -> ConnectorSection:
+    def ConnectorSection(
+        self,
+        name: str,
+        assembledType: SymbolicConstant = NONE,
+        rotationalType: SymbolicConstant = NONE,
+        translationalType: SymbolicConstant = NONE,
+        integration: SymbolicConstant = UNSPECIFIED,
+        u1ReferenceLength: float = None,
+        u2ReferenceLength: float = None,
+        u3ReferenceLength: float = None,
+        ur1ReferenceAngle: float = None,
+        ur2ReferenceAngle: float = None,
+        ur3ReferenceAngle: float = None,
+        massPerLength: float = None,
+        contactAngle: float = None,
+        materialFlowFactor: float = 1,
+        regularize: Boolean = ON,
+        defaultTolerance: Boolean = ON,
+        regularization: float = 0,
+        extrapolation: SymbolicConstant = CONSTANT,
+        behaviorOptions: ConnectorBehaviorOptionArray = None
+    ) -> ConnectorSection:
         """This method creates a ConnectorSection object.
 
         Notes
@@ -517,12 +581,13 @@ class SectionModel(ModelBase):
         InvalidNameError
         RangeError
         """
-        self.sections[name] = section = ConnectorSection(name, assembledType, rotationalType, translationalType,
-                                                         integration, u1ReferenceLength, u2ReferenceLength,
-                                                         u3ReferenceLength, ur1ReferenceAngle, ur2ReferenceAngle,
-                                                         ur3ReferenceAngle, massPerLength, contactAngle,
-                                                         materialFlowFactor, regularize, defaultTolerance,
-                                                         regularization, extrapolation, behaviorOptions)
+        self.sections[name] = section = ConnectorSection(
+            name, assembledType, rotationalType, translationalType,
+            integration, u1ReferenceLength, u2ReferenceLength,
+            u3ReferenceLength, ur1ReferenceAngle, ur2ReferenceAngle,
+            ur3ReferenceAngle, massPerLength, contactAngle, materialFlowFactor,
+            regularize, defaultTolerance, regularization, extrapolation,
+            behaviorOptions)
         return section
 
     def EulerianSection(self, name: str, data: str) -> EulerianSection:
@@ -552,10 +617,16 @@ class SectionModel(ModelBase):
         self.sections[name] = section = EulerianSection(name, data)
         return section
 
-    def GasketSection(self, name: str, material: str, crossSection: float = 1, initialGap: float = 0,
-                      initialThickness: typing.Union[SymbolicConstant, float] = DEFAULT,
-                      initialVoid: float = 0,
-                      stabilizationStiffness: typing.Union[SymbolicConstant, float] = DEFAULT) -> GasketSection:
+    def GasketSection(
+        self,
+        name: str,
+        material: str,
+        crossSection: float = 1,
+        initialGap: float = 0,
+        initialThickness: typing.Union[SymbolicConstant, float] = DEFAULT,
+        initialVoid: float = 0,
+        stabilizationStiffness: typing.Union[SymbolicConstant, float] = DEFAULT
+    ) -> GasketSection:
         """This method creates a GasketSection object.
 
         Notes
@@ -596,15 +667,28 @@ class SectionModel(ModelBase):
         -------
             A GasketSection object. and ValueError.
         """
-        self.sections[name] = section = GasketSection(name, material, crossSection, initialGap, initialThickness,
-                                                      initialVoid, stabilizationStiffness)
+        self.sections[name] = section = GasketSection(name, material,
+                                                      crossSection, initialGap,
+                                                      initialThickness,
+                                                      initialVoid,
+                                                      stabilizationStiffness)
         return section
 
-    def GeneralStiffnessSection(self, name: str, stiffnessMatrix: tuple, referenceTemperature: float = None,
-                                applyThermalStress: Boolean = OFF, temperatureDependency: Boolean = OFF,
-                                dependencies: int = 0, poissonDefinition: SymbolicConstant = DEFAULT,
-                                poisson: float = 0, useDensity: Boolean = OFF, density: float = 0,
-                                thermalStresses: tuple = (), scalingData: tuple = ()) -> GeneralStiffnessSection:
+    def GeneralStiffnessSection(
+        self,
+        name: str,
+        stiffnessMatrix: tuple,
+        referenceTemperature: float = None,
+        applyThermalStress: Boolean = OFF,
+        temperatureDependency: Boolean = OFF,
+        dependencies: int = 0,
+        poissonDefinition: SymbolicConstant = DEFAULT,
+        poisson: float = 0,
+        useDensity: Boolean = OFF,
+        density: float = 0,
+        thermalStresses: tuple = (),
+        scalingData: tuple = ()
+    ) -> GeneralStiffnessSection:
         """This method creates a GeneralStiffnessSection object.
 
         Notes
@@ -661,19 +745,31 @@ class SectionModel(ModelBase):
         -------
             A GeneralStiffnessSection object.
         """
-        self.sections[name] = section = GeneralStiffnessSection(name, stiffnessMatrix, referenceTemperature,
-                                                                applyThermalStress, temperatureDependency, dependencies,
-                                                                poissonDefinition, poisson, useDensity, density,
-                                                                thermalStresses, scalingData)
+        self.sections[name] = section = GeneralStiffnessSection(
+            name, stiffnessMatrix, referenceTemperature, applyThermalStress,
+            temperatureDependency, dependencies, poissonDefinition, poisson,
+            useDensity, density, thermalStresses, scalingData)
         return section
 
-    def HomogeneousShellSection(self, name: str, material: str, thickness: float = 0, numIntPts: int = 5,
-                                thicknessType: SymbolicConstant = UNIFORM, preIntegrate: Boolean = OFF,
-                                poissonDefinition: SymbolicConstant = DEFAULT, poisson: float = 0,
-                                integrationRule: SymbolicConstant = SIMPSON, temperature: SymbolicConstant = GRADIENT,
-                                idealization: SymbolicConstant = NO_IDEALIZATION, nTemp: int = None,
-                                thicknessModulus: float = None, useDensity: Boolean = OFF, density: float = 0,
-                                thicknessField: str = '', nodalThicknessField: str = '') -> HomogeneousShellSection:
+    def HomogeneousShellSection(
+            self,
+            name: str,
+            material: str,
+            thickness: float = 0,
+            numIntPts: int = 5,
+            thicknessType: SymbolicConstant = UNIFORM,
+            preIntegrate: Boolean = OFF,
+            poissonDefinition: SymbolicConstant = DEFAULT,
+            poisson: float = 0,
+            integrationRule: SymbolicConstant = SIMPSON,
+            temperature: SymbolicConstant = GRADIENT,
+            idealization: SymbolicConstant = NO_IDEALIZATION,
+            nTemp: int = None,
+            thicknessModulus: float = None,
+            useDensity: Boolean = OFF,
+            density: float = 0,
+            thicknessField: str = '',
+            nodalThicknessField: str = '') -> HomogeneousShellSection:
         """This method creates a HomogeneousShellSection object.
 
         Notes
@@ -758,14 +854,18 @@ class SectionModel(ModelBase):
         -------
             A HomogeneousShellSection object.
         """
-        self.sections[name] = section = HomogeneousShellSection(name, material, thickness, numIntPts, thicknessType,
-                                                                preIntegrate, poissonDefinition, poisson,
-                                                                integrationRule, temperature, idealization, nTemp,
-                                                                thicknessModulus, useDensity, density, thicknessField,
-                                                                nodalThicknessField)
+        self.sections[name] = section = HomogeneousShellSection(
+            name, material, thickness, numIntPts, thicknessType, preIntegrate,
+            poissonDefinition, poisson, integrationRule, temperature,
+            idealization, nTemp, thicknessModulus, useDensity, density,
+            thicknessField, nodalThicknessField)
         return section
 
-    def HomogeneousSolidSection(self, name: str, material: str, thickness: float = 1) -> HomogeneousSolidSection:
+    def HomogeneousSolidSection(
+            self,
+            name: str,
+            material: str,
+            thickness: float = 1) -> HomogeneousSolidSection:
         """This method creates a HomogeneousSolidSection object.
 
         Notes
@@ -796,12 +896,17 @@ class SectionModel(ModelBase):
         InvalidNameError
         RangeError
         """
-        self.sections[name] = section = HomogeneousSolidSection(name, material, thickness)
+        self.sections[name] = section = HomogeneousSolidSection(
+            name, material, thickness)
         return section
 
-    def MembraneSection(self, name: str, material: str, thickness: float = 1,
+    def MembraneSection(self,
+                        name: str,
+                        material: str,
+                        thickness: float = 1,
                         thicknessType: SymbolicConstant = UNIFORM,
-                        poissonDefinition: SymbolicConstant = DEFAULT, poisson: float = 0,
+                        poissonDefinition: SymbolicConstant = DEFAULT,
+                        poisson: float = 0,
                         thicknessField: str = '') -> MembraneSection:
         """This method creates a MembraneSection object.
 
@@ -851,11 +956,15 @@ class SectionModel(ModelBase):
         ------
             RangeError and InvalidNameError.
         """
-        self.sections[name] = section = MembraneSection(name, material, thickness, thicknessType, poissonDefinition,
-                                                        poisson, thicknessField)
+        self.sections[name] = section = MembraneSection(
+            name, material, thickness, thicknessType, poissonDefinition,
+            poisson, thicknessField)
         return section
 
-    def MPCSection(self, name: str, mpcType: SymbolicConstant, userMode: SymbolicConstant = DOF_MODE,
+    def MPCSection(self,
+                   name: str,
+                   mpcType: SymbolicConstant,
+                   userMode: SymbolicConstant = DOF_MODE,
                    userType: int = 0) -> MPCSection:
         """This method creates a MPCSection object.
 
@@ -892,10 +1001,15 @@ class SectionModel(ModelBase):
         ------
             RangeError and InvalidNameError.
         """
-        self.sections[name] = section = MPCSection(name, mpcType, userMode, userType)
+        self.sections[name] = section = MPCSection(name, mpcType, userMode,
+                                                   userType)
         return section
 
-    def PEGSection(self, name: str, material: str, thickness: float = 1, wedgeAngle1: float = 0,
+    def PEGSection(self,
+                   name: str,
+                   material: str,
+                   thickness: float = 1,
+                   wedgeAngle1: float = 0,
                    wedgeAngle2: float = 0) -> PEGSection:
         """This method creates a PEGSection object.
 
@@ -933,10 +1047,14 @@ class SectionModel(ModelBase):
         InvalidNameError
         RangeError
         """
-        self.sections[name] = section = PEGSection(name, material, thickness, wedgeAngle1, wedgeAngle2)
+        self.sections[name] = section = PEGSection(name, material, thickness,
+                                                   wedgeAngle1, wedgeAngle2)
         return section
 
-    def SurfaceSection(self, name: str, useDensity: Boolean = OFF, density: float = 0) -> SurfaceSection:
+    def SurfaceSection(self,
+                       name: str,
+                       useDensity: Boolean = OFF,
+                       density: float = 0) -> SurfaceSection:
         """This method creates a SurfaceSection object.
 
         Notes
@@ -967,10 +1085,14 @@ class SectionModel(ModelBase):
         ------
             RangeError and InvalidNameError.
         """
-        self.sections[name] = section = SurfaceSection(name, useDensity, density)
+        self.sections[name] = section = SurfaceSection(name, useDensity,
+                                                       density)
         return section
 
-    def TrussSection(self, name: str, material: str, area: float = 1) -> TrussSection:
+    def TrussSection(self,
+                     name: str,
+                     material: str,
+                     area: float = 1) -> TrussSection:
         """This method creates a TrussSection object.
 
         Notes

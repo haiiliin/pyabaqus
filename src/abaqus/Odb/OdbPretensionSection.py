@@ -1,6 +1,8 @@
 from .OdbMeshNode import OdbMeshNode
 from .OdbSet import OdbSet
 
+from __init__ import *
+
 
 class OdbPretensionSection:
     """The pretension section object is used to define an assembly load. It associates a
@@ -28,14 +30,14 @@ class OdbPretensionSection:
 
     """
 
-    # An OdbSet object specifying the node set containing the pretension node. 
+    # An OdbSet object specifying the node set containing the pretension node.
     node: OdbSet = OdbSet('set', tuple[OdbMeshNode]())
 
-    # An OdbSet object specifying the element set that defines the pretension section. 
+    # An OdbSet object specifying the element set that defines the pretension section.
     element: OdbSet = OdbSet('set', tuple[OdbMeshNode]())
 
-    # An OdbSet object specifying the surface set that defines the pretension section. 
+    # An OdbSet object specifying the surface set that defines the pretension section.
     surface: OdbSet = OdbSet('set', tuple[OdbMeshNode]())
 
-    # A tuple of Floats specifying the components of the normal to the pretension section. 
+    # A tuple of Floats specifying the components of the normal to the pretension section.
     normal: float = None

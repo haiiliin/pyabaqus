@@ -5,11 +5,17 @@ from .TransverseShearBeam import TransverseShearBeam
 from .TransverseShearShell import TransverseShearShell
 from ..Connector.ConnectorSection import ConnectorSection
 
+from __init__ import *
+
 
 class Section(ConnectorSection):
-
-    def TransverseShearBeam(self, scfDefinition: SymbolicConstant, k23: float = None, k13: float = None,
-                            slendernessCompensation: typing.Union[SymbolicConstant, float] = 0) -> TransverseShearBeam:
+    def TransverseShearBeam(
+        self,
+        scfDefinition: SymbolicConstant,
+        k23: float = None,
+        k13: float = None,
+        slendernessCompensation: typing.Union[SymbolicConstant, float] = 0
+    ) -> TransverseShearBeam:
         """This method creates a TransverseShearBeam object.
 
         Notes
@@ -40,11 +46,12 @@ class Section(ConnectorSection):
         -------
             A TransverseShearBeam object.
         """
-        self.beamTransverseShear = transverseShearBeam = TransverseShearBeam(scfDefinition, k23, k13,
-                                                                             slendernessCompensation)
+        self.beamTransverseShear = transverseShearBeam = TransverseShearBeam(
+            scfDefinition, k23, k13, slendernessCompensation)
         return transverseShearBeam
 
-    def TransverseShearShell(self, k11: float, k22: float, k12: float) -> TransverseShearShell:
+    def TransverseShearShell(self, k11: float, k22: float,
+                             k12: float) -> TransverseShearShell:
         """This method creates a TransverseShearShell object.
 
         Notes
@@ -69,5 +76,6 @@ class Section(ConnectorSection):
         -------
             A TransverseShearShell object.
         """
-        self.transverseShear = transverseShearShell = TransverseShearShell(k11, k22, k12)
+        self.transverseShear = transverseShearShell = TransverseShearShell(
+            k11, k22, k12)
         return transverseShearShell

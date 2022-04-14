@@ -18,11 +18,15 @@ from ..Step.StepModel import StepModel
 from ..StepOutput.OutputModel import OutputModel
 from ..TableCollection.TableCollectionModel import TableCollectionModel
 
+from __init__ import *
 
-class Model(AdaptivityModel, AmplitudeModel, AssemblyModel, BoundaryConditionModel, CalibrationModel, ConstraintModel,
-            FilterModel, InteractionModel, LoadModel, MaterialModel, OptimizationTaskModel, PartModel,
-            PredefinedFieldModel, BeamSectionProfileModel, OutputModel, SectionModel, SketchModel, StepModel,
-            TableCollectionModel):
+
+class Model(AdaptivityModel, AmplitudeModel, AssemblyModel,
+            BoundaryConditionModel, CalibrationModel, ConstraintModel,
+            FilterModel, InteractionModel, LoadModel, MaterialModel,
+            OptimizationTaskModel, PartModel, PredefinedFieldModel,
+            BeamSectionProfileModel, OutputModel, SectionModel, SketchModel,
+            StepModel, TableCollectionModel):
     """Abaqus creates a Model object named `Model-1` when a session is started.
 
     Attributes

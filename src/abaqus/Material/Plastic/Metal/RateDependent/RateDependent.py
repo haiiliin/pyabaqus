@@ -1,5 +1,6 @@
-
 from abaqusConstants import *
+
+from __init__ import *
 
 
 class RateDependent:
@@ -43,8 +44,10 @@ class RateDependent:
         - RATE DEPENDENT
 
     """
-
-    def __init__(self, table: tuple, type: SymbolicConstant = POWER_LAW, temperatureDependency: Boolean = OFF,
+    def __init__(self,
+                 table: tuple,
+                 type: SymbolicConstant = POWER_LAW,
+                 temperatureDependency: Boolean = OFF,
                  dependencies: int = 0):
         """This method creates a RateDependent object.
 

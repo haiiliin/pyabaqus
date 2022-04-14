@@ -1,6 +1,8 @@
 from ..Calibration.Behavior import Behavior
 from ..Calibration.DataSet import DataSet
 
+from __init__ import *
+
 
 class Calibration:
     """A Calibration object is the object used to specify a material calibration. The
@@ -24,10 +26,10 @@ class Calibration:
 
     """
 
-    # A DataSet object. 
+    # A DataSet object.
     dataSets: DataSet = None
 
-    # A Behavior object. 
+    # A Behavior object.
     behaviors: Behavior = None
 
     def __init__(self, name: str):

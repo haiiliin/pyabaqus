@@ -1,6 +1,8 @@
 from abaqusConstants import *
 from .ConnectorBehaviorOption import ConnectorBehaviorOption
 
+from __init__ import *
+
 
 class ConnectorLock(ConnectorBehaviorOption):
     """The ConnectorLock object defines locking criteria for one or more available components
@@ -22,9 +24,12 @@ class ConnectorLock(ConnectorBehaviorOption):
         - CONNECTOR LOCK
 
     """
-
-    def __init__(self, lockingComponent: SymbolicConstant = ALL, minMotion: float = None,
-                 maxMotion: float = None, minForce: float = None, maxForce: float = None,
+    def __init__(self,
+                 lockingComponent: SymbolicConstant = ALL,
+                 minMotion: float = None,
+                 maxMotion: float = None,
+                 minForce: float = None,
+                 maxForce: float = None,
                  components: tuple = ()):
         """This method creates a connector lock behavior option for a ConnectorSection.
 

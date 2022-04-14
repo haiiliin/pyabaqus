@@ -1,10 +1,12 @@
 from .ConstrainedSketchConstraint import ConstrainedSketchConstraint
 from ..ConstrainedSketchGeometry.ConstrainedSketchGeometry import ConstrainedSketchGeometry
 
+from __init__ import *
+
 
 class CoincidentConstraint(ConstrainedSketchConstraint):
-
-    def __init__(self, entity1: ConstrainedSketchGeometry, entity2: ConstrainedSketchGeometry):
+    def __init__(self, entity1: ConstrainedSketchGeometry,
+                 entity2: ConstrainedSketchGeometry):
         """This method creates a coincident constraint. This constraint applies to two vertices, to
         a vertex and a ConstrainedSketchGeometry object, or to two ConstrainedSketchGeometry
         objects of the same type and constrains them to be coincident.

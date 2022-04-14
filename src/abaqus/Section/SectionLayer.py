@@ -1,5 +1,7 @@
 from abaqusConstants import *
 
+from __init__ import *
+
 
 class SectionLayer:
     """The SectionLayer object defines the material layer in a composite shell.
@@ -21,11 +23,17 @@ class SectionLayer:
             - SHELL GENERAL SECTION
 
     """
-
-    def __init__(self, thickness: float, material: str, orientAngle: float = 0, numIntPts: int = 3,
-                 axis: SymbolicConstant = AXIS_3, angle: float = 0,
-                 additionalRotationType: SymbolicConstant = ROTATION_NONE, plyName: str = '',
-                 orientation: SymbolicConstant = None, additionalRotationField: str = ''):
+    def __init__(self,
+                 thickness: float,
+                 material: str,
+                 orientAngle: float = 0,
+                 numIntPts: int = 3,
+                 axis: SymbolicConstant = AXIS_3,
+                 angle: float = 0,
+                 additionalRotationType: SymbolicConstant = ROTATION_NONE,
+                 plyName: str = '',
+                 orientation: SymbolicConstant = None,
+                 additionalRotationField: str = ''):
         """This method creates a SectionLayer object.
 
         Notes

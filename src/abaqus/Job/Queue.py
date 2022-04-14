@@ -1,5 +1,7 @@
 from abaqusConstants import *
 
+from __init__ import *
+
 
 class Queue:
     """A Queue object tells the job where and how to submit a job remotely. A Queue object can
@@ -15,10 +17,17 @@ class Queue:
         session.queues[name]
 
     """
-
-    def __init__(self, name: str, queueName: str, hostName: str = '', fileCopy: Boolean = ON,
-                 directory: str = '', driver: str = '', remotePlatform: SymbolicConstant = 'Linux',
-                 filesToCopy: str = ALL, deleteAfterCopy: Boolean = OFF, description: str = ''):
+    def __init__(self,
+                 name: str,
+                 queueName: str,
+                 hostName: str = '',
+                 fileCopy: Boolean = ON,
+                 directory: str = '',
+                 driver: str = '',
+                 remotePlatform: SymbolicConstant = 'Linux',
+                 filesToCopy: str = ALL,
+                 deleteAfterCopy: Boolean = OFF,
+                 description: str = ''):
         """This method creates a Queue object.
         Note:Remote queues are available only on Linux platforms.
 
