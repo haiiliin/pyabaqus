@@ -1268,6 +1268,47 @@ The ActuatorAmplitude object is derived from the Amplitude object.</p>
 </tr>
 </tbody>
 </table></div>
+<p>This method creates a ActuatorAmplitude object.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>name</strong></dt><dd><p>A String specifying the repository key.</p>
+</dd>
+<dt><strong>timeSpan</strong></dt><dd><p>A SymbolicConstant specifying the time span of the amplitude. Possible values are STEP 
+and TOTAL. The default value is STEP.</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><dl class="simple">
+<dt><code class="xref py py-obj docutils literal notranslate"><span class="pre">An</span></code> <a class="reference internal" href="#abaqus.Amplitude.ActuatorAmplitude.ActuatorAmplitude" title="abaqus.Amplitude.ActuatorAmplitude.ActuatorAmplitude"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ActuatorAmplitude</span></code></a> object.</dt><dd></dd>
+</dl>
+</dd>
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><code class="xref py py-obj docutils literal notranslate"><span class="pre">InvalidNameError</span></code></dt><dd></dd>
+<dt><code class="xref py py-obj docutils literal notranslate"><span class="pre">RangeError</span></code></dt><dd></dd>
+</dl>
+</dd>
+</dl>
+<p class="rubric">Notes</p>
+<p>This function can be accessed by:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">mdb</span><span class="o">.</span><span class="n">models</span><span class="p">[</span><span class="n">name</span><span class="p">]</span><span class="o">.</span><span class="n">ActuatorAmplitude</span>
+<span class="n">session</span><span class="o">.</span><span class="n">odbs</span><span class="p">[</span><span class="n">name</span><span class="p">]</span><span class="o">.</span><span class="n">ActuatorAmplitude</span>
+</pre></div>
+</div>
+<p class="rubric">Methods</p>
+<div class="table-wrapper"><table class="autosummary longtable docutils align-default">
+<colgroup>
+<col style="width: 10%"/>
+<col style="width: 90%"/>
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#abaqus.Amplitude.ActuatorAmplitude.ActuatorAmplitude.setValues" title="abaqus.Amplitude.ActuatorAmplitude.ActuatorAmplitude.setValues"><code class="xref py py-obj docutils literal notranslate"><span class="pre">setValues</span></code></a>([timeSpan])</p></td>
+<td><p>This method modifies the ActuatorAmplitude object.</p></td>
+</tr>
+</tbody>
+</table></div>
 <dl class="py method">
 <dt class="sig sig-object py" id="abaqus.Amplitude.ActuatorAmplitude.ActuatorAmplitude.setValues">
 <span class="sig-name descname"><span class="pre">setValues</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">timeSpan</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.SymbolicConstantType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'STEP'</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../../_modules/abaqus/Amplitude/ActuatorAmplitude.html#ActuatorAmplitude.setValues"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#abaqus.Amplitude.ActuatorAmplitude.ActuatorAmplitude.setValues" title="Permalink to this definition">#</a></dt>
@@ -1310,6 +1351,45 @@ drift of the displacement obtained from the time integration of the given accele
 </ul>
 </dd>
 </dl>
+<p class="rubric">Methods</p>
+<div class="table-wrapper"><table class="autosummary longtable docutils align-default">
+<colgroup>
+<col style="width: 10%"/>
+<col style="width: 90%"/>
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#abaqus.Amplitude.BaselineCorrection.BaselineCorrection.setValues" title="abaqus.Amplitude.BaselineCorrection.BaselineCorrection.setValues"><code class="xref py py-obj docutils literal notranslate"><span class="pre">setValues</span></code></a>()</p></td>
+<td><p>This method modifies the BaselineCorrection object.</p></td>
+</tr>
+</tbody>
+</table></div>
+<p>This method creates a BaselineCorrection object.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>intervals</strong></dt><dd><p>A sequence of Floats specifying the correction time interval end points. Possible values 
+are positive and monotonically increasing Floats. The default value is an empty 
+sequence.</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><dl class="simple">
+<dt><code class="xref py py-obj docutils literal notranslate"><span class="pre">A</span></code> <a class="reference internal" href="#abaqus.Amplitude.BaselineCorrection.BaselineCorrection" title="abaqus.Amplitude.BaselineCorrection.BaselineCorrection"><code class="xref py py-obj docutils literal notranslate"><span class="pre">BaselineCorrection</span></code></a> object.</dt><dd></dd>
+</dl>
+</dd>
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><code class="xref py py-obj docutils literal notranslate"><span class="pre">RangeError</span></code></dt><dd></dd>
+</dl>
+</dd>
+</dl>
+<p class="rubric">Notes</p>
+<p>This function can be accessed by:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">mdb</span><span class="o">.</span><span class="n">models</span><span class="p">[</span><span class="n">name</span><span class="p">]</span><span class="o">.</span><span class="n">amplitudes</span><span class="p">[</span><span class="n">name</span><span class="p">]</span><span class="o">.</span><span class="n">BaselineCorrection</span>
+<span class="n">session</span><span class="o">.</span><span class="n">odbs</span><span class="p">[</span><span class="n">name</span><span class="p">]</span><span class="o">.</span><span class="n">amplitudes</span><span class="p">[</span><span class="n">name</span><span class="p">]</span><span class="o">.</span><span class="n">BaselineCorrection</span>
+</pre></div>
+</div>
 <p class="rubric">Methods</p>
 <div class="table-wrapper"><table class="autosummary longtable docutils align-default">
 <colgroup>
@@ -1471,6 +1551,55 @@ The DecayAmplitude object is derived from the Amplitude object.</p>
 </tr>
 </tbody>
 </table></div>
+<p>This method creates a DecayAmplitude object.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>name</strong></dt><dd><p>A String specifying the repository key.</p>
+</dd>
+<dt><strong>initial</strong></dt><dd><p>A Float specifying the constant A0A0.</p>
+</dd>
+<dt><strong>maximum</strong></dt><dd><p>A Float specifying the coefficient AA.</p>
+</dd>
+<dt><strong>start</strong></dt><dd><p>A Float specifying the starting time t0t0. Possible values are non-negative numbers.</p>
+</dd>
+<dt><strong>decayTime</strong></dt><dd><p>A Float specifying the decay time tdtd. Possible values are non-negative numbers.</p>
+</dd>
+<dt><strong>timeSpan</strong></dt><dd><p>A SymbolicConstant specifying the time span of the amplitude. Possible values are STEP 
+and TOTAL. The default value is STEP.</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><dl class="simple">
+<dt><code class="xref py py-obj docutils literal notranslate"><span class="pre">A</span></code> <a class="reference internal" href="#abaqus.Amplitude.DecayAmplitude.DecayAmplitude" title="abaqus.Amplitude.DecayAmplitude.DecayAmplitude"><code class="xref py py-obj docutils literal notranslate"><span class="pre">DecayAmplitude</span></code></a> object.</dt><dd></dd>
+</dl>
+</dd>
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><code class="xref py py-obj docutils literal notranslate"><span class="pre">InvalidNameError</span></code></dt><dd></dd>
+<dt><code class="xref py py-obj docutils literal notranslate"><span class="pre">RangeError</span></code></dt><dd></dd>
+</dl>
+</dd>
+</dl>
+<p class="rubric">Notes</p>
+<p>This function can be accessed by:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">mdb</span><span class="o">.</span><span class="n">models</span><span class="p">[</span><span class="n">name</span><span class="p">]</span><span class="o">.</span><span class="n">DecayAmplitude</span>
+<span class="n">session</span><span class="o">.</span><span class="n">odbs</span><span class="p">[</span><span class="n">name</span><span class="p">]</span><span class="o">.</span><span class="n">DecayAmplitude</span>
+</pre></div>
+</div>
+<p class="rubric">Methods</p>
+<div class="table-wrapper"><table class="autosummary longtable docutils align-default">
+<colgroup>
+<col style="width: 10%"/>
+<col style="width: 90%"/>
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#abaqus.Amplitude.DecayAmplitude.DecayAmplitude.setValues" title="abaqus.Amplitude.DecayAmplitude.DecayAmplitude.setValues"><code class="xref py py-obj docutils literal notranslate"><span class="pre">setValues</span></code></a>([timeSpan])</p></td>
+<td><p>This method modifies the DecayAmplitude object.</p></td>
+</tr>
+</tbody>
+</table></div>
 <dl class="py method">
 <dt class="sig sig-object py" id="abaqus.Amplitude.DecayAmplitude.DecayAmplitude.setValues">
 <span class="sig-name descname"><span class="pre">setValues</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">timeSpan</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.SymbolicConstantType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'STEP'</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../../_modules/abaqus/Amplitude/DecayAmplitude.html#DecayAmplitude.setValues"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#abaqus.Amplitude.DecayAmplitude.DecayAmplitude.setValues" title="Permalink to this definition">#</a></dt>
@@ -1534,6 +1663,60 @@ The EquallySpacedAmplitude object is derived from the Amplitude object.</p>
 </tr>
 </tbody>
 </table></div>
+<p>This method creates an EquallySpacedAmplitude object.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>name</strong></dt><dd><p>A String specifying the repository key.</p>
+</dd>
+<dt><strong>fixedInterval</strong></dt><dd><p>A Float specifying the fixed time interval at which the amplitude data are given. 
+Possible values are positive numbers.</p>
+</dd>
+<dt><strong>data</strong></dt><dd><p>A sequence of Floats specifying the amplitude values.</p>
+</dd>
+<dt><strong>begin</strong></dt><dd><p>A Float specifying the time at which the first amplitude data are given. Possible values 
+are non-negative numbers. The default value is 0.0.</p>
+</dd>
+<dt><strong>smooth</strong></dt><dd><p>The SymbolicConstant SOLVER_DEFAULT or a Float specifying the degree of smoothing. 
+Possible float values are 0 ≤≤ <em>smoothing</em> ≤≤ 0.5. If <a href="#id10"><span class="problematic" id="id11">*</span></a>smooth*=SOLVER_DEFAULT, the 
+default degree of smoothing will be determined by the solver. The default value is 
+SOLVER_DEFAULT.</p>
+</dd>
+<dt><strong>timeSpan</strong></dt><dd><p>A SymbolicConstant specifying the time span of the amplitude. Possible values are STEP 
+and TOTAL. The default value is STEP.</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><dl class="simple">
+<dt><code class="xref py py-obj docutils literal notranslate"><span class="pre">An</span></code> <a class="reference internal" href="#abaqus.Amplitude.EquallySpacedAmplitude.EquallySpacedAmplitude" title="abaqus.Amplitude.EquallySpacedAmplitude.EquallySpacedAmplitude"><code class="xref py py-obj docutils literal notranslate"><span class="pre">EquallySpacedAmplitude</span></code></a> object.</dt><dd></dd>
+</dl>
+</dd>
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><code class="xref py py-obj docutils literal notranslate"><span class="pre">InvalidNameError</span></code></dt><dd></dd>
+<dt><code class="xref py py-obj docutils literal notranslate"><span class="pre">RangeError</span></code></dt><dd></dd>
+</dl>
+</dd>
+</dl>
+<p class="rubric">Notes</p>
+<p>This function can be accessed by:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">mdb</span><span class="o">.</span><span class="n">models</span><span class="p">[</span><span class="n">name</span><span class="p">]</span><span class="o">.</span><span class="n">EquallySpacedAmplitude</span>
+<span class="n">session</span><span class="o">.</span><span class="n">odbs</span><span class="p">[</span><span class="n">name</span><span class="p">]</span><span class="o">.</span><span class="n">EquallySpacedAmplitude</span>
+</pre></div>
+</div>
+<p class="rubric">Methods</p>
+<div class="table-wrapper"><table class="autosummary longtable docutils align-default">
+<colgroup>
+<col style="width: 10%"/>
+<col style="width: 90%"/>
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#abaqus.Amplitude.EquallySpacedAmplitude.EquallySpacedAmplitude.setValues" title="abaqus.Amplitude.EquallySpacedAmplitude.EquallySpacedAmplitude.setValues"><code class="xref py py-obj docutils literal notranslate"><span class="pre">setValues</span></code></a>([begin, smooth, timeSpan])</p></td>
+<td><p>This method modifies the EquallySpacedAmplitude object.</p></td>
+</tr>
+</tbody>
+</table></div>
 <dl class="py method">
 <dt class="sig sig-object py" id="abaqus.Amplitude.EquallySpacedAmplitude.EquallySpacedAmplitude.setValues">
 <span class="sig-name descname"><span class="pre">setValues</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">begin</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">smooth</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Union</span><span class="p"><span class="pre">[</span></span><span class="pre">abaqusConstants.SymbolicConstantType</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'SOLVER_DEFAULT'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">timeSpan</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.SymbolicConstantType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'STEP'</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../../_modules/abaqus/Amplitude/EquallySpacedAmplitude.html#EquallySpacedAmplitude.setValues"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#abaqus.Amplitude.EquallySpacedAmplitude.EquallySpacedAmplitude.setValues" title="Permalink to this definition">#</a></dt>
@@ -1545,7 +1728,7 @@ The EquallySpacedAmplitude object is derived from the Amplitude object.</p>
 are non-negative numbers. The default value is 0.0.</p>
 </dd>
 <dt><strong>smooth</strong></dt><dd><p>The SymbolicConstant SOLVER_DEFAULT or a Float specifying the degree of smoothing. 
-Possible float values are 0 ≤≤ <em>smoothing</em> ≤≤ 0.5. If <a href="#id10"><span class="problematic" id="id11">*</span></a>smooth*=SOLVER_DEFAULT, the 
+Possible float values are 0 ≤≤ <em>smoothing</em> ≤≤ 0.5. If <a href="#id12"><span class="problematic" id="id13">*</span></a>smooth*=SOLVER_DEFAULT, the 
 default degree of smoothing will be determined by the solver. The default value is 
 SOLVER_DEFAULT.</p>
 </dd>
@@ -1584,6 +1767,59 @@ The ModulatedAmplitude object is derived from the Amplitude object.</p>
 </ul>
 </dd>
 </dl>
+<p class="rubric">Methods</p>
+<div class="table-wrapper"><table class="autosummary longtable docutils align-default">
+<colgroup>
+<col style="width: 10%"/>
+<col style="width: 90%"/>
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#abaqus.Amplitude.ModulatedAmplitude.ModulatedAmplitude.setValues" title="abaqus.Amplitude.ModulatedAmplitude.ModulatedAmplitude.setValues"><code class="xref py py-obj docutils literal notranslate"><span class="pre">setValues</span></code></a>([timeSpan])</p></td>
+<td><p>This method modifies the ModulatedAmplitude object.</p></td>
+</tr>
+</tbody>
+</table></div>
+<p>This method creates a ModulatedAmplitude object.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>name</strong></dt><dd><p>A String specifying the repository key.</p>
+</dd>
+<dt><strong>initial</strong></dt><dd><p>A Float specifying the constant A0A0.</p>
+</dd>
+<dt><strong>magnitude</strong></dt><dd><p>A Float specifying the coefficient AA.</p>
+</dd>
+<dt><strong>start</strong></dt><dd><p>A Float specifying the starting time t0t0. Possible values are non-negative numbers.</p>
+</dd>
+<dt><strong>frequency1</strong></dt><dd><p>A Float specifying the circular frequency 1 (ω1ω1). Possible values are positive 
+numbers.</p>
+</dd>
+<dt><strong>frequency2</strong></dt><dd><p>A Float specifying the circular frequency 2 (ω2ω2). Possible values are positive 
+numbers.</p>
+</dd>
+<dt><strong>timeSpan</strong></dt><dd><p>A SymbolicConstant specifying the time span of the amplitude. Possible values are STEP 
+and TOTAL. The default value is STEP.</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><dl class="simple">
+<dt><code class="xref py py-obj docutils literal notranslate"><span class="pre">A</span></code> <a class="reference internal" href="#abaqus.Amplitude.ModulatedAmplitude.ModulatedAmplitude" title="abaqus.Amplitude.ModulatedAmplitude.ModulatedAmplitude"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ModulatedAmplitude</span></code></a> object.</dt><dd></dd>
+</dl>
+</dd>
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><code class="xref py py-obj docutils literal notranslate"><span class="pre">InvalidNameError</span></code></dt><dd></dd>
+<dt><code class="xref py py-obj docutils literal notranslate"><span class="pre">RangeError</span></code></dt><dd></dd>
+</dl>
+</dd>
+</dl>
+<p class="rubric">Notes</p>
+<p>This function can be accessed by:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">mdb</span><span class="o">.</span><span class="n">models</span><span class="p">[</span><span class="n">name</span><span class="p">]</span><span class="o">.</span><span class="n">ModulatedAmplitude</span>
+<span class="n">session</span><span class="o">.</span><span class="n">odbs</span><span class="p">[</span><span class="n">name</span><span class="p">]</span><span class="o">.</span><span class="n">ModulatedAmplitude</span>
+</pre></div>
+</div>
 <p class="rubric">Methods</p>
 <div class="table-wrapper"><table class="autosummary longtable docutils align-default">
 <colgroup>
@@ -1650,6 +1886,55 @@ The PeriodicAmplitude object is derived from the Amplitude object.</p>
 </tr>
 </tbody>
 </table></div>
+<p>This method creates a PeriodicAmplitude object.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>name</strong></dt><dd><p>A String specifying the repository key.</p>
+</dd>
+<dt><strong>frequency</strong></dt><dd><p>A Float specifying the circular frequency ωω. Possible values are positive numbers.</p>
+</dd>
+<dt><strong>start</strong></dt><dd><p>A Float specifying the starting time t0t0. Possible values are positive numbers.</p>
+</dd>
+<dt><strong>a_0</strong></dt><dd><p>A Float specifying the constant A0A0.</p>
+</dd>
+<dt><strong>data</strong></dt><dd><p>A sequence of pairs of Floats specifying AiAi and BiBi pairs.</p>
+</dd>
+<dt><strong>timeSpan</strong></dt><dd><p>A SymbolicConstant specifying the time span of the amplitude. Possible values are STEP 
+and TOTAL. The default value is STEP.</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><dl class="simple">
+<dt><code class="xref py py-obj docutils literal notranslate"><span class="pre">A</span></code> <a class="reference internal" href="#abaqus.Amplitude.PeriodicAmplitude.PeriodicAmplitude" title="abaqus.Amplitude.PeriodicAmplitude.PeriodicAmplitude"><code class="xref py py-obj docutils literal notranslate"><span class="pre">PeriodicAmplitude</span></code></a> object.</dt><dd></dd>
+</dl>
+</dd>
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><code class="xref py py-obj docutils literal notranslate"><span class="pre">InvalidNameError</span></code></dt><dd></dd>
+<dt><code class="xref py py-obj docutils literal notranslate"><span class="pre">RangeError</span></code></dt><dd></dd>
+</dl>
+</dd>
+</dl>
+<p class="rubric">Notes</p>
+<p>This function can be accessed by:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">mdb</span><span class="o">.</span><span class="n">models</span><span class="p">[</span><span class="n">name</span><span class="p">]</span><span class="o">.</span><span class="n">PeriodicAmplitude</span>
+<span class="n">session</span><span class="o">.</span><span class="n">odbs</span><span class="p">[</span><span class="n">name</span><span class="p">]</span><span class="o">.</span><span class="n">PeriodicAmplitude</span>
+</pre></div>
+</div>
+<p class="rubric">Methods</p>
+<div class="table-wrapper"><table class="autosummary longtable docutils align-default">
+<colgroup>
+<col style="width: 10%"/>
+<col style="width: 90%"/>
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#abaqus.Amplitude.PeriodicAmplitude.PeriodicAmplitude.setValues" title="abaqus.Amplitude.PeriodicAmplitude.PeriodicAmplitude.setValues"><code class="xref py py-obj docutils literal notranslate"><span class="pre">setValues</span></code></a>([timeSpan])</p></td>
+<td><p>This method modifies the PeriodicAmplitude object.</p></td>
+</tr>
+</tbody>
+</table></div>
 <dl class="py method">
 <dt class="sig sig-object py" id="abaqus.Amplitude.PeriodicAmplitude.PeriodicAmplitude.setValues">
 <span class="sig-name descname"><span class="pre">setValues</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">timeSpan</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.SymbolicConstantType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'STEP'</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../../_modules/abaqus/Amplitude/PeriodicAmplitude.html#PeriodicAmplitude.setValues"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#abaqus.Amplitude.PeriodicAmplitude.PeriodicAmplitude.setValues" title="Permalink to this definition">#</a></dt>
@@ -1696,6 +1981,69 @@ The PsdDefinition object is derived from the Amplitude object.</p>
 </ul>
 </dd>
 </dl>
+<p class="rubric">Methods</p>
+<div class="table-wrapper"><table class="autosummary longtable docutils align-default">
+<colgroup>
+<col style="width: 10%"/>
+<col style="width: 90%"/>
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#abaqus.Amplitude.PsdDefinition.PsdDefinition.setValues" title="abaqus.Amplitude.PsdDefinition.PsdDefinition.setValues"><code class="xref py py-obj docutils literal notranslate"><span class="pre">setValues</span></code></a>([unitType, ...])</p></td>
+<td><p>This method modifies the PsdDefinition object.</p></td>
+</tr>
+</tbody>
+</table></div>
+<p>This method creates a PsdDefinition object.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>name</strong></dt><dd><p>A String specifying the repository key.</p>
+</dd>
+<dt><strong>data</strong></dt><dd><p>A sequence of sequences of Floats specifying the real part of the frequency function, 
+the imaginary part of the frequency function, and the frequency or frequency band number 
+values, depending on the value of <em>unitType</em>.</p>
+</dd>
+<dt><strong>unitType</strong></dt><dd><p>A SymbolicConstant specifying the type of units for specifying the frequency function. 
+FORCE implies power units. BASE implies gravity used to define base motion. DB implies 
+decibel units. Possible values are FORCE, BASE, and DB. The default value is FORCE.</p>
+</dd>
+<dt><strong>referenceGravityAcceleration</strong></dt><dd><p>A Float specifying the reference gravity acceleration. This argument applies when 
+<em>unitType</em> = BASE. The default value is 1.0.</p>
+</dd>
+<dt><strong>referenecePower</strong></dt><dd><p>A Float specifying the reference power value, in load units squared. This argument 
+applies when <em>unitType</em> = DB. The default value is 0.0.</p>
+</dd>
+<dt><strong>user</strong></dt><dd><p>A Boolean specifying whether the frequency function is defined in user subroutine UPSD. 
+If specified, then <em>data</em> is not applicable, and the <em>unitType</em> value must not be DB. 
+The default value is OFF.</p>
+</dd>
+<dt><strong>timeSpan</strong></dt><dd><p>A SymbolicConstant specifying the time span of the amplitude. Possible values are STEP 
+and TOTAL. The default value is STEP.</p>
+</dd>
+<dt><strong>amplitude</strong></dt><dd><p>A String specifying the name of the amplitude that describes the dynamic event used to 
+define the cross-spectral density frequency function. The default value is an empty 
+string.</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><dl class="simple">
+<dt><code class="xref py py-obj docutils literal notranslate"><span class="pre">A</span></code> <a class="reference internal" href="#abaqus.Amplitude.PsdDefinition.PsdDefinition" title="abaqus.Amplitude.PsdDefinition.PsdDefinition"><code class="xref py py-obj docutils literal notranslate"><span class="pre">PsdDefinition</span></code></a> object.</dt><dd></dd>
+</dl>
+</dd>
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><code class="xref py py-obj docutils literal notranslate"><span class="pre">InvalidNameError</span></code></dt><dd></dd>
+<dt><code class="xref py py-obj docutils literal notranslate"><span class="pre">RangeError</span></code></dt><dd></dd>
+</dl>
+</dd>
+</dl>
+<p class="rubric">Notes</p>
+<p>This function can be accessed by:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">mdb</span><span class="o">.</span><span class="n">models</span><span class="p">[</span><span class="n">name</span><span class="p">]</span><span class="o">.</span><span class="n">PsdDefinition</span>
+<span class="n">session</span><span class="o">.</span><span class="n">odbs</span><span class="p">[</span><span class="n">name</span><span class="p">]</span><span class="o">.</span><span class="n">PsdDefinition</span>
+</pre></div>
+</div>
 <p class="rubric">Methods</p>
 <div class="table-wrapper"><table class="autosummary longtable docutils align-default">
 <colgroup>
@@ -1781,6 +2129,50 @@ The SmoothStepAmplitude object is derived from the Amplitude object.</p>
 </tr>
 </tbody>
 </table></div>
+<p>This method creates a SmoothStepAmplitude object.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>name</strong></dt><dd><p>A String specifying the repository key.</p>
+</dd>
+<dt><strong>data</strong></dt><dd><p>A sequence of pairs of Floats specifying time/frequency and amplitude pairs. Possible 
+values for time/frequency are positive numbers.</p>
+</dd>
+<dt><strong>timeSpan</strong></dt><dd><p>A SymbolicConstant specifying the time span of the amplitude. Possible values are STEP 
+and TOTAL. The default value is STEP.</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><dl class="simple">
+<dt><code class="xref py py-obj docutils literal notranslate"><span class="pre">A</span></code> <a class="reference internal" href="#abaqus.Amplitude.SmoothStepAmplitude.SmoothStepAmplitude" title="abaqus.Amplitude.SmoothStepAmplitude.SmoothStepAmplitude"><code class="xref py py-obj docutils literal notranslate"><span class="pre">SmoothStepAmplitude</span></code></a> object.</dt><dd></dd>
+</dl>
+</dd>
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><code class="xref py py-obj docutils literal notranslate"><span class="pre">InvalidNameError</span></code></dt><dd></dd>
+<dt><code class="xref py py-obj docutils literal notranslate"><span class="pre">RangeError</span></code></dt><dd></dd>
+</dl>
+</dd>
+</dl>
+<p class="rubric">Notes</p>
+<p>This function can be accessed by:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">mdb</span><span class="o">.</span><span class="n">models</span><span class="p">[</span><span class="n">name</span><span class="p">]</span><span class="o">.</span><span class="n">SmoothStepAmplitude</span>
+<span class="n">session</span><span class="o">.</span><span class="n">odbs</span><span class="p">[</span><span class="n">name</span><span class="p">]</span><span class="o">.</span><span class="n">SmoothStepAmplitude</span>
+</pre></div>
+</div>
+<p class="rubric">Methods</p>
+<div class="table-wrapper"><table class="autosummary longtable docutils align-default">
+<colgroup>
+<col style="width: 10%"/>
+<col style="width: 90%"/>
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#abaqus.Amplitude.SmoothStepAmplitude.SmoothStepAmplitude.setValues" title="abaqus.Amplitude.SmoothStepAmplitude.SmoothStepAmplitude.setValues"><code class="xref py py-obj docutils literal notranslate"><span class="pre">setValues</span></code></a>([timeSpan])</p></td>
+<td><p>This method modifies the SmoothStepAmplitude object.</p></td>
+</tr>
+</tbody>
+</table></div>
 <dl class="py method">
 <dt class="sig sig-object py" id="abaqus.Amplitude.SmoothStepAmplitude.SmoothStepAmplitude.setValues">
 <span class="sig-name descname"><span class="pre">setValues</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">timeSpan</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.SymbolicConstantType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'STEP'</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../../_modules/abaqus/Amplitude/SmoothStepAmplitude.html#SmoothStepAmplitude.setValues"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#abaqus.Amplitude.SmoothStepAmplitude.SmoothStepAmplitude.setValues" title="Permalink to this definition">#</a></dt>
@@ -1824,6 +2216,56 @@ The SolutionDependentAmplitude object is derived from the Amplitude object.</p>
 </ul>
 </dd>
 </dl>
+<p class="rubric">Methods</p>
+<div class="table-wrapper"><table class="autosummary longtable docutils align-default">
+<colgroup>
+<col style="width: 10%"/>
+<col style="width: 90%"/>
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#abaqus.Amplitude.SolutionDependentAmplitude.SolutionDependentAmplitude.setValues" title="abaqus.Amplitude.SolutionDependentAmplitude.SolutionDependentAmplitude.setValues"><code class="xref py py-obj docutils literal notranslate"><span class="pre">setValues</span></code></a>([initial, minimum, maximum, timeSpan])</p></td>
+<td><p>This method modifies the SolutionDependentAmplitude object.</p></td>
+</tr>
+</tbody>
+</table></div>
+<p>This method creates a SolutionDependentAmplitude object.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>name</strong></dt><dd><p>A String specifying the repository key.</p>
+</dd>
+<dt><strong>initial</strong></dt><dd><p>A Float specifying the initial amplitude value. Possible values are those between 
+<em>minimum</em> and <em>maximum</em>. The default value is 1.0.</p>
+</dd>
+<dt><strong>minimum</strong></dt><dd><p>A Float specifying the minimum amplitude value. Possible values are those smaller than 
+<em>maximum</em> and <em>initial</em>. The default value is 0.1.</p>
+</dd>
+<dt><strong>maximum</strong></dt><dd><p>A Float specifying the maximum amplitude value. Possible values are those larger than 
+<em>minimum</em> and <em>initial</em>. The default value is 1000.0.</p>
+</dd>
+<dt><strong>timeSpan</strong></dt><dd><p>A SymbolicConstant specifying the time span of the amplitude. Possible values are STEP 
+and TOTAL. The default value is STEP.</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><dl class="simple">
+<dt><code class="xref py py-obj docutils literal notranslate"><span class="pre">A</span></code> <a class="reference internal" href="#abaqus.Amplitude.SolutionDependentAmplitude.SolutionDependentAmplitude" title="abaqus.Amplitude.SolutionDependentAmplitude.SolutionDependentAmplitude"><code class="xref py py-obj docutils literal notranslate"><span class="pre">SolutionDependentAmplitude</span></code></a> object.</dt><dd></dd>
+</dl>
+</dd>
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><code class="xref py py-obj docutils literal notranslate"><span class="pre">InvalidNameError</span></code></dt><dd></dd>
+<dt><code class="xref py py-obj docutils literal notranslate"><span class="pre">RangeError</span></code></dt><dd></dd>
+</dl>
+</dd>
+</dl>
+<p class="rubric">Notes</p>
+<p>This function can be accessed by:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">mdb</span><span class="o">.</span><span class="n">models</span><span class="p">[</span><span class="n">name</span><span class="p">]</span><span class="o">.</span><span class="n">SolutionDependentAmplitude</span>
+<span class="n">session</span><span class="o">.</span><span class="n">odbs</span><span class="p">[</span><span class="n">name</span><span class="p">]</span><span class="o">.</span><span class="n">SolutionDependentAmplitude</span>
+</pre></div>
+</div>
 <p class="rubric">Methods</p>
 <div class="table-wrapper"><table class="autosummary longtable docutils align-default">
 <colgroup>
@@ -1888,6 +2330,80 @@ The SpectrumAmplitude object is derived from the Amplitude object.</p>
 </ul>
 </dd>
 </dl>
+<p class="rubric">Methods</p>
+<div class="table-wrapper"><table class="autosummary longtable docutils align-default">
+<colgroup>
+<col style="width: 10%"/>
+<col style="width: 90%"/>
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#abaqus.Amplitude.SpectrumAmplitude.SpectrumAmplitude.setValues" title="abaqus.Amplitude.SpectrumAmplitude.SpectrumAmplitude.setValues"><code class="xref py py-obj docutils literal notranslate"><span class="pre">setValues</span></code></a>([specificationUnits, eventUnits, ...])</p></td>
+<td><p>This method modifies the SpectrumAmplitude object.</p></td>
+</tr>
+</tbody>
+</table></div>
+<p>This method creates a SpectrumAmplitude object.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>name</strong></dt><dd><p>A String specifying the repository key.</p>
+</dd>
+<dt><strong>method</strong></dt><dd><p>A SymbolicConstant specifying the method for specifying the spectrum. Possible values 
+are DEFINE and CALCULATE.</p>
+</dd>
+<dt><strong>data</strong></dt><dd><p>A sequence of sequences of Floats specifying the magnitude, frequency, and damping 
+values.</p>
+</dd>
+<dt><strong>specificationUnits</strong></dt><dd><p>A SymbolicConstant specifying the units used for specifying the spectrum. Possible 
+values are DISPLACEMENT, VELOCITY, ACCELERATION, and GRAVITY. The default value is 
+ACCELERATION.</p>
+</dd>
+<dt><strong>eventUnits</strong></dt><dd><p>A SymbolicConstant specifying the units used to describe the dynamic event in the 
+amplitude used for the calculation. Possible values are EVENT_DISPLACEMENT, 
+EVENT_VELOCITY, EVENT_ACCELERATION, and EVENT_GRAVITY. The default value is 
+EVENT_ACCELERATION.</p>
+</dd>
+<dt><strong>solution</strong></dt><dd><p>A SymbolicConstant specifying the solution method for the dynamic equations. Possible 
+values are ABSOLUTE_VALUE and RELATIVE_VALUE. The default value is ABSOLUTE_VALUE.</p>
+</dd>
+<dt><strong>timeIncrement</strong></dt><dd><p>A Float specifying the implicit time increment used to calculate the spectrum. This 
+argument is required when the <em>method</em> = CALCULATE. The default value is 0.0.</p>
+</dd>
+<dt><strong>gravity</strong></dt><dd><p>A Float specifying the acceleration due to gravity. This argument applies only when 
+<em>specificationUnits</em> = GRAVITY or*eventUnits* = GRAVITY. The default value is 1.0.</p>
+</dd>
+<dt><strong>criticalDamping</strong></dt><dd><p>A Boolean specifying whether to calculate the spectrum for only the specified range of 
+critical damping values or a list of values. If <em>criticalDamping</em> = ON, the spectrum is 
+calculated only for the specified range of critical damping values. If <em>criticalDamping</em> 
+= OFF, the spectrum is calculated for a list of damping values. The default value is 
+OFF.</p>
+</dd>
+<dt><strong>timeSpan</strong></dt><dd><p>A SymbolicConstant specifying the time span of the amplitude. Possible values are STEP 
+and TOTAL. The default value is STEP.</p>
+</dd>
+<dt><strong>amplitude</strong></dt><dd><p>A String specifying the name of the amplitude that describes the dynamic event used to 
+calculate the spectrum. The default value is an empty string.</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><dl class="simple">
+<dt><code class="xref py py-obj docutils literal notranslate"><span class="pre">A</span></code> <a class="reference internal" href="#abaqus.Amplitude.SpectrumAmplitude.SpectrumAmplitude" title="abaqus.Amplitude.SpectrumAmplitude.SpectrumAmplitude"><code class="xref py py-obj docutils literal notranslate"><span class="pre">SpectrumAmplitude</span></code></a> object.</dt><dd></dd>
+</dl>
+</dd>
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><code class="xref py py-obj docutils literal notranslate"><span class="pre">InvalidNameError</span></code></dt><dd></dd>
+<dt><code class="xref py py-obj docutils literal notranslate"><span class="pre">RangeError</span></code></dt><dd></dd>
+</dl>
+</dd>
+</dl>
+<p class="rubric">Notes</p>
+<p>This function can be accessed by:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">mdb</span><span class="o">.</span><span class="n">models</span><span class="p">[</span><span class="n">name</span><span class="p">]</span><span class="o">.</span><span class="n">SpectrumAmplitude</span>
+<span class="n">session</span><span class="o">.</span><span class="n">odbs</span><span class="p">[</span><span class="n">name</span><span class="p">]</span><span class="o">.</span><span class="n">SpectrumAmplitude</span>
+</pre></div>
+</div>
 <p class="rubric">Methods</p>
 <div class="table-wrapper"><table class="autosummary longtable docutils align-default">
 <colgroup>
@@ -1990,6 +2506,55 @@ The TabularAmplitude object is derived from the Amplitude object.</p>
 </tr>
 </tbody>
 </table></div>
+<p>This method creates a TabularAmplitude object.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>name</strong></dt><dd><p>A String specifying the repository key.</p>
+</dd>
+<dt><strong>data</strong></dt><dd><p>A sequence of pairs of Floats specifying time/frequency and amplitude pairs. Possible 
+values for time/frequency are positive numbers.</p>
+</dd>
+<dt><strong>smooth</strong></dt><dd><p>The SymbolicConstant SOLVER_DEFAULT or a Float specifying the degree of smoothing. 
+Possible float values are between 0 and 0.5. If <a href="#id14"><span class="problematic" id="id15">*</span></a>smooth*=SOLVER_DEFAULT, the default 
+degree of smoothing will be determined by the solver. The default value is 
+SOLVER_DEFAULT.</p>
+</dd>
+<dt><strong>timeSpan</strong></dt><dd><p>A SymbolicConstant specifying the time span of the amplitude. Possible values are STEP 
+and TOTAL. The default value is STEP.</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><dl class="simple">
+<dt><code class="xref py py-obj docutils literal notranslate"><span class="pre">A</span></code> <a class="reference internal" href="#abaqus.Amplitude.TabularAmplitude.TabularAmplitude" title="abaqus.Amplitude.TabularAmplitude.TabularAmplitude"><code class="xref py py-obj docutils literal notranslate"><span class="pre">TabularAmplitude</span></code></a> object.</dt><dd></dd>
+</dl>
+</dd>
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><code class="xref py py-obj docutils literal notranslate"><span class="pre">InvalidNameError</span></code></dt><dd></dd>
+<dt><code class="xref py py-obj docutils literal notranslate"><span class="pre">RangeError</span></code></dt><dd></dd>
+</dl>
+</dd>
+</dl>
+<p class="rubric">Notes</p>
+<p>This function can be accessed by:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">mdb</span><span class="o">.</span><span class="n">models</span><span class="p">[</span><span class="n">name</span><span class="p">]</span><span class="o">.</span><span class="n">TabularAmplitude</span>
+<span class="n">session</span><span class="o">.</span><span class="n">odbs</span><span class="p">[</span><span class="n">name</span><span class="p">]</span><span class="o">.</span><span class="n">TabularAmplitude</span>
+</pre></div>
+</div>
+<p class="rubric">Methods</p>
+<div class="table-wrapper"><table class="autosummary longtable docutils align-default">
+<colgroup>
+<col style="width: 10%"/>
+<col style="width: 90%"/>
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#abaqus.Amplitude.TabularAmplitude.TabularAmplitude.setValues" title="abaqus.Amplitude.TabularAmplitude.TabularAmplitude.setValues"><code class="xref py py-obj docutils literal notranslate"><span class="pre">setValues</span></code></a>([smooth, timeSpan])</p></td>
+<td><p>This method modifies the TabularAmplitude object.</p></td>
+</tr>
+</tbody>
+</table></div>
 <dl class="py method">
 <dt class="sig sig-object py" id="abaqus.Amplitude.TabularAmplitude.TabularAmplitude.setValues">
 <span class="sig-name descname"><span class="pre">setValues</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">smooth</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Union</span><span class="p"><span class="pre">[</span></span><span class="pre">abaqusConstants.SymbolicConstantType</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'SOLVER_DEFAULT'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">timeSpan</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.SymbolicConstantType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'STEP'</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../../_modules/abaqus/Amplitude/TabularAmplitude.html#TabularAmplitude.setValues"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#abaqus.Amplitude.TabularAmplitude.TabularAmplitude.setValues" title="Permalink to this definition">#</a></dt>
@@ -1998,7 +2563,7 @@ The TabularAmplitude object is derived from the Amplitude object.</p>
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><dl class="simple">
 <dt><strong>smooth</strong></dt><dd><p>The SymbolicConstant SOLVER_DEFAULT or a Float specifying the degree of smoothing. 
-Possible float values are between 0 and 0.5. If <a href="#id12"><span class="problematic" id="id13">*</span></a>smooth*=SOLVER_DEFAULT, the default 
+Possible float values are between 0 and 0.5. If <a href="#id16"><span class="problematic" id="id17">*</span></a>smooth*=SOLVER_DEFAULT, the default 
 degree of smoothing will be determined by the solver. The default value is 
 SOLVER_DEFAULT.</p>
 </dd>

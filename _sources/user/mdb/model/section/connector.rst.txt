@@ -22,88 +22,66 @@ ConnectorDamage
 
 .. autoclass:: abaqus.Connector.ConnectorDamage.ConnectorDamage
     :noindex:
-    
-    .. automethod:: __init__
 
 ConnectorDamping
 ~~~~~~~~~~~~~~~~
 
 .. autoclass:: abaqus.Connector.ConnectorDamping.ConnectorDamping
     :noindex:
-    
-    .. automethod:: __init__
 
 ConnectorElasticity
 ~~~~~~~~~~~~~~~~~~~
 
 .. autoclass:: abaqus.Connector.ConnectorElasticity.ConnectorElasticity
     :noindex:
-    
-    .. automethod:: __init__
 
 ConnectorFailure
 ~~~~~~~~~~~~~~~~
 
 .. autoclass:: abaqus.Connector.ConnectorFailure.ConnectorFailure
     :noindex:
-    
-    .. automethod:: __init__
 
 ConnectorFriction
 ~~~~~~~~~~~~~~~~~
 
 .. autoclass:: abaqus.Connector.ConnectorFriction.ConnectorFriction
     :noindex:
-    
-    .. automethod:: __init__
 
 ConnectorLock
 ~~~~~~~~~~~~~
 
 .. autoclass:: abaqus.Connector.ConnectorLock.ConnectorLock
     :noindex:
-    
-    .. automethod:: __init__
 
 ConnectorPlasticity
 ~~~~~~~~~~~~~~~~~~~
 
 .. autoclass:: abaqus.Connector.ConnectorPlasticity.ConnectorPlasticity
     :noindex:
-    
-    .. automethod:: __init__
 
 ConnectorPotential
 ~~~~~~~~~~~~~~~~~~
 
 .. autoclass:: abaqus.Connector.ConnectorPotential.ConnectorPotential
     :noindex:
-    
-    .. automethod:: __init__
 
 ConnectorStop
 ~~~~~~~~~~~~~
 
 .. autoclass:: abaqus.Connector.ConnectorStop.ConnectorStop
     :noindex:
-    
-    .. automethod:: __init__
 
 DerivedComponent
 ~~~~~~~~~~~~~~~~
 
 .. autoclass:: abaqus.Connector.DerivedComponent.DerivedComponent
     :noindex:
-    
-    .. automethod:: __init__
 
 TangentialBehavior
 ~~~~~~~~~~~~~~~~~~
 
 .. autoclass:: abaqus.Connector.TangentialBehavior.TangentialBehavior
     :noindex:
-    
-    .. automethod:: __init__
 
 
 Object features

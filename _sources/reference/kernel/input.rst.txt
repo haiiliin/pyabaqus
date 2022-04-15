@@ -8,8 +8,6 @@ Create input files
 ------------------
 
 .. autoclass:: abaqus.InputFileParser.InputFile.InputFile
-    
-    .. automethod:: __init__
 
 Object features
 ---------------

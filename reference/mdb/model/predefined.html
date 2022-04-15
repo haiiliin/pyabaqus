@@ -814,6 +814,118 @@ ignored if the predefined field has a <strong>distributionType</strong> member a
 </tr>
 </tbody>
 </table></div>
+<p>This method creates a Field object.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>name</strong></dt><dd><p>A String specifying the repository key.</p>
+</dd>
+<dt><strong>createStepName</strong></dt><dd><p>A String specifying the name of the step in which the predefined field is created.</p>
+</dd>
+<dt><strong>region</strong></dt><dd><p>A Region object specifying the region to which the predefined field is applied. <em>Region</em> 
+is ignored if the predefined field has a <em>distributionType</em> member available, and 
+<a href="#id65"><span class="problematic" id="id66">*</span></a>distributionType*=FROM_FILE.</p>
+</dd>
+<dt><strong>outputVariable</strong></dt><dd><p>A String specifying the scalar nodal output variable that will be read from an output 
+database and used to initialize a specified predefined field. This argument is a 
+required argument if <a href="#id67"><span class="problematic" id="id68">*</span></a>distributionType*=FROM_FILE or 
+<a href="#id69"><span class="problematic" id="id70">*</span></a>distributionType*=FROM_FILE_AND_USER_DEFINED.</p>
+</dd>
+<dt><strong>fieldVariableNum</strong></dt><dd><p>An Int specifying the field variable number.</p>
+</dd>
+<dt><strong>distributionType</strong></dt><dd><p>A SymbolicConstant specifying how the predefined field varies spatially. Possible values 
+are UNIFORM, USER_DEFINED, FROM_FILE, FIELD, FROM_FILE_AND_USER_DEFINED, and 
+DISCRETE_FIELD. The default value is UNIFORM.</p>
+</dd>
+<dt><strong>crossSectionDistribution</strong></dt><dd><p>A SymbolicConstant specifying how the predefined field is distributed over the 
+cross-section of the region. Possible values are 
+- CONSTANT_THROUGH_THICKNESS 
+- GRADIENTS_THROUGH_SHELL_CS 
+- GRADIENTS_THROUGH_BEAM_CS 
+- POINTS_THROUGH_SECTION 
+The default value is CONSTANT_THROUGH_THICKNESS.</p>
+</dd>
+<dt><strong>field</strong></dt><dd><p>A String specifying the name of the AnalyticalField or DiscreteField object associated 
+with this predefined field. The <em>field</em> argument applies only when 
+<a href="#id71"><span class="problematic" id="id72">*</span></a>distributionType*=FIELD or <a href="#id73"><span class="problematic" id="id74">*</span></a>distributionType*=DISCRETE_FIELD. The default value is an 
+empty string.</p>
+</dd>
+<dt><strong>amplitude</strong></dt><dd><p>A String or the SymbolicConstant UNSET specifying the name of the amplitude reference. 
+UNSET should be used if the predefined field has no amplitude reference. The default 
+value is UNSET.Note:<em>amplitude</em> should be given only if it is valid for the specified 
+step.</p>
+</dd>
+<dt><strong>fileName</strong></dt><dd><p>A String specifying the name of the file from which the Field values are to be read when 
+<a href="#id75"><span class="problematic" id="id76">*</span></a>distributionType*=FROM_FILE or <a href="#id77"><span class="problematic" id="id78">*</span></a>distributionType*=FROM_FILE_AND_USER_DEFINED.</p>
+</dd>
+<dt><strong>beginStep</strong></dt><dd><p>An Int specifying the first step from which Field values are to be read or the 
+SymbolicConstant FIRST_STEP or LAST_STEP. This argument is valid only when 
+<a href="#id79"><span class="problematic" id="id80">*</span></a>distributionType*=FROM_FILE or <a href="#id81"><span class="problematic" id="id82">*</span></a>distributionType*=FROM_FILE_AND_USER_DEFINED. The 
+default value is None.</p>
+</dd>
+<dt><strong>beginIncrement</strong></dt><dd><p>An Int specifying the first increment of the step set in <em>beginStep</em> or the 
+SymbolicConstants STEP_START or STEP_END. This argument is valid only when 
+<a href="#id83"><span class="problematic" id="id84">*</span></a>distributionType*=FROM_FILE or <a href="#id85"><span class="problematic" id="id86">*</span></a>distributionType*=FROM_FILE_AND_USER_DEFINED. The 
+default value is None.</p>
+</dd>
+<dt><strong>endStep</strong></dt><dd><p>An Int specifying the last step from which Field values are to be read or the 
+SymbolicConstants FIRST_STEP and LAST_STEP. This argument is valid only when 
+<a href="#id87"><span class="problematic" id="id88">*</span></a>distributionType*=FROM_FILE or <a href="#id89"><span class="problematic" id="id90">*</span></a>distributionType*=FROM_FILE_AND_USER_DEFINED. The 
+default value is None.</p>
+</dd>
+<dt><strong>endIncrement</strong></dt><dd><p>An Int specifying the last increment of the step set in <em>endStep</em> or the 
+SymbolicConstants STEP_START and STEP_END. This argument is valid only when 
+<a href="#id91"><span class="problematic" id="id92">*</span></a>distributionType*=FROM_FILE or <a href="#id93"><span class="problematic" id="id94">*</span></a>distributionType*=FROM_FILE_AND_USER_DEFINED. The 
+default value is None.</p>
+</dd>
+<dt><strong>interpolate</strong></dt><dd><p>A SymbolicConstant specifying whether to interpolate a field read from an output 
+database or results file. Possible values are OFF, ON, or MIDSIDE_ONLY. The default 
+value is OFF.</p>
+</dd>
+<dt><strong>magnitudes</strong></dt><dd><p>A Sequence of Doubles specifying the Field values when <em>distributionType*=UNIFORM or 
+FIELD. The value of the *magnitudes</em> argument is a function of the 
+<em>crossSectionDistribution</em> argument, as shown in the following list: 
+- If <em>crossSectionDistribution*=CONSTANT_THROUGH_THICKNESS, *magnitudes</em> is a Double 
+specifying the Field. 
+- If <em>crossSectionDistribution*=GRADIENTS_THROUGH_SHELL_CS, *magnitudes</em> is a sequence 
+of Doubles specifying the mean value and the gradient in the thickness direction. 
+- If <em>crossSectionDistribution*=GRADIENTS_THROUGH_BEAM_CS, *magnitudes</em> is a sequence of 
+Doubles specifying the mean value, the gradient in the N1 direction, and the gradient in 
+the N2 direction. 
+- If <em>crossSectionDistribution*=POINTS_THROUGH_SECTION, *magnitudes</em> is a sequence of 
+Doubles specifying the Field at each point.</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><dl class="simple">
+<dt><code class="xref py py-obj docutils literal notranslate"><span class="pre">A</span></code> <a class="reference internal" href="#abaqus.PredefinedField.Field.Field" title="abaqus.PredefinedField.Field.Field"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Field</span></code></a> object.</dt><dd></dd>
+</dl>
+</dd>
+</dl>
+<p class="rubric">Notes</p>
+<p>This function can be accessed by:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">mdb</span><span class="o">.</span><span class="n">models</span><span class="p">[</span><span class="n">name</span><span class="p">]</span><span class="o">.</span><span class="n">Field</span>
+</pre></div>
+</div>
+<p class="rubric">Methods</p>
+<div class="table-wrapper"><table class="autosummary longtable docutils align-default">
+<colgroup>
+<col style="width: 10%"/>
+<col style="width: 90%"/>
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#abaqus.PredefinedField.Field.Field.move" title="abaqus.PredefinedField.Field.Field.move"><code class="xref py py-obj docutils literal notranslate"><span class="pre">move</span></code></a>(fromStepName, toStepName)</p></td>
+<td><p>This method moves the FieldState object from one step to a different step.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#abaqus.PredefinedField.Field.Field.setValues" title="abaqus.PredefinedField.Field.Field.setValues"><code class="xref py py-obj docutils literal notranslate"><span class="pre">setValues</span></code></a>([outputVariable, ...])</p></td>
+<td><p>This method modifies the data for an existing Field object in the step where it is created.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#abaqus.PredefinedField.Field.Field.setValuesInStep" title="abaqus.PredefinedField.Field.Field.setValuesInStep"><code class="xref py py-obj docutils literal notranslate"><span class="pre">setValuesInStep</span></code></a>(stepName[, outputVariable, ...])</p></td>
+<td><p>This method modifies the propagating data for an existing Field object in the specified step.</p></td>
+</tr>
+</tbody>
+</table></div>
 <dl class="py method">
 <dt class="sig sig-object py" id="abaqus.PredefinedField.Field.Field.move">
 <span class="sig-name descname"><span class="pre">move</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">fromStepName</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">toStepName</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../../_modules/abaqus/PredefinedField/Field.html#Field.move"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#abaqus.PredefinedField.Field.Field.move" title="Permalink to this definition">#</a></dt>
@@ -844,8 +956,8 @@ created.</p>
 <dd class="field-odd"><dl class="simple">
 <dt><strong>outputVariable</strong></dt><dd><p>A String specifying the scalar nodal output variable that will be read from an output 
 database and used to initialize a specified predefined field. This argument is a 
-required argument if <a href="#id65"><span class="problematic" id="id66">*</span></a>distributionType*=FROM_FILE or 
-<a href="#id67"><span class="problematic" id="id68">*</span></a>distributionType*=FROM_FILE_AND_USER_DEFINED.</p>
+required argument if <a href="#id95"><span class="problematic" id="id96">*</span></a>distributionType*=FROM_FILE or 
+<a href="#id97"><span class="problematic" id="id98">*</span></a>distributionType*=FROM_FILE_AND_USER_DEFINED.</p>
 </dd>
 <dt><strong>fieldVariableNum</strong></dt><dd><p>An Int specifying the field variable number.</p>
 </dd>
@@ -863,7 +975,7 @@ The default value is CONSTANT_THROUGH_THICKNESS.</p>
 </dd>
 <dt><strong>field</strong></dt><dd><p>A String specifying the name of the AnalyticalField or DiscreteField object associated 
 with this predefined field. The <em>field</em> argument applies only when 
-<a href="#id69"><span class="problematic" id="id70">*</span></a>distributionType*=FIELD or <a href="#id71"><span class="problematic" id="id72">*</span></a>distributionType*=DISCRETE_FIELD. The default value is an 
+<a href="#id99"><span class="problematic" id="id100">*</span></a>distributionType*=FIELD or <a href="#id101"><span class="problematic" id="id102">*</span></a>distributionType*=DISCRETE_FIELD. The default value is an 
 empty string.</p>
 </dd>
 <dt><strong>amplitude</strong></dt><dd><p>A String or the SymbolicConstant UNSET specifying the name of the amplitude reference. 
@@ -872,26 +984,26 @@ value is UNSET.Note:<em>amplitude</em> should be given only if it is valid for t
 step.</p>
 </dd>
 <dt><strong>fileName</strong></dt><dd><p>A String specifying the name of the file from which the Field values are to be read when 
-<a href="#id73"><span class="problematic" id="id74">*</span></a>distributionType*=FROM_FILE or <a href="#id75"><span class="problematic" id="id76">*</span></a>distributionType*=FROM_FILE_AND_USER_DEFINED.</p>
+<a href="#id103"><span class="problematic" id="id104">*</span></a>distributionType*=FROM_FILE or <a href="#id105"><span class="problematic" id="id106">*</span></a>distributionType*=FROM_FILE_AND_USER_DEFINED.</p>
 </dd>
 <dt><strong>beginStep</strong></dt><dd><p>An Int specifying the first step from which Field values are to be read or the 
 SymbolicConstant FIRST_STEP or LAST_STEP. This argument is valid only when 
-<a href="#id77"><span class="problematic" id="id78">*</span></a>distributionType*=FROM_FILE or <a href="#id79"><span class="problematic" id="id80">*</span></a>distributionType*=FROM_FILE_AND_USER_DEFINED. The 
+<a href="#id107"><span class="problematic" id="id108">*</span></a>distributionType*=FROM_FILE or <a href="#id109"><span class="problematic" id="id110">*</span></a>distributionType*=FROM_FILE_AND_USER_DEFINED. The 
 default value is None.</p>
 </dd>
 <dt><strong>beginIncrement</strong></dt><dd><p>An Int specifying the first increment of the step set in <em>beginStep</em> or the 
 SymbolicConstants STEP_START or STEP_END. This argument is valid only when 
-<a href="#id81"><span class="problematic" id="id82">*</span></a>distributionType*=FROM_FILE or <a href="#id83"><span class="problematic" id="id84">*</span></a>distributionType*=FROM_FILE_AND_USER_DEFINED. The 
+<a href="#id111"><span class="problematic" id="id112">*</span></a>distributionType*=FROM_FILE or <a href="#id113"><span class="problematic" id="id114">*</span></a>distributionType*=FROM_FILE_AND_USER_DEFINED. The 
 default value is None.</p>
 </dd>
 <dt><strong>endStep</strong></dt><dd><p>An Int specifying the last step from which Field values are to be read or the 
 SymbolicConstants FIRST_STEP and LAST_STEP. This argument is valid only when 
-<a href="#id85"><span class="problematic" id="id86">*</span></a>distributionType*=FROM_FILE or <a href="#id87"><span class="problematic" id="id88">*</span></a>distributionType*=FROM_FILE_AND_USER_DEFINED. The 
+<a href="#id115"><span class="problematic" id="id116">*</span></a>distributionType*=FROM_FILE or <a href="#id117"><span class="problematic" id="id118">*</span></a>distributionType*=FROM_FILE_AND_USER_DEFINED. The 
 default value is None.</p>
 </dd>
 <dt><strong>endIncrement</strong></dt><dd><p>An Int specifying the last increment of the step set in <em>endStep</em> or the 
 SymbolicConstants STEP_START and STEP_END. This argument is valid only when 
-<a href="#id89"><span class="problematic" id="id90">*</span></a>distributionType*=FROM_FILE or <a href="#id91"><span class="problematic" id="id92">*</span></a>distributionType*=FROM_FILE_AND_USER_DEFINED. The 
+<a href="#id119"><span class="problematic" id="id120">*</span></a>distributionType*=FROM_FILE or <a href="#id121"><span class="problematic" id="id122">*</span></a>distributionType*=FROM_FILE_AND_USER_DEFINED. The 
 default value is None.</p>
 </dd>
 <dt><strong>interpolate</strong></dt><dd><p>A SymbolicConstant specifying whether to interpolate a field read from an output 
@@ -927,14 +1039,14 @@ step.</p>
 </dd>
 <dt><strong>outputVariable</strong></dt><dd><p>A String specifying the scalar nodal output variable that will be read from an output 
 database and used to initialize a specified predefined field. This argument is a 
-required argument if <a href="#id93"><span class="problematic" id="id94">*</span></a>distributionType*=FROM_FILE or 
-<a href="#id95"><span class="problematic" id="id96">*</span></a>distributionType*=FROM_FILE_AND_USER_DEFINED.</p>
+required argument if <a href="#id123"><span class="problematic" id="id124">*</span></a>distributionType*=FROM_FILE or 
+<a href="#id125"><span class="problematic" id="id126">*</span></a>distributionType*=FROM_FILE_AND_USER_DEFINED.</p>
 </dd>
 <dt><strong>fieldVariableNum</strong></dt><dd><p>An Int specifying the field variable number.</p>
 </dd>
 <dt><strong>field</strong></dt><dd><p>A String specifying the name of the AnalyticalField or DiscreteField object associated 
 with this predefined field. The <em>field</em> argument applies only when 
-<a href="#id97"><span class="problematic" id="id98">*</span></a>distributionType*=FIELD or <a href="#id99"><span class="problematic" id="id100">*</span></a>distributionType*=DISCRETE_FIELD. The default value is an 
+<a href="#id127"><span class="problematic" id="id128">*</span></a>distributionType*=FIELD or <a href="#id129"><span class="problematic" id="id130">*</span></a>distributionType*=DISCRETE_FIELD. The default value is an 
 empty string.</p>
 </dd>
 <dt><strong>amplitude</strong></dt><dd><p>A String or the SymbolicConstant UNSET specifying the name of the amplitude reference. 
@@ -943,26 +1055,26 @@ value is UNSET.Note:<em>amplitude</em> should be given only if it is valid for t
 step.</p>
 </dd>
 <dt><strong>fileName</strong></dt><dd><p>A String specifying the name of the file from which the Field values are to be read when 
-<a href="#id101"><span class="problematic" id="id102">*</span></a>distributionType*=FROM_FILE or <a href="#id103"><span class="problematic" id="id104">*</span></a>distributionType*=FROM_FILE_AND_USER_DEFINED.</p>
+<a href="#id131"><span class="problematic" id="id132">*</span></a>distributionType*=FROM_FILE or <a href="#id133"><span class="problematic" id="id134">*</span></a>distributionType*=FROM_FILE_AND_USER_DEFINED.</p>
 </dd>
 <dt><strong>beginStep</strong></dt><dd><p>An Int specifying the first step from which Field values are to be read or the 
 SymbolicConstant FIRST_STEP or LAST_STEP. This argument is valid only when 
-<a href="#id105"><span class="problematic" id="id106">*</span></a>distributionType*=FROM_FILE or <a href="#id107"><span class="problematic" id="id108">*</span></a>distributionType*=FROM_FILE_AND_USER_DEFINED. The 
+<a href="#id135"><span class="problematic" id="id136">*</span></a>distributionType*=FROM_FILE or <a href="#id137"><span class="problematic" id="id138">*</span></a>distributionType*=FROM_FILE_AND_USER_DEFINED. The 
 default value is None.</p>
 </dd>
 <dt><strong>beginIncrement</strong></dt><dd><p>An Int specifying the first increment of the step set in <em>beginStep</em> or the 
 SymbolicConstants STEP_START or STEP_END. This argument is valid only when 
-<a href="#id109"><span class="problematic" id="id110">*</span></a>distributionType*=FROM_FILE or <a href="#id111"><span class="problematic" id="id112">*</span></a>distributionType*=FROM_FILE_AND_USER_DEFINED. The 
+<a href="#id139"><span class="problematic" id="id140">*</span></a>distributionType*=FROM_FILE or <a href="#id141"><span class="problematic" id="id142">*</span></a>distributionType*=FROM_FILE_AND_USER_DEFINED. The 
 default value is None.</p>
 </dd>
 <dt><strong>endStep</strong></dt><dd><p>An Int specifying the last step from which Field values are to be read or the 
 SymbolicConstants FIRST_STEP and LAST_STEP. This argument is valid only when 
-<a href="#id113"><span class="problematic" id="id114">*</span></a>distributionType*=FROM_FILE or <a href="#id115"><span class="problematic" id="id116">*</span></a>distributionType*=FROM_FILE_AND_USER_DEFINED. The 
+<a href="#id143"><span class="problematic" id="id144">*</span></a>distributionType*=FROM_FILE or <a href="#id145"><span class="problematic" id="id146">*</span></a>distributionType*=FROM_FILE_AND_USER_DEFINED. The 
 default value is None.</p>
 </dd>
 <dt><strong>endIncrement</strong></dt><dd><p>An Int specifying the last increment of the step set in <em>endStep</em> or the 
 SymbolicConstants STEP_START and STEP_END. This argument is valid only when 
-<a href="#id117"><span class="problematic" id="id118">*</span></a>distributionType*=FROM_FILE or <a href="#id119"><span class="problematic" id="id120">*</span></a>distributionType*=FROM_FILE_AND_USER_DEFINED. The 
+<a href="#id147"><span class="problematic" id="id148">*</span></a>distributionType*=FROM_FILE or <a href="#id149"><span class="problematic" id="id150">*</span></a>distributionType*=FROM_FILE_AND_USER_DEFINED. The 
 default value is None.</p>
 </dd>
 <dt><strong>interpolate</strong></dt><dd><p>A SymbolicConstant specifying whether to interpolate a field read from an output 
@@ -1302,6 +1414,41 @@ The FluidCavityPressure object is derived from the PredefinedField object.</p>
 </tr>
 </tbody>
 </table></div>
+<p>This method creates a FluidCavityPressure object.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>name</strong></dt><dd><p>A String specifying the repository key.</p>
+</dd>
+<dt><strong>fluidCavity</strong></dt><dd><p>A String specifying the name of a Fluid Cavity Interaction.</p>
+</dd>
+<dt><strong>fluidPressure</strong></dt><dd><p>A Float specifying the initial fluid pressure.</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><dl class="simple">
+<dt><code class="xref py py-obj docutils literal notranslate"><span class="pre">A</span></code> <a class="reference internal" href="#abaqus.PredefinedField.FluidCavityPressure.FluidCavityPressure" title="abaqus.PredefinedField.FluidCavityPressure.FluidCavityPressure"><code class="xref py py-obj docutils literal notranslate"><span class="pre">FluidCavityPressure</span></code></a> object.</dt><dd></dd>
+</dl>
+</dd>
+</dl>
+<p class="rubric">Notes</p>
+<p>This function can be accessed by:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">mdb</span><span class="o">.</span><span class="n">models</span><span class="p">[</span><span class="n">name</span><span class="p">]</span><span class="o">.</span><span class="n">FluidCavityPressure</span>
+</pre></div>
+</div>
+<p class="rubric">Methods</p>
+<div class="table-wrapper"><table class="autosummary longtable docutils align-default">
+<colgroup>
+<col style="width: 10%"/>
+<col style="width: 90%"/>
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#abaqus.PredefinedField.FluidCavityPressure.FluidCavityPressure.setValues" title="abaqus.PredefinedField.FluidCavityPressure.FluidCavityPressure.setValues"><code class="xref py py-obj docutils literal notranslate"><span class="pre">setValues</span></code></a>()</p></td>
+<td><p>This method modifies the FluidCavityPressure object.</p></td>
+</tr>
+</tbody>
+</table></div>
 <dl class="py method">
 <dt class="sig sig-object py" id="abaqus.PredefinedField.FluidCavityPressure.FluidCavityPressure.setValues">
 <span class="sig-name descname"><span class="pre">setValues</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../../_modules/abaqus/PredefinedField/FluidCavityPressure.html#FluidCavityPressure.setValues"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#abaqus.PredefinedField.FluidCavityPressure.FluidCavityPressure.setValues" title="Permalink to this definition">#</a></dt>
@@ -1396,6 +1543,53 @@ The InitialState object is derived from the PredefinedField object.</p>
 </tr>
 </tbody>
 </table></div>
+<p>This method creates an InitialState predefined field object.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>name</strong></dt><dd><p>A String specifying the repository key.</p>
+</dd>
+<dt><strong>instances</strong></dt><dd><p>A PartInstanceArray object specifying the instances to which the predefined field is 
+applied.</p>
+</dd>
+<dt><strong>fileName</strong></dt><dd><p>A String specifying the name of the job that generated the initial state data.</p>
+</dd>
+<dt><strong>endStep</strong></dt><dd><p>The SymbolicConstant LAST_STEP or an Int specifying the step from which the initial 
+state values are to be read or the SymbolicConstant LAST_STEP. The default value is 
+LAST_STEP.</p>
+</dd>
+<dt><strong>endIncrement</strong></dt><dd><p>The SymbolicConstant STEP_END or an Int specifying the increment, interval or iteration 
+of the step set in <em>endStep</em> or the SymbolicConstant STEP_END. The default value is 
+STEP_END.</p>
+</dd>
+<dt><strong>updateReferenceConfiguration</strong></dt><dd><p>A Boolean specifying whether to update the reference configuration based on the import 
+data. The default value is OFF.</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><dl class="simple">
+<dt><code class="xref py py-obj docutils literal notranslate"><span class="pre">An</span></code> <a class="reference internal" href="#abaqus.PredefinedField.InitialState.InitialState" title="abaqus.PredefinedField.InitialState.InitialState"><code class="xref py py-obj docutils literal notranslate"><span class="pre">InitialState</span></code></a> object.</dt><dd></dd>
+</dl>
+</dd>
+</dl>
+<p class="rubric">Notes</p>
+<p>This function can be accessed by:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">mdb</span><span class="o">.</span><span class="n">models</span><span class="p">[</span><span class="n">name</span><span class="p">]</span><span class="o">.</span><span class="n">InitialState</span>
+</pre></div>
+</div>
+<p class="rubric">Methods</p>
+<div class="table-wrapper"><table class="autosummary longtable docutils align-default">
+<colgroup>
+<col style="width: 10%"/>
+<col style="width: 90%"/>
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#abaqus.PredefinedField.InitialState.InitialState.setValues" title="abaqus.PredefinedField.InitialState.InitialState.setValues"><code class="xref py py-obj docutils literal notranslate"><span class="pre">setValues</span></code></a>([endStep, endIncrement, ...])</p></td>
+<td><p>This method modifies the InitialState object.</p></td>
+</tr>
+</tbody>
+</table></div>
 <dl class="py method">
 <dt class="sig sig-object py" id="abaqus.PredefinedField.InitialState.InitialState.setValues">
 <span class="sig-name descname"><span class="pre">setValues</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">endStep</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.SymbolicConstantType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'LAST_STEP'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">endIncrement</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.SymbolicConstantType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'STEP_END'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">updateReferenceConfiguration</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.BooleanType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../../_modules/abaqus/PredefinedField/InitialState.html#InitialState.setValues"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#abaqus.PredefinedField.InitialState.InitialState.setValues" title="Permalink to this definition">#</a></dt>
@@ -1462,6 +1656,59 @@ predefined field. The <strong>field</strong> argument applies only when
 </tr>
 </tbody>
 </table></div>
+<p>This method creates a KinematicHardening object.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>name</strong></dt><dd><p>A String specifying the repository key.</p>
+</dd>
+<dt><strong>region</strong></dt><dd><p>A Region object specifying the region to which the predefined field is applied.</p>
+</dd>
+<dt><strong>numBackStress</strong></dt><dd><p>An Int specifying the number of backstresses. The default value is 1.</p>
+</dd>
+<dt><strong>equivPlasticStrain</strong></dt><dd><p>A sequence of Floats specifying the initial equivalent Plastic strain.</p>
+</dd>
+<dt><strong>backStress</strong></dt><dd><p>A sequence of sequences of Floats specifying the initial backstress tensor for kinematic 
+hardening models. The default value is an empty sequence.</p>
+</dd>
+<dt><strong>sectPtNum</strong></dt><dd><p>A sequence of Ints specifying section point numbers. This argument is valid only when 
+<a href="#id151"><span class="problematic" id="id152">*</span></a>definition*=SECTION_PTS.</p>
+</dd>
+<dt><strong>definition</strong></dt><dd><p>A SymbolicConstant specifying different types of kinematic hardening. Possible values 
+are KINEMATIC_HARDENING, CRUSHABLE_FOAM, REBAR, SECTION_PTS, and USER_DEFINED. The 
+default value is KINEMATIC_HARDENING.</p>
+</dd>
+<dt><strong>rebarLayerNames</strong></dt><dd><p>A sequence of Strings specifying rebar layer names. This argument is valid only when 
+<a href="#id153"><span class="problematic" id="id154">*</span></a>definition*=REBAR.</p>
+</dd>
+<dt><strong>distributionType</strong></dt><dd><p>A SymbolicConstant specifying whether the load is uniform. Possible values are MAGNITUDE 
+and ANALYTICAL_FIELD. The default value is MAGNITUDE.</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><dl class="simple">
+<dt><code class="xref py py-obj docutils literal notranslate"><span class="pre">A</span></code> <a class="reference internal" href="#abaqus.PredefinedField.KinematicHardening.KinematicHardening" title="abaqus.PredefinedField.KinematicHardening.KinematicHardening"><code class="xref py py-obj docutils literal notranslate"><span class="pre">KinematicHardening</span></code></a> object.</dt><dd></dd>
+</dl>
+</dd>
+</dl>
+<p class="rubric">Notes</p>
+<p>This function can be accessed by:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">mdb</span><span class="o">.</span><span class="n">models</span><span class="p">[</span><span class="n">name</span><span class="p">]</span><span class="o">.</span><span class="n">KinematicHardening</span>
+</pre></div>
+</div>
+<p class="rubric">Methods</p>
+<div class="table-wrapper"><table class="autosummary longtable docutils align-default">
+<colgroup>
+<col style="width: 10%"/>
+<col style="width: 90%"/>
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#abaqus.PredefinedField.KinematicHardening.KinematicHardening.setValues" title="abaqus.PredefinedField.KinematicHardening.KinematicHardening.setValues"><code class="xref py py-obj docutils literal notranslate"><span class="pre">setValues</span></code></a>([numBackStress, ...])</p></td>
+<td><p>This method modifies the KinematicHardening object.</p></td>
+</tr>
+</tbody>
+</table></div>
 <dl class="py method">
 <dt class="sig sig-object py" id="abaqus.PredefinedField.KinematicHardening.KinematicHardening.setValues">
 <span class="sig-name descname"><span class="pre">setValues</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">numBackStress</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">equivPlasticStrain</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">tuple</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">()</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">backStress</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">tuple</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">()</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sectPtNum</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">tuple</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">()</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">definition</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.SymbolicConstantType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'KINEMATIC_HARDENING'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">rebarLayerNames</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">tuple</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">()</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">distributionType</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.SymbolicConstantType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'MAGNITUDE'</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../../_modules/abaqus/PredefinedField/KinematicHardening.html#KinematicHardening.setValues"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#abaqus.PredefinedField.KinematicHardening.KinematicHardening.setValues" title="Permalink to this definition">#</a></dt>
@@ -1477,14 +1724,14 @@ predefined field. The <strong>field</strong> argument applies only when
 hardening models. The default value is an empty sequence.</p>
 </dd>
 <dt><strong>sectPtNum</strong></dt><dd><p>A sequence of Ints specifying section point numbers. This argument is valid only when 
-<a href="#id121"><span class="problematic" id="id122">*</span></a>definition*=SECTION_PTS.</p>
+<a href="#id155"><span class="problematic" id="id156">*</span></a>definition*=SECTION_PTS.</p>
 </dd>
 <dt><strong>definition</strong></dt><dd><p>A SymbolicConstant specifying different types of kinematic hardening. Possible values 
 are KINEMATIC_HARDENING, CRUSHABLE_FOAM, REBAR, SECTION_PTS, and USER_DEFINED. The 
 default value is KINEMATIC_HARDENING.</p>
 </dd>
 <dt><strong>rebarLayerNames</strong></dt><dd><p>A sequence of Strings specifying rebar layer names. This argument is valid only when 
-<a href="#id123"><span class="problematic" id="id124">*</span></a>definition*=REBAR.</p>
+<a href="#id157"><span class="problematic" id="id158">*</span></a>definition*=REBAR.</p>
 </dd>
 <dt><strong>distributionType</strong></dt><dd><p>A SymbolicConstant specifying whether the load is uniform. Possible values are MAGNITUDE 
 and ANALYTICAL_FIELD. The default value is MAGNITUDE.</p>
@@ -1523,6 +1770,59 @@ The MaterialAssignment object is derived from the PredefinedField object.</p>
 </dl>
 </dd>
 </dl>
+<p class="rubric">Methods</p>
+<div class="table-wrapper"><table class="autosummary longtable docutils align-default">
+<colgroup>
+<col style="width: 10%"/>
+<col style="width: 90%"/>
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#abaqus.PredefinedField.MaterialAssignment.MaterialAssignment.setValues" title="abaqus.PredefinedField.MaterialAssignment.MaterialAssignment.setValues"><code class="xref py py-obj docutils literal notranslate"><span class="pre">setValues</span></code></a>([useFields, assignmentList, ...])</p></td>
+<td><p>This method modifies the MaterialAssignment object.</p></td>
+</tr>
+</tbody>
+</table></div>
+<p>This method creates a MaterialAssignment predefined field object.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>name</strong></dt><dd><p>A String specifying the repository key.</p>
+</dd>
+<dt><strong>instanceList</strong></dt><dd><p>A PartInstanceArray object specifying the part instances to which the predefined field 
+is applied. All instances must be assigned the same Eulerian section.</p>
+</dd>
+<dt><strong>useFields</strong></dt><dd><p>A Boolean specifying whether the volume fraction data will be uniform or defined by 
+discrete fields. The default value is OFF.</p>
+</dd>
+<dt><strong>assignmentList</strong></dt><dd><p>A sequence of tuples specifying the uniform volume fractions to be assigned. This 
+argument is valid only when <em>useFields*=FALSE. Each tuple contains two entries:A Region 
+object.A tuple of Floats specifying the uniform volume fraction values. The length of 
+the tuple must match the number of material instance names specified in the Eulerain 
+section assigned to part instances specified by *instanceList</em>.</p>
+</dd>
+<dt><strong>fieldList</strong></dt><dd><p>A sequence of tuples specifying the discrete volume fractions to be assigned. This 
+argument is valid only when <em>useFields*=TRUE. Each tuple contains two entries:A Region 
+object.A tuple of Strings specifying Discrete Field names. The length of the tuple must 
+match the number of material instance names specified in the Eulerain section assigned 
+to part instances specified by *instanceList</em>.</p>
+</dd>
+<dt><strong>colorList</strong></dt><dd><p>A sequence of three Ints specifying colors used to display the material instance 
+assignments. This is a sequence of R,G,B colors, where the values are represented by 
+integers between 0 and 255. The default value is an empty sequence.</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><dl class="simple">
+<dt><code class="xref py py-obj docutils literal notranslate"><span class="pre">A</span></code> <a class="reference internal" href="#abaqus.PredefinedField.MaterialAssignment.MaterialAssignment" title="abaqus.PredefinedField.MaterialAssignment.MaterialAssignment"><code class="xref py py-obj docutils literal notranslate"><span class="pre">MaterialAssignment</span></code></a> object.</dt><dd></dd>
+</dl>
+</dd>
+</dl>
+<p class="rubric">Notes</p>
+<p>This function can be accessed by:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">mdb</span><span class="o">.</span><span class="n">models</span><span class="p">[</span><span class="n">name</span><span class="p">]</span><span class="o">.</span><span class="n">MaterialAssignment</span>
+</pre></div>
+</div>
 <p class="rubric">Methods</p>
 <div class="table-wrapper"><table class="autosummary longtable docutils align-default">
 <colgroup>
@@ -1586,6 +1886,55 @@ The Stress object is derived from the PredefinedField object.</p>
 </ul>
 </dd>
 </dl>
+<p class="rubric">Methods</p>
+<div class="table-wrapper"><table class="autosummary longtable docutils align-default">
+<colgroup>
+<col style="width: 10%"/>
+<col style="width: 90%"/>
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#abaqus.PredefinedField.Stress.Stress.setValues" title="abaqus.PredefinedField.Stress.Stress.setValues"><code class="xref py py-obj docutils literal notranslate"><span class="pre">setValues</span></code></a>([distributionType, sigma11, ...])</p></td>
+<td><p>This method modifies the Stress object.</p></td>
+</tr>
+</tbody>
+</table></div>
+<p>This method creates a Stress predefined field object.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>name</strong></dt><dd><p>A String specifying the repository key.</p>
+</dd>
+<dt><strong>region</strong></dt><dd><p>A Region object specifying the region to which the predefined field is applied. Region 
+is ignored if the predefined field has <a href="#id159"><span class="problematic" id="id160">*</span></a>distributionType*=FROM_FILE.</p>
+</dd>
+<dt><strong>distributionType</strong></dt><dd><p>A SymbolicConstant specifying whether the load is uniform. Possible values are UNIFORM 
+and FROM_FILE. The default value is UNIFORM.</p>
+</dd>
+<dt><strong>sigma11</strong></dt><dd><p>A Float specifying the first principal component of the stress.</p>
+</dd>
+<dt><strong>sigma22</strong></dt><dd><p>A Float specifying the second principal component of the stress.</p>
+</dd>
+<dt><strong>sigma33</strong></dt><dd><p>A Float specifying the third principal component of the stress.</p>
+</dd>
+<dt><strong>sigma12</strong></dt><dd><p>A Float specifying the first shear component of the stress.</p>
+</dd>
+<dt><strong>sigma13</strong></dt><dd><p>A Float specifying the second shear component of the stress.</p>
+</dd>
+<dt><strong>sigma23</strong></dt><dd><p>A Float specifying the third shear component of the stress.</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><dl class="simple">
+<dt><code class="xref py py-obj docutils literal notranslate"><span class="pre">A</span></code> <a class="reference internal" href="#abaqus.PredefinedField.Stress.Stress" title="abaqus.PredefinedField.Stress.Stress"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Stress</span></code></a> object.</dt><dd></dd>
+</dl>
+</dd>
+</dl>
+<p class="rubric">Notes</p>
+<p>This function can be accessed by:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">mdb</span><span class="o">.</span><span class="n">models</span><span class="p">[</span><span class="n">name</span><span class="p">]</span><span class="o">.</span><span class="n">Stress</span>
+</pre></div>
+</div>
 <p class="rubric">Methods</p>
 <div class="table-wrapper"><table class="autosummary longtable docutils align-default">
 <colgroup>
@@ -1691,6 +2040,120 @@ ignored if the predefined field has a <strong>distributionType</strong> member a
 </tr>
 </tbody>
 </table></div>
+<p>This method creates a Temperature object.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>name</strong></dt><dd><p>A String specifying the repository key.</p>
+</dd>
+<dt><strong>createStepName</strong></dt><dd><p>A String specifying the name of the step in which the predefined field is created.</p>
+</dd>
+<dt><strong>region</strong></dt><dd><p>A Region object specifying the region to which the predefined field is applied. <em>Region</em> 
+is ignored if the predefined field has a <em>distributionType</em> member available, and 
+<a href="#id161"><span class="problematic" id="id162">*</span></a>distributionType*=FROM_FILE .</p>
+</dd>
+<dt><strong>distributionType</strong></dt><dd><p>A SymbolicConstant specifying how the predefined field varies spatially. Possible values 
+are UNIFORM, USER_DEFINED, FROM_FILE, FIELD, FROM_FILE_AND_USER_DEFINED, and 
+DISCRETE_FIELD. The default value is UNIFORM.</p>
+</dd>
+<dt><strong>crossSectionDistribution</strong></dt><dd><p>A SymbolicConstant specifying how the predefined field is distributed over the cross 
+section of the region. Possible values are 
+- CONSTANT_THROUGH_THICKNESS 
+- GRADIENTS_THROUGH_SHELL_CS 
+- GRADIENTS_THROUGH_BEAM_CS 
+- POINTS_THROUGH_SECTION 
+The default value is CONSTANT_THROUGH_THICKNESS.</p>
+</dd>
+<dt><strong>field</strong></dt><dd><p>A String specifying the name of the AnalyticalField or DiscreteField object associated 
+with this predefined field. The <em>field</em> argument applies only when 
+<a href="#id163"><span class="problematic" id="id164">*</span></a>distributionType*=FIELD or <a href="#id165"><span class="problematic" id="id166">*</span></a>distributionType*=DISCRETE_FIELD. The default value is an 
+empty string.</p>
+</dd>
+<dt><strong>amplitude</strong></dt><dd><p>A String or the SymbolicConstant UNSET specifying the name of the amplitude reference. 
+UNSET should be used if the predefined field has no amplitude reference. The default 
+value is UNSET.Note:<em>amplitude</em> should be given only if it is valid for the specified 
+step.</p>
+</dd>
+<dt><strong>fileName</strong></dt><dd><p>A String specifying the name of the file from which the temperature values are to be 
+read when <a href="#id167"><span class="problematic" id="id168">*</span></a>distributionType*=FROM_FILE or <a href="#id169"><span class="problematic" id="id170">*</span></a>distributionType*=FROM_FILE_AND_USER_DEFINED.</p>
+</dd>
+<dt><strong>beginStep</strong></dt><dd><p>An Int specifying the first step from which temperature values are to be read or the 
+SymbolicConstant FIRST_STEP or LAST_STEP. This argument is valid only when 
+<a href="#id171"><span class="problematic" id="id172">*</span></a>distributionType*=FROM_FILE or <a href="#id173"><span class="problematic" id="id174">*</span></a>distributionType*=FROM_FILE_AND_USER_DEFINED. The 
+default value is None.</p>
+</dd>
+<dt><strong>beginIncrement</strong></dt><dd><p>An Int specifying the first increment of the step set in <em>beginStep</em> or the 
+SymbolicConstants STEP_START or STEP_END. This argument is valid only when 
+<a href="#id175"><span class="problematic" id="id176">*</span></a>distributionType*=FROM_FILE or <a href="#id177"><span class="problematic" id="id178">*</span></a>distributionType*=FROM_FILE_AND_USER_DEFINED. The 
+default value is None.</p>
+</dd>
+<dt><strong>endStep</strong></dt><dd><p>An Int specifying the last step from which temperature values are to be read or the 
+SymbolicConstants FIRST_STEP and LAST_STEP. This argument is valid only when 
+<a href="#id179"><span class="problematic" id="id180">*</span></a>distributionType*=FROM_FILE or <a href="#id181"><span class="problematic" id="id182">*</span></a>distributionType*=FROM_FILE_AND_USER_DEFINED. The 
+default value is None.</p>
+</dd>
+<dt><strong>endIncrement</strong></dt><dd><p>An Int specifying the last increment of the step set in <em>endStep</em> or the 
+SymbolicConstants STEP_START and STEP_END. This argument is valid only when 
+<a href="#id183"><span class="problematic" id="id184">*</span></a>distributionType*=FROM_FILE or <a href="#id185"><span class="problematic" id="id186">*</span></a>distributionType*=FROM_FILE_AND_USER_DEFINED. The 
+default value is None.</p>
+</dd>
+<dt><strong>interpolate</strong></dt><dd><p>A SymbolicConstant specifying whether to interpolate a field read from an output 
+database or results file. Possible values are OFF, ON or MIDSIDE_ONLY. The default value 
+is OFF.</p>
+</dd>
+<dt><strong>magnitudes</strong></dt><dd><p>A Sequence of Doubles specifying the temperature values when <em>distributionType*=UNIFORM 
+or FIELD. The value of the *magnitudes</em> argument is a function of the 
+<em>crossSectionDistribution</em> argument, as shown in the following list: 
+- If <em>crossSectionDistribution*=CONSTANT_THROUGH_THICKNESS then *magnitudes</em> is a Double 
+specifying the temperature. 
+- If <em>crossSectionDistribution*=GRADIENTS_THROUGH_SHELL_CS then *magnitudes</em> is a 
+sequence of Doubles specifying the mean value and the gradient in the thickness 
+direction. 
+- If <em>crossSectionDistribution*=GRADIENTS_THROUGH_BEAM_CS then *magnitudes</em> is a 
+sequence of Doubles specifying the mean value, the gradient in the N1 direction, and the 
+gradient in the N2 direction. 
+- If <em>crossSectionDistribution*=POINTS_THROUGH_SECTION then *magnitudes</em> is a sequence 
+of Doubles specifying the temperature at each point.</p>
+</dd>
+<dt><strong>absoluteExteriorTolerance</strong></dt><dd><p>A Float specifying the absolute value by which a driven node of the field can lie 
+outside the region of the elements of the global model. The default value is 0.0. This 
+argument cannot be used with <em>midside</em>.</p>
+</dd>
+<dt><strong>exteriorTolerance</strong></dt><dd><p>A Float specifying the fraction of the average element size in the global model by which 
+a driven node of the field can lie outside the region of the elements of the global 
+model. The default value is 0.0. This argument cannot be used with <em>midside</em>.</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><dl class="simple">
+<dt><code class="xref py py-obj docutils literal notranslate"><span class="pre">A</span></code> <a class="reference internal" href="#abaqus.PredefinedField.Temperature.Temperature" title="abaqus.PredefinedField.Temperature.Temperature"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Temperature</span></code></a> object.</dt><dd></dd>
+</dl>
+</dd>
+</dl>
+<p class="rubric">Notes</p>
+<p>This function can be accessed by:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">mdb</span><span class="o">.</span><span class="n">models</span><span class="p">[</span><span class="n">name</span><span class="p">]</span><span class="o">.</span><span class="n">Temperature</span>
+</pre></div>
+</div>
+<p class="rubric">Methods</p>
+<div class="table-wrapper"><table class="autosummary longtable docutils align-default">
+<colgroup>
+<col style="width: 10%"/>
+<col style="width: 90%"/>
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#abaqus.PredefinedField.Temperature.Temperature.move" title="abaqus.PredefinedField.Temperature.Temperature.move"><code class="xref py py-obj docutils literal notranslate"><span class="pre">move</span></code></a>(fromStepName, toStepName)</p></td>
+<td><p>This method moves the TemperatureState object from one step to a different step.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#abaqus.PredefinedField.Temperature.Temperature.setValues" title="abaqus.PredefinedField.Temperature.Temperature.setValues"><code class="xref py py-obj docutils literal notranslate"><span class="pre">setValues</span></code></a>([distributionType, ...])</p></td>
+<td><p>This method modifies the data for an existing Temperature object in the step where it is created.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#abaqus.PredefinedField.Temperature.Temperature.setValuesInStep" title="abaqus.PredefinedField.Temperature.Temperature.setValuesInStep"><code class="xref py py-obj docutils literal notranslate"><span class="pre">setValuesInStep</span></code></a>(stepName[, field, ...])</p></td>
+<td><p>This method modifies the propagating data for an existing Temperature object in the specified step.</p></td>
+</tr>
+</tbody>
+</table></div>
 <dl class="py method">
 <dt class="sig sig-object py" id="abaqus.PredefinedField.Temperature.Temperature.move">
 <span class="sig-name descname"><span class="pre">move</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">fromStepName</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">toStepName</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../../_modules/abaqus/PredefinedField/Temperature.html#Temperature.move"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#abaqus.PredefinedField.Temperature.Temperature.move" title="Permalink to this definition">#</a></dt>
@@ -1733,7 +2196,7 @@ The default value is CONSTANT_THROUGH_THICKNESS.</p>
 </dd>
 <dt><strong>field</strong></dt><dd><p>A String specifying the name of the AnalyticalField or DiscreteField object associated 
 with this predefined field. The <em>field</em> argument applies only when 
-<a href="#id125"><span class="problematic" id="id126">*</span></a>distributionType*=FIELD or <a href="#id127"><span class="problematic" id="id128">*</span></a>distributionType*=DISCRETE_FIELD. The default value is an 
+<a href="#id187"><span class="problematic" id="id188">*</span></a>distributionType*=FIELD or <a href="#id189"><span class="problematic" id="id190">*</span></a>distributionType*=DISCRETE_FIELD. The default value is an 
 empty string.</p>
 </dd>
 <dt><strong>amplitude</strong></dt><dd><p>A String or the SymbolicConstant UNSET specifying the name of the amplitude reference. 
@@ -1742,26 +2205,26 @@ value is UNSET.Note:<em>amplitude</em> should be given only if it is valid for t
 step.</p>
 </dd>
 <dt><strong>fileName</strong></dt><dd><p>A String specifying the name of the file from which the temperature values are to be 
-read when <a href="#id129"><span class="problematic" id="id130">*</span></a>distributionType*=FROM_FILE or <a href="#id131"><span class="problematic" id="id132">*</span></a>distributionType*=FROM_FILE_AND_USER_DEFINED.</p>
+read when <a href="#id191"><span class="problematic" id="id192">*</span></a>distributionType*=FROM_FILE or <a href="#id193"><span class="problematic" id="id194">*</span></a>distributionType*=FROM_FILE_AND_USER_DEFINED.</p>
 </dd>
 <dt><strong>beginStep</strong></dt><dd><p>An Int specifying the first step from which temperature values are to be read or the 
 SymbolicConstant FIRST_STEP or LAST_STEP. This argument is valid only when 
-<a href="#id133"><span class="problematic" id="id134">*</span></a>distributionType*=FROM_FILE or <a href="#id135"><span class="problematic" id="id136">*</span></a>distributionType*=FROM_FILE_AND_USER_DEFINED. The 
+<a href="#id195"><span class="problematic" id="id196">*</span></a>distributionType*=FROM_FILE or <a href="#id197"><span class="problematic" id="id198">*</span></a>distributionType*=FROM_FILE_AND_USER_DEFINED. The 
 default value is None.</p>
 </dd>
 <dt><strong>beginIncrement</strong></dt><dd><p>An Int specifying the first increment of the step set in <em>beginStep</em> or the 
 SymbolicConstants STEP_START or STEP_END. This argument is valid only when 
-<a href="#id137"><span class="problematic" id="id138">*</span></a>distributionType*=FROM_FILE or <a href="#id139"><span class="problematic" id="id140">*</span></a>distributionType*=FROM_FILE_AND_USER_DEFINED. The 
+<a href="#id199"><span class="problematic" id="id200">*</span></a>distributionType*=FROM_FILE or <a href="#id201"><span class="problematic" id="id202">*</span></a>distributionType*=FROM_FILE_AND_USER_DEFINED. The 
 default value is None.</p>
 </dd>
 <dt><strong>endStep</strong></dt><dd><p>An Int specifying the last step from which temperature values are to be read or the 
 SymbolicConstants FIRST_STEP and LAST_STEP. This argument is valid only when 
-<a href="#id141"><span class="problematic" id="id142">*</span></a>distributionType*=FROM_FILE or <a href="#id143"><span class="problematic" id="id144">*</span></a>distributionType*=FROM_FILE_AND_USER_DEFINED. The 
+<a href="#id203"><span class="problematic" id="id204">*</span></a>distributionType*=FROM_FILE or <a href="#id205"><span class="problematic" id="id206">*</span></a>distributionType*=FROM_FILE_AND_USER_DEFINED. The 
 default value is None.</p>
 </dd>
 <dt><strong>endIncrement</strong></dt><dd><p>An Int specifying the last increment of the step set in <em>endStep</em> or the 
 SymbolicConstants STEP_START and STEP_END. This argument is valid only when 
-<a href="#id145"><span class="problematic" id="id146">*</span></a>distributionType*=FROM_FILE or <a href="#id147"><span class="problematic" id="id148">*</span></a>distributionType*=FROM_FILE_AND_USER_DEFINED. The 
+<a href="#id207"><span class="problematic" id="id208">*</span></a>distributionType*=FROM_FILE or <a href="#id209"><span class="problematic" id="id210">*</span></a>distributionType*=FROM_FILE_AND_USER_DEFINED. The 
 default value is None.</p>
 </dd>
 <dt><strong>interpolate</strong></dt><dd><p>A SymbolicConstant specifying whether to interpolate a field read from an output 
@@ -1806,7 +2269,7 @@ specified step.</p>
 </dd>
 <dt><strong>field</strong></dt><dd><p>A String specifying the name of the AnalyticalField or DiscreteField object associated 
 with this predefined field. The <em>field</em> argument applies only when 
-<a href="#id149"><span class="problematic" id="id150">*</span></a>distributionType*=FIELD or <a href="#id151"><span class="problematic" id="id152">*</span></a>distributionType*=DISCRETE_FIELD. The default value is an 
+<a href="#id211"><span class="problematic" id="id212">*</span></a>distributionType*=FIELD or <a href="#id213"><span class="problematic" id="id214">*</span></a>distributionType*=DISCRETE_FIELD. The default value is an 
 empty string.</p>
 </dd>
 <dt><strong>amplitude</strong></dt><dd><p>A String or the SymbolicConstant UNSET specifying the name of the amplitude reference. 
@@ -1815,26 +2278,26 @@ value is UNSET.Note:<em>amplitude</em> should be given only if it is valid for t
 step.</p>
 </dd>
 <dt><strong>fileName</strong></dt><dd><p>A String specifying the name of the file from which the temperature values are to be 
-read when <a href="#id153"><span class="problematic" id="id154">*</span></a>distributionType*=FROM_FILE or <a href="#id155"><span class="problematic" id="id156">*</span></a>distributionType*=FROM_FILE_AND_USER_DEFINED.</p>
+read when <a href="#id215"><span class="problematic" id="id216">*</span></a>distributionType*=FROM_FILE or <a href="#id217"><span class="problematic" id="id218">*</span></a>distributionType*=FROM_FILE_AND_USER_DEFINED.</p>
 </dd>
 <dt><strong>beginStep</strong></dt><dd><p>An Int specifying the first step from which temperature values are to be read or the 
 SymbolicConstant FIRST_STEP or LAST_STEP. This argument is valid only when 
-<a href="#id157"><span class="problematic" id="id158">*</span></a>distributionType*=FROM_FILE or <a href="#id159"><span class="problematic" id="id160">*</span></a>distributionType*=FROM_FILE_AND_USER_DEFINED. The 
+<a href="#id219"><span class="problematic" id="id220">*</span></a>distributionType*=FROM_FILE or <a href="#id221"><span class="problematic" id="id222">*</span></a>distributionType*=FROM_FILE_AND_USER_DEFINED. The 
 default value is None.</p>
 </dd>
 <dt><strong>beginIncrement</strong></dt><dd><p>An Int specifying the first increment of the step set in <em>beginStep</em> or the 
 SymbolicConstants STEP_START or STEP_END. This argument is valid only when 
-<a href="#id161"><span class="problematic" id="id162">*</span></a>distributionType*=FROM_FILE or <a href="#id163"><span class="problematic" id="id164">*</span></a>distributionType*=FROM_FILE_AND_USER_DEFINED. The 
+<a href="#id223"><span class="problematic" id="id224">*</span></a>distributionType*=FROM_FILE or <a href="#id225"><span class="problematic" id="id226">*</span></a>distributionType*=FROM_FILE_AND_USER_DEFINED. The 
 default value is None.</p>
 </dd>
 <dt><strong>endStep</strong></dt><dd><p>An Int specifying the last step from which temperature values are to be read or the 
 SymbolicConstants FIRST_STEP and LAST_STEP. This argument is valid only when 
-<a href="#id165"><span class="problematic" id="id166">*</span></a>distributionType*=FROM_FILE or <a href="#id167"><span class="problematic" id="id168">*</span></a>distributionType*=FROM_FILE_AND_USER_DEFINED. The 
+<a href="#id227"><span class="problematic" id="id228">*</span></a>distributionType*=FROM_FILE or <a href="#id229"><span class="problematic" id="id230">*</span></a>distributionType*=FROM_FILE_AND_USER_DEFINED. The 
 default value is None.</p>
 </dd>
 <dt><strong>endIncrement</strong></dt><dd><p>An Int specifying the last increment of the step set in <em>endStep</em> or the 
 SymbolicConstants STEP_START and STEP_END. This argument is valid only when 
-<a href="#id169"><span class="problematic" id="id170">*</span></a>distributionType*=FROM_FILE or <a href="#id171"><span class="problematic" id="id172">*</span></a>distributionType*=FROM_FILE_AND_USER_DEFINED. The 
+<a href="#id231"><span class="problematic" id="id232">*</span></a>distributionType*=FROM_FILE or <a href="#id233"><span class="problematic" id="id234">*</span></a>distributionType*=FROM_FILE_AND_USER_DEFINED. The 
 default value is None.</p>
 </dd>
 <dt><strong>interpolate</strong></dt><dd><p>A SymbolicConstant specifying whether to interpolate a field read from an output 
@@ -2095,6 +2558,60 @@ The Velocity object is derived from the PredefinedField object.</p>
 </tr>
 </tbody>
 </table></div>
+<p>This method creates a Velocity predefined field object.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>name</strong></dt><dd><p>A String specifying the repository key.</p>
+</dd>
+<dt><strong>region</strong></dt><dd><p>A Region object specifying the region to which the predefined field is applied.</p>
+</dd>
+<dt><strong>velocity1</strong></dt><dd><p>A Float specifying the first component of the velocity.</p>
+</dd>
+<dt><strong>velocity2</strong></dt><dd><p>A Float specifying the second component of the velocity.</p>
+</dd>
+<dt><strong>velocity3</strong></dt><dd><p>A Float specifying the third component of the velocity.</p>
+</dd>
+<dt><strong>omega</strong></dt><dd><p>A Float specifying the angular velocity.</p>
+</dd>
+<dt><strong>axisBegin</strong></dt><dd><p>A sequence of Floats specifying the <em>X-</em>, <em>Y-</em>, and <em>Z</em>- coordinates of the starting 
+point of the axis about which <em>omega</em> is defined.</p>
+</dd>
+<dt><strong>axisEnd</strong></dt><dd><p>A sequence of Floats specifying the <em>X-</em>, <em>Y-</em>, and <em>Z</em>- coordinates of the end point of 
+the axis about which <em>omega</em> is defined.</p>
+</dd>
+<dt><strong>field</strong></dt><dd><p>A String specifying the name of the AnalyticalField object associated with this 
+predefined field. The <em>field</em> argument applies only when 
+<a href="#id235"><span class="problematic" id="id236">*</span></a>distributionType*=FIELD_ANALYTICAL. The default value is an empty string.</p>
+</dd>
+<dt><strong>distributionType</strong></dt><dd><p>A SymbolicConstant specifying whether the load is uniform. Possible values are MAGNITUDE 
+and FIELD_ANALYTICAL. The default value is MAGNITUDE.</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><dl class="simple">
+<dt><code class="xref py py-obj docutils literal notranslate"><span class="pre">A</span></code> <a class="reference internal" href="#abaqus.PredefinedField.Velocity.Velocity" title="abaqus.PredefinedField.Velocity.Velocity"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Velocity</span></code></a> object.</dt><dd></dd>
+</dl>
+</dd>
+</dl>
+<p class="rubric">Notes</p>
+<p>This function can be accessed by:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">mdb</span><span class="o">.</span><span class="n">models</span><span class="p">[</span><span class="n">name</span><span class="p">]</span><span class="o">.</span><span class="n">Velocity</span>
+</pre></div>
+</div>
+<p class="rubric">Methods</p>
+<div class="table-wrapper"><table class="autosummary longtable docutils align-default">
+<colgroup>
+<col style="width: 10%"/>
+<col style="width: 90%"/>
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#abaqus.PredefinedField.Velocity.Velocity.setValues" title="abaqus.PredefinedField.Velocity.Velocity.setValues"><code class="xref py py-obj docutils literal notranslate"><span class="pre">setValues</span></code></a>([field, distributionType])</p></td>
+<td><p>This method modifies the Velocity object.</p></td>
+</tr>
+</tbody>
+</table></div>
 <dl class="py method">
 <dt class="sig sig-object py" id="abaqus.PredefinedField.Velocity.Velocity.setValues">
 <span class="sig-name descname"><span class="pre">setValues</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">field</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">distributionType</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.SymbolicConstantType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'MAGNITUDE'</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../../_modules/abaqus/PredefinedField/Velocity.html#Velocity.setValues"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#abaqus.PredefinedField.Velocity.Velocity.setValues" title="Permalink to this definition">#</a></dt>
@@ -2104,7 +2621,7 @@ The Velocity object is derived from the PredefinedField object.</p>
 <dd class="field-odd"><dl class="simple">
 <dt><strong>field</strong></dt><dd><p>A String specifying the name of the AnalyticalField object associated with this 
 predefined field. The <em>field</em> argument applies only when 
-<a href="#id173"><span class="problematic" id="id174">*</span></a>distributionType*=FIELD_ANALYTICAL. The default value is an empty string.</p>
+<a href="#id237"><span class="problematic" id="id238">*</span></a>distributionType*=FIELD_ANALYTICAL. The default value is an empty string.</p>
 </dd>
 <dt><strong>distributionType</strong></dt><dd><p>A SymbolicConstant specifying whether the load is uniform. Possible values are MAGNITUDE 
 and FIELD_ANALYTICAL. The default value is MAGNITUDE.</p>
