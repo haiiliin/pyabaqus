@@ -8,10 +8,10 @@ setuptools.setup(
     version="1.0.14",
     author="WANG Hailin",
     author_email="hailin.wang@connect.polyu.hk",
-    description="Type hints for python scripting of Abaqus",
+    description="Type hints for Abaqus/Python scripting",
     long_description=long_description,
     long_description_content_type="text/markdown",
-    url="https://github.com/Haiiliin/.",
+    url="https://github.com/haiiliin/.",
     classifiers=[
         "Programming Language :: Python :: 3",
         "License :: OSI Approved :: MIT License",

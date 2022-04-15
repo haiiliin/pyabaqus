@@ -50,11 +50,11 @@ for some tests of the script, for more detailed documentation, please check
 ### Setup your Abaqus Environment
 
 In order to use Abaqus command to execute the Python script and submit the job, you need to tell 
-Abaqus where the Abaqus command located. Usually, Abaqus command locates in a directory like this: 
+`pyabaqus` where the Abaqus command located. Usually, Abaqus command locates in a directory like this: 
 ```shell
 C:/SIMULIA/Commands/abaqus.bat
 ```
-You can add the directory `C:/SIMULIA/Commands` to the system environment variable `path`, or you can create a new 
+You can add the directory `C:/SIMULIA/Commands` to the system environment variable `Path`, or you can create a new 
 system variable named `ABAQUS_BAT_PATH`, and set the value to the file path of the Abaqus command, i.e., 
 `C:/SIMULIA/Commands/abaqus.bat`
 
@@ -70,3 +70,11 @@ Now you can just run your Abaqus/Python script using your own Python interpreter
 
   ![Output](https://github.com/Haiiliin/pyabaqus/blob/main/screenshots/Output.gif "Extract Output Data")
 
+## What next?
+
+You may wonder how does this package work, 
+you can go [pyabaqus documentation: Getting Started](https://pyabaqus.haiiliin.com/getting_started.html) for more detailed introduction and go
+[pyabaqus documentation: Tutorials](https://pyabaqus.haiiliin.com/tutorials.html) for a simple tutorial. For more documentation about 
+Abaqus/Python scripting, please check [pyabaqus documentation: User Manual](https://pyabaqus.haiiliin.com/user.html)` for a list of 
+descriptions of objects and methods of Abaqus models, check [pyabaqus documentation: API References](https://pyabaqus.haiiliin.com/references.html) 
+for more detailed API references.
