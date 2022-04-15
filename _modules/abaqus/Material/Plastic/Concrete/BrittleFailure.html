@@ -309,31 +309,33 @@
 
 <span class="sd">    Notes</span>
 <span class="sd">    -----</span>
-<span class="sd">        This object can be accessed by:</span>
+<span class="sd">    This object can be accessed by:</span>
+<span class="sd">    </span>
+<span class="sd">    .. code-block:: python</span>
 <span class="sd">        </span>
-<span class="sd">        .. code-block:: python</span>
-<span class="sd">            </span>
-<span class="sd">            import material</span>
-<span class="sd">            mdb.models[name].materials[name].brittleCracking.brittleFailure</span>
-<span class="sd">            import odbMaterial</span>
-<span class="sd">            session.odbs[name].materials[name].brittleCracking.brittleFailure</span>
+<span class="sd">        import material</span>
+<span class="sd">        mdb.models[name].materials[name].brittleCracking.brittleFailure</span>
+<span class="sd">        import odbMaterial</span>
+<span class="sd">        session.odbs[name].materials[name].brittleCracking.brittleFailure</span>
 
-<span class="sd">        The table data for this object are:</span>
-<span class="sd">        If parent [BrittleCracking](https://help.3ds.com/2022/english/DSSIMULIA_Established/SIMACAEKERRefMap/simaker-c-brittlecrackingpyc.htm?ContextScope=all) member *type*=STRAIN the table data specify the following:</span>
-<span class="sd">            - Direct cracking failure strain.</span>
-<span class="sd">            - Temperature, if the data depend on temperature.</span>
-<span class="sd">            - Value of the first field variable, if the data depend on field variables.</span>
-<span class="sd">            - Value of the second field variable.</span>
-<span class="sd">            - Etc.</span>
-<span class="sd">        If parent [BrittleCracking](https://help.3ds.com/2022/english/DSSIMULIA_Established/SIMACAEKERRefMap/simaker-c-brittlecrackingpyc.htm?ContextScope=all) member *type*=DISPLACEMENT or *type*=GFI the table data specify the following:</span>
-<span class="sd">            - Direct cracking failure displacement.</span>
-<span class="sd">            - Temperature, if the data depend on temperature.</span>
-<span class="sd">            - Value of the first field variable, if the data depend on field variables.</span>
-<span class="sd">            - Value of the second field variable.</span>
-<span class="sd">            - Etc.</span>
+<span class="sd">    The table data for this object are:</span>
+<span class="sd">    </span>
+<span class="sd">    - If parent [BrittleCracking](https://help.3ds.com/2022/english/DSSIMULIA_Established/SIMACAEKERRefMap/simaker-c-brittlecrackingpyc.htm?ContextScope=all) member *type*=STRAIN the table data specify the following:</span>
+<span class="sd">        - Direct cracking failure strain.</span>
+<span class="sd">        - Temperature, if the data depend on temperature.</span>
+<span class="sd">        - Value of the first field variable, if the data depend on field variables.</span>
+<span class="sd">        - Value of the second field variable.</span>
+<span class="sd">        - Etc.</span>
+<span class="sd">    - If parent [BrittleCracking](https://help.3ds.com/2022/english/DSSIMULIA_Established/SIMACAEKERRefMap/simaker-c-brittlecrackingpyc.htm?ContextScope=all) member *type*=DISPLACEMENT or *type*=GFI the table data specify the following:</span>
+<span class="sd">        - Direct cracking failure displacement.</span>
+<span class="sd">        - Temperature, if the data depend on temperature.</span>
+<span class="sd">        - Value of the first field variable, if the data depend on field variables.</span>
+<span class="sd">        - Value of the second field variable.</span>
+<span class="sd">        - Etc.</span>
 
 <span class="sd">    The corresponding analysis keywords are:</span>
-<span class="sd">        - BRITTLE FAILURE</span>
+
+<span class="sd">    - BRITTLE FAILURE</span>
 
 <span class="sd">    """</span>
 

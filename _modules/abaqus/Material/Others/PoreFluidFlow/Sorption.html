@@ -310,27 +310,32 @@
 
 <span class="sd">    Notes</span>
 <span class="sd">    -----</span>
-<span class="sd">        This object can be accessed by:</span>
-<span class="sd">        </span>
-<span class="sd">        .. code-block:: python</span>
-<span class="sd">            </span>
-<span class="sd">            import material</span>
-<span class="sd">            mdb.models[name].materials[name].sorption</span>
-<span class="sd">            import odbMaterial</span>
-<span class="sd">            session.odbs[name].materials[name].sorption</span>
+<span class="sd">    This object can be accessed by:</span>
 
-<span class="sd">        The table data for this object are:</span>
-<span class="sd">        If *lawAbsorption*=TABULAR or *lawExsorption*=TABULAR, the *absorptionTable* and *exsorptionTable* data respectively specify the following:</span>
-<span class="sd">            - Pore pressure, uw.</span>
-<span class="sd">            - Saturation, s.</span>
-<span class="sd">        If *lawAbsorption*=LOG or *lawExsorption*=LOG, the *absorptionTable* and *exsorptionTable* data respectively specify the following:</span>
-<span class="sd">            - A.</span>
-<span class="sd">            - B.</span>
-<span class="sd">            - s0.</span>
-<span class="sd">            - s1.</span>
+<span class="sd">    .. code-block:: python</span>
+
+<span class="sd">        import material</span>
+<span class="sd">        mdb.models[name].materials[name].sorption</span>
+<span class="sd">        import odbMaterial</span>
+<span class="sd">        session.odbs[name].materials[name].sorption</span>
+
+<span class="sd">    The table data for this object are:</span>
+<span class="sd">    </span>
+<span class="sd">    - If *lawAbsorption*=TABULAR or *lawExsorption*=TABULAR, the *absorptionTable* and *exsorptionTable* data respectively specify the following:</span>
+
+<span class="sd">        - Pore pressure, uw.</span>
+<span class="sd">        - Saturation, s.</span>
+
+<span class="sd">    - If *lawAbsorption*=LOG or *lawExsorption*=LOG, the *absorptionTable* and *exsorptionTable* data respectively specify the following:</span>
+
+<span class="sd">        - A.</span>
+<span class="sd">        - B.</span>
+<span class="sd">        - s0.</span>
+<span class="sd">        - s1.</span>
 
 <span class="sd">    The corresponding analysis keywords are:</span>
-<span class="sd">        - SORPTION</span>
+
+<span class="sd">    - SORPTION</span>
 
 <span class="sd">    """</span>
 

@@ -311,278 +311,278 @@
 
 
 <div class="viewcode-block" id="AdaptivityStep"><a class="viewcode-back" href="../../../user/mdb/model/adaptivity.html#abaqus.Adaptivity.AdaptivityStep.AdaptivityStep">[docs]</a><span class="k">class</span> <span class="nc">AdaptivityStep</span><span class="p">(</span><span class="n">StepBase</span><span class="p">):</span>
-    <span class="sd">"""The Step object stores the parameters that determine the context of the step. The Step</span>
-<span class="sd">    object is the abstract base type for other Step objects. The Step object has no explicit </span>
-<span class="sd">    constructor. The methods and members of the Step object are common to all objects </span>
-<span class="sd">    derived from the Step. </span>
+     <span class="sd">"""The Step object stores the parameters that determine the context of the step. The Step</span>
+<span class="sd">     object is the abstract base type for other Step objects. The Step object has no explicit </span>
+<span class="sd">     constructor. The methods and members of the Step object are common to all objects </span>
+<span class="sd">     derived from the Step. </span>
 
-<span class="sd">    Notes</span>
-<span class="sd">    -----</span>
-<span class="sd">        This object can be accessed by:</span>
-<span class="sd">        </span>
-<span class="sd">        .. code-block:: python</span>
-<span class="sd">        </span>
-<span class="sd">           import step</span>
-<span class="sd">           mdb.models[name].steps[name]</span>
+<span class="sd">     Notes</span>
+<span class="sd">     -----</span>
+<span class="sd">     This object can be accessed by:</span>
+<span class="sd">          </span>
+<span class="sd">     .. code-block:: python</span>
+<span class="sd">     </span>
+<span class="sd">          import step</span>
+<span class="sd">          mdb.models[name].steps[name]</span>
 
-<span class="sd">    """</span>
+<span class="sd">     """</span>
 
-<div class="viewcode-block" id="AdaptivityStep.AdaptiveMeshConstraintState"><a class="viewcode-back" href="../../../reference/mdb/model/adaptivity.html#abaqus.Adaptivity.AdaptivityStep.AdaptivityStep.AdaptiveMeshConstraintState">[docs]</a>    <span class="k">def</span> <span class="nf">AdaptiveMeshConstraintState</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">amplitudeState</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">status</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
-                                    <span class="n">amplitude</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">''</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">AdaptiveMeshConstraintState</span><span class="p">:</span>
-        <span class="sd">"""The AdaptiveMeshConstraintState object is the abstract base type for other Arbitrary</span>
-<span class="sd">        Lagrangian Eularian (ALE) style AdaptiveMeshConstraintState objects. The</span>
-<span class="sd">        AdaptiveMeshConstraintState object has no explicit constructor or methods. The members</span>
-<span class="sd">        of the AdaptiveMeshConstraintState object are common to all objects derived from the</span>
-<span class="sd">        AdaptiveMeshConstraintState object.</span>
+<div class="viewcode-block" id="AdaptivityStep.AdaptiveMeshConstraintState"><a class="viewcode-back" href="../../../reference/mdb/model/adaptivity.html#abaqus.Adaptivity.AdaptivityStep.AdaptivityStep.AdaptiveMeshConstraintState">[docs]</a>     <span class="k">def</span> <span class="nf">AdaptiveMeshConstraintState</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">amplitudeState</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">status</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+                                        <span class="n">amplitude</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">''</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">AdaptiveMeshConstraintState</span><span class="p">:</span>
+          <span class="sd">"""The AdaptiveMeshConstraintState object is the abstract base type for other Arbitrary</span>
+<span class="sd">          Lagrangian Eularian (ALE) style AdaptiveMeshConstraintState objects. The</span>
+<span class="sd">          AdaptiveMeshConstraintState object has no explicit constructor or methods. The members</span>
+<span class="sd">          of the AdaptiveMeshConstraintState object are common to all objects derived from the</span>
+<span class="sd">          AdaptiveMeshConstraintState object.</span>
 
-<span class="sd">        Notes</span>
-<span class="sd">        -----</span>
-<span class="sd">            This function can be accessed by:</span>
+<span class="sd">          Notes</span>
+<span class="sd">          -----</span>
+<span class="sd">               This function can be accessed by:</span>
 
-<span class="sd">            .. code-block:: python</span>
-<span class="sd">              </span>
-<span class="sd">               mdb.models[name].steps[name].AdaptiveMeshConstraintState</span>
-<span class="sd">        </span>
-<span class="sd">        Parameters</span>
-<span class="sd">        ----------</span>
-<span class="sd">        amplitudeState</span>
-<span class="sd">            A SymbolicConstant specifying the propagation state of the amplitude reference. Possible  values are</span>
-<span class="sd">            UNSET, SET, UNCHANGED, FREED, and MODIFIED.</span>
-<span class="sd">        status</span>
-<span class="sd">            A SymbolicConstant specifying the propagation state of the AdaptiveMeshConstraintState  object. Possible</span>
-<span class="sd">            values are:</span>
-<span class="sd">            - NOT_YET_ACTIVE</span>
-<span class="sd">            - CREATED</span>
-<span class="sd">            - PROPAGATED</span>
-<span class="sd">            - MODIFIED</span>
-<span class="sd">            - DEACTIVATED</span>
-<span class="sd">            - NO_LONGER_ACTIVE</span>
-<span class="sd">            - TYPE_NOT_APPLICABLE</span>
-<span class="sd">            - INSTANCE_NOT_APPLICABLE</span>
-<span class="sd">            - PROPAGATED_FROM_BASE_STATE</span>
-<span class="sd">            - MODIFIED_FROM_BASE_STATE</span>
-<span class="sd">            - DEACTIVATED_FROM_BASE_STATE</span>
-<span class="sd">            - BUILT_INTO_MODES</span>
-<span class="sd">        amplitude</span>
-<span class="sd">            A String specifying the name of the amplitude reference. The String is empty if the  adaptive mesh</span>
-<span class="sd">            constraint has no amplitude reference.</span>
-<span class="sd">        """</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">adaptiveMeshConstraintStates</span><span class="p">[</span><span class="n">amplitude</span><span class="p">]</span> <span class="o">=</span> <span class="n">adaptiveMeshConstraintState</span> <span class="o">=</span> <span class="n">AdaptiveMeshConstraintState</span><span class="p">(</span>
-            <span class="n">amplitudeState</span><span class="p">,</span> <span class="n">status</span><span class="p">,</span> <span class="n">amplitude</span><span class="p">)</span>
-        <span class="k">return</span> <span class="n">adaptiveMeshConstraintState</span></div>
+<span class="sd">               .. code-block:: python</span>
+<span class="sd">               </span>
+<span class="sd">                    mdb.models[name].steps[name].AdaptiveMeshConstraintState</span>
+<span class="sd">          </span>
+<span class="sd">          Parameters</span>
+<span class="sd">          ----------</span>
+<span class="sd">          amplitudeState</span>
+<span class="sd">               A SymbolicConstant specifying the propagation state of the amplitude reference. Possible  values are</span>
+<span class="sd">               UNSET, SET, UNCHANGED, FREED, and MODIFIED.</span>
+<span class="sd">          status</span>
+<span class="sd">               A SymbolicConstant specifying the propagation state of the AdaptiveMeshConstraintState  object. Possible</span>
+<span class="sd">               values are:</span>
+<span class="sd">               - NOT_YET_ACTIVE</span>
+<span class="sd">               - CREATED</span>
+<span class="sd">               - PROPAGATED</span>
+<span class="sd">               - MODIFIED</span>
+<span class="sd">               - DEACTIVATED</span>
+<span class="sd">               - NO_LONGER_ACTIVE</span>
+<span class="sd">               - TYPE_NOT_APPLICABLE</span>
+<span class="sd">               - INSTANCE_NOT_APPLICABLE</span>
+<span class="sd">               - PROPAGATED_FROM_BASE_STATE</span>
+<span class="sd">               - MODIFIED_FROM_BASE_STATE</span>
+<span class="sd">               - DEACTIVATED_FROM_BASE_STATE</span>
+<span class="sd">               - BUILT_INTO_MODES</span>
+<span class="sd">          amplitude</span>
+<span class="sd">               A String specifying the name of the amplitude reference. The String is empty if the  adaptive mesh</span>
+<span class="sd">               constraint has no amplitude reference.</span>
+<span class="sd">          """</span>
+          <span class="bp">self</span><span class="o">.</span><span class="n">adaptiveMeshConstraintStates</span><span class="p">[</span><span class="n">amplitude</span><span class="p">]</span> <span class="o">=</span> <span class="n">adaptiveMeshConstraintState</span> <span class="o">=</span> <span class="n">AdaptiveMeshConstraintState</span><span class="p">(</span>
+               <span class="n">amplitudeState</span><span class="p">,</span> <span class="n">status</span><span class="p">,</span> <span class="n">amplitude</span><span class="p">)</span>
+          <span class="k">return</span> <span class="n">adaptiveMeshConstraintState</span></div>
 
-<div class="viewcode-block" id="AdaptivityStep.DisplacementAdaptiveMeshConstraintState"><a class="viewcode-back" href="../../../reference/mdb/model/adaptivity.html#abaqus.Adaptivity.AdaptivityStep.AdaptivityStep.DisplacementAdaptiveMeshConstraintState">[docs]</a>    <span class="k">def</span> <span class="nf">DisplacementAdaptiveMeshConstraintState</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">u1</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">u2</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">u3</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
-                                                <span class="n">ur1</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">ur2</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
-                                                <span class="n">ur3</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">u1State</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
-                                                <span class="n">u2State</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
-                                                <span class="n">u3State</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">ur1State</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
-                                                <span class="n">ur2State</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
-                                                <span class="n">ur3State</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
-                                                <span class="n">amplitudeState</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
-                                                <span class="n">status</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
-                                                <span class="n">amplitude</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">''</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">DisplacementAdaptiveMeshConstraintState</span><span class="p">:</span>
-        <span class="sd">"""The DisplacementAdaptiveMeshConstraintState object stores the propagating data for an</span>
-<span class="sd">        Arbitrary Lagrangian Eularian (ALE) style displacement/rotation adaptive mesh constraint</span>
-<span class="sd">        in a step. One instance of this object is created internally by the</span>
-<span class="sd">        DisplacementAdaptiveMeshConstraint object for each step. The instance is also deleted</span>
-<span class="sd">        internally by the DisplacementAdaptiveMeshConstraint object.</span>
-<span class="sd">        The DisplacementAdaptiveMeshConstraintState object has no constructor or methods.</span>
-<span class="sd">        The DisplacementAdaptiveMeshConstraintState object is derived from the</span>
-<span class="sd">        AdaptiveMeshConstraintState object.</span>
+<div class="viewcode-block" id="AdaptivityStep.DisplacementAdaptiveMeshConstraintState"><a class="viewcode-back" href="../../../reference/mdb/model/adaptivity.html#abaqus.Adaptivity.AdaptivityStep.AdaptivityStep.DisplacementAdaptiveMeshConstraintState">[docs]</a>     <span class="k">def</span> <span class="nf">DisplacementAdaptiveMeshConstraintState</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">u1</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">u2</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">u3</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+                                                  <span class="n">ur1</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">ur2</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+                                                  <span class="n">ur3</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">u1State</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+                                                  <span class="n">u2State</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+                                                  <span class="n">u3State</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">ur1State</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+                                                  <span class="n">ur2State</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+                                                  <span class="n">ur3State</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+                                                  <span class="n">amplitudeState</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+                                                  <span class="n">status</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+                                                  <span class="n">amplitude</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">''</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">DisplacementAdaptiveMeshConstraintState</span><span class="p">:</span>
+          <span class="sd">"""The DisplacementAdaptiveMeshConstraintState object stores the propagating data for an</span>
+<span class="sd">          Arbitrary Lagrangian Eularian (ALE) style displacement/rotation adaptive mesh constraint</span>
+<span class="sd">          in a step. One instance of this object is created internally by the</span>
+<span class="sd">          DisplacementAdaptiveMeshConstraint object for each step. The instance is also deleted</span>
+<span class="sd">          internally by the DisplacementAdaptiveMeshConstraint object.</span>
+<span class="sd">          The DisplacementAdaptiveMeshConstraintState object has no constructor or methods.</span>
+<span class="sd">          The DisplacementAdaptiveMeshConstraintState object is derived from the</span>
+<span class="sd">          AdaptiveMeshConstraintState object.</span>
 
-<span class="sd">        Notes</span>
-<span class="sd">        -----</span>
-<span class="sd">            This function can be accessed by:</span>
+<span class="sd">          Notes</span>
+<span class="sd">          -----</span>
+<span class="sd">               This function can be accessed by:</span>
 
-<span class="sd">            .. code-block:: python</span>
+<span class="sd">               .. code-block:: python</span>
 
-<span class="sd">                mdb.models[name].steps[name].DisplacementAdaptiveMeshConstraintState</span>
-<span class="sd">        </span>
-<span class="sd">        Parameters</span>
-<span class="sd">        ----------</span>
-<span class="sd">        u1</span>
-<span class="sd">             A Float or a Complex specifying the displacement component in the 1-direction.</span>
-<span class="sd">        u2</span>
-<span class="sd">             A Float or a Complex specifying the displacement component in the 2-direction.</span>
-<span class="sd">        u3</span>
-<span class="sd">             A Float or a Complex specifying the displacement component in the 3-direction.</span>
-<span class="sd">        ur1</span>
-<span class="sd">             A Float or a Complex specifying the rotational displacement component about the  1-direction.</span>
-<span class="sd">        ur2</span>
-<span class="sd">             A Float or a Complex specifying the rotational displacement component about the  2-direction.</span>
-<span class="sd">        ur3</span>
-<span class="sd">             A Float or a Complex specifying the rotational displacement component about the  3-direction.</span>
-<span class="sd">        u1State</span>
-<span class="sd">             A SymbolicConstant specifying the propagation state of the displacement component in the  1-direction.</span>
-<span class="sd">             Possible values are UNSET, SET, UNCHANGED, FREED, and MODIFIED.</span>
-<span class="sd">        u2State</span>
-<span class="sd">             A SymbolicConstant specifying the propagation state of the displacement component in the  2-direction.</span>
-<span class="sd">             Possible values are UNSET, SET, UNCHANGED, FREED, and MODIFIED.</span>
-<span class="sd">        u3State</span>
-<span class="sd">             A SymbolicConstant specifying the propagation state of the displacement component in the  3-direction.</span>
-<span class="sd">             Possible values are UNSET, SET, UNCHANGED, FREED, and MODIFIED.</span>
-<span class="sd">        ur1State</span>
-<span class="sd">             A SymbolicConstant specifying the propagation state of the rotational displacement  component about the</span>
-<span class="sd">             1-direction. Possible values are UNSET, SET, UNCHANGED, FREED, and  MODIFIED.</span>
-<span class="sd">        ur2State</span>
-<span class="sd">             A SymbolicConstant specifying the propagation state of the rotational displacement  component about the</span>
-<span class="sd">             2-direction. Possible values are UNSET, SET, UNCHANGED, FREED, and  MODIFIED.</span>
-<span class="sd">        ur3State</span>
-<span class="sd">             A SymbolicConstant specifying the propagation state of the rotational displacement  component about the</span>
-<span class="sd">             3-direction. Possible values are UNSET, SET, UNCHANGED, FREED, and  MODIFIED.</span>
-<span class="sd">        amplitudeState</span>
-<span class="sd">             A SymbolicConstant specifying the propagation state of the amplitude reference. Possible  values are UNSET,</span>
-<span class="sd">             SET, UNCHANGED, FREED, and MODIFIED.</span>
-<span class="sd">        status</span>
-<span class="sd">             A SymbolicConstant specifying the propagation state of the AdaptiveMeshConstraintState  object. Possible</span>
-<span class="sd">             values  are:</span>
-<span class="sd">            - NOT_YET_ACTIVE</span>
-<span class="sd">            - CREATED</span>
-<span class="sd">            - PROPAGATED</span>
-<span class="sd">            - MODIFIED</span>
-<span class="sd">            - DEACTIVATED</span>
-<span class="sd">            - NO_LONGER_ACTIVE</span>
-<span class="sd">            - TYPE_NOT_APPLICABLE</span>
-<span class="sd">            - INSTANCE_NOT_APPLICABLE</span>
-<span class="sd">            - PROPAGATED_FROM_BASE_STATE</span>
-<span class="sd">            - MODIFIED_FROM_BASE_STATE</span>
-<span class="sd">            - DEACTIVATED_FROM_BASE_STATE</span>
-<span class="sd">            - BUILT_INTO_MODES</span>
-<span class="sd">        amplitude</span>
-<span class="sd">             A String specifying the name of the amplitude reference. The String is empty if the  adaptive mesh</span>
-<span class="sd">             constraint has no amplitude reference.</span>
-<span class="sd">        """</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">adaptiveMeshConstraintStates</span><span class="p">[</span>
-            <span class="n">amplitude</span><span class="p">]</span> <span class="o">=</span> <span class="n">adaptiveMeshConstraintState</span> <span class="o">=</span> <span class="n">DisplacementAdaptiveMeshConstraintState</span><span class="p">(</span>
-            <span class="n">u1</span><span class="p">,</span> <span class="n">u2</span><span class="p">,</span> <span class="n">u3</span><span class="p">,</span> <span class="n">ur1</span><span class="p">,</span> <span class="n">ur2</span><span class="p">,</span> <span class="n">ur3</span><span class="p">,</span> <span class="n">u1State</span><span class="p">,</span> <span class="n">u2State</span><span class="p">,</span> <span class="n">u3State</span><span class="p">,</span> <span class="n">ur1State</span><span class="p">,</span> <span class="n">ur2State</span><span class="p">,</span> <span class="n">ur3State</span><span class="p">,</span> <span class="n">amplitudeState</span><span class="p">,</span> <span class="n">status</span><span class="p">,</span>
-            <span class="n">amplitude</span><span class="p">)</span>
-        <span class="k">return</span> <span class="n">adaptiveMeshConstraintState</span></div>
+<span class="sd">                    mdb.models[name].steps[name].DisplacementAdaptiveMeshConstraintState</span>
+<span class="sd">          </span>
+<span class="sd">          Parameters</span>
+<span class="sd">          ----------</span>
+<span class="sd">          u1</span>
+<span class="sd">               A Float or a Complex specifying the displacement component in the 1-direction.</span>
+<span class="sd">          u2</span>
+<span class="sd">               A Float or a Complex specifying the displacement component in the 2-direction.</span>
+<span class="sd">          u3</span>
+<span class="sd">               A Float or a Complex specifying the displacement component in the 3-direction.</span>
+<span class="sd">          ur1</span>
+<span class="sd">               A Float or a Complex specifying the rotational displacement component about the  1-direction.</span>
+<span class="sd">          ur2</span>
+<span class="sd">               A Float or a Complex specifying the rotational displacement component about the  2-direction.</span>
+<span class="sd">          ur3</span>
+<span class="sd">               A Float or a Complex specifying the rotational displacement component about the  3-direction.</span>
+<span class="sd">          u1State</span>
+<span class="sd">               A SymbolicConstant specifying the propagation state of the displacement component in the  1-direction.</span>
+<span class="sd">               Possible values are UNSET, SET, UNCHANGED, FREED, and MODIFIED.</span>
+<span class="sd">          u2State</span>
+<span class="sd">               A SymbolicConstant specifying the propagation state of the displacement component in the  2-direction.</span>
+<span class="sd">               Possible values are UNSET, SET, UNCHANGED, FREED, and MODIFIED.</span>
+<span class="sd">          u3State</span>
+<span class="sd">               A SymbolicConstant specifying the propagation state of the displacement component in the  3-direction.</span>
+<span class="sd">               Possible values are UNSET, SET, UNCHANGED, FREED, and MODIFIED.</span>
+<span class="sd">          ur1State</span>
+<span class="sd">               A SymbolicConstant specifying the propagation state of the rotational displacement  component about the</span>
+<span class="sd">               1-direction. Possible values are UNSET, SET, UNCHANGED, FREED, and  MODIFIED.</span>
+<span class="sd">          ur2State</span>
+<span class="sd">               A SymbolicConstant specifying the propagation state of the rotational displacement  component about the</span>
+<span class="sd">               2-direction. Possible values are UNSET, SET, UNCHANGED, FREED, and  MODIFIED.</span>
+<span class="sd">          ur3State</span>
+<span class="sd">               A SymbolicConstant specifying the propagation state of the rotational displacement  component about the</span>
+<span class="sd">               3-direction. Possible values are UNSET, SET, UNCHANGED, FREED, and  MODIFIED.</span>
+<span class="sd">          amplitudeState</span>
+<span class="sd">               A SymbolicConstant specifying the propagation state of the amplitude reference. Possible  values are UNSET,</span>
+<span class="sd">               SET, UNCHANGED, FREED, and MODIFIED.</span>
+<span class="sd">          status</span>
+<span class="sd">               A SymbolicConstant specifying the propagation state of the AdaptiveMeshConstraintState  object. Possible</span>
+<span class="sd">               values  are:</span>
+<span class="sd">               - NOT_YET_ACTIVE</span>
+<span class="sd">               - CREATED</span>
+<span class="sd">               - PROPAGATED</span>
+<span class="sd">               - MODIFIED</span>
+<span class="sd">               - DEACTIVATED</span>
+<span class="sd">               - NO_LONGER_ACTIVE</span>
+<span class="sd">               - TYPE_NOT_APPLICABLE</span>
+<span class="sd">               - INSTANCE_NOT_APPLICABLE</span>
+<span class="sd">               - PROPAGATED_FROM_BASE_STATE</span>
+<span class="sd">               - MODIFIED_FROM_BASE_STATE</span>
+<span class="sd">               - DEACTIVATED_FROM_BASE_STATE</span>
+<span class="sd">               - BUILT_INTO_MODES</span>
+<span class="sd">          amplitude</span>
+<span class="sd">               A String specifying the name of the amplitude reference. The String is empty if the  adaptive mesh</span>
+<span class="sd">               constraint has no amplitude reference.</span>
+<span class="sd">          """</span>
+          <span class="bp">self</span><span class="o">.</span><span class="n">adaptiveMeshConstraintStates</span><span class="p">[</span>
+               <span class="n">amplitude</span><span class="p">]</span> <span class="o">=</span> <span class="n">adaptiveMeshConstraintState</span> <span class="o">=</span> <span class="n">DisplacementAdaptiveMeshConstraintState</span><span class="p">(</span>
+               <span class="n">u1</span><span class="p">,</span> <span class="n">u2</span><span class="p">,</span> <span class="n">u3</span><span class="p">,</span> <span class="n">ur1</span><span class="p">,</span> <span class="n">ur2</span><span class="p">,</span> <span class="n">ur3</span><span class="p">,</span> <span class="n">u1State</span><span class="p">,</span> <span class="n">u2State</span><span class="p">,</span> <span class="n">u3State</span><span class="p">,</span> <span class="n">ur1State</span><span class="p">,</span> <span class="n">ur2State</span><span class="p">,</span> <span class="n">ur3State</span><span class="p">,</span> <span class="n">amplitudeState</span><span class="p">,</span> <span class="n">status</span><span class="p">,</span>
+               <span class="n">amplitude</span><span class="p">)</span>
+          <span class="k">return</span> <span class="n">adaptiveMeshConstraintState</span></div>
 
-<div class="viewcode-block" id="AdaptivityStep.VelocityAdaptiveMeshConstraintState"><a class="viewcode-back" href="../../../reference/mdb/model/adaptivity.html#abaqus.Adaptivity.AdaptivityStep.AdaptivityStep.VelocityAdaptiveMeshConstraintState">[docs]</a>    <span class="k">def</span> <span class="nf">VelocityAdaptiveMeshConstraintState</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">v1</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">v2</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">v3</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
-                                            <span class="n">vr1</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">vr2</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
-                                            <span class="n">vr3</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">v1State</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
-                                            <span class="n">v2State</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
-                                            <span class="n">v3State</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">vr1State</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
-                                            <span class="n">vr2State</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
-                                            <span class="n">vr3State</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">amplitudeState</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
-                                            <span class="n">status</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
-                                            <span class="n">amplitude</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">''</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">VelocityAdaptiveMeshConstraintState</span><span class="p">:</span>
-        <span class="sd">"""The VelocityAdaptiveMeshConstraintState object stores the propagating data for an</span>
-<span class="sd">        Arbitrary Lagrangian Eularian (ALE) style velocity adaptive mesh constraint in a step.</span>
-<span class="sd">        One instance of this object is created internally by the VelocityAdaptiveMeshConstraint</span>
-<span class="sd">        object for each step. The instance is also deleted internally by the</span>
-<span class="sd">        VelocityAdaptiveMeshConstraint object.</span>
-<span class="sd">        The VelocityAdaptiveMeshConstraintState object has no constructor or methods.</span>
-<span class="sd">        The VelocityAdaptiveMeshConstraintState object is derived from the</span>
-<span class="sd">        AdaptiveMeshConstraintState object.</span>
+<div class="viewcode-block" id="AdaptivityStep.VelocityAdaptiveMeshConstraintState"><a class="viewcode-back" href="../../../reference/mdb/model/adaptivity.html#abaqus.Adaptivity.AdaptivityStep.AdaptivityStep.VelocityAdaptiveMeshConstraintState">[docs]</a>     <span class="k">def</span> <span class="nf">VelocityAdaptiveMeshConstraintState</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">v1</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">v2</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">v3</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+                                             <span class="n">vr1</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">vr2</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+                                             <span class="n">vr3</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">v1State</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+                                             <span class="n">v2State</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+                                             <span class="n">v3State</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">vr1State</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+                                             <span class="n">vr2State</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+                                             <span class="n">vr3State</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">amplitudeState</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+                                             <span class="n">status</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+                                             <span class="n">amplitude</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">''</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">VelocityAdaptiveMeshConstraintState</span><span class="p">:</span>
+          <span class="sd">"""The VelocityAdaptiveMeshConstraintState object stores the propagating data for an</span>
+<span class="sd">          Arbitrary Lagrangian Eularian (ALE) style velocity adaptive mesh constraint in a step.</span>
+<span class="sd">          One instance of this object is created internally by the VelocityAdaptiveMeshConstraint</span>
+<span class="sd">          object for each step. The instance is also deleted internally by the</span>
+<span class="sd">          VelocityAdaptiveMeshConstraint object.</span>
+<span class="sd">          The VelocityAdaptiveMeshConstraintState object has no constructor or methods.</span>
+<span class="sd">          The VelocityAdaptiveMeshConstraintState object is derived from the</span>
+<span class="sd">          AdaptiveMeshConstraintState object.</span>
 
-<span class="sd">        Notes</span>
-<span class="sd">        -----</span>
-<span class="sd">            This function can be accessed by:</span>
+<span class="sd">          Notes</span>
+<span class="sd">          -----</span>
+<span class="sd">               This function can be accessed by:</span>
 
-<span class="sd">            .. code-block:: python</span>
+<span class="sd">               .. code-block:: python</span>
 
-<span class="sd">                mdb.models[name].steps[name].VelocityAdaptiveMeshConstraintState</span>
-<span class="sd">        </span>
-<span class="sd">        Parameters</span>
-<span class="sd">        ----------</span>
-<span class="sd">        v1</span>
-<span class="sd">             A Float specifying the velocity component in the 1-direction.</span>
-<span class="sd">        v2</span>
-<span class="sd">             A Float specifying the velocity component in the 2-direction.</span>
-<span class="sd">        v3</span>
-<span class="sd">             A Float specifying the velocity component in the 3-direction.</span>
-<span class="sd">        vr1</span>
-<span class="sd">             A Float specifying the rotational velocity component about the 1-direction.</span>
-<span class="sd">        vr2</span>
-<span class="sd">             A Float specifying the rotational velocity component about the 2-direction.</span>
-<span class="sd">        vr3</span>
-<span class="sd">             A Float specifying the rotational velocity component about the 3-direction.</span>
-<span class="sd">        v1State</span>
-<span class="sd">             A SymbolicConstant specifying the propagation state of the velocity component in the  1-direction.</span>
-<span class="sd">             Possible values are UNSET, SET, UNCHANGED, FREED, and MODIFIED.</span>
-<span class="sd">        v2State</span>
-<span class="sd">             A SymbolicConstant specifying the propagation state of the velocity component in the  2-direction.</span>
-<span class="sd">             Possible values are UNSET, SET, UNCHANGED, FREED, and MODIFIED.</span>
-<span class="sd">        v3State</span>
-<span class="sd">             A SymbolicConstant specifying the propagation state of the velocity component in the  3-direction.</span>
-<span class="sd">             Possible values are UNSET, SET, UNCHANGED, FREED, and MODIFIED.</span>
-<span class="sd">        vr1State</span>
-<span class="sd">             A SymbolicConstant specifying the propagation state of the rotational velocity component  about the</span>
-<span class="sd">             1-direction. Possible values are UNSET, SET, UNCHANGED, FREED, and MODIFIED.</span>
-<span class="sd">        vr2State</span>
-<span class="sd">             A SymbolicConstant specifying the propagation state of the rotational velocity component  about the</span>
-<span class="sd">             2-direction. Possible values are UNSET, SET, UNCHANGED, FREED, and MODIFIED.</span>
-<span class="sd">        vr3State</span>
-<span class="sd">             A SymbolicConstant specifying the propagation state of the rotational velocity component  about the</span>
-<span class="sd">             3-direction. Possible values are UNSET, SET, UNCHANGED, FREED, and MODIFIED.</span>
-<span class="sd">        amplitudeState</span>
-<span class="sd">             A SymbolicConstant specifying the propagation state of the amplitude reference. Possible  values are UNSET,</span>
-<span class="sd">             SET, UNCHANGED, FREED, and MODIFIED.</span>
-<span class="sd">        status</span>
-<span class="sd">             A SymbolicConstant specifying the propagation state of the AdaptiveMeshConstraintState  object. Possible</span>
-<span class="sd">             values  are:</span>
-<span class="sd">            - NOT_YET_ACTIVE</span>
-<span class="sd">            - CREATED</span>
-<span class="sd">            - PROPAGATED</span>
-<span class="sd">            - MODIFIED</span>
-<span class="sd">            - DEACTIVATED</span>
-<span class="sd">            - NO_LONGER_ACTIVE</span>
-<span class="sd">            - TYPE_NOT_APPLICABLE</span>
-<span class="sd">            - INSTANCE_NOT_APPLICABLE</span>
-<span class="sd">            - PROPAGATED_FROM_BASE_STATE</span>
-<span class="sd">            - MODIFIED_FROM_BASE_STATE</span>
-<span class="sd">            - DEACTIVATED_FROM_BASE_STATE</span>
-<span class="sd">            - BUILT_INTO_MODES</span>
-<span class="sd">        amplitude</span>
-<span class="sd">             A String specifying the name of the amplitude reference. The String is empty if the  adaptive mesh</span>
-<span class="sd">             constraint has no amplitude reference.</span>
-<span class="sd">        """</span>
-        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="n">amplitudeState</span><span class="p">,</span> <span class="n">status</span><span class="p">,</span> <span class="n">amplitude</span><span class="p">)</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">adaptiveMeshConstraintStates</span><span class="p">[</span>
-            <span class="n">amplitude</span><span class="p">]</span> <span class="o">=</span> <span class="n">adaptiveMeshConstraintState</span> <span class="o">=</span> <span class="n">VelocityAdaptiveMeshConstraintState</span><span class="p">(</span>
-            <span class="n">v1</span><span class="p">,</span> <span class="n">v2</span><span class="p">,</span> <span class="n">v3</span><span class="p">,</span> <span class="n">vr1</span><span class="p">,</span> <span class="n">vr2</span><span class="p">,</span> <span class="n">vr3</span><span class="p">,</span> <span class="n">v1State</span><span class="p">,</span> <span class="n">v2State</span><span class="p">,</span> <span class="n">v3State</span><span class="p">,</span> <span class="n">vr1State</span><span class="p">,</span> <span class="n">vr2State</span><span class="p">,</span> <span class="n">vr3State</span><span class="p">,</span> <span class="n">amplitudeState</span><span class="p">,</span> <span class="n">status</span><span class="p">,</span>
-            <span class="n">amplitude</span><span class="p">)</span>
-        <span class="k">return</span> <span class="n">adaptiveMeshConstraintState</span></div>
+<span class="sd">                    mdb.models[name].steps[name].VelocityAdaptiveMeshConstraintState</span>
+<span class="sd">          </span>
+<span class="sd">          Parameters</span>
+<span class="sd">          ----------</span>
+<span class="sd">          v1</span>
+<span class="sd">               A Float specifying the velocity component in the 1-direction.</span>
+<span class="sd">          v2</span>
+<span class="sd">               A Float specifying the velocity component in the 2-direction.</span>
+<span class="sd">          v3</span>
+<span class="sd">               A Float specifying the velocity component in the 3-direction.</span>
+<span class="sd">          vr1</span>
+<span class="sd">               A Float specifying the rotational velocity component about the 1-direction.</span>
+<span class="sd">          vr2</span>
+<span class="sd">               A Float specifying the rotational velocity component about the 2-direction.</span>
+<span class="sd">          vr3</span>
+<span class="sd">               A Float specifying the rotational velocity component about the 3-direction.</span>
+<span class="sd">          v1State</span>
+<span class="sd">               A SymbolicConstant specifying the propagation state of the velocity component in the  1-direction.</span>
+<span class="sd">               Possible values are UNSET, SET, UNCHANGED, FREED, and MODIFIED.</span>
+<span class="sd">          v2State</span>
+<span class="sd">               A SymbolicConstant specifying the propagation state of the velocity component in the  2-direction.</span>
+<span class="sd">               Possible values are UNSET, SET, UNCHANGED, FREED, and MODIFIED.</span>
+<span class="sd">          v3State</span>
+<span class="sd">               A SymbolicConstant specifying the propagation state of the velocity component in the  3-direction.</span>
+<span class="sd">               Possible values are UNSET, SET, UNCHANGED, FREED, and MODIFIED.</span>
+<span class="sd">          vr1State</span>
+<span class="sd">               A SymbolicConstant specifying the propagation state of the rotational velocity component  about the</span>
+<span class="sd">               1-direction. Possible values are UNSET, SET, UNCHANGED, FREED, and MODIFIED.</span>
+<span class="sd">          vr2State</span>
+<span class="sd">               A SymbolicConstant specifying the propagation state of the rotational velocity component  about the</span>
+<span class="sd">               2-direction. Possible values are UNSET, SET, UNCHANGED, FREED, and MODIFIED.</span>
+<span class="sd">          vr3State</span>
+<span class="sd">               A SymbolicConstant specifying the propagation state of the rotational velocity component  about the</span>
+<span class="sd">               3-direction. Possible values are UNSET, SET, UNCHANGED, FREED, and MODIFIED.</span>
+<span class="sd">          amplitudeState</span>
+<span class="sd">               A SymbolicConstant specifying the propagation state of the amplitude reference. Possible  values are UNSET,</span>
+<span class="sd">               SET, UNCHANGED, FREED, and MODIFIED.</span>
+<span class="sd">          status</span>
+<span class="sd">               A SymbolicConstant specifying the propagation state of the AdaptiveMeshConstraintState  object. Possible</span>
+<span class="sd">               values  are:</span>
+<span class="sd">               - NOT_YET_ACTIVE</span>
+<span class="sd">               - CREATED</span>
+<span class="sd">               - PROPAGATED</span>
+<span class="sd">               - MODIFIED</span>
+<span class="sd">               - DEACTIVATED</span>
+<span class="sd">               - NO_LONGER_ACTIVE</span>
+<span class="sd">               - TYPE_NOT_APPLICABLE</span>
+<span class="sd">               - INSTANCE_NOT_APPLICABLE</span>
+<span class="sd">               - PROPAGATED_FROM_BASE_STATE</span>
+<span class="sd">               - MODIFIED_FROM_BASE_STATE</span>
+<span class="sd">               - DEACTIVATED_FROM_BASE_STATE</span>
+<span class="sd">               - BUILT_INTO_MODES</span>
+<span class="sd">          amplitude</span>
+<span class="sd">               A String specifying the name of the amplitude reference. The String is empty if the  adaptive mesh</span>
+<span class="sd">               constraint has no amplitude reference.</span>
+<span class="sd">          """</span>
+          <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="n">amplitudeState</span><span class="p">,</span> <span class="n">status</span><span class="p">,</span> <span class="n">amplitude</span><span class="p">)</span>
+          <span class="bp">self</span><span class="o">.</span><span class="n">adaptiveMeshConstraintStates</span><span class="p">[</span>
+               <span class="n">amplitude</span><span class="p">]</span> <span class="o">=</span> <span class="n">adaptiveMeshConstraintState</span> <span class="o">=</span> <span class="n">VelocityAdaptiveMeshConstraintState</span><span class="p">(</span>
+               <span class="n">v1</span><span class="p">,</span> <span class="n">v2</span><span class="p">,</span> <span class="n">v3</span><span class="p">,</span> <span class="n">vr1</span><span class="p">,</span> <span class="n">vr2</span><span class="p">,</span> <span class="n">vr3</span><span class="p">,</span> <span class="n">v1State</span><span class="p">,</span> <span class="n">v2State</span><span class="p">,</span> <span class="n">v3State</span><span class="p">,</span> <span class="n">vr1State</span><span class="p">,</span> <span class="n">vr2State</span><span class="p">,</span> <span class="n">vr3State</span><span class="p">,</span> <span class="n">amplitudeState</span><span class="p">,</span> <span class="n">status</span><span class="p">,</span>
+               <span class="n">amplitude</span><span class="p">)</span>
+          <span class="k">return</span> <span class="n">adaptiveMeshConstraintState</span></div>
 
-<div class="viewcode-block" id="AdaptivityStep.AdaptiveMeshDomain"><a class="viewcode-back" href="../../../reference/mdb/model/adaptivity.html#abaqus.Adaptivity.AdaptivityStep.AdaptivityStep.AdaptiveMeshDomain">[docs]</a>    <span class="k">def</span> <span class="nf">AdaptiveMeshDomain</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">region</span><span class="p">:</span> <span class="n">Region</span><span class="p">,</span> <span class="n">controls</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">''</span><span class="p">,</span> <span class="n">frequency</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">10</span><span class="p">,</span> <span class="n">initialMeshSweeps</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">5</span><span class="p">,</span>
-                           <span class="n">meshSweeps</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">1</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">AdaptiveMeshDomain</span><span class="p">:</span>
-        <span class="sd">"""The AdaptiveMeshDomain object defines the region and controls that govern an Arbitrary</span>
-<span class="sd">        Lagrangian Eularian (ALE) style adaptive smoothing mesh domain.</span>
+<div class="viewcode-block" id="AdaptivityStep.AdaptiveMeshDomain"><a class="viewcode-back" href="../../../reference/mdb/model/adaptivity.html#abaqus.Adaptivity.AdaptivityStep.AdaptivityStep.AdaptiveMeshDomain">[docs]</a>     <span class="k">def</span> <span class="nf">AdaptiveMeshDomain</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">region</span><span class="p">:</span> <span class="n">Region</span><span class="p">,</span> <span class="n">controls</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">''</span><span class="p">,</span> <span class="n">frequency</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">10</span><span class="p">,</span> <span class="n">initialMeshSweeps</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">5</span><span class="p">,</span>
+                              <span class="n">meshSweeps</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">1</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">AdaptiveMeshDomain</span><span class="p">:</span>
+          <span class="sd">"""The AdaptiveMeshDomain object defines the region and controls that govern an Arbitrary</span>
+<span class="sd">          Lagrangian Eularian (ALE) style adaptive smoothing mesh domain.</span>
 
-<span class="sd">        This method creates an AdaptiveMeshDomain object.</span>
+<span class="sd">          This method creates an AdaptiveMeshDomain object.</span>
 
-<span class="sd">        Notes</span>
-<span class="sd">        -----</span>
-<span class="sd">            This function can be accessed by:</span>
+<span class="sd">          Notes</span>
+<span class="sd">          -----</span>
+<span class="sd">               This function can be accessed by:</span>
 
-<span class="sd">            .. code-block:: python</span>
+<span class="sd">               .. code-block:: python</span>
 
-<span class="sd">                mdb.models[name].steps[name].AdaptiveMeshDomain</span>
-<span class="sd">        </span>
-<span class="sd">        Parameters</span>
-<span class="sd">        ----------</span>
-<span class="sd">        region</span>
-<span class="sd">            A Region object specifying the region to which the adaptive mesh domain is applied.</span>
-<span class="sd">        controls</span>
-<span class="sd">            A String specifying the name of an AdaptiveMeshControl object.</span>
-<span class="sd">        frequency</span>
-<span class="sd">            An Int specifying the frequency in increments at which adaptive meshing will be</span>
-<span class="sd">            performed. The default value is 10.</span>
-<span class="sd">        initialMeshSweeps</span>
-<span class="sd">            An Int specifying the number of mesh sweeps to be performed at the beginning of the</span>
-<span class="sd">            first step in which this adaptive mesh definition is active. The default value is 5.</span>
-<span class="sd">        meshSweeps</span>
-<span class="sd">            An Int specifying the number of mesh sweeps to be performed in each adaptive mesh</span>
-<span class="sd">            increment. The default value is 1.</span>
+<span class="sd">                    mdb.models[name].steps[name].AdaptiveMeshDomain</span>
+<span class="sd">          </span>
+<span class="sd">          Parameters</span>
+<span class="sd">          ----------</span>
+<span class="sd">          region</span>
+<span class="sd">               A Region object specifying the region to which the adaptive mesh domain is applied.</span>
+<span class="sd">          controls</span>
+<span class="sd">               A String specifying the name of an AdaptiveMeshControl object.</span>
+<span class="sd">          frequency</span>
+<span class="sd">               An Int specifying the frequency in increments at which adaptive meshing will be</span>
+<span class="sd">               performed. The default value is 10.</span>
+<span class="sd">          initialMeshSweeps</span>
+<span class="sd">               An Int specifying the number of mesh sweeps to be performed at the beginning of the</span>
+<span class="sd">               first step in which this adaptive mesh definition is active. The default value is 5.</span>
+<span class="sd">          meshSweeps</span>
+<span class="sd">               An Int specifying the number of mesh sweeps to be performed in each adaptive mesh</span>
+<span class="sd">               increment. The default value is 1.</span>
 
-<span class="sd">        Returns</span>
-<span class="sd">        -------</span>
-<span class="sd">            An AdaptiveMeshDomain object</span>
-<span class="sd">        """</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">adaptiveMeshDomains</span><span class="p">[</span><span class="n">controls</span><span class="p">]</span> <span class="o">=</span> <span class="n">adaptiveMeshDomain</span> <span class="o">=</span> <span class="n">AdaptiveMeshDomain</span><span class="p">(</span><span class="n">region</span><span class="p">,</span> <span class="n">controls</span><span class="p">,</span> <span class="n">frequency</span><span class="p">,</span>
-                                                                                     <span class="n">initialMeshSweeps</span><span class="p">,</span> <span class="n">meshSweeps</span><span class="p">)</span>
-        <span class="k">return</span> <span class="n">adaptiveMeshDomain</span></div></div>
+<span class="sd">          Returns</span>
+<span class="sd">          -------</span>
+<span class="sd">               An AdaptiveMeshDomain object</span>
+<span class="sd">          """</span>
+          <span class="bp">self</span><span class="o">.</span><span class="n">adaptiveMeshDomains</span><span class="p">[</span><span class="n">controls</span><span class="p">]</span> <span class="o">=</span> <span class="n">adaptiveMeshDomain</span> <span class="o">=</span> <span class="n">AdaptiveMeshDomain</span><span class="p">(</span><span class="n">region</span><span class="p">,</span> <span class="n">controls</span><span class="p">,</span> <span class="n">frequency</span><span class="p">,</span>
+                                                                                          <span class="n">initialMeshSweeps</span><span class="p">,</span> <span class="n">meshSweeps</span><span class="p">)</span>
+          <span class="k">return</span> <span class="n">adaptiveMeshDomain</span></div></div>
 </pre></div>
         </article>
       </div>

@@ -310,25 +310,28 @@
 
 <span class="sd">    Notes</span>
 <span class="sd">    -----</span>
-<span class="sd">        This object can be accessed by:</span>
-<span class="sd">        </span>
-<span class="sd">        .. code-block:: python</span>
-<span class="sd">            </span>
-<span class="sd">            import material</span>
-<span class="sd">            mdb.models[name].materials[name].viscosity</span>
-<span class="sd">            import odbMaterial</span>
-<span class="sd">            session.odbs[name].materials[name].viscosity</span>
+<span class="sd">    This object can be accessed by:</span>
 
-<span class="sd">        The table data for this object are:</span>
-<span class="sd">        If *type*=NEWTONIAN, the table data specify the following:</span>
-<span class="sd">            - Viscosity, k.</span>
-<span class="sd">            - Temperature, if the data depend on temperature.</span>
-<span class="sd">            - Value of the first field variable, if the data depend on field variables.</span>
-<span class="sd">            - Value of the second field variable.</span>
-<span class="sd">            - Etc.</span>
+<span class="sd">    .. code-block:: python</span>
+
+<span class="sd">        import material</span>
+<span class="sd">        mdb.models[name].materials[name].viscosity</span>
+<span class="sd">        import odbMaterial</span>
+<span class="sd">        session.odbs[name].materials[name].viscosity</span>
+
+<span class="sd">    The table data for this object are:</span>
+<span class="sd">    </span>
+<span class="sd">    - If *type*=NEWTONIAN, the table data specify the following:</span>
+
+<span class="sd">        - Viscosity, k.</span>
+<span class="sd">        - Temperature, if the data depend on temperature.</span>
+<span class="sd">        - Value of the first field variable, if the data depend on field variables.</span>
+<span class="sd">        - Value of the second field variable.</span>
+<span class="sd">        - Etc.</span>
 
 <span class="sd">    The corresponding analysis keywords are:</span>
-<span class="sd">        - VISCOSITY</span>
+
+<span class="sd">    - VISCOSITY</span>
 
 <span class="sd">    """</span>
 

@@ -313,55 +313,60 @@
 
 <span class="sd">    Notes</span>
 <span class="sd">    -----</span>
-<span class="sd">        This object can be accessed by:</span>
-<span class="sd">        </span>
-<span class="sd">        .. code-block:: python</span>
-<span class="sd">            </span>
-<span class="sd">            import material</span>
-<span class="sd">            mdb.models[name].materials[name].viscoelastic</span>
-<span class="sd">            import odbMaterial</span>
-<span class="sd">            session.odbs[name].materials[name].viscoelastic</span>
+<span class="sd">    This object can be accessed by:</span>
 
-<span class="sd">        The table data for this object are:</span>
-<span class="sd">        If *frequency*=FORMULA, the table data for *table* specify the following:</span>
-<span class="sd">            - Real part of g∗1 (g∗(ω)=g∗1f−a).</span>
-<span class="sd">            - Imaginary part of g∗1.</span>
-<span class="sd">            - Value of a.</span>
-<span class="sd">            - Real part of k∗1 (k∗(ω)=k∗1f−b). If the material is incompressible, this value is ignored.</span>
-<span class="sd">            - Imaginary part of k1*. If the material is incompressible, this value is ignored.</span>
-<span class="sd">            - Value of b. If the material is incompressible, this value is ignored.</span>
-<span class="sd">        If *frequency*=TABULAR and *type*=ISOTROPIC and *preload*=NONE, or *time*=FREQUENCY_DATA the table data for *table* specify the following:</span>
-<span class="sd">            - Real part of ω⁢g* (ωR(g∗)=Gℓ/G∞).</span>
-<span class="sd">            - Imaginary part of ω⁢g* (ωI(g*)=1−Gs/G∞).</span>
-<span class="sd">            - Real part of ω⁢k* (ωR(k∗)=Kℓ/K∞). If the material is incompressible, this value is ignored.</span>
-<span class="sd">            - Imaginary part of ω⁢k* (ωI(k∗)=1−Ks/K∞). If the material is incompressible, this value is ignored.</span>
-<span class="sd">            - Frequency f in cycles per time.</span>
-<span class="sd">        If *frequency*=TABULAR and *type*=ISOTROPIC and *preload*=UNIAXIAL the table data for *table* specify the following:</span>
-<span class="sd">            - Loss modulus.</span>
-<span class="sd">            - Storage modulus.</span>
-<span class="sd">            - Frequency.</span>
-<span class="sd">            - Uniaxial strain.</span>
-<span class="sd">        If *frequency*=TABULAR and *type*=TRACTION and *preload*=NONE the table data for *table* specify the following:</span>
-<span class="sd">            - Normalized loss modulus.</span>
-<span class="sd">            - Normalized shear modulus.</span>
-<span class="sd">            - Frequency.</span>
-<span class="sd">        If *frequency*=TABULAR and *type*=TRACTION and *preload*=UNIAXIAL or *preload*=UNIAXIAL_VOLUMETRIC the table data for *table* specify the following:</span>
-<span class="sd">            - Loss modulus.</span>
-<span class="sd">            - Storage modulus.</span>
-<span class="sd">            - Frequency.</span>
-<span class="sd">            - Closure.</span>
-<span class="sd">        If *time*=PRONY or *frequency*=PRONY, the table data for *table* specify the following:</span>
-<span class="sd">            - g¯1P, the modulus ratio in the first term in the Prony series expansion of the shear relaxation modulus.</span>
-<span class="sd">            - k¯1P, the modulus ratio in the first term in the Prony series expansion of the bulk relaxation modulus.</span>
-<span class="sd">            - τ1, the relaxation time for the first term in the Prony series expansion.</span>
-<span class="sd">        If *frequency*=TABULAR and *type*=ISOTROPIC and *preload*=VOLUMETRIC or *preload*=UNIAXIAL_VOLUMETRIC the table data for *volumetricTable* specify the following:</span>
-<span class="sd">            - Loss modulus.</span>
-<span class="sd">            - Storage modulus.</span>
-<span class="sd">            - Frequency.</span>
-<span class="sd">            - Volume ratio.</span>
+<span class="sd">    .. code-block:: python</span>
+
+<span class="sd">        import material</span>
+<span class="sd">        mdb.models[name].materials[name].viscoelastic</span>
+<span class="sd">        import odbMaterial</span>
+<span class="sd">        session.odbs[name].materials[name].viscoelastic</span>
+
+<span class="sd">    The table data for this object are:</span>
+
+<span class="sd">    - If *frequency*=FORMULA, the table data for *table* specify the following:</span>
+<span class="sd">        - Real part of g∗1 (g∗(ω)=g∗1f−a).</span>
+<span class="sd">        - Imaginary part of g∗1.</span>
+<span class="sd">        - Value of a.</span>
+<span class="sd">        - Real part of k∗1 (k∗(ω)=k∗1f−b). If the material is incompressible, this value is ignored.</span>
+<span class="sd">        - Imaginary part of k1*. If the material is incompressible, this value is ignored.</span>
+<span class="sd">        - Value of b. If the material is incompressible, this value is ignored.</span>
+<span class="sd">    - If *frequency*=TABULAR and *type*=ISOTROPIC and *preload*=NONE, or *time*=FREQUENCY_DATA the table data for</span>
+<span class="sd">    *table* specify the following:</span>
+<span class="sd">        - Real part of ω⁢g* (ωR(g∗)=Gℓ/G∞).</span>
+<span class="sd">        - Imaginary part of ω⁢g* (ωI(g*)=1−Gs/G∞).</span>
+<span class="sd">        - Real part of ω⁢k* (ωR(k∗)=Kℓ/K∞). If the material is incompressible, this value is ignored.</span>
+<span class="sd">        - Imaginary part of ω⁢k* (ωI(k∗)=1−Ks/K∞). If the material is incompressible, this value is ignored.</span>
+<span class="sd">        - Frequency f in cycles per time.</span>
+<span class="sd">    - If *frequency*=TABULAR and *type*=ISOTROPIC and *preload*=UNIAXIAL the table data for *table* specify the following:</span>
+<span class="sd">        - Loss modulus.</span>
+<span class="sd">        - Storage modulus.</span>
+<span class="sd">        - Frequency.</span>
+<span class="sd">        - Uniaxial strain.</span>
+<span class="sd">    - If *frequency*=TABULAR and *type*=TRACTION and *preload*=NONE the table data for *table* specify the following:</span>
+<span class="sd">        - Normalized loss modulus.</span>
+<span class="sd">        - Normalized shear modulus.</span>
+<span class="sd">        - Frequency.</span>
+<span class="sd">    - If *frequency*=TABULAR and *type*=TRACTION and *preload*=UNIAXIAL or *preload*=UNIAXIAL_VOLUMETRIC the table</span>
+<span class="sd">    data for *table* specify the following:</span>
+<span class="sd">        - Loss modulus.</span>
+<span class="sd">        - Storage modulus.</span>
+<span class="sd">        - Frequency.</span>
+<span class="sd">        - Closure.</span>
+<span class="sd">    - If *time*=PRONY or *frequency*=PRONY, the table data for *table* specify the following:</span>
+<span class="sd">        - g¯1P, the modulus ratio in the first term in the Prony series expansion of the shear relaxation modulus.</span>
+<span class="sd">        - k¯1P, the modulus ratio in the first term in the Prony series expansion of the bulk relaxation modulus.</span>
+<span class="sd">        - τ1, the relaxation time for the first term in the Prony series expansion.</span>
+<span class="sd">    - If *frequency*=TABULAR and *type*=ISOTROPIC and *preload*=VOLUMETRIC or *preload*=UNIAXIAL_VOLUMETRIC the table</span>
+<span class="sd">    data for *volumetricTable* specify the following:</span>
+<span class="sd">        - Loss modulus.</span>
+<span class="sd">        - Storage modulus.</span>
+<span class="sd">        - Frequency.</span>
+<span class="sd">        - Volume ratio.</span>
 
 <span class="sd">    The corresponding analysis keywords are:</span>
-<span class="sd">        - VISCOELASTIC</span>
+
+<span class="sd">    - VISCOELASTIC</span>
 
 <span class="sd">    """</span>
 

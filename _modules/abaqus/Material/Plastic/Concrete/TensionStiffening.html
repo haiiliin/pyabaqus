@@ -310,32 +310,34 @@
 
 <span class="sd">    Notes</span>
 <span class="sd">    -----</span>
-<span class="sd">        This object can be accessed by:</span>
+<span class="sd">    This object can be accessed by:</span>
+<span class="sd">    </span>
+<span class="sd">    .. code-block:: python</span>
 <span class="sd">        </span>
-<span class="sd">        .. code-block:: python</span>
-<span class="sd">            </span>
-<span class="sd">            import material</span>
-<span class="sd">            mdb.models[name].materials[name].concrete.tensionStiffening</span>
-<span class="sd">            import odbMaterial</span>
-<span class="sd">            session.odbs[name].materials[name].concrete.tensionStiffening</span>
+<span class="sd">        import material</span>
+<span class="sd">        mdb.models[name].materials[name].concrete.tensionStiffening</span>
+<span class="sd">        import odbMaterial</span>
+<span class="sd">        session.odbs[name].materials[name].concrete.tensionStiffening</span>
 
-<span class="sd">        The table data for this object are:</span>
-<span class="sd">        If *type*=STRAIN, the table data specify the following:</span>
-<span class="sd">            - Fraction of remaining stress to stress at cracking.</span>
-<span class="sd">            - Absolute value of the direct strain minus the direct strain at cracking.</span>
-<span class="sd">            - Temperature, if the data depend on temperature.</span>
-<span class="sd">            - Value of the first field variable, if the data depend on field variables.</span>
-<span class="sd">            - Value of the second field variable.</span>
-<span class="sd">            - Etc.</span>
-<span class="sd">        If *type*=DISPLACEMENT, the table data specify the following:</span>
-<span class="sd">            - Displacement, u0u0, at which a linear loss of strength after cracking gives zero stress.</span>
-<span class="sd">            - Temperature, if the data depend on temperature.</span>
-<span class="sd">            - Value of the first field variable, if the data depend on field variables.</span>
-<span class="sd">            - Value of the second field variable.</span>
-<span class="sd">            - Etc.</span>
+<span class="sd">    The table data for this object are:</span>
+<span class="sd">    </span>
+<span class="sd">    - If *type*=STRAIN, the table data specify the following:</span>
+<span class="sd">        - Fraction of remaining stress to stress at cracking.</span>
+<span class="sd">        - Absolute value of the direct strain minus the direct strain at cracking.</span>
+<span class="sd">        - Temperature, if the data depend on temperature.</span>
+<span class="sd">        - Value of the first field variable, if the data depend on field variables.</span>
+<span class="sd">        - Value of the second field variable.</span>
+<span class="sd">        - Etc.</span>
+<span class="sd">    - If *type*=DISPLACEMENT, the table data specify the following:</span>
+<span class="sd">        - Displacement, u0u0, at which a linear loss of strength after cracking gives zero stress.</span>
+<span class="sd">        - Temperature, if the data depend on temperature.</span>
+<span class="sd">        - Value of the first field variable, if the data depend on field variables.</span>
+<span class="sd">        - Value of the second field variable.</span>
+<span class="sd">        - Etc.</span>
 
 <span class="sd">    The corresponding analysis keywords are:</span>
-<span class="sd">        - TENSION STIFFENING</span>
+
+<span class="sd">    - TENSION STIFFENING</span>
 
 <span class="sd">    """</span>
 

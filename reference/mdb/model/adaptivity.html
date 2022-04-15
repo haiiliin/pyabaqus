@@ -672,9 +672,9 @@ internally by the DisplacementAdaptiveMeshConstraint object.
 The DisplacementAdaptiveMeshConstraintState object has no constructor or methods.
 The DisplacementAdaptiveMeshConstraintState object is derived from the
 AdaptiveMeshConstraintState object.</p>
-<dl class="field-list">
+<dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><dl>
+<dd class="field-odd"><dl class="simple">
 <dt><strong>u1</strong></dt><dd><p>A Float or a Complex specifying the displacement component in the 1-direction.</p>
 </dd>
 <dt><strong>u2</strong></dt><dd><p>A Float or a Complex specifying the displacement component in the 2-direction.</p>
@@ -708,24 +708,20 @@ Possible values are UNSET, SET, UNCHANGED, FREED, and MODIFIED.</p>
 <dt><strong>amplitudeState</strong></dt><dd><p>A SymbolicConstant specifying the propagation state of the amplitude reference. Possible  values are UNSET,
 SET, UNCHANGED, FREED, and MODIFIED.</p>
 </dd>
-<dt><strong>status</strong></dt><dd><blockquote>
-<div><p>A SymbolicConstant specifying the propagation state of the AdaptiveMeshConstraintState  object. Possible
-values  are:</p>
-</div></blockquote>
-<ul class="simple">
-<li><p>NOT_YET_ACTIVE</p></li>
-<li><p>CREATED</p></li>
-<li><p>PROPAGATED</p></li>
-<li><p>MODIFIED</p></li>
-<li><p>DEACTIVATED</p></li>
-<li><p>NO_LONGER_ACTIVE</p></li>
-<li><p>TYPE_NOT_APPLICABLE</p></li>
-<li><p>INSTANCE_NOT_APPLICABLE</p></li>
-<li><p>PROPAGATED_FROM_BASE_STATE</p></li>
-<li><p>MODIFIED_FROM_BASE_STATE</p></li>
-<li><p>DEACTIVATED_FROM_BASE_STATE</p></li>
-<li><p>BUILT_INTO_MODES</p></li>
-</ul>
+<dt><strong>status</strong></dt><dd><p>A SymbolicConstant specifying the propagation state of the AdaptiveMeshConstraintState  object. Possible
+values  are:
+- NOT_YET_ACTIVE
+- CREATED
+- PROPAGATED
+- MODIFIED
+- DEACTIVATED
+- NO_LONGER_ACTIVE
+- TYPE_NOT_APPLICABLE
+- INSTANCE_NOT_APPLICABLE
+- PROPAGATED_FROM_BASE_STATE
+- MODIFIED_FROM_BASE_STATE
+- DEACTIVATED_FROM_BASE_STATE
+- BUILT_INTO_MODES</p>
 </dd>
 <dt><strong>amplitude</strong></dt><dd><p>A String specifying the name of the amplitude reference. The String is empty if the  adaptive mesh
 constraint has no amplitude reference.</p>
@@ -750,9 +746,9 @@ VelocityAdaptiveMeshConstraint object.
 The VelocityAdaptiveMeshConstraintState object has no constructor or methods.
 The VelocityAdaptiveMeshConstraintState object is derived from the
 AdaptiveMeshConstraintState object.</p>
-<dl class="field-list">
+<dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><dl>
+<dd class="field-odd"><dl class="simple">
 <dt><strong>v1</strong></dt><dd><p>A Float specifying the velocity component in the 1-direction.</p>
 </dd>
 <dt><strong>v2</strong></dt><dd><p>A Float specifying the velocity component in the 2-direction.</p>
@@ -786,24 +782,20 @@ Possible values are UNSET, SET, UNCHANGED, FREED, and MODIFIED.</p>
 <dt><strong>amplitudeState</strong></dt><dd><p>A SymbolicConstant specifying the propagation state of the amplitude reference. Possible  values are UNSET,
 SET, UNCHANGED, FREED, and MODIFIED.</p>
 </dd>
-<dt><strong>status</strong></dt><dd><blockquote>
-<div><p>A SymbolicConstant specifying the propagation state of the AdaptiveMeshConstraintState  object. Possible
-values  are:</p>
-</div></blockquote>
-<ul class="simple">
-<li><p>NOT_YET_ACTIVE</p></li>
-<li><p>CREATED</p></li>
-<li><p>PROPAGATED</p></li>
-<li><p>MODIFIED</p></li>
-<li><p>DEACTIVATED</p></li>
-<li><p>NO_LONGER_ACTIVE</p></li>
-<li><p>TYPE_NOT_APPLICABLE</p></li>
-<li><p>INSTANCE_NOT_APPLICABLE</p></li>
-<li><p>PROPAGATED_FROM_BASE_STATE</p></li>
-<li><p>MODIFIED_FROM_BASE_STATE</p></li>
-<li><p>DEACTIVATED_FROM_BASE_STATE</p></li>
-<li><p>BUILT_INTO_MODES</p></li>
-</ul>
+<dt><strong>status</strong></dt><dd><p>A SymbolicConstant specifying the propagation state of the AdaptiveMeshConstraintState  object. Possible
+values  are:
+- NOT_YET_ACTIVE
+- CREATED
+- PROPAGATED
+- MODIFIED
+- DEACTIVATED
+- NO_LONGER_ACTIVE
+- TYPE_NOT_APPLICABLE
+- INSTANCE_NOT_APPLICABLE
+- PROPAGATED_FROM_BASE_STATE
+- MODIFIED_FROM_BASE_STATE
+- DEACTIVATED_FROM_BASE_STATE
+- BUILT_INTO_MODES</p>
 </dd>
 <dt><strong>amplitude</strong></dt><dd><p>A String specifying the name of the amplitude reference. The String is empty if the  adaptive mesh
 constraint has no amplitude reference.</p>
@@ -2036,12 +2028,10 @@ AdaptiveMeshConstraintState object.</p>
 <span class="n">mdb</span><span class="o">.</span><span class="n">models</span><span class="p">[</span><span class="n">name</span><span class="p">]</span><span class="o">.</span><span class="n">steps</span><span class="p">[</span><span class="n">name</span><span class="p">]</span><span class="o">.</span><span class="n">adaptiveMeshConstraintStates</span><span class="p">[</span><span class="n">name</span><span class="p">]</span>
 </pre></div>
 </div>
-<dl class="simple">
-<dt>The corresponding analysis keywords are:</dt><dd><ul class="simple">
+<p>The corresponding analysis keywords are:</p>
+<ul class="simple">
 <li><p>ADAPTIVE MESH CONSTRAINT</p></li>
 </ul>
-</dd>
-</dl>
 <dl class="field-list simple">
 <dt class="field-odd">Attributes</dt>
 <dd class="field-odd"><dl class="simple">
@@ -2745,12 +2735,10 @@ AdaptiveMeshConstraintState object.</p>
 <span class="n">mdb</span><span class="o">.</span><span class="n">models</span><span class="p">[</span><span class="n">name</span><span class="p">]</span><span class="o">.</span><span class="n">steps</span><span class="p">[</span><span class="n">name</span><span class="p">]</span><span class="o">.</span><span class="n">adaptiveMeshConstraintStates</span><span class="p">[</span><span class="n">name</span><span class="p">]</span>
 </pre></div>
 </div>
-<dl class="simple">
-<dt>The corresponding analysis keywords are:</dt><dd><ul class="simple">
+<p>The corresponding analysis keywords are:</p>
+<ul class="simple">
 <li><p>ADAPTIVE MESH CONSTRAINT</p></li>
 </ul>
-</dd>
-</dl>
 <dl class="field-list simple">
 <dt class="field-odd">Attributes</dt>
 <dd class="field-odd"><dl class="simple">

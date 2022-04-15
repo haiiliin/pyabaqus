@@ -309,33 +309,35 @@
 
 <span class="sd">    Notes</span>
 <span class="sd">    -----</span>
-<span class="sd">        This object can be accessed by:</span>
+<span class="sd">    This object can be accessed by:</span>
+<span class="sd">    </span>
+<span class="sd">    .. code-block:: python</span>
 <span class="sd">        </span>
-<span class="sd">        .. code-block:: python</span>
-<span class="sd">            </span>
-<span class="sd">            import material</span>
-<span class="sd">            mdb.models[name].materials[name].hyperelastic.volumetricTestData</span>
-<span class="sd">            mdb.models[name].materials[name].hyperfoam.volumetricTestData</span>
-<span class="sd">            mdb.models[name].materials[name].viscoelastic.volumetricTestData</span>
-<span class="sd">            import odbMaterial</span>
-<span class="sd">            session.odbs[name].materials[name].hyperelastic.volumetricTestData</span>
-<span class="sd">            session.odbs[name].materials[name].hyperfoam.volumetricTestData</span>
-<span class="sd">            session.odbs[name].materials[name].viscoelastic.volumetricTestData</span>
+<span class="sd">        import material</span>
+<span class="sd">        mdb.models[name].materials[name].hyperelastic.volumetricTestData</span>
+<span class="sd">        mdb.models[name].materials[name].hyperfoam.volumetricTestData</span>
+<span class="sd">        mdb.models[name].materials[name].viscoelastic.volumetricTestData</span>
+<span class="sd">        import odbMaterial</span>
+<span class="sd">        session.odbs[name].materials[name].hyperelastic.volumetricTestData</span>
+<span class="sd">        session.odbs[name].materials[name].hyperfoam.volumetricTestData</span>
+<span class="sd">        session.odbs[name].materials[name].viscoelastic.volumetricTestData</span>
 
-<span class="sd">        The table data for this object are:</span>
-<span class="sd">        For a hyperelastic or hyperfoam material model, the table data specify the following:</span>
-<span class="sd">            - Pressure, p.</span>
-<span class="sd">            - Volume ratio, J (current volume/original volume).</span>
-<span class="sd">        For a viscoelastic material model, the values depend on the value of the *time* member of the [Viscoelastic](https://help.3ds.com/2022/english/DSSIMULIA_Established/SIMACAEKERRefMap/simaker-c-viscoelasticpyc.htm?ContextScope=all) object.</span>
-<span class="sd">        If *time*=RELAXATION_TEST_DATA, the table data specify the following:</span>
+<span class="sd">    The table data for this object are:</span>
+
+<span class="sd">    - For a hyperelastic or hyperfoam material model, the table data specify the following:</span>
+<span class="sd">        - Pressure, p.</span>
+<span class="sd">        - Volume ratio, J (current volume/original volume).</span>
+<span class="sd">    - For a viscoelastic material model, the values depend on the value of the *time* member of the [Viscoelastic](https://help.3ds.com/2022/english/DSSIMULIA_Established/SIMACAEKERRefMap/simaker-c-viscoelasticpyc.htm?ContextScope=all) object.</span>
+<span class="sd">        - If *time*=RELAXATION_TEST_DATA, the table data specify the following:</span>
 <span class="sd">            - Normalized volumetric (bulk) modulus kR(t),(0≤kR(t)≤1).</span>
 <span class="sd">            - Time t (t&gt;0).</span>
-<span class="sd">        If *time*=CREEP_TEST_DATA, the table data specify the following:</span>
+<span class="sd">        - If *time*=CREEP_TEST_DATA, the table data specify the following:</span>
 <span class="sd">            - Normalized volumetric (bulk) compliance jK(t),(jK(t)≥1).</span>
 <span class="sd">            - Time t (t&gt;0).</span>
 
 <span class="sd">    The corresponding analysis keywords are:</span>
-<span class="sd">        - VOLUMETRIC TEST DATA</span>
+
+<span class="sd">    - VOLUMETRIC TEST DATA</span>
 
 <span class="sd">    """</span>
 

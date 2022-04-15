@@ -336,17 +336,22 @@
 <span class="sd">        mdb.models[name].interactionProperties[name].damping</span>
 
 <span class="sd">        The table data for this object are:</span>
-<span class="sd">        If *definition*=DAMPING_COEFFICIENT and *clearanceDependence*=STEP, the table data specify the following:</span>
+
+<span class="sd">        - If *definition*=DAMPING_COEFFICIENT and *clearanceDependence*=STEP, the table data specify the following:</span>
 <span class="sd">            - Damping coefficient.</span>
-<span class="sd">        If *definition*=DAMPING_COEFFICIENT and *clearanceDependence*=LINEAR or BILINEAR, the table data specify the following:</span>
+<span class="sd">            </span>
+<span class="sd">        - If *definition*=DAMPING_COEFFICIENT and *clearanceDependence*=LINEAR or BILINEAR, the table data specify the following:</span>
+<span class="sd">        </span>
 <span class="sd">            - Damping coefficient.</span>
 <span class="sd">            - Clearance.</span>
-<span class="sd">        Two pairs must be given for *clearanceDependence*=LINEAR and three pairs for *clearanceDependence*=BILINEAR. The first pair must have *clearance*=0.0, and the last pair must have *coefficient*=0.0.</span>
-<span class="sd">        If *definition*=CRITICAL_DAMPING_FRACTION, the table data specify the following:</span>
+
+<span class="sd">            Two pairs must be given for *clearanceDependence*=LINEAR and three pairs for *clearanceDependence*=BILINEAR. The first pair must have *clearance*=0.0, and the last pair must have *coefficient*=0.0.</span>
+<span class="sd">        - If *definition*=CRITICAL_DAMPING_FRACTION, the table data specify the following:</span>
 <span class="sd">            - Critical damping fraction.</span>
 
 <span class="sd">    The corresponding analysis keywords are:</span>
-<span class="sd">        - CONTACT DAMPING</span>
+
+<span class="sd">    - CONTACT DAMPING</span>
 
 <span class="sd">    """</span>
 

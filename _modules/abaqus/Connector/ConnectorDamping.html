@@ -329,21 +329,22 @@
 <span class="sd">        session.odbs[name].sections[name].behaviorOptions[i]</span>
 
 <span class="sd">        The table data for this object are:</span>
-<span class="sd">        If *behavior*=LINEAR and *coupling*=UNCOUPLED, then each sequence of the table data specifies the following:</span>
+
+<span class="sd">        - If *behavior*=LINEAR and *coupling*=UNCOUPLED, then each sequence of the table data specifies the following:</span>
 <span class="sd">            - Damping coefficient (force or moment per relative velocity).</span>
 <span class="sd">            - Frequency (cycles/time), if the data depend on frequency.</span>
 <span class="sd">            - Temperature, if the data depend on temperature.</span>
 <span class="sd">            - Value of the first field variable, if the data depend on field variables.</span>
 <span class="sd">            - Value of the second field variable.</span>
 <span class="sd">            - Etc.</span>
-<span class="sd">        If *behavior*=NONLINEAR and *coupling*=UNCOUPLED, then each sequence of the table data specifies the following:</span>
+<span class="sd">        - If *behavior*=NONLINEAR and *coupling*=UNCOUPLED, then each sequence of the table data specifies the following:</span>
 <span class="sd">            - Force or moment.</span>
 <span class="sd">            - Relative displacement or rotation.</span>
 <span class="sd">            - Temperature, if the data depend on temperature.</span>
 <span class="sd">            - Value of the first field variable, if the data depend on field variables.</span>
 <span class="sd">            - Value of the second field variable.</span>
 <span class="sd">            - Etc.</span>
-<span class="sd">        If *behavior*=LINEAR and *coupling*=COUPLED, the table data specify the symmetric portion of the damping matrix</span>
+<span class="sd">        - If *behavior*=LINEAR and *coupling*=COUPLED, the table data specify the symmetric portion of the damping matrix</span>
 <span class="sd">        for the specified components followed by any temperature data and then any field data. For example, if</span>
 <span class="sd">        components 2, 3, and 5 are specified, the table portion of the command is as follows:</span>
 <span class="sd">        table=( (C22C22, C23C23, C25C25, C33C33, C35C35, C55C55,), )</span>
@@ -352,7 +353,7 @@
 <span class="sd">            - Value of the first field variable, if the data depend on field variables.</span>
 <span class="sd">            - Value of the second field variable.</span>
 <span class="sd">            - Etc.</span>
-<span class="sd">        If *behavior*=NONLINEAR and *coupling*=COUPLED_POSITION or COUPLED_MOTION, each sequence of the table data</span>
+<span class="sd">        - If *behavior*=NONLINEAR and *coupling*=COUPLED_POSITION or COUPLED_MOTION, each sequence of the table data</span>
 <span class="sd">        specifies the following:</span>
 <span class="sd">            - Force or moment for the directions in the *components* list.</span>
 <span class="sd">            - Relative velocity for the directions in the *components* list.</span>
@@ -367,7 +368,8 @@
 <span class="sd">            - Etc.</span>
 
 <span class="sd">    The corresponding analysis keywords are:</span>
-<span class="sd">        - CONNECTOR DAMPING</span>
+
+<span class="sd">    - CONNECTOR DAMPING</span>
 
 <span class="sd">    """</span>
 

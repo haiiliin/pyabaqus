@@ -309,45 +309,47 @@
 
 <span class="sd">    Notes</span>
 <span class="sd">    -----</span>
-<span class="sd">        This object can be accessed by:</span>
-<span class="sd">        </span>
-<span class="sd">        .. code-block:: python</span>
-<span class="sd">            </span>
-<span class="sd">            import material</span>
-<span class="sd">            mdb.models[name].materials[name].expansion</span>
-<span class="sd">            import odbMaterial</span>
-<span class="sd">            session.odbs[name].materials[name].expansion</span>
+<span class="sd">    This object can be accessed by:</span>
 
-<span class="sd">        The table data for this object are:</span>
-<span class="sd">        If *type*=ISOTROPIC, the table data specify the following:</span>
-<span class="sd">            - α in Abaqus/Standard or Abaqus/Explicit analysis.</span>
-<span class="sd">            - Temperature, if the data depend on temperature.</span>
-<span class="sd">            - Value of the first field variable, if the data depend on field variables.</span>
-<span class="sd">            - Value of the second field variable.</span>
-<span class="sd">            - Etc.</span>
-<span class="sd">        If *type*=ORTHOTROPIC, the table data specify the following:</span>
-<span class="sd">            - α11.</span>
-<span class="sd">            - α22.</span>
-<span class="sd">            - α33.</span>
-<span class="sd">            - Temperature, if the data depend on temperature.</span>
-<span class="sd">            - Value of the first field variable, if the data depend on field variables.</span>
-<span class="sd">            - Value of the second field variable.</span>
-<span class="sd">            - Etc.</span>
-<span class="sd">        If *type*=ANISOTROPIC, the table data specify the following:</span>
-<span class="sd">            - α11.</span>
-<span class="sd">            - α22.</span>
-<span class="sd">            - α33. (Not used for plane stress case.)</span>
-<span class="sd">            - α12.</span>
-<span class="sd">            - α13.</span>
-<span class="sd">            - α23.</span>
-<span class="sd">            - Temperature, if the data depend on temperature.</span>
-<span class="sd">            - Value of the first field variable, if the data depend on field variables.</span>
-<span class="sd">            - Value of the second field variable.</span>
-<span class="sd">            - Etc.</span>
-<span class="sd">        If *type*=SHORT_FIBER, there is no table data.</span>
+<span class="sd">    .. code-block:: python</span>
+
+<span class="sd">        import material</span>
+<span class="sd">        mdb.models[name].materials[name].expansion</span>
+<span class="sd">        import odbMaterial</span>
+<span class="sd">        session.odbs[name].materials[name].expansion</span>
+
+<span class="sd">    The table data for this object are:</span>
+
+<span class="sd">    - If *type*=ISOTROPIC, the table data specify the following:</span>
+<span class="sd">        - α in Abaqus/Standard or Abaqus/Explicit analysis.</span>
+<span class="sd">        - Temperature, if the data depend on temperature.</span>
+<span class="sd">        - Value of the first field variable, if the data depend on field variables.</span>
+<span class="sd">        - Value of the second field variable.</span>
+<span class="sd">        - Etc.</span>
+<span class="sd">    - If *type*=ORTHOTROPIC, the table data specify the following:</span>
+<span class="sd">        - α11.</span>
+<span class="sd">        - α22.</span>
+<span class="sd">        - α33.</span>
+<span class="sd">        - Temperature, if the data depend on temperature.</span>
+<span class="sd">        - Value of the first field variable, if the data depend on field variables.</span>
+<span class="sd">        - Value of the second field variable.</span>
+<span class="sd">        - Etc.</span>
+<span class="sd">    - If *type*=ANISOTROPIC, the table data specify the following:</span>
+<span class="sd">        - α11.</span>
+<span class="sd">        - α22.</span>
+<span class="sd">        - α33. (Not used for plane stress case.)</span>
+<span class="sd">        - α12.</span>
+<span class="sd">        - α13.</span>
+<span class="sd">        - α23.</span>
+<span class="sd">        - Temperature, if the data depend on temperature.</span>
+<span class="sd">        - Value of the first field variable, if the data depend on field variables.</span>
+<span class="sd">        - Value of the second field variable.</span>
+<span class="sd">        - Etc.</span>
+<span class="sd">    - If *type*=SHORT_FIBER, there is no table data.</span>
 
 <span class="sd">    The corresponding analysis keywords are:</span>
-<span class="sd">        - EXPANSION</span>
+
+<span class="sd">    - EXPANSION</span>
 
 <span class="sd">    """</span>
 

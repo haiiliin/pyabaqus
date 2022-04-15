@@ -314,23 +314,26 @@
 
 <span class="sd">    Notes</span>
 <span class="sd">    -----</span>
-<span class="sd">        This object can be accessed by:</span>
-<span class="sd">        </span>
-<span class="sd">        .. code-block:: python</span>
-<span class="sd">            </span>
-<span class="sd">            import material</span>
-<span class="sd">            mdb.models[name].materials[name].hyperfoam</span>
-<span class="sd">            import odbMaterial</span>
-<span class="sd">            session.odbs[name].materials[name].hyperfoam</span>
+<span class="sd">    This object can be accessed by:</span>
 
-<span class="sd">        The table data for this object are:</span>
-<span class="sd">        The items in the table data specify the following for values of nn:</span>
-<span class="sd">            - μi and αi for i from 1 to n.</span>
-<span class="sd">            - νi.</span>
-<span class="sd">            - Temperature, if the data depend on temperature. Temperature dependence is not allowed for 4 ≤n≤ 6 in an Abaqus/Explicit analysis.</span>
+<span class="sd">    .. code-block:: python</span>
+
+<span class="sd">        import material</span>
+<span class="sd">        mdb.models[name].materials[name].hyperfoam</span>
+<span class="sd">        import odbMaterial</span>
+<span class="sd">        session.odbs[name].materials[name].hyperfoam</span>
+
+<span class="sd">    The table data for this object are:</span>
+<span class="sd">    The items in the table data specify the following for values of nn:</span>
+
+<span class="sd">    - μi and αi for i from 1 to n.</span>
+<span class="sd">    - νi.</span>
+<span class="sd">    - Temperature, if the data depend on temperature. Temperature dependence is not allowed for 4 ≤n≤ 6 in an</span>
+<span class="sd">    Abaqus/Explicit analysis.</span>
 
 <span class="sd">    The corresponding analysis keywords are:</span>
-<span class="sd">        - HYPERFOAM</span>
+
+<span class="sd">    - HYPERFOAM</span>
 
 <span class="sd">    """</span>
 

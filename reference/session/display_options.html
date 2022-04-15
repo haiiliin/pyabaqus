@@ -627,14 +627,14 @@ session.viewports[name].assemblyDisplay.engineeringFeatures=ON
 The EngineeringFeatureDisplayOptions object has no constructor. When you create a new 
 viewport, the settings are copied from the current viewport.</p>
 <p class="rubric">Notes</p>
-<dl class="simple">
-<dt>This object can be accessed by:</dt><dd><p>session.viewports[name].assemblyDisplay.engineeringFeatureOptions
-session.viewports[name].layers[name].assemblyDisplay.engineeringFeatureOptions
-import part
-session.viewports[name].layers[name].partDisplay.engineeringFeatureOptions
-session.viewports[name].partDisplay.engineeringFeatureOptions</p>
-</dd>
-</dl>
+<p>This object can be accessed by:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">session</span><span class="o">.</span><span class="n">viewports</span><span class="p">[</span><span class="n">name</span><span class="p">]</span><span class="o">.</span><span class="n">assemblyDisplay</span><span class="o">.</span><span class="n">engineeringFeatureOptions</span>
+<span class="n">session</span><span class="o">.</span><span class="n">viewports</span><span class="p">[</span><span class="n">name</span><span class="p">]</span><span class="o">.</span><span class="n">layers</span><span class="p">[</span><span class="n">name</span><span class="p">]</span><span class="o">.</span><span class="n">assemblyDisplay</span><span class="o">.</span><span class="n">engineeringFeatureOptions</span>
+<span class="kn">import</span> <span class="nn">part</span>
+<span class="n">session</span><span class="o">.</span><span class="n">viewports</span><span class="p">[</span><span class="n">name</span><span class="p">]</span><span class="o">.</span><span class="n">layers</span><span class="p">[</span><span class="n">name</span><span class="p">]</span><span class="o">.</span><span class="n">partDisplay</span><span class="o">.</span><span class="n">engineeringFeatureOptions</span>
+<span class="n">session</span><span class="o">.</span><span class="n">viewports</span><span class="p">[</span><span class="n">name</span><span class="p">]</span><span class="o">.</span><span class="n">partDisplay</span><span class="o">.</span><span class="n">engineeringFeatureOptions</span>
+</pre></div>
+</div>
 <p class="rubric">Methods</p>
 <div class="table-wrapper"><table class="autosummary longtable docutils align-default">
 <colgroup>
@@ -799,13 +799,13 @@ displayed in a particular viewport. The GeometryDisplayOptions object has no
 constructor. When you create a new viewport, the settings are copied from the current 
 viewport.</p>
 <p class="rubric">Notes</p>
-<dl class="simple">
-<dt>This object can be accessed by:</dt><dd><p>session.viewports[name].assemblyDisplay.geometryOptions
-session.viewports[name].layers[name].assemblyDisplay.geometryOptions
-session.viewports[name].layers[name].partDisplay.geometryOptions
-session.viewports[name].partDisplay.geometryOptions</p>
-</dd>
-</dl>
+<p>This object can be accessed by:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">session</span><span class="o">.</span><span class="n">viewports</span><span class="p">[</span><span class="n">name</span><span class="p">]</span><span class="o">.</span><span class="n">assemblyDisplay</span><span class="o">.</span><span class="n">geometryOptions</span>
+<span class="n">session</span><span class="o">.</span><span class="n">viewports</span><span class="p">[</span><span class="n">name</span><span class="p">]</span><span class="o">.</span><span class="n">layers</span><span class="p">[</span><span class="n">name</span><span class="p">]</span><span class="o">.</span><span class="n">assemblyDisplay</span><span class="o">.</span><span class="n">geometryOptions</span>
+<span class="n">session</span><span class="o">.</span><span class="n">viewports</span><span class="p">[</span><span class="n">name</span><span class="p">]</span><span class="o">.</span><span class="n">layers</span><span class="p">[</span><span class="n">name</span><span class="p">]</span><span class="o">.</span><span class="n">partDisplay</span><span class="o">.</span><span class="n">geometryOptions</span>
+<span class="n">session</span><span class="o">.</span><span class="n">viewports</span><span class="p">[</span><span class="n">name</span><span class="p">]</span><span class="o">.</span><span class="n">partDisplay</span><span class="o">.</span><span class="n">geometryOptions</span>
+</pre></div>
+</div>
 <p class="rubric">Methods</p>
 <div class="table-wrapper"><table class="autosummary longtable docutils align-default">
 <colgroup>
@@ -877,10 +877,10 @@ display Abaqus/CAE on the same machine, you will typically see identical values 
 the name of the server and the name of the client. 
 The members are all read-only.</p>
 <p class="rubric">Notes</p>
-<dl class="simple">
-<dt>This object can be accessed by:</dt><dd><p>session.graphicsInfo</p>
-</dd>
-</dl>
+<p>This object can be accessed by:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">session</span><span class="o">.</span><span class="n">graphicsInfo</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Attributes</dt>
 <dd class="field-odd"><dl class="simple">
@@ -933,11 +933,11 @@ members of the GraphicsOptions object. If your graphics hardware is not supporte
 Abaqus/CAE, or if you wish to override the default graphics options, you can modify 
 settings in the environment file. For more information, see Tuning graphics cards.</p>
 <p class="rubric">Notes</p>
-<dl class="simple">
-<dt>This object can be accessed by:</dt><dd><p>session.defaultGraphicsOptions
-session.graphicsOptions</p>
-</dd>
-</dl>
+<p>This object can be accessed by:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">session</span><span class="o">.</span><span class="n">defaultGraphicsOptions</span>
+<span class="n">session</span><span class="o">.</span><span class="n">graphicsOptions</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Attributes</dt>
 <dd class="field-odd"><dl class="simple">
@@ -1384,11 +1384,11 @@ session.viewports[name].assemblyDisplay.interactions=ON
 The InteractionDisplayOptions object has no constructor. When you create a new viewport, 
 the settings are copied from the current viewport.</p>
 <p class="rubric">Notes</p>
-<dl class="simple">
-<dt>This object can be accessed by:</dt><dd><p>session.viewports[name].assemblyDisplay.interactionOptions
-session.viewports[name].layers[name].assemblyDisplay.interactionOptions</p>
-</dd>
-</dl>
+<p>This object can be accessed by:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">session</span><span class="o">.</span><span class="n">viewports</span><span class="p">[</span><span class="n">name</span><span class="p">]</span><span class="o">.</span><span class="n">assemblyDisplay</span><span class="o">.</span><span class="n">interactionOptions</span>
+<span class="n">session</span><span class="o">.</span><span class="n">viewports</span><span class="p">[</span><span class="n">name</span><span class="p">]</span><span class="o">.</span><span class="n">layers</span><span class="p">[</span><span class="n">name</span><span class="p">]</span><span class="o">.</span><span class="n">assemblyDisplay</span><span class="o">.</span><span class="n">interactionOptions</span>
+</pre></div>
+</div>
 <p class="rubric">Methods</p>
 <div class="table-wrapper"><table class="autosummary longtable docutils align-default">
 <colgroup>
@@ -1450,11 +1450,11 @@ is set to SHADED.
 The Light object has no constructor; Abaqus creates them as part of the 
 <em>defaultLightOptions</em> and the <em>lightOptions</em> objects when a session is started.</p>
 <p class="rubric">Notes</p>
-<dl class="simple">
-<dt>This object can be accessed by:</dt><dd><p>session.defaultLightOptions.lights[i]
-session.viewports[name].lightOptions.lights[i]</p>
-</dd>
-</dl>
+<p>This object can be accessed by:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">session</span><span class="o">.</span><span class="n">defaultLightOptions</span><span class="o">.</span><span class="n">lights</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
+<span class="n">session</span><span class="o">.</span><span class="n">viewports</span><span class="p">[</span><span class="n">name</span><span class="p">]</span><span class="o">.</span><span class="n">lightOptions</span><span class="o">.</span><span class="n">lights</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
+</pre></div>
+</div>
 <p class="rubric">Methods</p>
 <div class="table-wrapper"><table class="autosummary longtable docutils align-default">
 <colgroup>
@@ -1542,11 +1542,11 @@ The LightOptions object has no constructor; Abaqus creates the <em>defaultLightO
 member when a session is started. When a new viewport is created, the <em>lightOptions</em> 
 member is copied from the current viewport.</p>
 <p class="rubric">Notes</p>
-<dl class="simple">
-<dt>This object can be accessed by:</dt><dd><p>session.defaultLightOptions
-session.viewports[name].lightOptions</p>
-</dd>
-</dl>
+<p>This object can be accessed by:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">session</span><span class="o">.</span><span class="n">defaultLightOptions</span>
+<span class="n">session</span><span class="o">.</span><span class="n">viewports</span><span class="p">[</span><span class="n">name</span><span class="p">]</span><span class="o">.</span><span class="n">lightOptions</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Attributes</dt>
 <dd class="field-odd"><dl class="simple">
@@ -1660,11 +1660,11 @@ session.viewports[name].assemblyDisplay.loads=ON
 The LoadDisplayOptions object has no constructor. When you create a new viewport, the 
 settings are copied from the current viewport.</p>
 <p class="rubric">Notes</p>
-<dl class="simple">
-<dt>This object can be accessed by:</dt><dd><p>session.viewports[name].assemblyDisplay.loadOptions
-session.viewports[name].layers[name].assemblyDisplay.loadOptions</p>
-</dd>
-</dl>
+<p>This object can be accessed by:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">session</span><span class="o">.</span><span class="n">viewports</span><span class="p">[</span><span class="n">name</span><span class="p">]</span><span class="o">.</span><span class="n">assemblyDisplay</span><span class="o">.</span><span class="n">loadOptions</span>
+<span class="n">session</span><span class="o">.</span><span class="n">viewports</span><span class="p">[</span><span class="n">name</span><span class="p">]</span><span class="o">.</span><span class="n">layers</span><span class="p">[</span><span class="n">name</span><span class="p">]</span><span class="o">.</span><span class="n">assemblyDisplay</span><span class="o">.</span><span class="n">loadOptions</span>
+</pre></div>
+</div>
 <p class="rubric">Methods</p>
 <div class="table-wrapper"><table class="autosummary longtable docutils align-default">
 <colgroup>
@@ -1787,13 +1787,13 @@ session.viewports[name].assemblyDisplay.mesh=ON
 The MeshDisplayOptions object has no constructor. When you create a new viewport, the 
 settings are copied from the current viewport.</p>
 <p class="rubric">Notes</p>
-<dl class="simple">
-<dt>This object can be accessed by:</dt><dd><p>session.viewports[name].assemblyDisplay.meshOptions
-session.viewports[name].layers[name].assemblyDisplay.meshOptions
-session.viewports[name].layers[name].partDisplay.meshOptions
-session.viewports[name].partDisplay.meshOptions</p>
-</dd>
-</dl>
+<p>This object can be accessed by:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">session</span><span class="o">.</span><span class="n">viewports</span><span class="p">[</span><span class="n">name</span><span class="p">]</span><span class="o">.</span><span class="n">assemblyDisplay</span><span class="o">.</span><span class="n">meshOptions</span>
+<span class="n">session</span><span class="o">.</span><span class="n">viewports</span><span class="p">[</span><span class="n">name</span><span class="p">]</span><span class="o">.</span><span class="n">layers</span><span class="p">[</span><span class="n">name</span><span class="p">]</span><span class="o">.</span><span class="n">assemblyDisplay</span><span class="o">.</span><span class="n">meshOptions</span>
+<span class="n">session</span><span class="o">.</span><span class="n">viewports</span><span class="p">[</span><span class="n">name</span><span class="p">]</span><span class="o">.</span><span class="n">layers</span><span class="p">[</span><span class="n">name</span><span class="p">]</span><span class="o">.</span><span class="n">partDisplay</span><span class="o">.</span><span class="n">meshOptions</span>
+<span class="n">session</span><span class="o">.</span><span class="n">viewports</span><span class="p">[</span><span class="n">name</span><span class="p">]</span><span class="o">.</span><span class="n">partDisplay</span><span class="o">.</span><span class="n">meshOptions</span>
+</pre></div>
+</div>
 <p class="rubric">Methods</p>
 <div class="table-wrapper"><table class="autosummary longtable docutils align-default">
 <colgroup>
@@ -1860,11 +1860,11 @@ session.viewports[name].assemblyDisplay.optimizationTasks=ON
 The OptimizationTaskDisplayOptions object has no constructor. When you create a new 
 viewport, the settings are copied from the current viewport.</p>
 <p class="rubric">Notes</p>
-<dl class="simple">
-<dt>This object can be accessed by:</dt><dd><p>session.viewports[name].assemblyDisplay.optimizationTaskOptions
-session.viewports[name].layers[name].assemblyDisplay.optimizationTaskOptions</p>
-</dd>
-</dl>
+<p>This object can be accessed by:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">session</span><span class="o">.</span><span class="n">viewports</span><span class="p">[</span><span class="n">name</span><span class="p">]</span><span class="o">.</span><span class="n">assemblyDisplay</span><span class="o">.</span><span class="n">optimizationTaskOptions</span>
+<span class="n">session</span><span class="o">.</span><span class="n">viewports</span><span class="p">[</span><span class="n">name</span><span class="p">]</span><span class="o">.</span><span class="n">layers</span><span class="p">[</span><span class="n">name</span><span class="p">]</span><span class="o">.</span><span class="n">assemblyDisplay</span><span class="o">.</span><span class="n">optimizationTaskOptions</span>
+</pre></div>
+</div>
 <p class="rubric">Methods</p>
 <div class="table-wrapper"><table class="autosummary longtable docutils align-default">
 <colgroup>
@@ -1908,12 +1908,12 @@ session.viewports[name].layers[name].assemblyDisplay.optimizationTaskOptions</p>
 in a particular viewport. The PartDisplayOptions object has no constructor. When you 
 create a new viewport, the settings are copied from the current viewport.</p>
 <p class="rubric">Notes</p>
-<dl class="simple">
-<dt>This object can be accessed by:</dt><dd><p>session.viewports[name].layers[name].partDisplay
-import part
-session.viewports[name].partDisplay</p>
-</dd>
-</dl>
+<p>This object can be accessed by:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">session</span><span class="o">.</span><span class="n">viewports</span><span class="p">[</span><span class="n">name</span><span class="p">]</span><span class="o">.</span><span class="n">layers</span><span class="p">[</span><span class="n">name</span><span class="p">]</span><span class="o">.</span><span class="n">partDisplay</span>
+<span class="kn">import</span> <span class="nn">part</span>
+<span class="n">session</span><span class="o">.</span><span class="n">viewports</span><span class="p">[</span><span class="n">name</span><span class="p">]</span><span class="o">.</span><span class="n">partDisplay</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Attributes</dt>
 <dd class="field-odd"><dl class="simple">
@@ -1998,11 +1998,11 @@ session.viewports[name].assemblyDisplay.predefinedFields=ON
 The PredefinedFieldDisplayOptions object has no constructor. When you create a new 
 viewport, the settings are copied from the current viewport.</p>
 <p class="rubric">Notes</p>
-<dl class="simple">
-<dt>This object can be accessed by:</dt><dd><p>session.viewports[name].assemblyDisplay.predefinedFieldOptions
-session.viewports[name].layers[name].assemblyDisplay.predefinedFieldOptions</p>
-</dd>
-</dl>
+<p>This object can be accessed by:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">session</span><span class="o">.</span><span class="n">viewports</span><span class="p">[</span><span class="n">name</span><span class="p">]</span><span class="o">.</span><span class="n">assemblyDisplay</span><span class="o">.</span><span class="n">predefinedFieldOptions</span>
+<span class="n">session</span><span class="o">.</span><span class="n">viewports</span><span class="p">[</span><span class="n">name</span><span class="p">]</span><span class="o">.</span><span class="n">layers</span><span class="p">[</span><span class="n">name</span><span class="p">]</span><span class="o">.</span><span class="n">assemblyDisplay</span><span class="o">.</span><span class="n">predefinedFieldOptions</span>
+</pre></div>
+</div>
 <p class="rubric">Methods</p>
 <div class="table-wrapper"><table class="autosummary longtable docutils align-default">
 <colgroup>
@@ -2056,11 +2056,11 @@ session.viewports[name].assemblyDisplay.stopConditions=ON
 The StopConditionDisplayOptions object has no constructor. When you create a new 
 viewport, the settings are copied from the current viewport.</p>
 <p class="rubric">Notes</p>
-<dl class="simple">
-<dt>This object can be accessed by:</dt><dd><p>session.viewports[name].assemblyDisplay.stopConditionOptions
-session.viewports[name].layers[name].assemblyDisplay.stopConditionOptions</p>
-</dd>
-</dl>
+<p>This object can be accessed by:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">session</span><span class="o">.</span><span class="n">viewports</span><span class="p">[</span><span class="n">name</span><span class="p">]</span><span class="o">.</span><span class="n">assemblyDisplay</span><span class="o">.</span><span class="n">stopConditionOptions</span>
+<span class="n">session</span><span class="o">.</span><span class="n">viewports</span><span class="p">[</span><span class="n">name</span><span class="p">]</span><span class="o">.</span><span class="n">layers</span><span class="p">[</span><span class="n">name</span><span class="p">]</span><span class="o">.</span><span class="n">assemblyDisplay</span><span class="o">.</span><span class="n">stopConditionOptions</span>
+</pre></div>
+</div>
 <p class="rubric">Methods</p>
 <div class="table-wrapper"><table class="autosummary longtable docutils align-default">
 <colgroup>
@@ -2103,11 +2103,11 @@ is ON.</p>
 displayed in a particular viewport. The SymbolDisplayOptions object has no constructor. 
 When you create a new viewport, the settings are copied from the current viewport.</p>
 <p class="rubric">Notes</p>
-<dl class="simple">
-<dt>This object can be accessed by:</dt><dd><p>session.viewports[name].assemblyDisplay.symbolOptions
-session.viewports[name].layers[name].assemblyDisplay.symbolOptions</p>
-</dd>
-</dl>
+<p>This object can be accessed by:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">session</span><span class="o">.</span><span class="n">viewports</span><span class="p">[</span><span class="n">name</span><span class="p">]</span><span class="o">.</span><span class="n">assemblyDisplay</span><span class="o">.</span><span class="n">symbolOptions</span>
+<span class="n">session</span><span class="o">.</span><span class="n">viewports</span><span class="p">[</span><span class="n">name</span><span class="p">]</span><span class="o">.</span><span class="n">layers</span><span class="p">[</span><span class="n">name</span><span class="p">]</span><span class="o">.</span><span class="n">assemblyDisplay</span><span class="o">.</span><span class="n">symbolOptions</span>
+</pre></div>
+</div>
 <p class="rubric">Methods</p>
 <div class="table-wrapper"><table class="autosummary longtable docutils align-default">
 <colgroup>
@@ -2167,11 +2167,11 @@ The ViewportAnnotationOptions object has no constructor; Abaqus creates the
 <em>defaultViewportAnnotationOptions</em> member when a session is started. When a new viewport 
 is created, the settings are copied from the current viewport.</p>
 <p class="rubric">Notes</p>
-<dl class="simple">
-<dt>This object can be accessed by:</dt><dd><p>session.defaultViewportAnnotationOptions
-session.viewports[name].viewportAnnotationOptions</p>
-</dd>
-</dl>
+<p>This object can be accessed by:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">session</span><span class="o">.</span><span class="n">defaultViewportAnnotationOptions</span>
+<span class="n">session</span><span class="o">.</span><span class="n">viewports</span><span class="p">[</span><span class="n">name</span><span class="p">]</span><span class="o">.</span><span class="n">viewportAnnotationOptions</span>
+</pre></div>
+</div>
 <p class="rubric">Methods</p>
 <div class="table-wrapper"><table class="autosummary longtable docutils align-default">
 <colgroup>

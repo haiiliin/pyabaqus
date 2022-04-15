@@ -311,33 +311,35 @@
 
 <span class="sd">    Notes</span>
 <span class="sd">    -----</span>
-<span class="sd">        This object can be accessed by:</span>
+<span class="sd">    This object can be accessed by:</span>
+<span class="sd">    </span>
+<span class="sd">    .. code-block:: python</span>
 <span class="sd">        </span>
-<span class="sd">        .. code-block:: python</span>
-<span class="sd">            </span>
-<span class="sd">            import material</span>
-<span class="sd">            mdb.models[name].materials[name].crushableFoam</span>
-<span class="sd">            import odbMaterial</span>
-<span class="sd">            session.odbs[name].materials[name].crushableFoam</span>
+<span class="sd">        import material</span>
+<span class="sd">        mdb.models[name].materials[name].crushableFoam</span>
+<span class="sd">        import odbMaterial</span>
+<span class="sd">        session.odbs[name].materials[name].crushableFoam</span>
 
-<span class="sd">        The table data for this object are:</span>
-<span class="sd">        If *hardening*=VOLUMETRIC, the table data specify the following:</span>
-<span class="sd">            - Ratio, k, of initial yield stress in uniaxial compression, σc0, to initial yield stress in hydrostatic compression, p0cpc0; 0.0 &lt;k&lt; 3.0.</span>
-<span class="sd">            - Ratio, kt, of yield stress in hydrostatic tension, pt, to initial yield stress in hydrostatic compression, pc0. The default value is 1.0.</span>
-<span class="sd">            - Temperature, if the data depend on temperature.</span>
-<span class="sd">            - Value of the first field variable, if the data depend on field variables.</span>
-<span class="sd">            - Value of the second field variable.</span>
-<span class="sd">            - Etc.</span>
-<span class="sd">        If *hardening*=ISOTROPIC, the table data specify the following:</span>
-<span class="sd">            - Ratio, k, of initial yield stress in uniaxial compression, σ0cσc0, to initial yield stress in hydrostatic compression, p00; 0.0 ≤k≤ 3.0.</span>
-<span class="sd">            - Plastic Poisson's ratio.νpνp; -1≤νp≤0.5.</span>
-<span class="sd">            - Temperature, if the data depend on temperature.</span>
-<span class="sd">            - Value of the first field variable, if the data depend on field variables.</span>
-<span class="sd">            - Value of the second field variable.</span>
-<span class="sd">            - Etc.</span>
+<span class="sd">    The table data for this object are:</span>
+
+<span class="sd">    - If *hardening*=VOLUMETRIC, the table data specify the following:</span>
+<span class="sd">        - Ratio, k, of initial yield stress in uniaxial compression, σc0, to initial yield stress in hydrostatic compression, p0cpc0; 0.0 &lt;k&lt; 3.0.</span>
+<span class="sd">        - Ratio, kt, of yield stress in hydrostatic tension, pt, to initial yield stress in hydrostatic compression, pc0. The default value is 1.0.</span>
+<span class="sd">        - Temperature, if the data depend on temperature.</span>
+<span class="sd">        - Value of the first field variable, if the data depend on field variables.</span>
+<span class="sd">        - Value of the second field variable.</span>
+<span class="sd">        - Etc.</span>
+<span class="sd">    - If *hardening*=ISOTROPIC, the table data specify the following:</span>
+<span class="sd">        - Ratio, k, of initial yield stress in uniaxial compression, σ0cσc0, to initial yield stress in hydrostatic compression, p00; 0.0 ≤k≤ 3.0.</span>
+<span class="sd">        - Plastic Poisson's ratio.νpνp; -1≤νp≤0.5.</span>
+<span class="sd">        - Temperature, if the data depend on temperature.</span>
+<span class="sd">        - Value of the first field variable, if the data depend on field variables.</span>
+<span class="sd">        - Value of the second field variable.</span>
+<span class="sd">        - Etc.</span>
 
 <span class="sd">    The corresponding analysis keywords are:</span>
-<span class="sd">        - CRUSHABLE FOAM</span>
+
+<span class="sd">    - CRUSHABLE FOAM</span>
 
 <span class="sd">    """</span>
 

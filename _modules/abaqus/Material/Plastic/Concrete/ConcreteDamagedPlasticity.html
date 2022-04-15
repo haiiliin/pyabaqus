@@ -313,29 +313,30 @@
 
 <span class="sd">    Notes</span>
 <span class="sd">    -----</span>
-<span class="sd">        This object can be accessed by:</span>
+<span class="sd">    This object can be accessed by:</span>
+<span class="sd">    </span>
+<span class="sd">    .. code-block:: python</span>
 <span class="sd">        </span>
-<span class="sd">        .. code-block:: python</span>
-<span class="sd">            </span>
-<span class="sd">            import material</span>
-<span class="sd">            mdb.models[name].materials[name].concreteDamagedPlasticity</span>
-<span class="sd">            import odbMaterial</span>
-<span class="sd">            session.odbs[name].materials[name].concreteDamagedPlasticity</span>
+<span class="sd">        import material</span>
+<span class="sd">        mdb.models[name].materials[name].concreteDamagedPlasticity</span>
+<span class="sd">        import odbMaterial</span>
+<span class="sd">        session.odbs[name].materials[name].concreteDamagedPlasticity</span>
 
-<span class="sd">        The table data for this object are:</span>
-<span class="sd">        The table data specify the following:</span>
-<span class="sd">            - Dilation angle, ψ (in degrees) in the p–q plane.</span>
-<span class="sd">            - Flow potential eccentricity, ϵ. The default value is 0.1.</span>
-<span class="sd">            - σb0/σt0σb⁢0/σt⁢0, the ratio of initial equibiaxial compressive yield stress to initial uniaxial compressive yield stress. The default value is 1.16.</span>
-<span class="sd">            - Kc, the ratio of the second stress invariant on the tensile meridian, to that on the compressive meridian, at initial yield for any given value of the pressure invariant p such that the maximum principal stress is negative. The default value is 2/3.</span>
-<span class="sd">            - Viscosity parameter, μ, used for the viscoplastic regularization of the concrete constitutive equations in an Abaqus/Standard analysis. This parameter is ignored in an Abaqus/Explicit analysis. The default value is 0.0.</span>
-<span class="sd">            - Temperature, if the data depend on temperature.</span>
-<span class="sd">            - Value of the first field variable, if the data depend on field variables.</span>
-<span class="sd">            - Value of the second field variable.</span>
-<span class="sd">            - Etc.</span>
+<span class="sd">    The table data for this object are:</span>
+<span class="sd">    </span>
+<span class="sd">    - Dilation angle, ψ (in degrees) in the p–q plane.</span>
+<span class="sd">    - Flow potential eccentricity, ϵ. The default value is 0.1.</span>
+<span class="sd">    - σb0/σt0σb⁢0/σt⁢0, the ratio of initial equibiaxial compressive yield stress to initial uniaxial compressive yield stress. The default value is 1.16.</span>
+<span class="sd">    - Kc, the ratio of the second stress invariant on the tensile meridian, to that on the compressive meridian, at initial yield for any given value of the pressure invariant p such that the maximum principal stress is negative. The default value is 2/3.</span>
+<span class="sd">    - Viscosity parameter, μ, used for the viscoplastic regularization of the concrete constitutive equations in an Abaqus/Standard analysis. This parameter is ignored in an Abaqus/Explicit analysis. The default value is 0.0.</span>
+<span class="sd">    - Temperature, if the data depend on temperature.</span>
+<span class="sd">    - Value of the first field variable, if the data depend on field variables.</span>
+<span class="sd">    - Value of the second field variable.</span>
+<span class="sd">    - Etc.</span>
 
 <span class="sd">    The corresponding analysis keywords are:</span>
-<span class="sd">        - CONCRETE DAMAGED PLASTICITY</span>
+
+<span class="sd">    - CONCRETE DAMAGED PLASTICITY</span>
 
 <span class="sd">    """</span>
 

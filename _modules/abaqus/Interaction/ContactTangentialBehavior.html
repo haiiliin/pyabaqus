@@ -361,7 +361,8 @@
 <span class="sd">        mdb.models[name].interactionProperties[name].tangentialBehavior</span>
 
 <span class="sd">        The table data for this object are:</span>
-<span class="sd">        If *formulation*=PENALTY or LAGRANGE, the table data specify the following:</span>
+
+<span class="sd">        - If *formulation*=PENALTY or LAGRANGE, the table data specify the following:</span>
 <span class="sd">            - Friction coefficient in the first slip direction, μ1μ1.</span>
 <span class="sd">            - Friction coefficient in the second slip direction, μ2μ2 (if *directionality*=ANISOTROPIC).</span>
 <span class="sd">            - Slip rate, if the data depend on slip rate.</span>
@@ -370,20 +371,21 @@
 <span class="sd">            - Value of the first field variable, if the data depend on field variables.</span>
 <span class="sd">            - Value of the second field variable.</span>
 <span class="sd">            - Etc.</span>
-<span class="sd">        If *formulation*=EXPONENTIAL_DECAY and *exponentialDecayDefinition*=COEFFICIENTS, the table data specify the</span>
+<span class="sd">        - If *formulation*=EXPONENTIAL_DECAY and *exponentialDecayDefinition*=COEFFICIENTS, the table data specify the</span>
 <span class="sd">        following:</span>
 <span class="sd">            - Static friction coefficient.</span>
 <span class="sd">            - Kinetic friction coefficient.</span>
 <span class="sd">            - Decay coefficient.</span>
-<span class="sd">        If *formulation*=EXPONENTIAL_DECAY and *exponentialDecayDefinition*=TEST_DATA, the table data specify the</span>
+<span class="sd">        - If *formulation*=EXPONENTIAL_DECAY and *exponentialDecayDefinition*=TEST_DATA, the table data specify the</span>
 <span class="sd">        following:</span>
 <span class="sd">            - Friction coefficient.</span>
 <span class="sd">            - Slip rate.</span>
-<span class="sd">        If *formulation*=USER_DEFINED, the table data specify the following:</span>
+<span class="sd">        - If *formulation*=USER_DEFINED, the table data specify the following:</span>
 <span class="sd">            - Friction property.</span>
 
 <span class="sd">    The corresponding analysis keywords are:</span>
-<span class="sd">        - FRICTION</span>
+
+<span class="sd">    - FRICTION</span>
 <span class="sd">            - CHANGE FRICTION</span>
 
 <span class="sd">    """</span>

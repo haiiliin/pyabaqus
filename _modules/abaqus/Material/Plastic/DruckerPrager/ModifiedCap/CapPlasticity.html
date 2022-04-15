@@ -312,29 +312,31 @@
 
 <span class="sd">    Notes</span>
 <span class="sd">    -----</span>
-<span class="sd">        This object can be accessed by:</span>
+<span class="sd">    This object can be accessed by:</span>
+<span class="sd">    </span>
+<span class="sd">    .. code-block:: python</span>
 <span class="sd">        </span>
-<span class="sd">        .. code-block:: python</span>
-<span class="sd">            </span>
-<span class="sd">            import material</span>
-<span class="sd">            mdb.models[name].materials[name].capPlasticity</span>
-<span class="sd">            import odbMaterial</span>
-<span class="sd">            session.odbs[name].materials[name].capPlasticity</span>
+<span class="sd">        import material</span>
+<span class="sd">        mdb.models[name].materials[name].capPlasticity</span>
+<span class="sd">        import odbMaterial</span>
+<span class="sd">        session.odbs[name].materials[name].capPlasticity</span>
 
-<span class="sd">        The table data for this object are:</span>
-<span class="sd">            - Material cohesion, d, in the p–t plane (Abaqus/Standard) or in the p–q plane (Abaqus/Explicit).</span>
-<span class="sd">            - Material angle of friction, β, in the p–t plane (Abaqus/Standard) or in the p–q plane (Abaqus/Explicit). Give the value in degrees.</span>
-<span class="sd">            - Cap eccentricity parameter, RR. Its value must be greater than zero (typically 0.0 &lt;R&lt; 1.0).</span>
-<span class="sd">            - Initial cap yield surface position, ε_vol^pl|0.</span>
-<span class="sd">            - Transition surface radius parameter, αα. The default value is 0.0 (i.e., no transition surface).</span>
-<span class="sd">            - (Not used in Abaqus/Explicit) K, the ratio of the flow stress in triaxial tension to the flow stress in triaxial compression. Possible values are 0.778 ≤K≤ 1.0. If the default value of 0.0 is accepted, Abaqus/Standard assumes K= 1.0.</span>
-<span class="sd">            - Temperature, if the data depend on temperature.</span>
-<span class="sd">            - Value of the first field variable, if the data depend on field variables.</span>
-<span class="sd">            - Value of the second field variable.</span>
-<span class="sd">            - Etc.</span>
+<span class="sd">    The table data for this object are:</span>
+<span class="sd">        </span>
+<span class="sd">    - Material cohesion, d, in the p–t plane (Abaqus/Standard) or in the p–q plane (Abaqus/Explicit).</span>
+<span class="sd">    - Material angle of friction, β, in the p–t plane (Abaqus/Standard) or in the p–q plane (Abaqus/Explicit). Give the value in degrees.</span>
+<span class="sd">    - Cap eccentricity parameter, RR. Its value must be greater than zero (typically 0.0 &lt;R&lt; 1.0).</span>
+<span class="sd">    - Initial cap yield surface position, ε_vol^pl|0.</span>
+<span class="sd">    - Transition surface radius parameter, αα. The default value is 0.0 (i.e., no transition surface).</span>
+<span class="sd">    - (Not used in Abaqus/Explicit) K, the ratio of the flow stress in triaxial tension to the flow stress in triaxial compression. Possible values are 0.778 ≤K≤ 1.0. If the default value of 0.0 is accepted, Abaqus/Standard assumes K= 1.0.</span>
+<span class="sd">    - Temperature, if the data depend on temperature.</span>
+<span class="sd">    - Value of the first field variable, if the data depend on field variables.</span>
+<span class="sd">    - Value of the second field variable.</span>
+<span class="sd">    - Etc.</span>
 
 <span class="sd">    The corresponding analysis keywords are:</span>
-<span class="sd">        - CAP PLASTICITY</span>
+
+<span class="sd">    - CAP PLASTICITY</span>
 
 <span class="sd">    """</span>
 

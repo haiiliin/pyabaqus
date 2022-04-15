@@ -316,59 +316,61 @@
 
 <span class="sd">    Notes</span>
 <span class="sd">    -----</span>
-<span class="sd">        This object can be accessed by:</span>
+<span class="sd">    This object can be accessed by:</span>
+<span class="sd">    </span>
+<span class="sd">    .. code-block:: python</span>
 <span class="sd">        </span>
-<span class="sd">        .. code-block:: python</span>
-<span class="sd">            </span>
-<span class="sd">            import material</span>
-<span class="sd">            mdb.models[name].materials[name].Plastic</span>
-<span class="sd">            import odbMaterial</span>
-<span class="sd">            session.odbs[name].materials[name].Plastic</span>
+<span class="sd">        import material</span>
+<span class="sd">        mdb.models[name].materials[name].Plastic</span>
+<span class="sd">        import odbMaterial</span>
+<span class="sd">        session.odbs[name].materials[name].Plastic</span>
 
-<span class="sd">        The table data for this object are:</span>
-<span class="sd">        If *hardening*=ISOTROPIC, or if *hardening*=COMBINED and *dataType*=HALF_CYCLE, the table data specify the following:</span>
-<span class="sd">            - Yield stress.</span>
-<span class="sd">            - Plastic strain.</span>
-<span class="sd">            - Equivalent Plastic strain rate, ε¯˙p⁢l.</span>
-<span class="sd">            - Temperature, if the data depend on temperature.</span>
-<span class="sd">            - Value of the first field variable, if the data depend on field variables.</span>
-<span class="sd">            - Value of the second field variable.</span>
-<span class="sd">            - Etc.</span>
-<span class="sd">        If *hardening*=COMBINED and *dataType*=STABILIZED, the table data specify the following:</span>
-<span class="sd">            - Yield stress.</span>
-<span class="sd">            - Plastic strain.</span>
-<span class="sd">            - Strain range, if the data depend on strain range.</span>
-<span class="sd">            - Temperature, if the data depend on temperature.</span>
-<span class="sd">            - Value of the first field variable, if the data depend on field variables.</span>
-<span class="sd">            - Value of the second field variable.</span>
-<span class="sd">            - Etc.</span>
-<span class="sd">        If *hardening*=COMBINED and *dataType*=PARAMETERS, the table data specify the following:</span>
-<span class="sd">            - Yield stress at zero Plastic strain.</span>
-<span class="sd">            - The first kinematic hardening parameter, C1.</span>
-<span class="sd">            - The first kinematic hardening parameter, γ1.</span>
-<span class="sd">            - If applicable, the second kinematic hardening parameter, C2.</span>
-<span class="sd">            - If applicable, the second kinematic hardening parameter, γ2.</span>
-<span class="sd">            - Etc.</span>
-<span class="sd">            - Temperature, if the data depend on temperature.</span>
-<span class="sd">            - Value of the first field variable, if the data depend on field variables.</span>
-<span class="sd">            - Value of the second field variable.</span>
-<span class="sd">            - Etc.</span>
-<span class="sd">        If *hardening*=KINEMATIC, the table data specify the following:</span>
-<span class="sd">            - Yield stress.</span>
-<span class="sd">            - Plastic strain.</span>
-<span class="sd">            - Temperature, if the data depend on temperature.</span>
-<span class="sd">        If *hardening*=JOHNSON_COOK, the table data specify the following:</span>
-<span class="sd">            - A.</span>
-<span class="sd">            - B.</span>
-<span class="sd">            - n.</span>
-<span class="sd">            - m.</span>
-<span class="sd">            - Melting temperature.</span>
-<span class="sd">            - Transition temperature.</span>
-<span class="sd">        If *hardening*=USER, the table data specify the following:</span>
-<span class="sd">            - Hardening properties.</span>
+<span class="sd">    The table data for this object are:</span>
+<span class="sd">    </span>
+<span class="sd">    - If *hardening*=ISOTROPIC, or if *hardening*=COMBINED and *dataType*=HALF_CYCLE, the table data specify the following:</span>
+<span class="sd">        - Yield stress.</span>
+<span class="sd">        - Plastic strain.</span>
+<span class="sd">        - Equivalent Plastic strain rate, ε¯˙p⁢l.</span>
+<span class="sd">        - Temperature, if the data depend on temperature.</span>
+<span class="sd">        - Value of the first field variable, if the data depend on field variables.</span>
+<span class="sd">        - Value of the second field variable.</span>
+<span class="sd">        - Etc.</span>
+<span class="sd">    - If *hardening*=COMBINED and *dataType*=STABILIZED, the table data specify the following:</span>
+<span class="sd">        - Yield stress.</span>
+<span class="sd">        - Plastic strain.</span>
+<span class="sd">        - Strain range, if the data depend on strain range.</span>
+<span class="sd">        - Temperature, if the data depend on temperature.</span>
+<span class="sd">        - Value of the first field variable, if the data depend on field variables.</span>
+<span class="sd">        - Value of the second field variable.</span>
+<span class="sd">        - Etc.</span>
+<span class="sd">    - If *hardening*=COMBINED and *dataType*=PARAMETERS, the table data specify the following:</span>
+<span class="sd">        - Yield stress at zero Plastic strain.</span>
+<span class="sd">        - The first kinematic hardening parameter, C1.</span>
+<span class="sd">        - The first kinematic hardening parameter, γ1.</span>
+<span class="sd">        - If applicable, the second kinematic hardening parameter, C2.</span>
+<span class="sd">        - If applicable, the second kinematic hardening parameter, γ2.</span>
+<span class="sd">        - Etc.</span>
+<span class="sd">        - Temperature, if the data depend on temperature.</span>
+<span class="sd">        - Value of the first field variable, if the data depend on field variables.</span>
+<span class="sd">        - Value of the second field variable.</span>
+<span class="sd">        - Etc.</span>
+<span class="sd">    - If *hardening*=KINEMATIC, the table data specify the following:</span>
+<span class="sd">        - Yield stress.</span>
+<span class="sd">        - Plastic strain.</span>
+<span class="sd">        - Temperature, if the data depend on temperature.</span>
+<span class="sd">    - If *hardening*=JOHNSON_COOK, the table data specify the following:</span>
+<span class="sd">        - A.</span>
+<span class="sd">        - B.</span>
+<span class="sd">        - n.</span>
+<span class="sd">        - m.</span>
+<span class="sd">        - Melting temperature.</span>
+<span class="sd">        - Transition temperature.</span>
+<span class="sd">    - If *hardening*=USER, the table data specify the following:</span>
+<span class="sd">        - Hardening properties.</span>
 
 <span class="sd">    The corresponding analysis keywords are:</span>
-<span class="sd">        - PLASTIC</span>
+
+<span class="sd">    - PLASTIC</span>
 
 <span class="sd">    """</span>
 

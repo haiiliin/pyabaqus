@@ -309,36 +309,37 @@
 
 <span class="sd">    Notes</span>
 <span class="sd">    -----</span>
-<span class="sd">        This object can be accessed by:</span>
-<span class="sd">        </span>
-<span class="sd">        .. code-block:: python</span>
-<span class="sd">            </span>
-<span class="sd">            import material</span>
-<span class="sd">            mdb.models[name].materials[name].eos</span>
-<span class="sd">            import odbMaterial</span>
-<span class="sd">            session.odbs[name].materials[name].eos</span>
+<span class="sd">    This object can be accessed by:</span>
 
-<span class="sd">        The table data for this object are:</span>
-<span class="sd">        If *type*=IDEALGAS, the table data represents the following:</span>
-<span class="sd">            - Gas constant, R.</span>
-<span class="sd">            - The ambient pressure, pA. If this field is left blank, a default of 0.0 is used.</span>
-<span class="sd">        If *type*=JWL, the table data represents the following:</span>
-<span class="sd">            - Detonation wave speed, Cd.</span>
-<span class="sd">            - A.</span>
-<span class="sd">            - B.</span>
-<span class="sd">            - ω. (Dimensionless.)</span>
-<span class="sd">            - R1. (Dimensionless.)</span>
-<span class="sd">            - R2. (Dimensionless.)</span>
-<span class="sd">            - Pre-detonation bulk modulus, Kp⁢d.</span>
-<span class="sd">            - Detonation energy density, E0.</span>
-<span class="sd">        If *type*=USUP, the table data represents the following:</span>
-<span class="sd">            - c0.</span>
-<span class="sd">            - s. (Dimensionless.)</span>
-<span class="sd">            - Γ0. (Dimensionless.)</span>
-<span class="sd">        If *type*=TABULAR, the table data represents the following:</span>
-<span class="sd">            - F1.</span>
-<span class="sd">            - F2.</span>
-<span class="sd">            - εcvol. (Dimensionless.)</span>
+<span class="sd">    .. code-block:: python</span>
+
+<span class="sd">        import material</span>
+<span class="sd">        mdb.models[name].materials[name].eos</span>
+<span class="sd">        import odbMaterial</span>
+<span class="sd">        session.odbs[name].materials[name].eos</span>
+
+<span class="sd">    The table data for this object are:</span>
+<span class="sd">    </span>
+<span class="sd">    - If *type*=IDEALGAS, the table data represents the following:</span>
+<span class="sd">        - Gas constant, R.</span>
+<span class="sd">        - The ambient pressure, pA. If this field is left blank, a default of 0.0 is used.</span>
+<span class="sd">    - If *type*=JWL, the table data represents the following:</span>
+<span class="sd">        - Detonation wave speed, Cd.</span>
+<span class="sd">        - A.</span>
+<span class="sd">        - B.</span>
+<span class="sd">        - ω. (Dimensionless.)</span>
+<span class="sd">        - R1. (Dimensionless.)</span>
+<span class="sd">        - R2. (Dimensionless.)</span>
+<span class="sd">        - Pre-detonation bulk modulus, Kp⁢d.</span>
+<span class="sd">        - Detonation energy density, E0.</span>
+<span class="sd">    - If *type*=USUP, the table data represents the following:</span>
+<span class="sd">        - c0.</span>
+<span class="sd">        - s. (Dimensionless.)</span>
+<span class="sd">        - Γ0. (Dimensionless.)</span>
+<span class="sd">    - If *type*=TABULAR, the table data represents the following:</span>
+<span class="sd">        - F1.</span>
+<span class="sd">        - F2.</span>
+<span class="sd">        - εcvol. (Dimensionless.)</span>
 
 <span class="sd">    """</span>
 

@@ -311,118 +311,120 @@
 
 <span class="sd">    Notes</span>
 <span class="sd">    -----</span>
-<span class="sd">        This object can be accessed by:</span>
+<span class="sd">    This object can be accessed by:</span>
 <span class="sd">        </span>
-<span class="sd">        .. code-block:: python</span>
+<span class="sd">    .. code-block:: python</span>
 <span class="sd">            </span>
-<span class="sd">            import material</span>
-<span class="sd">            mdb.models[name].materials[name].elastic</span>
-<span class="sd">            import odbMaterial</span>
-<span class="sd">            session.odbs[name].materials[name].elastic</span>
+<span class="sd">        import material</span>
+<span class="sd">        mdb.models[name].materials[name].elastic</span>
+<span class="sd">        import odbMaterial</span>
+<span class="sd">        session.odbs[name].materials[name].elastic</span>
 
-<span class="sd">        The table data for this object are:</span>
-<span class="sd">        - If *type*=ISOTROPIC, the table data specify the following:</span>
-<span class="sd">            - The Young's modulus, E.</span>
-<span class="sd">            - The Poisson's ratio, v.</span>
-<span class="sd">            - Temperature, if the data depend on temperature.</span>
-<span class="sd">            - Value of the first field variable, if the data depend on field variables.</span>
-<span class="sd">            - Value of the second field variable.</span>
-<span class="sd">            - Etc.</span>
-<span class="sd">        - If *type*=SHEAR, the table data specify the following:</span>
-<span class="sd">            - The shear modulus,G.</span>
-<span class="sd">            - Temperature, if the data depend on temperature.</span>
-<span class="sd">            - Value of the first field variable, if the data depend on field variables.</span>
-<span class="sd">            - Value of the second field variable.</span>
-<span class="sd">            - Etc.</span>
-<span class="sd">        - If *type*=ENGINEERING_CONSTANTS, the table data specify the following:</span>
-<span class="sd">            - E1.</span>
-<span class="sd">            - E2.</span>
-<span class="sd">            - E3.</span>
-<span class="sd">            - v12.</span>
-<span class="sd">            - v13.</span>
-<span class="sd">            - v23.</span>
-<span class="sd">            - G12.</span>
-<span class="sd">            - G13.</span>
-<span class="sd">            - G23.</span>
-<span class="sd">            - Temperature, if the data depend on temperature.</span>
-<span class="sd">            - Value of the first field variable, if the data depend on field variables.</span>
-<span class="sd">            - Value of the second field variable.</span>
-<span class="sd">            - Etc.</span>
-<span class="sd">        - If *type*=LAMINA, the table data specify the following:</span>
-<span class="sd">            - E1.</span>
-<span class="sd">            - E2.</span>
-<span class="sd">            - v12.</span>
-<span class="sd">            - G12.</span>
-<span class="sd">            - G13. This shear modulus is needed to define transverse shear behavior in shells.</span>
-<span class="sd">            - G23. This shear modulus is needed to define transverse shear behavior in shells.</span>
-<span class="sd">            - Temperature, if the data depend on temperature.</span>
-<span class="sd">            - Value of the first field variable, if the data depend on field variables.</span>
-<span class="sd">            - Value of the second field variable.</span>
-<span class="sd">            - Etc.</span>
-<span class="sd">        - If *type*=ORTHOTROPIC, the table data specify the following:</span>
-<span class="sd">            - D1111.</span>
-<span class="sd">            - D1122.</span>
-<span class="sd">            - D2222.</span>
-<span class="sd">            - D1133.</span>
-<span class="sd">            - D2233.</span>
-<span class="sd">            - D3333.</span>
-<span class="sd">            - D1212.</span>
-<span class="sd">            - D1313.</span>
-<span class="sd">            - D2323.</span>
-<span class="sd">            - Temperature, if the data depend on temperature.</span>
-<span class="sd">            - Value of the first field variable, if the data depend on field variables.</span>
-<span class="sd">            - Value of the second field variable.</span>
-<span class="sd">            - Etc.</span>
-<span class="sd">        - If *type*=ANISOTROPIC, the table data specify the following:</span>
-<span class="sd">            - D1111.</span>
-<span class="sd">            - D1122.</span>
-<span class="sd">            - D2222.</span>
-<span class="sd">            - D1133.</span>
-<span class="sd">            - D2233.</span>
-<span class="sd">            - D3333.</span>
-<span class="sd">            - D1112.</span>
-<span class="sd">            - D2212.</span>
-<span class="sd">            - D3312.</span>
-<span class="sd">            - D1212.</span>
-<span class="sd">            - D1113.</span>
-<span class="sd">            - D2213.</span>
-<span class="sd">            - D3313.</span>
-<span class="sd">            - D1213.</span>
-<span class="sd">            - D1313.</span>
-<span class="sd">            - D1123.</span>
-<span class="sd">            - D2223.</span>
-<span class="sd">            - D3323.</span>
-<span class="sd">            - D1223.</span>
-<span class="sd">            - D1323.</span>
-<span class="sd">            - D2323.</span>
-<span class="sd">            - Temperature, if the data depend on temperature.</span>
-<span class="sd">            - Value of the first field variable, if the data depend on field variables.</span>
-<span class="sd">            - Value of the second field variable.</span>
-<span class="sd">            - Etc.</span>
-<span class="sd">        - If *type*=TRACTION, the table data specify the following:</span>
-<span class="sd">            - EE for warping elements; Enn for cohesive elements.</span>
-<span class="sd">            - G1 for warping elements; Ess for cohesive elements.</span>
-<span class="sd">            - G2 for warping elements; Ett for cohesive elements.</span>
-<span class="sd">            - Temperature, if the data depend on temperature.</span>
-<span class="sd">            - Value of the first field variable, if the data depend on field variables.</span>
-<span class="sd">            - Value of the second field variable.</span>
-<span class="sd">            - Etc.</span>
-<span class="sd">        - If *type*=BILAMINA, the table data specify the following:</span>
-<span class="sd">            - E1+.</span>
-<span class="sd">            - E2+.</span>
-<span class="sd">            - v12+.</span>
-<span class="sd">            - G12.</span>
-<span class="sd">            - E1-.</span>
-<span class="sd">            - E2-.</span>
-<span class="sd">            - v112-.</span>
-<span class="sd">            - Temperature, if the data depend on temperature.</span>
-<span class="sd">            - Value of the first field variable, if the data depend on field variables.</span>
-<span class="sd">            - Value of the second field variable.</span>
-<span class="sd">            - Etc.</span>
-<span class="sd">        - If *type*=SHORT_FIBER, there is no table data.</span>
+<span class="sd">    The table data for this object are:</span>
+
+<span class="sd">    - If *type*=ISOTROPIC, the table data specify the following:</span>
+<span class="sd">        - The Young's modulus, E.</span>
+<span class="sd">        - The Poisson's ratio, v.</span>
+<span class="sd">        - Temperature, if the data depend on temperature.</span>
+<span class="sd">        - Value of the first field variable, if the data depend on field variables.</span>
+<span class="sd">        - Value of the second field variable.</span>
+<span class="sd">        - Etc.</span>
+<span class="sd">    - If *type*=SHEAR, the table data specify the following:</span>
+<span class="sd">        - The shear modulus,G.</span>
+<span class="sd">        - Temperature, if the data depend on temperature.</span>
+<span class="sd">        - Value of the first field variable, if the data depend on field variables.</span>
+<span class="sd">        - Value of the second field variable.</span>
+<span class="sd">        - Etc.</span>
+<span class="sd">     - If *type*=ENGINEERING_CONSTANTS, the table data specify the following:</span>
+<span class="sd">        - E1.</span>
+<span class="sd">        - E2.</span>
+<span class="sd">        - E3.</span>
+<span class="sd">        - v12.</span>
+<span class="sd">        - v13.</span>
+<span class="sd">        - v23.</span>
+<span class="sd">        - G12.</span>
+<span class="sd">        - G13.</span>
+<span class="sd">        - G23.</span>
+<span class="sd">        - Temperature, if the data depend on temperature.</span>
+<span class="sd">        - Value of the first field variable, if the data depend on field variables.</span>
+<span class="sd">        - Value of the second field variable.</span>
+<span class="sd">        - Etc.</span>
+<span class="sd">    - If *type*=LAMINA, the table data specify the following:</span>
+<span class="sd">        - E1.</span>
+<span class="sd">        - E2.</span>
+<span class="sd">        - v12.</span>
+<span class="sd">        - G12.</span>
+<span class="sd">        - G13. This shear modulus is needed to define transverse shear behavior in shells.</span>
+<span class="sd">        - G23. This shear modulus is needed to define transverse shear behavior in shells.</span>
+<span class="sd">        - Temperature, if the data depend on temperature.</span>
+<span class="sd">        - Value of the first field variable, if the data depend on field variables.</span>
+<span class="sd">        - Value of the second field variable.</span>
+<span class="sd">        - Etc.</span>
+<span class="sd">    - If *type*=ORTHOTROPIC, the table data specify the following:</span>
+<span class="sd">        - D1111.</span>
+<span class="sd">        - D1122.</span>
+<span class="sd">        - D2222.</span>
+<span class="sd">        - D1133.</span>
+<span class="sd">        - D2233.</span>
+<span class="sd">        - D3333.</span>
+<span class="sd">        - D1212.</span>
+<span class="sd">        - D1313.</span>
+<span class="sd">        - D2323.</span>
+<span class="sd">        - Temperature, if the data depend on temperature.</span>
+<span class="sd">        - Value of the first field variable, if the data depend on field variables.</span>
+<span class="sd">        - Value of the second field variable.</span>
+<span class="sd">        - Etc.</span>
+<span class="sd">    - If *type*=ANISOTROPIC, the table data specify the following:</span>
+<span class="sd">        - D1111.</span>
+<span class="sd">        - D1122.</span>
+<span class="sd">        - D2222.</span>
+<span class="sd">        - D1133.</span>
+<span class="sd">        - D2233.</span>
+<span class="sd">        - D3333.</span>
+<span class="sd">        - D1112.</span>
+<span class="sd">        - D2212.</span>
+<span class="sd">        - D3312.</span>
+<span class="sd">        - D1212.</span>
+<span class="sd">        - D1113.</span>
+<span class="sd">        - D2213.</span>
+<span class="sd">        - D3313.</span>
+<span class="sd">        - D1213.</span>
+<span class="sd">        - D1313.</span>
+<span class="sd">        - D1123.</span>
+<span class="sd">        - D2223.</span>
+<span class="sd">        - D3323.</span>
+<span class="sd">        - D1223.</span>
+<span class="sd">        - D1323.</span>
+<span class="sd">        - D2323.</span>
+<span class="sd">        - Temperature, if the data depend on temperature.</span>
+<span class="sd">        - Value of the first field variable, if the data depend on field variables.</span>
+<span class="sd">        - Value of the second field variable.</span>
+<span class="sd">        - Etc.</span>
+<span class="sd">    - If *type*=TRACTION, the table data specify the following:</span>
+<span class="sd">        - EE for warping elements; Enn for cohesive elements.</span>
+<span class="sd">        - G1 for warping elements; Ess for cohesive elements.</span>
+<span class="sd">        - G2 for warping elements; Ett for cohesive elements.</span>
+<span class="sd">        - Temperature, if the data depend on temperature.</span>
+<span class="sd">        - Value of the first field variable, if the data depend on field variables.</span>
+<span class="sd">        - Value of the second field variable.</span>
+<span class="sd">        - Etc.</span>
+<span class="sd">    - If *type*=BILAMINA, the table data specify the following:</span>
+<span class="sd">        - E1+.</span>
+<span class="sd">        - E2+.</span>
+<span class="sd">        - v12+.</span>
+<span class="sd">        - G12.</span>
+<span class="sd">        - E1-.</span>
+<span class="sd">        - E2-.</span>
+<span class="sd">        - v112-.</span>
+<span class="sd">        - Temperature, if the data depend on temperature.</span>
+<span class="sd">        - Value of the first field variable, if the data depend on field variables.</span>
+<span class="sd">        - Value of the second field variable.</span>
+<span class="sd">        - Etc.</span>
+<span class="sd">    - If *type*=SHORT_FIBER, there is no table data.</span>
 
 <span class="sd">    The corresponding analysis keywords are:</span>
-<span class="sd">        - ELASTIC</span>
+
+<span class="sd">    - ELASTIC</span>
 
 <span class="sd">    """</span>
 

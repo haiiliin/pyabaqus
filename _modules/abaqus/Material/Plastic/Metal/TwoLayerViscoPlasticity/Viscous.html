@@ -311,78 +311,80 @@
 
 <span class="sd">    Notes</span>
 <span class="sd">    -----</span>
-<span class="sd">        This object can be accessed by:</span>
+<span class="sd">    This object can be accessed by:</span>
+<span class="sd">    </span>
+<span class="sd">    .. code-block:: python</span>
 <span class="sd">        </span>
-<span class="sd">        .. code-block:: python</span>
-<span class="sd">            </span>
-<span class="sd">            import material</span>
-<span class="sd">            mdb.models[name].materials[name].viscous</span>
-<span class="sd">            import odbMaterial</span>
-<span class="sd">            session.odbs[name].materials[name].viscous</span>
+<span class="sd">        import material</span>
+<span class="sd">        mdb.models[name].materials[name].viscous</span>
+<span class="sd">        import odbMaterial</span>
+<span class="sd">        session.odbs[name].materials[name].viscous</span>
 
-<span class="sd">        The table data for this object are:</span>
-<span class="sd">        If *law*=STRAIN or *law*=TIME, the table data specify the following:</span>
-<span class="sd">            - A.</span>
-<span class="sd">            - n.</span>
-<span class="sd">            - m.</span>
-<span class="sd">            - f.</span>
-<span class="sd">            - Temperature, if the data depend on temperature.</span>
-<span class="sd">            - Value of the first field variable, if the data depend on field variables.</span>
-<span class="sd">            - Value of the second field variable.</span>
-<span class="sd">            - Etc.</span>
-<span class="sd">        If *law*=USER, the table data specify the following:</span>
-<span class="sd">            - f.</span>
-<span class="sd">            - Temperature, if the data depend on temperature.</span>
-<span class="sd">            - Value of the first field variable, if the data depend on field variables.</span>
-<span class="sd">            - Value of the second field variable.</span>
-<span class="sd">            - Etc.</span>
-<span class="sd">        If *law*=ANAND, the table data specify the following:</span>
-<span class="sd">            - s1.</span>
-<span class="sd">            - QR.</span>
-<span class="sd">            - A.</span>
-<span class="sd">            - ξ.</span>
-<span class="sd">            - m.</span>
-<span class="sd">            - A00.</span>
-<span class="sd">            - ˆs.</span>
-<span class="sd">            - n.</span>
-<span class="sd">            - a.</span>
-<span class="sd">            - S2.</span>
-<span class="sd">            - S3.</span>
-<span class="sd">            - A1.</span>
-<span class="sd">            - A2.</span>
-<span class="sd">            - A3.</span>
-<span class="sd">            - A4.</span>
-<span class="sd">            - f.</span>
-<span class="sd">        If *law*=DARVEAUX, the table data specify the following:</span>
-<span class="sd">            - Css.</span>
-<span class="sd">            - QR.</span>
-<span class="sd">            - α.</span>
-<span class="sd">            - n.</span>
-<span class="sd">            - ϵT.</span>
-<span class="sd">            - B.</span>
-<span class="sd">            - f.</span>
-<span class="sd">        If *law*=DOUBLE_POWER, the table data specify the following:</span>
-<span class="sd">            - A1.</span>
-<span class="sd">            - B1.</span>
-<span class="sd">            - C1.</span>
-<span class="sd">            - A2.</span>
-<span class="sd">            - B2.</span>
-<span class="sd">            - C2.</span>
-<span class="sd">            - σ0.</span>
-<span class="sd">            - f.</span>
-<span class="sd">        If *law*=POWER_LAW or *law*=TIME_POWER_LAW, the table data specify the following:</span>
-<span class="sd">            - q0.</span>
-<span class="sd">            - n.</span>
-<span class="sd">            - m.</span>
-<span class="sd">            - ∙ε0.⁢</span>
-<span class="sd">            - f.</span>
-<span class="sd">            - Temperature, if the data depend on temperature.</span>
-<span class="sd">            - Value of the first field variable, if the data depend on field variables.</span>
-<span class="sd">            - Value of the second field variable.</span>
-<span class="sd">            - Etc.</span>
+<span class="sd">    The table data for this object are:</span>
+<span class="sd">    </span>
+<span class="sd">    - If *law*=STRAIN or *law*=TIME, the table data specify the following:</span>
+<span class="sd">        - A.</span>
+<span class="sd">        - n.</span>
+<span class="sd">        - m.</span>
+<span class="sd">        - f.</span>
+<span class="sd">        - Temperature, if the data depend on temperature.</span>
+<span class="sd">        - Value of the first field variable, if the data depend on field variables.</span>
+<span class="sd">        - Value of the second field variable.</span>
+<span class="sd">        - Etc.</span>
+<span class="sd">    - If *law*=USER, the table data specify the following:</span>
+<span class="sd">        - f.</span>
+<span class="sd">        - Temperature, if the data depend on temperature.</span>
+<span class="sd">        - Value of the first field variable, if the data depend on field variables.</span>
+<span class="sd">        - Value of the second field variable.</span>
+<span class="sd">        - Etc.</span>
+<span class="sd">    - If *law*=ANAND, the table data specify the following:</span>
+<span class="sd">        - s1.</span>
+<span class="sd">        - QR.</span>
+<span class="sd">        - A.</span>
+<span class="sd">        - ξ.</span>
+<span class="sd">        - m.</span>
+<span class="sd">        - A00.</span>
+<span class="sd">        - ˆs.</span>
+<span class="sd">        - n.</span>
+<span class="sd">        - a.</span>
+<span class="sd">        - S2.</span>
+<span class="sd">        - S3.</span>
+<span class="sd">        - A1.</span>
+<span class="sd">        - A2.</span>
+<span class="sd">        - A3.</span>
+<span class="sd">        - A4.</span>
+<span class="sd">        - f.</span>
+<span class="sd">    - If *law*=DARVEAUX, the table data specify the following:</span>
+<span class="sd">        - Css.</span>
+<span class="sd">        - QR.</span>
+<span class="sd">        - α.</span>
+<span class="sd">        - n.</span>
+<span class="sd">        - ϵT.</span>
+<span class="sd">        - B.</span>
+<span class="sd">        - f.</span>
+<span class="sd">    - If *law*=DOUBLE_POWER, the table data specify the following:</span>
+<span class="sd">        - A1.</span>
+<span class="sd">        - B1.</span>
+<span class="sd">        - C1.</span>
+<span class="sd">        - A2.</span>
+<span class="sd">        - B2.</span>
+<span class="sd">        - C2.</span>
+<span class="sd">        - σ0.</span>
+<span class="sd">        - f.</span>
+<span class="sd">    - If *law*=POWER_LAW or *law*=TIME_POWER_LAW, the table data specify the following:</span>
+<span class="sd">        - q0.</span>
+<span class="sd">        - n.</span>
+<span class="sd">        - m.</span>
+<span class="sd">        - ∙ε0.⁢</span>
+<span class="sd">        - f.</span>
+<span class="sd">        - Temperature, if the data depend on temperature.</span>
+<span class="sd">        - Value of the first field variable, if the data depend on field variables.</span>
+<span class="sd">        - Value of the second field variable.</span>
+<span class="sd">        - Etc.</span>
 
 <span class="sd">    The corresponding analysis keywords are:</span>
-<span class="sd">        - VISCOUS</span>
+
+<span class="sd">    - VISCOUS</span>
 
 <span class="sd">    """</span>
 

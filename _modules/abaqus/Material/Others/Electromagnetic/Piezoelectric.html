@@ -309,64 +309,66 @@
 
 <span class="sd">    Notes</span>
 <span class="sd">    -----</span>
-<span class="sd">        This object can be accessed by:</span>
-<span class="sd">        </span>
-<span class="sd">        .. code-block:: python</span>
-<span class="sd">            </span>
-<span class="sd">            import material</span>
-<span class="sd">            mdb.models[name].materials[name].piezoelectric</span>
-<span class="sd">            import odbMaterial</span>
-<span class="sd">            session.odbs[name].materials[name].piezoelectric</span>
+<span class="sd">    This object can be accessed by:</span>
 
-<span class="sd">        The table data for this object are:</span>
-<span class="sd">        If *type*=STRESS, the table data specify the following:</span>
-<span class="sd">            - e1 11φ.</span>
-<span class="sd">            - e1 22φ.</span>
-<span class="sd">            - e1 33φ.</span>
-<span class="sd">            - e1 12φ.</span>
-<span class="sd">            - e1 13φ.</span>
-<span class="sd">            - e1 23φ.</span>
-<span class="sd">            - e2 11φ.</span>
-<span class="sd">            - e2 22φ.</span>
-<span class="sd">            - e2 33φ.</span>
-<span class="sd">            - e2 12φ.</span>
-<span class="sd">            - e2 13φ.</span>
-<span class="sd">            - e2 23φ.</span>
-<span class="sd">            - e3 11φ.</span>
-<span class="sd">            - e3 22φ.</span>
-<span class="sd">            - e3 33φ.</span>
-<span class="sd">            - e3 12φ.</span>
-<span class="sd">            - e3 13φ.</span>
-<span class="sd">            - e3 23φ.</span>
-<span class="sd">            - Temperature, if the data depend on temperature.</span>
-<span class="sd">            - Value of the first field variable, if the data depend on field variables.</span>
-<span class="sd">            - Value of the second field variable.</span>
-<span class="sd">            - Etc.</span>
-<span class="sd">        If *type*=STRAIN, the table data specify the following:</span>
-<span class="sd">            - d1 11φ.</span>
-<span class="sd">            - d1 22φ.</span>
-<span class="sd">            - d1 33φ.</span>
-<span class="sd">            - d1 12φ.</span>
-<span class="sd">            - d1 13φ.</span>
-<span class="sd">            - d1 23φ.</span>
-<span class="sd">            - d2 11φ.</span>
-<span class="sd">            - d2 22φ.</span>
-<span class="sd">            - d2 33φ.</span>
-<span class="sd">            - d2 12φ.</span>
-<span class="sd">            - d2 13φ.</span>
-<span class="sd">            - d2 23φ.</span>
-<span class="sd">            - d3 11φ.</span>
-<span class="sd">            - d3 22φ.</span>
-<span class="sd">            - d3 33φ.</span>
-<span class="sd">            - d3 13φ.</span>
-<span class="sd">            - d3 23φ.</span>
-<span class="sd">            - Temperature, if the data depend on temperature.</span>
-<span class="sd">            - Value of the first field variable, if the data depend on field variables.</span>
-<span class="sd">            - Value of the second field variable.</span>
-<span class="sd">            - Etc.</span>
+<span class="sd">    .. code-block:: python</span>
+
+<span class="sd">        import material</span>
+<span class="sd">        mdb.models[name].materials[name].piezoelectric</span>
+<span class="sd">        import odbMaterial</span>
+<span class="sd">        session.odbs[name].materials[name].piezoelectric</span>
+
+<span class="sd">    The table data for this object are:</span>
+
+<span class="sd">    - If *type*=STRESS, the table data specify the following:</span>
+<span class="sd">        - e1 11φ.</span>
+<span class="sd">        - e1 22φ.</span>
+<span class="sd">        - e1 33φ.</span>
+<span class="sd">        - e1 12φ.</span>
+<span class="sd">        - e1 13φ.</span>
+<span class="sd">        - e1 23φ.</span>
+<span class="sd">        - e2 11φ.</span>
+<span class="sd">        - e2 22φ.</span>
+<span class="sd">        - e2 33φ.</span>
+<span class="sd">        - e2 12φ.</span>
+<span class="sd">        - e2 13φ.</span>
+<span class="sd">        - e2 23φ.</span>
+<span class="sd">        - e3 11φ.</span>
+<span class="sd">        - e3 22φ.</span>
+<span class="sd">        - e3 33φ.</span>
+<span class="sd">        - e3 12φ.</span>
+<span class="sd">        - e3 13φ.</span>
+<span class="sd">        - e3 23φ.</span>
+<span class="sd">        - Temperature, if the data depend on temperature.</span>
+<span class="sd">        - Value of the first field variable, if the data depend on field variables.</span>
+<span class="sd">        - Value of the second field variable.</span>
+<span class="sd">        - Etc.</span>
+<span class="sd">    - If *type*=STRAIN, the table data specify the following:</span>
+<span class="sd">        - d1 11φ.</span>
+<span class="sd">        - d1 22φ.</span>
+<span class="sd">        - d1 33φ.</span>
+<span class="sd">        - d1 12φ.</span>
+<span class="sd">        - d1 13φ.</span>
+<span class="sd">        - d1 23φ.</span>
+<span class="sd">        - d2 11φ.</span>
+<span class="sd">        - d2 22φ.</span>
+<span class="sd">        - d2 33φ.</span>
+<span class="sd">        - d2 12φ.</span>
+<span class="sd">        - d2 13φ.</span>
+<span class="sd">        - d2 23φ.</span>
+<span class="sd">        - d3 11φ.</span>
+<span class="sd">        - d3 22φ.</span>
+<span class="sd">        - d3 33φ.</span>
+<span class="sd">        - d3 13φ.</span>
+<span class="sd">        - d3 23φ.</span>
+<span class="sd">        - Temperature, if the data depend on temperature.</span>
+<span class="sd">        - Value of the first field variable, if the data depend on field variables.</span>
+<span class="sd">        - Value of the second field variable.</span>
+<span class="sd">        - Etc.</span>
 
 <span class="sd">    The corresponding analysis keywords are:</span>
-<span class="sd">        - PIEZOELECTRIC</span>
+
+<span class="sd">    - PIEZOELECTRIC</span>
 
 <span class="sd">    """</span>
 

@@ -310,43 +310,45 @@
 
 <span class="sd">    Notes</span>
 <span class="sd">    -----</span>
-<span class="sd">        This object can be accessed by:</span>
+<span class="sd">    This object can be accessed by:</span>
+<span class="sd">    </span>
+<span class="sd">    .. code-block:: python</span>
 <span class="sd">        </span>
-<span class="sd">        .. code-block:: python</span>
-<span class="sd">            </span>
-<span class="sd">            import material</span>
-<span class="sd">            mdb.models[name].materials[name].concreteDamagedPlasticity.concreteTensionStiffening</span>
-<span class="sd">            import odbMaterial</span>
-<span class="sd">            session.odbs[name].materials[name].concreteDamagedPlasticity.concreteTensionStiffening</span>
+<span class="sd">        import material</span>
+<span class="sd">        mdb.models[name].materials[name].concreteDamagedPlasticity.concreteTensionStiffening</span>
+<span class="sd">        import odbMaterial</span>
+<span class="sd">        session.odbs[name].materials[name].concreteDamagedPlasticity.concreteTensionStiffening</span>
 
-<span class="sd">        The table data for this object are:</span>
-<span class="sd">        If *type*=STRAIN, the table data specify the following:</span>
-<span class="sd">            - Remaining direct stress after cracking, σt.</span>
-<span class="sd">            - Direct cracking strain, ϵckt.</span>
-<span class="sd">            - Direct cracking strain rate, ˙ϵckt.</span>
-<span class="sd">            - Temperature, if the data depend on temperature.</span>
-<span class="sd">            - Value of the first field variable, if the data depend on field variables.</span>
-<span class="sd">            - Value of the second field variable.</span>
-<span class="sd">            - Etc.</span>
-<span class="sd">        If *type*=DISPLACEMENT, the table data specify the following:</span>
-<span class="sd">            - Remaining direct stress after cracking, σt.</span>
-<span class="sd">            - Direct cracking displacement, uckt.</span>
-<span class="sd">            - Direct cracking displacement rate, ˙uckt</span>
-<span class="sd">            - Temperature, if the data depend on temperature.</span>
-<span class="sd">            - Value of the first field variable, if the data depend on field variables.</span>
-<span class="sd">            - Value of the second field variable.</span>
-<span class="sd">            - Etc.</span>
-<span class="sd">        If *type*=GFI, the table data specify the following:</span>
-<span class="sd">            - Failure stress, σt0σt⁢0.</span>
-<span class="sd">            - Fracture energy, Gf.</span>
-<span class="sd">            - Direct cracking displacement rate, ˙uckt.</span>
-<span class="sd">            - Temperature, if the data depend on temperature.</span>
-<span class="sd">            - Value of the first field variable, if the data depend on field variables.</span>
-<span class="sd">            - Value of the second field variable.</span>
-<span class="sd">            - Etc.</span>
+<span class="sd">    The table data for this object are:</span>
+
+<span class="sd">    - If *type*=STRAIN, the table data specify the following:</span>
+<span class="sd">        - Remaining direct stress after cracking, σt.</span>
+<span class="sd">        - Direct cracking strain, ϵckt.</span>
+<span class="sd">        - Direct cracking strain rate, ˙ϵckt.</span>
+<span class="sd">        - Temperature, if the data depend on temperature.</span>
+<span class="sd">        - Value of the first field variable, if the data depend on field variables.</span>
+<span class="sd">        - Value of the second field variable.</span>
+<span class="sd">        - Etc.</span>
+<span class="sd">    - If *type*=DISPLACEMENT, the table data specify the following:</span>
+<span class="sd">        - Remaining direct stress after cracking, σt.</span>
+<span class="sd">        - Direct cracking displacement, uckt.</span>
+<span class="sd">        - Direct cracking displacement rate, ˙uckt</span>
+<span class="sd">        - Temperature, if the data depend on temperature.</span>
+<span class="sd">        - Value of the first field variable, if the data depend on field variables.</span>
+<span class="sd">        - Value of the second field variable.</span>
+<span class="sd">        - Etc.</span>
+<span class="sd">    - If *type*=GFI, the table data specify the following:</span>
+<span class="sd">        - Failure stress, σt0σt⁢0.</span>
+<span class="sd">        - Fracture energy, Gf.</span>
+<span class="sd">        - Direct cracking displacement rate, ˙uckt.</span>
+<span class="sd">        - Temperature, if the data depend on temperature.</span>
+<span class="sd">        - Value of the first field variable, if the data depend on field variables.</span>
+<span class="sd">        - Value of the second field variable.</span>
+<span class="sd">        - Etc.</span>
 
 <span class="sd">    The corresponding analysis keywords are:</span>
-<span class="sd">        - CONCRETE TENSION STIFFENING</span>
+
+<span class="sd">    - CONCRETE TENSION STIFFENING</span>
 
 <span class="sd">    """</span>
 

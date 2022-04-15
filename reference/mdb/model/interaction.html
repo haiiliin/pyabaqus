@@ -2751,8 +2751,8 @@ The ContactControl object has no explicit constructor, members, or methods.</p>
     <span class="o">-</span> <span class="n">Etc</span><span class="o">.</span>
 </pre></div>
 </div>
-<dl class="simple">
-<dt>The corresponding analysis keywords are:</dt><dd><ul class="simple">
+<p>The corresponding analysis keywords are:</p>
+<ul class="simple">
 <li><dl class="simple">
 <dt>DAMAGE INITIATION</dt><dd><ul>
 <li><p>DAMAGE EVOLUTION</p></li>
@@ -2762,8 +2762,6 @@ The ContactControl object has no explicit constructor, members, or methods.</p>
 </dl>
 </li>
 </ul>
-</dd>
-</dl>
 <dl class="field-list simple">
 <dt class="field-odd">Attributes</dt>
 <dd class="field-odd"><dl class="simple">
@@ -2952,22 +2950,24 @@ only when <a href="#id395"><span class="problematic" id="id396">*</span></a>useE
 <span class="n">mdb</span><span class="o">.</span><span class="n">models</span><span class="p">[</span><span class="n">name</span><span class="p">]</span><span class="o">.</span><span class="n">interactionProperties</span><span class="p">[</span><span class="n">name</span><span class="p">]</span><span class="o">.</span><span class="n">damping</span>
 
 <span class="n">The</span> <span class="n">table</span> <span class="n">data</span> <span class="k">for</span> <span class="n">this</span> <span class="nb">object</span> <span class="n">are</span><span class="p">:</span>
-<span class="n">If</span> <span class="o">*</span><span class="n">definition</span><span class="o">*=</span><span class="n">DAMPING_COEFFICIENT</span> <span class="ow">and</span> <span class="o">*</span><span class="n">clearanceDependence</span><span class="o">*=</span><span class="n">STEP</span><span class="p">,</span> <span class="n">the</span> <span class="n">table</span> <span class="n">data</span> <span class="n">specify</span> <span class="n">the</span> <span class="n">following</span><span class="p">:</span>
+
+<span class="o">-</span> <span class="n">If</span> <span class="o">*</span><span class="n">definition</span><span class="o">*=</span><span class="n">DAMPING_COEFFICIENT</span> <span class="ow">and</span> <span class="o">*</span><span class="n">clearanceDependence</span><span class="o">*=</span><span class="n">STEP</span><span class="p">,</span> <span class="n">the</span> <span class="n">table</span> <span class="n">data</span> <span class="n">specify</span> <span class="n">the</span> <span class="n">following</span><span class="p">:</span>
     <span class="o">-</span> <span class="n">Damping</span> <span class="n">coefficient</span><span class="o">.</span>
-<span class="n">If</span> <span class="o">*</span><span class="n">definition</span><span class="o">*=</span><span class="n">DAMPING_COEFFICIENT</span> <span class="ow">and</span> <span class="o">*</span><span class="n">clearanceDependence</span><span class="o">*=</span><span class="n">LINEAR</span> <span class="ow">or</span> <span class="n">BILINEAR</span><span class="p">,</span> <span class="n">the</span> <span class="n">table</span> <span class="n">data</span> <span class="n">specify</span> <span class="n">the</span> <span class="n">following</span><span class="p">:</span>
+
+<span class="o">-</span> <span class="n">If</span> <span class="o">*</span><span class="n">definition</span><span class="o">*=</span><span class="n">DAMPING_COEFFICIENT</span> <span class="ow">and</span> <span class="o">*</span><span class="n">clearanceDependence</span><span class="o">*=</span><span class="n">LINEAR</span> <span class="ow">or</span> <span class="n">BILINEAR</span><span class="p">,</span> <span class="n">the</span> <span class="n">table</span> <span class="n">data</span> <span class="n">specify</span> <span class="n">the</span> <span class="n">following</span><span class="p">:</span>
+
     <span class="o">-</span> <span class="n">Damping</span> <span class="n">coefficient</span><span class="o">.</span>
     <span class="o">-</span> <span class="n">Clearance</span><span class="o">.</span>
-<span class="n">Two</span> <span class="n">pairs</span> <span class="n">must</span> <span class="n">be</span> <span class="n">given</span> <span class="k">for</span> <span class="o">*</span><span class="n">clearanceDependence</span><span class="o">*=</span><span class="n">LINEAR</span> <span class="ow">and</span> <span class="n">three</span> <span class="n">pairs</span> <span class="k">for</span> <span class="o">*</span><span class="n">clearanceDependence</span><span class="o">*=</span><span class="n">BILINEAR</span><span class="o">.</span> <span class="n">The</span> <span class="n">first</span> <span class="n">pair</span> <span class="n">must</span> <span class="n">have</span> <span class="o">*</span><span class="n">clearance</span><span class="o">*=</span><span class="mf">0.0</span><span class="p">,</span> <span class="ow">and</span> <span class="n">the</span> <span class="n">last</span> <span class="n">pair</span> <span class="n">must</span> <span class="n">have</span> <span class="o">*</span><span class="n">coefficient</span><span class="o">*=</span><span class="mf">0.0</span><span class="o">.</span>
-<span class="n">If</span> <span class="o">*</span><span class="n">definition</span><span class="o">*=</span><span class="n">CRITICAL_DAMPING_FRACTION</span><span class="p">,</span> <span class="n">the</span> <span class="n">table</span> <span class="n">data</span> <span class="n">specify</span> <span class="n">the</span> <span class="n">following</span><span class="p">:</span>
+
+    <span class="n">Two</span> <span class="n">pairs</span> <span class="n">must</span> <span class="n">be</span> <span class="n">given</span> <span class="k">for</span> <span class="o">*</span><span class="n">clearanceDependence</span><span class="o">*=</span><span class="n">LINEAR</span> <span class="ow">and</span> <span class="n">three</span> <span class="n">pairs</span> <span class="k">for</span> <span class="o">*</span><span class="n">clearanceDependence</span><span class="o">*=</span><span class="n">BILINEAR</span><span class="o">.</span> <span class="n">The</span> <span class="n">first</span> <span class="n">pair</span> <span class="n">must</span> <span class="n">have</span> <span class="o">*</span><span class="n">clearance</span><span class="o">*=</span><span class="mf">0.0</span><span class="p">,</span> <span class="ow">and</span> <span class="n">the</span> <span class="n">last</span> <span class="n">pair</span> <span class="n">must</span> <span class="n">have</span> <span class="o">*</span><span class="n">coefficient</span><span class="o">*=</span><span class="mf">0.0</span><span class="o">.</span>
+<span class="o">-</span> <span class="n">If</span> <span class="o">*</span><span class="n">definition</span><span class="o">*=</span><span class="n">CRITICAL_DAMPING_FRACTION</span><span class="p">,</span> <span class="n">the</span> <span class="n">table</span> <span class="n">data</span> <span class="n">specify</span> <span class="n">the</span> <span class="n">following</span><span class="p">:</span>
     <span class="o">-</span> <span class="n">Critical</span> <span class="n">damping</span> <span class="n">fraction</span><span class="o">.</span>
 </pre></div>
 </div>
-<dl class="simple">
-<dt>The corresponding analysis keywords are:</dt><dd><ul class="simple">
+<p>The corresponding analysis keywords are:</p>
+<ul class="simple">
 <li><p>CONTACT DAMPING</p></li>
 </ul>
-</dd>
-</dl>
 <dl class="field-list simple">
 <dt class="field-odd">Attributes</dt>
 <dd class="field-odd"><dl class="simple">
@@ -3086,12 +3086,10 @@ The ContactProperty object is derived from the InteractionProperty object.</p>
 <span class="n">mdb</span><span class="o">.</span><span class="n">models</span><span class="p">[</span><span class="n">name</span><span class="p">]</span><span class="o">.</span><span class="n">interactionProperties</span><span class="p">[</span><span class="n">name</span><span class="p">]</span>
 </pre></div>
 </div>
-<dl class="simple">
-<dt>The corresponding analysis keywords are:</dt><dd><ul class="simple">
+<p>The corresponding analysis keywords are:</p>
+<ul class="simple">
 <li><p>SURFACE INTERACTION</p></li>
 </ul>
-</dd>
-</dl>
 <dl class="field-list simple">
 <dt class="field-odd">Attributes</dt>
 <dd class="field-odd"><dl class="simple">
@@ -3780,12 +3778,16 @@ table data are described below.</p>
 <dd><p>The ContactPropertyAssignment object stores the contact property assignment definition
 for domain pairs in ContactExp and ContactStd objects. The ContactPropertyAssignment 
 object has no constructor or members.</p>
-<dl class="simple">
-<dt>The corresponding analysis keywords are:</dt><dd><ul class="simple">
+<p class="rubric">Notes</p>
+<p>This object can be accessed by:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">interaction</span>
+<span class="n">mdb</span><span class="o">.</span><span class="n">models</span><span class="p">[</span><span class="n">name</span><span class="p">]</span><span class="o">.</span><span class="n">interactions</span><span class="p">[</span><span class="n">name</span><span class="p">]</span><span class="o">.</span><span class="n">contactPropertyAssignments</span>
+</pre></div>
+</div>
+<p>The corresponding analysis keywords are:</p>
+<ul class="simple">
 <li><p>CONTACT PROPERTY ASSIGNMENT</p></li>
 </ul>
-</dd>
-</dl>
 <p class="rubric">Methods</p>
 <div class="table-wrapper"><table class="autosummary longtable docutils align-default">
 <colgroup>
@@ -4017,12 +4019,16 @@ is available during the step in which the interaction was deactivated originally
 <dd><p>The InitializationAssignment object stores the contact initialization assignment
 definition for domain pairs in a ContactStd or ContactExp object. The 
 InitializationAssignment object has no constructor or members.</p>
-<dl class="simple">
-<dt>The corresponding analysis keywords are:</dt><dd><ul class="simple">
+<p class="rubric">Notes</p>
+<p>This object can be accessed by:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">interaction</span>
+<span class="n">mdb</span><span class="o">.</span><span class="n">models</span><span class="p">[</span><span class="n">name</span><span class="p">]</span><span class="o">.</span><span class="n">interactions</span><span class="p">[</span><span class="n">name</span><span class="p">]</span><span class="o">.</span><span class="n">initializationAssignments</span>
+</pre></div>
+</div>
+<p>The corresponding analysis keywords are:</p>
+<ul class="simple">
 <li><p>CONTACT INITIALIZATION ASSIGNMENT</p></li>
 </ul>
-</dd>
-</dl>
 <p class="rubric">Methods</p>
 <div class="table-wrapper"><table class="autosummary longtable docutils align-default">
 <colgroup>
@@ -4113,9 +4119,10 @@ methods.</p>
 <p>This object can be accessed by:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">interaction</span>
 <span class="n">mdb</span><span class="o">.</span><span class="n">models</span><span class="p">[</span><span class="n">name</span><span class="p">]</span><span class="o">.</span><span class="n">interactionProperties</span><span class="p">[</span><span class="n">name</span><span class="p">]</span>
+
+<span class="n">The</span> <span class="n">corresponding</span> <span class="n">analysis</span> <span class="n">keywords</span> <span class="n">are</span><span class="p">:</span>
 </pre></div>
 </div>
-<p>The corresponding analysis keywords are:</p>
 </dd></dl>
 </div>
 <div class="section" id="interactionstate">
@@ -4170,12 +4177,10 @@ The AcousticImpedance object is derived from the Interaction object.</p>
 <span class="n">mdb</span><span class="o">.</span><span class="n">models</span><span class="p">[</span><span class="n">name</span><span class="p">]</span><span class="o">.</span><span class="n">interactions</span><span class="p">[</span><span class="n">name</span><span class="p">]</span>
 </pre></div>
 </div>
-<dl class="simple">
-<dt>The corresponding analysis keywords are:</dt><dd><ul class="simple">
+<p>The corresponding analysis keywords are:</p>
+<ul class="simple">
 <li><p>SIMPEDANCE</p></li>
 </ul>
-</dd>
-</dl>
 <p class="rubric">Methods</p>
 <div class="table-wrapper"><table class="autosummary longtable docutils align-default">
 <colgroup>
@@ -4336,12 +4341,10 @@ The AcousticImpedanceProp object is derived from the InteractionProperty object.
 <span class="n">mdb</span><span class="o">.</span><span class="n">models</span><span class="p">[</span><span class="n">name</span><span class="p">]</span><span class="o">.</span><span class="n">interactionProperties</span><span class="p">[</span><span class="n">name</span><span class="p">]</span>
 </pre></div>
 </div>
-<dl class="simple">
-<dt>The corresponding analysis keywords are:</dt><dd><ul class="simple">
+<p>The corresponding analysis keywords are:</p>
+<ul class="simple">
 <li><p>IMPEDANCE PROPERTY</p></li>
 </ul>
-</dd>
-</dl>
 <p class="rubric">Methods</p>
 <div class="table-wrapper"><table class="autosummary longtable docutils align-default">
 <colgroup>
@@ -4425,12 +4428,16 @@ AcousticImpedance object for each step. The instance is also deleted internally 
 AcousticImpedance object. 
 The AcousticImpedanceState object has no constructor or methods. 
 The AcousticImpedanceState object is derived from the InteractionState object.</p>
-<dl class="simple">
-<dt>The corresponding analysis keywords are:</dt><dd><ul class="simple">
+<p class="rubric">Notes</p>
+<p>This object can be accessed by:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">interaction</span>
+<span class="n">mdb</span><span class="o">.</span><span class="n">models</span><span class="p">[</span><span class="n">name</span><span class="p">]</span><span class="o">.</span><span class="n">steps</span><span class="p">[</span><span class="n">name</span><span class="p">]</span><span class="o">.</span><span class="n">interactionStates</span><span class="p">[</span><span class="n">name</span><span class="p">]</span>
+</pre></div>
+</div>
+<p>The corresponding analysis keywords are:</p>
+<ul class="simple">
 <li><p>SIMPEDANCE</p></li>
 </ul>
-</dd>
-</dl>
 <dl class="field-list">
 <dt class="field-odd">Attributes</dt>
 <dd class="field-odd"><dl>
@@ -4476,8 +4483,8 @@ The ActuatorSensor object is derived from the Interaction object.</p>
 <span class="n">mdb</span><span class="o">.</span><span class="n">models</span><span class="p">[</span><span class="n">name</span><span class="p">]</span><span class="o">.</span><span class="n">interactions</span><span class="p">[</span><span class="n">name</span><span class="p">]</span>
 </pre></div>
 </div>
-<dl class="simple">
-<dt>The corresponding analysis keywords are:</dt><dd><ul class="simple">
+<p>The corresponding analysis keywords are:</p>
+<ul class="simple">
 <li><dl class="simple">
 <dt>ELEMENT</dt><dd><ul>
 <li><p>USER ELEMENT</p></li>
@@ -4487,8 +4494,6 @@ The ActuatorSensor object is derived from the Interaction object.</p>
 </dl>
 </li>
 </ul>
-</dd>
-</dl>
 <p class="rubric">Methods</p>
 <div class="table-wrapper"><table class="autosummary longtable docutils align-default">
 <colgroup>
@@ -4574,12 +4579,10 @@ The ActuatorSensorProp object is derived from the InteractionProperty object.</p
 <span class="n">mdb</span><span class="o">.</span><span class="n">models</span><span class="p">[</span><span class="n">name</span><span class="p">]</span><span class="o">.</span><span class="n">interactionProperties</span><span class="p">[</span><span class="n">name</span><span class="p">]</span>
 </pre></div>
 </div>
-<dl class="simple">
-<dt>The corresponding analysis keywords are:</dt><dd><ul class="simple">
+<p>The corresponding analysis keywords are:</p>
+<ul class="simple">
 <li><p>UEL PROPERTY</p></li>
 </ul>
-</dd>
-</dl>
 <p class="rubric">Methods</p>
 <div class="table-wrapper"><table class="autosummary longtable docutils align-default">
 <colgroup>
@@ -4702,8 +4705,8 @@ The CavityRadiation object is derived from the Interaction object.</p>
 <span class="n">mdb</span><span class="o">.</span><span class="n">models</span><span class="p">[</span><span class="n">name</span><span class="p">]</span><span class="o">.</span><span class="n">interactions</span><span class="p">[</span><span class="n">name</span><span class="p">]</span>
 </pre></div>
 </div>
-<dl class="simple">
-<dt>The corresponding analysis keywords are:</dt><dd><ul class="simple">
+<p>The corresponding analysis keywords are:</p>
+<ul class="simple">
 <li><dl class="simple">
 <dt>CAVITY DEFINITION</dt><dd><ul>
 <li><p>CYCLIC</p></li>
@@ -4717,8 +4720,6 @@ The CavityRadiation object is derived from the Interaction object.</p>
 </dl>
 </li>
 </ul>
-</dd>
-</dl>
 <dl class="field-list simple">
 <dt class="field-odd">Attributes</dt>
 <dd class="field-odd"><dl class="simple">
@@ -5229,12 +5230,10 @@ The CavityRadiationProp object is derived from the InteractionProperty object.</
 <span class="n">mdb</span><span class="o">.</span><span class="n">models</span><span class="p">[</span><span class="n">name</span><span class="p">]</span><span class="o">.</span><span class="n">interactionProperties</span><span class="p">[</span><span class="n">name</span><span class="p">]</span>
 </pre></div>
 </div>
-<dl class="simple">
-<dt>The corresponding analysis keywords are:</dt><dd><ul class="simple">
+<p>The corresponding analysis keywords are:</p>
+<ul class="simple">
 <li><p>EMISSIVITY</p></li>
 </ul>
-</dd>
-</dl>
 <p class="rubric">Methods</p>
 <div class="table-wrapper"><table class="autosummary longtable docutils align-default">
 <colgroup>
@@ -5317,12 +5316,16 @@ object. One instance of this object is created internally by the CavityRadiation
 for each step. The instance is also deleted internally by the CavityRadiation object. 
 The CavityRadiationState object has no constructor or methods. 
 The CavityRadiationState object is derived from the InteractionState object.</p>
-<dl class="simple">
-<dt>The corresponding analysis keywords are:</dt><dd><ul class="simple">
+<p class="rubric">Notes</p>
+<p>This object can be accessed by:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">interaction</span>
+<span class="n">mdb</span><span class="o">.</span><span class="n">models</span><span class="p">[</span><span class="n">name</span><span class="p">]</span><span class="o">.</span><span class="n">steps</span><span class="p">[</span><span class="n">name</span><span class="p">]</span><span class="o">.</span><span class="n">interactionStates</span><span class="p">[</span><span class="n">name</span><span class="p">]</span>
+</pre></div>
+</div>
+<p>The corresponding analysis keywords are:</p>
+<ul class="simple">
 <li><p>RADIATION VIEWFACTOR</p></li>
 </ul>
-</dd>
-</dl>
 <dl class="field-list simple">
 <dt class="field-odd">Attributes</dt>
 <dd class="field-odd"><dl class="simple">
@@ -5376,7 +5379,8 @@ are:NOT_YET_ACTIVECREATEDPROPAGATEDMODIFIEDDEACTIVATEDNO_LONGER_ACTIVETYPE_NOT_A
 <span class="n">mdb</span><span class="o">.</span><span class="n">models</span><span class="p">[</span><span class="n">name</span><span class="p">]</span><span class="o">.</span><span class="n">interactionProperties</span><span class="p">[</span><span class="n">name</span><span class="p">]</span><span class="o">.</span><span class="n">cohesiveBehavior</span>
 
 <span class="n">The</span> <span class="n">table</span> <span class="n">data</span> <span class="k">for</span> <span class="n">this</span> <span class="nb">object</span> <span class="n">are</span><span class="p">:</span>
-<span class="n">If</span> <span class="o">*</span><span class="n">coupling</span><span class="o">*=</span><span class="n">UNCOUPLED</span><span class="p">,</span> <span class="n">the</span> <span class="n">table</span> <span class="n">data</span> <span class="n">specify</span> <span class="n">the</span> <span class="n">following</span><span class="p">:</span>
+
+<span class="o">-</span> <span class="n">If</span> <span class="o">*</span><span class="n">coupling</span><span class="o">*=</span><span class="n">UNCOUPLED</span><span class="p">,</span> <span class="n">the</span> <span class="n">table</span> <span class="n">data</span> <span class="n">specify</span> <span class="n">the</span> <span class="n">following</span><span class="p">:</span>
     <span class="o">-</span> <span class="n">Stiffness</span> <span class="n">coefficient</span> <span class="ow">in</span> <span class="n">the</span> <span class="n">normal</span> <span class="n">direction</span><span class="p">,</span> <span class="n">Knn</span><span class="o">.</span>
     <span class="o">-</span> <span class="n">Stiffness</span> <span class="n">coefficient</span> <span class="ow">in</span> <span class="n">the</span> <span class="n">first</span> <span class="n">shear</span> <span class="n">direction</span><span class="p">,</span> <span class="n">Kss</span><span class="o">.</span>
     <span class="o">-</span> <span class="n">Stiffness</span> <span class="n">coefficient</span> <span class="ow">in</span> <span class="n">the</span> <span class="n">second</span> <span class="n">shear</span> <span class="n">direction</span><span class="p">,</span> <span class="n">Ktt</span><span class="o">.</span>
@@ -5384,7 +5388,7 @@ are:NOT_YET_ACTIVECREATEDPROPAGATEDMODIFIEDDEACTIVATEDNO_LONGER_ACTIVETYPE_NOT_A
     <span class="o">-</span> <span class="n">Value</span> <span class="n">of</span> <span class="n">the</span> <span class="n">first</span> <span class="n">field</span> <span class="n">variable</span><span class="p">,</span> <span class="k">if</span> <span class="n">the</span> <span class="n">data</span> <span class="n">depend</span> <span class="n">on</span> <span class="n">field</span> <span class="n">variables</span><span class="o">.</span>
     <span class="o">-</span> <span class="n">Value</span> <span class="n">of</span> <span class="n">the</span> <span class="n">second</span> <span class="n">field</span> <span class="n">variable</span><span class="o">.</span>
     <span class="o">-</span> <span class="n">Etc</span><span class="o">.</span>
-<span class="n">If</span> <span class="o">*</span><span class="n">coupling</span><span class="o">*=</span><span class="n">COUPLED</span><span class="p">,</span> <span class="n">the</span> <span class="n">table</span> <span class="n">data</span> <span class="n">specify</span> <span class="n">the</span> <span class="n">following</span><span class="p">:</span>
+<span class="o">-</span> <span class="n">If</span> <span class="o">*</span><span class="n">coupling</span><span class="o">*=</span><span class="n">COUPLED</span><span class="p">,</span> <span class="n">the</span> <span class="n">table</span> <span class="n">data</span> <span class="n">specify</span> <span class="n">the</span> <span class="n">following</span><span class="p">:</span>
     <span class="o">-</span> <span class="n">Stiffness</span> <span class="n">coefficient</span> <span class="ow">in</span> <span class="n">the</span> <span class="n">normal</span> <span class="n">direction</span><span class="p">,</span> <span class="n">Knn</span><span class="o">.</span>
     <span class="o">-</span> <span class="n">Stiffness</span> <span class="n">coefficient</span> <span class="ow">in</span> <span class="n">the</span> <span class="n">first</span> <span class="n">shear</span> <span class="n">direction</span><span class="p">,</span> <span class="n">Kss</span><span class="o">.</span>
     <span class="o">-</span> <span class="n">Stiffness</span> <span class="n">coefficient</span> <span class="ow">in</span> <span class="n">the</span> <span class="n">second</span> <span class="n">shear</span> <span class="n">direction</span><span class="p">,</span> <span class="n">Ktt</span><span class="o">.</span>
@@ -5673,12 +5677,16 @@ the ConcentratedFilmCondition object for each step. The instance is also deleted
 internally by the ConcentratedFilmCondition object. 
 The ConcentratedFilmConditionState object has no constructor or methods. 
 The ConcentratedFilmConditionState object is derived from the InteractionState object.</p>
-<dl class="simple">
-<dt>The corresponding analysis keywords are:</dt><dd><ul class="simple">
+<p class="rubric">Notes</p>
+<p>This object can be accessed by:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">interaction</span>
+<span class="n">mdb</span><span class="o">.</span><span class="n">models</span><span class="p">[</span><span class="n">name</span><span class="p">]</span><span class="o">.</span><span class="n">steps</span><span class="p">[</span><span class="n">name</span><span class="p">]</span><span class="o">.</span><span class="n">interactionStates</span><span class="p">[</span><span class="n">name</span><span class="p">]</span>
+</pre></div>
+</div>
+<p>The corresponding analysis keywords are:</p>
+<ul class="simple">
 <li><p>CFILM</p></li>
 </ul>
-</dd>
-</dl>
 <dl class="field-list">
 <dt class="field-odd">Attributes</dt>
 <dd class="field-odd"><dl>
@@ -5895,12 +5903,16 @@ internally by the ConcentratedRadiationToAmbient object.
 The ConcentratedRadiationToAmbientState object has no constructor or methods. 
 The ConcentratedRadiationToAmbientState object is derived from the InteractionState 
 object.</p>
-<dl class="simple">
-<dt>The corresponding analysis keywords are:</dt><dd><ul class="simple">
+<p class="rubric">Notes</p>
+<p>This object can be accessed by:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">interaction</span>
+<span class="n">mdb</span><span class="o">.</span><span class="n">models</span><span class="p">[</span><span class="n">name</span><span class="p">]</span><span class="o">.</span><span class="n">steps</span><span class="p">[</span><span class="n">name</span><span class="p">]</span><span class="o">.</span><span class="n">interactionStates</span><span class="p">[</span><span class="n">name</span><span class="p">]</span>
+</pre></div>
+</div>
+<p>The corresponding analysis keywords are:</p>
+<ul class="simple">
 <li><p>CRADIATE</p></li>
 </ul>
-</dd>
-</dl>
 <dl class="field-list">
 <dt class="field-odd">Attributes</dt>
 <dd class="field-odd"><dl>
@@ -5963,12 +5975,10 @@ The ContactExp object is derived from the Interaction object.</p>
 <span class="n">mdb</span><span class="o">.</span><span class="n">models</span><span class="p">[</span><span class="n">name</span><span class="p">]</span><span class="o">.</span><span class="n">interactions</span><span class="p">[</span><span class="n">name</span><span class="p">]</span>
 </pre></div>
 </div>
-<dl class="simple">
-<dt>The corresponding analysis keywords are:</dt><dd><ul class="simple">
+<p>The corresponding analysis keywords are:</p>
+<ul class="simple">
 <li><p>CONTACT</p></li>
 </ul>
-</dd>
-</dl>
 <dl class="field-list simple">
 <dt class="field-odd">Attributes</dt>
 <dd class="field-odd"><dl class="simple">
@@ -6022,12 +6032,10 @@ The ContactStd object is derived from the Interaction object.</p>
 <span class="n">mdb</span><span class="o">.</span><span class="n">models</span><span class="p">[</span><span class="n">name</span><span class="p">]</span><span class="o">.</span><span class="n">interactions</span><span class="p">[</span><span class="n">name</span><span class="p">]</span>
 </pre></div>
 </div>
-<dl class="simple">
-<dt>The corresponding analysis keywords are:</dt><dd><ul class="simple">
+<p>The corresponding analysis keywords are:</p>
+<ul class="simple">
 <li><p>CONTACT</p></li>
 </ul>
-</dd>
-</dl>
 <dl class="field-list simple">
 <dt class="field-odd">Attributes</dt>
 <dd class="field-odd"><dl class="simple">
@@ -6090,7 +6098,8 @@ interaction property.</p>
 <span class="n">mdb</span><span class="o">.</span><span class="n">models</span><span class="p">[</span><span class="n">name</span><span class="p">]</span><span class="o">.</span><span class="n">interactionProperties</span><span class="p">[</span><span class="n">name</span><span class="p">]</span><span class="o">.</span><span class="n">tangentialBehavior</span>
 
 <span class="n">The</span> <span class="n">table</span> <span class="n">data</span> <span class="k">for</span> <span class="n">this</span> <span class="nb">object</span> <span class="n">are</span><span class="p">:</span>
-<span class="n">If</span> <span class="o">*</span><span class="n">formulation</span><span class="o">*=</span><span class="n">PENALTY</span> <span class="ow">or</span> <span class="n">LAGRANGE</span><span class="p">,</span> <span class="n">the</span> <span class="n">table</span> <span class="n">data</span> <span class="n">specify</span> <span class="n">the</span> <span class="n">following</span><span class="p">:</span>
+
+<span class="o">-</span> <span class="n">If</span> <span class="o">*</span><span class="n">formulation</span><span class="o">*=</span><span class="n">PENALTY</span> <span class="ow">or</span> <span class="n">LAGRANGE</span><span class="p">,</span> <span class="n">the</span> <span class="n">table</span> <span class="n">data</span> <span class="n">specify</span> <span class="n">the</span> <span class="n">following</span><span class="p">:</span>
     <span class="o">-</span> <span class="n">Friction</span> <span class="n">coefficient</span> <span class="ow">in</span> <span class="n">the</span> <span class="n">first</span> <span class="n">slip</span> <span class="n">direction</span><span class="p">,</span> <span class="n">μ1μ1</span><span class="o">.</span>
     <span class="o">-</span> <span class="n">Friction</span> <span class="n">coefficient</span> <span class="ow">in</span> <span class="n">the</span> <span class="n">second</span> <span class="n">slip</span> <span class="n">direction</span><span class="p">,</span> <span class="n">μ2μ2</span> <span class="p">(</span><span class="k">if</span> <span class="o">*</span><span class="n">directionality</span><span class="o">*=</span><span class="n">ANISOTROPIC</span><span class="p">)</span><span class="o">.</span>
     <span class="o">-</span> <span class="n">Slip</span> <span class="n">rate</span><span class="p">,</span> <span class="k">if</span> <span class="n">the</span> <span class="n">data</span> <span class="n">depend</span> <span class="n">on</span> <span class="n">slip</span> <span class="n">rate</span><span class="o">.</span>
@@ -6099,21 +6108,21 @@ interaction property.</p>
     <span class="o">-</span> <span class="n">Value</span> <span class="n">of</span> <span class="n">the</span> <span class="n">first</span> <span class="n">field</span> <span class="n">variable</span><span class="p">,</span> <span class="k">if</span> <span class="n">the</span> <span class="n">data</span> <span class="n">depend</span> <span class="n">on</span> <span class="n">field</span> <span class="n">variables</span><span class="o">.</span>
     <span class="o">-</span> <span class="n">Value</span> <span class="n">of</span> <span class="n">the</span> <span class="n">second</span> <span class="n">field</span> <span class="n">variable</span><span class="o">.</span>
     <span class="o">-</span> <span class="n">Etc</span><span class="o">.</span>
-<span class="n">If</span> <span class="o">*</span><span class="n">formulation</span><span class="o">*=</span><span class="n">EXPONENTIAL_DECAY</span> <span class="ow">and</span> <span class="o">*</span><span class="n">exponentialDecayDefinition</span><span class="o">*=</span><span class="n">COEFFICIENTS</span><span class="p">,</span> <span class="n">the</span> <span class="n">table</span> <span class="n">data</span> <span class="n">specify</span> <span class="n">the</span>
+<span class="o">-</span> <span class="n">If</span> <span class="o">*</span><span class="n">formulation</span><span class="o">*=</span><span class="n">EXPONENTIAL_DECAY</span> <span class="ow">and</span> <span class="o">*</span><span class="n">exponentialDecayDefinition</span><span class="o">*=</span><span class="n">COEFFICIENTS</span><span class="p">,</span> <span class="n">the</span> <span class="n">table</span> <span class="n">data</span> <span class="n">specify</span> <span class="n">the</span>
 <span class="n">following</span><span class="p">:</span>
     <span class="o">-</span> <span class="n">Static</span> <span class="n">friction</span> <span class="n">coefficient</span><span class="o">.</span>
     <span class="o">-</span> <span class="n">Kinetic</span> <span class="n">friction</span> <span class="n">coefficient</span><span class="o">.</span>
     <span class="o">-</span> <span class="n">Decay</span> <span class="n">coefficient</span><span class="o">.</span>
-<span class="n">If</span> <span class="o">*</span><span class="n">formulation</span><span class="o">*=</span><span class="n">EXPONENTIAL_DECAY</span> <span class="ow">and</span> <span class="o">*</span><span class="n">exponentialDecayDefinition</span><span class="o">*=</span><span class="n">TEST_DATA</span><span class="p">,</span> <span class="n">the</span> <span class="n">table</span> <span class="n">data</span> <span class="n">specify</span> <span class="n">the</span>
+<span class="o">-</span> <span class="n">If</span> <span class="o">*</span><span class="n">formulation</span><span class="o">*=</span><span class="n">EXPONENTIAL_DECAY</span> <span class="ow">and</span> <span class="o">*</span><span class="n">exponentialDecayDefinition</span><span class="o">*=</span><span class="n">TEST_DATA</span><span class="p">,</span> <span class="n">the</span> <span class="n">table</span> <span class="n">data</span> <span class="n">specify</span> <span class="n">the</span>
 <span class="n">following</span><span class="p">:</span>
     <span class="o">-</span> <span class="n">Friction</span> <span class="n">coefficient</span><span class="o">.</span>
     <span class="o">-</span> <span class="n">Slip</span> <span class="n">rate</span><span class="o">.</span>
-<span class="n">If</span> <span class="o">*</span><span class="n">formulation</span><span class="o">*=</span><span class="n">USER_DEFINED</span><span class="p">,</span> <span class="n">the</span> <span class="n">table</span> <span class="n">data</span> <span class="n">specify</span> <span class="n">the</span> <span class="n">following</span><span class="p">:</span>
+<span class="o">-</span> <span class="n">If</span> <span class="o">*</span><span class="n">formulation</span><span class="o">*=</span><span class="n">USER_DEFINED</span><span class="p">,</span> <span class="n">the</span> <span class="n">table</span> <span class="n">data</span> <span class="n">specify</span> <span class="n">the</span> <span class="n">following</span><span class="p">:</span>
     <span class="o">-</span> <span class="n">Friction</span> <span class="nb">property</span><span class="o">.</span>
 </pre></div>
 </div>
-<dl class="simple">
-<dt>The corresponding analysis keywords are:</dt><dd><ul class="simple">
+<p>The corresponding analysis keywords are:</p>
+<ul class="simple">
 <li><dl class="simple">
 <dt>FRICTION</dt><dd><ul>
 <li><p>CHANGE FRICTION</p></li>
@@ -6122,8 +6131,6 @@ interaction property.</p>
 </dl>
 </li>
 </ul>
-</dd>
-</dl>
 <dl class="field-list simple">
 <dt class="field-odd">Attributes</dt>
 <dd class="field-odd"><dl class="simple">
@@ -6280,8 +6287,8 @@ The CyclicSymmetry object is derived from the Interaction object.</p>
 <span class="n">mdb</span><span class="o">.</span><span class="n">models</span><span class="p">[</span><span class="n">name</span><span class="p">]</span><span class="o">.</span><span class="n">interactions</span><span class="p">[</span><span class="n">name</span><span class="p">]</span>
 </pre></div>
 </div>
-<dl class="simple">
-<dt>The corresponding analysis keywords are:</dt><dd><ul class="simple">
+<p>The corresponding analysis keywords are:</p>
+<ul class="simple">
 <li><dl class="simple">
 <dt>CLOAD</dt><dd><ul>
 <li><p>CYCLIC SYMMETRY MODEL</p></li>
@@ -6294,8 +6301,6 @@ The CyclicSymmetry object is derived from the Interaction object.</p>
 </dl>
 </li>
 </ul>
-</dd>
-</dl>
 <p class="rubric">Methods</p>
 <div class="table-wrapper"><table class="autosummary longtable docutils align-default">
 <colgroup>
@@ -6487,8 +6492,14 @@ One instance of this object is created internally by the CyclicSymmetry object f
 step. The instance is also deleted internally by the CyclicSymmetry object. 
 The CyclicSymmetryState object has no constructor or methods. 
 The CyclicSymmetryState object is derived from the InteractionState object.</p>
-<dl class="simple">
-<dt>The corresponding analysis keywords are:</dt><dd><ul class="simple">
+<p class="rubric">Notes</p>
+<p>This object can be accessed by:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">interaction</span>
+<span class="n">mdb</span><span class="o">.</span><span class="n">models</span><span class="p">[</span><span class="n">name</span><span class="p">]</span><span class="o">.</span><span class="n">steps</span><span class="p">[</span><span class="n">name</span><span class="p">]</span><span class="o">.</span><span class="n">interactionStates</span><span class="p">[</span><span class="n">name</span><span class="p">]</span>
+</pre></div>
+</div>
+<p>The corresponding analysis keywords are:</p>
+<ul class="simple">
 <li><dl class="simple">
 <dt>CLOAD</dt><dd><ul>
 <li><p>DLOAD</p></li>
@@ -6499,8 +6510,6 @@ The CyclicSymmetryState object is derived from the InteractionState object.</p>
 </dl>
 </li>
 </ul>
-</dd>
-</dl>
 <dl class="field-list">
 <dt class="field-odd">Attributes</dt>
 <dd class="field-odd"><dl>
@@ -6568,12 +6577,10 @@ The ElasticFoundation object is derived from the Interaction object.</p>
 <span class="n">mdb</span><span class="o">.</span><span class="n">models</span><span class="p">[</span><span class="n">name</span><span class="p">]</span><span class="o">.</span><span class="n">interactions</span><span class="p">[</span><span class="n">name</span><span class="p">]</span>
 </pre></div>
 </div>
-<dl class="simple">
-<dt>The corresponding analysis keywords are:</dt><dd><ul class="simple">
+<p>The corresponding analysis keywords are:</p>
+<ul class="simple">
 <li><p>FOUNDATION</p></li>
 </ul>
-</dd>
-</dl>
 <p class="rubric">Methods</p>
 <div class="table-wrapper"><table class="autosummary longtable docutils align-default">
 <colgroup>
@@ -6714,12 +6721,10 @@ The ExpContactControl object is derived from the ContactControl object.</p>
 <span class="n">mdb</span><span class="o">.</span><span class="n">models</span><span class="p">[</span><span class="n">name</span><span class="p">]</span><span class="o">.</span><span class="n">contactControls</span><span class="p">[</span><span class="n">name</span><span class="p">]</span>
 </pre></div>
 </div>
-<dl class="simple">
-<dt>The corresponding analysis keywords are:</dt><dd><ul class="simple">
+<p>The corresponding analysis keywords are:</p>
+<ul class="simple">
 <li><p>CONTACT CONTROLS</p></li>
 </ul>
-</dd>
-</dl>
 <p class="rubric">Methods</p>
 <div class="table-wrapper"><table class="autosummary longtable docutils align-default">
 <colgroup>
@@ -6842,12 +6847,10 @@ The ExpInitialization object is derived from the ContactInitialization object.</
 <span class="n">mdb</span><span class="o">.</span><span class="n">models</span><span class="p">[</span><span class="n">name</span><span class="p">]</span><span class="o">.</span><span class="n">contactInitializations</span><span class="p">[</span><span class="n">name</span><span class="p">]</span>
 </pre></div>
 </div>
-<dl class="simple">
-<dt>The corresponding analysis keywords are:</dt><dd><ul class="simple">
+<p>The corresponding analysis keywords are:</p>
+<ul class="simple">
 <li><p>CONTACT INITIALIZATION DATA</p></li>
 </ul>
-</dd>
-</dl>
 <p class="rubric">Methods</p>
 <div class="table-wrapper"><table class="autosummary longtable docutils align-default">
 <colgroup>
@@ -7163,12 +7166,10 @@ The FilmConditionProp object is derived from the InteractionProperty object.</p>
 <span class="n">mdb</span><span class="o">.</span><span class="n">models</span><span class="p">[</span><span class="n">name</span><span class="p">]</span><span class="o">.</span><span class="n">interactionProperties</span><span class="p">[</span><span class="n">name</span><span class="p">]</span>
 </pre></div>
 </div>
-<dl class="simple">
-<dt>The corresponding analysis keywords are:</dt><dd><ul class="simple">
+<p>The corresponding analysis keywords are:</p>
+<ul class="simple">
 <li><p>FILM PROPERTY</p></li>
 </ul>
-</dd>
-</dl>
 <p class="rubric">Methods</p>
 <div class="table-wrapper"><table class="autosummary longtable docutils align-default">
 <colgroup>
@@ -7257,8 +7258,14 @@ One instance of this object is created internally by the FilmCondition object fo
 step. The instance is also deleted internally by the FilmCondition object. 
 The FilmConditionState object has no constructor or methods. 
 The FilmConditionState object is derived from the InteractionState object.</p>
-<dl class="simple">
-<dt>The corresponding analysis keywords are:</dt><dd><ul class="simple">
+<p class="rubric">Notes</p>
+<p>This object can be accessed by:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">interaction</span>
+<span class="n">mdb</span><span class="o">.</span><span class="n">models</span><span class="p">[</span><span class="n">name</span><span class="p">]</span><span class="o">.</span><span class="n">steps</span><span class="p">[</span><span class="n">name</span><span class="p">]</span><span class="o">.</span><span class="n">interactionStates</span><span class="p">[</span><span class="n">name</span><span class="p">]</span>
+</pre></div>
+</div>
+<p>The corresponding analysis keywords are:</p>
+<ul class="simple">
 <li><dl class="simple">
 <dt>SFILM</dt><dd><ul>
 <li><p>FILM</p></li>
@@ -7267,8 +7274,6 @@ The FilmConditionState object is derived from the InteractionState object.</p>
 </dl>
 </li>
 </ul>
-</dd>
-</dl>
 <dl class="field-list">
 <dt class="field-odd">Attributes</dt>
 <dd class="field-odd"><dl>
@@ -7333,12 +7338,10 @@ The FluidCavity object is derived from the Interaction object.</p>
 <span class="n">mdb</span><span class="o">.</span><span class="n">models</span><span class="p">[</span><span class="n">name</span><span class="p">]</span><span class="o">.</span><span class="n">interactions</span><span class="p">[</span><span class="n">name</span><span class="p">]</span>
 </pre></div>
 </div>
-<dl class="simple">
-<dt>The corresponding analysis keywords are:</dt><dd><ul class="simple">
+<p>The corresponding analysis keywords are:</p>
+<ul class="simple">
 <li><p>FLUID CAVITY</p></li>
 </ul>
-</dd>
-</dl>
 <p class="rubric">Methods</p>
 <div class="table-wrapper"><table class="autosummary longtable docutils align-default">
 <colgroup>
@@ -7441,8 +7444,8 @@ The FluidCavityProperty object is derived from the InteractionProperty object.</
 <span class="n">mdb</span><span class="o">.</span><span class="n">models</span><span class="p">[</span><span class="n">name</span><span class="p">]</span><span class="o">.</span><span class="n">interactionProperties</span><span class="p">[</span><span class="n">name</span><span class="p">]</span>
 </pre></div>
 </div>
-<dl class="simple">
-<dt>The corresponding analysis keywords are:</dt><dd><ul class="simple">
+<p>The corresponding analysis keywords are:</p>
+<ul class="simple">
 <li><dl class="simple">
 <dt>FLUID BEHAVIOR</dt><dd><ul>
 <li><p>CAPACITY</p></li>
@@ -7455,8 +7458,6 @@ The FluidCavityProperty object is derived from the InteractionProperty object.</
 </dl>
 </li>
 </ul>
-</dd>
-</dl>
 <p class="rubric">Methods</p>
 <div class="table-wrapper"><table class="autosummary longtable docutils align-default">
 <colgroup>
@@ -7743,12 +7744,10 @@ The FluidExchange object is derived from the Interaction object.</p>
 <span class="n">mdb</span><span class="o">.</span><span class="n">models</span><span class="p">[</span><span class="n">name</span><span class="p">]</span><span class="o">.</span><span class="n">interactions</span><span class="p">[</span><span class="n">name</span><span class="p">]</span>
 </pre></div>
 </div>
-<dl class="simple">
-<dt>The corresponding analysis keywords are:</dt><dd><ul class="simple">
+<p>The corresponding analysis keywords are:</p>
+<ul class="simple">
 <li><p>FLUID EXCHANGE</p></li>
 </ul>
-</dd>
-</dl>
 <p class="rubric">Methods</p>
 <div class="table-wrapper"><table class="autosummary longtable docutils align-default">
 <colgroup>
@@ -7843,12 +7842,10 @@ The FluidExchangeProperty object is derived from the InteractionProperty object.
 <span class="n">mdb</span><span class="o">.</span><span class="n">models</span><span class="p">[</span><span class="n">name</span><span class="p">]</span><span class="o">.</span><span class="n">interactionProperties</span><span class="p">[</span><span class="n">name</span><span class="p">]</span>
 </pre></div>
 </div>
-<dl class="simple">
-<dt>The corresponding analysis keywords are:</dt><dd><ul class="simple">
+<p>The corresponding analysis keywords are:</p>
+<ul class="simple">
 <li><p>FLUID EXCHANGE PROPERTY</p></li>
 </ul>
-</dd>
-</dl>
 <p class="rubric">Methods</p>
 <div class="table-wrapper"><table class="autosummary longtable docutils align-default">
 <colgroup>
@@ -8032,12 +8029,10 @@ The FluidInflator object is derived from the Interaction object.</p>
 <span class="n">mdb</span><span class="o">.</span><span class="n">models</span><span class="p">[</span><span class="n">name</span><span class="p">]</span><span class="o">.</span><span class="n">interactions</span><span class="p">[</span><span class="n">name</span><span class="p">]</span>
 </pre></div>
 </div>
-<dl class="simple">
-<dt>The corresponding analysis keywords are:</dt><dd><ul class="simple">
+<p>The corresponding analysis keywords are:</p>
+<ul class="simple">
 <li><p>FLUID INFLATOR</p></li>
 </ul>
-</dd>
-</dl>
 <p class="rubric">Methods</p>
 <div class="table-wrapper"><table class="autosummary longtable docutils align-default">
 <colgroup>
@@ -8128,30 +8123,29 @@ The FluidInflatorProperty object is derived from the InteractionProperty object.
 <span class="n">mdb</span><span class="o">.</span><span class="n">models</span><span class="p">[</span><span class="n">name</span><span class="p">]</span><span class="o">.</span><span class="n">interactionProperties</span><span class="p">[</span><span class="n">name</span><span class="p">]</span>
 
 <span class="n">The</span> <span class="n">table</span> <span class="n">data</span> <span class="k">for</span> <span class="n">this</span> <span class="nb">object</span> <span class="n">are</span><span class="p">:</span>
-<span class="n">If</span> <span class="o">*</span><span class="n">definition</span><span class="o">*=</span><span class="n">DUAL</span> <span class="n">PRESSURE</span><span class="p">,</span> <span class="n">the</span> <span class="n">table</span> <span class="n">data</span> <span class="n">specify</span> <span class="n">the</span> <span class="n">following</span><span class="p">:</span>
+
+<span class="o">-</span> <span class="n">If</span> <span class="o">*</span><span class="n">definition</span><span class="o">*=</span><span class="n">DUAL</span> <span class="n">PRESSURE</span><span class="p">,</span> <span class="n">the</span> <span class="n">table</span> <span class="n">data</span> <span class="n">specify</span> <span class="n">the</span> <span class="n">following</span><span class="p">:</span>
     <span class="o">-</span> <span class="n">Inflation</span> <span class="n">time</span><span class="o">.</span>
     <span class="o">-</span> <span class="n">Inflator</span> <span class="n">pressure</span><span class="o">.</span>
     <span class="o">-</span> <span class="n">Tank</span> <span class="n">pressure</span><span class="o">.</span>
-<span class="n">If</span> <span class="o">*</span><span class="n">definition</span><span class="o">*=</span><span class="n">PRESSURE</span> <span class="n">AND</span> <span class="n">MASS</span><span class="p">,</span> <span class="n">the</span> <span class="n">table</span> <span class="n">data</span> <span class="n">specify</span> <span class="n">the</span> <span class="n">following</span><span class="p">:</span>
+<span class="o">-</span> <span class="n">If</span> <span class="o">*</span><span class="n">definition</span><span class="o">*=</span><span class="n">PRESSURE</span> <span class="n">AND</span> <span class="n">MASS</span><span class="p">,</span> <span class="n">the</span> <span class="n">table</span> <span class="n">data</span> <span class="n">specify</span> <span class="n">the</span> <span class="n">following</span><span class="p">:</span>
     <span class="o">-</span> <span class="n">Inflation</span> <span class="n">time</span><span class="o">.</span>
     <span class="o">-</span> <span class="n">Inflator</span> <span class="n">pressure</span><span class="o">.</span>
     <span class="o">-</span> <span class="n">Inflator</span> <span class="n">mass</span> <span class="n">flow</span> <span class="n">rate</span><span class="o">.</span>
-<span class="n">If</span> <span class="o">*</span><span class="n">definition</span><span class="o">*=</span><span class="n">TANK</span> <span class="n">TEST</span><span class="p">,</span> <span class="n">the</span> <span class="n">table</span> <span class="n">data</span> <span class="n">specify</span> <span class="n">the</span> <span class="n">following</span><span class="p">:</span>
+<span class="o">-</span> <span class="n">If</span> <span class="o">*</span><span class="n">definition</span><span class="o">*=</span><span class="n">TANK</span> <span class="n">TEST</span><span class="p">,</span> <span class="n">the</span> <span class="n">table</span> <span class="n">data</span> <span class="n">specify</span> <span class="n">the</span> <span class="n">following</span><span class="p">:</span>
     <span class="o">-</span> <span class="n">Inflation</span> <span class="n">time</span><span class="o">.</span>
     <span class="o">-</span> <span class="n">Inflator</span> <span class="n">gas</span> <span class="n">temperature</span><span class="o">.</span>
     <span class="o">-</span> <span class="n">Tank</span> <span class="n">pressure</span><span class="o">.</span>
-<span class="n">If</span> <span class="o">*</span><span class="n">definition</span><span class="o">*=</span><span class="n">TEMPERATURE</span> <span class="n">AND</span> <span class="n">MASS</span><span class="p">,</span> <span class="n">the</span> <span class="n">table</span> <span class="n">data</span> <span class="n">specify</span> <span class="n">the</span> <span class="n">following</span><span class="p">:</span>
+<span class="o">-</span> <span class="n">If</span> <span class="o">*</span><span class="n">definition</span><span class="o">*=</span><span class="n">TEMPERATURE</span> <span class="n">AND</span> <span class="n">MASS</span><span class="p">,</span> <span class="n">the</span> <span class="n">table</span> <span class="n">data</span> <span class="n">specify</span> <span class="n">the</span> <span class="n">following</span><span class="p">:</span>
     <span class="o">-</span> <span class="n">Inflation</span> <span class="n">time</span><span class="o">.</span>
     <span class="o">-</span> <span class="n">Inflator</span> <span class="n">gas</span> <span class="n">temperature</span><span class="o">.</span>
     <span class="o">-</span> <span class="n">Inflator</span> <span class="n">mass</span> <span class="n">flow</span> <span class="n">rate</span><span class="o">.</span>
 </pre></div>
 </div>
-<dl class="simple">
-<dt>The corresponding analysis keywords are:</dt><dd><ul class="simple">
+<p>The corresponding analysis keywords are:</p>
+<ul class="simple">
 <li><p>FLUID INFLATOR PROPERTY</p></li>
 </ul>
-</dd>
-</dl>
 <p class="rubric">Methods</p>
 <div class="table-wrapper"><table class="autosummary longtable docutils align-default">
 <colgroup>
@@ -8356,12 +8350,10 @@ If *type*=ENHANCED VCCT for *mixedModeBehavior*=POWER, the table data specify th
     - Etc.
 </pre></div>
 </div>
-<dl class="simple">
-<dt>The corresponding analysis keywords are:</dt><dd><ul class="simple">
+<p>The corresponding analysis keywords are:</p>
+<ul class="simple">
 <li><p>FRACTURE CRITERION</p></li>
 </ul>
-</dd>
-</dl>
 <p class="rubric">Methods</p>
 <div class="table-wrapper"><table class="autosummary longtable docutils align-default">
 <colgroup>
@@ -8463,12 +8455,10 @@ interaction property.</p>
     <span class="o">-</span> <span class="n">Etc</span><span class="o">.</span>
 </pre></div>
 </div>
-<dl class="simple">
-<dt>The corresponding analysis keywords are:</dt><dd><ul class="simple">
+<p>The corresponding analysis keywords are:</p>
+<ul class="simple">
 <li><p>GAP ELECTRICAL CONDUCTANCE</p></li>
 </ul>
-</dd>
-</dl>
 <p class="rubric">Methods</p>
 <div class="table-wrapper"><table class="autosummary longtable docutils align-default">
 <colgroup>
@@ -8555,12 +8545,10 @@ property.</p>
 <span class="n">mdb</span><span class="o">.</span><span class="n">models</span><span class="p">[</span><span class="n">name</span><span class="p">]</span><span class="o">.</span><span class="n">interactionProperties</span><span class="p">[</span><span class="n">name</span><span class="p">]</span><span class="o">.</span><span class="n">heatGeneration</span>
 </pre></div>
 </div>
-<dl class="simple">
-<dt>The corresponding analysis keywords are:</dt><dd><ul class="simple">
+<p>The corresponding analysis keywords are:</p>
+<ul class="simple">
 <li><p>GAP HEAT GENERATION</p></li>
 </ul>
-</dd>
-</dl>
 <dl class="field-list simple">
 <dt class="field-odd">Attributes</dt>
 <dd class="field-odd"><dl class="simple">
@@ -8639,12 +8627,10 @@ The default value is 0.5.</p>
 <span class="n">mdb</span><span class="o">.</span><span class="n">models</span><span class="p">[</span><span class="n">name</span><span class="p">]</span><span class="o">.</span><span class="n">interactionProperties</span><span class="p">[</span><span class="n">name</span><span class="p">]</span><span class="o">.</span><span class="n">geometricProperties</span>
 </pre></div>
 </div>
-<dl class="simple">
-<dt>The corresponding analysis keywords are:</dt><dd><ul class="simple">
+<p>The corresponding analysis keywords are:</p>
+<ul class="simple">
 <li><p>SURFACE INTERACTION</p></li>
 </ul>
-</dd>
-</dl>
 <p class="rubric">Methods</p>
 <div class="table-wrapper"><table class="autosummary longtable docutils align-default">
 <colgroup>
@@ -8733,12 +8719,10 @@ The IncidentWave object is derived from the Interaction object.</p>
 <span class="n">mdb</span><span class="o">.</span><span class="n">models</span><span class="p">[</span><span class="n">name</span><span class="p">]</span><span class="o">.</span><span class="n">interactions</span><span class="p">[</span><span class="n">name</span><span class="p">]</span>
 </pre></div>
 </div>
-<dl class="simple">
-<dt>The corresponding analysis keywords are:</dt><dd><ul class="simple">
+<p>The corresponding analysis keywords are:</p>
+<ul class="simple">
 <li><p>INCIDENT WAVE INTERACTION</p></li>
 </ul>
-</dd>
-</dl>
 <p class="rubric">Methods</p>
 <div class="table-wrapper"><table class="autosummary longtable docutils align-default">
 <colgroup>
@@ -8886,8 +8870,8 @@ The IncidentWaveProperty object is derived from the InteractionProperty object.<
 <span class="n">mdb</span><span class="o">.</span><span class="n">models</span><span class="p">[</span><span class="n">name</span><span class="p">]</span><span class="o">.</span><span class="n">interactionProperties</span><span class="p">[</span><span class="n">name</span><span class="p">]</span>
 </pre></div>
 </div>
-<dl class="simple">
-<dt>The corresponding analysis keywords are:</dt><dd><ul class="simple">
+<p>The corresponding analysis keywords are:</p>
+<ul class="simple">
 <li><dl class="simple">
 <dt>INCIDENT WAVE INTERACTION PROPERTY</dt><dd><ul>
 <li><p>UNDEX CHARGE PROPERTY</p></li>
@@ -8897,8 +8881,6 @@ The IncidentWaveProperty object is derived from the InteractionProperty object.<
 </dl>
 </li>
 </ul>
-</dd>
-</dl>
 <p class="rubric">Methods</p>
 <div class="table-wrapper"><table class="autosummary longtable docutils align-default">
 <colgroup>
@@ -9195,12 +9177,16 @@ step. One instance of this object is created internally by the IncidentWave obje
 each step. The instance is also deleted internally by the IncidentWave object. 
 The IncidentWaveState object has no constructor or methods. 
 The IncidentWaveState object is derived from the InteractionState object.</p>
-<dl class="simple">
-<dt>The corresponding analysis keywords are:</dt><dd><ul class="simple">
+<p class="rubric">Notes</p>
+<p>This object can be accessed by:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">interaction</span>
+<span class="n">mdb</span><span class="o">.</span><span class="n">models</span><span class="p">[</span><span class="n">name</span><span class="p">]</span><span class="o">.</span><span class="n">steps</span><span class="p">[</span><span class="n">name</span><span class="p">]</span><span class="o">.</span><span class="n">interactionStates</span><span class="p">[</span><span class="n">name</span><span class="p">]</span>
+</pre></div>
+</div>
+<p>The corresponding analysis keywords are:</p>
+<ul class="simple">
 <li><p>INCIDENT WAVE INTERACTION</p></li>
 </ul>
-</dd>
-</dl>
 <dl class="field-list simple">
 <dt class="field-odd">Attributes</dt>
 <dd class="field-odd"><dl class="simple">
@@ -9221,12 +9207,16 @@ are:NOT_YET_ACTIVECREATEDPROPAGATEDMODIFIEDDEACTIVATEDNO_LONGER_ACTIVETYPE_NOT_A
 <dd><p>The MainSecondaryAssignment object stores the main-secondary assignment definition for
 surfaces in ContactExp and ContactStd objects. The MainSecondaryAssignment object has no 
 constructor or members.</p>
-<dl class="simple">
-<dt>The corresponding analysis keywords are:</dt><dd><ul class="simple">
+<p class="rubric">Notes</p>
+<p>This object can be accessed by:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">interaction</span>
+<span class="n">mdb</span><span class="o">.</span><span class="n">models</span><span class="p">[</span><span class="n">name</span><span class="p">]</span><span class="o">.</span><span class="n">interactions</span><span class="p">[</span><span class="n">name</span><span class="p">]</span><span class="o">.</span><span class="n">mainSecondaryAssignments</span>
+</pre></div>
+</div>
+<p>The corresponding analysis keywords are:</p>
+<ul class="simple">
 <li><p>CONTACT FORMULATION</p></li>
 </ul>
-</dd>
-</dl>
 <p class="rubric">Methods</p>
 <div class="table-wrapper"><table class="autosummary longtable docutils align-default">
 <colgroup>
@@ -9320,12 +9310,10 @@ The ModelChange object is derived from the Interaction object.</p>
 <span class="n">mdb</span><span class="o">.</span><span class="n">models</span><span class="p">[</span><span class="n">name</span><span class="p">]</span><span class="o">.</span><span class="n">interactions</span><span class="p">[</span><span class="n">name</span><span class="p">]</span>
 </pre></div>
 </div>
-<dl class="simple">
-<dt>The corresponding analysis keywords are:</dt><dd><ul class="simple">
+<p>The corresponding analysis keywords are:</p>
+<ul class="simple">
 <li><p>MODEL CHANGE</p></li>
 </ul>
-</dd>
-</dl>
 <p class="rubric">Methods</p>
 <div class="table-wrapper"><table class="autosummary longtable docutils align-default">
 <colgroup>
@@ -9460,20 +9448,19 @@ default value is OFF.</p>
 <span class="n">mdb</span><span class="o">.</span><span class="n">models</span><span class="p">[</span><span class="n">name</span><span class="p">]</span><span class="o">.</span><span class="n">interactionProperties</span><span class="p">[</span><span class="n">name</span><span class="p">]</span><span class="o">.</span><span class="n">normalBehavior</span>
 
 <span class="n">The</span> <span class="n">table</span> <span class="n">data</span> <span class="k">for</span> <span class="n">this</span> <span class="nb">object</span> <span class="n">are</span><span class="p">:</span>
-<span class="n">If</span> <span class="o">*</span><span class="n">pressureOverclosure</span><span class="o">*=</span><span class="n">EXPONENTIAL</span><span class="p">,</span> <span class="n">the</span> <span class="n">table</span> <span class="n">data</span> <span class="n">specify</span> <span class="n">the</span> <span class="n">following</span><span class="p">:</span>
+
+<span class="o">-</span> <span class="n">If</span> <span class="o">*</span><span class="n">pressureOverclosure</span><span class="o">*=</span><span class="n">EXPONENTIAL</span><span class="p">,</span> <span class="n">the</span> <span class="n">table</span> <span class="n">data</span> <span class="n">specify</span> <span class="n">the</span> <span class="n">following</span><span class="p">:</span>
     <span class="o">-</span> <span class="n">Pressure</span> <span class="n">at</span> <span class="n">zero</span> <span class="n">clearance</span><span class="p">,</span> <span class="n">p0p0</span><span class="o">.</span>
     <span class="o">-</span> <span class="n">Clearance</span> <span class="n">at</span> <span class="n">which</span> <span class="n">the</span> <span class="n">contact</span> <span class="n">pressure</span> <span class="ow">is</span> <span class="n">zero</span><span class="p">,</span> <span class="n">c0c0</span><span class="o">.</span>
-<span class="n">If</span> <span class="o">*</span><span class="n">pressureOverclosure</span><span class="o">*=</span><span class="n">TABULAR</span><span class="p">,</span> <span class="n">the</span> <span class="n">table</span> <span class="n">data</span> <span class="n">specify</span> <span class="n">the</span> <span class="n">following</span><span class="p">:</span>
+<span class="o">-</span> <span class="n">If</span> <span class="o">*</span><span class="n">pressureOverclosure</span><span class="o">*=</span><span class="n">TABULAR</span><span class="p">,</span> <span class="n">the</span> <span class="n">table</span> <span class="n">data</span> <span class="n">specify</span> <span class="n">the</span> <span class="n">following</span><span class="p">:</span>
     <span class="o">-</span> <span class="n">Pressure</span><span class="o">.</span>
     <span class="o">-</span> <span class="n">Overclosure</span><span class="o">.</span>
 </pre></div>
 </div>
-<dl class="simple">
-<dt>The corresponding analysis keywords are:</dt><dd><ul class="simple">
+<p>The corresponding analysis keywords are:</p>
+<ul class="simple">
 <li><p>SURFACE BEHAVIOR</p></li>
 </ul>
-</dd>
-</dl>
 <p class="rubric">Methods</p>
 <div class="table-wrapper"><table class="autosummary longtable docutils align-default">
 <colgroup>
@@ -9586,12 +9573,16 @@ default value is 0.33333.</p>
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">PolarityAssignments</span></span><a class="reference internal" href="../../../_modules/abaqus/Interaction/PolarityAssignments.html#PolarityAssignments"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#abaqus.Interaction.PolarityAssignments.PolarityAssignments" title="Permalink to this definition">#</a></dt>
 <dd><p>The PolarityAssignments object stores the polarity assignment definition for surfaces in
 ContactExp objects. The PolarityAssignments object has no constructor or members.</p>
-<dl class="simple">
-<dt>The corresponding analysis keywords are:</dt><dd><ul class="simple">
+<p class="rubric">Notes</p>
+<p>This object can be accessed by:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">interaction</span>
+<span class="n">mdb</span><span class="o">.</span><span class="n">models</span><span class="p">[</span><span class="n">name</span><span class="p">]</span><span class="o">.</span><span class="n">interactions</span><span class="p">[</span><span class="n">name</span><span class="p">]</span><span class="o">.</span><span class="n">polarityAssignments</span>
+</pre></div>
+</div>
+<p>The corresponding analysis keywords are:</p>
+<ul class="simple">
 <li><p>CONTACT FORMULATION</p></li>
 </ul>
-</dd>
-</dl>
 <p class="rubric">Methods</p>
 <div class="table-wrapper"><table class="autosummary longtable docutils align-default">
 <colgroup>
@@ -9680,12 +9671,10 @@ The PressurePenetration object is derived from the Interaction object.</p>
 <span class="n">mdb</span><span class="o">.</span><span class="n">models</span><span class="p">[</span><span class="n">name</span><span class="p">]</span><span class="o">.</span><span class="n">interactions</span><span class="p">[</span><span class="n">name</span><span class="p">]</span>
 </pre></div>
 </div>
-<dl class="simple">
-<dt>The corresponding analysis keywords are:</dt><dd><ul class="simple">
+<p>The corresponding analysis keywords are:</p>
+<ul class="simple">
 <li><p>PRESSURE PENETRATION</p></li>
 </ul>
-</dd>
-</dl>
 <dl class="field-list simple">
 <dt class="field-odd">Attributes</dt>
 <dd class="field-odd"><dl class="simple">
@@ -9842,12 +9831,16 @@ PressurePenetration object for each step. The instance is also deleted internall
 PressurePenetration object. 
 The PressurePenetrationState object has no constructor or methods. 
 The PressurePenetrationState object is derived from the InteractionState object.</p>
-<dl class="simple">
-<dt>The corresponding analysis keywords are:</dt><dd><ul class="simple">
+<p class="rubric">Notes</p>
+<p>This object can be accessed by:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">interaction</span>
+<span class="n">mdb</span><span class="o">.</span><span class="n">models</span><span class="p">[</span><span class="n">name</span><span class="p">]</span><span class="o">.</span><span class="n">steps</span><span class="p">[</span><span class="n">name</span><span class="p">]</span><span class="o">.</span><span class="n">interactionStates</span><span class="p">[</span><span class="n">name</span><span class="p">]</span>
+</pre></div>
+</div>
+<p>The corresponding analysis keywords are:</p>
+<ul class="simple">
 <li><p>PRESSURE PENETRATION</p></li>
 </ul>
-</dd>
-</dl>
 <dl class="field-list">
 <dt class="field-odd">Attributes</dt>
 <dd class="field-odd"><dl>
@@ -9909,12 +9902,10 @@ Possible values are:</p>
 <span class="n">mdb</span><span class="o">.</span><span class="n">models</span><span class="p">[</span><span class="n">name</span><span class="p">]</span><span class="o">.</span><span class="n">interactionProperties</span><span class="p">[</span><span class="n">name</span><span class="p">]</span><span class="o">.</span><span class="n">radiation</span>
 </pre></div>
 </div>
-<dl class="simple">
-<dt>The corresponding analysis keywords are:</dt><dd><ul class="simple">
+<p>The corresponding analysis keywords are:</p>
+<ul class="simple">
 <li><p>GAP RADIATION</p></li>
 </ul>
-</dd>
-</dl>
 <p class="rubric">Methods</p>
 <div class="table-wrapper"><table class="autosummary longtable docutils align-default">
 <colgroup>
@@ -10123,12 +10114,16 @@ object for each step. The instance is also deleted internally by the RadiationTo
 object. 
 The RadiationToAmbientState object has no constructor or methods. 
 The RadiationToAmbientState object is derived from the InteractionState object.</p>
-<dl class="simple">
-<dt>The corresponding analysis keywords are:</dt><dd><ul class="simple">
+<p class="rubric">Notes</p>
+<p>This object can be accessed by:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">interaction</span>
+<span class="n">mdb</span><span class="o">.</span><span class="n">models</span><span class="p">[</span><span class="n">name</span><span class="p">]</span><span class="o">.</span><span class="n">steps</span><span class="p">[</span><span class="n">name</span><span class="p">]</span><span class="o">.</span><span class="n">interactionStates</span><span class="p">[</span><span class="n">name</span><span class="p">]</span>
+</pre></div>
+</div>
+<p>The corresponding analysis keywords are:</p>
+<ul class="simple">
 <li><p>SRADIATE</p></li>
 </ul>
-</dd>
-</dl>
 <dl class="field-list">
 <dt class="field-odd">Attributes</dt>
 <dd class="field-odd"><dl>
@@ -10176,8 +10171,15 @@ Possible values are:</p>
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">RegionPairs</span></span><a class="reference internal" href="../../../_modules/abaqus/Interaction/RegionPairs.html#RegionPairs"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#abaqus.Interaction.RegionPairs.RegionPairs" title="Permalink to this definition">#</a></dt>
 <dd><p>The RegionPairs object stores the domain pair definition for ContactExp and ContactStd
 objects. The RegionPairs object has no constructor or members.</p>
-<dl class="simple">
-<dt>The corresponding analysis keywords are:</dt><dd><ul class="simple">
+<p class="rubric">Notes</p>
+<p>This object can be accessed by:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">interaction</span>
+<span class="n">mdb</span><span class="o">.</span><span class="n">models</span><span class="p">[</span><span class="n">name</span><span class="p">]</span><span class="o">.</span><span class="n">interactions</span><span class="p">[</span><span class="n">name</span><span class="p">]</span><span class="o">.</span><span class="n">excludedPairs</span>
+<span class="n">mdb</span><span class="o">.</span><span class="n">models</span><span class="p">[</span><span class="n">name</span><span class="p">]</span><span class="o">.</span><span class="n">interactions</span><span class="p">[</span><span class="n">name</span><span class="p">]</span><span class="o">.</span><span class="n">includedPairs</span>
+</pre></div>
+</div>
+<p>The corresponding analysis keywords are:</p>
+<ul class="simple">
 <li><dl class="simple">
 <dt>CONTACT INCLUSIONS</dt><dd><ul>
 <li><p>CONTACT EXCLUSIONS</p></li>
@@ -10186,8 +10188,6 @@ objects. The RegionPairs object has no constructor or members.</p>
 </dl>
 </li>
 </ul>
-</dd>
-</dl>
 <p class="rubric">Methods</p>
 <div class="table-wrapper"><table class="autosummary longtable docutils align-default">
 <colgroup>
@@ -10360,8 +10360,14 @@ One instance of this object is created internally by the SelfContactExp object f
 step. The instance is also deleted internally by the SelfContactExp object. 
 The SelfContactExpState object has no constructor or methods. 
 The SelfContactExpState object is derived from the InteractionState object.</p>
-<dl class="simple">
-<dt>The corresponding analysis keywords are:</dt><dd><ul class="simple">
+<p class="rubric">Notes</p>
+<p>This object can be accessed by:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">interaction</span>
+<span class="n">mdb</span><span class="o">.</span><span class="n">models</span><span class="p">[</span><span class="n">name</span><span class="p">]</span><span class="o">.</span><span class="n">steps</span><span class="p">[</span><span class="n">name</span><span class="p">]</span><span class="o">.</span><span class="n">interactionStates</span><span class="p">[</span><span class="n">name</span><span class="p">]</span>
+</pre></div>
+</div>
+<p>The corresponding analysis keywords are:</p>
+<ul class="simple">
 <li><dl class="simple">
 <dt>CONTACT CONTROLS</dt><dd><ul>
 <li><p>CONTACT PAIR</p></li>
@@ -10371,8 +10377,6 @@ The SelfContactExpState object is derived from the InteractionState object.</p>
 </dl>
 </li>
 </ul>
-</dd>
-</dl>
 <dl class="field-list">
 <dt class="field-odd">Attributes</dt>
 <dd class="field-odd"><dl>
@@ -10567,8 +10571,14 @@ One instance of this object is created internally by the SelfContactStd object f
 step. The instance is also deleted internally by the SelfContactStd object. 
 The SelfContactStdState object has no constructor or methods. 
 The SelfContactStdState object is derived from the InteractionState object.</p>
-<dl class="simple">
-<dt>The corresponding analysis keywords are:</dt><dd><ul class="simple">
+<p class="rubric">Notes</p>
+<p>This object can be accessed by:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">interaction</span>
+<span class="n">mdb</span><span class="o">.</span><span class="n">models</span><span class="p">[</span><span class="n">name</span><span class="p">]</span><span class="o">.</span><span class="n">steps</span><span class="p">[</span><span class="n">name</span><span class="p">]</span><span class="o">.</span><span class="n">interactionStates</span><span class="p">[</span><span class="n">name</span><span class="p">]</span>
+</pre></div>
+</div>
+<p>The corresponding analysis keywords are:</p>
+<ul class="simple">
 <li><dl class="simple">
 <dt>CONTACT CONTROLS</dt><dd><ul>
 <li><p>CONTACT PAIR</p></li>
@@ -10578,8 +10588,6 @@ The SelfContactStdState object is derived from the InteractionState object.</p>
 </dl>
 </li>
 </ul>
-</dd>
-</dl>
 <dl class="field-list">
 <dt class="field-odd">Attributes</dt>
 <dd class="field-odd"><dl>
@@ -10623,12 +10631,16 @@ Possible values are:</p>
 <dd><p>The SlidingFormulationAssignment object stores the sliding formulation assignment
 definition for surfaces in ContactStd objects. The SlidingFormulationAssignment object 
 has no constructor or members.</p>
-<dl class="simple">
-<dt>The corresponding analysis keywords are:</dt><dd><ul class="simple">
+<p class="rubric">Notes</p>
+<p>This object can be accessed by:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">interaction</span>
+<span class="n">mdb</span><span class="o">.</span><span class="n">models</span><span class="p">[</span><span class="n">name</span><span class="p">]</span><span class="o">.</span><span class="n">interactions</span><span class="p">[</span><span class="n">name</span><span class="p">]</span><span class="o">.</span><span class="n">slidingFormulationAssignments</span>
+</pre></div>
+</div>
+<p>The corresponding analysis keywords are:</p>
+<ul class="simple">
 <li><p>CONTACT FORMULATION</p></li>
 </ul>
-</dd>
-</dl>
 <p class="rubric">Methods</p>
 <div class="table-wrapper"><table class="autosummary longtable docutils align-default">
 <colgroup>
@@ -10714,12 +10726,16 @@ delete.</p>
 <dd><p>The SlidingTransitionAssignment object stores the sliding transition assignment
 definition for surfaces in ContactStd objects. The SlidingTransitionAssignment object 
 has no constructor or members.</p>
-<dl class="simple">
-<dt>The corresponding analysis keywords are:</dt><dd><ul class="simple">
+<p class="rubric">Notes</p>
+<p>This object can be accessed by:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">interaction</span>
+<span class="n">mdb</span><span class="o">.</span><span class="n">models</span><span class="p">[</span><span class="n">name</span><span class="p">]</span><span class="o">.</span><span class="n">interactions</span><span class="p">[</span><span class="n">name</span><span class="p">]</span><span class="o">.</span><span class="n">slidingTransitionAssignments</span>
+</pre></div>
+</div>
+<p>The corresponding analysis keywords are:</p>
+<ul class="simple">
 <li><p>CONTACT FORMULATION</p></li>
 </ul>
-</dd>
-</dl>
 <p class="rubric">Methods</p>
 <div class="table-wrapper"><table class="autosummary longtable docutils align-default">
 <colgroup>
@@ -10804,12 +10820,16 @@ values are ELEMENT_ORDER_SMOOTHING, LINEAR_SMOOTHING, and QUADRATIC_SMOOTHING.</
 <dd><p>The SmoothingAssignment object stores the surface smoothing assignment definition for
 surfaces in ContactExp and ContactStd objects. The SmoothingAssignment object has no 
 constructor or members.</p>
-<dl class="simple">
-<dt>The corresponding analysis keywords are:</dt><dd><ul class="simple">
+<p class="rubric">Notes</p>
+<p>This object can be accessed by:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">interaction</span>
+<span class="n">mdb</span><span class="o">.</span><span class="n">models</span><span class="p">[</span><span class="n">name</span><span class="p">]</span><span class="o">.</span><span class="n">interactions</span><span class="p">[</span><span class="n">name</span><span class="p">]</span><span class="o">.</span><span class="n">smoothingAssignments</span>
+</pre></div>
+</div>
+<p>The corresponding analysis keywords are:</p>
+<ul class="simple">
 <li><p>SURFACE PROPERTY ASSIGNMENT</p></li>
 </ul>
-</dd>
-</dl>
 <p class="rubric">Methods</p>
 <div class="table-wrapper"><table class="autosummary longtable docutils align-default">
 <colgroup>
@@ -10896,12 +10916,16 @@ ContactExp and ContactStd objects.</p>
 <dd><p>The StabilizationAssignment object stores the contact stabilization assignment
 definition for domain pairs in a ContactStd object. The StabilizationAssignment object 
 has no constructor or members.</p>
-<dl class="simple">
-<dt>The corresponding analysis keywords are:</dt><dd><ul class="simple">
+<p class="rubric">Notes</p>
+<p>This object can be accessed by:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">interaction</span>
+<span class="n">mdb</span><span class="o">.</span><span class="n">models</span><span class="p">[</span><span class="n">name</span><span class="p">]</span><span class="o">.</span><span class="n">interactions</span><span class="p">[</span><span class="n">name</span><span class="p">]</span><span class="o">.</span><span class="n">stabilizationAssignments</span>
+</pre></div>
+</div>
+<p>The corresponding analysis keywords are:</p>
+<ul class="simple">
 <li><p>CONTACT STABILIZATION</p></li>
 </ul>
-</dd>
-</dl>
 <p class="rubric">Methods</p>
 <div class="table-wrapper"><table class="autosummary longtable docutils align-default">
 <colgroup>
@@ -10993,12 +11017,10 @@ The StdContactControl object is derived from the ContactControl object.</p>
 <span class="n">mdb</span><span class="o">.</span><span class="n">models</span><span class="p">[</span><span class="n">name</span><span class="p">]</span><span class="o">.</span><span class="n">contactControls</span><span class="p">[</span><span class="n">name</span><span class="p">]</span>
 </pre></div>
 </div>
-<dl class="simple">
-<dt>The corresponding analysis keywords are:</dt><dd><ul class="simple">
+<p>The corresponding analysis keywords are:</p>
+<ul class="simple">
 <li><p>CONTACT CONTROLS</p></li>
 </ul>
-</dd>
-</dl>
 <p class="rubric">Methods</p>
 <div class="table-wrapper"><table class="autosummary longtable docutils align-default">
 <colgroup>
@@ -11237,12 +11259,10 @@ The StdInitialization object is derived from the ContactInitialization object.</
 <span class="n">mdb</span><span class="o">.</span><span class="n">models</span><span class="p">[</span><span class="n">name</span><span class="p">]</span><span class="o">.</span><span class="n">contactInitializations</span><span class="p">[</span><span class="n">name</span><span class="p">]</span>
 </pre></div>
 </div>
-<dl class="simple">
-<dt>The corresponding analysis keywords are:</dt><dd><ul class="simple">
+<p>The corresponding analysis keywords are:</p>
+<ul class="simple">
 <li><p>CONTACT INITIALIZATION DATA</p></li>
 </ul>
-</dd>
-</dl>
 <p class="rubric">Methods</p>
 <div class="table-wrapper"><table class="autosummary longtable docutils align-default">
 <colgroup>
@@ -11359,12 +11379,10 @@ The StdStabilization object is derived from the ContactStabilization object.</p>
 <span class="n">mdb</span><span class="o">.</span><span class="n">models</span><span class="p">[</span><span class="n">name</span><span class="p">]</span><span class="o">.</span><span class="n">contactStabilizations</span><span class="p">[</span><span class="n">name</span><span class="p">]</span>
 </pre></div>
 </div>
-<dl class="simple">
-<dt>The corresponding analysis keywords are:</dt><dd><ul class="simple">
+<p>The corresponding analysis keywords are:</p>
+<ul class="simple">
 <li><p>CONTACT STABILIZATION</p></li>
 </ul>
-</dd>
-</dl>
 <p class="rubric">Methods</p>
 <div class="table-wrapper"><table class="autosummary longtable docutils align-default">
 <colgroup>
@@ -11580,8 +11598,14 @@ object for each step. The instance is also deleted internally by the StdXplCosim
 object. 
 The StdXplCosimulationState object has no constructor or methods. 
 The StdXplCosimulationState object is derived from the InteractionState object.</p>
-<dl class="simple">
-<dt>The corresponding analysis keywords are:</dt><dd><ul class="simple">
+<p class="rubric">Notes</p>
+<p>This object can be accessed by:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">interaction</span>
+<span class="n">mdb</span><span class="o">.</span><span class="n">models</span><span class="p">[</span><span class="n">name</span><span class="p">]</span><span class="o">.</span><span class="n">steps</span><span class="p">[</span><span class="n">name</span><span class="p">]</span><span class="o">.</span><span class="n">interactionStates</span><span class="p">[</span><span class="n">name</span><span class="p">]</span>
+</pre></div>
+</div>
+<p>The corresponding analysis keywords are:</p>
+<ul class="simple">
 <li><dl class="simple">
 <dt>CO-SIMULATION</dt><dd><ul>
 <li><p>CO-SIMULATION REGION</p></li>
@@ -11591,8 +11615,6 @@ The StdXplCosimulationState object is derived from the InteractionState object.<
 </dl>
 </li>
 </ul>
-</dd>
-</dl>
 <dl class="field-list">
 <dt class="field-odd">Attributes</dt>
 <dd class="field-odd"><dl>
@@ -11625,12 +11647,16 @@ Possible values are:</p>
 <dd><p>The SurfaceBeamSmoothingAssignment object stores the surface beam smoothing assignment
 definition for surfaces in ContactStd objects. The SurfaceBeamSmoothingAssignment object 
 has no constructor or members.</p>
-<dl class="simple">
-<dt>The corresponding analysis keywords are:</dt><dd><ul class="simple">
+<p class="rubric">Notes</p>
+<p>This object can be accessed by:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">interaction</span>
+<span class="n">mdb</span><span class="o">.</span><span class="n">models</span><span class="p">[</span><span class="n">name</span><span class="p">]</span><span class="o">.</span><span class="n">interactions</span><span class="p">[</span><span class="n">name</span><span class="p">]</span><span class="o">.</span><span class="n">surfaceBeamSmoothingAssignments</span>
+</pre></div>
+</div>
+<p>The corresponding analysis keywords are:</p>
+<ul class="simple">
 <li><p>SURFACE PROPERTY ASSIGNMENT</p></li>
 </ul>
-</dd>
-</dl>
 <p class="rubric">Methods</p>
 <div class="table-wrapper"><table class="autosummary longtable docutils align-default">
 <colgroup>
@@ -11715,12 +11741,16 @@ delete.</p>
 <dd><p>The SurfaceCrushTriggerAssignment object stores the surface crush trigger assignment
 definition for surfaces in ContactExp objects. The SurfaceCrushTriggerAssignment object 
 has no constructor or members.</p>
-<dl class="simple">
-<dt>The corresponding analysis keywords are:</dt><dd><ul class="simple">
+<p class="rubric">Notes</p>
+<p>This object can be accessed by:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">interaction</span>
+<span class="n">mdb</span><span class="o">.</span><span class="n">models</span><span class="p">[</span><span class="n">name</span><span class="p">]</span><span class="o">.</span><span class="n">interactions</span><span class="p">[</span><span class="n">name</span><span class="p">]</span><span class="o">.</span><span class="n">surfaceCrushTriggerAssignments</span>
+</pre></div>
+</div>
+<p>The corresponding analysis keywords are:</p>
+<ul class="simple">
 <li><p>SURFACE PROPERTY ASSIGNMENT</p></li>
 </ul>
-</dd>
-</dl>
 <p class="rubric">Methods</p>
 <div class="table-wrapper"><table class="autosummary longtable docutils align-default">
 <colgroup>
@@ -11815,12 +11845,16 @@ delete.</p>
 <dd><p>The SurfaceFeatureAssignment object stores the surface feature angle assignment
 definition for surfaces in ContactExp or ContactStd objects. The 
 SurfaceFeatureAssignment object has no constructor or members.</p>
-<dl class="simple">
-<dt>The corresponding analysis keywords are:</dt><dd><ul class="simple">
+<p class="rubric">Notes</p>
+<p>This object can be accessed by:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">interaction</span>
+<span class="n">mdb</span><span class="o">.</span><span class="n">models</span><span class="p">[</span><span class="n">name</span><span class="p">]</span><span class="o">.</span><span class="n">interactions</span><span class="p">[</span><span class="n">name</span><span class="p">]</span><span class="o">.</span><span class="n">surfaceFeatureAssignments</span>
+</pre></div>
+</div>
+<p>The corresponding analysis keywords are:</p>
+<ul class="simple">
 <li><p>SURFACE PROPERTY ASSIGNMENT</p></li>
 </ul>
-</dd>
-</dl>
 <p class="rubric">Methods</p>
 <div class="table-wrapper"><table class="autosummary longtable docutils align-default">
 <colgroup>
@@ -11926,12 +11960,16 @@ delete.</p>
 <dd><p>The SurfaceFrictionAssignment object stores the surface friction assignment definition
 for surfaces in ContactExp objects. The SurfaceFrictionAssignment object has no 
 constructor or members.</p>
-<dl class="simple">
-<dt>The corresponding analysis keywords are:</dt><dd><ul class="simple">
+<p class="rubric">Notes</p>
+<p>This object can be accessed by:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">interaction</span>
+<span class="n">mdb</span><span class="o">.</span><span class="n">models</span><span class="p">[</span><span class="n">name</span><span class="p">]</span><span class="o">.</span><span class="n">interactions</span><span class="p">[</span><span class="n">name</span><span class="p">]</span><span class="o">.</span><span class="n">surfaceFrictionAssignments</span>
+</pre></div>
+</div>
+<p>The corresponding analysis keywords are:</p>
+<ul class="simple">
 <li><p>SURFACE PROPERTY ASSIGNMENT</p></li>
 </ul>
-</dd>
-</dl>
 <p class="rubric">Methods</p>
 <div class="table-wrapper"><table class="autosummary longtable docutils align-default">
 <colgroup>
@@ -12018,12 +12056,16 @@ definition.</p>
 <dd><p>The SurfaceOffsetAssignment object stores the surface offset fraction assignment
 definition for surfaces in ContactExp and ContactStd objects. The 
 SurfaceOffsetAssignment object has no constructor or members.</p>
-<dl class="simple">
-<dt>The corresponding analysis keywords are:</dt><dd><ul class="simple">
+<p class="rubric">Notes</p>
+<p>This object can be accessed by:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">interaction</span>
+<span class="n">mdb</span><span class="o">.</span><span class="n">models</span><span class="p">[</span><span class="n">name</span><span class="p">]</span><span class="o">.</span><span class="n">interactions</span><span class="p">[</span><span class="n">name</span><span class="p">]</span><span class="o">.</span><span class="n">surfaceOffsetAssignments</span>
+</pre></div>
+</div>
+<p>The corresponding analysis keywords are:</p>
+<ul class="simple">
 <li><p>SURFACE PROPERTY ASSIGNMENT</p></li>
 </ul>
-</dd>
-</dl>
 <p class="rubric">Methods</p>
 <div class="table-wrapper"><table class="autosummary longtable docutils align-default">
 <colgroup>
@@ -12111,12 +12153,16 @@ delete.</p>
 <dd><p>The SurfaceThicknessAssignment object stores the surface thickness assignment definition
 for surfaces in ContactExp and ContactStd objects. The SurfaceThicknessAssignment object 
 has no constructor or members.</p>
-<dl class="simple">
-<dt>The corresponding analysis keywords are:</dt><dd><ul class="simple">
+<p class="rubric">Notes</p>
+<p>This object can be accessed by:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">interaction</span>
+<span class="n">mdb</span><span class="o">.</span><span class="n">models</span><span class="p">[</span><span class="n">name</span><span class="p">]</span><span class="o">.</span><span class="n">interactions</span><span class="p">[</span><span class="n">name</span><span class="p">]</span><span class="o">.</span><span class="n">surfaceThicknessAssignments</span>
+</pre></div>
+</div>
+<p>The corresponding analysis keywords are:</p>
+<ul class="simple">
 <li><p>SURFACE PROPERTY ASSIGNMENT</p></li>
 </ul>
-</dd>
-</dl>
 <p class="rubric">Methods</p>
 <div class="table-wrapper"><table class="autosummary longtable docutils align-default">
 <colgroup>
@@ -12761,8 +12807,14 @@ the SurfaceToSurfaceContactExp object for each step. The instance is also delete
 internally by the SurfaceToSurfaceContactExp object. 
 The SurfaceToSurfaceExpState object has no constructor or methods. 
 The SurfaceToSurfaceExpState object is derived from the InteractionState object.</p>
-<dl class="simple">
-<dt>The corresponding analysis keywords are:</dt><dd><ul class="simple">
+<p class="rubric">Notes</p>
+<p>This object can be accessed by:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">interaction</span>
+<span class="n">mdb</span><span class="o">.</span><span class="n">models</span><span class="p">[</span><span class="n">name</span><span class="p">]</span><span class="o">.</span><span class="n">steps</span><span class="p">[</span><span class="n">name</span><span class="p">]</span><span class="o">.</span><span class="n">interactionStates</span><span class="p">[</span><span class="n">name</span><span class="p">]</span>
+</pre></div>
+</div>
+<p>The corresponding analysis keywords are:</p>
+<ul class="simple">
 <li><dl class="simple">
 <dt>CONTACT CONTROLS</dt><dd><ul>
 <li><p>CONTACT PAIR</p></li>
@@ -12771,8 +12823,6 @@ The SurfaceToSurfaceExpState object is derived from the InteractionState object.
 </dl>
 </li>
 </ul>
-</dd>
-</dl>
 <dl class="field-list">
 <dt class="field-odd">Attributes</dt>
 <dd class="field-odd"><dl>
@@ -12820,8 +12870,14 @@ the SurfaceToSurfaceContactStd object for each step. The instance is also delete
 internally by the SurfaceToSurfaceContactStd object. 
 The SurfaceToSurfaceStdState object has no constructor or methods. 
 The SurfaceToSurfaceStdState object is derived from the InteractionState object.</p>
-<dl class="simple">
-<dt>The corresponding analysis keywords are:</dt><dd><ul class="simple">
+<p class="rubric">Notes</p>
+<p>This object can be accessed by:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">interaction</span>
+<span class="n">mdb</span><span class="o">.</span><span class="n">models</span><span class="p">[</span><span class="n">name</span><span class="p">]</span><span class="o">.</span><span class="n">steps</span><span class="p">[</span><span class="n">name</span><span class="p">]</span><span class="o">.</span><span class="n">interactionStates</span><span class="p">[</span><span class="n">name</span><span class="p">]</span>
+</pre></div>
+</div>
+<p>The corresponding analysis keywords are:</p>
+<ul class="simple">
 <li><dl class="simple">
 <dt>CONTACT CONTROLS</dt><dd><ul>
 <li><p>CONTACT PAIR</p></li>
@@ -12831,8 +12887,6 @@ The SurfaceToSurfaceStdState object is derived from the InteractionState object.
 </dl>
 </li>
 </ul>
-</dd>
-</dl>
 <dl class="field-list">
 <dt class="field-odd">Attributes</dt>
 <dd class="field-odd"><dl>
@@ -12912,12 +12966,16 @@ Possible values are:</p>
 <dd><p>The SurfaceVertexCriteriaAssignment object stores the surface vertex criteria assignment
 definition for surfaces in ContactStd objects. The SurfaceVertexCriteriaAssignment 
 object has no constructor or members.</p>
-<dl class="simple">
-<dt>The corresponding analysis keywords are:</dt><dd><ul class="simple">
+<p class="rubric">Notes</p>
+<p>This object can be accessed by:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">interaction</span>
+<span class="n">mdb</span><span class="o">.</span><span class="n">models</span><span class="p">[</span><span class="n">name</span><span class="p">]</span><span class="o">.</span><span class="n">interactions</span><span class="p">[</span><span class="n">name</span><span class="p">]</span><span class="o">.</span><span class="n">surfacevertexCriteriaAssignments</span>
+</pre></div>
+</div>
+<p>The corresponding analysis keywords are:</p>
+<ul class="simple">
 <li><p>SURFACE PROPERTY ASSIGNMENT</p></li>
 </ul>
-</dd>
-</dl>
 <p class="rubric">Methods</p>
 <div class="table-wrapper"><table class="autosummary longtable docutils align-default">
 <colgroup>
@@ -13029,12 +13087,10 @@ property.</p>
     <span class="o">-</span> <span class="n">Etc</span><span class="o">.</span>
 </pre></div>
 </div>
-<dl class="simple">
-<dt>The corresponding analysis keywords are:</dt><dd><ul class="simple">
+<p>The corresponding analysis keywords are:</p>
+<ul class="simple">
 <li><p>GAP CONDUCTANCE</p></li>
 </ul>
-</dd>
-</dl>
 <p class="rubric">Methods</p>
 <div class="table-wrapper"><table class="autosummary longtable docutils align-default">
 <colgroup>
@@ -13127,12 +13183,10 @@ The XFEMCrackGrowth object is derived from the Interaction object.</p>
 <span class="n">mdb</span><span class="o">.</span><span class="n">models</span><span class="p">[</span><span class="n">name</span><span class="p">]</span><span class="o">.</span><span class="n">interactions</span><span class="p">[</span><span class="n">name</span><span class="p">]</span>
 </pre></div>
 </div>
-<dl class="simple">
-<dt>The corresponding analysis keywords are:</dt><dd><ul class="simple">
+<p>The corresponding analysis keywords are:</p>
+<ul class="simple">
 <li><p>ENRICHMENT ACTIVATION</p></li>
 </ul>
-</dd>
-</dl>
 <p class="rubric">Methods</p>
 <div class="table-wrapper"><table class="autosummary longtable docutils align-default">
 <colgroup>
@@ -13234,12 +13288,16 @@ object for each step. The instance is also deleted internally by the XFEMCrackGr
 object. 
 The XFEMCrackGrowthState object has no constructor or methods. 
 The XFEMCrackGrowthState object is derived from the InteractionState object.</p>
-<dl class="simple">
-<dt>The corresponding analysis keywords are:</dt><dd><ul class="simple">
+<p class="rubric">Notes</p>
+<p>This object can be accessed by:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">interaction</span>
+<span class="n">mdb</span><span class="o">.</span><span class="n">models</span><span class="p">[</span><span class="n">name</span><span class="p">]</span><span class="o">.</span><span class="n">steps</span><span class="p">[</span><span class="n">name</span><span class="p">]</span><span class="o">.</span><span class="n">interactionStates</span><span class="p">[</span><span class="n">name</span><span class="p">]</span>
+</pre></div>
+</div>
+<p>The corresponding analysis keywords are:</p>
+<ul class="simple">
 <li><p>ENRICHMENT ACTIVATION</p></li>
 </ul>
-</dd>
-</dl>
 <dl class="field-list">
 <dt class="field-odd">Attributes</dt>
 <dd class="field-odd"><dl>

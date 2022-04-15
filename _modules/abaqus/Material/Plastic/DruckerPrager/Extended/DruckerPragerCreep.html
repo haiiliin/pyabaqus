@@ -309,36 +309,38 @@
 
 <span class="sd">    Notes</span>
 <span class="sd">    -----</span>
-<span class="sd">        This object can be accessed by:</span>
+<span class="sd">    This object can be accessed by:</span>
+<span class="sd">    </span>
+<span class="sd">    .. code-block:: python</span>
 <span class="sd">        </span>
-<span class="sd">        .. code-block:: python</span>
-<span class="sd">            </span>
-<span class="sd">            import material</span>
-<span class="sd">            mdb.models[name].materials[name].druckerPrager.druckerPragerCreep</span>
-<span class="sd">            import odbMaterial</span>
-<span class="sd">            session.odbs[name].materials[name].druckerPrager.druckerPragerCreep</span>
+<span class="sd">        import material</span>
+<span class="sd">        mdb.models[name].materials[name].druckerPrager.druckerPragerCreep</span>
+<span class="sd">        import odbMaterial</span>
+<span class="sd">        session.odbs[name].materials[name].druckerPrager.druckerPragerCreep</span>
 
-<span class="sd">        The table data for this object are:</span>
-<span class="sd">        If *law*=TIME or *law*=STRAIN, the table data specify the following:</span>
-<span class="sd">            - AA. (Units of F-nL2nT−1−m.)</span>
-<span class="sd">            - n.</span>
-<span class="sd">            - m.</span>
-<span class="sd">            - Temperature, if the data depend on temperature.</span>
-<span class="sd">            - Value of the first field variable, if the data depend on field variables.</span>
-<span class="sd">            - Value of the second field variable.</span>
-<span class="sd">            - Etc.</span>
-<span class="sd">        If *law*=SINGHM, the table data specify the following:</span>
-<span class="sd">            - A. (Units of T−1.)</span>
-<span class="sd">            - α. (Units of F−1L2.)</span>
-<span class="sd">            - m.</span>
-<span class="sd">            - t1. (Units of T.)</span>
-<span class="sd">            - Temperature, if the data depend on temperature.</span>
-<span class="sd">            - Value of the first field variable, if the data depend on field variables.</span>
-<span class="sd">            - Value of the second field variable.</span>
-<span class="sd">            - Etc.</span>
+<span class="sd">    The table data for this object are:</span>
+
+<span class="sd">    - If *law*=TIME or *law*=STRAIN, the table data specify the following:</span>
+<span class="sd">        - AA. (Units of F-nL2nT−1−m.)</span>
+<span class="sd">        - n.</span>
+<span class="sd">        - m.</span>
+<span class="sd">        - Temperature, if the data depend on temperature.</span>
+<span class="sd">        - Value of the first field variable, if the data depend on field variables.</span>
+<span class="sd">        - Value of the second field variable.</span>
+<span class="sd">        - Etc.</span>
+<span class="sd">    - If *law*=SINGHM, the table data specify the following:</span>
+<span class="sd">        - A. (Units of T−1.)</span>
+<span class="sd">        - α. (Units of F−1L2.)</span>
+<span class="sd">        - m.</span>
+<span class="sd">        - t1. (Units of T.)</span>
+<span class="sd">        - Temperature, if the data depend on temperature.</span>
+<span class="sd">        - Value of the first field variable, if the data depend on field variables.</span>
+<span class="sd">        - Value of the second field variable.</span>
+<span class="sd">        - Etc.</span>
 
 <span class="sd">    The corresponding analysis keywords are:</span>
-<span class="sd">        - DRUCKER PRAGER CREEP</span>
+
+<span class="sd">    - DRUCKER PRAGER CREEP</span>
 
 <span class="sd">    """</span>
 

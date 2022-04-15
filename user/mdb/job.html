@@ -491,8 +491,15 @@ local machine. The default value is OFF.</p>
 <dd><p>The Job object is the abstract base type for other Job objects. The Job object has no
 explicit constructor. The methods and members of the Job object are common to all 
 objects derived from Job.</p>
-<dl class="simple">
-<dt>The corresponding analysis keywords are:</dt><dd><ul class="simple">
+<p class="rubric">Notes</p>
+<p>This object can be accessed by:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">job</span>
+<span class="n">mdb</span><span class="o">.</span><span class="n">coexecutions</span><span class="p">[</span><span class="n">name</span><span class="p">]</span><span class="o">.</span><span class="n">jobs</span><span class="p">[</span><span class="n">name</span><span class="p">]</span>
+<span class="n">mdb</span><span class="o">.</span><span class="n">jobs</span><span class="p">[</span><span class="n">name</span><span class="p">]</span>
+</pre></div>
+</div>
+<p>The corresponding analysis keywords are:</p>
+<ul class="simple">
 <li><dl class="simple">
 <dt>HEADING</dt><dd><ul>
 <li><p>PREPRINT</p></li>
@@ -501,8 +508,6 @@ objects derived from Job.</p>
 </dl>
 </li>
 </ul>
-</dd>
-</dl>
 <dl class="field-list simple">
 <dt class="field-odd">Attributes</dt>
 <dd class="field-odd"><dl class="simple">

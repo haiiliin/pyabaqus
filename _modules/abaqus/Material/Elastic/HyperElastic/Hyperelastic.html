@@ -317,61 +317,67 @@
 
 <span class="sd">    Notes</span>
 <span class="sd">    -----</span>
-<span class="sd">        This object can be accessed by:</span>
-<span class="sd">        </span>
-<span class="sd">        .. code-block:: python</span>
-<span class="sd">            </span>
-<span class="sd">            import material</span>
-<span class="sd">            mdb.models[name].materials[name].hyperelastic</span>
-<span class="sd">            import odbMaterial</span>
-<span class="sd">            session.odbs[name].materials[name].hyperelastic</span>
+<span class="sd">    This object can be accessed by:</span>
 
-<span class="sd">        The table data for this object are:</span>
-<span class="sd">        If *type*=ARRUDA_BOYCE, the table data specify the following:</span>
-<span class="sd">            - μ.</span>
-<span class="sd">            - λm.</span>
-<span class="sd">            - D.</span>
-<span class="sd">            - Temperature, if the data depend on temperature.</span>
-<span class="sd">        If *type*=MOONEY_RIVLIN, the table data specify the following:</span>
-<span class="sd">            - C10.</span>
-<span class="sd">            - C01.</span>
-<span class="sd">            - D1.</span>
-<span class="sd">            - Temperature, if the data depend on temperature.</span>
-<span class="sd">        If *type*=NEO_HOOKE, the table data specify the following:</span>
-<span class="sd">            - C10.</span>
-<span class="sd">            - D1.</span>
-<span class="sd">            - Temperature, if the data depend on temperature.</span>
-<span class="sd">        If *type*=OGDEN, the table data specify the following for values of nn:</span>
-<span class="sd">            - μi and αi for ii from 1 to n.</span>
-<span class="sd">            - nn coefficients Di.</span>
-<span class="sd">            - Temperature, if the data depend on temperature. Temperature dependence is not allowed for 4 ≤n≤ 6 in an Abaqus/Explicit analysis.</span>
-<span class="sd">        If *type*=POLYNOMIAL, the table data specify the following for values of nn:</span>
-<span class="sd">            - CijCi⁢j for each value of (i+j) from 11 to n with ii decreasing from (i+j) to zero and j increasing from zero to (i+j).</span>
-<span class="sd">            - n coefficients Di.</span>
-<span class="sd">            - Temperature, if the data depend on temperature. Temperature dependence is not allowed for 3 ≤n≤ 6 in an Abaqus/Explicit analysis.</span>
-<span class="sd">        If *type*=REDUCED_POLYNOMIAL, the table data specify the following for values of nn:</span>
-<span class="sd">            - Ci⁢0 for ii from 1 to n.</span>
-<span class="sd">            - n coefficients Di.</span>
-<span class="sd">            - Temperature, if the data depend on temperature. Temperature dependence is not allowed for 4 ≤n≤ 6 in an Abaqus/Explicit analysis.</span>
-<span class="sd">        If *type*=VAN_DER_WAALS, the table data specify the following:</span>
-<span class="sd">            - μ.</span>
-<span class="sd">            - λm.</span>
-<span class="sd">            - a.</span>
-<span class="sd">            - β.</span>
-<span class="sd">            - D.</span>
-<span class="sd">            - Temperature, if the data depend on temperature.</span>
-<span class="sd">        If *type*=YEOH, the table data specify the following:</span>
-<span class="sd">            - C10.</span>
-<span class="sd">            - C20.</span>
-<span class="sd">            - C30.</span>
-<span class="sd">            - D1.</span>
-<span class="sd">            - D2.</span>
-<span class="sd">            - D3.</span>
-<span class="sd">            - Temperature, if the data depend on temperature. Temperature dependence is not allowed in an Abaqus/Explicit analysis.</span>
-<span class="sd">        The None object is the default value if *testData*=ON.</span>
+<span class="sd">    .. code-block:: python</span>
+
+<span class="sd">        import material</span>
+<span class="sd">        mdb.models[name].materials[name].hyperelastic</span>
+<span class="sd">        import odbMaterial</span>
+<span class="sd">        session.odbs[name].materials[name].hyperelastic</span>
+
+<span class="sd">    The table data for this object are:</span>
+
+<span class="sd">    - If *type*=ARRUDA_BOYCE, the table data specify the following:</span>
+<span class="sd">        - μ.</span>
+<span class="sd">        - λm.</span>
+<span class="sd">        - D.</span>
+<span class="sd">        - Temperature, if the data depend on temperature.</span>
+<span class="sd">    - If *type*=MOONEY_RIVLIN, the table data specify the following:</span>
+<span class="sd">        - C10.</span>
+<span class="sd">        - C01.</span>
+<span class="sd">        - D1.</span>
+<span class="sd">        - Temperature, if the data depend on temperature.</span>
+<span class="sd">    - If *type*=NEO_HOOKE, the table data specify the following:</span>
+<span class="sd">        - C10.</span>
+<span class="sd">        - D1.</span>
+<span class="sd">        - Temperature, if the data depend on temperature.</span>
+<span class="sd">    - If *type*=OGDEN, the table data specify the following for values of nn:</span>
+<span class="sd">        - μi and αi for ii from 1 to n.</span>
+<span class="sd">        - nn coefficients Di.</span>
+<span class="sd">        - Temperature, if the data depend on temperature. Temperature dependence is not allowed for 4 ≤n≤ 6 in an</span>
+<span class="sd">        Abaqus/Explicit analysis.</span>
+<span class="sd">    - If *type*=POLYNOMIAL, the table data specify the following for values of nn:</span>
+<span class="sd">        - CijCi⁢j for each value of (i+j) from 11 to n with ii decreasing from (i+j) to zero and j increasing from</span>
+<span class="sd">        zero to (i+j).</span>
+<span class="sd">        - n coefficients Di.</span>
+<span class="sd">        - Temperature, if the data depend on temperature. Temperature dependence is not allowed for 3 ≤n≤ 6 in an</span>
+<span class="sd">        Abaqus/Explicit analysis.</span>
+<span class="sd">    - If *type*=REDUCED_POLYNOMIAL, the table data specify the following for values of nn:</span>
+<span class="sd">        - Ci⁢0 for ii from 1 to n.</span>
+<span class="sd">        - n coefficients Di.</span>
+<span class="sd">        - Temperature, if the data depend on temperature. Temperature dependence is not allowed for 4 ≤n≤ 6 in an</span>
+<span class="sd">        Abaqus/Explicit analysis.</span>
+<span class="sd">    - If *type*=VAN_DER_WAALS, the table data specify the following:</span>
+<span class="sd">        - μ.</span>
+<span class="sd">        - λm.</span>
+<span class="sd">        - a.</span>
+<span class="sd">        - β.</span>
+<span class="sd">        - D.</span>
+<span class="sd">        - Temperature, if the data depend on temperature.</span>
+<span class="sd">    - If *type*=YEOH, the table data specify the following:</span>
+<span class="sd">        - C10.</span>
+<span class="sd">        - C20.</span>
+<span class="sd">        - C30.</span>
+<span class="sd">        - D1.</span>
+<span class="sd">        - D2.</span>
+<span class="sd">        - D3.</span>
+<span class="sd">        - Temperature, if the data depend on temperature. Temperature dependence is not allowed in an Abaqus/Explicit analysis.</span>
+<span class="sd">    The None object is the default value if *testData*=ON.</span>
 
 <span class="sd">    The corresponding analysis keywords are:</span>
-<span class="sd">        - HYPERELASTIC</span>
+
+<span class="sd">    - HYPERELASTIC</span>
 
 <span class="sd">    """</span>
 

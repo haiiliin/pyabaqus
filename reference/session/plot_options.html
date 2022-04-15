@@ -964,10 +964,10 @@ membranes based on feature edges. The default value is ON.</p>
 object. The DetailPlotOptions object has no constructor command. Abaqus creates the 
 <em>detailPlotOptions</em> member whenever a Viewport is created.</p>
 <p class="rubric">Notes</p>
-<dl class="simple">
-<dt>This object can be accessed by:</dt><dd><p>session.viewports[name].detailPlotOptions</p>
-</dd>
-</dl>
+<p>This object can be accessed by:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">session</span><span class="o">.</span><span class="n">viewports</span><span class="p">[</span><span class="n">name</span><span class="p">]</span><span class="o">.</span><span class="n">detailPlotOptions</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Attributes</dt>
 <dd class="field-odd"><dl class="simple">
@@ -988,15 +988,15 @@ states. The DGCommonOptions object has no constructor command. Abaqus creates an
 <em>odbDisplayOptions.commonOptions</em> member when a display group instance is created, using 
 values from <em>odbDisplay.commonOptions</em>.</p>
 <p class="rubric">Notes</p>
-<dl class="simple">
-<dt>This object can be accessed by:</dt><dd><p>session.viewports[name].assemblyDisplay.displayGroupInstances[name].odbDisplayOptions.commonOptions
-session.viewports[name].layers[name].assemblyDisplay.displayGroupInstances[name].odbDisplayOptions.commonOptions
-session.viewports[name].layers[name].odbDisplay.displayGroupInstances[name].odbDisplayOptions.commonOptions
-session.viewports[name].layers[name].partDisplay.displayGroupInstances[name].odbDisplayOptions.commonOptions
-session.viewports[name].odbDisplay.displayGroupInstances[name].odbDisplayOptions.commonOptions
-session.viewports[name].partDisplay.displayGroupInstances[name].odbDisplayOptions.commonOptions</p>
-</dd>
-</dl>
+<p>This object can be accessed by:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">session</span><span class="o">.</span><span class="n">viewports</span><span class="p">[</span><span class="n">name</span><span class="p">]</span><span class="o">.</span><span class="n">assemblyDisplay</span><span class="o">.</span><span class="n">displayGroupInstances</span><span class="p">[</span><span class="n">name</span><span class="p">]</span><span class="o">.</span><span class="n">odbDisplayOptions</span><span class="o">.</span><span class="n">commonOptions</span>
+<span class="n">session</span><span class="o">.</span><span class="n">viewports</span><span class="p">[</span><span class="n">name</span><span class="p">]</span><span class="o">.</span><span class="n">layers</span><span class="p">[</span><span class="n">name</span><span class="p">]</span><span class="o">.</span><span class="n">assemblyDisplay</span><span class="o">.</span><span class="n">displayGroupInstances</span><span class="p">[</span><span class="n">name</span><span class="p">]</span><span class="o">.</span><span class="n">odbDisplayOptions</span><span class="o">.</span><span class="n">commonOptions</span>
+<span class="n">session</span><span class="o">.</span><span class="n">viewports</span><span class="p">[</span><span class="n">name</span><span class="p">]</span><span class="o">.</span><span class="n">layers</span><span class="p">[</span><span class="n">name</span><span class="p">]</span><span class="o">.</span><span class="n">odbDisplay</span><span class="o">.</span><span class="n">displayGroupInstances</span><span class="p">[</span><span class="n">name</span><span class="p">]</span><span class="o">.</span><span class="n">odbDisplayOptions</span><span class="o">.</span><span class="n">commonOptions</span>
+<span class="n">session</span><span class="o">.</span><span class="n">viewports</span><span class="p">[</span><span class="n">name</span><span class="p">]</span><span class="o">.</span><span class="n">layers</span><span class="p">[</span><span class="n">name</span><span class="p">]</span><span class="o">.</span><span class="n">partDisplay</span><span class="o">.</span><span class="n">displayGroupInstances</span><span class="p">[</span><span class="n">name</span><span class="p">]</span><span class="o">.</span><span class="n">odbDisplayOptions</span><span class="o">.</span><span class="n">commonOptions</span>
+<span class="n">session</span><span class="o">.</span><span class="n">viewports</span><span class="p">[</span><span class="n">name</span><span class="p">]</span><span class="o">.</span><span class="n">odbDisplay</span><span class="o">.</span><span class="n">displayGroupInstances</span><span class="p">[</span><span class="n">name</span><span class="p">]</span><span class="o">.</span><span class="n">odbDisplayOptions</span><span class="o">.</span><span class="n">commonOptions</span>
+<span class="n">session</span><span class="o">.</span><span class="n">viewports</span><span class="p">[</span><span class="n">name</span><span class="p">]</span><span class="o">.</span><span class="n">partDisplay</span><span class="o">.</span><span class="n">displayGroupInstances</span><span class="p">[</span><span class="n">name</span><span class="p">]</span><span class="o">.</span><span class="n">odbDisplayOptions</span><span class="o">.</span><span class="n">commonOptions</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Attributes</dt>
 <dd class="field-odd"><dl class="simple">
@@ -1113,15 +1113,15 @@ The DGContourOptions object has no constructor command. Abaqus creates an
 <em>odbDisplayOptions.contourOptions</em> member when a display group instance is created, 
 using values from <em>odbDisplay.contourOptions</em>.</p>
 <p class="rubric">Notes</p>
-<dl class="simple">
-<dt>This object can be accessed by:</dt><dd><p>session.viewports[name].assemblyDisplay.displayGroupInstances[name].odbDisplayOptions.contourOptions
-session.viewports[name].layers[name].assemblyDisplay.displayGroupInstances[name].odbDisplayOptions.contourOptions
-session.viewports[name].layers[name].odbDisplay.displayGroupInstances[name].odbDisplayOptions.contourOptions
-session.viewports[name].layers[name].partDisplay.displayGroupInstances[name].odbDisplayOptions.contourOptions
-session.viewports[name].odbDisplay.displayGroupInstances[name].odbDisplayOptions.contourOptions
-session.viewports[name].partDisplay.displayGroupInstances[name].odbDisplayOptions.contourOptions</p>
-</dd>
-</dl>
+<p>This object can be accessed by:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">session</span><span class="o">.</span><span class="n">viewports</span><span class="p">[</span><span class="n">name</span><span class="p">]</span><span class="o">.</span><span class="n">assemblyDisplay</span><span class="o">.</span><span class="n">displayGroupInstances</span><span class="p">[</span><span class="n">name</span><span class="p">]</span><span class="o">.</span><span class="n">odbDisplayOptions</span><span class="o">.</span><span class="n">contourOptions</span>
+<span class="n">session</span><span class="o">.</span><span class="n">viewports</span><span class="p">[</span><span class="n">name</span><span class="p">]</span><span class="o">.</span><span class="n">layers</span><span class="p">[</span><span class="n">name</span><span class="p">]</span><span class="o">.</span><span class="n">assemblyDisplay</span><span class="o">.</span><span class="n">displayGroupInstances</span><span class="p">[</span><span class="n">name</span><span class="p">]</span><span class="o">.</span><span class="n">odbDisplayOptions</span><span class="o">.</span><span class="n">contourOptions</span>
+<span class="n">session</span><span class="o">.</span><span class="n">viewports</span><span class="p">[</span><span class="n">name</span><span class="p">]</span><span class="o">.</span><span class="n">layers</span><span class="p">[</span><span class="n">name</span><span class="p">]</span><span class="o">.</span><span class="n">odbDisplay</span><span class="o">.</span><span class="n">displayGroupInstances</span><span class="p">[</span><span class="n">name</span><span class="p">]</span><span class="o">.</span><span class="n">odbDisplayOptions</span><span class="o">.</span><span class="n">contourOptions</span>
+<span class="n">session</span><span class="o">.</span><span class="n">viewports</span><span class="p">[</span><span class="n">name</span><span class="p">]</span><span class="o">.</span><span class="n">layers</span><span class="p">[</span><span class="n">name</span><span class="p">]</span><span class="o">.</span><span class="n">partDisplay</span><span class="o">.</span><span class="n">displayGroupInstances</span><span class="p">[</span><span class="n">name</span><span class="p">]</span><span class="o">.</span><span class="n">odbDisplayOptions</span><span class="o">.</span><span class="n">contourOptions</span>
+<span class="n">session</span><span class="o">.</span><span class="n">viewports</span><span class="p">[</span><span class="n">name</span><span class="p">]</span><span class="o">.</span><span class="n">odbDisplay</span><span class="o">.</span><span class="n">displayGroupInstances</span><span class="p">[</span><span class="n">name</span><span class="p">]</span><span class="o">.</span><span class="n">odbDisplayOptions</span><span class="o">.</span><span class="n">contourOptions</span>
+<span class="n">session</span><span class="o">.</span><span class="n">viewports</span><span class="p">[</span><span class="n">name</span><span class="p">]</span><span class="o">.</span><span class="n">partDisplay</span><span class="o">.</span><span class="n">displayGroupInstances</span><span class="p">[</span><span class="n">name</span><span class="p">]</span><span class="o">.</span><span class="n">odbDisplayOptions</span><span class="o">.</span><span class="n">contourOptions</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Attributes</dt>
 <dd class="field-odd"><dl class="simple">
@@ -1199,15 +1199,15 @@ The DGDisplayBodyOptions object has no constructor command. Abaqus creates an
 <em>odbDisplayOptions.displayBodyOptions</em> member when a display group instance is created, 
 using values from <em>odbDisplay.displayBodyOptions</em>.</p>
 <p class="rubric">Notes</p>
-<dl class="simple">
-<dt>This object can be accessed by:</dt><dd><p>session.viewports[name].assemblyDisplay.displayGroupInstances[name].odbDisplayOptions.displayBodyOptions
-session.viewports[name].layers[name].assemblyDisplay.displayGroupInstances[name].odbDisplayOptions.displayBodyOptions
-session.viewports[name].layers[name].odbDisplay.displayGroupInstances[name].odbDisplayOptions.displayBodyOptions
-session.viewports[name].layers[name].partDisplay.displayGroupInstances[name].odbDisplayOptions.displayBodyOptions
-session.viewports[name].odbDisplay.displayGroupInstances[name].odbDisplayOptions.displayBodyOptions
-session.viewports[name].partDisplay.displayGroupInstances[name].odbDisplayOptions.displayBodyOptions</p>
-</dd>
-</dl>
+<p>This object can be accessed by:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">session</span><span class="o">.</span><span class="n">viewports</span><span class="p">[</span><span class="n">name</span><span class="p">]</span><span class="o">.</span><span class="n">assemblyDisplay</span><span class="o">.</span><span class="n">displayGroupInstances</span><span class="p">[</span><span class="n">name</span><span class="p">]</span><span class="o">.</span><span class="n">odbDisplayOptions</span><span class="o">.</span><span class="n">displayBodyOptions</span>
+<span class="n">session</span><span class="o">.</span><span class="n">viewports</span><span class="p">[</span><span class="n">name</span><span class="p">]</span><span class="o">.</span><span class="n">layers</span><span class="p">[</span><span class="n">name</span><span class="p">]</span><span class="o">.</span><span class="n">assemblyDisplay</span><span class="o">.</span><span class="n">displayGroupInstances</span><span class="p">[</span><span class="n">name</span><span class="p">]</span><span class="o">.</span><span class="n">odbDisplayOptions</span><span class="o">.</span><span class="n">displayBodyOptions</span>
+<span class="n">session</span><span class="o">.</span><span class="n">viewports</span><span class="p">[</span><span class="n">name</span><span class="p">]</span><span class="o">.</span><span class="n">layers</span><span class="p">[</span><span class="n">name</span><span class="p">]</span><span class="o">.</span><span class="n">odbDisplay</span><span class="o">.</span><span class="n">displayGroupInstances</span><span class="p">[</span><span class="n">name</span><span class="p">]</span><span class="o">.</span><span class="n">odbDisplayOptions</span><span class="o">.</span><span class="n">displayBodyOptions</span>
+<span class="n">session</span><span class="o">.</span><span class="n">viewports</span><span class="p">[</span><span class="n">name</span><span class="p">]</span><span class="o">.</span><span class="n">layers</span><span class="p">[</span><span class="n">name</span><span class="p">]</span><span class="o">.</span><span class="n">partDisplay</span><span class="o">.</span><span class="n">displayGroupInstances</span><span class="p">[</span><span class="n">name</span><span class="p">]</span><span class="o">.</span><span class="n">odbDisplayOptions</span><span class="o">.</span><span class="n">displayBodyOptions</span>
+<span class="n">session</span><span class="o">.</span><span class="n">viewports</span><span class="p">[</span><span class="n">name</span><span class="p">]</span><span class="o">.</span><span class="n">odbDisplay</span><span class="o">.</span><span class="n">displayGroupInstances</span><span class="p">[</span><span class="n">name</span><span class="p">]</span><span class="o">.</span><span class="n">odbDisplayOptions</span><span class="o">.</span><span class="n">displayBodyOptions</span>
+<span class="n">session</span><span class="o">.</span><span class="n">viewports</span><span class="p">[</span><span class="n">name</span><span class="p">]</span><span class="o">.</span><span class="n">partDisplay</span><span class="o">.</span><span class="n">displayGroupInstances</span><span class="p">[</span><span class="n">name</span><span class="p">]</span><span class="o">.</span><span class="n">odbDisplayOptions</span><span class="o">.</span><span class="n">displayBodyOptions</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Attributes</dt>
 <dd class="field-odd"><dl class="simple">
@@ -1264,15 +1264,15 @@ orientation plot. The DGOrientationOptions object has no constructor command. Ab
 creates an <em>odbDisplayOptions.materialOrientationOptions</em> member when a display group 
 instance is created, using values from <em>odbDisplay.materialOrientationOptions</em>.</p>
 <p class="rubric">Notes</p>
-<dl class="simple">
-<dt>This object can be accessed by:</dt><dd><p>session.viewports[name].assemblyDisplay.displayGroupInstances[name].odbDisplayOptions.materialOrientationOptions
-session.viewports[name].layers[name].assemblyDisplay.displayGroupInstances[name].odbDisplayOptions.materialOrientationOptions
-session.viewports[name].layers[name].odbDisplay.displayGroupInstances[name].odbDisplayOptions.materialOrientationOptions
-session.viewports[name].layers[name].partDisplay.displayGroupInstances[name].odbDisplayOptions.materialOrientationOptions
-session.viewports[name].odbDisplay.displayGroupInstances[name].odbDisplayOptions.materialOrientationOptions
-session.viewports[name].partDisplay.displayGroupInstances[name].odbDisplayOptions.materialOrientationOptions</p>
-</dd>
-</dl>
+<p>This object can be accessed by:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">session</span><span class="o">.</span><span class="n">viewports</span><span class="p">[</span><span class="n">name</span><span class="p">]</span><span class="o">.</span><span class="n">assemblyDisplay</span><span class="o">.</span><span class="n">displayGroupInstances</span><span class="p">[</span><span class="n">name</span><span class="p">]</span><span class="o">.</span><span class="n">odbDisplayOptions</span><span class="o">.</span><span class="n">materialOrientationOptions</span>
+<span class="n">session</span><span class="o">.</span><span class="n">viewports</span><span class="p">[</span><span class="n">name</span><span class="p">]</span><span class="o">.</span><span class="n">layers</span><span class="p">[</span><span class="n">name</span><span class="p">]</span><span class="o">.</span><span class="n">assemblyDisplay</span><span class="o">.</span><span class="n">displayGroupInstances</span><span class="p">[</span><span class="n">name</span><span class="p">]</span><span class="o">.</span><span class="n">odbDisplayOptions</span><span class="o">.</span><span class="n">materialOrientationOptions</span>
+<span class="n">session</span><span class="o">.</span><span class="n">viewports</span><span class="p">[</span><span class="n">name</span><span class="p">]</span><span class="o">.</span><span class="n">layers</span><span class="p">[</span><span class="n">name</span><span class="p">]</span><span class="o">.</span><span class="n">odbDisplay</span><span class="o">.</span><span class="n">displayGroupInstances</span><span class="p">[</span><span class="n">name</span><span class="p">]</span><span class="o">.</span><span class="n">odbDisplayOptions</span><span class="o">.</span><span class="n">materialOrientationOptions</span>
+<span class="n">session</span><span class="o">.</span><span class="n">viewports</span><span class="p">[</span><span class="n">name</span><span class="p">]</span><span class="o">.</span><span class="n">layers</span><span class="p">[</span><span class="n">name</span><span class="p">]</span><span class="o">.</span><span class="n">partDisplay</span><span class="o">.</span><span class="n">displayGroupInstances</span><span class="p">[</span><span class="n">name</span><span class="p">]</span><span class="o">.</span><span class="n">odbDisplayOptions</span><span class="o">.</span><span class="n">materialOrientationOptions</span>
+<span class="n">session</span><span class="o">.</span><span class="n">viewports</span><span class="p">[</span><span class="n">name</span><span class="p">]</span><span class="o">.</span><span class="n">odbDisplay</span><span class="o">.</span><span class="n">displayGroupInstances</span><span class="p">[</span><span class="n">name</span><span class="p">]</span><span class="o">.</span><span class="n">odbDisplayOptions</span><span class="o">.</span><span class="n">materialOrientationOptions</span>
+<span class="n">session</span><span class="o">.</span><span class="n">viewports</span><span class="p">[</span><span class="n">name</span><span class="p">]</span><span class="o">.</span><span class="n">partDisplay</span><span class="o">.</span><span class="n">displayGroupInstances</span><span class="p">[</span><span class="n">name</span><span class="p">]</span><span class="o">.</span><span class="n">odbDisplayOptions</span><span class="o">.</span><span class="n">materialOrientationOptions</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Attributes</dt>
 <dd class="field-odd"><dl class="simple">
@@ -1464,15 +1464,15 @@ The DGSymbolOptions object has no constructor command. Abaqus creates an
 <em>odbDisplayOptions.symbolOptions</em> member when a display group instance is created, using 
 values from <em>odbDisplay.symbolOptions</em>.</p>
 <p class="rubric">Notes</p>
-<dl class="simple">
-<dt>This object can be accessed by:</dt><dd><p>session.viewports[name].assemblyDisplay.displayGroupInstances[name].odbDisplayOptions.symbolOptions
-session.viewports[name].layers[name].assemblyDisplay.displayGroupInstances[name].odbDisplayOptions.symbolOptions
-session.viewports[name].layers[name].odbDisplay.displayGroupInstances[name].odbDisplayOptions.symbolOptions
-session.viewports[name].layers[name].partDisplay.displayGroupInstances[name].odbDisplayOptions.symbolOptions
-session.viewports[name].odbDisplay.displayGroupInstances[name].odbDisplayOptions.symbolOptions
-session.viewports[name].partDisplay.displayGroupInstances[name].odbDisplayOptions.symbolOptions</p>
-</dd>
-</dl>
+<p>This object can be accessed by:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">session</span><span class="o">.</span><span class="n">viewports</span><span class="p">[</span><span class="n">name</span><span class="p">]</span><span class="o">.</span><span class="n">assemblyDisplay</span><span class="o">.</span><span class="n">displayGroupInstances</span><span class="p">[</span><span class="n">name</span><span class="p">]</span><span class="o">.</span><span class="n">odbDisplayOptions</span><span class="o">.</span><span class="n">symbolOptions</span>
+<span class="n">session</span><span class="o">.</span><span class="n">viewports</span><span class="p">[</span><span class="n">name</span><span class="p">]</span><span class="o">.</span><span class="n">layers</span><span class="p">[</span><span class="n">name</span><span class="p">]</span><span class="o">.</span><span class="n">assemblyDisplay</span><span class="o">.</span><span class="n">displayGroupInstances</span><span class="p">[</span><span class="n">name</span><span class="p">]</span><span class="o">.</span><span class="n">odbDisplayOptions</span><span class="o">.</span><span class="n">symbolOptions</span>
+<span class="n">session</span><span class="o">.</span><span class="n">viewports</span><span class="p">[</span><span class="n">name</span><span class="p">]</span><span class="o">.</span><span class="n">layers</span><span class="p">[</span><span class="n">name</span><span class="p">]</span><span class="o">.</span><span class="n">odbDisplay</span><span class="o">.</span><span class="n">displayGroupInstances</span><span class="p">[</span><span class="n">name</span><span class="p">]</span><span class="o">.</span><span class="n">odbDisplayOptions</span><span class="o">.</span><span class="n">symbolOptions</span>
+<span class="n">session</span><span class="o">.</span><span class="n">viewports</span><span class="p">[</span><span class="n">name</span><span class="p">]</span><span class="o">.</span><span class="n">layers</span><span class="p">[</span><span class="n">name</span><span class="p">]</span><span class="o">.</span><span class="n">partDisplay</span><span class="o">.</span><span class="n">displayGroupInstances</span><span class="p">[</span><span class="n">name</span><span class="p">]</span><span class="o">.</span><span class="n">odbDisplayOptions</span><span class="o">.</span><span class="n">symbolOptions</span>
+<span class="n">session</span><span class="o">.</span><span class="n">viewports</span><span class="p">[</span><span class="n">name</span><span class="p">]</span><span class="o">.</span><span class="n">odbDisplay</span><span class="o">.</span><span class="n">displayGroupInstances</span><span class="p">[</span><span class="n">name</span><span class="p">]</span><span class="o">.</span><span class="n">odbDisplayOptions</span><span class="o">.</span><span class="n">symbolOptions</span>
+<span class="n">session</span><span class="o">.</span><span class="n">viewports</span><span class="p">[</span><span class="n">name</span><span class="p">]</span><span class="o">.</span><span class="n">partDisplay</span><span class="o">.</span><span class="n">displayGroupInstances</span><span class="p">[</span><span class="n">name</span><span class="p">]</span><span class="o">.</span><span class="n">odbDisplayOptions</span><span class="o">.</span><span class="n">symbolOptions</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Attributes</dt>
 <dd class="field-odd"><dl class="simple">
@@ -2902,10 +2902,10 @@ SHADED. The default value is “Green”.</p>
 object. The PlyStackPlotOptions object has no constructor command. Abaqus creates the 
 <em>detailPlotOptions.plyStackPlotPlotOptions</em> member whenever a Viewport is created.</p>
 <p class="rubric">Notes</p>
-<dl class="simple">
-<dt>This object can be accessed by:</dt><dd><p>session.viewports[name].detailPlotOptions.plyStackPlotOptions</p>
-</dd>
-</dl>
+<p>This object can be accessed by:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">session</span><span class="o">.</span><span class="n">viewports</span><span class="p">[</span><span class="n">name</span><span class="p">]</span><span class="o">.</span><span class="n">detailPlotOptions</span><span class="o">.</span><span class="n">plyStackPlotOptions</span>
+</pre></div>
+</div>
 <p class="rubric">Methods</p>
 <div class="table-wrapper"><table class="autosummary longtable docutils align-default">
 <colgroup>

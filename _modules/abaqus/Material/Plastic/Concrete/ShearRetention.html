@@ -310,27 +310,29 @@
 
 <span class="sd">    Notes</span>
 <span class="sd">    -----</span>
-<span class="sd">        This object can be accessed by:</span>
+<span class="sd">    This object can be accessed by:</span>
+<span class="sd">    </span>
+<span class="sd">    .. code-block:: python</span>
 <span class="sd">        </span>
-<span class="sd">        .. code-block:: python</span>
-<span class="sd">            </span>
-<span class="sd">            import material</span>
-<span class="sd">            mdb.models[name].materials[name].concrete.shearRetention</span>
-<span class="sd">            import odbMaterial</span>
-<span class="sd">            session.odbs[name].materials[name].concrete.shearRetention</span>
+<span class="sd">        import material</span>
+<span class="sd">        mdb.models[name].materials[name].concrete.shearRetention</span>
+<span class="sd">        import odbMaterial</span>
+<span class="sd">        session.odbs[name].materials[name].concrete.shearRetention</span>
 
-<span class="sd">        The table data for this object are:</span>
-<span class="sd">            - ϱclose for dry concrete. The default value is 1.0.</span>
-<span class="sd">            - εmax for dry concrete. The default value is a very large number (full shear retention).</span>
-<span class="sd">            - ϱclose for wet concrete. The default value is 1.0.</span>
-<span class="sd">            - εmax for wet concrete. The default value is a very large number (full shear retention).</span>
-<span class="sd">            - Temperature, if the data depend on temperature.</span>
-<span class="sd">            - Value of the first field variable, if the data depend on field variables.</span>
-<span class="sd">            - Value of the second field variable.</span>
-<span class="sd">            - Etc.</span>
+<span class="sd">    The table data for this object are:</span>
+
+<span class="sd">    - ϱclose for dry concrete. The default value is 1.0.</span>
+<span class="sd">    - εmax for dry concrete. The default value is a very large number (full shear retention).</span>
+<span class="sd">    - ϱclose for wet concrete. The default value is 1.0.</span>
+<span class="sd">    - εmax for wet concrete. The default value is a very large number (full shear retention).</span>
+<span class="sd">    - Temperature, if the data depend on temperature.</span>
+<span class="sd">    - Value of the first field variable, if the data depend on field variables.</span>
+<span class="sd">    - Value of the second field variable.</span>
+<span class="sd">    - Etc.</span>
 
 <span class="sd">    The corresponding analysis keywords are:</span>
-<span class="sd">        - SHEAR RETENTION</span>
+
+<span class="sd">    - SHEAR RETENTION</span>
 
 <span class="sd">    """</span>
 

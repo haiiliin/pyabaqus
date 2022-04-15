@@ -309,47 +309,49 @@
 
 <span class="sd">    Notes</span>
 <span class="sd">    -----</span>
-<span class="sd">        This object can be accessed by:</span>
-<span class="sd">        </span>
-<span class="sd">        .. code-block:: python</span>
-<span class="sd">            </span>
-<span class="sd">            import material</span>
-<span class="sd">            mdb.models[name].materials[name].dielectric</span>
-<span class="sd">            import odbMaterial</span>
-<span class="sd">            session.odbs[name].materials[name].dielectric</span>
+<span class="sd">    This object can be accessed by:</span>
 
-<span class="sd">        The table data for this object are:</span>
-<span class="sd">        If *type*=ISOTROPIC, the table data specify the following:</span>
-<span class="sd">            - Dielectric constant.</span>
-<span class="sd">            - Frequency, if the data depend on frequency.</span>
-<span class="sd">            - Temperature, if the data depend on temperature.</span>
-<span class="sd">            - Value of the first field variable, if the data depend on field variables.</span>
-<span class="sd">            - Value of the second field variable.</span>
-<span class="sd">            - Etc.</span>
-<span class="sd">        If *type*=ORTHOTROPIC, the table data specify the following:</span>
-<span class="sd">            - Dφ11.</span>
-<span class="sd">            - Dφ2φ.</span>
-<span class="sd">            - Dφ3φ.</span>
-<span class="sd">            - Frequency, if the data depend on frequency.</span>
-<span class="sd">            - Temperature, if the data depend on temperature.</span>
-<span class="sd">            - Value of the first field variable, if the data depend on field variables.</span>
-<span class="sd">            - Value of the second field variable.</span>
-<span class="sd">            - Etc.</span>
-<span class="sd">        If *type*=ANISOTROPIC, the table data specify the following:</span>
-<span class="sd">            - Dφ11.</span>
-<span class="sd">            - Dφ12.</span>
-<span class="sd">            - Dφ22.</span>
-<span class="sd">            - Dφ13.</span>
-<span class="sd">            - Dφ23.</span>
-<span class="sd">            - Dφ33.</span>
-<span class="sd">            - Frequency, if the data depend on frequency.</span>
-<span class="sd">            - Temperature, if the data depend on temperature.</span>
-<span class="sd">            - Value of the first field variable, if the data depend on field variables.</span>
-<span class="sd">            - Value of the second field variable.</span>
-<span class="sd">            - Etc.</span>
+<span class="sd">    .. code-block:: python</span>
+
+<span class="sd">        import material</span>
+<span class="sd">        mdb.models[name].materials[name].dielectric</span>
+<span class="sd">        import odbMaterial</span>
+<span class="sd">        session.odbs[name].materials[name].dielectric</span>
+
+<span class="sd">    The table data for this object are:</span>
+
+<span class="sd">    - If *type*=ISOTROPIC, the table data specify the following:</span>
+<span class="sd">        - Dielectric constant.</span>
+<span class="sd">        - Frequency, if the data depend on frequency.</span>
+<span class="sd">        - Temperature, if the data depend on temperature.</span>
+<span class="sd">        - Value of the first field variable, if the data depend on field variables.</span>
+<span class="sd">        - Value of the second field variable.</span>
+<span class="sd">        - Etc.</span>
+<span class="sd">    - If *type*=ORTHOTROPIC, the table data specify the following:</span>
+<span class="sd">        - Dφ11.</span>
+<span class="sd">        - Dφ2φ.</span>
+<span class="sd">        - Dφ3φ.</span>
+<span class="sd">        - Frequency, if the data depend on frequency.</span>
+<span class="sd">        - Temperature, if the data depend on temperature.</span>
+<span class="sd">        - Value of the first field variable, if the data depend on field variables.</span>
+<span class="sd">        - Value of the second field variable.</span>
+<span class="sd">        - Etc.</span>
+<span class="sd">    - If *type*=ANISOTROPIC, the table data specify the following:</span>
+<span class="sd">        - Dφ11.</span>
+<span class="sd">        - Dφ12.</span>
+<span class="sd">        - Dφ22.</span>
+<span class="sd">        - Dφ13.</span>
+<span class="sd">        - Dφ23.</span>
+<span class="sd">        - Dφ33.</span>
+<span class="sd">        - Frequency, if the data depend on frequency.</span>
+<span class="sd">        - Temperature, if the data depend on temperature.</span>
+<span class="sd">        - Value of the first field variable, if the data depend on field variables.</span>
+<span class="sd">        - Value of the second field variable.</span>
+<span class="sd">        - Etc.</span>
 
 <span class="sd">    The corresponding analysis keywords are:</span>
-<span class="sd">        - DIELECTRIC</span>
+
+<span class="sd">    - DIELECTRIC</span>
 
 <span class="sd">    """</span>
 

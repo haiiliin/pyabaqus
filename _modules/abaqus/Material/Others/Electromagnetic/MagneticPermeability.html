@@ -309,61 +309,63 @@
 
 <span class="sd">    Notes</span>
 <span class="sd">    -----</span>
-<span class="sd">        This object can be accessed by:</span>
-<span class="sd">        </span>
-<span class="sd">        .. code-block:: python</span>
-<span class="sd">            </span>
-<span class="sd">            import material</span>
-<span class="sd">            mdb.models[name].materials[name].magneticPermeability</span>
-<span class="sd">            import odbMaterial</span>
-<span class="sd">            session.odbs[name].materials[name].magneticPermeability</span>
+<span class="sd">    This object can be accessed by:</span>
 
-<span class="sd">        The table data for this object are:</span>
-<span class="sd">        If *type*=ISOTROPIC, the table data specify the following:</span>
-<span class="sd">            - Magnetic permeability.</span>
-<span class="sd">            - Frequency, if the data depend on frequency.</span>
-<span class="sd">            - Temperature, if the data depend on temperature.</span>
-<span class="sd">            - Value of the first field variable, if the data depend on field variables.</span>
-<span class="sd">            - Value of the second field variable.</span>
-<span class="sd">            - Etc.</span>
-<span class="sd">        If *type*=ISOTROPIC, and *nonlinearBH*=TRUE, the table data specify the following:</span>
-<span class="sd">            - Magntitude of the magnetic flux density vector.</span>
-<span class="sd">            - Magnitude of the magnetic field vector.</span>
-<span class="sd">            - Temperature, if the data depend on temperature.</span>
-<span class="sd">            - Value of the first field variable, if the data depend on field variables.</span>
-<span class="sd">            - Value of the second field variable.</span>
-<span class="sd">            - Etc.</span>
-<span class="sd">        If *type*=ORTHOTROPIC, the table data specify the following:</span>
-<span class="sd">            - μ11E.</span>
-<span class="sd">            - μ22E.</span>
-<span class="sd">            - μ33E.</span>
-<span class="sd">            - Frequency, if the data depend on frequency.</span>
-<span class="sd">            - Temperature, if the data depend on temperature.</span>
-<span class="sd">            - Value of the first field variable, if the data depend on field variables.</span>
-<span class="sd">            - Value of the second field variable.</span>
-<span class="sd">            - Etc.</span>
-<span class="sd">        If *type*=ORTHOTROPIC, and *nonlinearBH*=TRUE, the table data specify the following:</span>
-<span class="sd">            - Magntitude of the magnetic flux density vector in the first direction.</span>
-<span class="sd">            - Magnitude of the magnetic field vector in the second direction.</span>
-<span class="sd">            - Temperature, if the data depend on temperature.</span>
-<span class="sd">            - Value of the first field variable, if the data depend on field variables.</span>
-<span class="sd">            - Value of the second field variable.</span>
-<span class="sd">            - Etc.</span>
-<span class="sd">        If *type*=ANISOTROPIC, the table data specify the following:</span>
-<span class="sd">            - μ11E.</span>
-<span class="sd">            - μ12E.</span>
-<span class="sd">            - μ22E.</span>
-<span class="sd">            - μ13E.</span>
-<span class="sd">            - μ23E.</span>
-<span class="sd">            - μ33E.</span>
-<span class="sd">            - Frequency, if the data depend on frequency.</span>
-<span class="sd">            - Temperature, if the data depend on temperature.</span>
-<span class="sd">            - Value of the first field variable, if the data depend on field variables.</span>
-<span class="sd">            - Value of the second field variable.</span>
-<span class="sd">            - Etc.</span>
+<span class="sd">    .. code-block:: python</span>
+
+<span class="sd">        import material</span>
+<span class="sd">        mdb.models[name].materials[name].magneticPermeability</span>
+<span class="sd">        import odbMaterial</span>
+<span class="sd">        session.odbs[name].materials[name].magneticPermeability</span>
+
+<span class="sd">    The table data for this object are:</span>
+
+<span class="sd">    - If *type*=ISOTROPIC, the table data specify the following:</span>
+<span class="sd">        - Magnetic permeability.</span>
+<span class="sd">        - Frequency, if the data depend on frequency.</span>
+<span class="sd">        - Temperature, if the data depend on temperature.</span>
+<span class="sd">        - Value of the first field variable, if the data depend on field variables.</span>
+<span class="sd">        - Value of the second field variable.</span>
+<span class="sd">        - Etc.</span>
+<span class="sd">    - If *type*=ISOTROPIC, and *nonlinearBH*=TRUE, the table data specify the following:</span>
+<span class="sd">        - Magntitude of the magnetic flux density vector.</span>
+<span class="sd">        - Magnitude of the magnetic field vector.</span>
+<span class="sd">        - Temperature, if the data depend on temperature.</span>
+<span class="sd">        - Value of the first field variable, if the data depend on field variables.</span>
+<span class="sd">        - Value of the second field variable.</span>
+<span class="sd">        - Etc.</span>
+<span class="sd">    - If *type*=ORTHOTROPIC, the table data specify the following:</span>
+<span class="sd">        - μ11E.</span>
+<span class="sd">        - μ22E.</span>
+<span class="sd">        - μ33E.</span>
+<span class="sd">        - Frequency, if the data depend on frequency.</span>
+<span class="sd">        - Temperature, if the data depend on temperature.</span>
+<span class="sd">        - Value of the first field variable, if the data depend on field variables.</span>
+<span class="sd">        - Value of the second field variable.</span>
+<span class="sd">        - Etc.</span>
+<span class="sd">    - If *type*=ORTHOTROPIC, and *nonlinearBH*=TRUE, the table data specify the following:</span>
+<span class="sd">        - Magntitude of the magnetic flux density vector in the first direction.</span>
+<span class="sd">        - Magnitude of the magnetic field vector in the second direction.</span>
+<span class="sd">        - Temperature, if the data depend on temperature.</span>
+<span class="sd">        - Value of the first field variable, if the data depend on field variables.</span>
+<span class="sd">        - Value of the second field variable.</span>
+<span class="sd">        - Etc.</span>
+<span class="sd">    - If *type*=ANISOTROPIC, the table data specify the following:</span>
+<span class="sd">        - μ11E.</span>
+<span class="sd">        - μ12E.</span>
+<span class="sd">        - μ22E.</span>
+<span class="sd">        - μ13E.</span>
+<span class="sd">        - μ23E.</span>
+<span class="sd">        - μ33E.</span>
+<span class="sd">        - Frequency, if the data depend on frequency.</span>
+<span class="sd">        - Temperature, if the data depend on temperature.</span>
+<span class="sd">        - Value of the first field variable, if the data depend on field variables.</span>
+<span class="sd">        - Value of the second field variable.</span>
+<span class="sd">        - Etc.</span>
 
 <span class="sd">    The corresponding analysis keywords are:</span>
-<span class="sd">        - MAGNETIC PERMEABILITY</span>
+
+<span class="sd">    - MAGNETIC PERMEABILITY</span>
 
 <span class="sd">    """</span>
 

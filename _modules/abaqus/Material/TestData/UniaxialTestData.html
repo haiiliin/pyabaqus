@@ -309,38 +309,40 @@
 
 <span class="sd">    Notes</span>
 <span class="sd">    -----</span>
-<span class="sd">        This object can be accessed by:</span>
+<span class="sd">    This object can be accessed by:</span>
+<span class="sd">    </span>
+<span class="sd">    .. code-block:: python</span>
 <span class="sd">        </span>
-<span class="sd">        .. code-block:: python</span>
-<span class="sd">            </span>
-<span class="sd">            import material</span>
-<span class="sd">            mdb.models[name].materials[name].hyperelastic.uniaxialTestData</span>
-<span class="sd">            mdb.models[name].materials[name].hyperfoam.uniaxialTestData</span>
-<span class="sd">            mdb.models[name].materials[name].lowDensityFoam.uniaxialCompressionTestData</span>
-<span class="sd">            mdb.models[name].materials[name].lowDensityFoam.uniaxialTensionTestData</span>
-<span class="sd">            mdb.models[name].materials[name].mullinsEffect.uniaxialTests[i]</span>
-<span class="sd">            import odbMaterial</span>
-<span class="sd">            session.odbs[name].materials[name].hyperelastic.uniaxialTestData</span>
-<span class="sd">            session.odbs[name].materials[name].hyperfoam.uniaxialTestData</span>
-<span class="sd">            session.odbs[name].materials[name].lowDensityFoam.uniaxialCompressionTestData</span>
-<span class="sd">            session.odbs[name].materials[name].lowDensityFoam.uniaxialTensionTestData</span>
-<span class="sd">            session.odbs[name].materials[name].mullinsEffect.uniaxialTests[i]</span>
+<span class="sd">        import material</span>
+<span class="sd">        mdb.models[name].materials[name].hyperelastic.uniaxialTestData</span>
+<span class="sd">        mdb.models[name].materials[name].hyperfoam.uniaxialTestData</span>
+<span class="sd">        mdb.models[name].materials[name].lowDensityFoam.uniaxialCompressionTestData</span>
+<span class="sd">        mdb.models[name].materials[name].lowDensityFoam.uniaxialTensionTestData</span>
+<span class="sd">        mdb.models[name].materials[name].mullinsEffect.uniaxialTests[i]</span>
+<span class="sd">        import odbMaterial</span>
+<span class="sd">        session.odbs[name].materials[name].hyperelastic.uniaxialTestData</span>
+<span class="sd">        session.odbs[name].materials[name].hyperfoam.uniaxialTestData</span>
+<span class="sd">        session.odbs[name].materials[name].lowDensityFoam.uniaxialCompressionTestData</span>
+<span class="sd">        session.odbs[name].materials[name].lowDensityFoam.uniaxialTensionTestData</span>
+<span class="sd">        session.odbs[name].materials[name].mullinsEffect.uniaxialTests[i]</span>
 
-<span class="sd">        The table data for this object are:</span>
-<span class="sd">        For a hyperelastic material model, the table data specify the following:</span>
-<span class="sd">            - Nominal stress, TU.</span>
-<span class="sd">            - Nominal strain, ϵU.</span>
-<span class="sd">        For a hyperfoam material model, the table data specify the following:</span>
-<span class="sd">            - Nominal stress, TL.</span>
-<span class="sd">            - Nominal strain, ϵU.</span>
-<span class="sd">            - Nominal lateral strain, ϵ2=ϵ3. The default value is 0.</span>
-<span class="sd">        For a low-density foam material model, the table data specify the following:</span>
-<span class="sd">            - Nominal stress, TU.</span>
-<span class="sd">            - Nominal strain, ϵU.</span>
-<span class="sd">            - Nominal strain rate, ϵU˙.</span>
+<span class="sd">    The table data for this object are:</span>
+<span class="sd">    </span>
+<span class="sd">    - For a hyperelastic material model, the table data specify the following:</span>
+<span class="sd">        - Nominal stress, TU.</span>
+<span class="sd">        - Nominal strain, ϵU.</span>
+<span class="sd">    - For a hyperfoam material model, the table data specify the following:</span>
+<span class="sd">        - Nominal stress, TL.</span>
+<span class="sd">        - Nominal strain, ϵU.</span>
+<span class="sd">        - Nominal lateral strain, ϵ2=ϵ3. The default value is 0.</span>
+<span class="sd">    - For a low-density foam material model, the table data specify the following:</span>
+<span class="sd">        - Nominal stress, TU.</span>
+<span class="sd">        - Nominal strain, ϵU.</span>
+<span class="sd">        - Nominal strain rate, ϵU˙.</span>
 
 <span class="sd">    The corresponding analysis keywords are:</span>
-<span class="sd">        - UNIAXIAL TEST DATA</span>
+
+<span class="sd">    - UNIAXIAL TEST DATA</span>
 
 <span class="sd">    """</span>
 
