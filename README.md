@@ -30,6 +30,12 @@ it using pip:
 pip install pyabaqus
 ```
 
+`pyabaqus` is also uploaded to [anaconda](https://anaconda.org/haiiliin/pyabaqus), you can use 
+`conda` to install it:
+```shell
+conda install -c haiiliin pyabaqus
+```
+
 You may install the latest development version by cloning the 
 [GitHub repository](https://github.com/Haiiliin/pyabaqus) and use `python` to install from 
 the local directory:
