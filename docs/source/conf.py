@@ -48,6 +48,8 @@ numpydoc_show_class_members = True
 numpydoc_show_inherited_class_members = False
 numpydoc_xref_param_type = True
 
+autoclass_content = 'both'
+
 add_module_names = False
 
 # True to convert the type definitions in the docstrings as references. Defaults to False.
