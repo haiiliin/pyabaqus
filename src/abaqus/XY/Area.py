@@ -172,6 +172,7 @@ class Area:
         alignment
             A SymbolicConstant specifying the relative position of the area in its parent when 
             *positionMethod*=AUTO_ALIGN. Possible values are: 
+            
             - BOTTOM_LEFT 
             - BOTTOM_CENTER 
             - BOTTOM_RIGHT 

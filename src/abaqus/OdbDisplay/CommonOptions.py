@@ -400,6 +400,7 @@ class CommonOptions(DGCommonOptions):
             A Boolean specifying whether to plot the node symbols. The default value is OFF. 
         nodeSymbolType
             A SymbolicConstant specifying the node symbol types. Possible values are: 
+            
             - FILLED_CIRCLE 
             - FILLED_SQUARE 
             - FILLED_DIAMOND 

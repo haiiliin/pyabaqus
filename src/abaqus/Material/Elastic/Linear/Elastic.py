@@ -151,6 +151,7 @@ class Elastic:
             A sequence of sequences of Floats specifying the items described below. 
         type
             A SymbolicConstant specifying the type of elasticity data provided. Possible values are: 
+            
             - ISOTROPIC 
             - ORTHOTROPIC 
             - ANISOTROPIC 

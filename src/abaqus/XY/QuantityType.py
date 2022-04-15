@@ -71,6 +71,7 @@ class QuantityType:
             A String specifying the label for this quantity type. 
         type
             A SymbolicConstant specifying the physical dimension of the axis. Possible values are: 
+            
             - NONE. 
             - ACCELERATION. 
             - ACOUSTIC_INTENSITY. 

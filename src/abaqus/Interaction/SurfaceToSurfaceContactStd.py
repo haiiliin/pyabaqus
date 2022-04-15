@@ -95,6 +95,7 @@ class SurfaceToSurfaceContactStd(Interaction):
         interferenceType
             A SymbolicConstant specifying the type of time-dependent allowable interference for 
             contact pairs and contact elements. Possible values are: 
+            
             - NONE, specifying no allowable contact interference. 
             - SHRINK_FIT. 
             - UNIFORM. 
@@ -222,6 +223,7 @@ class SurfaceToSurfaceContactStd(Interaction):
         interferenceType
             A SymbolicConstant specifying the type of time-dependent allowable interference for 
             contact pairs and contact elements. Possible values are: 
+            
             - NONE, specifying no allowable contact interference. 
             - SHRINK_FIT. 
             - UNIFORM. 
@@ -332,6 +334,7 @@ class SurfaceToSurfaceContactStd(Interaction):
         interferenceType
             A SymbolicConstant specifying the type of time-dependent allowable interference for 
             contact pairs and contact elements. Possible values are: 
+            
             - NONE, specifying no allowable contact interference. 
             - SHRINK_FIT. 
             - UNIFORM. 

@@ -27,6 +27,7 @@ class PsOptions:
         ----------
         paperSize
             A SymbolicConstant specifying the paper size. Possible values are: 
+            
             - LETTER 
             - LEGAL 
             - LEDGER 

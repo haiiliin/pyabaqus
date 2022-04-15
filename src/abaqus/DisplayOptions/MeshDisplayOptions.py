@@ -34,6 +34,7 @@ class MeshDisplayOptions:
             A Boolean specifying whether element labels are shown. The default value is OFF. 
         meshVisibleEdges
             A SymbolicConstant specifying how the mesh's edges are drawn. Possible values are: 
+            
             - ALL, specifying that all edges are shown. 
             - EXTERIOR, specifying that only exterior edges are shown. 
             - FEATURE, specifying that edges are shown based on *featureAngle*. 

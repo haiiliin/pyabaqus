@@ -384,31 +384,37 @@ class MeshAssembly(AssemblyBase):
         attribute
             A SymbolicConstant specifying the type of edge seed attribute to return. Possible values 
             are: 
-            - EDGE_SEEDING_METHOD 
-            - BIAS_METHOD 
-            - NUMBER 
-            - AVERAGE_SIZE 
-            - DEVIATION_FACTOR 
-            - MIN_SIZE_FACTOR 
-            - BIAS_RATIO 
-            - BIAS_MIN_SIZE 
-            - BIAS_MAX_SIZE 
-            - VERTEX_ADJ_TO_SMALLEST_ELEM 
-            - SMALLEST_ELEM_LOCATION 
-            - CONSTRAINT 
+
+                - EDGE_SEEDING_METHOD 
+                - BIAS_METHOD 
+                - NUMBER 
+                - AVERAGE_SIZE 
+                - DEVIATION_FACTOR 
+                - MIN_SIZE_FACTOR 
+                - BIAS_RATIO 
+                - BIAS_MIN_SIZE 
+                - BIAS_MAX_SIZE 
+                - VERTEX_ADJ_TO_SMALLEST_ELEM 
+                - SMALLEST_ELEM_LOCATION 
+                - CONSTRAINT 
+
             The return value is dependent on the *attribute* argument. 
             - If *attribute*=EDGE_SEEDING_METHOD, the return value is a SymbolicConstant specifying 
             the edge seeding method used to create the seeds along the edge. Possible values are: 
-            - UNIFORM_BY_NUMBER 
-            - UNIFORM_BY_SIZE 
-            - CURVATURE_BASED_BY_SIZE 
-            - BIASED 
-            - NONE 
+            
+                - UNIFORM_BY_NUMBER 
+                - UNIFORM_BY_SIZE 
+                - CURVATURE_BASED_BY_SIZE 
+                - BIASED 
+                - NONE 
+
             - If *attribute*=BIAS_METHOD, the return value is a SymbolicConstant specifying the bias 
             type used to create the seeds along the edge. Possible values are: 
-            - SINGLE 
-            - DOUBLE 
-            - NONE 
+            
+                - SINGLE 
+                - DOUBLE 
+                - NONE 
+
             - If *attribute*=NUMBER, the return value is an Int specifying the number of element 
             seeds along the edge. 
             - If *attribute*=AVERAGE_SIZE, the return value is a Float specifying the average 
@@ -433,15 +439,19 @@ class MeshAssembly(AssemblyBase):
             - If *attribute*=SMALLEST_ELEM_LOCATION, the return value is a SymbolicConstant 
             specifying the location of smallest elements for double bias seeds; only applicable if 
             the EDGE_SEEDING_METHOD is BIASED and BIAS_METHOD is DOUBLE. Possible values are: 
-            - SMALLEST_ELEM_AT_CENTER 
-            - SMALLEST_ELEM_AT_ENDS 
-            - NONE 
+            
+                - SMALLEST_ELEM_AT_CENTER 
+                - SMALLEST_ELEM_AT_ENDS 
+                - NONE 
+
             - If *attribute*=CONSTRAINT, the return value is a SymbolicConstant specifying how close 
             the seeds must be matched by the mesh. Possible values are: 
-            - FREE 
-            - FINER 
-            - FIXED 
-            - NONE 
+            
+                - FREE 
+                - FINER 
+                - FIXED 
+                - NONE 
+
             A value of NONE indicates that the edge is not seeded. 
 
         Returns
@@ -499,42 +509,50 @@ class MeshAssembly(AssemblyBase):
             A Cell, a Face, or an Edge object specifying the region to be queried. 
         attribute
             A SymbolicConstant specifying the mesh control attribute to return. Possible values are: 
-            - ELEM_SHAPE 
-            - TECHNIQUE 
-            - ALGORITHM 
-            - MIN_TRANSITION 
+            
+                - ELEM_SHAPE 
+                - TECHNIQUE 
+                - ALGORITHM 
+                - MIN_TRANSITION 
+
             The return value is dependent on the *attribute* argument. 
             - If *attribute*=ELEM_SHAPE, the return value is a SymbolicConstant specifying the 
             element shape used during meshing. Possible values are: 
-            - LINE 
-            - QUAD 
-            - TRI 
-            - QUAD_DOMINATED 
-            - HEX 
-            - TET 
-            - WEDGE 
-            - HEX_DOMINATED 
+            
+                - LINE 
+                - QUAD 
+                - TRI 
+                - QUAD_DOMINATED 
+                - HEX 
+                - TET 
+                - WEDGE 
+                - HEX_DOMINATED 
+
             - If *attribute*=TECHNIQUE, the return value is a SymbolicConstant specifying the 
             meshing technique to be used during meshing. Possible values are: 
-            - FREE 
-            - STRUCTURED 
-            - SWEEP 
-            - UNMESHABLE 
+            
+                - FREE 
+                - STRUCTURED 
+                - SWEEP 
+                - UNMESHABLE 
+
             Where UNMESHABLE indicates that no meshing technique is applicable with the currently 
             assigned element shape. 
             - If *attribute*=ALGORITHM, the return value is a SymbolicConstant specifying the 
             meshing algorithm to be used during meshing. Possible values are: 
-            - MEDIAL_AXIS 
-            - ADVANCING_FRONT 
-            - DEFAULT 
-            - NON_DEFAULT 
-            - NONE 
+            
+                - MEDIAL_AXIS 
+                - ADVANCING_FRONT 
+                - DEFAULT 
+                - NON_DEFAULT 
+                - NONE 
+
             Where NONE indicates that no algorithm is applicable. 
             - If *attribute*=MIN_TRANSITION, the return value is a Boolean indicating whether 
             minimum transition will be used during meshing. This option is applicable only to the 
             following: 
-            - Free quadrilateral meshing or sweep hexahedral meshing with *algorithm*=MEDIAL_AXIS. 
-            - Structured quadrilateral meshing. 
+                - Free quadrilateral meshing or sweep hexahedral meshing with *algorithm*=MEDIAL_AXIS. 
+                - Structured quadrilateral meshing. 
 
         Returns
         -------
@@ -692,6 +710,7 @@ class MeshAssembly(AssemblyBase):
             A SymbolicConstant specifying how closely the seeds must be matched by the mesh. The 
             default value is FREE. If unspecified, the existing constraint will remain unchanged. 
             Possible values are: 
+            
             - FREE: The resulting mesh can be finer or coarser than the specified seeds. 
             - FINER: The resulting mesh can be finer than the specified seeds. 
             - FIXED: The seeds must be exactly matched by the mesh (only with respect to the number 
@@ -854,6 +873,7 @@ class MeshAssembly(AssemblyBase):
             A SymbolicConstant specifying the element shape to be used for meshing. The default 
             value is QUAD for Face regions and HEX for Cell regions. If unspecified, the existing 
             element shape will remain unchanged. Possible values are: 
+            
             - QUAD: Quadrilateral mesh. 
             - QUAD_DOMINATED: Quadrilateral-dominated mesh. 
             - TRI: Triangular mesh. 
@@ -866,6 +886,7 @@ class MeshAssembly(AssemblyBase):
             for Face regions. For Cell regions the initial value depends on the geometry of the 
             regions and can be STRUCTURED, SWEEP, or unmeshable. If unspecified, the existing mesh 
             technique(s) will remain unchanged. Possible values are: 
+            
             - FREE: Free mesh technique. 
             - STRUCTURED: Structured mesh technique. 
             - SWEEP: Sweep mesh technique. 
@@ -935,7 +956,9 @@ class MeshAssembly(AssemblyBase):
         criterion
             A SymbolicConstant specifying the criterion used for the quality check. Possible values 
             are: 
+
             - ANALYSIS_CHECKS 
+            
             When this criterion is specified Abaqus/CAE will invoke the element quality checks 
             included with the input file processor for Abaqus/Standard and Abaqus/Explicit. 
             - ANGULAR_DEVIATION 

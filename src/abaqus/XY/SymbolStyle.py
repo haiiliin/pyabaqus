@@ -50,6 +50,7 @@ class SymbolStyle:
         marker
             A SymbolicConstant specifying the marker type be used when drawing symbols using this 
             SymbolStyle object. Possible values are: 
+            
             - FILLED_CIRCLE 
             - FILLED_SQUARE 
             - FILLED_DIAMOND 
@@ -91,6 +92,7 @@ class SymbolStyle:
         marker
             A SymbolicConstant specifying the marker type be used when drawing symbols using this 
             SymbolStyle object. Possible values are: 
+            
             - FILLED_CIRCLE 
             - FILLED_SQUARE 
             - FILLED_DIAMOND 

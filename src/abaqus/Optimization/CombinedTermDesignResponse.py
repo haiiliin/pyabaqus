@@ -54,6 +54,7 @@ class CombinedTermDesignResponse(DesignResponse):
         method
             A SymbolicConstant specifying the method used to combine selected design responses. 
             Possible values are: 
+            
             - ABSOLUTE_DIFFERENCE 
             - ABSOLUTE_VALUE 
             - ADD 
@@ -122,6 +123,7 @@ class CombinedTermDesignResponse(DesignResponse):
         method
             A SymbolicConstant specifying the method used to combine selected design responses. 
             Possible values are: 
+            
             - ABSOLUTE_DIFFERENCE 
             - ABSOLUTE_VALUE 
             - ADD 
