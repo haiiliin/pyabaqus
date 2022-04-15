@@ -2,12 +2,9 @@ import os
 import sys
 from threading import Thread
 
-from PyQt5.QtWidgets import QApplication, QStyle
-
 from .Mdb.Mdb import Mdb as AbaqusMdb
 from .Odb.Odb import Odb
 from .Session.Session import Session as AbaqusSession
-from .Tools.JobMonitor.JobMonitor import JobMonitor
 
 
 class Mdb(AbaqusMdb):
@@ -99,28 +96,10 @@ def submitJobByInputFile(inputFile: str, userSubroutine: str = None, options: st
     absInputFilePath = os.path.abspath(inputFile)
     workDirectory = os.path.dirname(absInputFilePath)
     jobName = os.path.basename(absInputFilePath.replace('.inp', ''))
-
-    if showStatus:
-        monitorThread = Thread(target=_jobMonitor, args=(workDirectory, jobName))
-        monitorThread.start()
-    abaqusThread = Thread(target=_runAbaqus, args=(userSubroutine, abaqus, workDirectory, jobName, options))
-    abaqusThread.start()
-
-def _runAbaqus(userSubroutine: str, abaqus: str, workDirectory: str, jobName: str, options: str):
+    
     if userSubroutine is not None:
         commandLine = "{} job={} user={} {}".format(abaqus, jobName, userSubroutine, options)
     else:
         commandLine = "{} job={} {}".format(abaqus, jobName, options)
     os.system('cd {}'.format(workDirectory))
     os.system(commandLine)
-
-
-def _jobMonitor(workDirectory: str, jobName: str):
-    app = QApplication(sys.argv)
-    monitor = JobMonitor()
-    monitor.setWindowIcon(QApplication.style().standardIcon(QStyle.SP_TitleBarMenuButton))
-    monitor.setWorkDirectory(workDirectory)
-    monitor.setJobName(jobName)
-    monitor.show()
-    monitor.run()
-    sys.exit(app.exec_())
