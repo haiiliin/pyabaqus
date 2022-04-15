@@ -305,12 +305,9 @@
 <span class="kn">import</span> <span class="nn">sys</span>
 <span class="kn">from</span> <span class="nn">threading</span> <span class="kn">import</span> <span class="n">Thread</span>
 
-<span class="kn">from</span> <span class="nn">PyQt5.QtWidgets</span> <span class="kn">import</span> <span class="n">QApplication</span><span class="p">,</span> <span class="n">QStyle</span>
-
 <span class="kn">from</span> <span class="nn">.Mdb.Mdb</span> <span class="kn">import</span> <span class="n">Mdb</span> <span class="k">as</span> <span class="n">AbaqusMdb</span>
 <span class="kn">from</span> <span class="nn">.Odb.Odb</span> <span class="kn">import</span> <span class="n">Odb</span>
 <span class="kn">from</span> <span class="nn">.Session.Session</span> <span class="kn">import</span> <span class="n">Session</span> <span class="k">as</span> <span class="n">AbaqusSession</span>
-<span class="kn">from</span> <span class="nn">.Tools.JobMonitor.JobMonitor</span> <span class="kn">import</span> <span class="n">JobMonitor</span>
 
 
 <span class="k">class</span> <span class="nc">Mdb</span><span class="p">(</span><span class="n">AbaqusMdb</span><span class="p">):</span>
@@ -402,31 +399,13 @@
     <span class="n">absInputFilePath</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">abspath</span><span class="p">(</span><span class="n">inputFile</span><span class="p">)</span>
     <span class="n">workDirectory</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">dirname</span><span class="p">(</span><span class="n">absInputFilePath</span><span class="p">)</span>
     <span class="n">jobName</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">basename</span><span class="p">(</span><span class="n">absInputFilePath</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">'.inp'</span><span class="p">,</span> <span class="s1">''</span><span class="p">))</span>
-
-    <span class="k">if</span> <span class="n">showStatus</span><span class="p">:</span>
-        <span class="n">monitorThread</span> <span class="o">=</span> <span class="n">Thread</span><span class="p">(</span><span class="n">target</span><span class="o">=</span><span class="n">_jobMonitor</span><span class="p">,</span> <span class="n">args</span><span class="o">=</span><span class="p">(</span><span class="n">workDirectory</span><span class="p">,</span> <span class="n">jobName</span><span class="p">))</span>
-        <span class="n">monitorThread</span><span class="o">.</span><span class="n">start</span><span class="p">()</span>
-    <span class="n">abaqusThread</span> <span class="o">=</span> <span class="n">Thread</span><span class="p">(</span><span class="n">target</span><span class="o">=</span><span class="n">_runAbaqus</span><span class="p">,</span> <span class="n">args</span><span class="o">=</span><span class="p">(</span><span class="n">userSubroutine</span><span class="p">,</span> <span class="n">abaqus</span><span class="p">,</span> <span class="n">workDirectory</span><span class="p">,</span> <span class="n">jobName</span><span class="p">,</span> <span class="n">options</span><span class="p">))</span>
-    <span class="n">abaqusThread</span><span class="o">.</span><span class="n">start</span><span class="p">()</span></div>
-
-<span class="k">def</span> <span class="nf">_runAbaqus</span><span class="p">(</span><span class="n">userSubroutine</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">abaqus</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">workDirectory</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">jobName</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">options</span><span class="p">:</span> <span class="nb">str</span><span class="p">):</span>
+    
     <span class="k">if</span> <span class="n">userSubroutine</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
         <span class="n">commandLine</span> <span class="o">=</span> <span class="s2">"</span><span class="si">{}</span><span class="s2"> job=</span><span class="si">{}</span><span class="s2"> user=</span><span class="si">{}</span><span class="s2"> </span><span class="si">{}</span><span class="s2">"</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">abaqus</span><span class="p">,</span> <span class="n">jobName</span><span class="p">,</span> <span class="n">userSubroutine</span><span class="p">,</span> <span class="n">options</span><span class="p">)</span>
     <span class="k">else</span><span class="p">:</span>
         <span class="n">commandLine</span> <span class="o">=</span> <span class="s2">"</span><span class="si">{}</span><span class="s2"> job=</span><span class="si">{}</span><span class="s2"> </span><span class="si">{}</span><span class="s2">"</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">abaqus</span><span class="p">,</span> <span class="n">jobName</span><span class="p">,</span> <span class="n">options</span><span class="p">)</span>
     <span class="n">os</span><span class="o">.</span><span class="n">system</span><span class="p">(</span><span class="s1">'cd </span><span class="si">{}</span><span class="s1">'</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">workDirectory</span><span class="p">))</span>
-    <span class="n">os</span><span class="o">.</span><span class="n">system</span><span class="p">(</span><span class="n">commandLine</span><span class="p">)</span>
-
-
-<span class="k">def</span> <span class="nf">_jobMonitor</span><span class="p">(</span><span class="n">workDirectory</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">jobName</span><span class="p">:</span> <span class="nb">str</span><span class="p">):</span>
-    <span class="n">app</span> <span class="o">=</span> <span class="n">QApplication</span><span class="p">(</span><span class="n">sys</span><span class="o">.</span><span class="n">argv</span><span class="p">)</span>
-    <span class="n">monitor</span> <span class="o">=</span> <span class="n">JobMonitor</span><span class="p">()</span>
-    <span class="n">monitor</span><span class="o">.</span><span class="n">setWindowIcon</span><span class="p">(</span><span class="n">QApplication</span><span class="o">.</span><span class="n">style</span><span class="p">()</span><span class="o">.</span><span class="n">standardIcon</span><span class="p">(</span><span class="n">QStyle</span><span class="o">.</span><span class="n">SP_TitleBarMenuButton</span><span class="p">))</span>
-    <span class="n">monitor</span><span class="o">.</span><span class="n">setWorkDirectory</span><span class="p">(</span><span class="n">workDirectory</span><span class="p">)</span>
-    <span class="n">monitor</span><span class="o">.</span><span class="n">setJobName</span><span class="p">(</span><span class="n">jobName</span><span class="p">)</span>
-    <span class="n">monitor</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
-    <span class="n">monitor</span><span class="o">.</span><span class="n">run</span><span class="p">()</span>
-    <span class="n">sys</span><span class="o">.</span><span class="n">exit</span><span class="p">(</span><span class="n">app</span><span class="o">.</span><span class="n">exec_</span><span class="p">())</span>
+    <span class="n">os</span><span class="o">.</span><span class="n">system</span><span class="p">(</span><span class="n">commandLine</span><span class="p">)</span></div>
 </pre></div>
         </article>
       </div>
