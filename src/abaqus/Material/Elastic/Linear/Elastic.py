@@ -32,7 +32,7 @@ class Elastic:
         - Value of the first field variable, if the data depend on field variables.
         - Value of the second field variable.
         - Etc.
-     - If *type*=ENGINEERING_CONSTANTS, the table data specify the following:
+    - If *type*=ENGINEERING_CONSTANTS, the table data specify the following:
         - E1.
         - E2.
         - E3.
