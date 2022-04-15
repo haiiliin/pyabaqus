@@ -1810,20 +1810,22 @@ settings are copied from the current viewport.</p>
 <dt class="sig sig-object py" id="abaqus.DisplayOptions.MeshDisplayOptions.MeshDisplayOptions.setValues">
 <span class="sig-name descname"><span class="pre">setValues</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">nodeLabels</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.BooleanType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">elementLabels</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.BooleanType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">meshVisibleEdges</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.SymbolicConstantType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'EXTERIOR'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">featureAngle</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">20</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">meshEdgesInShaded</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.BooleanType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">meshTechnique</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.BooleanType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">seeds</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.BooleanType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/abaqus/DisplayOptions/MeshDisplayOptions.html#MeshDisplayOptions.setValues"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#abaqus.DisplayOptions.MeshDisplayOptions.MeshDisplayOptions.setValues" title="Permalink to this definition">#</a></dt>
 <dd><p>This method modifies the MeshDisplayOptions object.</p>
-<dl class="field-list simple">
+<dl class="field-list">
 <dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><dl class="simple">
+<dd class="field-odd"><dl>
 <dt><strong>nodeLabels</strong></dt><dd><p>A Boolean specifying whether node labels are shown. The default value is OFF.</p>
 </dd>
 <dt><strong>elementLabels</strong></dt><dd><p>A Boolean specifying whether element labels are shown. The default value is OFF.</p>
 </dd>
-<dt><strong>meshVisibleEdges</strong></dt><dd><p>A SymbolicConstant specifying how the mesh’s edges are drawn. Possible values are: 
-- ALL, specifying that all edges are shown. 
-- EXTERIOR, specifying that only exterior edges are shown. 
-- FEATURE, specifying that edges are shown based on <em>featureAngle</em>. 
-- FREE, specifying that only free edges are shown. 
-- NONE, specifying that no display edges are shown. 
-The default value is EXTERIOR.</p>
+<dt><strong>meshVisibleEdges</strong></dt><dd><p>A SymbolicConstant specifying how the mesh’s edges are drawn. Possible values are:</p>
+<ul class="simple">
+<li><p>ALL, specifying that all edges are shown.</p></li>
+<li><p>EXTERIOR, specifying that only exterior edges are shown.</p></li>
+<li><p>FEATURE, specifying that edges are shown based on <em>featureAngle</em>.</p></li>
+<li><p>FREE, specifying that only free edges are shown.</p></li>
+<li><p>NONE, specifying that no display edges are shown.</p></li>
+</ul>
+<p>The default value is EXTERIOR.</p>
 </dd>
 <dt><strong>featureAngle</strong></dt><dd><p>A Float specifying the angle in degrees to be used in calculating a feature edge plot. 
 Possible values are 0 ≤≤ <em>featureAngle</em> ≤≤ 90. The default value is 20.0.</p>

@@ -1013,23 +1013,25 @@ pressure. The default value is OFF.This argument is valid only if
 <dt class="sig sig-object py" id="abaqus.Material.Material.Material.Elastic">
 <span class="sig-prename descclassname"><span class="pre">Material.</span></span><span class="sig-name descname"><span class="pre">Elastic</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">table</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">tuple</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">type</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.SymbolicConstantType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'ISOTROPIC'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">noCompression</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.BooleanType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">noTension</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.BooleanType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">temperatureDependency</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.BooleanType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dependencies</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">moduli</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.SymbolicConstantType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'LONG_TERM'</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">→</span> <span class="sig-return-typehint"><a class="reference internal" href="#abaqus.Material.Elastic.Linear.Elastic.Elastic" title="abaqus.Material.Elastic.Linear.Elastic.Elastic"><span class="pre">abaqus.Material.Elastic.Linear.Elastic.Elastic</span></a></span></span><a class="reference internal" href="../../../_modules/abaqus/Material/Material.html#Material.Elastic"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#abaqus.Material.Material.Material.Elastic" title="Permalink to this definition">#</a></dt>
 <dd><p>This method creates an Elastic object.</p>
-<dl class="field-list simple">
+<dl class="field-list">
 <dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><dl class="simple">
+<dd class="field-odd"><dl>
 <dt><strong>table</strong></dt><dd><p>A sequence of sequences of Floats specifying the items described below.</p>
 </dd>
-<dt><strong>type</strong></dt><dd><p>A SymbolicConstant specifying the type of elasticity data provided. Possible values are: 
-- ISOTROPIC 
-- ORTHOTROPIC 
-- ANISOTROPIC 
-- ENGINEERING_CONSTANTS 
-- LAMINA 
-- TRACTION 
-- COUPLED_TRACTION 
-- SHORT_FIBER 
-- SHEAR 
-- BILAMINA 
-The default value is ISOTROPIC.</p>
+<dt><strong>type</strong></dt><dd><p>A SymbolicConstant specifying the type of elasticity data provided. Possible values are:</p>
+<ul class="simple">
+<li><p>ISOTROPIC</p></li>
+<li><p>ORTHOTROPIC</p></li>
+<li><p>ANISOTROPIC</p></li>
+<li><p>ENGINEERING_CONSTANTS</p></li>
+<li><p>LAMINA</p></li>
+<li><p>TRACTION</p></li>
+<li><p>COUPLED_TRACTION</p></li>
+<li><p>SHORT_FIBER</p></li>
+<li><p>SHEAR</p></li>
+<li><p>BILAMINA</p></li>
+</ul>
+<p>The default value is ISOTROPIC.</p>
 </dd>
 <dt><strong>noCompression</strong></dt><dd><p>A Boolean specifying whether compressive stress is allowed. The default value is OFF.</p>
 </dd>
@@ -3817,23 +3819,25 @@ pressure. The default value is OFF.This argument is valid only if
 <dt class="sig sig-object py" id="id122">
 <span class="sig-name descname"><span class="pre">Elastic</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">table</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">tuple</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">type</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.SymbolicConstantType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'ISOTROPIC'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">noCompression</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.BooleanType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">noTension</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.BooleanType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">temperatureDependency</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.BooleanType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dependencies</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">moduli</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.SymbolicConstantType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'LONG_TERM'</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">→</span> <span class="sig-return-typehint"><a class="reference internal" href="#abaqus.Material.Elastic.Linear.Elastic.Elastic" title="abaqus.Material.Elastic.Linear.Elastic.Elastic"><span class="pre">abaqus.Material.Elastic.Linear.Elastic.Elastic</span></a></span></span><a class="reference internal" href="../../../_modules/abaqus/Material/Material.html#Material.Elastic"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#id122" title="Permalink to this definition">#</a></dt>
 <dd><p>This method creates an Elastic object.</p>
-<dl class="field-list simple">
+<dl class="field-list">
 <dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><dl class="simple">
+<dd class="field-odd"><dl>
 <dt><strong>table</strong></dt><dd><p>A sequence of sequences of Floats specifying the items described below.</p>
 </dd>
-<dt><strong>type</strong></dt><dd><p>A SymbolicConstant specifying the type of elasticity data provided. Possible values are: 
-- ISOTROPIC 
-- ORTHOTROPIC 
-- ANISOTROPIC 
-- ENGINEERING_CONSTANTS 
-- LAMINA 
-- TRACTION 
-- COUPLED_TRACTION 
-- SHORT_FIBER 
-- SHEAR 
-- BILAMINA 
-The default value is ISOTROPIC.</p>
+<dt><strong>type</strong></dt><dd><p>A SymbolicConstant specifying the type of elasticity data provided. Possible values are:</p>
+<ul class="simple">
+<li><p>ISOTROPIC</p></li>
+<li><p>ORTHOTROPIC</p></li>
+<li><p>ANISOTROPIC</p></li>
+<li><p>ENGINEERING_CONSTANTS</p></li>
+<li><p>LAMINA</p></li>
+<li><p>TRACTION</p></li>
+<li><p>COUPLED_TRACTION</p></li>
+<li><p>SHORT_FIBER</p></li>
+<li><p>SHEAR</p></li>
+<li><p>BILAMINA</p></li>
+</ul>
+<p>The default value is ISOTROPIC.</p>
 </dd>
 <dt><strong>noCompression</strong></dt><dd><p>A Boolean specifying whether compressive stress is allowed. The default value is OFF.</p>
 </dd>
@@ -6512,23 +6516,25 @@ default value is OFF.</p>
 </tbody>
 </table></div>
 <p>This method creates an Elastic object.</p>
-<dl class="field-list simple">
+<dl class="field-list">
 <dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><dl class="simple">
+<dd class="field-odd"><dl>
 <dt><strong>table</strong></dt><dd><p>A sequence of sequences of Floats specifying the items described below.</p>
 </dd>
-<dt><strong>type</strong></dt><dd><p>A SymbolicConstant specifying the type of elasticity data provided. Possible values are: 
-- ISOTROPIC 
-- ORTHOTROPIC 
-- ANISOTROPIC 
-- ENGINEERING_CONSTANTS 
-- LAMINA 
-- TRACTION 
-- COUPLED_TRACTION 
-- SHORT_FIBER 
-- SHEAR 
-- BILAMINA 
-The default value is ISOTROPIC.</p>
+<dt><strong>type</strong></dt><dd><p>A SymbolicConstant specifying the type of elasticity data provided. Possible values are:</p>
+<ul class="simple">
+<li><p>ISOTROPIC</p></li>
+<li><p>ORTHOTROPIC</p></li>
+<li><p>ANISOTROPIC</p></li>
+<li><p>ENGINEERING_CONSTANTS</p></li>
+<li><p>LAMINA</p></li>
+<li><p>TRACTION</p></li>
+<li><p>COUPLED_TRACTION</p></li>
+<li><p>SHORT_FIBER</p></li>
+<li><p>SHEAR</p></li>
+<li><p>BILAMINA</p></li>
+</ul>
+<p>The default value is ISOTROPIC.</p>
 </dd>
 <dt><strong>noCompression</strong></dt><dd><p>A Boolean specifying whether compressive stress is allowed. The default value is OFF.</p>
 </dd>

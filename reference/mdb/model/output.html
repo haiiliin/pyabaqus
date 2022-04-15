@@ -1751,27 +1751,29 @@ such that a least-squares fit surface will be used. The default value is OFF.</p
 </table></div>
 <p>This method creates a request for a degree of freedom to be monitored in a general or
 modal procedure.</p>
-<dl class="field-list simple">
+<dl class="field-list">
 <dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><dl class="simple">
+<dd class="field-odd"><dl>
 <dt><strong>node</strong></dt><dd><p>A String specifying the name of the region to be monitored.</p>
 </dd>
 <dt><strong>dof</strong></dt><dd><p>A SymbolicConstant specifying the degree of freedom to be monitored at the node. 
-Possible values are: 
-- U1 
-- U2 
-- U3 
-- UR1 
-- UR2 
-- UR3 
-- WARP 
-- FLUID_PRESSURE 
-- ELECTRICAL_POTENTIAL 
-- NT11 
-- NT30 
-- NN11 
-- NN30 
-The NT identifiers are not available for mass diffusion. The NN identifiers are 
+Possible values are:</p>
+<ul class="simple">
+<li><p>U1</p></li>
+<li><p>U2</p></li>
+<li><p>U3</p></li>
+<li><p>UR1</p></li>
+<li><p>UR2</p></li>
+<li><p>UR3</p></li>
+<li><p>WARP</p></li>
+<li><p>FLUID_PRESSURE</p></li>
+<li><p>ELECTRICAL_POTENTIAL</p></li>
+<li><p>NT11</p></li>
+<li><p>NT30</p></li>
+<li><p>NN11</p></li>
+<li><p>NN30</p></li>
+</ul>
+<p>The NT identifiers are not available for mass diffusion. The NN identifiers are 
 available only for mass diffusion.</p>
 </dd>
 <dt><strong>frequency</strong></dt><dd><p>An Int specifying the output frequency in increments. This argument is valid only for an 

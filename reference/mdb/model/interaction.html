@@ -12494,9 +12494,9 @@ argument is not valid when <strong>sliding=FINITE</strong> and <strong>enforceme
 </tbody>
 </table></div>
 <p>This method creates a SurfaceToSurfaceContactStd object.</p>
-<dl class="field-list simple">
+<dl class="field-list">
 <dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><dl class="simple">
+<dd class="field-odd"><dl>
 <dt><strong>name</strong></dt><dd><p>A String specifying the repository key.</p>
 </dd>
 <dt><strong>createStepName</strong></dt><dd><p>A String specifying the name of the step in which the SurfaceToSurfaceContactStd object 
@@ -12513,11 +12513,13 @@ SMALL.</p>
 interaction.</p>
 </dd>
 <dt><strong>interferenceType</strong></dt><dd><p>A SymbolicConstant specifying the type of time-dependent allowable interference for 
-contact pairs and contact elements. Possible values are: 
-- NONE, specifying no allowable contact interference. 
-- SHRINK_FIT. 
-- UNIFORM. 
-The default value is NONE.</p>
+contact pairs and contact elements. Possible values are:</p>
+<ul class="simple">
+<li><p>NONE, specifying no allowable contact interference.</p></li>
+<li><p>SHRINK_FIT.</p></li>
+<li><p>UNIFORM.</p></li>
+</ul>
+<p>The default value is NONE.</p>
 </dd>
 <dt><strong>overclosure</strong></dt><dd><p>A Float specifying the maximum overclosure distance allowed. This argument applies only 
 when <a href="#id1218"><span class="problematic" id="id1219">*</span></a>interferenceType*=UNIFORM. The default value is 0.0.</p>
@@ -12642,15 +12644,17 @@ value is UNIFORM AXIAL COMPONENT.</p>
 <span class="sig-name descname"><span class="pre">setValues</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">interferenceType:</span> <span class="pre">abaqusConstants.SymbolicConstantType</span> <span class="pre">=</span> <span class="pre">'NONE'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">overclosure:</span> <span class="pre">float</span> <span class="pre">=</span> <span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">interferenceDirectionType:</span> <span class="pre">abaqusConstants.SymbolicConstantType</span> <span class="pre">=</span> <span class="pre">'COMPUTED'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">direction:</span> <span class="pre">tuple</span> <span class="pre">=</span> <span class="pre">()</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">amplitude:</span> <span class="pre">str</span> <span class="pre">=</span> <span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">smooth:</span> <span class="pre">float</span> <span class="pre">=</span> <span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">hcrit:</span> <span class="pre">float</span> <span class="pre">=</span> <span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">extensionZone:</span> <span class="pre">float</span> <span class="pre">=</span> <span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">adjustMethod:</span> <span class="pre">abaqusConstants.SymbolicConstantType</span> <span class="pre">=</span> <span class="pre">'NONE'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">adjustTolerance:</span> <span class="pre">float</span> <span class="pre">=</span> <span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">adjustSet:</span> <span class="pre">abaqus.Region.Region.Region</span> <span class="pre">=</span> <span class="pre">&lt;abaqus.Region.Region.Region</span> <span class="pre">object&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">enforcement:</span> <span class="pre">abaqusConstants.SymbolicConstantType</span> <span class="pre">=</span> <span class="pre">'SURFACE_TO_SURFACE'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">thickness:</span> <span class="pre">abaqusConstants.BooleanType</span> <span class="pre">=</span> <span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">contactControls:</span> <span class="pre">str</span> <span class="pre">=</span> <span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tied:</span> <span class="pre">abaqusConstants.BooleanType</span> <span class="pre">=</span> <span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">initialClearance:</span> <span class="pre">typing.Union[abaqusConstants.SymbolicConstantType</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">float]</span> <span class="pre">=</span> <span class="pre">'OMIT'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">halfThreadAngle:</span> <span class="pre">typing.Optional[str]</span> <span class="pre">=</span> <span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pitch:</span> <span class="pre">typing.Optional[str]</span> <span class="pre">=</span> <span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">majorBoltDiameter:</span> <span class="pre">typing.Union[abaqusConstants.SymbolicConstantType</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">float]</span> <span class="pre">=</span> <span class="pre">'COMPUTED'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">meanBoltDiameter:</span> <span class="pre">typing.Union[abaqusConstants.SymbolicConstantType</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">float]</span> <span class="pre">=</span> <span class="pre">'COMPUTED'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">datumAxis:</span> <span class="pre">abaqus.Datum.DatumAxis.DatumAxis</span> <span class="pre">=</span> <span class="pre">&lt;abaqus.Datum.DatumAxis.DatumAxis</span> <span class="pre">object&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">useReverseDatumAxis:</span> <span class="pre">abaqusConstants.BooleanType</span> <span class="pre">=</span> <span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">clearanceRegion:</span> <span class="pre">abaqus.Region.Region.Region</span> <span class="pre">=</span> <span class="pre">&lt;abaqus.Region.Region.Region</span> <span class="pre">object&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">surfaceSmoothing:</span> <span class="pre">abaqusConstants.SymbolicConstantType</span> <span class="pre">=</span> <span class="pre">'NONE'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bondingSet:</span> <span class="pre">abaqus.Region.Region.Region</span> <span class="pre">=</span> <span class="pre">&lt;abaqus.Region.Region.Region</span> <span class="pre">object&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">handedness:</span> <span class="pre">abaqusConstants.SymbolicConstantType</span> <span class="pre">=</span> <span class="pre">'RIGHT'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">normalAdjustment:</span> <span class="pre">typing.Optional[abaqusConstants.SymbolicConstantType]</span> <span class="pre">=</span> <span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../../_modules/abaqus/Interaction/SurfaceToSurfaceContactStd.html#SurfaceToSurfaceContactStd.setValues"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#abaqus.Interaction.SurfaceToSurfaceContactStd.SurfaceToSurfaceContactStd.setValues" title="Permalink to this definition">#</a></dt>
 <dd><p>This method modifies the data for an existing SurfaceToSurfaceContactStd object in the
 step where it is created.</p>
-<dl class="field-list simple">
+<dl class="field-list">
 <dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><dl class="simple">
+<dd class="field-odd"><dl>
 <dt><strong>interferenceType</strong></dt><dd><p>A SymbolicConstant specifying the type of time-dependent allowable interference for 
-contact pairs and contact elements. Possible values are: 
-- NONE, specifying no allowable contact interference. 
-- SHRINK_FIT. 
-- UNIFORM. 
-The default value is NONE.</p>
+contact pairs and contact elements. Possible values are:</p>
+<ul class="simple">
+<li><p>NONE, specifying no allowable contact interference.</p></li>
+<li><p>SHRINK_FIT.</p></li>
+<li><p>UNIFORM.</p></li>
+</ul>
+<p>The default value is NONE.</p>
 </dd>
 <dt><strong>overclosure</strong></dt><dd><p>A Float specifying the maximum overclosure distance allowed. This argument applies only 
 when <a href="#id1228"><span class="problematic" id="id1229">*</span></a>interferenceType*=UNIFORM. The default value is 0.0.</p>
@@ -12748,20 +12752,22 @@ value is UNIFORM AXIAL COMPONENT.</p>
 <span class="sig-name descname"><span class="pre">setValuesInStep</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">stepName</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">interactionProperty</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">interferenceType</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.SymbolicConstantType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'NONE'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">overclosure</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">interferenceDirectionType</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.SymbolicConstantType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'COMPUTED'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">direction</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">tuple</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">()</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">amplitude</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">contactControls</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">''</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../../_modules/abaqus/Interaction/SurfaceToSurfaceContactStd.html#SurfaceToSurfaceContactStd.setValuesInStep"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#abaqus.Interaction.SurfaceToSurfaceContactStd.SurfaceToSurfaceContactStd.setValuesInStep" title="Permalink to this definition">#</a></dt>
 <dd><p>This method modifies the propagating data for an existing SurfaceToSurfaceContactStd
 object in the specified step.</p>
-<dl class="field-list simple">
+<dl class="field-list">
 <dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><dl class="simple">
+<dd class="field-odd"><dl>
 <dt><strong>stepName</strong></dt><dd><p>A String specifying the name of the step in which the interaction is modified.</p>
 </dd>
 <dt><strong>interactionProperty</strong></dt><dd><p>A String specifying the name of the ContactProperty object associated with this 
 interaction.</p>
 </dd>
 <dt><strong>interferenceType</strong></dt><dd><p>A SymbolicConstant specifying the type of time-dependent allowable interference for 
-contact pairs and contact elements. Possible values are: 
-- NONE, specifying no allowable contact interference. 
-- SHRINK_FIT. 
-- UNIFORM. 
-The default value is NONE.</p>
+contact pairs and contact elements. Possible values are:</p>
+<ul class="simple">
+<li><p>NONE, specifying no allowable contact interference.</p></li>
+<li><p>SHRINK_FIT.</p></li>
+<li><p>UNIFORM.</p></li>
+</ul>
+<p>The default value is NONE.</p>
 </dd>
 <dt><strong>overclosure</strong></dt><dd><p>A Float specifying the maximum overclosure distance allowed. This argument applies only 
 when <a href="#id1238"><span class="problematic" id="id1239">*</span></a>interferenceType*=UNIFORM. The default value is 0.0.</p>

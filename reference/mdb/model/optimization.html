@@ -2949,9 +2949,9 @@ The CombinedTermDesignResponse object is derived from the DesignResponse object.
 </tbody>
 </table></div>
 <p>This method creates a CombinedTermDesignResponse object.</p>
-<dl class="field-list simple">
+<dl class="field-list">
 <dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><dl class="simple">
+<dd class="field-odd"><dl>
 <dt><strong>name</strong></dt><dd><p>A String specifying the design response repository key.</p>
 </dd>
 <dt><strong>terms</strong></dt><dd><p>A sequence of Strings specifying the names of the design responses to combine.</p>
@@ -2972,39 +2972,41 @@ The CombinedTermDesignResponse object is derived from the DesignResponse object.
 All values less than the <em>lowCutOff</em> are treated as 0. The default value is 0.0.</p>
 </dd>
 <dt><strong>method</strong></dt><dd><p>A SymbolicConstant specifying the method used to combine selected design responses. 
-Possible values are: 
-- ABSOLUTE_DIFFERENCE 
-- ABSOLUTE_VALUE 
-- ADD 
-- COSINE 
-- CUT_OFF 
-- DELTA_OVER_1_ITERATION 
-- DELTA_OVER_2_ITERATIONS 
-- DELTA_OVER_3_ITERATIONS 
-- DELTA_OVER_4_ITERATIONS 
-- DELTA_OVER_5_ITERATIONS 
-- DELTA_OVER_6_ITERATIONS 
-- DIVIDE 
-- EXPONENTIAL 
-- FILTER 
-- INTEGER 
-- LOG 
-- MAXIMUM 
-- MINIMUM 
-- MULTIPLY 
-- NATURAL_LOG 
-- NEAREST_INTEGER 
-- NORM 
-- NORM_FIRST 
-- NTH_POWER 
-- NTH_ROOT 
-- SIGN 
-- SINE 
-- SQUARE_ROOT 
-- SUBTRACT 
-- TANGENT 
-- WEIGHTED_ADD 
-The default value is ADD.</p>
+Possible values are:</p>
+<ul class="simple">
+<li><p>ABSOLUTE_DIFFERENCE</p></li>
+<li><p>ABSOLUTE_VALUE</p></li>
+<li><p>ADD</p></li>
+<li><p>COSINE</p></li>
+<li><p>CUT_OFF</p></li>
+<li><p>DELTA_OVER_1_ITERATION</p></li>
+<li><p>DELTA_OVER_2_ITERATIONS</p></li>
+<li><p>DELTA_OVER_3_ITERATIONS</p></li>
+<li><p>DELTA_OVER_4_ITERATIONS</p></li>
+<li><p>DELTA_OVER_5_ITERATIONS</p></li>
+<li><p>DELTA_OVER_6_ITERATIONS</p></li>
+<li><p>DIVIDE</p></li>
+<li><p>EXPONENTIAL</p></li>
+<li><p>FILTER</p></li>
+<li><p>INTEGER</p></li>
+<li><p>LOG</p></li>
+<li><p>MAXIMUM</p></li>
+<li><p>MINIMUM</p></li>
+<li><p>MULTIPLY</p></li>
+<li><p>NATURAL_LOG</p></li>
+<li><p>NEAREST_INTEGER</p></li>
+<li><p>NORM</p></li>
+<li><p>NORM_FIRST</p></li>
+<li><p>NTH_POWER</p></li>
+<li><p>NTH_ROOT</p></li>
+<li><p>SIGN</p></li>
+<li><p>SINE</p></li>
+<li><p>SQUARE_ROOT</p></li>
+<li><p>SUBTRACT</p></li>
+<li><p>TANGENT</p></li>
+<li><p>WEIGHTED_ADD</p></li>
+</ul>
+<p>The default value is ADD.</p>
 </dd>
 <dt><strong>weights</strong></dt><dd><p>A sequence of Floats specifying the weights to apply to the list of design responses 
 used when <em>method</em> is WEIGHTED_ADD. The default value is an empty sequence.</p>
@@ -3038,9 +3040,9 @@ used when <em>method</em> is WEIGHTED_ADD. The default value is an empty sequenc
 <dt class="sig sig-object py" id="abaqus.Optimization.CombinedTermDesignResponse.CombinedTermDesignResponse.setValues">
 <span class="sig-name descname"><span class="pre">setValues</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">filterMaxRadius</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">filterExponent</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">filterRadiusReduction</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">highCutOff</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">lowCutOff</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">method</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.SymbolicConstantType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'ADD'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">weights</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">tuple</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">()</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../../_modules/abaqus/Optimization/CombinedTermDesignResponse.html#CombinedTermDesignResponse.setValues"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#abaqus.Optimization.CombinedTermDesignResponse.CombinedTermDesignResponse.setValues" title="Permalink to this definition">#</a></dt>
 <dd><p>This method modifies the CombinedTermDesignResponse object.</p>
-<dl class="field-list simple">
+<dl class="field-list">
 <dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><dl class="simple">
+<dd class="field-odd"><dl>
 <dt><strong>filterMaxRadius</strong></dt><dd><p>None or a sequence of Floats specifying the maximum radius of influence used when 
 <em>method</em> is FILTER. The default value is None.</p>
 </dd>
@@ -3057,39 +3059,41 @@ used when <em>method</em> is WEIGHTED_ADD. The default value is an empty sequenc
 All values less than the <em>lowCutOff</em> are treated as 0. The default value is 0.0.</p>
 </dd>
 <dt><strong>method</strong></dt><dd><p>A SymbolicConstant specifying the method used to combine selected design responses. 
-Possible values are: 
-- ABSOLUTE_DIFFERENCE 
-- ABSOLUTE_VALUE 
-- ADD 
-- COSINE 
-- CUT_OFF 
-- DELTA_OVER_1_ITERATION 
-- DELTA_OVER_2_ITERATIONS 
-- DELTA_OVER_3_ITERATIONS 
-- DELTA_OVER_4_ITERATIONS 
-- DELTA_OVER_5_ITERATIONS 
-- DELTA_OVER_6_ITERATIONS 
-- DIVIDE 
-- EXPONENTIAL 
-- FILTER 
-- INTEGER 
-- LOG 
-- MAXIMUM 
-- MINIMUM 
-- MULTIPLY 
-- NATURAL_LOG 
-- NEAREST_INTEGER 
-- NORM 
-- NORM_FIRST 
-- NTH_POWER 
-- NTH_ROOT 
-- SIGN 
-- SINE 
-- SQUARE_ROOT 
-- SUBTRACT 
-- TANGENT 
-- WEIGHTED_ADD 
-The default value is ADD.</p>
+Possible values are:</p>
+<ul class="simple">
+<li><p>ABSOLUTE_DIFFERENCE</p></li>
+<li><p>ABSOLUTE_VALUE</p></li>
+<li><p>ADD</p></li>
+<li><p>COSINE</p></li>
+<li><p>CUT_OFF</p></li>
+<li><p>DELTA_OVER_1_ITERATION</p></li>
+<li><p>DELTA_OVER_2_ITERATIONS</p></li>
+<li><p>DELTA_OVER_3_ITERATIONS</p></li>
+<li><p>DELTA_OVER_4_ITERATIONS</p></li>
+<li><p>DELTA_OVER_5_ITERATIONS</p></li>
+<li><p>DELTA_OVER_6_ITERATIONS</p></li>
+<li><p>DIVIDE</p></li>
+<li><p>EXPONENTIAL</p></li>
+<li><p>FILTER</p></li>
+<li><p>INTEGER</p></li>
+<li><p>LOG</p></li>
+<li><p>MAXIMUM</p></li>
+<li><p>MINIMUM</p></li>
+<li><p>MULTIPLY</p></li>
+<li><p>NATURAL_LOG</p></li>
+<li><p>NEAREST_INTEGER</p></li>
+<li><p>NORM</p></li>
+<li><p>NORM_FIRST</p></li>
+<li><p>NTH_POWER</p></li>
+<li><p>NTH_ROOT</p></li>
+<li><p>SIGN</p></li>
+<li><p>SINE</p></li>
+<li><p>SQUARE_ROOT</p></li>
+<li><p>SUBTRACT</p></li>
+<li><p>TANGENT</p></li>
+<li><p>WEIGHTED_ADD</p></li>
+</ul>
+<p>The default value is ADD.</p>
 </dd>
 <dt><strong>weights</strong></dt><dd><p>A sequence of Floats specifying the weights to apply to the list of design responses 
 used when <em>method</em> is WEIGHTED_ADD. The default value is an empty sequence.</p>

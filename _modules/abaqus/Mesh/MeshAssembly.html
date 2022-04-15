@@ -687,31 +687,37 @@
 <span class="sd">        attribute</span>
 <span class="sd">            A SymbolicConstant specifying the type of edge seed attribute to return. Possible values </span>
 <span class="sd">            are: </span>
-<span class="sd">            - EDGE_SEEDING_METHOD </span>
-<span class="sd">            - BIAS_METHOD </span>
-<span class="sd">            - NUMBER </span>
-<span class="sd">            - AVERAGE_SIZE </span>
-<span class="sd">            - DEVIATION_FACTOR </span>
-<span class="sd">            - MIN_SIZE_FACTOR </span>
-<span class="sd">            - BIAS_RATIO </span>
-<span class="sd">            - BIAS_MIN_SIZE </span>
-<span class="sd">            - BIAS_MAX_SIZE </span>
-<span class="sd">            - VERTEX_ADJ_TO_SMALLEST_ELEM </span>
-<span class="sd">            - SMALLEST_ELEM_LOCATION </span>
-<span class="sd">            - CONSTRAINT </span>
+
+<span class="sd">                - EDGE_SEEDING_METHOD </span>
+<span class="sd">                - BIAS_METHOD </span>
+<span class="sd">                - NUMBER </span>
+<span class="sd">                - AVERAGE_SIZE </span>
+<span class="sd">                - DEVIATION_FACTOR </span>
+<span class="sd">                - MIN_SIZE_FACTOR </span>
+<span class="sd">                - BIAS_RATIO </span>
+<span class="sd">                - BIAS_MIN_SIZE </span>
+<span class="sd">                - BIAS_MAX_SIZE </span>
+<span class="sd">                - VERTEX_ADJ_TO_SMALLEST_ELEM </span>
+<span class="sd">                - SMALLEST_ELEM_LOCATION </span>
+<span class="sd">                - CONSTRAINT </span>
+
 <span class="sd">            The return value is dependent on the *attribute* argument. </span>
 <span class="sd">            - If *attribute*=EDGE_SEEDING_METHOD, the return value is a SymbolicConstant specifying </span>
 <span class="sd">            the edge seeding method used to create the seeds along the edge. Possible values are: </span>
-<span class="sd">            - UNIFORM_BY_NUMBER </span>
-<span class="sd">            - UNIFORM_BY_SIZE </span>
-<span class="sd">            - CURVATURE_BASED_BY_SIZE </span>
-<span class="sd">            - BIASED </span>
-<span class="sd">            - NONE </span>
+<span class="sd">            </span>
+<span class="sd">                - UNIFORM_BY_NUMBER </span>
+<span class="sd">                - UNIFORM_BY_SIZE </span>
+<span class="sd">                - CURVATURE_BASED_BY_SIZE </span>
+<span class="sd">                - BIASED </span>
+<span class="sd">                - NONE </span>
+
 <span class="sd">            - If *attribute*=BIAS_METHOD, the return value is a SymbolicConstant specifying the bias </span>
 <span class="sd">            type used to create the seeds along the edge. Possible values are: </span>
-<span class="sd">            - SINGLE </span>
-<span class="sd">            - DOUBLE </span>
-<span class="sd">            - NONE </span>
+<span class="sd">            </span>
+<span class="sd">                - SINGLE </span>
+<span class="sd">                - DOUBLE </span>
+<span class="sd">                - NONE </span>
+
 <span class="sd">            - If *attribute*=NUMBER, the return value is an Int specifying the number of element </span>
 <span class="sd">            seeds along the edge. </span>
 <span class="sd">            - If *attribute*=AVERAGE_SIZE, the return value is a Float specifying the average </span>
@@ -736,15 +742,19 @@
 <span class="sd">            - If *attribute*=SMALLEST_ELEM_LOCATION, the return value is a SymbolicConstant </span>
 <span class="sd">            specifying the location of smallest elements for double bias seeds; only applicable if </span>
 <span class="sd">            the EDGE_SEEDING_METHOD is BIASED and BIAS_METHOD is DOUBLE. Possible values are: </span>
-<span class="sd">            - SMALLEST_ELEM_AT_CENTER </span>
-<span class="sd">            - SMALLEST_ELEM_AT_ENDS </span>
-<span class="sd">            - NONE </span>
+<span class="sd">            </span>
+<span class="sd">                - SMALLEST_ELEM_AT_CENTER </span>
+<span class="sd">                - SMALLEST_ELEM_AT_ENDS </span>
+<span class="sd">                - NONE </span>
+
 <span class="sd">            - If *attribute*=CONSTRAINT, the return value is a SymbolicConstant specifying how close </span>
 <span class="sd">            the seeds must be matched by the mesh. Possible values are: </span>
-<span class="sd">            - FREE </span>
-<span class="sd">            - FINER </span>
-<span class="sd">            - FIXED </span>
-<span class="sd">            - NONE </span>
+<span class="sd">            </span>
+<span class="sd">                - FREE </span>
+<span class="sd">                - FINER </span>
+<span class="sd">                - FIXED </span>
+<span class="sd">                - NONE </span>
+
 <span class="sd">            A value of NONE indicates that the edge is not seeded. </span>
 
 <span class="sd">        Returns</span>
@@ -802,42 +812,50 @@
 <span class="sd">            A Cell, a Face, or an Edge object specifying the region to be queried. </span>
 <span class="sd">        attribute</span>
 <span class="sd">            A SymbolicConstant specifying the mesh control attribute to return. Possible values are: </span>
-<span class="sd">            - ELEM_SHAPE </span>
-<span class="sd">            - TECHNIQUE </span>
-<span class="sd">            - ALGORITHM </span>
-<span class="sd">            - MIN_TRANSITION </span>
+<span class="sd">            </span>
+<span class="sd">                - ELEM_SHAPE </span>
+<span class="sd">                - TECHNIQUE </span>
+<span class="sd">                - ALGORITHM </span>
+<span class="sd">                - MIN_TRANSITION </span>
+
 <span class="sd">            The return value is dependent on the *attribute* argument. </span>
 <span class="sd">            - If *attribute*=ELEM_SHAPE, the return value is a SymbolicConstant specifying the </span>
 <span class="sd">            element shape used during meshing. Possible values are: </span>
-<span class="sd">            - LINE </span>
-<span class="sd">            - QUAD </span>
-<span class="sd">            - TRI </span>
-<span class="sd">            - QUAD_DOMINATED </span>
-<span class="sd">            - HEX </span>
-<span class="sd">            - TET </span>
-<span class="sd">            - WEDGE </span>
-<span class="sd">            - HEX_DOMINATED </span>
+<span class="sd">            </span>
+<span class="sd">                - LINE </span>
+<span class="sd">                - QUAD </span>
+<span class="sd">                - TRI </span>
+<span class="sd">                - QUAD_DOMINATED </span>
+<span class="sd">                - HEX </span>
+<span class="sd">                - TET </span>
+<span class="sd">                - WEDGE </span>
+<span class="sd">                - HEX_DOMINATED </span>
+
 <span class="sd">            - If *attribute*=TECHNIQUE, the return value is a SymbolicConstant specifying the </span>
 <span class="sd">            meshing technique to be used during meshing. Possible values are: </span>
-<span class="sd">            - FREE </span>
-<span class="sd">            - STRUCTURED </span>
-<span class="sd">            - SWEEP </span>
-<span class="sd">            - UNMESHABLE </span>
+<span class="sd">            </span>
+<span class="sd">                - FREE </span>
+<span class="sd">                - STRUCTURED </span>
+<span class="sd">                - SWEEP </span>
+<span class="sd">                - UNMESHABLE </span>
+
 <span class="sd">            Where UNMESHABLE indicates that no meshing technique is applicable with the currently </span>
 <span class="sd">            assigned element shape. </span>
 <span class="sd">            - If *attribute*=ALGORITHM, the return value is a SymbolicConstant specifying the </span>
 <span class="sd">            meshing algorithm to be used during meshing. Possible values are: </span>
-<span class="sd">            - MEDIAL_AXIS </span>
-<span class="sd">            - ADVANCING_FRONT </span>
-<span class="sd">            - DEFAULT </span>
-<span class="sd">            - NON_DEFAULT </span>
-<span class="sd">            - NONE </span>
+<span class="sd">            </span>
+<span class="sd">                - MEDIAL_AXIS </span>
+<span class="sd">                - ADVANCING_FRONT </span>
+<span class="sd">                - DEFAULT </span>
+<span class="sd">                - NON_DEFAULT </span>
+<span class="sd">                - NONE </span>
+
 <span class="sd">            Where NONE indicates that no algorithm is applicable. </span>
 <span class="sd">            - If *attribute*=MIN_TRANSITION, the return value is a Boolean indicating whether </span>
 <span class="sd">            minimum transition will be used during meshing. This option is applicable only to the </span>
 <span class="sd">            following: </span>
-<span class="sd">            - Free quadrilateral meshing or sweep hexahedral meshing with *algorithm*=MEDIAL_AXIS. </span>
-<span class="sd">            - Structured quadrilateral meshing. </span>
+<span class="sd">                - Free quadrilateral meshing or sweep hexahedral meshing with *algorithm*=MEDIAL_AXIS. </span>
+<span class="sd">                - Structured quadrilateral meshing. </span>
 
 <span class="sd">        Returns</span>
 <span class="sd">        -------</span>
@@ -995,6 +1013,7 @@
 <span class="sd">            A SymbolicConstant specifying how closely the seeds must be matched by the mesh. The </span>
 <span class="sd">            default value is FREE. If unspecified, the existing constraint will remain unchanged. </span>
 <span class="sd">            Possible values are: </span>
+<span class="sd">            </span>
 <span class="sd">            - FREE: The resulting mesh can be finer or coarser than the specified seeds. </span>
 <span class="sd">            - FINER: The resulting mesh can be finer than the specified seeds. </span>
 <span class="sd">            - FIXED: The seeds must be exactly matched by the mesh (only with respect to the number </span>
@@ -1157,6 +1176,7 @@
 <span class="sd">            A SymbolicConstant specifying the element shape to be used for meshing. The default </span>
 <span class="sd">            value is QUAD for Face regions and HEX for Cell regions. If unspecified, the existing </span>
 <span class="sd">            element shape will remain unchanged. Possible values are: </span>
+<span class="sd">            </span>
 <span class="sd">            - QUAD: Quadrilateral mesh. </span>
 <span class="sd">            - QUAD_DOMINATED: Quadrilateral-dominated mesh. </span>
 <span class="sd">            - TRI: Triangular mesh. </span>
@@ -1169,6 +1189,7 @@
 <span class="sd">            for Face regions. For Cell regions the initial value depends on the geometry of the </span>
 <span class="sd">            regions and can be STRUCTURED, SWEEP, or unmeshable. If unspecified, the existing mesh </span>
 <span class="sd">            technique(s) will remain unchanged. Possible values are: </span>
+<span class="sd">            </span>
 <span class="sd">            - FREE: Free mesh technique. </span>
 <span class="sd">            - STRUCTURED: Structured mesh technique. </span>
 <span class="sd">            - SWEEP: Sweep mesh technique. </span>
@@ -1238,7 +1259,9 @@
 <span class="sd">        criterion</span>
 <span class="sd">            A SymbolicConstant specifying the criterion used for the quality check. Possible values </span>
 <span class="sd">            are: </span>
+
 <span class="sd">            - ANALYSIS_CHECKS </span>
+<span class="sd">            </span>
 <span class="sd">            When this criterion is specified Abaqus/CAE will invoke the element quality checks </span>
 <span class="sd">            included with the input file processor for Abaqus/Standard and Abaqus/Explicit. </span>
 <span class="sd">            - ANGULAR_DEVIATION </span>

@@ -1461,9 +1461,9 @@ default value is UNDEFINED_POSITION.</p>
 </tbody>
 </table></div>
 <p>This method creates an OdbMeshRegionData object.</p>
-<dl class="field-list simple">
+<dl class="field-list">
 <dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><dl class="simple">
+<dd class="field-odd"><dl>
 <dt><strong>odbFileName</strong></dt><dd><p>A String specifying the name of the output database file (including the .odb extension) 
 to be read into as the source data. This String can also be the full path to the output 
 database file if it is located in another directory.</p>
@@ -1479,36 +1479,40 @@ database file if it is located in another directory.</p>
 <dt><strong>outputPosition</strong></dt><dd><p>A SymbolicConstant specifying the position where the data is written in the output 
 database. Data can be obtained only from the position at which it was written to the 
 output database during the analysis. This position should be aligned with the field 
-output variable. Possible values are: 
-- UNDEFINED_POSITION 
-- NODAL 
-- INTEGRATION_POINT 
-- ELEMENT_FACE 
-- ELEMENT_NODAL 
-- ELEMENT_CENTROID 
-- WHOLE_ELEMENT 
-- WHOLE_REGION 
-- WHOLE_PART_INSTANCE 
-- WHOLE_MODEL 
-- GENERAL_PARTICLE 
-​   The default value is UNDEFINED_POSITION.</p>
+output variable. Possible values are:</p>
+<ul class="simple">
+<li><p>UNDEFINED_POSITION</p></li>
+<li><p>NODAL</p></li>
+<li><p>INTEGRATION_POINT</p></li>
+<li><p>ELEMENT_FACE</p></li>
+<li><p>ELEMENT_NODAL</p></li>
+<li><p>ELEMENT_CENTROID</p></li>
+<li><p>WHOLE_ELEMENT</p></li>
+<li><p>WHOLE_REGION</p></li>
+<li><p>WHOLE_PART_INSTANCE</p></li>
+<li><p>WHOLE_MODEL</p></li>
+<li><p>GENERAL_PARTICLE</p></li>
+</ul>
+<p>​   The default value is UNDEFINED_POSITION.</p>
 </dd>
 <dt><strong>dataType</strong></dt><dd><p>A SymbolicConstant specifying the data type of the field output variable which should be 
-aligned with the variable. Currently only SCALAR is supported. Possible values are: 
-- ENUMERATION 
-- BOOLEAN 
-- INTEGER 
-- SCALAR 
-- VECTOR 
-- QUATERNION_2D 
-- QUATERNION_3D 
-- TENSOR 
-- TENSOR_3D_FULL 
-- TENSOR_3D_PLANAR 
-- TENSOR_3D_SURFACE 
-- TENSOR_2D_PLANAR 
-- TENSOR_2D_SURFACE 
-The default value is SCALAR.</p>
+aligned with the variable. Currently only SCALAR is supported. Possible values are:</p>
+<ul class="simple">
+<li><p>ENUMERATION</p></li>
+<li><p>BOOLEAN</p></li>
+<li><p>INTEGER</p></li>
+<li><p>SCALAR</p></li>
+<li><p>VECTOR</p></li>
+<li><p>QUATERNION_2D</p></li>
+<li><p>QUATERNION_3D</p></li>
+<li><p>TENSOR</p></li>
+<li><p>TENSOR_3D_FULL</p></li>
+<li><p>TENSOR_3D_PLANAR</p></li>
+<li><p>TENSOR_3D_SURFACE</p></li>
+<li><p>TENSOR_2D_PLANAR</p></li>
+<li><p>TENSOR_2D_SURFACE</p></li>
+</ul>
+<p>The default value is SCALAR.</p>
 </dd>
 <dt><strong>storageType</strong></dt><dd><p>​   A SymbolicConstant specifying the storage type of the field output variable which 
 should be aligned with the variable. Possible values are FLOAT, DOUBLE, INTEGER, and 

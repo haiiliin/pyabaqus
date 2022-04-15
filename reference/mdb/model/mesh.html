@@ -780,40 +780,56 @@ default value is OFF.</p>
 <dt class="sig sig-object py" id="abaqus.Mesh.MeshAssembly.MeshAssembly.getEdgeSeeds">
 <span class="sig-name descname"><span class="pre">getEdgeSeeds</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">edge</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="part_assembly/geometry.html#abaqus.BasicGeometry.Edge.Edge" title="abaqus.BasicGeometry.Edge.Edge"><span class="pre">abaqus.BasicGeometry.Edge.Edge</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">attribute</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Union</span><span class="p"><span class="pre">[</span></span><span class="pre">abaqusConstants.SymbolicConstantType</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../../_modules/abaqus/Mesh/MeshAssembly.html#MeshAssembly.getEdgeSeeds"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#abaqus.Mesh.MeshAssembly.MeshAssembly.getEdgeSeeds" title="Permalink to this definition">#</a></dt>
 <dd><p>This method returns an edge seed parameter for a specified edge of an assembly.</p>
-<dl class="field-list simple">
+<dl class="field-list">
 <dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><dl class="simple">
+<dd class="field-odd"><dl>
 <dt><strong>edge</strong></dt><dd><p>An Edge object specifying the edge to be queried.</p>
 </dd>
 <dt><strong>attribute</strong></dt><dd><p>A SymbolicConstant specifying the type of edge seed attribute to return. Possible values 
-are: 
-- EDGE_SEEDING_METHOD 
-- BIAS_METHOD 
-- NUMBER 
-- AVERAGE_SIZE 
-- DEVIATION_FACTOR 
-- MIN_SIZE_FACTOR 
-- BIAS_RATIO 
-- BIAS_MIN_SIZE 
-- BIAS_MAX_SIZE 
-- VERTEX_ADJ_TO_SMALLEST_ELEM 
-- SMALLEST_ELEM_LOCATION 
-- CONSTRAINT 
-The return value is dependent on the <em>attribute</em> argument. 
+are:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>EDGE_SEEDING_METHOD</p></li>
+<li><p>BIAS_METHOD</p></li>
+<li><p>NUMBER</p></li>
+<li><p>AVERAGE_SIZE</p></li>
+<li><p>DEVIATION_FACTOR</p></li>
+<li><p>MIN_SIZE_FACTOR</p></li>
+<li><p>BIAS_RATIO</p></li>
+<li><p>BIAS_MIN_SIZE</p></li>
+<li><p>BIAS_MAX_SIZE</p></li>
+<li><p>VERTEX_ADJ_TO_SMALLEST_ELEM</p></li>
+<li><p>SMALLEST_ELEM_LOCATION</p></li>
+<li><p>CONSTRAINT</p></li>
+</ul>
+</div></blockquote>
+<p>The return value is dependent on the <em>attribute</em> argument. 
 - If <a href="#id1"><span class="problematic" id="id2">*</span></a>attribute*=EDGE_SEEDING_METHOD, the return value is a SymbolicConstant specifying 
-the edge seeding method used to create the seeds along the edge. Possible values are: 
-- UNIFORM_BY_NUMBER 
-- UNIFORM_BY_SIZE 
-- CURVATURE_BASED_BY_SIZE 
-- BIASED 
-- NONE 
-- If <a href="#id3"><span class="problematic" id="id4">*</span></a>attribute*=BIAS_METHOD, the return value is a SymbolicConstant specifying the bias 
-type used to create the seeds along the edge. Possible values are: 
-- SINGLE 
-- DOUBLE 
-- NONE 
-- If <a href="#id5"><span class="problematic" id="id6">*</span></a>attribute*=NUMBER, the return value is an Int specifying the number of element 
-seeds along the edge. 
+the edge seeding method used to create the seeds along the edge. Possible values are:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>UNIFORM_BY_NUMBER</p></li>
+<li><p>UNIFORM_BY_SIZE</p></li>
+<li><p>CURVATURE_BASED_BY_SIZE</p></li>
+<li><p>BIASED</p></li>
+<li><p>NONE</p></li>
+</ul>
+</div></blockquote>
+<ul class="simple">
+<li><p>If <a href="#id3"><span class="problematic" id="id4">*</span></a>attribute*=BIAS_METHOD, the return value is a SymbolicConstant specifying the bias</p></li>
+</ul>
+<p>type used to create the seeds along the edge. Possible values are:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>SINGLE</p></li>
+<li><p>DOUBLE</p></li>
+<li><p>NONE</p></li>
+</ul>
+</div></blockquote>
+<ul class="simple">
+<li><p>If <a href="#id5"><span class="problematic" id="id6">*</span></a>attribute*=NUMBER, the return value is an Int specifying the number of element</p></li>
+</ul>
+<p>seeds along the edge. 
 - If <a href="#id7"><span class="problematic" id="id8">*</span></a>attribute*=AVERAGE_SIZE, the return value is a Float specifying the average 
 element size along the edge. 
 - If <a href="#id9"><span class="problematic" id="id10">*</span></a>attribute*=DEVIATION_FACTOR, the return value is a Float specifying the deviation 
@@ -835,17 +851,27 @@ ID of the vertex next to the smallest element; only applicable if the
 EDGE_SEEDING_METHOD is BIASED. 
 - If <a href="#id21"><span class="problematic" id="id22">*</span></a>attribute*=SMALLEST_ELEM_LOCATION, the return value is a SymbolicConstant 
 specifying the location of smallest elements for double bias seeds; only applicable if 
-the EDGE_SEEDING_METHOD is BIASED and BIAS_METHOD is DOUBLE. Possible values are: 
-- SMALLEST_ELEM_AT_CENTER 
-- SMALLEST_ELEM_AT_ENDS 
-- NONE 
-- If <a href="#id23"><span class="problematic" id="id24">*</span></a>attribute*=CONSTRAINT, the return value is a SymbolicConstant specifying how close 
-the seeds must be matched by the mesh. Possible values are: 
-- FREE 
-- FINER 
-- FIXED 
-- NONE 
-A value of NONE indicates that the edge is not seeded.</p>
+the EDGE_SEEDING_METHOD is BIASED and BIAS_METHOD is DOUBLE. Possible values are:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>SMALLEST_ELEM_AT_CENTER</p></li>
+<li><p>SMALLEST_ELEM_AT_ENDS</p></li>
+<li><p>NONE</p></li>
+</ul>
+</div></blockquote>
+<ul class="simple">
+<li><p>If <a href="#id23"><span class="problematic" id="id24">*</span></a>attribute*=CONSTRAINT, the return value is a SymbolicConstant specifying how close</p></li>
+</ul>
+<p>the seeds must be matched by the mesh. Possible values are:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>FREE</p></li>
+<li><p>FINER</p></li>
+<li><p>FIXED</p></li>
+<li><p>NONE</p></li>
+</ul>
+</div></blockquote>
+<p>A value of NONE indicates that the edge is not seeded.</p>
 </dd>
 </dl>
 </dd>
@@ -914,48 +940,70 @@ elements.</p>
 <dt class="sig sig-object py" id="abaqus.Mesh.MeshAssembly.MeshAssembly.getMeshControl">
 <span class="sig-name descname"><span class="pre">getMeshControl</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">region</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">attribute</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.SymbolicConstantType</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../../_modules/abaqus/Mesh/MeshAssembly.html#MeshAssembly.getMeshControl"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#abaqus.Mesh.MeshAssembly.MeshAssembly.getMeshControl" title="Permalink to this definition">#</a></dt>
 <dd><p>This method returns a mesh control parameter for the specified region of the assembly.</p>
-<dl class="field-list simple">
+<dl class="field-list">
 <dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><dl class="simple">
+<dd class="field-odd"><dl>
 <dt><strong>region</strong></dt><dd><p>A Cell, a Face, or an Edge object specifying the region to be queried.</p>
 </dd>
-<dt><strong>attribute</strong></dt><dd><p>A SymbolicConstant specifying the mesh control attribute to return. Possible values are: 
-- ELEM_SHAPE 
-- TECHNIQUE 
-- ALGORITHM 
-- MIN_TRANSITION 
-The return value is dependent on the <em>attribute</em> argument. 
+<dt><strong>attribute</strong></dt><dd><p>A SymbolicConstant specifying the mesh control attribute to return. Possible values are:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>ELEM_SHAPE</p></li>
+<li><p>TECHNIQUE</p></li>
+<li><p>ALGORITHM</p></li>
+<li><p>MIN_TRANSITION</p></li>
+</ul>
+</div></blockquote>
+<p>The return value is dependent on the <em>attribute</em> argument. 
 - If <a href="#id25"><span class="problematic" id="id26">*</span></a>attribute*=ELEM_SHAPE, the return value is a SymbolicConstant specifying the 
-element shape used during meshing. Possible values are: 
-- LINE 
-- QUAD 
-- TRI 
-- QUAD_DOMINATED 
-- HEX 
-- TET 
-- WEDGE 
-- HEX_DOMINATED 
-- If <a href="#id27"><span class="problematic" id="id28">*</span></a>attribute*=TECHNIQUE, the return value is a SymbolicConstant specifying the 
-meshing technique to be used during meshing. Possible values are: 
-- FREE 
-- STRUCTURED 
-- SWEEP 
-- UNMESHABLE 
-Where UNMESHABLE indicates that no meshing technique is applicable with the currently 
+element shape used during meshing. Possible values are:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>LINE</p></li>
+<li><p>QUAD</p></li>
+<li><p>TRI</p></li>
+<li><p>QUAD_DOMINATED</p></li>
+<li><p>HEX</p></li>
+<li><p>TET</p></li>
+<li><p>WEDGE</p></li>
+<li><p>HEX_DOMINATED</p></li>
+</ul>
+</div></blockquote>
+<ul class="simple">
+<li><p>If <a href="#id27"><span class="problematic" id="id28">*</span></a>attribute*=TECHNIQUE, the return value is a SymbolicConstant specifying the</p></li>
+</ul>
+<p>meshing technique to be used during meshing. Possible values are:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>FREE</p></li>
+<li><p>STRUCTURED</p></li>
+<li><p>SWEEP</p></li>
+<li><p>UNMESHABLE</p></li>
+</ul>
+</div></blockquote>
+<p>Where UNMESHABLE indicates that no meshing technique is applicable with the currently 
 assigned element shape. 
 - If <a href="#id29"><span class="problematic" id="id30">*</span></a>attribute*=ALGORITHM, the return value is a SymbolicConstant specifying the 
-meshing algorithm to be used during meshing. Possible values are: 
-- MEDIAL_AXIS 
-- ADVANCING_FRONT 
-- DEFAULT 
-- NON_DEFAULT 
-- NONE 
-Where NONE indicates that no algorithm is applicable. 
+meshing algorithm to be used during meshing. Possible values are:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>MEDIAL_AXIS</p></li>
+<li><p>ADVANCING_FRONT</p></li>
+<li><p>DEFAULT</p></li>
+<li><p>NON_DEFAULT</p></li>
+<li><p>NONE</p></li>
+</ul>
+</div></blockquote>
+<p>Where NONE indicates that no algorithm is applicable. 
 - If <a href="#id31"><span class="problematic" id="id32">*</span></a>attribute*=MIN_TRANSITION, the return value is a Boolean indicating whether 
 minimum transition will be used during meshing. This option is applicable only to the 
-following: 
-- Free quadrilateral meshing or sweep hexahedral meshing with <a href="#id33"><span class="problematic" id="id34">*</span></a>algorithm*=MEDIAL_AXIS. 
-- Structured quadrilateral meshing.</p>
+following:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>Free quadrilateral meshing or sweep hexahedral meshing with <a href="#id33"><span class="problematic" id="id34">*</span></a>algorithm*=MEDIAL_AXIS.</p></li>
+<li><p>Structured quadrilateral meshing.</p></li>
+</ul>
+</div></blockquote>
 </dd>
 </dl>
 </dd>
@@ -1101,9 +1149,9 @@ be restored.</p>
 <span class="sig-name descname"><span class="pre">seedEdgeByBias</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">biasMethod</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.SymbolicConstantType</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">end1Edges</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">tuple</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="part_assembly/geometry.html#abaqus.BasicGeometry.Edge.Edge" title="abaqus.BasicGeometry.Edge.Edge"><span class="pre">abaqus.BasicGeometry.Edge.Edge</span></a><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">end2Edges</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">tuple</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="part_assembly/geometry.html#abaqus.BasicGeometry.Edge.Edge" title="abaqus.BasicGeometry.Edge.Edge"><span class="pre">abaqus.BasicGeometry.Edge.Edge</span></a><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">centerEdges</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">tuple</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="part_assembly/geometry.html#abaqus.BasicGeometry.Edge.Edge" title="abaqus.BasicGeometry.Edge.Edge"><span class="pre">abaqus.BasicGeometry.Edge.Edge</span></a><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">endEdges</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">tuple</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="part_assembly/geometry.html#abaqus.BasicGeometry.Edge.Edge" title="abaqus.BasicGeometry.Edge.Edge"><span class="pre">abaqus.BasicGeometry.Edge.Edge</span></a><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ratio</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">number</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">minSize</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">maxSize</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">constraint</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.SymbolicConstantType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'FREE'</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../../_modules/abaqus/Mesh/MeshAssembly.html#MeshAssembly.seedEdgeByBias"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#abaqus.Mesh.MeshAssembly.MeshAssembly.seedEdgeByBias" title="Permalink to this definition">#</a></dt>
 <dd><p>This method seeds the given edges nonuniformly using the specified number of elements
 and bias ratio or the specified minimum and maximum element sizes.</p>
-<dl class="field-list simple">
+<dl class="field-list">
 <dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><dl class="simple">
+<dd class="field-odd"><dl>
 <dt><strong>biasMethod</strong></dt><dd><p>A SymbolicConstant specifying whether single- or double-biased seed distribution will be 
 applied. If unspecified, single-biased seed distribution will be applied. Possible 
 values are: 
@@ -1141,11 +1189,13 @@ values are 1.0 ≤≤ <em>ratio</em> ≤≤ 106.</p>
 </dd>
 <dt><strong>constraint</strong></dt><dd><p>A SymbolicConstant specifying how closely the seeds must be matched by the mesh. The 
 default value is FREE. If unspecified, the existing constraint will remain unchanged. 
-Possible values are: 
-- FREE: The resulting mesh can be finer or coarser than the specified seeds. 
-- FINER: The resulting mesh can be finer than the specified seeds. 
-- FIXED: The seeds must be exactly matched by the mesh (only with respect to the number 
-of elements, not to the nodal positioning).</p>
+Possible values are:</p>
+<ul class="simple">
+<li><p>FREE: The resulting mesh can be finer or coarser than the specified seeds.</p></li>
+<li><p>FINER: The resulting mesh can be finer than the specified seeds.</p></li>
+<li><p>FIXED: The seeds must be exactly matched by the mesh (only with respect to the number</p></li>
+</ul>
+<p>of elements, not to the nodal positioning).</p>
 </dd>
 </dl>
 </dd>
@@ -1312,33 +1362,37 @@ face region.</p>
 <dt class="sig sig-object py" id="abaqus.Mesh.MeshAssembly.MeshAssembly.setMeshControls">
 <span class="sig-name descname"><span class="pre">setMeshControls</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">regions</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">tuple</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">elemShape</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">abaqusConstants.SymbolicConstantType</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">technique</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">abaqusConstants.SymbolicConstantType</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">algorithm</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">abaqusConstants.SymbolicConstantType</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">minTransition</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.BooleanType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sizeGrowth</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">abaqusConstants.SymbolicConstantType</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">allowMapped</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.BooleanType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../../_modules/abaqus/Mesh/MeshAssembly.html#MeshAssembly.setMeshControls"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#abaqus.Mesh.MeshAssembly.MeshAssembly.setMeshControls" title="Permalink to this definition">#</a></dt>
 <dd><p>This method sets the mesh control parameters for the specified regions.</p>
-<dl class="field-list simple">
+<dl class="field-list">
 <dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><dl class="simple">
+<dd class="field-odd"><dl>
 <dt><strong>regions</strong></dt><dd><p>A sequence of Face or Cell regions specifying the regions for which to set the mesh 
 control parameters.</p>
 </dd>
 <dt><strong>elemShape</strong></dt><dd><p>A SymbolicConstant specifying the element shape to be used for meshing. The default 
 value is QUAD for Face regions and HEX for Cell regions. If unspecified, the existing 
-element shape will remain unchanged. Possible values are: 
-- QUAD: Quadrilateral mesh. 
-- QUAD_DOMINATED: Quadrilateral-dominated mesh. 
-- TRI: Triangular mesh. 
-- HEX: Hexahedral mesh. 
-- HEX_DOMINATED: Hex-dominated mesh. 
-- TET: Tetrahedral mesh. 
-- WEDGE: Wedge mesh.</p>
+element shape will remain unchanged. Possible values are:</p>
+<ul class="simple">
+<li><p>QUAD: Quadrilateral mesh.</p></li>
+<li><p>QUAD_DOMINATED: Quadrilateral-dominated mesh.</p></li>
+<li><p>TRI: Triangular mesh.</p></li>
+<li><p>HEX: Hexahedral mesh.</p></li>
+<li><p>HEX_DOMINATED: Hex-dominated mesh.</p></li>
+<li><p>TET: Tetrahedral mesh.</p></li>
+<li><p>WEDGE: Wedge mesh.</p></li>
+</ul>
 </dd>
 <dt><strong>technique</strong></dt><dd><p>A SymbolicConstant specifying the mesh technique to be used. The default value is FREE 
 for Face regions. For Cell regions the initial value depends on the geometry of the 
 regions and can be STRUCTURED, SWEEP, or unmeshable. If unspecified, the existing mesh 
-technique(s) will remain unchanged. Possible values are: 
-- FREE: Free mesh technique. 
-- STRUCTURED: Structured mesh technique. 
-- SWEEP: Sweep mesh technique. 
-- BOTTOM_UP: Bottom-up mesh technique. Only applicable for cell regions. 
-- SYSTEM_ASSIGN: Allow the system to assign a suitable technique. The actual technique 
-assigned can be STRUCTURED, SWEEP, or “unmeshable”.</p>
+technique(s) will remain unchanged. Possible values are:</p>
+<ul class="simple">
+<li><p>FREE: Free mesh technique.</p></li>
+<li><p>STRUCTURED: Structured mesh technique.</p></li>
+<li><p>SWEEP: Sweep mesh technique.</p></li>
+<li><p>BOTTOM_UP: Bottom-up mesh technique. Only applicable for cell regions.</p></li>
+<li><p>SYSTEM_ASSIGN: Allow the system to assign a suitable technique. The actual technique</p></li>
+</ul>
+<p>assigned can be STRUCTURED, SWEEP, or “unmeshable”.</p>
 </dd>
 <dt><strong>algorithm</strong></dt><dd><p>A SymbolicConstant specifying the algorithm used to generate the mesh for the specified 
 regions. Possible values are MEDIAL_AXIS, ADVANCING_FRONT, and NON_DEFAULT. If 
@@ -1402,13 +1456,15 @@ underlying curve will be used.</p>
 <dt class="sig sig-object py" id="abaqus.Mesh.MeshAssembly.MeshAssembly.verifyMeshQuality">
 <span class="sig-name descname"><span class="pre">verifyMeshQuality</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">criterion</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.SymbolicConstantType</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">threshold</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">elemShape</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">abaqusConstants.SymbolicConstantType</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">regions</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">tuple</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">()</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../../_modules/abaqus/Mesh/MeshAssembly.html#MeshAssembly.verifyMeshQuality"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#abaqus.Mesh.MeshAssembly.MeshAssembly.verifyMeshQuality" title="Permalink to this definition">#</a></dt>
 <dd><p>This method tests the quality of part instance meshes and returns poor-quality elements.</p>
-<dl class="field-list simple">
+<dl class="field-list">
 <dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><dl class="simple">
+<dd class="field-odd"><dl>
 <dt><strong>criterion</strong></dt><dd><p>A SymbolicConstant specifying the criterion used for the quality check. Possible values 
-are: 
-- ANALYSIS_CHECKS 
-When this criterion is specified Abaqus/CAE will invoke the element quality checks 
+are:</p>
+<ul class="simple">
+<li><p>ANALYSIS_CHECKS</p></li>
+</ul>
+<p>When this criterion is specified Abaqus/CAE will invoke the element quality checks 
 included with the input file processor for Abaqus/Standard and Abaqus/Explicit. 
 - ANGULAR_DEVIATION 
 The maximum amount (in degrees) that an element’s face corner angles deviate from the 
@@ -1488,16 +1544,18 @@ command.</p>
 </pre></div>
 </div>
 <p>This method creates an ElemType object.</p>
-<dl class="field-list simple">
+<dl class="field-list">
 <dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><dl class="simple">
+<dd class="field-odd"><dl>
 <dt><strong>elemCode</strong></dt><dd><p>A SymbolicConstant specifying the Abaqus element code or just the element shape. 
-Possible values are: 
-- C3D8R, specifying a 8-node linear brick, reduced integration with hourglass control. 
-- CODE, specifying add more codes. 
-- UNKNOWN_TRI, specifying an unknown element type associated with a triangular shape. 
-- UNKNOWN_QUAD, specifying an unknown element type associated with a quadrilateral 
-shape. 
+Possible values are:</p>
+<ul class="simple">
+<li><p>C3D8R, specifying a 8-node linear brick, reduced integration with hourglass control.</p></li>
+<li><p>CODE, specifying add more codes.</p></li>
+<li><p>UNKNOWN_TRI, specifying an unknown element type associated with a triangular shape.</p></li>
+<li><p>UNKNOWN_QUAD, specifying an unknown element type associated with a quadrilateral</p></li>
+</ul>
+<p>shape. 
 - UNKNOWN_HEX, specifying an unknown element type associated with a hexahedral shape. 
 - UNKNOWN_WEDGE, specifying an unknown element type associated with a wedge shape. 
 - UNKNOWN_TET, specifying an unknown element type associated with a tetrahedral shape.</p>
@@ -3856,40 +3914,56 @@ default value is OFF.</p>
 <dt class="sig sig-object py" id="abaqus.Mesh.MeshPart.MeshPart.getEdgeSeeds">
 <span class="sig-name descname"><span class="pre">getEdgeSeeds</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">edge</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="part_assembly/geometry.html#abaqus.BasicGeometry.Edge.Edge" title="abaqus.BasicGeometry.Edge.Edge"><span class="pre">abaqus.BasicGeometry.Edge.Edge</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">attribute</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Union</span><span class="p"><span class="pre">[</span></span><span class="pre">abaqusConstants.SymbolicConstantType</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../../_modules/abaqus/Mesh/MeshPart.html#MeshPart.getEdgeSeeds"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#abaqus.Mesh.MeshPart.MeshPart.getEdgeSeeds" title="Permalink to this definition">#</a></dt>
 <dd><p>This method returns an edge seed parameter for a specified edge of a part.</p>
-<dl class="field-list simple">
+<dl class="field-list">
 <dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><dl class="simple">
+<dd class="field-odd"><dl>
 <dt><strong>edge</strong></dt><dd><p>An Edge object specifying the edge to be queried.</p>
 </dd>
 <dt><strong>attribute</strong></dt><dd><p>A SymbolicConstant specifying the type of edge seed attribute to return. Possible values 
-are: 
-- EDGE_SEEDING_METHOD 
-- BIAS_METHOD 
-- NUMBER 
-- AVERAGE_SIZE 
-- DEVIATION_FACTOR 
-- MIN_SIZE_FACTOR 
-- BIAS_RATIO 
-- BIAS_MIN_SIZE 
-- BIAS_MAX_SIZE 
-- VERTEX_ADJ_TO_SMALLEST_ELEM 
-- SMALLEST_ELEM_LOCATION 
-- CONSTRAINT 
-The return value is dependent on the <em>attribute</em> argument. 
+are:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>EDGE_SEEDING_METHOD</p></li>
+<li><p>BIAS_METHOD</p></li>
+<li><p>NUMBER</p></li>
+<li><p>AVERAGE_SIZE</p></li>
+<li><p>DEVIATION_FACTOR</p></li>
+<li><p>MIN_SIZE_FACTOR</p></li>
+<li><p>BIAS_RATIO</p></li>
+<li><p>BIAS_MIN_SIZE</p></li>
+<li><p>BIAS_MAX_SIZE</p></li>
+<li><p>VERTEX_ADJ_TO_SMALLEST_ELEM</p></li>
+<li><p>SMALLEST_ELEM_LOCATION</p></li>
+<li><p>CONSTRAINT</p></li>
+</ul>
+</div></blockquote>
+<p>The return value is dependent on the <em>attribute</em> argument. 
 - If <a href="#id57"><span class="problematic" id="id58">*</span></a>attribute*=EDGE_SEEDING_METHOD, the return value is a SymbolicConstant specifying 
-the edge seeding method used to create the seeds along the edge. Possible values are: 
-- UNIFORM_BY_NUMBER 
-- UNIFORM_BY_SIZE 
-- CURVATURE_BASED_BY_SIZE 
-- BIASED 
-- NONE 
-- If <a href="#id59"><span class="problematic" id="id60">*</span></a>attribute*=BIAS_METHOD, the return value is a SymbolicConstant specifying the bias 
-type used to create the seeds along the edge. Possible values are: 
-- SINGLE 
-- DOUBLE 
-- NONE 
-- If <a href="#id61"><span class="problematic" id="id62">*</span></a>attribute*=NUMBER, the return value is an Int specifying the number of element 
-seeds along the edge. 
+the edge seeding method used to create the seeds along the edge. Possible values are:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>UNIFORM_BY_NUMBER</p></li>
+<li><p>UNIFORM_BY_SIZE</p></li>
+<li><p>CURVATURE_BASED_BY_SIZE</p></li>
+<li><p>BIASED</p></li>
+<li><p>NONE</p></li>
+</ul>
+</div></blockquote>
+<ul class="simple">
+<li><p>If <a href="#id59"><span class="problematic" id="id60">*</span></a>attribute*=BIAS_METHOD, the return value is a SymbolicConstant specifying the bias</p></li>
+</ul>
+<p>type used to create the seeds along the edge. Possible values are:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>SINGLE</p></li>
+<li><p>DOUBLE</p></li>
+<li><p>NONE</p></li>
+</ul>
+</div></blockquote>
+<ul class="simple">
+<li><p>If <a href="#id61"><span class="problematic" id="id62">*</span></a>attribute*=NUMBER, the return value is an Int specifying the number of element</p></li>
+</ul>
+<p>seeds along the edge. 
 - If <a href="#id63"><span class="problematic" id="id64">*</span></a>attribute*=AVERAGE_SIZE, the return value is a Float specifying the average 
 element size along the edge. 
 - If <a href="#id65"><span class="problematic" id="id66">*</span></a>attribute*=DEVIATION_FACTOR, the return value is a Float specifying the deviation 
@@ -3911,17 +3985,27 @@ ID of the vertex next to the smallest element; only applicable if the
 EDGE_SEEDING_METHOD is BIASED. 
 - If <a href="#id77"><span class="problematic" id="id78">*</span></a>attribute*=SMALLEST_ELEM_LOCATION, the return value is a SymbolicConstant 
 specifying the location of smallest elements for double bias seeds; only applicable if 
-the EDGE_SEEDING_METHOD is BIASED and BIAS_METHOD is DOUBLE. Possible values are: 
-- SMALLEST_ELEM_AT_CENTER 
-- SMALLEST_ELEM_AT_ENDS 
-- NONE 
-- If <a href="#id79"><span class="problematic" id="id80">*</span></a>attribute*=CONSTRAINT, the return value is a SymbolicConstant specifying how close 
-the seeds must be matched by the mesh. Possible values are: 
-- FREE 
-- FINER 
-- FIXED 
-- NONE 
-A value of NONE indicates that the edge is not seeded.</p>
+the EDGE_SEEDING_METHOD is BIASED and BIAS_METHOD is DOUBLE. Possible values are:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>SMALLEST_ELEM_AT_CENTER</p></li>
+<li><p>SMALLEST_ELEM_AT_ENDS</p></li>
+<li><p>NONE</p></li>
+</ul>
+</div></blockquote>
+<ul class="simple">
+<li><p>If <a href="#id79"><span class="problematic" id="id80">*</span></a>attribute*=CONSTRAINT, the return value is a SymbolicConstant specifying how close</p></li>
+</ul>
+<p>the seeds must be matched by the mesh. Possible values are:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>FREE</p></li>
+<li><p>FINER</p></li>
+<li><p>FIXED</p></li>
+<li><p>NONE</p></li>
+</ul>
+</div></blockquote>
+<p>A value of NONE indicates that the edge is not seeded.</p>
 </dd>
 </dl>
 </dd>
@@ -3944,13 +4028,15 @@ a part.</p>
 <dt><strong>region</strong></dt><dd><p>A Cell, a Face, or an Edge object specifying the region to be queried.</p>
 </dd>
 <dt><strong>elemShape</strong></dt><dd><p>A SymbolicConstant specifying the shape of the element for which to return the element 
-type. Possible values are: 
-- LINE 
-- QUAD 
-- TRI 
-- HEX 
-- WEDGE 
-- TET</p>
+type. Possible values are:</p>
+<ul class="simple">
+<li><p>LINE</p></li>
+<li><p>QUAD</p></li>
+<li><p>TRI</p></li>
+<li><p>HEX</p></li>
+<li><p>WEDGE</p></li>
+<li><p>TET</p></li>
+</ul>
 </dd>
 </dl>
 </dd>
@@ -3996,43 +4082,61 @@ elements.</p>
 <dt class="sig sig-object py" id="abaqus.Mesh.MeshPart.MeshPart.getMeshControl">
 <span class="sig-name descname"><span class="pre">getMeshControl</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">region</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">attribute</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.SymbolicConstantType</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../../_modules/abaqus/Mesh/MeshPart.html#MeshPart.getMeshControl"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#abaqus.Mesh.MeshPart.MeshPart.getMeshControl" title="Permalink to this definition">#</a></dt>
 <dd><p>This method returns a mesh control parameter for the specified region of a part.</p>
-<dl class="field-list simple">
+<dl class="field-list">
 <dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><dl class="simple">
+<dd class="field-odd"><dl>
 <dt><strong>region</strong></dt><dd><p>A Cell, a Face, or an Edge object specifying the region to be queried.</p>
 </dd>
-<dt><strong>attribute</strong></dt><dd><p>A SymbolicConstant specifying the mesh control attribute to return. Possible values are: 
-- ELEM_SHAPE 
-- TECHNIQUE 
-- ALGORITHM 
-- MIN_TRANSITION 
-The return value depends on the value of the <em>attribute</em> argument. 
+<dt><strong>attribute</strong></dt><dd><p>A SymbolicConstant specifying the mesh control attribute to return. Possible values are:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>ELEM_SHAPE</p></li>
+<li><p>TECHNIQUE</p></li>
+<li><p>ALGORITHM</p></li>
+<li><p>MIN_TRANSITION</p></li>
+</ul>
+</div></blockquote>
+<p>The return value depends on the value of the <em>attribute</em> argument. 
 - If <a href="#id81"><span class="problematic" id="id82">*</span></a>attribute*=ELEM_SHAPE, the return value is a SymbolicConstant specifying the 
-element shape used during meshing. Possible values are: 
-- LINE 
-- QUAD 
-- TRI 
-- QUAD_DOMINATED 
-- HEX 
-- TET 
-- WEDGE 
-- HEX_DOMINATED 
-- If <a href="#id83"><span class="problematic" id="id84">*</span></a>attribute*=TECHNIQUE, the return value is a SymbolicConstant specifying the 
-meshing technique to be used during meshing. Possible values are: 
-- FREE 
-- STRUCTURED 
-- SWEEP 
-- UNMESHABLE 
-Where UNMESHABLE indicates that no meshing technique is applicable with the currently 
+element shape used during meshing. Possible values are:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>LINE</p></li>
+<li><p>QUAD</p></li>
+<li><p>TRI</p></li>
+<li><p>QUAD_DOMINATED</p></li>
+<li><p>HEX</p></li>
+<li><p>TET</p></li>
+<li><p>WEDGE</p></li>
+<li><p>HEX_DOMINATED</p></li>
+</ul>
+</div></blockquote>
+<ul class="simple">
+<li><p>If <a href="#id83"><span class="problematic" id="id84">*</span></a>attribute*=TECHNIQUE, the return value is a SymbolicConstant specifying the</p></li>
+</ul>
+<p>meshing technique to be used during meshing. Possible values are:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>FREE</p></li>
+<li><p>STRUCTURED</p></li>
+<li><p>SWEEP</p></li>
+<li><p>UNMESHABLE</p></li>
+</ul>
+</div></blockquote>
+<p>Where UNMESHABLE indicates that no meshing technique is applicable with the currently 
 assigned element shape. 
 - If <a href="#id85"><span class="problematic" id="id86">*</span></a>attribute*=ALGORITHM, the return value is a SymbolicConstant specifying the 
-meshing algorithm to be used during meshing. Possible values are: 
-- MEDIAL_AXIS 
-- ADVANCING_FRONT 
-- DEFAULT 
-- NON_DEFAULT 
-- NONE 
-Where NONE indicates that no algorithm is applicable. 
+meshing algorithm to be used during meshing. Possible values are:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>MEDIAL_AXIS</p></li>
+<li><p>ADVANCING_FRONT</p></li>
+<li><p>DEFAULT</p></li>
+<li><p>NON_DEFAULT</p></li>
+<li><p>NONE</p></li>
+</ul>
+</div></blockquote>
+<p>Where NONE indicates that no algorithm is applicable. 
 - If <a href="#id87"><span class="problematic" id="id88">*</span></a>attribute*=MIN_TRANSITION, the return value is a Boolean indicating whether 
 minimum transition will be used during meshing. This option is applicable only to the 
 following: 
@@ -4180,9 +4284,9 @@ be restored.</p>
 <span class="sig-name descname"><span class="pre">seedEdgeByBias</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">biasMethod</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.SymbolicConstantType</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">end1Edges</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">tuple</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="part_assembly/geometry.html#abaqus.BasicGeometry.Edge.Edge" title="abaqus.BasicGeometry.Edge.Edge"><span class="pre">abaqus.BasicGeometry.Edge.Edge</span></a><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">end2Edges</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">tuple</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="part_assembly/geometry.html#abaqus.BasicGeometry.Edge.Edge" title="abaqus.BasicGeometry.Edge.Edge"><span class="pre">abaqus.BasicGeometry.Edge.Edge</span></a><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">centerEdges</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">tuple</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="part_assembly/geometry.html#abaqus.BasicGeometry.Edge.Edge" title="abaqus.BasicGeometry.Edge.Edge"><span class="pre">abaqus.BasicGeometry.Edge.Edge</span></a><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">endEdges</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">tuple</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="part_assembly/geometry.html#abaqus.BasicGeometry.Edge.Edge" title="abaqus.BasicGeometry.Edge.Edge"><span class="pre">abaqus.BasicGeometry.Edge.Edge</span></a><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ratio</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">number</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">minSize</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">maxSize</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">constraint</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.SymbolicConstantType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'FREE'</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../../_modules/abaqus/Mesh/MeshPart.html#MeshPart.seedEdgeByBias"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#abaqus.Mesh.MeshPart.MeshPart.seedEdgeByBias" title="Permalink to this definition">#</a></dt>
 <dd><p>This method seeds the given edges nonuniformly using the specified number of elements
 and bias ratio or the specified minimum and maximum element sizes.</p>
-<dl class="field-list simple">
+<dl class="field-list">
 <dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><dl class="simple">
+<dd class="field-odd"><dl>
 <dt><strong>biasMethod</strong></dt><dd><p>A SymbolicConstant specifying whether single- or double-biased seed distribution will be 
 applied. If unspecified, single-biased seed distribution will be applied. Possible 
 values are: 
@@ -4220,11 +4324,13 @@ values are 1.0 ≤≤ <em>ratio</em> ≤≤ 106.</p>
 </dd>
 <dt><strong>constraint</strong></dt><dd><p>A SymbolicConstant specifying how closely the seeds must be matched by the mesh. The 
 default value is FREE. If unspecified, the existing constraint will remain unchanged. 
-Possible values are: 
-- FREE: The resulting mesh can be finer or coarser than the specified seeds. 
-- FINER: The resulting mesh can be finer than the specified seeds. 
-- FIXED: The seeds must be exactly matched by the mesh (only with respect to the number 
-of elements, not to the nodal positioning).</p>
+Possible values are:</p>
+<ul class="simple">
+<li><p>FREE: The resulting mesh can be finer or coarser than the specified seeds.</p></li>
+<li><p>FINER: The resulting mesh can be finer than the specified seeds.</p></li>
+<li><p>FIXED: The seeds must be exactly matched by the mesh (only with respect to the number</p></li>
+</ul>
+<p>of elements, not to the nodal positioning).</p>
 </dd>
 </dl>
 </dd>
@@ -4235,9 +4341,9 @@ of elements, not to the nodal positioning).</p>
 <span class="sig-name descname"><span class="pre">seedEdgeByNumber</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">edges</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">tuple</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="part_assembly/geometry.html#abaqus.BasicGeometry.Edge.Edge" title="abaqus.BasicGeometry.Edge.Edge"><span class="pre">abaqus.BasicGeometry.Edge.Edge</span></a><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">number</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">constraint</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.SymbolicConstantType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'FREE'</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../../_modules/abaqus/Mesh/MeshPart.html#MeshPart.seedEdgeByNumber"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#abaqus.Mesh.MeshPart.MeshPart.seedEdgeByNumber" title="Permalink to this definition">#</a></dt>
 <dd><p>This method seeds the given edges uniformly based on the number of elements along the
 edges.</p>
-<dl class="field-list simple">
+<dl class="field-list">
 <dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><dl class="simple">
+<dd class="field-odd"><dl>
 <dt><strong>edges</strong></dt><dd><p>A sequence of Edge objects specifying the edges to seed.</p>
 </dd>
 <dt><strong>number</strong></dt><dd><p>An Int specifying the number of elements along each edge. Possible values are 1 ≤≤ 
@@ -4245,11 +4351,13 @@ edges.</p>
 </dd>
 <dt><strong>constraint</strong></dt><dd><p>A SymbolicConstant specifying how closely the seeds must be matched by the mesh. The 
 default value is FREE. If unspecified, the existing constraint will remain unchanged. 
-Possible values are: 
-- FREE: The resulting mesh can be finer or coarser than the specified seeds. 
-- FINER: The resulting mesh can be finer than the specified seeds. 
-- FIXED: The seeds must be exactly matched by the mesh (only with respect to the number 
-of elements, not to the nodal positioning).</p>
+Possible values are:</p>
+<ul class="simple">
+<li><p>FREE: The resulting mesh can be finer or coarser than the specified seeds.</p></li>
+<li><p>FINER: The resulting mesh can be finer than the specified seeds.</p></li>
+<li><p>FIXED: The seeds must be exactly matched by the mesh (only with respect to the number</p></li>
+</ul>
+<p>of elements, not to the nodal positioning).</p>
 </dd>
 </dl>
 </dd>
@@ -4260,9 +4368,9 @@ of elements, not to the nodal positioning).</p>
 <span class="sig-name descname"><span class="pre">seedEdgeBySize</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">edges</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">tuple</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="part_assembly/geometry.html#abaqus.BasicGeometry.Edge.Edge" title="abaqus.BasicGeometry.Edge.Edge"><span class="pre">abaqus.BasicGeometry.Edge.Edge</span></a><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">size</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">deviationFactor</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">minSizeFactor</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">constraint</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.SymbolicConstantType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'FREE'</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../../_modules/abaqus/Mesh/MeshPart.html#MeshPart.seedEdgeBySize"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#abaqus.Mesh.MeshPart.MeshPart.seedEdgeBySize" title="Permalink to this definition">#</a></dt>
 <dd><p>This method seeds the given edges either uniformly or following edge curvature
 distribution, based on the desired element size.</p>
-<dl class="field-list simple">
+<dl class="field-list">
 <dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><dl class="simple">
+<dd class="field-odd"><dl>
 <dt><strong>edges</strong></dt><dd><p>A sequence of Edge objects specifying the edges to seed.</p>
 </dd>
 <dt><strong>size</strong></dt><dd><p>A Float specifying the desired element size.</p>
@@ -4275,11 +4383,13 @@ specified global element size.</p>
 </dd>
 <dt><strong>constraint</strong></dt><dd><p>A SymbolicConstant specifying how closely the seeds must be matched by the mesh. The 
 default value is FREE. If unspecified, the existing constraint will remain unchanged. 
-Possible values are: 
-- FREE: The resulting mesh can be finer or coarser than the specified seeds. 
-- FINER: The resulting mesh can be finer than the specified seeds. 
-- FIXED: The seeds must be exactly matched by the mesh (only with respect to the number 
-of elements, not to the nodal positioning).</p>
+Possible values are:</p>
+<ul class="simple">
+<li><p>FREE: The resulting mesh can be finer or coarser than the specified seeds.</p></li>
+<li><p>FINER: The resulting mesh can be finer than the specified seeds.</p></li>
+<li><p>FIXED: The seeds must be exactly matched by the mesh (only with respect to the number</p></li>
+</ul>
+<p>of elements, not to the nodal positioning).</p>
 </dd>
 </dl>
 </dd>
@@ -4391,33 +4501,37 @@ face region.</p>
 <dt class="sig sig-object py" id="abaqus.Mesh.MeshPart.MeshPart.setMeshControls">
 <span class="sig-name descname"><span class="pre">setMeshControls</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">regions</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">tuple</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">elemShape</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">abaqusConstants.SymbolicConstantType</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">technique</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">abaqusConstants.SymbolicConstantType</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">algorithm</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">abaqusConstants.SymbolicConstantType</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">minTransition</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.BooleanType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sizeGrowth</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">abaqusConstants.SymbolicConstantType</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">allowMapped</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.BooleanType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../../_modules/abaqus/Mesh/MeshPart.html#MeshPart.setMeshControls"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#abaqus.Mesh.MeshPart.MeshPart.setMeshControls" title="Permalink to this definition">#</a></dt>
 <dd><p>This method sets the mesh control parameters for the specified regions.</p>
-<dl class="field-list simple">
+<dl class="field-list">
 <dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><dl class="simple">
+<dd class="field-odd"><dl>
 <dt><strong>regions</strong></dt><dd><p>A sequence of Face or Cell regions specifying the regions for which to set the mesh 
 control parameters.</p>
 </dd>
 <dt><strong>elemShape</strong></dt><dd><p>A SymbolicConstant specifying the element shape to be used for meshing. The default 
 value is QUAD for Face regions and HEX for Cell regions. If unspecified, the existing 
-element shape will remain unchanged. Possible values are: 
-- QUAD: Quadrilateral mesh. 
-- QUAD_DOMINATED: Quadrilateral-dominated mesh. 
-- TRI: Triangular mesh. 
-- HEX: Hexahedral mesh. 
-- HEX_DOMINATED: Hex-dominated mesh. 
-- TET: Tetrahedral mesh. 
-- WEDGE: Wedge mesh.</p>
+element shape will remain unchanged. Possible values are:</p>
+<ul class="simple">
+<li><p>QUAD: Quadrilateral mesh.</p></li>
+<li><p>QUAD_DOMINATED: Quadrilateral-dominated mesh.</p></li>
+<li><p>TRI: Triangular mesh.</p></li>
+<li><p>HEX: Hexahedral mesh.</p></li>
+<li><p>HEX_DOMINATED: Hex-dominated mesh.</p></li>
+<li><p>TET: Tetrahedral mesh.</p></li>
+<li><p>WEDGE: Wedge mesh.</p></li>
+</ul>
 </dd>
 <dt><strong>technique</strong></dt><dd><p>A SymbolicConstant specifying the mesh technique to be used. The default value is FREE 
 for Face regions. For Cell regions the initial value depends on the geometry of the 
 regions and can be STRUCTURED, SWEEP, or unmeshable. If unspecified, the existing mesh 
-technique(s) will remain unchanged. Possible values are: 
-- FREE: Free mesh technique. 
-- STRUCTURED: Structured mesh technique. 
-- SWEEP: Sweep mesh technique. 
-- BOTTOM_UP: Bottom-up mesh technique. Only applicable for cell regions. 
-- SYSTEM_ASSIGN: Allow the system to assign a suitable technique. The actual technique 
-assigned can be STRUCTURED, SWEEP, or unmeshable.</p>
+technique(s) will remain unchanged. Possible values are:</p>
+<ul class="simple">
+<li><p>FREE: Free mesh technique.</p></li>
+<li><p>STRUCTURED: Structured mesh technique.</p></li>
+<li><p>SWEEP: Sweep mesh technique.</p></li>
+<li><p>BOTTOM_UP: Bottom-up mesh technique. Only applicable for cell regions.</p></li>
+<li><p>SYSTEM_ASSIGN: Allow the system to assign a suitable technique. The actual technique</p></li>
+</ul>
+<p>assigned can be STRUCTURED, SWEEP, or unmeshable.</p>
 </dd>
 <dt><strong>algorithm</strong></dt><dd><p>A SymbolicConstant specifying the algorithm used to generate the mesh for the specified 
 regions. Possible values are MEDIAL_AXIS, ADVANCING_FRONT, and NON_DEFAULT. If 
