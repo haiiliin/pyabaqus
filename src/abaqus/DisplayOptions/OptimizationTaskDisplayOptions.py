@@ -10,9 +10,12 @@ class OptimizationTaskDisplayOptions:
 
     Notes
     -----
-        This object can be accessed by:
-            session.viewports[name].assemblyDisplay.optimizationTaskOptions
-            session.viewports[name].layers[name].assemblyDisplay.optimizationTaskOptions
+    This object can be accessed by:
+
+    .. code-block::
+    
+        session.viewports[name].assemblyDisplay.optimizationTaskOptions
+        session.viewports[name].layers[name].assemblyDisplay.optimizationTaskOptions
 
     """
 

@@ -26,21 +26,22 @@ class ConnectorDamping(ConnectorBehaviorOption):
         session.odbs[name].sections[name].behaviorOptions[i]
 
         The table data for this object are:
-        If *behavior*=LINEAR and *coupling*=UNCOUPLED, then each sequence of the table data specifies the following:
+
+        - If *behavior*=LINEAR and *coupling*=UNCOUPLED, then each sequence of the table data specifies the following:
             - Damping coefficient (force or moment per relative velocity).
             - Frequency (cycles/time), if the data depend on frequency.
             - Temperature, if the data depend on temperature.
             - Value of the first field variable, if the data depend on field variables.
             - Value of the second field variable.
             - Etc.
-        If *behavior*=NONLINEAR and *coupling*=UNCOUPLED, then each sequence of the table data specifies the following:
+        - If *behavior*=NONLINEAR and *coupling*=UNCOUPLED, then each sequence of the table data specifies the following:
             - Force or moment.
             - Relative displacement or rotation.
             - Temperature, if the data depend on temperature.
             - Value of the first field variable, if the data depend on field variables.
             - Value of the second field variable.
             - Etc.
-        If *behavior*=LINEAR and *coupling*=COUPLED, the table data specify the symmetric portion of the damping matrix
+        - If *behavior*=LINEAR and *coupling*=COUPLED, the table data specify the symmetric portion of the damping matrix
         for the specified components followed by any temperature data and then any field data. For example, if
         components 2, 3, and 5 are specified, the table portion of the command is as follows:
         table=( (C22C22, C23C23, C25C25, C33C33, C35C35, C55C55,), )
@@ -49,7 +50,7 @@ class ConnectorDamping(ConnectorBehaviorOption):
             - Value of the first field variable, if the data depend on field variables.
             - Value of the second field variable.
             - Etc.
-        If *behavior*=NONLINEAR and *coupling*=COUPLED_POSITION or COUPLED_MOTION, each sequence of the table data
+        - If *behavior*=NONLINEAR and *coupling*=COUPLED_POSITION or COUPLED_MOTION, each sequence of the table data
         specifies the following:
             - Force or moment for the directions in the *components* list.
             - Relative velocity for the directions in the *components* list.
@@ -64,7 +65,8 @@ class ConnectorDamping(ConnectorBehaviorOption):
             - Etc.
 
     The corresponding analysis keywords are:
-        - CONNECTOR DAMPING
+
+    - CONNECTOR DAMPING
 
     """
 

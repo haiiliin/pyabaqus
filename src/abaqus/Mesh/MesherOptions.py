@@ -10,8 +10,11 @@ class MesherOptions:
 
     Notes
     -----
-        This object can be accessed by:
-            session.defaultMesherOptions
+    This object can be accessed by:
+
+    .. code-block:: python
+    
+        session.defaultMesherOptions
 
     """
 

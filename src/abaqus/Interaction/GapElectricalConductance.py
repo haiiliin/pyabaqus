@@ -31,7 +31,8 @@ class GapElectricalConductance:
             - Etc.
 
     The corresponding analysis keywords are:
-        - GAP ELECTRICAL CONDUCTANCE
+
+    - GAP ELECTRICAL CONDUCTANCE
 
     """
 

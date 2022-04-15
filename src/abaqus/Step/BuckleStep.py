@@ -130,7 +130,8 @@ class BuckleStep(AnalysisStep):
         mdb.models[name].steps[name]
 
     The corresponding analysis keywords are:
-        - BUCKLE
+
+    - BUCKLE
             - STEP
 
     """

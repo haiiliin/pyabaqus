@@ -18,7 +18,8 @@ class AcousticImpedance(Interaction):
         mdb.models[name].interactions[name]
 
     The corresponding analysis keywords are:
-        - SIMPEDANCE
+
+    - SIMPEDANCE
 
     """
 

@@ -31,7 +31,8 @@ class CompositeLayup:
         mdb.models[name].parts[name].compositeLayups[i]
 
     The corresponding analysis keywords are:
-        - SHELL SECTION
+
+    - SHELL SECTION
             - SHELL GENERAL SECTION
             - SOLID SECTION
 

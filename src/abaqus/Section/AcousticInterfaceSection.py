@@ -17,7 +17,8 @@ class AcousticInterfaceSection(Section):
         session.odbs[name].sections[name]
 
     The corresponding analysis keywords are:
-        - INTERFACE
+
+    - INTERFACE
 
     """
 

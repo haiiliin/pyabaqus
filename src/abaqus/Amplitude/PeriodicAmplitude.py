@@ -18,7 +18,8 @@ class PeriodicAmplitude(Amplitude):
         session.odbs[name].amplitudes[name]
 
     The corresponding analysis keywords are:
-        - AMPLITUDE
+
+    - AMPLITUDE
 
     """
 

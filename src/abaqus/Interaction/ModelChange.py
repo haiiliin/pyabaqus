@@ -18,7 +18,8 @@ class ModelChange(Interaction):
         mdb.models[name].interactions[name]
 
     The corresponding analysis keywords are:
-        - MODEL CHANGE
+
+    - MODEL CHANGE
 
     """
 

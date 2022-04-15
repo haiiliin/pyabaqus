@@ -13,7 +13,8 @@ class Radiation:
         mdb.models[name].interactionProperties[name].radiation
 
     The corresponding analysis keywords are:
-        - GAP RADIATION
+
+    - GAP RADIATION
 
     """
 

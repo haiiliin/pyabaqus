@@ -26,7 +26,8 @@ class ArbitraryProfile(Profile):
             - The thickness of the segment ending at that point.
 
     The corresponding analysis keywords are:
-        - BEAM SECTION
+
+    - BEAM SECTION
 
     """
 

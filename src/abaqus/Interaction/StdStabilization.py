@@ -17,7 +17,8 @@ class StdStabilization(ContactStabilization):
         mdb.models[name].contactStabilizations[name]
 
     The corresponding analysis keywords are:
-        - CONTACT STABILIZATION
+
+    - CONTACT STABILIZATION
 
     """
 

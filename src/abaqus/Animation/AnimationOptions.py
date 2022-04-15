@@ -92,12 +92,12 @@ class AnimationOptions:
 
     Notes
     -----
-        This object can be accessed by:
+    This object can be accessed by:
+    
+    .. code-block:: python
         
-        .. code-block:: python
-            
-            import animation
-            session.animationOptions
+        import animation
+        session.animationOptions
 
     """
 

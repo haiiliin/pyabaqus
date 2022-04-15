@@ -7,17 +7,18 @@ class LowDensityFoam:
 
     Notes
     -----
-        This object can be accessed by:
-        
-        .. code-block:: python
-            
-            import material
-            mdb.models[name].materials[name].lowDensityFoam
-            import odbMaterial
-            session.odbs[name].materials[name].lowDensityFoam
+    This object can be accessed by:
+
+    .. code-block:: python
+
+        import material
+        mdb.models[name].materials[name].lowDensityFoam
+        import odbMaterial
+        session.odbs[name].materials[name].lowDensityFoam
 
     The corresponding analysis keywords are:
-        - LOW DENSITY FOAM
+
+    - LOW DENSITY FOAM
 
     """
 

@@ -3,17 +3,18 @@ class Damping:
 
     Notes
     -----
-        This object can be accessed by:
-        
-        .. code-block:: python
-            
-            import material
-            mdb.models[name].materials[name].damping
-            import odbMaterial
-            session.odbs[name].materials[name].damping
+    This object can be accessed by:
+
+    .. code-block:: python
+
+        import material
+        mdb.models[name].materials[name].damping
+        import odbMaterial
+        session.odbs[name].materials[name].damping
 
     The corresponding analysis keywords are:
-        - DAMPING
+
+    - DAMPING
 
     """
 

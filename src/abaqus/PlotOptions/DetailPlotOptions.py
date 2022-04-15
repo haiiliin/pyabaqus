@@ -13,8 +13,11 @@ class DetailPlotOptions:
 
     Notes
     -----
-        This object can be accessed by:
-            session.viewports[name].detailPlotOptions
+    This object can be accessed by:
+
+    .. code-block:: python
+    
+        session.viewports[name].detailPlotOptions
 
     """
 

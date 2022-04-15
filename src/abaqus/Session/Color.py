@@ -11,8 +11,11 @@ class Color:
 
     Notes
     -----
-        This object can be accessed by:
-            session.colors[name]
+    This object can be accessed by:
+
+    .. code-block:: python
+    
+        session.colors[name]
 
     """
 

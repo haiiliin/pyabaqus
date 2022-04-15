@@ -24,7 +24,8 @@ class MembraneSection(Section):
         session.odbs[name].sections[name]
 
     The corresponding analysis keywords are:
-        - MEMBRANE SECTION
+
+    - MEMBRANE SECTION
 
     """
 

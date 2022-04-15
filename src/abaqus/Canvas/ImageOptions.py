@@ -11,8 +11,11 @@ class ImageOptions:
 
     Notes
     -----
-        This object can be accessed by:
-            session.viewports[name].imageOptions
+    This object can be accessed by:
+    
+    .. code-block::
+    
+        session.viewports[name].imageOptions
 
     """
 

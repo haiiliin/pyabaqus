@@ -7,25 +7,27 @@ class CastIronCompressionHardening:
 
     Notes
     -----
-        This object can be accessed by:
+    This object can be accessed by:
+    
+    .. code-block:: python
         
-        .. code-block:: python
-            
-            import material
-            mdb.models[name].materials[name].castIronPlasticity.castIronCompressionHardening
-            import odbMaterial
-            session.odbs[name].materials[name].castIronPlasticity.castIronCompressionHardening
+        import material
+        mdb.models[name].materials[name].castIronPlasticity.castIronCompressionHardening
+        import odbMaterial
+        session.odbs[name].materials[name].castIronPlasticity.castIronCompressionHardening
 
-        The table data for this object are:
-            - Yield stress in compression, σcσc.
-            - The absolute value of the corresponding Plastic strain.(The first tabular value entered must always be zero.)
-            - Temperature, if the data depend on temperature.
-            - Value of the first field variable, if the data depend on field variables.
-            - Value of the second field variable.
-            - Etc.
+    The table data for this object are:
+    
+    - Yield stress in compression, σcσc.
+    - The absolute value of the corresponding Plastic strain.(The first tabular value entered must always be zero.)
+    - Temperature, if the data depend on temperature.
+    - Value of the first field variable, if the data depend on field variables.
+    - Value of the second field variable.
+    - Etc.
 
     The corresponding analysis keywords are:
-        - CAST IRON COMPRESSION HARDENING
+
+    - CAST IRON COMPRESSION HARDENING
 
     """
 

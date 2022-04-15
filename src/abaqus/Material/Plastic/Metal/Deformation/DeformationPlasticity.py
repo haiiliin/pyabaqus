@@ -6,25 +6,27 @@ class DeformationPlasticity:
 
     Notes
     -----
-        This object can be accessed by:
+    This object can be accessed by:
+    
+    .. code-block:: python
         
-        .. code-block:: python
-            
-            import material
-            mdb.models[name].materials[name].deformationPlasticity
-            import odbMaterial
-            session.odbs[name].materials[name].deformationPlasticity
+        import material
+        mdb.models[name].materials[name].deformationPlasticity
+        import odbMaterial
+        session.odbs[name].materials[name].deformationPlasticity
 
-        The table data for this object are:
-            - Young's modulus, E.
-            - Poisson's ratio, ν.
-            - Yield stress, σ0.
-            - Exponent, n.
-            - Yield offset, α.
-            - Temperature, if the data depend on temperature.
+    The table data for this object are:
+
+    - Young's modulus, E.
+    - Poisson's ratio, ν.
+    - Yield stress, σ0.
+    - Exponent, n.
+    - Yield offset, α.
+    - Temperature, if the data depend on temperature.
 
     The corresponding analysis keywords are:
-        - DEFORMATION PLASTICITY
+
+    - DEFORMATION PLASTICITY
 
     """
 

@@ -7,30 +7,32 @@ class PlanarTestData:
 
     Notes
     -----
-        This object can be accessed by:
+    This object can be accessed by:
+    
+    .. code-block:: python
         
-        .. code-block:: python
-            
-            import material
-            mdb.models[name].materials[name].hyperelastic.planarTestData
-            mdb.models[name].materials[name].hyperfoam.planarTestData
-            mdb.models[name].materials[name].mullinsEffect.planarTests[i]
-            import odbMaterial
-            session.odbs[name].materials[name].hyperelastic.planarTestData
-            session.odbs[name].materials[name].hyperfoam.planarTestData
-            session.odbs[name].materials[name].mullinsEffect.planarTests[i]
+        import material
+        mdb.models[name].materials[name].hyperelastic.planarTestData
+        mdb.models[name].materials[name].hyperfoam.planarTestData
+        mdb.models[name].materials[name].mullinsEffect.planarTests[i]
+        import odbMaterial
+        session.odbs[name].materials[name].hyperelastic.planarTestData
+        session.odbs[name].materials[name].hyperfoam.planarTestData
+        session.odbs[name].materials[name].mullinsEffect.planarTests[i]
 
-        The table data for this object are:
-        For a hyperelastic material model, the table data specify the following:
-            - Nominal stress, TS.
-            - Nominal strain in the direction of loading, ϵS.
-        For a hyperfoam material model, the table data specify the following:
-            - Nominal stress, TL.
-            - Nominal strain in the direction of loading, ϵp.
-            - Nominal transverse strain, ϵ3. The default value is 0.
+    The table data for this object are:
+
+    - For a hyperelastic material model, the table data specify the following:
+        - Nominal stress, TS.
+        - Nominal strain in the direction of loading, ϵS.
+    - For a hyperfoam material model, the table data specify the following:
+        - Nominal stress, TL.
+        - Nominal strain in the direction of loading, ϵp.
+        - Nominal transverse strain, ϵ3. The default value is 0.
 
     The corresponding analysis keywords are:
-        - PLANAR TEST DATA
+
+    - PLANAR TEST DATA
 
     """
 

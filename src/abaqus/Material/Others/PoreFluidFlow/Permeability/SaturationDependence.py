@@ -5,21 +5,23 @@ class SaturationDependence:
 
     Notes
     -----
-        This object can be accessed by:
-        
-        .. code-block:: python
-            
-            import material
-            mdb.models[name].materials[name].permeability.saturationDependence
-            import odbMaterial
-            session.odbs[name].materials[name].permeability.saturationDependence
+    This object can be accessed by:
 
-        The table data for this object are:
-            - ks. (Dimensionless.)
-            - Saturation, s. (Dimensionless.)
+    .. code-block:: python
+
+        import material
+        mdb.models[name].materials[name].permeability.saturationDependence
+        import odbMaterial
+        session.odbs[name].materials[name].permeability.saturationDependence
+
+    The table data for this object are:
+
+    - ks. (Dimensionless.)
+    - Saturation, s. (Dimensionless.)
 
     The corresponding analysis keywords are:
-        - PERMEABILITY
+
+    - PERMEABILITY
 
     """
 

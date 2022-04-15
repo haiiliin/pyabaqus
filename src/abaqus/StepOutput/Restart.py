@@ -14,7 +14,8 @@ class Restart:
         mdb.models[name].steps[name].restart
 
     The corresponding analysis keywords are:
-        - RESTART
+
+    - RESTART
 
     """
 

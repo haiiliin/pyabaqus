@@ -16,14 +16,14 @@ class FreeBodyOptions:
 
     Notes
     -----
-        This object can be accessed by:
+    This object can be accessed by:
+    
+    .. code-block:: python
         
-        .. code-block:: python
-            
-            import visualization
-            session.defaultOdbDisplay.freeBodyOptions
-            session.viewports[name].layers[name].odbDisplay.freeBodyOptions
-            session.viewports[name].odbDisplay.freeBodyOptions
+        import visualization
+        session.defaultOdbDisplay.freeBodyOptions
+        session.viewports[name].layers[name].odbDisplay.freeBodyOptions
+        session.viewports[name].odbDisplay.freeBodyOptions
 
     """
 

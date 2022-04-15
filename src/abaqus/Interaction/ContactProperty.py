@@ -54,7 +54,8 @@ class ContactProperty(InteractionProperty):
         mdb.models[name].interactionProperties[name]
 
     The corresponding analysis keywords are:
-        - SURFACE INTERACTION
+
+    - SURFACE INTERACTION
 
     """
 

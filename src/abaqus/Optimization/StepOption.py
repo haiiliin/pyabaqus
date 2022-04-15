@@ -27,12 +27,12 @@ class StepOption:
 
     Notes
     -----
-        This object can be accessed by:
+    This object can be accessed by:
+    
+    .. code-block:: python
         
-        .. code-block:: python
-            
-            import optimization
-            mdb.models[name].optimizationTasks[name].designResponses[name].stepOptions[i]
+        import optimization
+        mdb.models[name].optimizationTasks[name].designResponses[name].stepOptions[i]
 
     """
 

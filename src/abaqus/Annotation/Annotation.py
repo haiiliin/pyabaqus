@@ -12,14 +12,14 @@ class Annotation:
 
     Notes
     -----
-        This object can be accessed by:
+    This object can be accessed by:
+    
+    .. code-block:: python
         
-        .. code-block:: python
-            
-            import annotationToolset
-            mdb.annotations[name]
-            session.odbs[name].userData.annotations[name]
-            session.viewports[name].annotationsToPlot[i]
+        import annotationToolset
+        mdb.annotations[name]
+        session.odbs[name].userData.annotations[name]
+        session.viewports[name].annotationsToPlot[i]
 
     """
 

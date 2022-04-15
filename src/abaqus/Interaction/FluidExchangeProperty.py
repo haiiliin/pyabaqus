@@ -18,7 +18,8 @@ class FluidExchangeProperty(ContactProperty):
         mdb.models[name].interactionProperties[name]
 
     The corresponding analysis keywords are:
-        - FLUID EXCHANGE PROPERTY
+
+    - FLUID EXCHANGE PROPERTY
 
     """
 

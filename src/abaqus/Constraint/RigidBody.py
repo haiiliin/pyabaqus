@@ -24,7 +24,8 @@ class RigidBody(Constraint):
         mdb.models[name].constraints[name]
 
     The corresponding analysis keywords are:
-        - RIGID BODY
+
+    - RIGID BODY
 
     """
 

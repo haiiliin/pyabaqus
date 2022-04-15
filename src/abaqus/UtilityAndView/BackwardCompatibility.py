@@ -49,11 +49,11 @@ class BackwardCompatibility:
 
     Notes
     -----
-        This object can be accessed by:
-        
-        .. code-block:: python
-        
-            backwardCompatibility
+    This object can be accessed by:
+    
+    .. code-block:: python
+    
+        backwardCompatibility
 
     """
 

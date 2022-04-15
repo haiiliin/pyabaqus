@@ -3,21 +3,23 @@ class TriaxialTestData:
 
     Notes
     -----
-        This object can be accessed by:
+    This object can be accessed by:
+    
+    .. code-block:: python
         
-        .. code-block:: python
-            
-            import material
-            mdb.models[name].materials[name].druckerPrager.triaxialTestData
-            import odbMaterial
-            session.odbs[name].materials[name].druckerPrager.triaxialTestData
+        import material
+        mdb.models[name].materials[name].druckerPrager.triaxialTestData
+        import odbMaterial
+        session.odbs[name].materials[name].druckerPrager.triaxialTestData
 
-        The table data for this object are:
-            - Sign and magnitude of confining stress, σ1=σ2.
-            - Sign and magnitude of the stress in loading direction, σ3.
+    The table data for this object are:
+
+    - Sign and magnitude of confining stress, σ1=σ2.
+    - Sign and magnitude of the stress in loading direction, σ3.
 
     The corresponding analysis keywords are:
-        - TRIAXIAL TEST DATA
+
+    - TRIAXIAL TEST DATA
 
     """
 

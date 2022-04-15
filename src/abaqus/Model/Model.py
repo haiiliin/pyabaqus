@@ -154,7 +154,8 @@ class Model(AdaptivityModel, AmplitudeModel, AssemblyModel, BoundaryConditionMod
         mdb.models[name]
 
     The corresponding analysis keywords are:
-        - PHYSICAL CONSTANTS
+
+    - PHYSICAL CONSTANTS
 
     """
     pass

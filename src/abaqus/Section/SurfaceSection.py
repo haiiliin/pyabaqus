@@ -24,7 +24,8 @@ class SurfaceSection(Section):
         session.odbs[name].sections[name]
 
     The corresponding analysis keywords are:
-        - SURFACE SECTION
+
+    - SURFACE SECTION
 
     """
 

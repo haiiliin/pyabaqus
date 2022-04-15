@@ -15,7 +15,8 @@ class DiagnosticPrint:
         mdb.models[name].steps[name].diagnosticPrint
 
     The corresponding analysis keywords are:
-        - DIAGNOSTICS
+
+    - DIAGNOSTICS
 
     """
 

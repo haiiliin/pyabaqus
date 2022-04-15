@@ -4,17 +4,18 @@ class PorousFailureCriteria:
 
     Notes
     -----
-        This object can be accessed by:
+    This object can be accessed by:
+    
+    .. code-block:: python
         
-        .. code-block:: python
-            
-            import material
-            mdb.models[name].materials[name].porousMetalPlasticity.porousFailureCriteria
-            import odbMaterial
-            session.odbs[name].materials[name].porousMetalPlasticity.porousFailureCriteria
+        import material
+        mdb.models[name].materials[name].porousMetalPlasticity.porousFailureCriteria
+        import odbMaterial
+        session.odbs[name].materials[name].porousMetalPlasticity.porousFailureCriteria
 
     The corresponding analysis keywords are:
-        - POROUS FAILURE CRITERIA
+
+    - POROUS FAILURE CRITERIA
 
     """
 

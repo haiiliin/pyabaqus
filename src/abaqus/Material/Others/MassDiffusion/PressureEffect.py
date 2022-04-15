@@ -6,25 +6,27 @@ class PressureEffect:
 
     Notes
     -----
-        This object can be accessed by:
-        
-        .. code-block:: python
-            
-            import material
-            mdb.models[name].materials[name].diffusivity.pressureEffect
-            import odbMaterial
-            session.odbs[name].materials[name].diffusivity.pressureEffect
+    This object can be accessed by:
 
-        The table data for this object are:
-            - Pressure stress factor, κpκp.
-            - Concentration.
-            - Temperature, if the data depend on temperature.
-            - Value of the first field variable, if the data depend on field variables.
-            - Value of the second field variable.
-            - Etc.
+    .. code-block:: python
+
+        import material
+        mdb.models[name].materials[name].diffusivity.pressureEffect
+        import odbMaterial
+        session.odbs[name].materials[name].diffusivity.pressureEffect
+
+    The table data for this object are:
+
+    - Pressure stress factor, κp.
+    - Concentration.
+    - Temperature, if the data depend on temperature.
+    - Value of the first field variable, if the data depend on field variables.
+    - Value of the second field variable.
+    - Etc.
 
     The corresponding analysis keywords are:
-        - KAPPA
+
+    - KAPPA
 
     """
 

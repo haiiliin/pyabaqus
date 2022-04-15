@@ -175,7 +175,8 @@ class DirectCyclicStep(AnalysisStep):
         mdb.models[name].steps[name]
 
     The corresponding analysis keywords are:
-        - DIRECT CYCLIC
+
+    - DIRECT CYCLIC
             - STEP
 
     """

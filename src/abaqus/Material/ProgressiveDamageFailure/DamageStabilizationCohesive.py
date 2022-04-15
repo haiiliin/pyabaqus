@@ -4,43 +4,44 @@ class DamageStabilizationCohesive:
 
     Notes
     -----
-        This object can be accessed by:
+    This object can be accessed by:
+    
+    .. code-block:: python
         
-        .. code-block:: python
-            
-            import material
-            mdb.models[name].materials[name].ductileDamageInitiation.damageStabilizationCohesive
-            mdb.models[name].materials[name].fldDamageInitiation.damageStabilizationCohesive
-            mdb.models[name].materials[name].flsdDamageInitiation.damageStabilizationCohesive
-            mdb.models[name].materials[name].hashinDamageInitiation.damageStabilizationCohesive
-            mdb.models[name].materials[name].johnsonCookDamageInitiation.damageStabilizationCohesive
-            mdb.models[name].materials[name].maxeDamageInitiation.damageStabilizationCohesive
-            mdb.models[name].materials[name].maxpeDamageInitiation.damageStabilizationCohesive
-            mdb.models[name].materials[name].maxpsDamageInitiation.damageStabilizationCohesive
-            mdb.models[name].materials[name].maxsDamageInitiation.damageStabilizationCohesive
-            mdb.models[name].materials[name].mkDamageInitiation.damageStabilizationCohesive
-            mdb.models[name].materials[name].msfldDamageInitiation.damageStabilizationCohesive
-            mdb.models[name].materials[name].quadeDamageInitiation.damageStabilizationCohesive
-            mdb.models[name].materials[name].quadsDamageInitiation.damageStabilizationCohesive
-            mdb.models[name].materials[name].shearDamageInitiation.damageStabilizationCohesive
-            import odbMaterial
-            session.odbs[name].materials[name].ductileDamageInitiation.damageStabilizationCohesive
-            session.odbs[name].materials[name].fldDamageInitiation.damageStabilizationCohesive
-            session.odbs[name].materials[name].flsdDamageInitiation.damageStabilizationCohesive
-            session.odbs[name].materials[name].hashinDamageInitiation.damageStabilizationCohesive
-            session.odbs[name].materials[name].johnsonCookDamageInitiation.damageStabilizationCohesive
-            session.odbs[name].materials[name].maxeDamageInitiation.damageStabilizationCohesive
-            session.odbs[name].materials[name].maxpeDamageInitiation.damageStabilizationCohesive
-            session.odbs[name].materials[name].maxpsDamageInitiation.damageStabilizationCohesive
-            session.odbs[name].materials[name].maxsDamageInitiation.damageStabilizationCohesive
-            session.odbs[name].materials[name].mkDamageInitiation.damageStabilizationCohesive
-            session.odbs[name].materials[name].msfldDamageInitiation.damageStabilizationCohesive
-            session.odbs[name].materials[name].quadeDamageInitiation.damageStabilizationCohesive
-            session.odbs[name].materials[name].quadsDamageInitiation.damageStabilizationCohesive
-            session.odbs[name].materials[name].shearDamageInitiation.damageStabilizationCohesive
+        import material
+        mdb.models[name].materials[name].ductileDamageInitiation.damageStabilizationCohesive
+        mdb.models[name].materials[name].fldDamageInitiation.damageStabilizationCohesive
+        mdb.models[name].materials[name].flsdDamageInitiation.damageStabilizationCohesive
+        mdb.models[name].materials[name].hashinDamageInitiation.damageStabilizationCohesive
+        mdb.models[name].materials[name].johnsonCookDamageInitiation.damageStabilizationCohesive
+        mdb.models[name].materials[name].maxeDamageInitiation.damageStabilizationCohesive
+        mdb.models[name].materials[name].maxpeDamageInitiation.damageStabilizationCohesive
+        mdb.models[name].materials[name].maxpsDamageInitiation.damageStabilizationCohesive
+        mdb.models[name].materials[name].maxsDamageInitiation.damageStabilizationCohesive
+        mdb.models[name].materials[name].mkDamageInitiation.damageStabilizationCohesive
+        mdb.models[name].materials[name].msfldDamageInitiation.damageStabilizationCohesive
+        mdb.models[name].materials[name].quadeDamageInitiation.damageStabilizationCohesive
+        mdb.models[name].materials[name].quadsDamageInitiation.damageStabilizationCohesive
+        mdb.models[name].materials[name].shearDamageInitiation.damageStabilizationCohesive
+        import odbMaterial
+        session.odbs[name].materials[name].ductileDamageInitiation.damageStabilizationCohesive
+        session.odbs[name].materials[name].fldDamageInitiation.damageStabilizationCohesive
+        session.odbs[name].materials[name].flsdDamageInitiation.damageStabilizationCohesive
+        session.odbs[name].materials[name].hashinDamageInitiation.damageStabilizationCohesive
+        session.odbs[name].materials[name].johnsonCookDamageInitiation.damageStabilizationCohesive
+        session.odbs[name].materials[name].maxeDamageInitiation.damageStabilizationCohesive
+        session.odbs[name].materials[name].maxpeDamageInitiation.damageStabilizationCohesive
+        session.odbs[name].materials[name].maxpsDamageInitiation.damageStabilizationCohesive
+        session.odbs[name].materials[name].maxsDamageInitiation.damageStabilizationCohesive
+        session.odbs[name].materials[name].mkDamageInitiation.damageStabilizationCohesive
+        session.odbs[name].materials[name].msfldDamageInitiation.damageStabilizationCohesive
+        session.odbs[name].materials[name].quadeDamageInitiation.damageStabilizationCohesive
+        session.odbs[name].materials[name].quadsDamageInitiation.damageStabilizationCohesive
+        session.odbs[name].materials[name].shearDamageInitiation.damageStabilizationCohesive
 
     The corresponding analysis keywords are:
-        - DAMAGE STABILIZATION
+
+    - DAMAGE STABILIZATION
 
     """
 

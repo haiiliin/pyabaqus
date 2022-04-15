@@ -6,33 +6,35 @@ class Potential:
 
     Notes
     -----
-        This object can be accessed by:
+    This object can be accessed by:
+    
+    .. code-block:: python
         
-        .. code-block:: python
-            
-            import material
-            mdb.models[name].materials[name].creep.potential
-            mdb.models[name].materials[name].Plastic.potential
-            mdb.models[name].materials[name].viscous.potential
-            import odbMaterial
-            session.odbs[name].materials[name].creep.potential
-            session.odbs[name].materials[name].Plastic.potential
-            session.odbs[name].materials[name].viscous.potential
+        import material
+        mdb.models[name].materials[name].creep.potential
+        mdb.models[name].materials[name].Plastic.potential
+        mdb.models[name].materials[name].viscous.potential
+        import odbMaterial
+        session.odbs[name].materials[name].creep.potential
+        session.odbs[name].materials[name].Plastic.potential
+        session.odbs[name].materials[name].viscous.potential
 
-        The table data for this object are:
-            - R11.
-            - R22.
-            - R33.
-            - R12.
-            - R13.
-            - R23.
-            - Temperature, if the data depend on temperature.
-            - Value of the first field variable, if the data depend on field variables.
-            - Value of the second field variable.
-            - Etc.
+    The table data for this object are:
+    
+    - R11.
+    - R22.
+    - R33.
+    - R12.
+    - R13.
+    - R23.
+    - Temperature, if the data depend on temperature.
+    - Value of the first field variable, if the data depend on field variables.
+    - Value of the second field variable.
+    - Etc.
 
     The corresponding analysis keywords are:
-        - POTENTIAL
+
+    - POTENTIAL
 
     """
 

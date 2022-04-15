@@ -24,7 +24,8 @@ class ShellSolidCoupling(Constraint):
         mdb.models[name].constraints[name]
 
     The corresponding analysis keywords are:
-        - SHELL TO SOLID COUPLING
+
+    - SHELL TO SOLID COUPLING
 
     """
 

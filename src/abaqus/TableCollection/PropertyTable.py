@@ -24,7 +24,8 @@ class PropertyTable:
         mdb.models[name].tableCollections[name].propertyTables[name]
 
     The corresponding analysis keywords are:
-        - PROPERTY TABLE TYPE
+
+    - PROPERTY TABLE TYPE
             - PROPERTY TABLE
 
     """

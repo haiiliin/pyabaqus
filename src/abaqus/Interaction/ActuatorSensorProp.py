@@ -16,7 +16,8 @@ class ActuatorSensorProp(ContactProperty):
         mdb.models[name].interactionProperties[name]
 
     The corresponding analysis keywords are:
-        - UEL PROPERTY
+
+    - UEL PROPERTY
 
     """
 

@@ -42,8 +42,11 @@ class GraphicsInfo:
 
     Notes
     -----
-        This object can be accessed by:
-            session.graphicsInfo
+    This object can be accessed by:
+
+    .. code-block::
+    
+        session.graphicsInfo
 
     """
 

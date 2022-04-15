@@ -6,36 +6,37 @@ class Eos:
 
     Notes
     -----
-        This object can be accessed by:
-        
-        .. code-block:: python
-            
-            import material
-            mdb.models[name].materials[name].eos
-            import odbMaterial
-            session.odbs[name].materials[name].eos
+    This object can be accessed by:
 
-        The table data for this object are:
-        If *type*=IDEALGAS, the table data represents the following:
-            - Gas constant, R.
-            - The ambient pressure, pA. If this field is left blank, a default of 0.0 is used.
-        If *type*=JWL, the table data represents the following:
-            - Detonation wave speed, Cd.
-            - A.
-            - B.
-            - ω. (Dimensionless.)
-            - R1. (Dimensionless.)
-            - R2. (Dimensionless.)
-            - Pre-detonation bulk modulus, Kp⁢d.
-            - Detonation energy density, E0.
-        If *type*=USUP, the table data represents the following:
-            - c0.
-            - s. (Dimensionless.)
-            - Γ0. (Dimensionless.)
-        If *type*=TABULAR, the table data represents the following:
-            - F1.
-            - F2.
-            - εcvol. (Dimensionless.)
+    .. code-block:: python
+
+        import material
+        mdb.models[name].materials[name].eos
+        import odbMaterial
+        session.odbs[name].materials[name].eos
+
+    The table data for this object are:
+    
+    - If *type*=IDEALGAS, the table data represents the following:
+        - Gas constant, R.
+        - The ambient pressure, pA. If this field is left blank, a default of 0.0 is used.
+    - If *type*=JWL, the table data represents the following:
+        - Detonation wave speed, Cd.
+        - A.
+        - B.
+        - ω. (Dimensionless.)
+        - R1. (Dimensionless.)
+        - R2. (Dimensionless.)
+        - Pre-detonation bulk modulus, Kp⁢d.
+        - Detonation energy density, E0.
+    - If *type*=USUP, the table data represents the following:
+        - c0.
+        - s. (Dimensionless.)
+        - Γ0. (Dimensionless.)
+    - If *type*=TABULAR, the table data represents the following:
+        - F1.
+        - F2.
+        - εcvol. (Dimensionless.)
 
     """
 

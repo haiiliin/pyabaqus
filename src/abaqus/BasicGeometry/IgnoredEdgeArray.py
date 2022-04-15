@@ -7,15 +7,15 @@ class IgnoredEdgeArray:
 
     Notes
     -----
-        This object can be accessed by:
+    This object can be accessed by:
+    
+    .. code-block:: python
         
-        .. code-block:: python
-            
-            import part
-            mdb.models[name].parts[name].ignoredEdges
-            import assembly
-            mdb.models[name].rootAssembly.allInstances[name].ignoredEdges
-            mdb.models[name].rootAssembly.instances[name].ignoredEdges
+        import part
+        mdb.models[name].parts[name].ignoredEdges
+        import assembly
+        mdb.models[name].rootAssembly.allInstances[name].ignoredEdges
+        mdb.models[name].rootAssembly.instances[name].ignoredEdges
 
     """
 

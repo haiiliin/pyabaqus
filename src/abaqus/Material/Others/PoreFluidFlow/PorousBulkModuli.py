@@ -6,22 +6,24 @@ class PorousBulkModuli:
 
     Notes
     -----
-        This object can be accessed by:
-        
-        .. code-block:: python
-            
-            import material
-            mdb.models[name].materials[name].porousBulkModuli
-            import odbMaterial
-            session.odbs[name].materials[name].porousBulkModuli
+    This object can be accessed by:
 
-        The table data for this object are:
-            - Bulk modulus of solid grains.
-            - Bulk modulus of permeating fluid.
-            - Temperature, if the data depend on temperature.
+    .. code-block:: python
+
+        import material
+        mdb.models[name].materials[name].porousBulkModuli
+        import odbMaterial
+        session.odbs[name].materials[name].porousBulkModuli
+
+    The table data for this object are:
+
+    - Bulk modulus of solid grains.
+    - Bulk modulus of permeating fluid.
+    - Temperature, if the data depend on temperature.
 
     The corresponding analysis keywords are:
-        - POROUS BULK MODULI
+
+    - POROUS BULK MODULI
 
     """
 

@@ -3,8 +3,11 @@ class AutoColors:
 
     Notes
     -----
-        This object can be accessed by:
-            session.autoColors
+    This object can be accessed by:
+
+    .. code-block:: python
+    
+        session.autoColors
 
     """
 

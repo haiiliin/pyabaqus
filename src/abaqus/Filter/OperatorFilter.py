@@ -18,7 +18,8 @@ class OperatorFilter(Filter):
         session.odbs[name].filters[name]
 
     The corresponding analysis keywords are:
-        - FILTER
+
+    - FILTER
 
     """
 

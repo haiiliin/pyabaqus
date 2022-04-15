@@ -10,9 +10,12 @@ class PredefinedFieldDisplayOptions:
 
     Notes
     -----
-        This object can be accessed by:
-            session.viewports[name].assemblyDisplay.predefinedFieldOptions
-            session.viewports[name].layers[name].assemblyDisplay.predefinedFieldOptions
+    This object can be accessed by:
+
+    .. code-block::
+    
+        session.viewports[name].assemblyDisplay.predefinedFieldOptions
+        session.viewports[name].layers[name].assemblyDisplay.predefinedFieldOptions
 
     """
 

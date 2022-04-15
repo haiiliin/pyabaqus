@@ -34,7 +34,8 @@ class BeamSection(Section):
             - Etc.
 
     The corresponding analysis keywords are:
-        - BEAM GENERAL SECTION
+
+    - BEAM GENERAL SECTION
             - BEAM SECTION
             - BEAM FLUID INERTIA
             - CENTROID

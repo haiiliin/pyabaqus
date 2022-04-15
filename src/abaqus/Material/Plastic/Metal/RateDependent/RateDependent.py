@@ -7,40 +7,42 @@ class RateDependent:
 
     Notes
     -----
-        This object can be accessed by:
+    This object can be accessed by:
+    
+    .. code-block:: python
         
-        .. code-block:: python
-            
-            import material
-            mdb.models[name].materials[name].crushableFoam.rateDependent
-            mdb.models[name].materials[name].druckerPrager.rateDependent
-            mdb.models[name].materials[name].Plastic.rateDependent
-            import odbMaterial
-            session.odbs[name].materials[name].crushableFoam.rateDependent
-            session.odbs[name].materials[name].druckerPrager.rateDependent
-            session.odbs[name].materials[name].Plastic.rateDependent
+        import material
+        mdb.models[name].materials[name].crushableFoam.rateDependent
+        mdb.models[name].materials[name].druckerPrager.rateDependent
+        mdb.models[name].materials[name].Plastic.rateDependent
+        import odbMaterial
+        session.odbs[name].materials[name].crushableFoam.rateDependent
+        session.odbs[name].materials[name].druckerPrager.rateDependent
+        session.odbs[name].materials[name].Plastic.rateDependent
 
-        The table data for this object are:
-        If *type*=POWER_LAW, the table data specify the following:
-            - D.
-            - n.
-            - Temperature, if the data depend on temperature.
-            - Value of the first field variable, if the data depend on field variables.
-            - Value of the second field variable.
-            - Etc.
-        If *type*=YIELD_RATIO, the table data specify the following:
-            - Yield stress ratio, R=¯σ/σ0.
-            - Equivalent Plastic strain rate, ˙¯εpl.
-            - Temperature, if the data depend on temperature.
-            - Value of the first field variable, if the data depend on field variables.
-            - Value of the second field variable.
-            - Etc.
-        If *type*=JOHNSON_COOK, the table data specify the following:
-            - C.
-            - ˙ε0.
+    The table data for this object are:
+    
+    - If *type*=POWER_LAW, the table data specify the following:
+        - D.
+        - n.
+        - Temperature, if the data depend on temperature.
+        - Value of the first field variable, if the data depend on field variables.
+        - Value of the second field variable.
+        - Etc.
+    - If *type*=YIELD_RATIO, the table data specify the following:
+        - Yield stress ratio, R=¯σ/σ0.
+        - Equivalent Plastic strain rate, ˙¯εpl.
+        - Temperature, if the data depend on temperature.
+        - Value of the first field variable, if the data depend on field variables.
+        - Value of the second field variable.
+        - Etc.
+    - If *type*=JOHNSON_COOK, the table data specify the following:
+        - C.
+        - ˙ε0.
 
     The corresponding analysis keywords are:
-        - RATE DEPENDENT
+
+    - RATE DEPENDENT
 
     """
 

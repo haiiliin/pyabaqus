@@ -9,40 +9,42 @@ class BrittleCracking:
 
     Notes
     -----
-        This object can be accessed by:
+    This object can be accessed by:
+    
+    .. code-block:: python
         
-        .. code-block:: python
-            
-            import material
-            mdb.models[name].materials[name].brittleCracking
-            import odbMaterial
-            session.odbs[name].materials[name].brittleCracking
+        import material
+        mdb.models[name].materials[name].brittleCracking
+        import odbMaterial
+        session.odbs[name].materials[name].brittleCracking
 
-        The table data for this object are:
-        If *type*=STRAIN the table data specify the following:
-            - Remaining direct stress after cracking.
-            - Direct cracking strain.
-            - Temperature, if the data depend on temperature.
-            - Value of the first field variable, if the data depend on field variables.
-            - Value of the second field variable.
-            - Etc.
-        If *type*=DISPLACEMENT the table data specify the following:
-            - Remaining direct stress after cracking.
-            - Direct cracking displacement.
-            - Temperature, if the data depend on temperature.
-            - Value of the first field variable, if the data depend on field variables.
-            - Value of the second field variable.
-            - Etc.
-        If *type*=GFI the table data specify the following:
-            - Failure stress.
-            - Mode I fracture energy.
-            - Temperature, if the data depend on temperature.
-            - Value of the first field variable, if the data depend on field variables.
-            - Value of the second field variable.
-            - Etc.
+    The table data for this object are:
+    
+    - If *type*=STRAIN the table data specify the following:
+        - Remaining direct stress after cracking.
+        - Direct cracking strain.
+        - Temperature, if the data depend on temperature.
+        - Value of the first field variable, if the data depend on field variables.
+        - Value of the second field variable.
+        - Etc.
+    - If *type*=DISPLACEMENT the table data specify the following:
+        - Remaining direct stress after cracking.
+        - Direct cracking displacement.
+        - Temperature, if the data depend on temperature.
+        - Value of the first field variable, if the data depend on field variables.
+        - Value of the second field variable.
+        - Etc.
+    - If *type*=GFI the table data specify the following:
+        - Failure stress.
+        - Mode I fracture energy.
+        - Temperature, if the data depend on temperature.
+        - Value of the first field variable, if the data depend on field variables.
+        - Value of the second field variable.
+        - Etc.
 
     The corresponding analysis keywords are:
-        - BRITTLE CRACKING
+
+    - BRITTLE CRACKING
 
     """
 

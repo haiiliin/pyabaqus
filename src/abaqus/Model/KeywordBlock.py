@@ -30,8 +30,8 @@ class KeywordBlock:
 
     Notes
     -----
-        This object can be accessed by:
-            mdb.models[name].keywordBlock
+    This object can be accessed by:
+        mdb.models[name].keywordBlock
 
     """
 

@@ -17,7 +17,8 @@ class FluidExchange(Interaction):
         mdb.models[name].interactions[name]
 
     The corresponding analysis keywords are:
-        - FLUID EXCHANGE
+
+    - FLUID EXCHANGE
 
     """
 

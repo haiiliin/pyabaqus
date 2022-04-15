@@ -4,7 +4,7 @@ class ModelDot:
 
     Notes
     -----
-        This object can be accessed by:
+    This object can be accessed by:
 
     """
 

@@ -29,7 +29,8 @@ class CompositeShellSection(GeometryShellSection):
         session.odbs[name].sections[name]
 
     The corresponding analysis keywords are:
-        - SHELL SECTION
+
+    - SHELL SECTION
             - SHELL GENERAL SECTION
 
     """

@@ -8,8 +8,11 @@ class SvgOptions:
 
     Notes
     -----
-        This object can be accessed by:
-            session.svgOptions
+    This object can be accessed by:
+
+    .. code-block:: python
+    
+        session.svgOptions
 
     """
 

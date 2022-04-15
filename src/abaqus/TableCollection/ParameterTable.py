@@ -25,7 +25,8 @@ class ParameterTable:
         mdb.models[name].tableCollections[name].parameterTables[name]
 
     The corresponding analysis keywords are:
-        - *PARAMETER TABLE TYPE
+
+    - *PARAMETER TABLE TYPE
             - *PARAMETER TABLE
 
     """

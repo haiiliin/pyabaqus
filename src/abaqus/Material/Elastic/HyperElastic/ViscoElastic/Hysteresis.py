@@ -5,23 +5,25 @@ class Hysteresis:
 
     Notes
     -----
-        This object can be accessed by:
-        
-        .. code-block:: python
-            
-            import material
-            mdb.models[name].materials[name].hyperelastic.hysteresis
-            import odbMaterial
-            session.odbs[name].materials[name].hyperelastic.hysteresis
+    This object can be accessed by:
 
-        The table data for this object are:
-            - Stress scaling factor.
-            - Creep parameter.
-            - Effective stress exponent.
-            - Creep strain exponent.
+    .. code-block:: python
+
+        import material
+        mdb.models[name].materials[name].hyperelastic.hysteresis
+        import odbMaterial
+        session.odbs[name].materials[name].hyperelastic.hysteresis
+
+    The table data for this object are:
+
+    - Stress scaling factor.
+    - Creep parameter.
+    - Effective stress exponent.
+    - Creep strain exponent.
 
     The corresponding analysis keywords are:
-        - HYSTERESIS
+
+    - HYSTERESIS
 
     """
 

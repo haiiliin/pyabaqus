@@ -3,12 +3,12 @@ class ConstrainedSketchDimension:
 
     Notes
     -----
-        This object can be accessed by:
+    This object can be accessed by:
         
-        .. code-block:: python
-            
-            import sketch
-            mdb.models[name].sketches[name].dimensions[i]
+    .. code-block:: python
+        
+        import sketch
+        mdb.models[name].sketches[name].dimensions[i]
 
     """
     pass

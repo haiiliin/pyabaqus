@@ -18,12 +18,12 @@ class GeometricRestriction:
 
     Notes
     -----
-        This object can be accessed by:
+    This object can be accessed by:
+    
+    .. code-block:: python
         
-        .. code-block:: python
-            
-            import optimization
-            mdb.models[name].optimizationTasks[name].geometricRestrictions[name]
+        import optimization
+        mdb.models[name].optimizationTasks[name].geometricRestrictions[name]
 
     """
 

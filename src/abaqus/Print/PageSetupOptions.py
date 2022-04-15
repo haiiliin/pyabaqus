@@ -10,8 +10,11 @@ class PageSetupOptions:
 
     Notes
     -----
-        This object can be accessed by:
-            session.pageSetupOptions
+    This object can be accessed by:
+
+    .. code-block:: python
+    
+        session.pageSetupOptions
 
     """
 

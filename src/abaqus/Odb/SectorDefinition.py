@@ -12,12 +12,12 @@ class SectorDefinition:
 
     Notes
     -----
-        This object can be accessed by:
+    This object can be accessed by:
+    
+    .. code-block:: python
         
-        .. code-block:: python
-            
-            import odbAccess
-            session.odbs[name].sectorDefinition
+        import odbAccess
+        session.odbs[name].sectorDefinition
 
     """
 

@@ -108,7 +108,8 @@ class AnnealStep(AnalysisStep):
         mdb.models[name].steps[name]
 
     The corresponding analysis keywords are:
-        - ANNEAL
+
+    - ANNEAL
             - STEP
 
     """

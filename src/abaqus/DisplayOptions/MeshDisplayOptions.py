@@ -10,11 +10,14 @@ class MeshDisplayOptions:
 
     Notes
     -----
-        This object can be accessed by:
-            session.viewports[name].assemblyDisplay.meshOptions
-            session.viewports[name].layers[name].assemblyDisplay.meshOptions
-            session.viewports[name].layers[name].partDisplay.meshOptions
-            session.viewports[name].partDisplay.meshOptions
+    This object can be accessed by:
+
+    .. code-block::
+    
+        session.viewports[name].assemblyDisplay.meshOptions
+        session.viewports[name].layers[name].assemblyDisplay.meshOptions
+        session.viewports[name].layers[name].partDisplay.meshOptions
+        session.viewports[name].partDisplay.meshOptions
 
     """
 

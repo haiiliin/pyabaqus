@@ -225,7 +225,8 @@ class Material(MaterialBase):
         session.odbs[name].materials[name]
 
     The corresponding analysis keywords are:
-        - MATERIAL
+
+    - MATERIAL
 
     """
 

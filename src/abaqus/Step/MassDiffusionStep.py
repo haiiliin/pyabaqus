@@ -141,7 +141,8 @@ class MassDiffusionStep(AnalysisStep):
         mdb.models[name].steps[name]
 
     The corresponding analysis keywords are:
-        - MASS DIFFUSION
+
+    - MASS DIFFUSION
             - STEP
 
     """

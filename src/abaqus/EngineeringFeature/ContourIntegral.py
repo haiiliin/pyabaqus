@@ -25,7 +25,8 @@ class ContourIntegral(Crack):
         mdb.models[name].rootAssembly.engineeringFeatures.cracks[name]
 
     The corresponding analysis keywords are:
-        - CONTOUR INTEGRAL
+
+    - CONTOUR INTEGRAL
 
     """
 

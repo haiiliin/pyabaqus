@@ -135,7 +135,8 @@ class SteadyStateModalStep(AnalysisStep):
         mdb.models[name].steps[name]
 
     The corresponding analysis keywords are:
-        - DAMPING
+
+    - DAMPING
             - MODAL DAMPING
             - STEADY STATE DYNAMICS
             - STEP

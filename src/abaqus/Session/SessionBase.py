@@ -215,8 +215,11 @@ class SessionBase:
 
     Notes
     -----
-        This object can be accessed by:
-            session
+    This object can be accessed by:
+
+    .. code-block:: python
+    
+        session
 
     """
 

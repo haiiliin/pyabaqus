@@ -17,7 +17,8 @@ class TProfile(Profile):
         session.odbs[name].profiles[name]
 
     The corresponding analysis keywords are:
-        - BEAM SECTION
+
+    - BEAM SECTION
 
     """
 

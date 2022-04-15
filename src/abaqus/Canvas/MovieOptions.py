@@ -11,8 +11,11 @@ class MovieOptions:
 
     Notes
     -----
-        This object can be accessed by:
-            session.viewports[name].movieOptions
+    This object can be accessed by:
+    
+    .. code-block::
+    
+        session.viewports[name].movieOptions
 
     """
 

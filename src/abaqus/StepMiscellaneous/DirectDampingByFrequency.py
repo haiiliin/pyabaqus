@@ -11,12 +11,12 @@ class DirectDampingByFrequency:
 
     Notes
     -----
-        This object can be accessed by:
-        
-        .. code-block:: python
-        
-           import step
-           mdb.models[name].steps[name].directDampingByFrequency
+    This object can be accessed by:
+    
+    .. code-block:: python
+    
+        import step
+        mdb.models[name].steps[name].directDampingByFrequency
 
     """
 

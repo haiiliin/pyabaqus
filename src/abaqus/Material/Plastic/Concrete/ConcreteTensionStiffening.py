@@ -7,43 +7,45 @@ class ConcreteTensionStiffening:
 
     Notes
     -----
-        This object can be accessed by:
+    This object can be accessed by:
+    
+    .. code-block:: python
         
-        .. code-block:: python
-            
-            import material
-            mdb.models[name].materials[name].concreteDamagedPlasticity.concreteTensionStiffening
-            import odbMaterial
-            session.odbs[name].materials[name].concreteDamagedPlasticity.concreteTensionStiffening
+        import material
+        mdb.models[name].materials[name].concreteDamagedPlasticity.concreteTensionStiffening
+        import odbMaterial
+        session.odbs[name].materials[name].concreteDamagedPlasticity.concreteTensionStiffening
 
-        The table data for this object are:
-        If *type*=STRAIN, the table data specify the following:
-            - Remaining direct stress after cracking, σt.
-            - Direct cracking strain, ϵckt.
-            - Direct cracking strain rate, ˙ϵckt.
-            - Temperature, if the data depend on temperature.
-            - Value of the first field variable, if the data depend on field variables.
-            - Value of the second field variable.
-            - Etc.
-        If *type*=DISPLACEMENT, the table data specify the following:
-            - Remaining direct stress after cracking, σt.
-            - Direct cracking displacement, uckt.
-            - Direct cracking displacement rate, ˙uckt
-            - Temperature, if the data depend on temperature.
-            - Value of the first field variable, if the data depend on field variables.
-            - Value of the second field variable.
-            - Etc.
-        If *type*=GFI, the table data specify the following:
-            - Failure stress, σt0σt⁢0.
-            - Fracture energy, Gf.
-            - Direct cracking displacement rate, ˙uckt.
-            - Temperature, if the data depend on temperature.
-            - Value of the first field variable, if the data depend on field variables.
-            - Value of the second field variable.
-            - Etc.
+    The table data for this object are:
+
+    - If *type*=STRAIN, the table data specify the following:
+        - Remaining direct stress after cracking, σt.
+        - Direct cracking strain, ϵckt.
+        - Direct cracking strain rate, ˙ϵckt.
+        - Temperature, if the data depend on temperature.
+        - Value of the first field variable, if the data depend on field variables.
+        - Value of the second field variable.
+        - Etc.
+    - If *type*=DISPLACEMENT, the table data specify the following:
+        - Remaining direct stress after cracking, σt.
+        - Direct cracking displacement, uckt.
+        - Direct cracking displacement rate, ˙uckt
+        - Temperature, if the data depend on temperature.
+        - Value of the first field variable, if the data depend on field variables.
+        - Value of the second field variable.
+        - Etc.
+    - If *type*=GFI, the table data specify the following:
+        - Failure stress, σt0σt⁢0.
+        - Fracture energy, Gf.
+        - Direct cracking displacement rate, ˙uckt.
+        - Temperature, if the data depend on temperature.
+        - Value of the first field variable, if the data depend on field variables.
+        - Value of the second field variable.
+        - Etc.
 
     The corresponding analysis keywords are:
-        - CONCRETE TENSION STIFFENING
+
+    - CONCRETE TENSION STIFFENING
 
     """
 

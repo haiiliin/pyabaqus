@@ -3,23 +3,25 @@ class Gel:
 
     Notes
     -----
-        This object can be accessed by:
-        
-        .. code-block:: python
-            
-            import material
-            mdb.models[name].materials[name].gel
-            import odbMaterial
-            session.odbs[name].materials[name].gel
+    This object can be accessed by:
 
-        The table data for this object are:
-            - Radius of gel particles when completely dry, radry.
-            - Fully swollen radius of gel particles, raf.
-            - Number of gel particles per unit volume, ka.
-            - Relaxation time constant for long-term swelling of gel particles, τ1.
+    .. code-block:: python
+
+        import material
+        mdb.models[name].materials[name].gel
+        import odbMaterial
+        session.odbs[name].materials[name].gel
+
+    The table data for this object are:
+
+    - Radius of gel particles when completely dry, radry.
+    - Fully swollen radius of gel particles, raf.
+    - Number of gel particles per unit volume, ka.
+    - Relaxation time constant for long-term swelling of gel particles, τ1.
 
     The corresponding analysis keywords are:
-        - GEL
+
+    - GEL
 
     """
 

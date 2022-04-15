@@ -20,7 +20,8 @@ class GasketSection(Section):
         session.odbs[name].sections[name]
 
     The corresponding analysis keywords are:
-        - GASKET SECTION
+
+    - GASKET SECTION
 
     """
 

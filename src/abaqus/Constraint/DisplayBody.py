@@ -27,7 +27,8 @@ class DisplayBody(Constraint):
         mdb.models[name].constraints[name]
 
     The corresponding analysis keywords are:
-        - DISPLAY BODY
+
+    - DISPLAY BODY
 
     """
 

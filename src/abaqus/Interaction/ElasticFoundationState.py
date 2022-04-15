@@ -32,12 +32,12 @@ class ElasticFoundationState(InteractionState):
 
     Notes
     -----
-        This object can be accessed by:
+    This object can be accessed by:
+    
+    .. code-block:: python
         
-        .. code-block:: python
-            
-            import interaction
-            mdb.models[name].steps[name].interactionStates[name]
+        import interaction
+        mdb.models[name].steps[name].interactionStates[name]
 
     """
 

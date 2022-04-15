@@ -19,7 +19,8 @@ class ActuatorSensor(Interaction):
         mdb.models[name].interactions[name]
 
     The corresponding analysis keywords are:
-        - ELEMENT
+
+    - ELEMENT
             - USER ELEMENT
             - INITIAL CONDITIONS
 

@@ -17,7 +17,8 @@ class LayerProperties:
         session.odbs[name].sections[name].rebarLayers.layerTable[i]
 
     The corresponding analysis keywords are:
-        - REBAR LAYER
+
+    - REBAR LAYER
 
     """
 

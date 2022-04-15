@@ -27,7 +27,8 @@ class Ratios:
             - Etc.
 
     The corresponding analysis keywords are:
-        - RATIOS
+
+    - RATIOS
 
     """
 

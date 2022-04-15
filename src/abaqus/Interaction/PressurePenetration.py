@@ -34,7 +34,8 @@ class PressurePenetration(Interaction):
         mdb.models[name].interactions[name]
 
     The corresponding analysis keywords are:
-        - PRESSURE PENETRATION
+
+    - PRESSURE PENETRATION
 
     """
 

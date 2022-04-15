@@ -64,7 +64,8 @@ class FractureCriterion:
             - Etc.
 
     The corresponding analysis keywords are:
-        - FRACTURE CRITERION
+
+    - FRACTURE CRITERION
 
     """
 

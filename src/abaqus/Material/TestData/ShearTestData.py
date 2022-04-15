@@ -4,17 +4,18 @@ class ShearTestData:
 
     Notes
     -----
-        This object can be accessed by:
+    This object can be accessed by:
+    
+    .. code-block:: python
         
-        .. code-block:: python
-            
-            import material
-            mdb.models[name].materials[name].viscoelastic.shearTestData
-            import odbMaterial
-            session.odbs[name].materials[name].viscoelastic.shearTestData
+        import material
+        mdb.models[name].materials[name].viscoelastic.shearTestData
+        import odbMaterial
+        session.odbs[name].materials[name].viscoelastic.shearTestData
 
     The corresponding analysis keywords are:
-        - SHEAR TEST DATA
+
+    - SHEAR TEST DATA
 
     """
 

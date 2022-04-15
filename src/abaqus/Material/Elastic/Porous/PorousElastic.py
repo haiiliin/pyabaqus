@@ -6,35 +6,37 @@ class PorousElastic:
 
     Notes
     -----
-        This object can be accessed by:
-        
-        .. code-block:: python
-            
-            import material
-            mdb.models[name].materials[name].porousElastic
-            import odbMaterial
-            session.odbs[name].materials[name].porousElastic
+    This object can be accessed by:
 
-        The table data for this object are:
-        If *shear*=G, the table data specify the following:
-            - The logarithmic bulk modulus, κ. (Dimensionless.)
-            - The shear modulus, G.
-            - The elastic tensile limit, peltpte⁢l. (This value cannot be negative.)
-            - Temperature, if the data depend on temperature.
-            - Value of the first field variable, if the data depend on field variables.
-            - Value of the second field variable.
-            - Etc.
-        If *shear*=POISSON, the table data specify the following:
-            - The logarithmic bulk modulus, κ. (Dimensionless.)
-            - The Poisson's ratio, ν.
-            - The elastic tensile limit, peltpte⁢l. (This value cannot be negative.)
-            - Temperature, if the data depend on temperature.
-            - Value of the first field variable, if the data depend on field variables.
-            - Value of the second field variable.
-            - Etc.
+    .. code-block:: python
+
+        import material
+        mdb.models[name].materials[name].porousElastic
+        import odbMaterial
+        session.odbs[name].materials[name].porousElastic
+
+    The table data for this object are:
+    
+    - If *shear*=G, the table data specify the following:
+        - The logarithmic bulk modulus, κ. (Dimensionless.)
+        - The shear modulus, G.
+        - The elastic tensile limit, peltpte⁢l. (This value cannot be negative.)
+        - Temperature, if the data depend on temperature.
+        - Value of the first field variable, if the data depend on field variables.
+        - Value of the second field variable.
+        - Etc.
+    - If *shear*=POISSON, the table data specify the following:
+        - The logarithmic bulk modulus, κ. (Dimensionless.)
+        - The Poisson's ratio, ν.
+        - The elastic tensile limit, peltpte⁢l. (This value cannot be negative.)
+        - Temperature, if the data depend on temperature.
+        - Value of the first field variable, if the data depend on field variables.
+        - Value of the second field variable.
+        - Etc.
 
     The corresponding analysis keywords are:
-        - POROUS ELASTIC
+
+    - POROUS ELASTIC
 
     """
 

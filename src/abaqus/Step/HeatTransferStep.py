@@ -157,7 +157,8 @@ class HeatTransferStep(AnalysisStep):
         mdb.models[name].steps[name]
 
     The corresponding analysis keywords are:
-        - HEAT TRANSFER
+
+    - HEAT TRANSFER
             - STEP
 
     """

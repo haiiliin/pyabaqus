@@ -7,26 +7,27 @@ class GapConductance:
 
     Notes
     -----
-        This object can be accessed by:
-        
-        .. code-block:: python
-            
-            import material
-            mdb.models[name].materials[name].gapConductance
-            import odbMaterial
-            session.odbs[name].materials[name].gapConductance
+    This object can be accessed by:
 
-        The table data for this object are:
-            - Gap Conductance or Cohesive Separation.
-            - Gap Clearance, Gap Pressure (if optional parameter pressureDependency is used), or Closure, c (for coupled temperature-displacement gasket elements).
-            - Average Temperature if the data depend on temperature.
-            - Mass Flow Rate per unit area if the data depend on the average mass flow rate.
-            - Value of the first field variable if the data depend on field variables.
-            - Value of the second field variable.
-            - Etc.
+    .. code-block:: python
+
+        import material
+        mdb.models[name].materials[name].gapConductance
+        import odbMaterial
+        session.odbs[name].materials[name].gapConductance
+
+    The table data for this object are:
+        - Gap Conductance or Cohesive Separation.
+        - Gap Clearance, Gap Pressure (if optional parameter pressureDependency is used), or Closure, c (for coupled temperature-displacement gasket elements).
+        - Average Temperature if the data depend on temperature.
+        - Mass Flow Rate per unit area if the data depend on the average mass flow rate.
+        - Value of the first field variable if the data depend on field variables.
+        - Value of the second field variable.
+        - Etc.
 
     The corresponding analysis keywords are:
-        - GAP CONDUCTANCE
+
+    - GAP CONDUCTANCE
 
     """
 

@@ -8,8 +8,11 @@ class TiffOptions:
 
     Notes
     -----
-        This object can be accessed by:
-            session.tiffOptions
+    This object can be accessed by:
+
+    .. code-block:: python
+    
+        session.tiffOptions
 
     """
 

@@ -8,25 +8,26 @@ class GapConvection:
 
     Notes
     -----
-        This object can be accessed by:
-        
-        .. code-block:: python
-            
-            import material
-            mdb.models[name].materials[name].gapConvection
-            import odbMaterial
-            session.odbs[name].materials[name].gapConvection
+    This object can be accessed by:
 
-        The table data for this object are:
-        For *type*=TABULAR the table data specify the following:
-            - Nusselt number (Nu)
-            - Temperature, if the data depend on temperature.
-            - Value of the first field variable, if the data depend on field variables.
-            - Value of the second field variable.
-            - Etc.
+    .. code-block:: python
+
+        import material
+        mdb.models[name].materials[name].gapConvection
+        import odbMaterial
+        session.odbs[name].materials[name].gapConvection
+
+    The table data for this object are:
+    For *type*=TABULAR the table data specify the following:
+        - Nusselt number (Nu)
+        - Temperature, if the data depend on temperature.
+        - Value of the first field variable, if the data depend on field variables.
+        - Value of the second field variable.
+        - Etc.
 
     The corresponding analysis keywords are:
-        - GAP CONVECTION
+
+    - GAP CONVECTION
 
     """
 

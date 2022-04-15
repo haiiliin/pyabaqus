@@ -29,19 +29,19 @@ class OdbDisplayOptions:
 
     Notes
     -----
-        This object can be accessed by:
+    This object can be accessed by:
+    
+    .. code-block:: python
         
-        .. code-block:: python
-            
-            import assembly
-            session.viewports[name].assemblyDisplay.displayGroupInstances[name].odbDisplayOptions
-            session.viewports[name].layers[name].assemblyDisplay.displayGroupInstances[name].odbDisplayOptions
-            import visualization
-            session.viewports[name].layers[name].odbDisplay.displayGroupInstances[name].odbDisplayOptions
-            import part
-            session.viewports[name].layers[name].partDisplay.displayGroupInstances[name].odbDisplayOptions
-            session.viewports[name].odbDisplay.displayGroupInstances[name].odbDisplayOptions
-            session.viewports[name].partDisplay.displayGroupInstances[name].odbDisplayOptions
+        import assembly
+        session.viewports[name].assemblyDisplay.displayGroupInstances[name].odbDisplayOptions
+        session.viewports[name].layers[name].assemblyDisplay.displayGroupInstances[name].odbDisplayOptions
+        import visualization
+        session.viewports[name].layers[name].odbDisplay.displayGroupInstances[name].odbDisplayOptions
+        import part
+        session.viewports[name].layers[name].partDisplay.displayGroupInstances[name].odbDisplayOptions
+        session.viewports[name].odbDisplay.displayGroupInstances[name].odbDisplayOptions
+        session.viewports[name].partDisplay.displayGroupInstances[name].odbDisplayOptions
 
     """
 

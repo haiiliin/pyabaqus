@@ -104,15 +104,16 @@ class EulerianMotionBCState(BoundaryConditionState):
 
     Notes
     -----
-        This object can be accessed by:
+    This object can be accessed by:
+    
+    .. code-block:: python
         
-        .. code-block:: python
-            
-            import load
-            mdb.models[name].steps[name].boundaryConditionStates[name]
+        import load
+        mdb.models[name].steps[name].boundaryConditionStates[name]
 
     The corresponding analysis keywords are:
-        - EULERIAN MESH MOTION
+
+    - EULERIAN MESH MOTION
 
     """
 

@@ -170,7 +170,8 @@ class ViscoStep(AnalysisStep):
         mdb.models[name].steps[name]
 
     The corresponding analysis keywords are:
-        - VISCO
+
+    - VISCO
             - STEP
 
     """

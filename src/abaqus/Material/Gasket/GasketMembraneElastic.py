@@ -7,25 +7,26 @@ class GasketMembraneElastic:
 
     Notes
     -----
-        This object can be accessed by:
-        
-        .. code-block:: python
-            
-            import material
-            mdb.models[name].materials[name].gasketMembraneElastic
-            import odbMaterial
-            session.odbs[name].materials[name].gasketMembraneElastic
+    This object can be accessed by:
 
-        The table data for this object are:
-            - Young's modulus, E.
-            - Poisson's ratio, ν.
-            - Temperature, if the data depend on temperature.
-            - Value of the first field variable, if the data depend on field variables.
-            - Value of the second field variable.
-            - Etc.
+    .. code-block:: python
+
+        import material
+        mdb.models[name].materials[name].gasketMembraneElastic
+        import odbMaterial
+        session.odbs[name].materials[name].gasketMembraneElastic
+
+    The table data for this object are:
+        - Young's modulus, E.
+        - Poisson's ratio, ν.
+        - Temperature, if the data depend on temperature.
+        - Value of the first field variable, if the data depend on field variables.
+        - Value of the second field variable.
+        - Etc.
 
     The corresponding analysis keywords are:
-        - GASKET ELASTICITY
+
+    - GASKET ELASTICITY
 
     """
 

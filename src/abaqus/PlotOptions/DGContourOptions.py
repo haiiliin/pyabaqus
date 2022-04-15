@@ -71,13 +71,16 @@ class DGContourOptions:
 
     Notes
     -----
-        This object can be accessed by:
-            session.viewports[name].assemblyDisplay.displayGroupInstances[name].odbDisplayOptions.contourOptions
-            session.viewports[name].layers[name].assemblyDisplay.displayGroupInstances[name].odbDisplayOptions.contourOptions
-            session.viewports[name].layers[name].odbDisplay.displayGroupInstances[name].odbDisplayOptions.contourOptions
-            session.viewports[name].layers[name].partDisplay.displayGroupInstances[name].odbDisplayOptions.contourOptions
-            session.viewports[name].odbDisplay.displayGroupInstances[name].odbDisplayOptions.contourOptions
-            session.viewports[name].partDisplay.displayGroupInstances[name].odbDisplayOptions.contourOptions
+    This object can be accessed by:
+
+    .. code-block:: python
+    
+        session.viewports[name].assemblyDisplay.displayGroupInstances[name].odbDisplayOptions.contourOptions
+        session.viewports[name].layers[name].assemblyDisplay.displayGroupInstances[name].odbDisplayOptions.contourOptions
+        session.viewports[name].layers[name].odbDisplay.displayGroupInstances[name].odbDisplayOptions.contourOptions
+        session.viewports[name].layers[name].partDisplay.displayGroupInstances[name].odbDisplayOptions.contourOptions
+        session.viewports[name].odbDisplay.displayGroupInstances[name].odbDisplayOptions.contourOptions
+        session.viewports[name].partDisplay.displayGroupInstances[name].odbDisplayOptions.contourOptions
 
     """
 

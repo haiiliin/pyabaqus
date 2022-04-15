@@ -17,7 +17,8 @@ class EulerianSection(Section):
         session.odbs[name].sections[name]
 
     The corresponding analysis keywords are:
-        - EULERIAN SECTION
+
+    - EULERIAN SECTION
 
     """
 

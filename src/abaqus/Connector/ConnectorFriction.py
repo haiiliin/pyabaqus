@@ -36,7 +36,8 @@ class ConnectorFriction(ConnectorBehaviorOption):
         session.odbs[name].sections[name].behaviorOptions[i]
 
     The corresponding analysis keywords are:
-        - CONNECTOR FRICTION
+
+    - CONNECTOR FRICTION
 
     """
 

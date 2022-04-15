@@ -7,26 +7,28 @@ class CyclicHardening:
 
     Notes
     -----
-        This object can be accessed by:
+    This object can be accessed by:
+    
+    .. code-block:: python
         
-        .. code-block:: python
-            
-            import material
-            mdb.models[name].materials[name].Plastic.cyclicHardening
-            import odbMaterial
-            session.odbs[name].materials[name].Plastic.cyclicHardening
+        import material
+        mdb.models[name].materials[name].Plastic.cyclicHardening
+        import odbMaterial
+        session.odbs[name].materials[name].Plastic.cyclicHardening
 
-        The table data for this object are:
-            - Equivalent stress.
-            - Q∞Q(only if *parameters*=ON).
-            - Hardening parameter (only if *parameters*=ON).
-            - Temperature, if the data depend on temperature.
-            - Value of the first field variable, if the data depend on field variables.
-            - Value of the second field variable.
-            - Etc.
+    The table data for this object are:
+    
+    - Equivalent stress.
+    - Q∞Q(only if *parameters*=ON).
+    - Hardening parameter (only if *parameters*=ON).
+    - Temperature, if the data depend on temperature.
+    - Value of the first field variable, if the data depend on field variables.
+    - Value of the second field variable.
+    - Etc.
 
     The corresponding analysis keywords are:
-        - CYCLIC HARDENING
+
+    - CYCLIC HARDENING
 
     """
 

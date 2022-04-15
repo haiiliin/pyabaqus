@@ -222,9 +222,12 @@ class GraphicsOptions:
 
     Notes
     -----
-        This object can be accessed by:
-            session.defaultGraphicsOptions
-            session.graphicsOptions
+    This object can be accessed by:
+
+    .. code-block::
+    
+        session.defaultGraphicsOptions
+        session.graphicsOptions
 
     """
 

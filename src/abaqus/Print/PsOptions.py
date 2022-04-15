@@ -8,8 +8,11 @@ class PsOptions:
 
     Notes
     -----
-        This object can be accessed by:
-            session.psOptions
+    This object can be accessed by:
+
+    .. code-block:: python
+    
+        session.psOptions
 
     """
 

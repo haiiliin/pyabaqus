@@ -17,7 +17,8 @@ class AcousticImpedanceProp(ContactProperty):
         mdb.models[name].interactionProperties[name]
 
     The corresponding analysis keywords are:
-        - IMPEDANCE PROPERTY
+
+    - IMPEDANCE PROPERTY
 
     """
 

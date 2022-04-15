@@ -63,13 +63,13 @@ class Chart:
 
     Notes
     -----
-        This object can be accessed by:
+    This object can be accessed by:
+    
+    .. code-block:: python
         
-        .. code-block:: python
-            
-            import visualization
-            session.charts[name]
-            session.xyPlots[name].charts[name]
+        import visualization
+        session.charts[name]
+        session.xyPlots[name].charts[name]
 
     """
 

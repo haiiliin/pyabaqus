@@ -17,7 +17,8 @@ class StdContactControl(ContactControl):
         mdb.models[name].contactControls[name]
 
     The corresponding analysis keywords are:
-        - CONTACT CONTROLS
+
+    - CONTACT CONTROLS
 
     """
 

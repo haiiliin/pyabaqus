@@ -4,24 +4,26 @@ class SuperElasticHardeningModifications:
 
     Notes
     -----
-        This object can be accessed by:
+    This object can be accessed by:
+    
+    .. code-block:: python
         
-        .. code-block:: python
-            
-            import material
-            mdb.models[name].materials[name].superElasticity.SuperElasticHardening
-            import odbMaterial
-            session.odbs[name].materials[name].superElasticity.SuperElasticHardening
+        import material
+        mdb.models[name].materials[name].superElasticity.SuperElasticHardening
+        import odbMaterial
+        session.odbs[name].materials[name].superElasticity.SuperElasticHardening
 
-        The table data for this object are:
-            - Start of Transformation (Loading).
-            - End of Transformation (Loading).
-            - Start of Transformation (Unloading).
-            - End of Transformation (Unloading).
-            - Plastic Strain.
+    The table data for this object are:
+    
+    - Start of Transformation (Loading).
+    - End of Transformation (Loading).
+    - Start of Transformation (Unloading).
+    - End of Transformation (Unloading).
+    - Plastic Strain.
 
     The corresponding analysis keywords are:
-        - SUPERELASTIC HARDENING MODIFICATIONS
+
+    - SUPERELASTIC HARDENING MODIFICATIONS
 
     """
 

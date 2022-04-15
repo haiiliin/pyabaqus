@@ -25,7 +25,8 @@ class PointMassInertia(Inertia):
         mdb.models[name].rootAssembly.engineeringFeatures.inertias[name]
 
     The corresponding analysis keywords are:
-        - MASS
+
+    - MASS
 
     """
 

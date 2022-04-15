@@ -140,20 +140,20 @@ class SymbolOptions(DGSymbolOptions):
 
     Notes
     -----
-        This object can be accessed by:
+    This object can be accessed by:
+    
+    .. code-block:: python
         
-        .. code-block:: python
-            
-            import visualization
-            session.defaultOdbDisplay.symbolOptions
-            session.viewports[name].assemblyDisplay.displayGroupInstances[name].odbDisplayOptions.symbolOptions
-            session.viewports[name].layers[name].assemblyDisplay.displayGroupInstances[name].odbDisplayOptions.symbolOptions
-            session.viewports[name].layers[name].odbDisplay.displayGroupInstances[name].odbDisplayOptions.symbolOptions
-            session.viewports[name].layers[name].odbDisplay.symbolOptions
-            session.viewports[name].layers[name].partDisplay.displayGroupInstances[name].odbDisplayOptions.symbolOptions
-            session.viewports[name].odbDisplay.displayGroupInstances[name].odbDisplayOptions.symbolOptions
-            session.viewports[name].odbDisplay.symbolOptions
-            session.viewports[name].partDisplay.displayGroupInstances[name].odbDisplayOptions.symbolOptions
+        import visualization
+        session.defaultOdbDisplay.symbolOptions
+        session.viewports[name].assemblyDisplay.displayGroupInstances[name].odbDisplayOptions.symbolOptions
+        session.viewports[name].layers[name].assemblyDisplay.displayGroupInstances[name].odbDisplayOptions.symbolOptions
+        session.viewports[name].layers[name].odbDisplay.displayGroupInstances[name].odbDisplayOptions.symbolOptions
+        session.viewports[name].layers[name].odbDisplay.symbolOptions
+        session.viewports[name].layers[name].partDisplay.displayGroupInstances[name].odbDisplayOptions.symbolOptions
+        session.viewports[name].odbDisplay.displayGroupInstances[name].odbDisplayOptions.symbolOptions
+        session.viewports[name].odbDisplay.symbolOptions
+        session.viewports[name].partDisplay.displayGroupInstances[name].odbDisplayOptions.symbolOptions
 
     """
 

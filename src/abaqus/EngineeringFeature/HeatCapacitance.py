@@ -33,7 +33,8 @@ class HeatCapacitance(Inertia):
             - Etc.
 
     The corresponding analysis keywords are:
-        - HEATCAP
+
+    - HEATCAP
 
     """
 

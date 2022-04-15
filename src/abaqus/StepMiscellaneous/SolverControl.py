@@ -8,12 +8,12 @@ class SolverControl:
 
     Notes
     -----
-        This object can be accessed by:
-        
-        .. code-block:: python
-        
-           import step
-           mdb.models[name].steps[name].solverControl
+    This object can be accessed by:
+    
+    .. code-block:: python
+    
+        import step
+        mdb.models[name].steps[name].solverControl
 
     """
 

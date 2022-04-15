@@ -17,7 +17,8 @@ class FluidCavityProperty(ContactProperty):
         mdb.models[name].interactionProperties[name]
 
     The corresponding analysis keywords are:
-        - FLUID BEHAVIOR
+
+    - FLUID BEHAVIOR
             - CAPACITY
             - FLUID BULK MODULUS
             - FLUID DENSITY

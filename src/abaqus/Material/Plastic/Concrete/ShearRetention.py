@@ -7,27 +7,29 @@ class ShearRetention:
 
     Notes
     -----
-        This object can be accessed by:
+    This object can be accessed by:
+    
+    .. code-block:: python
         
-        .. code-block:: python
-            
-            import material
-            mdb.models[name].materials[name].concrete.shearRetention
-            import odbMaterial
-            session.odbs[name].materials[name].concrete.shearRetention
+        import material
+        mdb.models[name].materials[name].concrete.shearRetention
+        import odbMaterial
+        session.odbs[name].materials[name].concrete.shearRetention
 
-        The table data for this object are:
-            - ϱclose for dry concrete. The default value is 1.0.
-            - εmax for dry concrete. The default value is a very large number (full shear retention).
-            - ϱclose for wet concrete. The default value is 1.0.
-            - εmax for wet concrete. The default value is a very large number (full shear retention).
-            - Temperature, if the data depend on temperature.
-            - Value of the first field variable, if the data depend on field variables.
-            - Value of the second field variable.
-            - Etc.
+    The table data for this object are:
+
+    - ϱclose for dry concrete. The default value is 1.0.
+    - εmax for dry concrete. The default value is a very large number (full shear retention).
+    - ϱclose for wet concrete. The default value is 1.0.
+    - εmax for wet concrete. The default value is a very large number (full shear retention).
+    - Temperature, if the data depend on temperature.
+    - Value of the first field variable, if the data depend on field variables.
+    - Value of the second field variable.
+    - Etc.
 
     The corresponding analysis keywords are:
-        - SHEAR RETENTION
+
+    - SHEAR RETENTION
 
     """
 

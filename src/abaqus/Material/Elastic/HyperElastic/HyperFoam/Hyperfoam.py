@@ -11,23 +11,26 @@ class Hyperfoam:
 
     Notes
     -----
-        This object can be accessed by:
-        
-        .. code-block:: python
-            
-            import material
-            mdb.models[name].materials[name].hyperfoam
-            import odbMaterial
-            session.odbs[name].materials[name].hyperfoam
+    This object can be accessed by:
 
-        The table data for this object are:
-        The items in the table data specify the following for values of nn:
-            - μi and αi for i from 1 to n.
-            - νi.
-            - Temperature, if the data depend on temperature. Temperature dependence is not allowed for 4 ≤n≤ 6 in an Abaqus/Explicit analysis.
+    .. code-block:: python
+
+        import material
+        mdb.models[name].materials[name].hyperfoam
+        import odbMaterial
+        session.odbs[name].materials[name].hyperfoam
+
+    The table data for this object are:
+    The items in the table data specify the following for values of nn:
+
+    - μi and αi for i from 1 to n.
+    - νi.
+    - Temperature, if the data depend on temperature. Temperature dependence is not allowed for 4 ≤n≤ 6 in an
+    Abaqus/Explicit analysis.
 
     The corresponding analysis keywords are:
-        - HYPERFOAM
+
+    - HYPERFOAM
 
     """
 

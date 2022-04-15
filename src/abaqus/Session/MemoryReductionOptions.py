@@ -8,8 +8,11 @@ class MemoryReductionOptions:
 
     Notes
     -----
-        This object can be accessed by:
-            session.memoryReductionOptions
+    This object can be accessed by:
+
+    .. code-block:: python
+    
+        session.memoryReductionOptions
 
     """
 

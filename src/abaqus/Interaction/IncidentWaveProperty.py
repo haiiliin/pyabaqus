@@ -17,7 +17,8 @@ class IncidentWaveProperty(ContactProperty):
         mdb.models[name].interactionProperties[name]
 
     The corresponding analysis keywords are:
-        - INCIDENT WAVE INTERACTION PROPERTY
+
+    - INCIDENT WAVE INTERACTION PROPERTY
             - UNDEX CHARGE PROPERTY
             - CONWEP CHARGE PROPERTY
 

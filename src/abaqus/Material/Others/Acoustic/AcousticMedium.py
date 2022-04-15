@@ -6,17 +6,18 @@ class AcousticMedium:
 
     Notes
     -----
-        This object can be accessed by:
-        
-        .. code-block:: python
-            
-            import material
-            mdb.models[name].materials[name].acousticMedium
-            import odbMaterial
-            session.odbs[name].materials[name].acousticMedium
+    This object can be accessed by:
+
+    .. code-block:: python
+
+        import material
+        mdb.models[name].materials[name].acousticMedium
+        import odbMaterial
+        session.odbs[name].materials[name].acousticMedium
 
     The corresponding analysis keywords are:
-        - ACOUSTIC MEDIUM
+
+    - ACOUSTIC MEDIUM
 
     """
 

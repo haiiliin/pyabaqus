@@ -13,12 +13,12 @@ class RayleighDampingByFrequencyComponent:
 
     Notes
     -----
-        This object can be accessed by:
-        
-        .. code-block:: python
-        
-           import step
-           mdb.models[name].steps[name].rayleighDampingByFrequency.components[i]
+    This object can be accessed by:
+    
+    .. code-block:: python
+    
+        import step
+        mdb.models[name].steps[name].rayleighDampingByFrequency.components[i]
 
     """
 

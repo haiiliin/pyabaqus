@@ -7,15 +7,16 @@ class PolarityAssignments:
 
     Notes
     -----
-        This object can be accessed by:
+    This object can be accessed by:
+    
+    .. code-block:: python
         
-        .. code-block:: python
-            
-            import interaction
-            mdb.models[name].interactions[name].polarityAssignments
+        import interaction
+        mdb.models[name].interactions[name].polarityAssignments
 
     The corresponding analysis keywords are:
-        - CONTACT FORMULATION
+
+    - CONTACT FORMULATION
 
     """
 

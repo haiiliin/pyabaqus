@@ -26,7 +26,8 @@ class Coupling(Constraint):
         mdb.models[name].constraints[name]
 
     The corresponding analysis keywords are:
-        - COUPLING
+
+    - COUPLING
 
     """
 

@@ -170,7 +170,8 @@ class ContactDamage:
             - Etc.
 
     The corresponding analysis keywords are:
-        - DAMAGE INITIATION
+
+    - DAMAGE INITIATION
             - DAMAGE EVOLUTION
             - DAMAGE STABILIZATION
 

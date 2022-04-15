@@ -31,8 +31,11 @@ class AttributeColorMap:
 
     Notes
     -----
-        This object can be accessed by:
-            session.viewports[name].colorMappings[name]
+    This object can be accessed by:
+
+    .. code-block::
+    
+        session.viewports[name].colorMappings[name]
 
     """
 

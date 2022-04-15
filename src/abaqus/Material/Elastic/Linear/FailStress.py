@@ -6,30 +6,31 @@ class FailStress:
 
     Notes
     -----
-        This object can be accessed by:
-        
-        .. code-block:: python
-            
-            import material
-            mdb.models[name].materials[name].elastic.failStress
-            import odbMaterial
-            session.odbs[name].materials[name].elastic.failStress
+    This object can be accessed by:
 
-        The table data for this object are:
-            - Tensile stress limit in fiber direction, Xt.
-            - Compressive stress limit in fiber direction, Xc.
-            - Tensile stress limit in transverse direction, Yt.
-            - Compressive stress limit in transverse direction, Yc.
-            - Shear strength in the X–Y plane, S.
-            - Cross product term coefficient, *f* (-1.0≤f*≤1.0). The default value is zero.
-            - Biaxial stress limit, σb⁢i⁢a⁢x.
-            - Temperature, if the data depend on temperature.
-            - Value of the first field variable, if the data depend on field variables.
-            - Value of the second field variable.
-            - Etc.
+    .. code-block:: python
+
+        import material
+        mdb.models[name].materials[name].elastic.failStress
+        import odbMaterial
+        session.odbs[name].materials[name].elastic.failStress
+
+    The table data for this object are:
+        - Tensile stress limit in fiber direction, Xt.
+        - Compressive stress limit in fiber direction, Xc.
+        - Tensile stress limit in transverse direction, Yt.
+        - Compressive stress limit in transverse direction, Yc.
+        - Shear strength in the X–Y plane, S.
+        - Cross product term coefficient, *f* (-1.0≤f*≤1.0). The default value is zero.
+        - Biaxial stress limit, σb⁢i⁢a⁢x.
+        - Temperature, if the data depend on temperature.
+        - Value of the first field variable, if the data depend on field variables.
+        - Value of the second field variable.
+        - Etc.
 
     The corresponding analysis keywords are:
-        - FAIL STRESS
+
+    - FAIL STRESS
 
     """
 

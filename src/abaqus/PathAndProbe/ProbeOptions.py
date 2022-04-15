@@ -79,13 +79,13 @@ class ProbeOptions:
 
     Notes
     -----
-        This object can be accessed by:
+    This object can be accessed by:
+    
+    .. code-block:: python
         
-        .. code-block:: python
-            
-            import visualization
-            session.defaultProbeOptions
-            session.probeOptions
+        import visualization
+        session.defaultProbeOptions
+        session.probeOptions
 
     """
 

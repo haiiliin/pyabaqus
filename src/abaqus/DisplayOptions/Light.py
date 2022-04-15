@@ -9,9 +9,12 @@ class Light:
 
     Notes
     -----
-        This object can be accessed by:
-            session.defaultLightOptions.lights[i]
-            session.viewports[name].lightOptions.lights[i]
+    This object can be accessed by:
+
+    .. code-block::
+    
+        session.defaultLightOptions.lights[i]
+        session.viewports[name].lightOptions.lights[i]
 
     """
 

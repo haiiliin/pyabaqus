@@ -3,13 +3,13 @@ class ConstrainedSketchVertex:
 
     Notes
     -----
-        This object can be accessed by:
+    This object can be accessed by:
+    
+    .. code-block:: python
         
-        .. code-block:: python
-            
-            import sketch
-            mdb.models[name].sketches[name].vertices[i]
-            mdb.models[name].sketches[name].vertices[i][i]
+        import sketch
+        mdb.models[name].sketches[name].vertices[i]
+        mdb.models[name].sketches[name].vertices[i][i]
 
     """
 

@@ -16,14 +16,14 @@ class StreamOptions:
 
     Notes
     -----
-        This object can be accessed by:
+    This object can be accessed by:
+    
+    .. code-block:: python
         
-        .. code-block:: python
-            
-            import visualization
-            session.defaultOdbDisplay.streamOptions
-            session.viewports[name].layers[name].odbDisplay.streamOptions
-            session.viewports[name].odbDisplay.streamOptions
+        import visualization
+        session.defaultOdbDisplay.streamOptions
+        session.viewports[name].layers[name].odbDisplay.streamOptions
+        session.viewports[name].odbDisplay.streamOptions
 
     """
 

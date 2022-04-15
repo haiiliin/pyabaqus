@@ -33,7 +33,8 @@ class BodyForce(Load):
         mdb.models[name].loads[name]
 
     The corresponding analysis keywords are:
-        - DLOAD
+
+    - DLOAD
 
     """
 

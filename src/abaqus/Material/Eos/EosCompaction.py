@@ -3,17 +3,18 @@ class EosCompaction:
 
     Notes
     -----
-        This object can be accessed by:
-        
-        .. code-block:: python
-            
-            import material
-            mdb.models[name].materials[name].eos.eosCompaction
-            import odbMaterial
-            session.odbs[name].materials[name].eos.eosCompaction
+    This object can be accessed by:
+
+    .. code-block:: python
+
+        import material
+        mdb.models[name].materials[name].eos.eosCompaction
+        import odbMaterial
+        session.odbs[name].materials[name].eos.eosCompaction
 
     The corresponding analysis keywords are:
-        - EOS COMPACTION
+
+    - EOS COMPACTION
 
     """
 

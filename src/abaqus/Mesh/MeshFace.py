@@ -12,18 +12,18 @@ class MeshFace:
 
     Notes
     -----
-        This object can be accessed by:
+    This object can be accessed by:
+    
+    .. code-block:: python
         
-        .. code-block:: python
-            
-            import part
-            mdb.models[name].parts[name].elementFaces[i]
-            mdb.models[name].parts[name].elemFaces[i]
-            import assembly
-            mdb.models[name].rootAssembly.allInstances[name].elementFaces[i]
-            mdb.models[name].rootAssembly.allInstances[name].elemFaces[i]
-            mdb.models[name].rootAssembly.instances[name].elementFaces[i]
-            mdb.models[name].rootAssembly.instances[name].elemFaces[i]
+        import part
+        mdb.models[name].parts[name].elementFaces[i]
+        mdb.models[name].parts[name].elemFaces[i]
+        import assembly
+        mdb.models[name].rootAssembly.allInstances[name].elementFaces[i]
+        mdb.models[name].rootAssembly.allInstances[name].elemFaces[i]
+        mdb.models[name].rootAssembly.instances[name].elementFaces[i]
+        mdb.models[name].rootAssembly.instances[name].elemFaces[i]
 
     """
 

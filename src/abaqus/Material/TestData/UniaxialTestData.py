@@ -6,38 +6,40 @@ class UniaxialTestData:
 
     Notes
     -----
-        This object can be accessed by:
+    This object can be accessed by:
+    
+    .. code-block:: python
         
-        .. code-block:: python
-            
-            import material
-            mdb.models[name].materials[name].hyperelastic.uniaxialTestData
-            mdb.models[name].materials[name].hyperfoam.uniaxialTestData
-            mdb.models[name].materials[name].lowDensityFoam.uniaxialCompressionTestData
-            mdb.models[name].materials[name].lowDensityFoam.uniaxialTensionTestData
-            mdb.models[name].materials[name].mullinsEffect.uniaxialTests[i]
-            import odbMaterial
-            session.odbs[name].materials[name].hyperelastic.uniaxialTestData
-            session.odbs[name].materials[name].hyperfoam.uniaxialTestData
-            session.odbs[name].materials[name].lowDensityFoam.uniaxialCompressionTestData
-            session.odbs[name].materials[name].lowDensityFoam.uniaxialTensionTestData
-            session.odbs[name].materials[name].mullinsEffect.uniaxialTests[i]
+        import material
+        mdb.models[name].materials[name].hyperelastic.uniaxialTestData
+        mdb.models[name].materials[name].hyperfoam.uniaxialTestData
+        mdb.models[name].materials[name].lowDensityFoam.uniaxialCompressionTestData
+        mdb.models[name].materials[name].lowDensityFoam.uniaxialTensionTestData
+        mdb.models[name].materials[name].mullinsEffect.uniaxialTests[i]
+        import odbMaterial
+        session.odbs[name].materials[name].hyperelastic.uniaxialTestData
+        session.odbs[name].materials[name].hyperfoam.uniaxialTestData
+        session.odbs[name].materials[name].lowDensityFoam.uniaxialCompressionTestData
+        session.odbs[name].materials[name].lowDensityFoam.uniaxialTensionTestData
+        session.odbs[name].materials[name].mullinsEffect.uniaxialTests[i]
 
-        The table data for this object are:
-        For a hyperelastic material model, the table data specify the following:
-            - Nominal stress, TU.
-            - Nominal strain, ϵU.
-        For a hyperfoam material model, the table data specify the following:
-            - Nominal stress, TL.
-            - Nominal strain, ϵU.
-            - Nominal lateral strain, ϵ2=ϵ3. The default value is 0.
-        For a low-density foam material model, the table data specify the following:
-            - Nominal stress, TU.
-            - Nominal strain, ϵU.
-            - Nominal strain rate, ϵU˙.
+    The table data for this object are:
+    
+    - For a hyperelastic material model, the table data specify the following:
+        - Nominal stress, TU.
+        - Nominal strain, ϵU.
+    - For a hyperfoam material model, the table data specify the following:
+        - Nominal stress, TL.
+        - Nominal strain, ϵU.
+        - Nominal lateral strain, ϵ2=ϵ3. The default value is 0.
+    - For a low-density foam material model, the table data specify the following:
+        - Nominal stress, TU.
+        - Nominal strain, ϵU.
+        - Nominal strain rate, ϵU˙.
 
     The corresponding analysis keywords are:
-        - UNIAXIAL TEST DATA
+
+    - UNIAXIAL TEST DATA
 
     """
 

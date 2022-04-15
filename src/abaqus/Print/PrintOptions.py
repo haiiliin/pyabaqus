@@ -8,8 +8,11 @@ class PrintOptions:
 
     Notes
     -----
-        This object can be accessed by:
-            session.printOptions
+    This object can be accessed by:
+
+    .. code-block:: python
+    
+        session.printOptions
 
     """
 

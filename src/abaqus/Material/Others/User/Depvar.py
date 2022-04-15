@@ -3,17 +3,18 @@ class Depvar:
 
     Notes
     -----
-        This object can be accessed by:
-        
-        .. code-block:: python
-            
-            import material
-            mdb.models[name].materials[name].depvar
-            import odbMaterial
-            session.odbs[name].materials[name].depvar
+    This object can be accessed by:
+
+    .. code-block:: python
+
+        import material
+        mdb.models[name].materials[name].depvar
+        import odbMaterial
+        session.odbs[name].materials[name].depvar
 
     The corresponding analysis keywords are:
-        - DEPVAR
+
+    - DEPVAR
 
     """
 

@@ -58,7 +58,8 @@ class ContactTangentialBehavior:
         mdb.models[name].interactionProperties[name].tangentialBehavior
 
         The table data for this object are:
-        If *formulation*=PENALTY or LAGRANGE, the table data specify the following:
+
+        - If *formulation*=PENALTY or LAGRANGE, the table data specify the following:
             - Friction coefficient in the first slip direction, μ1μ1.
             - Friction coefficient in the second slip direction, μ2μ2 (if *directionality*=ANISOTROPIC).
             - Slip rate, if the data depend on slip rate.
@@ -67,20 +68,21 @@ class ContactTangentialBehavior:
             - Value of the first field variable, if the data depend on field variables.
             - Value of the second field variable.
             - Etc.
-        If *formulation*=EXPONENTIAL_DECAY and *exponentialDecayDefinition*=COEFFICIENTS, the table data specify the
+        - If *formulation*=EXPONENTIAL_DECAY and *exponentialDecayDefinition*=COEFFICIENTS, the table data specify the
         following:
             - Static friction coefficient.
             - Kinetic friction coefficient.
             - Decay coefficient.
-        If *formulation*=EXPONENTIAL_DECAY and *exponentialDecayDefinition*=TEST_DATA, the table data specify the
+        - If *formulation*=EXPONENTIAL_DECAY and *exponentialDecayDefinition*=TEST_DATA, the table data specify the
         following:
             - Friction coefficient.
             - Slip rate.
-        If *formulation*=USER_DEFINED, the table data specify the following:
+        - If *formulation*=USER_DEFINED, the table data specify the following:
             - Friction property.
 
     The corresponding analysis keywords are:
-        - FRICTION
+
+    - FRICTION
             - CHANGE FRICTION
 
     """

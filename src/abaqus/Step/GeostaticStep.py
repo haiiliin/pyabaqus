@@ -148,7 +148,8 @@ class GeostaticStep(AnalysisStep):
         step mdb.models[name].steps[name]
 
     The corresponding analysis keywords are:
-        - GEOSTATIC
+
+    - GEOSTATIC
             - STEP
 
     """

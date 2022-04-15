@@ -7,38 +7,40 @@ class ClayPlasticity:
 
     Notes
     -----
-        This object can be accessed by:
+    This object can be accessed by:
+    
+    .. code-block:: python
         
-        .. code-block:: python
-            
-            import material
-            mdb.models[name].materials[name].clayPlasticity
-            import odbMaterial
-            session.odbs[name].materials[name].clayPlasticity
+        import material
+        mdb.models[name].materials[name].clayPlasticity
+        import odbMaterial
+        session.odbs[name].materials[name].clayPlasticity
 
-        The table data for this object are:
-        If *hardening*=EXPONENTIAL, the table data specify the following:
-            - Logarithmic Plastic bulk modulus, λ (dimensionless).
-            - Stress ratio at critical state, M.
-            - The initial yield surface size, a0.
-            - ββ, the parameter defining the size of the yield surface on the “wet” side of critical state.
-            - KK, the ratio of the flow stress in triaxial tension to the flow stress in triaxial compression. 0.778≤K≤1.0. If the default value of 0.0 is accepted, a value of 1.0 is assumed.
-            - Temperature, if the data depend on temperature.
-            - Value of the first field variable, if the data depend on field variables.
-            - Value of the second field variable.
-            - Etc.
-        If *hardening*=TABULAR, the table data specify the following:
-            - Stress ratio at critical state, M.
-            - The initial volumetric Plastic strain, ε_vol^pl∣0, corresponding to pc|0according to the [ClayHardening](https://help.3ds.com/2022/english/DSSIMULIA_Established/SIMACAEKERRefMap/simaker-c-clayhardeningpyc.htm?ContextScope=all) definition.
-            - ββ, the parameter defining the size of the yield surface on the “wet” side of critical state.
-            - KK, the ratio of the flow stress in triaxial tension to the flow stress in triaxial compression. 0.778≤K≤1.0.
-            - Temperature, if the data depend on temperature.
-            - Value of the first field variable, if the data depend on field variables.
-            - Value of the second field variable.
-            - Etc.
+    The table data for this object are:
+    
+    - If *hardening*=EXPONENTIAL, the table data specify the following:
+        - Logarithmic Plastic bulk modulus, λ (dimensionless).
+        - Stress ratio at critical state, M.
+        - The initial yield surface size, a0.
+        - ββ, the parameter defining the size of the yield surface on the “wet” side of critical state.
+        - KK, the ratio of the flow stress in triaxial tension to the flow stress in triaxial compression. 0.778≤K≤1.0. If the default value of 0.0 is accepted, a value of 1.0 is assumed.
+        - Temperature, if the data depend on temperature.
+        - Value of the first field variable, if the data depend on field variables.
+        - Value of the second field variable.
+        - Etc.
+    - If *hardening*=TABULAR, the table data specify the following:
+        - Stress ratio at critical state, M.
+        - The initial volumetric Plastic strain, ε_vol^pl∣0, corresponding to pc|0according to the [ClayHardening](https://help.3ds.com/2022/english/DSSIMULIA_Established/SIMACAEKERRefMap/simaker-c-clayhardeningpyc.htm?ContextScope=all) definition.
+        - ββ, the parameter defining the size of the yield surface on the “wet” side of critical state.
+        - KK, the ratio of the flow stress in triaxial tension to the flow stress in triaxial compression. 0.778≤K≤1.0.
+        - Temperature, if the data depend on temperature.
+        - Value of the first field variable, if the data depend on field variables.
+        - Value of the second field variable.
+        - Etc.
 
     The corresponding analysis keywords are:
-        - CLAY PLASTICITY
+
+    - CLAY PLASTICITY
 
     """
 

@@ -25,7 +25,8 @@ class NonstructuralMass(Inertia):
         mdb.models[name].rootAssembly.engineeringFeatures.inertias[name]
 
     The corresponding analysis keywords are:
-        - NONSTRUCTURAL MASS
+
+    - NONSTRUCTURAL MASS
 
     """
 

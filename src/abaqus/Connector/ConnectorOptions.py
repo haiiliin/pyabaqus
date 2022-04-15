@@ -41,7 +41,8 @@ class ConnectorOptions:
         session.odbs[name].sections[name].behaviorOptions[i].options
 
     The corresponding analysis keywords are:
-        - CONNECTOR BEHAVIOR
+
+    - CONNECTOR BEHAVIOR
             - CONNECTOR DAMAGE INITIATION
             - CONNECTOR DAMAGE EVOLUTION
             - CONNECTOR DAMPING

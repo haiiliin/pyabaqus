@@ -30,7 +30,8 @@ class DerivedComponent:
         session.odbs[name].sections[name].behaviorOptions[i].initiationPotentials[i].derivedComponent
 
     The corresponding analysis keywords are:
-        - CONNECTOR DERIVED COMPONENT
+
+    - CONNECTOR DERIVED COMPONENT
 
     """
 

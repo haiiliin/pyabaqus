@@ -14,14 +14,14 @@ class SolidSection(Section):
 
     Notes
     -----
-        This object can be accessed by:
+    This object can be accessed by:
+    
+    .. code-block:: python
         
-        .. code-block:: python
-            
-            import section
-            mdb.models[name].sections[name]
-            import odbSection
-            session.odbs[name].sections[name]
+        import section
+        mdb.models[name].sections[name]
+        import odbSection
+        session.odbs[name].sections[name]
 
     """
 

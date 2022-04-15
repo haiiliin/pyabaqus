@@ -7,12 +7,12 @@ class InteractionProperty:
 
     Notes
     -----
-        This object can be accessed by:
+    This object can be accessed by:
+    
+    .. code-block:: python
         
-        .. code-block:: python
-            
-            import interaction
-            mdb.models[name].interactionProperties[name]
+        import interaction
+        mdb.models[name].interactionProperties[name]
 
         The corresponding analysis keywords are:
     """

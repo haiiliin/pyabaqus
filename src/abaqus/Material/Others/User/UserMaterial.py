@@ -7,17 +7,18 @@ class UserMaterial:
 
     Notes
     -----
-        This object can be accessed by:
-        
-        .. code-block:: python
-            
-            import material
-            mdb.models[name].materials[name].userMaterial
-            import odbMaterial
-            session.odbs[name].materials[name].userMaterial
+    This object can be accessed by:
+
+    .. code-block:: python
+
+        import material
+        mdb.models[name].materials[name].userMaterial
+        import odbMaterial
+        session.odbs[name].materials[name].userMaterial
 
     The corresponding analysis keywords are:
-        - USER MATERIAL
+
+    - USER MATERIAL
 
     """
 

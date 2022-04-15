@@ -8,33 +8,35 @@ class CrushableFoam:
 
     Notes
     -----
-        This object can be accessed by:
+    This object can be accessed by:
+    
+    .. code-block:: python
         
-        .. code-block:: python
-            
-            import material
-            mdb.models[name].materials[name].crushableFoam
-            import odbMaterial
-            session.odbs[name].materials[name].crushableFoam
+        import material
+        mdb.models[name].materials[name].crushableFoam
+        import odbMaterial
+        session.odbs[name].materials[name].crushableFoam
 
-        The table data for this object are:
-        If *hardening*=VOLUMETRIC, the table data specify the following:
-            - Ratio, k, of initial yield stress in uniaxial compression, σc0, to initial yield stress in hydrostatic compression, p0cpc0; 0.0 <k< 3.0.
-            - Ratio, kt, of yield stress in hydrostatic tension, pt, to initial yield stress in hydrostatic compression, pc0. The default value is 1.0.
-            - Temperature, if the data depend on temperature.
-            - Value of the first field variable, if the data depend on field variables.
-            - Value of the second field variable.
-            - Etc.
-        If *hardening*=ISOTROPIC, the table data specify the following:
-            - Ratio, k, of initial yield stress in uniaxial compression, σ0cσc0, to initial yield stress in hydrostatic compression, p00; 0.0 ≤k≤ 3.0.
-            - Plastic Poisson's ratio.νpνp; -1≤νp≤0.5.
-            - Temperature, if the data depend on temperature.
-            - Value of the first field variable, if the data depend on field variables.
-            - Value of the second field variable.
-            - Etc.
+    The table data for this object are:
+
+    - If *hardening*=VOLUMETRIC, the table data specify the following:
+        - Ratio, k, of initial yield stress in uniaxial compression, σc0, to initial yield stress in hydrostatic compression, p0cpc0; 0.0 <k< 3.0.
+        - Ratio, kt, of yield stress in hydrostatic tension, pt, to initial yield stress in hydrostatic compression, pc0. The default value is 1.0.
+        - Temperature, if the data depend on temperature.
+        - Value of the first field variable, if the data depend on field variables.
+        - Value of the second field variable.
+        - Etc.
+    - If *hardening*=ISOTROPIC, the table data specify the following:
+        - Ratio, k, of initial yield stress in uniaxial compression, σ0cσc0, to initial yield stress in hydrostatic compression, p00; 0.0 ≤k≤ 3.0.
+        - Plastic Poisson's ratio.νpνp; -1≤νp≤0.5.
+        - Temperature, if the data depend on temperature.
+        - Value of the first field variable, if the data depend on field variables.
+        - Value of the second field variable.
+        - Etc.
 
     The corresponding analysis keywords are:
-        - CRUSHABLE FOAM
+
+    - CRUSHABLE FOAM
 
     """
 

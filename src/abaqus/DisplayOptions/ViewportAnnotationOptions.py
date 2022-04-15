@@ -15,9 +15,12 @@ class ViewportAnnotationOptions:
 
     Notes
     -----
-        This object can be accessed by:
-            session.defaultViewportAnnotationOptions
-            session.viewports[name].viewportAnnotationOptions
+    This object can be accessed by:
+
+    .. code-block::
+    
+        session.defaultViewportAnnotationOptions
+        session.viewports[name].viewportAnnotationOptions
 
     """
 

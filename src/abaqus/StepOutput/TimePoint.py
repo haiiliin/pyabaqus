@@ -12,7 +12,8 @@ class TimePoint:
         mdb.models[name].timePoints[name]
 
     The corresponding analysis keywords are:
-        - TIME POINTS
+
+    - TIME POINTS
 
     """
 

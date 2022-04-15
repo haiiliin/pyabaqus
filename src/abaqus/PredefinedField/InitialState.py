@@ -17,7 +17,8 @@ class InitialState(PredefinedField):
         mdb.models[name].predefinedFields[name]
 
     The corresponding analysis keywords are:
-        - INSTANCE
+
+    - INSTANCE
 
     """
 

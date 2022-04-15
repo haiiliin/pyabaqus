@@ -7,27 +7,32 @@ class Sorption:
 
     Notes
     -----
-        This object can be accessed by:
-        
-        .. code-block:: python
-            
-            import material
-            mdb.models[name].materials[name].sorption
-            import odbMaterial
-            session.odbs[name].materials[name].sorption
+    This object can be accessed by:
 
-        The table data for this object are:
-        If *lawAbsorption*=TABULAR or *lawExsorption*=TABULAR, the *absorptionTable* and *exsorptionTable* data respectively specify the following:
-            - Pore pressure, uw.
-            - Saturation, s.
-        If *lawAbsorption*=LOG or *lawExsorption*=LOG, the *absorptionTable* and *exsorptionTable* data respectively specify the following:
-            - A.
-            - B.
-            - s0.
-            - s1.
+    .. code-block:: python
+
+        import material
+        mdb.models[name].materials[name].sorption
+        import odbMaterial
+        session.odbs[name].materials[name].sorption
+
+    The table data for this object are:
+    
+    - If *lawAbsorption*=TABULAR or *lawExsorption*=TABULAR, the *absorptionTable* and *exsorptionTable* data respectively specify the following:
+
+        - Pore pressure, uw.
+        - Saturation, s.
+
+    - If *lawAbsorption*=LOG or *lawExsorption*=LOG, the *absorptionTable* and *exsorptionTable* data respectively specify the following:
+
+        - A.
+        - B.
+        - s0.
+        - s1.
 
     The corresponding analysis keywords are:
-        - SORPTION
+
+    - SORPTION
 
     """
 

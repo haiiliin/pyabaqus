@@ -73,7 +73,8 @@ class ConnectorPlasticity(ConnectorBehaviorOption):
             - Etc.
 
     The corresponding analysis keywords are:
-        - CONNECTOR PLASTICITY
+
+    - CONNECTOR PLASTICITY
             - CONNECTOR HARDENING
             - CONNECTOR POTENTIAL
 

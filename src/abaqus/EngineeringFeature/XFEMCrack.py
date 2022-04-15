@@ -25,7 +25,8 @@ class XFEMCrack(Crack):
         mdb.models[name].rootAssembly.engineeringFeatures.cracks[name]
 
     The corresponding analysis keywords are:
-        - ENRICHMENT
+
+    - ENRICHMENT
             - INITIAL CONDITIONS
 
     """

@@ -9,11 +9,11 @@ class MonitorMgr:
 
     Notes
     -----
-        This object can be accessed by:
-        
-        .. code-block:: python
-        
-            monitorManager
+    This object can be accessed by:
+    
+    .. code-block:: python
+    
+        monitorManager
 
     """
 

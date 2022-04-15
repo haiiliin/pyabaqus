@@ -40,10 +40,13 @@ class PartDisplayOptions:
 
     Notes
     -----
-        This object can be accessed by:
-            session.viewports[name].layers[name].partDisplay
-            import part
-            session.viewports[name].partDisplay
+    This object can be accessed by:
+
+    .. code-block::
+    
+        session.viewports[name].layers[name].partDisplay
+        import part
+        session.viewports[name].partDisplay
 
     """
 

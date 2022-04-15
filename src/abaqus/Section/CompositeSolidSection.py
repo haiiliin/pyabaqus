@@ -19,7 +19,8 @@ class CompositeSolidSection(Section):
         session.odbs[name].sections[name]
 
     The corresponding analysis keywords are:
-        - SOLID SECTION
+
+    - SOLID SECTION
 
     """
 

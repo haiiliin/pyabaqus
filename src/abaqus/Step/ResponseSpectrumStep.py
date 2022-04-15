@@ -138,7 +138,8 @@ class ResponseSpectrumStep(AnalysisStep):
         mdb.models[name].steps[name]
 
     The corresponding analysis keywords are:
-        - RESPONSE SPECTRUM
+
+    - RESPONSE SPECTRUM
             - STEP
 
     """

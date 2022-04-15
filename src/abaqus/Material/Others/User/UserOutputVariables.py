@@ -3,17 +3,18 @@ class UserOutputVariables:
 
     Notes
     -----
-        This object can be accessed by:
-        
-        .. code-block:: python
-            
-            import material
-            mdb.models[name].materials[name].userOutputVariables
-            import odbMaterial
-            session.odbs[name].materials[name].userOutputVariables
+    This object can be accessed by:
+
+    .. code-block:: python
+
+        import material
+        mdb.models[name].materials[name].userOutputVariables
+        import odbMaterial
+        session.odbs[name].materials[name].userOutputVariables
 
     The corresponding analysis keywords are:
-        - USER OUTPUT VARIABLES
+
+    - USER OUTPUT VARIABLES
 
     """
 

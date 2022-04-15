@@ -7,33 +7,35 @@ class ConcreteTensionDamage:
 
     Notes
     -----
-        This object can be accessed by:
+    This object can be accessed by:
+    
+    .. code-block:: python
         
-        .. code-block:: python
-            
-            import material
-            mdb.models[name].materials[name].concreteDamagedPlasticity.concreteTensionDamage
-            import odbMaterial
-            session.odbs[name].materials[name].concreteDamagedPlasticity.concreteTensionDamage
+        import material
+        mdb.models[name].materials[name].concreteDamagedPlasticity.concreteTensionDamage
+        import odbMaterial
+        session.odbs[name].materials[name].concreteDamagedPlasticity.concreteTensionDamage
 
-        The table data for this object are:
-        If *type*=STRAIN, the table data specify the following:
-            - Tensile damage variable, dt.
-            - Direct cracking strain, ϵtc⁢k.
-            - Temperature, if the data depend on temperature.
-            - Value of the first field variable, if the data depend on field variables.
-            - Value of the second field variable.
-            - Etc.
-        If *type*=DISPLACEMENT, the table data specify the following:
-            - Tensile damage variable, dt.
-            - Direct cracking displacement, utc⁢k.
-            - Temperature, if the data depend on temperature.
-            - Value of the first field variable, if the data depend on field variables.
-            - Value of the second field variable.
-            - Etc.
+    The table data for this object are:
+    
+    - If *type*=STRAIN, the table data specify the following:
+        - Tensile damage variable, dt.
+        - Direct cracking strain, ϵtc⁢k.
+        - Temperature, if the data depend on temperature.
+        - Value of the first field variable, if the data depend on field variables.
+        - Value of the second field variable.
+        - Etc.
+    - If *type*=DISPLACEMENT, the table data specify the following:
+        - Tensile damage variable, dt.
+        - Direct cracking displacement, utc⁢k.
+        - Temperature, if the data depend on temperature.
+        - Value of the first field variable, if the data depend on field variables.
+        - Value of the second field variable.
+        - Etc.
 
     The corresponding analysis keywords are:
-        - CONCRETE TENSION DAMAGE
+
+    - CONCRETE TENSION DAMAGE
 
     """
 

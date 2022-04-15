@@ -16,8 +16,11 @@ class DrawingArea:
 
     Notes
     -----
-        This object can be accessed by:
-            session.drawingArea
+    This object can be accessed by:
+
+    .. code-block::
+    
+        session.drawingArea
 
     """
 

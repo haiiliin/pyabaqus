@@ -25,19 +25,19 @@ class DisplayGroupInstance:
 
     Notes
     -----
-        This object can be accessed by:
+    This object can be accessed by:
+    
+    .. code-block:: python
         
-        .. code-block:: python
-            
-            import assembly
-            session.viewports[name].assemblyDisplay.displayGroupInstances[name]
-            session.viewports[name].layers[name].assemblyDisplay.displayGroupInstances[name]
-            import visualization
-            session.viewports[name].layers[name].odbDisplay.displayGroupInstances[name]
-            import part
-            session.viewports[name].layers[name].partDisplay.displayGroupInstances[name]
-            session.viewports[name].odbDisplay.displayGroupInstances[name]
-            session.viewports[name].partDisplay.displayGroupInstances[name]
+        import assembly
+        session.viewports[name].assemblyDisplay.displayGroupInstances[name]
+        session.viewports[name].layers[name].assemblyDisplay.displayGroupInstances[name]
+        import visualization
+        session.viewports[name].layers[name].odbDisplay.displayGroupInstances[name]
+        import part
+        session.viewports[name].layers[name].partDisplay.displayGroupInstances[name]
+        session.viewports[name].odbDisplay.displayGroupInstances[name]
+        session.viewports[name].partDisplay.displayGroupInstances[name]
 
     """
 

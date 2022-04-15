@@ -6,28 +6,29 @@ class FailStrain:
 
     Notes
     -----
-        This object can be accessed by:
-        
-        .. code-block:: python
-            
-            import material
-            mdb.models[name].materials[name].elastic.failStrain
-            import odbMaterial
-            session.odbs[name].materials[name].elastic.failStrain
+    This object can be accessed by:
 
-        The table data for this object are:
-            - Tensile strain limit in fiber direction, Xεt.
-            - Compressive strain limit in fiber direction, Xεc.
-            - Tensile strain limit in transverse direction, Yεt.
-            - Compressive strain limit in transverse direction, Yεc.
-            - Shear strain limit in the X–Y plane, Sε.
-            - Temperature, if the data depend on temperature.
-            - Value of the first field variable, if the data depend on field variables.
-            - Value of the second field variable.
-            - Etc.
+    .. code-block:: python
+
+        import material
+        mdb.models[name].materials[name].elastic.failStrain
+        import odbMaterial
+        session.odbs[name].materials[name].elastic.failStrain
+
+    The table data for this object are:
+        - Tensile strain limit in fiber direction, Xεt.
+        - Compressive strain limit in fiber direction, Xεc.
+        - Tensile strain limit in transverse direction, Yεt.
+        - Compressive strain limit in transverse direction, Yεc.
+        - Shear strain limit in the X–Y plane, Sε.
+        - Temperature, if the data depend on temperature.
+        - Value of the first field variable, if the data depend on field variables.
+        - Value of the second field variable.
+        - Etc.
 
     The corresponding analysis keywords are:
-        - FAIL STRAIN
+
+    - FAIL STRAIN
 
     """
 

@@ -7,25 +7,27 @@ class ConcreteCompressionDamage:
 
     Notes
     -----
-        This object can be accessed by:
+    This object can be accessed by:
+    
+    .. code-block:: python
         
-        .. code-block:: python
-            
-            import material
-            mdb.models[name].materials[name].concreteDamagedPlasticity.concreteCompressionDamage
-            import odbMaterial
-            session.odbs[name].materials[name].concreteDamagedPlasticity.concreteCompressionDamage
+        import material
+        mdb.models[name].materials[name].concreteDamagedPlasticity.concreteCompressionDamage
+        import odbMaterial
+        session.odbs[name].materials[name].concreteDamagedPlasticity.concreteCompressionDamage
 
-        The table data for this object are:
-            - Compressive damage variable, dc.
-            - Plastic (crushing) strain, ϵci⁢n.
-            - Temperature, if the data depend on temperature.
-            - Value of the first field variable, if the data depend on field variables.
-            - Value of the second field variable.
-            - Etc.
+    The table data for this object are:
+
+    - Compressive damage variable, dc.
+    - Plastic (crushing) strain, ϵci⁢n.
+    - Temperature, if the data depend on temperature.
+    - Value of the first field variable, if the data depend on field variables.
+    - Value of the second field variable.
+    - Etc.
 
     The corresponding analysis keywords are:
-        - CONCRETE COMPRESSION DAMAGE
+
+    - CONCRETE COMPRESSION DAMAGE
 
     """
 

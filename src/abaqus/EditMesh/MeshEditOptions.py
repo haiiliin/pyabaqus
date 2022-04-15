@@ -9,8 +9,11 @@ class MeshEditOptions:
 
     Notes
     -----
-        This object can be accessed by:
-            mdb.meshEditOptions
+    This object can be accessed by:
+
+    .. code-block::
+    
+        mdb.meshEditOptions
 
     """
 

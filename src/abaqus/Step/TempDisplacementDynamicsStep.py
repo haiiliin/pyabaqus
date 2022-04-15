@@ -138,7 +138,8 @@ class TempDisplacementDynamicsStep(AnalysisStep):
         mdb.models[name].steps[name]
 
     The corresponding analysis keywords are:
-        - BULK VISCOSITY
+
+    - BULK VISCOSITY
             - DYNAMIC
             - FIXED MASS SCALING
             - STEP

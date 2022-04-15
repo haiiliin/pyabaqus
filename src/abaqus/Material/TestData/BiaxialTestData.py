@@ -6,21 +6,22 @@ class BiaxialTestData:
 
     Notes
     -----
-        This object can be accessed by:
+    This object can be accessed by:
+    
+    .. code-block:: python
         
-        .. code-block:: python
-            
-            import material
-            mdb.models[name].materials[name].hyperelastic.biaxialTestData
-            mdb.models[name].materials[name].hyperfoam.biaxialTestData
-            mdb.models[name].materials[name].mullinsEffect.biaxialTests[i]
-            import odbMaterial
-            session.odbs[name].materials[name].hyperelastic.biaxialTestData
-            session.odbs[name].materials[name].hyperfoam.biaxialTestData
-            session.odbs[name].materials[name].mullinsEffect.biaxialTests[i]
+        import material
+        mdb.models[name].materials[name].hyperelastic.biaxialTestData
+        mdb.models[name].materials[name].hyperfoam.biaxialTestData
+        mdb.models[name].materials[name].mullinsEffect.biaxialTests[i]
+        import odbMaterial
+        session.odbs[name].materials[name].hyperelastic.biaxialTestData
+        session.odbs[name].materials[name].hyperfoam.biaxialTestData
+        session.odbs[name].materials[name].mullinsEffect.biaxialTests[i]
 
     The corresponding analysis keywords are:
-        - BIAXIAL TEST DATA
+
+    - BIAXIAL TEST DATA
 
     """
 

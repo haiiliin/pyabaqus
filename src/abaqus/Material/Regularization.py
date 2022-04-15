@@ -17,7 +17,8 @@ class Regularization:
         session.odbs[name].materials[name].regularization
 
     The corresponding analysis keywords are:
-        - DASHPOT
+
+    - DASHPOT
 
     """
 

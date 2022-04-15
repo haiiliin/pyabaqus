@@ -25,14 +25,14 @@ class AnalyticSurface:
 
     Notes
     -----
-        This object can be accessed by:
+    This object can be accessed by:
+    
+    .. code-block:: python
         
-        .. code-block:: python
-            
-            import odbAccess
-            session.odbs[name].parts[name].analyticSurface
-            session.odbs[name].rootAssembly.instances[name].analyticSurface
-            session.odbs[name].steps[name].frames[i].fieldOutputs[name].values[i].instance.analyticSurface
+        import odbAccess
+        session.odbs[name].parts[name].analyticSurface
+        session.odbs[name].rootAssembly.instances[name].analyticSurface
+        session.odbs[name].steps[name].frames[i].fieldOutputs[name].values[i].instance.analyticSurface
 
     """
 

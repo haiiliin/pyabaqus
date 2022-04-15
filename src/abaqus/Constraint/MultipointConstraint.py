@@ -24,7 +24,8 @@ class MultipointConstraint(Constraint):
         mdb.models[name].constraints[name]
 
     The corresponding analysis keywords are:
-        - MPC
+
+    - MPC
 
     """
 

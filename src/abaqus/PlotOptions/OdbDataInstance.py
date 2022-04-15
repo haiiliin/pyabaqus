@@ -8,12 +8,12 @@ class OdbDataInstance:
 
     Notes
     -----
-        This object can be accessed by:
+    This object can be accessed by:
+    
+    .. code-block:: python
         
-        .. code-block:: python
-            
-            import visualization
-            session.odbData[name].instances[i]
+        import visualization
+        session.odbData[name].instances[i]
 
     """
 

@@ -8,12 +8,12 @@ class ConstrainedSketcherOptions:
 
     Notes
     -----
-        This object can be accessed by:
+    This object can be accessed by:
+    
+    .. code-block:: python
         
-        .. code-block:: python
-            
-            import sketch
-            session.sketcherOptions
+        import sketch
+        session.sketcherOptions
 
     """
 

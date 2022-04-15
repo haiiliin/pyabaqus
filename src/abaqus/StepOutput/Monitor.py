@@ -14,7 +14,8 @@ class Monitor:
         mdb.models[name].steps[name].monitor
 
     The corresponding analysis keywords are:
-        - MONITOR
+
+    - MONITOR
 
     """
 

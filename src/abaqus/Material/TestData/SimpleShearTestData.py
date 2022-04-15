@@ -3,22 +3,24 @@ class SimpleShearTestData:
 
     Notes
     -----
-        This object can be accessed by:
+    This object can be accessed by:
+    
+    .. code-block:: python
         
-        .. code-block:: python
-            
-            import material
-            mdb.models[name].materials[name].hyperfoam.simpleShearTestData
-            import odbMaterial
-            session.odbs[name].materials[name].hyperfoam.simpleShearTestData
+        import material
+        mdb.models[name].materials[name].hyperfoam.simpleShearTestData
+        import odbMaterial
+        session.odbs[name].materials[name].hyperfoam.simpleShearTestData
 
-        The table data for this object are:
-            - Nominal shear stress, TS.
-            - Nominal shear strain, γ.
-            - Nominal transverse stress, TT (normal to edge with shear stress). This stress value is optional.
+    The table data for this object are:
+
+    - Nominal shear stress, TS.
+    - Nominal shear strain, γ.
+    - Nominal transverse stress, TT (normal to edge with shear stress). This stress value is optional.
 
     The corresponding analysis keywords are:
-        - SIMPLE SHEAR TEST DATA
+
+    - SIMPLE SHEAR TEST DATA
 
     """
 

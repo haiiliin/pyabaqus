@@ -16,15 +16,17 @@ class NormalBehavior:
         mdb.models[name].interactionProperties[name].normalBehavior
 
         The table data for this object are:
-        If *pressureOverclosure*=EXPONENTIAL, the table data specify the following:
+
+        - If *pressureOverclosure*=EXPONENTIAL, the table data specify the following:
             - Pressure at zero clearance, p0p0.
             - Clearance at which the contact pressure is zero, c0c0.
-        If *pressureOverclosure*=TABULAR, the table data specify the following:
+        - If *pressureOverclosure*=TABULAR, the table data specify the following:
             - Pressure.
             - Overclosure.
 
     The corresponding analysis keywords are:
-        - SURFACE BEHAVIOR
+
+    - SURFACE BEHAVIOR
 
     """
 

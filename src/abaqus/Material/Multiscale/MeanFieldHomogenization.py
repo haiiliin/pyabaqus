@@ -6,17 +6,18 @@ class MeanFieldHomogenization:
 
     Notes
     -----
-        This object can be accessed by:
-        
-        .. code-block:: python
-            
-            import material
-            mdb.models[name].materials[name].meanFieldHomogenization
-            import odbMaterial
-            session.odbs[name].materials[name].meanFieldHomogenization
+    This object can be accessed by:
+
+    .. code-block:: python
+
+        import material
+        mdb.models[name].materials[name].meanFieldHomogenization
+        import odbMaterial
+        session.odbs[name].materials[name].meanFieldHomogenization
 
     The corresponding analysis keywords are:
-        - MEAN FIELD HOMOGENIZATION
+
+    - MEAN FIELD HOMOGENIZATION
 
     """
 

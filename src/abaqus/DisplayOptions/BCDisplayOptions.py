@@ -10,9 +10,9 @@ class BCDisplayOptions:
 
     Notes
     -----
-        This object can be accessed by:
-            session.viewports[name].assemblyDisplay.bcOptions
-            session.viewports[name].layers[name].assemblyDisplay.bcOptions
+    This object can be accessed by:
+        session.viewports[name].assemblyDisplay.bcOptions
+        session.viewports[name].layers[name].assemblyDisplay.bcOptions
 
     """
 

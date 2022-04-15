@@ -3,17 +3,18 @@ class JouleHeatFraction:
 
     Notes
     -----
-        This object can be accessed by:
-        
-        .. code-block:: python
-            
-            import material
-            mdb.models[name].materials[name].jouleHeatFraction
-            import odbMaterial
-            session.odbs[name].materials[name].jouleHeatFraction
+    This object can be accessed by:
+
+    .. code-block:: python
+
+        import material
+        mdb.models[name].materials[name].jouleHeatFraction
+        import odbMaterial
+        session.odbs[name].materials[name].jouleHeatFraction
 
     The corresponding analysis keywords are:
-        - JOULE HEAT FRACTION
+
+    - JOULE HEAT FRACTION
 
     """
 

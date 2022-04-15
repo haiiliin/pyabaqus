@@ -9,14 +9,14 @@ class MullinsEffect:
 
     Notes
     -----
-        This object can be accessed by:
+    This object can be accessed by:
+    
+    .. code-block:: python
         
-        .. code-block:: python
-            
-            import material
-            mdb.models[name].materials[name].mullinsEffect
-            import odbMaterial
-            session.odbs[name].materials[name].mullinsEffect
+        import material
+        mdb.models[name].materials[name].mullinsEffect
+        import odbMaterial
+        session.odbs[name].materials[name].mullinsEffect
 
     """
 

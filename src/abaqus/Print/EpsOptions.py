@@ -10,8 +10,11 @@ class EpsOptions:
 
     Notes
     -----
-        This object can be accessed by:
-            session.epsOptions
+    This object can be accessed by:
+
+    .. code-block:: python
+    
+        session.epsOptions
 
     """
 

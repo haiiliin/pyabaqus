@@ -33,7 +33,8 @@ class ThermalConductance:
             - Etc.
 
     The corresponding analysis keywords are:
-        - GAP CONDUCTANCE
+
+    - GAP CONDUCTANCE
 
     """
 

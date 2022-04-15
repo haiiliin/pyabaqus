@@ -3,22 +3,24 @@ class LatentHeat:
 
     Notes
     -----
-        This object can be accessed by:
-        
-        .. code-block:: python
-            
-            import material
-            mdb.models[name].materials[name].latentHeat
-            import odbMaterial
-            session.odbs[name].materials[name].latentHeat
+    This object can be accessed by:
 
-        The table data for this object are:
-            - Latent heat per unit mass.
-            - Solidus temperature.
-            - Liquidus temperature.
+    .. code-block:: python
+
+        import material
+        mdb.models[name].materials[name].latentHeat
+        import odbMaterial
+        session.odbs[name].materials[name].latentHeat
+
+    The table data for this object are:
+
+    - Latent heat per unit mass.
+    - Solidus temperature.
+    - Liquidus temperature.
 
     The corresponding analysis keywords are:
-        - LATENT HEAT
+
+    - LATENT HEAT
 
     """
 

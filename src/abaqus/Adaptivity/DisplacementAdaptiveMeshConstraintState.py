@@ -73,7 +73,8 @@ class DisplacementAdaptiveMeshConstraintState(AdaptiveMeshConstraintState):
         mdb.models[name].steps[name].adaptiveMeshConstraintStates[name]
 
     The corresponding analysis keywords are:
-        - ADAPTIVE MESH CONSTRAINT
+
+    - ADAPTIVE MESH CONSTRAINT
 
     """
 

@@ -24,7 +24,8 @@ class EmbeddedRegion(Constraint):
         mdb.models[name].constraints[name]
 
     The corresponding analysis keywords are:
-        - EMBEDDED ELEMENT
+
+    - EMBEDDED ELEMENT
 
     """
 

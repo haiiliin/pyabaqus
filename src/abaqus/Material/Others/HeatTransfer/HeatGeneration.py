@@ -3,17 +3,18 @@ class HeatGeneration:
 
     Notes
     -----
-        This object can be accessed by:
-        
-        .. code-block:: python
-            
-            import material
-            mdb.models[name].materials[name].heatGeneration
-            import odbMaterial
-            session.odbs[name].materials[name].heatGeneration
+    This object can be accessed by:
+
+    .. code-block:: python
+
+        import material
+        mdb.models[name].materials[name].heatGeneration
+        import odbMaterial
+        session.odbs[name].materials[name].heatGeneration
 
     The corresponding analysis keywords are:
-        - HEAT GENERATION
+
+    - HEAT GENERATION
 
     """
 

@@ -7,24 +7,26 @@ class Trs:
 
     Notes
     -----
-        This object can be accessed by:
-        
-        .. code-block:: python
-            
-            import material
-            mdb.models[name].materials[name].viscoelastic.trs
-            mdb.models[name].materials[name].viscosity.trs
-            import odbMaterial
-            session.odbs[name].materials[name].viscoelastic.trs
-            session.odbs[name].materials[name].viscosity.trs
+    This object can be accessed by:
 
-        The table data for this object are:
-            - Reference temperature, θ0θ0.
-            - Calibration constant, C1C1.
-            - Calibration constant, C2C2.
+    .. code-block:: python
+
+        import material
+        mdb.models[name].materials[name].viscoelastic.trs
+        mdb.models[name].materials[name].viscosity.trs
+        import odbMaterial
+        session.odbs[name].materials[name].viscoelastic.trs
+        session.odbs[name].materials[name].viscosity.trs
+
+    The table data for this object are:
+
+    - Reference temperature, θ0θ0.
+    - Calibration constant, C1C1.
+    - Calibration constant, C2C2.
 
     The corresponding analysis keywords are:
-        - TRS
+
+    - TRS
 
     """
 

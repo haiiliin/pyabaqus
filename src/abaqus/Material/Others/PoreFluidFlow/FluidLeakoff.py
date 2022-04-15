@@ -7,26 +7,28 @@ class FluidLeakoff:
 
     Notes
     -----
-        This object can be accessed by:
-        
-        .. code-block:: python
-            
-            import material
-            mdb.models[name].materials[name].fluidLeakoff
-            import odbMaterial
-            session.odbs[name].materials[name].fluidLeakoff
+    This object can be accessed by:
 
-        The table data for this object are:
-        The table data specify the following:
-            - Fluid leak-off coefficient at top element surface.
-            - Fluid leak-off coefficient at bottom element surface.
-            - Temperature, if the data depend on temperature.
-            - Value of the first field variable, if the data depend on field variables.
-            - Value of the second field variable.
-            - Etc.
+    .. code-block:: python
+
+        import material
+        mdb.models[name].materials[name].fluidLeakoff
+        import odbMaterial
+        session.odbs[name].materials[name].fluidLeakoff
+
+    The table data for this object are:
+    The table data specify the following:
+
+    - Fluid leak-off coefficient at top element surface.
+    - Fluid leak-off coefficient at bottom element surface.
+    - Temperature, if the data depend on temperature.
+    - Value of the first field variable, if the data depend on field variables.
+    - Value of the second field variable.
+    - Etc.
 
     The corresponding analysis keywords are:
-        - FLUID LEAKOFF
+
+    - FLUID LEAKOFF
 
     """
 

@@ -19,12 +19,12 @@ class SelectedProbeValues:
 
     Notes
     -----
-        This object can be accessed by:
+    This object can be accessed by:
         
-        .. code-block:: python
-            
-            import visualization
-            session.selectedProbeValues
+    .. code-block:: python
+        
+        import visualization
+        session.selectedProbeValues
 
     """
 

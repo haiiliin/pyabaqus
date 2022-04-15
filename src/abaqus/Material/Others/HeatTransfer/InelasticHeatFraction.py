@@ -4,17 +4,18 @@ class InelasticHeatFraction:
 
     Notes
     -----
-        This object can be accessed by:
-        
-        .. code-block:: python
-            
-            import material
-            mdb.models[name].materials[name].inelasticHeatFraction
-            import odbMaterial
-            session.odbs[name].materials[name].inelasticHeatFraction
+    This object can be accessed by:
+
+    .. code-block:: python
+
+        import material
+        mdb.models[name].materials[name].inelasticHeatFraction
+        import odbMaterial
+        session.odbs[name].materials[name].inelasticHeatFraction
 
     The corresponding analysis keywords are:
-        - INELASTIC HEAT FRACTION
+
+    - INELASTIC HEAT FRACTION
 
     """
 

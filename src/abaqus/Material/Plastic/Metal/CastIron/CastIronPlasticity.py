@@ -8,25 +8,26 @@ class CastIronPlasticity:
 
     Notes
     -----
-        This object can be accessed by:
+    This object can be accessed by:
+    
+    .. code-block:: python
         
-        .. code-block:: python
-            
-            import material
-            mdb.models[name].materials[name].castIronPlasticity
-            import odbMaterial
-            session.odbs[name].materials[name].castIronPlasticity
+        import material
+        mdb.models[name].materials[name].castIronPlasticity
+        import odbMaterial
+        session.odbs[name].materials[name].castIronPlasticity
 
-        The table data for this object are:
-        The table data specify the following:
-            - Plastic Poisson's ratio, νp⁢l (dimensionless).
-            - Temperature, if the data depend on temperature.
-            - Value of the first field variable, if the data depend on field variables.
-            - Value of the second field variable.
-            - Etc.
+    The table data for this object are:
+    
+    - Plastic Poisson's ratio, νp⁢l (dimensionless).
+    - Temperature, if the data depend on temperature.
+    - Value of the first field variable, if the data depend on field variables.
+    - Value of the second field variable.
+    - Etc.
 
     The corresponding analysis keywords are:
-        - CAST IRON PLASTICITY
+
+    - CAST IRON PLASTICITY
 
     """
 

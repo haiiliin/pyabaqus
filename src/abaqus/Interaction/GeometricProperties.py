@@ -14,7 +14,8 @@ class GeometricProperties:
         mdb.models[name].interactionProperties[name].geometricProperties
 
     The corresponding analysis keywords are:
-        - SURFACE INTERACTION
+
+    - SURFACE INTERACTION
 
     """
 

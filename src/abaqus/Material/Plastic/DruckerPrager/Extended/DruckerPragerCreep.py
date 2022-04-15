@@ -6,36 +6,38 @@ class DruckerPragerCreep:
 
     Notes
     -----
-        This object can be accessed by:
+    This object can be accessed by:
+    
+    .. code-block:: python
         
-        .. code-block:: python
-            
-            import material
-            mdb.models[name].materials[name].druckerPrager.druckerPragerCreep
-            import odbMaterial
-            session.odbs[name].materials[name].druckerPrager.druckerPragerCreep
+        import material
+        mdb.models[name].materials[name].druckerPrager.druckerPragerCreep
+        import odbMaterial
+        session.odbs[name].materials[name].druckerPrager.druckerPragerCreep
 
-        The table data for this object are:
-        If *law*=TIME or *law*=STRAIN, the table data specify the following:
-            - AA. (Units of F-nL2nT−1−m.)
-            - n.
-            - m.
-            - Temperature, if the data depend on temperature.
-            - Value of the first field variable, if the data depend on field variables.
-            - Value of the second field variable.
-            - Etc.
-        If *law*=SINGHM, the table data specify the following:
-            - A. (Units of T−1.)
-            - α. (Units of F−1L2.)
-            - m.
-            - t1. (Units of T.)
-            - Temperature, if the data depend on temperature.
-            - Value of the first field variable, if the data depend on field variables.
-            - Value of the second field variable.
-            - Etc.
+    The table data for this object are:
+
+    - If *law*=TIME or *law*=STRAIN, the table data specify the following:
+        - AA. (Units of F-nL2nT−1−m.)
+        - n.
+        - m.
+        - Temperature, if the data depend on temperature.
+        - Value of the first field variable, if the data depend on field variables.
+        - Value of the second field variable.
+        - Etc.
+    - If *law*=SINGHM, the table data specify the following:
+        - A. (Units of T−1.)
+        - α. (Units of F−1L2.)
+        - m.
+        - t1. (Units of T.)
+        - Temperature, if the data depend on temperature.
+        - Value of the first field variable, if the data depend on field variables.
+        - Value of the second field variable.
+        - Etc.
 
     The corresponding analysis keywords are:
-        - DRUCKER PRAGER CREEP
+
+    - DRUCKER PRAGER CREEP
 
     """
 

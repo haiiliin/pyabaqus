@@ -8,38 +8,40 @@ class Permeability:
 
     Notes
     -----
-        This object can be accessed by:
-        
-        .. code-block:: python
-            
-            import material
-            mdb.models[name].materials[name].permeability
-            import odbMaterial
-            session.odbs[name].materials[name].permeability
+    This object can be accessed by:
 
-        The table data for this object are:
-        If *type*=ISOTROPIC, the table data specify the following:
-            - k.
-            - Void ratio, e.
-            - Temperature, if the data depend on temperature.
-        If *type*=ORTHOTROPIC, the table data specify the following:
-            - k11.
-            - k22.
-            - k33.
-            - Void ratio, e.
-            - Temperature, if the data depend on temperature.
-        If *type*=ANISOTROPIC, the table data specify the following:
-            - k11.
-            - k12.
-            - k22.
-            - k13.
-            - k23.
-            - k33.
-            - Void ratio, e.
-            - Temperature, if the data depend on temperature.
+    .. code-block:: python
+
+        import material
+        mdb.models[name].materials[name].permeability
+        import odbMaterial
+        session.odbs[name].materials[name].permeability
+
+    The table data for this object are:
+
+    - If *type*=ISOTROPIC, the table data specify the following:
+        - k.
+        - Void ratio, e.
+        - Temperature, if the data depend on temperature.
+    - If *type*=ORTHOTROPIC, the table data specify the following:
+        - k11.
+        - k22.
+        - k33.
+        - Void ratio, e.
+        - Temperature, if the data depend on temperature.
+    - If *type*=ANISOTROPIC, the table data specify the following:
+        - k11.
+        - k12.
+        - k22.
+        - k13.
+        - k23.
+        - k33.
+        - Void ratio, e.
+        - Temperature, if the data depend on temperature.
 
     The corresponding analysis keywords are:
-        - PERMEABILITY
+
+    - PERMEABILITY
 
     """
 

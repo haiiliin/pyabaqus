@@ -14,7 +14,8 @@ class BaselineCorrection:
         session.odbs[name].amplitudes[name].baselineCorrection
 
     The corresponding analysis keywords are:
-        - BASELINE CORRECTION
+
+    - BASELINE CORRECTION
 
     """
 

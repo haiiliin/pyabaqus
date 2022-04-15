@@ -17,7 +17,8 @@ class SectionLayer:
         session.odbs[name].sections[name].layup[i]
 
     The corresponding analysis keywords are:
-        - SHELL SECTION
+
+    - SHELL SECTION
             - SHELL GENERAL SECTION
 
     """

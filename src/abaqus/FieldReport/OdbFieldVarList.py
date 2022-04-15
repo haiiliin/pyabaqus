@@ -6,13 +6,13 @@ class OdbFieldVarList(list[str]):
 
     Notes
     -----
-        This object can be accessed by:
+    This object can be accessed by:
+    
+    .. code-block:: python
         
-        .. code-block:: python
-            
-            import visualization
-            session.viewports[name].layers[name].odbDisplay.fieldVariables
-            session.viewports[name].odbDisplay.fieldVariables
+        import visualization
+        session.viewports[name].layers[name].odbDisplay.fieldVariables
+        session.viewports[name].odbDisplay.fieldVariables
 
     """
     pass

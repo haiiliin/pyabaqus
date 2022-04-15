@@ -4,27 +4,29 @@ class CombinedTestData:
 
     Notes
     -----
-        This object can be accessed by:
+    This object can be accessed by:
+    
+    .. code-block:: python
         
-        .. code-block:: python
-            
-            import material
-            mdb.models[name].materials[name].viscoelastic.combinedTestData
-            import odbMaterial
-            session.odbs[name].materials[name].viscoelastic.combinedTestData
+        import material
+        mdb.models[name].materials[name].viscoelastic.combinedTestData
+        import odbMaterial
+        session.odbs[name].materials[name].viscoelastic.combinedTestData
 
-        The table data for this object are:
-        If *time*=RELAXATION_TEST_DATA, the table data specify the following:
-            - Normalized shear modulus, gR⁢(t) (0≤gR(t)≤1).
-            - Normalized volumetric (bulk) modulus, kR⁢(t) (0≤kR(t)≤1).
-            - Time t (t>0).
-        If *time*=CREEP_TEST_DATA, the table data specify the following:
-            - Normalized shear compliance, jS(t)(jS(t)≥1).
-            - Normalized volumetric (bulk) compliance, jK⁢(t) (jK(t)≥1)
-            - Time t (t>0)
+    The table data for this object are:
+    
+    If *time*=RELAXATION_TEST_DATA, the table data specify the following:
+        - Normalized shear modulus, gR⁢(t) (0≤gR(t)≤1).
+        - Normalized volumetric (bulk) modulus, kR⁢(t) (0≤kR(t)≤1).
+        - Time t (t>0).
+    If *time*=CREEP_TEST_DATA, the table data specify the following:
+        - Normalized shear compliance, jS(t)(jS(t)≥1).
+        - Normalized volumetric (bulk) compliance, jK⁢(t) (jK(t)≥1)
+        - Time t (t>0)
 
     The corresponding analysis keywords are:
-        - COMBINED TEST DATA
+
+    - COMBINED TEST DATA
 
     """
 

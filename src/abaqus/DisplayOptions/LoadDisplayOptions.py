@@ -10,9 +10,12 @@ class LoadDisplayOptions:
 
     Notes
     -----
-        This object can be accessed by:
-            session.viewports[name].assemblyDisplay.loadOptions
-            session.viewports[name].layers[name].assemblyDisplay.loadOptions
+    This object can be accessed by:
+
+    .. code-block::
+    
+        session.viewports[name].assemblyDisplay.loadOptions
+        session.viewports[name].layers[name].assemblyDisplay.loadOptions
 
     """
 

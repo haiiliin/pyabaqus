@@ -10,9 +10,9 @@ class GeometricRestrictionDisplayOptions:
 
     Notes
     -----
-        This object can be accessed by:
-            session.viewports[name].assemblyDisplay.geometricRestrictionOptions
-            session.viewports[name].layers[name].assemblyDisplay.geometricRestrictionOptions
+    This object can be accessed by:
+        session.viewports[name].assemblyDisplay.geometricRestrictionOptions
+        session.viewports[name].layers[name].assemblyDisplay.geometricRestrictionOptions
 
     """
 

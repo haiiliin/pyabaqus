@@ -25,7 +25,8 @@ class TableCollection:
         mdb.models[name].tableCollections[name]
 
     The corresponding analysis keywords are:
-        - *TABLE COLLECTION
+
+    - *TABLE COLLECTION
 
     """
 

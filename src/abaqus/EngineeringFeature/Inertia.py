@@ -14,14 +14,14 @@ class Inertia:
 
     Notes
     -----
-        This object can be accessed by:
+    This object can be accessed by:
+    
+    .. code-block:: python
         
-        .. code-block:: python
-            
-            import part
-            mdb.models[name].parts[name].engineeringFeatures.inertias[name]
-            import assembly
-            mdb.models[name].rootAssembly.engineeringFeatures.inertias[name]
+        import part
+        mdb.models[name].parts[name].engineeringFeatures.inertias[name]
+        import assembly
+        mdb.models[name].rootAssembly.engineeringFeatures.inertias[name]
 
     """
 

@@ -7,32 +7,34 @@ class TensionStiffening:
 
     Notes
     -----
-        This object can be accessed by:
+    This object can be accessed by:
+    
+    .. code-block:: python
         
-        .. code-block:: python
-            
-            import material
-            mdb.models[name].materials[name].concrete.tensionStiffening
-            import odbMaterial
-            session.odbs[name].materials[name].concrete.tensionStiffening
+        import material
+        mdb.models[name].materials[name].concrete.tensionStiffening
+        import odbMaterial
+        session.odbs[name].materials[name].concrete.tensionStiffening
 
-        The table data for this object are:
-        If *type*=STRAIN, the table data specify the following:
-            - Fraction of remaining stress to stress at cracking.
-            - Absolute value of the direct strain minus the direct strain at cracking.
-            - Temperature, if the data depend on temperature.
-            - Value of the first field variable, if the data depend on field variables.
-            - Value of the second field variable.
-            - Etc.
-        If *type*=DISPLACEMENT, the table data specify the following:
-            - Displacement, u0u0, at which a linear loss of strength after cracking gives zero stress.
-            - Temperature, if the data depend on temperature.
-            - Value of the first field variable, if the data depend on field variables.
-            - Value of the second field variable.
-            - Etc.
+    The table data for this object are:
+    
+    - If *type*=STRAIN, the table data specify the following:
+        - Fraction of remaining stress to stress at cracking.
+        - Absolute value of the direct strain minus the direct strain at cracking.
+        - Temperature, if the data depend on temperature.
+        - Value of the first field variable, if the data depend on field variables.
+        - Value of the second field variable.
+        - Etc.
+    - If *type*=DISPLACEMENT, the table data specify the following:
+        - Displacement, u0u0, at which a linear loss of strength after cracking gives zero stress.
+        - Temperature, if the data depend on temperature.
+        - Value of the first field variable, if the data depend on field variables.
+        - Value of the second field variable.
+        - Etc.
 
     The corresponding analysis keywords are:
-        - TENSION STIFFENING
+
+    - TENSION STIFFENING
 
     """
 

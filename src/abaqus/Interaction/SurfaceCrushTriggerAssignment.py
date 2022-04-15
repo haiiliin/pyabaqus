@@ -10,15 +10,16 @@ class SurfaceCrushTriggerAssignment:
 
     Notes
     -----
-        This object can be accessed by:
+    This object can be accessed by:
+    
+    .. code-block:: python
         
-        .. code-block:: python
-            
-            import interaction
-            mdb.models[name].interactions[name].surfaceCrushTriggerAssignments
+        import interaction
+        mdb.models[name].interactions[name].surfaceCrushTriggerAssignments
 
     The corresponding analysis keywords are:
-        - SURFACE PROPERTY ASSIGNMENT
+
+    - SURFACE PROPERTY ASSIGNMENT
 
     """
 

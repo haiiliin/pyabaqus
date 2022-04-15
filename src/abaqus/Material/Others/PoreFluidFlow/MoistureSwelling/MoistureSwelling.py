@@ -6,21 +6,23 @@ class MoistureSwelling:
 
     Notes
     -----
-        This object can be accessed by:
-        
-        .. code-block:: python
-            
-            import material
-            mdb.models[name].materials[name].moistureSwelling
-            import odbMaterial
-            session.odbs[name].materials[name].moistureSwelling
+    This object can be accessed by:
 
-        The table data for this object are:
-            - Volumetric moisture swelling strain, εm⁢s.
-            - Saturation, s. This value must lie in the range 0≤s≤1.0.
+    .. code-block:: python
+
+        import material
+        mdb.models[name].materials[name].moistureSwelling
+        import odbMaterial
+        session.odbs[name].materials[name].moistureSwelling
+
+    The table data for this object are:
+
+    - Volumetric moisture swelling strain, εm⁢s.
+    - Saturation, s. This value must lie in the range 0≤s≤1.0.
 
     The corresponding analysis keywords are:
-        - MOISTURE SWELLING
+
+    - MOISTURE SWELLING
 
     """
 

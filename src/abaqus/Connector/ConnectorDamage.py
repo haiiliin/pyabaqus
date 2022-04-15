@@ -92,7 +92,8 @@ class ConnectorDamage(ConnectorBehaviorOption):
             - Etc.
 
     The corresponding analysis keywords are:
-        - CONNECTOR DAMAGE INITIATION
+
+    - CONNECTOR DAMAGE INITIATION
 
     """
 

@@ -6,24 +6,25 @@ class MeanFieldInclusion:
 
     Notes
     -----
-        This object can be accessed by:
+    This object can be accessed by:
         
-        .. code-block:: python
-            
-            import material
-            mdb.models[name].materials[name].constituents[name]
-            import odbMaterial
-            session.odbs[name].materials[name].constituents[name]
+    .. code-block:: python
 
-        The table data for this object are:
-        The table data specify the following:
-            - Volume fraction.
-            - Aspect ratio.
-            - Components of the direction vector defined in the local coordinate system when *direction*=FIXED. Components of the second-order orientation tensor in the local coordinate system when *direction*=ORIENTATION_TENSOR.
-            - Etc.
+        import material
+        mdb.models[name].materials[name].constituents[name]
+        import odbMaterial
+        session.odbs[name].materials[name].constituents[name]
+
+    The table data for this object are:
+
+    - Volume fraction.
+    - Aspect ratio.
+    - Components of the direction vector defined in the local coordinate system when *direction*=FIXED. Components of the second-order orientation tensor in the local coordinate system when *direction*=ORIENTATION_TENSOR.
+    - Etc.
 
     The corresponding analysis keywords are:
-        - CONSTITUENT
+
+    - CONSTITUENT
 
     """
 

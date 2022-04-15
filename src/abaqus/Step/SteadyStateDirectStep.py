@@ -125,7 +125,8 @@ class SteadyStateDirectStep(AnalysisStep):
         mdb.models[name].steps[name]
 
     The corresponding analysis keywords are:
-        - STEADY STATE DYNAMICS
+
+    - STEADY STATE DYNAMICS
             - STEP
 
     """

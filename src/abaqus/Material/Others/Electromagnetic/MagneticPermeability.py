@@ -6,61 +6,63 @@ class MagneticPermeability:
 
     Notes
     -----
-        This object can be accessed by:
-        
-        .. code-block:: python
-            
-            import material
-            mdb.models[name].materials[name].magneticPermeability
-            import odbMaterial
-            session.odbs[name].materials[name].magneticPermeability
+    This object can be accessed by:
 
-        The table data for this object are:
-        If *type*=ISOTROPIC, the table data specify the following:
-            - Magnetic permeability.
-            - Frequency, if the data depend on frequency.
-            - Temperature, if the data depend on temperature.
-            - Value of the first field variable, if the data depend on field variables.
-            - Value of the second field variable.
-            - Etc.
-        If *type*=ISOTROPIC, and *nonlinearBH*=TRUE, the table data specify the following:
-            - Magntitude of the magnetic flux density vector.
-            - Magnitude of the magnetic field vector.
-            - Temperature, if the data depend on temperature.
-            - Value of the first field variable, if the data depend on field variables.
-            - Value of the second field variable.
-            - Etc.
-        If *type*=ORTHOTROPIC, the table data specify the following:
-            - μ11E.
-            - μ22E.
-            - μ33E.
-            - Frequency, if the data depend on frequency.
-            - Temperature, if the data depend on temperature.
-            - Value of the first field variable, if the data depend on field variables.
-            - Value of the second field variable.
-            - Etc.
-        If *type*=ORTHOTROPIC, and *nonlinearBH*=TRUE, the table data specify the following:
-            - Magntitude of the magnetic flux density vector in the first direction.
-            - Magnitude of the magnetic field vector in the second direction.
-            - Temperature, if the data depend on temperature.
-            - Value of the first field variable, if the data depend on field variables.
-            - Value of the second field variable.
-            - Etc.
-        If *type*=ANISOTROPIC, the table data specify the following:
-            - μ11E.
-            - μ12E.
-            - μ22E.
-            - μ13E.
-            - μ23E.
-            - μ33E.
-            - Frequency, if the data depend on frequency.
-            - Temperature, if the data depend on temperature.
-            - Value of the first field variable, if the data depend on field variables.
-            - Value of the second field variable.
-            - Etc.
+    .. code-block:: python
+
+        import material
+        mdb.models[name].materials[name].magneticPermeability
+        import odbMaterial
+        session.odbs[name].materials[name].magneticPermeability
+
+    The table data for this object are:
+
+    - If *type*=ISOTROPIC, the table data specify the following:
+        - Magnetic permeability.
+        - Frequency, if the data depend on frequency.
+        - Temperature, if the data depend on temperature.
+        - Value of the first field variable, if the data depend on field variables.
+        - Value of the second field variable.
+        - Etc.
+    - If *type*=ISOTROPIC, and *nonlinearBH*=TRUE, the table data specify the following:
+        - Magntitude of the magnetic flux density vector.
+        - Magnitude of the magnetic field vector.
+        - Temperature, if the data depend on temperature.
+        - Value of the first field variable, if the data depend on field variables.
+        - Value of the second field variable.
+        - Etc.
+    - If *type*=ORTHOTROPIC, the table data specify the following:
+        - μ11E.
+        - μ22E.
+        - μ33E.
+        - Frequency, if the data depend on frequency.
+        - Temperature, if the data depend on temperature.
+        - Value of the first field variable, if the data depend on field variables.
+        - Value of the second field variable.
+        - Etc.
+    - If *type*=ORTHOTROPIC, and *nonlinearBH*=TRUE, the table data specify the following:
+        - Magntitude of the magnetic flux density vector in the first direction.
+        - Magnitude of the magnetic field vector in the second direction.
+        - Temperature, if the data depend on temperature.
+        - Value of the first field variable, if the data depend on field variables.
+        - Value of the second field variable.
+        - Etc.
+    - If *type*=ANISOTROPIC, the table data specify the following:
+        - μ11E.
+        - μ12E.
+        - μ22E.
+        - μ13E.
+        - μ23E.
+        - μ33E.
+        - Frequency, if the data depend on frequency.
+        - Temperature, if the data depend on temperature.
+        - Value of the first field variable, if the data depend on field variables.
+        - Value of the second field variable.
+        - Etc.
 
     The corresponding analysis keywords are:
-        - MAGNETIC PERMEABILITY
+
+    - MAGNETIC PERMEABILITY
 
     """
 

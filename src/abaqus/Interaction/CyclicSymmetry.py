@@ -17,7 +17,8 @@ class CyclicSymmetry(Interaction):
         mdb.models[name].interactions[name]
 
     The corresponding analysis keywords are:
-        - CLOAD
+
+    - CLOAD
             - CYCLIC SYMMETRY MODEL
             - DLOAD
             - DSLOAD

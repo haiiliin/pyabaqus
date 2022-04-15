@@ -18,25 +18,27 @@ class FluidInflatorProperty(ContactProperty):
         mdb.models[name].interactionProperties[name]
 
         The table data for this object are:
-        If *definition*=DUAL PRESSURE, the table data specify the following:
+
+        - If *definition*=DUAL PRESSURE, the table data specify the following:
             - Inflation time.
             - Inflator pressure.
             - Tank pressure.
-        If *definition*=PRESSURE AND MASS, the table data specify the following:
+        - If *definition*=PRESSURE AND MASS, the table data specify the following:
             - Inflation time.
             - Inflator pressure.
             - Inflator mass flow rate.
-        If *definition*=TANK TEST, the table data specify the following:
+        - If *definition*=TANK TEST, the table data specify the following:
             - Inflation time.
             - Inflator gas temperature.
             - Tank pressure.
-        If *definition*=TEMPERATURE AND MASS, the table data specify the following:
+        - If *definition*=TEMPERATURE AND MASS, the table data specify the following:
             - Inflation time.
             - Inflator gas temperature.
             - Inflator mass flow rate.
 
     The corresponding analysis keywords are:
-        - FLUID INFLATOR PROPERTY
+
+    - FLUID INFLATOR PROPERTY
 
     """
 

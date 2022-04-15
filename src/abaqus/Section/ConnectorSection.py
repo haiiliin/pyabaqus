@@ -19,7 +19,8 @@ class ConnectorSection(Section):
         session.odbs[name].sections[name]
 
     The corresponding analysis keywords are:
-        - CONNECTOR SECTION
+
+    - CONNECTOR SECTION
             - CONNECTOR BEHAVIOR
             - CONNECTOR CONSTITUTIVE REFERENCE
 

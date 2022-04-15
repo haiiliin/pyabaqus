@@ -7,25 +7,28 @@ class Viscosity:
 
     Notes
     -----
-        This object can be accessed by:
-        
-        .. code-block:: python
-            
-            import material
-            mdb.models[name].materials[name].viscosity
-            import odbMaterial
-            session.odbs[name].materials[name].viscosity
+    This object can be accessed by:
 
-        The table data for this object are:
-        If *type*=NEWTONIAN, the table data specify the following:
-            - Viscosity, k.
-            - Temperature, if the data depend on temperature.
-            - Value of the first field variable, if the data depend on field variables.
-            - Value of the second field variable.
-            - Etc.
+    .. code-block:: python
+
+        import material
+        mdb.models[name].materials[name].viscosity
+        import odbMaterial
+        session.odbs[name].materials[name].viscosity
+
+    The table data for this object are:
+    
+    - If *type*=NEWTONIAN, the table data specify the following:
+
+        - Viscosity, k.
+        - Temperature, if the data depend on temperature.
+        - Value of the first field variable, if the data depend on field variables.
+        - Value of the second field variable.
+        - Etc.
 
     The corresponding analysis keywords are:
-        - VISCOSITY
+
+    - VISCOSITY
 
     """
 

@@ -3,17 +3,18 @@ class UserDefinedField:
 
     Notes
     -----
-        This object can be accessed by:
-        
-        .. code-block:: python
-            
-            import material
-            mdb.models[name].materials[name].userDefinedField
-            import odbMaterial
-            session.odbs[name].materials[name].userDefinedField
+    This object can be accessed by:
+
+    .. code-block:: python
+
+        import material
+        mdb.models[name].materials[name].userDefinedField
+        import odbMaterial
+        session.odbs[name].materials[name].userDefinedField
 
     The corresponding analysis keywords are:
-        - USER DEFINED FIELD
+
+    - USER DEFINED FIELD
 
     """
 

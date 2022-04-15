@@ -26,7 +26,8 @@ class SpringDashpotToGround(SpringDashpot):
         mdb.models[name].rootAssembly.engineeringFeatures.springDashpots[name]
 
     The corresponding analysis keywords are:
-        - ELEMENT
+
+    - ELEMENT
             - SPRING
             - DASHPOT
 

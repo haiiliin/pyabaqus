@@ -17,12 +17,12 @@ class IMARegion:
 
     Notes
     -----
-        This object can be accessed by:
+    This object can be accessed by:
+    
+    .. code-block:: python
         
-        .. code-block:: python
-            
-            import load
-            mdb.models[name].predefinedFields[name].assignmentList
+        import load
+        mdb.models[name].predefinedFields[name].assignmentList
 
     """
 

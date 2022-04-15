@@ -4,12 +4,12 @@ class OdbAnalysisWarning:
 
     Notes
     -----
-        This object can be accessed by:
+    This object can be accessed by:
+    
+    .. code-block:: python
         
-        .. code-block:: python
-            
-            import visualization
-            session.odbData[name].diagnosticData.analysisWarnings[i]
+        import visualization
+        session.odbData[name].diagnosticData.analysisWarnings[i]
 
     """
     pass

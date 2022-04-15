@@ -14,7 +14,7 @@ class AbaqusNDarray:
 
     Notes
     -----
-        This object can be accessed by:
+    This object can be accessed by:
 
     """
     pass

@@ -28,7 +28,8 @@ class FieldOutputRequest:
         mdb.models[name].fieldOutputRequests[name]
 
     The corresponding analysis keywords are:
-        - CONTACT OUTPUT
+
+    - CONTACT OUTPUT
             - ELEMENT OUTPUT
             - ENERGY OUTPUT
             - INCREMENTATION OUTPUT

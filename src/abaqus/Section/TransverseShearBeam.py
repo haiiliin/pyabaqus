@@ -18,7 +18,8 @@ class TransverseShearBeam:
         session.odbs[name].sections[name].beamTransverseShear
 
     The corresponding analysis keywords are:
-        - TRANSVERSE SHEAR STIFFNESS
+
+    - TRANSVERSE SHEAR STIFFNESS
 
     """
 

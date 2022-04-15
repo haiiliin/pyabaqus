@@ -33,7 +33,8 @@ class HistoryOutputRequest:
         mdb.models[name].historyOutputRequests[name]
 
     The corresponding analysis keywords are:
-        - CONTACT OUTPUT
+
+    - CONTACT OUTPUT
             - ELEMENT OUTPUT
             - ENERGY OUTPUT
             - INCREMENTATION OUTPUT

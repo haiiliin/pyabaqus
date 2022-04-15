@@ -18,7 +18,8 @@ class CohesiveSection(Section):
         session.odbs[name].sections[name]
 
     The corresponding analysis keywords are:
-        - COHESIVE SECTION
+
+    - COHESIVE SECTION
 
     """
 

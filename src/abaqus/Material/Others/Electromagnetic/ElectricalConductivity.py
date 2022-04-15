@@ -6,47 +6,49 @@ class ElectricalConductivity:
 
     Notes
     -----
-        This object can be accessed by:
-        
-        .. code-block:: python
-            
-            import material
-            mdb.models[name].materials[name].electricalConductivity
-            import odbMaterial
-            session.odbs[name].materials[name].electricalConductivity
+    This object can be accessed by:
 
-        The table data for this object are:
-        If *type*=ISOTROPIC, the table data specify the following:
-            - Electrical conductivity.
-            - Frequency, if the data depend on frequency.
-            - Temperature, if the data depend on temperature.
-            - Value of the first field variable, if the data depend on field variables.
-            - Value of the second field variable.
-            - Etc.
-        If *type*=ORTHOTROPIC, the table data specify the following:
-            - σE1E.
-            - σE2E.
-            - σE3E.
-            - Frequency, if the data depend on frequency.
-            - Temperature, if the data depend on temperature.
-            - Value of the first field variable, if the data depend on field variables.
-            - Value of the second field variable.
-            - Etc.
-        If *type*=ANISOTROPIC, the table data specify the following:
-            - σ11E.
-            - σ12E.
-            - σE2E.
-            - σE3E.
-            - σE3E.
-            - σE3E.
-            - Frequency, if the data depend on frequency.
-            - Temperature, if the data depend on temperature.
-            - Value of the first field variable, if the data depend on field variables.
-            - Value of the second field variable.
-            - Etc.
+    .. code-block:: python
+
+        import material
+        mdb.models[name].materials[name].electricalConductivity
+        import odbMaterial
+        session.odbs[name].materials[name].electricalConductivity
+
+    The table data for this object are:
+
+    - If *type*=ISOTROPIC, the table data specify the following:
+        - Electrical conductivity.
+        - Frequency, if the data depend on frequency.
+        - Temperature, if the data depend on temperature.
+        - Value of the first field variable, if the data depend on field variables.
+        - Value of the second field variable.
+        - Etc.
+    - If *type*=ORTHOTROPIC, the table data specify the following:
+        - σE1E.
+        - σE2E.
+        - σE3E.
+        - Frequency, if the data depend on frequency.
+        - Temperature, if the data depend on temperature.
+        - Value of the first field variable, if the data depend on field variables.
+        - Value of the second field variable.
+        - Etc.
+    - If *type*=ANISOTROPIC, the table data specify the following:
+        - σ11E.
+        - σ12E.
+        - σE2E.
+        - σE3E.
+        - σE3E.
+        - σE3E.
+        - Frequency, if the data depend on frequency.
+        - Temperature, if the data depend on temperature.
+        - Value of the first field variable, if the data depend on field variables.
+        - Value of the second field variable.
+        - Etc.
 
     The corresponding analysis keywords are:
-        - ELECTRICAL CONDUCTIVITY
+
+    - ELECTRICAL CONDUCTIVITY
 
     """
 

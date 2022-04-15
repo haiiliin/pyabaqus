@@ -6,45 +6,47 @@ class CapCreepCohesion:
 
     Notes
     -----
-        This object can be accessed by:
+    This object can be accessed by:
+    
+    .. code-block:: python
         
-        .. code-block:: python
-            
-            import material
-            mdb.models[name].materials[name].capPlasticity.capCreepCohesion
-            import odbMaterial
-            session.odbs[name].materials[name].capPlasticity.capCreepCohesion
+        import material
+        mdb.models[name].materials[name].capPlasticity.capCreepCohesion
+        import odbMaterial
+        session.odbs[name].materials[name].capPlasticity.capCreepCohesion
 
-        The table data for this object are:
-        If *law*=STRAIN or *law*=TIME, the table data specify the following:
-            - A.
-            - n.
-            - m.
-            - Temperature, if the data depend on temperature.
-            - Value of the first field variable, if the data depend on field variables.
-            - Value of the second field variable.
-            - Etc.
-        If *law*=SINGHM, the table data specify the following:
-            - A.
-            - α.
-            - m.
-            - t1.
-            - Temperature, if the data depend on temperature.
-            - Value of the first field variable, if the data depend on field variables.
-            - Value of the second field variable.
-            - Etc.
-        If *law*=POWER_LAW or *law*=TIME_POWER_LAW, the table data specify the following:
-            - q0.
-            - n.
-            - m.
-            - ε0.
-            - Temperature, if the data depend on temperature.
-            - Value of the first field variable, if the data depend on field variables.
-            - Value of the second field variable.
-            - Etc.
+    The table data for this object are:
+
+    - If *law*=STRAIN or *law*=TIME, the table data specify the following:
+        - A.
+        - n.
+        - m.
+        - Temperature, if the data depend on temperature.
+        - Value of the first field variable, if the data depend on field variables.
+        - Value of the second field variable.
+        - Etc.
+    - If *law*=SINGHM, the table data specify the following:
+        - A.
+        - α.
+        - m.
+        - t1.
+        - Temperature, if the data depend on temperature.
+        - Value of the first field variable, if the data depend on field variables.
+        - Value of the second field variable.
+        - Etc.
+    - If *law*=POWER_LAW or *law*=TIME_POWER_LAW, the table data specify the following:
+        - q0.
+        - n.
+        - m.
+        - ε0.
+        - Temperature, if the data depend on temperature.
+        - Value of the first field variable, if the data depend on field variables.
+        - Value of the second field variable.
+        - Etc.
 
     The corresponding analysis keywords are:
-        - CAP CREEP
+
+    - CAP CREEP
 
     """
 

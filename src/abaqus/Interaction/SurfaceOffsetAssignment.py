@@ -10,15 +10,16 @@ class SurfaceOffsetAssignment:
 
     Notes
     -----
-        This object can be accessed by:
+    This object can be accessed by:
+    
+    .. code-block:: python
         
-        .. code-block:: python
-            
-            import interaction
-            mdb.models[name].interactions[name].surfaceOffsetAssignments
+        import interaction
+        mdb.models[name].interactions[name].surfaceOffsetAssignments
 
     The corresponding analysis keywords are:
-        - SURFACE PROPERTY ASSIGNMENT
+
+    - SURFACE PROPERTY ASSIGNMENT
 
     """
 

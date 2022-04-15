@@ -7,33 +7,35 @@ class BrittleShear:
 
     Notes
     -----
-        This object can be accessed by:
+    This object can be accessed by:
+    
+    .. code-block:: python
         
-        .. code-block:: python
-            
-            import material
-            mdb.models[name].materials[name].brittleCracking.brittleShear
-            import odbMaterial
-            session.odbs[name].materials[name].brittleCracking.brittleShear
+        import material
+        mdb.models[name].materials[name].brittleCracking.brittleShear
+        import odbMaterial
+        session.odbs[name].materials[name].brittleCracking.brittleShear
 
-        The table data for this object are:
-        If *type*=RETENTION_FACTOR the table data specify the following:
-            - Shear retention factor.
-            - Crack opening strain.
-            - Temperature, if the data depend on temperature.
-            - Value of the first field variable, if the data depend on field variables.
-            - Value of the second field variable.
-            - Etc.
-        If *type*=POWER_LAW the table data specify the following:
-            - e.
-            - p.
-            - Temperature, if the data depend on temperature.
-            - Value of the first field variable, if the data depend on field variables.
-            - Value of the second field variable.
-            - Etc.
+    The table data for this object are:
+    
+    - If *type*=RETENTION_FACTOR the table data specify the following:
+        - Shear retention factor.
+        - Crack opening strain.
+        - Temperature, if the data depend on temperature.
+        - Value of the first field variable, if the data depend on field variables.
+        - Value of the second field variable.
+        - Etc.
+    - If *type*=POWER_LAW the table data specify the following:
+        - e.
+        - p.
+        - Temperature, if the data depend on temperature.
+        - Value of the first field variable, if the data depend on field variables.
+        - Value of the second field variable.
+        - Etc.
 
     The corresponding analysis keywords are:
-        - BRITTLE SHEAR
+
+    - BRITTLE SHEAR
 
     """
 

@@ -51,9 +51,12 @@ class LightOptions:
 
     Notes
     -----
-        This object can be accessed by:
-            session.defaultLightOptions
-            session.viewports[name].lightOptions
+    This object can be accessed by:
+
+    .. code-block::
+    
+        session.defaultLightOptions
+        session.viewports[name].lightOptions
 
     """
 

@@ -8,26 +8,27 @@ class MohrCoulombPlasticity:
 
     Notes
     -----
-        This object can be accessed by:
+    This object can be accessed by:
+    
+    .. code-block:: python
         
-        .. code-block:: python
-            
-            import material
-            mdb.models[name].materials[name].mohrCoulombPlasticity
-            import odbMaterial
-            session.odbs[name].materials[name].mohrCoulombPlasticity
+        import material
+        mdb.models[name].materials[name].mohrCoulombPlasticity
+        import odbMaterial
+        session.odbs[name].materials[name].mohrCoulombPlasticity
 
-        The table data for this object are:
-        The table data specify the following:
-            - Friction angle (given in degrees), ϕ, at high confining pressure in the p–Rm⁢c⁢q plane.
-            - Dilation angle, ψ, at high confining pressure in the p–Rm⁢w⁢q plane.
-            - Temperature, if the data depend on temperature.
-            - Value of the first field variable, if the data depend on field variables.
-            - Value of the second field variable.
-            - Etc.
+    The table data for this object are:
+
+    - Friction angle (given in degrees), ϕ, at high confining pressure in the p–Rm⁢c⁢q plane.
+    - Dilation angle, ψ, at high confining pressure in the p–Rm⁢w⁢q plane.
+    - Temperature, if the data depend on temperature.
+    - Value of the first field variable, if the data depend on field variables.
+    - Value of the second field variable.
+    - Etc.
 
     The corresponding analysis keywords are:
-        - MOHR COULOMB
+
+    - MOHR COULOMB
 
     """
 

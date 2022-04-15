@@ -19,7 +19,8 @@ class PsdDefinition(Amplitude):
         session.odbs[name].amplitudes[name]
 
     The corresponding analysis keywords are:
-        - PSD-DEFINITION
+
+    - PSD-DEFINITION
 
     """
 

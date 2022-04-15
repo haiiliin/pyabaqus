@@ -7,30 +7,31 @@ class SuperElasticity:
 
     Notes
     -----
-        This object can be accessed by:
-        
-        .. code-block:: python
-            
-            import material
-            mdb.models[name].materials[name].superElasticity
-            import odbMaterial
-            session.odbs[name].materials[name].superElasticity
+    This object can be accessed by:
 
-        The table data for this object are:
-            - Young's Modulus (Martensite).
-            - Poisson's Ratio (Martensite).
-            - Transformation Strain.
-            - Start of Transformation (Loading).
-            - End of Transformation (Loading).
-            - Start of Transformation (Unloading).
-            - End of Transformation (Unloading).
-            - Start of Transformation in Compression (Loading).
-            - Reference Temperature.
-            - Loading.
-            - Unloading.
+    .. code-block:: python
+
+        import material
+        mdb.models[name].materials[name].superElasticity
+        import odbMaterial
+        session.odbs[name].materials[name].superElasticity
+
+    The table data for this object are:
+        - Young's Modulus (Martensite).
+        - Poisson's Ratio (Martensite).
+        - Transformation Strain.
+        - Start of Transformation (Loading).
+        - End of Transformation (Loading).
+        - Start of Transformation (Unloading).
+        - End of Transformation (Unloading).
+        - Start of Transformation in Compression (Loading).
+        - Reference Temperature.
+        - Loading.
+        - Unloading.
 
     The corresponding analysis keywords are:
-        - SUPERELASTIC
+
+    - SUPERELASTIC
 
     """
 
