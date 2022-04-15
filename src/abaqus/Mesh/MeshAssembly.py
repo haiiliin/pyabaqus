@@ -399,6 +399,7 @@ class MeshAssembly(AssemblyBase):
                 - CONSTRAINT 
 
             The return value is dependent on the *attribute* argument. 
+            
             - If *attribute*=EDGE_SEEDING_METHOD, the return value is a SymbolicConstant specifying 
             the edge seeding method used to create the seeds along the edge. Possible values are: 
             
