@@ -81,6 +81,6 @@ Now you can just run your Abaqus/Python script using your own Python interpreter
 You may wonder how does this package work, 
 you can go [pyabaqus documentation: Getting Started](https://pyabaqus.haiiliin.com/getting_started.html) for more detailed introduction and go
 [pyabaqus documentation: Tutorials](https://pyabaqus.haiiliin.com/tutorials.html) for a simple tutorial. For more documentation about 
-Abaqus/Python scripting, please check [pyabaqus documentation: User Manual](https://pyabaqus.haiiliin.com/user.html)` for a list of 
+Abaqus/Python scripting, please check [pyabaqus documentation: User Manual](https://pyabaqus.haiiliin.com/user.html) for a list of 
 descriptions of objects and methods of Abaqus models, check [pyabaqus documentation: API References](https://pyabaqus.haiiliin.com/references.html) 
 for more detailed API references.
