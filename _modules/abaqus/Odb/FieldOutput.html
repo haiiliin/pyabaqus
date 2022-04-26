@@ -306,6 +306,7 @@
 <span class="kn">from</span> <span class="nn">abaqusConstants</span> <span class="kn">import</span> <span class="o">*</span>
 <span class="kn">from</span> <span class="nn">.FieldLocation</span> <span class="kn">import</span> <span class="n">FieldLocation</span>
 <span class="kn">from</span> <span class="nn">.FieldLocationArray</span> <span class="kn">import</span> <span class="n">FieldLocationArray</span>
+<span class="kn">from</span> <span class="nn">.FieldValueArray</span> <span class="kn">import</span> <span class="n">FieldValueArray</span>
 <span class="kn">from</span> <span class="nn">.OdbInstance</span> <span class="kn">import</span> <span class="n">OdbInstance</span>
 <span class="kn">from</span> <span class="nn">.OdbSet</span> <span class="kn">import</span> <span class="n">OdbSet</span>
 <span class="kn">from</span> <span class="nn">.SectionPoint</span> <span class="kn">import</span> <span class="n">SectionPoint</span>
@@ -325,9 +326,11 @@
 <span class="sd">        A Boolean specifying whether the data are complex.</span>
 <span class="sd">    locations: FieldLocationArray</span>
 <span class="sd">        A :py:class:`~abaqus.Odb.FieldLocationArray.FieldLocationArray` object.</span>
-<span class="sd">    values: int</span>
-<span class="sd">        A :py:class:`~.FieldValueArray` object specifying :py:class:`~.the` order of :py:class:`~.the` objects in :py:class:`~.the` array is determined</span>
-<span class="sd">        by :py:class:`~.the` Abaqus Scripting Interface; see :py:class:`~.the` **data** argument to :py:class:`~.the` addData method for a</span>
+<span class="sd">    values: FieldValueArray</span>
+<span class="sd">        A :py:class:`~.FieldValueArray` object specifying :py:class:`~.the` order of :py:class:`~.the` objects in</span>
+<span class="sd">        :py:class:`~.the` array is determined</span>
+<span class="sd">        by :py:class:`~.the` Abaqus Scripting Interface; see :py:class:`~.the` **data** argument to</span>
+<span class="sd">        :py:class:`~.the` addData method for a</span>
 <span class="sd">        description of :py:class:`~.the` order.</span>
 
 <span class="sd">    Notes</span>
@@ -358,7 +361,7 @@
     <span class="c1"># A FieldValueArray object specifying the order of the objects in the array is determined </span>
     <span class="c1"># by the Abaqus Scripting Interface; see the *data* argument to the addData method for a </span>
     <span class="c1"># description of the order. </span>
-    <span class="n">values</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="kc">None</span>
+    <span class="n">values</span><span class="p">:</span> <span class="n">FieldValueArray</span> <span class="o">=</span> <span class="kc">None</span>
 
     <span class="nd">@typing</span><span class="o">.</span><span class="n">overload</span>
     <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">description</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="nb">type</span><span class="p">:</span> <span class="n">SymbolicConstant</span><span class="p">,</span> <span class="n">componentLabels</span><span class="p">:</span> <span class="nb">tuple</span> <span class="o">=</span> <span class="p">(),</span>
@@ -621,25 +624,25 @@
     <span class="nd">@typing</span><span class="o">.</span><span class="n">overload</span>
     <span class="k">def</span> <span class="nf">getSubset</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">position</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">readOnly</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="n">OFF</span><span class="p">):</span>
         <span class="sd">"""A FieldOutput object with a subset of the field values.</span>
-<span class="sd">        position</span>
-<span class="sd">            *position* </span>
-<span class="sd">            A SymbolicConstant specifying the position of the output in the element. Possible values </span>
-<span class="sd">            are: </span>
-<span class="sd">            - NODAL, specifying the values calculated at the nodes. </span>
-<span class="sd">            - INTEGRATION_POINT, specifying the values calculated at the integration points. </span>
-<span class="sd">            - ELEMENT_NODAL, specifying the values obtained by extrapolating results calculated at </span>
-<span class="sd">            the integration points. </span>
-<span class="sd">            - CENTROID, specifying the value at the centroid obtained by extrapolating results </span>
-<span class="sd">            calculated at the integration points. </span>
-<span class="sd">            If the requested field values are not found in the output database at the specified </span>
-<span class="sd">            ELEMENT_NODAL or CENTROID positions, they are extrapolated from the field data at the </span>
-<span class="sd">            INTEGRATION_POINT position for the entire field region. If the field values are found at </span>
-<span class="sd">            the specified positions, only these field values are returned without any extrapolation. </span>
-<span class="sd">            This could potentially be only for a subset of the field region, depending on the output </span>
-<span class="sd">            request. </span>
 <span class="sd">        </span>
 <span class="sd">        Parameters</span>
 <span class="sd">        ----------</span>
+<span class="sd">        position</span>
+<span class="sd">            *position*</span>
+<span class="sd">            A SymbolicConstant specifying the position of the output in the element. Possible values</span>
+<span class="sd">            are:</span>
+<span class="sd">            - NODAL, specifying the values calculated at the nodes.</span>
+<span class="sd">            - INTEGRATION_POINT, specifying the values calculated at the integration points.</span>
+<span class="sd">            - ELEMENT_NODAL, specifying the values obtained by extrapolating results calculated at</span>
+<span class="sd">            the integration points.</span>
+<span class="sd">            - CENTROID, specifying the value at the centroid obtained by extrapolating results</span>
+<span class="sd">            calculated at the integration points.</span>
+<span class="sd">            If the requested field values are not found in the output database at the specified</span>
+<span class="sd">            ELEMENT_NODAL or CENTROID positions, they are extrapolated from the field data at the</span>
+<span class="sd">            INTEGRATION_POINT position for the entire field region. If the field values are found at</span>
+<span class="sd">            the specified positions, only these field values are returned without any extrapolation.</span>
+<span class="sd">            This could potentially be only for a subset of the field region, depending on the output</span>
+<span class="sd">            request.</span>
 <span class="sd">        readOnly</span>
 <span class="sd">            A Boolean specifying whether the extrapolated data returned by this call is written to </span>
 <span class="sd">            the output database. The default value is OFF. </span>
