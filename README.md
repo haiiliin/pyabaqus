@@ -24,7 +24,7 @@ or check the [documentation](https://executor.haiiliin.com/).
 
 ### Installation
 
-`pyabaqus` is using type hints features that require Python with the version greater than 3.9, 
+`pyabaqus` is using type hints features that require Python 3.9 or a later version, 
 please upgrade it to Python 3.9 or a later version if you are using an earlier version.
 
 `pyabaqus` is uploaded to [PyPI](https://pypi.org/project/pyabaqus), you can simply install 
