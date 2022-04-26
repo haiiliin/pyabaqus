@@ -3,6 +3,7 @@ import typing
 from abaqusConstants import *
 from .FieldLocation import FieldLocation
 from .FieldLocationArray import FieldLocationArray
+from .FieldValueArray import FieldValueArray
 from .OdbInstance import OdbInstance
 from .OdbSet import OdbSet
 from .SectionPoint import SectionPoint
@@ -22,9 +23,11 @@ class FieldOutput:
         A Boolean specifying whether the data are complex.
     locations: FieldLocationArray
         A :py:class:`~abaqus.Odb.FieldLocationArray.FieldLocationArray` object.
-    values: int
-        A :py:class:`~.FieldValueArray` object specifying :py:class:`~.the` order of :py:class:`~.the` objects in :py:class:`~.the` array is determined
-        by :py:class:`~.the` Abaqus Scripting Interface; see :py:class:`~.the` **data** argument to :py:class:`~.the` addData method for a
+    values: FieldValueArray
+        A :py:class:`~.FieldValueArray` object specifying :py:class:`~.the` order of :py:class:`~.the` objects in
+        :py:class:`~.the` array is determined
+        by :py:class:`~.the` Abaqus Scripting Interface; see :py:class:`~.the` **data** argument to
+        :py:class:`~.the` addData method for a
         description of :py:class:`~.the` order.
 
     Notes
@@ -55,7 +58,7 @@ class FieldOutput:
     # A FieldValueArray object specifying the order of the objects in the array is determined 
     # by the Abaqus Scripting Interface; see the *data* argument to the addData method for a 
     # description of the order. 
-    values: int = None
+    values: FieldValueArray = None
 
     @typing.overload
     def __init__(self, name: str, description: str, type: SymbolicConstant, componentLabels: tuple = (),
@@ -318,25 +321,25 @@ class FieldOutput:
     @typing.overload
     def getSubset(self, position: SymbolicConstant = None, readOnly: Boolean = OFF):
         """A FieldOutput object with a subset of the field values.
-        position
-            *position* 
-            A SymbolicConstant specifying the position of the output in the element. Possible values 
-            are: 
-            - NODAL, specifying the values calculated at the nodes. 
-            - INTEGRATION_POINT, specifying the values calculated at the integration points. 
-            - ELEMENT_NODAL, specifying the values obtained by extrapolating results calculated at 
-            the integration points. 
-            - CENTROID, specifying the value at the centroid obtained by extrapolating results 
-            calculated at the integration points. 
-            If the requested field values are not found in the output database at the specified 
-            ELEMENT_NODAL or CENTROID positions, they are extrapolated from the field data at the 
-            INTEGRATION_POINT position for the entire field region. If the field values are found at 
-            the specified positions, only these field values are returned without any extrapolation. 
-            This could potentially be only for a subset of the field region, depending on the output 
-            request. 
         
         Parameters
         ----------
+        position
+            *position*
+            A SymbolicConstant specifying the position of the output in the element. Possible values
+            are:
+            - NODAL, specifying the values calculated at the nodes.
+            - INTEGRATION_POINT, specifying the values calculated at the integration points.
+            - ELEMENT_NODAL, specifying the values obtained by extrapolating results calculated at
+            the integration points.
+            - CENTROID, specifying the value at the centroid obtained by extrapolating results
+            calculated at the integration points.
+            If the requested field values are not found in the output database at the specified
+            ELEMENT_NODAL or CENTROID positions, they are extrapolated from the field data at the
+            INTEGRATION_POINT position for the entire field region. If the field values are found at
+            the specified positions, only these field values are returned without any extrapolation.
+            This could potentially be only for a subset of the field region, depending on the output
+            request.
         readOnly
             A Boolean specifying whether the extrapolated data returned by this call is written to 
             the output database. The default value is OFF. 
