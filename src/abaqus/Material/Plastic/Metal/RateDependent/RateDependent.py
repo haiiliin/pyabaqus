@@ -1,6 +1,7 @@
 from abaqusConstants import *
 
 from __init__ import *
+from __future__ import annotations
 
 
 class RateDependent:
@@ -45,7 +46,7 @@ class RateDependent:
 
     """
     def __init__(self,
-                 table: tuple,
+                 table: Tuple,
                  type: SymbolicConstant = POWER_LAW,
                  temperatureDependency: Boolean = OFF,
                  dependencies: int = 0):

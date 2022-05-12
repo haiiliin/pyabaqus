@@ -10,6 +10,7 @@ from ..Part.PartBase import PartBase
 from ..Region.Region import Region
 
 from __init__ import *
+from __future__ import annotations
 
 
 class Node(MeshNode):
@@ -17,6 +18,7 @@ class Node(MeshNode):
 
 
 from __init__ import *
+from __future__ import annotations
 
 
 class MeshEditPart(PartBase):
@@ -32,7 +34,7 @@ class MeshEditPart(PartBase):
             import meshEdit
 
     """
-    def adjustMidsideNode(self, cornerNodes: tuple[Node], parameter: float):
+    def adjustMidsideNode(self, cornerNodes: Tuple[Node], parameter: float):
         """This method is used to adjust the midside node of second-order elements of an orphan
         mesh part.
         
@@ -78,7 +80,7 @@ class MeshEditPart(PartBase):
             considered, unless *thicknessDir* is specified, in which case the operation will attempt 
             to determine the topological edges from the thickness direction. 
         thicknessDir
-            A tuple of two or three Floats indicating a vector along which element edge lengths will 
+            A Tuple of two or three Floats indicating a vector along which element edge lengths will 
             be measured. 
         moveLayers
             A Boolean indicating whether element edges will be all grown in the direction of the 
@@ -104,7 +106,7 @@ class MeshEditPart(PartBase):
         """
         pass
 
-    def combineElement(self, elements: tuple):
+    def combineElement(self, elements: Tuple):
         """This method combines two triangular elements of an orphan mesh part or an Abaqus native
         mesh.
         
@@ -122,7 +124,7 @@ class MeshEditPart(PartBase):
         pass
 
     def deleteElement(self,
-                      elements: tuple[MeshElement],
+                      elements: Tuple[MeshElement],
                       deleteUnreferencedNodes: Boolean = OFF):
         """This method deletes the given elements from an orphan mesh part or an Abaqus native
         mesh. If the elements belong to an Abaqus native mesh then the elements must have been
@@ -139,7 +141,7 @@ class MeshEditPart(PartBase):
         pass
 
     def deleteNode(self,
-                   nodes: tuple[MeshNode],
+                   nodes: Tuple[MeshNode],
                    deleteUnreferencedNodes: Boolean = OFF):
         """This method deletes the given nodes from an orphan mesh part.
         
@@ -155,11 +157,11 @@ class MeshEditPart(PartBase):
         pass
 
     def editNode(self,
-                 nodes: tuple[MeshNode],
+                 nodes: Tuple[MeshNode],
                  coordinate1: float = None,
                  coordinate2: float = None,
                  coordinate3: float = None,
-                 coordinates: tuple = (),
+                 coordinates: Tuple = (),
                  offset1: float = None,
                  offset2: float = None,
                  offset3: float = None,
@@ -210,7 +212,7 @@ class MeshEditPart(PartBase):
         """
         pass
 
-    def projectNode(self, nodes: tuple[MeshNode], projectionReference: str):
+    def projectNode(self, nodes: Tuple[MeshNode], projectionReference: str):
         """This method projects the given nodes onto a mesh entity, geometric entity, or a datum
         object. The nodes may belong to an orphan mesh part or to an Abaqus native mesh.
         
@@ -308,7 +310,7 @@ class MeshEditPart(PartBase):
 
     @typing.overload
     def mergeNodes(self,
-                   nodes: tuple[Node],
+                   nodes: Tuple[Node],
                    tolerance: float = None,
                    removeDuplicateElements: Boolean = True,
                    keepHighLabels: Boolean = False):
@@ -362,7 +364,7 @@ class MeshEditPart(PartBase):
     def mergeNodes(self, *args, **kwargs):
         pass
 
-    def orientElements(self, pickedElements: tuple[MeshElement],
+    def orientElements(self, pickedElements: Tuple[MeshElement],
                        referenceRegion: MeshFace):
         """This method orients the stack direction of elements in a continuum shell or gasket mesh.
         
@@ -382,7 +384,7 @@ class MeshEditPart(PartBase):
         pass
 
     def renumberElement(self,
-                        elements: tuple = (),
+                        elements: Tuple = (),
                         startLabel: int = None,
                         increment: int = None,
                         offset: int = None,
@@ -392,7 +394,7 @@ class MeshEditPart(PartBase):
         Parameters
         ----------
         elements
-            A MeshElementArray or a tuple or list of MeshElement objects, or a Set containing 
+            A MeshElementArray or a Tuple or list of MeshElement objects, or a Set containing 
             elements to be renumbered. If unspecified, all elements in the part will be renumbered. 
         startLabel
             A positive Int specifying the new label for the first element in *elements*. 
@@ -419,7 +421,7 @@ class MeshEditPart(PartBase):
         pass
 
     def renumberNode(self,
-                     nodes: tuple = (),
+                     nodes: Tuple = (),
                      startLabel: int = None,
                      increment: int = None,
                      offset: int = None,
@@ -429,7 +431,7 @@ class MeshEditPart(PartBase):
         Parameters
         ----------
         nodes
-            A MeshNodeArray or a tuple or list of MeshNode objects, or a Set containing nodes to be 
+            A MeshNodeArray or a Tuple or list of MeshNode objects, or a Set containing nodes to be 
             renumbered. If unspecified, all nodes in the part will be renumbered. 
         startLabel
             A positive Int specifying the new label for the first node in *nodes*. 
@@ -465,7 +467,7 @@ class MeshEditPart(PartBase):
         """
         pass
 
-    def splitElement(self, elements: tuple):
+    def splitElement(self, elements: Tuple):
         """This method splits quadrilateral elements of an orphan mesh part or a Abaqus native mesh
         into triangular elements.
         

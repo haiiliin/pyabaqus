@@ -1,6 +1,7 @@
 from .StructuralDampingByFrequencyComponentArray import StructuralDampingByFrequencyComponentArray
 
 from __init__ import *
+from __future__ import annotations
 
 
 class StructuralDampingByFrequency:

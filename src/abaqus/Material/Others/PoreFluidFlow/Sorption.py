@@ -1,6 +1,7 @@
 from abaqusConstants import *
 
 from __init__ import *
+from __future__ import annotations
 
 
 class Sorption:
@@ -33,12 +34,12 @@ class Sorption:
 
     """
     def __init__(self,
-                 absorptionTable: tuple,
+                 absorptionTable: Tuple,
                  lawAbsorption: SymbolicConstant = TABULAR,
                  exsorption: Boolean = OFF,
                  lawExsorption: SymbolicConstant = TABULAR,
                  scanning: float = 0,
-                 exsorptionTable: tuple = ()):
+                 exsorptionTable: Tuple = ()):
         """This method creates a Sorption object.
 
         Notes

@@ -1,4 +1,5 @@
 from __init__ import *
+from __future__ import annotations
 
 
 class SuperElasticHardeningModifications:
@@ -27,7 +28,7 @@ class SuperElasticHardeningModifications:
         - SUPERELASTIC HARDENING MODIFICATIONS
 
     """
-    def __init__(self, table: tuple):
+    def __init__(self, table: Tuple):
         """This method creates a SuperElasticHardeningModifications object.
 
         Notes

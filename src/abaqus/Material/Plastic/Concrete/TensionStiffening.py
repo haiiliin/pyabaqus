@@ -1,6 +1,7 @@
 from abaqusConstants import *
 
 from __init__ import *
+from __future__ import annotations
 
 
 class TensionStiffening:
@@ -38,7 +39,7 @@ class TensionStiffening:
 
     """
     def __init__(self,
-                 table: tuple,
+                 table: Tuple,
                  type: SymbolicConstant = STRAIN,
                  temperatureDependency: Boolean = OFF,
                  dependencies: int = 0):

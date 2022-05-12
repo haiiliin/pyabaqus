@@ -4,6 +4,7 @@ from .PlanarTestDataArray import PlanarTestDataArray
 from .UniaxialTestDataArray import UniaxialTestDataArray
 
 from __init__ import *
+from __future__ import annotations
 
 
 class MullinsEffect:
@@ -36,9 +37,9 @@ class MullinsEffect:
     # hyperelastic material. The default value is 0.
     properties: int = 0
 
-    # A tuple of tuples of Floats specifying the items described below. The default value is
+    # A Tuple of tuples of Floats specifying the items described below. The default value is
     # an empty sequence.
-    table: tuple = ()
+    table: Tuple = ()
 
     # A UniaxialTestDataArray object.
     uniaxialTests: UniaxialTestDataArray = UniaxialTestDataArray()

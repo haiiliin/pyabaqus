@@ -1,6 +1,7 @@
 from abaqusConstants import *
 
 from __init__ import *
+from __future__ import annotations
 
 
 class MagneticPermeability:
@@ -66,9 +67,9 @@ class MagneticPermeability:
 
     """
     def __init__(self,
-                 table: tuple,
-                 table2: tuple,
-                 table3: tuple,
+                 table: Tuple,
+                 table2: Tuple,
+                 table3: Tuple,
                  type: SymbolicConstant = ISOTROPIC,
                  frequencyDependency: Boolean = OFF,
                  temperatureDependency: Boolean = OFF,

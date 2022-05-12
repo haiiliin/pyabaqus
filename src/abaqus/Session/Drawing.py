@@ -1,6 +1,7 @@
 from abaqusConstants import *
 
 from __init__ import *
+from __future__ import annotations
 
 
 class Drawing:
@@ -59,10 +60,10 @@ class Drawing:
         displays with the **polygonMode** set to EDGES. If only edge and point drawing commands
         have been defined, the Drawing will not be rendered in FILLED or SHADED displays.
     edgeColor: float
-        A tuple of three Floats specifying the **Red**, **Green**, and **Blue** component values for
+        A Tuple of three Floats specifying the **Red**, **Green**, and **Blue** component values for
         the edge color. Possible values for each component are between 0.0 and 1.0.
     pointColor: float
-        A tuple of three Floats specifying the **Red**, **Green**, and **Blue** component values for
+        A Tuple of three Floats specifying the **Red**, **Green**, and **Blue** component values for
         the point color. Possible values for each component are between 0.0 and 1.0.
     depthTest: Boolean
         A Boole:py:class:`~.an` specifying whe:py:class:`~.the`r :py:class:`~.an` object's depth will be considered during rendering. The
@@ -139,11 +140,11 @@ class Drawing:
     # have been defined, the Drawing will not be rendered in FILLED or SHADED displays.
     edgesInShaded: Boolean = ON
 
-    # A tuple of three Floats specifying the *Red*, *Green*, and *Blue* component values for
+    # A Tuple of three Floats specifying the *Red*, *Green*, and *Blue* component values for
     # the edge color. Possible values for each component are between 0.0 and 1.0.
     edgeColor: float = None
 
-    # A tuple of three Floats specifying the *Red*, *Green*, and *Blue* component values for
+    # A Tuple of three Floats specifying the *Red*, *Green*, and *Blue* component values for
     # the point color. Possible values for each component are between 0.0 and 1.0.
     pointColor: float = None
 
@@ -180,7 +181,7 @@ class Drawing:
         """
         pass
 
-    def setVertices(self, vertexDimension: float, vertexData: tuple):
+    def setVertices(self, vertexDimension: float, vertexData: Tuple):
         """This method accepts the vertex data that defines the Drawing object. It defines in an
         array of vertices with a length equal to the length of the *vertexData* sequence divided
         by *vertexDimension*.
@@ -211,7 +212,7 @@ class Drawing:
         """
         pass
 
-    def setNormals(self, normalData: tuple):
+    def setNormals(self, normalData: Tuple):
         """This method accepts the normal data for each vertex. It defines in an array of normal
         vectors with a length equal to the length of the *normalData* sequence divided by 3.
         
@@ -237,7 +238,7 @@ class Drawing:
         """
         pass
 
-    def setColors(self, colorDimension: float, colorData: tuple):
+    def setColors(self, colorDimension: float, colorData: Tuple):
         """This method accepts the color data for each vertex. It defines in an array of colors
         with a length equal to the length of the *colorData* sequence divided by
         *colorDimension*.
@@ -273,7 +274,7 @@ class Drawing:
         """
         pass
 
-    def setEdgeColor(self, edgeColor: tuple):
+    def setEdgeColor(self, edgeColor: Tuple):
         """This method allows a separate, single color to be used when rendering the edges of the
         drawing. Once called, edges will be rendered using the specified color but facets will
         continue to use the colors specified in the setColors method. An empty sequence can be
@@ -290,11 +291,11 @@ class Drawing:
         ------
             ValueError. 
             - If *edgeColor* is not a sequence of 0 or 3 Floats: 
-              ValueError: *edgeColor* must be a tuple with 3 values 
+              ValueError: *edgeColor* must be a Tuple with 3 values 
         """
         pass
 
-    def setPointColor(self, pointColor: tuple):
+    def setPointColor(self, pointColor: Tuple):
         """This method allows a separate, single color to be used when rendering the points of the
         drawing. Once called, points will be rendered using the specified color but facets will
         continue to use the colors specified in the setColors method. An empty sequence can be
@@ -311,7 +312,7 @@ class Drawing:
         ------
             ValueError. 
             - If *pointColor* is a not sequence of 0 or 3 Floats: 
-              ValueError: *pointColor* must be a tuple with 3 values 
+              ValueError: *pointColor* must be a Tuple with 3 values 
         """
         pass
 
@@ -360,7 +361,7 @@ class Drawing:
 
     def addIndexDraw(self,
                      type: SymbolicConstant,
-                     indices: tuple,
+                     indices: Tuple,
                      polygonMode: SymbolicConstant = FILL):
         """This method adds a rendering command to the drawing and can be called multiple times to
         add additional rendering commands. When the drawing is referenced by a Viewport, the

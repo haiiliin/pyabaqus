@@ -2,6 +2,7 @@ from abaqusConstants import *
 from .Profile import Profile
 
 from __init__ import *
+from __future__ import annotations
 
 
 class BoxProfile(Profile):

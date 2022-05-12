@@ -6,6 +6,7 @@ from .OptimizationConstraint import OptimizationConstraint
 from .StopCondition import StopCondition
 
 from __init__ import *
+from __future__ import annotations
 
 
 class OptimizationTaskBase:

@@ -7,6 +7,7 @@ from ..DisplayGroup.DisplayGroupInstance import DisplayGroupInstance
 from ..DisplayGroup.Leaf import Leaf
 
 from __init__ import *
+from __future__ import annotations
 
 
 class PartDisplayOptions:
@@ -86,7 +87,7 @@ class PartDisplayOptions:
 
     def setValues(self,
                   renderStyle: SymbolicConstant = WIREFRAME,
-                  visibleDisplayGroups: tuple[DisplayGroup] = (),
+                  visibleDisplayGroups: Tuple[DisplayGroup] = (),
                   engineeringFeatures: Boolean = OFF,
                   renderBeamProfiles: Boolean = OFF,
                   beamScaleFactor: float = 1):

@@ -5,6 +5,7 @@ from ..Region.Set import Set
 from ..Region.Surface import Surface
 
 from __init__ import *
+from __future__ import annotations
 
 
 class MaterialOrientation:
@@ -59,13 +60,13 @@ class MaterialOrientation:
                  normalAxisRegion: Surface = None,
                  normalAxisDatum: DatumAxis = DatumAxis(),
                  flipNormalDirection: Boolean = OFF,
-                 normalAxisVector: tuple = (),
+                 normalAxisVector: Tuple = (),
                  primaryAxisDirection: SymbolicConstant = AXIS_1,
                  primaryAxisDefinition: SymbolicConstant = PRIMARY_VECTOR,
                  primaryAxisRegion: Set = None,
                  primaryAxisDatum: DatumAxis = DatumAxis(),
                  flipPrimaryDirection: Boolean = OFF,
-                 primaryAxisVector: tuple = ()):
+                 primaryAxisVector: Tuple = ()):
         """This method creates a MaterialOrientation object.
 
         Notes
@@ -165,13 +166,13 @@ class MaterialOrientation:
         normalAxisRegion: Surface = None,
         normalAxisDatum: DatumAxis = DatumAxis(),
         flipNormalDirection: Boolean = OFF,
-        normalAxisVector: tuple = (),
+        normalAxisVector: Tuple = (),
         primaryAxisDirection: SymbolicConstant = AXIS_1,
         primaryAxisDefinition: SymbolicConstant = VECTOR,
         primaryAxisRegion: Set = None,
         primaryAxisDatum: DatumAxis = DatumAxis(),
         flipPrimaryDirection: Boolean = OFF,
-        primaryAxisVector: tuple = ()):
+        primaryAxisVector: Tuple = ()):
         """This method creates a MaterialOrientation object.
 
         Notes

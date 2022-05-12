@@ -1,6 +1,7 @@
 from abaqusConstants import *
 
 from __init__ import *
+from __future__ import annotations
 
 
 class PorousElastic:
@@ -40,7 +41,7 @@ class PorousElastic:
 
     """
     def __init__(self,
-                 table: tuple,
+                 table: Tuple,
                  shear: SymbolicConstant = POISSON,
                  temperatureDependency: Boolean = OFF,
                  dependencies: int = 0):

@@ -1,6 +1,7 @@
 from .AnalyticalField import AnalyticalField
 
 from __init__ import *
+from __future__ import annotations
 
 
 class ExpressionField(AnalyticalField):

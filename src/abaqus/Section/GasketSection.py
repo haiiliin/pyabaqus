@@ -4,6 +4,7 @@ from abaqusConstants import *
 from .Section import Section
 
 from __init__ import *
+from __future__ import annotations
 
 
 class GasketSection(Section):

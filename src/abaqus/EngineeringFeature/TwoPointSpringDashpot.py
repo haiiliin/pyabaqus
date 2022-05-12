@@ -2,6 +2,7 @@ from abaqusConstants import *
 from .SpringDashpot import SpringDashpot
 
 from __init__ import *
+from __future__ import annotations
 
 
 class TwoPointSpringDashpot(SpringDashpot):
@@ -39,7 +40,7 @@ class TwoPointSpringDashpot(SpringDashpot):
 
     def __init__(self,
                  name: str,
-                 regionPairs: tuple,
+                 regionPairs: Tuple,
                  axis: SymbolicConstant,
                  dof1: int = 0,
                  dof2: int = 0,

@@ -3,6 +3,7 @@ from .AcisFile import AcisFile
 from ..Mdb.MdbBase import MdbBase
 
 from __init__ import *
+from __future__ import annotations
 
 
 class AcisMdb(MdbBase):
@@ -139,7 +140,7 @@ class AcisMdb(MdbBase):
                  trimCurve: SymbolicConstant = DEFAULT,
                  scaleFromFile: SymbolicConstant = OFF,
                  msbo: Boolean = False,
-                 includedLayers: tuple = (),
+                 includedLayers: Tuple = (),
                  topology: SymbolicConstant = SOLID,
                  uniteWires: SymbolicConstant = ON):
         """This method creates an AcisFile object from a file containing IGES-format geometry. This

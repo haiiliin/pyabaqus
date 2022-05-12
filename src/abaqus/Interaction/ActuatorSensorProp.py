@@ -1,6 +1,7 @@
 from .ContactProperty import ContactProperty
 
 from __init__ import *
+from __future__ import annotations
 
 
 class ActuatorSensorProp(ContactProperty):
@@ -23,8 +24,8 @@ class ActuatorSensorProp(ContactProperty):
     """
     def __init__(self,
                  name: str,
-                 realProperties: tuple = (),
-                 integerProperties: tuple = ()):
+                 realProperties: Tuple = (),
+                 integerProperties: Tuple = ()):
         """This method creates an ActuatorSensorProp object.
 
         Notes
@@ -54,8 +55,8 @@ class ActuatorSensorProp(ContactProperty):
         pass
 
     def setValues(self,
-                  realProperties: tuple = (),
-                  integerProperties: tuple = ()):
+                  realProperties: Tuple = (),
+                  integerProperties: Tuple = ()):
         """This method modifies the ActuatorSensorProp object.
         
         Parameters

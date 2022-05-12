@@ -6,6 +6,7 @@ from .DGSuperimposeOptions import DGSuperimposeOptions
 from .DGSymbolOptions import DGSymbolOptions
 
 from __init__ import *
+from __future__ import annotations
 
 
 class OdbDisplayOptions:

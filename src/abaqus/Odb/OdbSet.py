@@ -5,6 +5,7 @@ from .OdbMeshNode import OdbMeshNode
 from .OdbMeshNodeArray import OdbMeshNodeArray
 
 from __init__ import *
+from __future__ import annotations
 
 
 class OdbSet:
@@ -14,8 +15,8 @@ class OdbSet:
     ----------
     name: str
         A String specifying the name of the set and the repository key.
-    instanceNames: tuple
-        A tuple of Strings specifying the namespaces for the nodes, elements, and faces; None if
+    instanceNames: Tuple
+        A Tuple of Strings specifying the namespaces for the nodes, elements, and faces; None if
         the set is on a Part or an :py:class:`~abaqus.Odb.OdbInstance.OdbInstance` object.
     nodes: OdbMeshNodeArray
         An :py:class:`~abaqus.Odb.OdbMeshNodeArray.OdbMeshNodeArray` object specifying the nodes of an OdbSet. If a set spans more than
@@ -24,7 +25,7 @@ class OdbSet:
         An :py:class:`~abaqus.Odb.OdbMeshElementArray.OdbMeshElementArray` object specifying the elements of an OdbSet. If a set spans more
         than one part instance, this member is a sequence of sequences for each part instance.
     faces: SymbolicConstant
-        A tuple of SymbolicConstants specifying the element face. If a set spans more than one
+        A Tuple of SymbolicConstants specifying the element face. If a set spans more than one
         part instance, this member is a sequence of sequences for each part instance.
     instances: str
         A repository of an :py:class:`~abaqus.Odb.OdbInstance.OdbInstance` object.
@@ -56,9 +57,9 @@ class OdbSet:
     # A String specifying the name of the set and the repository key.
     name: str = ''
 
-    # A tuple of Strings specifying the namespaces for the nodes, elements, and faces; None if
+    # A Tuple of Strings specifying the namespaces for the nodes, elements, and faces; None if
     # the set is on a Part or an OdbInstance object.
-    instanceNames: tuple = ()
+    instanceNames: Tuple = ()
 
     # An OdbMeshNodeArray object specifying the nodes of an OdbSet. If a set spans more than
     # one part instance, this member is a sequence of sequences for each part instance.
@@ -68,7 +69,7 @@ class OdbSet:
     # than one part instance, this member is a sequence of sequences for each part instance.
     elements: OdbMeshElementArray = OdbMeshElementArray()
 
-    # A tuple of SymbolicConstants specifying the element face. If a set spans more than one
+    # A Tuple of SymbolicConstants specifying the element face. If a set spans more than one
     # part instance, this member is a sequence of sequences for each part instance.
     faces: SymbolicConstant = None
 
@@ -78,7 +79,7 @@ class OdbSet:
     # A Boolean specifying whether the set is internal.
     isInternal: Boolean = OFF
 
-    def __init__(self, name: str, nodes: tuple[OdbMeshNode]):
+    def __init__(self, name: str, nodes: Tuple[OdbMeshNode]):
         """This method creates a node set from an array of OdbMeshNode objects (for part
         instance-level sets) or from a sequence of arrays of OdbMeshNode objects (for
         assembly-level sets).
@@ -107,7 +108,7 @@ class OdbSet:
         """
         pass
 
-    def NodeSetFromNodeLabels(self, name: str, nodeLabels: tuple):
+    def NodeSetFromNodeLabels(self, name: str, nodeLabels: Tuple):
         """This method creates a node set from a sequence of node labels.
 
         Notes
@@ -135,7 +136,7 @@ class OdbSet:
         """
         pass
 
-    def ElementSet(self, name: str, elements: tuple[OdbMeshElement]):
+    def ElementSet(self, name: str, elements: Tuple[OdbMeshElement]):
         """This method creates an element set from an array of OdbMeshElement objects (for part
         instance-level sets) or from a sequence of arrays of OdbMeshElement objects (for
         assembly-level sets).
@@ -165,7 +166,7 @@ class OdbSet:
         """
         pass
 
-    def ElementSetFromElementLabels(self, name: str, elementLabels: tuple):
+    def ElementSetFromElementLabels(self, name: str, elementLabels: Tuple):
         """This method creates an element set from a sequence of element labels.
 
         Notes
@@ -193,7 +194,7 @@ class OdbSet:
         """
         pass
 
-    def MeshSurface(self, name: str, meshSurfaces: tuple):
+    def MeshSurface(self, name: str, meshSurfaces: Tuple):
         """This method creates a surface from the element and side identifiers for the assembly.
 
         Notes
@@ -235,7 +236,7 @@ class OdbSet:
         """
         pass
 
-    def MeshSurfaceFromElsets(self, name: str, elementSetSeq: tuple):
+    def MeshSurfaceFromElsets(self, name: str, elementSetSeq: Tuple):
         """This method creates a mesh surface from a sequence of element sets.
 
         Notes
@@ -264,7 +265,7 @@ class OdbSet:
         """
         pass
 
-    def MeshSurfaceFromLabels(self, name: str, surfaceLabels: tuple):
+    def MeshSurfaceFromLabels(self, name: str, surfaceLabels: Tuple):
         """This method creates a mesh surface from a sequence of surface labels.
 
         Notes

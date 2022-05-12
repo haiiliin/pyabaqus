@@ -18,6 +18,7 @@ from ..PlotOptions.DetailPlotOptions import DetailPlotOptions
 from ..UtilityAndView.View import View
 
 from __init__ import *
+from __future__ import annotations
 
 
 class ViewportBase:
@@ -188,14 +189,14 @@ class ViewportBase:
         A :py:class:`~abaqus.PlotOptions.DetailPlotOptions.DetailPlotOptions` object.
     annotationsToPlot: AnnotationsToPlotArray
         An :py:class:`~abaqus.Annotation.AnnotationsToPlotArray.AnnotationsToPlotArray` object.
-    visibleLayers: tuple
-        A tuple of Strings specifying the names of layers that will be displayed in the viewport
+    visibleLayers: Tuple
+        A Tuple of Strings specifying the names of layers that will be displayed in the viewport
         when **displayMode** = OVERLAY.
-    currentOrigin: tuple[float]
+    currentOrigin: Tuple[float]
         A pair of Floats specifying the **X**- and **Y**-coordinates in millimeters in the canvas
         coordinate system of the lower left corner of the current viewport, regardless of the
         value of **windowState**.
-    iconOrigin: tuple[float]
+    iconOrigin: Tuple[float]
         A pair of Floats specifying the **X**- and **Y**-coordinates in millimeters of the lower
         left corner of the current viewport from a coordinate system having its origin in the
         lower left corner of the drawing area. This origin refers to the viewport location when
@@ -208,8 +209,8 @@ class ViewportBase:
         A :py:class:`~abaqus.Canvas.MovieOptions.MovieOptions` object.
     animationController: AnimationController
         An :py:class:`~abaqus.Animation.AnimationController.AnimationController` object.
-    drawings: tuple
-        A tuple of Strings specifying keys to the session.drawings repository. The default value
+    drawings: Tuple
+        A Tuple of Strings specifying keys to the session.drawings repository. The default value
         is an empty sequence.
 
     Notes
@@ -408,20 +409,20 @@ class ViewportBase:
     # An AnnotationsToPlotArray object.
     annotationsToPlot: AnnotationsToPlotArray = AnnotationsToPlotArray()
 
-    # A tuple of Strings specifying the names of layers that will be displayed in the viewport
+    # A Tuple of Strings specifying the names of layers that will be displayed in the viewport
     # when *displayMode* = OVERLAY.
-    visibleLayers: tuple = ()
+    visibleLayers: Tuple = ()
 
     # A pair of Floats specifying the *X*- and *Y*-coordinates in millimeters in the canvas
     # coordinate system of the lower left corner of the current viewport, regardless of the
     # value of *windowState*.
-    currentOrigin: tuple[float] = ()
+    currentOrigin: Tuple[float] = ()
 
     # A pair of Floats specifying the *X*- and *Y*-coordinates in millimeters of the lower
     # left corner of the current viewport from a coordinate system having its origin in the
     # lower left corner of the drawing area. This origin refers to the viewport location when
     # *windowState* =MINIMIZED.
-    iconOrigin: tuple[float] = ()
+    iconOrigin: Tuple[float] = ()
 
     # A LightOptions object.
     lightOptions: LightOptions = LightOptions()
@@ -435,13 +436,13 @@ class ViewportBase:
     # An AnimationController object.
     animationController: AnimationController = AnimationController()
 
-    # A tuple of Strings specifying keys to the session.drawings repository. The default value
+    # A Tuple of Strings specifying keys to the session.drawings repository. The default value
     # is an empty sequence.
-    drawings: tuple = ()
+    drawings: Tuple = ()
 
     def __init__(self,
                  name: str,
-                 origin: tuple[float] = (),
+                 origin: Tuple[float] = (),
                  width: float = 120,
                  height: float = 80,
                  border: Boolean = ON,
@@ -727,7 +728,7 @@ class ViewportBase:
     def setValues(self,
                   displayedObject: Displayable = Displayable(),
                   displayMode: SymbolicConstant = None,
-                  visibleLayers: tuple = (),
+                  visibleLayers: Tuple = (),
                   viewManipLayers: SymbolicConstant = None,
                   currentLayer: str = '',
                   layerOffset: float = None):
@@ -767,7 +768,7 @@ class ViewportBase:
         """
         pass
 
-    def addDrawings(self, names: tuple = ()):
+    def addDrawings(self, names: Tuple = ()):
         """This method identifies the names of Drawing objects to be rendered in the Viewport.
         
         Parameters
@@ -781,7 +782,7 @@ class ViewportBase:
         """
         pass
 
-    def removeDrawings(self, names: tuple = ()):
+    def removeDrawings(self, names: Tuple = ()):
         """This method identifies the names of Drawing objects to no longer be rendered in the
         Viewport.
         

@@ -1,6 +1,7 @@
 from abaqusConstants import *
 
 from __init__ import *
+from __future__ import annotations
 
 
 class Constraint:
@@ -44,7 +45,7 @@ class Constraint:
         """
         pass
 
-    def delete(self, indices: tuple):
+    def delete(self, indices: Tuple):
         """This method allows you to delete existing constraints.
         
         Parameters

@@ -1,6 +1,7 @@
 from abaqusConstants import *
 
 from __init__ import *
+from __future__ import annotations
 
 
 class SelectedProbeValues:
@@ -15,9 +16,9 @@ class SelectedProbeValues:
         A Boolean specifying whether any probe values have been selected (as is necessary prior
         to writing to a file).
     values: float
-        A tuple of tuples of Floats specifying the selected probe values.
-    lastValues: tuple
-        A tuple of Floats specifying the last sequence of the **values** member.
+        A Tuple of tuples of Floats specifying the selected probe values.
+    lastValues: Tuple
+        A Tuple of Floats specifying the last sequence of the **values** member.
 
     Notes
     -----
@@ -37,8 +38,8 @@ class SelectedProbeValues:
     # to writing to a file).
     fieldOutputAvailable: Boolean = OFF
 
-    # A tuple of tuples of Floats specifying the selected probe values.
+    # A Tuple of tuples of Floats specifying the selected probe values.
     values: float = None
 
-    # A tuple of Floats specifying the last sequence of the *values* member.
-    lastValues: tuple = ()
+    # A Tuple of Floats specifying the last sequence of the *values* member.
+    lastValues: Tuple = ()

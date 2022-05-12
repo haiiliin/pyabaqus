@@ -1,4 +1,5 @@
 from __init__ import *
+from __future__ import annotations
 
 
 class Transform:
@@ -17,11 +18,11 @@ class Transform:
 
     """
     def matrix(self):
-        """This method returns the transformation matrix as a tuple of 12 Floats.
+        """This method returns the transformation matrix as a Tuple of 12 Floats.
 
         Returns
         -------
-            A tuple of 12 Floats.
+            A Tuple of 12 Floats.
             
         """
         pass

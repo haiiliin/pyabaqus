@@ -1,4 +1,5 @@
 from __init__ import *
+from __future__ import annotations
 
 
 class AutoColors:
@@ -10,7 +11,7 @@ class AutoColors:
             session.autoColors
 
     """
-    def setValues(self, colors: tuple):
+    def setValues(self, colors: Tuple):
         """This method changes the color palette.
         
         Parameters

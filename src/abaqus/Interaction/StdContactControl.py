@@ -2,6 +2,7 @@ from abaqusConstants import *
 from .ContactControl import ContactControl
 
 from __init__ import *
+from __future__ import annotations
 
 
 class StdContactControl(ContactControl):

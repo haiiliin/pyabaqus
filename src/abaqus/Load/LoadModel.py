@@ -39,6 +39,7 @@ from ..Model.ModelBase import ModelBase
 from ..Region.Region import Region
 
 from __init__ import *
+from __future__ import annotations
 
 
 class LoadModel(ModelBase):
@@ -880,8 +881,8 @@ class LoadModel(ModelBase):
                       createStepName: str,
                       region: Region,
                       magnitude: float,
-                      point1: tuple,
-                      point2: tuple,
+                      point1: Tuple,
+                      point2: Tuple,
                       amplitude: str = UNSET,
                       distributionType: SymbolicConstant = UNIFORM,
                       field: str = '') -> CoriolisForce:
@@ -998,7 +999,7 @@ class LoadModel(ModelBase):
                       ur1: Boolean = OFF,
                       ur2: Boolean = OFF,
                       ur3: Boolean = OFF,
-                      referencePoint: tuple = (),
+                      referencePoint: Tuple = (),
                       localCoordinates: int = None) -> InertiaRelief:
         """This method creates an InertiaRelief object.
 
@@ -1424,8 +1425,8 @@ class LoadModel(ModelBase):
                             createStepName: str,
                             region: Region,
                             magnitude: float,
-                            point1: tuple,
-                            point2: tuple,
+                            point1: Tuple,
+                            point2: Tuple,
                             distributionType: SymbolicConstant = UNIFORM,
                             field: str = '',
                             centrifugal: Boolean = OFF,
@@ -1498,7 +1499,7 @@ class LoadModel(ModelBase):
                       axis: SymbolicConstant = AXIS_1,
                       localCsys: int = GENERAL,
                       userCsys: str = GENERAL,
-                      directionVector: tuple = (),
+                      directionVector: Tuple = (),
                       follower: Boolean = ON,
                       resultant: Boolean = OFF,
                       traction: SymbolicConstant = NORMAL) -> ShellEdgeLoad:
@@ -1553,8 +1554,8 @@ class LoadModel(ModelBase):
             the *localCsys* parameter if defined. This parameter is available only if *traction* is
             GENERAL.
         directionVector
-            A tuple of two points specifying the direction of the load. Each point is specified as a
-            point region or a tuple of coordinates. If *traction* is SHEAR, then *directionVector*
+            A Tuple of two points specifying the direction of the load. Each point is specified as a
+            point region or a Tuple of coordinates. If *traction* is SHEAR, then *directionVector*
             will be projected onto the region surface. This parameter is available only if
             *traction* is GENERAL.
         follower
@@ -2000,7 +2001,7 @@ class LoadModel(ModelBase):
                         axis: SymbolicConstant = AXIS_1,
                         localCsys: int = None,
                         userCsys: str = '',
-                        directionVector: tuple = (),
+                        directionVector: Tuple = (),
                         follower: Boolean = ON,
                         resultant: Boolean = OFF,
                         traction: SymbolicConstant = SHEAR) -> SurfaceTraction:
@@ -2054,7 +2055,7 @@ class LoadModel(ModelBase):
             if defined. The default value is "None".
         directionVector
             A VertexArray object of length 2 specifying the direction of the load. Instead of
-            through a ConstrainedSketchVertex, each point may be specified through a tuple of coordinates. If
+            through a ConstrainedSketchVertex, each point may be specified through a Tuple of coordinates. If
             *traction* is SHEAR, then *directionVector* will be projected onto the region surface.
             This parameter is available only if *traction* is GENERAL or SHEAR.
         follower

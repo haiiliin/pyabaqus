@@ -3,6 +3,7 @@ from .GeometricRestriction import GeometricRestriction
 from ..Region.Region import Region
 
 from __init__ import *
+from __future__ import annotations
 
 
 class ShapeRotationalSymmetry(GeometricRestriction):
@@ -22,7 +23,7 @@ class ShapeRotationalSymmetry(GeometricRestriction):
     """
     def __init__(self,
                  name: str,
-                 clientDirection: tuple,
+                 clientDirection: Tuple,
                  region: Region,
                  allowNonSymmetricMesh: Boolean = TRUE,
                  angle: float = 0,
@@ -51,7 +52,7 @@ class ShapeRotationalSymmetry(GeometricRestriction):
         clientDirection
             A VertexArray object of length 2 specifying the vector positioned at the *csys* origin, 
             used as the axis of symmetry. Instead of through a ConstrainedSketchVertex, each point might be specified
-            through a tuple of coordinates. 
+            through a Tuple of coordinates. 
         region
             A Region object specifying the region to which the geometric restriction is applied. 
             When used with a TopologyTask, there is no default value. When used with a ShapeTask, 
@@ -76,7 +77,7 @@ class ShapeRotationalSymmetry(GeometricRestriction):
             A Boolean specifying whether to ignore the geometric restriction in the first design 
             cycle. The default value is ON. 
         startPoint
-            A tuple of Floats representing the coordinates of a start point of the rotational 
+            A Tuple of Floats representing the coordinates of a start point of the rotational 
             symmetry. 
         tolerance1
             A Float specifying the geometric tolerance in the 1-direction. The default value is 
@@ -130,7 +131,7 @@ class ShapeRotationalSymmetry(GeometricRestriction):
             A Boolean specifying whether to ignore the geometric restriction in the first design 
             cycle. The default value is ON. 
         startPoint
-            A tuple of Floats representing the coordinates of a start point of the rotational 
+            A Tuple of Floats representing the coordinates of a start point of the rotational 
             symmetry. 
         tolerance1
             A Float specifying the geometric tolerance in the 1-direction. The default value is 

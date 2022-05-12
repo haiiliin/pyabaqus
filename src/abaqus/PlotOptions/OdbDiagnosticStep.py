@@ -3,6 +3,7 @@ from .OdbContactDiagnostics import OdbContactDiagnostics
 from .OdbDiagnosticIncrement import OdbDiagnosticIncrement
 
 from __init__ import *
+from __future__ import annotations
 
 
 class OdbDiagnosticStep:
@@ -10,14 +11,14 @@ class OdbDiagnosticStep:
 
     Attributes
     ----------
-    activeXplStatus: tuple
+    activeXplStatus: Tuple
         A Tuple of the status values. This attribute is read-only.
     characteristicElementLength: str
         A float specifying the characteristic element length for the step. This attribute is
         read-only.
     contactDiagnostics: dict[str, OdbContactDiagnostics]
         A repository of :py:class:`~abaqus.PlotOptions.OdbContactDiagnostics.OdbContactDiagnostics` objects.
-    explicitIncrementStatus: tuple
+    explicitIncrementStatus: Tuple
         A sequence of string specifying the explicit increment status. This attribute is
         read-only.
     extrapolation: str
@@ -90,7 +91,7 @@ class OdbDiagnosticStep:
     """
 
     # A Tuple of the status values. This attribute is read-only.
-    activeXplStatus: tuple = ()
+    activeXplStatus: Tuple = ()
 
     # A float specifying the characteristic element length for the step. This attribute is
     # read-only.
@@ -102,7 +103,7 @@ class OdbDiagnosticStep:
 
     # A sequence of string specifying the explicit increment status. This attribute is
     # read-only.
-    explicitIncrementStatus: tuple = ()
+    explicitIncrementStatus: Tuple = ()
 
     # A String specifying the method (Linear or logarithmic) used for extrapolation. This
     # attribute is read-only.

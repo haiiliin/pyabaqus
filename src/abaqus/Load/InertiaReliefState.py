@@ -2,6 +2,7 @@ from abaqusConstants import *
 from .LoadState import LoadState
 
 from __init__ import *
+from __future__ import annotations
 
 
 class InertiaReliefState(LoadState):
@@ -60,7 +61,7 @@ class InertiaReliefState(LoadState):
         A SymbolicConstant specifying the propagation state of the reference point of the
         inertia relief load. Possible values are UNSET, SET, UNCHANGED, and MODIFIED.
     referencePoint: float
-        A tuple of Floats specifying the point about which rotations are defined. The point can
+        A Tuple of Floats specifying the point about which rotations are defined. The point can
         be specified only for certain combinations of free directions. The **referencePoint**
         argument can be one of the following:
             - The **X**, **Y** and **Z**-coordinates of a fixed rotation point.
@@ -160,7 +161,7 @@ class InertiaReliefState(LoadState):
     # inertia relief load. Possible values are UNSET, SET, UNCHANGED, and MODIFIED.
     referencePointState: SymbolicConstant = None
 
-    # A tuple of Floats specifying the point about which rotations are defined. The point can
+    # A Tuple of Floats specifying the point about which rotations are defined. The point can
     # be specified only for certain combinations of free directions. The *referencePoint*
     # argument can be one of the following:
     # - The *X*, *Y* and *Z*-coordinates of a fixed rotation point.

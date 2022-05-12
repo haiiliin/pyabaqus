@@ -8,6 +8,7 @@ from ..Region.Region import Region
 from ..Sketcher.ConstrainedSketch import ConstrainedSketch
 
 from __init__ import *
+from __future__ import annotations
 
 
 class Feature(BaseFeature):
@@ -45,7 +46,7 @@ class Feature(BaseFeature):
         """
         pass
 
-    def AddCells(self, faceList: tuple[Face], flipped: Boolean = OFF):
+    def AddCells(self, faceList: Tuple[Face], flipped: Boolean = OFF):
         """This method tries to convert a shell entity to a solid entity. The conversion is not
         always successful.
 
@@ -150,7 +151,7 @@ class Feature(BaseFeature):
         """
         pass
 
-    def AssignMidsurfaceRegion(self, cellList: tuple[Cell]):
+    def AssignMidsurfaceRegion(self, cellList: Tuple[Cell]):
         """This method assign a mid-surface property to sequence of Cell objects. If a reference
         representation of the part does not exist, it creates one. It also copies the *cells* to
         the reference representation and deletes the *cells* from the active representation of
@@ -489,8 +490,8 @@ class Feature(BaseFeature):
         pass
 
     def BlendFaces(self,
-                   side1: tuple[Edge],
-                   side2: tuple,
+                   side1: Tuple[Edge],
+                   side2: Tuple,
                    method: SymbolicConstant = None,
                    path: Edge = Edge()):
         """This method creates a Feature object by creating new faces that blends two sets of
@@ -530,7 +531,7 @@ class Feature(BaseFeature):
         """
         pass
 
-    def Chamfer(self, length: float, edgeList: tuple[Edge]):
+    def Chamfer(self, length: float, edgeList: Tuple[Edge]):
         """This method creates an additional Feature object by chamfering the given list of edges
         with a given length.
 
@@ -632,7 +633,7 @@ class Feature(BaseFeature):
         pass
 
     def CoverEdges(self,
-                   edgeList: tuple[Edge],
+                   edgeList: Tuple[Edge],
                    tryAnalytical: Boolean = False):
         """This method generates a face using the given edges as the face's boundaries. The
         CoverEdges method generates a face by creating the geometry consisting of the underlying
@@ -783,7 +784,7 @@ class Feature(BaseFeature):
         pass
 
     def CutLoft(self,
-                loftsections: tuple,
+                loftsections: Tuple,
                 startCondition: SymbolicConstant = None,
                 endCondition: SymbolicConstant = None,
                 startTangent: float = None,
@@ -1012,10 +1013,10 @@ class Feature(BaseFeature):
         pass
 
     def ExtendFaces(self,
-                    faces: tuple[Face] = (),
-                    extendAlong: tuple[Edge] = (),
+                    faces: Tuple[Face] = (),
+                    extendAlong: Tuple[Edge] = (),
                     distance: float = None,
-                    upToFaces: tuple[Face] = (),
+                    upToFaces: Tuple[Face] = (),
                     trimToExtendedTargetSurfaces: Boolean = True,
                     upToReferenceRep: Boolean = OFF):
         """This method extends faces along its free edges by offsetting the external edges along
@@ -1223,7 +1224,7 @@ class Feature(BaseFeature):
         pass
 
     def MergeEdges(self,
-                   edgeList: tuple[Edge] = (),
+                   edgeList: Tuple[Edge] = (),
                    extendSelection: Boolean = OFF):
         """This method merges edges either by extending the user selection or using only the
         selected edges.
@@ -1253,9 +1254,9 @@ class Feature(BaseFeature):
         pass
 
     def OffsetFaces(self,
-                    faceList: tuple[Face],
+                    faceList: Tuple[Face],
                     distance: float = None,
-                    targetFaces: tuple[Face] = (),
+                    targetFaces: Tuple[Face] = (),
                     targetFacesMethod: SymbolicConstant = None,
                     fractionDistance: float = None,
                     trimToReferenceRep: Boolean = OFF):
@@ -1303,7 +1304,7 @@ class Feature(BaseFeature):
         """
         pass
 
-    def RemoveCells(self, cellList: tuple[Cell]):
+    def RemoveCells(self, cellList: Tuple[Cell]):
         """This method converts a solid entity to a shell entity.
 
         Notes
@@ -1330,7 +1331,7 @@ class Feature(BaseFeature):
         """
         pass
 
-    def RemoveFaces(self, faceList: tuple[Face], deleteCells: Boolean = False):
+    def RemoveFaces(self, faceList: Tuple[Face], deleteCells: Boolean = False):
         """This method removes faces from a solid entity or from a shell entity.
 
         Notes
@@ -1356,7 +1357,7 @@ class Feature(BaseFeature):
         """
         pass
 
-    def RemoveFacesAndStitch(self, faceList: tuple[Face]):
+    def RemoveFacesAndStitch(self, faceList: Tuple[Face]):
         """This method removes faces from a solid entity and attempts to close the resulting gap by
         extending the neighboring faces of the solid.
 
@@ -1381,8 +1382,8 @@ class Feature(BaseFeature):
         pass
 
     def RemoveRedundantEntities(self,
-                                vertexList: tuple[Vertex] = (),
-                                edgeList: tuple[Edge] = (),
+                                vertexList: Tuple[Vertex] = (),
+                                edgeList: Tuple[Edge] = (),
                                 removeEdgeVertices: Boolean = True):
         """This method removes redundant edges and vertices from a solid or a shell entity. One of
         the two arguments is required.
@@ -1416,7 +1417,7 @@ class Feature(BaseFeature):
         """
         pass
 
-    def RepairFaceNormals(self, faceList: tuple[Face] = ()):
+    def RepairFaceNormals(self, faceList: Tuple[Face] = ()):
         """This method works on the entire part or a sequence of shell faces. When the entire part
         is selected, it aligns all the shell face normals, and inverts all of the solid faces'
         normals if the solid was originally inside out. When a few shell faces are selected, it
@@ -1442,7 +1443,7 @@ class Feature(BaseFeature):
         """
         pass
 
-    def RepairInvalidEdges(self, edgeList: tuple[Edge]):
+    def RepairInvalidEdges(self, edgeList: Tuple[Edge]):
         """This method repairs invalid edges. It will always attempt to improve edges even if none
         of selected edges are initially invalid and may leave behind invalid edges that could
         not be repaired.
@@ -1506,7 +1507,7 @@ class Feature(BaseFeature):
         pass
 
     def RepairSmallEdges(self,
-                         edgeList: tuple[Edge],
+                         edgeList: Tuple[Edge],
                          toleranceChecks: Boolean = True):
         """This method repairs small edges. This method will attempt to replace selected small
         edges with vertices and extend the adjacent faces and edges. This method might leave
@@ -1536,7 +1537,7 @@ class Feature(BaseFeature):
         pass
 
     def RepairSmallFaces(self,
-                         faceList: tuple[Face],
+                         faceList: Tuple[Face],
                          toleranceChecks: Boolean = True):
         """This method repairs small faces. It will attempt to replace the selected small faces
         with edges or vertices and extend the adjacent faces. This method might leave behind
@@ -1565,7 +1566,7 @@ class Feature(BaseFeature):
         """
         pass
 
-    def ReplaceFaces(self, faceList: tuple[Face], stitch: Boolean = True):
+    def ReplaceFaces(self, faceList: Tuple[Face], stitch: Boolean = True):
         """This method replaces the selected faces with a single face. If one single face is
         selected, that alone is replaced with a new face.
 
@@ -1592,8 +1593,8 @@ class Feature(BaseFeature):
         """
         pass
 
-    def Round(self, radius: float, edgeList: tuple[Edge],
-              vertexList: tuple[Vertex]):
+    def Round(self, radius: float, edgeList: Tuple[Edge],
+              vertexList: Tuple[Vertex]):
         """This method creates an additional Feature object by rounding (filleting) the given list
         of entities with the given radius.
 
@@ -1742,14 +1743,14 @@ class Feature(BaseFeature):
         pass
 
     def ShellLoft(self,
-                  loftsections: tuple,
+                  loftsections: Tuple,
                   startCondition: SymbolicConstant = None,
                   endCondition: SymbolicConstant = None,
                   startTangent: float = None,
                   startMagnitude: float = None,
                   endTangent: float = None,
                   endMagnitude: float = None,
-                  paths: tuple = (),
+                  paths: Tuple = (),
                   globalSmoothing: Boolean = OFF,
                   keepInternalBoundaries: Boolean = OFF):
         """This method creates an additional Feature object by lofting between the given sections
@@ -2070,14 +2071,14 @@ class Feature(BaseFeature):
         pass
 
     def SolidLoft(self,
-                  loftsections: tuple,
+                  loftsections: Tuple,
                   startCondition: SymbolicConstant = None,
                   endCondition: SymbolicConstant = None,
                   startTangent: float = None,
                   startMagnitude: float = None,
                   endTangent: float = None,
                   endMagnitude: float = None,
-                  paths: tuple = (),
+                  paths: Tuple = (),
                   globalSmoothing: Boolean = OFF,
                   keepInternalBoundaries: Boolean = OFF):
         """This method creates an additional Feature object by lofting between the given sections
@@ -2321,7 +2322,7 @@ class Feature(BaseFeature):
         pass
 
     def Stitch(self,
-               edgeList: tuple[Edge] = (),
+               edgeList: Tuple[Edge] = (),
                stitchTolerance: float = None):
         """This method attempts to create a valid part by binding together free and imprecise edges
         of all the faces of a part. If *edgeList* is not given, a global stitch will be
@@ -2394,12 +2395,12 @@ class Feature(BaseFeature):
         pass
 
     def WireSpline(self,
-                   points: tuple,
+                   points: Tuple,
                    mergeType: SymbolicConstant = IMPRINT,
                    smoothClosedSpline: Boolean = OFF):
         """This method creates an additional Feature object by creating a spline wire that passes
         through a sequence of given points. Each point can be a datum point, a vertex, an
-        interesting point, or a tuple.
+        interesting point, or a Tuple.
 
         Notes
         -----
@@ -2437,12 +2438,12 @@ class Feature(BaseFeature):
         pass
 
     def WirePolyLine(self,
-                     points: tuple,
+                     points: Tuple,
                      mergeType: SymbolicConstant = IMPRINT,
                      meshable: Boolean = ON):
         """This method creates an additional Feature object by creating a polyline wire that passes
         through a sequence of given points. Each point can be a datum point, a vertex, an
-        interesting point, or a tuple.
+        interesting point, or a Tuple.
 
         Notes
         -----

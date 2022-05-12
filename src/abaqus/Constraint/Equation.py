@@ -2,6 +2,7 @@ from abaqusConstants import *
 from .Constraint import Constraint
 
 from __init__ import *
+from __future__ import annotations
 
 
 class Equation(Constraint):
@@ -33,7 +34,7 @@ class Equation(Constraint):
     # OFF.
     suppressed: Boolean = OFF
 
-    def __init__(self, name: str, terms: tuple):
+    def __init__(self, name: str, terms: Tuple):
         """This method creates an Equation object.
 
         Notes

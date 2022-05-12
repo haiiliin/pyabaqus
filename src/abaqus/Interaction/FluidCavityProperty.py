@@ -2,6 +2,7 @@ from abaqusConstants import *
 from .ContactProperty import ContactProperty
 
 from __init__ import *
+from __future__ import annotations
 
 
 class FluidCavityProperty(ContactProperty):
@@ -36,16 +37,16 @@ class FluidCavityProperty(ContactProperty):
                  expansionTempDep: Boolean = OFF,
                  expansionDependencies: int = 0,
                  referenceTemperature: float = 0,
-                 expansionTable: tuple = (),
+                 expansionTable: Tuple = (),
                  useBulkModulus: Boolean = OFF,
                  bulkModulusTempDep: Boolean = OFF,
                  bulkModulusDependencies: int = 0,
-                 bulkModulusTable: tuple = (),
+                 bulkModulusTable: Tuple = (),
                  useCapacity: Boolean = OFF,
                  capacityType: SymbolicConstant = POLYNOMIAL,
                  capacityTempDep: Boolean = OFF,
                  capacityDependencies: int = 0,
-                 capacityTable: tuple = ()):
+                 capacityTable: Tuple = ()):
         """This method creates a FluidCavityProperty object.
 
         Notes
@@ -164,16 +165,16 @@ class FluidCavityProperty(ContactProperty):
                   expansionTempDep: Boolean = OFF,
                   expansionDependencies: int = 0,
                   referenceTemperature: float = 0,
-                  expansionTable: tuple = (),
+                  expansionTable: Tuple = (),
                   useBulkModulus: Boolean = OFF,
                   bulkModulusTempDep: Boolean = OFF,
                   bulkModulusDependencies: int = 0,
-                  bulkModulusTable: tuple = (),
+                  bulkModulusTable: Tuple = (),
                   useCapacity: Boolean = OFF,
                   capacityType: SymbolicConstant = POLYNOMIAL,
                   capacityTempDep: Boolean = OFF,
                   capacityDependencies: int = 0,
-                  capacityTable: tuple = ()):
+                  capacityTable: Tuple = ()):
         """This method modifies the FluidCavityProperty object.
         
         Parameters

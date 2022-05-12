@@ -1,6 +1,7 @@
 from abaqusConstants import *
 
 from __init__ import *
+from __future__ import annotations
 
 
 class PressureEffect:
@@ -30,7 +31,7 @@ class PressureEffect:
 
     """
     def __init__(self,
-                 table: tuple,
+                 table: Tuple,
                  temperatureDependency: Boolean = OFF,
                  dependencies: int = 0):
         """This method creates a PressureEffect object.

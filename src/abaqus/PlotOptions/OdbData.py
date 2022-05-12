@@ -15,6 +15,7 @@ from .RigidBodyConstraint import RigidBodyConstraint
 from .TieConstraint import TieConstraint
 
 from __init__ import *
+from __future__ import annotations
 
 
 class OdbData:
@@ -26,8 +27,8 @@ class OdbData:
     Attributes
     ----------
     activeFrames: SymbolicConstant
-        A tuple specifying the active frames, or the SymbolicConstant ALL. Each item in the
-        sequence is a tuple defining the stepName followed by a sequence of expressions
+        A Tuple specifying the active frames, or the SymbolicConstant ALL. Each item in the
+        sequence is a Tuple defining the stepName followed by a sequence of expressions
         specifying frame numbers. The expression can be any of the following:
             - An Int specifying a single frame number; for example, `1`.
             - A String specifying a single frame number ; for example, `'7'`.
@@ -35,7 +36,7 @@ class OdbData:
         For these expressions a negative number will indicate reverse numbering: -1 is the last
         frame of the step, -2 is the one before the last frame. Frame numbering starts at 0.
     stepPeriods: float
-        A tuple of (String, Float) tuples specifying the stepName and the stepPeriod.
+        A Tuple of (String, Float) tuples specifying the stepName and the stepPeriod.
         Alternatively, this member may take the value ODB_VALUES.
     historyVariables: dict[str, HistoryVariable]
         A repository of :py:class:`~abaqus.PlotOptions.HistoryVariable.HistoryVariable` objects specifying the history request label. The
@@ -96,8 +97,8 @@ class OdbData:
 
     """
 
-    # A tuple specifying the active frames, or the SymbolicConstant ALL. Each item in the
-    # sequence is a tuple defining the stepName followed by a sequence of expressions
+    # A Tuple specifying the active frames, or the SymbolicConstant ALL. Each item in the
+    # sequence is a Tuple defining the stepName followed by a sequence of expressions
     # specifying frame numbers. The expression can be any of the following:
     # - An Int specifying a single frame number; for example, `1`.
     # - A String specifying a single frame number ; for example, `'7'`.
@@ -106,7 +107,7 @@ class OdbData:
     # frame of the step, -2 is the one before the last frame. Frame numbering starts at 0.
     activeFrames: SymbolicConstant = None
 
-    # A tuple of (String, Float) tuples specifying the stepName and the stepPeriod.
+    # A Tuple of (String, Float) tuples specifying the stepName and the stepPeriod.
     # Alternatively, this member may take the value ODB_VALUES.
     stepPeriods: float = None
 
@@ -182,14 +183,14 @@ class OdbData:
 
     def setValues(self,
                   activeFrames: SymbolicConstant = None,
-                  stepPeriods: tuple = ()):
+                  stepPeriods: Tuple = ()):
         """This method modifies the OdbData object.
         
         Parameters
         ----------
         activeFrames
             A sequence specifying the active frames, or the SymbolicConstant ALL. Each item in the 
-            sequence is a tuple defining the stepName followed by a sequence of expressions 
+            sequence is a Tuple defining the stepName followed by a sequence of expressions 
             specifying frame numbers. The expression can be any of the following:An Int specifying a 
             single frame number; for example, `1`.A String specifying a single frame number ; for 
             example, `'7'`.A String specifying a sequence of frame numbers; for example, `'3:5'` and 

@@ -1,4 +1,5 @@
 from __init__ import *
+from __future__ import annotations
 
 
 class MpcConstraint:
@@ -28,6 +29,6 @@ class MpcConstraint:
 
         Returns
         -------
-            A tuple containing coordinates of the nodes pertaining to the constraint.
+            A Tuple containing coordinates of the nodes pertaining to the constraint.
         """
         pass

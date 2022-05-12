@@ -2,6 +2,7 @@ from abaqusConstants import *
 from .DataSet import DataSet
 
 from __init__ import *
+from __future__ import annotations
 
 
 class Behavior:
@@ -90,12 +91,12 @@ class Behavior:
                   biWeight: str = '',
                   uMullinsReload: str = '',
                   uMullinsUnload: str = '',
-                  uPYieldPoint: tuple = (),
+                  uPYieldPoint: Tuple = (),
                   uPermSet: str = '',
                   uPrimary: str = '',
                   bMullinsReload: str = '',
                   bMullinsUnload: str = '',
-                  bPYieldPoint: tuple = (),
+                  bPYieldPoint: Tuple = (),
                   bPermSet: str = '',
                   bPrimary: str = ''):
         """This method modifies the data for an existing behavior object.
@@ -153,7 +154,7 @@ class Behavior:
             A List of strings, specifying names of reloading DataSet objects obtained from uniaxial 
             test data. Only valid if the behavior is of type FeFpBehavior 
         uPYieldPoint
-            A tuple specifying the coordinates of yield point of the permanent data set. Only valid 
+            A Tuple specifying the coordinates of yield point of the permanent data set. Only valid 
             if the behavior is of type FeFpBehavior 
         uPermSet
             A List of strings, specifying names of permanent DataSet objects obtained from uniaxial 
@@ -168,7 +169,7 @@ class Behavior:
             A List of strings, specifying names of unloading DataSet objects obtained from biaxial 
             test data. Only valid if the behavior is of type FeFpBehavior 
         bPYieldPoint
-            A tuple specifying the coordinates of yield point of the permanent data set. Only valid 
+            A Tuple specifying the coordinates of yield point of the permanent data set. Only valid 
             if the behavior is of type FeFpBehavior 
         bPermSet
             A List of strings, specifying names of permanent DataSet objects obtained from biaxial 
@@ -204,7 +205,7 @@ class Behavior:
 
         Returns
         -------
-            A tuple consisting of a and b values of the regression line(y = ax + b), coefficient of 
+            A Tuple consisting of a and b values of the regression line(y = ax + b), coefficient of 
             determination(r-squared) value and the start and end-points of the line.
         """
         pass
@@ -220,7 +221,7 @@ class Behavior:
 
         Returns
         -------
-            A tuple consisting of a and b values of the regression line(y = ax + b), coefficient of 
+            A Tuple consisting of a and b values of the regression line(y = ax + b), coefficient of 
             determination(r-squared) value and the start and end-points of the line.
         """
         pass
@@ -240,14 +241,14 @@ class Behavior:
         """
         pass
 
-    def compute_elasticModulus(self, yieldPoint: tuple):
+    def compute_elasticModulus(self, yieldPoint: Tuple):
         """This method computes the value of the elastic modulus from the yieldpoint value. The
         method is only valid for ElasPlasIsoBehavior type of behavior.
         
         Parameters
         ----------
         yieldPoint
-            A tuple consisting of coordinates of the yieldpoint. 
+            A Tuple consisting of coordinates of the yieldpoint. 
 
         Returns
         -------

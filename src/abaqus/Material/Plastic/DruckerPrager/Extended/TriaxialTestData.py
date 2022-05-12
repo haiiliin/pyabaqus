@@ -1,4 +1,5 @@
 from __init__ import *
+from __future__ import annotations
 
 
 class TriaxialTestData:
@@ -24,7 +25,7 @@ class TriaxialTestData:
 
     """
     def __init__(self,
-                 table: tuple,
+                 table: Tuple,
                  a: float = None,
                  b: float = None,
                  pt: float = None):

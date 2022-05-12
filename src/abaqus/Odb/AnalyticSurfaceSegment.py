@@ -1,6 +1,7 @@
 from abaqusConstants import *
 
 from __init__ import *
+from __future__ import annotations
 
 
 class AnalyticSurfaceSegment:
@@ -18,7 +19,7 @@ class AnalyticSurfaceSegment:
         session.odbs[name].steps[name].frames[i].fieldOutputs[name].values[i].instance.analyticSurface.segments[i]
 
     """
-    def __init__(self, type: SymbolicConstant, data: tuple):
+    def __init__(self, type: SymbolicConstant, data: Tuple):
         """This method creates an AnalyticSurfaceSegment object.
 
         Notes

@@ -1,6 +1,7 @@
 from abaqusConstants import *
 
 from __init__ import *
+from __future__ import annotations
 
 
 class ShearRetention:
@@ -33,7 +34,7 @@ class ShearRetention:
 
     """
     def __init__(self,
-                 table: tuple,
+                 table: Tuple,
                  temperatureDependency: Boolean = OFF,
                  dependencies: int = 0):
         """This method creates a ShearRetention object.

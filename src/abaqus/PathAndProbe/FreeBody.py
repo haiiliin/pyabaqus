@@ -1,6 +1,7 @@
 from abaqusConstants import *
 
 from __init__ import *
+from __future__ import annotations
 
 
 class FreeBody:
@@ -22,7 +23,7 @@ class FreeBody:
             name: str,
             edges: str,
             summationLoc: SymbolicConstant = CENTROID,
-            summationPoint: tuple = (),
+            summationPoint: Tuple = (),
             componentResolution: SymbolicConstant = NORMAL_TANGENTIAL,
             csysName: str = ''):
         """This method creates a FreeBody object and places it in the freeBodies repository.
@@ -45,7 +46,7 @@ class FreeBody:
             A SymbolicConstant specifying the location of the summation point. Possible values are 
             CENTROID, NODAL_AVERAGE and SPECIFY. The default value is CENTROID. 
         summationPoint
-            A tuple of 3 floats specifying the summation point. 
+            A Tuple of 3 floats specifying the summation point. 
         componentResolution
             A SymbolicConstant specifying the component resolution. Possible values are 
             NORMAL_TANGENTIAL and CSYS. The default value is NORMAL_TANGENTIAL. 
@@ -63,7 +64,7 @@ class FreeBody:
             name: str,
             faces: str,
             summationLoc: SymbolicConstant = CENTROID,
-            summationPoint: tuple = (),
+            summationPoint: Tuple = (),
             componentResolution: SymbolicConstant = NORMAL_TANGENTIAL,
             csysName: str = ''):
         """This method creates a FreeBody object and places it in the freeBodies repository.
@@ -86,7 +87,7 @@ class FreeBody:
             A SymbolicConstant specifying the location of the summation point. Possible values are 
             CENTROID, NODAL_AVERAGE and SPECIFY. The default value is CENTROID. 
         summationPoint
-            A tuple of 3 floats specifying the summation point. 
+            A Tuple of 3 floats specifying the summation point. 
         componentResolution
             A SymbolicConstant specifying the component resolution. Possible values are 
             NORMAL_TANGENTIAL and CSYS. The default value is NORMAL_TANGENTIAL. 
@@ -105,7 +106,7 @@ class FreeBody:
             elements: str,
             nodes: str,
             summationLoc: SymbolicConstant = CENTROID,
-            summationPoint: tuple = (),
+            summationPoint: Tuple = (),
             componentResolution: SymbolicConstant = NORMAL_TANGENTIAL,
             csysName: str = ''):
         """This method creates a FreeBody object and places it in the freeBodies repository.
@@ -130,7 +131,7 @@ class FreeBody:
             A SymbolicConstant specifying the location of the summation point. Possible values are 
             CENTROID, NODAL_AVERAGE and SPECIFY. The default value is CENTROID. 
         summationPoint
-            A tuple of 3 floats specifying the summation point. 
+            A Tuple of 3 floats specifying the summation point. 
         componentResolution
             A SymbolicConstant specifying the component resolution. Possible values are 
             NORMAL_TANGENTIAL and CSYS. The default value is NORMAL_TANGENTIAL. 

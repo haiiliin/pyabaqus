@@ -1,6 +1,7 @@
 from .ConnectorBehaviorOption import ConnectorBehaviorOption
 
 from __init__ import *
+from __future__ import annotations
 
 
 class ConnectorStop(ConnectorBehaviorOption):
@@ -26,7 +27,7 @@ class ConnectorStop(ConnectorBehaviorOption):
     def __init__(self,
                  minMotion: float = None,
                  maxMotion: float = None,
-                 components: tuple = ()):
+                 components: Tuple = ()):
         """This method creates a connector stop behavior option for a ConnectorSection object.
 
         Notes

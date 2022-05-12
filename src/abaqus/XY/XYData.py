@@ -6,6 +6,7 @@ from ..PathAndProbe.Path import Path
 
 # prevent circular imports
 from __init__ import *
+from __future__ import annotations
 
 
 class Odb:
@@ -13,6 +14,7 @@ class Odb:
 
 
 from __init__ import *
+from __future__ import annotations
 
 
 class XYData:
@@ -71,7 +73,7 @@ class XYData:
 
     @typing.overload
     def __init__(self,
-                 data: tuple,
+                 data: Tuple,
                  name: str = '',
                  sourceDescription: str = '',
                  contentDescription: str = '',
@@ -240,7 +242,7 @@ class XYData:
     def XYDataFromHistory(self,
                           odb: Odb,
                           outputVariableName: str,
-                          steps: tuple,
+                          steps: Tuple,
                           name: str = '',
                           sourceDescription: str = '',
                           contentDescription: str = '',
@@ -299,7 +301,7 @@ class XYData:
             A Float specifying the angle (in degrees) at which to display results that contain 
             complex numbers when *numericForm*=COMPLEX_VAL_AT_ANGLE. The default value is 0. 
         stepTuple
-            A tuple of Integers specifying the steps to include when extracting data. 
+            A Tuple of Integers specifying the steps to include when extracting data. 
 
         Returns
         -------
@@ -316,11 +318,11 @@ class XYData:
             self,
             odb: Odb,
             outputPosition: SymbolicConstant,
-            variable: tuple[tuple],
-            elementSets: tuple = (),
-            elementLabels: tuple = (),
-            nodeSets: tuple = (),
-            nodeLabels: tuple = (),
+            variable: Tuple[Tuple],
+            elementSets: Tuple = (),
+            elementLabels: Tuple = (),
+            nodeSets: Tuple = (),
+            nodeLabels: Tuple = (),
             numericForm: SymbolicConstant = REAL,
             complexAngle: float = 0,
             operator: SymbolicConstant = None) -> list['XYData']:
@@ -343,15 +345,15 @@ class XYData:
             A SymbolicConstant specifying the position from which output will be read. Possible 
             values are ELEMENT_CENTROID, ELEMENT_NODAL, INTEGRATION_POINT, and NODAL. 
         variable
-            A tuple of tuples containing the descriptions of variables for which to extract data 
-            from the field. Each tuple specifies the following:Variable label: A String specifying 
+            A Tuple of tuples containing the descriptions of variables for which to extract data 
+            from the field. Each Tuple specifies the following:Variable label: A String specifying 
             the variable; for example, 'U'.Variable output position: A SymbolicConstant specifying 
             the output position. Possible values are ELEMENT_CENTROID, ELEMENT_FACE, ELEMENT_NODAL, 
             GENERAL_PARTICLE, INTEGRATION_POINT, NODAL, WHOLE_ELEMENT, WHOLE_MODEL, 
-            WHOLE_PART_INSTANCE, and WHOLE_REGION.Refinement: A tuple specifying the refinement. If 
-            the refinement tuple is omitted, data are written for all components and invariants (if 
+            WHOLE_PART_INSTANCE, and WHOLE_REGION.Refinement: A Tuple specifying the refinement. If 
+            the refinement Tuple is omitted, data are written for all components and invariants (if 
             applicable). This element is required if the location dictionary (the following element 
-            in the tuple) is included. The refinement tuple contains the following:Type: A 
+            in the Tuple) is included. The refinement Tuple contains the following:Type: A 
             SymbolicConstant specifying the type of refinement. Possible values are INVARIANT and 
             COMPONENT.Label: A String specifying the invariant or the component; for example, 
             'Mises' or 'S22'.Location: An optional Dictionary specifying the location. The 
@@ -470,10 +472,10 @@ class XYData:
                                  odb: Odb,
                                  outputPosition: SymbolicConstant,
                                  variable: SymbolicConstant,
-                                 elementSets: tuple = (),
-                                 elementLabels: tuple = (),
-                                 nodeSets: tuple = (),
-                                 nodeLabels: tuple = (),
+                                 elementSets: Tuple = (),
+                                 elementLabels: Tuple = (),
+                                 nodeSets: Tuple = (),
+                                 nodeLabels: Tuple = (),
                                  numericForm: SymbolicConstant = REAL,
                                  complexAngle: float = 0):
         """This method creates a list of XYData objects by reading through the thickness field data
@@ -496,15 +498,15 @@ class XYData:
             A SymbolicConstant specifying the position from which output will be read. Possible 
             values are ELEMENT_CENTROID, ELEMENT_NODAL, INTEGRATION_POINT, and NODAL. 
         variable
-            A tuple of tuples containing the descriptions of variables for which to extract data 
-            from the field. Each tuple specifies the following:Variable label: A String specifying 
+            A Tuple of tuples containing the descriptions of variables for which to extract data 
+            from the field. Each Tuple specifies the following:Variable label: A String specifying 
             the variable; for example, 'U'.Variable output position: A SymbolicConstant specifying 
             the output position. Possible values are ELEMENT_CENTROID, ELEMENT_FACE, ELEMENT_NODAL, 
             GENERAL_PARTICLE, INTEGRATION_POINT, NODAL, WHOLE_ELEMENT, WHOLE_MODEL, 
-            WHOLE_PART_INSTANCE, and WHOLE_REGION.Refinement: A tuple specifying the refinement. If 
-            the refinement tuple is omitted, data are written for all components and invariants (if 
+            WHOLE_PART_INSTANCE, and WHOLE_REGION.Refinement: A Tuple specifying the refinement. If 
+            the refinement Tuple is omitted, data are written for all components and invariants (if 
             applicable). This element is required if the location dictionary (the following element 
-            in the tuple) is included. The refinement tuple contains the following:Type: A 
+            in the Tuple) is included. The refinement Tuple contains the following:Type: A 
             SymbolicConstant specifying the type of refinement. Possible values are INVARIANT and 
             COMPONENT.Label: A String specifying the invariant or the component; for example, 
             'Mises' or 'S22'.Location: An optional Dictionary specifying the location. The 
@@ -622,16 +624,16 @@ class XYData:
             An Int identifying the frame from which to obtain values. The default value is the 
             current frame. 
         variable
-            A tuple of tuples containing the descriptions of variables for which to extract data 
-            along the path. The default value is the current variable. Each tuple specifies the 
+            A Tuple of tuples containing the descriptions of variables for which to extract data 
+            along the path. The default value is the current variable. Each Tuple specifies the 
             following:Variable label: A String specifying the variable; for example, 'U'.Variable 
             output position: A SymbolicConstant specifying the output position. Possible values are 
             ELEMENT_CENTROID, ELEMENT_FACE, ELEMENT_NODAL, GENERAL_PARTICLE, INTEGRATION_POINT, 
             NODAL, WHOLE_ELEMENT, WHOLE_MODEL, WHOLE_PART_INSTANCE, and WHOLE_REGION.Refinement: A 
-            tuple specifying the refinement. If the refinement tuple is omitted, data are written 
+            Tuple specifying the refinement. If the refinement Tuple is omitted, data are written 
             for all components and invariants (if applicable). This element is required if the 
-            location dictionary (the following element in the tuple) is included. The refinement 
-            tuple contains the following:Type: A SymbolicConstant specifying the type of refinement. 
+            location dictionary (the following element in the Tuple) is included. The refinement 
+            Tuple contains the following:Type: A SymbolicConstant specifying the type of refinement. 
             Possible values are INVARIANT and COMPONENT.Label: A String specifying the invariant or 
             the component; for example, 'Mises' or 'S22'.Location: An optional Dictionary specifying 
             the location. The dictionary contains pairs of the following:A String specifying the 
@@ -642,7 +644,7 @@ class XYData:
             {'shell < STEEL > < 3 section points >':'SNEG,                                    
             (fraction = -1.0)', }), )` 
         deformedMag
-            A tuple of three Floats specifying the deformation magnitude in the *X-*, *Y-*, and 
+            A Tuple of three Floats specifying the deformation magnitude in the *X-*, *Y-*, and 
             *Z-*planes. The default value is (1, 1, 1). 
         numericForm
             A SymbolicConstant specifying the numeric form in which to display results that contain 
@@ -684,7 +686,7 @@ class XYData:
             - If the label specifying the refinement invariant or component is invalid: 
               ErrorInvalidRefinementSpecification: Invalid refinement specification. 
             - If *deformedMag* does not contain three Floats: 
-              ErrorDeformedMagTupleInPathExtract: Deformed magnification tuple must contain X, Y and 
+              ErrorDeformedMagTupleInPathExtract: Deformed magnification Tuple must contain X, Y and 
             Z values. 
         """
         pass

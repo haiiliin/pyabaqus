@@ -3,6 +3,7 @@ from .AnalyticalField import AnalyticalField
 from .OdbMeshRegionData import OdbMeshRegionData
 
 from __init__ import *
+from __future__ import annotations
 
 
 class MappedField(AnalyticalField):
@@ -62,17 +63,17 @@ class MappedField(AnalyticalField):
     scaleCoordinates: Boolean
         A Boolean specifying whether or not to scale the user-supplied coordinate values from
         the point cloud or indicated ODB. The default value is OFF.
-    gridPointData: tuple
-        A tuple of tuples of Floats specifying the point cloud source data of grid format. The
+    gridPointData: Tuple
+        A Tuple of tuples of Floats specifying the point cloud source data of grid format. The
         default value is an empty sequence.
-    xyzPointData: tuple
-        A tuple of tuples of Floats specifying the point cloud source data of XYZ format. Each
+    xyzPointData: Tuple
+        A Tuple of tuples of Floats specifying the point cloud source data of XYZ format. Each
         data item is defining the XYZ coordinates of a point and its field value. The default
         value is an empty sequence.
     odbMeshRegionData: OdbMeshRegionData
         An :py:class:`~abaqus.Field.OdbMeshRegionData.OdbMeshRegionData` object specifying the external source data from ODB mesh region.
     coordinateScalingFactors: float
-        A tuple of Floats specifying the scaling factors for the global 1, 2 and 3 directions.
+        A Tuple of Floats specifying the scaling factors for the global 1, 2 and 3 directions.
         The default value is (1.0, 1.0, 1.0).
     localCsys: str
         None or a :py:class:`~abaqus.Datum.DatumCsys.DatumCsys` object specifying the local coordinate system of the field. If
@@ -155,19 +156,19 @@ class MappedField(AnalyticalField):
     # the point cloud or indicated ODB. The default value is OFF.
     scaleCoordinates: Boolean = OFF
 
-    # A tuple of tuples of Floats specifying the point cloud source data of grid format. The
+    # A Tuple of tuples of Floats specifying the point cloud source data of grid format. The
     # default value is an empty sequence.
-    gridPointData: tuple = ()
+    gridPointData: Tuple = ()
 
-    # A tuple of tuples of Floats specifying the point cloud source data of XYZ format. Each
+    # A Tuple of tuples of Floats specifying the point cloud source data of XYZ format. Each
     # data item is defining the XYZ coordinates of a point and its field value. The default
     # value is an empty sequence.
-    xyzPointData: tuple = ()
+    xyzPointData: Tuple = ()
 
     # An OdbMeshRegionData object specifying the external source data from ODB mesh region.
     odbMeshRegionData: OdbMeshRegionData = None
 
-    # A tuple of Floats specifying the scaling factors for the global 1, 2 and 3 directions.
+    # A Tuple of Floats specifying the scaling factors for the global 1, 2 and 3 directions.
     # The default value is (1.0, 1.0, 1.0).
     coordinateScalingFactors: float = None
 
@@ -193,9 +194,9 @@ class MappedField(AnalyticalField):
                  negativeNormalSearchTol: float = 0,
                  positiveNormalSearchTol: float = 0,
                  scaleCoordinates: Boolean = OFF,
-                 gridPointData: tuple = (),
-                 xyzPointData: tuple = (),
-                 coordinateScalingFactors: tuple = (),
+                 gridPointData: Tuple = (),
+                 xyzPointData: Tuple = (),
+                 coordinateScalingFactors: Tuple = (),
                  localCsys: str = None,
                  description: str = ''):
         """This method creates an MappedField object.
@@ -301,9 +302,9 @@ class MappedField(AnalyticalField):
                   negativeNormalSearchTol: float = 0,
                   positiveNormalSearchTol: float = 0,
                   scaleCoordinates: Boolean = OFF,
-                  gridPointData: tuple = (),
-                  xyzPointData: tuple = (),
-                  coordinateScalingFactors: tuple = (),
+                  gridPointData: Tuple = (),
+                  xyzPointData: Tuple = (),
+                  coordinateScalingFactors: Tuple = (),
                   localCsys: str = None,
                   description: str = ''):
         """This method modifies the MappedField object.

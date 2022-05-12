@@ -1,6 +1,7 @@
 from abaqusConstants import *
 
 from __init__ import *
+from __future__ import annotations
 
 
 class DGSuperimposeOptions:
@@ -129,7 +130,7 @@ class DGSuperimposeOptions:
         A String specifying the color to be used to plot an arrow along the tangent to a beam.
         The default value is "White".
     coordinateScaleFactors: float
-        A tuple of three Floats specifying the coordinate scaling in each of the three
+        A Tuple of three Floats specifying the coordinate scaling in each of the three
         coordinate directions when **coordinateScale=ON**. The default value is (1, 1, 1).
     """
 
@@ -270,6 +271,6 @@ class DGSuperimposeOptions:
     # The default value is "White".
     beamTangentColor: str = ''
 
-    # A tuple of three Floats specifying the coordinate scaling in each of the three
+    # A Tuple of three Floats specifying the coordinate scaling in each of the three
     # coordinate directions when *coordinateScale*=ON. The default value is (1, 1, 1).
     coordinateScaleFactors: float = None

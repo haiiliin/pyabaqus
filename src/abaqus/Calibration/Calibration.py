@@ -2,6 +2,7 @@ from .Behavior import Behavior
 from .DataSet import DataSet
 
 from __init__ import *
+from __future__ import annotations
 
 
 class Calibration:
@@ -82,7 +83,7 @@ class Calibration:
 
     def DataSet(self,
                 name: str,
-                data: tuple = (),
+                data: Tuple = (),
                 type: str = '',
                 form: str = '') -> DataSet:
         """This method creates a DataSet object.

@@ -1,6 +1,7 @@
 from abaqusConstants import *
 
 from __init__ import *
+from __future__ import annotations
 
 
 class PoreFluidExpansion:
@@ -30,7 +31,7 @@ class PoreFluidExpansion:
 
     """
     def __init__(self,
-                 table: tuple,
+                 table: Tuple,
                  zero: float = 0,
                  temperatureDependency: Boolean = OFF,
                  dependencies: int = 0):

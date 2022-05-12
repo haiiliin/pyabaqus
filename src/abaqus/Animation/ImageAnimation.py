@@ -1,6 +1,7 @@
 from abaqusConstants import *
 
 from __init__ import *
+from __future__ import annotations
 
 
 class ImageAnimation:
@@ -50,7 +51,7 @@ class ImageAnimation:
         """
         pass
 
-    def writeFrame(self, canvasObjects: tuple = ()):
+    def writeFrame(self, canvasObjects: Tuple = ()):
         """This method adds a frame to the ImageAnimation object.
         
         Parameters

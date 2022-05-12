@@ -3,6 +3,7 @@ from .PredefinedField import PredefinedField
 from ..Region.Region import Region
 
 from __init__ import *
+from __future__ import annotations
 
 
 class KinematicHardening(PredefinedField):
@@ -40,11 +41,11 @@ class KinematicHardening(PredefinedField):
                  name: str,
                  region: Region,
                  numBackStress: int = 1,
-                 equivPlasticStrain: tuple = (),
-                 backStress: tuple = (),
-                 sectPtNum: tuple = (),
+                 equivPlasticStrain: Tuple = (),
+                 backStress: Tuple = (),
+                 sectPtNum: Tuple = (),
                  definition: SymbolicConstant = KINEMATIC_HARDENING,
-                 rebarLayerNames: tuple = (),
+                 rebarLayerNames: Tuple = (),
                  distributionType: SymbolicConstant = MAGNITUDE):
         """This method creates a KinematicHardening object.
 
@@ -92,11 +93,11 @@ class KinematicHardening(PredefinedField):
 
     def setValues(self,
                   numBackStress: int = 1,
-                  equivPlasticStrain: tuple = (),
-                  backStress: tuple = (),
-                  sectPtNum: tuple = (),
+                  equivPlasticStrain: Tuple = (),
+                  backStress: Tuple = (),
+                  sectPtNum: Tuple = (),
                   definition: SymbolicConstant = KINEMATIC_HARDENING,
-                  rebarLayerNames: tuple = (),
+                  rebarLayerNames: Tuple = (),
                   distributionType: SymbolicConstant = MAGNITUDE):
         """This method modifies the KinematicHardening object.
         

@@ -5,6 +5,7 @@ from .PartInstance import PartInstance
 
 # Prevent circular import
 from __init__ import *
+from __future__ import annotations
 
 
 class ModelBase:
@@ -12,6 +13,7 @@ class ModelBase:
 
 
 from __init__ import *
+from __future__ import annotations
 
 
 class AssemblyModel(ModelBase):
@@ -74,7 +76,7 @@ class AssemblyModel(ModelBase):
         """
         pass
 
-    def linkInstances(self, instancesMap: tuple):
+    def linkInstances(self, instancesMap: Tuple):
         """This method links the selected PartInstance objects to the corresponding PartInstance
         objects from the specified models. If all instances of a Part are selected for linking,
         the Part will be linked as well. If not, a new linked child Part object will be created
@@ -83,7 +85,7 @@ class AssemblyModel(ModelBase):
         Parameters
         ----------
         instancesMap
-            A tuple of tuples containing the instance name to be linked and the corresponding 
+            A Tuple of tuples containing the instance name to be linked and the corresponding 
             PartInstance object to which it will be linked. 
 
         Returns

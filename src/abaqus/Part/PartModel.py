@@ -3,6 +3,7 @@ from ..Model.ModelBase import ModelBase
 from ..Part.Part import Part
 
 from __init__ import *
+from __future__ import annotations
 
 
 class PartModel(ModelBase):

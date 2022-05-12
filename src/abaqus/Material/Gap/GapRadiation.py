@@ -1,4 +1,5 @@
 from __init__ import *
+from __future__ import annotations
 
 
 class GapRadiation:
@@ -26,7 +27,7 @@ class GapRadiation:
 
     """
     def __init__(self, mainSurfaceEmissivity: float,
-                 secondarySurfaceEmissivity: float, table: tuple):
+                 secondarySurfaceEmissivity: float, table: Tuple):
         """This method creates a GapRadiation object.
 
         Notes

@@ -15,6 +15,7 @@ from ..Property.MaterialOrientationArray import MaterialOrientationArray
 from ..Property.SectionAssignmentArray import SectionAssignmentArray
 
 from __init__ import *
+from __future__ import annotations
 
 
 class OdbPartBase:
@@ -122,8 +123,8 @@ class OdbPartBase:
 
     @typing.overload
     def addElements(self,
-                    labels: tuple,
-                    connectivity: tuple,
+                    labels: Tuple,
+                    connectivity: Tuple,
                     type: str,
                     elementSetName: str = '',
                     sectionCategory: SectionCategory = None):
@@ -149,7 +150,7 @@ class OdbPartBase:
 
     @typing.overload
     def addElements(self,
-                    elementData: tuple,
+                    elementData: Tuple,
                     type: str,
                     elementSetName: str = None,
                     sectionCategory: SectionCategory = None):
@@ -177,8 +178,8 @@ class OdbPartBase:
 
     @typing.overload
     def addNodes(self,
-                 labels: tuple,
-                 coordinates: tuple,
+                 labels: Tuple,
+                 coordinates: Tuple,
                  nodeSetName: str = None):
         """This method adds nodes to an OdbPart object using node labels and coordinates.
         Warning:Adding nodes not in ascending order of their labels may cause Abaqus/Viewer to
@@ -196,7 +197,7 @@ class OdbPartBase:
         pass
 
     @typing.overload
-    def addNodes(self, nodeData: tuple, nodeSetName: str = None):
+    def addNodes(self, nodeData: Tuple, nodeSetName: str = None):
         """This method adds nodes to an OdbPart object using a sequence of node labels and
         coordinates.
         Warning:Adding nodes not in ascending order of their labels may cause Abaqus/Viewer to
@@ -216,7 +217,7 @@ class OdbPartBase:
         pass
 
     def assignBeamOrientation(self, region: str, method: SymbolicConstant,
-                              vector: tuple):
+                              vector: Tuple):
         """This method assigns a beam section orientation to a region of a part instance.
         
         Parameters
@@ -325,7 +326,7 @@ class OdbPartBase:
 
     def AnalyticRigidSurf2DPlanar(self,
                                   name: str,
-                                  profile: tuple[AnalyticSurfaceSegment],
+                                  profile: Tuple[AnalyticSurfaceSegment],
                                   filletRadius: str = 0):
         """This method is used to define a two-dimensional AnalyticSurface object on the part
         object.
@@ -351,7 +352,7 @@ class OdbPartBase:
 
     def AnalyticRigidSurfExtrude(self,
                                  name: str,
-                                 profile: tuple[AnalyticSurfaceSegment],
+                                 profile: Tuple[AnalyticSurfaceSegment],
                                  filletRadius: str = 0):
         """This method is used to define a three-dimensional cylindrical AnalyticSurface on the
         part object.
@@ -377,7 +378,7 @@ class OdbPartBase:
 
     def AnalyticRigidSurfRevolve(self,
                                  name: str,
-                                 profile: tuple[AnalyticSurfaceSegment],
+                                 profile: Tuple[AnalyticSurfaceSegment],
                                  filletRadius: str = 0):
         """This method is used to define a three-dimensional AnalyticSurface of revolution on the
         part object.

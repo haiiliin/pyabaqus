@@ -5,6 +5,7 @@ from .SpringDashpot import SpringDashpot
 from ..Region.Region import Region
 
 from __init__ import *
+from __future__ import annotations
 
 
 class EngineeringFeatureBase:
@@ -47,7 +48,7 @@ class EngineeringFeatureBase:
     # A repository of SpringDashpot objects.
     springDashpots: dict[str, SpringDashpot] = dict[str, SpringDashpot]()
 
-    def assignSeam(self, regions: tuple[Region]):
+    def assignSeam(self, regions: Tuple[Region]):
         """This method creates a seam crack along an edge or a face.
         
         Parameters
@@ -58,7 +59,7 @@ class EngineeringFeatureBase:
         """
         pass
 
-    def deleteSeam(self, regions: tuple[Region]):
+    def deleteSeam(self, regions: Tuple[Region]):
         """This method deletes a seam crack.
         
         Parameters

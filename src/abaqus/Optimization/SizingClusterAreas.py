@@ -1,6 +1,7 @@
 from .GeometricRestriction import GeometricRestriction
 
 from __init__ import *
+from __future__ import annotations
 
 
 class SizingClusterAreas(GeometricRestriction):
@@ -17,7 +18,7 @@ class SizingClusterAreas(GeometricRestriction):
         mdb.models[name].optimizationTasks[name].geometricRestrictions[name]
 
     """
-    def __init__(self, name: str, regions: tuple):
+    def __init__(self, name: str, regions: Tuple):
         """This method creates a SizingClusterAreas object.
 
         Notes

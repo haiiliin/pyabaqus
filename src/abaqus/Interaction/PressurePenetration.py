@@ -3,6 +3,7 @@ from .Interaction import Interaction
 from ..Region.RegionArray import RegionArray
 
 from __init__ import *
+from __future__ import annotations
 
 
 class PressurePenetration(Interaction):
@@ -94,10 +95,10 @@ class PressurePenetration(Interaction):
             A RegionArray object specifying the points on the secondary surface that are exposed to 
             the fluid. 
         penetrationPressure
-            A tuple of Floats specifying the fluid pressure magnitude. For steady state dynamic 
-            analyses, a tuple of Complexes specifying the fluid pressure magnitude. 
+            A Tuple of Floats specifying the fluid pressure magnitude. For steady state dynamic 
+            analyses, a Tuple of Complexes specifying the fluid pressure magnitude. 
         criticalPressure
-            A tuple of Floats specifying the critical contact pressure below which fluid penetration 
+            A Tuple of Floats specifying the critical contact pressure below which fluid penetration 
             starts to occur. 
         amplitude
             A String or the SymbolicConstant UNSET specifying the name of the amplitude reference. 
@@ -146,10 +147,10 @@ class PressurePenetration(Interaction):
         stepName
             A String specifying the name of the step in which the interaction is modified. 
         penetrationPressure
-            A tuple of Floats specifying the fluid pressure magnitude. For steady state dynamic 
-            analyses, a tuple of Complexes specifying the fluid pressure magnitude. 
+            A Tuple of Floats specifying the fluid pressure magnitude. For steady state dynamic 
+            analyses, a Tuple of Complexes specifying the fluid pressure magnitude. 
         criticalPressure
-            A tuple of Floats specifying the critical contact pressure below which fluid penetration 
+            A Tuple of Floats specifying the critical contact pressure below which fluid penetration 
             starts to occur. 
         amplitude
             A String or a SymbolicConstant specifying the name of the amplitude reference. Possible 

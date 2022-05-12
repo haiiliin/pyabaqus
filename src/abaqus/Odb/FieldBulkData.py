@@ -4,6 +4,7 @@ from .OdbPart import OdbPart
 from .SectionPoint import SectionPoint
 
 from __init__ import *
+from __future__ import annotations
 
 
 class FieldBulkData:
@@ -30,28 +31,28 @@ class FieldBulkData:
         An :py:class:`~abaqus.Odb.OdbInstance.OdbInstance` object specifying the part to which the labels belong.
     sectionPoint: SectionPoint
         A :py:class:`~abaqus.Odb.SectionPoint.SectionPoint` object specifying the section point number of the current block of data.
-    elementLabels: tuple
+    elementLabels: Tuple
         A sequence of Ints specifying the element labels of the elements in the block.
         **elementLabels** is valid only if **position=INTEGRATION_POINT**, CENTROID, ELEMENT_NODAL,
         or ELEMENT_FACE.
-    nodeLabels: tuple
+    nodeLabels: Tuple
         A sequence of Ints specifying the node labels of the nodes in the block. **nodelabels** is
         valid only if **position=ELEMENT_NODAL** or NODAL.
-    componentLabels: tuple
+    componentLabels: Tuple
         A sequence of Strings specifying the component labels.
-    integrationPoints: tuple
+    integrationPoints: Tuple
         A sequence of Ints specifying the integration points in the elements in the block.
         **integrationPoints** is available only if **position=INTEGRATION_POINT**.
-    data: tuple
-        A tuple of Floats specifying data in the form described by **type**. If **type=TENSOR** or
+    data: Tuple
+        A Tuple of Floats specifying data in the form described by **type**. If **type=TENSOR** or
         VECTOR, **data** is a sequence containing the components for each element or node in the
         block. If the underlying data are in double precision, an exception will be thrown.
-    conjugateData: tuple
-        A tuple of Floats specifying data in the form described by **type**. If **type=TENSOR** or
+    conjugateData: Tuple
+        A Tuple of Floats specifying data in the form described by **type**. If **type=TENSOR** or
         VECTOR, **conjugateData** is a sequence containing the imaginary part of the components
         for each element or node in the block. If the underlying data are in double precision,
         an exception will be thrown.
-    mises: tuple
+    mises: Tuple
         A sequence of Floats specifying the calculated von Mises stress at each output location
         in the block of element data, or NULL. The value is valid only when the
         **validInvariants** member includes MISES; otherwise, the value is indeterminate.
@@ -105,35 +106,35 @@ class FieldBulkData:
     # A sequence of Ints specifying the element labels of the elements in the block.
     # *elementLabels* is valid only if *position*=INTEGRATION_POINT, CENTROID, ELEMENT_NODAL,
     # or ELEMENT_FACE.
-    elementLabels: tuple = ()
+    elementLabels: Tuple = ()
 
     # A sequence of Ints specifying the node labels of the nodes in the block. *nodelabels* is
     # valid only if *position*=ELEMENT_NODAL or NODAL.
-    nodeLabels: tuple = ()
+    nodeLabels: Tuple = ()
 
     # A sequence of Strings specifying the component labels.
-    componentLabels: tuple = ()
+    componentLabels: Tuple = ()
 
     # A sequence of Ints specifying the integration points in the elements in the block.
     # *integrationPoints* is available only if *position*=INTEGRATION_POINT.
-    integrationPoints: tuple = ()
+    integrationPoints: Tuple = ()
 
-    # A tuple of Floats specifying data in the form described by *type*. If *type*=TENSOR or
+    # A Tuple of Floats specifying data in the form described by *type*. If *type*=TENSOR or
     # VECTOR, *data* is a sequence containing the components for each element or node in the
     # block. If the underlying data are in double precision, an exception will be thrown.
-    data: tuple = ()
+    data: Tuple = ()
 
-    # A tuple of Floats specifying data in the form described by *type*. If *type*=TENSOR or
+    # A Tuple of Floats specifying data in the form described by *type*. If *type*=TENSOR or
     # VECTOR, *conjugateData* is a sequence containing the imaginary part of the components
     # for each element or node in the block. If the underlying data are in double precision,
     # an exception will be thrown.
-    conjugateData: tuple = ()
+    conjugateData: Tuple = ()
 
     # A sequence of Floats specifying the calculated von Mises stress at each output location
     # in the block of element data, or NULL. The value is valid only when the
     # *validInvariants* member includes MISES; otherwise, the value is indeterminate.
     # Conjugate data will be ignored in invariant calculation.
-    mises: tuple = ()
+    mises: Tuple = ()
 
     # A pointer to an array of Floats specifying the quaternion representing the local
     # coordinate system (the rotation from global to local) at each output location. The

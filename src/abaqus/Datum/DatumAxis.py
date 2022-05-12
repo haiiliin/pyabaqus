@@ -1,6 +1,7 @@
 from .Datum import Datum
 
 from __init__ import *
+from __future__ import annotations
 
 
 class DatumAxis(Datum):
@@ -12,10 +13,10 @@ class DatumAxis(Datum):
     Attributes
     ----------
     pointOn: float
-        A tuple of Floats specifying the **X**-, **Y**-, and **Z**-coordinates of a point located on
+        A Tuple of Floats specifying the **X**-, **Y**-, and **Z**-coordinates of a point located on
         the datum.
-    direction: tuple
-        A tuple of Floats specifying a sequence of three Floats specifying the direction of the
+    direction: Tuple
+        A Tuple of Floats specifying a sequence of three Floats specifying the direction of the
         axis.
 
     Notes
@@ -33,10 +34,10 @@ class DatumAxis(Datum):
 
     """
 
-    # A tuple of Floats specifying the *X*-, *Y*-, and *Z*-coordinates of a point located on
+    # A Tuple of Floats specifying the *X*-, *Y*-, and *Z*-coordinates of a point located on
     # the datum.
     pointOn: float = None
 
-    # A tuple of Floats specifying a sequence of three Floats specifying the direction of the
+    # A Tuple of Floats specifying a sequence of three Floats specifying the direction of the
     # axis.
-    direction: tuple = ()
+    direction: Tuple = ()

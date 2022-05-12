@@ -3,6 +3,7 @@ from .Leaf import Leaf
 from ..Datum.Datum import Datum
 
 from __init__ import *
+from __future__ import annotations
 
 
 class LeafFromDatums(Leaf):
@@ -32,7 +33,7 @@ class LeafFromDatums(Leaf):
     # DEFAULT_MODEL, ALL_ELEMENTS, ALL_NODES, and ALL_SURFACES.
     leafType: SymbolicConstant = None
 
-    def __init__(self, datumSeq: tuple[Datum]):
+    def __init__(self, datumSeq: Tuple[Datum]):
         """This method creates a Leaf object from a sequence of datum objects. Leaf objects specify
         the items in a display group.
 

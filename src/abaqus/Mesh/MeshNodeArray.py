@@ -1,8 +1,7 @@
 from .MeshNode import MeshNode
 
-from __future__ import annotations
-
 from __init__ import *
+from __future__ import annotations
 
 
 class MeshNodeArray(list[MeshNode]):
@@ -133,7 +132,7 @@ class MeshNodeArray(list[MeshNode]):
         """
         pass
 
-    def getByBoundingCylinder(self, center1: tuple, center2: tuple,
+    def getByBoundingCylinder(self, center1: Tuple, center2: Tuple,
                               radius: str):
         """This method returns an array of node objects that lie within the specified bounding
         cylinder.
@@ -141,9 +140,9 @@ class MeshNodeArray(list[MeshNode]):
         Parameters
         ----------
         center1
-            A tuple of the X-, Y-, and Z-coordinates of the center of the first end of the cylinder. 
+            A Tuple of the X-, Y-, and Z-coordinates of the center of the first end of the cylinder. 
         center2
-            A tuple of the X-, Y-, and Z-coordinates of the center of the second end of the 
+            A Tuple of the X-, Y-, and Z-coordinates of the center of the second end of the 
             cylinder. 
         radius
             A float specifying the radius of the cylinder. 
@@ -154,14 +153,14 @@ class MeshNodeArray(list[MeshNode]):
         """
         pass
 
-    def getByBoundingSphere(self, center: tuple, radius: str):
+    def getByBoundingSphere(self, center: Tuple, radius: str):
         """This method returns an array of node objects that lie within the specified bounding
         sphere.
         
         Parameters
         ----------
         center
-            A tuple of the X-, Y-, and Z-coordinates of the center of the sphere. 
+            A Tuple of the X-, Y-, and Z-coordinates of the center of the sphere. 
         radius
             A float specifying the radius of the sphere. 
 
@@ -178,9 +177,9 @@ class MeshNodeArray(list[MeshNode]):
         Returns
         -------
             A Dictionary object with the following items: 
-            *low*: a tuple of three floats representing the minimum x, y and z boundary values of 
+            *low*: a Tuple of three floats representing the minimum x, y and z boundary values of 
             the bounding box. 
-            *high*: a tuple of three floats representing the maximum x, y and z boundary values of 
+            *high*: a Tuple of three floats representing the maximum x, y and z boundary values of 
             the bounding box. 
 
         Raises
@@ -216,7 +215,7 @@ class MeshNodeArray(list[MeshNode]):
         """
         pass
 
-    def sequenceFromLabels(self, labels: tuple):
+    def sequenceFromLabels(self, labels: Tuple):
         """This method returns the objects in the MeshNodeArray identified using the specified
         labels.
         

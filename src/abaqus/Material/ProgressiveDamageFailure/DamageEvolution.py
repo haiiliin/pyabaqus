@@ -1,6 +1,7 @@
 from abaqusConstants import *
 
 from __init__ import *
+from __future__ import annotations
 
 
 class DamageEvolution:
@@ -143,7 +144,7 @@ class DamageEvolution:
     """
     def __init__(self,
                  type: SymbolicConstant,
-                 table: tuple,
+                 table: Tuple,
                  degradation: SymbolicConstant = MAXIMUM,
                  temperatureDependency: Boolean = OFF,
                  dependencies: int = 0,

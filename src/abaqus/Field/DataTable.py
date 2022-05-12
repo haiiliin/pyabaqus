@@ -1,4 +1,5 @@
 from __init__ import *
+from __future__ import annotations
 
 
 class DataTable:
@@ -14,9 +15,9 @@ class DataTable:
     instanceName: str
         A String specifying the instance name.
     domain: int
-        A tuple of Ints specifying the domain node, element or integration point identifiers.
+        A Tuple of Ints specifying the domain node, element or integration point identifiers.
     table: float
-        A tuple of Floats specifying the data within the domain.
+        A Tuple of Floats specifying the data within the domain.
 
     Notes
     -----
@@ -39,8 +40,8 @@ class DataTable:
     # A String specifying the instance name.
     instanceName: str = ''
 
-    # A tuple of Ints specifying the domain node, element or integration point identifiers.
+    # A Tuple of Ints specifying the domain node, element or integration point identifiers.
     domain: int = None
 
-    # A tuple of Floats specifying the data within the domain.
+    # A Tuple of Floats specifying the data within the domain.
     table: float = None

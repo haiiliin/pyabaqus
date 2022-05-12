@@ -1,6 +1,7 @@
 from abaqusConstants import *
 
 from __init__ import *
+from __future__ import annotations
 
 
 class ElectricalConductivity:
@@ -52,7 +53,7 @@ class ElectricalConductivity:
 
     """
     def __init__(self,
-                 table: tuple,
+                 table: Tuple,
                  type: SymbolicConstant = ISOTROPIC,
                  frequencyDependency: Boolean = OFF,
                  temperatureDependency: Boolean = OFF,

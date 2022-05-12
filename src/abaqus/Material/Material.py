@@ -58,6 +58,7 @@ from .Plastic.Swelling.Swelling import Swelling
 from .Regularization import Regularization
 
 from __init__ import *
+from __future__ import annotations
 
 
 class Material(MaterialBase):
@@ -237,8 +238,8 @@ class Material(MaterialBase):
         temperatureDependencyV: Boolean = OFF,
         dependenciesB: int = 0,
         dependenciesV: int = 0,
-        bulkTable: tuple = (),
-        volumetricTable: tuple = ()
+        bulkTable: Tuple = (),
+        volumetricTable: Tuple = ()
     ) -> AcousticMedium:
         """This method creates an AcousticMedium object.
 
@@ -301,7 +302,7 @@ class Material(MaterialBase):
         return self.acousticMedium
 
     def BrittleCracking(self,
-                        table: tuple,
+                        table: Tuple,
                         temperatureDependency: Boolean = OFF,
                         dependencies: int = 0,
                         type: SymbolicConstant = STRAIN) -> BrittleCracking:
@@ -337,7 +338,7 @@ class Material(MaterialBase):
         return self.brittleCracking
 
     def CapPlasticity(self,
-                      table: tuple,
+                      table: Tuple,
                       temperatureDependency: Boolean = OFF,
                       dependencies: int = 0) -> CapPlasticity:
         """This method creates a CapPlasticity object.
@@ -373,7 +374,7 @@ class Material(MaterialBase):
         return self.capPlasticity
 
     def CastIronPlasticity(self,
-                           table: tuple,
+                           table: Tuple,
                            temperatureDependency: Boolean = OFF,
                            dependencies: int = 0) -> CastIronPlasticity:
         """This method creates a CastIronPlasticity object.
@@ -410,7 +411,7 @@ class Material(MaterialBase):
         return self.castIronPlasticity
 
     def ClayPlasticity(self,
-                       table: tuple,
+                       table: Tuple,
                        intercept: float = None,
                        hardening: SymbolicConstant = EXPONENTIAL,
                        temperatureDependency: Boolean = OFF,
@@ -456,7 +457,7 @@ class Material(MaterialBase):
         return self.clayPlasticity
 
     def Concrete(self,
-                 table: tuple,
+                 table: Tuple,
                  temperatureDependency: Boolean = OFF,
                  dependencies: int = 0) -> Concrete:
         """This method creates a Concrete object.
@@ -492,7 +493,7 @@ class Material(MaterialBase):
 
     def ConcreteDamagedPlasticity(
             self,
-            table: tuple,
+            table: Tuple,
             temperatureDependency: Boolean = OFF,
             dependencies: int = 0) -> ConcreteDamagedPlasticity:
         """This method creates a ConcreteDamagedPlasticity object.
@@ -528,7 +529,7 @@ class Material(MaterialBase):
         return self.concreteDamagedPlasticity
 
     def Conductivity(self,
-                     table: tuple,
+                     table: Tuple,
                      type: SymbolicConstant = ISOTROPIC,
                      temperatureDependency: Boolean = OFF,
                      dependencies: int = 0) -> Conductivity:
@@ -568,7 +569,7 @@ class Material(MaterialBase):
         return self.conductivity
 
     def Creep(self,
-              table: tuple,
+              table: Tuple,
               law: SymbolicConstant = STRAIN,
               temperatureDependency: Boolean = OFF,
               dependencies: int = 0,
@@ -613,7 +614,7 @@ class Material(MaterialBase):
         return self.creep
 
     def CrushableFoam(self,
-                      table: tuple,
+                      table: Tuple,
                       hardening: SymbolicConstant = VOLUMETRIC,
                       temperatureDependency: Boolean = OFF,
                       dependencies: int = 0) -> CrushableFoam:
@@ -697,7 +698,7 @@ class Material(MaterialBase):
 
     def DeformationPlasticity(
             self,
-            table: tuple,
+            table: Tuple,
             temperatureDependency: Boolean = OFF) -> DeformationPlasticity:
         """This method creates a DeformationPlasticity object.
 
@@ -730,7 +731,7 @@ class Material(MaterialBase):
         return self.deformationPlasticity
 
     def Density(self,
-                table: tuple,
+                table: Tuple,
                 temperatureDependency: Boolean = OFF,
                 dependencies: int = 0,
                 distributionType: SymbolicConstant = UNIFORM,
@@ -815,7 +816,7 @@ class Material(MaterialBase):
         return self.depvar
 
     def Dielectric(self,
-                   table: tuple,
+                   table: Tuple,
                    type: SymbolicConstant = ISOTROPIC,
                    frequencyDependency: Boolean = OFF,
                    temperatureDependency: Boolean = OFF,
@@ -854,7 +855,7 @@ class Material(MaterialBase):
         return self.dielectric
 
     def Diffusivity(self,
-                    table: tuple,
+                    table: Tuple,
                     type: SymbolicConstant = ISOTROPIC,
                     law: SymbolicConstant = GENERAL,
                     temperatureDependency: Boolean = OFF,
@@ -898,7 +899,7 @@ class Material(MaterialBase):
         return self.diffusivity
 
     def DruckerPrager(self,
-                      table: tuple,
+                      table: Tuple,
                       shearCriterion: SymbolicConstant = LINEAR,
                       eccentricity: float = 0,
                       testData: Boolean = OFF,
@@ -952,7 +953,7 @@ class Material(MaterialBase):
         return self.druckerPrager
 
     def Elastic(self,
-                table: tuple,
+                table: Tuple,
                 type: SymbolicConstant = ISOTROPIC,
                 noCompression: Boolean = OFF,
                 noTension: Boolean = OFF,
@@ -1114,7 +1115,7 @@ class Material(MaterialBase):
 
     def ElectricalConductivity(
             self,
-            table: tuple,
+            table: Tuple,
             type: SymbolicConstant = ISOTROPIC,
             frequencyDependency: Boolean = OFF,
             temperatureDependency: Boolean = OFF,
@@ -1163,11 +1164,11 @@ class Material(MaterialBase):
         temperatureDependency: Boolean = OFF,
         dependencies: int = 0,
         detonationEnergy: float = 0,
-        solidTable: tuple = (),
-        gasTable: tuple = (),
-        reactionTable: tuple = (),
-        gasSpecificTable: tuple = (),
-        table: tuple = ()
+        solidTable: Tuple = (),
+        gasTable: Tuple = (),
+        reactionTable: Tuple = (),
+        gasSpecificTable: Tuple = (),
+        table: Tuple = ()
     ) -> Eos:
         """This method creates an Eos object.
 
@@ -1255,7 +1256,7 @@ class Material(MaterialBase):
                   zero: float = 0,
                   temperatureDependency: Boolean = OFF,
                   dependencies: int = 0,
-                  table: tuple = ()) -> Expansion:
+                  table: Tuple = ()) -> Expansion:
         """This method creates an Expansion object.
 
         Notes
@@ -1303,7 +1304,7 @@ class Material(MaterialBase):
         temperatureDependency: Boolean = OFF,
         dependencies: int = 0,
         type: SymbolicConstant = COEFFICIENTS,
-        table: tuple = ()) -> FluidLeakoff:
+        table: Tuple = ()) -> FluidLeakoff:
         """This method creates a FluidLeakoff object.
 
         Notes
@@ -1337,7 +1338,7 @@ class Material(MaterialBase):
         return self.fluidLeakoff
 
     def GapFlow(self,
-                table: tuple,
+                table: Tuple,
                 kmax: float = None,
                 temperatureDependency: Boolean = OFF,
                 dependencies: int = 0,
@@ -1378,7 +1379,7 @@ class Material(MaterialBase):
         return self.gapFlow
 
     def GasketMembraneElastic(self,
-                              table: tuple,
+                              table: Tuple,
                               temperatureDependency: Boolean = OFF,
                               dependencies: int = 0) -> GasketMembraneElastic:
         """This method creates a GasketMembraneElastic object.
@@ -1415,7 +1416,7 @@ class Material(MaterialBase):
 
     def GasketThicknessBehavior(
         self,
-        table: tuple,
+        table: Tuple,
         temperatureDependency: Boolean = OFF,
         dependencies: int = 0,
         tensileStiffnessFactor: float = None,
@@ -1425,7 +1426,7 @@ class Material(MaterialBase):
         variableUnits: SymbolicConstant = STRESS,
         yieldOnset: float = 0,
         yieldOnsetMethod: SymbolicConstant = RELATIVE_SLOPE_DROP,
-        unloadingTable: tuple = ()
+        unloadingTable: Tuple = ()
     ) -> GasketThicknessBehavior:
         """This method creates a GasketThicknessBehavior object.
 
@@ -1495,7 +1496,7 @@ class Material(MaterialBase):
 
     def GasketTransverseShearElastic(
             self,
-            table: tuple,
+            table: Tuple,
             variableUnits: SymbolicConstant = STRESS,
             temperatureDependency: Boolean = OFF,
             dependencies: int = 0) -> GasketTransverseShearElastic:
@@ -1534,7 +1535,7 @@ class Material(MaterialBase):
             table, variableUnits, temperatureDependency, dependencies)
         return self.gasketTransverseShearElastic
 
-    def Gel(self, table: tuple) -> Gel:
+    def Gel(self, table: Tuple) -> Gel:
         """This method creates a Gel object.
 
         Notes
@@ -1559,7 +1560,7 @@ class Material(MaterialBase):
         return self.gel
 
     def Hyperelastic(self,
-                     table: tuple,
+                     table: Tuple,
                      type: SymbolicConstant = UNKNOWN,
                      moduliTimeScale: SymbolicConstant = LONG_TERM,
                      temperatureDependency: Boolean = OFF,
@@ -1674,7 +1675,7 @@ class Material(MaterialBase):
         n: int = 1,
         temperatureDependency: Boolean = OFF,
         moduli: SymbolicConstant = LONG_TERM,
-        table: tuple = ()) -> Hyperfoam:
+        table: Tuple = ()) -> Hyperfoam:
         """This method creates a Hyperfoam object.
 
         Notes
@@ -1717,7 +1718,7 @@ class Material(MaterialBase):
                                    moduli, table)
         return self.hyperfoam
 
-    def Hypoelastic(self, table: tuple, user: Boolean = OFF) -> Hypoelastic:
+    def Hypoelastic(self, table: Tuple, user: Boolean = OFF) -> Hypoelastic:
         """This method creates a Hypoelastic object.
 
         Notes
@@ -1804,7 +1805,7 @@ class Material(MaterialBase):
         self.jouleHeatFraction = JouleHeatFraction(fraction)
         return self.jouleHeatFraction
 
-    def LatentHeat(self, table: tuple) -> LatentHeat:
+    def LatentHeat(self, table: Tuple) -> LatentHeat:
         """This method creates a LatentHeat object.
 
         Notes
@@ -1889,9 +1890,9 @@ class Material(MaterialBase):
 
     def MagneticPermeability(
             self,
-            table: tuple,
-            table2: tuple,
-            table3: tuple,
+            table: Tuple,
+            table2: Tuple,
+            table3: Tuple,
             type: SymbolicConstant = ISOTROPIC,
             frequencyDependency: Boolean = OFF,
             temperatureDependency: Boolean = OFF,
@@ -1950,7 +1951,7 @@ class Material(MaterialBase):
 
     def MohrCoulombPlasticity(
             self,
-            table: tuple,
+            table: Tuple,
             deviatoricEccentricity: float = None,
             meridionalEccentricity: float = 0,
             temperatureDependency: Boolean = OFF,
@@ -1999,7 +2000,7 @@ class Material(MaterialBase):
             temperatureDependency, dependencies, useTensionCutoff)
         return self.mohrCoulombPlasticity
 
-    def MoistureSwelling(self, table: tuple) -> MoistureSwelling:
+    def MoistureSwelling(self, table: Tuple) -> MoistureSwelling:
         """This method creates a MoistureSwelling object.
 
         Notes
@@ -2026,7 +2027,7 @@ class Material(MaterialBase):
     def Permeability(self,
                      specificWeight: float,
                      inertialDragCoefficient: float,
-                     table: tuple,
+                     table: Tuple,
                      type: SymbolicConstant = ISOTROPIC,
                      temperatureDependency: Boolean = OFF,
                      dependencies: int = 0) -> Permeability:
@@ -2071,7 +2072,7 @@ class Material(MaterialBase):
         return self.permeability
 
     def Piezoelectric(self,
-                      table: tuple,
+                      table: Tuple,
                       type: SymbolicConstant = STRESS,
                       temperatureDependency: Boolean = OFF,
                       dependencies: int = 0) -> Piezoelectric:
@@ -2107,7 +2108,7 @@ class Material(MaterialBase):
         return self.piezoelectric
 
     def Plastic(self,
-                table: tuple,
+                table: Tuple,
                 hardening: SymbolicConstant = ISOTROPIC,
                 rate: Boolean = OFF,
                 dataType: SymbolicConstant = HALF_CYCLE,
@@ -2164,7 +2165,7 @@ class Material(MaterialBase):
         return self.plastic
 
     def PoreFluidExpansion(self,
-                           table: tuple,
+                           table: Tuple,
                            zero: float = 0,
                            temperatureDependency: Boolean = OFF,
                            dependencies: int = 0) -> PoreFluidExpansion:
@@ -2205,7 +2206,7 @@ class Material(MaterialBase):
 
     def PorousBulkModuli(
             self,
-            table: tuple,
+            table: Tuple,
             temperatureDependency: Boolean = OFF) -> PorousBulkModuli:
         """This method creates a PorousBulkModuli object.
 
@@ -2233,7 +2234,7 @@ class Material(MaterialBase):
         return self.porousBulkModuli
 
     def PorousElastic(self,
-                      table: tuple,
+                      table: Tuple,
                       shear: SymbolicConstant = POISSON,
                       temperatureDependency: Boolean = OFF,
                       dependencies: int = 0) -> PorousElastic:
@@ -2273,7 +2274,7 @@ class Material(MaterialBase):
         return self.porousElastic
 
     def PorousMetalPlasticity(self,
-                              table: tuple,
+                              table: Tuple,
                               relativeDensity: float = None,
                               temperatureDependency: Boolean = OFF,
                               dependencies: int = 0) -> PorousMetalPlasticity:
@@ -2350,7 +2351,7 @@ class Material(MaterialBase):
         return self.regularization
 
     def Solubility(self,
-                   table: tuple,
+                   table: Tuple,
                    temperatureDependency: Boolean = OFF,
                    dependencies: int = 0) -> Solubility:
         """This method creates a Solubility object.
@@ -2386,12 +2387,12 @@ class Material(MaterialBase):
         return self.solubility
 
     def Sorption(self,
-                 absorptionTable: tuple,
+                 absorptionTable: Tuple,
                  lawAbsorption: SymbolicConstant = TABULAR,
                  exsorption: Boolean = OFF,
                  lawExsorption: SymbolicConstant = TABULAR,
                  scanning: float = 0,
-                 exsorptionTable: tuple = ()) -> Sorption:
+                 exsorptionTable: Tuple = ()) -> Sorption:
         """This method creates a Sorption object.
 
         Notes
@@ -2436,7 +2437,7 @@ class Material(MaterialBase):
         return self.sorption
 
     def SpecificHeat(self,
-                     table: tuple,
+                     table: Tuple,
                      law: SymbolicConstant = CONSTANTVOLUME,
                      temperatureDependency: Boolean = OFF,
                      dependencies: int = 0) -> SpecificHeat:
@@ -2476,7 +2477,7 @@ class Material(MaterialBase):
         return self.specificHeat
 
     def Swelling(self,
-                 table: tuple,
+                 table: Tuple,
                  law: SymbolicConstant = INPUT,
                  temperatureDependency: Boolean = OFF,
                  dependencies: int = 0) -> Swelling:
@@ -2520,8 +2521,8 @@ class Material(MaterialBase):
             self,
             type: SymbolicConstant = MECHANICAL,
             unsymm: Boolean = OFF,
-            mechanicalConstants: tuple = (),
-            thermalConstants: tuple = (),
+            mechanicalConstants: Tuple = (),
+            thermalConstants: Tuple = (),
             effmod: Boolean = OFF,
             hybridFormulation: SymbolicConstant = INCREMENTAL) -> UserMaterial:
         """This method creates a UserMaterial object.
@@ -2607,14 +2608,14 @@ class Material(MaterialBase):
     def Viscoelastic(
         self,
         domain: SymbolicConstant,
-        table: tuple,
+        table: Tuple,
         frequency: SymbolicConstant = FORMULA,
         type: SymbolicConstant = ISOTROPIC,
         preload: SymbolicConstant = NONE,
         time: SymbolicConstant = PRONY,
         errtol: float = 0,
         nmax: int = 13,
-        volumetricTable: tuple = ()) -> Viscoelastic:
+        volumetricTable: Tuple = ()) -> Viscoelastic:
         """This method creates a Viscoelastic object.
 
         Notes
@@ -2679,7 +2680,7 @@ class Material(MaterialBase):
         return self.viscoelastic
 
     def Viscosity(self,
-                  table: tuple,
+                  table: Tuple,
                   type: SymbolicConstant = NEWTONIAN,
                   temperatureDependency: Boolean = OFF,
                   dependencies: int = 0) -> Viscosity:
@@ -2718,7 +2719,7 @@ class Material(MaterialBase):
         return self.viscosity
 
     def Viscous(self,
-                table: tuple,
+                table: Tuple,
                 law: SymbolicConstant = STRAIN,
                 temperatureDependency: Boolean = OFF,
                 dependencies: int = 0,

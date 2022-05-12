@@ -5,6 +5,7 @@ from .SectionLayerArray import SectionLayerArray
 from .TransverseShearShell import TransverseShearShell
 
 from __init__ import *
+from __future__ import annotations
 
 
 class CompositeShellSection(GeometryShellSection):

@@ -1,6 +1,7 @@
 from abaqusConstants import *
 
 from __init__ import *
+from __future__ import annotations
 
 
 class IgnoredVertexArray:
@@ -20,7 +21,7 @@ class IgnoredVertexArray:
             mdb.models[name].rootAssembly.instances[name].ignoredVertices
 
     """
-    def findAt(self, coordinates: tuple, printWarning: Boolean = True):
+    def findAt(self, coordinates: Tuple, printWarning: Boolean = True):
         """This method returns the object or objects in the IgnoredVertexArray located at the given
         coordinates.
         findAt initially uses the ACIS tolerance of 1E-6. As a result, findAt returns any
@@ -81,7 +82,7 @@ class IgnoredVertexArray:
         """
         pass
 
-    def getClosest(self, coordinates: tuple, searchTolerance: str = ''):
+    def getClosest(self, coordinates: Tuple, searchTolerance: str = ''):
         """This method returns a object or objects in the IgnoredVertexArray closest to the given
         set of points, where the given points need not lie on the vertices in the
         IgnoredVertexArray.
@@ -101,7 +102,7 @@ class IgnoredVertexArray:
         Returns
         -------
             This method returns a dictionary object. The key to the dictionary object is the 
-            position of the input point in the tuple specified in the *coordinates* starting at 
+            position of the input point in the Tuple specified in the *coordinates* starting at 
             index 0. If a closest IgnoredVertex could be found then the value is a sequence 
             consisting of two objects. The first object in the sequence is a IgnoredVertex that is 
             close to the input point referred to by the key. The second object in the sequence, is a 

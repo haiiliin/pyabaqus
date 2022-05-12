@@ -2,6 +2,7 @@ from abaqusConstants import *
 from .OdbSequenceAnalyticSurfaceSegment import OdbSequenceAnalyticSurfaceSegment
 
 from __init__ import *
+from __future__ import annotations
 
 
 class AnalyticSurface:
@@ -22,7 +23,7 @@ class AnalyticSurface:
         An :py:class:`~abaqus.Odb.OdbSequenceAnalyticSurfaceSegment.OdbSequenceAnalyticSurfaceSegment` object specifying the profile associated with the
         surface.
     localCoordData: float
-        A tuple of tuples of Floats specifying the global coordinates of points representing the
+        A Tuple of tuples of Floats specifying the global coordinates of points representing the
         local coordinate system, if used.
 
     Notes
@@ -54,6 +55,6 @@ class AnalyticSurface:
     segments: OdbSequenceAnalyticSurfaceSegment = OdbSequenceAnalyticSurfaceSegment(
     )
 
-    # A tuple of tuples of Floats specifying the global coordinates of points representing the
+    # A Tuple of tuples of Floats specifying the global coordinates of points representing the
     # local coordinate system, if used.
     localCoordData: float = None

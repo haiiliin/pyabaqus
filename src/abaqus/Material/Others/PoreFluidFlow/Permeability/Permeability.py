@@ -3,6 +3,7 @@ from .SaturationDependence import SaturationDependence
 from .VelocityDependence import VelocityDependence
 
 from __init__ import *
+from __future__ import annotations
 
 
 class Permeability:
@@ -56,7 +57,7 @@ class Permeability:
     def __init__(self,
                  specificWeight: float,
                  inertialDragCoefficient: float,
-                 table: tuple,
+                 table: Tuple,
                  type: SymbolicConstant = ISOTROPIC,
                  temperatureDependency: Boolean = OFF,
                  dependencies: int = 0):

@@ -6,6 +6,7 @@ from ..Region.Region import Region
 from ..Region.RegionArray import RegionArray
 
 from __init__ import *
+from __future__ import annotations
 
 
 class PointFastener(Fastener):
@@ -42,7 +43,7 @@ class PointFastener(Fastener):
                  name: str,
                  region: Region,
                  physicalRadius: float,
-                 directionVector: tuple = None,
+                 directionVector: Tuple = None,
                  targetSurfaces: RegionArray = MODEL,
                  ur1: Boolean = ON,
                  ur2: Boolean = ON,
@@ -90,7 +91,7 @@ class PointFastener(Fastener):
             A Float specifying the physical fastener radius. 
         directionVector
             A VertexArray object of length 2 specifying the direction of projection. Instead of 
-            through a ConstrainedSketchVertex, each point may be specified through a tuple of coordinates. The
+            through a ConstrainedSketchVertex, each point may be specified through a Tuple of coordinates. The
             default value is None. 
         targetSurfaces
             A RegionArray object specifying surfaces to be fastened. The default value is MODEL. 
@@ -190,7 +191,7 @@ class PointFastener(Fastener):
         pass
 
     def setValues(self,
-                  directionVector: tuple = None,
+                  directionVector: Tuple = None,
                   targetSurfaces: RegionArray = MODEL,
                   ur1: Boolean = ON,
                   ur2: Boolean = ON,
@@ -222,7 +223,7 @@ class PointFastener(Fastener):
         ----------
         directionVector
             A VertexArray object of length 2 specifying the direction of projection. Instead of 
-            through a ConstrainedSketchVertex, each point may be specified through a tuple of coordinates. The
+            through a ConstrainedSketchVertex, each point may be specified through a Tuple of coordinates. The
             default value is None. 
         targetSurfaces
             A RegionArray object specifying surfaces to be fastened. The default value is MODEL. 

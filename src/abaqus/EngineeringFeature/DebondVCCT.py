@@ -2,6 +2,7 @@ from abaqusConstants import *
 from .Crack import Crack
 
 from __init__ import *
+from __future__ import annotations
 
 
 class DebondVCCT(Crack):

@@ -2,6 +2,7 @@ from abaqusConstants import *
 from .DerivedComponent import DerivedComponent
 
 from __init__ import *
+from __future__ import annotations
 
 
 class ConnectorPotential:

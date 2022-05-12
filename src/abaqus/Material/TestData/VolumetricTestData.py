@@ -1,6 +1,7 @@
 from abaqusConstants import *
 
 from __init__ import *
+from __future__ import annotations
 
 
 class VolumetricTestData:
@@ -38,7 +39,7 @@ class VolumetricTestData:
 
     """
     def __init__(self,
-                 table: tuple,
+                 table: Tuple,
                  volinf: float = None,
                  smoothing: int = None,
                  temperatureDependency: Boolean = OFF,

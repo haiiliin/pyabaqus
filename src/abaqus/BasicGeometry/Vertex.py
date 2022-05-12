@@ -1,6 +1,7 @@
 from abaqusConstants import *
 
 from __init__ import *
+from __future__ import annotations
 
 
 class Vertex:
@@ -14,11 +15,11 @@ class Vertex:
         A Boolean specifying whether the vertex belongs to the reference representation of the
         Part or Instance.
     pointOn: float
-        A tuple of Floats specifying the **X** -, **Y** -, and **Z** -coordinates of the vertex.
+        A Tuple of Floats specifying the **X** -, **Y** -, and **Z** -coordinates of the vertex.
     featureName: float
-        A tuple of Floats specifying the name of the feature that created this vertex.
+        A Tuple of Floats specifying the name of the feature that created this vertex.
     instanceName: float
-        A tuple of Floats specifying the name of the part instance for this vertex (if
+        A Tuple of Floats specifying the name of the part instance for this vertex (if
         applicable).
 
     Notes
@@ -53,13 +54,13 @@ class Vertex:
     # Part or Instance.
     isReferenceRep: Boolean = OFF
 
-    # A tuple of Floats specifying the *X* -, *Y* -, and *Z* -coordinates of the vertex.
+    # A Tuple of Floats specifying the *X* -, *Y* -, and *Z* -coordinates of the vertex.
     pointOn: float = None
 
-    # A tuple of Floats specifying the name of the feature that created this vertex.
+    # A Tuple of Floats specifying the name of the feature that created this vertex.
     featureName: float = None
 
-    # A tuple of Floats specifying the name of the part instance for this vertex (if
+    # A Tuple of Floats specifying the name of the part instance for this vertex (if
     # applicable).
     instanceName: float = None
 
@@ -69,7 +70,7 @@ class Vertex:
 
         Returns
         -------
-            A tuple of integers.
+            A Tuple of integers.
             
         """
         pass

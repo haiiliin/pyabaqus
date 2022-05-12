@@ -1,6 +1,7 @@
 from abaqusConstants import *
 
 from __init__ import *
+from __future__ import annotations
 
 
 class ViewCutOptions:
@@ -72,10 +73,10 @@ class ViewCutOptions:
         A String specifying the name of the path along which slicing occurs. The default value
         is an empty string.
     summationPoint: float
-        A tuple of three Floats specifying the summation point for the free body cut. The
+        A Tuple of three Floats specifying the summation point for the free body cut. The
         default value is (0, 0, 0).
     yAxis: float
-        A tuple of three Floats specifying the Y axis for free body component resolution. The
+        A Tuple of three Floats specifying the Y axis for free body component resolution. The
         default value is (0, 1, 0).
 
     Notes
@@ -163,11 +164,11 @@ class ViewCutOptions:
     # is an empty string.
     pathName: str = ''
 
-    # A tuple of three Floats specifying the summation point for the free body cut. The
+    # A Tuple of three Floats specifying the summation point for the free body cut. The
     # default value is (0, 0, 0).
     summationPoint: float = None
 
-    # A tuple of three Floats specifying the Y axis for free body component resolution. The
+    # A Tuple of three Floats specifying the Y axis for free body component resolution. The
     # default value is (0, 1, 0).
     yAxis: float = None
 
@@ -192,8 +193,8 @@ class ViewCutOptions:
                   componentResolution: SymbolicConstant = NORMAL_TANGENTIAL,
                   csysName: SymbolicConstant = GLOBAL,
                   pathName: str = '',
-                  summationPoint: tuple = (),
-                  yAxis: tuple = ()):
+                  summationPoint: Tuple = (),
+                  yAxis: Tuple = ()):
         """This method modifies the ViewCutOptions object.
         
         Parameters

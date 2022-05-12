@@ -1,4 +1,5 @@
 from __init__ import *
+from __future__ import annotations
 
 
 class DrawingArea:
@@ -11,7 +12,7 @@ class DrawingArea:
         A Float specifying the width in millimeters.
     height: float
         A Float specifying the height in millimeters.
-    origin: tuple[float]
+    origin: Tuple[float]
         A pair of Floats specifying the coordinates of the bottom left hand corner in
         millimeters.
 
@@ -30,4 +31,4 @@ class DrawingArea:
 
     # A pair of Floats specifying the coordinates of the bottom left hand corner in
     # millimeters.
-    origin: tuple[float] = ()
+    origin: Tuple[float] = ()

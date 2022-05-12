@@ -2,6 +2,7 @@ from abaqusConstants import *
 from ..PlotOptions.DGCommonOptions import DGCommonOptions
 
 from __init__ import *
+from __future__ import annotations
 
 
 class CommonOptions(DGCommonOptions):
@@ -30,7 +31,7 @@ class CommonOptions(DGCommonOptions):
         A Float specifying the deformation scale factor value when **deformationScaling=AUTO**.
         This value is read-only.
     nonuniformScaleFactor: float
-        A tuple of three Floats specifying the deformation scaling in each of the three
+        A Tuple of three Floats specifying the deformation scaling in each of the three
         coordinate directions when **deformationScaling=NONUNIFORM**. The default value is
         (**autoDeformationScaleValue**, **autoDeformationScaleValue**, **autoDeformationScaleValue**).
     renderStyle: SymbolicConstant
@@ -138,7 +139,7 @@ class CommonOptions(DGCommonOptions):
         A String specifying the color to be used to plot an arrow along the tangent to a beam.
         The default value is "White".
     coordinateScaleFactors: float
-        A tuple of three Floats specifying the coordinate scaling in each of the three
+        A Tuple of three Floats specifying the coordinate scaling in each of the three
         coordinate directions when **coordinateScale=ON**. The default value is (1, 1, 1).
 
     Notes
@@ -172,7 +173,7 @@ class CommonOptions(DGCommonOptions):
     # This value is read-only.
     autoDeformationScaleValue: float = None
 
-    # A tuple of three Floats specifying the deformation scaling in each of the three
+    # A Tuple of three Floats specifying the deformation scaling in each of the three
     # coordinate directions when *deformationScaling*=NONUNIFORM. The default value is
     # (*autoDeformationScaleValue*, *autoDeformationScaleValue*, *autoDeformationScaleValue*).
     nonuniformScaleFactor: float = None
@@ -314,7 +315,7 @@ class CommonOptions(DGCommonOptions):
     # The default value is "White".
     beamTangentColor: str = ''
 
-    # A tuple of three Floats specifying the coordinate scaling in each of the three
+    # A Tuple of three Floats specifying the coordinate scaling in each of the three
     # coordinate directions when *coordinateScale*=ON. The default value is (1, 1, 1).
     coordinateScaleFactors: float = None
 
@@ -324,7 +325,7 @@ class CommonOptions(DGCommonOptions):
                   visibleEdges: SymbolicConstant = EXTERIOR,
                   deformationScaling: SymbolicConstant = AUTO,
                   uniformScaleFactor: float = None,
-                  nonuniformScaleFactor: tuple = (),
+                  nonuniformScaleFactor: Tuple = (),
                   edgeColorWireHide: str = '',
                   edgeColorFillShade: str = '',
                   edgeLineStyle: SymbolicConstant = SOLID,
@@ -345,7 +346,7 @@ class CommonOptions(DGCommonOptions):
                   elementShrink: Boolean = OFF,
                   elementShrinkFactor: int = 5,
                   coordinateScale: Boolean = OFF,
-                  coordinateScaleFactors: tuple = (),
+                  coordinateScaleFactors: Tuple = (),
                   normals: Boolean = OFF,
                   normalDisplay: SymbolicConstant = ELEMENT,
                   faceNormalColor: str = '',

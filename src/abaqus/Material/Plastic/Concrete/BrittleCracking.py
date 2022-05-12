@@ -3,6 +3,7 @@ from .BrittleFailure import BrittleFailure
 from .BrittleShear import BrittleShear
 
 from __init__ import *
+from __future__ import annotations
 
 
 class BrittleCracking:
@@ -55,7 +56,7 @@ class BrittleCracking:
     brittleFailure: BrittleFailure = BrittleFailure(((), ))
 
     def __init__(self,
-                 table: tuple,
+                 table: Tuple,
                  temperatureDependency: Boolean = OFF,
                  dependencies: int = 0,
                  type: SymbolicConstant = STRAIN):

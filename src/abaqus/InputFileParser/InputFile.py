@@ -1,6 +1,7 @@
 from abaqusConstants import *
 
 from __init__ import *
+from __future__ import annotations
 
 
 class InputFile:
@@ -13,10 +14,10 @@ class InputFile:
         A String specifying the source file name of the Abaqus input file.
     directory: str
         A String specifying the directory where the input file is located.
-    includes: tuple
+    includes: Tuple
         A sequence of Strings specifying any additional input files included in the specified
         input file.
-    missingIncludes: tuple
+    missingIncludes: Tuple
         A sequence of Strings for input files included in the specified input file that could
         not be located.
 
@@ -38,11 +39,11 @@ class InputFile:
 
     # A sequence of Strings specifying any additional input files included in the specified
     # input file.
-    includes: tuple = ()
+    includes: Tuple = ()
 
     # A sequence of Strings for input files included in the specified input file that could
     # not be located.
-    missingIncludes: tuple = ()
+    missingIncludes: Tuple = ()
 
     def __init__(self, file: str, directory: str = ''):
         """This method creates an InputFile object by reading an Abaqus input file.

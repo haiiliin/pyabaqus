@@ -2,6 +2,7 @@ from abaqusConstants import *
 from .Amplitude import Amplitude
 
 from __init__ import *
+from __future__ import annotations
 
 
 class Correlation(Amplitude):
@@ -18,7 +19,7 @@ class Correlation(Amplitude):
         Possible values are CORRELATED, MOVING_NOISE, UNCORRELATED, and USER. The default value
         is CORRELATED.
     data: float
-        A tuple of tuples of Floats specifying the real and imaginary part of the scaling
+        A Tuple of tuples of Floats specifying the real and imaginary part of the scaling
         factor. If **approach=MOVING_NOISE**, then **data** represents the noise velocity components
         1, 2, and 3.
     timeSpan: SymbolicConstant
@@ -44,7 +45,7 @@ class Correlation(Amplitude):
     # is CORRELATED.
     approach: SymbolicConstant = CORRELATED
 
-    # A tuple of tuples of Floats specifying the real and imaginary part of the scaling
+    # A Tuple of tuples of Floats specifying the real and imaginary part of the scaling
     # factor. If *approach*=MOVING_NOISE, then *data* represents the noise velocity components
     # 1, 2, and 3.
     data: float = None

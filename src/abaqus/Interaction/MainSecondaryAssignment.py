@@ -1,6 +1,7 @@
 from abaqusConstants import *
 
 from __init__ import *
+from __future__ import annotations
 
 
 class MainSecondaryAssignment:
@@ -51,7 +52,7 @@ class MainSecondaryAssignment:
             A String specifying the name of the step in which the main-secondary assignments are to 
             be defined. 
         assignments
-            A sequence of tuples specifying the main-secondary assignments. Each tuple contains two 
+            A sequence of tuples specifying the main-secondary assignments. Each Tuple contains two 
             entries: 
             - A region object or the SymbolicConstant GLOBAL specifying the surface to which the 
             main-secondary attribute is assigned. 
@@ -62,7 +63,7 @@ class MainSecondaryAssignment:
         """
         pass
 
-    def delete(self, indices: tuple):
+    def delete(self, indices: Tuple):
         """The delete method allows you to delete existing main-secondary assignments.
         
         Parameters

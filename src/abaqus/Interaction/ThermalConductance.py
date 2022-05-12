@@ -1,6 +1,7 @@
 from abaqusConstants import *
 
 from __init__ import *
+from __future__ import annotations
 
 
 class ThermalConductance:
@@ -45,11 +46,11 @@ class ThermalConductance:
                  temperatureDependencyC: Boolean = OFF,
                  massFlowRateDependencyC: Boolean = OFF,
                  dependenciesC: int = 0,
-                 clearanceDepTable: tuple = (),
+                 clearanceDepTable: Tuple = (),
                  temperatureDependencyP: Boolean = OFF,
                  massFlowRateDependencyP: Boolean = OFF,
                  dependenciesP: int = 0,
-                 pressureDepTable: tuple = ()):
+                 pressureDepTable: Tuple = ()):
         """This method creates a ThermalConductance object.
 
         Notes

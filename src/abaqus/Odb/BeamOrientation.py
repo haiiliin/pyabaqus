@@ -3,6 +3,7 @@ from .OdbMeshNode import OdbMeshNode
 from .OdbSet import OdbSet
 
 from __init__ import *
+from __future__ import annotations
 
 
 class BeamOrientation:
@@ -18,7 +19,7 @@ class BeamOrientation:
     region: OdbSet
         An :py:class:`~abaqus.Odb.OdbSet.OdbSet` object specifying a region for which the beam orientation is defined.
     vector: float
-        A tuple of Floats specifying direction cosines of the n1-direction of the beam
+        A Tuple of Floats specifying direction cosines of the n1-direction of the beam
         cross-section.
 
     Notes
@@ -39,8 +40,8 @@ class BeamOrientation:
     method: SymbolicConstant = None
 
     # An OdbSet object specifying a region for which the beam orientation is defined.
-    region: OdbSet = OdbSet('set', tuple[OdbMeshNode]())
+    region: OdbSet = OdbSet('set', Tuple[OdbMeshNode]())
 
-    # A tuple of Floats specifying direction cosines of the n1-direction of the beam
+    # A Tuple of Floats specifying direction cosines of the n1-direction of the beam
     # cross-section.
     vector: float = None

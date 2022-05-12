@@ -14,6 +14,7 @@ from .TabularAmplitude import TabularAmplitude
 from ..Odb.OdbBase import OdbBase
 
 from __init__ import *
+from __future__ import annotations
 
 
 class AmplitudeOdb(OdbBase):
@@ -115,7 +116,7 @@ class AmplitudeOdb(OdbBase):
             self,
             name: str,
             fixedInterval: float,
-            data: tuple,
+            data: Tuple,
             begin: float = 0,
             smooth: typing.Union[SymbolicConstant, float] = SOLVER_DEFAULT,
             timeSpan: SymbolicConstant = STEP) -> EquallySpacedAmplitude:
@@ -223,7 +224,7 @@ class AmplitudeOdb(OdbBase):
             frequency: float,
             start: float,
             a_0: float,
-            data: tuple,
+            data: Tuple,
             timeSpan: SymbolicConstant = STEP) -> PeriodicAmplitude:
         """This method creates a PeriodicAmplitude object.
 
@@ -267,7 +268,7 @@ class AmplitudeOdb(OdbBase):
 
     def PsdDefinition(self,
                       name: str,
-                      data: tuple,
+                      data: Tuple,
                       unitType: SymbolicConstant = FORCE,
                       referenceGravityAcceleration: float = 1,
                       referenecePower: float = 0,
@@ -332,7 +333,7 @@ class AmplitudeOdb(OdbBase):
     def SmoothStepAmplitude(
             self,
             name: str,
-            data: tuple,
+            data: Tuple,
             timeSpan: SymbolicConstant = STEP) -> SmoothStepAmplitude:
         """This method creates a SmoothStepAmplitude object.
 
@@ -420,7 +421,7 @@ class AmplitudeOdb(OdbBase):
     def SpectrumAmplitude(self,
                           name: str,
                           method: SymbolicConstant,
-                          data: tuple,
+                          data: Tuple,
                           specificationUnits: SymbolicConstant = ACCELERATION,
                           eventUnits: SymbolicConstant = EVENT_ACCELERATION,
                           solution: SymbolicConstant = ABSOLUTE_VALUE,
@@ -498,7 +499,7 @@ class AmplitudeOdb(OdbBase):
     def TabularAmplitude(
             self,
             name: str,
-            data: tuple,
+            data: Tuple,
             smooth: typing.Union[SymbolicConstant, float] = SOLVER_DEFAULT,
             timeSpan: SymbolicConstant = STEP) -> TabularAmplitude:
         """This method creates a TabularAmplitude object.

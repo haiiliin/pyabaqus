@@ -1,4 +1,5 @@
 from __init__ import *
+from __future__ import annotations
 
 
 class ConstrainedSketchVertex:
@@ -16,10 +17,10 @@ class ConstrainedSketchVertex:
 
     """
 
-    # A tuple of Floats specifying the*X*-, *Y*-, and *Z*-coordinates of the sketch vertex.
+    # A Tuple of Floats specifying the*X*-, *Y*-, and *Z*-coordinates of the sketch vertex.
     coords: float = None
 
-    def Spot(self, point: tuple[float]):
+    def Spot(self, point: Tuple[float]):
         """This method creates a spot (construction point) located at the specified coordinates.
 
         Notes

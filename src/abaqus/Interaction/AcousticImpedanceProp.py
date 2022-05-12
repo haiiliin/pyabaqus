@@ -2,6 +2,7 @@ from abaqusConstants import *
 from .ContactProperty import ContactProperty
 
 from __init__ import *
+from __future__ import annotations
 
 
 class AcousticImpedanceProp(ContactProperty):
@@ -25,7 +26,7 @@ class AcousticImpedanceProp(ContactProperty):
     def __init__(self,
                  name: str,
                  tableType: SymbolicConstant,
-                 table: tuple,
+                 table: Tuple,
                  frequencyDependency: Boolean = OFF):
         """This method creates an AcousticImpedanceProp object.
 

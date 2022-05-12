@@ -5,6 +5,7 @@ from ..OdbDisplay.OdbDisplay import OdbDisplay
 from ..UtilityAndView.View import View
 
 from __init__ import *
+from __future__ import annotations
 
 
 class Layer:

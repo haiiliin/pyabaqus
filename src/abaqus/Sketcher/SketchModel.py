@@ -2,6 +2,7 @@ from .ConstrainedSketch import ConstrainedSketch
 from ..Model.ModelBase import ModelBase
 
 from __init__ import *
+from __future__ import annotations
 
 
 class SketchModel(ModelBase):
@@ -21,7 +22,7 @@ class SketchModel(ModelBase):
         name: str,
         sheetSize: float,
         gridSpacing: float = None,
-        transform: tuple = ()) -> ConstrainedSketch:
+        transform: Tuple = ()) -> ConstrainedSketch:
         """This method creates a ConstrainedSketch object. If the sketch cannot be created, the
         method returns None.
 

@@ -3,6 +3,7 @@ from .Section import Section
 from ..Connector.ConnectorBehaviorOptionArray import ConnectorBehaviorOptionArray
 
 from __init__ import *
+from __future__ import annotations
 
 
 class ConnectorSection(Section):

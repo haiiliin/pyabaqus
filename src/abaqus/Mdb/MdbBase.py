@@ -8,6 +8,7 @@ from ..Job.OptimizationProcess import OptimizationProcess
 from ..Model.Model import Model
 
 from __init__ import *
+from __future__ import annotations
 
 
 class MdbBase:

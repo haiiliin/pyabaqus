@@ -5,6 +5,7 @@ from .FieldOutput import FieldOutput
 from .OdbLoadCase import OdbLoadCase
 
 from __init__ import *
+from __future__ import annotations
 
 
 class OdbFrame:
@@ -173,7 +174,7 @@ class OdbFrame:
                     name: str,
                     description: str,
                     type: SymbolicConstant,
-                    componentLabels: tuple = (),
+                    componentLabels: Tuple = (),
                     validInvariants: SymbolicConstant = None,
                     isEngineeringTensor: Boolean = OFF):
         """This method creates a FieldOutput object.

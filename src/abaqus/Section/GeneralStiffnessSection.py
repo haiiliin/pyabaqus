@@ -4,6 +4,7 @@ from .ShellSection import ShellSection
 from .TransverseShearShell import TransverseShearShell
 
 from __init__ import *
+from __future__ import annotations
 
 
 class GeneralStiffnessSection(ShellSection):
@@ -42,7 +43,7 @@ class GeneralStiffnessSection(ShellSection):
 
     def __init__(self,
                  name: str,
-                 stiffnessMatrix: tuple,
+                 stiffnessMatrix: Tuple,
                  referenceTemperature: float = None,
                  applyThermalStress: Boolean = OFF,
                  temperatureDependency: Boolean = OFF,
@@ -51,8 +52,8 @@ class GeneralStiffnessSection(ShellSection):
                  poisson: float = 0,
                  useDensity: Boolean = OFF,
                  density: float = 0,
-                 thermalStresses: tuple = (),
-                 scalingData: tuple = ()):
+                 thermalStresses: Tuple = (),
+                 scalingData: Tuple = ()):
         """This method creates a GeneralStiffnessSection object.
 
         Notes
@@ -121,8 +122,8 @@ class GeneralStiffnessSection(ShellSection):
                   poisson: float = 0,
                   useDensity: Boolean = OFF,
                   density: float = 0,
-                  thermalStresses: tuple = (),
-                  scalingData: tuple = ()):
+                  thermalStresses: Tuple = (),
+                  scalingData: Tuple = ()):
         """This method modifies the GeneralStiffnessSection object.
         
         Parameters

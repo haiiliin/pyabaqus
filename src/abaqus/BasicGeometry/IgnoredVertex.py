@@ -1,4 +1,5 @@
 from __init__ import *
+from __future__ import annotations
 
 
 class IgnoredVertex:
@@ -10,7 +11,7 @@ class IgnoredVertex:
     index: int
         An Int specifying the index of the IgnoredVertex in the IgnoredVertexArray.
     pointOn: float
-        A tuple of Floats specifying the **X**-, **Y**-, and **Z**-coordinates of the vertex.
+        A Tuple of Floats specifying the **X**-, **Y**-, and **Z**-coordinates of the vertex.
 
     Notes
     -----
@@ -29,5 +30,5 @@ class IgnoredVertex:
     # An Int specifying the index of the IgnoredVertex in the IgnoredVertexArray.
     index: int = None
 
-    # A tuple of Floats specifying the *X*-, *Y*-, and *Z*-coordinates of the vertex.
+    # A Tuple of Floats specifying the *X*-, *Y*-, and *Z*-coordinates of the vertex.
     pointOn: float = None

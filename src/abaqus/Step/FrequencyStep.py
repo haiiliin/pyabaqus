@@ -15,6 +15,7 @@ from ..StepOutput.Monitor import Monitor
 from ..StepOutput.Restart import Restart
 
 from __init__ import *
+from __future__ import annotations
 
 
 class FrequencyStep(AnalysisStep):
@@ -110,11 +111,11 @@ class FrequencyStep(AnalysisStep):
         in the list of analysis steps.
     description: str
         A String specifying a description of the new step. The default value is an empty string.
-    residualModeRegion: tuple
-        None or a tuple of Strings specifying the name of a region for which residual modes are
+    residualModeRegion: Tuple
+        None or a Tuple of Strings specifying the name of a region for which residual modes are
         requested. The default value is None.
     residualModeDof: int
-        None or a tuple of Ints specifying the degree of freedom for which residual modes are
+        None or a Tuple of Ints specifying the degree of freedom for which residual modes are
         requested. The default value is None.
     limitSavedEigenvectorRegion: SymbolicConstant
         None or a :py:class:`~abaqus.Region.Region.Region` object specifying a region for which eigenvectors should be saved or
@@ -310,11 +311,11 @@ class FrequencyStep(AnalysisStep):
     # A String specifying a description of the new step. The default value is an empty string.
     description: str = ''
 
-    # None or a tuple of Strings specifying the name of a region for which residual modes are
+    # None or a Tuple of Strings specifying the name of a region for which residual modes are
     # requested. The default value is None.
-    residualModeRegion: tuple = None
+    residualModeRegion: Tuple = None
 
-    # None or a tuple of Ints specifying the degree of freedom for which residual modes are
+    # None or a Tuple of Ints specifying the degree of freedom for which residual modes are
     # requested. The default value is None.
     residualModeDof: int = None
 

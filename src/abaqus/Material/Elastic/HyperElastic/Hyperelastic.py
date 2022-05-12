@@ -8,6 +8,7 @@ from ...TestData.UniaxialTestData import UniaxialTestData
 from ...TestData.VolumetricTestData import VolumetricTestData
 
 from __init__ import *
+from __future__ import annotations
 
 
 class Hyperelastic:
@@ -90,7 +91,7 @@ class Hyperelastic:
     hysteresis: Hysteresis = Hysteresis(((), ))
 
     def __init__(self,
-                 table: tuple,
+                 table: Tuple,
                  type: SymbolicConstant = UNKNOWN,
                  moduliTimeScale: SymbolicConstant = LONG_TERM,
                  temperatureDependency: Boolean = OFF,

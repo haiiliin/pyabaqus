@@ -14,6 +14,7 @@ from ..Material.Material import Material
 from ..Section.Section import Section
 
 from __init__ import *
+from __future__ import annotations
 
 
 class OdbBase:

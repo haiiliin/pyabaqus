@@ -9,6 +9,7 @@ from ..Region.Set import Set
 from ..Region.Surface import Surface
 
 from __init__ import *
+from __future__ import annotations
 
 
 class PropertyPart(PartBase):
@@ -131,13 +132,13 @@ class PropertyPart(PartBase):
         normalAxisRegion: Surface = None,
         normalAxisDatum: DatumAxis = DatumAxis(),
         flipNormalDirection: Boolean = OFF,
-        normalAxisVector: tuple = (),
+        normalAxisVector: Tuple = (),
         primaryAxisDirection: SymbolicConstant = AXIS_1,
         primaryAxisDefinition: SymbolicConstant = PRIMARY_VECTOR,
         primaryAxisRegion: Set = None,
         primaryAxisDatum: DatumAxis = DatumAxis(),
         flipPrimaryDirection: Boolean = OFF,
-        primaryAxisVector: tuple = ()
+        primaryAxisVector: Tuple = ()
     ) -> MaterialOrientation:
         """This method creates a MaterialOrientation object.
 

@@ -2,6 +2,7 @@ from abaqusConstants import *
 from .BoundaryConditionState import BoundaryConditionState
 
 from __init__ import *
+from __future__ import annotations
 
 
 class EulerianBCState(BoundaryConditionState):

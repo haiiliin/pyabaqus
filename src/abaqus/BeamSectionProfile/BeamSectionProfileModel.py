@@ -14,6 +14,7 @@ from .TrapezoidalProfile import TrapezoidalProfile
 from ..Model.ModelBase import ModelBase
 
 from __init__ import *
+from __future__ import annotations
 
 
 class BeamSectionProfileModel(ModelBase):
@@ -56,7 +57,7 @@ class BeamSectionProfileModel(ModelBase):
         self.profiles.update(profiles)
         return profiles
 
-    def ArbitraryProfile(self, name: str, table: tuple) -> ArbitraryProfile:
+    def ArbitraryProfile(self, name: str, table: Tuple) -> ArbitraryProfile:
         """This method creates a ArbitraryProfile object.
 
         Notes

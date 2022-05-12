@@ -1,6 +1,7 @@
 from abaqusConstants import *
 
 from __init__ import *
+from __future__ import annotations
 
 
 class Eos:
@@ -45,11 +46,11 @@ class Eos:
                  temperatureDependency: Boolean = OFF,
                  dependencies: int = 0,
                  detonationEnergy: float = 0,
-                 solidTable: tuple = (),
-                 gasTable: tuple = (),
-                 reactionTable: tuple = (),
-                 gasSpecificTable: tuple = (),
-                 table: tuple = ()):
+                 solidTable: Tuple = (),
+                 gasTable: Tuple = (),
+                 reactionTable: Tuple = (),
+                 gasSpecificTable: Tuple = (),
+                 table: Tuple = ()):
         """This method creates an Eos object.
 
         Notes

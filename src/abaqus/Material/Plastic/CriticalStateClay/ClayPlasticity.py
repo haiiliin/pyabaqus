@@ -2,6 +2,7 @@ from abaqusConstants import *
 from .ClayHardening import ClayHardening
 
 from __init__ import *
+from __future__ import annotations
 
 
 class ClayPlasticity:
@@ -48,7 +49,7 @@ class ClayPlasticity:
     clayHardening: ClayHardening = ClayHardening(((), ))
 
     def __init__(self,
-                 table: tuple,
+                 table: Tuple,
                  intercept: float = None,
                  hardening: SymbolicConstant = EXPONENTIAL,
                  temperatureDependency: Boolean = OFF,

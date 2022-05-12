@@ -7,6 +7,7 @@ from .OdbLoadCase import OdbLoadCase
 from .OdbStepBase import OdbStepBase
 
 from __init__ import *
+from __future__ import annotations
 
 
 class OdbStep(OdbStepBase):

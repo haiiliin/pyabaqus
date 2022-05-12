@@ -4,6 +4,7 @@ from ..Property.PropertyPart import PropertyPart
 from ..Region.RegionPart import RegionPart
 
 from __init__ import *
+from __future__ import annotations
 
 
 class Part(MeshEditPart, MeshPart, PropertyPart, RegionPart):

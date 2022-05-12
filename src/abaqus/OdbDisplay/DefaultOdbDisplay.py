@@ -10,6 +10,7 @@ from ..PlotOptions.StreamOptions import StreamOptions
 from ..PlotOptions.ViewCutOptions import ViewCutOptions
 
 from __init__ import *
+from __future__ import annotations
 
 
 class DefaultOdbDisplay:

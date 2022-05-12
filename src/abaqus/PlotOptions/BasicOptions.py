@@ -2,6 +2,7 @@ from abaqusConstants import *
 from ..Datum.DatumCsys import DatumCsys
 
 from __init__ import *
+from __future__ import annotations
 
 
 class BasicOptions:
@@ -288,11 +289,11 @@ class BasicOptions:
         A :py:class:`~abaqus.Datum.DatumCsys.DatumCsys` object specifying the coordinate system to use for results transformation
         when **transformationType=USER_SPECIFIED**.
     selectedSectorNumbers: int
-        A tuple of Ints specifying which sectors to display when
+        A Tuple of Ints specifying which sectors to display when
         **sectorSelectionType=SELECT_BY_NUMBER**. Possible values are 1 ≤≤ **selectedSectorNumbers**
         ≤≤ the number of sectors. The default value is (1).
-    userRegions: tuple
-        A tuple of Strings specifying either element set or display group names (depending on
+    userRegions: Tuple
+        A Tuple of Strings specifying either element set or display group names (depending on
         the value of regionBoundaries) defining the averaging region boundaries. The default
         value is an empty sequence.
 
@@ -660,15 +661,15 @@ class BasicOptions:
     # when *transformationType*=USER_SPECIFIED.
     datumCsys: DatumCsys = DatumCsys()
 
-    # A tuple of Ints specifying which sectors to display when
+    # A Tuple of Ints specifying which sectors to display when
     # *sectorSelectionType*=SELECT_BY_NUMBER. Possible values are 1 ≤≤ *selectedSectorNumbers*
     # ≤≤ the number of sectors. The default value is (1).
     selectedSectorNumbers: int = None
 
-    # A tuple of Strings specifying either element set or display group names (depending on
+    # A Tuple of Strings specifying either element set or display group names (depending on
     # the value of regionBoundaries) defining the averaging region boundaries. The default
     # value is an empty sequence.
-    userRegions: tuple = ()
+    userRegions: Tuple = ()
 
     def setValues(
             self,
@@ -717,7 +718,7 @@ class BasicOptions:
             sectionPointScheme: SymbolicConstant = CATEGORY_BASED,
             sweepSectors: Boolean = OFF,
             sectorSelectionType: SymbolicConstant = SELECT_BY_NUMBER,
-            selectedSectorNumbers: tuple = (),
+            selectedSectorNumbers: Tuple = (),
             sweepSectorStartAngle: float = 0,
             sweepSectorEndAngle: float = 360,
             extrudeArs: Boolean = OFF,
@@ -754,7 +755,7 @@ class BasicOptions:
             computeOutput: SymbolicConstant = EXTRAPOLATE_AVERAGE_COMPUTE,
             regionBoundaries: SymbolicConstant = ODB_REGIONS,
             useRegionBoundaries: Boolean = ON,
-            userRegions: tuple = (),
+            userRegions: Tuple = (),
             includeFeatureBoundaries: Boolean = ON):
         """This method modifies the BasicOptions object.
         

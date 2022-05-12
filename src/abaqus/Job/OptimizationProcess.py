@@ -1,6 +1,7 @@
 from abaqusConstants import *
 
 from __init__ import *
+from __future__ import annotations
 
 
 class OptimizationProcess:
@@ -120,7 +121,7 @@ class OptimizationProcess:
                 reductionPercent: str = 0,
                 reductionAngle: str = '',
                 targetVolume: str = 0,
-                extractFormat: tuple = OPT_EXTRACT_SMOOTH_ABAQUS_INPUT_FILE,
+                extractFormat: Tuple = OPT_EXTRACT_SMOOTH_ABAQUS_INPUT_FILE,
                 resultFiltering: str = OFF,
                 instances: str = ''):
         """This method extracts a surface mesh from the optimized model.
@@ -150,7 +151,7 @@ class OptimizationProcess:
             Defines the target volume that is to be achieved iteratively by varying the isovalue. 
             Value between 0 and 1. The default value is 0. 
         extractFormat
-            A tuple for the types of format of the output. Possible values are 
+            A Tuple for the types of format of the output. Possible values are 
             OPT_EXTRACT_SMOOTH_ABAQUS_INPUT_FILE, OPT_EXTRACT_SMOOTH_STL, OPT_EXTRACT_SMOOTH_IGES1, 
             OPT_EXTRACT_SMOOTH_IGES2, or OPT_EXTRACT_SMOOTH_IGES3. The default value is 
             OPT_EXTRACT_SMOOTH_ABAQUS_INPUT_FILE. 

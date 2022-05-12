@@ -2,6 +2,7 @@ from abaqusConstants import *
 from .ContactStabilization import ContactStabilization
 
 from __init__ import *
+from __future__ import annotations
 
 
 class StdStabilization(ContactStabilization):

@@ -3,6 +3,7 @@ from .Section import Section
 from .TransverseShearBeam import TransverseShearBeam
 
 from __init__ import *
+from __future__ import annotations
 
 
 class BeamSection(Section):
@@ -74,10 +75,10 @@ class BeamSection(Section):
                  massOffsetY: float = 0,
                  beamShape: SymbolicConstant = CONSTANT,
                  material: str = '',
-                 table: tuple = (),
-                 outputPts: tuple = (),
-                 centroid: tuple[float] = (),
-                 shearCenter: tuple[float] = (),
+                 table: Tuple = (),
+                 outputPts: Tuple = (),
+                 centroid: Tuple[float] = (),
+                 shearCenter: Tuple[float] = (),
                  profileEnd: str = ''):
         """This method creates a BeamSection object.
 
@@ -208,10 +209,10 @@ class BeamSection(Section):
                   massOffsetY: float = 0,
                   beamShape: SymbolicConstant = CONSTANT,
                   material: str = '',
-                  table: tuple = (),
-                  outputPts: tuple = (),
-                  centroid: tuple[float] = (),
-                  shearCenter: tuple[float] = (),
+                  table: Tuple = (),
+                  outputPts: Tuple = (),
+                  centroid: Tuple[float] = (),
+                  shearCenter: Tuple[float] = (),
                   profileEnd: str = ''):
         """This method modifies the BeamSection object.
         

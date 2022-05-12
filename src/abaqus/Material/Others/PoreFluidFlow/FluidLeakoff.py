@@ -1,6 +1,7 @@
 from abaqusConstants import *
 
 from __init__ import *
+from __future__ import annotations
 
 
 class FluidLeakoff:
@@ -35,7 +36,7 @@ class FluidLeakoff:
                  temperatureDependency: Boolean = OFF,
                  dependencies: int = 0,
                  type: SymbolicConstant = COEFFICIENTS,
-                 table: tuple = ()):
+                 table: Tuple = ()):
         """This method creates a FluidLeakoff object.
 
         Notes

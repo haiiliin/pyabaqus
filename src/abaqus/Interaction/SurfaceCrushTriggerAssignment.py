@@ -3,6 +3,7 @@ import typing
 from abaqusConstants import *
 
 from __init__ import *
+from __future__ import annotations
 
 
 class SurfaceCrushTriggerAssignment:
@@ -37,8 +38,8 @@ class SurfaceCrushTriggerAssignment:
             An Int specifying the position of the surface crush trigger assignment whose value is to 
             be modified. 
         value
-            A tuple specifying the value of the surface crush trigger assignments for the surface 
-            whose index is referenced. Each tuple contains three entries: 
+            A Tuple specifying the value of the surface crush trigger assignments for the surface 
+            whose index is referenced. Each Tuple contains three entries: 
             - A SymbolicConstant specifying the trigger option to be used for the surface. Possible 
             values of the SymbolicConstant are TRIGGER, NO_TRIGGER, or NO_CRUSH. 
             - A Float specifying the crush stress value to be used for the surface. 
@@ -58,7 +59,7 @@ class SurfaceCrushTriggerAssignment:
             A String specifying the name of the step in which new surface crush trigger assignments 
             are to be defined. 
         assignments
-            A sequence of tuples specifying the surface crush trigger assignments. Each tuple 
+            A sequence of tuples specifying the surface crush trigger assignments. Each Tuple 
             contains four entries: 
             - A region or a material object or the SymbolicConstant GLOBAL specifying the surface to 
             which the feature angle is assigned. 
@@ -70,7 +71,7 @@ class SurfaceCrushTriggerAssignment:
         """
         pass
 
-    def delete(self, indices: tuple):
+    def delete(self, indices: Tuple):
         """The delete method allows you to delete existing surface crush trigger assignments from a
         ContactExp object.
         

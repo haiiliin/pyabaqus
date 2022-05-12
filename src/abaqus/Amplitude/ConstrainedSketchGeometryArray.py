@@ -1,6 +1,7 @@
 from abaqusConstants import *
 
 from __init__ import *
+from __future__ import annotations
 
 
 class ConstrainedSketchGeometryArray:
@@ -16,7 +17,7 @@ class ConstrainedSketchGeometryArray:
             mdb.models[name].sketches[name].geometry[i]
 
     """
-    def findAt(self, coordinates: tuple, printWarning: Boolean = True):
+    def findAt(self, coordinates: Tuple, printWarning: Boolean = True):
         """This method returns the ConstrainedSketchGeometry object located at the given
         coordinates.
         

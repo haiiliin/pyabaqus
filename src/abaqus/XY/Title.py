@@ -3,6 +3,7 @@ from .Area import Area
 from .TextStyle import TextStyle
 
 from __init__ import *
+from __future__ import annotations
 
 
 class Title:

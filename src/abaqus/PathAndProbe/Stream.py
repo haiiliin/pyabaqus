@@ -1,4 +1,5 @@
 from __init__ import *
+from __future__ import annotations
 
 
 class Stream:
@@ -17,8 +18,8 @@ class Stream:
     def __init__(self,
                  name: str,
                  numPointsOnRake: str,
-                 pointA: tuple = (),
-                 pointB: tuple = (),
+                 pointA: Tuple = (),
+                 pointB: Tuple = (),
                  path: str = ''):
         """This method creates aStream object and places it in the streams repository.
 
@@ -37,10 +38,10 @@ class Stream:
         numPointsOnRake
             An integer specifying the number of points along the rake. 
         pointA
-            A tuple of 3 floats specifying the starting point of the rake. Alternatively, a string 
+            A Tuple of 3 floats specifying the starting point of the rake. Alternatively, a string 
             representation of the node selected in the viewport. 
         pointB
-            A tuple of 3 floats specifying the end point of the rake. Alternatively, a string 
+            A Tuple of 3 floats specifying the end point of the rake. Alternatively, a string 
             representation of the node selected in the viewport. 
         path
             APath object that specifies the rake. 

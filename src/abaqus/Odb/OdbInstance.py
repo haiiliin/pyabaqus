@@ -6,6 +6,7 @@ from .OdbRigidBody import OdbRigidBody
 from .OdbSet import OdbSet
 
 from __init__ import *
+from __future__ import annotations
 
 
 class OdbInstance(OdbInstanceBase):
@@ -14,9 +15,9 @@ class OdbInstance(OdbInstanceBase):
         referenceNode: OdbSet,
         position: SymbolicConstant = INPUT,
         isothermal: Boolean = ON,
-        elements: OdbSet = OdbSet('set', tuple[OdbMeshNode]()),
-        tieNodes: OdbSet = OdbSet('set', tuple[OdbMeshNode]()),
-        pinNodes: OdbSet = OdbSet('set', tuple[OdbMeshNode]()),
+        elements: OdbSet = OdbSet('set', Tuple[OdbMeshNode]()),
+        tieNodes: OdbSet = OdbSet('set', Tuple[OdbMeshNode]()),
+        pinNodes: OdbSet = OdbSet('set', Tuple[OdbMeshNode]()),
         analyticSurface: AnalyticSurface = AnalyticSurface()
     ) -> OdbRigidBody:
         """This method creates a OdbRigidBody object.
@@ -65,7 +66,7 @@ class OdbInstance(OdbInstanceBase):
         self.rigidBodies.append(odbRigidBody)
         return odbRigidBody
 
-    def NodeSet(self, name: str, nodes: tuple[OdbMeshNode]) -> OdbSet:
+    def NodeSet(self, name: str, nodes: Tuple[OdbMeshNode]) -> OdbSet:
         """This method creates a node set from an array of OdbMeshNode objects (for part
         instance-level sets) or from a sequence of arrays of OdbMeshNode objects (for
         assembly-level sets).

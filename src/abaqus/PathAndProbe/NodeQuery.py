@@ -1,4 +1,5 @@
 from __init__ import *
+from __future__ import annotations
 
 
 class NodeQuery:
@@ -12,7 +13,7 @@ class NodeQuery:
         An Int specifying the ID of the most recently queried node. If the last query was
         unsuccessful, **nodeID**=−1.
     nodePos: float
-        A tuple of Floats specifying the **X**-, **Y**-, and **Z**-coordinates of the most recently
+        A Tuple of Floats specifying the **X**-, **Y**-, and **Z**-coordinates of the most recently
         queried node.
 
     Notes
@@ -30,6 +31,6 @@ class NodeQuery:
     # unsuccessful, *nodeID*=−1.
     nodeId: int = None
 
-    # A tuple of Floats specifying the *X*-, *Y*-, and *Z*-coordinates of the most recently
+    # A Tuple of Floats specifying the *X*-, *Y*-, and *Z*-coordinates of the most recently
     # queried node.
     nodePos: float = None

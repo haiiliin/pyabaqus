@@ -11,6 +11,7 @@ from .ConstrainedSketchVertex.ConstrainedSketchVertexModel import ConstrainedSke
 from ..Part.AcisFile import AcisFile
 
 from __init__ import *
+from __future__ import annotations
 
 
 class ConstrainedSketch(ConstrainedSketchConstraintModel,
@@ -23,7 +24,7 @@ class ConstrainedSketch(ConstrainedSketchConstraintModel,
                  name: str,
                  sheetSize: float,
                  gridSpacing: float = None,
-                 transform: tuple = ()):
+                 transform: Tuple = ()):
         """This method creates a ConstrainedSketch object. If the sketch cannot be created, the
         method returns None.
 
@@ -152,7 +153,7 @@ class ConstrainedSketch(ConstrainedSketchConstraintModel,
         """
         pass
 
-    def autoDimension(self, objectList: tuple):
+    def autoDimension(self, objectList: Tuple):
         """This method applies dimensions to the selected ConstrainedSketchGeometry objects in an
         effort to make the ConstrainedSketch well defined.
         
@@ -163,7 +164,7 @@ class ConstrainedSketch(ConstrainedSketchConstraintModel,
         """
         pass
 
-    def autoTrimCurve(self, curve1: str, point1: tuple[float],
+    def autoTrimCurve(self, curve1: str, point1: Tuple[float],
                       parameter1: float):
         """This method automatically trims a selected ConstrainedSketchGeometry object at the
         specified location. If the object does not intersect other ConstrainedSketchGeometry
@@ -183,8 +184,8 @@ class ConstrainedSketch(ConstrainedSketchConstraintModel,
         pass
 
     def breakCurve(self, curve1: ConstrainedSketchGeometry,
-                   point1: tuple[float], curve2: ConstrainedSketchGeometry,
-                   point2: tuple[float]):
+                   point1: Tuple[float], curve2: ConstrainedSketchGeometry,
+                   point2: Tuple[float]):
         """This method breaks a specified ConstrainedSketchGeometry object (*curve1*) using another
         specified ConstrainedSketchGeometry object (*curve2*). If the selected
         ConstrainedSketchGeometry objects intersect, then only *curve1* will be broken; *curve2*
@@ -207,7 +208,7 @@ class ConstrainedSketch(ConstrainedSketchConstraintModel,
         pass
 
     def copyMirror(self, mirrorLine: ConstrainedSketchGeometry,
-                   objectList: tuple[ConstrainedSketchGeometry]):
+                   objectList: Tuple[ConstrainedSketchGeometry]):
         """This method creates copies of the given ConstrainedSketchGeometry objects, mirrors them
         about a selected line, and inserts them into the appropriate repositories of the
         ConstrainedSketch object.
@@ -223,8 +224,8 @@ class ConstrainedSketch(ConstrainedSketchConstraintModel,
         """
         pass
 
-    def copyMove(self, vector: tuple,
-                 objectList: tuple[ConstrainedSketchGeometry]):
+    def copyMove(self, vector: Tuple,
+                 objectList: Tuple[ConstrainedSketchGeometry]):
         """This method creates copies of the given ConstrainedSketchGeometry objects, moves them
         from their original position, and inserts them into the appropriate repositories of the
         ConstrainedSketch object.
@@ -238,8 +239,8 @@ class ConstrainedSketch(ConstrainedSketchConstraintModel,
         """
         pass
 
-    def copyRotate(self, centerPoint: tuple[float], angle: float,
-                   objectList: tuple[ConstrainedSketchGeometry]):
+    def copyRotate(self, centerPoint: Tuple[float], angle: float,
+                   objectList: Tuple[ConstrainedSketchGeometry]):
         """This method creates copies of the given ConstrainedSketchGeometry objects, rotates them,
         and inserts them into the appropriate repositories of the ConstrainedSketch object.
         
@@ -254,8 +255,8 @@ class ConstrainedSketch(ConstrainedSketchConstraintModel,
         """
         pass
 
-    def copyScale(self, scaleValue: float, scaleCenter: tuple[float],
-                  objectList: tuple[ConstrainedSketchGeometry]):
+    def copyScale(self, scaleValue: float, scaleCenter: Tuple[float],
+                  objectList: Tuple[ConstrainedSketchGeometry]):
         """This method creates copies of the given ConstrainedSketchGeometry objects, scales them
         by the specified value about a selected point, and inserts them into the appropriate
         repositories of the ConstrainedSketch object.
@@ -271,7 +272,7 @@ class ConstrainedSketch(ConstrainedSketchConstraintModel,
         """
         pass
 
-    def delete(self, objectList: tuple):
+    def delete(self, objectList: Tuple):
         """This method deletes the given ConstrainedSketchGeometry, ConstrainedSketchDimension, or
         ConstrainedSketchConstraint objects.
         
@@ -293,7 +294,7 @@ class ConstrainedSketch(ConstrainedSketchConstraintModel,
         """
         pass
 
-    def dragEntity(self, entity: str, points: tuple):
+    def dragEntity(self, entity: str, points: Tuple):
         """This method drags a specified ConstrainedSketchGeometry or ConstrainedSketchVertex
         object to a specific location.
         
@@ -313,8 +314,8 @@ class ConstrainedSketch(ConstrainedSketchConstraintModel,
                       number1: int,
                       spacing1: float,
                       angle1: float,
-                      vertexList: tuple[ConstrainedSketchVertex] = (),
-                      geomList: tuple[ConstrainedSketchGeometry] = (),
+                      vertexList: Tuple[ConstrainedSketchVertex] = (),
+                      geomList: Tuple[ConstrainedSketchGeometry] = (),
                       number2: str = 1,
                       spacing2: float = None,
                       angle2: float = None):
@@ -364,7 +365,7 @@ class ConstrainedSketch(ConstrainedSketchConstraintModel,
         pass
 
     def mergeVertices(self, value: float,
-                      vertexList: tuple[ConstrainedSketchVertex]):
+                      vertexList: Tuple[ConstrainedSketchVertex]):
         """This method merges the ConstrainedSketchVertex objects that lie within the specified
         distance of each other. If only one ConstrainedSketchVertex object is selected, it will
         merge all ConstrainedSketchVertex objects that lie within the specified distance of that
@@ -380,8 +381,8 @@ class ConstrainedSketch(ConstrainedSketchConstraintModel,
         """
         pass
 
-    def move(self, vector: tuple,
-             objectList: tuple[ConstrainedSketchGeometry]):
+    def move(self, vector: Tuple,
+             objectList: Tuple[ConstrainedSketchGeometry]):
         """This method translates the given ConstrainedSketchGeometry objects by the given vector.
         
         Parameters
@@ -395,7 +396,7 @@ class ConstrainedSketch(ConstrainedSketchConstraintModel,
 
     def offset(self,
                distance: float,
-               objectList: tuple[ConstrainedSketchGeometry],
+               objectList: Tuple[ConstrainedSketchGeometry],
                side: SymbolicConstant,
                filletCorners: Boolean = OFF):
         """This method creates copies of the selected ConstrainedSketchGeometry objects, offsets
@@ -420,9 +421,9 @@ class ConstrainedSketch(ConstrainedSketchConstraintModel,
     def radialPattern(self,
                       number: int,
                       totalAngle: float,
-                      centerPoint: tuple[float],
-                      vertexList: tuple[ConstrainedSketchVertex] = (),
-                      geomList: tuple[ConstrainedSketchGeometry] = ()):
+                      centerPoint: Tuple[float],
+                      vertexList: Tuple[ConstrainedSketchVertex] = (),
+                      geomList: Tuple[ConstrainedSketchGeometry] = ()):
         """This method copies ConstrainedSketchGeometry objects in a radial pattern about a
         specified center point.
         
@@ -451,7 +452,7 @@ class ConstrainedSketch(ConstrainedSketchConstraintModel,
         """
         pass
 
-    def rectangle(self, point1: tuple[float], point2: tuple[float]):
+    def rectangle(self, point1: Tuple[float], point2: Tuple[float]):
         """This method creates four lines that form a rectangle with diagonal corners defined by
         the given points and inserts them into the geometry repository of the ConstrainedSketch
         object.
@@ -471,7 +472,7 @@ class ConstrainedSketch(ConstrainedSketchConstraintModel,
         pass
 
     def removeGapsAndOverlaps(self, tolerance: str,
-                              geomList: tuple[ConstrainedSketchGeometry]):
+                              geomList: Tuple[ConstrainedSketchGeometry]):
         """This method removes gaps and overlaps between sketch geometries specified by the user.
         This method is particularly useful when cleaning up imported sketches
         
@@ -489,7 +490,7 @@ class ConstrainedSketch(ConstrainedSketchConstraintModel,
         pass
 
     def repairShortEdges(self,
-                         geomList: tuple[ConstrainedSketchGeometry],
+                         geomList: Tuple[ConstrainedSketchGeometry],
                          tolerance: str = ''):
         """This method deletes the short edges specified, optionally selecting only those short
         edges whose lengths are smaller than the specified tolerance and healing the resultant
@@ -522,8 +523,8 @@ class ConstrainedSketch(ConstrainedSketchConstraintModel,
         """
         pass
 
-    def rotate(self, centerPoint: tuple[float], angle: float,
-               objectList: tuple):
+    def rotate(self, centerPoint: Tuple[float], angle: float,
+               objectList: Tuple):
         """This method rotates the given ConstrainedSketchGeometry objects by the given angle and
         about the given point.
         
@@ -538,8 +539,8 @@ class ConstrainedSketch(ConstrainedSketchConstraintModel,
         """
         pass
 
-    def scale(self, scaleValue: float, scaleCenter: tuple[float],
-              objectList: tuple[ConstrainedSketchGeometry]):
+    def scale(self, scaleValue: float, scaleCenter: Tuple[float],
+              objectList: Tuple[ConstrainedSketchGeometry]):
         """This method scales the given ConstrainedSketchGeometry objects by the given scale factor
         and about the given point.
         
@@ -571,8 +572,8 @@ class ConstrainedSketch(ConstrainedSketchConstraintModel,
         """
         pass
 
-    def trimExtendCurve(self, curve1: str, point1: tuple[float], curve2: str,
-                        point2: tuple[float]):
+    def trimExtendCurve(self, curve1: str, point1: Tuple[float], curve2: str,
+                        point2: Tuple[float]):
         """This method trims or extends a specified ConstrainedSketchGeometry object (*curve1*)
         using another specified ConstrainedSketchGeometry object (*curve2*). *curve2* is not
         affected by the operation. The location for the trim or extend is determined by the

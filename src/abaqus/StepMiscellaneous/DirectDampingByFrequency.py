@@ -1,6 +1,7 @@
 from .DirectDampingByFrequencyComponentArray import DirectDampingByFrequencyComponentArray
 
 from __init__ import *
+from __future__ import annotations
 
 
 class DirectDampingByFrequency:

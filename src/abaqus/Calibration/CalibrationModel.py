@@ -2,6 +2,7 @@ from ..Calibration.Calibration import Calibration
 from ..Model.ModelBase import ModelBase
 
 from __init__ import *
+from __future__ import annotations
 
 
 class CalibrationModel(ModelBase):

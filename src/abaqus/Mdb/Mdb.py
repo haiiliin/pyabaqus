@@ -4,6 +4,7 @@ from ..Model.Model import Model
 from ..Part.AcisMdb import AcisMdb
 
 from __init__ import *
+from __future__ import annotations
 
 
 class Mdb(AcisMdb, JobMdb):

@@ -1,6 +1,7 @@
 from abaqusConstants import *
 
 from __init__ import *
+from __future__ import annotations
 
 
 class InitializationAssignment:
@@ -50,7 +51,7 @@ class InitializationAssignment:
             are to be defined. 
         assignments
             A sequence of tuples specifying the initializations assigned to each surface pair. Each 
-            tuple contains four entries (fourth entry is for Abaqus/Explicit and is optional): 
+            Tuple contains four entries (fourth entry is for Abaqus/Explicit and is optional): 
             - A region object or the SymbolicConstant GLOBAL (for Abaqus/Standard only). 
             - A region object or the SymbolicConstant SELF (for Abaqus/Standard only). 
             - A String specifying a StdInitialization or ExpInitializationobject associated with this pair of regions. 
@@ -58,7 +59,7 @@ class InitializationAssignment:
         """
         pass
 
-    def delete(self, indices: tuple):
+    def delete(self, indices: Tuple):
         """The delete method allows you to delete existing contact initialization assignments from
         a ContactStd or ContactExp object.
         

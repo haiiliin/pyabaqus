@@ -4,6 +4,7 @@ from ..Odb.Odb import Odb
 from ..Session.SessionBase import SessionBase
 
 from __init__ import *
+from __future__ import annotations
 
 
 class FieldReportSession(SessionBase):
@@ -66,7 +67,7 @@ class FieldReportSession(SessionBase):
             refinement (COMPONENT or INVARIANT), followed by a String specifying the name of a
             component or invariant for which to obtain values.
             If this element is omitted, data are written for all components and invariants (if
-            applicable). This element is required if *element3* (the following element in the tuple)
+            applicable). This element is required if *element3* (the following element in the Tuple)
             is included.
             - *element3 (if applicable)*: A Dictionary with a String key and a String value
             specifying a single section point at which to report data. The key specifies a region in

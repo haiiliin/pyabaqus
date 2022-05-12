@@ -3,6 +3,7 @@ import typing
 from abaqusConstants import *
 
 from __init__ import *
+from __future__ import annotations
 
 
 class SurfaceVertexCriteriaAssignment:
@@ -37,8 +38,8 @@ class SurfaceVertexCriteriaAssignment:
             An Int specifying the position of the surface vertex criteria assignment whose value is 
             to be modified. 
         value
-            A tuple specifying the value of the surface vertex criteria assignments for the surface 
-            whose index is referenced. Each tuple contains: 
+            A Tuple specifying the value of the surface vertex criteria assignments for the surface 
+            whose index is referenced. Each Tuple contains: 
             - A Float or a SymbolicConstant specifying the vertex criteria value to be used for the 
             surface. Possible values of the SymbolicConstant are ALL_VERTICES or NO_VERTICES. 
         """
@@ -55,7 +56,7 @@ class SurfaceVertexCriteriaAssignment:
             A String specifying the name of the step in which new surface vertex criteria 
             assignments are to be defined. 
         assignments
-            A sequence of tuples specifying the surface vertex criteria assignments. Each tuple 
+            A sequence of tuples specifying the surface vertex criteria assignments. Each Tuple 
             contains two entries: 
             - A region or a material object or the SymbolicConstant GLOBAL specifying the surface to 
             which the vertex criteria is assigned. 
@@ -64,7 +65,7 @@ class SurfaceVertexCriteriaAssignment:
         """
         pass
 
-    def delete(self, indices: tuple):
+    def delete(self, indices: Tuple):
         """The delete method allows you to delete existing surface vertex criteria assignments from
         a ContactStd object.
         

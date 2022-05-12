@@ -1,5 +1,7 @@
 from abaqusConstants import *
 from __init__ import *
+from __future__ import annotations
+
 
 class Face:
     from Mesh.MeshElementArray import MeshElementArray
@@ -16,14 +18,14 @@ class Face:
         A Boolean specifying whether the face belongs to the reference representation of the
         Part or Instance.
     pointOn: float
-        A tuple of tuples of Floats specifying the coordinates. For a face of a shell **pointOn**
+        A Tuple of tuples of Floats specifying the coordinates. For a face of a shell **pointOn**
         specifies the **X**-, **Y**-, and **Z**-coordinates of a point located on the face and the
         **X**-, **Y**-, and **Z**-components of the normal to the face.For a face of a solid **pointOn**
         specifies the **X**-, **Y**-, and **Z**-coordinates of a point located on the face.
     featureName: float
-        A tuple of Floats specifying the name of the feature that created this face.
+        A Tuple of Floats specifying the name of the feature that created this face.
     instanceName: float
-        A tuple of Floats specifying the name of the part instance for this face (if
+        A Tuple of Floats specifying the name of the part instance for this face (if
         applicable).
 
     Notes
@@ -65,16 +67,16 @@ class Face:
     # Part or Instance.
     isReferenceRep: Boolean = OFF
 
-    # A tuple of tuples of Floats specifying the coordinates. For a face of a shell *pointOn*
+    # A Tuple of tuples of Floats specifying the coordinates. For a face of a shell *pointOn*
     # specifies the *X*-, *Y*-, and *Z*-coordinates of a point located on the face and the
     # *X*-, *Y*-, and *Z*-components of the normal to the face.For a face of a solid *pointOn*
     # specifies the *X*-, *Y*-, and *Z*-coordinates of a point located on the face.
     pointOn: float = None
 
-    # A tuple of Floats specifying the name of the feature that created this face.
+    # A Tuple of Floats specifying the name of the feature that created this face.
     featureName: float = None
 
-    # A tuple of Floats specifying the name of the part instance for this face (if
+    # A Tuple of Floats specifying the name of the part instance for this face (if
     # applicable).
     instanceName: float = None
 
@@ -89,13 +91,13 @@ class Face:
         """
         pass
 
-    def getCurvature(self, point: tuple, uParam: float, vParam: float) -> Dict:
+    def getCurvature(self, point: Tuple, uParam: float, vParam: float) -> Dict:
         """This method returns information about the curvature at a location on the face.
         
         Parameters
         ----------
         point
-            A tuple specifying the *X*-, *Y*-, and *Z* coordinates of the point where the curvature 
+            A Tuple specifying the *X*-, *Y*-, and *Z* coordinates of the point where the curvature 
             is desired. If the *point* does not lie on the face it will be projected onto the face. 
             This argument and *uParam* and *vParam* are mutually exclusive. 
         uParam
@@ -168,7 +170,7 @@ class Face:
         """
         pass
 
-    def getNormal(self, point: tuple = ()) -> COORDINATE_3D:
+    def getNormal(self, point: Tuple = ()) -> COORDINATE_3D:
         """This method returns the normal to a face at the location specified by the *pointOn*
         member. The normal at a different location on the face can be obtained by specifying the
         optional *point* argument.
@@ -176,7 +178,7 @@ class Face:
         Parameters
         ----------
         point
-            A tuple specifying the *X*-, *Y*-, and *Z* coordinates of the point where the normal to 
+            A Tuple specifying the *X*-, *Y*-, and *Z* coordinates of the point where the normal to 
             the face is desired. If the *point* does not lie on the face it will be projected onto 
             the face. 
 
@@ -213,7 +215,7 @@ class Face:
 
         Returns
         -------
-            A tuple of integers.
+            A Tuple of integers.
             
         """
         pass
@@ -223,7 +225,7 @@ class Face:
 
         Returns
         -------
-            A tuple of integers.
+            A Tuple of integers.
             
         """
         pass
@@ -234,7 +236,7 @@ class Face:
 
         Returns
         -------
-            A tuple of integers.
+            A Tuple of integers.
             
         """
         pass

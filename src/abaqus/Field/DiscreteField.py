@@ -5,6 +5,7 @@ from ..Assembly.PartInstance import PartInstance
 from ..Region.Region import Region
 
 from __init__ import *
+from __future__ import annotations
 
 
 class DiscreteField(Field):
@@ -24,7 +25,7 @@ class DiscreteField(Field):
     """
     def __init__(self,
                  name: str,
-                 defaultValues: tuple,
+                 defaultValues: Tuple,
                  fieldType: SymbolicConstant,
                  location: SymbolicConstant = NODES,
                  dataWidth: int = 1,

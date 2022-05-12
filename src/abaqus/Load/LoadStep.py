@@ -3,13 +3,14 @@ from .LoadCase import LoadCase
 from ..Step.StepBase import StepBase
 
 from __init__ import *
+from __future__ import annotations
 
 
 class LoadStep(StepBase):
     def LoadCase(self,
                  name: str,
-                 boundaryConditions: tuple = (),
-                 loads: tuple = (),
+                 boundaryConditions: Tuple = (),
+                 loads: Tuple = (),
                  includeActiveBaseStateBC: Boolean = ON) -> LoadCase:
         """This method creates a load case in a step.
 

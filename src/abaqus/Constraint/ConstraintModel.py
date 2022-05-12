@@ -16,6 +16,7 @@ from ..Model.ModelBase import ModelBase
 from ..Region.Region import Region
 
 from __init__ import *
+from __future__ import annotations
 
 
 class ConstraintModel(ModelBase):
@@ -232,7 +233,7 @@ class ConstraintModel(ModelBase):
             toleranceMethod, absoluteTolerance, fractionalTolerance)
         return constraint
 
-    def Equation(self, name: str, terms: tuple) -> Equation:
+    def Equation(self, name: str, terms: Tuple) -> Equation:
         """This method creates an Equation object.
 
         Notes

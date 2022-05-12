@@ -3,6 +3,7 @@ import typing
 from abaqusConstants import *
 
 from __init__ import *
+from __future__ import annotations
 
 
 class ContactDamping:
@@ -22,7 +23,7 @@ class ContactDamping:
         respect to clearance. Possible values are STEP, LINEAR, and BILINEAR. The default value
         is STEP.If **definition=CRITICAL_DAMPING_FRACTION**, the only possible value is STEP.
     table: float
-        A tuple of pairs of Floats specifying the damping properties. The items in the table
+        A Tuple of pairs of Floats specifying the damping properties. The items in the table
         data are described below.
 
     Notes
@@ -63,7 +64,7 @@ class ContactDamping:
     # is STEP.If *definition*=CRITICAL_DAMPING_FRACTION, the only possible value is STEP.
     clearanceDependence: SymbolicConstant = STEP
 
-    # A tuple of pairs of Floats specifying the damping properties. The items in the table
+    # A Tuple of pairs of Floats specifying the damping properties. The items in the table
     # data are described below.
     table: float = None
 
@@ -72,7 +73,7 @@ class ContactDamping:
                  tangentFraction: typing.Union[SymbolicConstant,
                                                float] = DEFAULT,
                  clearanceDependence: SymbolicConstant = STEP,
-                 table: tuple = ()):
+                 table: Tuple = ()):
         """This method creates a ContactDamping object.
 
         Notes

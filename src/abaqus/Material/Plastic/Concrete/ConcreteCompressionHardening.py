@@ -1,6 +1,7 @@
 from abaqusConstants import *
 
 from __init__ import *
+from __future__ import annotations
 
 
 class ConcreteCompressionHardening:
@@ -32,7 +33,7 @@ class ConcreteCompressionHardening:
 
     """
     def __init__(self,
-                 table: tuple,
+                 table: Tuple,
                  rate: Boolean = OFF,
                  temperatureDependency: Boolean = OFF,
                  dependencies: int = 0):

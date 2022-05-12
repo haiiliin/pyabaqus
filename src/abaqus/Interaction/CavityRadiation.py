@@ -4,6 +4,7 @@ from ..BasicGeometry.ModelDot import ModelDot
 from ..Region.RegionArray import RegionArray
 
 from __init__ import *
+from __future__ import annotations
 
 
 class CavityRadiation(Interaction):
@@ -77,8 +78,8 @@ class CavityRadiation(Interaction):
     surfaces: RegionArray
         A :py:class:`~abaqus.Region.RegionArray.RegionArray` object specifying the surfaces for which radiation viewfactor control is
         being specified.
-    surfaceEmissivities: tuple
-        A tuple of Strings specifying the names of the Cavity Radiation properties containing
+    surfaceEmissivities: Tuple
+        A Tuple of Strings specifying the names of the Cavity Radiation properties containing
         the surface emissivity data. One name per specified surface. The emissivity data is
         ignored when **surfaceReflection=OFF**.
     cyclicRotPt: ModelDot
@@ -90,19 +91,19 @@ class CavityRadiation(Interaction):
     cyclicSymPt: ModelDot
         A :py:class:`~abaqus.BasicGeometry.ModelDot.ModelDot` object specifying the symmetry axis end point. This argument applies only
         when **cyclicSymmetry=ON**.
-    periodicDistance_1: tuple
-        A tuple of tuples of Floats specifying the two points of the vector that describes the
-        periodic distance for the first periodic symmetry. Each point is defined by a tuple of
+    periodicDistance_1: Tuple
+        A Tuple of tuples of Floats specifying the two points of the vector that describes the
+        periodic distance for the first periodic symmetry. Each point is defined by a Tuple of
         three coordinates indicating its position. This argument applies only when
         **periodicSymmetries** is greater than zero. The default value is an empty sequence.
-    periodicDistance_2: tuple
-        A tuple of tuples of Floats specifying the two points of the vector that describes the
-        periodic distance for the second periodic symmetry. Each point is defined by a tuple of
+    periodicDistance_2: Tuple
+        A Tuple of tuples of Floats specifying the two points of the vector that describes the
+        periodic distance for the second periodic symmetry. Each point is defined by a Tuple of
         three coordinates indicating its position. This argument applies only when
         **periodicSymmetries** is greater than one. The default value is an empty sequence.
-    periodicDistance_3: tuple
-        A tuple of tuples of Floats specifying the two points of the vector that describes the
-        periodic distance for the third periodic symmetry. Each point is defined by a tuple of
+    periodicDistance_3: Tuple
+        A Tuple of tuples of Floats specifying the two points of the vector that describes the
+        periodic distance for the third periodic symmetry. Each point is defined by a Tuple of
         three coordinates indicating its position. This argument applies only when
         **periodicSymmetries** = 3. The default value is an empty sequence.
 
@@ -207,10 +208,10 @@ class CavityRadiation(Interaction):
     # being specified.
     surfaces: RegionArray = RegionArray()
 
-    # A tuple of Strings specifying the names of the Cavity Radiation properties containing
+    # A Tuple of Strings specifying the names of the Cavity Radiation properties containing
     # the surface emissivity data. One name per specified surface. The emissivity data is
     # ignored when *surfaceReflection*=OFF.
-    surfaceEmissivities: tuple = ()
+    surfaceEmissivities: Tuple = ()
 
     # A ModelDot object specifying the rotation axis point. This argument applies only when
     # *cyclicSymmetry*=ON.
@@ -224,29 +225,29 @@ class CavityRadiation(Interaction):
     # when *cyclicSymmetry*=ON.
     cyclicSymPt: ModelDot = ModelDot()
 
-    # A tuple of tuples of Floats specifying the two points of the vector that describes the
-    # periodic distance for the first periodic symmetry. Each point is defined by a tuple of
+    # A Tuple of tuples of Floats specifying the two points of the vector that describes the
+    # periodic distance for the first periodic symmetry. Each point is defined by a Tuple of
     # three coordinates indicating its position. This argument applies only when
     # *periodicSymmetries* is greater than zero. The default value is an empty sequence.
-    periodicDistance_1: tuple = ()
+    periodicDistance_1: Tuple = ()
 
-    # A tuple of tuples of Floats specifying the two points of the vector that describes the
-    # periodic distance for the second periodic symmetry. Each point is defined by a tuple of
+    # A Tuple of tuples of Floats specifying the two points of the vector that describes the
+    # periodic distance for the second periodic symmetry. Each point is defined by a Tuple of
     # three coordinates indicating its position. This argument applies only when
     # *periodicSymmetries* is greater than one. The default value is an empty sequence.
-    periodicDistance_2: tuple = ()
+    periodicDistance_2: Tuple = ()
 
-    # A tuple of tuples of Floats specifying the two points of the vector that describes the
-    # periodic distance for the third periodic symmetry. Each point is defined by a tuple of
+    # A Tuple of tuples of Floats specifying the two points of the vector that describes the
+    # periodic distance for the third periodic symmetry. Each point is defined by a Tuple of
     # three coordinates indicating its position. This argument applies only when
     # *periodicSymmetries* = 3. The default value is an empty sequence.
-    periodicDistance_3: tuple = ()
+    periodicDistance_3: Tuple = ()
 
     def __init__(self,
                  name: str,
                  createStepName: str,
                  surfaces: RegionArray,
-                 surfaceEmissivities: tuple = (),
+                 surfaceEmissivities: Tuple = (),
                  ambientTemp: float = None,
                  blocking: SymbolicConstant = BLOCKING_ALL,
                  blockingSurfaces: RegionArray = None,
@@ -270,9 +271,9 @@ class CavityRadiation(Interaction):
                  periodicSymPlane_1: str = '',
                  periodicSymPlane_2: str = '',
                  periodicSymPlane_3: str = '',
-                 periodicDistance_1: tuple = (),
-                 periodicDistance_2: tuple = (),
-                 periodicDistance_3: tuple = (),
+                 periodicDistance_1: Tuple = (),
+                 periodicDistance_2: Tuple = (),
+                 periodicDistance_3: Tuple = (),
                  periodicSymZ: float = None,
                  periodicDistZ: float = None,
                  reflectionSymmetries: int = 0,
@@ -397,17 +398,17 @@ class CavityRadiation(Interaction):
             three-dimensional models, and when *periodicSymmetries* = 3. 
         periodicDistance_1
             A sequence of sequences of Floats specifying the two points of the vector that describes 
-            the periodic distance for the first periodic symmetry. Each point is defined by a tuple 
+            the periodic distance for the first periodic symmetry. Each point is defined by a Tuple 
             of three coordinates indicating its position. This argument applies only when 
             *periodicSymmetries* is greater than zero. The default value is an empty sequence. 
         periodicDistance_2
             A sequence of sequences of Floats specifying the two points of the vector that describes 
-            the periodic distance for the second periodic symmetry. Each point is defined by a tuple 
+            the periodic distance for the second periodic symmetry. Each point is defined by a Tuple 
             of three coordinates indicating its position. This argument applies only when 
             *periodicSymmetries* is greater than one. The default value is an empty sequence. 
         periodicDistance_3
             A sequence of sequences of Floats specifying the two points of the vector that describes 
-            the periodic distance for the third periodic symmetry. Each point is defined by a tuple 
+            the periodic distance for the third periodic symmetry. Each point is defined by a Tuple 
             of three coordinates indicating its position. This argument applies only when 
             *periodicSymmetries* = 3. The default value is an empty sequence. 
         periodicSymZ
@@ -454,7 +455,7 @@ class CavityRadiation(Interaction):
         pass
 
     def setValues(self,
-                  surfaceEmissivities: tuple = (),
+                  surfaceEmissivities: Tuple = (),
                   ambientTemp: float = None,
                   blocking: SymbolicConstant = BLOCKING_ALL,
                   blockingSurfaces: RegionArray = None,
@@ -478,9 +479,9 @@ class CavityRadiation(Interaction):
                   periodicSymPlane_1: str = '',
                   periodicSymPlane_2: str = '',
                   periodicSymPlane_3: str = '',
-                  periodicDistance_1: tuple = (),
-                  periodicDistance_2: tuple = (),
-                  periodicDistance_3: tuple = (),
+                  periodicDistance_1: Tuple = (),
+                  periodicDistance_2: Tuple = (),
+                  periodicDistance_3: Tuple = (),
                   periodicSymZ: float = None,
                   periodicDistZ: float = None,
                   reflectionSymmetries: int = 0,
@@ -590,17 +591,17 @@ class CavityRadiation(Interaction):
             three-dimensional models, and when *periodicSymmetries* = 3. 
         periodicDistance_1
             A sequence of sequences of Floats specifying the two points of the vector that describes 
-            the periodic distance for the first periodic symmetry. Each point is defined by a tuple 
+            the periodic distance for the first periodic symmetry. Each point is defined by a Tuple 
             of three coordinates indicating its position. This argument applies only when 
             *periodicSymmetries* is greater than zero. The default value is an empty sequence. 
         periodicDistance_2
             A sequence of sequences of Floats specifying the two points of the vector that describes 
-            the periodic distance for the second periodic symmetry. Each point is defined by a tuple 
+            the periodic distance for the second periodic symmetry. Each point is defined by a Tuple 
             of three coordinates indicating its position. This argument applies only when 
             *periodicSymmetries* is greater than one. The default value is an empty sequence. 
         periodicDistance_3
             A sequence of sequences of Floats specifying the two points of the vector that describes 
-            the periodic distance for the third periodic symmetry. Each point is defined by a tuple 
+            the periodic distance for the third periodic symmetry. Each point is defined by a Tuple 
             of three coordinates indicating its position. This argument applies only when 
             *periodicSymmetries* = 3. The default value is an empty sequence. 
         periodicSymZ

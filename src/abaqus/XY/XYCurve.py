@@ -4,6 +4,7 @@ from .SymbolStyle import SymbolStyle
 from .XYData import XYData
 
 from __init__ import *
+from __future__ import annotations
 
 
 class XYCurve:
@@ -34,7 +35,7 @@ class XYCurve:
         A String specifying the label to be displayed in the legend. By default, the label is
         system defined.
     displayTypes: SymbolicConstant
-        A tuple of SymbolicConstants specifying that describe how curves are to be displayed.
+        A Tuple of SymbolicConstants specifying that describe how curves are to be displayed.
         Possible values are LINE and SYMBOL. The default value is (LINE).
 
     Notes
@@ -87,7 +88,7 @@ class XYCurve:
     # system defined.
     legendLabel: str = ''
 
-    # A tuple of SymbolicConstants specifying that describe how curves are to be displayed.
+    # A Tuple of SymbolicConstants specifying that describe how curves are to be displayed.
     # Possible values are LINE and SYMBOL. The default value is (LINE).
     displayTypes: SymbolicConstant = None
 

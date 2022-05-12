@@ -1,6 +1,7 @@
 from abaqusConstants import *
 
 from __init__ import *
+from __future__ import annotations
 
 
 class SmoothingAssignment:
@@ -35,8 +36,8 @@ class SmoothingAssignment:
             An Int specifying the position of the surface smoothing assignment whose value is to be 
             modified. 
         value
-            A tuple specifying the value of the surface smoothing assignments for the surface whose 
-            index is referenced. Each tuple contains one entry:A SymbolicConstant specifying the 
+            A Tuple specifying the value of the surface smoothing assignments for the surface whose 
+            index is referenced. Each Tuple contains one entry:A SymbolicConstant specifying the 
             surface smoothing value to be used for the surface. Possible values of the 
             SymbolicConstant are NONE, REVOLUTION, SPHERICAL, and TOROIDAL. 
         """
@@ -52,7 +53,7 @@ class SmoothingAssignment:
             A String specifying the name of the step in which new surface smoothing assignments are 
             to be defined. 
         assignments
-            A sequence of tuples specifying the surface smoothing assignments. Each tuple contains 
+            A sequence of tuples specifying the surface smoothing assignments. Each Tuple contains 
             two entries: 
             - A region object specifying the surface to which the smoothing is assigned. 
             - A SymbolicConstant specifying the surface smoothing value to be used for the surface. 
@@ -60,7 +61,7 @@ class SmoothingAssignment:
         """
         pass
 
-    def delete(self, indices: tuple):
+    def delete(self, indices: Tuple):
         """The delete method allows you to delete existing surface smoothing assignments from
         ContactExp and ContactStd objects.
         

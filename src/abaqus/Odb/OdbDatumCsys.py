@@ -2,6 +2,7 @@ from abaqusConstants import *
 from .OdbMeshNode import OdbMeshNode
 
 from __init__ import *
+from __future__ import annotations
 
 
 class OdbDatumCsys:
@@ -19,14 +20,14 @@ class OdbDatumCsys:
         A SymbolicConstant specifying the type of coordinate system. Possible values are
         CARTESIAN, CYLINDRICAL, and SPHERICAL.
     origin: float
-        A tuple of Floats specifying the coordinates of the origin of the datum coordinate
+        A Tuple of Floats specifying the coordinates of the origin of the datum coordinate
         system.
     xAxis: float
-        A tuple of Floats specifying a point on the **X**-axis.
+        A Tuple of Floats specifying a point on the **X**-axis.
     yAxis: float
-        A tuple of Floats specifying a point on the **Y**-axis.
+        A Tuple of Floats specifying a point on the **Y**-axis.
     zAxis: float
-        A tuple of Floats specifying a point on the **Z**-axis.
+        A Tuple of Floats specifying a point on the **Z**-axis.
 
     Notes
     -----
@@ -46,21 +47,21 @@ class OdbDatumCsys:
     # CARTESIAN, CYLINDRICAL, and SPHERICAL.
     coordSysType: SymbolicConstant = None
 
-    # A tuple of Floats specifying the coordinates of the origin of the datum coordinate
+    # A Tuple of Floats specifying the coordinates of the origin of the datum coordinate
     # system.
     origin: float = None
 
-    # A tuple of Floats specifying a point on the *X*-axis.
+    # A Tuple of Floats specifying a point on the *X*-axis.
     xAxis: float = None
 
-    # A tuple of Floats specifying a point on the *Y*-axis.
+    # A Tuple of Floats specifying a point on the *Y*-axis.
     yAxis: float = None
 
-    # A tuple of Floats specifying a point on the *Z*-axis.
+    # A Tuple of Floats specifying a point on the *Z*-axis.
     zAxis: float = None
 
     def DatumCsysByThreePoints(self, name: str, coordSysType: SymbolicConstant,
-                               origin: tuple, point1: tuple, point2: tuple):
+                               origin: Tuple, point1: Tuple, point2: Tuple):
         """This method creates an OdbDatumCsys object using three points. A datum coordinate system
         created with this method results in a fixed system.
 

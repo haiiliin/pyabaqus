@@ -4,6 +4,7 @@ from ..Region.Set import Set
 
 
 from __init__ import *
+from __future__ import annotations
 class ConnectorOrientation:
     """The ConnectorOrientation object is used to assign a connector orientation to a
     connector. 

@@ -2,6 +2,7 @@ from abaqusConstants import *
 from .Leaf import Leaf
 
 from __init__ import *
+from __future__ import annotations
 
 
 class LeafFromOdbElementMaterials(Leaf):
@@ -31,7 +32,7 @@ class LeafFromOdbElementMaterials(Leaf):
     # DEFAULT_MODEL, ALL_ELEMENTS, ALL_NODES, and ALL_SURFACES.
     leafType: SymbolicConstant = None
 
-    def __init__(self, elementMaterials: tuple):
+    def __init__(self, elementMaterials: Tuple):
         """This method creates a Leaf object from a sequence of Strings specifying material names.
         Leaf objects specify the items in a display group.
 

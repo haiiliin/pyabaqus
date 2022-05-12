@@ -16,6 +16,7 @@ from ..DisplayGroup.DisplayGroupInstance import DisplayGroupInstance
 from ..DisplayGroup.Leaf import Leaf
 
 from __init__ import *
+from __future__ import annotations
 
 
 class AssemblyDisplayOptions:
@@ -99,8 +100,8 @@ class AssemblyDisplayOptions:
         A :py:class:`~abaqus.DisplayOptions.StopConditionDisplayOptions.StopConditionDisplayOptions` object.
     symbolOptions: SymbolDisplayOptions
         A :py:class:`~abaqus.DisplayOptions.SymbolDisplayOptions.SymbolDisplayOptions` object.
-    visibleInstances: tuple
-        A tuple of Strings specifying the names of the part instances that are visible in the
+    visibleInstances: Tuple
+        A Tuple of Strings specifying the names of the part instances that are visible in the
         viewport. The default value is an empty sequence.
     step: str
         A String specifying the step for :py:class:`~.which` objects are to be displayed. Possible values are
@@ -229,16 +230,16 @@ class AssemblyDisplayOptions:
     # A SymbolDisplayOptions object.
     symbolOptions: SymbolDisplayOptions = SymbolDisplayOptions()
 
-    # A tuple of Strings specifying the names of the part instances that are visible in the
+    # A Tuple of Strings specifying the names of the part instances that are visible in the
     # viewport. The default value is an empty sequence.
-    visibleInstances: tuple = ()
+    visibleInstances: Tuple = ()
 
     # A String specifying the step for which objects are to be displayed. Possible values are
     # any valid step name. The default value is "Initial".
     step: str = ''
 
     def setValues(self,
-                  visibleInstances: tuple = (),
+                  visibleInstances: Tuple = (),
                   step: str = '',
                   renderStyle: SymbolicConstant = WIREFRAME,
                   mesh: Boolean = OFF,
@@ -252,7 +253,7 @@ class AssemblyDisplayOptions:
                   cnxTypeLabels: Boolean = ON,
                   cnxTagDisplay: Boolean = OFF,
                   predefinedFields: Boolean = OFF,
-                  visibleDisplayGroups: tuple[DisplayGroup] = (),
+                  visibleDisplayGroups: Tuple[DisplayGroup] = (),
                   engineeringFeatures: Boolean = OFF,
                   renderBeamProfiles: Boolean = OFF,
                   beamScaleFactor: float = 1,

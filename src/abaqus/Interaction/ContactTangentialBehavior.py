@@ -1,6 +1,7 @@
 from abaqusConstants import *
 
 from __init__ import *
+from __future__ import annotations
 
 
 class ContactTangentialBehavior:
@@ -47,7 +48,7 @@ class ContactTangentialBehavior:
     useProperties: Boolean
         A Boolean specifying whether property values will be used. The default value is OFF.
     table: float
-        A tuple of tuples of Floats specifying tangential behavior. The items in the table data
+        A Tuple of tuples of Floats specifying tangential behavior. The items in the table data
         are described below.
 
     Notes
@@ -138,7 +139,7 @@ class ContactTangentialBehavior:
     # A Boolean specifying whether property values will be used. The default value is OFF.
     useProperties: Boolean = OFF
 
-    # A tuple of tuples of Floats specifying tangential behavior. The items in the table data
+    # A Tuple of tuples of Floats specifying tangential behavior. The items in the table data
     # are described below.
     table: float = None
 
@@ -150,7 +151,7 @@ class ContactTangentialBehavior:
                  temperatureDependency: Boolean = OFF,
                  dependencies: int = 0,
                  exponentialDecayDefinition: SymbolicConstant = COEFFICIENTS,
-                 table: tuple = (),
+                 table: Tuple = (),
                  shearStressLimit: float = None,
                  maximumElasticSlip: SymbolicConstant = FRACTION,
                  fraction: float = 0,

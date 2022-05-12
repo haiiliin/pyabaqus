@@ -4,6 +4,7 @@ from .ShearRetention import ShearRetention
 from .TensionStiffening import TensionStiffening
 
 from __init__ import *
+from __future__ import annotations
 
 
 class Concrete:
@@ -43,7 +44,7 @@ class Concrete:
     tensionStiffening: TensionStiffening = TensionStiffening(((), ))
 
     def __init__(self,
-                 table: tuple,
+                 table: Tuple,
                  temperatureDependency: Boolean = OFF,
                  dependencies: int = 0):
         """This method creates a Concrete object.

@@ -1,6 +1,7 @@
 from abaqusConstants import *
 
 from __init__ import *
+from __future__ import annotations
 
 
 class CohesiveBehavior:
@@ -47,7 +48,7 @@ class CohesiveBehavior:
                  coupling: SymbolicConstant = UNCOUPLED,
                  temperatureDependency: Boolean = OFF,
                  dependencies: int = 0,
-                 table: tuple = ()):
+                 table: Tuple = ()):
         """This method creates a CohesiveBehavior object.
 
         Notes

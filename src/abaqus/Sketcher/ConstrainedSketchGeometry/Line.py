@@ -1,10 +1,11 @@
 from .ConstrainedSketchGeometry import ConstrainedSketchGeometry
 
 from __init__ import *
+from __future__ import annotations
 
 
 class Line(ConstrainedSketchGeometry):
-    def __init__(self, point1: tuple[float], point2: tuple[float]):
+    def __init__(self, point1: Tuple[float], point2: Tuple[float]):
         """This method creates a line between two given points.
 
         Notes

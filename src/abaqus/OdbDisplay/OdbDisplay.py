@@ -22,6 +22,7 @@ from ..PlotOptions.StreamOptions import StreamOptions
 from ..PlotOptions.ViewCutOptions import ViewCutOptions
 
 from __init__ import *
+from __future__ import annotations
 
 
 class OdbDisplay:
@@ -42,9 +43,9 @@ class OdbDisplay:
     name: str
         A String specifying the name of the output database associated with the OdbDisplay
         object.
-    fieldSteps: tuple
-        A tuple of Strings specifying field steps.
-        Each item in the sequence consists of a tuple that contains the following step
+    fieldSteps: Tuple
+        A Tuple of Strings specifying field steps.
+        Each item in the sequence consists of a Tuple that contains the following step
         information:
             - **element0**: A String specifying the step name.
             - **element1**: A String specifying the step description.
@@ -105,13 +106,13 @@ class OdbDisplay:
         A :py:class:`~abaqus.PlotOptions.BasicOptions.BasicOptions` object.
     materialOrientationOptions: OrientationOptions
         An :py:class:`~abaqus.OdbDisplay.OrientationOptions.OrientationOptions` object.
-    fieldFrame: tuple[str]
-        A tuple of Strings specifying the step label and the frame label when the current step
+    fieldFrame: Tuple[str]
+        A Tuple of Strings specifying the step label and the frame label when the current step
         is user defined. Alternatively, **fieldFrame** maybe specified as a pair of Ints with the
         step index and the frame index, when the current step is defined in the analysis.
-    primaryVariable: tuple
-        A tuple specifying variables.
-        Each item in the sequence consists of a tuple containing the following elements:
+    primaryVariable: Tuple
+        A Tuple specifying variables.
+        Each item in the sequence consists of a Tuple containing the following elements:
             - Element 0: A String specifying the variable label.
             - Element 1: An Int specifying the output position. Possible integer values are:
             - 0: UNDEFINED_POSITION
@@ -155,7 +156,7 @@ class OdbDisplay:
         unavailable.
             - Element 8: A sequence of a String specifying the name of the ply and category
         selection tuples (see below) specifying the section point information.
-        A category selection tuple consists of the following elements:
+        A category selection Tuple consists of the following elements:
             - Element 0: A String specifying the category label.
             - Element 1: An Int specifying whether to use both top and bottom section points to
         obtain results. Possible values are 1 to use both section points and 0 to use only the
@@ -171,27 +172,27 @@ class OdbDisplay:
             - Element 11: A Float specifying the maximum possible value for the data.
             - Element 12: An Int specifying whether the data is derived. Possible values are 1 when
         the data is derived; 0, when the data is not derived.
-    deformedVariable: tuple
-        A tuple specifying variables.For information on the sequence, see the member
+    deformedVariable: Tuple
+        A Tuple specifying variables.For information on the sequence, see the member
         **primaryVariable**.
     statusVariable: SymbolicConstant
-        A tuple of SymbolicConstants specifying variables.For information on the sequence, see
+        A Tuple of SymbolicConstants specifying variables.For information on the sequence, see
         the member **primaryVariable**.
     symbolVariable: SymbolicConstant
-        A tuple of SymbolicConstants specifying variables.For information on the sequence, see
+        A Tuple of SymbolicConstants specifying variables.For information on the sequence, see
         the member **primaryVariable**.
     applyStatusToUndeformed: SymbolicConstant
-        A tuple of SymbolicConstants specifying a Boolean to specify if elements are to be
+        A Tuple of SymbolicConstants specifying a Boolean to specify if elements are to be
         removed in undeformed states based on an active status variable
     statusInsideRange: SymbolicConstant
-        A tuple of SymbolicConstants specifying a Boolean to specify if the status range should
+        A Tuple of SymbolicConstants specifying a Boolean to specify if the status range should
         be inside a specified minimum and maximum. The range will be outside when false.
     statusMinimum: float
-        A tuple of Floats specifying a Float value for the minimum status range value.
+        A Tuple of Floats specifying a Float value for the minimum status range value.
     statusMaximum: float
-        A tuple of Floats specifying a Float value for the maximum status range value.
+        A Tuple of Floats specifying a Float value for the maximum status range value.
     useStatus: SymbolicConstant
-        A tuple of SymbolicConstants specifying a Boolean to specify if elements are to be
+        A Tuple of SymbolicConstants specifying a Boolean to specify if elements are to be
         removed based on the status variable
     firstFrame: str
         A pair of Ints specifying the step index and the frame index of the first available
@@ -222,8 +223,8 @@ class OdbDisplay:
     # object.
     name: str = ''
 
-    # A tuple of Strings specifying field steps.
-    # Each item in the sequence consists of a tuple that contains the following step
+    # A Tuple of Strings specifying field steps.
+    # Each item in the sequence consists of a Tuple that contains the following step
     # information:
     # - *element0*: A String specifying the step name.
     # - *element1*: A String specifying the step description.
@@ -245,7 +246,7 @@ class OdbDisplay:
     # defined.
     # - *element10*: A sequence of machine readable strings encoding the currently active
     # frame numbers.
-    fieldSteps: tuple = ()
+    fieldSteps: Tuple = ()
 
     # An OdbFieldVarList object.
     fieldVariables: OdbFieldVarList = OdbFieldVarList()
@@ -306,13 +307,13 @@ class OdbDisplay:
     # An OrientationOptions object.
     materialOrientationOptions: OrientationOptions = OrientationOptions()
 
-    # A tuple of Strings specifying the step label and the frame label when the current step
+    # A Tuple of Strings specifying the step label and the frame label when the current step
     # is user defined. Alternatively, *fieldFrame* maybe specified as a pair of Ints with the
     # step index and the frame index, when the current step is defined in the analysis.
-    fieldFrame: tuple[str] = ()
+    fieldFrame: Tuple[str] = ()
 
-    # A tuple specifying variables.
-    # Each item in the sequence consists of a tuple containing the following elements:
+    # A Tuple specifying variables.
+    # Each item in the sequence consists of a Tuple containing the following elements:
     # - Element 0: A String specifying the variable label.
     # - Element 1: An Int specifying the output position. Possible integer values are:
     # - 0: UNDEFINED_POSITION
@@ -356,7 +357,7 @@ class OdbDisplay:
     # unavailable.
     # - Element 8: A sequence of a String specifying the name of the ply and category
     # selection tuples (see below) specifying the section point information.
-    # A category selection tuple consists of the following elements:
+    # A category selection Tuple consists of the following elements:
     # - Element 0: A String specifying the category label.
     # - Element 1: An Int specifying whether to use both top and bottom section points to
     # obtain results. Possible values are 1 to use both section points and 0 to use only the
@@ -372,35 +373,35 @@ class OdbDisplay:
     # - Element 11: A Float specifying the maximum possible value for the data.
     # - Element 12: An Int specifying whether the data is derived. Possible values are 1 when
     # the data is derived; 0, when the data is not derived.
-    primaryVariable: tuple = ()
+    primaryVariable: Tuple = ()
 
-    # A tuple specifying variables.For information on the sequence, see the member
+    # A Tuple specifying variables.For information on the sequence, see the member
     # *primaryVariable*.
-    deformedVariable: tuple = ()
+    deformedVariable: Tuple = ()
 
-    # A tuple of SymbolicConstants specifying variables.For information on the sequence, see
+    # A Tuple of SymbolicConstants specifying variables.For information on the sequence, see
     # the member *primaryVariable*.
     statusVariable: SymbolicConstant = None
 
-    # A tuple of SymbolicConstants specifying variables.For information on the sequence, see
+    # A Tuple of SymbolicConstants specifying variables.For information on the sequence, see
     # the member *primaryVariable*.
     symbolVariable: SymbolicConstant = None
 
-    # A tuple of SymbolicConstants specifying a Boolean to specify if elements are to be
+    # A Tuple of SymbolicConstants specifying a Boolean to specify if elements are to be
     # removed in undeformed states based on an active status variable
     applyStatusToUndeformed: SymbolicConstant = None
 
-    # A tuple of SymbolicConstants specifying a Boolean to specify if the status range should
+    # A Tuple of SymbolicConstants specifying a Boolean to specify if the status range should
     # be inside a specified minimum and maximum. The range will be outside when false.
     statusInsideRange: SymbolicConstant = None
 
-    # A tuple of Floats specifying a Float value for the minimum status range value.
+    # A Tuple of Floats specifying a Float value for the minimum status range value.
     statusMinimum: float = None
 
-    # A tuple of Floats specifying a Float value for the maximum status range value.
+    # A Tuple of Floats specifying a Float value for the maximum status range value.
     statusMaximum: float = None
 
-    # A tuple of SymbolicConstants specifying a Boolean to specify if elements are to be
+    # A Tuple of SymbolicConstants specifying a Boolean to specify if elements are to be
     # removed based on the status variable
     useStatus: SymbolicConstant = None
 
@@ -698,7 +699,7 @@ class OdbDisplay:
     def ViewCut(self,
                 name: str,
                 shape: SymbolicConstant,
-                origin: tuple,
+                origin: Tuple,
                 normal: typing.Union[SymbolicConstant, float],
                 axis2: typing.Union[SymbolicConstant, float],
                 csysName: str,

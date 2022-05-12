@@ -3,6 +3,7 @@ from .RebarLayers import RebarLayers
 from .Section import Section
 
 from __init__ import *
+from __future__ import annotations
 
 
 class MembraneSection(Section):

@@ -4,6 +4,7 @@ from .ConnectorOptions import ConnectorOptions
 from .ConnectorPotentialArray import ConnectorPotentialArray
 
 from __init__ import *
+from __future__ import annotations
 
 
 class ConnectorPlasticity(ConnectorBehaviorOption):
@@ -102,9 +103,9 @@ class ConnectorPlasticity(ConnectorBehaviorOption):
                  forcePotentialOperator: SymbolicConstant = SUM,
                  forcePotentialExponent: float = 2,
                  connectorPotentials: ConnectorPotentialArray = None,
-                 isotropicTable: tuple = (),
-                 kinematicTable: tuple = (),
-                 components: tuple = ()):
+                 isotropicTable: Tuple = (),
+                 kinematicTable: Tuple = (),
+                 components: Tuple = ()):
         """This method creates a connector plasticity behavior option for a ConnectorSection
         object.
 

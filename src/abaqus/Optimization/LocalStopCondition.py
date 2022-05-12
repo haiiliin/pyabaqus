@@ -2,6 +2,7 @@ from abaqusConstants import *
 from .StopCondition import StopCondition
 
 from __init__ import *
+from __future__ import annotations
 
 
 class LocalStopCondition(StopCondition):

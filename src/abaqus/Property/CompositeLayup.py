@@ -9,6 +9,7 @@ from ..Section.HomogeneousShellSection import HomogeneousShellSection
 from ..Section.SectionLayerArray import SectionLayerArray
 
 from __init__ import *
+from __future__ import annotations
 
 
 class CompositeLayup:

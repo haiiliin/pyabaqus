@@ -1,4 +1,5 @@
 from __init__ import *
+from __future__ import annotations
 
 
 class MeshFace:
@@ -37,32 +38,32 @@ class MeshFace:
     face: int = None
 
     def getElemEdges(self):
-        """This method returns a tuple of unique element edges on the element face.
+        """This method returns a Tuple of unique element edges on the element face.
 
         Returns
         -------
-        edges: tuple[MeshEdge]
-            A tuple of MeshEdge objects
+        edges: Tuple[MeshEdge]
+            A Tuple of MeshEdge objects
         """
         pass
 
     def getElements(self):
-        """This method returns a tuple of elements that share the element face.
+        """This method returns a Tuple of elements that share the element face.
 
         Returns
         -------
-        elements: tuple[MeshElement]
-            A tuple of MeshElement objects
+        elements: Tuple[MeshElement]
+            A Tuple of MeshElement objects
         """
         pass
 
     def getNodes(self):
-        """This method returns a tuple of nodes on the element face.
+        """This method returns a Tuple of nodes on the element face.
 
         Returns
         -------
-        nodes: tuple[MeshNode]
-            A tuple of MeshNode objects
+        nodes: Tuple[MeshNode]
+            A Tuple of MeshNode objects
         """
         pass
 
@@ -88,8 +89,8 @@ class MeshFace:
 
         Returns
         -------
-        normal: tuple[float]
-            A tuple of 3 floats representing the unit normal vector. If the element face is 
+        normal: Tuple[float]
+            A Tuple of 3 floats representing the unit normal vector. If the element face is 
             collapsed such that a normal cannot be computed, a zero-length vector is returned.
         """
         pass

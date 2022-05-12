@@ -1,7 +1,7 @@
 from ..Datum.DatumCsys import DatumCsys
 
-from __future__ import annotations
 from __init__ import *
+from __future__ import annotations
 
 
 class MeshNode:
@@ -16,7 +16,7 @@ class MeshNode:
     instanceName: str
         A String specifying the name of the part instance that owns this node.
     coordinates: float
-        A tuple of three Floats specifying the coordinates of the new node.
+        A Tuple of three Floats specifying the coordinates of the new node.
 
     Notes
     -----
@@ -59,11 +59,11 @@ class MeshNode:
     # A String specifying the name of the part instance that owns this node.
     instanceName: str = ''
 
-    # A tuple of three Floats specifying the coordinates of the new node.
+    # A Tuple of three Floats specifying the coordinates of the new node.
     coordinates: float = None
 
     def __init__(self,
-                 coordinates: tuple,
+                 coordinates: Tuple,
                  localCsys: DatumCsys = DatumCsys(),
                  label: int = None):
         """This method creates a node on an orphan mesh part.
@@ -94,32 +94,32 @@ class MeshNode:
         pass
 
     def getElemEdges(self):
-        """This method returns a tuple of element edge objects that share the node.
+        """This method returns a Tuple of element edge objects that share the node.
 
         Returns
         -------
-        edges: tuple[MeshEdge]
-            A tuple of MeshEdge objects
+        edges: Tuple[MeshEdge]
+            A Tuple of MeshEdge objects
         """
         pass
 
     def getElemFaces(self):
-        """This method returns a tuple of element face objects that share the node.
+        """This method returns a Tuple of element face objects that share the node.
 
         Returns
         -------
-        faces: tuple[MeshFace]
-            A tuple of MeshFace objects
+        faces: Tuple[MeshFace]
+            A Tuple of MeshFace objects
         """
         pass
 
     def getElements(self):
-        """This method returns a tuple of element objects that share the node.
+        """This method returns a Tuple of element objects that share the node.
 
         Returns
         -------
-        elements: tuple[MeshElement]
-            A tuple of MeshElement objects
+        elements: Tuple[MeshElement]
+            A Tuple of MeshElement objects
         """
         pass
 

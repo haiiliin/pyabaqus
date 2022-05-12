@@ -5,6 +5,7 @@ from ....TestData.ShearTestData import ShearTestData
 from ....TestData.VolumetricTestData import VolumetricTestData
 
 from __init__ import *
+from __future__ import annotations
 
 
 class Viscoelastic:
@@ -78,14 +79,14 @@ class Viscoelastic:
 
     def __init__(self,
                  domain: SymbolicConstant,
-                 table: tuple,
+                 table: Tuple,
                  frequency: SymbolicConstant = FORMULA,
                  type: SymbolicConstant = ISOTROPIC,
                  preload: SymbolicConstant = NONE,
                  time: SymbolicConstant = PRONY,
                  errtol: float = 0,
                  nmax: int = 13,
-                 volumetricTable: tuple = ()):
+                 volumetricTable: Tuple = ()):
         """This method creates a Viscoelastic object.
 
         Notes

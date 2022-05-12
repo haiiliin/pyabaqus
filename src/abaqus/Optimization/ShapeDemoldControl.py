@@ -3,6 +3,7 @@ from .GeometricRestriction import GeometricRestriction
 from ..Region.Region import Region
 
 from __init__ import *
+from __future__ import annotations
 
 
 class ShapeDemoldControl(GeometricRestriction):
@@ -21,7 +22,7 @@ class ShapeDemoldControl(GeometricRestriction):
     """
     def __init__(self,
                  name: str,
-                 pullDirection: tuple,
+                 pullDirection: Tuple,
                  region: Region,
                  collisionCheckRegion: SymbolicConstant = DEMOLD_REGION,
                  csys: int = None,
@@ -48,7 +49,7 @@ class ShapeDemoldControl(GeometricRestriction):
             A String specifying the geometric restriction repository key. 
         pullDirection
             A VertexArray object of length 2 specifying the demold pull direction. Instead of 
-            through a ConstrainedSketchVertex, each point might be specified through a tuple of coordinates.
+            through a ConstrainedSketchVertex, each point might be specified through a Tuple of coordinates.
         region
             A Region object specifying the region to which the geometric restriction is applied. 
             When used with a TopologyTask, there is no default value. When used with a ShapeTask, 

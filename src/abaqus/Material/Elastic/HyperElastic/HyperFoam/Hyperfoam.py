@@ -6,6 +6,7 @@ from ....TestData.UniaxialTestData import UniaxialTestData
 from ....TestData.VolumetricTestData import VolumetricTestData
 
 from __init__ import *
+from __future__ import annotations
 
 
 class Hyperfoam:
@@ -54,7 +55,7 @@ class Hyperfoam:
                  n: int = 1,
                  temperatureDependency: Boolean = OFF,
                  moduli: SymbolicConstant = LONG_TERM,
-                 table: tuple = ()):
+                 table: Tuple = ()):
         """This method creates a Hyperfoam object.
 
         Notes

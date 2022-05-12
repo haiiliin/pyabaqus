@@ -1,6 +1,7 @@
 from abaqusConstants import *
 
 from __init__ import *
+from __future__ import annotations
 
 
 class GapConvection:
@@ -33,7 +34,7 @@ class GapConvection:
     """
     def __init__(self,
                  type: str,
-                 table: tuple = (),
+                 table: Tuple = (),
                  temperatureDependency: Boolean = OFF,
                  dependencies: int = 0):
         """This method creates a GapConvection object.

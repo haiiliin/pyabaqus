@@ -2,6 +2,7 @@ from abaqusConstants import *
 from .InteractionState import InteractionState
 
 from __init__ import *
+from __future__ import annotations
 
 
 class CavityRadiationState(InteractionState):
@@ -40,8 +41,8 @@ class CavityRadiationState(InteractionState):
     viewfactorAccuracyTolState: SymbolicConstant
         A SymbolicConstant specifying the propagation state of the **viewfactorAccuracyTol**
         member. Possible values are UNSET, SET, UNCHANGED, and FREED.
-    blockingSurfaces: tuple
-        A tuple of Strings specifying the surfaces that provide blocking inside the cavity.
+    blockingSurfaces: Tuple
+        A Tuple of Strings specifying the surfaces that provide blocking inside the cavity.
     status: SymbolicConstant
         A SymbolicConstant specifying the propagation state of the :py:class:`~abaqus.Interaction.InteractionState.InteractionState` object.
         Possible values
@@ -97,8 +98,8 @@ class CavityRadiationState(InteractionState):
     # member. Possible values are UNSET, SET, UNCHANGED, and FREED.
     viewfactorAccuracyTolState: SymbolicConstant = None
 
-    # A tuple of Strings specifying the surfaces that provide blocking inside the cavity.
-    blockingSurfaces: tuple = ()
+    # A Tuple of Strings specifying the surfaces that provide blocking inside the cavity.
+    blockingSurfaces: Tuple = ()
 
     # A SymbolicConstant specifying the propagation state of the InteractionState object.
     # Possible values

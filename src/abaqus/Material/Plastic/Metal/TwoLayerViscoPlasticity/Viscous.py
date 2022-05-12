@@ -2,6 +2,7 @@ from abaqusConstants import *
 from ...Potential import Potential
 
 from __init__ import *
+from __future__ import annotations
 
 
 class Viscous:
@@ -89,7 +90,7 @@ class Viscous:
     potential: Potential = Potential(((), ))
 
     def __init__(self,
-                 table: tuple,
+                 table: Tuple,
                  law: SymbolicConstant = STRAIN,
                  temperatureDependency: Boolean = OFF,
                  dependencies: int = 0,

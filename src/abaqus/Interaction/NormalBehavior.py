@@ -3,6 +3,7 @@ import typing
 from abaqusConstants import *
 
 from __init__ import *
+from __future__ import annotations
 
 
 class NormalBehavior:
@@ -35,7 +36,7 @@ class NormalBehavior:
                  pressureOverclosure: SymbolicConstant = HARD,
                  allowSeparation: Boolean = ON,
                  maxStiffness: float = None,
-                 table: tuple = (),
+                 table: Tuple = (),
                  constraintEnforcementMethod: SymbolicConstant = DEFAULT,
                  overclosureFactor: float = 0,
                  overclosureMeasure: float = 0,

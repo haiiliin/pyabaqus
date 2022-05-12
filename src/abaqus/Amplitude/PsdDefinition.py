@@ -2,6 +2,7 @@ from abaqusConstants import *
 from .Amplitude import Amplitude
 
 from __init__ import *
+from __future__ import annotations
 
 
 class PsdDefinition(Amplitude):
@@ -26,7 +27,7 @@ class PsdDefinition(Amplitude):
     """
     def __init__(self,
                  name: str,
-                 data: tuple,
+                 data: Tuple,
                  unitType: SymbolicConstant = FORCE,
                  referenceGravityAcceleration: float = 1,
                  referenecePower: float = 0,

@@ -12,6 +12,7 @@ from ..Property.SectionAssignmentArray import SectionAssignmentArray
 from ..Section.Section import Section
 
 from __init__ import *
+from __future__ import annotations
 
 
 class OdbAssemblyBase:
@@ -154,9 +155,9 @@ class OdbAssemblyBase:
         pass
 
     def addElements(self,
-                    labels: tuple,
-                    connectivity: tuple,
-                    instanceNames: tuple,
+                    labels: Tuple,
+                    connectivity: Tuple,
+                    instanceNames: Tuple,
                     type: str,
                     elementSetName: str = '',
                     sectionCategory: SectionCategory = None):
@@ -195,8 +196,8 @@ class OdbAssemblyBase:
         pass
 
     def addNodes(self,
-                 labels: tuple,
-                 coordinates: tuple,
+                 labels: Tuple,
+                 coordinates: Tuple,
                  nodeSetName: str = None):
         """This method adds nodes to the OdbAssembly object using node labels and coordinates.
         Warning:Adding nodes not in ascending order of their labels may cause Abaqus/Viewer to

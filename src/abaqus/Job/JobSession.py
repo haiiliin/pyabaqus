@@ -3,6 +3,7 @@ from .Queue import Queue
 from ..Session.SessionBase import SessionBase
 
 from __init__ import *
+from __future__ import annotations
 
 
 class JobSession(SessionBase):

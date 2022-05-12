@@ -5,6 +5,7 @@ from .ShellSection import ShellSection
 from .TransverseShearShell import TransverseShearShell
 
 from __init__ import *
+from __future__ import annotations
 
 
 class GeometryShellSection(ShellSection):

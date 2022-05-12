@@ -14,6 +14,7 @@ from ..Datum.DatumCsys import DatumCsys
 from ..Part.PartBase import PartBase
 
 from __init__ import *
+from __future__ import annotations
 
 
 class MeshPart(PartBase):
@@ -29,7 +30,7 @@ class MeshPart(PartBase):
         import mesh
 
     """
-    def assignStackDirection(self, cells: tuple[Cell], referenceRegion: Face):
+    def assignStackDirection(self, cells: Tuple[Cell], referenceRegion: Face):
         """This method assigns a stack direction to geometric cells. The stack direction will be
         used to orient the elements during mesh generation.
         
@@ -44,9 +45,9 @@ class MeshPart(PartBase):
 
     def associateMeshWithGeometry(self,
                                   geometricEntity: str,
-                                  elements: tuple[MeshElement] = (),
-                                  elemFaces: tuple[MeshFace] = (),
-                                  elemEdges: tuple[MeshEdge] = (),
+                                  elements: Tuple[MeshElement] = (),
+                                  elemFaces: Tuple[MeshFace] = (),
+                                  elemEdges: Tuple[MeshEdge] = (),
                                   node: MeshNode = MeshNode((0, 0, 0))):
         """This method associates a geometric entity with mesh entities that are either orphan
         elements, bounds orphan elements, or were created using the bottom-up meshing technique.
@@ -75,7 +76,7 @@ class MeshPart(PartBase):
         pass
 
     def createVirtualTopology(self,
-                              regions: tuple[Face] = (),
+                              regions: Tuple[Face] = (),
                               mergeShortEdges: Boolean = False,
                               shortEdgeThreshold: float = None,
                               mergeSmallFaces: Boolean = False,
@@ -171,7 +172,7 @@ class MeshPart(PartBase):
         """
         pass
 
-    def deleteBoundaryLayerControls(self, regions: tuple[Cell]):
+    def deleteBoundaryLayerControls(self, regions: Tuple[Cell]):
         """This method deletes the control parameters for boundary layer mesh for all the specified
         regions.
         
@@ -183,7 +184,7 @@ class MeshPart(PartBase):
         """
         pass
 
-    def deleteMesh(self, regions: tuple['Part']):
+    def deleteMesh(self, regions: Tuple['Part']):
         """This method deletes a subset of the mesh that contains the native elements from the
         given parts or regions.
         
@@ -197,7 +198,7 @@ class MeshPart(PartBase):
 
     def deleteMeshAssociationWithGeometry(
             self,
-            geometricEntities: tuple[Cell],
+            geometricEntities: Tuple[Cell],
             addBoundingEntities: Boolean = False):
         """This method deletes the association of geometric entities with mesh entities.
         
@@ -221,7 +222,7 @@ class MeshPart(PartBase):
         """
         pass
 
-    def deleteSeeds(self, regions: tuple['Part']):
+    def deleteSeeds(self, regions: Tuple['Part']):
         """This method deletes the global edge seeds from the given parts or deletes the local edge
         seeds from the given edges.
         
@@ -234,7 +235,7 @@ class MeshPart(PartBase):
         pass
 
     def generateMesh(self,
-                     regions: tuple['Part'] = (),
+                     regions: Tuple['Part'] = (),
                      seedConstraintOverride: Boolean = OFF,
                      meshTechniqueOverride: Boolean = OFF,
                      boundaryPreview: Boolean = OFF,
@@ -268,10 +269,10 @@ class MeshPart(PartBase):
     def generateBottomUpExtrudedMesh(self,
                                      cell: Cell,
                                      numberOfLayers: int,
-                                     extrudeVector: tuple,
+                                     extrudeVector: Tuple,
                                      geometrySourceSide: str = '',
-                                     elemFacesSourceSide: tuple[MeshFace] = (),
-                                     elemSourceSide: tuple = (),
+                                     elemFacesSourceSide: Tuple[MeshFace] = (),
+                                     elemSourceSide: Tuple = (),
                                      depth: float = None,
                                      targetSide: str = '',
                                      biasRatio: float = 1,
@@ -288,7 +289,7 @@ class MeshPart(PartBase):
             An Int specifying the number of layers to be generated along the extrusion vector. 
         extrudeVector
             A sequence of sequences of Floats specifying the start point and end point of a vector. 
-            Each point is defined by a tuple of three coordinates indicating its position. The 
+            Each point is defined by a Tuple of three coordinates indicating its position. The 
             direction of the mesh extrusion operation is from the first point to the second point. 
         geometrySourceSide
             A Region of Face objects specifying the geometric domain to be used as the source for 
@@ -321,11 +322,11 @@ class MeshPart(PartBase):
             self,
             cell: Cell,
             geometrySourceSide: str = '',
-            elemFacesSourceSide: tuple[MeshFace] = (),
-            elemSourceSide: tuple = (),
+            elemFacesSourceSide: Tuple[MeshFace] = (),
+            elemSourceSide: Tuple = (),
             geometryConnectingSides: str = '',
-            elemFacesConnectingSides: tuple[MeshFace] = (),
-            elemConnectingSides: tuple = (),
+            elemFacesConnectingSides: Tuple[MeshFace] = (),
+            elemConnectingSides: Tuple = (),
             targetSide: Face = Face(),
             numberOfLayers: int = None,
             extendElementSets: Boolean = False):
@@ -368,11 +369,11 @@ class MeshPart(PartBase):
     def generateBottomUpRevolvedMesh(self,
                                      cell: Cell,
                                      numberOfLayers: int,
-                                     axisOfRevolution: tuple,
+                                     axisOfRevolution: Tuple,
                                      angleOfRevolution: float,
                                      geometrySourceSide: str = '',
-                                     elemFacesSourceSide: tuple[MeshFace] = (),
-                                     elemSourceSide: tuple = (),
+                                     elemFacesSourceSide: Tuple[MeshFace] = (),
+                                     elemSourceSide: Tuple = (),
                                      extendElementSets: Boolean = False):
         """This method generates solid elements by revolving a 2D mesh around an axis, either on an
         orphan mesh or within a cell region using a bottom-up technique.
@@ -387,7 +388,7 @@ class MeshPart(PartBase):
             revolution. 
         axisOfRevolution
             A sequence of sequences of Floats specifying the two points of the vector that describes 
-            the axis of revolution. Each point is defined by a tuple of three coordinates indicating 
+            the axis of revolution. Each point is defined by a Tuple of three coordinates indicating 
             its position. The direction of the axis of revolution is from the first point to the 
             second point. The orientation of the revolution operation follows the right-hand-rule 
             about the axis of revolution. 
@@ -517,7 +518,7 @@ class MeshPart(PartBase):
         """
         pass
 
-    def getIncompatibleMeshInterfaces(self, cells: tuple[Cell] = ()):
+    def getIncompatibleMeshInterfaces(self, cells: Tuple[Cell] = ()):
         """This method returns a sequence of face objects that are meshed with incompatible
         elements.
         
@@ -590,13 +591,13 @@ class MeshPart(PartBase):
         """
         pass
 
-    def getMeshStats(self, regions: tuple):
+    def getMeshStats(self, regions: Tuple):
         """This method returns the mesh statistics for the given regions.
         
         Parameters
         ----------
         regions
-            A sequence or tuple of ConstrainedSketchGeometry regions for which mesh statistics should be returned.
+            A sequence or Tuple of ConstrainedSketchGeometry regions for which mesh statistics should be returned.
 
         Returns
         -------
@@ -649,7 +650,7 @@ class MeshPart(PartBase):
         """
         pass
 
-    def ignoreEntity(self, entities: tuple):
+    def ignoreEntity(self, entities: Tuple):
         """This method creates a virtual topology feature. Virtual topology allows unimportant
         entities to be ignored during mesh generation. You can combine two adjacent faces by
         specifying a common edge to ignore. Similarly, you can combine two adjacent edges by
@@ -667,7 +668,7 @@ class MeshPart(PartBase):
         """
         pass
 
-    def restoreIgnoredEntity(self, entities: tuple[IgnoredVertex]):
+    def restoreIgnoredEntity(self, entities: Tuple[IgnoredVertex]):
         """This method restores vertices and edges that have been merged using a virtual topology
         feature.
         
@@ -686,10 +687,10 @@ class MeshPart(PartBase):
 
     def seedEdgeByBias(self,
                        biasMethod: SymbolicConstant,
-                       end1Edges: tuple[Edge],
-                       end2Edges: tuple[Edge],
-                       centerEdges: tuple[Edge],
-                       endEdges: tuple[Edge],
+                       end1Edges: Tuple[Edge],
+                       end2Edges: Tuple[Edge],
+                       centerEdges: Tuple[Edge],
+                       endEdges: Tuple[Edge],
                        ratio: float,
                        number: int,
                        minSize: float,
@@ -747,7 +748,7 @@ class MeshPart(PartBase):
         pass
 
     def seedEdgeByNumber(self,
-                         edges: tuple[Edge],
+                         edges: Tuple[Edge],
                          number: int,
                          constraint: SymbolicConstant = FREE):
         """This method seeds the given edges uniformly based on the number of elements along the
@@ -772,7 +773,7 @@ class MeshPart(PartBase):
         pass
 
     def seedEdgeBySize(self,
-                       edges: tuple[Edge],
+                       edges: Tuple[Edge],
                        size: float,
                        deviationFactor: float = None,
                        minSizeFactor: float = None,
@@ -829,11 +830,11 @@ class MeshPart(PartBase):
         pass
 
     def setBoundaryLayerControls(self,
-                                 regions: tuple[Cell],
+                                 regions: Tuple[Cell],
                                  firstElemSize: float,
                                  growthFactor: float,
                                  numLayers: int,
-                                 inactiveFaces: tuple[Face] = (),
+                                 inactiveFaces: Tuple[Face] = (),
                                  setName: str = ''):
         """This method sets the control parameters for boundary layer mesh for the specified
         regions.
@@ -861,7 +862,7 @@ class MeshPart(PartBase):
         """
         pass
 
-    def setElementType(self, regions: tuple, elemTypes: tuple[ElemType]):
+    def setElementType(self, regions: Tuple, elemTypes: Tuple[ElemType]):
         """This method assigns element types to the specified regions.
         
         Parameters
@@ -903,7 +904,7 @@ class MeshPart(PartBase):
         pass
 
     def setMeshControls(self,
-                        regions: tuple,
+                        regions: Tuple,
                         elemShape: SymbolicConstant = None,
                         technique: SymbolicConstant = None,
                         algorithm: SymbolicConstant = None,
@@ -996,7 +997,7 @@ class MeshPart(PartBase):
                           criterion: SymbolicConstant,
                           threshold: float = None,
                           elemShape: SymbolicConstant = None,
-                          regions: tuple = ()):
+                          regions: Tuple = ()):
         """This method tests the mesh quality of a part and returns poor-quality elements.
         
         Parameters
@@ -1068,7 +1069,7 @@ class MeshPart(PartBase):
         pass
 
     def Node(self,
-             coordinates: tuple,
+             coordinates: Tuple,
              localCsys: DatumCsys = DatumCsys(),
              label: int = None):
         """This method creates a node on an orphan mesh part.

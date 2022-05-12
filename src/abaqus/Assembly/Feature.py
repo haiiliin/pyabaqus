@@ -4,6 +4,7 @@ from ..Feature.Feature import Feature as FeatureBase
 from ..Mesh.MeshFace import MeshFace
 
 from __init__ import *
+from __future__ import annotations
 
 
 class Feature(FeatureBase):
@@ -23,10 +24,10 @@ class Feature(FeatureBase):
     def AttachmentLines(
             name: str,
             points: int,
-            sourceFaces: tuple[Face],
-            sourceElementFaces: tuple[MeshFace],
-            targetFaces: tuple[Face],
-            targetElementFaces: tuple[MeshFace],
+            sourceFaces: Tuple[Face],
+            sourceElementFaces: Tuple[MeshFace],
+            targetFaces: Tuple[Face],
+            targetElementFaces: Tuple[MeshFace],
             projectionMethod: SymbolicConstant = PROJECT_BY_PROXIMITY,
             projectionDirStartPt: float = None,
             projectionDirEndPt: float = None,
@@ -56,7 +57,7 @@ class Feature(FeatureBase):
         name
             A String specifying a unique Feature name.
         points
-            A tuple of points. Each point can be a ConstrainedSketchVertex, Datum point, Reference point, an
+            A Tuple of points. Each point can be a ConstrainedSketchVertex, Datum point, Reference point, an
             Attachment point, orphan mesh Node, or an Interesting point object.
         sourceFaces
             A sequence of Face objects specifying the geometry faces onto which the points are to be
@@ -77,12 +78,12 @@ class Feature(FeatureBase):
         projectionDirStartPt
             A point specifying the start point of the projection direction to project onto source
             faces. The point can be a ConstrainedSketchVertex, Datum point, Reference point, Attachment point, orphan
-            mesh Node, Interesting Point object, or a tuple of Floats representing the coordinates
+            mesh Node, Interesting Point object, or a Tuple of Floats representing the coordinates
             of a point.
         projectionDirEndPt
             A point specifying the end point of the projection direction to project onto source
             faces. The point can be a ConstrainedSketchVertex, Datum point, Reference point, Attachment point, orphan
-            mesh Node, Interesting point object, or a tuple of Floats representing the coordinates
+            mesh Node, Interesting point object, or a Tuple of Floats representing the coordinates
             of a point.
         sourceToTargetProjMethod
             A SymbolicConstant specifying the method to be used to project onto target faces.

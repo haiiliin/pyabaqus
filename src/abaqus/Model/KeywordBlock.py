@@ -1,6 +1,7 @@
 from abaqusConstants import *
 
 from __init__ import *
+from __future__ import annotations
 
 
 class KeywordBlock:
@@ -19,8 +20,8 @@ class KeywordBlock:
     lastSynchCount: float
         A Float specifying the value of the counter associated with the :py:class:`~abaqus.abaqus.Mdb` object at the most
         recent synchronization.
-    sieBlocks: tuple
-        A tuple of Strings specifying a sequence of Strings that is identical to the information
+    sieBlocks: Tuple
+        A Tuple of Strings specifying a sequence of Strings that is identical to the information
         written to the Abaqus input file. Each String in the sequence represents an Abaqus input
         file keyword along with the parameters and data lines associated with the keyword. A
         String can also be a comment in the input file. You initialize this data member by
@@ -44,7 +45,7 @@ class KeywordBlock:
     # recent synchronization.
     lastSynchCount: float = None
 
-    # A tuple of Strings specifying a sequence of Strings that is identical to the information
+    # A Tuple of Strings specifying a sequence of Strings that is identical to the information
     # written to the Abaqus input file. Each String in the sequence represents an Abaqus input
     # file keyword along with the parameters and data lines associated with the keyword. A
     # String can also be a comment in the input file. You initialize this data member by
@@ -53,7 +54,7 @@ class KeywordBlock:
     # synchVersions used the argument *storeNodesAndElements*=False, the entry for the
     # keywords NODE and ELEMENT will contain only the keyword and its parameters, not the data
     # lines.
-    sieBlocks: tuple = ()
+    sieBlocks: Tuple = ()
 
     def setValues(self, edited: Boolean = OFF):
         """This method modifies the KeywordBlock object.
@@ -62,7 +63,7 @@ class KeywordBlock:
         ----------
         edited
             A Boolean specifying whether this objects *sieBlocks* member has been edited. Setting 
-            edited=False will set the *sieBlocks* member to an empty tuple, thereby discarding all 
+            edited=False will set the *sieBlocks* member to an empty Tuple, thereby discarding all 
             previous edits. 
         """
         pass

@@ -17,6 +17,7 @@ from .SurfaceThicknessAssignment import SurfaceThicknessAssignment
 from .SurfaceVertexCriteriaAssignment import SurfaceVertexCriteriaAssignment
 
 from __init__ import *
+from __future__ import annotations
 
 
 class ContactStd(Interaction):
@@ -254,7 +255,7 @@ class ContactStd(Interaction):
             name: str,
             createStepName: str,
             globalSmoothing: Boolean = ON,
-            surfaceBeamSmoothingAssignments: tuple = (),
+            surfaceBeamSmoothingAssignments: Tuple = (),
             surfaceVertexCriteriaAssignments: typing.Union[SymbolicConstant,
                                                            float] = GLOBAL,
             slidingFormulationAssignments: SymbolicConstant = None,
@@ -293,19 +294,19 @@ class ContactStd(Interaction):
             A Boolean specifying whether surface smoothing (geometric correction) is automatically 
             applied to all eligible surfaces. The default value is ON. 
         surfaceBeamSmoothingAssignments
-            A sequence of tuples specifying the surface beam smoothing assignments. Each tuple 
+            A sequence of tuples specifying the surface beam smoothing assignments. Each Tuple 
             contains two entries: 
             - A region object specifying the surface to which the smoothing is assigned. 
             - A Float specifying the surface smoothing value to be used for the surface. 
         surfaceVertexCriteriaAssignments
-            A sequence of tuples specifying the surface vertex criteria assignments. Each tuple 
+            A sequence of tuples specifying the surface vertex criteria assignments. Each Tuple 
             contains two entries: 
             - A region or a material object or the SymbolicConstant GLOBAL specifying the surface to 
             which the vertex criteria is assigned. 
             - A Float or a SymbolicConstant specifying the vertex criteria value to be used for the 
             surface. Possible values of the SymbolicConstant are ALL_VERTICES or NO_VERTICES. 
         slidingFormulationAssignments
-            A sequence of tuples specifying the sliding formulation assignments. Each tuple contains 
+            A sequence of tuples specifying the sliding formulation assignments. Each Tuple contains 
             two entries: 
             - A region object or the SymbolicConstant GLOBAL specifying the surface to which the 
             sliding formulation attribute is assigned. 
@@ -323,7 +324,7 @@ class ContactStd(Interaction):
             pairs excluded from contact. Possible values of the SymbolicConstants are ALLSTAR and 
             SELF. 
         contactPropertyAssignments
-            A sequence of tuples specifying the properties assigned to each surface pair. Each tuple 
+            A sequence of tuples specifying the properties assigned to each surface pair. Each Tuple 
             contains three entries: 
             - A Region object or the SymbolicConstant GLOBAL. 
             - A Region object or the SymbolicConstant SELF. 
@@ -331,7 +332,7 @@ class ContactStd(Interaction):
             regions. 
         surfaceFeatureAssignments
             A sequence of tuples specifying the surface feature angle assignments in the contact 
-            domain. Each tuple contains two entries: 
+            domain. Each Tuple contains two entries: 
             - A region object or the SymbolicConstant GLOBAL specifying the surface to which the 
             surface feature angle is assigned. 
             - A Float or a SymbolicConstant specifying the overriding feature angle value to be used 
@@ -339,7 +340,7 @@ class ContactStd(Interaction):
             NONE. 
         surfaceThicknessAssignments
             A sequence of tuples specifying the surface thickness assignments in the contact domain. 
-            Each tuple contains three entries: 
+            Each Tuple contains three entries: 
             - A region object or the SymbolicConstant GLOBAL specifying the surface to which the 
             surface thickness is assigned. 
             - A Float or a SymbolicConstant specifying the overriding thickness value to be used in 
@@ -349,14 +350,14 @@ class ContactStd(Interaction):
             second entry. 
         surfaceOffsetAssignments
             A sequence of tuples specifying the surface offset fraction assignments in the contact 
-            domain. Each tuple contains two entries: 
+            domain. Each Tuple contains two entries: 
             - A region object or the SymbolicConstant GLOBAL specifying the surface to which the 
             surface offset fraction is assigned. 
             - A Float or a SymbolicConstant specifying the offset fraction value to be used in the 
             contact definition. Possible values of the SymbolicConstant are ORIGINAL, SPOS, or SNEG. 
         mainSecondaryAssignments
             A sequence of tuples specifying main-secondary assignments in the contact domain. Each 
-            tuple contains three entries: 
+            Tuple contains three entries: 
             - A region object or the SymbolicConstant GLOBAL specifying the first surface that 
             defines the main-secondary assignment. 
             - A region object specifying the second surface in the main-secondary assignment 
@@ -365,26 +366,26 @@ class ContactStd(Interaction):
             MAIN, SECONDARY, and BALANCED. 
         initializationAssignments
             A sequence of tuples specifying the contact initialization data assigned to each surface 
-            pair. Each tuple contains three entries: 
+            pair. Each Tuple contains three entries: 
             - A Region object or the SymbolicConstant GLOBAL. 
             - A Region object or the SymbolicConstant SELF. 
             - A String specifying a StdStabilization object associated with this pair of regions. 
         stabilizationAssignments
             A sequence of tuples specifying the contact stabilization assigned to each surface pair. 
-            Each tuple contains three entries: 
+            Each Tuple contains three entries: 
             - A Region object or the SymbolicConstant GLOBAL. 
             - A Region object or the SymbolicConstant SELF. 
             - A String specifying a StdStabilization object associated with this pair of regions. 
         smoothingAssignments
             A sequence of tuples specifying the surface smoothing assignments in the contact domain. 
-            Each tuple contains two entries: 
+            Each Tuple contains two entries: 
             - A region object specifying the surface to which the smoothing option is assigned. 
             - A SymbolicConstant specifying the smoothing option to be used in the contact 
             definition. Possible values of the SymbolicConstant are NONE, REVOLUTION, SPHERICAL, or 
             TOROIDAL. 
         slidingTransitionAssignments
             A sequence of tuples specifying sliding transition assignments in the contact domain. 
-            Each tuple contains three entries: 
+            Each Tuple contains three entries: 
             - A region object or the SymbolicConstant GLOBAL specifying the first surface that 
             defines the sliding transition assignment. 
             - A region object specifying the second surface in the sliding transition assignment 

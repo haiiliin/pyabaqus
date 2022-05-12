@@ -3,6 +3,7 @@ from .Job import Job
 from .MessageArray import MessageArray
 
 from __init__ import *
+from __future__ import annotations
 
 
 class JobFromInputFile(Job):
@@ -26,8 +27,8 @@ class JobFromInputFile(Job):
         **message** member is empty, **status** is set to NONE.
     messages: MessageArray
         A :py:class:`~abaqus.Job.MessageArray.MessageArray` object specifying the messages received during an analysis.
-    environment: tuple
-        A tuple of Strings specifying the environment variables and their values.
+    environment: Tuple
+        A Tuple of Strings specifying the environment variables and their values.
 
     Notes
     -----
@@ -58,8 +59,8 @@ class JobFromInputFile(Job):
     # A MessageArray object specifying the messages received during an analysis.
     messages: MessageArray = MessageArray()
 
-    # A tuple of Strings specifying the environment variables and their values.
-    environment: tuple = ()
+    # A Tuple of Strings specifying the environment variables and their values.
+    environment: Tuple = ()
 
     def __init__(self,
                  name: str,

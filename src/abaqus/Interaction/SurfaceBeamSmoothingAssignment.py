@@ -1,4 +1,5 @@
 from __init__ import *
+from __future__ import annotations
 
 
 class SurfaceBeamSmoothingAssignment:
@@ -32,13 +33,13 @@ class SurfaceBeamSmoothingAssignment:
             An Int specifying the position of the surface beam smoothing assignment whose value is 
             to be modified. 
         value
-            A tuple specifying the value of the surface beam smoothing assignments for the surface 
-            whose index is referenced. Each tuple contains one entry:A Float specifying the surface 
+            A Tuple specifying the value of the surface beam smoothing assignments for the surface 
+            whose index is referenced. Each Tuple contains one entry:A Float specifying the surface 
             beam smoothing value to be used for the surface. 
         """
         pass
 
-    def appendInStep(self, stepName: str, assignments: tuple):
+    def appendInStep(self, stepName: str, assignments: Tuple):
         """This method allows addition of surface beam smoothing assignments to new surfaces in a
         given step.
         
@@ -48,13 +49,13 @@ class SurfaceBeamSmoothingAssignment:
             A String specifying the name of the step in which new surface beam smoothing assignments 
             are to be defined. 
         assignments
-            A sequence of tuples specifying the surface beam smoothing assignments. Each tuple 
+            A sequence of tuples specifying the surface beam smoothing assignments. Each Tuple 
             contains two entries:A region object specifying the surface to which the smoothing is 
             assigned.A Float specifying the surface smoothing value to be used for the surface. 
         """
         pass
 
-    def delete(self, indices: tuple):
+    def delete(self, indices: Tuple):
         """The delete method allows you to delete existing surface beam smoothing assignments from
         ContactStd objects.
         

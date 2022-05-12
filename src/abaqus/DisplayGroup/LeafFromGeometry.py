@@ -2,6 +2,7 @@ from abaqusConstants import *
 from .Leaf import Leaf
 
 from __init__ import *
+from __future__ import annotations
 
 
 class LeafFromGeometry(Leaf):
@@ -32,9 +33,9 @@ class LeafFromGeometry(Leaf):
     leafType: SymbolicConstant = None
 
     def __init__(self,
-                 edgeSeq: tuple = (),
-                 faceSeq: tuple = (),
-                 cellSeq: tuple = ()):
+                 edgeSeq: Tuple = (),
+                 faceSeq: Tuple = (),
+                 cellSeq: Tuple = ()):
         """This method creates a Leaf object from a sequence of edge, face and cell geometry
         objects. Any combination of edge, face or cell arguments is allowed however the
         arguments must specify at least one object--it is not permissible to create an empty

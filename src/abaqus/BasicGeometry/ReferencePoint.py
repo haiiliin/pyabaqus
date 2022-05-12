@@ -6,6 +6,7 @@ from ..Datum.Datum import Datum
 from ..Mesh.MeshNode import MeshNode
 
 from __init__ import *
+from __future__ import annotations
 
 
 class ReferencePoint:
@@ -38,7 +39,7 @@ class ReferencePoint:
 
     """
     def __init__(self,
-                 point: typing.Union[tuple, Vertex, InterestingPoint, MeshNode,
+                 point: typing.Union[Tuple, Vertex, InterestingPoint, MeshNode,
                                      Datum],
                  instanceName: str = ''):
         """This method creates a Feature object and a ReferencePoint object at the specified

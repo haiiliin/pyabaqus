@@ -15,6 +15,7 @@ from ..StepOutput.Restart import Restart
 from ..TableCollection.ActivateElements import ActivateElements
 
 from __init__ import *
+from __future__ import annotations
 
 
 class StepBase:

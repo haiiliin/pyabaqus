@@ -14,6 +14,7 @@ from ..Property.SectionAssignmentArray import SectionAssignmentArray
 from ..Section.Section import Section
 
 from __init__ import *
+from __future__ import annotations
 
 
 class OdbInstanceBase:
@@ -124,7 +125,7 @@ class OdbInstanceBase:
     def __init__(self,
                  name: str,
                  object: OdbPart,
-                 localCoordSystem: tuple = ()):
+                 localCoordSystem: Tuple = ()):
         """This method creates an OdbInstance object from an OdbPart object.
 
         Notes
@@ -164,7 +165,7 @@ class OdbInstanceBase:
         pass
 
     def assignBeamOrientation(self, region: str, method: SymbolicConstant,
-                              vector: tuple):
+                              vector: Tuple):
         """This method assigns a beam section orientation to a region of a part instance.
         
         Parameters
@@ -293,7 +294,7 @@ class OdbInstanceBase:
 
     def AnalyticRigidSurf2DPlanar(self,
                                   name: str,
-                                  profile: tuple[AnalyticSurfaceSegment],
+                                  profile: Tuple[AnalyticSurfaceSegment],
                                   filletRadius: str = 0):
         """This method is used to define a two-dimensional AnalyticSurface object on the instance.
         
@@ -318,9 +319,9 @@ class OdbInstanceBase:
 
     def AnalyticRigidSurfExtrude(self,
                                  name: str,
-                                 profile: tuple[AnalyticSurfaceSegment],
+                                 profile: Tuple[AnalyticSurfaceSegment],
                                  filletRadius: str = 0,
-                                 localCoordData: tuple = ()):
+                                 localCoordData: Tuple = ()):
         """This method is used to define a three-dimensional cylindrical AnalyticSurface on the
         instance.
         
@@ -348,9 +349,9 @@ class OdbInstanceBase:
 
     def AnalyticRigidSurfRevolve(self,
                                  name: str,
-                                 profile: tuple[AnalyticSurfaceSegment],
+                                 profile: Tuple[AnalyticSurfaceSegment],
                                  filletRadius: str = 0,
-                                 localCoordData: tuple = ()):
+                                 localCoordData: Tuple = ()):
         """This method is used to define a three-dimensional AnalyticSurface of revolution on the
         instance.
         

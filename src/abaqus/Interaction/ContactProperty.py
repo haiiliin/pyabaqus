@@ -15,6 +15,7 @@ from .Radiation import Radiation
 from .ThermalConductance import ThermalConductance
 
 from __init__ import *
+from __future__ import annotations
 
 
 class ContactProperty(InteractionProperty):
@@ -126,7 +127,7 @@ class ContactProperty(InteractionProperty):
             temperatureDependency: Boolean = OFF,
             dependencies: int = 0,
             exponentialDecayDefinition: SymbolicConstant = COEFFICIENTS,
-            table: tuple = (),
+            table: Tuple = (),
             shearStressLimit: float = None,
             maximumElasticSlip: SymbolicConstant = FRACTION,
             fraction: float = 0,
@@ -205,7 +206,7 @@ class ContactProperty(InteractionProperty):
                        pressureOverclosure: SymbolicConstant = HARD,
                        allowSeparation: Boolean = ON,
                        maxStiffness: float = None,
-                       table: tuple = (),
+                       table: Tuple = (),
                        constraintEnforcementMethod: SymbolicConstant = DEFAULT,
                        overclosureFactor: float = 0,
                        overclosureMeasure: float = 0,
@@ -304,7 +305,7 @@ class ContactProperty(InteractionProperty):
                 tangentFraction: typing.Union[SymbolicConstant,
                                               float] = DEFAULT,
                 clearanceDependence: SymbolicConstant = STEP,
-                table: tuple = ()):
+                table: Tuple = ()):
         """This method creates a ContactDamping object.
 
         Notes
@@ -341,7 +342,7 @@ class ContactProperty(InteractionProperty):
         return self.damping
 
     def Damage(self,
-               initTable: tuple,
+               initTable: Tuple,
                criterion: SymbolicConstant = MAX_STRESS,
                initTempDep: Boolean = OFF,
                initDependencies: int = 0,
@@ -354,7 +355,7 @@ class ContactProperty(InteractionProperty):
                exponent: float = None,
                evolTempDep: Boolean = OFF,
                evolDependencies: int = 0,
-               evolTable: tuple = (),
+               evolTable: Tuple = (),
                useStabilization: Boolean = OFF,
                viscosityCoef: float = None):
         """This method creates a ContactDamage object.
@@ -439,7 +440,7 @@ class ContactProperty(InteractionProperty):
         return self.damage
 
     def FractureCriterion(self,
-                          initTable: tuple,
+                          initTable: Tuple,
                           type: SymbolicConstant = VCCT,
                           mixedModeBehavior: SymbolicConstant = BK,
                           temperatureDependency: Boolean = OFF,
@@ -504,7 +505,7 @@ class ContactProperty(InteractionProperty):
                          coupling: SymbolicConstant = UNCOUPLED,
                          temperatureDependency: Boolean = OFF,
                          dependencies: int = 0,
-                         table: tuple = ()):
+                         table: Tuple = ()):
         """This method creates a CohesiveBehavior object.
 
         Notes
@@ -558,11 +559,11 @@ class ContactProperty(InteractionProperty):
                            temperatureDependencyC: Boolean = OFF,
                            massFlowRateDependencyC: Boolean = OFF,
                            dependenciesC: int = 0,
-                           clearanceDepTable: tuple = (),
+                           clearanceDepTable: Tuple = (),
                            temperatureDependencyP: Boolean = OFF,
                            massFlowRateDependencyP: Boolean = OFF,
                            dependenciesP: int = 0,
-                           pressureDepTable: tuple = ()):
+                           pressureDepTable: Tuple = ()):
         """This method creates a ThermalConductance object.
 
         Notes
@@ -649,7 +650,7 @@ class ContactProperty(InteractionProperty):
         return self.heatGeneration
 
     def Radiation(self, mainEmissivity: float, secondaryEmissivity: float,
-                  table: tuple):
+                  table: Tuple):
         """This method creates a Radiation object.
 
         Notes
@@ -739,10 +740,10 @@ class ContactProperty(InteractionProperty):
                               pressureDependency: Boolean = OFF,
                               temperatureDependencyC: Boolean = OFF,
                               dependenciesC: int = 0,
-                              clearanceDepTable: tuple = (),
+                              clearanceDepTable: Tuple = (),
                               temperatureDependencyP: Boolean = OFF,
                               dependenciesP: int = 0,
-                              pressureDepTable: tuple = ()):
+                              pressureDepTable: Tuple = ()):
         """This method creates a GapElectricalConductance object.
 
         Notes

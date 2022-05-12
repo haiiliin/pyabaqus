@@ -9,6 +9,7 @@ from .XYCurve import XYCurve
 from ..UtilityAndView.View import View
 
 from __init__ import *
+from __future__ import annotations
 
 
 class Chart:
@@ -60,7 +61,7 @@ class Chart:
         A :py:class:`~abaqus.XY.LineStyle.LineStyle` object specifying the tag area border properties to be used when creating
         tags.
     transform: float
-        A tuple of Floats specifying a transformation matrix used to scale or pan along the axes
+        A Tuple of Floats specifying a transformation matrix used to scale or pan along the axes
         of the Chart.
 
     Notes
@@ -133,7 +134,7 @@ class Chart:
     # tags.
     tagBorder: LineStyle = LineStyle()
 
-    # A tuple of Floats specifying a transformation matrix used to scale or pan along the axes
+    # A Tuple of Floats specifying a transformation matrix used to scale or pan along the axes
     # of the Chart.
     transform: float = None
 
@@ -247,9 +248,9 @@ class Chart:
 
     def setValues(self,
                   chart: 'Chart' = None,
-                  curvesToPlot: tuple[XYCurve] = (),
+                  curvesToPlot: Tuple[XYCurve] = (),
                   aspectRatio: float = None,
-                  transform: tuple = (),
+                  transform: Tuple = (),
                   view: View = None,
                   useQuantityType: Boolean = ON):
         """This method modifies the Chart object.

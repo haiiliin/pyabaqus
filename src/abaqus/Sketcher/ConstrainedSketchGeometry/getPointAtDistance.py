@@ -2,11 +2,12 @@ from abaqusConstants import *
 from .ConstrainedSketchGeometry import ConstrainedSketchGeometry
 
 from __init__ import *
+from __future__ import annotations
 
 
 class getPointAtDistance(ConstrainedSketchGeometry):
     def __init__(self,
-                 point: tuple[float],
+                 point: Tuple[float],
                  distance: str,
                  percentage: Boolean = OFF):
         """This method returns a point offset along the given ConstrainedSketchGeometry from the

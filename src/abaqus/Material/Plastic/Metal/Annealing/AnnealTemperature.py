@@ -1,4 +1,5 @@
 from __init__ import *
+from __future__ import annotations
 
 
 class AnnealTemperature:
@@ -26,7 +27,7 @@ class AnnealTemperature:
         - ANNEAL TEMPERATURE
 
     """
-    def __init__(self, table: tuple, dependencies: int = 0):
+    def __init__(self, table: Tuple, dependencies: int = 0):
         """This method creates an AnnealTemperature object.
 
         Notes

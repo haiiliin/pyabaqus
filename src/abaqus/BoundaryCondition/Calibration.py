@@ -2,6 +2,7 @@ from ..Calibration.Behavior import Behavior
 from ..Calibration.DataSet import DataSet
 
 from __init__ import *
+from __future__ import annotations
 
 
 class Calibration:

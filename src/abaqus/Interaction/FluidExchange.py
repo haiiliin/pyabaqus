@@ -2,6 +2,7 @@ from abaqusConstants import *
 from .Interaction import Interaction
 
 from __init__ import *
+from __future__ import annotations
 
 
 class FluidExchange(Interaction):

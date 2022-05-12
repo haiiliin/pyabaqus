@@ -4,6 +4,7 @@ from .OdbPart import OdbPart
 from .SectionPoint import SectionPoint
 
 from __init__ import *
+from __future__ import annotations
 
 
 class FieldValue:
@@ -94,36 +95,36 @@ class FieldValue:
         An :py:class:`~abaqus.Odb.OdbInstance.OdbInstance` object specifying the part to which the labels belong.
     sectionPoint: SectionPoint
         A :py:class:`~abaqus.Odb.SectionPoint.SectionPoint` object.
-    localCoordSystem: tuple
-        A tuple of tuples of Floats specifying the 3 × 3 matrix of Floats specifying the
+    localCoordSystem: Tuple
+        A Tuple of tuples of Floats specifying the 3 × 3 matrix of Floats specifying the
         direction cosines of the local coordinate system (the rotation from global to local).
         Each sequence represents a row in the direction cosine matrix. **localCoordSystem** is
         available for TENSOR data written in a local coordinate system. It is also available for
         VECTOR data for connector element outputs. For connector element outputs the rotation is
         from local to global. If the underlying data are in double precision, an exception will
         be thrown.
-    localCoordSystemDouble: tuple
-        A tuple of tuples of Floats specifying the 3 × 3 matrix of Doubles specifying the
+    localCoordSystemDouble: Tuple
+        A Tuple of tuples of Floats specifying the 3 × 3 matrix of Doubles specifying the
         direction cosines of the local coordinate system (the rotation from global to local).
         Each sequence represents a row in the direction cosine matrix. **localCoordSystemDouble**
         is available for TENSOR data written in a local coordinate system. It is also available
         for VECTOR data for connector element outputs. For connector element outputs the
         rotation is from local to global. If the underlying data are in single precision, an
         exception will be thrown.
-    data: tuple
-        A tuple of Floats specifying data in the form described by **type**. If **type=TENSOR** or
+    data: Tuple
+        A Tuple of Floats specifying data in the form described by **type**. If **type=TENSOR** or
         VECTOR, **data** is a sequence containing the components. If the underlying data are in
         double precision an exception will be thrown.
-    dataDouble: tuple
-        A tuple of Floats specifying data in the form described by **type**. If **type=TENSOR** or
+    dataDouble: Tuple
+        A Tuple of Floats specifying data in the form described by **type**. If **type=TENSOR** or
         VECTOR, **data** is a sequence containing the components. If the underlying data are in
         single precision, an exception will be thrown.
-    conjugateData: tuple
-        A tuple of Floats specifying data in the form described by **type**. If **type=TENSOR** or
+    conjugateData: Tuple
+        A Tuple of Floats specifying data in the form described by **type**. If **type=TENSOR** or
         VECTOR, **conjugateData** is a sequence containing the components. If the underlying data
         are in double precision, an exception will be thrown.
-    conjugateDataDouble: tuple
-        A tuple of Floats specifying data in the form described by **type**. If **type=TENSOR** or
+    conjugateDataDouble: Tuple
+        A Tuple of Floats specifying data in the form described by **type**. If **type=TENSOR** or
         VECTOR, **conjugateData** is a sequence containing the components. If the underlying data
         are in single precision, an exception will be thrown.
 
@@ -239,40 +240,40 @@ class FieldValue:
     # A SectionPoint object.
     sectionPoint: SectionPoint = None
 
-    # A tuple of tuples of Floats specifying the 3 × 3 matrix of Floats specifying the
+    # A Tuple of tuples of Floats specifying the 3 × 3 matrix of Floats specifying the
     # direction cosines of the local coordinate system (the rotation from global to local).
     # Each sequence represents a row in the direction cosine matrix. *localCoordSystem* is
     # available for TENSOR data written in a local coordinate system. It is also available for
     # VECTOR data for connector element outputs. For connector element outputs the rotation is
     # from local to global. If the underlying data are in double precision, an exception will
     # be thrown.
-    localCoordSystem: tuple = ()
+    localCoordSystem: Tuple = ()
 
-    # A tuple of tuples of Floats specifying the 3 × 3 matrix of Doubles specifying the
+    # A Tuple of tuples of Floats specifying the 3 × 3 matrix of Doubles specifying the
     # direction cosines of the local coordinate system (the rotation from global to local).
     # Each sequence represents a row in the direction cosine matrix. *localCoordSystemDouble*
     # is available for TENSOR data written in a local coordinate system. It is also available
     # for VECTOR data for connector element outputs. For connector element outputs the
     # rotation is from local to global. If the underlying data are in single precision, an
     # exception will be thrown.
-    localCoordSystemDouble: tuple = ()
+    localCoordSystemDouble: Tuple = ()
 
-    # A tuple of Floats specifying data in the form described by *type*. If *type*=TENSOR or
+    # A Tuple of Floats specifying data in the form described by *type*. If *type*=TENSOR or
     # VECTOR, *data* is a sequence containing the components. If the underlying data are in
     # double precision an exception will be thrown.
-    data: tuple = ()
+    data: Tuple = ()
 
-    # A tuple of Floats specifying data in the form described by *type*. If *type*=TENSOR or
+    # A Tuple of Floats specifying data in the form described by *type*. If *type*=TENSOR or
     # VECTOR, *data* is a sequence containing the components. If the underlying data are in
     # single precision, an exception will be thrown.
-    dataDouble: tuple = ()
+    dataDouble: Tuple = ()
 
-    # A tuple of Floats specifying data in the form described by *type*. If *type*=TENSOR or
+    # A Tuple of Floats specifying data in the form described by *type*. If *type*=TENSOR or
     # VECTOR, *conjugateData* is a sequence containing the components. If the underlying data
     # are in double precision, an exception will be thrown.
-    conjugateData: tuple = ()
+    conjugateData: Tuple = ()
 
-    # A tuple of Floats specifying data in the form described by *type*. If *type*=TENSOR or
+    # A Tuple of Floats specifying data in the form described by *type*. If *type*=TENSOR or
     # VECTOR, *conjugateData* is a sequence containing the components. If the underlying data
     # are in single precision, an exception will be thrown.
-    conjugateDataDouble: tuple = ()
+    conjugateDataDouble: Tuple = ()

@@ -1,4 +1,5 @@
 from __init__ import *
+from __future__ import annotations
 
 
 class Hysteresis:
@@ -26,7 +27,7 @@ class Hysteresis:
         - HYSTERESIS
 
     """
-    def __init__(self, table: tuple):
+    def __init__(self, table: Tuple):
         """This method creates a Hysteresis object.
 
         Notes

@@ -1,6 +1,5 @@
 from abaqusConstants import *
 from .Material import Material
-
 """ This command evaluates the behavior of a hyperelastic material under standard test 
 conditions. 
 
@@ -11,13 +10,21 @@ Notes
 """
 
 
-def evaluateMaterial(material: Material, simulationName: str, dataSource: SymbolicConstant = None,
-                     strainEnergyPotentials: SymbolicConstant = None, marlowData: SymbolicConstant = None,
-                     marlowDataType: SymbolicConstant = None, testDataTypes: SymbolicConstant = None,
-                     uniaxialStrainRange: float = None, biaxialStrainRange: float = None,
-                     planarStrainRange: float = None, volumeRatioRange: float = None,
-                     simpleShearStrainRange: float = None, viscoDataSource: SymbolicConstant = None,
-                     viscoTestDataTypes: SymbolicConstant = None, relaxationTime: float = None,
+def evaluateMaterial(material: Material,
+                     simulationName: str,
+                     dataSource: SymbolicConstant = None,
+                     strainEnergyPotentials: SymbolicConstant = None,
+                     marlowData: SymbolicConstant = None,
+                     marlowDataType: SymbolicConstant = None,
+                     testDataTypes: SymbolicConstant = None,
+                     uniaxialStrainRange: float = None,
+                     biaxialStrainRange: float = None,
+                     planarStrainRange: float = None,
+                     volumeRatioRange: float = None,
+                     simpleShearStrainRange: float = None,
+                     viscoDataSource: SymbolicConstant = None,
+                     viscoTestDataTypes: SymbolicConstant = None,
+                     relaxationTime: float = None,
                      creepTime: float = None):
     """This method evaluates the behavior of a hyperelastic material under standard test
     conditions.
@@ -60,18 +67,18 @@ def evaluateMaterial(material: Material, simulationName: str, dataSource: Symbol
         material definition of the material being evaluated. Possible values are UNIAXIAL, 
         BIAXIAL, PLANAR, and VOLUMETRIC. 
     uniaxialStrainRange
-        A tuple of Floats specifying minimum and maximum nominal strains to be applied in the 
+        A Tuple of Floats specifying minimum and maximum nominal strains to be applied in the 
         uniaxial tension test. 
     biaxialStrainRange
-        A tuple of Floats specifying the minimum and maximum nominal strains to be applied in 
+        A Tuple of Floats specifying the minimum and maximum nominal strains to be applied in 
         the biaxial tension test. 
     planarStrainRange
-        A tuple of Floats specifying the minimum and maximum nominal strains to be applied in 
+        A Tuple of Floats specifying the minimum and maximum nominal strains to be applied in 
         the planar test. The planar test is equivalent to a pure shear test. 
     volumeRatioRange
-        A tuple of Floats specifying the minimum and maximum compressive volume ratio. 
+        A Tuple of Floats specifying the minimum and maximum compressive volume ratio. 
     simpleShearStrainRange
-        A tuple of Floats specifying the minimum and maximum nominal strains to be applied in 
+        A Tuple of Floats specifying the minimum and maximum nominal strains to be applied in 
         the simple shear test. 
     viscoDataSource
         None or a SymbolicConstant specifying whether test data or coefficients should be used 

@@ -3,6 +3,7 @@ from .Interaction import Interaction
 from ..Region.Region import Region
 
 from __init__ import *
+from __future__ import annotations
 
 
 class AcousticImpedance(Interaction):
@@ -33,8 +34,8 @@ class AcousticImpedance(Interaction):
                  radius: float = 1,
                  semimajorAxis: float = 1,
                  eccentricity: float = 0,
-                 centerCoordinates: tuple = (),
-                 directionCosine: tuple = ()):
+                 centerCoordinates: Tuple = (),
+                 directionCosine: Tuple = ()):
         """This method creates an AcousticImpedance object.
 
         Notes
@@ -100,8 +101,8 @@ class AcousticImpedance(Interaction):
                   radius: float = 1,
                   semimajorAxis: float = 1,
                   eccentricity: float = 0,
-                  centerCoordinates: tuple = (),
-                  directionCosine: tuple = ()):
+                  centerCoordinates: Tuple = (),
+                  directionCosine: Tuple = ()):
         """This method modifies the data for an existing AcousticImpedance object in the step where
         it is created.
         

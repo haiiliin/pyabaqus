@@ -2,6 +2,7 @@ from .ErrorIndicatorResult import ErrorIndicatorResult
 from .RuleResult import RuleResult
 
 from __init__ import *
+from __future__ import annotations
 
 
 class AdaptivityIteration:
@@ -104,7 +105,7 @@ class AdaptivityIteration:
         indicatorResults: dict[str, ErrorIndicatorResult],
         numElems: int,
         minSizeElemCount: int,
-        satisfiedVars: tuple = ()) -> RuleResult:
+        satisfiedVars: Tuple = ()) -> RuleResult:
         """This method creates a RuleResult with data for a RemeshingRule for a given adaptivity
         iteration.
 

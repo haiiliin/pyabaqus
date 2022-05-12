@@ -3,6 +3,7 @@ from .GeometricRestriction import GeometricRestriction
 from ..Region.Region import Region
 
 from __init__ import *
+from __future__ import annotations
 
 
 class SlideRegionControl(GeometricRestriction):
@@ -21,7 +22,7 @@ class SlideRegionControl(GeometricRestriction):
     """
     def __init__(self,
                  name: str,
-                 clientDirection: tuple,
+                 clientDirection: Tuple,
                  region: Region,
                  approach: SymbolicConstant = FREE_FORM,
                  csys: int = None,
@@ -47,7 +48,7 @@ class SlideRegionControl(GeometricRestriction):
             A String specifying the geometric restriction repository key. 
         clientDirection
             A VertexArray object of length 2 specifying the axis of revolution. Instead of through a 
-            ConstrainedSketchVertex, each point may be specified through a tuple of coordinates. This is used when
+            ConstrainedSketchVertex, each point may be specified through a Tuple of coordinates. This is used when
             *approach* is TURN. 
         region
             A Region object specifying the region to which the geometric restriction is applied. 

@@ -3,6 +3,7 @@ from .Section import Section
 from .SectionLayerArray import SectionLayerArray
 
 from __init__ import *
+from __future__ import annotations
 
 
 class CompositeSolidSection(Section):

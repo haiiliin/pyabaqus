@@ -1,6 +1,7 @@
 from abaqusConstants import *
 
 from __init__ import *
+from __future__ import annotations
 
 
 class DGDisplayBodyOptions:
@@ -47,7 +48,7 @@ class DGDisplayBodyOptions:
         A String specifying the color to be used to fill elements when **renderStyle=FILLED** or
         SHADED. The default value is "White".
     coordinateScaleFactors: float
-        A tuple of three Floats specifying the coordinate scaling in each of the three
+        A Tuple of three Floats specifying the coordinate scaling in each of the three
         coordinate directions when **coordinateScale=ON**. The default value is (1, 1, 1).
 
     Notes
@@ -109,6 +110,6 @@ class DGDisplayBodyOptions:
     # SHADED. The default value is "White".
     fillColor: str = ''
 
-    # A tuple of three Floats specifying the coordinate scaling in each of the three
+    # A Tuple of three Floats specifying the coordinate scaling in each of the three
     # coordinate directions when *coordinateScale*=ON. The default value is (1, 1, 1).
     coordinateScaleFactors: float = None

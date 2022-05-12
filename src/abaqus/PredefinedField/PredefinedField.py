@@ -2,6 +2,7 @@ from .IMAField import IMAField
 from ..Region.Region import Region
 
 from __init__ import *
+from __future__ import annotations
 
 
 class PredefinedField:
@@ -76,7 +77,7 @@ class PredefinedField:
         """
         pass
 
-    def delete(self, indices: tuple):
+    def delete(self, indices: Tuple):
         """This method allows you to delete existing fields.
         
         Parameters

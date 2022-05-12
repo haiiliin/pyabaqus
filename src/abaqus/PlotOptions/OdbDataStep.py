@@ -2,6 +2,7 @@ from abaqusConstants import *
 from .OdbDataFrameArray import OdbDataFrameArray
 
 from __init__ import *
+from __future__ import annotations
 
 
 class OdbDataStep:

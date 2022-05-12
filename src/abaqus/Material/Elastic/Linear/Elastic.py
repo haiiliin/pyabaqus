@@ -3,6 +3,7 @@ from .FailStrain import FailStrain
 from .FailStress import FailStress
 
 from __init__ import *
+from __future__ import annotations
 
 
 class Elastic:
@@ -132,7 +133,7 @@ class Elastic:
     failStrain: FailStrain = FailStrain(((), ))
 
     def __init__(self,
-                 table: tuple,
+                 table: Tuple,
                  type: SymbolicConstant = ISOTROPIC,
                  noCompression: Boolean = OFF,
                  noTension: Boolean = OFF,

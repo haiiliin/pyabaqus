@@ -18,6 +18,7 @@ from ..StepOutput.Monitor import Monitor
 from ..StepOutput.Restart import Restart
 
 from __init__ import *
+from __future__ import annotations
 
 
 class SubstructureGenerateStep(AnalysisStep):

@@ -4,6 +4,7 @@ from .OdbMeshNode import OdbMeshNode
 from .OdbSet import OdbSet
 
 from __init__ import *
+from __future__ import annotations
 
 
 class RebarOrientation:
@@ -44,7 +45,7 @@ class RebarOrientation:
     angle: float = None
 
     # An OdbSet object specifying a region for which the rebar orientation is defined.
-    region: OdbSet = OdbSet('set', tuple[OdbMeshNode]())
+    region: OdbSet = OdbSet('set', Tuple[OdbMeshNode]())
 
     # An OdbDatumCsys object specifying a datum coordinates system.
     csys: OdbDatumCsys = OdbDatumCsys()

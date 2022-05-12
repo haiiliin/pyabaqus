@@ -3,6 +3,7 @@ from .Leaf import Leaf
 from ..Region.Set import Set
 
 from __init__ import *
+from __future__ import annotations
 
 
 class LeafFromSets(Leaf):
@@ -32,7 +33,7 @@ class LeafFromSets(Leaf):
     # DEFAULT_MODEL, ALL_ELEMENTS, ALL_NODES, and ALL_SURFACES.
     leafType: SymbolicConstant = None
 
-    def __init__(self, sets: tuple[Set]):
+    def __init__(self, sets: Tuple[Set]):
         """This method creates a Leaf object from a sequence of Set objects.
 
         Notes

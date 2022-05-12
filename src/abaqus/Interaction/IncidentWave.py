@@ -3,6 +3,7 @@ from .Interaction import Interaction
 from ..Region.Region import Region
 
 from __init__ import *
+from __future__ import annotations
 
 
 class IncidentWave(Interaction):
@@ -33,7 +34,7 @@ class IncidentWave(Interaction):
                  definition: SymbolicConstant = PRESSURE,
                  amplitude: str = '',
                  imaginaryAmplitude: str = '',
-                 surfaceNormal: tuple = (),
+                 surfaceNormal: Tuple = (),
                  initialDepth: float = None,
                  referenceMagnitude: float = None,
                  detonationTime: float = None,
@@ -109,7 +110,7 @@ class IncidentWave(Interaction):
                   definition: SymbolicConstant = PRESSURE,
                   amplitude: str = '',
                   imaginaryAmplitude: str = '',
-                  surfaceNormal: tuple = (),
+                  surfaceNormal: Tuple = (),
                   initialDepth: float = None,
                   referenceMagnitude: float = None,
                   detonationTime: float = None,

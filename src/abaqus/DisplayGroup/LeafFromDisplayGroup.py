@@ -3,6 +3,7 @@ from .DisplayGroupArray import DisplayGroupArray
 from .Leaf import Leaf
 
 from __init__ import *
+from __future__ import annotations
 
 
 class LeafFromDisplayGroup(Leaf):

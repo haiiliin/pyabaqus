@@ -6,6 +6,7 @@ from ..Datum.DatumAxis import DatumAxis
 from ..Region.Region import Region
 
 from __init__ import *
+from __future__ import annotations
 
 
 class SurfaceToSurfaceContactStd(Interaction):
@@ -61,7 +62,7 @@ class SurfaceToSurfaceContactStd(Interaction):
                  interferenceType: SymbolicConstant = NONE,
                  overclosure: float = 0,
                  interferenceDirectionType: SymbolicConstant = COMPUTED,
-                 direction: tuple = (),
+                 direction: Tuple = (),
                  amplitude: str = '',
                  smooth: float = 0,
                  hcrit: float = 0,
@@ -227,7 +228,7 @@ class SurfaceToSurfaceContactStd(Interaction):
                   interferenceType: SymbolicConstant = NONE,
                   overclosure: float = 0,
                   interferenceDirectionType: SymbolicConstant = COMPUTED,
-                  direction: tuple = (),
+                  direction: Tuple = (),
                   amplitude: str = '',
                   smooth: float = 0,
                   hcrit: float = 0,
@@ -362,7 +363,7 @@ class SurfaceToSurfaceContactStd(Interaction):
                         interferenceType: SymbolicConstant = NONE,
                         overclosure: float = 0,
                         interferenceDirectionType: SymbolicConstant = COMPUTED,
-                        direction: tuple = (),
+                        direction: Tuple = (),
                         amplitude: str = '',
                         contactControls: str = ''):
         """This method modifies the propagating data for an existing SurfaceToSurfaceContactStd

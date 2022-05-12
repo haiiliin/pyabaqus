@@ -1,6 +1,7 @@
 from abaqusConstants import *
 
 from __init__ import *
+from __future__ import annotations
 
 
 class UniaxialTestData:
@@ -43,7 +44,7 @@ class UniaxialTestData:
 
     """
     def __init__(self,
-                 table: tuple,
+                 table: Tuple,
                  smoothing: int = None,
                  lateralNominalStrain: Boolean = OFF,
                  temperatureDependency: Boolean = OFF,

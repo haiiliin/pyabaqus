@@ -1,6 +1,7 @@
 from abaqusConstants import *
 
 from __init__ import *
+from __future__ import annotations
 
 
 class PolarityAssignments:
@@ -47,7 +48,7 @@ class PolarityAssignments:
             A String specifying the name of the step in which the polarity assignments are to be 
             defined. 
         assignments
-            A sequence of tuples specifying the polarity assignments. Each tuple contains two 
+            A sequence of tuples specifying the polarity assignments. Each Tuple contains two 
             entries: 
             - A region object or the SymbolicConstant GLOBAL specifying the surface to which the 
             polarity attribute is assigned. 
@@ -56,7 +57,7 @@ class PolarityAssignments:
         """
         pass
 
-    def delete(self, indices: tuple):
+    def delete(self, indices: Tuple):
         """The delete method allows you to delete existing polarity assignments.
         
         Parameters

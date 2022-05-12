@@ -3,6 +3,7 @@ from .CDCTerm import CDCTerm
 from .CDCTermArray import CDCTermArray
 
 from __init__ import *
+from __future__ import annotations
 
 
 class DerivedComponent:
@@ -77,13 +78,13 @@ class DerivedComponent:
         pass
 
     def CDCTerm(self,
-                intrinsicComponents: tuple,
-                table: tuple,
+                intrinsicComponents: Tuple,
+                table: Tuple,
                 termOperator: SymbolicConstant = RSS,
                 termSign: SymbolicConstant = POSITIVE,
                 localDependency: Boolean = OFF,
                 indepCompType: SymbolicConstant = POSITION,
-                indepComponents: tuple = (),
+                indepComponents: Tuple = (),
                 tempDependency: Boolean = OFF,
                 fieldDependencies: int = 0) -> CDCTerm:
         """This method creates a CDCTerm object.

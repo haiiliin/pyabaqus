@@ -1,10 +1,11 @@
 from .ConstrainedSketchGeometry import ConstrainedSketchGeometry
 
 from __init__ import *
+from __future__ import annotations
 
 
 class Spot(ConstrainedSketchGeometry):
-    def __init__(self, point: tuple[float]):
+    def __init__(self, point: Tuple[float]):
         """This method creates a spot construction point located at the specified coordinates. The
         spot is added to the vertex repository of the ConstrainedSketch object.
 

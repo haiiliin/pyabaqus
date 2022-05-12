@@ -2,6 +2,7 @@ from abaqusConstants import *
 from .Job import Job
 
 from __init__ import *
+from __future__ import annotations
 
 
 class Coexecution:
@@ -47,10 +48,10 @@ class Coexecution:
         platforms.
     jobs: dict[str, Job]
         A repository of :py:class:`~abaqus.Job.Job.Job` objects specifying the jobs that comprise this co-execution.
-    secondaryModels: tuple
-        A tuple of Strings specifying the names of the secondary models for the co-execution.
+    secondaryModels: Tuple
+        A Tuple of Strings specifying the names of the secondary models for the co-execution.
     secondaryAnalysisProducts: SymbolicConstant
-        A tuple of SymbolicConstants specifying the analysis product types of the secondary
+        A Tuple of SymbolicConstants specifying the analysis product types of the secondary
         models for the co-execution. The default value is an empty sequence.
     mainModel: str
         A String specifying the name of the main model for the co-execution.
@@ -121,10 +122,10 @@ class Coexecution:
     # A repository of Job objects specifying the jobs that comprise this co-execution.
     jobs: dict[str, Job] = dict[str, Job]()
 
-    # A tuple of Strings specifying the names of the secondary models for the co-execution.
-    secondaryModels: tuple = ()
+    # A Tuple of Strings specifying the names of the secondary models for the co-execution.
+    secondaryModels: Tuple = ()
 
-    # A tuple of SymbolicConstants specifying the analysis product types of the secondary
+    # A Tuple of SymbolicConstants specifying the analysis product types of the secondary
     # models for the co-execution. The default value is an empty sequence.
     secondaryAnalysisProducts: SymbolicConstant = None
 

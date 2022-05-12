@@ -3,6 +3,7 @@ import typing
 from abaqusConstants import *
 
 from __init__ import *
+from __future__ import annotations
 
 
 class FieldOutputRequest:
@@ -16,8 +17,8 @@ class FieldOutputRequest:
         The SymbolicConstant MODEL or a :py:class:`~abaqus.Region.Region.Region` object specifying the region from which output is
         requested. The SymbolicConstant MODEL represents the whole model. The default value is
         MODEL.
-    interactions: tuple
-        None or a tuple of Strings specifying the interaction names. The default value is
+    interactions: Tuple
+        None or a Tuple of Strings specifying the interaction names. The default value is
         None.The sequence can contain only one String.
 
     Notes
@@ -49,9 +50,9 @@ class FieldOutputRequest:
     # MODEL.
     region: SymbolicConstant = MODEL
 
-    # None or a tuple of Strings specifying the interaction names. The default value is
+    # None or a Tuple of Strings specifying the interaction names. The default value is
     # None.The sequence can contain only one String.
-    interactions: tuple = None
+    interactions: Tuple = None
 
     def __init__(self,
                  name: str,

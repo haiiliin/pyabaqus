@@ -3,6 +3,7 @@ from .Fastener import Fastener
 from ..Region.Region import Region
 
 from __init__ import *
+from __future__ import annotations
 
 
 class AssembledFastener(Fastener):
@@ -37,8 +38,8 @@ class AssembledFastener(Fastener):
                  region: Region,
                  templateModel: str,
                  controlSet: Region,
-                 templateSurfaces: tuple,
-                 assignedSurfaces: tuple,
+                 templateSurfaces: Tuple,
+                 assignedSurfaces: Tuple,
                  propertyPrefix: str,
                  orientMethod: SymbolicConstant = NORMALS,
                  localCsys: int = None,

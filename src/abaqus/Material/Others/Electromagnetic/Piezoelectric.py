@@ -1,6 +1,7 @@
 from abaqusConstants import *
 
 from __init__ import *
+from __future__ import annotations
 
 
 class Piezoelectric:
@@ -69,7 +70,7 @@ class Piezoelectric:
 
     """
     def __init__(self,
-                 table: tuple,
+                 table: Tuple,
                  type: SymbolicConstant = STRESS,
                  temperatureDependency: Boolean = OFF,
                  dependencies: int = 0):

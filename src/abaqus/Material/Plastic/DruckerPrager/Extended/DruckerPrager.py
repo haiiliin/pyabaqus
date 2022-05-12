@@ -5,6 +5,7 @@ from .TriaxialTestData import TriaxialTestData
 from ...Metal.RateDependent.RateDependent import RateDependent
 
 from __init__ import *
+from __future__ import annotations
 
 
 class DruckerPrager:
@@ -65,7 +66,7 @@ class DruckerPrager:
     triaxialTestData: TriaxialTestData = TriaxialTestData(((), ))
 
     def __init__(self,
-                 table: tuple,
+                 table: Tuple,
                  shearCriterion: SymbolicConstant = LINEAR,
                  eccentricity: float = 0,
                  testData: Boolean = OFF,

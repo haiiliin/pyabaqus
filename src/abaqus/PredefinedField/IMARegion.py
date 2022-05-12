@@ -1,6 +1,7 @@
 from ..Region.Region import Region
 
 from __init__ import *
+from __future__ import annotations
 
 
 class IMARegion:
@@ -13,8 +14,8 @@ class IMARegion:
         A :py:class:`~abaqus.Region.Region.Region` object specifying the sub-region of the selected part instance to which the
         volume fractions will be applied.
     fractionList: float
-        A tuple of Floats specifying the volume fractions, per material instance name. The
-        length of the tuple corresponds to the number of material instance names, as established
+        A Tuple of Floats specifying the volume fractions, per material instance name. The
+        length of the Tuple corresponds to the number of material instance names, as established
         by the assigned Eulerian section.
 
     Notes
@@ -32,7 +33,7 @@ class IMARegion:
     # volume fractions will be applied.
     region: Region = Region()
 
-    # A tuple of Floats specifying the volume fractions, per material instance name. The
-    # length of the tuple corresponds to the number of material instance names, as established
+    # A Tuple of Floats specifying the volume fractions, per material instance name. The
+    # length of the Tuple corresponds to the number of material instance names, as established
     # by the assigned Eulerian section.
     fractionList: float = None

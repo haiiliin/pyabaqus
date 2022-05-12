@@ -3,6 +3,7 @@ import os
 from PyQt5.QtCore import QThread, pyqtSignal
 
 from __init__ import *
+from __future__ import annotations
 
 
 class FileMonitorThread(QThread):

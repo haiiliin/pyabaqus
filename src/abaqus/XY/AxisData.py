@@ -3,6 +3,7 @@ from .QuantityType import QuantityType
 from .XYCurveArray import XYCurveArray
 
 from __init__ import *
+from __future__ import annotations
 
 
 class AxisData:
@@ -91,9 +92,9 @@ class AxisData:
         A :py:class:`~abaqus.XY.QuantityType.QuantityType` object specifying the quantity type: i.e. the physical dimension and
         associated label of the data represented by this axis.
     tickValues: float
-        A tuple of Floats specifying the read-only major tick values shown.
-    tickLabels: tuple
-        A tuple of Strings specifying the read-only major tick labels shown.
+        A Tuple of Floats specifying the read-only major tick values shown.
+    tickLabels: Tuple
+        A Tuple of Strings specifying the read-only major tick labels shown.
     systemTitle: str
         A String specifying the system title. The system title is based on the **quantityType** of
         the axis and associated curves.
@@ -218,11 +219,11 @@ class AxisData:
     # associated label of the data represented by this axis.
     quantityType: QuantityType = QuantityType()
 
-    # A tuple of Floats specifying the read-only major tick values shown.
+    # A Tuple of Floats specifying the read-only major tick values shown.
     tickValues: float = None
 
-    # A tuple of Strings specifying the read-only major tick labels shown.
-    tickLabels: tuple = ()
+    # A Tuple of Strings specifying the read-only major tick labels shown.
+    tickLabels: Tuple = ()
 
     # A String specifying the system title. The system title is based on the *quantityType* of
     # the axis and associated curves.

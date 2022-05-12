@@ -2,6 +2,7 @@ from .Annotation import Annotation
 from ..Canvas.ViewportBase import ViewportBase
 
 from __init__ import *
+from __future__ import annotations
 
 
 class AnnotationViewport(ViewportBase):

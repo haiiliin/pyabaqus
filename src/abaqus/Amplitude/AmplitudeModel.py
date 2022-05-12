@@ -14,6 +14,7 @@ from .TabularAmplitude import TabularAmplitude
 from ..Model.ModelBase import ModelBase
 
 from __init__ import *
+from __future__ import annotations
 
 
 class AmplitudeModel(ModelBase):
@@ -114,7 +115,7 @@ class AmplitudeModel(ModelBase):
             self,
             name: str,
             fixedInterval: float,
-            data: tuple,
+            data: Tuple,
             begin: float = 0,
             smooth: typing.Union[SymbolicConstant, float] = SOLVER_DEFAULT,
             timeSpan: SymbolicConstant = STEP) -> EquallySpacedAmplitude:
@@ -222,7 +223,7 @@ class AmplitudeModel(ModelBase):
             frequency: float,
             start: float,
             a_0: float,
-            data: tuple,
+            data: Tuple,
             timeSpan: SymbolicConstant = STEP) -> PeriodicAmplitude:
         """This method creates a PeriodicAmplitude object.
 
@@ -266,7 +267,7 @@ class AmplitudeModel(ModelBase):
 
     def PsdDefinition(self,
                       name: str,
-                      data: tuple,
+                      data: Tuple,
                       unitType: SymbolicConstant = FORCE,
                       referenceGravityAcceleration: float = 1,
                       referenecePower: float = 0,
@@ -331,7 +332,7 @@ class AmplitudeModel(ModelBase):
     def SmoothStepAmplitude(
             self,
             name: str,
-            data: tuple,
+            data: Tuple,
             timeSpan: SymbolicConstant = STEP) -> SmoothStepAmplitude:
         """This method creates a SmoothStepAmplitude object.
 
@@ -419,7 +420,7 @@ class AmplitudeModel(ModelBase):
     def SpectrumAmplitude(self,
                           name: str,
                           method: SymbolicConstant,
-                          data: tuple,
+                          data: Tuple,
                           specificationUnits: SymbolicConstant = ACCELERATION,
                           eventUnits: SymbolicConstant = EVENT_ACCELERATION,
                           solution: SymbolicConstant = ABSOLUTE_VALUE,
@@ -497,7 +498,7 @@ class AmplitudeModel(ModelBase):
     def TabularAmplitude(
             self,
             name: str,
-            data: tuple,
+            data: Tuple,
             smooth: typing.Union[SymbolicConstant, float] = SOLVER_DEFAULT,
             timeSpan: SymbolicConstant = STEP) -> TabularAmplitude:
         """This method creates a TabularAmplitude object.

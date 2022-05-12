@@ -3,6 +3,7 @@ from .Interaction import Interaction
 from ..Region.Region import Region
 
 from __init__ import *
+from __future__ import annotations
 
 
 class ActuatorSensor(Interaction):
@@ -29,7 +30,7 @@ class ActuatorSensor(Interaction):
     def __init__(self, name: str, createStepName: str, point: Region,
                  interactionProperty: str, noCoordComponents: int,
                  unsymm: Boolean, noSolutionDepVar: int, userSubUel: str,
-                 dof: str, solutionDepVars: tuple):
+                 dof: str, solutionDepVars: Tuple):
         """This method creates an ActuatorSensor object.
 
         Notes

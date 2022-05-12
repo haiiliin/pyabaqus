@@ -1,6 +1,7 @@
 from .MeshFace import MeshFace
 
 from __init__ import *
+from __future__ import annotations
 
 
 class MeshFaceArray(list[MeshFace]):

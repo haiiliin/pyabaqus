@@ -2,6 +2,7 @@ from abaqusConstants import *
 from ..Session.SessionBase import SessionBase
 
 from __init__ import *
+from __future__ import annotations
 
 
 class XYSessionBase(SessionBase):
@@ -23,10 +24,10 @@ class XYSessionBase(SessionBase):
                         startPoint: str,
                         endPoint: str,
                         modelShape: SymbolicConstant,
-                        components: tuple,
-                        xyMembraneComps: tuple,
-                        xyBendingComps: tuple,
-                        invariantBendingComps: tuple = (),
+                        components: Tuple,
+                        xyMembraneComps: Tuple,
+                        xyBendingComps: Tuple,
+                        invariantBendingComps: Tuple = (),
                         intervals: int = 40,
                         radiusOfCurvature: float = None,
                         oopRadiusOfCurvature: float = None,

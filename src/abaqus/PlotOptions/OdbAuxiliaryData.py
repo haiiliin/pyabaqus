@@ -1,6 +1,7 @@
 from abaqusConstants import *
 
 from __init__ import *
+from __future__ import annotations
 
 
 class OdbAuxiliaryData:
@@ -8,17 +9,17 @@ class OdbAuxiliaryData:
 
     Attributes
     ----------
-    elementInstanceNames: tuple
-        A tuple consisting of element instance names. This attribute is read-only.
-    elementLabels: tuple
-        A tuple consisting of element label names. This attribute is read-only.
+    elementInstanceNames: Tuple
+        A Tuple consisting of element instance names. This attribute is read-only.
+    elementLabels: Tuple
+        A Tuple consisting of element label names. This attribute is read-only.
     hasValues: Boolean
         A boolean specifying whether the :py:class:`~abaqus.PlotOptions.OdbAuxiliaryData.OdbAuxiliaryData` object has values in it. This
         attribute is read-only.
-    nodeInstanceNames: tuple
-        A tuple consisting of node instance names. This attribute is read-only.
-    nodeLables: tuple
-        A tuple consisting of node label names. This attribute is read-only.
+    nodeInstanceNames: Tuple
+        A Tuple consisting of node instance names. This attribute is read-only.
+    nodeLables: Tuple
+        A Tuple consisting of node label names. This attribute is read-only.
 
     Notes
     -----
@@ -33,18 +34,18 @@ class OdbAuxiliaryData:
 
     """
 
-    # A tuple consisting of element instance names. This attribute is read-only.
-    elementInstanceNames: tuple = ()
+    # A Tuple consisting of element instance names. This attribute is read-only.
+    elementInstanceNames: Tuple = ()
 
-    # A tuple consisting of element label names. This attribute is read-only.
-    elementLabels: tuple = ()
+    # A Tuple consisting of element label names. This attribute is read-only.
+    elementLabels: Tuple = ()
 
     # A boolean specifying whether the OdbAuxiliaryData object has values in it. This
     # attribute is read-only.
     hasValues: Boolean = OFF
 
-    # A tuple consisting of node instance names. This attribute is read-only.
-    nodeInstanceNames: tuple = ()
+    # A Tuple consisting of node instance names. This attribute is read-only.
+    nodeInstanceNames: Tuple = ()
 
-    # A tuple consisting of node label names. This attribute is read-only.
-    nodeLables: tuple = ()
+    # A Tuple consisting of node label names. This attribute is read-only.
+    nodeLables: Tuple = ()

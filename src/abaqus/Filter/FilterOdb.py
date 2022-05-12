@@ -6,6 +6,7 @@ from .OperatorFilter import OperatorFilter
 from ..Odb.OdbBase import OdbBase
 
 from __init__ import *
+from __future__ import annotations
 
 
 class FilterOdb(OdbBase):

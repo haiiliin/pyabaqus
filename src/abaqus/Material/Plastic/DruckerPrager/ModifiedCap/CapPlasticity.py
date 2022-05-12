@@ -4,6 +4,7 @@ from .CapCreepConsolidation import CapCreepConsolidation
 from .CapHardening import CapHardening
 
 from __init__ import *
+from __future__ import annotations
 
 
 class CapPlasticity:
@@ -48,7 +49,7 @@ class CapPlasticity:
     capHardening: CapHardening = CapHardening(((), ))
 
     def __init__(self,
-                 table: tuple,
+                 table: Tuple,
                  temperatureDependency: Boolean = OFF,
                  dependencies: int = 0):
         """This method creates a CapPlasticity object.

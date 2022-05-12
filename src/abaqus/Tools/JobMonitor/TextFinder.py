@@ -4,6 +4,7 @@ from PyQt5.QtWidgets import QDialog, QApplication, QStyle
 from .Ui_TextFinder import Ui_TextFinder
 
 from __init__ import *
+from __future__ import annotations
 
 
 class TextFinder(QDialog):

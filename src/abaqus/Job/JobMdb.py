@@ -5,6 +5,7 @@ from .OptimizationProcess import OptimizationProcess
 from ..Mdb.MdbBase import MdbBase
 
 from __init__ import *
+from __future__ import annotations
 
 
 class JobMdb(MdbBase):

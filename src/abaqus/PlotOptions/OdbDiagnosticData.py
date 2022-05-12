@@ -6,6 +6,7 @@ from .OdbJobTime import OdbJobTime
 from .OdbNumericalProblemSummary import OdbNumericalProblemSummary
 
 from __init__ import *
+from __future__ import annotations
 
 
 class OdbDiagnosticData:

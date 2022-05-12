@@ -1,6 +1,7 @@
 from abaqusConstants import *
 
 from __init__ import *
+from __future__ import annotations
 
 
 class ConstrainedSketchGeometry:
@@ -30,6 +31,6 @@ class ConstrainedSketchGeometry:
     # REFERENCE, and CONSTRUCTION.
     type: SymbolicConstant = None
 
-    # A tuple of Floats specifying the *X*- and*Y*-coordinates of a point located on the
+    # A Tuple of Floats specifying the *X*- and*Y*-coordinates of a point located on the
     # geometry.
     pointOn: float = None

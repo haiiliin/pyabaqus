@@ -1,6 +1,7 @@
 from abaqusConstants import *
 
 from __init__ import *
+from __future__ import annotations
 
 
 class SpecificHeat:
@@ -29,7 +30,7 @@ class SpecificHeat:
 
     """
     def __init__(self,
-                 table: tuple,
+                 table: Tuple,
                  law: SymbolicConstant = CONSTANTVOLUME,
                  temperatureDependency: Boolean = OFF,
                  dependencies: int = 0):

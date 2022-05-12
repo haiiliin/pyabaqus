@@ -3,6 +3,7 @@ from ..XY.QuantityType import QuantityType
 from ..XY.XYData import XYData
 
 from __init__ import *
+from __future__ import annotations
 
 
 class UserDataBase:
@@ -42,7 +43,7 @@ class UserDataBase:
     annotations: dict[str, Annotation]
         A repository of :py:class:`~abaqus.Annotation.Annotation.Annotation` objects.
     data: float
-        A tuple of pairs of Floats specifying the *X–Y* data pairs.
+        A Tuple of pairs of Floats specifying the *X–Y* data pairs.
 
     Notes
     -----
@@ -96,12 +97,12 @@ class UserDataBase:
     # A repository of Annotation objects.
     annotations: dict[str, Annotation] = dict[str, Annotation]()
 
-    # A tuple of pairs of Floats specifying the *X–Y* data pairs.
+    # A Tuple of pairs of Floats specifying the *X–Y* data pairs.
     data: float = None
 
     def XYData(self,
                name: str,
-               data: tuple,
+               data: Tuple,
                sourceDescription: str = '',
                contentDescription: str = '',
                positionDescription: str = '',

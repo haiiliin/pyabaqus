@@ -2,6 +2,7 @@ from .Layer import Layer
 from ..Annotation.AnnotationViewport import AnnotationViewport
 
 from __init__ import *
+from __future__ import annotations
 
 
 class Viewport(AnnotationViewport):

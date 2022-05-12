@@ -2,6 +2,7 @@ from abaqusConstants import *
 from ..Assembly.AssemblyBase import AssemblyBase
 
 from __init__ import *
+from __future__ import annotations
 
 
 class RegionAssemblyBase(AssemblyBase):
@@ -37,7 +38,7 @@ class RegionAssemblyBase(AssemblyBase):
         """
         pass
 
-    def deleteSets(self, setNames: tuple):
+    def deleteSets(self, setNames: Tuple):
         """This command deletes the given sets from the assembly.
         
         Parameters
@@ -91,7 +92,7 @@ class RegionAssemblyBase(AssemblyBase):
         """
         pass
 
-    def deleteSurfaces(self, surfaceNames: tuple):
+    def deleteSurfaces(self, surfaceNames: Tuple):
         """This command deletes the given surfaces from the assembly.
         
         Parameters

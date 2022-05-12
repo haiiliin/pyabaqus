@@ -2,6 +2,7 @@ from abaqusConstants import *
 from .ContactProperty import ContactProperty
 
 from __init__ import *
+from __future__ import annotations
 
 
 class FluidExchangeProperty(ContactProperty):
@@ -25,7 +26,7 @@ class FluidExchangeProperty(ContactProperty):
     """
     def __init__(self,
                  name: str,
-                 dataTable: tuple,
+                 dataTable: Tuple,
                  definition: SymbolicConstant = BULK_VISCOSITY,
                  pressureDependency: Boolean = OFF,
                  temperatureDependency: Boolean = OFF,

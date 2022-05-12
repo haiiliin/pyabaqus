@@ -49,6 +49,7 @@ from ..StepMiscellaneous.SubstructureGenerateFrequencyArray import SubstructureG
 from ..StepMiscellaneous.SubstructureGenerateModesArray import SubstructureGenerateModesArray
 
 from __init__ import *
+from __future__ import annotations
 
 
 class StepModel(ModelBase):

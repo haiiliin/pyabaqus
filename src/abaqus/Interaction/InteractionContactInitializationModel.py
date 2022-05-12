@@ -4,6 +4,7 @@ from .StdInitialization import StdInitialization
 from ..Model.ModelBase import ModelBase
 
 from __init__ import *
+from __future__ import annotations
 
 
 class InteractionContactInitializationModel(ModelBase):

@@ -6,13 +6,14 @@ from .Text import Text
 from ..Odb.UserDataBase import UserDataBase
 
 from __init__ import *
+from __future__ import annotations
 
 
 class AnimationUserData(UserDataBase):
     def Arrow(self,
               name: str,
-              startPoint: tuple[float] = (),
-              endPoint: tuple[float] = (),
+              startPoint: Tuple[float] = (),
+              endPoint: Tuple[float] = (),
               startAnchor: typing.Union[SymbolicConstant, float] = BOTTOM_LEFT,
               endAnchor: typing.Union[SymbolicConstant, float] = BOTTOM_LEFT,
               startHeadStyle: SymbolicConstant = NONE,
@@ -129,7 +130,7 @@ class AnimationUserData(UserDataBase):
     def Text(self,
              name: str,
              text: str = '',
-             offset: tuple[float] = (),
+             offset: Tuple[float] = (),
              anchor: typing.Union[SymbolicConstant, float] = BOTTOM_LEFT,
              referencePoint: typing.Union[SymbolicConstant,
                                           float] = BOTTOM_LEFT,

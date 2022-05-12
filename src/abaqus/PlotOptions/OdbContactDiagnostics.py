@@ -1,6 +1,7 @@
 from .OdbAuxiliaryData import OdbAuxiliaryData
 
 from __init__ import *
+from __future__ import annotations
 
 
 class OdbContactDiagnostics:
@@ -13,7 +14,7 @@ class OdbContactDiagnostics:
     description: str
         A string specifying the opening/overclosure status of the contact. This attribute is
         read-only.
-    detailStrings: tuple
+    detailStrings: Tuple
         A sequence of strings specifying the nature of each of the contact pair. This attribute
         is read-only.
     type: str
@@ -45,7 +46,7 @@ class OdbContactDiagnostics:
 
     # A sequence of strings specifying the nature of each of the contact pair. This attribute
     # is read-only.
-    detailStrings: tuple = ()
+    detailStrings: Tuple = ()
 
     # A string specifying the type of contact initialization. This attribute is read-only.
     type: str = ''

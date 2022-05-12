@@ -1,6 +1,7 @@
 from .MeshEdge import MeshEdge
 
 from __init__ import *
+from __future__ import annotations
 
 
 class MeshEdgeArray(list[MeshEdge]):

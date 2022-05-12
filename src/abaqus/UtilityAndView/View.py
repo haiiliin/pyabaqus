@@ -1,6 +1,7 @@
 from abaqusConstants import *
 
 from __init__ import *
+from __future__ import annotations
 
 
 class View:
@@ -23,7 +24,7 @@ class View:
         the viewport contents. This value does not include annotations or symbols and it is not
         clipped to the size of the viewport window.
     layerTransform: float
-        A tuple of Floats specifying a transformation matrix used to position the contents of
+        A Tuple of Floats specifying a transformation matrix used to position the contents of
         the Layer within a viewport.
 
     Notes
@@ -48,7 +49,7 @@ class View:
     # clipped to the size of the viewport window.
     displayedObjectScreenHeight: float = None
 
-    # A tuple of Floats specifying a transformation matrix used to position the contents of
+    # A Tuple of Floats specifying a transformation matrix used to position the contents of
     # the Layer within a viewport.
     layerTransform: float = None
 
@@ -59,9 +60,9 @@ class View:
                  width: float,
                  height: float,
                  projection: SymbolicConstant,
-                 cameraPosition: tuple,
-                 cameraUpVector: tuple,
-                 cameraTarget: tuple,
+                 cameraPosition: Tuple,
+                 cameraUpVector: Tuple,
+                 cameraTarget: Tuple,
                  viewOffsetX: float,
                  viewOffsetY: float,
                  autoFit: Boolean,
@@ -243,7 +244,7 @@ class View:
         pass
 
     def setLayerTransform(self,
-                          layerTransform: tuple = (),
+                          layerTransform: Tuple = (),
                           options: 'View' = None,
                           drawImmediately: Boolean = False):
         """This method modifies the transformation used to position a Layer.
@@ -290,7 +291,7 @@ class View:
         """
         pass
 
-    def setRotationCenter(self, rotationCenter: tuple):
+    def setRotationCenter(self, rotationCenter: Tuple):
         """This method sets the center of rotation to the specified location.
         
         Parameters
@@ -323,8 +324,8 @@ class View:
         pass
 
     def setViewpoint(self,
-                     viewVector: tuple,
-                     cameraUpVector: tuple = (),
+                     viewVector: Tuple,
+                     cameraUpVector: Tuple = (),
                      drawImmediately: Boolean = False):
         """This method sets the camera's position in the viewport.
         Note:This method is not available for a Layer View.
@@ -378,8 +379,8 @@ class View:
         pass
 
     def zoomRectangle(self,
-                      point1: tuple[float],
-                      point2: tuple[float],
+                      point1: Tuple[float],
+                      point2: Tuple[float],
                       drawImmediately: Boolean = False):
         """This method fills the viewport with the graphics located within the given rectangle.
         

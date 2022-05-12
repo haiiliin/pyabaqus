@@ -10,6 +10,7 @@ from .OdbSet import OdbSet
 from .SectionPoint import SectionPoint
 
 from __init__ import *
+from __future__ import annotations
 
 
 class HistoryPoint:
@@ -125,7 +126,7 @@ class HistoryPoint:
     sectionPoint: SectionPoint = None
 
     # An OdbSet object specifying the region for which the data are to be collected.
-    region: OdbSet = OdbSet('set', tuple[OdbMeshNode]())
+    region: OdbSet = OdbSet('set', Tuple[OdbMeshNode]())
 
     # An OdbAssembly object specifying the assembly for which the data are to be collected.
     assembly: OdbAssembly = OdbAssembly()

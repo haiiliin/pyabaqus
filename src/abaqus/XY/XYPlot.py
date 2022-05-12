@@ -10,6 +10,7 @@ from .XYData import XYData
 from .XYPlotBase import XYPlotBase
 
 from __init__ import *
+from __future__ import annotations
 
 
 class XYPlot(XYPlotBase):
@@ -293,7 +294,7 @@ class XYPlot(XYPlotBase):
 
     @staticmethod
     @typing.overload
-    def XYData(data: tuple,
+    def XYData(data: Tuple,
                name: str = '',
                sourceDescription: str = '',
                contentDescription: str = '',

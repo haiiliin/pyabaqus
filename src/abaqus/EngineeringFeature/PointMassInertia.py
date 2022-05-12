@@ -3,6 +3,7 @@ from .Inertia import Inertia
 from ..Region.Region import Region
 
 from __init__ import *
+from __future__ import annotations
 
 
 class PointMassInertia(Inertia):

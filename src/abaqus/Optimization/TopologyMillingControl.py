@@ -3,6 +3,7 @@ from .GeometricRestriction import GeometricRestriction
 from ..Region.Region import Region
 
 from __init__ import *
+from __future__ import annotations
 
 
 class TopologyMillingControl(GeometricRestriction):
@@ -22,7 +23,7 @@ class TopologyMillingControl(GeometricRestriction):
     """
     def __init__(self,
                  name: str,
-                 millingDirections: tuple,
+                 millingDirections: Tuple,
                  region: Region,
                  csys: int = None,
                  millingCheckRegion: SymbolicConstant = MILLING_REGION,
@@ -42,8 +43,8 @@ class TopologyMillingControl(GeometricRestriction):
         name
             A String specifying the geometric restriction repository key. 
         millingDirections
-            A tuple of VertexArray objects of length 2 specifying the milling directions. Each point 
-            can be specified through a tuple of coordinates instead of through a ConstrainedSketchVertex.
+            A Tuple of VertexArray objects of length 2 specifying the milling directions. Each point 
+            can be specified through a Tuple of coordinates instead of through a ConstrainedSketchVertex.
         region
             A Region object specifying the region to which the geometric restriction is applied. 
         csys

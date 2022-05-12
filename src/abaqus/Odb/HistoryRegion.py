@@ -5,6 +5,7 @@ from .HistoryOutput import HistoryOutput
 from .HistoryPoint import HistoryPoint
 
 from __init__ import *
+from __future__ import annotations
 
 
 class HistoryRegion:

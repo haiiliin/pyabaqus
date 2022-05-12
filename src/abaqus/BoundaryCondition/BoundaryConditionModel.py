@@ -50,6 +50,7 @@ from ..Region.Region import Region
 from ..Region.RegionArray import RegionArray
 
 from __init__ import *
+from __future__ import annotations
 
 
 class BoundaryConditionModel(ModelBase):
@@ -70,7 +71,7 @@ class BoundaryConditionModel(ModelBase):
             createStepName: str,
             dof: SymbolicConstant,
             amplitudeScaleFactor: float = 1,
-            centerOfRotation: tuple = (),
+            centerOfRotation: Tuple = (),
             correlation: CorrelationArray = None,
             secondaryBase: str = '',
             useComplex: Boolean = OFF,
@@ -97,7 +98,7 @@ class BoundaryConditionModel(ModelBase):
         amplitudeScaleFactor
             A Float specifying the scale factor for the amplitude curve. The default value is 1.0.
         centerOfRotation
-            A ModelDot object specifying a tuple containing one center of rotation. The default
+            A ModelDot object specifying a Tuple containing one center of rotation. The default
             value is the global origin. This argument applies only when *dof*=UR1, UR2, or UR3.
         correlation
             A CorrelationArray object.
@@ -646,7 +647,7 @@ class BoundaryConditionModel(ModelBase):
             createStepName: str,
             dof: SymbolicConstant,
             amplitudeScaleFactor: float = 1,
-            centerOfRotation: tuple = (),
+            centerOfRotation: Tuple = (),
             correlation: CorrelationArray = None,
             secondaryBase: str = '',
             useComplex: Boolean = OFF,
@@ -673,7 +674,7 @@ class BoundaryConditionModel(ModelBase):
         amplitudeScaleFactor
             A Float specifying the scale factor for the amplitude curve. The default value is 1.0.
         centerOfRotation
-            A ModelDot object specifying a tuple containing one center of rotation. The default
+            A ModelDot object specifying a Tuple containing one center of rotation. The default
             value is the global origin. This argument applies only when *dof*=UR1, UR2, or UR3.
         correlation
             A CorrelationArray object.
@@ -1338,7 +1339,7 @@ class BoundaryConditionModel(ModelBase):
         return boundaryCondition
 
     def SecondaryBaseBC(self, name: str, createStepName: str,
-                        regions: RegionArray, dofs: tuple) -> SecondaryBaseBC:
+                        regions: RegionArray, dofs: Tuple) -> SecondaryBaseBC:
         """This method creates a SecondaryBaseBC object.
 
         Notes
@@ -1376,7 +1377,7 @@ class BoundaryConditionModel(ModelBase):
                    name: str,
                    createStepName: str,
                    region: Region,
-                   dof: tuple,
+                   dof: Tuple,
                    globalStep: str,
                    timeScale: Boolean,
                    shellThickness: float,
@@ -1468,7 +1469,7 @@ class BoundaryConditionModel(ModelBase):
                       region: Region,
                       fieldName: str = '',
                       magnitude: float = 0,
-                      dof: tuple = (),
+                      dof: Tuple = (),
                       amplitude: str = UNSET,
                       distributionType: SymbolicConstant = UNIFORM,
                       fixed: Boolean = OFF) -> TemperatureBC:
@@ -1528,7 +1529,7 @@ class BoundaryConditionModel(ModelBase):
                              createStepName: str,
                              dof: SymbolicConstant,
                              amplitudeScaleFactor: float = 1,
-                             centerOfRotation: tuple = (),
+                             centerOfRotation: Tuple = (),
                              correlation: CorrelationArray = None,
                              secondaryBase: str = '',
                              useComplex: Boolean = OFF,
@@ -1555,7 +1556,7 @@ class BoundaryConditionModel(ModelBase):
         amplitudeScaleFactor
             A Float specifying the scale factor for the amplitude curve. The default value is 1.0.
         centerOfRotation
-            A ModelDot object specifying a tuple containing one center of rotation. The default
+            A ModelDot object specifying a Tuple containing one center of rotation. The default
             value is the global origin. This argument applies only when *dof*=UR1, UR2, or UR3.
         correlation
             A CorrelationArray object.

@@ -2,6 +2,7 @@ from ..Step.StepBase import StepBase
 from ..TableCollection.ActivateElements import ActivateElements
 
 from __init__ import *
+from __future__ import annotations
 
 
 class TableCollectionStep(StepBase):

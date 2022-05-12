@@ -4,6 +4,7 @@ from .OdbMeshRegionData import OdbMeshRegionData
 from ..Datum.DatumCsys import DatumCsys
 
 from __init__ import *
+from __future__ import annotations
 
 
 class AnalyticalField(Field):

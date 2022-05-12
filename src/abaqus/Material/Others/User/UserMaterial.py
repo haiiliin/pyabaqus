@@ -1,6 +1,7 @@
 from abaqusConstants import *
 
 from __init__ import *
+from __future__ import annotations
 
 
 class UserMaterial:
@@ -25,8 +26,8 @@ class UserMaterial:
     def __init__(self,
                  type: SymbolicConstant = MECHANICAL,
                  unsymm: Boolean = OFF,
-                 mechanicalConstants: tuple = (),
-                 thermalConstants: tuple = (),
+                 mechanicalConstants: Tuple = (),
+                 thermalConstants: Tuple = (),
                  effmod: Boolean = OFF,
                  hybridFormulation: SymbolicConstant = INCREMENTAL):
         """This method creates a UserMaterial object.

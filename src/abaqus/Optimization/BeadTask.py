@@ -6,6 +6,7 @@ from .OptimizationConstraint import OptimizationConstraint
 from .OptimizationTask import OptimizationTask
 
 from __init__ import *
+from __future__ import annotations
 
 
 class BeadTask(OptimizationTask):

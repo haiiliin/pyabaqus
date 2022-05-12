@@ -17,6 +17,7 @@ from ..Mesh.MeshFace import MeshFace
 from ..Mesh.MeshNode import MeshNode
 
 from __init__ import *
+from __future__ import annotations
 
 
 class RegionPart(RegionPartBase):
@@ -33,13 +34,13 @@ class RegionPart(RegionPartBase):
 
     """
 
-    def Surface(self, side1Faces: tuple[Face] = None, side2Faces: tuple[Face] = None, side12Faces: tuple[Face] = None,
-                end1Edges: tuple[Face] = None, end2Edges: tuple[Face] = None, circumEdges: tuple[Face] = None,
-                side1Edges: tuple[Face] = None, side2Edges: tuple[Face] = None, face1Elements: tuple[Face] = None,
-                face2Elements: tuple[Face] = None, face3Elements: tuple[Face] = None, face4Elements: tuple[Face] = None,
-                face5Elements: tuple[Face] = None, face6Elements: tuple[Face] = None, side1Elements: tuple[Face] = None,
-                side2Elements: tuple[Face] = None, side12Elements: tuple[Face] = None, end1Elements: tuple[Face] = None,
-                end2Elements: tuple[Face] = None, circumElements: tuple[Face] = None, name: str = '', **kwargs) -> \
+    def Surface(self, side1Faces: Tuple[Face] = None, side2Faces: Tuple[Face] = None, side12Faces: Tuple[Face] = None,
+                end1Edges: Tuple[Face] = None, end2Edges: Tuple[Face] = None, circumEdges: Tuple[Face] = None,
+                side1Edges: Tuple[Face] = None, side2Edges: Tuple[Face] = None, face1Elements: Tuple[Face] = None,
+                face2Elements: Tuple[Face] = None, face3Elements: Tuple[Face] = None, face4Elements: Tuple[Face] = None,
+                face5Elements: Tuple[Face] = None, face6Elements: Tuple[Face] = None, side1Elements: Tuple[Face] = None,
+                side2Elements: Tuple[Face] = None, side12Elements: Tuple[Face] = None, end1Elements: Tuple[Face] = None,
+                end2Elements: Tuple[Face] = None, circumElements: Tuple[Face] = None, name: str = '', **kwargs) -> \
             Surface:
         """This method creates a surface from a sequence of objects in a model database. The
         surface will apply to the sides specified by the arguments.For example
@@ -159,20 +160,20 @@ class RegionPart(RegionPartBase):
     def Set(
         self,
         name: str,
-        nodes: tuple[MeshNode] = None,
-        elements: tuple[MeshElement] = None,
+        nodes: Tuple[MeshNode] = None,
+        elements: Tuple[MeshElement] = None,
         region: Region = None,
-        vertices: tuple[Vertex] = None,
-        edges: tuple[Edge] = None,
-        faces: tuple[Face] = None,
-        cells: tuple[Cell] = None,
-        xVertices: tuple[Vertex] = None,
-        xEdges: tuple[Edge] = None,
-        xFaces: tuple[Face] = None,
-        referencePoints: tuple[ReferencePoint] = (),
-        skinFaces: tuple = (),
-        skinEdges: tuple = (),
-        stringerEdges: tuple = ()
+        vertices: Tuple[Vertex] = None,
+        edges: Tuple[Edge] = None,
+        faces: Tuple[Face] = None,
+        cells: Tuple[Cell] = None,
+        xVertices: Tuple[Vertex] = None,
+        xEdges: Tuple[Edge] = None,
+        xFaces: Tuple[Face] = None,
+        referencePoints: Tuple[ReferencePoint] = (),
+        skinFaces: Tuple = (),
+        skinEdges: Tuple = (),
+        stringerEdges: Tuple = ()
     ) -> Set:
         """This method creates a set from a sequence of objects in a model database.
 
@@ -216,13 +217,13 @@ class RegionPart(RegionPartBase):
         referencePoints
             A sequence of ReferencePoint objects. The default value is an empty sequence.
         skinFaces
-            A tuple of tuples specifying a skin name and the sequence of faces associated with this
+            A Tuple of tuples specifying a skin name and the sequence of faces associated with this
             skin. Valid only for geometric regions on 3D and 2D parts.
         skinEdges
-            A tuple of tuples specifying a skin name and the sequence of edges associated with this
+            A Tuple of tuples specifying a skin name and the sequence of edges associated with this
             skin. Valid only for geometric regions on Axisymmetric parts.
         stringerEdges
-            A tuple of tuples specifying a stringer name and the sequence of edges associated with
+            A Tuple of tuples specifying a stringer name and the sequence of edges associated with
             this stringer. Valid only for geometric regions on 3D and 2D parts.
 
         Returns
@@ -286,10 +287,10 @@ class RegionPart(RegionPartBase):
     def Skin(
         self,
         name: str,
-        faces: tuple[Face] = (),
-        edges: tuple[Edge] = (),
-        elementFaces: tuple[MeshFace] = (),
-        elementEdges: tuple[MeshEdge] = ()
+        faces: Tuple[Face] = (),
+        edges: Tuple[Edge] = (),
+        elementFaces: Tuple[MeshFace] = (),
+        elementEdges: Tuple[MeshEdge] = ()
     ) -> Skin:
         """This method creates a skin from a sequence of objects in a model database. At least one
         of the optional arguments needs to be specified.
@@ -331,10 +332,10 @@ class RegionPart(RegionPartBase):
     def EditSkin(
         self,
         name: str = '',
-        faces: tuple[Face] = (),
-        edges: tuple[Edge] = (),
-        elementFaces: tuple[MeshFace] = (),
-        elementEdges: tuple[MeshEdge] = ()
+        faces: Tuple[Face] = (),
+        edges: Tuple[Edge] = (),
+        elementFaces: Tuple[MeshFace] = (),
+        elementEdges: Tuple[MeshEdge] = ()
     ) -> Skin:
         """This method modifies underlying entities of the selected skin. At least one of the
         optional arguments needs to be specified.
@@ -376,8 +377,8 @@ class RegionPart(RegionPartBase):
     def Stringer(
         self,
         name: str,
-        edges: tuple[Edge] = (),
-        elementEdges: tuple[MeshEdge] = ()
+        edges: Tuple[Edge] = (),
+        elementEdges: Tuple[MeshEdge] = ()
     ) -> Stringer:
         """This method creates a stringer from a sequence of objects in a model database. At least
         one of the optional arguments needs to be specified.

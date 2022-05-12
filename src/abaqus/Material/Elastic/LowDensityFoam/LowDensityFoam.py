@@ -2,6 +2,7 @@ from abaqusConstants import *
 from ...TestData.UniaxialTestData import UniaxialTestData
 
 from __init__ import *
+from __future__ import annotations
 
 
 class LowDensityFoam:

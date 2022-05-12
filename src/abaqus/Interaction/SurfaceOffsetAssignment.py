@@ -3,6 +3,7 @@ import typing
 from abaqusConstants import *
 
 from __init__ import *
+from __future__ import annotations
 
 
 class SurfaceOffsetAssignment:
@@ -37,8 +38,8 @@ class SurfaceOffsetAssignment:
             An Int specifying the position of the surface offset fraction assignment whose value is 
             to be modified. 
         value
-            A tuple specifying the value of the surface offset assignments for the surface whose 
-            index is referenced. Each tuple contains one entry: 
+            A Tuple specifying the value of the surface offset assignments for the surface whose 
+            index is referenced. Each Tuple contains one entry: 
             - A Float or a SymbolicConstant specifying the surface offset fraction value to be used 
             for the surface. Possible values of the SymbolicConstant are ORIGINAL, SPOS, and SNEG. 
         """
@@ -55,7 +56,7 @@ class SurfaceOffsetAssignment:
             A String specifying the name of the step in which new surface offset fraction 
             assignments are to be defined. 
         assignments
-            A sequence of tuples specifying the surface offset fraction assignments. Each tuple 
+            A sequence of tuples specifying the surface offset fraction assignments. Each Tuple 
             contains two entries: 
             - A region or a material object or the SymbolicConstant GLOBAL specifying the surface to 
             which the offset fraction is assigned. 
@@ -64,7 +65,7 @@ class SurfaceOffsetAssignment:
         """
         pass
 
-    def delete(self, indices: tuple):
+    def delete(self, indices: Tuple):
         """The delete method allows you to delete existing surface offset fraction assignments.
         
         Parameters

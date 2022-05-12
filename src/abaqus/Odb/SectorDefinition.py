@@ -1,4 +1,5 @@
 from __init__ import *
+from __future__ import annotations
 
 
 class SectorDefinition:
@@ -10,7 +11,7 @@ class SectorDefinition:
     numSectors: int
         An Int specifying the number of sectors in the cyclic symmetry model.
     symmetryAxis: float
-        A tuple of tuples of Floats specifying the coordinates of two points on the axis of
+        A Tuple of tuples of Floats specifying the coordinates of two points on the axis of
         symmetry.
 
     Notes
@@ -27,6 +28,6 @@ class SectorDefinition:
     # An Int specifying the number of sectors in the cyclic symmetry model.
     numSectors: int = None
 
-    # A tuple of tuples of Floats specifying the coordinates of two points on the axis of
+    # A Tuple of tuples of Floats specifying the coordinates of two points on the axis of
     # symmetry.
     symmetryAxis: float = None

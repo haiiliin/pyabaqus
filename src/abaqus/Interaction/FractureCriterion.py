@@ -3,6 +3,7 @@ import typing
 from abaqusConstants import *
 
 from __init__ import *
+from __future__ import annotations
 
 
 class FractureCriterion:
@@ -70,7 +71,7 @@ class FractureCriterion:
 
     """
     def __init__(self,
-                 initTable: tuple,
+                 initTable: Tuple,
                  type: SymbolicConstant = VCCT,
                  mixedModeBehavior: SymbolicConstant = BK,
                  temperatureDependency: Boolean = OFF,

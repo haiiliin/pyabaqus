@@ -1,6 +1,7 @@
 from abaqusConstants import *
 
 from __init__ import *
+from __future__ import annotations
 
 
 class DruckerPragerHardening:
@@ -32,7 +33,7 @@ class DruckerPragerHardening:
 
     """
     def __init__(self,
-                 table: tuple,
+                 table: Tuple,
                  type: SymbolicConstant = COMPRESSION,
                  rate: Boolean = OFF,
                  temperatureDependency: Boolean = OFF,

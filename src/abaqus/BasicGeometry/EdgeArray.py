@@ -1,7 +1,7 @@
 from abaqusConstants import *
 from .Edge import Edge
-from __future__ import annotations
 from __init__ import *
+from __future__ import annotations
 
 
 class EdgeArray:
@@ -65,7 +65,7 @@ class EdgeArray:
         pass
 
     def findAt(self,
-               coordinates: tuple,
+               coordinates: Tuple,
                printWarning: Boolean = True) -> Union[Edge, EdgeArray]:
         """This method returns the object or objects in the EdgeArray located at the given
         coordinates.
@@ -124,7 +124,7 @@ class EdgeArray:
         Returns
         -------
             This method returns a dictionary object. The key to the dictionary object is the 
-            position of the input point in the tuple specified in the *coordinates* starting at 
+            position of the input point in the Tuple specified in the *coordinates* starting at 
             index 0. If a closest edge could be found then the value is a sequence consisting of two 
             objects. The first object in the sequence is an Edge that is close to the input point 
             referred to by the key. The second object in the sequence is a sequence of floats that 
@@ -198,7 +198,7 @@ class EdgeArray:
         """
         pass
 
-    def getByBoundingCylinder(self, center1: tuple, center2: tuple,
+    def getByBoundingCylinder(self, center1: Tuple, center2: Tuple,
                               radius: str) -> EdgeArray:
         """This method returns an array of edge objects that lie within the specified bounding
         cylinder.
@@ -206,10 +206,10 @@ class EdgeArray:
         Parameters
         ----------
         center1
-            A tuple of the *X*-, *Y*-, and *Z*-coordinates of the center of the first end of the 
+            A Tuple of the *X*-, *Y*-, and *Z*-coordinates of the center of the first end of the 
             cylinder. 
         center2
-            A tuple of the *X*-, *Y*-, and *Z*-coordinates of the center of the second end of the 
+            A Tuple of the *X*-, *Y*-, and *Z*-coordinates of the center of the second end of the 
             cylinder. 
         radius
             A float specifying the radius of the cylinder. 
@@ -221,14 +221,14 @@ class EdgeArray:
         """
         pass
 
-    def getByBoundingSphere(self, center: tuple, radius: str) -> EdgeArray:
+    def getByBoundingSphere(self, center: Tuple, radius: str) -> EdgeArray:
         """This method returns an array of edge objects that lie within the specified bounding
         sphere.
         
         Parameters
         ----------
         center
-            A tuple of the *X*-, *Y*-, and *Z*-coordinates of the center of the sphere. 
+            A Tuple of the *X*-, *Y*-, and *Z*-coordinates of the center of the sphere. 
         radius
             A float specifying the radius of the sphere. 
 
@@ -247,9 +247,9 @@ class EdgeArray:
         Returns
         -------
             A Dictionary object with the following items: 
-            *low*: a tuple of three floats representing the minimum *X*-, *Y*-, and *Z*-boundary 
+            *low*: a Tuple of three floats representing the minimum *X*-, *Y*-, and *Z*-boundary 
             values of the bounding box. 
-            *high*: a tuple of three floats representing the maximum *X*-, *Y*-, and *Z*-boundary 
+            *high*: a Tuple of three floats representing the maximum *X*-, *Y*-, and *Z*-boundary 
             values of the bounding box.
             
         """

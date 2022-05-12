@@ -1,6 +1,7 @@
 from abaqusConstants import *
 
 from __init__ import *
+from __future__ import annotations
 
 
 class TangentialBehavior:
@@ -52,7 +53,7 @@ class TangentialBehavior:
                  maximumElasticSlip: SymbolicConstant = FRACTION,
                  fraction: float = None,
                  absoluteDistance: float = None,
-                 table: tuple = ()):
+                 table: Tuple = ()):
         """This method creates a TangentialBehavior object.
 
         Notes

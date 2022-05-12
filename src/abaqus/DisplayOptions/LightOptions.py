@@ -2,6 +2,7 @@ from abaqusConstants import *
 from .LightArray import LightArray
 
 from __init__ import *
+from __future__ import annotations
 
 
 class LightOptions:

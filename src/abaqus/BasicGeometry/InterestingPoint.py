@@ -2,6 +2,7 @@ from abaqusConstants import *
 from .Edge import Edge
 
 from __init__ import *
+from __future__ import annotations
 
 
 class InterestingPoint:

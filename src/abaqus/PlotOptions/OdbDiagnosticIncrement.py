@@ -2,6 +2,7 @@ from abaqusConstants import *
 from .OdbDiagnosticAttempt import OdbDiagnosticAttempt
 
 from __init__ import *
+from __future__ import annotations
 
 
 class OdbDiagnosticIncrement:

@@ -3,6 +3,7 @@ import typing
 from abaqusConstants import *
 
 from __init__ import *
+from __future__ import annotations
 
 
 class HistoryOutput:
@@ -12,11 +13,11 @@ class HistoryOutput:
     Attributes
     ----------
     data: float
-        A tuple of pairs of Floats specifying the pairs (**frameValue**, **value**) where
+        A Tuple of pairs of Floats specifying the pairs (**frameValue**, **value**) where
         **frameValue** is either time, frequency, or mode and **value** is the value of the
         specified variable at **frameValue**. (This value depends on the type of the variable.)
     conjugateData: float
-        A tuple of pairs of Floats specifying the imaginary portion of a specified complex
+        A Tuple of pairs of Floats specifying the imaginary portion of a specified complex
         variable at each frame value (time, frequency, or mode). The pairs have the form
         (**frameValue**, **value**).
 
@@ -31,12 +32,12 @@ class HistoryOutput:
 
     """
 
-    # A tuple of pairs of Floats specifying the pairs (*frameValue*, *value*) where
+    # A Tuple of pairs of Floats specifying the pairs (*frameValue*, *value*) where
     # *frameValue* is either time, frequency, or mode and *value* is the value of the
     # specified variable at *frameValue*. (This value depends on the type of the variable.)
     data: float = None
 
-    # A tuple of pairs of Floats specifying the imaginary portion of a specified complex
+    # A Tuple of pairs of Floats specifying the imaginary portion of a specified complex
     # variable at each frame value (time, frequency, or mode). The pairs have the form
     # (*frameValue*, *value*).
     conjugateData: float = None
@@ -90,7 +91,7 @@ class HistoryOutput:
         pass
 
     @typing.overload
-    def addData(self, frame: tuple, value: tuple):
+    def addData(self, frame: Tuple, value: Tuple):
         """This method adds data to the *data* member of the HistoryOutput object.
         
         Parameters
@@ -110,7 +111,7 @@ class HistoryOutput:
         pass
 
     @typing.overload
-    def addData(self, data: tuple):
+    def addData(self, data: Tuple):
         """This method adds data to the *data* member of the HistoryOutput object.
         
         Parameters

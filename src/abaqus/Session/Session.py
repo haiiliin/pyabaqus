@@ -7,6 +7,7 @@ from ..PathAndProbe.PathSession import PathSession
 from ..XY.XYSession import XYSession
 
 from __init__ import *
+from __future__ import annotations
 
 
 class Session(AnimationSession, DisplayGroupSession, FieldReportSession,

@@ -2,6 +2,7 @@ from abaqusConstants import *
 from ..Region.Set import Set
 
 from __init__ import *
+from __future__ import annotations
 
 
 class SectionAssignment:

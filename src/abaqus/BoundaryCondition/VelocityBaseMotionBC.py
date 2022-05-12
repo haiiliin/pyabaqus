@@ -4,6 +4,7 @@ from ..Amplitude.CorrelationArray import CorrelationArray
 from ..Region.Region import Region
 
 from __init__ import *
+from __future__ import annotations
 
 
 class VelocityBaseMotionBC(BoundaryCondition):
@@ -20,8 +21,8 @@ class VelocityBaseMotionBC(BoundaryCondition):
     useComplex: Boolean
         A Boolean specifying whether to define the imaginary (out-of-plane) portion of the base
         motion record given by amplitude definition. The default value is OFF.
-    centerOfRotation: tuple
-        A :py:class:`~abaqus.BasicGeometry.ModelDot.ModelDot` object specifying a tuple containing one center of rotation. The default
+    centerOfRotation: Tuple
+        A :py:class:`~abaqus.BasicGeometry.ModelDot.ModelDot` object specifying a Tuple containing one center of rotation. The default
         value is the global origin. This argument applies only when **dof=UR1**, UR2, or UR3.
     correlation: CorrelationArray
         A :py:class:`~abaqus.Amplitude.CorrelationArray.CorrelationArray` object.
@@ -59,9 +60,9 @@ class VelocityBaseMotionBC(BoundaryCondition):
     # motion record given by amplitude definition. The default value is OFF.
     useComplex: Boolean = OFF
 
-    # A ModelDot object specifying a tuple containing one center of rotation. The default
+    # A ModelDot object specifying a Tuple containing one center of rotation. The default
     # value is the global origin. This argument applies only when *dof*=UR1, UR2, or UR3.
-    centerOfRotation: tuple = ()
+    centerOfRotation: Tuple = ()
 
     # A CorrelationArray object.
     correlation: CorrelationArray = CorrelationArray()
@@ -87,7 +88,7 @@ class VelocityBaseMotionBC(BoundaryCondition):
                  createStepName: str,
                  dof: SymbolicConstant,
                  amplitudeScaleFactor: float = 1,
-                 centerOfRotation: tuple = (),
+                 centerOfRotation: Tuple = (),
                  correlation: CorrelationArray = None,
                  secondaryBase: str = '',
                  useComplex: Boolean = OFF,
@@ -114,7 +115,7 @@ class VelocityBaseMotionBC(BoundaryCondition):
         amplitudeScaleFactor
             A Float specifying the scale factor for the amplitude curve. The default value is 1.0. 
         centerOfRotation
-            A ModelDot object specifying a tuple containing one center of rotation. The default 
+            A ModelDot object specifying a Tuple containing one center of rotation. The default 
             value is the global origin. This argument applies only when *dof*=UR1, UR2, or UR3. 
         correlation
             A CorrelationArray object. 
@@ -139,7 +140,7 @@ class VelocityBaseMotionBC(BoundaryCondition):
 
     def setValues(self,
                   amplitudeScaleFactor: float = 1,
-                  centerOfRotation: tuple = (),
+                  centerOfRotation: Tuple = (),
                   correlation: CorrelationArray = None,
                   secondaryBase: str = '',
                   useComplex: Boolean = OFF,
@@ -152,7 +153,7 @@ class VelocityBaseMotionBC(BoundaryCondition):
         amplitudeScaleFactor
             A Float specifying the scale factor for the amplitude curve. The default value is 1.0. 
         centerOfRotation
-            A ModelDot object specifying a tuple containing one center of rotation. The default 
+            A ModelDot object specifying a Tuple containing one center of rotation. The default 
             value is the global origin. This argument applies only when *dof*=UR1, UR2, or UR3. 
         correlation
             A CorrelationArray object. 

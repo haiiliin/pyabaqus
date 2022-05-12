@@ -2,6 +2,7 @@ from abaqusConstants import *
 from .ConnectorBehaviorOption import ConnectorBehaviorOption
 
 from __init__ import *
+from __future__ import annotations
 
 
 class ConnectorLock(ConnectorBehaviorOption):
@@ -30,7 +31,7 @@ class ConnectorLock(ConnectorBehaviorOption):
                  maxMotion: float = None,
                  minForce: float = None,
                  maxForce: float = None,
-                 components: tuple = ()):
+                 components: Tuple = ()):
         """This method creates a connector lock behavior option for a ConnectorSection.
 
         Notes

@@ -1,6 +1,7 @@
 from abaqusConstants import *
 
 from __init__ import *
+from __future__ import annotations
 
 
 class ConstrainedSketchImageOptions:
@@ -21,7 +22,7 @@ class ConstrainedSketchImageOptions:
     def setValues(self,
                   imageName: str = '',
                   showImage: Boolean = OFF,
-                  origin: tuple[float] = (),
+                  origin: Tuple[float] = (),
                   xScale: float = 1,
                   yScale: float = 1,
                   translucency: float = 1):

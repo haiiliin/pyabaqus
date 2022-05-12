@@ -4,6 +4,7 @@ from ..Assembly.PartInstance import PartInstance
 from ..BasicGeometry.ModelDotArray import ModelDotArray
 
 from __init__ import *
+from __future__ import annotations
 
 
 class DisplayBody(Constraint):

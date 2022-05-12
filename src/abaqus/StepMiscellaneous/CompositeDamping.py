@@ -1,6 +1,7 @@
 from .CompositeDampingComponentArray import CompositeDampingComponentArray
 
 from __init__ import *
+from __future__ import annotations
 
 
 class CompositeDamping:

@@ -1,6 +1,7 @@
 from abaqusConstants import *
 
 from __init__ import *
+from __future__ import annotations
 
 
 class MeanFieldVoid:
@@ -30,7 +31,7 @@ class MeanFieldVoid:
     """
     def __init__(self,
                  name: str,
-                 table: tuple,
+                 table: Tuple,
                  material: str = '',
                  isotropizationCoefficient: float = None,
                  volumeFractionType: SymbolicConstant = UNIFORM,
@@ -41,8 +42,8 @@ class MeanFieldVoid:
                  orientationTensorFieldName: str = '',
                  shape: SymbolicConstant = SPHERE,
                  direction: SymbolicConstant = None,
-                 strainConcentrationTensor: tuple = (),
-                 temperatureGradientConcentrationTensor: tuple = ()):
+                 strainConcentrationTensor: Tuple = (),
+                 temperatureGradientConcentrationTensor: Tuple = ()):
         """This method creates a MeanFieldVoid object.
 
         Notes

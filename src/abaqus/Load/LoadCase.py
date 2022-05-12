@@ -1,6 +1,7 @@
 from abaqusConstants import *
 
 from __init__ import *
+from __future__ import annotations
 
 
 class LoadCase:
@@ -31,8 +32,8 @@ class LoadCase:
 
     def __init__(self,
                  name: str,
-                 boundaryConditions: tuple = (),
-                 loads: tuple = (),
+                 boundaryConditions: Tuple = (),
+                 loads: Tuple = (),
                  includeActiveBaseStateBC: Boolean = ON):
         """This method creates a load case in a step.
 
@@ -76,8 +77,8 @@ class LoadCase:
         pass
 
     def setValues(self,
-                  boundaryConditions: tuple = (),
-                  loads: tuple = (),
+                  boundaryConditions: Tuple = (),
+                  loads: Tuple = (),
                   includeActiveBaseStateBC: Boolean = ON):
         """This method modifies the LoadCase object.
         

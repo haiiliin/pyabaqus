@@ -8,6 +8,7 @@ from .OdbSet import OdbSet
 from .SectionPoint import SectionPoint
 
 from __init__ import *
+from __future__ import annotations
 
 
 class FieldOutput:
@@ -64,7 +65,7 @@ class FieldOutput:
                  name: str,
                  description: str,
                  type: SymbolicConstant,
-                 componentLabels: tuple = (),
+                 componentLabels: Tuple = (),
                  validInvariants: SymbolicConstant = None,
                  isEngineeringTensor: Boolean = OFF):
         """This method creates a FieldOutput object.
@@ -151,10 +152,10 @@ class FieldOutput:
     def addData(self,
                 position: SymbolicConstant,
                 instance: OdbInstance,
-                labels: tuple,
-                data: tuple,
+                labels: Tuple,
+                data: Tuple,
                 sectionPoint: SectionPoint = None,
-                localCoordSystem: tuple = ()):
+                localCoordSystem: Tuple = ()):
         """This method adds data to a FieldOutput object.
         
         Parameters
@@ -234,7 +235,7 @@ class FieldOutput:
     def addData(self,
                 position: SymbolicConstant,
                 set: OdbSet,
-                data: tuple,
+                data: Tuple,
                 sectionPoint: SectionPoint = None,
                 conjugateData: float = None):
         """This method adds data to a FieldOutput object.
@@ -384,7 +385,7 @@ class FieldOutput:
         pass
 
     @typing.overload
-    def getSubset(self, localCoordSystem: tuple = ()):
+    def getSubset(self, localCoordSystem: Tuple = ()):
         """A FieldOutput object with a subset of the field values.
         
         Parameters
@@ -653,7 +654,7 @@ class FieldOutput:
         """
         pass
 
-    def setComponentLabels(self, componentLabels: tuple):
+    def setComponentLabels(self, componentLabels: Tuple):
         """This method sets the component labels for the FieldOutput object.
         
         Parameters

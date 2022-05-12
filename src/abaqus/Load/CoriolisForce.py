@@ -3,6 +3,7 @@ from .Load import Load
 from ..Region.Region import Region
 
 from __init__ import *
+from __future__ import annotations
 
 
 class CoriolisForce(Load):
@@ -17,9 +18,9 @@ class CoriolisForce(Load):
         A SymbolicConstant specifying how the load is distributed spatially. Possible values are
         UNIFORM and FIELD. The default value is UNIFORM.
     point1: float
-        A tuple of Floats specifying the first point on the axis of rotation for the load.
+        A Tuple of Floats specifying the first point on the axis of rotation for the load.
     point2: float
-        A tuple of Floats specifying the second point on the axis of rotation for the load.
+        A Tuple of Floats specifying the second point on the axis of rotation for the load.
     field: str
         A String specifying the name of the :py:class:`~abaqus.Field.AnalyticalField.AnalyticalField` object associated with this load.
         The **field** argument applies only when **distributionType=FIELD**. The default value is an
@@ -45,10 +46,10 @@ class CoriolisForce(Load):
     # UNIFORM and FIELD. The default value is UNIFORM.
     distributionType: SymbolicConstant = UNIFORM
 
-    # A tuple of Floats specifying the first point on the axis of rotation for the load.
+    # A Tuple of Floats specifying the first point on the axis of rotation for the load.
     point1: float = None
 
-    # A tuple of Floats specifying the second point on the axis of rotation for the load.
+    # A Tuple of Floats specifying the second point on the axis of rotation for the load.
     point2: float = None
 
     # A String specifying the name of the AnalyticalField object associated with this load.
@@ -64,8 +65,8 @@ class CoriolisForce(Load):
                  createStepName: str,
                  region: Region,
                  magnitude: float,
-                 point1: tuple,
-                 point2: tuple,
+                 point1: Tuple,
+                 point2: Tuple,
                  amplitude: str = UNSET,
                  distributionType: SymbolicConstant = UNIFORM,
                  field: str = ''):

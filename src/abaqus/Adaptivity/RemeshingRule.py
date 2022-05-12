@@ -1,6 +1,7 @@
 from abaqusConstants import *
 
 from __init__ import *
+from __future__ import annotations
 
 
 class RemeshingRule:
@@ -31,7 +32,7 @@ class RemeshingRule:
     def __init__(self,
                  name: str,
                  stepName: str,
-                 variables: tuple,
+                 variables: Tuple,
                  description: str = '',
                  region: SymbolicConstant = MODEL,
                  sizingMethod: SymbolicConstant = DEFAULT,

@@ -3,6 +3,7 @@ import typing
 from abaqusConstants import *
 
 from __init__ import *
+from __future__ import annotations
 
 
 class SurfaceThicknessAssignment:
@@ -37,8 +38,8 @@ class SurfaceThicknessAssignment:
             An Int specifying the position of the surface thickness assignment whose value is to be 
             modified. 
         value
-            A tuple specifying the value of the surface thickness assignments for the surface whose 
-            index is referenced. Each tuple contains two entries: 
+            A Tuple specifying the value of the surface thickness assignments for the surface whose 
+            index is referenced. Each Tuple contains two entries: 
             - A Float or a SymbolicConstant specifying the overriding thickness value to be used in 
             the contact definition. Possible values of the SymbolicConstant are ORIGINAL and 
             THINNING. The SymbolicConstant THINNING can be specified only in an Abaqus/Explicit 
@@ -59,7 +60,7 @@ class SurfaceThicknessAssignment:
             A String specifying the name of the step in which new surface thickness assignments are 
             to be defined. 
         assignments
-            A sequence of tuples specifying the surface thickness assignments. Each tuple contains 
+            A sequence of tuples specifying the surface thickness assignments. Each Tuple contains 
             three entries: 
             - A region or a material object or the SymbolicConstant GLOBAL specifying the surface to 
             which the thickness is assigned. 
@@ -72,7 +73,7 @@ class SurfaceThicknessAssignment:
         """
         pass
 
-    def delete(self, indices: tuple):
+    def delete(self, indices: Tuple):
         """The delete method allows you to delete existing surface thickness assignments.
         
         Parameters

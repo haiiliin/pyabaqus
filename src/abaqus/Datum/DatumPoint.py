@@ -1,6 +1,7 @@
 from .Datum import Datum
 
 from __init__ import *
+from __future__ import annotations
 
 
 class DatumPoint(Datum):
@@ -12,7 +13,7 @@ class DatumPoint(Datum):
     Attributes
     ----------
     pointOn: float
-        A tuple of Floats specifying the **X**-, **Y**-, and **Z**-coordinates of a point located on
+        A Tuple of Floats specifying the **X**-, **Y**-, and **Z**-coordinates of a point located on
         the datum.
 
     Notes
@@ -30,6 +31,6 @@ class DatumPoint(Datum):
 
     """
 
-    # A tuple of Floats specifying the *X*-, *Y*-, and *Z*-coordinates of a point located on
+    # A Tuple of Floats specifying the *X*-, *Y*-, and *Z*-coordinates of a point located on
     # the datum.
     pointOn: float = None

@@ -2,6 +2,7 @@ from abaqusConstants import *
 from .Filter import Filter
 
 from __init__ import *
+from __future__ import annotations
 
 
 class OperatorFilter(Filter):

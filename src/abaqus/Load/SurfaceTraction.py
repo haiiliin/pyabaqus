@@ -5,6 +5,7 @@ from .Load import Load
 from ..Region.Region import Region
 
 from __init__ import *
+from __future__ import annotations
 
 
 class SurfaceTraction(Load):
@@ -50,9 +51,9 @@ class SurfaceTraction(Load):
         of freedom. If **localCsys=None**, the degrees of freedom are defined in the global
         coordinate system or by the **userCsys** parameter if defined. When this member is
         queried, it returns an Int. The default value is None.
-    directionVector: tuple
+    directionVector: Tuple
         A :py:class:`~abaqus.BasicGeometry.VertexArray.VertexArray` object of length 2 specifying the direction of the load. Instead of
-        through a ConstrainedSketchVertex, each point may be specified through a tuple of coordinates. If
+        through a ConstrainedSketchVertex, each point may be specified through a Tuple of coordinates. If
         **traction** is SHEAR, then **directionVector** will be projected onto the region surface.
         This parameter is available only if **traction** is GENERAL or SHEAR.
     region: Region
@@ -117,10 +118,10 @@ class SurfaceTraction(Load):
     localCsys: int = None
 
     # A VertexArray object of length 2 specifying the direction of the load. Instead of
-    # through a ConstrainedSketchVertex, each point may be specified through a tuple of coordinates. If
+    # through a ConstrainedSketchVertex, each point may be specified through a Tuple of coordinates. If
     # *traction* is SHEAR, then *directionVector* will be projected onto the region surface.
     # This parameter is available only if *traction* is GENERAL or SHEAR.
-    directionVector: tuple = ()
+    directionVector: Tuple = ()
 
     # A Region object specifying the region to which the load is applied.
     region: Region = Region()
@@ -137,7 +138,7 @@ class SurfaceTraction(Load):
                  axis: SymbolicConstant = AXIS_1,
                  localCsys: int = None,
                  userCsys: str = '',
-                 directionVector: tuple = (),
+                 directionVector: Tuple = (),
                  follower: Boolean = ON,
                  resultant: Boolean = OFF,
                  traction: SymbolicConstant = SHEAR):
@@ -191,7 +192,7 @@ class SurfaceTraction(Load):
             if defined. The default value is "None". 
         directionVector
             A VertexArray object of length 2 specifying the direction of the load. Instead of 
-            through a ConstrainedSketchVertex, each point may be specified through a tuple of coordinates. If
+            through a ConstrainedSketchVertex, each point may be specified through a Tuple of coordinates. If
             *traction* is SHEAR, then *directionVector* will be projected onto the region surface. 
             This parameter is available only if *traction* is GENERAL or SHEAR. 
         follower
@@ -222,7 +223,7 @@ class SurfaceTraction(Load):
                   axis: SymbolicConstant = AXIS_1,
                   localCsys: int = None,
                   userCsys: str = '',
-                  directionVector: tuple = (),
+                  directionVector: Tuple = (),
                   follower: Boolean = ON,
                   resultant: Boolean = OFF,
                   traction: SymbolicConstant = SHEAR):
@@ -260,7 +261,7 @@ class SurfaceTraction(Load):
             if defined. The default value is "None". 
         directionVector
             A VertexArray object of length 2 specifying the direction of the load. Instead of 
-            through a ConstrainedSketchVertex, each point may be specified through a tuple of coordinates. If
+            through a ConstrainedSketchVertex, each point may be specified through a Tuple of coordinates. If
             *traction* is SHEAR, then *directionVector* will be projected onto the region surface. 
             This parameter is available only if *traction* is GENERAL or SHEAR. 
         follower

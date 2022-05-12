@@ -2,6 +2,7 @@ from abaqusConstants import *
 from .SectionCategory import SectionCategory
 
 from __init__ import *
+from __future__ import annotations
 
 
 class OdbMeshElement:
@@ -17,13 +18,13 @@ class OdbMeshElement:
     sectionCategory: SectionCategory
         A :py:class:`~abaqus.Odb.SectionCategory.SectionCategory` object specifying the element section properties.
     connectivity: int
-        A tuple of Ints specifying the element connectivity. For connector elements connected to
+        A Tuple of Ints specifying the element connectivity. For connector elements connected to
         ground, the other node is repeated in the connectivity data. The position of the ground
         node cannot be ascertained. This is a limitation. It is important to note the difference
         with :py:class:`~abaqus.Mesh.MeshElement.MeshElement` object of MDB where the connectivity is node indices instead of node
         labels.
-    instanceNames: tuple
-        A tuple of Strings specifying the instance names for nodes in the element connectivity.
+    instanceNames: Tuple
+        A Tuple of Strings specifying the instance names for nodes in the element connectivity.
     instanceName: str
         A String specifying the instance name.
 
@@ -62,15 +63,15 @@ class OdbMeshElement:
     # A SectionCategory object specifying the element section properties.
     sectionCategory: SectionCategory = None
 
-    # A tuple of Ints specifying the element connectivity. For connector elements connected to
+    # A Tuple of Ints specifying the element connectivity. For connector elements connected to
     # ground, the other node is repeated in the connectivity data. The position of the ground
     # node cannot be ascertained. This is a limitation. It is important to note the difference
     # with MeshElement object of MDB where the connectivity is node indices instead of node
     # labels.
     connectivity: int = None
 
-    # A tuple of Strings specifying the instance names for nodes in the element connectivity.
-    instanceNames: tuple = ()
+    # A Tuple of Strings specifying the instance names for nodes in the element connectivity.
+    instanceNames: Tuple = ()
 
     # A String specifying the instance name.
     instanceName: str = ''
@@ -102,7 +103,7 @@ class OdbMeshElement:
 
         Returns
         -------
-            A tuple of 3 floats representing the unit normal vector. If the element face is 
+            A Tuple of 3 floats representing the unit normal vector. If the element face is 
             collapsed such that a normal cannot be computed, a zero-length vector is returned. 
 
         Raises

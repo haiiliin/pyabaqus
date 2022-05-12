@@ -3,6 +3,7 @@ import typing
 from abaqusConstants import *
 
 from __init__ import *
+from __future__ import annotations
 
 
 class Path:
@@ -11,7 +12,7 @@ class Path:
 
     Attributes
     ----------
-    coordinates: list[tuple[float]]
+    coordinates: list[Tuple[float]]
         If **type=NODE_LIST**, **coordinates** is a sequence of tuples of three Floats. This can be
         used as the value for the **expression** argument when creating a :py:class:`~abaqus.PathAndProbe.Path.Path` object of **type** =
         POINT_LIST.
@@ -30,9 +31,9 @@ class Path:
     # If *type*=NODE_LIST, *coordinates* is a sequence of tuples of three Floats. This can be
     # used as the value for the *expression* argument when creating a Path object of *type* =
     # POINT_LIST.
-    coordinates: list[tuple[float]] = []
+    coordinates: list[Tuple[float]] = []
 
-    def __init__(self, name: str, type: SymbolicConstant, expression: tuple,
+    def __init__(self, name: str, type: SymbolicConstant, expression: Tuple,
                  circleDefinition: SymbolicConstant, numSegments: int,
                  startAngle: float, endAngle: float,
                  radius: typing.Union[SymbolicConstant,

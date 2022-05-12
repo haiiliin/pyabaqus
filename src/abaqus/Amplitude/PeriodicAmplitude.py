@@ -2,6 +2,7 @@ from abaqusConstants import *
 from .Amplitude import Amplitude
 
 from __init__ import *
+from __future__ import annotations
 
 
 class PeriodicAmplitude(Amplitude):
@@ -28,7 +29,7 @@ class PeriodicAmplitude(Amplitude):
                  frequency: float,
                  start: float,
                  a_0: float,
-                 data: tuple,
+                 data: Tuple,
                  timeSpan: SymbolicConstant = STEP):
         """This method creates a PeriodicAmplitude object.
 

@@ -2,6 +2,7 @@ from abaqusConstants import *
 from ..PlotOptions.DGContourOptions import DGContourOptions
 
 from __init__ import *
+from __future__ import annotations
 
 
 class ContourOptions(DGContourOptions):
@@ -82,7 +83,7 @@ class ContourOptions(DGContourOptions):
         and the highest value at the bottom (**reversedContourLegendRange=ON**) or vice versa. The
         default value is OFF.
     intervalValues: float
-        A tuple of Floats specifying the interval values when **intervalType=USER_DEFINED**.
+        A Tuple of Floats specifying the interval values when **intervalType=USER_DEFINED**.
     contourMethod: SymbolicConstant
         A SymbolicConstant specifying the contour rendering method. Possible values are
         TEXTURE_MAPPED and TESSELLATED. The default value is TEXTURE_MAPPED.
@@ -136,7 +137,7 @@ class ContourOptions(DGContourOptions):
         A String specifying the color to be used to plot the tick mark curve. The default value
         is "Cyan".
     intervalLineAttributes: SymbolicConstant
-        A tuple of tuples of SymbolicConstants specifying the line style and line thickness for
+        A Tuple of tuples of SymbolicConstants specifying the line style and line thickness for
         each interval in the plot when **contourType=LINE**. The size of the outer sequence must
         be equal to **numIntervals**-1. The inner sequence consists of two SymbolicConstants
         specifying the line style and line thickness. For possible values, refer to the
@@ -245,7 +246,7 @@ class ContourOptions(DGContourOptions):
     # default value is OFF.
     reversedContourLegendRange: Boolean = OFF
 
-    # A tuple of Floats specifying the interval values when *intervalType*=USER_DEFINED.
+    # A Tuple of Floats specifying the interval values when *intervalType*=USER_DEFINED.
     intervalValues: float = None
 
     # A SymbolicConstant specifying the contour rendering method. Possible values are
@@ -316,7 +317,7 @@ class ContourOptions(DGContourOptions):
     # is "Cyan".
     tickmarkCurveColor: str = ''
 
-    # A tuple of tuples of SymbolicConstants specifying the line style and line thickness for
+    # A Tuple of tuples of SymbolicConstants specifying the line style and line thickness for
     # each interval in the plot when *contourType*=LINE. The size of the outer sequence must
     # be equal to *numIntervals*-1. The inner sequence consists of two SymbolicConstants
     # specifying the line style and line thickness. For possible values, refer to the
@@ -337,7 +338,7 @@ class ContourOptions(DGContourOptions):
                   contourStyle: SymbolicConstant = UNIFORM,
                   numIntervals: int = 12,
                   intervalType: SymbolicConstant = UNIFORM,
-                  intervalValues: tuple = (),
+                  intervalValues: Tuple = (),
                   maxAutoCompute: Boolean = ON,
                   maxValue: float = None,
                   minAutoCompute: Boolean = ON,

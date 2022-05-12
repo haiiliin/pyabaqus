@@ -5,6 +5,7 @@ from .Movie import Movie
 from ..Session.SessionBase import SessionBase
 
 from __init__ import *
+from __future__ import annotations
 
 
 class AnimationSession(SessionBase):
@@ -23,7 +24,7 @@ class AnimationSession(SessionBase):
     def writeImageAnimation(self,
                             fileName: str,
                             format: SymbolicConstant,
-                            canvasObjects: tuple = ()):
+                            canvasObjects: Tuple = ()):
         """This method writes the animations present in the list of canvas objects to a file. It
         generates an animation file using the given file name and file format and uses the
         values in the appropriate options object.

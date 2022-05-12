@@ -1,6 +1,7 @@
 from abaqusConstants import *
 
 from __init__ import *
+from __future__ import annotations
 
 
 class DisplayOptions:
@@ -9,7 +10,7 @@ class DisplayOptions:
     Attributes
     ----------
     plotState: SymbolicConstant
-        A tuple of SymbolicConstants specifying the plot state of the display. Possible values
+        A Tuple of SymbolicConstants specifying the plot state of the display. Possible values
         are UNDEFORMED, DEFORMED, CONTOURS_ON_UNDEF, CONTOURS_ON_DEF, SYMBOLS_ON_UNDEF,
         SYMBOLS_ON_DEF, ORIENT_ON_UNDEF, and ORIENT_ON_DEF. The default value is (UNDEFORMED).
 
@@ -25,7 +26,7 @@ class DisplayOptions:
 
     """
 
-    # A tuple of SymbolicConstants specifying the plot state of the display. Possible values
+    # A Tuple of SymbolicConstants specifying the plot state of the display. Possible values
     # are UNDEFORMED, DEFORMED, CONTOURS_ON_UNDEF, CONTOURS_ON_DEF, SYMBOLS_ON_UNDEF,
     # SYMBOLS_ON_DEF, ORIENT_ON_UNDEF, and ORIENT_ON_DEF. The default value is (UNDEFORMED).
     plotState: SymbolicConstant = None

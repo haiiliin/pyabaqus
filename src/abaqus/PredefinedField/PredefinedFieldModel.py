@@ -12,6 +12,7 @@ from ..Model.ModelBase import ModelBase
 from ..Region.Region import Region
 
 from __init__ import *
+from __future__ import annotations
 
 
 class PredefinedFieldModel(ModelBase, Field, FluidCavityPressure, InitialState,
@@ -229,11 +230,11 @@ class PredefinedFieldModel(ModelBase, Field, FluidCavityPressure, InitialState,
             name: str,
             region: Region,
             numBackStress: int = 1,
-            equivPlasticStrain: tuple = (),
-            backStress: tuple = (),
-            sectPtNum: tuple = (),
+            equivPlasticStrain: Tuple = (),
+            backStress: Tuple = (),
+            sectPtNum: Tuple = (),
             definition: SymbolicConstant = KINEMATIC_HARDENING,
-            rebarLayerNames: tuple = (),
+            rebarLayerNames: Tuple = (),
             distributionType: SymbolicConstant = MAGNITUDE
     ) -> KinematicHardening:
         """This method creates a KinematicHardening object.
@@ -287,9 +288,9 @@ class PredefinedFieldModel(ModelBase, Field, FluidCavityPressure, InitialState,
         name: str,
         instanceList: PartInstanceArray,
         useFields: Boolean = OFF,
-        assignmentList: tuple = (),
-        fieldList: tuple = (),
-        colorList: tuple = ()
+        assignmentList: Tuple = (),
+        fieldList: Tuple = (),
+        colorList: Tuple = ()
     ) -> MaterialAssignment:
         """This method creates a MaterialAssignment predefined field object.
 
@@ -313,14 +314,14 @@ class PredefinedFieldModel(ModelBase, Field, FluidCavityPressure, InitialState,
             discrete fields. The default value is OFF.
         assignmentList
             A sequence of tuples specifying the uniform volume fractions to be assigned. This
-            argument is valid only when *useFields*=FALSE. Each tuple contains two entries:A Region
-            object.A tuple of Floats specifying the uniform volume fraction values. The length of
-            the tuple must match the number of material instance names specified in the Eulerain
+            argument is valid only when *useFields*=FALSE. Each Tuple contains two entries:A Region
+            object.A Tuple of Floats specifying the uniform volume fraction values. The length of
+            the Tuple must match the number of material instance names specified in the Eulerain
             section assigned to part instances specified by *instanceList*.
         fieldList
             A sequence of tuples specifying the discrete volume fractions to be assigned. This
-            argument is valid only when *useFields*=TRUE. Each tuple contains two entries:A Region
-            object.A tuple of Strings specifying Discrete Field names. The length of the tuple must
+            argument is valid only when *useFields*=TRUE. Each Tuple contains two entries:A Region
+            object.A Tuple of Strings specifying Discrete Field names. The length of the Tuple must
             match the number of material instance names specified in the Eulerain section assigned
             to part instances specified by *instanceList*.
         colorList
@@ -517,8 +518,8 @@ class PredefinedFieldModel(ModelBase, Field, FluidCavityPressure, InitialState,
                  velocity2: float,
                  velocity3: float,
                  omega: float,
-                 axisBegin: tuple,
-                 axisEnd: tuple,
+                 axisBegin: Tuple,
+                 axisEnd: Tuple,
                  field: str = '',
                  distributionType: SymbolicConstant = MAGNITUDE) -> Velocity:
         """This method creates a Velocity predefined field object.

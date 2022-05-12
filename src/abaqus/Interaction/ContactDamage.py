@@ -1,6 +1,7 @@
 from abaqusConstants import *
 
 from __init__ import *
+from __future__ import annotations
 
 
 class ContactDamage:
@@ -58,10 +59,10 @@ class ContactDamage:
         None or a Float specifying the viscosity coefficient. This argument is valid only when
         **useStabilization=ON**. The default value is None.
     initTable: float
-        A tuple of tuples of Floats specifying the values defining the damage initiation. The
+        A Tuple of tuples of Floats specifying the values defining the damage initiation. The
         items in the table data are described below.
     evolTable: float
-        A tuple of tuples of Floats specifying the values defining the damage evolution. The
+        A Tuple of tuples of Floats specifying the values defining the damage evolution. The
         items in the table data are described below. This argument is valid only when
         **useEvolution=ON**.
 
@@ -241,17 +242,17 @@ class ContactDamage:
     # *useStabilization*=ON. The default value is None.
     viscosityCoef: float = None
 
-    # A tuple of tuples of Floats specifying the values defining the damage initiation. The
+    # A Tuple of tuples of Floats specifying the values defining the damage initiation. The
     # items in the table data are described below.
     initTable: float = None
 
-    # A tuple of tuples of Floats specifying the values defining the damage evolution. The
+    # A Tuple of tuples of Floats specifying the values defining the damage evolution. The
     # items in the table data are described below. This argument is valid only when
     # *useEvolution*=ON.
     evolTable: float = None
 
     def __init__(self,
-                 initTable: tuple,
+                 initTable: Tuple,
                  criterion: SymbolicConstant = MAX_STRESS,
                  initTempDep: Boolean = OFF,
                  initDependencies: int = 0,
@@ -264,7 +265,7 @@ class ContactDamage:
                  exponent: float = None,
                  evolTempDep: Boolean = OFF,
                  evolDependencies: int = 0,
-                 evolTable: tuple = (),
+                 evolTable: Tuple = (),
                  useStabilization: Boolean = OFF,
                  viscosityCoef: float = None):
         """This method creates a ContactDamage object.

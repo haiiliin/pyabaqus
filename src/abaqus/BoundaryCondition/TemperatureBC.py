@@ -5,6 +5,7 @@ from .BoundaryCondition import BoundaryCondition
 from ..Region.Region import Region
 
 from __init__ import *
+from __future__ import annotations
 
 
 class TemperatureBC(BoundaryCondition):
@@ -73,7 +74,7 @@ class TemperatureBC(BoundaryCondition):
                  region: Region,
                  fieldName: str = '',
                  magnitude: float = 0,
-                 dof: tuple = (),
+                 dof: Tuple = (),
                  amplitude: str = UNSET,
                  distributionType: SymbolicConstant = UNIFORM,
                  fixed: Boolean = OFF):
@@ -126,7 +127,7 @@ class TemperatureBC(BoundaryCondition):
     def setValues(self,
                   fieldName: str = '',
                   magnitude: float = 0,
-                  dof: tuple = (),
+                  dof: Tuple = (),
                   amplitude: str = UNSET,
                   distributionType: SymbolicConstant = UNIFORM,
                   fixed: Boolean = OFF):
@@ -162,7 +163,7 @@ class TemperatureBC(BoundaryCondition):
                         stepName: str,
                         magnitude: typing.Union[SymbolicConstant,
                                                 float] = UNCHANGED,
-                        dof: tuple = (),
+                        dof: Tuple = (),
                         amplitude: str = ''):
         """This method modifies the propagating data for an existing TemperatureBC object in the
         specified step.

@@ -1,6 +1,7 @@
 from abaqusConstants import *
 
 from __init__ import *
+from __future__ import annotations
 
 
 class AcousticMedium:
@@ -27,8 +28,8 @@ class AcousticMedium:
                  temperatureDependencyV: Boolean = OFF,
                  dependenciesB: int = 0,
                  dependenciesV: int = 0,
-                 bulkTable: tuple = (),
-                 volumetricTable: tuple = ()):
+                 bulkTable: Tuple = (),
+                 volumetricTable: Tuple = ()):
         """This method creates an AcousticMedium object.
 
         Notes

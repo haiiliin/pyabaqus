@@ -2,6 +2,7 @@ from abaqusConstants import *
 from .Trs import Trs
 
 from __init__ import *
+from __future__ import annotations
 
 
 class Viscosity:
@@ -35,7 +36,7 @@ class Viscosity:
     trs: Trs = Trs()
 
     def __init__(self,
-                 table: tuple,
+                 table: Tuple,
                  type: SymbolicConstant = NEWTONIAN,
                  temperatureDependency: Boolean = OFF,
                  dependencies: int = 0):

@@ -2,6 +2,7 @@ from abaqusConstants import *
 from .PropertyTableData import PropertyTableData
 
 from __init__ import *
+from __future__ import annotations
 
 
 class PropertyTable:

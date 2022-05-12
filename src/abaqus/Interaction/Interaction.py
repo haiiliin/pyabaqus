@@ -1,4 +1,5 @@
 from __init__ import *
+from __future__ import annotations
 
 
 class Interaction:
@@ -76,7 +77,7 @@ class Interaction:
         """
         pass
 
-    def delete(self, indices: tuple):
+    def delete(self, indices: Tuple):
         """This method allows you to delete existing interactions.
         
         Parameters

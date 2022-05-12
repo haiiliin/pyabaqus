@@ -1,16 +1,23 @@
 from abaqusConstants import *
 from ..DisplayGroup.DisplayGroup import DisplayGroup
 from ..Odb.Odb import Odb
-
 """This command writes a field output report to a file. 
 
 """
 
 
-def writeFieldRepor(filename: str, append: Boolean, sortItem: str, odb: Odb, step: int, frame: int,
-                    outputPosition: SymbolicConstant, displayGroup: DisplayGroup,
-                    variable: SymbolicConstant, numericForm: SymbolicConstant = None,
-                    complexAngle: float = None, stepFrame: SymbolicConstant = SPECIFY):
+def writeFieldRepor(filename: str,
+                    append: Boolean,
+                    sortItem: str,
+                    odb: Odb,
+                    step: int,
+                    frame: int,
+                    outputPosition: SymbolicConstant,
+                    displayGroup: DisplayGroup,
+                    variable: SymbolicConstant,
+                    numericForm: SymbolicConstant = None,
+                    complexAngle: float = None,
+                    stepFrame: SymbolicConstant = SPECIFY):
     """This method writes a FieldOutput object to a user-defined ASCII file.
 
     Notes
@@ -57,7 +64,7 @@ def writeFieldRepor(filename: str, append: Boolean, sortItem: str, odb: Odb, ste
         refinement (COMPONENT or INVARIANT), followed by a String specifying the name of a 
         component or invariant for which to obtain values. 
         If this element is omitted, data are written for all components and invariants (if 
-        applicable). This element is required if *element3* (the following element in the tuple) 
+        applicable). This element is required if *element3* (the following element in the Tuple) 
         is included. 
             - *element3 (if applicable)*: A Dictionary with a String key and a String value 
         specifying a single section point at which to report data. The key specifies a region in 

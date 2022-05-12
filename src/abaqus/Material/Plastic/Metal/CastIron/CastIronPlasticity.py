@@ -3,6 +3,7 @@ from .CastIronCompressionHardening import CastIronCompressionHardening
 from .CastIronTensionHardening import CastIronTensionHardening
 
 from __init__ import *
+from __future__ import annotations
 
 
 class CastIronPlasticity:
@@ -41,7 +42,7 @@ class CastIronPlasticity:
         ((), ))
 
     def __init__(self,
-                 table: tuple,
+                 table: Tuple,
                  temperatureDependency: Boolean = OFF,
                  dependencies: int = 0):
         """This method creates a CastIronPlasticity object.

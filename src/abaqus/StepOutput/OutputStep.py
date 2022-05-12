@@ -5,6 +5,7 @@ from .Restart import Restart
 from ..Step.StepBase import StepBase
 
 from __init__ import *
+from __future__ import annotations
 
 
 class OutputStep(StepBase):

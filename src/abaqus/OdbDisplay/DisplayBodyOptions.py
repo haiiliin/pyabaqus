@@ -2,6 +2,7 @@ from abaqusConstants import *
 from ..PlotOptions.DGDisplayBodyOptions import DGDisplayBodyOptions
 
 from __init__ import *
+from __future__ import annotations
 
 
 class DisplayBodyOptions(DGDisplayBodyOptions):
@@ -57,7 +58,7 @@ class DisplayBodyOptions(DGDisplayBodyOptions):
         A String specifying the color to be used to fill elements when **renderStyle=FILLED** or
         SHADED. The default value is "White".
     coordinateScaleFactors: float
-        A tuple of three Floats specifying the coordinate scaling in each of the three
+        A Tuple of three Floats specifying the coordinate scaling in each of the three
         coordinate directions when **coordinateScale=ON**. The default value is (1, 1, 1).
 
     Notes
@@ -126,7 +127,7 @@ class DisplayBodyOptions(DGDisplayBodyOptions):
     # SHADED. The default value is "White".
     fillColor: str = ''
 
-    # A tuple of three Floats specifying the coordinate scaling in each of the three
+    # A Tuple of three Floats specifying the coordinate scaling in each of the three
     # coordinate directions when *coordinateScale*=ON. The default value is (1, 1, 1).
     coordinateScaleFactors: float = None
 
@@ -142,7 +143,7 @@ class DisplayBodyOptions(DGDisplayBodyOptions):
                   elementShrink: Boolean = OFF,
                   elementShrinkFactor: int = 5,
                   coordinateScale: Boolean = OFF,
-                  coordinateScaleFactors: tuple = (),
+                  coordinateScaleFactors: Tuple = (),
                   translucency: Boolean = OFF,
                   translucencyFactor: float = 0):
         """This method modifies the DisplayBodyOptions object.

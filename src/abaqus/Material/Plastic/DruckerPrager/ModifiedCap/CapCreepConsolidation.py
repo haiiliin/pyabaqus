@@ -1,6 +1,7 @@
 from abaqusConstants import *
 
 from __init__ import *
+from __future__ import annotations
 
 
 class CapCreepConsolidation:
@@ -50,7 +51,7 @@ class CapCreepConsolidation:
 
     """
     def __init__(self,
-                 table: tuple,
+                 table: Tuple,
                  law: SymbolicConstant = STRAIN,
                  temperatureDependency: Boolean = OFF,
                  dependencies: int = 0,

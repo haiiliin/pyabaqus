@@ -1,6 +1,7 @@
 from abaqusConstants import *
 
 from __init__ import *
+from __future__ import annotations
 
 
 class ConstrainedSketchVertexArray:
@@ -16,7 +17,7 @@ class ConstrainedSketchVertexArray:
             mdb.models[name].sketches[name].vertices[i]
 
     """
-    def findAt(self, coordinates: tuple, printWarning: Boolean = True):
+    def findAt(self, coordinates: Tuple, printWarning: Boolean = True):
         """This method returns the ConstrainedSketchVertex located at the given coordinates.
         
         Parameters

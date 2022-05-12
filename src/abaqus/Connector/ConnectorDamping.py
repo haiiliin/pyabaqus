@@ -3,6 +3,7 @@ from .ConnectorBehaviorOption import ConnectorBehaviorOption
 from .ConnectorOptions import ConnectorOptions
 
 from __init__ import *
+from __future__ import annotations
 
 
 class ConnectorDamping(ConnectorBehaviorOption):
@@ -80,9 +81,9 @@ class ConnectorDamping(ConnectorBehaviorOption):
                  dependencies: int = 0,
                  temperatureDependency: Boolean = OFF,
                  frequencyDependency: Boolean = OFF,
-                 table: tuple = (),
-                 independentComponents: tuple = (),
-                 components: tuple = ()):
+                 table: Tuple = (),
+                 independentComponents: Tuple = (),
+                 components: Tuple = ()):
         """This method creates a connector damping behavior option for a ConnectorSection object.
 
         Notes

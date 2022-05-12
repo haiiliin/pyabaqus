@@ -1,6 +1,7 @@
 from ....Ratios import Ratios
 
 from __init__ import *
+from __future__ import annotations
 
 
 class MoistureSwelling:
@@ -29,7 +30,7 @@ class MoistureSwelling:
     # A Ratios object.
     ratios: Ratios = Ratios(((), ))
 
-    def __init__(self, table: tuple):
+    def __init__(self, table: Tuple):
         """This method creates a MoistureSwelling object.
 
         Notes

@@ -1,5 +1,6 @@
 from abaqusConstants import *
 from __init__ import *
+from __future__ import annotations
 
 
 class Cell:
@@ -16,12 +17,12 @@ class Cell:
         A Boolean specifying whether the cell belongs to the reference representation of the
         Part or Instance.
     pointOn: float
-        A tuple of Floats specifying the **X**-, **Y**-, and **Z**-coordinates of a point located on
+        A Tuple of Floats specifying the **X**-, **Y**-, and **Z**-coordinates of a point located on
         the cell.
     featureName: float
-        A tuple of Floats specifying the name of the feature that created this cell.
+        A Tuple of Floats specifying the name of the feature that created this cell.
     instanceName: float
-        A tuple of Floats specifying the name of the part instance for this cell (if
+        A Tuple of Floats specifying the name of the part instance for this cell (if
         applicable).
 
     Notes
@@ -54,14 +55,14 @@ class Cell:
     # Part or Instance.
     isReferenceRep: Boolean = OFF
 
-    # A tuple of Floats specifying the *X*-, *Y*-, and *Z*-coordinates of a point located on
+    # A Tuple of Floats specifying the *X*-, *Y*-, and *Z*-coordinates of a point located on
     # the cell.
     pointOn: float = None
 
-    # A tuple of Floats specifying the name of the feature that created this cell.
+    # A Tuple of Floats specifying the name of the feature that created this cell.
     featureName: float = None
 
-    # A tuple of Floats specifying the name of the part instance for this cell (if
+    # A Tuple of Floats specifying the name of the part instance for this cell (if
     # applicable).
     instanceName: float = None
 
@@ -87,7 +88,7 @@ class Cell:
 
         Returns
         -------
-            A tuple of integers.
+            A Tuple of integers.
             
         """
         pass
@@ -97,7 +98,7 @@ class Cell:
 
         Returns
         -------
-            A tuple of integers.
+            A Tuple of integers.
             
         """
         pass
@@ -107,7 +108,7 @@ class Cell:
 
         Returns
         -------
-            A tuple of integers.
+            A Tuple of integers.
             
         """
         pass

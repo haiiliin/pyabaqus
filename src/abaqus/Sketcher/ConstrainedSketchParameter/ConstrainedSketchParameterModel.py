@@ -1,6 +1,7 @@
 from ..ConstrainedSketchBase import ConstrainedSketchBase
 
 from __init__ import *
+from __future__ import annotations
 
 
 class ConstrainedSketchParameterModel(ConstrainedSketchBase):

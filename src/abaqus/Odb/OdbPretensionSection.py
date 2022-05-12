@@ -2,6 +2,7 @@ from .OdbMeshNode import OdbMeshNode
 from .OdbSet import OdbSet
 
 from __init__ import *
+from __future__ import annotations
 
 
 class OdbPretensionSection:
@@ -17,7 +18,7 @@ class OdbPretensionSection:
     surface: OdbSet
         An :py:class:`~abaqus.Odb.OdbSet.OdbSet` object specifying the surface set that defines the pretension section.
     normal: float
-        A tuple of Floats specifying the components of the normal to the pretension section.
+        A Tuple of Floats specifying the components of the normal to the pretension section.
 
     Notes
     -----
@@ -31,13 +32,13 @@ class OdbPretensionSection:
     """
 
     # An OdbSet object specifying the node set containing the pretension node.
-    node: OdbSet = OdbSet('set', tuple[OdbMeshNode]())
+    node: OdbSet = OdbSet('set', Tuple[OdbMeshNode]())
 
     # An OdbSet object specifying the element set that defines the pretension section.
-    element: OdbSet = OdbSet('set', tuple[OdbMeshNode]())
+    element: OdbSet = OdbSet('set', Tuple[OdbMeshNode]())
 
     # An OdbSet object specifying the surface set that defines the pretension section.
-    surface: OdbSet = OdbSet('set', tuple[OdbMeshNode]())
+    surface: OdbSet = OdbSet('set', Tuple[OdbMeshNode]())
 
-    # A tuple of Floats specifying the components of the normal to the pretension section.
+    # A Tuple of Floats specifying the components of the normal to the pretension section.
     normal: float = None

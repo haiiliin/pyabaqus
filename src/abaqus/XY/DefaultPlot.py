@@ -2,6 +2,7 @@ from .Area import Area
 from .Title import Title
 
 from __init__ import *
+from __future__ import annotations
 
 
 class DefaultPlot:

@@ -1,4 +1,5 @@
 from __init__ import *
+from __future__ import annotations
 
 
 class OdbMeshNode:
@@ -9,7 +10,7 @@ class OdbMeshNode:
     label: int
         An Int specifying the node label.
     coordinates: float
-        A tuple of Floats specifying the nodal coordinates in the global Cartesian coordinate
+        A Tuple of Floats specifying the nodal coordinates in the global Cartesian coordinate
         system.
 
     Notes
@@ -37,6 +38,6 @@ class OdbMeshNode:
     # An Int specifying the node label.
     label: int = None
 
-    # A tuple of Floats specifying the nodal coordinates in the global Cartesian coordinate
+    # A Tuple of Floats specifying the nodal coordinates in the global Cartesian coordinate
     # system.
     coordinates: float = None

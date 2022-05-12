@@ -13,6 +13,7 @@ from .TrapezoidalProfile import TrapezoidalProfile
 from ..Odb.OdbBase import OdbBase
 
 from __init__ import *
+from __future__ import annotations
 
 
 class BeamSectionProfileOdb(OdbBase):
@@ -28,7 +29,7 @@ class BeamSectionProfileOdb(OdbBase):
         session.odbs[name]
 
     """
-    def ArbitraryProfile(self, name: str, table: tuple) -> ArbitraryProfile:
+    def ArbitraryProfile(self, name: str, table: Tuple) -> ArbitraryProfile:
         """This method creates a ArbitraryProfile object.
 
         Notes

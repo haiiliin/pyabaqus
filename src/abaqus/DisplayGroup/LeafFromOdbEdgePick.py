@@ -2,6 +2,7 @@ from abaqusConstants import *
 from .Leaf import Leaf
 
 from __init__ import *
+from __future__ import annotations
 
 
 class LeafFromOdbEdgePick(Leaf):
@@ -31,8 +32,8 @@ class LeafFromOdbEdgePick(Leaf):
     # DEFAULT_MODEL, ALL_ELEMENTS, ALL_NODES, and ALL_SURFACES.
     leafType: SymbolicConstant = None
 
-    def __init__(self, edgePick: tuple):
-        """This method creates a Leaf object from a tuple containing machine readable, compact
+    def __init__(self, edgePick: Tuple):
+        """This method creates a Leaf object from a Tuple containing machine readable, compact
         strings defining the edges picked for each part instance. Leaf objects specify the items
         in a display group.
 

@@ -3,6 +3,7 @@ import typing
 from abaqusConstants import *
 
 from __init__ import *
+from __future__ import annotations
 
 
 class ViewCut:
@@ -40,7 +41,7 @@ class ViewCut:
         A Boolean specifying whether to display the free body cut. The default value is OFF.
     active: Boolean
         A Boolean specifying whether the cut is displayed.
-    cutRange: tuple[float]
+    cutRange: Tuple[float]
         A pair of Floats specifying the acceptable range for positioning the cut.
     crossSectionalArea: float
         A Float returning the cross-sectional area of the cut when **showFreeBodyCut** is set to
@@ -97,7 +98,7 @@ class ViewCut:
     active: Boolean = OFF
 
     # A pair of Floats specifying the acceptable range for positioning the cut.
-    cutRange: tuple[float] = ()
+    cutRange: Tuple[float] = ()
 
     # A Float returning the cross-sectional area of the cut when *showFreeBodyCut* is set to
     # ON.
@@ -106,7 +107,7 @@ class ViewCut:
     def __init__(self,
                  name: str,
                  shape: SymbolicConstant,
-                 origin: tuple,
+                 origin: Tuple,
                  normal: typing.Union[SymbolicConstant, float],
                  axis2: typing.Union[SymbolicConstant, float],
                  csysName: str,
@@ -188,7 +189,7 @@ class ViewCut:
                   showModelBelowCut: Boolean = ON,
                   showFreeBodyCut: Boolean = OFF,
                   csysName: str = '',
-                  origin: tuple = (),
+                  origin: Tuple = (),
                   normal: typing.Union[SymbolicConstant, float] = AXIS_1,
                   axis2: typing.Union[SymbolicConstant, float] = AXIS_2,
                   cylinderAxis: typing.Union[SymbolicConstant, float] = AXIS_3,

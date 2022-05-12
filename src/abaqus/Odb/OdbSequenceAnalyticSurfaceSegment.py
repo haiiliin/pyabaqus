@@ -1,4 +1,5 @@
 from __init__ import *
+from __future__ import annotations
 
 
 class OdbSequenceAnalyticSurfaceSegment:
@@ -33,7 +34,7 @@ class OdbSequenceAnalyticSurfaceSegment:
         """
         pass
 
-    def Start(self, origin: tuple):
+    def Start(self, origin: Tuple):
         """This method adds a AnalyticSurfaceSegment describing the first segment of the surface
         profile.
         
@@ -44,7 +45,7 @@ class OdbSequenceAnalyticSurfaceSegment:
         """
         pass
 
-    def Line(self, endPoint: tuple):
+    def Line(self, endPoint: Tuple):
         """This method adds a AnalyticSurfaceSegment describing the line segment of the surface
         profile.
         
@@ -55,7 +56,7 @@ class OdbSequenceAnalyticSurfaceSegment:
         """
         pass
 
-    def Circle(self, center: tuple, endPoint: tuple):
+    def Circle(self, center: Tuple, endPoint: Tuple):
         """This method adds a AnalyticSurfaceSegment describing a circular segment of the surface
         profile.
         
@@ -68,7 +69,7 @@ class OdbSequenceAnalyticSurfaceSegment:
         """
         pass
 
-    def Parabola(self, middlePoint: tuple, endPoint: tuple):
+    def Parabola(self, middlePoint: Tuple, endPoint: Tuple):
         """This method adds a AnalyticSurfaceSegment describing a parabolic segment of the surface
         profile.
         

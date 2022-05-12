@@ -1,6 +1,7 @@
 from abaqusConstants import *
 
 from __init__ import *
+from __future__ import annotations
 
 
 class GapFlow:
@@ -53,7 +54,7 @@ class GapFlow:
 
     """
     def __init__(self,
-                 table: tuple,
+                 table: Tuple,
                  kmax: float = None,
                  temperatureDependency: Boolean = OFF,
                  dependencies: int = 0,

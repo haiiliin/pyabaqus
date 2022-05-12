@@ -3,6 +3,7 @@ from .GeometricRestriction import GeometricRestriction
 from ..Region.Region import Region
 
 from __init__ import *
+from __future__ import annotations
 
 
 class ShapePlanarSymmetry(GeometricRestriction):
@@ -21,7 +22,7 @@ class ShapePlanarSymmetry(GeometricRestriction):
     """
     def __init__(self,
                  name: str,
-                 clientDirection: tuple,
+                 clientDirection: Tuple,
                  region: Region,
                  allowNonSymmetricMesh: Boolean = TRUE,
                  csys: int = None,
@@ -47,7 +48,7 @@ class ShapePlanarSymmetry(GeometricRestriction):
         clientDirection
             A VertexArray object of length 2 specifying the vector positioned at the *csys* origin 
             that is normal to the symmetry plane. Instead of through a ConstrainedSketchVertex, each point may be
-            specified through a tuple of coordinates. 
+            specified through a Tuple of coordinates. 
         region
             A Region object specifying the region to which the geometric restriction is applied. 
             When used with a TopologyTask, there is no default value. When used with a ShapeTask, 

@@ -4,6 +4,7 @@ from .RebarLayers import RebarLayers
 from .TransverseShearShell import TransverseShearShell
 
 from __init__ import *
+from __future__ import annotations
 
 
 class HomogeneousShellSection(GeometryShellSection):

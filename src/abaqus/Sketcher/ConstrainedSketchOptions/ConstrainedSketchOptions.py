@@ -1,6 +1,7 @@
 from abaqusConstants import *
 
 from __init__ import *
+from __future__ import annotations
 
 
 class ConstrainedSketchOptions:
@@ -28,7 +29,7 @@ class ConstrainedSketchOptions:
                   gridSnap: Boolean = ON,
                   preselection: Boolean = ON,
                   sheetAuto: Boolean = ON,
-                  gridOrigin: tuple = (),
+                  gridOrigin: Tuple = (),
                   gridAngle: float = 0,
                   viewStyle: SymbolicConstant = REGULAR,
                   addImpliedConstraints: Boolean = ON,

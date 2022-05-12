@@ -3,6 +3,7 @@ from ..TableCollection.ParameterColumn import ParameterColumn
 from ..TableCollection.ParameterColumnArray import ParameterColumnArray
 
 from __init__ import *
+from __future__ import annotations
 
 
 class ParameterTable:

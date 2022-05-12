@@ -2,6 +2,7 @@ from abaqusConstants import *
 from ..Part.PartBase import PartBase
 
 from __init__ import *
+from __future__ import annotations
 
 
 class RegionPartBase(PartBase):
@@ -81,7 +82,7 @@ class RegionPartBase(PartBase):
         """
         pass
 
-    def deleteSets(self, setNames: tuple):
+    def deleteSets(self, setNames: Tuple):
         """This command deletes the given sets from the part.
         
         Parameters
@@ -91,7 +92,7 @@ class RegionPartBase(PartBase):
         """
         pass
 
-    def deleteSurfaces(self, surfaceNames: tuple):
+    def deleteSurfaces(self, surfaceNames: Tuple):
         """This command deletes the given surfaces from the part.
         
         Parameters

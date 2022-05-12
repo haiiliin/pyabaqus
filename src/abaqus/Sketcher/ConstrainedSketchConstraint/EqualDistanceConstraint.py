@@ -3,6 +3,7 @@ from ..ConstrainedSketchGeometry.ConstrainedSketchGeometry import ConstrainedSke
 from ...BasicGeometry.Vertex import Vertex
 
 from __init__ import *
+from __future__ import annotations
 
 
 class EqualDistanceConstraint(ConstrainedSketchConstraint):

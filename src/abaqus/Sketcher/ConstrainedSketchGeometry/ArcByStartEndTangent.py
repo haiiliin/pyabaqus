@@ -1,11 +1,12 @@
 from .ConstrainedSketchGeometry import ConstrainedSketchGeometry
 
 from __init__ import *
+from __future__ import annotations
 
 
 class ArcByStartEndTangent(ConstrainedSketchGeometry):
-    def __init__(self, point1: tuple[float], point2: tuple[float],
-                 vector: tuple):
+    def __init__(self, point1: Tuple[float], point2: Tuple[float],
+                 vector: Tuple):
         """This method constructs an arc using two vertices. The Arc object is added to the
         geometry repository of the ConstrainedSketch object.
 

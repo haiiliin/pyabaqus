@@ -4,6 +4,7 @@ from abaqusConstants import *
 from .Annotation import Annotation
 
 from __init__ import *
+from __future__ import annotations
 
 
 class Text(Annotation):
@@ -39,7 +40,7 @@ class Text(Annotation):
     def __init__(self,
                  name: str,
                  text: str = '',
-                 offset: tuple[float] = (),
+                 offset: Tuple[float] = (),
                  anchor: typing.Union[SymbolicConstant, float] = BOTTOM_LEFT,
                  referencePoint: typing.Union[SymbolicConstant,
                                               float] = BOTTOM_LEFT,
@@ -133,7 +134,7 @@ class Text(Annotation):
 
     def setValues(self,
                   text: str = '',
-                  offset: tuple[float] = (),
+                  offset: Tuple[float] = (),
                   anchor: typing.Union[SymbolicConstant, float] = BOTTOM_LEFT,
                   referencePoint: typing.Union[SymbolicConstant,
                                                float] = BOTTOM_LEFT,

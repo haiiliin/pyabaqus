@@ -1,4 +1,5 @@
 from __init__ import *
+from __future__ import annotations
 
 
 class Color:
@@ -9,7 +10,7 @@ class Color:
     name: str
         A String specifying the name of the color.
     rgb: float
-        A tuple of three Floats specifying the RGB value of the color. The Float values must be
+        A Tuple of three Floats specifying the RGB value of the color. The Float values must be
         between 0.0 and 1.0.
 
     Notes
@@ -22,11 +23,11 @@ class Color:
     # A String specifying the name of the color.
     name: str = ''
 
-    # A tuple of three Floats specifying the RGB value of the color. The Float values must be
+    # A Tuple of three Floats specifying the RGB value of the color. The Float values must be
     # between 0.0 and 1.0.
     rgb: float = None
 
-    def setByRGB(self, rgb: tuple):
+    def setByRGB(self, rgb: Tuple):
         """This method changes the RGB value of a user-defined color. However, users cannot define
         colors, and this method does not modify system-defined colors.
         

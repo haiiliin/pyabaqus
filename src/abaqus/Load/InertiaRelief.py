@@ -3,6 +3,7 @@ from .Load import Load
 from ..Region.Region import Region
 
 from __init__ import *
+from __future__ import annotations
 
 
 class InertiaRelief(Load):
@@ -53,7 +54,7 @@ class InertiaRelief(Load):
                  ur1: Boolean = OFF,
                  ur2: Boolean = OFF,
                  ur3: Boolean = OFF,
-                 referencePoint: tuple = (),
+                 referencePoint: Tuple = (),
                  localCoordinates: int = None):
         """This method creates an InertiaRelief object.
 
@@ -111,7 +112,7 @@ class InertiaRelief(Load):
                   ur1: Boolean = OFF,
                   ur2: Boolean = OFF,
                   ur3: Boolean = OFF,
-                  referencePoint: tuple = (),
+                  referencePoint: Tuple = (),
                   localCoordinates: int = None):
         """This method modifies the data for an existing InertiaRelief object in the step where it
         is created.
@@ -154,7 +155,7 @@ class InertiaRelief(Load):
                         ur1: Boolean = OFF,
                         ur2: Boolean = OFF,
                         ur3: Boolean = OFF,
-                        referencePoint: tuple = (),
+                        referencePoint: Tuple = (),
                         fixed: Boolean = OFF):
         """This method modifies the propagating data for an existing InertiaRelief object in the
         specified step.

@@ -1,6 +1,7 @@
 from abaqusConstants import *
 
 from __init__ import *
+from __future__ import annotations
 
 
 class CycledPlastic:
@@ -27,7 +28,7 @@ class CycledPlastic:
         - CYCLED PLASTIC
 
     """
-    def __init__(self, table: tuple, temperatureDependency: Boolean = OFF):
+    def __init__(self, table: Tuple, temperatureDependency: Boolean = OFF):
         """This method creates a CycledPlastic object.
 
         Notes

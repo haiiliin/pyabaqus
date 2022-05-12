@@ -9,11 +9,12 @@ from .OdbRigidBody import OdbRigidBody
 from .OdbSet import OdbSet
 
 from __init__ import *
+from __future__ import annotations
 
 
 class OdbAssembly(OdbAssemblyBase):
     def DatumCsysByThreePoints(self, name: str, coordSysType: SymbolicConstant,
-                               origin: tuple, point1: tuple, point2: tuple):
+                               origin: Tuple, point1: Tuple, point2: Tuple):
         """This method creates an OdbDatumCsys object using three points. A datum coordinate system
         created with this method results in a fixed system.
 
@@ -188,7 +189,7 @@ class OdbAssembly(OdbAssemblyBase):
     def Instance(self,
                  name: str,
                  object: OdbPart,
-                 localCoordSystem: tuple = ()) -> OdbInstance:
+                 localCoordSystem: Tuple = ()) -> OdbInstance:
         """This method creates an OdbInstance object from an OdbPart object.
 
         Notes
@@ -232,9 +233,9 @@ class OdbAssembly(OdbAssemblyBase):
         referenceNode: OdbSet,
         position: SymbolicConstant = INPUT,
         isothermal: Boolean = ON,
-        elements: OdbSet = OdbSet('set', tuple[OdbMeshNode]()),
-        tieNodes: OdbSet = OdbSet('set', tuple[OdbMeshNode]()),
-        pinNodes: OdbSet = OdbSet('set', tuple[OdbMeshNode]()),
+        elements: OdbSet = OdbSet('set', Tuple[OdbMeshNode]()),
+        tieNodes: OdbSet = OdbSet('set', Tuple[OdbMeshNode]()),
+        pinNodes: OdbSet = OdbSet('set', Tuple[OdbMeshNode]()),
         analyticSurface: AnalyticSurface = AnalyticSurface()
     ) -> OdbRigidBody:
         """This method creates a OdbRigidBody object.
@@ -283,7 +284,7 @@ class OdbAssembly(OdbAssemblyBase):
         self.rigidBodies.append(odbRigidBody)
         return odbRigidBody
 
-    def NodeSet(self, name: str, nodes: tuple[OdbMeshNode]) -> OdbSet:
+    def NodeSet(self, name: str, nodes: Tuple[OdbMeshNode]) -> OdbSet:
         """This method creates a node set from an array of OdbMeshNode objects (for part
         instance-level sets) or from a sequence of arrays of OdbMeshNode objects (for
         assembly-level sets).

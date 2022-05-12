@@ -3,6 +3,7 @@ from .Crack import Crack
 from ..Region.Region import Region
 
 from __init__ import *
+from __future__ import annotations
 
 
 class XFEMCrack(Crack):
@@ -42,11 +43,11 @@ class XFEMCrack(Crack):
                  crackLocation: Region = Region(),
                  singularityCalcRadius: float = None,
                  interactionProperty: str = '',
-                 elemId: tuple = (),
-                 nodeId: tuple = (),
-                 hasCrackFront: tuple = (),
-                 crackPlaneDist: tuple = (),
-                 crackFrontDist: tuple = (),
+                 elemId: Tuple = (),
+                 nodeId: Tuple = (),
+                 hasCrackFront: Tuple = (),
+                 crackPlaneDist: Tuple = (),
+                 crackFrontDist: Tuple = (),
                  autoDetectValue: str = ''):
         """This method creates a XFEMCrack object. Although the constructor is available both for
         parts and for the assembly, XFEMCrack objects are currently supported only under the
@@ -114,11 +115,11 @@ class XFEMCrack(Crack):
                   crackLocation: Region = Region(),
                   singularityCalcRadius: float = None,
                   interactionProperty: str = '',
-                  elemId: tuple = (),
-                  nodeId: tuple = (),
-                  hasCrackFront: tuple = (),
-                  crackPlaneDist: tuple = (),
-                  crackFrontDist: tuple = (),
+                  elemId: Tuple = (),
+                  nodeId: Tuple = (),
+                  hasCrackFront: Tuple = (),
+                  crackPlaneDist: Tuple = (),
+                  crackFrontDist: Tuple = (),
                   autoDetectValue: str = ''):
         """This method modifies the XFEMCrack object.
         

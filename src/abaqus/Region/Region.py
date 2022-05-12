@@ -9,6 +9,7 @@ from ..Mesh.MeshElement import MeshElement as Element
 from ..Mesh.MeshNode import MeshNode as Node
 
 from __init__ import *
+from __future__ import annotations
 
 
 class Region:
@@ -44,7 +45,7 @@ class Region:
     should use a Region object immediately after you create it. The contents of a Region 
     object are not intended to survive regeneration. If you use an out-of-date Region 
     object, the script is unlikely to function correctly. 
-    Querying an attribute's Region will return a Region tuple. The contents of the tuple are 
+    Querying an attribute's Region will return a Region Tuple. The contents of the Tuple are 
     the set name followed by the owners of the set and three flags expressed as integers. 
     The flags indicate the region space, the type of region and the whether the region is an 
     internal set. 
@@ -60,19 +61,19 @@ class Region:
     """
     @typing.overload
     def __init__(self,
-                 elements: tuple[Element] = None,
-                 nodes: tuple[Node] = None,
-                 vertices: tuple[Vertex] = None,
-                 edges: tuple[Edge] = None,
-                 faces: tuple[Face] = None,
-                 cells: tuple[Cell] = None,
-                 referencePoints: tuple[ReferencePoint] = (),
-                 xVertices: tuple[Vertex] = None,
-                 xEdges: tuple[Vertex] = None,
-                 xFaces: tuple[Vertex] = None,
-                 skinFaces: tuple = (),
-                 skinEdges: tuple = (),
-                 stringerEdges: tuple = ()):
+                 elements: Tuple[Element] = None,
+                 nodes: Tuple[Node] = None,
+                 vertices: Tuple[Vertex] = None,
+                 edges: Tuple[Edge] = None,
+                 faces: Tuple[Face] = None,
+                 cells: Tuple[Cell] = None,
+                 referencePoints: Tuple[ReferencePoint] = (),
+                 xVertices: Tuple[Vertex] = None,
+                 xEdges: Tuple[Vertex] = None,
+                 xFaces: Tuple[Vertex] = None,
+                 skinFaces: Tuple = (),
+                 skinEdges: Tuple = (),
+                 stringerEdges: Tuple = ()):
         """This command creates a set-like region. For example
         myRegion = regionToolset.Region(vertices=v[2:4]
             edges=e[4:5]+e[6:9])
@@ -119,13 +120,13 @@ class Region:
             A sequence of ConstrainedSketchVertex objects that excludes specific faces from the region. The default
             value is None. 
         skinFaces
-            A tuple of tuples specifying a skin name and the sequence of faces associated with this 
+            A Tuple of tuples specifying a skin name and the sequence of faces associated with this 
             skin. Valid only for geometric regions on 3D and 2D parts. 
         skinEdges
-            A tuple of tuples specifying a skin name and the sequence of edges associated with this 
+            A Tuple of tuples specifying a skin name and the sequence of edges associated with this 
             skin. Valid only for geometric regions on Axisymmetric parts. 
         stringerEdges
-            A tuple of tuples specifying a stringer name and the sequence of edges associated with 
+            A Tuple of tuples specifying a stringer name and the sequence of edges associated with 
             this stringer. Valid only for geometric regions on 3D and 2D parts. 
 
         Returns
@@ -136,26 +137,26 @@ class Region:
 
     @typing.overload
     def __init__(self,
-                 side1Faces: tuple[Face] = None,
-                 side2Faces: tuple[Face] = None,
-                 side12Faces: tuple[Face] = None,
-                 side1Edges: tuple[Edge] = None,
-                 side2Edges: tuple[Edge] = None,
-                 end1Edges: tuple[Edge] = None,
-                 end2Edges: tuple[Edge] = None,
-                 circumEdges: tuple[Edge] = None,
-                 face1Elements: tuple[Element] = None,
-                 face2Elements: tuple[Element] = None,
-                 face3Elements: tuple[Element] = None,
-                 face4Elements: tuple[Element] = None,
-                 face5Elements: tuple[Element] = None,
-                 face6Elements: tuple[Element] = None,
-                 side1Elements: tuple[Element] = None,
-                 side2Elements: tuple[Element] = None,
-                 side12Elements: tuple[Element] = None,
-                 end1Elements: tuple[Element] = None,
-                 end2Elements: tuple[Element] = None,
-                 circumElements: tuple[Element] = None):
+                 side1Faces: Tuple[Face] = None,
+                 side2Faces: Tuple[Face] = None,
+                 side12Faces: Tuple[Face] = None,
+                 side1Edges: Tuple[Edge] = None,
+                 side2Edges: Tuple[Edge] = None,
+                 end1Edges: Tuple[Edge] = None,
+                 end2Edges: Tuple[Edge] = None,
+                 circumEdges: Tuple[Edge] = None,
+                 face1Elements: Tuple[Element] = None,
+                 face2Elements: Tuple[Element] = None,
+                 face3Elements: Tuple[Element] = None,
+                 face4Elements: Tuple[Element] = None,
+                 face5Elements: Tuple[Element] = None,
+                 face6Elements: Tuple[Element] = None,
+                 side1Elements: Tuple[Element] = None,
+                 side2Elements: Tuple[Element] = None,
+                 side12Elements: Tuple[Element] = None,
+                 end1Elements: Tuple[Element] = None,
+                 end2Elements: Tuple[Element] = None,
+                 circumElements: Tuple[Element] = None):
         """This command creates a surface-like region. For example
         myRegion = regionToolset.Region(side1Faces=f[12:14])
         The arguments are the same as the arguments to the Surface method, except for the *name*

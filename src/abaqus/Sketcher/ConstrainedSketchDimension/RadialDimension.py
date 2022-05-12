@@ -3,12 +3,13 @@ from .ConstrainedSketchDimension import ConstrainedSketchDimension
 from ..ConstrainedSketchGeometry.ConstrainedSketchGeometry import ConstrainedSketchGeometry
 
 from __init__ import *
+from __future__ import annotations
 
 
 class RadialDimension(ConstrainedSketchDimension):
     def __init__(self,
                  curve: ConstrainedSketchGeometry,
-                 textPoint: tuple[float],
+                 textPoint: Tuple[float],
                  value: float = None,
                  reference: Boolean = OFF,
                  majorRadius: float = None,

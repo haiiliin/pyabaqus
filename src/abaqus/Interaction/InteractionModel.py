@@ -63,6 +63,7 @@ from ..Region.Region import Region
 from ..Region.RegionArray import RegionArray
 
 from __init__ import *
+from __future__ import annotations
 
 
 class InteractionModel(InteractionContactControlModel,
@@ -197,7 +198,7 @@ class InteractionModel(InteractionContactControlModel,
 
         Returns
         -------
-            Tuple of tuples, where each tuple holds information, to be used in contact creation as
+            Tuple of tuples, where each Tuple holds information, to be used in contact creation as
             follows:
             A string specifying the name of the main surface used in contact.
             A string specifying the name of the secondary surface used in contact.
@@ -218,8 +219,8 @@ class InteractionModel(InteractionContactControlModel,
         radius: float = 1,
         semimajorAxis: float = 1,
         eccentricity: float = 0,
-        centerCoordinates: tuple = (),
-        directionCosine: tuple = ()
+        centerCoordinates: Tuple = (),
+        directionCosine: Tuple = ()
     ) -> AcousticImpedance:
         """This method creates an AcousticImpedance object.
 
@@ -286,7 +287,7 @@ class InteractionModel(InteractionContactControlModel,
             self,
             name: str,
             tableType: SymbolicConstant,
-            table: tuple,
+            table: Tuple,
             frequencyDependency: Boolean = OFF) -> AcousticImpedanceProp:
         """This method creates an AcousticImpedanceProp object.
 
@@ -327,7 +328,7 @@ class InteractionModel(InteractionContactControlModel,
     def ActuatorSensor(self, name: str, createStepName: str, point: Region,
                        interactionProperty: str, noCoordComponents: int,
                        unsymm: Boolean, noSolutionDepVar: int, userSubUel: str,
-                       dof: str, solutionDepVars: tuple) -> ActuatorSensor:
+                       dof: str, solutionDepVars: Tuple) -> ActuatorSensor:
         """This method creates an ActuatorSensor object.
 
         Notes
@@ -377,8 +378,8 @@ class InteractionModel(InteractionContactControlModel,
     def ActuatorSensorProp(
         self,
         name: str,
-        realProperties: tuple = (),
-        integerProperties: tuple = ()
+        realProperties: Tuple = (),
+        integerProperties: Tuple = ()
     ) -> ActuatorSensorProp:
         """This method creates an ActuatorSensorProp object.
 
@@ -413,7 +414,7 @@ class InteractionModel(InteractionContactControlModel,
                         name: str,
                         createStepName: str,
                         surfaces: RegionArray,
-                        surfaceEmissivities: tuple = (),
+                        surfaceEmissivities: Tuple = (),
                         ambientTemp: float = None,
                         blocking: SymbolicConstant = BLOCKING_ALL,
                         blockingSurfaces: RegionArray = None,
@@ -437,9 +438,9 @@ class InteractionModel(InteractionContactControlModel,
                         periodicSymPlane_1: str = '',
                         periodicSymPlane_2: str = '',
                         periodicSymPlane_3: str = '',
-                        periodicDistance_1: tuple = (),
-                        periodicDistance_2: tuple = (),
-                        periodicDistance_3: tuple = (),
+                        periodicDistance_1: Tuple = (),
+                        periodicDistance_2: Tuple = (),
+                        periodicDistance_3: Tuple = (),
                         periodicSymZ: float = None,
                         periodicDistZ: float = None,
                         reflectionSymmetries: int = 0,
@@ -564,17 +565,17 @@ class InteractionModel(InteractionContactControlModel,
             three-dimensional models, and when *periodicSymmetries* = 3.
         periodicDistance_1
             A sequence of sequences of Floats specifying the two points of the vector that describes
-            the periodic distance for the first periodic symmetry. Each point is defined by a tuple
+            the periodic distance for the first periodic symmetry. Each point is defined by a Tuple
             of three coordinates indicating its position. This argument applies only when
             *periodicSymmetries* is greater than zero. The default value is an empty sequence.
         periodicDistance_2
             A sequence of sequences of Floats specifying the two points of the vector that describes
-            the periodic distance for the second periodic symmetry. Each point is defined by a tuple
+            the periodic distance for the second periodic symmetry. Each point is defined by a Tuple
             of three coordinates indicating its position. This argument applies only when
             *periodicSymmetries* is greater than one. The default value is an empty sequence.
         periodicDistance_3
             A sequence of sequences of Floats specifying the two points of the vector that describes
-            the periodic distance for the third periodic symmetry. Each point is defined by a tuple
+            the periodic distance for the third periodic symmetry. Each point is defined by a Tuple
             of three coordinates indicating its position. This argument applies only when
             *periodicSymmetries* = 3. The default value is an empty sequence.
         periodicSymZ
@@ -637,7 +638,7 @@ class InteractionModel(InteractionContactControlModel,
         name: str,
         temperatureDependency: Boolean = OFF,
         dependencies: int = 0,
-        property: tuple = ()) -> CavityRadiationProp:
+        property: Tuple = ()) -> CavityRadiationProp:
         """This method creates a CavityRadiationProp object.
 
         Notes
@@ -1399,7 +1400,7 @@ class InteractionModel(InteractionContactControlModel,
         name: str,
         temperatureDependency: Boolean = OFF,
         dependencies: int = 0,
-        property: tuple = ()) -> FilmConditionProp:
+        property: Tuple = ()) -> FilmConditionProp:
         """This method creates a FilmConditionProp object.
 
         Notes
@@ -1499,16 +1500,16 @@ class InteractionModel(InteractionContactControlModel,
         expansionTempDep: Boolean = OFF,
         expansionDependencies: int = 0,
         referenceTemperature: float = 0,
-        expansionTable: tuple = (),
+        expansionTable: Tuple = (),
         useBulkModulus: Boolean = OFF,
         bulkModulusTempDep: Boolean = OFF,
         bulkModulusDependencies: int = 0,
-        bulkModulusTable: tuple = (),
+        bulkModulusTable: Tuple = (),
         useCapacity: Boolean = OFF,
         capacityType: SymbolicConstant = POLYNOMIAL,
         capacityTempDep: Boolean = OFF,
         capacityDependencies: int = 0,
-        capacityTable: tuple = ()
+        capacityTable: Tuple = ()
     ) -> FluidCavityProperty:
         """This method creates a FluidCavityProperty object.
 
@@ -1675,7 +1676,7 @@ class InteractionModel(InteractionContactControlModel,
     def FluidExchangeProperty(
             self,
             name: str,
-            dataTable: tuple,
+            dataTable: Tuple,
             definition: SymbolicConstant = BULK_VISCOSITY,
             pressureDependency: Boolean = OFF,
             temperatureDependency: Boolean = OFF,
@@ -1811,12 +1812,12 @@ class InteractionModel(InteractionContactControlModel,
         effectiveArea: float,
         tankVolume: float,
         dischargeCoefficient: float = None,
-        dataTable: tuple = (),
+        dataTable: Tuple = (),
         numFluids: int = None,
         mixtureType: str = '',
-        inflationTime: tuple = (),
-        fluidbehaviorName: tuple = (),
-        massFraction: tuple = ()
+        inflationTime: Tuple = (),
+        fluidbehaviorName: Tuple = (),
+        massFraction: Tuple = ()
     ) -> FluidInflatorProperty:
         """This method creates a FluidInflatorProperty object.
 
@@ -1882,7 +1883,7 @@ class InteractionModel(InteractionContactControlModel,
                      definition: SymbolicConstant = PRESSURE,
                      amplitude: str = '',
                      imaginaryAmplitude: str = '',
-                     surfaceNormal: tuple = (),
+                     surfaceNormal: Tuple = (),
                      initialDepth: float = None,
                      referenceMagnitude: float = None,
                      detonationTime: float = None,
@@ -2224,10 +2225,10 @@ class InteractionModel(InteractionContactControlModel,
             A RegionArray object specifying the points on the secondary surface that are exposed to
             the fluid.
         penetrationPressure
-            A tuple of Floats specifying the fluid pressure magnitude. For steady state dynamic
-            analyses, a tuple of Complexes specifying the fluid pressure magnitude.
+            A Tuple of Floats specifying the fluid pressure magnitude. For steady state dynamic
+            analyses, a Tuple of Complexes specifying the fluid pressure magnitude.
         criticalPressure
-            A tuple of Floats specifying the critical contact pressure below which fluid penetration
+            A Tuple of Floats specifying the critical contact pressure below which fluid penetration
             starts to occur.
         amplitude
             A String or the SymbolicConstant UNSET specifying the name of the amplitude reference.
@@ -2810,7 +2811,7 @@ class InteractionModel(InteractionContactControlModel,
         interferenceType: SymbolicConstant = NONE,
         overclosure: float = 0,
         interferenceDirectionType: SymbolicConstant = COMPUTED,
-        direction: tuple = (),
+        direction: Tuple = (),
         amplitude: str = '',
         smooth: float = 0,
         hcrit: float = 0,

@@ -1,4 +1,5 @@
 from __init__ import *
+from __future__ import annotations
 
 
 class SimpleShearTestData:
@@ -24,7 +25,7 @@ class SimpleShearTestData:
         - SIMPLE SHEAR TEST DATA
 
     """
-    def __init__(self, table: tuple):
+    def __init__(self, table: Tuple):
         """This method creates a SimpleShearTestData object.
 
         Notes

@@ -3,6 +3,7 @@ from .GeometricRestriction import GeometricRestriction
 from ..Region.Region import Region
 
 from __init__ import *
+from __future__ import annotations
 
 
 class TopologyDemoldControl(GeometricRestriction):
@@ -27,7 +28,7 @@ class TopologyDemoldControl(GeometricRestriction):
                  draftAngle: float = 0,
                  collisionCheckRegion: SymbolicConstant = DEMOLD_REGION,
                  pointRegion: Region = Region(),
-                 pullDirection: tuple = (),
+                 pullDirection: Tuple = (),
                  technique: SymbolicConstant = AUTO):
         """This method creates a TopologyDemoldControl object.
 
@@ -63,7 +64,7 @@ class TopologyDemoldControl(GeometricRestriction):
             used to specify the central plane when *technique* is POINT. 
         pullDirection
             A VertexArray object of length 2 specifying the demold pull direction. Instead of 
-            through a ConstrainedSketchVertex, each point may be specified through a tuple of coordinates.
+            through a ConstrainedSketchVertex, each point may be specified through a Tuple of coordinates.
         technique
             A SymbolicConstant specifying the demold technique. Possible values are AUTO, 
             AUTO_TIGHT, POINT, SURFACE, and STAMP. The default value is AUTO. 
@@ -80,7 +81,7 @@ class TopologyDemoldControl(GeometricRestriction):
                   draftAngle: float = 0,
                   collisionCheckRegion: SymbolicConstant = DEMOLD_REGION,
                   pointRegion: Region = Region(),
-                  pullDirection: tuple = (),
+                  pullDirection: Tuple = (),
                   technique: SymbolicConstant = AUTO):
         """This method modifies the TopologyDemoldControl object.
         
@@ -102,7 +103,7 @@ class TopologyDemoldControl(GeometricRestriction):
             used to specify the central plane when *technique* is POINT. 
         pullDirection
             A VertexArray object of length 2 specifying the demold pull direction. Instead of 
-            through a ConstrainedSketchVertex, each point may be specified through a tuple of coordinates.
+            through a ConstrainedSketchVertex, each point may be specified through a Tuple of coordinates.
         technique
             A SymbolicConstant specifying the demold technique. Possible values are AUTO, 
             AUTO_TIGHT, POINT, SURFACE, and STAMP. The default value is AUTO. 

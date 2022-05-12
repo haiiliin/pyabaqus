@@ -2,6 +2,7 @@ from abaqusConstants import *
 from .DesignResponse import DesignResponse
 
 from __init__ import *
+from __future__ import annotations
 
 
 class CombinedTermDesignResponse(DesignResponse):
@@ -20,14 +21,14 @@ class CombinedTermDesignResponse(DesignResponse):
     """
     def __init__(self,
                  name: str,
-                 terms: tuple,
+                 terms: Tuple,
                  filterMaxRadius: str = None,
                  filterExponent: float = 1,
                  filterRadiusReduction: float = 0,
                  highCutOff: str = None,
                  lowCutOff: float = 0,
                  method: SymbolicConstant = ADD,
-                 weights: tuple = ()):
+                 weights: Tuple = ()):
         """This method creates a CombinedTermDesignResponse object.
 
         Notes
@@ -112,7 +113,7 @@ class CombinedTermDesignResponse(DesignResponse):
                   highCutOff: str = None,
                   lowCutOff: float = 0,
                   method: SymbolicConstant = ADD,
-                  weights: tuple = ()):
+                  weights: Tuple = ()):
         """This method modifies the CombinedTermDesignResponse object.
         
         Parameters

@@ -1,6 +1,7 @@
 from .MeshElementArray import MeshElementArray
 
 from __init__ import *
+from __future__ import annotations
 
 
 class MeshEdge:
@@ -24,12 +25,12 @@ class MeshEdge:
             mdb.models[name].rootAssembly.instances[name].elementEdges[i]
 
     """
-    def getElements(self):
-        """This method returns a tuple of elements that share the element edge.
+    def getElements(self) -> Tuple[MeshEdge]:
+        """This method returns a Tuple of elements that share the element edge.
 
         Returns
         -------
-            A tuple of MeshElement objects.
+            A Tuple of MeshElement objects.
         """
         pass
 
@@ -69,19 +70,19 @@ class MeshEdge:
         pass
 
     def getElemFaces(self):
-        """This method returns a tuple of unique MeshFace objects that share the element edge.
+        """This method returns a Tuple of unique MeshFace objects that share the element edge.
 
         Returns
         -------
-            A tuple of MeshFace objects.
+            A Tuple of MeshFace objects.
         """
         pass
 
     def getNodes(self):
-        """This method returns a tuple of nodes on the element edge.
+        """This method returns a Tuple of nodes on the element edge.
 
         Returns
         -------
-            A tuple of MeshNode objects.
+            A Tuple of MeshNode objects.
         """
         pass

@@ -12,6 +12,7 @@ from ..Odb.Odb import Odb
 from ..Region.Region import Region
 
 from __init__ import *
+from __future__ import annotations
 
 
 class AdaptivityModel(ModelBase):
@@ -255,7 +256,7 @@ class AdaptivityModel(ModelBase):
     def RemeshingRule(self,
                       name: str,
                       stepName: str,
-                      variables: tuple,
+                      variables: Tuple,
                       description: str = '',
                       region: SymbolicConstant = MODEL,
                       sizingMethod: SymbolicConstant = DEFAULT,

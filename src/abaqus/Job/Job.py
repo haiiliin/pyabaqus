@@ -2,6 +2,7 @@ from abaqusConstants import *
 from .MessageArray import MessageArray
 
 from __init__ import *
+from __future__ import annotations
 
 
 class Job:
@@ -92,8 +93,8 @@ class Job:
         value is an empty string.
     messages: MessageArray
         A :py:class:`~abaqus.Job.MessageArray.MessageArray` object specifying the messages received during an analysis.
-    environment: tuple
-        A tuple of Strings specifying the environment variables and their values.
+    environment: Tuple
+        A Tuple of Strings specifying the environment variables and their values.
     licenseType: SymbolicConstant
         A SymbolicConstant specifying the type of license type being used in the case of the
         DSLS SimUnit license model. Possible values are DEFAULT, TOKEN, and CREDIT. The default
@@ -219,8 +220,8 @@ class Job:
     # A MessageArray object specifying the messages received during an analysis.
     messages: MessageArray = MessageArray()
 
-    # A tuple of Strings specifying the environment variables and their values.
-    environment: tuple = ()
+    # A Tuple of Strings specifying the environment variables and their values.
+    environment: Tuple = ()
 
     # A SymbolicConstant specifying the type of license type being used in the case of the
     # DSLS SimUnit license model. Possible values are DEFAULT, TOKEN, and CREDIT. The default

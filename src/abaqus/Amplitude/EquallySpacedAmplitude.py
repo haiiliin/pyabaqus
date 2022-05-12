@@ -5,6 +5,7 @@ from .Amplitude import Amplitude
 from .BaselineCorrection import BaselineCorrection
 
 from __init__ import *
+from __future__ import annotations
 
 
 class EquallySpacedAmplitude(Amplitude):
@@ -39,7 +40,7 @@ class EquallySpacedAmplitude(Amplitude):
     def __init__(self,
                  name: str,
                  fixedInterval: float,
-                 data: tuple,
+                 data: Tuple,
                  begin: float = 0,
                  smooth: typing.Union[SymbolicConstant,
                                       float] = SOLVER_DEFAULT,

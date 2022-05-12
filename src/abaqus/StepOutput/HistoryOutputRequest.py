@@ -3,6 +3,7 @@ import typing
 from abaqusConstants import *
 
 from __init__ import *
+from __future__ import annotations
 
 
 class HistoryOutputRequest:
@@ -19,10 +20,10 @@ class HistoryOutputRequest:
         MODEL.If the region is a surface region, the surface must lie within the general contact
         surface domain.
     sectionPoints: SymbolicConstant
-        The SymbolicConstant DEFAULT or a tuple of Ints specifying the section points for which
+        The SymbolicConstant DEFAULT or a Tuple of Ints specifying the section points for which
         output is requested. The default value is DEFAULT.
-    interactions: tuple
-        None or a tuple of Strings specifying the interaction names. The default value is
+    interactions: Tuple
+        None or a Tuple of Strings specifying the interaction names. The default value is
         None.The sequence can contain only one String.
 
     Notes
@@ -56,13 +57,13 @@ class HistoryOutputRequest:
     # surface domain.
     region: SymbolicConstant = MODEL
 
-    # The SymbolicConstant DEFAULT or a tuple of Ints specifying the section points for which
+    # The SymbolicConstant DEFAULT or a Tuple of Ints specifying the section points for which
     # output is requested. The default value is DEFAULT.
     sectionPoints: SymbolicConstant = DEFAULT
 
-    # None or a tuple of Strings specifying the interaction names. The default value is
+    # None or a Tuple of Strings specifying the interaction names. The default value is
     # None.The sequence can contain only one String.
-    interactions: tuple = None
+    interactions: Tuple = None
 
     def __init__(self,
                  name: str,
@@ -85,7 +86,7 @@ class HistoryOutputRequest:
                  kFactorDirection: SymbolicConstant = MTS,
                  rebar: SymbolicConstant = EXCLUDE,
                  integratedOutputSection: str = '',
-                 springs: tuple = None,
+                 springs: Tuple = None,
                  filter: SymbolicConstant = None,
                  fasteners: str = '',
                  assembledFastener: str = '',
@@ -251,7 +252,7 @@ class HistoryOutputRequest:
                   kFactorDirection: SymbolicConstant = MTS,
                   rebar: SymbolicConstant = EXCLUDE,
                   integratedOutputSection: str = '',
-                  springs: tuple = None,
+                  springs: Tuple = None,
                   filter: SymbolicConstant = None,
                   fasteners: str = '',
                   assembledFastener: str = '',

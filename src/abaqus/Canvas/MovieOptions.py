@@ -1,6 +1,7 @@
 from abaqusConstants import *
 
 from __init__ import *
+from __future__ import annotations
 
 
 class MovieOptions:
@@ -25,7 +26,7 @@ class MovieOptions:
                   alignment: SymbolicConstant = CENTER,
                   xScale: float = 1,
                   yScale: float = 1,
-                  origin: tuple[float] = (),
+                  origin: Tuple[float] = (),
                   translucency: float = 1,
                   options: str = None):
         """This method modifies the MovieOptions object.

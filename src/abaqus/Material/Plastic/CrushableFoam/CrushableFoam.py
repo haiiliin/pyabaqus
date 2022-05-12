@@ -3,6 +3,7 @@ from .CrushableFoamHardening import CrushableFoamHardening
 from ..Metal.RateDependent.RateDependent import RateDependent
 
 from __init__ import *
+from __future__ import annotations
 
 
 class CrushableFoam:
@@ -48,7 +49,7 @@ class CrushableFoam:
     rateDependent: RateDependent = RateDependent(((), ))
 
     def __init__(self,
-                 table: tuple,
+                 table: Tuple,
                  hardening: SymbolicConstant = VOLUMETRIC,
                  temperatureDependency: Boolean = OFF,
                  dependencies: int = 0):

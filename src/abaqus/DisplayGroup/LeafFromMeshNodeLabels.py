@@ -3,6 +3,7 @@ from .Leaf import Leaf
 from ..Mesh.MeshNode import MeshNode
 
 from __init__ import *
+from __future__ import annotations
 
 
 class LeafFromMeshNodeLabels(Leaf):
@@ -32,7 +33,7 @@ class LeafFromMeshNodeLabels(Leaf):
     # DEFAULT_MODEL, ALL_ELEMENTS, ALL_NODES, and ALL_SURFACES.
     leafType: SymbolicConstant = None
 
-    def __init__(self, nodeSeq: tuple[MeshNode]):
+    def __init__(self, nodeSeq: Tuple[MeshNode]):
         """This method creates a Leaf object from a sequence of mesh node objects. Leaf objects
         specify the items in a display group.
 

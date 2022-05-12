@@ -2,6 +2,7 @@ from .MdbDataInstance import MdbDataInstance
 from .MdbDataStep import MdbDataStep
 
 from __init__ import *
+from __future__ import annotations
 
 
 class MdbData:
@@ -12,7 +13,7 @@ class MdbData:
     Attributes
     ----------
     stepPeriods: float
-        A tuple of (String, Float) tuples specifying the stepName and the stepPeriod.
+        A Tuple of (String, Float) tuples specifying the stepName and the stepPeriod.
     steps: dict[str, MdbDataStep]
         A repository of :py:class:`~abaqus.PlotOptions.MdbDataStep.MdbDataStep` objects specifying the list of steps. The repository is
         read-only.
@@ -31,7 +32,7 @@ class MdbData:
 
     """
 
-    # A tuple of (String, Float) tuples specifying the stepName and the stepPeriod.
+    # A Tuple of (String, Float) tuples specifying the stepName and the stepPeriod.
     stepPeriods: float = None
 
     # A repository of MdbDataStep objects specifying the list of steps. The repository is

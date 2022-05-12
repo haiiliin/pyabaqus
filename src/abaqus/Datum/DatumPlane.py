@@ -1,6 +1,7 @@
 from .Datum import Datum
 
 from __init__ import *
+from __future__ import annotations
 
 
 class DatumPlane(Datum):
@@ -12,10 +13,10 @@ class DatumPlane(Datum):
     Attributes
     ----------
     pointOn: float
-        A tuple of Floats specifying the **X**-, **Y**-, and **Z**-coordinates of a point located on
+        A Tuple of Floats specifying the **X**-, **Y**-, and **Z**-coordinates of a point located on
         the datum.
-    normal: tuple
-        A tuple of Floats specifying a sequence of three Floats specifying the normal.
+    normal: Tuple
+        A Tuple of Floats specifying a sequence of three Floats specifying the normal.
 
     Notes
     -----
@@ -32,9 +33,9 @@ class DatumPlane(Datum):
 
     """
 
-    # A tuple of Floats specifying the *X*-, *Y*-, and *Z*-coordinates of a point located on
+    # A Tuple of Floats specifying the *X*-, *Y*-, and *Z*-coordinates of a point located on
     # the datum.
     pointOn: float = None
 
-    # A tuple of Floats specifying a sequence of three Floats specifying the normal.
-    normal: tuple = ()
+    # A Tuple of Floats specifying a sequence of three Floats specifying the normal.
+    normal: Tuple = ()

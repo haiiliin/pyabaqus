@@ -4,6 +4,7 @@ from .DatumAxis import DatumAxis
 from .DatumPoint import DatumPoint
 
 from __init__ import *
+from __future__ import annotations
 
 
 class DatumCsys(Datum):

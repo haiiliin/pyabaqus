@@ -2583,6 +2583,7 @@ TRUE = True
 # classes
 
 from __init__ import *
+from __future__ import annotations
 
 
 class AbaqusBooleanType(int):
@@ -2640,6 +2641,7 @@ class AbaqusBooleanType(int):
 AbaqusBoolean = AbaqusBooleanType
 
 from __init__ import *
+from __future__ import annotations
 
 
 class BooleanType(int):
@@ -2694,6 +2696,7 @@ class BooleanType(int):
 Boolean = BooleanType
 
 from __init__ import *
+from __future__ import annotations
 
 
 class SymbolicConstantType(object):

@@ -3,6 +3,7 @@ from .Leaf import Leaf
 from ..Part.Part import Part
 
 from __init__ import *
+from __future__ import annotations
 
 
 class LeafFromPartNodeLabels(Leaf):
@@ -32,7 +33,7 @@ class LeafFromPartNodeLabels(Leaf):
     # DEFAULT_MODEL, ALL_ELEMENTS, ALL_NODES, and ALL_SURFACES.
     leafType: SymbolicConstant = None
 
-    def __init__(self, part: Part, nodeLabels: tuple):
+    def __init__(self, part: Part, nodeLabels: Tuple):
         """This method creates a Leaf object from a sequence of Strings specifying node labels.
         Leaf objects specify the items in a display group.
 

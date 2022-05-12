@@ -43,6 +43,7 @@ from .TurnControl import TurnControl
 from ..Region.Region import Region
 
 from __init__ import *
+from __future__ import annotations
 
 
 class OptimizationTask(OptimizationTaskBase):
@@ -486,7 +487,7 @@ class OptimizationTask(OptimizationTaskBase):
 
     def DrillControl(self,
                      name: str,
-                     clientDirection: tuple,
+                     clientDirection: Tuple,
                      region: Region,
                      csys: int = None,
                      drawAngle: float = 0,
@@ -514,7 +515,7 @@ class OptimizationTask(OptimizationTaskBase):
         clientDirection
             A VertexArray object of length 2 specifying the direction of the drill axis positioned
             at the *csys* origin. Instead of through a ConstrainedSketchVertex, each point may be specified through a
-            tuple of coordinates.
+            Tuple of coordinates.
         region
             A Region object specifying the region to which the geometric restriction is applied.
             When used with a TopologyTask, there is no default value. When used with a ShapeTask,
@@ -720,7 +721,7 @@ class OptimizationTask(OptimizationTaskBase):
     def ShapeDemoldControl(
             self,
             name: str,
-            pullDirection: tuple,
+            pullDirection: Tuple,
             region: Region,
             collisionCheckRegion: SymbolicConstant = DEMOLD_REGION,
             csys: int = None,
@@ -747,7 +748,7 @@ class OptimizationTask(OptimizationTaskBase):
             A String specifying the geometric restriction repository key.
         pullDirection
             A VertexArray object of length 2 specifying the demold pull direction. Instead of
-            through a ConstrainedSketchVertex, each point might be specified through a tuple of coordinates.
+            through a ConstrainedSketchVertex, each point might be specified through a Tuple of coordinates.
         region
             A Region object specifying the region to which the geometric restriction is applied.
             When used with a TopologyTask, there is no default value. When used with a ShapeTask,
@@ -843,7 +844,7 @@ class OptimizationTask(OptimizationTaskBase):
 
     def ShapePlanarSymmetry(self,
                             name: str,
-                            clientDirection: tuple,
+                            clientDirection: Tuple,
                             region: Region,
                             allowNonSymmetricMesh: Boolean = TRUE,
                             csys: int = None,
@@ -869,7 +870,7 @@ class OptimizationTask(OptimizationTaskBase):
         clientDirection
             A VertexArray object of length 2 specifying the vector positioned at the *csys* origin
             that is normal to the symmetry plane. Instead of through a ConstrainedSketchVertex, each point may be
-            specified through a tuple of coordinates.
+            specified through a Tuple of coordinates.
         region
             A Region object specifying the region to which the geometric restriction is applied.
             When used with a TopologyTask, there is no default value. When used with a ShapeTask,
@@ -969,7 +970,7 @@ class OptimizationTask(OptimizationTaskBase):
     def ShapeRotationalSymmetry(
             self,
             name: str,
-            clientDirection: tuple,
+            clientDirection: Tuple,
             region: Region,
             allowNonSymmetricMesh: Boolean = TRUE,
             angle: float = 0,
@@ -998,7 +999,7 @@ class OptimizationTask(OptimizationTaskBase):
         clientDirection
             A VertexArray object of length 2 specifying the vector positioned at the *csys* origin,
             used as the axis of symmetry. Instead of through a ConstrainedSketchVertex, each point might be specified
-            through a tuple of coordinates.
+            through a Tuple of coordinates.
         region
             A Region object specifying the region to which the geometric restriction is applied.
             When used with a TopologyTask, there is no default value. When used with a ShapeTask,
@@ -1023,7 +1024,7 @@ class OptimizationTask(OptimizationTaskBase):
             A Boolean specifying whether to ignore the geometric restriction in the first design
             cycle. The default value is ON.
         startPoint
-            A tuple of Floats representing the coordinates of a start point of the rotational
+            A Tuple of Floats representing the coordinates of a start point of the rotational
             symmetry.
         tolerance1
             A Float specifying the geometric tolerance in the 1-direction. The default value is
@@ -1048,7 +1049,7 @@ class OptimizationTask(OptimizationTaskBase):
         return geometricRestriction
 
     def SizingClusterAreas(self, name: str,
-                           regions: tuple) -> SizingClusterAreas:
+                           regions: Tuple) -> SizingClusterAreas:
         """This method creates a SizingClusterAreas object.
 
         Notes
@@ -1306,7 +1307,7 @@ class OptimizationTask(OptimizationTaskBase):
 
     def SlideRegionControl(self,
                            name: str,
-                           clientDirection: tuple,
+                           clientDirection: Tuple,
                            region: Region,
                            approach: SymbolicConstant = FREE_FORM,
                            csys: int = None,
@@ -1332,7 +1333,7 @@ class OptimizationTask(OptimizationTaskBase):
             A String specifying the geometric restriction repository key.
         clientDirection
             A VertexArray object of length 2 specifying the axis of revolution. Instead of through a
-            ConstrainedSketchVertex, each point may be specified through a tuple of coordinates. This is used when
+            ConstrainedSketchVertex, each point may be specified through a Tuple of coordinates. This is used when
             *approach* is TURN.
         region
             A Region object specifying the region to which the geometric restriction is applied.
@@ -1379,7 +1380,7 @@ class OptimizationTask(OptimizationTaskBase):
 
     def StampControl(self,
                      name: str,
-                     clientDirection: tuple,
+                     clientDirection: Tuple,
                      region: Region,
                      csys: int = None,
                      drawAngle: float = 0,
@@ -1406,7 +1407,7 @@ class OptimizationTask(OptimizationTaskBase):
             A String specifying the geometric restriction repository key.
         clientDirection
             A VertexArray object of length 2 specifying the stamping direction. Instead of through a
-            ConstrainedSketchVertex, each point may be specified through a tuple of coordinates.
+            ConstrainedSketchVertex, each point may be specified through a Tuple of coordinates.
         region
             A Region object specifying the region to which the geometric restriction is applied.
             When used with a TopologyTask, there is no default value. When used with a ShapeTask,
@@ -1504,7 +1505,7 @@ class OptimizationTask(OptimizationTaskBase):
             draftAngle: float = 0,
             collisionCheckRegion: SymbolicConstant = DEMOLD_REGION,
             pointRegion: Region = Region(),
-            pullDirection: tuple = (),
+            pullDirection: Tuple = (),
             technique: SymbolicConstant = AUTO) -> TopologyDemoldControl:
         """This method creates a TopologyDemoldControl object.
 
@@ -1540,7 +1541,7 @@ class OptimizationTask(OptimizationTaskBase):
             used to specify the central plane when *technique* is POINT.
         pullDirection
             A VertexArray object of length 2 specifying the demold pull direction. Instead of
-            through a ConstrainedSketchVertex, each point may be specified through a tuple of coordinates.
+            through a ConstrainedSketchVertex, each point may be specified through a Tuple of coordinates.
         technique
             A SymbolicConstant specifying the demold technique. Possible values are AUTO,
             AUTO_TIGHT, POINT, SURFACE, and STAMP. The default value is AUTO.
@@ -1605,7 +1606,7 @@ class OptimizationTask(OptimizationTaskBase):
     def TopologyMillingControl(
             self,
             name: str,
-            millingDirections: tuple,
+            millingDirections: Tuple,
             region: Region,
             csys: int = None,
             millingCheckRegion: SymbolicConstant = MILLING_REGION,
@@ -1625,8 +1626,8 @@ class OptimizationTask(OptimizationTaskBase):
         name
             A String specifying the geometric restriction repository key.
         millingDirections
-            A tuple of VertexArray objects of length 2 specifying the milling directions. Each point
-            can be specified through a tuple of coordinates instead of through a ConstrainedSketchVertex.
+            A Tuple of VertexArray objects of length 2 specifying the milling directions. Each point
+            can be specified through a Tuple of coordinates instead of through a ConstrainedSketchVertex.
         region
             A Region object specifying the region to which the geometric restriction is applied.
         csys
@@ -1656,7 +1657,7 @@ class OptimizationTask(OptimizationTaskBase):
     def TopologyOverhangControl(
             self,
             name: str,
-            pullDirection: tuple,
+            pullDirection: Tuple,
             region: Region,
             csys: int = None,
             draftAngle: float = 45,
@@ -1680,7 +1681,7 @@ class OptimizationTask(OptimizationTaskBase):
             A String specifying the geometric restriction repository key.
         pullDirection
             A VertexArray object of length 2 specifying the overhang control print direction.
-            Instead of through a ConstrainedSketchVertex, each point can be specified through a tuple of coordinates.
+            Instead of through a ConstrainedSketchVertex, each point can be specified through a Tuple of coordinates.
         region
             A Region object specifying the region to which the geometric restriction is applied.
         csys
@@ -1848,7 +1849,7 @@ class OptimizationTask(OptimizationTaskBase):
 
     def TurnControl(self,
                     name: str,
-                    clientDirection: tuple,
+                    clientDirection: Tuple,
                     region: Region,
                     csys: int = None,
                     mainPoint: str = None,
@@ -1874,7 +1875,7 @@ class OptimizationTask(OptimizationTaskBase):
         clientDirection
             A VertexArray object of length 2 specifying the direction of the rotation axis as a
             vector positioned at the *csys* origin. Instead of through a ConstrainedSketchVertex, each point might be
-            specified through a tuple of coordinates.
+            specified through a Tuple of coordinates.
         region
             A Region object specifying the region to which the geometric restriction is applied.
             When used with a TopologyTask, there is no default value. When used with a ShapeTask,

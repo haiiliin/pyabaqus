@@ -10,6 +10,7 @@ from .Session.Session import Session as AbaqusSession
 from .Tools.JobMonitor.JobMonitor import JobMonitor
 
 from __init__ import *
+from __future__ import annotations
 
 
 class Mdb(AbaqusMdb):
@@ -30,6 +31,7 @@ class Mdb(AbaqusMdb):
 
 
 from __init__ import *
+from __future__ import annotations
 
 
 class Session(AbaqusSession):

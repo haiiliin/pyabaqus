@@ -3,6 +3,7 @@ from .Leaf import Leaf
 from ..Region.Surface import Surface
 
 from __init__ import *
+from __future__ import annotations
 
 
 class LeafFromMeshSurfaceSets(Leaf):
@@ -32,7 +33,7 @@ class LeafFromMeshSurfaceSets(Leaf):
     # DEFAULT_MODEL, ALL_ELEMENTS, ALL_NODES, and ALL_SURFACES.
     leafType: SymbolicConstant = None
 
-    def __init__(self, surfaceSets: tuple[Surface]):
+    def __init__(self, surfaceSets: Tuple[Surface]):
         """This method creates a Leaf object from a sequence of surface sets.
 
         Notes

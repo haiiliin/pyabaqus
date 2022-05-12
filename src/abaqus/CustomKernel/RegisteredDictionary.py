@@ -1,6 +1,7 @@
 from .CommandRegister import CommandRegister
 
 from __init__ import *
+from __future__ import annotations
 
 
 class RegisteredDictionary(CommandRegister):

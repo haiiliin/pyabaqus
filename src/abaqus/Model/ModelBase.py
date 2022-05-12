@@ -37,6 +37,7 @@ from ..TableCollection.EventSeriesType import EventSeriesType
 from ..TableCollection.TableCollection import TableCollection
 
 from __init__ import *
+from __future__ import annotations
 
 
 class ModelBase:
@@ -115,11 +116,11 @@ class ModelBase:
         A repository of :py:class:`~abaqus.Interaction.ContactInitialization.ContactInitialization` objects.
     contactStabilizations: dict[str, ContactStabilization]
         A repository of :py:class:`~abaqus.Interaction.ContactStabilization.ContactStabilization` objects.
-    linkedInstances: tuple
-        A tuple of tuples of Strings specifying the linked child PartInstance name in the
+    linkedInstances: Tuple
+        A Tuple of tuples of Strings specifying the linked child PartInstance name in the
         current model to the corresponding parent PartInstance name in a different model.
-    linkedParts: tuple
-        A tuple of tuples of Strings specifying the linked child Part name in the current model
+    linkedParts: Tuple
+        A Tuple of tuples of Strings specifying the linked child Part name in the current model
         to the corresponding parent Part name in a different model.
     loads: dict[str, Load]
         A repository of :py:class:`~abaqus.Load.Load.Load` objects.
@@ -282,13 +283,13 @@ class ModelBase:
     contactStabilizations: dict[str, ContactStabilization] = dict[
         str, ContactStabilization]()
 
-    # A tuple of tuples of Strings specifying the linked child PartInstance name in the
+    # A Tuple of tuples of Strings specifying the linked child PartInstance name in the
     # current model to the corresponding parent PartInstance name in a different model.
-    linkedInstances: tuple = ()
+    linkedInstances: Tuple = ()
 
-    # A tuple of tuples of Strings specifying the linked child Part name in the current model
+    # A Tuple of tuples of Strings specifying the linked child Part name in the current model
     # to the corresponding parent Part name in a different model.
-    linkedParts: tuple = ()
+    linkedParts: Tuple = ()
 
     # A repository of Load objects.
     loads: dict[str, Load] = dict[str, Load]()

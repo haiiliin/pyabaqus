@@ -1,6 +1,7 @@
 from abaqusConstants import *
 
 from __init__ import *
+from __future__ import annotations
 
 
 class GapElectricalConductance:
@@ -42,10 +43,10 @@ class GapElectricalConductance:
                  pressureDependency: Boolean = OFF,
                  temperatureDependencyC: Boolean = OFF,
                  dependenciesC: int = 0,
-                 clearanceDepTable: tuple = (),
+                 clearanceDepTable: Tuple = (),
                  temperatureDependencyP: Boolean = OFF,
                  dependenciesP: int = 0,
-                 pressureDepTable: tuple = ()):
+                 pressureDepTable: Tuple = ()):
         """This method creates a GapElectricalConductance object.
 
         Notes

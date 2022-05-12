@@ -1,4 +1,5 @@
 from __init__ import *
+from __future__ import annotations
 
 
 class Radiation:
@@ -18,7 +19,7 @@ class Radiation:
 
     """
     def __init__(self, mainEmissivity: float, secondaryEmissivity: float,
-                 table: tuple):
+                 table: Tuple):
         """This method creates a Radiation object.
 
         Notes

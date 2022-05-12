@@ -19,6 +19,7 @@ from ..StepOutput.OutputModel import OutputModel
 from ..TableCollection.TableCollectionModel import TableCollectionModel
 
 from __init__ import *
+from __future__ import annotations
 
 
 class Model(AdaptivityModel, AmplitudeModel, AssemblyModel,
@@ -102,11 +103,11 @@ class Model(AdaptivityModel, AmplitudeModel, AssemblyModel,
         A repository of :py:class:`~abaqus.Interaction.ContactInitialization.ContactInitialization` objects.
     contactStabilizations: dict[str, ContactStabilization]
         A repository of :py:class:`~abaqus.Interaction.ContactStabilization.ContactStabilization` objects.
-    linkedInstances: tuple
-        A tuple of tuples of Strings specifying the linked child PartInstance name in the
+    linkedInstances: Tuple
+        A Tuple of tuples of Strings specifying the linked child PartInstance name in the
         current model to the corresponding parent PartInstance name in a different model.
-    linkedParts: tuple
-        A tuple of tuples of Strings specifying the linked child Part name in the current model
+    linkedParts: Tuple
+        A Tuple of tuples of Strings specifying the linked child Part name in the current model
         to the corresponding parent Part name in a different model.
     loads: dict[str, Load]
         A repository of :py:class:`~abaqus.Load.Load.Load` objects.

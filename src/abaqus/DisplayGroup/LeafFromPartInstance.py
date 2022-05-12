@@ -2,6 +2,7 @@ from abaqusConstants import *
 from .Leaf import Leaf
 
 from __init__ import *
+from __future__ import annotations
 
 
 class LeafFromPartInstance(Leaf):
@@ -31,7 +32,7 @@ class LeafFromPartInstance(Leaf):
     # DEFAULT_MODEL, ALL_ELEMENTS, ALL_NODES, and ALL_SURFACES.
     leafType: SymbolicConstant = None
 
-    def __init__(self, partInstanceName: tuple):
+    def __init__(self, partInstanceName: Tuple):
         """This method creates a Leaf object from a list of part instance names.
 
         Notes

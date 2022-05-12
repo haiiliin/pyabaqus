@@ -2,6 +2,7 @@ from abaqusConstants import *
 from .LoadState import LoadState
 
 from __init__ import *
+from __future__ import annotations
 
 
 class SubstructureLoadState(LoadState):
@@ -13,8 +14,8 @@ class SubstructureLoadState(LoadState):
 
     Attributes
     ----------
-    loadCaseNames: tuple
-        A tuple of strings specifying the names of the load cases to be activated.
+    loadCaseNames: Tuple
+        A Tuple of strings specifying the names of the load cases to be activated.
     magnitude: float
         A Float or a Complex specifying the load magnitude.
     magnitudeState: SymbolicConstant
@@ -53,8 +54,8 @@ class SubstructureLoadState(LoadState):
 
     """
 
-    # A tuple of strings specifying the names of the load cases to be activated.
-    loadCaseNames: tuple = ()
+    # A Tuple of strings specifying the names of the load cases to be activated.
+    loadCaseNames: Tuple = ()
 
     # A Float or a Complex specifying the load magnitude.
     magnitude: float = None

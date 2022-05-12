@@ -3,6 +3,7 @@ from ..Metal.ORNL.Ornl import Ornl
 from ..Potential import Potential
 
 from __init__ import *
+from __future__ import annotations
 
 
 class Creep:
@@ -90,7 +91,7 @@ class Creep:
     potential: Potential = Potential(((), ))
 
     def __init__(self,
-                 table: tuple,
+                 table: Tuple,
                  law: SymbolicConstant = STRAIN,
                  temperatureDependency: Boolean = OFF,
                  dependencies: int = 0,

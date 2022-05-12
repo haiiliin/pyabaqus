@@ -6,14 +6,20 @@ from .MeshEdge import MeshEdge
 from .MeshElement import MeshElement
 from .MeshFace import MeshFace
 from .MeshNode import MeshNode
+from .MeshStats import MeshStats
 from ..Assembly.AssemblyBase import AssemblyBase
 from ..Assembly.PartInstance import PartInstance
 from ..BasicGeometry.Cell import Cell
 from ..BasicGeometry.Edge import Edge
 from ..BasicGeometry.Face import Face
+from ..BasicGeometry.Vertex import Vertex
+from ..Region.Region import Region
 from ..BasicGeometry.IgnoredVertex import IgnoredVertex
+from ..BasicGeometry.IgnoredEdge import IgnoredEdge
+from ..Feature.Feature import Feature
 
 from __init__ import *
+from __future__ import annotations
 
 
 class MeshAssembly(AssemblyBase):
@@ -31,7 +37,7 @@ class MeshAssembly(AssemblyBase):
         mdb.models[name].rootAssembly
 
     """
-    def assignStackDirection(self, cells: tuple[Cell], referenceRegion: Face):
+    def assignStackDirection(self, cells: Tuple[Cell], referenceRegion: Face):
         """This method assigns a stack direction to geometric cells. The stack direction will be
         used to orient the elements during mesh generation.
         
@@ -45,10 +51,11 @@ class MeshAssembly(AssemblyBase):
         pass
 
     def associateMeshWithGeometry(self,
-                                  geometricEntity: str,
-                                  elements: tuple[MeshElement] = (),
-                                  elemFaces: tuple[MeshFace] = (),
-                                  elemEdges: tuple[MeshEdge] = (),
+                                  geometricEntity: Union[Cell, Face, Edge,
+                                                         Vertex],
+                                  elements: Tuple[MeshElement] = (),
+                                  elemFaces: Tuple[MeshFace] = (),
+                                  elemEdges: Tuple[MeshEdge] = (),
                                   node: MeshNode = MeshNode((0, 0, 0))):
         """This method associates a geometric entity with mesh entities that are either orphan
         elements, bounds orphan elements, or were created using the bottom-up meshing technique.
@@ -77,7 +84,7 @@ class MeshAssembly(AssemblyBase):
         pass
 
     def createVirtualTopology(self,
-                              regions: tuple[Face],
+                              regions: Tuple[Face],
                               mergeShortEdges: Boolean = False,
                               shortEdgeThreshold: float = None,
                               mergeSmallFaces: Boolean = False,
@@ -172,7 +179,7 @@ class MeshAssembly(AssemblyBase):
         """
         pass
 
-    def deleteBoundaryLayerControls(self, regions: tuple[Cell]):
+    def deleteBoundaryLayerControls(self, regions: Tuple[Cell]):
         """This method deletes the control parameters for boundary layer mesh for all the specified
         regions.
         
@@ -184,7 +191,7 @@ class MeshAssembly(AssemblyBase):
         """
         pass
 
-    def deleteMesh(self, regions: tuple[PartInstance]):
+    def deleteMesh(self, regions: Union[Tuple[PartInstance], Tuple[Region]]):
         """This method deletes a subset of the mesh that contains the native elements from the
         given part instances or regions.
         
@@ -198,7 +205,8 @@ class MeshAssembly(AssemblyBase):
 
     def deleteMeshAssociationWithGeometry(
             self,
-            geometricEntities: tuple[Cell],
+            geometricEntities: Union[Tuple[Cell], Tuple[Face], Tuple[Edge],
+                                     Tuple[Vertex]],
             addBoundingEntities: Boolean = False):
         """This method deletes the association of geometric entities with mesh entities.
         
@@ -222,7 +230,7 @@ class MeshAssembly(AssemblyBase):
         """
         pass
 
-    def deleteSeeds(self, regions: tuple[PartInstance]):
+    def deleteSeeds(self, regions: Union[Tuple[PartInstance], Tuple[Edge]]):
         """This method deletes the global edge seeds from the given part instances or deletes the
         local edge seeds from the given edges.
         
@@ -237,10 +245,10 @@ class MeshAssembly(AssemblyBase):
     def generateBottomUpExtrudedMesh(self,
                                      cell: Cell,
                                      numberOfLayers: int,
-                                     extrudeVector: tuple,
-                                     geometrySourceSide: str = '',
-                                     elemFacesSourceSide: tuple[MeshFace] = (),
-                                     elemSourceSide: tuple = (),
+                                     extrudeVector: Tuple[COORDINATE_3D],
+                                     geometrySourceSide: Region,
+                                     elemFacesSourceSide: Tuple[MeshFace] = (),
+                                     elemSourceSide: Tuple[MeshElement] = (),
                                      depth: float = None,
                                      targetSide: str = '',
                                      biasRatio: float = 1,
@@ -257,7 +265,7 @@ class MeshAssembly(AssemblyBase):
             An Int specifying the number of layers to be generated along the extrusion vector. 
         extrudeVector
             A sequence of sequences of Floats specifying the start point and end point of a vector. 
-            Each point is defined by a tuple of three coordinates indicating its position. The 
+            Each point is defined by a Tuple of three coordinates indicating its position. The 
             direction of the mesh extrusion operation is from the first point to the second point. 
         geometrySourceSide
             A Region of Face objects specifying the geometric domain to be used as the source for 
@@ -289,12 +297,12 @@ class MeshAssembly(AssemblyBase):
     def generateBottomUpSweptMesh(
             self,
             cell: Cell,
-            geometrySourceSide: str = '',
-            elemFacesSourceSide: tuple[MeshFace] = (),
-            elemSourceSide: tuple = (),
-            geometryConnectingSides: str = '',
-            elemFacesConnectingSides: tuple[MeshFace] = (),
-            elemConnectingSides: tuple = (),
+            geometrySourceSide: Region,
+            elemFacesSourceSide: Tuple[MeshFace] = (),
+            elemSourceSide: Tuple[MeshElement] = (),
+            geometryConnectingSides: Region = None,
+            elemFacesConnectingSides: Tuple[MeshFace] = (),
+            elemConnectingSides: Tuple[MeshElement] = (),
             targetSide: Face = Face(),
             numberOfLayers: int = None,
             extendElementSets: Boolean = False):
@@ -337,11 +345,11 @@ class MeshAssembly(AssemblyBase):
     def generateBottomUpRevolvedMesh(self,
                                      cell: Cell,
                                      numberOfLayers: int,
-                                     axisOfRevolution: tuple,
+                                     axisOfRevolution: Tuple[COORDINATE_3D],
                                      angleOfRevolution: float,
                                      geometrySourceSide: str = '',
-                                     elemFacesSourceSide: tuple[MeshFace] = (),
-                                     elemSourceSide: tuple = (),
+                                     elemFacesSourceSide: Tuple[MeshFace] = (),
+                                     elemSourceSide: Tuple[MeshElement] = (),
                                      extendElementSets: Boolean = False):
         """This method generates solid elements by revolving a 2D mesh around an axis, either on an
         orphan mesh or within a cell region using a bottom-up technique.
@@ -356,7 +364,7 @@ class MeshAssembly(AssemblyBase):
             revolution. 
         axisOfRevolution
             A sequence of sequences of Floats specifying the two points of the vector that describes 
-            the axis of revolution. Each point is defined by a tuple of three coordinates indicating 
+            the axis of revolution. Each point is defined by a Tuple of three coordinates indicating 
             its position. The direction of the axis of revolution is from the first point to the 
             second point. The orientation of the revolution operation follows the right-hand-rule 
             about the axis of revolution. 
@@ -379,7 +387,7 @@ class MeshAssembly(AssemblyBase):
         pass
 
     def generateMesh(self,
-                     regions: tuple[PartInstance] = (),
+                     regions: Union[Tuple[PartInstance], Tuple[Region]] = (),
                      seedConstraintOverride: Boolean = OFF,
                      meshTechniqueOverride: Boolean = OFF,
                      boundaryPreview: Boolean = OFF,
@@ -410,8 +418,8 @@ class MeshAssembly(AssemblyBase):
         """
         pass
 
-    def getEdgeSeeds(self, edge: Edge,
-                     attribute: typing.Union[SymbolicConstant, float]):
+    def getEdgeSeeds(self, edge: Edge, attribute: Union[SymbolicConstant,
+                                                        float]):
         """This method returns an edge seed parameter for a specified edge of an assembly.
         
         Parameters
@@ -488,7 +496,8 @@ class MeshAssembly(AssemblyBase):
         """
         pass
 
-    def getElementType(self, region: str, elemShape: SymbolicConstant):
+    def getElementType(self, region: Union[Cell, Face, Edge],
+                       elemShape: SymbolicConstant):
         """This method returns the ElemType object of a given element shape assigned to a region of
         the assembly.
         
@@ -512,7 +521,7 @@ class MeshAssembly(AssemblyBase):
         """
         pass
 
-    def getIncompatibleMeshInterfaces(self, cells: tuple[Cell] = ()):
+    def getIncompatibleMeshInterfaces(self, cells: Tuple[Cell] = ()):
         """This method returns a sequence of face objects that are meshed with incompatible
         elements.
         
@@ -527,7 +536,8 @@ class MeshAssembly(AssemblyBase):
         """
         pass
 
-    def getMeshControl(self, region: str, attribute: SymbolicConstant):
+    def getMeshControl(self, region: Union[Cell, Face, Edge],
+                       attribute: SymbolicConstant):
         """This method returns a mesh control parameter for the specified region of the assembly.
         
         Parameters
@@ -585,13 +595,16 @@ class MeshAssembly(AssemblyBase):
         """
         pass
 
-    def getMeshStats(self, regions: tuple):
+    def getMeshStats(
+        self,
+        regions: Union[Tuple[PartInstance], Tuple[Region]],
+    ) -> MeshStats:
         """This method returns the mesh statistics for the given part instances or regions.
         
         Parameters
         ----------
         regions
-            A sequence or tuple of PartInstance objects or ConstrainedSketchGeometry regions for which mesh
+            A sequence or Tuple of PartInstance objects or ConstrainedSketchGeometry regions for which mesh
             statistics should be returned. 
 
         Returns
@@ -600,8 +613,9 @@ class MeshAssembly(AssemblyBase):
         """
         pass
 
-    def getPartSeeds(self, region: PartInstance,
-                     attribute: typing.Union[SymbolicConstant, float]):
+    def getPartSeeds(
+            self, region: PartInstance,
+            attribute: typing.Union[SymbolicConstant, float]) -> float:
         """This method returns a part seed parameter for the specified instance.
         
         Parameters
@@ -638,7 +652,7 @@ class MeshAssembly(AssemblyBase):
         """
         pass
 
-    def getUnmeshedRegions(self):
+    def getUnmeshedRegions(self) -> Union[Region, None]:
         """This method returns all geometric regions in the assembly that require a mesh for
         submitting an analysis but are either unmeshed or are meshed incompletely.
 
@@ -648,7 +662,8 @@ class MeshAssembly(AssemblyBase):
         """
         pass
 
-    def ignoreEntity(self, entities: tuple):
+    def ignoreEntity(self, entities: Union[Tuple[Vertex],
+                                           Tuple[Edge]]) -> Feature:
         """This method creates a virtual topology feature. Virtual topology allows unimportant
         entities to be ignored during mesh generation. You can combine two adjacent faces by
         specifying a common edge to ignore. Similarly, you can combine two adjacent edges by
@@ -666,7 +681,9 @@ class MeshAssembly(AssemblyBase):
         """
         pass
 
-    def restoreIgnoredEntity(self, entities: tuple[IgnoredVertex]):
+    def restoreIgnoredEntity(
+            self, entities: Union[Tuple[IgnoredVertex],
+                                  Tuple[IgnoredEdge]]) -> Feature:
         """This method restores vertices and edges that have been merged using a virtual topology
         feature.
         
@@ -685,10 +702,10 @@ class MeshAssembly(AssemblyBase):
 
     def seedEdgeByBias(self,
                        biasMethod: SymbolicConstant,
-                       end1Edges: tuple[Edge],
-                       end2Edges: tuple[Edge],
-                       centerEdges: tuple[Edge],
-                       endEdges: tuple[Edge],
+                       end1Edges: Tuple[Edge],
+                       end2Edges: Tuple[Edge],
+                       centerEdges: Tuple[Edge],
+                       endEdges: Tuple[Edge],
                        ratio: float,
                        number: int,
                        minSize: float,
@@ -746,7 +763,7 @@ class MeshAssembly(AssemblyBase):
         pass
 
     def seedEdgeByNumber(self,
-                         edges: tuple[Edge],
+                         edges: Tuple[Edge],
                          number: int,
                          constraint: SymbolicConstant = FREE):
         """This method seeds the given edges uniformly based on the number of elements along the
@@ -770,7 +787,7 @@ class MeshAssembly(AssemblyBase):
         pass
 
     def seedEdgeBySize(self,
-                       edges: tuple[Edge],
+                       edges: Tuple[Edge],
                        size: float,
                        deviationFactor: float = None,
                        minSizeFactor: float = None,
@@ -801,7 +818,7 @@ class MeshAssembly(AssemblyBase):
         pass
 
     def seedPartInstance(self,
-                         regions: tuple[PartInstance],
+                         regions: Tuple[PartInstance],
                          size: float,
                          deviationFactor: float = None,
                          minSizeFactor: float = None,
@@ -829,11 +846,11 @@ class MeshAssembly(AssemblyBase):
         pass
 
     def setBoundaryLayerControls(self,
-                                 regions: tuple[Cell],
+                                 regions: Tuple[Cell],
                                  firstElemSize: float,
                                  growthFactor: float,
                                  numLayers: int,
-                                 inactiveFaces: tuple[Face] = (),
+                                 inactiveFaces: Tuple[Face] = (),
                                  setName: str = ''):
         """This method sets the control parameters for boundary layer mesh for the specified
         regions.
@@ -861,7 +878,8 @@ class MeshAssembly(AssemblyBase):
         """
         pass
 
-    def setElementType(self, regions: tuple, elemTypes: tuple[ElemType]):
+    def setElementType(self, regions: Union[Region, Tuple[MeshElement]],
+                       elemTypes: Tuple[ElemType]):
         """This method assigns element types to the specified regions.
         
         Parameters
@@ -889,7 +907,7 @@ class MeshAssembly(AssemblyBase):
         """
         pass
 
-    def setLogicalCorners(self, region: str, corners: str):
+    def setLogicalCorners(self, region: Region, corners: Tuple[Vertex]):
         """This method sets the logical corners for a mappable face region.
         
         Parameters
@@ -903,7 +921,7 @@ class MeshAssembly(AssemblyBase):
         pass
 
     def setMeshControls(self,
-                        regions: tuple,
+                        regions: Tuple[Region],
                         elemShape: SymbolicConstant = None,
                         technique: SymbolicConstant = None,
                         algorithm: SymbolicConstant = None,
@@ -975,7 +993,8 @@ class MeshAssembly(AssemblyBase):
         """
         pass
 
-    def setSweepPath(self, region: str, edge: Edge, sense: SymbolicConstant):
+    def setSweepPath(self, region: Region, edge: Edge,
+                     sense: SymbolicConstant):
         """This method sets the sweep path for a sweepable region or the revolve path for a
         revolvable region.
         
@@ -997,7 +1016,7 @@ class MeshAssembly(AssemblyBase):
                           criterion: SymbolicConstant,
                           threshold: float = None,
                           elemShape: SymbolicConstant = None,
-                          regions: tuple = ()):
+                          regions: Tuple = ()):
         """This method tests the quality of part instance meshes and returns poor-quality elements.
         
         Parameters

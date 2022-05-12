@@ -2,6 +2,7 @@ from abaqusConstants import *
 from .Leaf import Leaf
 
 from __init__ import *
+from __future__ import annotations
 
 
 class LeafFromConstraintNames(Leaf):
@@ -32,7 +33,7 @@ class LeafFromConstraintNames(Leaf):
     # SHELL_TO_SOLID_COUPLING, DISTRIBUTING_COUPLING, KINEMATIC_COUPLING, RIGID_BODY, and MPC.
     leafType: SymbolicConstant = None
 
-    def __init__(self, name: tuple, type: SymbolicConstant):
+    def __init__(self, name: Tuple, type: SymbolicConstant):
         """This method creates a Leaf object from a sequence of constraint objects. Leaf objects
         specify the items in a display group.
 

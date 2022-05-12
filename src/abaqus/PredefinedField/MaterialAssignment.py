@@ -4,6 +4,7 @@ from ..Assembly.PartInstanceArray import PartInstanceArray
 from ..Region.Region import Region
 
 from __init__ import *
+from __future__ import annotations
 
 
 class MaterialAssignment(PredefinedField):
@@ -37,9 +38,9 @@ class MaterialAssignment(PredefinedField):
                  name: str,
                  instanceList: PartInstanceArray,
                  useFields: Boolean = OFF,
-                 assignmentList: tuple = (),
-                 fieldList: tuple = (),
-                 colorList: tuple = ()):
+                 assignmentList: Tuple = (),
+                 fieldList: Tuple = (),
+                 colorList: Tuple = ()):
         """This method creates a MaterialAssignment predefined field object.
 
         Notes
@@ -62,14 +63,14 @@ class MaterialAssignment(PredefinedField):
             discrete fields. The default value is OFF. 
         assignmentList
             A sequence of tuples specifying the uniform volume fractions to be assigned. This 
-            argument is valid only when *useFields*=FALSE. Each tuple contains two entries:A Region 
-            object.A tuple of Floats specifying the uniform volume fraction values. The length of 
-            the tuple must match the number of material instance names specified in the Eulerain 
+            argument is valid only when *useFields*=FALSE. Each Tuple contains two entries:A Region 
+            object.A Tuple of Floats specifying the uniform volume fraction values. The length of 
+            the Tuple must match the number of material instance names specified in the Eulerain 
             section assigned to part instances specified by *instanceList*. 
         fieldList
             A sequence of tuples specifying the discrete volume fractions to be assigned. This 
-            argument is valid only when *useFields*=TRUE. Each tuple contains two entries:A Region 
-            object.A tuple of Strings specifying Discrete Field names. The length of the tuple must 
+            argument is valid only when *useFields*=TRUE. Each Tuple contains two entries:A Region 
+            object.A Tuple of Strings specifying Discrete Field names. The length of the Tuple must 
             match the number of material instance names specified in the Eulerain section assigned 
             to part instances specified by *instanceList*. 
         colorList
@@ -86,9 +87,9 @@ class MaterialAssignment(PredefinedField):
 
     def setValues(self,
                   useFields: Boolean = OFF,
-                  assignmentList: tuple = (),
-                  fieldList: tuple = (),
-                  colorList: tuple = ()):
+                  assignmentList: Tuple = (),
+                  fieldList: Tuple = (),
+                  colorList: Tuple = ()):
         """This method modifies the MaterialAssignment object.
         
         Parameters
@@ -98,14 +99,14 @@ class MaterialAssignment(PredefinedField):
             discrete fields. The default value is OFF. 
         assignmentList
             A sequence of tuples specifying the uniform volume fractions to be assigned. This 
-            argument is valid only when *useFields*=FALSE. Each tuple contains two entries:A Region 
-            object.A tuple of Floats specifying the uniform volume fraction values. The length of 
-            the tuple must match the number of material instance names specified in the Eulerain 
+            argument is valid only when *useFields*=FALSE. Each Tuple contains two entries:A Region 
+            object.A Tuple of Floats specifying the uniform volume fraction values. The length of 
+            the Tuple must match the number of material instance names specified in the Eulerain 
             section assigned to part instances specified by *instanceList*. 
         fieldList
             A sequence of tuples specifying the discrete volume fractions to be assigned. This 
-            argument is valid only when *useFields*=TRUE. Each tuple contains two entries:A Region 
-            object.A tuple of Strings specifying Discrete Field names. The length of the tuple must 
+            argument is valid only when *useFields*=TRUE. Each Tuple contains two entries:A Region 
+            object.A Tuple of Strings specifying Discrete Field names. The length of the Tuple must 
             match the number of material instance names specified in the Eulerain section assigned 
             to part instances specified by *instanceList*. 
         colorList

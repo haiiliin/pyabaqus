@@ -2,6 +2,7 @@
 
 # Prevent circular import
 from __init__ import *
+from __future__ import annotations
 
 
 class ErrorIndicatorResult:
@@ -9,6 +10,7 @@ class ErrorIndicatorResult:
 
 
 from __init__ import *
+from __future__ import annotations
 
 
 class RuleResult:
@@ -30,7 +32,7 @@ class RuleResult:
                  indicatorResults: dict[str, ErrorIndicatorResult],
                  numElems: int,
                  minSizeElemCount: int,
-                 satisfiedVars: tuple = ()):
+                 satisfiedVars: Tuple = ()):
         """This method creates a RuleResult with data for a RemeshingRule for a given adaptivity
         iteration.
 

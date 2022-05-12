@@ -4,6 +4,7 @@ from abaqusConstants import *
 from ..PlotOptions.DGSymbolOptions import DGSymbolOptions
 
 from __init__ import *
+from __future__ import annotations
 
 
 class SymbolOptions(DGSymbolOptions):

@@ -1,4 +1,5 @@
 from __init__ import *
+from __future__ import annotations
 
 
 class IgnoredEdge:
@@ -10,7 +11,7 @@ class IgnoredEdge:
     index: int
         An Int specifying the index of the IgnoredEdge in the IgnoredEdgeArray.
     pointOn: float
-        A tuple of Floats specifying the **X**-, **Y**-, and **Z**-coordinates of a point located on
+        A Tuple of Floats specifying the **X**-, **Y**-, and **Z**-coordinates of a point located on
         the edge.
 
     Notes
@@ -30,7 +31,7 @@ class IgnoredEdge:
     # An Int specifying the index of the IgnoredEdge in the IgnoredEdgeArray.
     index: int = None
 
-    # A tuple of Floats specifying the *X*-, *Y*-, and *Z*-coordinates of a point located on
+    # A Tuple of Floats specifying the *X*-, *Y*-, and *Z*-coordinates of a point located on
     # the edge.
     pointOn: float = None
 
@@ -63,7 +64,7 @@ class IgnoredEdge:
         """
         pass
 
-    def getCurvature(self, parameter: float, point: tuple):
+    def getCurvature(self, parameter: float, point: Tuple):
         """This method returns curvature information at a location on the IgnoredEdge object.
         
         Parameters
@@ -73,7 +74,7 @@ class IgnoredEdge:
             curvature is to be computed. This argument is mutually exclusive with the argument 
             *point*. 
         point
-            A tuple of *X*-, *Y*-, and *Z*-coordinates of a point at which the curvature is to be 
+            A Tuple of *X*-, *Y*-, and *Z*-coordinates of a point at which the curvature is to be 
             computed. If *point* does not lie on the IgnoredEdge an attempt is made to project it 
             onto the IgnoredEdge and use the projected point. 
 

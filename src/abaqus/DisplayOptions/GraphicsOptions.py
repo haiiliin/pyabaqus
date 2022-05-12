@@ -1,6 +1,7 @@
 from abaqusConstants import *
 
 from __init__ import *
+from __future__ import annotations
 
 
 class GraphicsOptions:
@@ -196,7 +197,7 @@ class GraphicsOptions:
         copied. If o:py:class:`~.the`r arguments are also supplied to setValues, :py:class:`~.the`y will override :py:class:`~.the` values
         in :py:class:`~.the` **options** member. The default value is None.
     highlightMethodHint: SymbolicConstant
-        A tuple of SymbolicConstants specifying a hint used to modify the highlight method.
+        A Tuple of SymbolicConstants specifying a hint used to modify the highlight method.
         Possible values are:HARDWARE_OVERLAY, specifying a hint of hardware overlay. The best
         graphics performance is achieved using hardware overlay, but not all systems and
         graphics adapters support hardware overlay.XOR, specifying a hint of XOR technique. The
@@ -211,8 +212,8 @@ class GraphicsOptions:
         becomes the default highlight method. Not all graphics adapters support the
         HARDWARE_OVERLAY value and you must use the **highlightMethodHint** argument to provide an
         alternative.You can use a single value to set the first element of the list, or you can
-        use a tuple with one to four unique values. Abaqus sets any remaining elements of the
-        tuple to unique values based on the default order.
+        use a Tuple with one to four unique values. Abaqus sets any remaining elements of the
+        Tuple to unique values based on the default order.
     backgroundColor: str
         A String specifying one of the two background colors for all viewport windows. The
         initial color is black. A list of valid color strings is in the **colors** map in the
@@ -435,7 +436,7 @@ class GraphicsOptions:
     # in the *options* member. The default value is None.
     options: str = None
 
-    # A tuple of SymbolicConstants specifying a hint used to modify the highlight method.
+    # A Tuple of SymbolicConstants specifying a hint used to modify the highlight method.
     # Possible values are:HARDWARE_OVERLAY, specifying a hint of hardware overlay. The best
     # graphics performance is achieved using hardware overlay, but not all systems and
     # graphics adapters support hardware overlay.XOR, specifying a hint of XOR technique. The
@@ -450,8 +451,8 @@ class GraphicsOptions:
     # becomes the default highlight method. Not all graphics adapters support the
     # HARDWARE_OVERLAY value and you must use the *highlightMethodHint* argument to provide an
     # alternative.You can use a single value to set the first element of the list, or you can
-    # use a tuple with one to four unique values. Abaqus sets any remaining elements of the
-    # tuple to unique values based on the default order.
+    # use a Tuple with one to four unique values. Abaqus sets any remaining elements of the
+    # Tuple to unique values based on the default order.
     highlightMethodHint: SymbolicConstant = None
 
     # A String specifying one of the two background colors for all viewport windows. The
@@ -535,8 +536,8 @@ class GraphicsOptions:
             becomes the default highlight method. Not all graphics adapters support the 
             HARDWARE_OVERLAY value and you must use the *highlightMethodHint* argument to provide an 
             alternative.You can use a single value to set the first element of the list, or you can 
-            use a tuple with one to four unique values. Abaqus sets any remaining elements of the 
-            tuple to unique values based on the default order. 
+            use a Tuple with one to four unique values. Abaqus sets any remaining elements of the 
+            Tuple to unique values based on the default order. 
         dragMode
             A SymbolicConstant specifying which rendering is used during dynamic rotations of the 
             view. Possible values are:FAST, specifying a rendering mode where the image is rendered 

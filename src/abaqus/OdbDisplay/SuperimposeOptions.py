@@ -2,6 +2,7 @@ from abaqusConstants import *
 from ..PlotOptions.DGSuperimposeOptions import DGSuperimposeOptions
 
 from __init__ import *
+from __future__ import annotations
 
 
 class SuperimposeOptions(DGSuperimposeOptions):
@@ -31,7 +32,7 @@ class SuperimposeOptions(DGSuperimposeOptions):
         A Float specifying the uniform offset value when **deformedOffsetMode=UNIFORM**. The
         default value is 0.0.
     nonuniformOffset: float
-        A tuple of three Floats specifying the offset value in each of the three coordinate
+        A Tuple of three Floats specifying the offset value in each of the three coordinate
         directions when **deformedOffsetMode=NONUNIFORM**. The default value is (0, 0, 0).
     renderStyle: SymbolicConstant
         A SymbolicConstant specifying the render style of the plot. Possible values are
@@ -129,7 +130,7 @@ class SuperimposeOptions(DGSuperimposeOptions):
         A String specifying the color to be used to plot an arrow along the tangent to a beam.
         The default value is "White".
     coordinateScaleFactors: float
-        A tuple of three Floats specifying the coordinate scaling in each of the three
+        A Tuple of three Floats specifying the coordinate scaling in each of the three
         coordinate directions when **coordinateScale=ON**. The default value is (1, 1, 1).
 
     Notes
@@ -161,7 +162,7 @@ class SuperimposeOptions(DGSuperimposeOptions):
     # default value is 0.0.
     uniformOffset: float = 0
 
-    # A tuple of three Floats specifying the offset value in each of the three coordinate
+    # A Tuple of three Floats specifying the offset value in each of the three coordinate
     # directions when *deformedOffsetMode*=NONUNIFORM. The default value is (0, 0, 0).
     nonuniformOffset: float = None
 
@@ -293,7 +294,7 @@ class SuperimposeOptions(DGSuperimposeOptions):
     # The default value is "White".
     beamTangentColor: str = ''
 
-    # A tuple of three Floats specifying the coordinate scaling in each of the three
+    # A Tuple of three Floats specifying the coordinate scaling in each of the three
     # coordinate directions when *coordinateScale*=ON. The default value is (1, 1, 1).
     coordinateScaleFactors: float = None
 
@@ -321,7 +322,7 @@ class SuperimposeOptions(DGSuperimposeOptions):
                   elementShrink: Boolean = OFF,
                   elementShrinkFactor: int = 5,
                   coordinateScale: Boolean = OFF,
-                  coordinateScaleFactors: tuple = (),
+                  coordinateScaleFactors: Tuple = (),
                   normals: Boolean = OFF,
                   normalDisplay: SymbolicConstant = ELEMENT,
                   faceNormalColor: str = '',
@@ -335,7 +336,7 @@ class SuperimposeOptions(DGSuperimposeOptions):
                   translucencyFactor: float = 0,
                   deformedOffsetMode: SymbolicConstant = NONE,
                   uniformOffset: float = 0,
-                  nonuniformOffset: tuple = ()):
+                  nonuniformOffset: Tuple = ()):
         """This method modifies the SuperimposeOptions object.
         
         Parameters

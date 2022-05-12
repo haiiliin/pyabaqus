@@ -1,7 +1,6 @@
 from abaqusConstants import *
 from ..Datum.Datum import Datum
 from ..Region.Region import Region
-
 """The Property assignment commands are used to assign and unassign properties to parts. 
 The part and section modules must be imported to give access to the Property assignment 
 commands. 
@@ -14,7 +13,8 @@ Notes
 """
 
 
-def assignBeamSectionOrientatio(region: tuple, method: SymbolicConstant, n1: tuple):
+def assignBeamSectionOrientatio(region: Tuple, method: SymbolicConstant,
+                                n1: Tuple):
     """This method assigns a beam section orientation to a region of a part.
 
     Notes
@@ -41,7 +41,10 @@ def assignBeamSectionOrientatio(region: tuple, method: SymbolicConstant, n1: tup
     pass
 
 
-def assignMaterialOrientatio(region: tuple, localCsys: Datum, axis: SymbolicConstant = AXIS_1, angle: float = 0):
+def assignMaterialOrientatio(region: Tuple,
+                             localCsys: Datum,
+                             axis: SymbolicConstant = AXIS_1,
+                             angle: float = 0):
     """This method assigns a material orientation to a region.
 
     Notes
@@ -72,7 +75,10 @@ def assignMaterialOrientatio(region: tuple, localCsys: Datum, axis: SymbolicCons
     pass
 
 
-def assignRebarOrientatio(region: tuple, localCsys: Datum, axis: SymbolicConstant = AXIS_1, angle: float = 0):
+def assignRebarOrientatio(region: Tuple,
+                          localCsys: Datum,
+                          axis: SymbolicConstant = AXIS_1,
+                          angle: float = 0):
     """This method assigns a rebar reference orientation to a region.
 
     Notes

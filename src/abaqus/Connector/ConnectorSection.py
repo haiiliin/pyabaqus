@@ -14,6 +14,7 @@ from .TangentialBehavior import TangentialBehavior
 from ..Section.SectionBase import SectionBase
 
 from __init__ import *
+from __future__ import annotations
 
 
 class ConnectorSection(SectionBase):
@@ -35,10 +36,10 @@ class ConnectorSection(SectionBase):
                         evolutionPotentialExponent: float = 2,
                         initiationPotentials: ConnectorPotentialArray = None,
                         evolutionPotentials: ConnectorPotentialArray = None,
-                        initiationTable: tuple = (),
-                        evolutionTable: tuple = (),
-                        affectedComponents: tuple = (),
-                        components: tuple = ()):
+                        initiationTable: Tuple = (),
+                        evolutionTable: Tuple = (),
+                        affectedComponents: Tuple = (),
+                        components: Tuple = ()):
         """This method creates a connector damage behavior option for a ConnectorSection object.
 
         Notes
@@ -156,9 +157,9 @@ class ConnectorSection(SectionBase):
                          dependencies: int = 0,
                          temperatureDependency: Boolean = OFF,
                          frequencyDependency: Boolean = OFF,
-                         table: tuple = (),
-                         independentComponents: tuple = (),
-                         components: tuple = ()):
+                         table: Tuple = (),
+                         independentComponents: Tuple = (),
+                         components: Tuple = ()):
         """This method creates a connector damping behavior option for a ConnectorSection object.
 
         Notes
@@ -224,9 +225,9 @@ class ConnectorSection(SectionBase):
                             dependencies: int = 0,
                             temperatureDependency: Boolean = OFF,
                             frequencyDependency: Boolean = OFF,
-                            table: tuple = (),
-                            independentComponents: tuple = (),
-                            components: tuple = ()):
+                            table: Tuple = (),
+                            independentComponents: Tuple = (),
+                            components: Tuple = ()):
         """This method creates a connector elasticity behavior option for a ConnectorSection
         object.
 
@@ -296,7 +297,7 @@ class ConnectorSection(SectionBase):
                          maxMotion: float = None,
                          minForce: float = None,
                          maxForce: float = None,
-                         components: tuple = ()):
+                         components: Tuple = ()):
         """This method creates a connector failure behavior option for a ConnectorSection object.
 
         Notes
@@ -363,8 +364,8 @@ class ConnectorSection(SectionBase):
         forcePotentialOperator: SymbolicConstant = SUM,
         forcePotentialExponent: float = 2,
         connectorPotentials: ConnectorPotentialArray = None,
-        table: tuple = (),
-        independentComponents: tuple = ()):
+        table: Tuple = (),
+        independentComponents: Tuple = ()):
         """This method creates a connector friction behavior option for a ConnectorSection object.
         Depending upon the arguments provided, the friction behavior can be Coulomb-like or
         hysteretic in nature.
@@ -487,7 +488,7 @@ class ConnectorSection(SectionBase):
                       maxMotion: float = None,
                       minForce: float = None,
                       maxForce: float = None,
-                      components: tuple = ()):
+                      components: Tuple = ()):
         """This method creates a connector lock behavior option for a ConnectorSection.
 
         Notes
@@ -553,9 +554,9 @@ class ConnectorSection(SectionBase):
         forcePotentialOperator: SymbolicConstant = SUM,
         forcePotentialExponent: float = 2,
         connectorPotentials: ConnectorPotentialArray = None,
-        isotropicTable: tuple = (),
-        kinematicTable: tuple = (),
-        components: tuple = ()):
+        isotropicTable: Tuple = (),
+        kinematicTable: Tuple = (),
+        components: Tuple = ()):
         """This method creates a connector plasticity behavior option for a ConnectorSection
         object.
 
@@ -702,7 +703,7 @@ class ConnectorSection(SectionBase):
     def ConnectorStop(self,
                       minMotion: float = None,
                       maxMotion: float = None,
-                      components: tuple = ()):
+                      components: Tuple = ()):
         """This method creates a connector stop behavior option for a ConnectorSection object.
 
         Notes
@@ -783,7 +784,7 @@ class ConnectorSection(SectionBase):
         maximumElasticSlip: SymbolicConstant = FRACTION,
         fraction: float = None,
         absoluteDistance: float = None,
-        table: tuple = ()):
+        table: Tuple = ()):
         """This method creates a TangentialBehavior object.
 
         Notes

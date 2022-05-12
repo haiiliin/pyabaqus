@@ -60,6 +60,7 @@ from ..XY.XYPlot import XYPlot
 from ..XY.XYReportOptions import XYReportOptions
 
 from __init__ import *
+from __future__ import annotations
 
 
 class SessionBase:
@@ -590,7 +591,7 @@ class SessionBase:
     def printToFile(self,
                     fileName: str,
                     format: SymbolicConstant = PNG,
-                    canvasObjects: tuple[Canvas] = (),
+                    canvasObjects: Tuple[Canvas] = (),
                     compression: Boolean = OFF):
         """This method prints canvas objects to a file using the attributes stored in the
         PrintOptions object and the appropriate format options object.
@@ -616,7 +617,7 @@ class SessionBase:
     def printToPrinter(self,
                        printCommand: str = '',
                        numCopies: int = 1,
-                       canvasObjects: tuple[Canvas] = ()):
+                       canvasObjects: Tuple[Canvas] = ()):
         """This method prints canvas objects to a Windows printer or to a PostScript printer. The
         attributes used for printing to a Windows printer are stored in the PrintOptions object
         and the PageSetupOptions object; the attributes used for printing to a PostScript
@@ -670,7 +671,7 @@ class SessionBase:
     def writeVrmlFile(self,
                       fileName: str,
                       format: Boolean = OFF,
-                      canvasObjects: tuple[Canvas] = ()):
+                      canvasObjects: Tuple[Canvas] = ()):
         """This method exports the current viewport objects to a file.
         
         Parameters
@@ -689,7 +690,7 @@ class SessionBase:
     def write3DXMLFile(self,
                        fileName: str,
                        format: Boolean = OFF,
-                       canvasObjects: tuple[Canvas] = ()):
+                       canvasObjects: Tuple[Canvas] = ()):
         """This method exports the current viewport objects to a file.
         
         Parameters
@@ -705,7 +706,7 @@ class SessionBase:
         """
         pass
 
-    def writeOBJFile(self, fileName: str, canvasObjects: tuple[Canvas] = ()):
+    def writeOBJFile(self, fileName: str, canvasObjects: Tuple[Canvas] = ()):
         """This method exports the current viewport objects to a file.
         
         Parameters

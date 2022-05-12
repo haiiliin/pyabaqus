@@ -2,6 +2,7 @@ from abaqusConstants import *
 from .InteractionState import InteractionState
 
 from __init__ import *
+from __future__ import annotations
 
 
 class SurfaceToSurfaceStdState(InteractionState):
@@ -53,7 +54,7 @@ class SurfaceToSurfaceStdState(InteractionState):
         A String specifying the name of the :py:class:`~abaqus.Interaction.ContactControl.ContactControl` object associated with this
         interaction.
     direction: float
-        A tuple of three Floats specifying the following:
+        A Tuple of three Floats specifying the following:
             - X-direction cosine of the interference direction vector.
             - Y-direction cosine of the interference direction vector.
             - Z-direction cosine of the interference direction vector.
@@ -137,7 +138,7 @@ class SurfaceToSurfaceStdState(InteractionState):
     # interaction.
     contactControls: str = ''
 
-    # A tuple of three Floats specifying the following:
+    # A Tuple of three Floats specifying the following:
     # - X-direction cosine of the interference direction vector.
     # - Y-direction cosine of the interference direction vector.
     # - Z-direction cosine of the interference direction vector.

@@ -1,4 +1,5 @@
 from __init__ import *
+from __future__ import annotations
 
 
 class BaselineCorrection:
@@ -20,7 +21,7 @@ class BaselineCorrection:
         - BASELINE CORRECTION
 
     """
-    def __init__(self, intervals: tuple = ()):
+    def __init__(self, intervals: Tuple = ()):
         """This method creates a BaselineCorrection object.
 
         Notes

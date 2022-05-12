@@ -1,4 +1,5 @@
 from __init__ import *
+from __future__ import annotations
 
 
 class Spectrum:
@@ -14,7 +15,7 @@ class Spectrum:
         session.spectrums[name]
 
     """
-    def __init__(self, name: str, colors: tuple):
+    def __init__(self, name: str, colors: Tuple):
         """This method creates a Spectrum object and places it in the spectrums repository.
 
         Notes

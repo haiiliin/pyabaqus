@@ -1,4 +1,5 @@
 from __init__ import *
+from __future__ import annotations
 
 
 class OdbDataElementSet:
@@ -9,7 +10,7 @@ class OdbDataElementSet:
     name: str
         A String specifying the set name. This attribute is read-only.
     elements: str
-        A String-to-tuple-of-Ints Dictionary specifying the elements in the set. This attribute
+        A String-to-Tuple-of-Ints Dictionary specifying the elements in the set. This attribute
         is read-only.
 
     Notes
@@ -26,6 +27,6 @@ class OdbDataElementSet:
     # A String specifying the set name. This attribute is read-only.
     name: str = ''
 
-    # A String-to-tuple-of-Ints Dictionary specifying the elements in the set. This attribute
+    # A String-to-Tuple-of-Ints Dictionary specifying the elements in the set. This attribute
     # is read-only.
     elements: str = ''

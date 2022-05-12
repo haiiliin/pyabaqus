@@ -1,12 +1,13 @@
 from abaqusConstants import *
 from .XYData import XYData
-
 """This method writes an XYData object to a user-defined ASCII file. 
 
 """
 
 
-def writeXYRepor(fileName: str, xyData: tuple[XYData], appendMode: Boolean = ON):
+def writeXYRepor(fileName: str,
+                 xyData: Tuple[XYData],
+                 appendMode: Boolean = ON):
     """This method writes an XYData object to a user-defined ASCII file.
 
     Notes

@@ -23,6 +23,7 @@ from ..Connector.ConnectorBehaviorOptionArray import ConnectorBehaviorOptionArra
 from ..Model.ModelBase import ModelBase
 
 from __init__ import *
+from __future__ import annotations
 
 
 class SectionModel(ModelBase):
@@ -140,10 +141,10 @@ class SectionModel(ModelBase):
                     massOffsetY: float = 0,
                     beamShape: SymbolicConstant = CONSTANT,
                     material: str = '',
-                    table: tuple = (),
-                    outputPts: tuple = (),
-                    centroid: tuple[float] = (),
-                    shearCenter: tuple[float] = (),
+                    table: Tuple = (),
+                    outputPts: Tuple = (),
+                    centroid: Tuple[float] = (),
+                    shearCenter: Tuple[float] = (),
                     profileEnd: str = '') -> BeamSection:
         """This method creates a BeamSection object.
 
@@ -677,7 +678,7 @@ class SectionModel(ModelBase):
     def GeneralStiffnessSection(
         self,
         name: str,
-        stiffnessMatrix: tuple,
+        stiffnessMatrix: Tuple,
         referenceTemperature: float = None,
         applyThermalStress: Boolean = OFF,
         temperatureDependency: Boolean = OFF,
@@ -686,8 +687,8 @@ class SectionModel(ModelBase):
         poisson: float = 0,
         useDensity: Boolean = OFF,
         density: float = 0,
-        thermalStresses: tuple = (),
-        scalingData: tuple = ()
+        thermalStresses: Tuple = (),
+        scalingData: Tuple = ()
     ) -> GeneralStiffnessSection:
         """This method creates a GeneralStiffnessSection object.
 

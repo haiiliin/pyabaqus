@@ -1,6 +1,7 @@
 from abaqusConstants import *
 
 from __init__ import *
+from __future__ import annotations
 
 
 class Expansion:
@@ -55,7 +56,7 @@ class Expansion:
                  zero: float = 0,
                  temperatureDependency: Boolean = OFF,
                  dependencies: int = 0,
-                 table: tuple = ()):
+                 table: Tuple = ()):
         """This method creates an Expansion object.
 
         Notes

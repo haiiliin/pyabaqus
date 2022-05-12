@@ -1,6 +1,7 @@
 from .Odb import Odb
 
 from __init__ import *
+from __future__ import annotations
 
 
 class ScratchOdb:

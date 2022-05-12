@@ -6,6 +6,7 @@ from .DerivedComponent import DerivedComponent
 from .TangentialBehavior import TangentialBehavior
 
 from __init__ import *
+from __future__ import annotations
 
 
 class ConnectorFriction(ConnectorBehaviorOption):
@@ -70,8 +71,8 @@ class ConnectorFriction(ConnectorBehaviorOption):
                  forcePotentialOperator: SymbolicConstant = SUM,
                  forcePotentialExponent: float = 2,
                  connectorPotentials: ConnectorPotentialArray = None,
-                 table: tuple = (),
-                 independentComponents: tuple = ()):
+                 table: Tuple = (),
+                 independentComponents: Tuple = ()):
         """This method creates a connector friction behavior option for a ConnectorSection object.
         Depending upon the arguments provided, the friction behavior can be Coulomb-like or
         hysteretic in nature.

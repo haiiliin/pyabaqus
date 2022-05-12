@@ -4,6 +4,7 @@ from ..Assembly.AssemblyBase import AssemblyBase
 from ..Region.Region import Region
 
 from __init__ import *
+from __future__ import annotations
 
 
 class TableCollectionAssembly(AssemblyBase):

@@ -18,6 +18,7 @@ from ..Mesh.MeshNode import MeshNode
 from ..Mesh.MeshNodeArray import MeshNodeArray
 
 from __init__ import *
+from __future__ import annotations
 
 
 class Set:
@@ -113,20 +114,20 @@ class Set:
     @typing.overload
     def __init__(self,
                  name: str,
-                 nodes: tuple[MeshNode] = None,
-                 elements: tuple[MeshElement] = None,
+                 nodes: Tuple[MeshNode] = None,
+                 elements: Tuple[MeshElement] = None,
                  region: Region = None,
-                 vertices: tuple[Vertex] = None,
-                 edges: tuple[Edge] = None,
-                 faces: tuple[Face] = None,
-                 cells: tuple[Cell] = None,
-                 xVertices: tuple[Vertex] = None,
-                 xEdges: tuple[Edge] = None,
-                 xFaces: tuple[Face] = None,
-                 referencePoints: tuple[ReferencePoint] = (),
-                 skinFaces: tuple = (),
-                 skinEdges: tuple = (),
-                 stringerEdges: tuple = ()):
+                 vertices: Tuple[Vertex] = None,
+                 edges: Tuple[Edge] = None,
+                 faces: Tuple[Face] = None,
+                 cells: Tuple[Cell] = None,
+                 xVertices: Tuple[Vertex] = None,
+                 xEdges: Tuple[Edge] = None,
+                 xFaces: Tuple[Face] = None,
+                 referencePoints: Tuple[ReferencePoint] = (),
+                 skinFaces: Tuple = (),
+                 skinEdges: Tuple = (),
+                 stringerEdges: Tuple = ()):
         """This method creates a set from a sequence of objects in a model database.
 
         Notes
@@ -169,13 +170,13 @@ class Set:
         referencePoints
             A sequence of ReferencePoint objects. The default value is an empty sequence. 
         skinFaces
-            A tuple of tuples specifying a skin name and the sequence of faces associated with this 
+            A Tuple of tuples specifying a skin name and the sequence of faces associated with this 
             skin. Valid only for geometric regions on 3D and 2D parts. 
         skinEdges
-            A tuple of tuples specifying a skin name and the sequence of edges associated with this 
+            A Tuple of tuples specifying a skin name and the sequence of edges associated with this 
             skin. Valid only for geometric regions on Axisymmetric parts. 
         stringerEdges
-            A tuple of tuples specifying a stringer name and the sequence of edges associated with 
+            A Tuple of tuples specifying a stringer name and the sequence of edges associated with 
             this stringer. Valid only for geometric regions on 3D and 2D parts. 
 
         Returns
@@ -215,7 +216,7 @@ class Set:
 
     def SetByBoolean(self,
                      name: str,
-                     sets: tuple['Set'],
+                     sets: Tuple['Set'],
                      operation: SymbolicConstant = UNION):
         """This method creates a set by performing a boolean operation on two or more input sets.
 
@@ -246,7 +247,7 @@ class Set:
         """
         pass
 
-    def SetFromColor(self, name: str, color: tuple):
+    def SetFromColor(self, name: str, color: Tuple):
         """This method creates a set containing faces of the part marked with a specified color
         attribute. Third-party applications can assign color attributes to faces, and the color
         attribute can be imported into Abaqus from an ACIS file. You can use this method to
@@ -277,7 +278,7 @@ class Set:
         """
         pass
 
-    def SetFromElementLabels(self, name: str, elementLabels: tuple):
+    def SetFromElementLabels(self, name: str, elementLabels: Tuple):
         """This method creates a set from a sequence of element labels in a model database.
 
         Notes
@@ -306,7 +307,7 @@ class Set:
 
     def SetFromNodeLabels(self,
                           name: str,
-                          nodeLabels: tuple,
+                          nodeLabels: Tuple,
                           unsorted: Boolean = False):
         """This method creates a set from a sequence of node labels in a model database.
 
@@ -366,6 +367,6 @@ class Set:
 
         Returns
         -------
-            A Set object or a tuple of Set objects.
+            A Set object or a Tuple of Set objects.
         """
         pass

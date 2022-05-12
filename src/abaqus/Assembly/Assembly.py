@@ -9,6 +9,7 @@ from ..Region.Set import Set
 from ..TableCollection.TableCollectionAssembly import TableCollectionAssembly
 
 from __init__ import *
+from __future__ import annotations
 
 
 class Assembly(MeshEditAssembly, MeshAssembly, PropertyAssembly,

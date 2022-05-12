@@ -2,6 +2,7 @@ from .Section import Section
 from .TransverseShearShell import TransverseShearShell
 
 from __init__ import *
+from __future__ import annotations
 
 
 class ShellSection(Section):

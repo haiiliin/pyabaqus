@@ -1,6 +1,7 @@
 from abaqusConstants import *
 
 from __init__ import *
+from __future__ import annotations
 
 
 class TensileFailure:
@@ -31,7 +32,7 @@ class TensileFailure:
 
     """
     def tensileFailure(self,
-                       table: tuple,
+                       table: Tuple,
                        dependencies: int = 0,
                        temperatureDependency: Boolean = OFF,
                        elementDeletion: Boolean = True,

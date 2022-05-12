@@ -1,6 +1,7 @@
 from abaqusConstants import *
 
 from __init__ import *
+from __future__ import annotations
 
 
 class SlidingFormulationAssignment:
@@ -51,7 +52,7 @@ class SlidingFormulationAssignment:
             A String specifying the name of the step in which the sliding formulation assignments 
             are to be defined. 
         assignments
-            A sequence of tuples specifying the sliding formulation assignments. Each tuple contains 
+            A sequence of tuples specifying the sliding formulation assignments. Each Tuple contains 
             two entries:A region object or the SymbolicConstant GLOBAL specifying the surface to 
             which the sliding formulation attribute is assigned.A SymbolicConstant specifying the 
             overriding the smoothness value to be used for the first surface. Possible values of the 
@@ -59,7 +60,7 @@ class SlidingFormulationAssignment:
         """
         pass
 
-    def delete(self, indices: tuple):
+    def delete(self, indices: Tuple):
         """The delete method allows you to delete existing sliding formulation assignments.
         
         Parameters

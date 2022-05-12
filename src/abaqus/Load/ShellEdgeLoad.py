@@ -5,6 +5,7 @@ from .Load import Load
 from ..Region.Region import Region
 
 from __init__ import *
+from __future__ import annotations
 
 
 class ShellEdgeLoad(Load):
@@ -63,7 +64,7 @@ class ShellEdgeLoad(Load):
                  axis: SymbolicConstant = AXIS_1,
                  localCsys: int = GENERAL,
                  userCsys: str = GENERAL,
-                 directionVector: tuple = (),
+                 directionVector: Tuple = (),
                  follower: Boolean = ON,
                  resultant: Boolean = OFF,
                  traction: SymbolicConstant = NORMAL):
@@ -118,8 +119,8 @@ class ShellEdgeLoad(Load):
             the *localCsys* parameter if defined. This parameter is available only if *traction* is 
             GENERAL. 
         directionVector
-            A tuple of two points specifying the direction of the load. Each point is specified as a 
-            point region or a tuple of coordinates. If *traction* is SHEAR, then *directionVector* 
+            A Tuple of two points specifying the direction of the load. Each point is specified as a 
+            point region or a Tuple of coordinates. If *traction* is SHEAR, then *directionVector* 
             will be projected onto the region surface. This parameter is available only if 
             *traction* is GENERAL. 
         follower
@@ -150,7 +151,7 @@ class ShellEdgeLoad(Load):
                   axis: SymbolicConstant = AXIS_1,
                   localCsys: int = GENERAL,
                   userCsys: str = GENERAL,
-                  directionVector: tuple = (),
+                  directionVector: Tuple = (),
                   follower: Boolean = ON,
                   resultant: Boolean = OFF,
                   traction: SymbolicConstant = NORMAL):
@@ -189,8 +190,8 @@ class ShellEdgeLoad(Load):
             the *localCsys* parameter if defined. This parameter is available only if *traction* is 
             GENERAL. 
         directionVector
-            A tuple of two points specifying the direction of the load. Each point is specified as a 
-            point region or a tuple of coordinates. If *traction* is SHEAR, then *directionVector* 
+            A Tuple of two points specifying the direction of the load. Each point is specified as a 
+            point region or a Tuple of coordinates. If *traction* is SHEAR, then *directionVector* 
             will be projected onto the region surface. This parameter is available only if 
             *traction* is GENERAL. 
         follower

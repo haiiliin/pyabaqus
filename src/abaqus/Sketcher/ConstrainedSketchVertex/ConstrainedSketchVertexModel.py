@@ -1,6 +1,7 @@
 from ..ConstrainedSketchBase import ConstrainedSketchBase
 
 from __init__ import *
+from __future__ import annotations
 
 
 class ConstrainedSketchVertexModel(ConstrainedSketchBase):
@@ -19,7 +20,7 @@ class ConstrainedSketchVertexModel(ConstrainedSketchBase):
             mdb.models[name].sketches[name]
 
     """
-    def Spot(self, point: tuple[float]):
+    def Spot(self, point: Tuple[float]):
         """This method creates a spot (construction point) located at the specified coordinates.
 
         Notes

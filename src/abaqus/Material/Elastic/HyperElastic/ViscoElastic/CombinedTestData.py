@@ -1,4 +1,5 @@
 from __init__ import *
+from __future__ import annotations
 
 
 class CombinedTestData:
@@ -31,7 +32,7 @@ class CombinedTestData:
 
     """
     def __init__(self,
-                 table: tuple,
+                 table: Tuple,
                  volinf: float = None,
                  shrinf: float = None):
         """This method creates a CombinedTestData object.

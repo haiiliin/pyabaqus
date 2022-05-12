@@ -3,6 +3,7 @@ from ..TableCollection.ParameterTable import ParameterTable
 from ..TableCollection.PropertyTable import PropertyTable
 
 from __init__ import *
+from __future__ import annotations
 
 
 class TableCollection:

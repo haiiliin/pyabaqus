@@ -4,6 +4,7 @@ from .ConnectorOptions import ConnectorOptions
 from .ConnectorPotentialArray import ConnectorPotentialArray
 
 from __init__ import *
+from __future__ import annotations
 
 
 class ConnectorDamage(ConnectorBehaviorOption):
@@ -124,10 +125,10 @@ class ConnectorDamage(ConnectorBehaviorOption):
                  evolutionPotentialExponent: float = 2,
                  initiationPotentials: ConnectorPotentialArray = None,
                  evolutionPotentials: ConnectorPotentialArray = None,
-                 initiationTable: tuple = (),
-                 evolutionTable: tuple = (),
-                 affectedComponents: tuple = (),
-                 components: tuple = ()):
+                 initiationTable: Tuple = (),
+                 evolutionTable: Tuple = (),
+                 affectedComponents: Tuple = (),
+                 components: Tuple = ()):
         """This method creates a connector damage behavior option for a ConnectorSection object.
 
         Notes

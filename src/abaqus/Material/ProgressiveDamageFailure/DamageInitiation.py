@@ -4,6 +4,7 @@ from .DamageStabilization import DamageStabilization
 from .DamageStabilizationCohesive import DamageStabilizationCohesive
 
 from __init__ import *
+from __future__ import annotations
 
 
 class DamageInitiation:
@@ -208,7 +209,7 @@ class DamageInitiation:
     # and TMORI. The default value is NMORI.
     direction: SymbolicConstant = NMORI
 
-    # A tuple of tuples of Floats specifying the items described in the "Table data" section.
+    # A Tuple of tuples of Floats specifying the items described in the "Table data" section.
     table: float = None
 
     # A DamageEvolution object.
@@ -222,7 +223,7 @@ class DamageInitiation:
     )
 
     def DuctileDamageInitiation(self,
-                                table: tuple,
+                                table: Tuple,
                                 definition: SymbolicConstant = MSFLD,
                                 feq: float = 10,
                                 fnn: float = 10,
@@ -302,7 +303,7 @@ class DamageInitiation:
         pass
 
     def FldDamageInitiation(self,
-                            table: tuple,
+                            table: Tuple,
                             definition: SymbolicConstant = MSFLD,
                             feq: float = 10,
                             fnn: float = 10,
@@ -382,7 +383,7 @@ class DamageInitiation:
         pass
 
     def FlsdDamageInitiation(self,
-                             table: tuple,
+                             table: Tuple,
                              definition: SymbolicConstant = MSFLD,
                              feq: float = 10,
                              fnn: float = 10,
@@ -462,7 +463,7 @@ class DamageInitiation:
         pass
 
     def JohnsonCookDamageInitiation(self,
-                                    table: tuple,
+                                    table: Tuple,
                                     definition: SymbolicConstant = MSFLD,
                                     feq: float = 10,
                                     fnn: float = 10,
@@ -542,7 +543,7 @@ class DamageInitiation:
         pass
 
     def MaxeDamageInitiation(self,
-                             table: tuple,
+                             table: Tuple,
                              definition: SymbolicConstant = MSFLD,
                              feq: float = 10,
                              fnn: float = 10,
@@ -626,7 +627,7 @@ class DamageInitiation:
         pass
 
     def MaxsDamageInitiation(self,
-                             table: tuple,
+                             table: Tuple,
                              definition: SymbolicConstant = MSFLD,
                              feq: float = 10,
                              fnn: float = 10,
@@ -710,7 +711,7 @@ class DamageInitiation:
         pass
 
     def MkDamageInitiation(self,
-                           table: tuple,
+                           table: Tuple,
                            definition: SymbolicConstant = MSFLD,
                            feq: float = 10,
                            fnn: float = 10,
@@ -790,7 +791,7 @@ class DamageInitiation:
         pass
 
     def MsfldDamageInitiation(self,
-                              table: tuple,
+                              table: Tuple,
                               definition: SymbolicConstant = MSFLD,
                               feq: float = 10,
                               fnn: float = 10,
@@ -870,7 +871,7 @@ class DamageInitiation:
         pass
 
     def QuadeDamageInitiation(self,
-                              table: tuple,
+                              table: Tuple,
                               definition: SymbolicConstant = MSFLD,
                               feq: float = 10,
                               fnn: float = 10,
@@ -954,7 +955,7 @@ class DamageInitiation:
         pass
 
     def QuadsDamageInitiation(self,
-                              table: tuple,
+                              table: Tuple,
                               definition: SymbolicConstant = MSFLD,
                               feq: float = 10,
                               fnn: float = 10,
@@ -1038,7 +1039,7 @@ class DamageInitiation:
         pass
 
     def MaxpeDamageInitiation(self,
-                              table: tuple,
+                              table: Tuple,
                               definition: SymbolicConstant = MSFLD,
                               feq: float = 10,
                               fnn: float = 10,
@@ -1122,7 +1123,7 @@ class DamageInitiation:
         pass
 
     def MaxpsDamageInitiation(self,
-                              table: tuple,
+                              table: Tuple,
                               definition: SymbolicConstant = MSFLD,
                               feq: float = 10,
                               fnn: float = 10,
@@ -1206,7 +1207,7 @@ class DamageInitiation:
         pass
 
     def ShearDamageInitiation(self,
-                              table: tuple,
+                              table: Tuple,
                               definition: SymbolicConstant = MSFLD,
                               feq: float = 10,
                               fnn: float = 10,
@@ -1286,7 +1287,7 @@ class DamageInitiation:
         pass
 
     def HashinDamageInitiation(self,
-                               table: tuple,
+                               table: Tuple,
                                definition: SymbolicConstant = MSFLD,
                                feq: float = 10,
                                fnn: float = 10,

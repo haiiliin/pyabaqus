@@ -2,6 +2,7 @@ from abaqusConstants import *
 from .MeshNode import MeshNode
 
 from __init__ import *
+from __future__ import annotations
 
 
 class MeshElement:
@@ -19,7 +20,7 @@ class MeshElement:
     instanceName: str
         A String specifying the name of the part instance that owns this element.
     connectivity: int
-        A tuple of Ints specifying the internal node indices that define the nodal connectivity.
+        A Tuple of Ints specifying the internal node indices that define the nodal connectivity.
         It is important to note the difference with :py:class:`~abaqus.Odb.OdbMeshElement.OdbMeshElement` object of ODB where the
         connectivity is node labels instead of node indices.
 
@@ -66,13 +67,13 @@ class MeshElement:
     # A String specifying the name of the part instance that owns this element.
     instanceName: str = ''
 
-    # A tuple of Ints specifying the internal node indices that define the nodal connectivity.
+    # A Tuple of Ints specifying the internal node indices that define the nodal connectivity.
     # It is important to note the difference with OdbMeshElement object of ODB where the
     # connectivity is node labels instead of node indices.
     connectivity: int = None
 
     def Element(self,
-                nodes: tuple[MeshNode],
+                nodes: Tuple[MeshNode],
                 elemShape: SymbolicConstant,
                 label: int = None):
         """This method creates an element on an orphan mesh part from a sequence of nodes.
@@ -103,29 +104,29 @@ class MeshElement:
         pass
 
     def getNodes(self):
-        """This method returns a tuple of node objects of the element.
+        """This method returns a Tuple of node objects of the element.
 
         Returns
         -------
-            A tuple of MeshNode objects.
+            A Tuple of MeshNode objects.
         """
         pass
 
     def getElemEdges(self):
-        """This method returns a tuple of unique element edge objects on the element.
+        """This method returns a Tuple of unique element edge objects on the element.
 
         Returns
         -------
-            A tuple of MeshEdge objects.
+            A Tuple of MeshEdge objects.
         """
         pass
 
     def getElemFaces(self):
-        """This method returns a tuple of unique element face objects on the element.
+        """This method returns a Tuple of unique element face objects on the element.
 
         Returns
         -------
-            A tuple of MeshFace objects.
+            A Tuple of MeshFace objects.
         """
         pass
 

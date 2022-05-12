@@ -3,6 +3,7 @@ from .AdaptivityIteration import AdaptivityIteration
 from ..Job.ModelJob import ModelJob
 
 from __init__ import *
+from __future__ import annotations
 
 
 class AdaptivityProcess:

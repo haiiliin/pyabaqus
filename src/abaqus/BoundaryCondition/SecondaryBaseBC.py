@@ -4,6 +4,7 @@ from ..Region.Region import Region
 from ..Region.RegionArray import RegionArray
 
 from __init__ import *
+from __future__ import annotations
 
 
 class SecondaryBaseBC(BoundaryCondition):
@@ -15,7 +16,7 @@ class SecondaryBaseBC(BoundaryCondition):
     name: str
         A String specifying the boundary condition repository key.
     dofs: int
-        A tuple of tuples of Ints specifying the constrained degrees-of-freedom.
+        A Tuple of tuples of Ints specifying the constrained degrees-of-freedom.
     regions: RegionArray
         A :py:class:`~abaqus.Region.RegionArray.RegionArray` object specifying the region to which the boundary condition is applied.
         Note that the usual **region** is ignored. The default value is MODEL.
@@ -43,7 +44,7 @@ class SecondaryBaseBC(BoundaryCondition):
     # A String specifying the boundary condition repository key.
     name: str = ''
 
-    # A tuple of tuples of Ints specifying the constrained degrees-of-freedom.
+    # A Tuple of tuples of Ints specifying the constrained degrees-of-freedom.
     dofs: int = None
 
     # A RegionArray object specifying the region to which the boundary condition is applied.
@@ -63,7 +64,7 @@ class SecondaryBaseBC(BoundaryCondition):
     localCsys: str = None
 
     def __init__(self, name: str, createStepName: str, regions: RegionArray,
-                 dofs: tuple):
+                 dofs: Tuple):
         """This method creates a SecondaryBaseBC object.
 
         Notes

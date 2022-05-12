@@ -11,6 +11,7 @@ from .IncidentWaveProperty import IncidentWaveProperty
 from ..Model.ModelBase import ModelBase
 
 from __init__ import *
+from __future__ import annotations
 
 
 class InteractionPropertyModel(ModelBase):
@@ -18,7 +19,7 @@ class InteractionPropertyModel(ModelBase):
             self,
             name: str,
             tableType: SymbolicConstant,
-            table: tuple,
+            table: Tuple,
             frequencyDependency: Boolean = OFF) -> AcousticImpedanceProp:
         """This method creates an AcousticImpedanceProp object.
 
@@ -60,8 +61,8 @@ class InteractionPropertyModel(ModelBase):
     def ActuatorSensorProp(
         self,
         name: str,
-        realProperties: tuple = (),
-        integerProperties: tuple = ()
+        realProperties: Tuple = (),
+        integerProperties: Tuple = ()
     ) -> ActuatorSensorProp:
         """This method creates an ActuatorSensorProp object.
 
@@ -98,7 +99,7 @@ class InteractionPropertyModel(ModelBase):
         name: str,
         temperatureDependency: Boolean = OFF,
         dependencies: int = 0,
-        property: tuple = ()) -> CavityRadiationProp:
+        property: Tuple = ()) -> CavityRadiationProp:
         """This method creates a CavityRadiationProp object.
 
         Notes
@@ -160,7 +161,7 @@ class InteractionPropertyModel(ModelBase):
         name: str,
         temperatureDependency: Boolean = OFF,
         dependencies: int = 0,
-        property: tuple = ()) -> FilmConditionProp:
+        property: Tuple = ()) -> FilmConditionProp:
         """This method creates a FilmConditionProp object.
 
         Notes
@@ -206,16 +207,16 @@ class InteractionPropertyModel(ModelBase):
         expansionTempDep: Boolean = OFF,
         expansionDependencies: int = 0,
         referenceTemperature: float = 0,
-        expansionTable: tuple = (),
+        expansionTable: Tuple = (),
         useBulkModulus: Boolean = OFF,
         bulkModulusTempDep: Boolean = OFF,
         bulkModulusDependencies: int = 0,
-        bulkModulusTable: tuple = (),
+        bulkModulusTable: Tuple = (),
         useCapacity: Boolean = OFF,
         capacityType: SymbolicConstant = POLYNOMIAL,
         capacityTempDep: Boolean = OFF,
         capacityDependencies: int = 0,
-        capacityTable: tuple = ()
+        capacityTable: Tuple = ()
     ) -> FluidCavityProperty:
         """This method creates a FluidCavityProperty object.
 
@@ -337,7 +338,7 @@ class InteractionPropertyModel(ModelBase):
     def FluidExchangeProperty(
             self,
             name: str,
-            dataTable: tuple,
+            dataTable: Tuple,
             definition: SymbolicConstant = BULK_VISCOSITY,
             pressureDependency: Boolean = OFF,
             temperatureDependency: Boolean = OFF,
@@ -431,12 +432,12 @@ class InteractionPropertyModel(ModelBase):
         effectiveArea: float,
         tankVolume: float,
         dischargeCoefficient: float = None,
-        dataTable: tuple = (),
+        dataTable: Tuple = (),
         numFluids: int = None,
         mixtureType: str = '',
-        inflationTime: tuple = (),
-        fluidbehaviorName: tuple = (),
-        massFraction: tuple = ()
+        inflationTime: Tuple = (),
+        fluidbehaviorName: Tuple = (),
+        massFraction: Tuple = ()
     ) -> FluidInflatorProperty:
         """This method creates a FluidInflatorProperty object.
 

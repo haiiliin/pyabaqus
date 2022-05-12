@@ -3,6 +3,7 @@ from ..Datum.DatumCsys import DatumCsys
 from ..Region.Region import Region
 
 from __init__ import *
+from __future__ import annotations
 
 
 class AdaptiveMeshConstraint:
@@ -148,7 +149,7 @@ class AdaptiveMeshConstraint:
         """
         pass
 
-    def delete(self, indices: tuple):
+    def delete(self, indices: Tuple):
         """This method allows you to delete existing adaptive mesh constraints.
         
         Parameters

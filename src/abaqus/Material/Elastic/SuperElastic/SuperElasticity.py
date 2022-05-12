@@ -2,6 +2,7 @@ from ...Plastic.SuperElastic.SuperElasticHardening import SuperElasticHardening
 from ...Plastic.SuperElastic.SuperElasticHardeningModifications import SuperElasticHardeningModifications
 
 from __init__ import *
+from __future__ import annotations
 
 
 class SuperElasticity:
@@ -46,7 +47,7 @@ class SuperElasticity:
     superElasticHardeningModifications: SuperElasticHardeningModifications = SuperElasticHardeningModifications(
         ((), ))
 
-    def __init__(self, table: tuple, nonassociated: float = None):
+    def __init__(self, table: Tuple, nonassociated: float = None):
         """This method creates a SuperElasticity object.
 
         Notes

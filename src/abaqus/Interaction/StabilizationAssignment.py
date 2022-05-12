@@ -1,6 +1,7 @@
 from abaqusConstants import *
 
 from __init__ import *
+from __future__ import annotations
 
 
 class StabilizationAssignment:
@@ -50,14 +51,14 @@ class StabilizationAssignment:
             are to be defined. 
         assignments
             A sequence of tuples specifying the stabilizations assigned to each surface pair. Each 
-            tuple contains three entries: 
+            Tuple contains three entries: 
             - A region object or the SymbolicConstant GLOBAL. 
             - A region object or the SymbolicConstant SELF. 
             - A String specifying a StdStabilization object associated with this pair of regions. 
         """
         pass
 
-    def delete(self, indices: tuple):
+    def delete(self, indices: Tuple):
         """The delete method allows you to delete existing contact stabilization assignments from a
         ContactStd object.
         

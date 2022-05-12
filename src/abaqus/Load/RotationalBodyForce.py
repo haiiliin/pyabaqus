@@ -3,6 +3,7 @@ from .Load import Load
 from ..Region.Region import Region
 
 from __init__ import *
+from __future__ import annotations
 
 
 class RotationalBodyForce(Load):
@@ -25,9 +26,9 @@ class RotationalBodyForce(Load):
         default value is OFF.Note:At least one of **centrifugal** or **rotaryAcceleration** must be
         specified and only one must have the value ON.
     point1: float
-        A tuple of Floats specifying the first point on the axis of rotation for the load.
+        A Tuple of Floats specifying the first point on the axis of rotation for the load.
     point2: float
-        A tuple of Floats specifying the second point on the axis of rotation for the load.
+        A Tuple of Floats specifying the second point on the axis of rotation for the load.
     field: str
         A String specifying the name of the :py:class:`~abaqus.Field.AnalyticalField.AnalyticalField` object associated with this load.
         The **field** argument applies only when **distributionType=FIELD**. The default value is an
@@ -63,10 +64,10 @@ class RotationalBodyForce(Load):
     # specified and only one must have the value ON.
     rotaryAcceleration: Boolean = OFF
 
-    # A tuple of Floats specifying the first point on the axis of rotation for the load.
+    # A Tuple of Floats specifying the first point on the axis of rotation for the load.
     point1: float = None
 
-    # A tuple of Floats specifying the second point on the axis of rotation for the load.
+    # A Tuple of Floats specifying the second point on the axis of rotation for the load.
     point2: float = None
 
     # A String specifying the name of the AnalyticalField object associated with this load.
@@ -82,8 +83,8 @@ class RotationalBodyForce(Load):
                  createStepName: str,
                  region: Region,
                  magnitude: float,
-                 point1: tuple,
-                 point2: tuple,
+                 point1: Tuple,
+                 point2: Tuple,
                  distributionType: SymbolicConstant = UNIFORM,
                  field: str = '',
                  centrifugal: Boolean = OFF,

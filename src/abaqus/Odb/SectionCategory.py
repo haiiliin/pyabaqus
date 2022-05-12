@@ -2,6 +2,7 @@ from .SectionPoint import SectionPoint
 from .SectionPointArray import SectionPointArray
 
 from __init__ import *
+from __future__ import annotations
 
 
 class SectionCategory:

@@ -13,6 +13,7 @@ from ..Mesh.MeshNode import MeshNode
 from ..Sketcher.ConstrainedSketch import ConstrainedSketch
 
 from __init__ import *
+from __future__ import annotations
 
 
 class Feature:
@@ -55,8 +56,8 @@ class Feature:
             name: str,
             points: float,
             projectionMethod: SymbolicConstant = PROJECT_BY_PROXIMITY,
-            projectOnFaces: tuple[Face] = (),
-            projectOnElementFaces: tuple[MeshFace] = (),
+            projectOnFaces: Tuple[Face] = (),
+            projectOnElementFaces: Tuple[MeshFace] = (),
             projectionDirStartPt: float = None,
             projectionDirEndPt: float = None,
             setName: str = ''):
@@ -79,8 +80,8 @@ class Feature:
         name
             A String specifying a unique Feature name. 
         points
-            A tuple of points. Each point can be a ConstrainedSketchVertex, Datum point, Reference point, Attachment
-            point, orphan mesh Node, Interesting point object, or a tuple of Floats representing the 
+            A Tuple of points. Each point can be a ConstrainedSketchVertex, Datum point, Reference point, Attachment
+            point, orphan mesh Node, Interesting point object, or a Tuple of Floats representing the 
             coordinates of a point. 
         projectionMethod
             A SymbolicConstant specifying the projection method. Possible values are 
@@ -95,11 +96,11 @@ class Feature:
         projectionDirStartPt
             A point specifying the start point of the projection direction. The point can be a 
             ConstrainedSketchVertex, Datum point, Reference point, Attachment point, orphan mesh Node, Interesting
-            point object, or a tuple of Floats representing the coordinates of a point. 
+            point object, or a Tuple of Floats representing the coordinates of a point. 
         projectionDirEndPt
             A point specifying the end point of the projection direction. The point can be a ConstrainedSketchVertex,
             Datum point, Reference point, Attachment point, orphan mesh Node, Interesting point 
-            object, or a tuple of Floats representing the coordinates of a point. 
+            object, or a Tuple of Floats representing the coordinates of a point. 
         setName
             A String specifying a unique set name. 
 
@@ -123,8 +124,8 @@ class Feature:
             createPtAtStartPt: Boolean = True,
             createPtAtEndPt: Boolean = True,
             projectionMethod: SymbolicConstant = PROJECT_BY_PROXIMITY,
-            projectOnFaces: tuple[Face] = (),
-            projectOnElementFaces: tuple[MeshFace] = (),
+            projectOnFaces: Tuple[Face] = (),
+            projectOnElementFaces: Tuple[MeshFace] = (),
             projectionDirStartPt: float = None,
             projectionDirEndPt: float = None,
             flipDirection: Boolean = OFF,
@@ -150,14 +151,14 @@ class Feature:
         startPoint
             A point specifying the start point of the direction along which to create points. The 
             point can be a ConstrainedSketchVertex, Datum point, Reference point, Attachment point, orphan mesh Node,
-            Interesting point object, or a tuple of Floats representing the coordinates of a point. 
+            Interesting point object, or a Tuple of Floats representing the coordinates of a point. 
         pointCreationMethod
             A SymbolicConstant specifying the point creation method. Possible values are AUTO_FIT, 
             NUM_PTS_ALONG_DIR, and NUM_PTS_BETWEEN_PTS. 
         endPoint
             A point specifying the end point if creating points between two points. The point can be 
             a ConstrainedSketchVertex, Datum point, Reference point, Attachment point, orphan mesh Node, Interesting
-            point object, or a tuple of Floats representing the coordinates of a point. 
+            point object, or a Tuple of Floats representing the coordinates of a point. 
         direction
             The direction can be specified by a straight edge or a datum axis. 
         spacing
@@ -186,11 +187,11 @@ class Feature:
         projectionDirStartPt
             A point specifying the start point of the projection direction. The point can be a 
             ConstrainedSketchVertex, Datum point, Reference point, Attachment point, orphan mesh Node, Interesting
-            point object, or a tuple of Floats representing the coordinates of a point. 
+            point object, or a Tuple of Floats representing the coordinates of a point. 
         projectionDirEndPt
             A point specifying the end point of the projection direction. The point can be a ConstrainedSketchVertex,
             Datum point, Reference point, Attachment point, orphan mesh Node, Interesting point 
-            object, or a tuple of Floats representing the coordinates of a point. 
+            object, or a Tuple of Floats representing the coordinates of a point. 
         flipDirection
             A Boolean specifying if the direction along which the attachment points are created 
             should be reversed. This argument is valid only when 
@@ -208,7 +209,7 @@ class Feature:
     def AttachmentPointsOffsetFromEdges(
             self,
             name: str,
-            edges: tuple,
+            edges: Tuple,
             startPoint: str = '',
             flipDirection: str = '',
             pointCreationMethod: SymbolicConstant = None,
@@ -225,8 +226,8 @@ class Feature:
             numberOfRows: str = 1,
             spacingBetweenRows: str = '',
             projectionMethod: SymbolicConstant = PROJECT_BY_PROXIMITY,
-            projectOnFaces: tuple[Face] = (),
-            projectOnElementFaces: tuple[MeshFace] = (),
+            projectOnFaces: Tuple[Face] = (),
+            projectOnElementFaces: Tuple[MeshFace] = (),
             projectionDirStartPt: float = None,
             projectionDirEndPt: float = None,
             setName: str = ''):
@@ -287,12 +288,12 @@ class Feature:
             A point specifying the start point of the direction along which to create a pattern of 
             points when the PATTERN_ALONG_DIRECTION method is chosen for patterning. The point can 
             be a ConstrainedSketchVertex, Datum point, Reference point, Attachment point, orphan mesh Node,
-            Interesting point object, or a tuple of Floats representing the coordinates of a point. 
+            Interesting point object, or a Tuple of Floats representing the coordinates of a point. 
         endPointForPatternDirection
             A point specifying the end point of the direction along which to create a pattern of 
             points when the PATTERN_ALONG_DIRECTION method is chosen for patterning. The point can 
             be a ConstrainedSketchVertex, Datum point, Reference point, Attachment point, orphan mesh Node,
-            Interesting point object, or a tuple of Floats representing the coordinates of a point. 
+            Interesting point object, or a Tuple of Floats representing the coordinates of a point. 
         offsetFromEdges
             A float specifying the distance by which to offset the first row of points from the 
             edges. 
@@ -315,11 +316,11 @@ class Feature:
         projectionDirStartPt
             A point specifying the start point of the projection direction. The point can be a 
             ConstrainedSketchVertex, Datum point, Reference point, Attachment point, orphan mesh Node, Interesting
-            point object, or a tuple of Floats representing the coordinates of a point. 
+            point object, or a Tuple of Floats representing the coordinates of a point. 
         projectionDirEndPt
             A point specifying the end point of the projection direction. The point can be a ConstrainedSketchVertex,
             Datum point, Reference point, Attachment point, orphan mesh Node, Interesting point 
-            object, or a tuple of Floats representing the coordinates of a point. 
+            object, or a Tuple of Floats representing the coordinates of a point. 
         setName
             A String specifying a unique set name. 
 
@@ -678,7 +679,7 @@ class Feature:
     def DatumCsysByOffset(self,
                           coordSysType: SymbolicConstant,
                           datumCoordSys: Datum,
-                          vector: tuple,
+                          vector: Tuple,
                           point: str,
                           name: str = ''):
         """This method creates a Feature object and a DatumCsys object by offsetting the origin of
@@ -1075,7 +1076,7 @@ class Feature:
         """
         pass
 
-    def DatumPointByCoordinate(self, coords: tuple):
+    def DatumPointByCoordinate(self, coords: Tuple):
         """This method creates a Feature object and a DatumPoint object at the point defined by the
         specified coordinates.
 
@@ -1101,7 +1102,7 @@ class Feature:
         """
         pass
 
-    def DatumPointByOffset(self, point: int, vector: tuple):
+    def DatumPointByOffset(self, point: int, vector: Tuple):
         """This method creates a Feature object and a DatumPoint object offset from an existing
         point by a vector.
 
@@ -1286,7 +1287,7 @@ class Feature:
 
     def MakeSketchTransform(self,
                             sketchPlane: str,
-                            origin: tuple = (),
+                            origin: Tuple = (),
                             sketchOrientation: SymbolicConstant = RIGHT,
                             sketchPlaneSide: SymbolicConstant = SIDE1,
                             sketchUpEdge: str = ''):
@@ -1331,7 +1332,7 @@ class Feature:
         """
         pass
 
-    def PartitionCellByDatumPlane(self, cells: tuple[Cell],
+    def PartitionCellByDatumPlane(self, cells: Tuple[Cell],
                                   datumPlane: DatumPlane):
         """This method partitions one or more cells using the given datum plane.
 
@@ -1361,7 +1362,7 @@ class Feature:
         """
         pass
 
-    def PartitionCellByExtendFace(self, cells: tuple[Cell], extendFace: str):
+    def PartitionCellByExtendFace(self, cells: Tuple[Cell], extendFace: str):
         """This method partitions one or more cells by extending the underlying geometry of a given
         face to partition the target cells.
 
@@ -1391,7 +1392,7 @@ class Feature:
         """
         pass
 
-    def PartitionCellByExtrudeEdge(self, cells: tuple[Cell], edges: str,
+    def PartitionCellByExtrudeEdge(self, cells: Tuple[Cell], edges: str,
                                    line: str, sense: SymbolicConstant):
         """This method partitions one or more cells by extruding selected edges in the given
         direction.
@@ -1430,7 +1431,7 @@ class Feature:
         """
         pass
 
-    def PartitionCellByPatchNCorners(self, cell: Cell, cornerPoints: tuple):
+    def PartitionCellByPatchNCorners(self, cell: Cell, cornerPoints: Tuple):
         """This method partitions a cell using an N-sided cutting patch defined by the given corner
         points.
 
@@ -1461,7 +1462,7 @@ class Feature:
         """
         pass
 
-    def PartitionCellByPatchNEdges(self, cell: str, edges: tuple[Edge]):
+    def PartitionCellByPatchNEdges(self, cell: str, edges: Tuple[Edge]):
         """This method partitions a cell using an N-sided cutting patch defined by the given edges.
 
         Notes
@@ -1491,7 +1492,7 @@ class Feature:
         """
         pass
 
-    def PartitionCellByPlaneNormalToEdge(self, cells: tuple[Cell], edge: Edge,
+    def PartitionCellByPlaneNormalToEdge(self, cells: Tuple[Cell], edge: Edge,
                                          point: int):
         """This method partitions one or more cells using a plane normal to an edge at the given
         edge point.
@@ -1524,7 +1525,7 @@ class Feature:
         """
         pass
 
-    def PartitionCellByPlanePointNormal(self, cells: tuple[Cell], point: int,
+    def PartitionCellByPlanePointNormal(self, cells: Tuple[Cell], point: int,
                                         normal: str):
         """This method partitions one or more cells using a plane defined by a point and a normal
         direction.
@@ -1557,7 +1558,7 @@ class Feature:
         """
         pass
 
-    def PartitionCellByPlaneThreePoints(self, cells: tuple[Cell], point1: int,
+    def PartitionCellByPlaneThreePoints(self, cells: Tuple[Cell], point1: int,
                                         point2: int, point3: int):
         """This method partitions one or more cells using a plane defined by three points.
 
@@ -1592,7 +1593,7 @@ class Feature:
         """
         pass
 
-    def PartitionCellBySweepEdge(self, cells: tuple[Cell], edges: tuple[Edge],
+    def PartitionCellBySweepEdge(self, cells: Tuple[Cell], edges: Tuple[Edge],
                                  sweepPath: Edge):
         """This method partitions one or more cells by sweeping selected edges along the given
         sweep path.
@@ -1628,7 +1629,7 @@ class Feature:
         """
         pass
 
-    def PartitionEdgeByDatumPlane(self, edges: tuple[Edge],
+    def PartitionEdgeByDatumPlane(self, edges: Tuple[Edge],
                                   datumPlane: DatumPlane):
         """This method partitions an edge where it intersects with a datum plane.
 
@@ -1658,7 +1659,7 @@ class Feature:
         """
         pass
 
-    def PartitionEdgeByParam(self, edges: tuple[Edge], parameter: float):
+    def PartitionEdgeByParam(self, edges: Tuple[Edge], parameter: float):
         """This method partitions one or more edges at the given normalized edge parameter.
 
         Notes
@@ -1820,7 +1821,7 @@ class Feature:
         """
         pass
 
-    def PartitionFaceByDatumPlane(self, faces: tuple[Face],
+    def PartitionFaceByDatumPlane(self, faces: Tuple[Face],
                                   datumPlane: DatumPlane):
         """This method partitions one or more faces using the given datum plane.
 
@@ -1847,7 +1848,7 @@ class Feature:
         """
         pass
 
-    def PartitionFaceByExtendFace(self, faces: tuple[Face], extendFace: Face):
+    def PartitionFaceByExtendFace(self, faces: Tuple[Face], extendFace: Face):
         """This method partitions one or more faces by extending the underlying geometry of another
         given face to partition the target faces.
 
@@ -1875,8 +1876,8 @@ class Feature:
         """
         pass
 
-    def PartitionFaceByIntersectFace(self, faces: tuple[Face],
-                                     cuttingFaces: tuple[Face]):
+    def PartitionFaceByIntersectFace(self, faces: Tuple[Face],
+                                     cuttingFaces: Tuple[Face]):
         """This method partitions one or more faces using the given cutting faces to partition the
         target faces.
 
@@ -1904,8 +1905,8 @@ class Feature:
         pass
 
     def PartitionFaceByProjectingEdges(self,
-                                       faces: tuple[Face],
-                                       edges: tuple[Edge],
+                                       faces: Tuple[Face],
+                                       edges: Tuple[Edge],
                                        extendEdges: Boolean = False):
         """This method partitions one or more faces by projecting the given edges on the target
         faces.
@@ -1937,7 +1938,7 @@ class Feature:
         """
         pass
 
-    def PartitionFaceByShortestPath(self, faces: tuple[Face], point1: int,
+    def PartitionFaceByShortestPath(self, faces: Tuple[Face], point1: int,
                                     point2: int):
         """This method partitions one or more faces using a minimum distance path between the two
         given points.
@@ -1973,7 +1974,7 @@ class Feature:
         pass
 
     def PartitionFaceBySketch(self,
-                              faces: tuple[Face],
+                              faces: Tuple[Face],
                               sketch: ConstrainedSketch,
                               sketchUpEdge: str = '',
                               sketchOrientation: SymbolicConstant = RIGHT):
@@ -2014,7 +2015,7 @@ class Feature:
 
     def PartitionFaceBySketchDistance(
             self,
-            faces: tuple[Face],
+            faces: Tuple[Face],
             sketchPlane: str,
             sketchPlaneSide: SymbolicConstant,
             sketchUpEdge: Edge,
@@ -2065,7 +2066,7 @@ class Feature:
 
     def PartitionFaceBySketchRefPoint(
             self,
-            faces: tuple[Face],
+            faces: Tuple[Face],
             sketchPlane: str,
             sketchUpEdge: Edge,
             sketch: ConstrainedSketch,
@@ -2114,7 +2115,7 @@ class Feature:
 
     def PartitionFaceBySketchThruAll(
             self,
-            faces: tuple[Face],
+            faces: Tuple[Face],
             sketchPlane: str,
             sketchPlaneSide: SymbolicConstant,
             sketchUpEdge: str,
@@ -2161,7 +2162,7 @@ class Feature:
         pass
 
     def ReferencePoint(self,
-                       point: typing.Union[tuple, Vertex, InterestingPoint,
+                       point: typing.Union[Tuple, Vertex, InterestingPoint,
                                            MeshNode, Datum],
                        instanceName: str = '') -> 'Feature':
         """This method creates a Feature object and a ReferencePoint object at the specified
@@ -2192,7 +2193,7 @@ class Feature:
         """
         return self
 
-    def RemoveWireEdges(self, wireEdgeList: tuple[Edge]):
+    def RemoveWireEdges(self, wireEdgeList: Tuple[Edge]):
         """This method removes wire edges.
 
         Notes
@@ -2239,10 +2240,10 @@ class Feature:
         Parameters
         ----------
         points
-            A tuple of point pairs, each pair being itself represented by a tuple. For part level 
+            A Tuple of point pairs, each pair being itself represented by a Tuple. For part level 
             features each point can be a ConstrainedSketchVertex, Datum point, Reference point, orphan mesh Node, or
             InterestingPoint object specifying the points through which the polyline wire will pass. 
-            Each point can also be a tuple of Floats representing the coordinates of a point. For 
+            Each point can also be a Tuple of Floats representing the coordinates of a point. For 
             assembly level features each point can only be a ConstrainedSketchVertex, Reference point, or orphan mesh
             Node specifying the points through which the polyline wire will pass (coordinates cannot 
             be specified). In any of the pairs, the first or second point can be NONE. In that case, 

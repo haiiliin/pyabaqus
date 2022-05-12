@@ -3,6 +3,7 @@ from .GeometricRestriction import GeometricRestriction
 from ..Region.Region import Region
 
 from __init__ import *
+from __future__ import annotations
 
 
 class TopologyOverhangControl(GeometricRestriction):
@@ -22,7 +23,7 @@ class TopologyOverhangControl(GeometricRestriction):
     """
     def __init__(self,
                  name: str,
-                 pullDirection: tuple,
+                 pullDirection: Tuple,
                  region: Region,
                  csys: int = None,
                  draftAngle: float = 45,
@@ -46,7 +47,7 @@ class TopologyOverhangControl(GeometricRestriction):
             A String specifying the geometric restriction repository key. 
         pullDirection
             A VertexArray object of length 2 specifying the overhang control print direction. 
-            Instead of through a ConstrainedSketchVertex, each point can be specified through a tuple of coordinates.
+            Instead of through a ConstrainedSketchVertex, each point can be specified through a Tuple of coordinates.
         region
             A Region object specifying the region to which the geometric restriction is applied. 
         csys

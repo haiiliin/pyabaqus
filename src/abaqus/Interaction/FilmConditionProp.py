@@ -2,6 +2,7 @@ from abaqusConstants import *
 from .ContactProperty import ContactProperty
 
 from __init__ import *
+from __future__ import annotations
 
 
 class FilmConditionProp(ContactProperty):
@@ -26,7 +27,7 @@ class FilmConditionProp(ContactProperty):
                  name: str,
                  temperatureDependency: Boolean = OFF,
                  dependencies: int = 0,
-                 property: tuple = ()):
+                 property: Tuple = ()):
         """This method creates a FilmConditionProp object.
 
         Notes
@@ -63,7 +64,7 @@ class FilmConditionProp(ContactProperty):
     def setValues(self,
                   temperatureDependency: Boolean = OFF,
                   dependencies: int = 0,
-                  property: tuple = ()):
+                  property: Tuple = ()):
         """This method modifies the FilmConditionProp object.
         
         Parameters

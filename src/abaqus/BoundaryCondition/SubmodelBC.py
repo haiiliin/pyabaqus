@@ -3,6 +3,7 @@ from .BoundaryCondition import BoundaryCondition
 from ..Region.Region import Region
 
 from __init__ import *
+from __future__ import annotations
 
 
 class SubmodelBC(BoundaryCondition):
@@ -87,7 +88,7 @@ class SubmodelBC(BoundaryCondition):
                  name: str,
                  createStepName: str,
                  region: Region,
-                 dof: tuple,
+                 dof: Tuple,
                  globalStep: str,
                  timeScale: Boolean,
                  shellThickness: float,
@@ -212,7 +213,7 @@ class SubmodelBC(BoundaryCondition):
     def setValuesInStep(self,
                         stepName: str,
                         fixed: Boolean = ON,
-                        dof: tuple = (),
+                        dof: Tuple = (),
                         globalStep: str = '',
                         globalIncrement: int = 0,
                         centerZoneSize: float = None):

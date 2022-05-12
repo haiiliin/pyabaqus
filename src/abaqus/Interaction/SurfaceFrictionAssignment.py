@@ -3,6 +3,7 @@ import typing
 from abaqusConstants import *
 
 from __init__ import *
+from __future__ import annotations
 
 
 class SurfaceFrictionAssignment:
@@ -36,8 +37,8 @@ class SurfaceFrictionAssignment:
             An Int specifying the position of the surface friction assignment whose value is to be 
             modified. 
         value
-            A tuple specifying the value of the surface friction assignments for the surface whose 
-            index is referenced. Each tuple contains: 
+            A Tuple specifying the value of the surface friction assignments for the surface whose 
+            index is referenced. Each Tuple contains: 
             - A Float specifying the overriding friction coefficient value to be used in the contact 
             definition. 
         """
@@ -54,7 +55,7 @@ class SurfaceFrictionAssignment:
             A String specifying the name of the step in which new surface friction assignments are 
             to be defined. 
         assignments
-            A sequence of tuples specifying the surface friction assignments. Each tuple contains 
+            A sequence of tuples specifying the surface friction assignments. Each Tuple contains 
             two entries: 
             - A region or a material object or the SymbolicConstant GLOBAL specifying the surface to 
             which the friction coefficient is assigned. 
@@ -63,7 +64,7 @@ class SurfaceFrictionAssignment:
         """
         pass
 
-    def delete(self, indices: tuple):
+    def delete(self, indices: Tuple):
         """The delete method allows you to delete existing surface friction assignments.
         
         Parameters

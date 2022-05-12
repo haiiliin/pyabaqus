@@ -1,6 +1,7 @@
 from abaqusConstants import *
 
 from __init__ import *
+from __future__ import annotations
 
 
 class DGContourOptions:
@@ -64,7 +65,7 @@ class DGContourOptions:
         A String specifying the color to be used to plot the tick mark curve. The default value
         is "Cyan".
     intervalLineAttributes: SymbolicConstant
-        A tuple of tuples of SymbolicConstants specifying the line style and line thickness for
+        A Tuple of tuples of SymbolicConstants specifying the line style and line thickness for
         each interval in the plot when **contourType=LINE**. The size of the outer sequence must
         be equal to **numIntervals**-1. The inner sequence consists of two SymbolicConstants
         specifying the line style and line thickness. For possible values, refer to the
@@ -151,7 +152,7 @@ class DGContourOptions:
     # is "Cyan".
     tickmarkCurveColor: str = ''
 
-    # A tuple of tuples of SymbolicConstants specifying the line style and line thickness for
+    # A Tuple of tuples of SymbolicConstants specifying the line style and line thickness for
     # each interval in the plot when *contourType*=LINE. The size of the outer sequence must
     # be equal to *numIntervals*-1. The inner sequence consists of two SymbolicConstants
     # specifying the line style and line thickness. For possible values, refer to the

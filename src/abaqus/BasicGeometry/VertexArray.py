@@ -2,6 +2,7 @@ from abaqusConstants import *
 from .Vertex import Vertex
 
 from __init__ import *
+from __future__ import annotations
 
 
 class VertexArray:
@@ -55,7 +56,7 @@ class VertexArray:
         """
         pass
 
-    def findAt(self, coordinates: tuple, printWarning: Boolean = True):
+    def findAt(self, coordinates: Tuple, printWarning: Boolean = True):
         """This method returns the object or objects in the VertexArray located at the given
         coordinates.
         findAt initially uses the ACIS tolerance of 1E-6. As a result, findAt returns any ConstrainedSketchVertex
@@ -147,7 +148,7 @@ class VertexArray:
         """
         pass
 
-    def getByBoundingCylinder(self, center1: tuple, center2: tuple,
+    def getByBoundingCylinder(self, center1: Tuple, center2: Tuple,
                               radius: str):
         """This method returns an array of vertex objects that lie within the specified bounding
         cylinder.
@@ -155,10 +156,10 @@ class VertexArray:
         Parameters
         ----------
         center1
-            A tuple of the *X*-, *Y*-, and *Z*-coordinates of the center of the first end of the 
+            A Tuple of the *X*-, *Y*-, and *Z*-coordinates of the center of the first end of the 
             cylinder. 
         center2
-            A tuple of the *X*-, *Y*-, and *Z*-coordinates of the center of the second end of the 
+            A Tuple of the *X*-, *Y*-, and *Z*-coordinates of the center of the second end of the 
             cylinder. 
         radius
             A float specifying the radius of the cylinder. 
@@ -170,14 +171,14 @@ class VertexArray:
         """
         pass
 
-    def getByBoundingSphere(self, center: tuple, radius: str):
+    def getByBoundingSphere(self, center: Tuple, radius: str):
         """This method returns an array of vertex objects that lie within the specified bounding
         sphere.
         
         Parameters
         ----------
         center
-            A tuple of the *X*-, *Y*-, and *Z*-coordinates of the center of the sphere. 
+            A Tuple of the *X*-, *Y*-, and *Z*-coordinates of the center of the sphere. 
         radius
             A float specifying the radius of the sphere. 
 
@@ -195,15 +196,15 @@ class VertexArray:
         Returns
         -------
             A Dictionary object with the following items: 
-            *low*: a tuple of three floats representing the minimum *X*-, *Y*-, and *Z*-boundary 
+            *low*: a Tuple of three floats representing the minimum *X*-, *Y*-, and *Z*-boundary 
             values of the bounding box. 
-            *high*: a tuple of three floats representing the maximum *X*-, *Y*-, and *Z*-boundary 
+            *high*: a Tuple of three floats representing the maximum *X*-, *Y*-, and *Z*-boundary 
             values of the bounding box.
             
         """
         pass
 
-    def getClosest(self, coordinates: tuple, searchTolerance: str = ''):
+    def getClosest(self, coordinates: Tuple, searchTolerance: str = ''):
         """This method returns a object or objects in the VertexArray closest to the given set of
         points, where the given points need not lie on ConstrainedSketchVertex objects in the VertexArray.
         
@@ -222,7 +223,7 @@ class VertexArray:
         Returns
         -------
             This method returns a dictionary object. The key to the dictionary object is the 
-            position of the input point in the tuple specified in the *coordinates* starting at 
+            position of the input point in the Tuple specified in the *coordinates* starting at 
             index 0. If a closest vertex could be found then the value is a sequence consisting of 
             two objects. The first object in the sequence is a ConstrainedSketchVertex that is close to the input
             point referred to by the key. The second object in the sequence is a sequence of floats 

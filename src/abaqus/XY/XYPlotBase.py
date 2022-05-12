@@ -5,6 +5,7 @@ from .Title import Title
 from .XYCurve import XYCurve
 
 from __init__ import *
+from __future__ import annotations
 
 
 class XYPlotBase:
@@ -22,7 +23,7 @@ class XYPlotBase:
     curves: dict[str, XYCurve]
         A repository of :py:class:`~abaqus.XY.XYCurve.XYCurve` objects.
     transform: float
-        A tuple of Floats specifying a transformation matrix used to scale or pan along the axes
+        A Tuple of Floats specifying a transformation matrix used to scale or pan along the axes
         of the active :py:class:`~abaqus.XY.Chart.Chart` object of this XYPlot.
 
     Notes
@@ -49,7 +50,7 @@ class XYPlotBase:
     # A repository of XYCurve objects.
     curves: dict[str, XYCurve] = dict[str, XYCurve]()
 
-    # A tuple of Floats specifying a transformation matrix used to scale or pan along the axes
+    # A Tuple of Floats specifying a transformation matrix used to scale or pan along the axes
     # of the active Chart object of this XYPlot.
     transform: float = None
 
@@ -127,7 +128,7 @@ class XYPlotBase:
         """
         pass
 
-    def setValues(self, title: Title = Title(), transform: tuple = ()):
+    def setValues(self, title: Title = Title(), transform: Tuple = ()):
         """This method modifies the XYPlot object.
         
         Parameters

@@ -1,4 +1,5 @@
 from __init__ import *
+from __future__ import annotations
 
 
 class Keyword:
@@ -11,7 +12,7 @@ class Keyword:
         A String specifying the name of the keyword.
     parameter: dict
         A Dictionary of Strings specifying the keyword parameters.
-    data: tuple
+    data: Tuple
         A sequence of sequences or an :py:class:`~abaqus.InputFileParser.:py:class:`~abaqus.InputFileParser.AbaqusNDarray.AbaqusNDarray`.:py:class:`~abaqus.InputFileParser.AbaqusNDarray.AbaqusNDarray`` object specifying the keyword data. The type
         of the :py:class:`~.leaf` objects depends on the keyword. The :py:class:`~abaqus.InputFileParser.:py:class:`~abaqus.InputFileParser.AbaqusNDarray.AbaqusNDarray`.:py:class:`~abaqus.InputFileParser.AbaqusNDarray.AbaqusNDarray`` object is returned only if
         the data is suitable and if the InputFile.parse() method was called with the option
@@ -19,7 +20,7 @@ class Keyword:
         arrays) are expected, it is recommended that you use the option usePyArray=True.
     suboptions: str
         A KeywordSequence specifying the suboptions of the keyword.
-    comments: tuple
+    comments: Tuple
         A sequence of Strings specifying the comments.
 
     Notes
@@ -43,10 +44,10 @@ class Keyword:
     # the data is suitable and if the InputFile.parse() method was called with the option
     # usePyArray=True. In cases where large amounts of numerical data (i.e., large node
     # arrays) are expected, it is recommended that you use the option usePyArray=True.
-    data: tuple = ()
+    data: Tuple = ()
 
     # A KeywordSequence specifying the suboptions of the keyword.
     suboptions: str = ''
 
     # A sequence of Strings specifying the comments.
-    comments: tuple = ()
+    comments: Tuple = ()

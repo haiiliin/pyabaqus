@@ -20,6 +20,7 @@ from ..Region.Stringer import Stringer
 from ..Region.Surface import Surface
 
 from __init__ import *
+from __future__ import annotations
 
 
 class PartInstance:
@@ -269,7 +270,7 @@ class PartInstance:
     def InstanceFromBooleanCut(self,
                                name: str,
                                instanceToBeCut: str,
-                               cuttingInstances: tuple['PartInstance'],
+                               cuttingInstances: Tuple['PartInstance'],
                                originalInstances: SymbolicConstant = SUPPRESS):
         """This method creates a PartInstance in the instances repository after subtracting or
         cutting the geometries of a group of part instances from that of a base part instance.
@@ -305,7 +306,7 @@ class PartInstance:
     def InstanceFromBooleanMerge(
             self,
             name: str,
-            instances: tuple['PartInstance'],
+            instances: Tuple['PartInstance'],
             keepIntersections: Boolean = False,
             originalInstances: SymbolicConstant = SUPPRESS,
             domain: SymbolicConstant = GEOMETRY,
@@ -361,13 +362,13 @@ class PartInstance:
         pass
 
     def LinearInstancePattern(self,
-                              instanceList: tuple,
+                              instanceList: Tuple,
                               number1: int,
                               spacing1: float,
                               number2: int,
                               spacing2: float,
-                              direction1: tuple = (),
-                              direction2: tuple = ()):
+                              direction1: Tuple = (),
+                              direction2: Tuple = ()):
         """This method creates multiple PartInstance objects in a linear pattern and puts them into
         the instances repository.
 
@@ -409,11 +410,11 @@ class PartInstance:
         pass
 
     def RadialInstancePattern(self,
-                              instanceList: tuple,
+                              instanceList: Tuple,
                               number: int,
                               totalAngle: float,
-                              point: tuple = (),
-                              axis: tuple = ()):
+                              point: Tuple = (),
+                              axis: Tuple = ()):
         """This method creates multiple PartInstance objects in a radial pattern and puts them into
         the instances repository.
 
@@ -477,9 +478,9 @@ class PartInstance:
         pass
 
     def Contact(self,
-                movableList: tuple,
-                fixedList: tuple,
-                direction: tuple,
+                movableList: Tuple,
+                fixedList: Tuple,
+                direction: Tuple,
                 clearance: float,
                 isFaceEdges: Boolean = OFF):
         """This method translates an instance along the specified direction until it is in contact
@@ -522,23 +523,23 @@ class PartInstance:
         pass
 
     def getRotation(self):
-        """This method returns a tuple including the point of rotation, axis of rotation, and
+        """This method returns a Tuple including the point of rotation, axis of rotation, and
         rotation angle (in degrees).
 
         Returns
         -------
-            A tuple including the point of rotation, axis of rotation, and rotation angle (in 
+            A Tuple including the point of rotation, axis of rotation, and rotation angle (in 
             degrees).
         """
         pass
 
     def getTranslation(self):
-        """This method returns a tuple of three Floats representing translation in the *X*-, *Y*-,
+        """This method returns a Tuple of three Floats representing translation in the *X*-, *Y*-,
         and *Z*-directions.
 
         Returns
         -------
-            A tuple of three Floats representing the translation.
+            A Tuple of three Floats representing the translation.
         """
         pass
 
@@ -557,7 +558,7 @@ class PartInstance:
         """
         pass
 
-    def rotateAboutAxis(self, axisPoint: tuple, axisDirection: tuple,
+    def rotateAboutAxis(self, axisPoint: Tuple, axisDirection: Tuple,
                         angle: float):
         """This method translates an instance by the specified amount.
         
@@ -574,7 +575,7 @@ class PartInstance:
         """
         pass
 
-    def translate(self, vector: tuple):
+    def translate(self, vector: Tuple):
         """This method translates an instance by the specified amount.
         
         Parameters
@@ -585,11 +586,11 @@ class PartInstance:
         pass
 
     def translateTo(self,
-                    movableList: tuple,
-                    fixedList: tuple,
-                    direction: tuple,
+                    movableList: Tuple,
+                    fixedList: Tuple,
+                    direction: Tuple,
                     clearance: float,
-                    vector: tuple = ()):
+                    vector: Tuple = ()):
         """This method translates an instance along the specified direction until it is in contact
         with a fixed instance.
         

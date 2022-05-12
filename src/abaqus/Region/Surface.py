@@ -8,6 +8,7 @@ from ..Mesh.MeshElementArray import MeshElementArray
 from ..Mesh.MeshNodeArray import MeshNodeArray
 
 from __init__ import *
+from __future__ import annotations
 
 
 class Surface:
@@ -26,9 +27,9 @@ class Surface:
     nodes: MeshNodeArray
         A :py:class:`~abaqus.Mesh.MeshNodeArray.MeshNodeArray` object.
     sides: SymbolicConstant
-        A tuple of SymbolicConstants specifying the sides; for example, (SIDE1, SIDE2).
+        A Tuple of SymbolicConstants specifying the sides; for example, (SIDE1, SIDE2).
     instances: int
-        A tuple of Ints specifying the instances. This member is not applicable for a Surface
+        A Tuple of Ints specifying the instances. This member is not applicable for a Surface
         object on an output database.
 
     Notes
@@ -63,35 +64,35 @@ class Surface:
     # A MeshNodeArray object.
     nodes: MeshNodeArray = MeshNodeArray([])
 
-    # A tuple of SymbolicConstants specifying the sides; for example, (SIDE1, SIDE2).
+    # A Tuple of SymbolicConstants specifying the sides; for example, (SIDE1, SIDE2).
     sides: SymbolicConstant = None
 
-    # A tuple of Ints specifying the instances. This member is not applicable for a Surface
+    # A Tuple of Ints specifying the instances. This member is not applicable for a Surface
     # object on an output database.
     instances: int = None
 
     @typing.overload
     def __init__(self,
-                 side1Faces: tuple[Face] = None,
-                 side2Faces: tuple[Face] = None,
-                 side12Faces: tuple[Face] = None,
-                 end1Edges: tuple[Face] = None,
-                 end2Edges: tuple[Face] = None,
-                 circumEdges: tuple[Face] = None,
-                 side1Edges: tuple[Face] = None,
-                 side2Edges: tuple[Face] = None,
-                 face1Elements: tuple[Face] = None,
-                 face2Elements: tuple[Face] = None,
-                 face3Elements: tuple[Face] = None,
-                 face4Elements: tuple[Face] = None,
-                 face5Elements: tuple[Face] = None,
-                 face6Elements: tuple[Face] = None,
-                 side1Elements: tuple[Face] = None,
-                 side2Elements: tuple[Face] = None,
-                 side12Elements: tuple[Face] = None,
-                 end1Elements: tuple[Face] = None,
-                 end2Elements: tuple[Face] = None,
-                 circumElements: tuple[Face] = None,
+                 side1Faces: Tuple[Face] = None,
+                 side2Faces: Tuple[Face] = None,
+                 side12Faces: Tuple[Face] = None,
+                 end1Edges: Tuple[Face] = None,
+                 end2Edges: Tuple[Face] = None,
+                 circumEdges: Tuple[Face] = None,
+                 side1Edges: Tuple[Face] = None,
+                 side2Edges: Tuple[Face] = None,
+                 face1Elements: Tuple[Face] = None,
+                 face2Elements: Tuple[Face] = None,
+                 face3Elements: Tuple[Face] = None,
+                 face4Elements: Tuple[Face] = None,
+                 face5Elements: Tuple[Face] = None,
+                 face6Elements: Tuple[Face] = None,
+                 side1Elements: Tuple[Face] = None,
+                 side2Elements: Tuple[Face] = None,
+                 side12Elements: Tuple[Face] = None,
+                 end1Elements: Tuple[Face] = None,
+                 end2Elements: Tuple[Face] = None,
+                 circumElements: Tuple[Face] = None,
                  name: str = '',
                  **kwargs):
         """This method creates a surface from a sequence of objects in a model database. The
@@ -207,7 +208,7 @@ class Surface:
 
     def SurfaceByBoolean(self,
                          name: str,
-                         surfaces: tuple['Surface'],
+                         surfaces: Tuple['Surface'],
                          operation: SymbolicConstant = UNION):
         """This method creates a surface by performing a boolean operation on two or more input
         surfaces.
@@ -239,7 +240,7 @@ class Surface:
         """
         pass
 
-    def SurfaceFromElsets(self, name: str, elementSetSeq: tuple):
+    def SurfaceFromElsets(self, name: str, elementSetSeq: Tuple):
         """This method creates a surface from a sequence of element sets in a model database.
 
         Notes

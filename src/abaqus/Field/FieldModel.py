@@ -6,12 +6,13 @@ from .MappedField import MappedField
 from ..Model.ModelBase import ModelBase
 
 from __init__ import *
+from __future__ import annotations
 
 
 class FieldModel(ModelBase):
     def DiscreteField(self,
                       name: str,
-                      defaultValues: tuple,
+                      defaultValues: Tuple,
                       fieldType: SymbolicConstant,
                       location: SymbolicConstant = NODES,
                       dataWidth: int = 1,
@@ -123,9 +124,9 @@ class FieldModel(ModelBase):
                     negativeNormalSearchTol: float = 0,
                     positiveNormalSearchTol: float = 0,
                     scaleCoordinates: Boolean = OFF,
-                    gridPointData: tuple = (),
-                    xyzPointData: tuple = (),
-                    coordinateScalingFactors: tuple = (),
+                    gridPointData: Tuple = (),
+                    xyzPointData: Tuple = (),
+                    coordinateScalingFactors: Tuple = (),
                     localCsys: str = None,
                     description: str = '') -> MappedField:
         """This method creates an MappedField object.

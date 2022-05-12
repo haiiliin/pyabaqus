@@ -4,6 +4,7 @@ from .EventSeriesType import EventSeriesType
 from ..Model.ModelBase import ModelBase
 
 from __init__ import *
+from __future__ import annotations
 
 
 class TableCollectionModel(ModelBase):

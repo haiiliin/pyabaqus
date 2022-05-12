@@ -1,6 +1,7 @@
 from ..Region.Region import Region
 
 from __init__ import *
+from __future__ import annotations
 
 
 class Load:
@@ -75,7 +76,7 @@ class Load:
         """
         pass
 
-    def delete(self, indices: tuple):
+    def delete(self, indices: Tuple):
         """This method allows you to delete existing loads.
         
         Parameters

@@ -3,6 +3,7 @@ import typing
 from abaqusConstants import *
 
 from __init__ import *
+from __future__ import annotations
 
 
 class FieldOutputRequestState:
@@ -52,11 +53,11 @@ class FieldOutputRequestState:
         object. Possible values are NOT_YET_ACTIVE, CREATED, PROPAGATED, MODIFIED, DEACTIVATED,
         NO_LONGER_ACTIVE, TYPE_NOT_APPLICABLE, and INSTANCE_NOT_APPLICABLE.
     variables: SymbolicConstant
-        A tuple of Strings specifying output request variable or component names, or the
+        A Tuple of Strings specifying output request variable or component names, or the
         SymbolicConstant PRESELECT or ALL. PRESELECT represents all default output variables for
         the given step. ALL represents all valid output variables.
     modes: SymbolicConstant
-        The SymbolicConstant ALL or a tuple of Ints specifying a list of eigenmodes for which
+        The SymbolicConstant ALL or a Tuple of Ints specifying a list of eigenmodes for which
         output is desired. The default value is ALL.
     timePoint: str
         A String specifying the name of a time :py:class:`~.point` object used to determine which output
@@ -127,12 +128,12 @@ class FieldOutputRequestState:
     # NO_LONGER_ACTIVE, TYPE_NOT_APPLICABLE, and INSTANCE_NOT_APPLICABLE.
     status: SymbolicConstant = None
 
-    # A tuple of Strings specifying output request variable or component names, or the
+    # A Tuple of Strings specifying output request variable or component names, or the
     # SymbolicConstant PRESELECT or ALL. PRESELECT represents all default output variables for
     # the given step. ALL represents all valid output variables.
     variables: SymbolicConstant = None
 
-    # The SymbolicConstant ALL or a tuple of Ints specifying a list of eigenmodes for which
+    # The SymbolicConstant ALL or a Tuple of Ints specifying a list of eigenmodes for which
     # output is desired. The default value is ALL.
     modes: SymbolicConstant = ALL
 

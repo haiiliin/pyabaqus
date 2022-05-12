@@ -9,6 +9,7 @@ from ..Model.ModelBase import ModelBase
 from ..Region.Region import Region
 
 from __init__ import *
+from __future__ import annotations
 
 
 class OutputModel(ModelBase):
@@ -175,7 +176,7 @@ class OutputModel(ModelBase):
             kFactorDirection: SymbolicConstant = MTS,
             rebar: SymbolicConstant = EXCLUDE,
             integratedOutputSection: str = '',
-            springs: tuple = None,
+            springs: Tuple = None,
             filter: SymbolicConstant = None,
             fasteners: str = '',
             assembledFastener: str = '',
@@ -345,7 +346,7 @@ class OutputModel(ModelBase):
                 localCsys, projectOrientation)
         return integratedOutputSection
 
-    def TimePoint(self, name: str, points: tuple) -> TimePoint:
+    def TimePoint(self, name: str, points: Tuple) -> TimePoint:
         """This method creates a TimePoint object.
 
         Notes

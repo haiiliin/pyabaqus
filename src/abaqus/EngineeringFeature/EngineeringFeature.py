@@ -17,6 +17,7 @@ from ..Region.Region import Region
 from ..Region.RegionArray import RegionArray
 
 from __init__ import *
+from __future__ import annotations
 
 
 class EngineeringFeature(EngineeringFeatureBase):
@@ -25,8 +26,8 @@ class EngineeringFeature(EngineeringFeatureBase):
                           region: Region,
                           templateModel: str,
                           controlSet: Region,
-                          templateSurfaces: tuple,
-                          assignedSurfaces: tuple,
+                          templateSurfaces: Tuple,
+                          assignedSurfaces: Tuple,
                           propertyPrefix: str,
                           orientMethod: SymbolicConstant = NORMALS,
                           localCsys: int = None,
@@ -98,8 +99,8 @@ class EngineeringFeature(EngineeringFeatureBase):
             listOfRegions: Boolean = OFF,
             crackFrontName: str = '',
             crackTipName: str = '',
-            crackNormal: tuple = (),
-            qVectors: tuple = (),
+            crackNormal: Tuple = (),
+            qVectors: Tuple = (),
             midNodePosition: float = 0,
             collapsedElementAtTip: SymbolicConstant = NONE) -> ContourIntegral:
         """This method creates a ContourIntegral object. Although the constructor is available both
@@ -137,22 +138,22 @@ class EngineeringFeature(EngineeringFeatureBase):
             A Boolean specifying whether the regions specified by *crackFront* and *crackTip* are
             specified using a single region or tuples of region objects. The default value is OFF.
         crackFrontName
-            A String specifying the name of the crack-front region generated from the tuple of
+            A String specifying the name of the crack-front region generated from the Tuple of
             regions specifying the crack-front region. This argument is valid only when
             *listOfRegions* is ON. The default value is *name*+Front.
         crackTipName
-            A String specifying the name of the crack-tip region generated from the tuple of regions
+            A String specifying the name of the crack-tip region generated from the Tuple of regions
             specifying the crack-tip region. This parameter is valid only when *listOfRegions*=ON.
             The default value is *name*+Tip.
         crackNormal
             A sequence of sequences of Floats specifying the two points of the vector that describes
-            the crack normal direction. Each point is defined by a tuple of two or three coordinates
+            the crack normal direction. Each point is defined by a Tuple of two or three coordinates
             indicating its position. This argument is required only when
             *extensionDirectionMethod*=CRACK_NORMAL. The default value is an empty sequence.
         qVectors
             A sequence of sequences of sequences of Floats specifying the vectors that indicate the
-            set of crack extension directions. Each vector is described by a tuple of two points,
-            and each point is described by a tuple of two or three coordinates indicating its
+            set of crack extension directions. Each vector is described by a Tuple of two points,
+            and each point is described by a Tuple of two or three coordinates indicating its
             position. This argument is required only when *extensionDirectionMethod*=Q_VECTORS. The
             default value is an empty sequence.
         midNodePosition
@@ -289,7 +290,7 @@ class EngineeringFeature(EngineeringFeatureBase):
     def HeatCapacitance(self,
                         name: str,
                         region: Region,
-                        table: tuple,
+                        table: Tuple,
                         temperatureDependency: Boolean = OFF,
                         dependencies: int = 0) -> HeatCapacitance:
         """This method creates a HeatCapacitance object.
@@ -372,7 +373,7 @@ class EngineeringFeature(EngineeringFeatureBase):
                       name: str,
                       region: Region,
                       physicalRadius: float,
-                      directionVector: tuple = None,
+                      directionVector: Tuple = None,
                       targetSurfaces: RegionArray = MODEL,
                       ur1: Boolean = ON,
                       ur2: Boolean = ON,
@@ -421,7 +422,7 @@ class EngineeringFeature(EngineeringFeatureBase):
             A Float specifying the physical fastener radius.
         directionVector
             A VertexArray object of length 2 specifying the direction of projection. Instead of
-            through a ConstrainedSketchVertex, each point may be specified through a tuple of coordinates. The
+            through a ConstrainedSketchVertex, each point may be specified through a Tuple of coordinates. The
             default value is None.
         targetSurfaces
             A RegionArray object specifying surfaces to be fastened. The default value is MODEL.
@@ -670,7 +671,7 @@ class EngineeringFeature(EngineeringFeatureBase):
     def TwoPointSpringDashpot(
             self,
             name: str,
-            regionPairs: tuple,
+            regionPairs: Tuple,
             axis: SymbolicConstant,
             dof1: int = 0,
             dof2: int = 0,
@@ -748,11 +749,11 @@ class EngineeringFeature(EngineeringFeatureBase):
                   crackLocation: Region = Region(),
                   singularityCalcRadius: float = None,
                   interactionProperty: str = '',
-                  elemId: tuple = (),
-                  nodeId: tuple = (),
-                  hasCrackFront: tuple = (),
-                  crackPlaneDist: tuple = (),
-                  crackFrontDist: tuple = (),
+                  elemId: Tuple = (),
+                  nodeId: Tuple = (),
+                  hasCrackFront: Tuple = (),
+                  crackPlaneDist: Tuple = (),
+                  crackFrontDist: Tuple = (),
                   autoDetectValue: str = '') -> XFEMCrack:
         """This method creates a XFEMCrack object. Although the constructor is available both for
         parts and for the assembly, XFEMCrack objects are currently supported only under the

@@ -1,6 +1,7 @@
 from ..Region.Region import Region
 
 from __init__ import *
+from __future__ import annotations
 
 
 class IMAField:
@@ -12,9 +13,9 @@ class IMAField:
     region: Region
         A :py:class:`~abaqus.Region.Region.Region` object specifying the sub-region of the selected part instance to which the
         volume fractions will be applied.
-    discFieldList: tuple
-        A tuple of Strings specifying the name of the discrete fields that contain the volume
-        fraction data. The length of the tuple corresponds to the number of material instance
+    discFieldList: Tuple
+        A Tuple of Strings specifying the name of the discrete fields that contain the volume
+        fraction data. The length of the Tuple corresponds to the number of material instance
         names, as established by the assigned Eulerian section.
 
     Notes
@@ -32,7 +33,7 @@ class IMAField:
     # volume fractions will be applied.
     region: Region = Region()
 
-    # A tuple of Strings specifying the name of the discrete fields that contain the volume
-    # fraction data. The length of the tuple corresponds to the number of material instance
+    # A Tuple of Strings specifying the name of the discrete fields that contain the volume
+    # fraction data. The length of the Tuple corresponds to the number of material instance
     # names, as established by the assigned Eulerian section.
-    discFieldList: tuple = ()
+    discFieldList: Tuple = ()

@@ -1,6 +1,7 @@
 from abaqusConstants import *
 
 from __init__ import *
+from __future__ import annotations
 
 
 class OdbDataDatumCsys:
@@ -13,17 +14,17 @@ class OdbDataDatumCsys:
     type: SymbolicConstant
         A SymbolicConstant specifying the coordinate system type. This String is read-only.
         Possible values are CARTESIAN, CYLINDRICAL, and SPHERICAL.
-    xAxis: tuple
-        A tuple of three Floats specifying a sequence of three floats specifying the x-Axis
+    xAxis: Tuple
+        A Tuple of three Floats specifying a sequence of three floats specifying the x-Axis
         vector. The default value is (1, 0, 0).
-    yAxis: tuple
-        A tuple of three Floats specifying a sequence of three floats specifying the y-Axis
+    yAxis: Tuple
+        A Tuple of three Floats specifying a sequence of three floats specifying the y-Axis
         vector. The default value is (0, 1, 0).
-    zAxis: tuple
-        A tuple of three Floats specifying a sequence of three floats specifying the z-Axis
+    zAxis: Tuple
+        A Tuple of three Floats specifying a sequence of three floats specifying the z-Axis
         vector. The default value is (0, 0, 1).
-    origin: tuple
-        A tuple of three Floats specifying a sequence of three floats specifying the origin. The
+    origin: Tuple
+        A Tuple of three Floats specifying a sequence of three floats specifying the origin. The
         default value is (0, 0, 0).
 
     Notes
@@ -44,18 +45,18 @@ class OdbDataDatumCsys:
     # Possible values are CARTESIAN, CYLINDRICAL, and SPHERICAL.
     type: SymbolicConstant = None
 
-    # A tuple of three Floats specifying a sequence of three floats specifying the x-Axis
+    # A Tuple of three Floats specifying a sequence of three floats specifying the x-Axis
     # vector. The default value is (1, 0, 0).
-    xAxis: tuple = ()
+    xAxis: Tuple = ()
 
-    # A tuple of three Floats specifying a sequence of three floats specifying the y-Axis
+    # A Tuple of three Floats specifying a sequence of three floats specifying the y-Axis
     # vector. The default value is (0, 1, 0).
-    yAxis: tuple = ()
+    yAxis: Tuple = ()
 
-    # A tuple of three Floats specifying a sequence of three floats specifying the z-Axis
+    # A Tuple of three Floats specifying a sequence of three floats specifying the z-Axis
     # vector. The default value is (0, 0, 1).
-    zAxis: tuple = ()
+    zAxis: Tuple = ()
 
-    # A tuple of three Floats specifying a sequence of three floats specifying the origin. The
+    # A Tuple of three Floats specifying a sequence of three floats specifying the origin. The
     # default value is (0, 0, 0).
-    origin: tuple = ()
+    origin: Tuple = ()

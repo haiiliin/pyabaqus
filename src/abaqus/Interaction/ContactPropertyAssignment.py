@@ -1,6 +1,7 @@
 from abaqusConstants import *
 
 from __init__ import *
+from __future__ import annotations
 
 
 class ContactPropertyAssignment:
@@ -49,7 +50,7 @@ class ContactPropertyAssignment:
             A String specifying the name of the step in which new contact property assignments are 
             to be defined. 
         assignments
-            A sequence of tuples specifying the properties assigned to each surface pair. Each tuple 
+            A sequence of tuples specifying the properties assigned to each surface pair. Each Tuple 
             contains three entries:A region or a material object or the SymbolicConstant GLOBAL.A 
             region or a material object or the SymbolicConstant SELF. When used with a ContactExp 
             object, this parameter can also be a string that references an Eulerian material 
@@ -58,7 +59,7 @@ class ContactPropertyAssignment:
         """
         pass
 
-    def delete(self, indices: tuple, surfPair: SymbolicConstant):
+    def delete(self, indices: Tuple, surfPair: SymbolicConstant):
         """The delete method allows you to delete existing contact property assignments.
         
         Parameters
@@ -68,7 +69,7 @@ class ContactPropertyAssignment:
             The *indices* and *surfPair* arguments are mutually exclusive. 
         surfPair
             A sequence of tuples specifying the surface pair of each contact property assignment to 
-            delete. Each tuple contains two entries:A region or a material object or the 
+            delete. Each Tuple contains two entries:A region or a material object or the 
             SymbolicConstant GLOBAL.A region or a material object or the SymbolicConstant SELF. When 
             used with a ContactExp object, this parameter can also be a string that references an 
             Eulerian material surface.*surfPair* and *indices* arguments are mutually exclusive. 

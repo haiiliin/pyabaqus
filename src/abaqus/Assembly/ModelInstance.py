@@ -11,6 +11,7 @@ from ..Region.Surface import Surface
 
 # prevent circular imports
 from __init__ import *
+from __future__ import annotations
 
 
 class Model:
@@ -18,6 +19,7 @@ class Model:
 
 
 from __init__ import *
+from __future__ import annotations
 
 
 class ModelInstance:
@@ -142,7 +144,7 @@ class ModelInstance:
         """
         pass
 
-    def translate(self, vector: tuple):
+    def translate(self, vector: Tuple):
         """This method translates an instance by the specified amount.
         
         Parameters

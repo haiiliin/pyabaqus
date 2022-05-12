@@ -8,6 +8,7 @@ from ..Filter.FilterOdb import FilterOdb
 from ..Material.MaterialOdb import MaterialOdb
 
 from __init__ import *
+from __future__ import annotations
 
 
 class Odb(AmplitudeOdb, FilterOdb, MaterialOdb, BeamSectionProfileOdb):

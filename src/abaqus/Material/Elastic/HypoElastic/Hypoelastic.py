@@ -1,6 +1,7 @@
 from abaqusConstants import *
 
 from __init__ import *
+from __future__ import annotations
 
 
 class Hypoelastic:
@@ -28,7 +29,7 @@ class Hypoelastic:
         - HYPOELASTIC
 
     """
-    def __init__(self, table: tuple, user: Boolean = OFF):
+    def __init__(self, table: Tuple, user: Boolean = OFF):
         """This method creates a Hypoelastic object.
 
         Notes

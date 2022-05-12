@@ -8,6 +8,7 @@ from .OdbFrameArray import OdbFrameArray
 from .OdbLoadCase import OdbLoadCase
 
 from __init__ import *
+from __future__ import annotations
 
 
 class OdbStepBase:
@@ -31,19 +32,19 @@ class OdbStepBase:
     loadCases: dict[str, OdbLoadCase]
         A repository of :py:class:`~abaqus.Odb.OdbLoadCase.OdbLoadCase` objects.
     massCenter: float
-        A tuple of Floats specifying the coordinates of the center of mass.
+        A Tuple of Floats specifying the coordinates of the center of mass.
     inertiaAboutCenter: float
-        A tuple of Floats specifying the moments and products of inertia about the center of
+        A Tuple of Floats specifying the moments and products of inertia about the center of
         mass. For 3-D models inertia quantities are written in the following order: I(XX),
         I(YY), I(ZZ), I(XY), I(XZ), and I(YZ). For 2-D models only I(ZZ) and I(XY) are
         outputted.
     inertiaAboutOrigin: float
-        A tuple of Floats specifying the moments and products of inertia about the origin of the
+        A Tuple of Floats specifying the moments and products of inertia about the origin of the
         global coordinate system. For 3-D models inertia quantities are written in the following
         order: I(XX), I(YY), I(ZZ), I(XY), I(XZ), and I(YZ). For 2-D models only I(ZZ) and I(XY)
         are outputted.
     acousticMassCenter: float
-        A tuple of Floats specifying the coordinates of the center of mass of the acoustic
+        A Tuple of Floats specifying the coordinates of the center of mass of the acoustic
         media.
 
     Notes
@@ -79,22 +80,22 @@ class OdbStepBase:
     # A repository of OdbLoadCase objects.
     loadCases: dict[str, OdbLoadCase] = dict[str, OdbLoadCase]()
 
-    # A tuple of Floats specifying the coordinates of the center of mass.
+    # A Tuple of Floats specifying the coordinates of the center of mass.
     massCenter: float = None
 
-    # A tuple of Floats specifying the moments and products of inertia about the center of
+    # A Tuple of Floats specifying the moments and products of inertia about the center of
     # mass. For 3-D models inertia quantities are written in the following order: I(XX),
     # I(YY), I(ZZ), I(XY), I(XZ), and I(YZ). For 2-D models only I(ZZ) and I(XY) are
     # outputted.
     inertiaAboutCenter: float = None
 
-    # A tuple of Floats specifying the moments and products of inertia about the origin of the
+    # A Tuple of Floats specifying the moments and products of inertia about the origin of the
     # global coordinate system. For 3-D models inertia quantities are written in the following
     # order: I(XX), I(YY), I(ZZ), I(XY), I(XZ), and I(YZ). For 2-D models only I(ZZ) and I(XY)
     # are outputted.
     inertiaAboutOrigin: float = None
 
-    # A tuple of Floats specifying the coordinates of the center of mass of the acoustic
+    # A Tuple of Floats specifying the coordinates of the center of mass of the acoustic
     # media.
     acousticMassCenter: float = None
 

@@ -3,6 +3,7 @@ from .PorousFailureCriteria import PorousFailureCriteria
 from .VoidNucleation import VoidNucleation
 
 from __init__ import *
+from __future__ import annotations
 
 
 class PorousMetalPlasticity:
@@ -40,7 +41,7 @@ class PorousMetalPlasticity:
     voidNucleation: VoidNucleation = VoidNucleation(((), ))
 
     def __init__(self,
-                 table: tuple,
+                 table: Tuple,
                  relativeDensity: float = None,
                  temperatureDependency: Boolean = OFF,
                  dependencies: int = 0):

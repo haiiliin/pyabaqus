@@ -1,5 +1,7 @@
 from abaqusConstants import *
 from __init__ import *
+from __future__ import annotations
+
 
 class Edge:
     from .EdgeArray import EdgeArray
@@ -15,12 +17,12 @@ class Edge:
         A Boolean specifying whether the edge belongs to the reference representation of the
         Part or Instance.
     pointOn: float
-        A tuple of Floats specifying the **X**-, **Y**-, and **Z**-coordinates of a point located on
+        A Tuple of Floats specifying the **X**-, **Y**-, and **Z**-coordinates of a point located on
         the edge.
     featureName: float
-        A tuple of Floats specifying the name of the feature that created this edge.
+        A Tuple of Floats specifying the name of the feature that created this edge.
     instanceName: float
-        A tuple of Floats specifying the name of the part instance for this edge (if
+        A Tuple of Floats specifying the name of the part instance for this edge (if
         applicable).
 
     Notes
@@ -64,14 +66,14 @@ class Edge:
     # Part or Instance.
     isReferenceRep: Boolean = OFF
 
-    # A tuple of Floats specifying the *X*-, *Y*-, and *Z*-coordinates of a point located on
+    # A Tuple of Floats specifying the *X*-, *Y*-, and *Z*-coordinates of a point located on
     # the edge.
     pointOn: float = None
 
-    # A tuple of Floats specifying the name of the feature that created this edge.
+    # A Tuple of Floats specifying the name of the feature that created this edge.
     featureName: float = None
 
-    # A tuple of Floats specifying the name of the part instance for this edge (if
+    # A Tuple of Floats specifying the name of the part instance for this edge (if
     # applicable).
     instanceName: float = None
 
@@ -86,7 +88,7 @@ class Edge:
         """
         pass
 
-    def getCurvature(self, parameter: float, point: tuple) -> Dict:
+    def getCurvature(self, parameter: float, point: Tuple) -> Dict:
         """This method returns curvature information at a location on the edge.
         
         Parameters
@@ -95,7 +97,7 @@ class Edge:
             A Float specifying the normalized parameter location on the edge where the curvature is 
             to be computed. This argument is mutually exclusive with the argument *point*. 
         point
-            A tuple of *X*-, *Y*-, and *Z*-coordinates of a point at which the curvature is to be 
+            A Tuple of *X*-, *Y*-, and *Z*-coordinates of a point at which the curvature is to be 
             computed. If *point* does not lie on the edge an attempt is made to project it onto the 
             edge and use the projected point. 
 
@@ -119,7 +121,7 @@ class Edge:
 
         Returns
         -------
-            A tuple of integers.
+            A Tuple of integers.
             
         """
         pass
@@ -207,7 +209,7 @@ class Edge:
 
         Returns
         -------
-            A tuple of integers.
+            A Tuple of integers.
             
         """
         pass

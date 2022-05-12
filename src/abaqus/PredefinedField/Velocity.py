@@ -3,6 +3,7 @@ from .PredefinedField import PredefinedField
 from ..Region.Region import Region
 
 from __init__ import *
+from __future__ import annotations
 
 
 class Velocity(PredefinedField):
@@ -29,8 +30,8 @@ class Velocity(PredefinedField):
                  velocity2: float,
                  velocity3: float,
                  omega: float,
-                 axisBegin: tuple,
-                 axisEnd: tuple,
+                 axisBegin: Tuple,
+                 axisEnd: Tuple,
                  field: str = '',
                  distributionType: SymbolicConstant = MAGNITUDE):
         """This method creates a Velocity predefined field object.

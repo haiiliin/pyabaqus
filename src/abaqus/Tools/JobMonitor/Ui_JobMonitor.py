@@ -10,6 +10,7 @@
 from PyQt5 import QtCore, QtGui, QtWidgets
 
 from __init__ import *
+from __future__ import annotations
 
 
 class Ui_JobMonitor(object):

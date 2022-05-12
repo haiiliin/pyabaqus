@@ -2,6 +2,7 @@ from abaqusConstants import *
 from ...Ratios import Ratios
 
 from __init__ import *
+from __future__ import annotations
 
 
 class Swelling:
@@ -34,7 +35,7 @@ class Swelling:
     ratios: Ratios = Ratios(((), ))
 
     def __init__(self,
-                 table: tuple,
+                 table: Tuple,
                  law: SymbolicConstant = INPUT,
                  temperatureDependency: Boolean = OFF,
                  dependencies: int = 0):

@@ -1,6 +1,7 @@
 from .Profile import Profile
 
 from __init__ import *
+from __future__ import annotations
 
 
 class ArbitraryProfile(Profile):
@@ -31,7 +32,7 @@ class ArbitraryProfile(Profile):
         - BEAM SECTION
 
     """
-    def __init__(self, name: str, table: tuple):
+    def __init__(self, name: str, table: Tuple):
         """This method creates a ArbitraryProfile object.
 
         Notes

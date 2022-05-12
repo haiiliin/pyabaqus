@@ -1,4 +1,5 @@
 from __init__ import *
+from __future__ import annotations
 
 
 class TimePoint:
@@ -18,7 +19,7 @@ class TimePoint:
         - TIME POINTS
 
     """
-    def __init__(self, name: str, points: tuple):
+    def __init__(self, name: str, points: Tuple):
         """This method creates a TimePoint object.
 
         Notes

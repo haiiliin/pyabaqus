@@ -1,6 +1,7 @@
 from abaqusConstants import *
 
 from __init__ import *
+from __future__ import annotations
 
 
 class GapConductance:
@@ -34,7 +35,7 @@ class GapConductance:
     def __init__(self,
                  pressureDependency: Boolean = OFF,
                  dependencies: int = 0,
-                 table: tuple = ()):
+                 table: Tuple = ()):
         """This method creates a GapConductance object.
 
         Notes

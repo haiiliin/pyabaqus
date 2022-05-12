@@ -3,6 +3,7 @@ from .MohrCoulombHardening import MohrCoulombHardening
 from .TensionCutOff import TensionCutOff
 
 from __init__ import *
+from __future__ import annotations
 
 
 class MohrCoulombPlasticity:
@@ -40,7 +41,7 @@ class MohrCoulombPlasticity:
     tensionCutOff: TensionCutOff = TensionCutOff(((), ))
 
     def __init__(self,
-                 table: tuple,
+                 table: Tuple,
                  deviatoricEccentricity: float = None,
                  meridionalEccentricity: float = 0,
                  temperatureDependency: Boolean = OFF,

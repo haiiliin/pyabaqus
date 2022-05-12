@@ -3,6 +3,7 @@ from .Inertia import Inertia
 from ..Region.Region import Region
 
 from __init__ import *
+from __future__ import annotations
 
 
 class HeatCapacitance(Inertia):
@@ -45,7 +46,7 @@ class HeatCapacitance(Inertia):
     def __init__(self,
                  name: str,
                  region: Region,
-                 table: tuple,
+                 table: Tuple,
                  temperatureDependency: Boolean = OFF,
                  dependencies: int = 0):
         """This method creates a HeatCapacitance object.

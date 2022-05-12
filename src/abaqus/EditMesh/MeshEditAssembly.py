@@ -8,6 +8,7 @@ from ..Mesh.MeshNode import MeshNode
 from ..Region.Region import Region
 
 from __init__ import *
+from __future__ import annotations
 
 
 class MeshEditAssembly(AssemblyBase):
@@ -39,7 +40,7 @@ class MeshEditAssembly(AssemblyBase):
         """
         pass
 
-    def combineElement(self, elements: tuple):
+    def combineElement(self, elements: Tuple):
         """This method combines two triangular elements of a part instance.
         
         Parameters
@@ -50,7 +51,7 @@ class MeshEditAssembly(AssemblyBase):
         pass
 
     def deleteElement(self,
-                      elements: tuple[MeshElement],
+                      elements: Tuple[MeshElement],
                       deleteUnreferencedNodes: Boolean = OFF):
         """This method deletes the given elements from a part instance. The elements must have been
         generated using the bottom-up meshing technique.
@@ -65,7 +66,7 @@ class MeshEditAssembly(AssemblyBase):
         """
         pass
 
-    def projectNode(self, nodes: tuple[MeshNode], projectionReference: str):
+    def projectNode(self, nodes: Tuple[MeshNode], projectionReference: str):
         """This method projects the given nodes of a part instance onto a mesh entity, geometric
         entity, or a datum object.
         
@@ -81,11 +82,11 @@ class MeshEditAssembly(AssemblyBase):
         pass
 
     def editNode(self,
-                 nodes: tuple[MeshNode],
+                 nodes: Tuple[MeshNode],
                  coordinate1: float = None,
                  coordinate2: float = None,
                  coordinate3: float = None,
-                 coordinates: tuple = (),
+                 coordinates: Tuple = (),
                  offset1: float = None,
                  offset2: float = None,
                  offset3: float = None,
@@ -137,7 +138,7 @@ class MeshEditAssembly(AssemblyBase):
 
     @typing.overload
     def mergeNodes(self,
-                   nodes: tuple[MeshNode],
+                   nodes: Tuple[MeshNode],
                    tolerance: float = None,
                    removeDuplicateElements: Boolean = True):
         """Merge the nodes of a part instance. The nodes must have been generated using the
@@ -180,7 +181,7 @@ class MeshEditAssembly(AssemblyBase):
     def mergeNodes(self, *args, **kwargs):
         pass
 
-    def splitElement(self, elements: tuple):
+    def splitElement(self, elements: Tuple):
         """This method splits quadrilateral elements into triangular elements.
         
         Parameters

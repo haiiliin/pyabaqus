@@ -3,6 +3,7 @@ from .PressureEffect import PressureEffect
 from .SoretEffect import SoretEffect
 
 from __init__ import *
+from __future__ import annotations
 
 
 class Diffusivity:
@@ -61,7 +62,7 @@ class Diffusivity:
     soretEffect: SoretEffect = SoretEffect(((), ))
 
     def __init__(self,
-                 table: tuple,
+                 table: Tuple,
                  type: SymbolicConstant = ISOTROPIC,
                  law: SymbolicConstant = GENERAL,
                  temperatureDependency: Boolean = OFF,

@@ -1,6 +1,7 @@
 from abaqusConstants import *
 
 from __init__ import *
+from __future__ import annotations
 
 
 class Trs:
@@ -29,7 +30,7 @@ class Trs:
         - TRS
 
     """
-    def __init__(self, definition: SymbolicConstant = WLF, table: tuple = ()):
+    def __init__(self, definition: SymbolicConstant = WLF, table: Tuple = ()):
         """This method creates a Trs object.
 
         Notes

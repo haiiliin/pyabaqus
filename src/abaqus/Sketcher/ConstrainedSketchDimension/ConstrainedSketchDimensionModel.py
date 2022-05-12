@@ -4,6 +4,7 @@ from ..ConstrainedSketchGeometry.ConstrainedSketchGeometry import ConstrainedSke
 from ..ConstrainedSketchVertex.ConstrainedSketchVertex import ConstrainedSketchVertex
 
 from __init__ import *
+from __future__ import annotations
 
 
 class ConstrainedSketchDimensionModel(ConstrainedSketchBase):
@@ -25,7 +26,7 @@ class ConstrainedSketchDimensionModel(ConstrainedSketchBase):
     def AngularDimension(self,
                          line1: ConstrainedSketchGeometry,
                          line2: ConstrainedSketchGeometry,
-                         textPoint: tuple[float],
+                         textPoint: Tuple[float],
                          value: float = None,
                          reference: Boolean = OFF):
         """This method constructs a ConstrainedSketchDimension object between two
@@ -63,7 +64,7 @@ class ConstrainedSketchDimensionModel(ConstrainedSketchBase):
     def HorizontalDimension(self,
                             vertex1: ConstrainedSketchVertex,
                             vertex2: ConstrainedSketchVertex,
-                            textPoint: tuple[float],
+                            textPoint: Tuple[float],
                             value: float = None,
                             reference: Boolean = OFF):
         """This method constructs a ConstrainedSketchDimension object between two vertices. A
@@ -102,7 +103,7 @@ class ConstrainedSketchDimensionModel(ConstrainedSketchBase):
     def ObliqueDimension(self,
                          vertex1: ConstrainedSketchVertex,
                          vertex2: ConstrainedSketchVertex,
-                         textPoint: tuple[float],
+                         textPoint: Tuple[float],
                          value: float = None,
                          reference: Boolean = OFF):
         """This method constructs a ConstrainedSketchDimension object between two vertices. An
@@ -139,7 +140,7 @@ class ConstrainedSketchDimensionModel(ConstrainedSketchBase):
 
     def RadialDimension(self,
                         curve: ConstrainedSketchGeometry,
-                        textPoint: tuple[float],
+                        textPoint: Tuple[float],
                         value: float = None,
                         reference: Boolean = OFF,
                         majorRadius: float = None,
@@ -184,7 +185,7 @@ class ConstrainedSketchDimensionModel(ConstrainedSketchBase):
     def VerticalDimension(self,
                           vertex1: ConstrainedSketchVertex,
                           vertex2: ConstrainedSketchVertex,
-                          textPoint: tuple[float],
+                          textPoint: Tuple[float],
                           value: float = None,
                           reference: Boolean = OFF):
         """This method constructs a ConstrainedSketchDimension between two vertices. A vertical
@@ -222,7 +223,7 @@ class ConstrainedSketchDimensionModel(ConstrainedSketchBase):
     def DistanceDimension(self,
                           entity1: ConstrainedSketchVertex,
                           entity2: ConstrainedSketchVertex,
-                          textPoint: tuple[float],
+                          textPoint: Tuple[float],
                           value: float = None,
                           reference: Boolean = OFF):
         """This method constructs a ConstrainedSketchDimension object between two

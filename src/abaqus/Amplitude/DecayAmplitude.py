@@ -2,6 +2,7 @@ from abaqusConstants import *
 from .Amplitude import Amplitude
 
 from __init__ import *
+from __future__ import annotations
 
 
 class DecayAmplitude(Amplitude):

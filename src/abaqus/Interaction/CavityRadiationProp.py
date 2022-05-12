@@ -2,6 +2,7 @@ from abaqusConstants import *
 from .ContactProperty import ContactProperty
 
 from __init__ import *
+from __future__ import annotations
 
 
 class CavityRadiationProp(ContactProperty):
@@ -26,7 +27,7 @@ class CavityRadiationProp(ContactProperty):
                  name: str,
                  temperatureDependency: Boolean = OFF,
                  dependencies: int = 0,
-                 property: tuple = ()):
+                 property: Tuple = ()):
         """This method creates a CavityRadiationProp object.
 
         Notes
@@ -60,7 +61,7 @@ class CavityRadiationProp(ContactProperty):
     def setValues(self,
                   temperatureDependency: Boolean = OFF,
                   dependencies: int = 0,
-                  property: tuple = ()):
+                  property: Tuple = ()):
         """This method modifies the CavityRadiationProp object.
         
         Parameters

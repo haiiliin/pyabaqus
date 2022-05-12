@@ -1,6 +1,7 @@
 from .Annotation import Annotation
 
 from __init__ import *
+from __future__ import annotations
 
 
 class AnnotationsToPlotArray(list[Annotation]):

@@ -2,6 +2,7 @@ from abaqusConstants import *
 from .ContactArea import ContactArea
 
 from __init__ import *
+from __future__ import annotations
 
 
 class GasketThicknessBehavior:
@@ -76,7 +77,7 @@ class GasketThicknessBehavior:
     contactArea: ContactArea = ContactArea(((), ))
 
     def __init__(self,
-                 table: tuple,
+                 table: Tuple,
                  temperatureDependency: Boolean = OFF,
                  dependencies: int = 0,
                  tensileStiffnessFactor: float = None,
@@ -86,7 +87,7 @@ class GasketThicknessBehavior:
                  variableUnits: SymbolicConstant = STRESS,
                  yieldOnset: float = 0,
                  yieldOnsetMethod: SymbolicConstant = RELATIVE_SLOPE_DROP,
-                 unloadingTable: tuple = ()):
+                 unloadingTable: Tuple = ()):
         """This method creates a GasketThicknessBehavior object.
 
         Notes

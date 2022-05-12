@@ -4,7 +4,8 @@ file.
 """
 
 
-def journalMethodCall(objectPath: str, methodName: str, args: tuple, kargs: str):
+def journalMethodCall(objectPath: str, methodName: str, args: Tuple,
+                      kargs: str):
     """This function may be used by a user-defined command to record itself in the Abaqus
     journal file.
     For example

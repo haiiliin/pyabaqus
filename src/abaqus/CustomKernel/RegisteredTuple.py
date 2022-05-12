@@ -1,11 +1,12 @@
 from .CommandRegister import CommandRegister
 
 from __init__ import *
+from __future__ import annotations
 
 
 class RegisteredTuple(CommandRegister):
-    """This class allows you to create a tuple that can be queried from the GUI and is capable
-    of notifying the GUI when the contents of any of the tuple's members change. 
+    """This class allows you to create a Tuple that can be queried from the GUI and is capable
+    of notifying the GUI when the contents of any of the Tuple's members change. 
     The RegisteredTuple object is derived from the CommandRegister object. 
 
     Notes
@@ -17,7 +18,7 @@ class RegisteredTuple(CommandRegister):
         import customKernel
 
     """
-    def __init__(self, tuple: tuple):
+    def __init__(self, Tuple: Tuple):
         """This method creates a RegisteredTuple object.
 
         Notes
@@ -30,8 +31,8 @@ class RegisteredTuple(CommandRegister):
         
         Parameters
         ----------
-        tuple
-            A tuple of objects. These objects must be derived from the CommandRegister class. 
+        Tuple
+            A Tuple of objects. These objects must be derived from the CommandRegister class. 
 
         Returns
         -------

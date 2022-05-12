@@ -5,6 +5,7 @@ from .Amplitude import Amplitude
 from .BaselineCorrection import BaselineCorrection
 
 from __init__ import *
+from __future__ import annotations
 
 
 class TabularAmplitude(Amplitude):
@@ -38,7 +39,7 @@ class TabularAmplitude(Amplitude):
 
     def __init__(self,
                  name: str,
-                 data: tuple,
+                 data: Tuple,
                  smooth: typing.Union[SymbolicConstant,
                                       float] = SOLVER_DEFAULT,
                  timeSpan: SymbolicConstant = STEP):

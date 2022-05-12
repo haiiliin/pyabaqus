@@ -1,4 +1,5 @@
 from __init__ import *
+from __future__ import annotations
 
 
 class GraphicsInfo:
@@ -14,16 +15,16 @@ class GraphicsInfo:
 
     Attributes
     ----------
-    glVersion: tuple
+    glVersion: Tuple
         A sequence of the type (Int, Int, String) specifying the three components of the OpenGL
         version. The sequence consists of an Int with the OpenGL major version number, an Int
         with the OpenGL minor version number, and a String with any additional information.
-    glxServerVersion: tuple
+    glxServerVersion: Tuple
         A sequence of the type (Int, Int, String) specifying the three components of the glx
         version of the server. The sequence consists of an Int with the glx major version
         number, an Int with the glx minor version number, and a String with any additional
         information.
-    glxClientVersion: tuple
+    glxClientVersion: Tuple
         A sequence of the type (Int, Int, String) specifying the three components of the of glx
         version of the client. The sequence consists of an Int with the glx major version
         number, an Int with the glx minor version number, and String with any additional
@@ -51,19 +52,19 @@ class GraphicsInfo:
     # A sequence of the type (Int, Int, String) specifying the three components of the OpenGL
     # version. The sequence consists of an Int with the OpenGL major version number, an Int
     # with the OpenGL minor version number, and a String with any additional information.
-    glVersion: tuple = ()
+    glVersion: Tuple = ()
 
     # A sequence of the type (Int, Int, String) specifying the three components of the glx
     # version of the server. The sequence consists of an Int with the glx major version
     # number, an Int with the glx minor version number, and a String with any additional
     # information.
-    glxServerVersion: tuple = ()
+    glxServerVersion: Tuple = ()
 
     # A sequence of the type (Int, Int, String) specifying the three components of the of glx
     # version of the client. The sequence consists of an Int with the glx major version
     # number, an Int with the glx minor version number, and String with any additional
     # information.
-    glxClientVersion: tuple = ()
+    glxClientVersion: Tuple = ()
 
     # A String specifying the graphics adapter vendor. On hardware accelerated systems
     # *glVendor* specifies the vendor that manufactured the adapter. On systems without

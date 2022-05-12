@@ -25,6 +25,7 @@ from ..Region.Stringer import Stringer
 from ..Region.Surface import Surface
 
 from __init__ import *
+from __future__ import annotations
 
 
 class AssemblyBase(Feature):
@@ -340,7 +341,7 @@ class AssemblyBase(Feature):
         """
         pass
 
-    def deleteFeatures(self, featureNames: tuple):
+    def deleteFeatures(self, featureNames: Tuple):
         """This method deletes specified features from the assembly.
         
         Parameters
@@ -351,7 +352,7 @@ class AssemblyBase(Feature):
         """
         pass
 
-    def excludeFromSimulation(self, instances: tuple[PartInstance],
+    def excludeFromSimulation(self, instances: Tuple[PartInstance],
                               exclude: str):
         """This method excludes the specified part instances from the analysis.
         
@@ -379,7 +380,7 @@ class AssemblyBase(Feature):
                           specifyThickness: Boolean = False,
                           thickness: str = '',
                           miAboutCenterOfMass: Boolean = True,
-                          miAboutPoint: tuple = ()):
+                          miAboutPoint: Tuple = ()):
         """This method returns the mass properties of the assembly, or instances or regions. Only
         beams, trusses, shells, solids, point, nonstructural mass, and rotary inertia elements
         are supported.
@@ -412,7 +413,7 @@ class AssemblyBase(Feature):
             A Boolean specifying if the moments of inertia should be evaluated about the center of 
             mass. The default value is True. 
         miAboutPoint
-            A tuple of three floats specifying the coordinates of the point about which to evaluate 
+            A Tuple of three floats specifying the coordinates of the point about which to evaluate 
             the moment of inertia. By default if the moments of inertia are not being evaluated 
             about the center of mass, they will be evaluated about the origin. 
 
@@ -422,20 +423,20 @@ class AssemblyBase(Feature):
             A Dictionary object with the following items: 
             *area*: None or a Float specifying the sum of the area of the specified faces. The area 
             is computed only for one side for shells. 
-            *areaCentroid*: None or a tuple of three Floats representing the coordinates of the area 
+            *areaCentroid*: None or a Tuple of three Floats representing the coordinates of the area 
             centroid. 
             *volume*: None or a Float specifying the volume of the specified regions. 
-            *volumeCentroid*: None or a tuple of three Floats representing the coordinates of the 
+            *volumeCentroid*: None or a Tuple of three Floats representing the coordinates of the 
             volume centroid. 
             *massFromMassPerUnitSurfaceArea*: None or a Float specifying the mass due to mass per 
             unit surface area. 
             *mass*: None or a Float specifying the mass of the specified regions. It is the total 
             mass and includes mass from quantities such as mass per unit surface area. 
-            *centerOfMass*: None or a tuple of three Floats representing the coordinates of the 
+            *centerOfMass*: None or a Tuple of three Floats representing the coordinates of the 
             center of mass. 
-            *momentOfInertia*: None or a tuple of six Floats representing the moments of inertia 
+            *momentOfInertia*: None or a Tuple of six Floats representing the moments of inertia 
             about the center of mass or about the point specified. 
-            *warnings*: A tuple of SymbolicConstants representing the problems encountered while 
+            *warnings*: A Tuple of SymbolicConstants representing the problems encountered while 
             computing the mass properties. Possible SymbolicConstants are: 
             UNSUPPORTED_ENTITIES: Some unsupported entities exist in the specified regions. The mass 
             properties are computed only for beams, trusses, shells, solids, point and 
@@ -532,7 +533,7 @@ class AssemblyBase(Feature):
 
         Returns
         -------
-            A tuple of three Floats representing the coordinates of the specified point.
+            A Tuple of three Floats representing the coordinates of the specified point.
         """
         pass
 
@@ -563,7 +564,7 @@ class AssemblyBase(Feature):
         pass
 
     def getFacesAndVerticesOfAttachmentLines(self, edges: EdgeArray):
-        """Given an array of edge objects, this method returns a tuple of dictionary objects. Each
+        """Given an array of edge objects, this method returns a Tuple of dictionary objects. Each
         object consists of five members including the attachment line and associated face and
         vertex objects.
         
@@ -574,7 +575,7 @@ class AssemblyBase(Feature):
 
         Returns
         -------
-            A tuple of dictionary objects. Each dictionary contains five items with the following 
+            A Tuple of dictionary objects. Each dictionary contains five items with the following 
             keys: 
             *edge*: An Edge object specifying the attachment line. 
             *startFace*: A Face object specifying the face associated with one end of the attachment 
@@ -599,12 +600,12 @@ class AssemblyBase(Feature):
 
         Returns
         -------
-            A tuple of strings representing the section names. If no section names are found, the 
-            tuple will contain one empty string.
+            A Tuple of strings representing the section names. If no section names are found, the 
+            Tuple will contain one empty string.
         """
         pass
 
-    def importEafFile(self, filename: str, ids: tuple = ()):
+    def importEafFile(self, filename: str, ids: Tuple = ()):
         """This method imports an assembly from an EAF file into the root assembly.
         
         Parameters
@@ -619,7 +620,7 @@ class AssemblyBase(Feature):
         """
         pass
 
-    def importParasolidFile(self, filename: str, ids: tuple = ()):
+    def importParasolidFile(self, filename: str, ids: Tuple = ()):
         """This method imports an assembly from the Parasolid file into the root assembly.
         
         Parameters
@@ -634,7 +635,7 @@ class AssemblyBase(Feature):
         """
         pass
 
-    def importCatiaV5File(self, filename: str, ids: tuple = ()):
+    def importCatiaV5File(self, filename: str, ids: Tuple = ()):
         """This method imports an assembly from a CATIA V5 Elysium Neutral file into the root
         assembly.
         
@@ -651,7 +652,7 @@ class AssemblyBase(Feature):
         """
         pass
 
-    def importEnfFile(self, filename: str, ids: tuple = ()):
+    def importEnfFile(self, filename: str, ids: Tuple = ()):
         """This method imports an assembly from an Elysium Neutral file created by Pro/ENGINEER,
         I-DEAS, or CATIA V5 into the root assembly.
         
@@ -668,7 +669,7 @@ class AssemblyBase(Feature):
         """
         pass
 
-    def importIdeasFile(self, filename: str, ids: tuple = ()):
+    def importIdeasFile(self, filename: str, ids: Tuple = ()):
         """This method imports an assembly from an I-DEAS Elysium Neutral file into the root
         assembly.
         
@@ -685,7 +686,7 @@ class AssemblyBase(Feature):
         """
         pass
 
-    def importProEFile(self, filename: str, ids: tuple = ()):
+    def importProEFile(self, filename: str, ids: Tuple = ()):
         """This method imports an assembly from a Pro/ENGINEER Elysium Neutral file into the root
         assembly.
         
@@ -702,7 +703,7 @@ class AssemblyBase(Feature):
         """
         pass
 
-    def makeDependent(self, instances: tuple[PartInstance]):
+    def makeDependent(self, instances: Tuple[PartInstance]):
         """This method converts the specified part instances from independent to dependent part
         instances.
         
@@ -713,7 +714,7 @@ class AssemblyBase(Feature):
         """
         pass
 
-    def makeIndependent(self, instances: tuple[PartInstance]):
+    def makeIndependent(self, instances: Tuple[PartInstance]):
         """This method converts the specified part instances from dependent to independent part
         instances.
         
@@ -738,8 +739,8 @@ class AssemblyBase(Feature):
                                     sketch: str,
                                     filter: SymbolicConstant = ALL_EDGES,
                                     upToFeature: Feature = Feature(),
-                                    edges: tuple = (),
-                                    vertices: tuple = ()):
+                                    edges: Tuple = (),
+                                    vertices: Tuple = ()):
         """This method projects the specified edges, vertices, and datum points from the assembly
         onto the specified ConstrainedSketch object. The edges, vertices, and datum points
         appear on the sketch as reference geometry.
@@ -800,7 +801,7 @@ class AssemblyBase(Feature):
         """
         pass
 
-    def resumeFeatures(self, featureNames: tuple):
+    def resumeFeatures(self, featureNames: Tuple):
         """This method resumes the specified suppressed features in the assembly.
         
         Parameters
@@ -815,8 +816,8 @@ class AssemblyBase(Feature):
         """
         pass
 
-    def rotate(self, instanceList: tuple, axisPoint: tuple,
-               axisDirection: tuple, angle: float):
+    def rotate(self, instanceList: Tuple, axisPoint: Tuple,
+               axisDirection: Tuple, angle: float):
         """This method rotates given instances by the specified amount.
         
         Parameters
@@ -833,7 +834,7 @@ class AssemblyBase(Feature):
         """
         pass
 
-    def translate(self, instanceList: tuple, vector: tuple):
+    def translate(self, instanceList: Tuple, vector: Tuple):
         """This method translates given instances by the specified amount.
         
         Parameters
@@ -868,7 +869,7 @@ class AssemblyBase(Feature):
         """
         pass
 
-    def suppressFeatures(self, featureNames: tuple):
+    def suppressFeatures(self, featureNames: Tuple):
         """This method suppresses specified features.
         
         Parameters
@@ -878,7 +879,7 @@ class AssemblyBase(Feature):
         """
         pass
 
-    def unlinkInstances(self, instances: tuple[PartInstance]):
+    def unlinkInstances(self, instances: Tuple[PartInstance]):
         """This method converts the specified PartInstance objects from linked child instances to
         regular instances. The parts associated with the selected instances will be converted to
         regular parts as well.
@@ -908,7 +909,7 @@ class AssemblyBase(Feature):
 
     def writeCADParameters(self,
                            paramFile: str,
-                           modifiedParams: tuple = (),
+                           modifiedParams: Tuple = (),
                            updatePaths: str = ''):
         """This method writes the parameters that were imported from the CAD system to a parameter
         file.
@@ -918,8 +919,8 @@ class AssemblyBase(Feature):
         paramFile
             A String specifying the parameter file name. 
         modifiedParams
-            A tuple of tuples each containing the part name, the parameter name and the modified 
-            parameter value. Default is an empty tuple. 
+            A Tuple of tuples each containing the part name, the parameter name and the modified 
+            parameter value. Default is an empty Tuple. 
         updatePaths
             A Bool specifying whether to update the path of the CAD model file specified in the 
             *parameterFile* to the current directory, if the CAD model is present in the current 
@@ -940,7 +941,7 @@ class AssemblyBase(Feature):
         pass
 
     def setMeshNumberingControl(self,
-                                instances: tuple[PartInstance],
+                                instances: Tuple[PartInstance],
                                 startNodeLabel: int = None,
                                 startElemLabel: int = None):
         """This method changes the start node and/or element labels on the specified independent
@@ -960,12 +961,12 @@ class AssemblyBase(Feature):
         pass
 
     def copyMeshPattern(self,
-                        elements: tuple[MeshElement] = (),
-                        faces: tuple[Face] = (),
-                        elemFaces: tuple[MeshFace] = (),
+                        elements: Tuple[MeshElement] = (),
+                        faces: Tuple[Face] = (),
+                        elemFaces: Tuple[MeshFace] = (),
                         targetFace: MeshFace = MeshFace(),
-                        nodes: tuple[MeshNode] = (),
-                        coordinates: tuple = ()):
+                        nodes: Tuple[MeshNode] = (),
+                        coordinates: Tuple = ()):
         """This method copies a mesh pattern from a source region consisting of a set of shell
         elements or element faces onto a target face, mapping nodes and elements in a one-one
         correspondence between source and target.
@@ -995,7 +996,7 @@ class AssemblyBase(Feature):
         """
         pass
 
-    def smoothNodes(self, nodes: tuple[MeshNode]):
+    def smoothNodes(self, nodes: Tuple[MeshNode]):
         """This method smooths the given nodes of a native mesh, moving them locally to a more
         optimal location that improves the quality of the mesh
         

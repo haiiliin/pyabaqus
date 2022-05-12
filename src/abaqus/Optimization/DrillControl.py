@@ -3,6 +3,7 @@ from .GeometricRestriction import GeometricRestriction
 from ..Region.Region import Region
 
 from __init__ import *
+from __future__ import annotations
 
 
 class DrillControl(GeometricRestriction):
@@ -21,7 +22,7 @@ class DrillControl(GeometricRestriction):
     """
     def __init__(self,
                  name: str,
-                 clientDirection: tuple,
+                 clientDirection: Tuple,
                  region: Region,
                  csys: int = None,
                  drawAngle: float = 0,
@@ -49,7 +50,7 @@ class DrillControl(GeometricRestriction):
         clientDirection
             A VertexArray object of length 2 specifying the direction of the drill axis positioned 
             at the *csys* origin. Instead of through a ConstrainedSketchVertex, each point may be specified through a
-            tuple of coordinates. 
+            Tuple of coordinates. 
         region
             A Region object specifying the region to which the geometric restriction is applied. 
             When used with a TopologyTask, there is no default value. When used with a ShapeTask, 

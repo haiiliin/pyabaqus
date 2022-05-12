@@ -1,4 +1,5 @@
 from __init__ import *
+from __future__ import annotations
 
 
 class CurrentProbeValues:
@@ -7,8 +8,8 @@ class CurrentProbeValues:
 
     Attributes
     ----------
-    values: tuple[float]
-        A tuple of Floats specifying :py:class:`~.the` values obtained while probing. These values are updated
+    values: Tuple[float]
+        A Tuple of Floats specifying :py:class:`~.the` values obtained while probing. These values are updated
         constantly as :py:class:`~.the` user moves :py:class:`~.the` mouse over :py:class:`~.the` object being probed.
 
     Notes
@@ -22,6 +23,6 @@ class CurrentProbeValues:
 
     """
 
-    # A tuple of Floats specifying the values obtained while probing. These values are updated
+    # A Tuple of Floats specifying the values obtained while probing. These values are updated
     # constantly as the user moves the mouse over the object being probed.
-    values: tuple[float] = None
+    values: Tuple[float] = None

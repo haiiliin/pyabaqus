@@ -3,6 +3,7 @@ from .Leaf import Leaf
 from ..Assembly.PartInstance import PartInstance
 
 from __init__ import *
+from __future__ import annotations
 
 
 class LeafFromInstance(Leaf):

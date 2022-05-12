@@ -4,6 +4,7 @@ from abaqusConstants import *
 from .Annotation import Annotation
 
 from __init__ import *
+from __future__ import annotations
 
 
 class Arrow(Annotation):
@@ -24,8 +25,8 @@ class Arrow(Annotation):
     """
     def __init__(self,
                  name: str,
-                 startPoint: tuple[float] = (),
-                 endPoint: tuple[float] = (),
+                 startPoint: Tuple[float] = (),
+                 endPoint: Tuple[float] = (),
                  startAnchor: typing.Union[SymbolicConstant,
                                            float] = BOTTOM_LEFT,
                  endAnchor: typing.Union[SymbolicConstant,
@@ -165,8 +166,8 @@ class Arrow(Annotation):
         pass
 
     def setValues(self,
-                  startPoint: tuple[float] = (),
-                  endPoint: tuple[float] = (),
+                  startPoint: Tuple[float] = (),
+                  endPoint: Tuple[float] = (),
                   startAnchor: typing.Union[SymbolicConstant,
                                             float] = BOTTOM_LEFT,
                   endAnchor: typing.Union[SymbolicConstant,

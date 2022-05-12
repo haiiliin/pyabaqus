@@ -35,13 +35,13 @@ from ..Sketcher.ConstrainedSketch import ConstrainedSketch
 
 # prevent circular imports
 from __init__ import *
+from __future__ import annotations
+
+from __future__ import annotations
 
 
 class PartInstance:
     pass
-
-
-from __init__ import *
 
 
 class PartBase(Feature):
@@ -359,8 +359,8 @@ class PartBase(Feature):
     def __init__(self, *args, **kwargs):
         pass
 
-    def PartFromBooleanCut(self, name: str, instanceToBeCut: str,
-                           cuttingInstances: tuple[PartInstance]):
+    def PartFromBooleanCut(self, name: str, instanceToBeCut: PartInstance,
+                           cuttingInstances: Tuple[PartInstance]):
         """This method creates a Part in the parts repository after subtracting or cutting the
         geometries of a group of part instances from that of a base part instance.
 
@@ -391,7 +391,7 @@ class PartBase(Feature):
 
     def PartFromBooleanMerge(self,
                              name: str,
-                             instances: tuple[PartInstance],
+                             instances: Tuple[PartInstance],
                              keepIntersections: Boolean = False,
                              mergeNodes: SymbolicConstant = BOUNDARY_ONLY,
                              nodeMergingTolerance: float = None,
@@ -441,7 +441,7 @@ class PartBase(Feature):
         """
         pass
 
-    def PartFromExtrude2DMesh(self, name: str, part: 'PartBase', depth: float,
+    def PartFromExtrude2DMesh(self, name: str, part: PartBase, depth: float,
                               elementSize: float):
         """This method creates a Part object by extruding an existing two-dimensional orphan mesh
         Part object in the positive *Z*-direction and places it in the parts repository.
@@ -571,7 +571,7 @@ class PartBase(Feature):
 
     def PartFromInstanceMesh(self,
                              name: str,
-                             partInstances: tuple[PartInstance] = (),
+                             partInstances: Tuple[PartInstance] = (),
                              copyPartSets: Boolean = False,
                              copyAssemblySets: Boolean = False):
         """This method creates a Part object containing the mesh found in the supplied PartInstance
@@ -643,8 +643,8 @@ class PartBase(Feature):
         """
         pass
 
-    def PartFromMeshMirror(self, name: str, part: 'PartBase', point1: tuple,
-                           point2: tuple):
+    def PartFromMeshMirror(self, name: str, part: PartBase, point1: Tuple,
+                           point2: Tuple):
         """This method creates a Part object by mirroring an existing orphan mesh Part object about
         a specified plane and places it in the parts repository. The result is a union of the
         original and the mirrored copy. Contrast the PartFromMeshMirror method with the
@@ -692,8 +692,8 @@ class PartBase(Feature):
                                  name: str,
                                  dimensionality: SymbolicConstant,
                                  type: SymbolicConstant,
-                                 nodes: tuple,
-                                 elements: tuple,
+                                 nodes: Tuple,
+                                 elements: Tuple,
                                  twist: Boolean = OFF):
         """This method creates a Part object from nodes and elements and places it in the parts
         repository.
@@ -815,7 +815,7 @@ class PartBase(Feature):
 
     def PartFromSection3DMeshByPlane(self, name: str, part: 'PartBase',
                                      point1: float, point2: float,
-                                     point3: tuple):
+                                     point3: Tuple):
         """This method creates a Part object by cutting an existing three-dimensional orphan mesh
         Part object by a plane and places it in the parts repository. This method is valid only
         for orphan mesh parts composed of 8-node brick elements.
@@ -974,10 +974,10 @@ class PartBase(Feature):
         pass
 
     def assignThickness(self,
-                        faces: tuple[Face],
+                        faces: Tuple[Face],
                         thickness: float = None,
-                        topFaces: tuple[Face] = (),
-                        bottomFaces: tuple[Face] = ()):
+                        topFaces: Tuple[Face] = (),
+                        bottomFaces: Tuple[Face] = ()):
         """This method assigns thickness data to shell faces. The thickness can be used while
         assigning shell and membrane sections to faces.
         
@@ -1045,7 +1045,7 @@ class PartBase(Feature):
         """
         pass
 
-    def deleteFeatures(self, featureNames: tuple):
+    def deleteFeatures(self, featureNames: Tuple):
         """This method deletes the given features.
         
         Parameters
@@ -1093,7 +1093,7 @@ class PartBase(Feature):
         """
         pass
 
-    def getArea(self, faces: tuple[Face], relativeAccuracy: float = 0):
+    def getArea(self, faces: Tuple[Face], relativeAccuracy: float = 0):
         """This method returns the total surface area of a given face or group of faces.
         
         Parameters
@@ -1119,7 +1119,7 @@ class PartBase(Feature):
 
         Returns
         -------`
-        paths: tuple
+        paths: Tuple
             A sequence containing the path to the associated CAD part and assembly file
         """
         pass
@@ -1139,8 +1139,8 @@ class PartBase(Feature):
         pass
 
     def getCentroid(self,
-                    faces: tuple[Face],
-                    cells: tuple[Face],
+                    faces: Tuple[Face],
+                    cells: Tuple[Face],
                     relativeAccuracy: float = 0):
         """Depending on the arguments provided, this method returns the following:
             - The location of the centroid of a given face or group of faces.
@@ -1157,7 +1157,7 @@ class PartBase(Feature):
 
         Returns
         -------
-        centroid: tuple[float]
+        centroid: Tuple[float]
             A sequence of Floats specifying the *X*-, *Y*-, and *Z*-coordinates of the centroid.
         """
         pass
@@ -1172,11 +1172,11 @@ class PartBase(Feature):
 
         Returns
         -------
-            A tuple of 3 Floats representing the coordinates of the specified point.
+            A Tuple of 3 Floats representing the coordinates of the specified point.
         """
         pass
 
-    def getCurvature(self, edges: tuple[Edge], samplePoints: int = 100):
+    def getCurvature(self, edges: Tuple[Edge], samplePoints: int = 100):
         """This method returns the maximum curvature of a given edge or group of edges. For an arc,
         the curvature is constant over the entire edge, and equal to the inverse of the radius.
         For a straight line, the curvature is constant and equal to 0. For a spline edge, the
@@ -1220,7 +1220,7 @@ class PartBase(Feature):
         """
         pass
 
-    def getLength(self, edges: tuple[Edge]):
+    def getLength(self, edges: Tuple[Edge]):
         """This method returns the length of a given edge or group of edges.
         
         Parameters
@@ -1235,7 +1235,7 @@ class PartBase(Feature):
         """
         pass
 
-    def getPerimeter(self, faces: tuple[Face]):
+    def getPerimeter(self, faces: Tuple[Face]):
         """This method returns the total perimeter of a given face or group of faces. All faces
         need to be on the same part. If the specified faces have shared edges, these edges are
         excluded from the computation, thus providing the length of the outer perimeter of the
@@ -1253,7 +1253,7 @@ class PartBase(Feature):
         """
         pass
 
-    def getVolume(self, cells: tuple[Cell], relativeAccuracy: float = 0):
+    def getVolume(self, cells: Tuple[Cell], relativeAccuracy: float = 0):
         """This method returns the volume area of a given cell or group of cells.
         
         Parameters
@@ -1280,7 +1280,7 @@ class PartBase(Feature):
                           specifyThickness: Boolean = False,
                           thickness: str = '',
                           miAboutCenterOfMass: Boolean = True,
-                          miAboutPoint: tuple = ()):
+                          miAboutPoint: Tuple = ()):
         """This method returns the mass properties of a part or region. Only beams, trusses,
         shells, solids, point, nonstructural mass, and rotary inertia elements are supported.
         
@@ -1311,7 +1311,7 @@ class PartBase(Feature):
             A Boolean specifying if the moments of inertia should be evaluated about the center of 
             mass. The default value is True. 
         miAboutPoint
-            A tuple of three floats specifying the coordinates of the point about which to evaluate 
+            A Tuple of three floats specifying the coordinates of the point about which to evaluate 
             the moment of inertia. By default if the moments of inertia are not being evaluated 
             about the center of mass, they will be evaluated about the origin. 
 
@@ -1321,20 +1321,20 @@ class PartBase(Feature):
             A Dictionary object with the following items: 
             *area*: None or a Float specifying the sum of the area of the specified faces. The area 
             is computed only for one side for shells. 
-            *areaCentroid*: None or a tuple of three Floats representing the coordinates of the area 
+            *areaCentroid*: None or a Tuple of three Floats representing the coordinates of the area 
             centroid. 
             *volume*: None or a Float specifying the volume of the specified regions. 
-            *volumeCentroid*: None or a tuple of three Floats representing the coordinates of the 
+            *volumeCentroid*: None or a Tuple of three Floats representing the coordinates of the 
             volume centroid. 
             *massFromMassPerUnitSurfaceArea*: None or a Float specifying the mass due to mass per 
             unit surface area. 
             *mass*: None or a Float specifying the mass of the specified regions. It is the total 
             mass and includes mass from quantities such as mass per unit surface area. 
-            *centerOfMass*: None or a tuple of three Floats representing the coordinates of the 
+            *centerOfMass*: None or a Tuple of three Floats representing the coordinates of the 
             center of mass. 
-            *momentOfInertia*: None or a tuple of six Floats representing the moments of inertia 
+            *momentOfInertia*: None or a Tuple of six Floats representing the moments of inertia 
             about the center of mass or about the point specified. 
-            *warnings*: A tuple of SymbolicConstants representing the problems encountered while 
+            *warnings*: A Tuple of SymbolicConstants representing the problems encountered while 
             computing the mass properties. Possible SymbolicConstants are: 
             UNSUPPORTED_ENTITIES: Some unsupported entities exist in the specified region. The mass 
             properties are computed only for beams, trusses, shells, solids, point and 
@@ -1397,7 +1397,7 @@ class PartBase(Feature):
 
         Returns
         -------
-        faces: tuple[Face]
+        faces: Tuple[Face]
             Sequence of Face objects. 
 
         Raises
@@ -1417,7 +1417,7 @@ class PartBase(Feature):
 
         Returns
         -------
-        edges: tuple[Edge]
+        edges: Tuple[Edge]
             Sequence of Edge objects. 
 
         Raises
@@ -1437,7 +1437,7 @@ class PartBase(Feature):
 
         Returns
         -------
-        cells: tuple[Cell]
+        cells: Tuple[Cell]
             Sequence of Cell objects. 
 
         Raises
@@ -1457,7 +1457,7 @@ class PartBase(Feature):
 
         Returns
         -------
-        vertices: tuple[ConstrainedSketchVertex]
+        vertices: Tuple[ConstrainedSketchVertex]
             Sequence of ConstrainedSketchVertex objects.
 
         Raises
@@ -1491,7 +1491,7 @@ class PartBase(Feature):
 
     def projectEdgesOntoSketch(self,
                                sketch: str,
-                               edges: tuple,
+                               edges: Tuple,
                                constrainToBackground: Boolean = True):
         """This method projects the selected edges of a part onto the specified ConstrainedSketch
         object. The edges appear as sketch geometry after projection. If the plane of projection
@@ -1517,8 +1517,8 @@ class PartBase(Feature):
                                     sketch: str,
                                     filter: SymbolicConstant = ALL_EDGES,
                                     upToFeature: Feature = Feature(),
-                                    edges: tuple = (),
-                                    vertices: tuple = ()):
+                                    edges: Tuple = (),
+                                    vertices: Tuple = ()):
         """This method projects the vertices of specified edges, and datum points from the part
         onto the specified ConstrainedSketch object. The vertices and datum points appear on the
         sketch as reference geometry.
@@ -1653,13 +1653,13 @@ class PartBase(Feature):
         """
         pass
 
-    def resumeFeatures(self, featureNames: tuple):
+    def resumeFeatures(self, featureNames: Tuple):
         """This method resumes the specified suppressed features in the part.
         
         Parameters
         ----------
         featureNames
-            A tuple of names of features which are to be resumed. 
+            A Tuple of names of features which are to be resumed. 
         """
         pass
 
@@ -1691,13 +1691,13 @@ class PartBase(Feature):
         """
         pass
 
-    def suppressFeatures(self, featureNames: tuple):
+    def suppressFeatures(self, featureNames: Tuple):
         """This method suppresses the given features.
         
         Parameters
         ----------
         featureNames
-            A tuple of names of features which are to be suppressed in the part. 
+            A Tuple of names of features which are to be suppressed in the part. 
         """
         pass
 
@@ -1721,7 +1721,7 @@ class PartBase(Feature):
 
     def writeCADParameters(self,
                            paramFile: str,
-                           modifiedParams: tuple = (),
+                           modifiedParams: Tuple = (),
                            updatePaths: str = ''):
         """This method writes the parameters that were imported from the CAD system to a parameter
         file.
@@ -1731,8 +1731,8 @@ class PartBase(Feature):
         paramFile
             A String specifying the parameter file name. 
         modifiedParams
-            A tuple of tuples each containing the part name, the parameter name, and the modified 
-            parameter value. Default is an empty tuple. 
+            A Tuple of tuples each containing the part name, the parameter name, and the modified 
+            parameter value. Default is an empty Tuple. 
         updatePaths
             A Bool specifying whether to update the path of the CAD model file specified in the 
             *parameterFile* to the current directory, if the CAD model is present in the current 
@@ -1789,12 +1789,12 @@ class PartBase(Feature):
         pass
 
     def copyMeshPattern(self,
-                        elements: tuple[MeshElement] = (),
-                        faces: tuple[Face] = (),
-                        elemFaces: tuple[MeshFace] = (),
+                        elements: Tuple[MeshElement] = (),
+                        faces: Tuple[Face] = (),
+                        elemFaces: Tuple[MeshFace] = (),
                         targetFace: MeshFace = MeshFace(),
-                        nodes: tuple[MeshNode] = (),
-                        coordinates: tuple = ()):
+                        nodes: Tuple[MeshNode] = (),
+                        coordinates: Tuple = ()):
         """This method copies a mesh pattern from a source region consisting of a set of shell
         elements or element faces onto a target face, mapping nodes and elements in a one-one
         correspondence between source and target.
@@ -1823,7 +1823,7 @@ class PartBase(Feature):
         """
         pass
 
-    def smoothNodes(self, nodes: tuple[MeshNode]):
+    def smoothNodes(self, nodes: Tuple[MeshNode]):
         """This method smooths the given nodes of a native mesh, moving them locally to a more
         optimal location that improves the quality of the mesh
         

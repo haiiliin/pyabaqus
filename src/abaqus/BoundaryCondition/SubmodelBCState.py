@@ -2,6 +2,7 @@ from abaqusConstants import *
 from .BoundaryConditionState import BoundaryConditionState
 
 from __init__ import *
+from __future__ import annotations
 
 
 class SubmodelBCState(BoundaryConditionState):
@@ -44,7 +45,7 @@ class SubmodelBCState(BoundaryConditionState):
         of the step in the sequence of analysis steps. For example, **globalStep**='1' indicates
         the first step.
     dof: int
-        A tuple of Ints specifying the degrees of freedom to which the boundary condition is
+        A Tuple of Ints specifying the degrees of freedom to which the boundary condition is
         applied.
     amplitudeState: SymbolicConstant
         A SymbolicConstant specifying the propagation state of the amplitude reference. Possible
@@ -121,7 +122,7 @@ class SubmodelBCState(BoundaryConditionState):
     # the first step.
     globalStep: str = ''
 
-    # A tuple of Ints specifying the degrees of freedom to which the boundary condition is
+    # A Tuple of Ints specifying the degrees of freedom to which the boundary condition is
     # applied.
     dof: int = None
 

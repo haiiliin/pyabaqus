@@ -2,6 +2,7 @@ from abaqusConstants import *
 from .ConnectorOptions import ConnectorOptions
 
 from __init__ import *
+from __future__ import annotations
 
 
 class CDCTerm:
@@ -37,13 +38,13 @@ class CDCTerm:
     options: ConnectorOptions = ConnectorOptions()
 
     def __init__(self,
-                 intrinsicComponents: tuple,
-                 table: tuple,
+                 intrinsicComponents: Tuple,
+                 table: Tuple,
                  termOperator: SymbolicConstant = RSS,
                  termSign: SymbolicConstant = POSITIVE,
                  localDependency: Boolean = OFF,
                  indepCompType: SymbolicConstant = POSITION,
-                 indepComponents: tuple = (),
+                 indepComponents: Tuple = (),
                  tempDependency: Boolean = OFF,
                  fieldDependencies: int = 0):
         """This method creates a CDCTerm object.

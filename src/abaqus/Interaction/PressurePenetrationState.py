@@ -2,6 +2,7 @@ from abaqusConstants import *
 from .InteractionState import InteractionState
 
 from __init__ import *
+from __future__ import annotations
 
 
 class PressurePenetrationState(InteractionState):
@@ -31,13 +32,13 @@ class PressurePenetrationState(InteractionState):
         A SymbolicConstant specifying the propagation state of the **penetrationPressure** member.
         Possible values are UNSET, SET, UNCHANGED, and FREED.
     penetrationPressure: float
-        A tuple of Floats specifying the fluid pressure magnitude. For steady state dynamic
-        analyses, a tuple of Complexes specifying the fluid pressure magnitude.
+        A Tuple of Floats specifying the fluid pressure magnitude. For steady state dynamic
+        analyses, a Tuple of Complexes specifying the fluid pressure magnitude.
     amplitude: str
         A String specifying the name of the amplitude reference. The String is empty if the load
         has no amplitude reference.
     criticalPressure: float
-        A tuple of Floats specifying the critical contact pressure below which fluid penetration
+        A Tuple of Floats specifying the critical contact pressure below which fluid penetration
         starts to occur.
     status: SymbolicConstant
         A SymbolicConstant specifying the propagation state of the :py:class:`~abaqus.Interaction.InteractionState.InteractionState` object.
@@ -87,15 +88,15 @@ class PressurePenetrationState(InteractionState):
     # Possible values are UNSET, SET, UNCHANGED, and FREED.
     penetrationPressureState: SymbolicConstant = None
 
-    # A tuple of Floats specifying the fluid pressure magnitude. For steady state dynamic
-    # analyses, a tuple of Complexes specifying the fluid pressure magnitude.
+    # A Tuple of Floats specifying the fluid pressure magnitude. For steady state dynamic
+    # analyses, a Tuple of Complexes specifying the fluid pressure magnitude.
     penetrationPressure: float = None
 
     # A String specifying the name of the amplitude reference. The String is empty if the load
     # has no amplitude reference.
     amplitude: str = ''
 
-    # A tuple of Floats specifying the critical contact pressure below which fluid penetration
+    # A Tuple of Floats specifying the critical contact pressure below which fluid penetration
     # starts to occur.
     criticalPressure: float = None
 

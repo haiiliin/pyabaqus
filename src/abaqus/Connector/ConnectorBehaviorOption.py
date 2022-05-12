@@ -6,6 +6,7 @@ from .TangentialBehavior import TangentialBehavior
 
 # Prevent circular import
 from __init__ import *
+from __future__ import annotations
 
 
 class DerivedComponent:
@@ -13,6 +14,7 @@ class DerivedComponent:
 
 
 from __init__ import *
+from __future__ import annotations
 
 
 class ConnectorBehaviorOption:
@@ -96,7 +98,7 @@ class ConnectorBehaviorOption:
         maximumElasticSlip: SymbolicConstant = FRACTION,
         fraction: float = None,
         absoluteDistance: float = None,
-        table: tuple = ()) -> TangentialBehavior:
+        table: Tuple = ()) -> TangentialBehavior:
         """This method creates a TangentialBehavior object.
 
         Notes

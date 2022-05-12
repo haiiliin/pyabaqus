@@ -2,6 +2,7 @@ from abaqusConstants import *
 from .AdaptiveMeshConstraintState import AdaptiveMeshConstraintState
 
 from __init__ import *
+from __future__ import annotations
 
 
 class VelocityAdaptiveMeshConstraintState(AdaptiveMeshConstraintState):

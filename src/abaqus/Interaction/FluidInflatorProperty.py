@@ -1,6 +1,7 @@
 from .ContactProperty import ContactProperty
 
 from __init__ import *
+from __future__ import annotations
 
 
 class FluidInflatorProperty(ContactProperty):
@@ -47,12 +48,12 @@ class FluidInflatorProperty(ContactProperty):
                  effectiveArea: float,
                  tankVolume: float,
                  dischargeCoefficient: float = None,
-                 dataTable: tuple = (),
+                 dataTable: Tuple = (),
                  numFluids: int = None,
                  mixtureType: str = '',
-                 inflationTime: tuple = (),
-                 fluidbehaviorName: tuple = (),
-                 massFraction: tuple = ()):
+                 inflationTime: Tuple = (),
+                 fluidbehaviorName: Tuple = (),
+                 massFraction: Tuple = ()):
         """This method creates a FluidInflatorProperty object.
 
         Notes
@@ -106,12 +107,12 @@ class FluidInflatorProperty(ContactProperty):
 
     def setValues(self,
                   dischargeCoefficient: float = None,
-                  dataTable: tuple = (),
+                  dataTable: Tuple = (),
                   numFluids: int = None,
                   mixtureType: str = '',
-                  inflationTime: tuple = (),
-                  fluidbehaviorName: tuple = (),
-                  massFraction: tuple = ()):
+                  inflationTime: Tuple = (),
+                  fluidbehaviorName: Tuple = (),
+                  massFraction: Tuple = ()):
         """This method modifies the FluidInflatorProperty object.
         
         Parameters

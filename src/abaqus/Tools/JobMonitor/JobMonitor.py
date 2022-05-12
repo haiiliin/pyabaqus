@@ -9,6 +9,7 @@ from .TextFinder import TextFinder
 from .Ui_JobMonitor import Ui_JobMonitor
 
 from __init__ import *
+from __future__ import annotations
 
 
 class JobMonitor(QMainWindow):

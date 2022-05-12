@@ -7,6 +7,7 @@ from .ConstrainedSketchVertex.ConstrainedSketchVertexArray import ConstrainedSke
 from ..Amplitude.ConstrainedSketchGeometryArray import ConstrainedSketchGeometryArray
 
 from __init__ import *
+from __future__ import annotations
 
 
 class ConstrainedSketchBase:

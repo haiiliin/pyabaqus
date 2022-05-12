@@ -2,6 +2,7 @@ from abaqusConstants import *
 from .OptimizationObjectiveArray import OptimizationObjectiveArray
 
 from __init__ import *
+from __future__ import annotations
 
 
 class ObjectiveFunction:

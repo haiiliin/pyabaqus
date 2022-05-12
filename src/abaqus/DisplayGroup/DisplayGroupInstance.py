@@ -2,6 +2,7 @@ from abaqusConstants import *
 from ..PlotOptions.OdbDisplayOptions import OdbDisplayOptions
 
 from __init__ import *
+from __future__ import annotations
 
 
 class DisplayGroupInstance:

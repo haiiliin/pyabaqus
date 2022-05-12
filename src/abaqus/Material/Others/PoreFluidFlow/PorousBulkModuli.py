@@ -1,6 +1,7 @@
 from abaqusConstants import *
 
 from __init__ import *
+from __future__ import annotations
 
 
 class PorousBulkModuli:
@@ -26,7 +27,7 @@ class PorousBulkModuli:
         - POROUS BULK MODULI
 
     """
-    def __init__(self, table: tuple, temperatureDependency: Boolean = OFF):
+    def __init__(self, table: Tuple, temperatureDependency: Boolean = OFF):
         """This method creates a PorousBulkModuli object.
 
         Notes

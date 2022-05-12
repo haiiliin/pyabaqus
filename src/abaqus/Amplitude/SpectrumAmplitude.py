@@ -2,6 +2,7 @@ from abaqusConstants import *
 from .Amplitude import Amplitude
 
 from __init__ import *
+from __future__ import annotations
 
 
 class SpectrumAmplitude(Amplitude):
@@ -27,7 +28,7 @@ class SpectrumAmplitude(Amplitude):
     def __init__(self,
                  name: str,
                  method: SymbolicConstant,
-                 data: tuple,
+                 data: Tuple,
                  specificationUnits: SymbolicConstant = ACCELERATION,
                  eventUnits: SymbolicConstant = EVENT_ACCELERATION,
                  solution: SymbolicConstant = ABSOLUTE_VALUE,

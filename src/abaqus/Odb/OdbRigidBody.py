@@ -4,6 +4,7 @@ from .OdbMeshNode import OdbMeshNode
 from .OdbSet import OdbSet
 
 from __init__ import *
+from __future__ import annotations
 
 
 class OdbRigidBody:
@@ -27,9 +28,9 @@ class OdbRigidBody:
                  referenceNode: OdbSet,
                  position: SymbolicConstant = INPUT,
                  isothermal: Boolean = ON,
-                 elements: OdbSet = OdbSet('set', tuple[OdbMeshNode]()),
-                 tieNodes: OdbSet = OdbSet('set', tuple[OdbMeshNode]()),
-                 pinNodes: OdbSet = OdbSet('set', tuple[OdbMeshNode]()),
+                 elements: OdbSet = OdbSet('set', Tuple[OdbMeshNode]()),
+                 tieNodes: OdbSet = OdbSet('set', Tuple[OdbMeshNode]()),
+                 pinNodes: OdbSet = OdbSet('set', Tuple[OdbMeshNode]()),
                  analyticSurface: AnalyticSurface = AnalyticSurface()):
         """This method creates a OdbRigidBody object.
 

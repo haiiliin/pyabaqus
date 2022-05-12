@@ -59,6 +59,7 @@ from .Regularization import Regularization
 from .TestData.MullinsEffect import MullinsEffect
 
 from __init__ import *
+from __future__ import annotations
 
 
 class MaterialBase:

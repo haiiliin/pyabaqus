@@ -7,6 +7,7 @@ from .OptimizationTask import OptimizationTask
 from .StopCondition import StopCondition
 
 from __init__ import *
+from __future__ import annotations
 
 
 class ShapeTask(OptimizationTask):

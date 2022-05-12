@@ -2,6 +2,7 @@ from abaqusConstants import *
 from .BoundaryConditionState import BoundaryConditionState
 
 from __init__ import *
+from __future__ import annotations
 
 
 class TemperatureBCState(BoundaryConditionState):
@@ -23,7 +24,7 @@ class TemperatureBCState(BoundaryConditionState):
         A SymbolicConstant specifying the propagation state of the **dof** member. Possible values
         are SET and UNCHANGED.
     dof: int
-        A tuple of Ints specifying the degrees of freedom to which the boundary condition is
+        A Tuple of Ints specifying the degrees of freedom to which the boundary condition is
         applied.
     amplitudeState: SymbolicConstant
         A SymbolicConstant specifying the propagation state of the amplitude reference. Possible
@@ -71,7 +72,7 @@ class TemperatureBCState(BoundaryConditionState):
     # are SET and UNCHANGED.
     dofState: SymbolicConstant = None
 
-    # A tuple of Ints specifying the degrees of freedom to which the boundary condition is
+    # A Tuple of Ints specifying the degrees of freedom to which the boundary condition is
     # applied.
     dof: int = None
 

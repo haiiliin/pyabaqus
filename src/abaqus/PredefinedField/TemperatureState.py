@@ -2,6 +2,7 @@ from abaqusConstants import *
 from .PredefinedFieldState import PredefinedFieldState
 
 from __init__ import *
+from __future__ import annotations
 
 
 class TemperatureState(PredefinedFieldState):
@@ -66,10 +67,10 @@ class TemperatureState(PredefinedFieldState):
         reference. The default value is UNSET.Note:**amplitude** should be given only if it is
         valid for the specified step.
     magnitudesState: SymbolicConstant
-        A tuple of SymbolicConstants specifying the propagation state of each item of the
+        A Tuple of SymbolicConstants specifying the propagation state of each item of the
         **magnitudes** member. Possible values are UNSET, SET, and UNCHANGED.
-    magnitudes: tuple
-        A tuple of Floats specifying the temperature values when **distributionType=UNIFORM** or
+    magnitudes: Tuple
+        A Tuple of Floats specifying the temperature values when **distributionType=UNIFORM** or
         **distributionType=FIELD**. The value of the **magnitudes** argument is a function of the
         **crossSectionDistribution** argument, as shown in the following list:
             - If **crossSectionDistribution=CONSTANT_THROUGH_THICKNESS** then **magnitudes** is a Double
@@ -180,11 +181,11 @@ class TemperatureState(PredefinedFieldState):
     # valid for the specified step.
     amplitude: SymbolicConstant = UNSET
 
-    # A tuple of SymbolicConstants specifying the propagation state of each item of the
+    # A Tuple of SymbolicConstants specifying the propagation state of each item of the
     # *magnitudes* member. Possible values are UNSET, SET, and UNCHANGED.
     magnitudesState: SymbolicConstant = None
 
-    # A tuple of Floats specifying the temperature values when *distributionType*=UNIFORM or
+    # A Tuple of Floats specifying the temperature values when *distributionType*=UNIFORM or
     # *distributionType*=FIELD. The value of the *magnitudes* argument is a function of the
     # *crossSectionDistribution* argument, as shown in the following list:
     # - If *crossSectionDistribution*=CONSTANT_THROUGH_THICKNESS then *magnitudes* is a Double
@@ -197,7 +198,7 @@ class TemperatureState(PredefinedFieldState):
     # gradient in the N2 direction.
     # - If *crossSectionDistribution*=POINTS_THROUGH_SECTION then *magnitudes* is a sequence
     # of Doubles specifying the temperature at each point.
-    magnitudes: tuple = ()
+    magnitudes: Tuple = ()
 
     # A SymbolicConstant specifying the propagation state of the PredefinedFieldState object.
     # Possible values are:

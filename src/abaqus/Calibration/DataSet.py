@@ -1,4 +1,5 @@
 from __init__ import *
+from __future__ import annotations
 
 
 class DataSet:
@@ -16,7 +17,7 @@ class DataSet:
     """
     def __init__(self,
                  name: str,
-                 data: tuple = (),
+                 data: Tuple = (),
                  type: str = '',
                  form: str = ''):
         """This method creates a DataSet object.
@@ -50,7 +51,7 @@ class DataSet:
         """
         pass
 
-    def setValues(self, data: tuple = ()):
+    def setValues(self, data: Tuple = ()):
         """This method modifies the data for an existing DataSet object.
         
         Parameters

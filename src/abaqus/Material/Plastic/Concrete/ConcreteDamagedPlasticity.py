@@ -5,6 +5,7 @@ from .ConcreteTensionDamage import ConcreteTensionDamage
 from .ConcreteTensionStiffening import ConcreteTensionStiffening
 
 from __init__ import *
+from __future__ import annotations
 
 
 class ConcreteDamagedPlasticity:
@@ -55,7 +56,7 @@ class ConcreteDamagedPlasticity:
         ((), ))
 
     def __init__(self,
-                 table: tuple,
+                 table: Tuple,
                  temperatureDependency: Boolean = OFF,
                  dependencies: int = 0):
         """This method creates a ConcreteDamagedPlasticity object.

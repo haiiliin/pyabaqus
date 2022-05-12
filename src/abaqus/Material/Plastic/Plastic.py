@@ -8,6 +8,7 @@ from .Potential import Potential
 from .TensileFailure import TensileFailure
 
 from __init__ import *
+from __future__ import annotations
 
 
 class Plastic:
@@ -93,7 +94,7 @@ class Plastic:
     tensileFailure: TensileFailure = TensileFailure()
 
     def __init__(self,
-                 table: tuple,
+                 table: Tuple,
                  hardening: SymbolicConstant = ISOTROPIC,
                  rate: Boolean = OFF,
                  dataType: SymbolicConstant = HALF_CYCLE,
