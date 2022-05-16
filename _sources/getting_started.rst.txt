@@ -136,7 +136,7 @@ Dependencies
 ------------
 
 Required dependencies:
-    * PyQt5, used for GUI window of Job monitor
+    * ipyparams, used to get the file name of the jupyter notebook
 
 Once you have installed `pyabaqus` and `PyQt5`, you can start to build your Abaqus model right 
 now.
