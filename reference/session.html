@@ -2,7 +2,8 @@
 <html class="no-js">
   <head><meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width,initial-scale=1"/>
-    <meta name="color-scheme" content="light dark"><link rel="index" title="Index" href="../genindex.html" /><link rel="search" title="Search" href="../search.html" /><link rel="next" title="Animation Options" href="session/animation.html" /><link rel="prev" title="Abaqus Output Database" href="odb.html" />
+    <meta name="color-scheme" content="light dark"><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+<link rel="index" title="Index" href="../genindex.html" /><link rel="search" title="Search" href="../search.html" /><link rel="next" title="Animation Options" href="session/animation.html" /><link rel="prev" title="Abaqus Output Database" href="odb.html" />
         <link rel="canonical" href="https://pyabaqus.haiiliin.com/reference/session.html" />
 
     <meta name="generator" content="sphinx-4.5.0, furo 2022.04.07"/>
@@ -300,7 +301,7 @@
           </label>
         </div>
         <article role="main">
-          <div class="section" id="abaqus-session">
+          <section id="abaqus-session">
 <h1>Abaqus Session<a class="headerlink" href="#abaqus-session" title="Permalink to this headline">#</a></h1>
 <p>Session commands are used to create objects that are not stored with the model; for example, viewports and display groups. Abaqus/CAE retains Session objects only for the duration of the session; they are not saved when the model database is saved.</p>
 <div class="toctree-wrapper compound">
@@ -318,9 +319,9 @@
 <li class="toctree-l1"><a class="reference internal" href="session/xy.html">XY</a></li>
 </ul>
 </div>
-<div class="section" id="object-features">
+<section id="object-features">
 <h2>Object features<a class="headerlink" href="#object-features" title="Permalink to this headline">#</a></h2>
-<div class="section" id="session">
+<section id="session">
 <h3>Session<a class="headerlink" href="#session" title="Permalink to this headline">#</a></h3>
 <dl class="py class">
 <dt class="sig sig-object py" id="abaqus.Session.Session.Session">
@@ -1629,22 +1630,17 @@ stress line and placed in the Path repository.</p>
 <dt class="sig sig-object py" id="abaqus.Session.Session.Session.openOdb">
 <span class="sig-name descname"><span class="pre">openOdb</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">→</span> <span class="sig-return-typehint"><a class="reference internal" href="odb.html#abaqus.Odb.Odb.Odb" title="abaqus.Odb.Odb.Odb"><span class="pre">abaqus.Odb.Odb.Odb</span></a></span></span><a class="headerlink" href="#abaqus.Session.Session.Session.openOdb" title="Permalink to this definition">#</a></dt>
 <dd><p>This method opens an existing output database (.odb) file and creates a new Odb object.
-You typically execute this method outside of Abaqus/CAE when, in most cases, only one
+You typically execute this method outside Abaqus/CAE when, in most cases, only one
 output database is open at any time. For example
 import odbAccess
 shockLoadOdb = odbAccess.openOdb(path=’myOdb.odb’)</p>
 <dl class="field-list">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><dl class="simple">
-<dt><strong>path</strong></dt><dd><p>A String specifying the path to an existing output database (.odb) file.</p>
-</dd>
-<dt><strong>readOnly</strong></dt><dd><p>A Boolean specifying whether the file will permit only read access or both read and
-write access. The initial value is False, indicating that both read and write access
-will be permitted.</p>
-</dd>
-<dt><strong>readInternalSets</strong></dt><dd><p>A Boolean specifying whether the file will permit access to sets specified as Internal
-on the database. The initial value is False, indicating that internal sets will not be
-read.</p>
+<dt><strong>name</strong></dt><dd><p>A String specifying the repository key. If the*name* is not the same as the*path* to the
+output database (.odb) file, the <em>path</em> must be specified as well. Additionally, to
+support backwards compatibility of the interface, if the <em>name</em> parameter is omitted,
+the <em>path</em> and <em>name</em> will be presumed to be the same.</p>
 </dd>
 </dl>
 </dd>
@@ -2159,8 +2155,8 @@ on the data, and the data will be saved as is.</p>
 </div>
 </dd></dl>
 </dd></dl>
-</div>
-<div class="section" id="autocolors">
+</section>
+<section id="autocolors">
 <h3>AutoColors<a class="headerlink" href="#autocolors" title="Permalink to this headline">#</a></h3>
 <dl class="py class">
 <dt class="sig sig-object py" id="abaqus.Session.AutoColors.AutoColors">
@@ -2199,8 +2195,8 @@ for red, ‘#00FF00’ for green and ‘#0000FF’ for blue</p>
 </dl>
 </dd></dl>
 </dd></dl>
-</div>
-<div class="section" id="color">
+</section>
+<section id="color">
 <h3>Color<a class="headerlink" href="#color" title="Permalink to this headline">#</a></h3>
 <dl class="py class">
 <dt class="sig sig-object py" id="abaqus.Session.Color.Color">
@@ -2250,8 +2246,8 @@ be between 0.0 and 1.0.</p>
 </dl>
 </dd></dl>
 </dd></dl>
-</div>
-<div class="section" id="drawing">
+</section>
+<section id="drawing">
 <h3>Drawing<a class="headerlink" href="#drawing" title="Permalink to this headline">#</a></h3>
 <dl class="py class">
 <dt class="sig sig-object py" id="abaqus.Session.Drawing.Drawing">
@@ -2807,8 +2803,8 @@ ValueError: <em>vertexData</em> cannot be reduced</p></li>
 </dl>
 </dd></dl>
 </dd></dl>
-</div>
-<div class="section" id="image">
+</section>
+<section id="image">
 <h3>Image<a class="headerlink" href="#image" title="Permalink to this headline">#</a></h3>
 <dl class="py class">
 <dt class="sig sig-object py" id="abaqus.Session.Image.Image">
@@ -2943,8 +2939,8 @@ movie must exist in the session.movies repository.</p>
 </dl>
 </dd></dl>
 </dd></dl>
-</div>
-<div class="section" id="journaloptions">
+</section>
+<section id="journaloptions">
 <h3>JournalOptions<a class="headerlink" href="#journaloptions" title="Permalink to this headline">#</a></h3>
 <dl class="py class">
 <dt class="sig sig-object py" id="abaqus.Session.JournalOptions.JournalOptions">
@@ -3048,8 +3044,8 @@ object.</p>
 </dl>
 </dd></dl>
 </dd></dl>
-</div>
-<div class="section" id="memoryreductionoptions">
+</section>
+<section id="memoryreductionoptions">
 <h3>MemoryReductionOptions<a class="headerlink" href="#memoryreductionoptions" title="Permalink to this headline">#</a></h3>
 <dl class="py class">
 <dt class="sig sig-object py" id="abaqus.Session.MemoryReductionOptions.MemoryReductionOptions">
@@ -3092,8 +3088,8 @@ starts. The default value is 75.0.</p>
 </dl>
 </dd></dl>
 </dd></dl>
-</div>
-<div class="section" id="networkdatabaseconnector">
+</section>
+<section id="networkdatabaseconnector">
 <h3>NetworkDatabaseConnector<a class="headerlink" href="#networkdatabaseconnector" title="Permalink to this headline">#</a></h3>
 <dl class="py class">
 <dt class="sig sig-object py" id="abaqus.Session.NetworkDatabaseConnector.NetworkDatabaseConnector">
@@ -3254,8 +3250,8 @@ the client during the time specified. The default value is 86400.</p>
 <dd><p>This method stops the remote network database connector server on the remote host.</p>
 </dd></dl>
 </dd></dl>
-</div>
-<div class="section" id="numberformat">
+</section>
+<section id="numberformat">
 <h3>NumberFormat<a class="headerlink" href="#numberformat" title="Permalink to this headline">#</a></h3>
 <dl class="py class">
 <dt class="sig sig-object py" id="abaqus.Session.NumberFormat.NumberFormat">
@@ -3307,9 +3303,9 @@ value is 0.</p>
 </pre></div>
 </div>
 </dd></dl>
-</div>
-</div>
-</div>
+</section>
+</section>
+</section>
 
         </article>
       </div>

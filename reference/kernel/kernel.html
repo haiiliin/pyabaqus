@@ -2,7 +2,8 @@
 <html class="no-js">
   <head><meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width,initial-scale=1"/>
-    <meta name="color-scheme" content="light dark"><link rel="index" title="Index" href="../../genindex.html" /><link rel="search" title="Search" href="../../search.html" /><link rel="next" title="Messaging" href="messaging.html" /><link rel="prev" title="Input File Parser" href="input.html" />
+    <meta name="color-scheme" content="light dark"><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+<link rel="index" title="Index" href="../../genindex.html" /><link rel="search" title="Search" href="../../search.html" /><link rel="next" title="Messaging" href="messaging.html" /><link rel="prev" title="Input File Parser" href="input.html" />
         <link rel="canonical" href="https://pyabaqus.haiiliin.com/reference/kernel/kernel.html" />
 
     <meta name="generator" content="sphinx-4.5.0, furo 2022.04.07"/>
@@ -300,14 +301,14 @@
           </label>
         </div>
         <article role="main">
-          <div class="section" id="custom-kernel">
+          <section id="custom-kernel">
 <h1>Custom Kernel<a class="headerlink" href="#custom-kernel" title="Permalink to this headline">#</a></h1>
 <p>The customKernel module augments the mdb, odb, and session objects with an object called customData. The customData object can contain custom data that you created using standard Python objects; for example, dictionaries, strings, numbers, and classes. In addition, the customData object can contain objects that you created using the classes described in this section.</p>
 <p>All objects that you create under the mdb.customData and odb[odbName].customData object will be stored in the Abaqus/CAE model and output database, respectively, when you save the database; all objects that you create under the session.customData object will be lost when you exit Abaqus/CAE.</p>
 <p>The customData object is an instance of the RepositorySupport class; for more information, see RepositorySupport. The classes described in this section register with the GUI infrastructure when you create the class. As a result, if you write a custom GUI script, you can query these objects from the GUI, and you can also be notified when the contents of these objects change so you can update the GUI accordingly. For more information, see Extending the Abaqus Scripting Interface and Accessing kernel data from the GUI.</p>
-<div class="section" id="object-features">
+<section id="object-features">
 <h2>Object features<a class="headerlink" href="#object-features" title="Permalink to this headline">#</a></h2>
-<div class="section" id="commandregister">
+<section id="commandregister">
 <h3>CommandRegister<a class="headerlink" href="#commandregister" title="Permalink to this headline">#</a></h3>
 <dl class="py class">
 <dt class="sig sig-object py" id="abaqus.CustomKernel.CommandRegister.CommandRegister">
@@ -334,8 +335,8 @@ capable of notifying the GUI when the contents of the class change.</p>
 </pre></div>
 </div>
 </dd></dl>
-</div>
-<div class="section" id="registereddictionary">
+</section>
+<section id="registereddictionary">
 <h3>RegisteredDictionary<a class="headerlink" href="#registereddictionary" title="Permalink to this headline">#</a></h3>
 <dl class="py class">
 <dt class="sig sig-object py" id="abaqus.CustomKernel.RegisteredDictionary.RegisteredDictionary">
@@ -414,8 +415,8 @@ addition, the RegisteredDictionary object supports the changeKey method.</p>
 </dl>
 </dd></dl>
 </dd></dl>
-</div>
-<div class="section" id="registeredlist">
+</section>
+<section id="registeredlist">
 <h3>RegisteredList<a class="headerlink" href="#registeredlist" title="Permalink to this headline">#</a></h3>
 <dl class="py class">
 <dt class="sig sig-object py" id="abaqus.CustomKernel.RegisteredList.RegisteredList">
@@ -471,8 +472,8 @@ The RegisteredList object is derived from the CommandRegister object.</p>
 <dd><p>The RegisteredList object supports the same methods as a standard Python list object.</p>
 </dd></dl>
 </dd></dl>
-</div>
-<div class="section" id="registeredtuple">
+</section>
+<section id="registeredtuple">
 <h3>RegisteredTuple<a class="headerlink" href="#registeredtuple" title="Permalink to this headline">#</a></h3>
 <dl class="py class">
 <dt class="sig sig-object py" id="abaqus.CustomKernel.RegisteredTuple.RegisteredTuple">
@@ -534,8 +535,8 @@ The RegisteredTuple object is derived from the CommandRegister object.</p>
 <dd><p>The RegisteredTuple object supports the same methods as a standard Python list object.</p>
 </dd></dl>
 </dd></dl>
-</div>
-<div class="section" id="repositorysupport">
+</section>
+<section id="repositorysupport">
 <h3>RepositorySupport<a class="headerlink" href="#repositorysupport" title="Permalink to this headline">#</a></h3>
 <dl class="py class">
 <dt class="sig sig-object py" id="abaqus.CustomKernel.RepositorySupport.RepositorySupport">
@@ -610,9 +611,9 @@ instances in the repository.</p>
 </dl>
 </dd></dl>
 </dd></dl>
-</div>
-</div>
-</div>
+</section>
+</section>
+</section>
 
         </article>
       </div>

@@ -2,7 +2,8 @@
 <html class="no-js">
   <head><meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width,initial-scale=1"/>
-    <meta name="color-scheme" content="light dark"><link rel="index" title="Index" href="../../../genindex.html" /><link rel="search" title="Search" href="../../../search.html" /><link rel="next" title="Material" href="material.html" /><link rel="prev" title="Interaction" href="interaction.html" />
+    <meta name="color-scheme" content="light dark"><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+<link rel="index" title="Index" href="../../../genindex.html" /><link rel="search" title="Search" href="../../../search.html" /><link rel="next" title="Material" href="material.html" /><link rel="prev" title="Interaction" href="interaction.html" />
         <link rel="canonical" href="https://pyabaqus.haiiliin.com/reference/mdb/model/load.html" />
 
     <meta name="generator" content="sphinx-4.5.0, furo 2022.04.07"/>
@@ -300,14 +301,14 @@
           </label>
         </div>
         <article role="main">
-          <div class="section" id="load">
+          <section id="load">
 <h1>Load<a class="headerlink" href="#load" title="Permalink to this headline">#</a></h1>
 <p>A specific type of load object and a specific type of load state object are designed for each type of load. A load object stores the nonpropagating data of a load as well as a number of instances of the corresponding load state object, each of which stores the propagating data of the load in a single step. Instances of the load state object are created and deleted internally by its corresponding load object.</p>
 <p>Load Case commands are used for configuring load cases in specific types of steps that may use them.</p>
-<div class="section" id="id1">
+<section id="id1">
 <h2>Load<a class="headerlink" href="#id1" title="Permalink to this headline">#</a></h2>
 <p>The Load object is the abstract base type for other Load objects. The Load object has no explicit constructor. The methods and members of the Load object are common to all objects derived from Load.</p>
-<div class="section" id="create-loads">
+<section id="create-loads">
 <h3>Create loads<a class="headerlink" href="#create-loads" title="Permalink to this headline">#</a></h3>
 <dl class="py method">
 <dt class="sig sig-object py" id="abaqus.Load.LoadModel.LoadModel.BodyCharge">
@@ -1946,10 +1947,10 @@ and GENERAL. The default value is SHEAR.</p>
 </pre></div>
 </div>
 </dd></dl>
-</div>
-<div class="section" id="object-features-of-loads">
+</section>
+<section id="object-features-of-loads">
 <h3>Object features of loads<a class="headerlink" href="#object-features-of-loads" title="Permalink to this headline">#</a></h3>
-<div class="section" id="id98">
+<section id="id98">
 <h4>Load<a class="headerlink" href="#id98" title="Permalink to this headline">#</a></h4>
 <dl class="py class">
 <dt class="sig sig-object py" id="abaqus.Load.Load.Load">
@@ -2066,8 +2067,8 @@ general analysis step.</p>
 <dd><p>This method suppresses the load.</p>
 </dd></dl>
 </dd></dl>
-</div>
-<div class="section" id="loadstate">
+</section>
+<section id="loadstate">
 <h4>LoadState<a class="headerlink" href="#loadstate" title="Permalink to this headline">#</a></h4>
 <dl class="py class">
 <dt class="sig sig-object py" id="abaqus.Load.LoadState.LoadState">
@@ -2110,8 +2111,8 @@ has no amplitude reference.</p>
 </dd>
 </dl>
 </dd></dl>
-</div>
-<div class="section" id="bodycharge">
+</section>
+<section id="bodycharge">
 <h4>BodyCharge<a class="headerlink" href="#bodycharge" title="Permalink to this headline">#</a></h4>
 <dl class="py class">
 <dt class="sig sig-object py" id="abaqus.Load.BodyCharge.BodyCharge">
@@ -2254,8 +2255,8 @@ argument only if it is valid for the specified step.</p>
 </dl>
 </dd></dl>
 </dd></dl>
-</div>
-<div class="section" id="bodychargestate">
+</section>
+<section id="bodychargestate">
 <h4>BodyChargeState<a class="headerlink" href="#bodychargestate" title="Permalink to this headline">#</a></h4>
 <dl class="py class">
 <dt class="sig sig-object py" id="abaqus.Load.BodyChargeState.BodyChargeState">
@@ -2309,8 +2310,8 @@ has no amplitude reference.</p>
 </dd>
 </dl>
 </dd></dl>
-</div>
-<div class="section" id="bodyconcentrationflux">
+</section>
+<section id="bodyconcentrationflux">
 <h4>BodyConcentrationFlux<a class="headerlink" href="#bodyconcentrationflux" title="Permalink to this headline">#</a></h4>
 <dl class="py class">
 <dt class="sig sig-object py" id="abaqus.Load.BodyConcentrationFlux.BodyConcentrationFlux">
@@ -2454,8 +2455,8 @@ is valid for the specified step.</p>
 </dl>
 </dd></dl>
 </dd></dl>
-</div>
-<div class="section" id="bodyconcentrationfluxstate">
+</section>
+<section id="bodyconcentrationfluxstate">
 <h4>BodyConcentrationFluxState<a class="headerlink" href="#bodyconcentrationfluxstate" title="Permalink to this headline">#</a></h4>
 <dl class="py class">
 <dt class="sig sig-object py" id="abaqus.Load.BodyConcentrationFluxState.BodyConcentrationFluxState">
@@ -2510,8 +2511,8 @@ has no amplitude reference.</p>
 </dd>
 </dl>
 </dd></dl>
-</div>
-<div class="section" id="bodycurrent">
+</section>
+<section id="bodycurrent">
 <h4>BodyCurrent<a class="headerlink" href="#bodycurrent" title="Permalink to this headline">#</a></h4>
 <dl class="py class">
 <dt class="sig sig-object py" id="abaqus.Load.BodyCurrent.BodyCurrent">
@@ -2654,8 +2655,8 @@ argument only if it is valid for the specified step.</p>
 </dl>
 </dd></dl>
 </dd></dl>
-</div>
-<div class="section" id="bodycurrentdensity">
+</section>
+<section id="bodycurrentdensity">
 <h4>BodyCurrentDensity<a class="headerlink" href="#bodycurrentdensity" title="Permalink to this headline">#</a></h4>
 <dl class="py class">
 <dt class="sig sig-object py" id="abaqus.Load.BodyCurrentDensity.BodyCurrentDensity">
@@ -2794,8 +2795,8 @@ argument only if it is valid for the specified step.</p>
 </dl>
 </dd></dl>
 </dd></dl>
-</div>
-<div class="section" id="bodycurrentstate">
+</section>
+<section id="bodycurrentstate">
 <h4>BodyCurrentState<a class="headerlink" href="#bodycurrentstate" title="Permalink to this headline">#</a></h4>
 <dl class="py class">
 <dt class="sig sig-object py" id="abaqus.Load.BodyCurrentState.BodyCurrentState">
@@ -2849,8 +2850,8 @@ has no amplitude reference.</p>
 </dd>
 </dl>
 </dd></dl>
-</div>
-<div class="section" id="bodyforce">
+</section>
+<section id="bodyforce">
 <h4>BodyForce<a class="headerlink" href="#bodyforce" title="Permalink to this headline">#</a></h4>
 <dl class="py class">
 <dt class="sig sig-object py" id="abaqus.Load.BodyForce.BodyForce">
@@ -3020,8 +3021,8 @@ argument only if it is valid for the specified step.</p>
 </dl>
 </dd></dl>
 </dd></dl>
-</div>
-<div class="section" id="bodyforcestate">
+</section>
+<section id="bodyforcestate">
 <h4>BodyForceState<a class="headerlink" href="#bodyforcestate" title="Permalink to this headline">#</a></h4>
 <dl class="py class">
 <dt class="sig sig-object py" id="abaqus.Load.BodyForceState.BodyForceState">
@@ -3085,8 +3086,8 @@ has no amplitude reference.</p>
 </dd>
 </dl>
 </dd></dl>
-</div>
-<div class="section" id="bodyheatflux">
+</section>
+<section id="bodyheatflux">
 <h4>BodyHeatFlux<a class="headerlink" href="#bodyheatflux" title="Permalink to this headline">#</a></h4>
 <dl class="py class">
 <dt class="sig sig-object py" id="abaqus.Load.BodyHeatFlux.BodyHeatFlux">
@@ -3229,8 +3230,8 @@ is valid for the specified step.</p>
 </dl>
 </dd></dl>
 </dd></dl>
-</div>
-<div class="section" id="bodyheatfluxstate">
+</section>
+<section id="bodyheatfluxstate">
 <h4>BodyHeatFluxState<a class="headerlink" href="#bodyheatfluxstate" title="Permalink to this headline">#</a></h4>
 <dl class="py class">
 <dt class="sig sig-object py" id="abaqus.Load.BodyHeatFluxState.BodyHeatFluxState">
@@ -3284,8 +3285,8 @@ has no amplitude reference.</p>
 </dd>
 </dl>
 </dd></dl>
-</div>
-<div class="section" id="boltload">
+</section>
+<section id="boltload">
 <h4>BoltLoad<a class="headerlink" href="#boltload" title="Permalink to this headline">#</a></h4>
 <dl class="py class">
 <dt class="sig sig-object py" id="abaqus.Load.BoltLoad.BoltLoad">
@@ -3454,8 +3455,8 @@ argument only if it is valid for the specified step.</p>
 </dl>
 </dd></dl>
 </dd></dl>
-</div>
-<div class="section" id="boltloadstate">
+</section>
+<section id="boltloadstate">
 <h4>BoltLoadState<a class="headerlink" href="#boltloadstate" title="Permalink to this headline">#</a></h4>
 <dl class="py class">
 <dt class="sig sig-object py" id="abaqus.Load.BoltLoadState.BoltLoadState">
@@ -3521,8 +3522,8 @@ has no amplitude reference.</p>
 </dd>
 </dl>
 </dd></dl>
-</div>
-<div class="section" id="conccharge">
+</section>
+<section id="conccharge">
 <h4>ConcCharge<a class="headerlink" href="#conccharge" title="Permalink to this headline">#</a></h4>
 <dl class="py class">
 <dt class="sig sig-object py" id="abaqus.Load.ConcCharge.ConcCharge">
@@ -3665,8 +3666,8 @@ argument only if it is valid for the specified step.</p>
 </dl>
 </dd></dl>
 </dd></dl>
-</div>
-<div class="section" id="concconcflux">
+</section>
+<section id="concconcflux">
 <h4>ConcConcFlux<a class="headerlink" href="#concconcflux" title="Permalink to this headline">#</a></h4>
 <dl class="py class">
 <dt class="sig sig-object py" id="abaqus.Load.ConcConcFlux.ConcConcFlux">
@@ -3809,8 +3810,8 @@ argument only if it is valid for the specified step.</p>
 </dl>
 </dd></dl>
 </dd></dl>
-</div>
-<div class="section" id="conccurrent">
+</section>
+<section id="conccurrent">
 <h4>ConcCurrent<a class="headerlink" href="#conccurrent" title="Permalink to this headline">#</a></h4>
 <dl class="py class">
 <dt class="sig sig-object py" id="abaqus.Load.ConcCurrent.ConcCurrent">
@@ -3953,8 +3954,8 @@ argument only if it is valid for the specified step.</p>
 </dl>
 </dd></dl>
 </dd></dl>
-</div>
-<div class="section" id="conccurrentstate">
+</section>
+<section id="conccurrentstate">
 <h4>ConcCurrentState<a class="headerlink" href="#conccurrentstate" title="Permalink to this headline">#</a></h4>
 <dl class="py class">
 <dt class="sig sig-object py" id="abaqus.Load.ConcCurrentState.ConcCurrentState">
@@ -4008,8 +4009,8 @@ has no amplitude reference.</p>
 </dd>
 </dl>
 </dd></dl>
-</div>
-<div class="section" id="concentratedchargestate">
+</section>
+<section id="concentratedchargestate">
 <h4>ConcentratedChargeState<a class="headerlink" href="#concentratedchargestate" title="Permalink to this headline">#</a></h4>
 <dl class="py class">
 <dt class="sig sig-object py" id="abaqus.Load.ConcentratedChargeState.ConcentratedChargeState">
@@ -4063,8 +4064,8 @@ has no amplitude reference.</p>
 </dd>
 </dl>
 </dd></dl>
-</div>
-<div class="section" id="concentratedconcentrationfluxstate">
+</section>
+<section id="concentratedconcentrationfluxstate">
 <h4>ConcentratedConcentrationFluxState<a class="headerlink" href="#concentratedconcentrationfluxstate" title="Permalink to this headline">#</a></h4>
 <dl class="py class">
 <dt class="sig sig-object py" id="abaqus.Load.ConcentratedConcentrationFluxState.ConcentratedConcentrationFluxState">
@@ -4119,8 +4120,8 @@ has no amplitude reference.</p>
 </dd>
 </dl>
 </dd></dl>
-</div>
-<div class="section" id="concentratedforce">
+</section>
+<section id="concentratedforce">
 <h4>ConcentratedForce<a class="headerlink" href="#concentratedforce" title="Permalink to this headline">#</a></h4>
 <dl class="py class">
 <dt class="sig sig-object py" id="abaqus.Load.ConcentratedForce.ConcentratedForce">
@@ -4320,8 +4321,8 @@ argument only if it is valid for the specified step.</p>
 </dl>
 </dd></dl>
 </dd></dl>
-</div>
-<div class="section" id="concentratedforcestate">
+</section>
+<section id="concentratedforcestate">
 <h4>ConcentratedForceState<a class="headerlink" href="#concentratedforcestate" title="Permalink to this headline">#</a></h4>
 <dl class="py class">
 <dt class="sig sig-object py" id="abaqus.Load.ConcentratedForceState.ConcentratedForceState">
@@ -4388,8 +4389,8 @@ has no amplitude reference.</p>
 </dd>
 </dl>
 </dd></dl>
-</div>
-<div class="section" id="concentratedheatflux">
+</section>
+<section id="concentratedheatflux">
 <h4>ConcentratedHeatFlux<a class="headerlink" href="#concentratedheatflux" title="Permalink to this headline">#</a></h4>
 <dl class="py class">
 <dt class="sig sig-object py" id="abaqus.Load.ConcentratedHeatFlux.ConcentratedHeatFlux">
@@ -4541,8 +4542,8 @@ argument only if it is valid for the specified step.</p>
 </dl>
 </dd></dl>
 </dd></dl>
-</div>
-<div class="section" id="concentratedheatfluxstate">
+</section>
+<section id="concentratedheatfluxstate">
 <h4>ConcentratedHeatFluxState<a class="headerlink" href="#concentratedheatfluxstate" title="Permalink to this headline">#</a></h4>
 <dl class="py class">
 <dt class="sig sig-object py" id="abaqus.Load.ConcentratedHeatFluxState.ConcentratedHeatFluxState">
@@ -4599,8 +4600,8 @@ has no amplitude reference.</p>
 </dd>
 </dl>
 </dd></dl>
-</div>
-<div class="section" id="concentratedporefluidstate">
+</section>
+<section id="concentratedporefluidstate">
 <h4>ConcentratedPoreFluidState<a class="headerlink" href="#concentratedporefluidstate" title="Permalink to this headline">#</a></h4>
 <dl class="py class">
 <dt class="sig sig-object py" id="abaqus.Load.ConcentratedPoreFluidState.ConcentratedPoreFluidState">
@@ -4655,8 +4656,8 @@ has no amplitude reference.</p>
 </dd>
 </dl>
 </dd></dl>
-</div>
-<div class="section" id="concporefluid">
+</section>
+<section id="concporefluid">
 <h4>ConcPoreFluid<a class="headerlink" href="#concporefluid" title="Permalink to this headline">#</a></h4>
 <dl class="py class">
 <dt class="sig sig-object py" id="abaqus.Load.ConcPoreFluid.ConcPoreFluid">
@@ -4799,8 +4800,8 @@ argument only if it is valid for the specified step.</p>
 </dl>
 </dd></dl>
 </dd></dl>
-</div>
-<div class="section" id="connectorforce">
+</section>
+<section id="connectorforce">
 <h4>ConnectorForce<a class="headerlink" href="#connectorforce" title="Permalink to this headline">#</a></h4>
 <dl class="py class">
 <dt class="sig sig-object py" id="abaqus.Load.ConnectorForce.ConnectorForce">
@@ -4981,8 +4982,8 @@ argument only if it is valid for the specified step.</p>
 </dl>
 </dd></dl>
 </dd></dl>
-</div>
-<div class="section" id="connectorforcestate">
+</section>
+<section id="connectorforcestate">
 <h4>ConnectorForceState<a class="headerlink" href="#connectorforcestate" title="Permalink to this headline">#</a></h4>
 <dl class="py class">
 <dt class="sig sig-object py" id="abaqus.Load.ConnectorForceState.ConnectorForceState">
@@ -5052,8 +5053,8 @@ has no amplitude reference.</p>
 </dd>
 </dl>
 </dd></dl>
-</div>
-<div class="section" id="connectormoment">
+</section>
+<section id="connectormoment">
 <h4>ConnectorMoment<a class="headerlink" href="#connectormoment" title="Permalink to this headline">#</a></h4>
 <dl class="py class">
 <dt class="sig sig-object py" id="abaqus.Load.ConnectorMoment.ConnectorMoment">
@@ -5235,8 +5236,8 @@ argument only if it is valid for the specified step.</p>
 </dl>
 </dd></dl>
 </dd></dl>
-</div>
-<div class="section" id="connectormomentstate">
+</section>
+<section id="connectormomentstate">
 <h4>ConnectorMomentState<a class="headerlink" href="#connectormomentstate" title="Permalink to this headline">#</a></h4>
 <dl class="py class">
 <dt class="sig sig-object py" id="abaqus.Load.ConnectorMomentState.ConnectorMomentState">
@@ -5304,8 +5305,8 @@ has no amplitude reference.</p>
 </dd>
 </dl>
 </dd></dl>
-</div>
-<div class="section" id="coriolisforce">
+</section>
+<section id="coriolisforce">
 <h4>CoriolisForce<a class="headerlink" href="#coriolisforce" title="Permalink to this headline">#</a></h4>
 <dl class="py class">
 <dt class="sig sig-object py" id="abaqus.Load.CoriolisForce.CoriolisForce">
@@ -5464,8 +5465,8 @@ argument only if it is valid for the specified step.</p>
 </dl>
 </dd></dl>
 </dd></dl>
-</div>
-<div class="section" id="coriolisforcestate">
+</section>
+<section id="coriolisforcestate">
 <h4>CoriolisForceState<a class="headerlink" href="#coriolisforcestate" title="Permalink to this headline">#</a></h4>
 <dl class="py class">
 <dt class="sig sig-object py" id="abaqus.Load.CoriolisForceState.CoriolisForceState">
@@ -5519,8 +5520,8 @@ has no amplitude reference.</p>
 </dd>
 </dl>
 </dd></dl>
-</div>
-<div class="section" id="gravity">
+</section>
+<section id="gravity">
 <h4>Gravity<a class="headerlink" href="#gravity" title="Permalink to this headline">#</a></h4>
 <dl class="py class">
 <dt class="sig sig-object py" id="abaqus.Load.Gravity.Gravity">
@@ -5687,8 +5688,8 @@ argument only if it is valid for the specified step.</p>
 </dl>
 </dd></dl>
 </dd></dl>
-</div>
-<div class="section" id="gravitystate">
+</section>
+<section id="gravitystate">
 <h4>GravityState<a class="headerlink" href="#gravitystate" title="Permalink to this headline">#</a></h4>
 <dl class="py class">
 <dt class="sig sig-object py" id="abaqus.Load.GravityState.GravityState">
@@ -5752,8 +5753,8 @@ has no amplitude reference.</p>
 </dd>
 </dl>
 </dd></dl>
-</div>
-<div class="section" id="hydrostaticfluidflowstate">
+</section>
+<section id="hydrostaticfluidflowstate">
 <h4>HydrostaticFluidFlowState<a class="headerlink" href="#hydrostaticfluidflowstate" title="Permalink to this headline">#</a></h4>
 <dl class="py class">
 <dt class="sig sig-object py" id="abaqus.Load.HydrostaticFluidFlowState.HydrostaticFluidFlowState">
@@ -5808,8 +5809,8 @@ has no amplitude reference.</p>
 </dd>
 </dl>
 </dd></dl>
-</div>
-<div class="section" id="inertiarelief">
+</section>
+<section id="inertiarelief">
 <h4>InertiaRelief<a class="headerlink" href="#inertiarelief" title="Permalink to this headline">#</a></h4>
 <dl class="py class">
 <dt class="sig sig-object py" id="abaqus.Load.InertiaRelief.InertiaRelief">
@@ -5994,8 +5995,8 @@ current loading at the start of the step. The default value is OFF.</p>
 </dl>
 </dd></dl>
 </dd></dl>
-</div>
-<div class="section" id="inertiareliefstate">
+</section>
+<section id="inertiareliefstate">
 <h4>InertiaReliefState<a class="headerlink" href="#inertiareliefstate" title="Permalink to this headline">#</a></h4>
 <dl class="py class">
 <dt class="sig sig-object py" id="abaqus.Load.InertiaReliefState.InertiaReliefState">
@@ -6101,8 +6102,8 @@ has no amplitude reference.</p>
 </dd>
 </dl>
 </dd></dl>
-</div>
-<div class="section" id="inwardvolaccel">
+</section>
+<section id="inwardvolaccel">
 <h4>InwardVolAccel<a class="headerlink" href="#inwardvolaccel" title="Permalink to this headline">#</a></h4>
 <dl class="py class">
 <dt class="sig sig-object py" id="abaqus.Load.InwardVolAccel.InwardVolAccel">
@@ -6246,8 +6247,8 @@ argument only if it is valid for the specified step.</p>
 </dl>
 </dd></dl>
 </dd></dl>
-</div>
-<div class="section" id="inwardvolaccelstate">
+</section>
+<section id="inwardvolaccelstate">
 <h4>InwardVolAccelState<a class="headerlink" href="#inwardvolaccelstate" title="Permalink to this headline">#</a></h4>
 <dl class="py class">
 <dt class="sig sig-object py" id="abaqus.Load.InwardVolAccelState.InwardVolAccelState">
@@ -6302,8 +6303,8 @@ has no amplitude reference.</p>
 </dd>
 </dl>
 </dd></dl>
-</div>
-<div class="section" id="lineload">
+</section>
+<section id="lineload">
 <h4>LineLoad<a class="headerlink" href="#lineload" title="Permalink to this headline">#</a></h4>
 <dl class="py class">
 <dt class="sig sig-object py" id="abaqus.Load.LineLoad.LineLoad">
@@ -6479,8 +6480,8 @@ argument only if it is valid for the specified step.</p>
 </dl>
 </dd></dl>
 </dd></dl>
-</div>
-<div class="section" id="lineloadstate">
+</section>
+<section id="lineloadstate">
 <h4>LineLoadState<a class="headerlink" href="#lineloadstate" title="Permalink to this headline">#</a></h4>
 <dl class="py class">
 <dt class="sig sig-object py" id="abaqus.Load.LineLoadState.LineLoadState">
@@ -6546,8 +6547,8 @@ has no amplitude reference.</p>
 </dd>
 </dl>
 </dd></dl>
-</div>
-<div class="section" id="loadstep">
+</section>
+<section id="loadstep">
 <h4>LoadStep<a class="headerlink" href="#loadstep" title="Permalink to this headline">#</a></h4>
 <dl class="py class">
 <dt class="sig sig-object py" id="abaqus.Load.LoadStep.LoadStep">
@@ -6602,8 +6603,8 @@ modified from the base state. The default value is ON.</p>
 </div>
 </dd></dl>
 </dd></dl>
-</div>
-<div class="section" id="moment">
+</section>
+<section id="moment">
 <h4>Moment<a class="headerlink" href="#moment" title="Permalink to this headline">#</a></h4>
 <dl class="py class">
 <dt class="sig sig-object py" id="abaqus.Load.Moment.Moment">
@@ -6802,8 +6803,8 @@ argument only if it is valid for the specified step.</p>
 </dl>
 </dd></dl>
 </dd></dl>
-</div>
-<div class="section" id="momentstate">
+</section>
+<section id="momentstate">
 <h4>MomentState<a class="headerlink" href="#momentstate" title="Permalink to this headline">#</a></h4>
 <dl class="py class">
 <dt class="sig sig-object py" id="abaqus.Load.MomentState.MomentState">
@@ -6867,8 +6868,8 @@ has no amplitude reference.</p>
 </dd>
 </dl>
 </dd></dl>
-</div>
-<div class="section" id="pegload">
+</section>
+<section id="pegload">
 <h4>PEGLoad<a class="headerlink" href="#pegload" title="Permalink to this headline">#</a></h4>
 <dl class="py class">
 <dt class="sig sig-object py" id="abaqus.Load.PEGLoad.PEGLoad">
@@ -7033,8 +7034,8 @@ argument only if it is valid for the specified step.</p>
 </dl>
 </dd></dl>
 </dd></dl>
-</div>
-<div class="section" id="pegloadstate">
+</section>
+<section id="pegloadstate">
 <h4>PEGLoadState<a class="headerlink" href="#pegloadstate" title="Permalink to this headline">#</a></h4>
 <dl class="py class">
 <dt class="sig sig-object py" id="abaqus.Load.PEGLoadState.PEGLoadState">
@@ -7098,8 +7099,8 @@ has no amplitude reference.</p>
 </dd>
 </dl>
 </dd></dl>
-</div>
-<div class="section" id="pipepressure">
+</section>
+<section id="pipepressure">
 <h4>PipePressure<a class="headerlink" href="#pipepressure" title="Permalink to this headline">#</a></h4>
 <dl class="py class">
 <dt class="sig sig-object py" id="abaqus.Load.PipePressure.PipePressure">
@@ -7275,8 +7276,8 @@ it is valid for the specified step.</p>
 </dl>
 </dd></dl>
 </dd></dl>
-</div>
-<div class="section" id="pipepressurestate">
+</section>
+<section id="pipepressurestate">
 <h4>PipePressureState<a class="headerlink" href="#pipepressurestate" title="Permalink to this headline">#</a></h4>
 <dl class="py class">
 <dt class="sig sig-object py" id="abaqus.Load.PipePressureState.PipePressureState">
@@ -7348,8 +7349,8 @@ has no amplitude reference.</p>
 </dd>
 </dl>
 </dd></dl>
-</div>
-<div class="section" id="pressure">
+</section>
+<section id="pressure">
 <h4>Pressure<a class="headerlink" href="#pressure" title="Permalink to this headline">#</a></h4>
 <dl class="py class">
 <dt class="sig sig-object py" id="abaqus.Load.Pressure.Pressure">
@@ -7513,8 +7514,8 @@ is valid for the specified step.</p>
 </dl>
 </dd></dl>
 </dd></dl>
-</div>
-<div class="section" id="pressurestate">
+</section>
+<section id="pressurestate">
 <h4>PressureState<a class="headerlink" href="#pressurestate" title="Permalink to this headline">#</a></h4>
 <dl class="py class">
 <dt class="sig sig-object py" id="abaqus.Load.PressureState.PressureState">
@@ -7586,8 +7587,8 @@ has no amplitude reference.</p>
 </dd>
 </dl>
 </dd></dl>
-</div>
-<div class="section" id="rotationalbodyforce">
+</section>
+<section id="rotationalbodyforce">
 <h4>RotationalBodyForce<a class="headerlink" href="#rotationalbodyforce" title="Permalink to this headline">#</a></h4>
 <dl class="py class">
 <dt class="sig sig-object py" id="abaqus.Load.RotationalBodyForce.RotationalBodyForce">
@@ -7770,8 +7771,8 @@ argument only if it is valid for the specified step.</p>
 </dl>
 </dd></dl>
 </dd></dl>
-</div>
-<div class="section" id="rotationalbodyforcestate">
+</section>
+<section id="rotationalbodyforcestate">
 <h4>RotationalBodyForceState<a class="headerlink" href="#rotationalbodyforcestate" title="Permalink to this headline">#</a></h4>
 <dl class="py class">
 <dt class="sig sig-object py" id="abaqus.Load.RotationalBodyForceState.RotationalBodyForceState">
@@ -7826,8 +7827,8 @@ has no amplitude reference.</p>
 </dd>
 </dl>
 </dd></dl>
-</div>
-<div class="section" id="shelledgeload">
+</section>
+<section id="shelledgeload">
 <h4>ShellEdgeLoad<a class="headerlink" href="#shelledgeload" title="Permalink to this headline">#</a></h4>
 <dl class="py class">
 <dt class="sig sig-object py" id="abaqus.Load.ShellEdgeLoad.ShellEdgeLoad">
@@ -8042,8 +8043,8 @@ is valid for the specified step.</p>
 </dl>
 </dd></dl>
 </dd></dl>
-</div>
-<div class="section" id="shelledgeloadstate">
+</section>
+<section id="shelledgeloadstate">
 <h4>ShellEdgeLoadState<a class="headerlink" href="#shelledgeloadstate" title="Permalink to this headline">#</a></h4>
 <dl class="py class">
 <dt class="sig sig-object py" id="abaqus.Load.ShellEdgeLoadState.ShellEdgeLoadState">
@@ -8103,8 +8104,8 @@ has no amplitude reference.</p>
 </dd>
 </dl>
 </dd></dl>
-</div>
-<div class="section" id="submodelsb">
+</section>
+<section id="submodelsb">
 <h4>SubmodelSB<a class="headerlink" href="#submodelsb" title="Permalink to this headline">#</a></h4>
 <dl class="py class">
 <dt class="sig sig-object py" id="abaqus.Load.SubmodelSB.SubmodelSB">
@@ -8276,8 +8277,8 @@ applicable only for linear perturbation steps and if <a href="#id241"><span clas
 </dl>
 </dd></dl>
 </dd></dl>
-</div>
-<div class="section" id="submodelsbstate">
+</section>
+<section id="submodelsbstate">
 <h4>SubmodelSBState<a class="headerlink" href="#submodelsbstate" title="Permalink to this headline">#</a></h4>
 <dl class="py class">
 <dt class="sig sig-object py" id="abaqus.Load.SubmodelSBState.SubmodelSBState">
@@ -8347,8 +8348,8 @@ has no amplitude reference.</p>
 </dd>
 </dl>
 </dd></dl>
-</div>
-<div class="section" id="substructureload">
+</section>
+<section id="substructureload">
 <h4>SubstructureLoad<a class="headerlink" href="#substructureload" title="Permalink to this headline">#</a></h4>
 <dl class="py class">
 <dt class="sig sig-object py" id="abaqus.Load.SubstructureLoad.SubstructureLoad">
@@ -8473,8 +8474,8 @@ is valid for the specified step.</p>
 </dl>
 </dd></dl>
 </dd></dl>
-</div>
-<div class="section" id="substructureloadstate">
+</section>
+<section id="substructureloadstate">
 <h4>SubstructureLoadState<a class="headerlink" href="#substructureloadstate" title="Permalink to this headline">#</a></h4>
 <dl class="py class">
 <dt class="sig sig-object py" id="abaqus.Load.SubstructureLoadState.SubstructureLoadState">
@@ -8530,8 +8531,8 @@ has no amplitude reference.</p>
 </dd>
 </dl>
 </dd></dl>
-</div>
-<div class="section" id="surfacecharge">
+</section>
+<section id="surfacecharge">
 <h4>SurfaceCharge<a class="headerlink" href="#surfacecharge" title="Permalink to this headline">#</a></h4>
 <dl class="py class">
 <dt class="sig sig-object py" id="abaqus.Load.SurfaceCharge.SurfaceCharge">
@@ -8674,8 +8675,8 @@ argument only if it is valid for the specified step.</p>
 </dl>
 </dd></dl>
 </dd></dl>
-</div>
-<div class="section" id="surfacechargestate">
+</section>
+<section id="surfacechargestate">
 <h4>SurfaceChargeState<a class="headerlink" href="#surfacechargestate" title="Permalink to this headline">#</a></h4>
 <dl class="py class">
 <dt class="sig sig-object py" id="abaqus.Load.SurfaceChargeState.SurfaceChargeState">
@@ -8729,8 +8730,8 @@ has no amplitude reference.</p>
 </dd>
 </dl>
 </dd></dl>
-</div>
-<div class="section" id="surfaceconcentrationflux">
+</section>
+<section id="surfaceconcentrationflux">
 <h4>SurfaceConcentrationFlux<a class="headerlink" href="#surfaceconcentrationflux" title="Permalink to this headline">#</a></h4>
 <dl class="py class">
 <dt class="sig sig-object py" id="abaqus.Load.SurfaceConcentrationFlux.SurfaceConcentrationFlux">
@@ -8878,8 +8879,8 @@ is valid for the specified step.</p>
 </dl>
 </dd></dl>
 </dd></dl>
-</div>
-<div class="section" id="surfaceconcentrationfluxstate">
+</section>
+<section id="surfaceconcentrationfluxstate">
 <h4>SurfaceConcentrationFluxState<a class="headerlink" href="#surfaceconcentrationfluxstate" title="Permalink to this headline">#</a></h4>
 <dl class="py class">
 <dt class="sig sig-object py" id="abaqus.Load.SurfaceConcentrationFluxState.SurfaceConcentrationFluxState">
@@ -8934,8 +8935,8 @@ has no amplitude reference.</p>
 </dd>
 </dl>
 </dd></dl>
-</div>
-<div class="section" id="surfacecurrent">
+</section>
+<section id="surfacecurrent">
 <h4>SurfaceCurrent<a class="headerlink" href="#surfacecurrent" title="Permalink to this headline">#</a></h4>
 <dl class="py class">
 <dt class="sig sig-object py" id="abaqus.Load.SurfaceCurrent.SurfaceCurrent">
@@ -9078,8 +9079,8 @@ argument only if it is valid for the specified step.</p>
 </dl>
 </dd></dl>
 </dd></dl>
-</div>
-<div class="section" id="surfacecurrentdensity">
+</section>
+<section id="surfacecurrentdensity">
 <h4>SurfaceCurrentDensity<a class="headerlink" href="#surfacecurrentdensity" title="Permalink to this headline">#</a></h4>
 <dl class="py class">
 <dt class="sig sig-object py" id="abaqus.Load.SurfaceCurrentDensity.SurfaceCurrentDensity">
@@ -9218,8 +9219,8 @@ argument only if it is valid for the specified step.</p>
 </dl>
 </dd></dl>
 </dd></dl>
-</div>
-<div class="section" id="surfacecurrentstate">
+</section>
+<section id="surfacecurrentstate">
 <h4>SurfaceCurrentState<a class="headerlink" href="#surfacecurrentstate" title="Permalink to this headline">#</a></h4>
 <dl class="py class">
 <dt class="sig sig-object py" id="abaqus.Load.SurfaceCurrentState.SurfaceCurrentState">
@@ -9273,8 +9274,8 @@ has no amplitude reference.</p>
 </dd>
 </dl>
 </dd></dl>
-</div>
-<div class="section" id="surfaceheatflux">
+</section>
+<section id="surfaceheatflux">
 <h4>SurfaceHeatFlux<a class="headerlink" href="#surfaceheatflux" title="Permalink to this headline">#</a></h4>
 <dl class="py class">
 <dt class="sig sig-object py" id="abaqus.Load.SurfaceHeatFlux.SurfaceHeatFlux">
@@ -9417,8 +9418,8 @@ is valid for the specified step.</p>
 </dl>
 </dd></dl>
 </dd></dl>
-</div>
-<div class="section" id="surfaceheatfluxstate">
+</section>
+<section id="surfaceheatfluxstate">
 <h4>SurfaceHeatFluxState<a class="headerlink" href="#surfaceheatfluxstate" title="Permalink to this headline">#</a></h4>
 <dl class="py class">
 <dt class="sig sig-object py" id="abaqus.Load.SurfaceHeatFluxState.SurfaceHeatFluxState">
@@ -9473,8 +9474,8 @@ has no amplitude reference.</p>
 </dd>
 </dl>
 </dd></dl>
-</div>
-<div class="section" id="surfaceporefluid">
+</section>
+<section id="surfaceporefluid">
 <h4>SurfacePoreFluid<a class="headerlink" href="#surfaceporefluid" title="Permalink to this headline">#</a></h4>
 <dl class="py class">
 <dt class="sig sig-object py" id="abaqus.Load.SurfacePoreFluid.SurfacePoreFluid">
@@ -9619,8 +9620,8 @@ is valid for the specified step.</p>
 </dl>
 </dd></dl>
 </dd></dl>
-</div>
-<div class="section" id="surfaceporefluidstate">
+</section>
+<section id="surfaceporefluidstate">
 <h4>SurfacePoreFluidState<a class="headerlink" href="#surfaceporefluidstate" title="Permalink to this headline">#</a></h4>
 <dl class="py class">
 <dt class="sig sig-object py" id="abaqus.Load.SurfacePoreFluidState.SurfacePoreFluidState">
@@ -9675,8 +9676,8 @@ has no amplitude reference.</p>
 </dd>
 </dl>
 </dd></dl>
-</div>
-<div class="section" id="surfacetraction">
+</section>
+<section id="surfacetraction">
 <h4>SurfaceTraction<a class="headerlink" href="#surfacetraction" title="Permalink to this headline">#</a></h4>
 <dl class="py class">
 <dt class="sig sig-object py" id="abaqus.Load.SurfaceTraction.SurfaceTraction">
@@ -9926,8 +9927,8 @@ is valid for the specified step.</p>
 </dl>
 </dd></dl>
 </dd></dl>
-</div>
-<div class="section" id="surfacetractionstate">
+</section>
+<section id="surfacetractionstate">
 <h4>SurfaceTractionState<a class="headerlink" href="#surfacetractionstate" title="Permalink to this headline">#</a></h4>
 <dl class="py class">
 <dt class="sig sig-object py" id="abaqus.Load.SurfaceTractionState.SurfaceTractionState">
@@ -9988,13 +9989,13 @@ has no amplitude reference.</p>
 </dd>
 </dl>
 </dd></dl>
-</div>
-</div>
-</div>
-<div class="section" id="load-case">
+</section>
+</section>
+</section>
+<section id="load-case">
 <h2>Load case<a class="headerlink" href="#load-case" title="Permalink to this headline">#</a></h2>
 <p>The LoadCase object is used to define the loads and constraints comprising a particular loading condition and the linear response of a structure subjected to that loading condition.</p>
-<div class="section" id="create-load-cases">
+<section id="create-load-cases">
 <h3>Create load cases<a class="headerlink" href="#create-load-cases" title="Permalink to this headline">#</a></h3>
 <dl class="py class">
 <dt class="sig sig-object py" id="id0">
@@ -10049,8 +10050,8 @@ modified from the base state. The default value is ON.</p>
 </div>
 </dd></dl>
 </dd></dl>
-</div>
-<div class="section" id="object-features-of-load-cases">
+</section>
+<section id="object-features-of-load-cases">
 <h3>Object features of load cases<a class="headerlink" href="#object-features-of-load-cases" title="Permalink to this headline">#</a></h3>
 <dl class="py class">
 <dt class="sig sig-object py" id="abaqus.Load.LoadCase.LoadCase">
@@ -10169,9 +10170,9 @@ modified from the base state. The default value is ON.</p>
 <dd><p>This method suppresses the load case.</p>
 </dd></dl>
 </dd></dl>
-</div>
-</div>
-</div>
+</section>
+</section>
+</section>
 
         </article>
       </div>

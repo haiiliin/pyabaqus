@@ -2,7 +2,8 @@
 <html class="no-js">
   <head><meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width,initial-scale=1"/>
-    <meta name="color-scheme" content="light dark"><link rel="index" title="Index" href="genindex.html" /><link rel="search" title="Search" href="search.html" /><link rel="next" title="Tutorials" href="tutorials.html" /><link rel="prev" title="pyabaqus documentation" href="index.html" />
+    <meta name="color-scheme" content="light dark"><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+<link rel="index" title="Index" href="genindex.html" /><link rel="search" title="Search" href="search.html" /><link rel="next" title="Tutorials" href="tutorials.html" /><link rel="prev" title="pyabaqus documentation" href="index.html" />
         <link rel="canonical" href="https://pyabaqus.haiiliin.com/getting_started.html" />
 
     <meta name="generator" content="sphinx-4.5.0, furo 2022.04.07"/>
@@ -300,16 +301,16 @@
           </label>
         </div>
         <article role="main">
-          <div class="section" id="getting-started">
+          <section id="getting-started">
 <h1>Getting Started<a class="headerlink" href="#getting-started" title="Permalink to this headline">#</a></h1>
-<div class="section" id="introduction">
+<section id="introduction">
 <h2>Introduction<a class="headerlink" href="#introduction" title="Permalink to this headline">#</a></h2>
 <p><cite>pyabaqus</cite> is a Python package providing type hints for Python scripting of Abaqus, you can
 use it to write you Python script of Abaqus fluently, even without doing anything in Abaqus.
 It also provides some simple APIs to execute the Abaqus commands so that you can run your
 Python script to build the model, submit the job and extract the output data in just one
 Python script, even without opening the Abaqus/CAE.</p>
-<div class="section" id="two-python-interpreters">
+<section id="two-python-interpreters">
 <h3>Two Python interpreters<a class="headerlink" href="#two-python-interpreters" title="Permalink to this headline">#</a></h3>
 <p>Before we go any further, it is necessary for us to understand two Python interpreters.</p>
 <p>When we use the Abaqus/CAE graphical user interface (GUI) to create a model and to visualize
@@ -347,9 +348,9 @@ Abaqus model. But fortunately, we can use the commands provided by Abaqus to acc
 is installed. <cite>pyabaqus</cite> provides a bridge to connect our Python script to Abaqus Python
 interpreter, it provides type hints for Python scripting for Abaqus, enabling us to write a
 Abaqus Python script quickly.</p>
-</div>
-</div>
-<div class="section" id="how-does-this-package-work">
+</section>
+</section>
+<section id="how-does-this-package-work">
 <h2>How does this package work?<a class="headerlink" href="#how-does-this-package-work" title="Permalink to this headline">#</a></h2>
 <p><cite>pyabaqus</cite> is just a package to provide type hints for Abaqus/Python scripting, it is installed outside Abaqus/Python
 environment, you can use <cite>pyabaqus</cite> to write your Abaqus/Python scripts, and run the scripts inside Abaqus on your own.
@@ -380,8 +381,8 @@ method <a class="reference internal" href="reference/session.html#abaqus.Session
 </pre></div>
 </div>
 <p>Therefore, if you want to run your Python script in Abaqus Python environment, please make sure to use these methods.</p>
-</div>
-<div class="section" id="installation">
+</section>
+<section id="installation">
 <h2>Installation<a class="headerlink" href="#installation" title="Permalink to this headline">#</a></h2>
 <p><cite>pyabaqus</cite> is using type hints features that require Python 3.9 or a later version,
 please upgrade it to Python 3.9 or a later version if you are using an earlier version.</p>
@@ -402,8 +403,8 @@ the local directory:</p>
 python setup.py install
 </pre></div>
 </div>
-</div>
-<div class="section" id="dependencies">
+</section>
+<section id="dependencies">
 <h2>Dependencies<a class="headerlink" href="#dependencies" title="Permalink to this headline">#</a></h2>
 <dl class="simple">
 <dt>Required dependencies:</dt><dd><ul class="simple">
@@ -413,8 +414,8 @@ python setup.py install
 </dl>
 <p>Once you have installed <cite>pyabaqus</cite> and <cite>PyQt5</cite>, you can start to build your Abaqus model right
 now.</p>
-</div>
-<div class="section" id="abaqus-command">
+</section>
+<section id="abaqus-command">
 <h2>Abaqus command<a class="headerlink" href="#abaqus-command" title="Permalink to this headline">#</a></h2>
 <p>In order to use Abaqus command to execute the Python script and submit the job, you need to tell
 <cite>pyabaqus</cite> where the Abaqus command located. Usually, Abaqus command locates in a directory like this:</p>
@@ -424,8 +425,8 @@ now.</p>
 <p>You can add the directory <cite>C:/SIMULIA/Commands</cite> to the system environment variable <cite>Path</cite>, or you can create a new
 system variable named <cite>ABAQUS_BAT_PATH</cite>, and set the value to the file path of the Abaqus command, i.e.,
 <cite>C:/SIMULIA/Commands/abaqus.bat</cite>.</p>
-</div>
-</div>
+</section>
+</section>
 
         </article>
       </div>

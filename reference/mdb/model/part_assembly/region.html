@@ -2,7 +2,8 @@
 <html class="no-js">
   <head><meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width,initial-scale=1"/>
-    <meta name="color-scheme" content="light dark"><link rel="index" title="Index" href="../../../../genindex.html" /><link rel="search" title="Search" href="../../../../search.html" /><link rel="next" title="Predefined Field" href="../predefined.html" /><link rel="prev" title="Basic Geometry" href="geometry.html" />
+    <meta name="color-scheme" content="light dark"><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+<link rel="index" title="Index" href="../../../../genindex.html" /><link rel="search" title="Search" href="../../../../search.html" /><link rel="next" title="Predefined Field" href="../predefined.html" /><link rel="prev" title="Basic Geometry" href="geometry.html" />
         <link rel="canonical" href="https://pyabaqus.haiiliin.com/reference/mdb/model/part_assembly/region.html" />
 
     <meta name="generator" content="sphinx-4.5.0, furo 2022.04.07"/>
@@ -300,7 +301,7 @@
           </label>
         </div>
         <article role="main">
-          <div class="section" id="region">
+          <section id="region">
 <h1>Region<a class="headerlink" href="#region" title="Permalink to this headline">#</a></h1>
 <p>Region commands are used to create part and assembly sets or surfaces from elements, nodes, and geometry. For more information, see Specifying a region. Part and assembly objects have the following member, a repository of Set objects:</p>
 <ul class="simple">
@@ -326,7 +327,7 @@
 <p>Region commands are also used to create surfaces on the assembly. Surfaces are sets with additional sidedness information.</p>
 <p>Part sets contain regions of a part. You can assign section definitions to a set created by selecting a region of a part. The part sets can be accessed from the instance; however, the section definition you assigned to a region is copied automatically to all instances of that part in the assembly.</p>
 <p>Assembly sets contain regions of an assembly and are used by many commands that operate on the assembly. For example, you can apply a load or boundary condition to a set created by selecting a region of the assembly. Sets can include regions from multiple part instances.</p>
-<div class="section" id="create-regions-for-part">
+<section id="create-regions-for-part">
 <h2>Create regions for Part<a class="headerlink" href="#create-regions-for-part" title="Permalink to this headline">#</a></h2>
 <dl class="py method">
 <dt class="sig sig-object py" id="abaqus.Region.RegionPart.RegionPart.Surface">
@@ -559,8 +560,8 @@ created. Applicable to three and two-dimensional parts.</p>
 </pre></div>
 </div>
 </dd></dl>
-</div>
-<div class="section" id="create-regions-for-assembly">
+</section>
+<section id="create-regions-for-assembly">
 <h2>Create regions for Assembly<a class="headerlink" href="#create-regions-for-assembly" title="Permalink to this headline">#</a></h2>
 <dl class="py method">
 <dt class="sig sig-object py" id="abaqus.Region.RegionAssembly.RegionAssembly.Surface">
@@ -623,10 +624,10 @@ circumElements</p>
 <dt class="sig sig-object py">
 <span class="sig-prename descclassname"><span class="pre">RegionAssembly.</span></span><span class="sig-name descname"><span class="pre">Set</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">objectToCopy</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#abaqus.Region.Set.Set" title="abaqus.Region.Set.Set"><span class="pre">abaqus.Region.Set.Set</span></a></span></em><span class="sig-paren">)</span></dt>
 <dd></dd></dl>
-</div>
-<div class="section" id="object-features">
+</section>
+<section id="object-features">
 <h2>Object features<a class="headerlink" href="#object-features" title="Permalink to this headline">#</a></h2>
-<div class="section" id="region-features-for-part">
+<section id="region-features-for-part">
 <h3>Region features for Part<a class="headerlink" href="#region-features-for-part" title="Permalink to this headline">#</a></h3>
 <dl class="py class">
 <dt class="sig sig-object py" id="abaqus.Region.RegionPartBase.RegionPartBase">
@@ -780,8 +781,8 @@ sets. Possible outcomes are:</p>
 </dl>
 </dd></dl>
 </dd></dl>
-</div>
-<div class="section" id="region-features-for-assembly">
+</section>
+<section id="region-features-for-assembly">
 <h3>Region features for Assembly<a class="headerlink" href="#region-features-for-assembly" title="Permalink to this headline">#</a></h3>
 <dl class="py class">
 <dt class="sig sig-object py" id="abaqus.Region.RegionAssemblyBase.RegionAssemblyBase">
@@ -934,8 +935,8 @@ assembly.</p>
 </dl>
 </dd></dl>
 </dd></dl>
-</div>
-<div class="section" id="id1">
+</section>
+<section id="id1">
 <h3>Region<a class="headerlink" href="#id1" title="Permalink to this headline">#</a></h3>
 <dl class="py class">
 <dt class="sig sig-object py" id="abaqus.Region.Region.Region">
@@ -986,8 +987,8 @@ internal set.</p>
 </pre></div>
 </div>
 </dd></dl>
-</div>
-<div class="section" id="regionarray">
+</section>
+<section id="regionarray">
 <h3>RegionArray<a class="headerlink" href="#regionarray" title="Permalink to this headline">#</a></h3>
 <dl class="py class">
 <dt class="sig sig-object py" id="abaqus.Region.RegionArray.RegionArray">
@@ -1005,8 +1006,8 @@ internal set.</p>
 </tbody>
 </table></div>
 </dd></dl>
-</div>
-<div class="section" id="set">
+</section>
+<section id="set">
 <h3>Set<a class="headerlink" href="#set" title="Permalink to this headline">#</a></h3>
 <dl class="py class">
 <dt class="sig sig-object py" id="abaqus.Region.Set.Set">
@@ -1244,8 +1245,8 @@ example, for a part:<cite>nodeLabels=(2,3,5,7)`For an assembly:`nodeLabels=((‘
 </div>
 </dd></dl>
 </dd></dl>
-</div>
-<div class="section" id="skin">
+</section>
+<section id="skin">
 <h3>Skin<a class="headerlink" href="#skin" title="Permalink to this headline">#</a></h3>
 <dl class="py class">
 <dt class="sig sig-object py" id="abaqus.Region.Skin.Skin">
@@ -1366,8 +1367,8 @@ created. Applicable to axisymmetric parts.</p>
 </div>
 </dd></dl>
 </dd></dl>
-</div>
-<div class="section" id="stringer">
+</section>
+<section id="stringer">
 <h3>Stringer<a class="headerlink" href="#stringer" title="Permalink to this headline">#</a></h3>
 <dl class="py class">
 <dt class="sig sig-object py" id="abaqus.Region.Stringer.Stringer">
@@ -1474,8 +1475,8 @@ created. Applicable to three and two dimensional parts.</p>
 </div>
 </dd></dl>
 </dd></dl>
-</div>
-<div class="section" id="surface">
+</section>
+<section id="surface">
 <h3>Surface<a class="headerlink" href="#surface" title="Permalink to this headline">#</a></h3>
 <dl class="py class">
 <dt class="sig sig-object py" id="abaqus.Region.Surface.Surface">
@@ -1595,9 +1596,9 @@ side of the element set.</p>
 </div>
 </dd></dl>
 </dd></dl>
-</div>
-</div>
-</div>
+</section>
+</section>
+</section>
 
         </article>
       </div>

@@ -2,7 +2,8 @@
 <html class="no-js">
   <head><meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width,initial-scale=1"/>
-    <meta name="color-scheme" content="light dark"><link rel="index" title="Index" href="../../../genindex.html" /><link rel="search" title="Search" href="../../../search.html" /><link rel="next" title="Load" href="load.html" /><link rel="prev" title="Filter" href="filter.html" />
+    <meta name="color-scheme" content="light dark"><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+<link rel="index" title="Index" href="../../../genindex.html" /><link rel="search" title="Search" href="../../../search.html" /><link rel="next" title="Load" href="load.html" /><link rel="prev" title="Filter" href="filter.html" />
         <link rel="canonical" href="https://pyabaqus.haiiliin.com/reference/mdb/model/interaction.html" />
 
     <meta name="generator" content="sphinx-4.5.0, furo 2022.04.07"/>
@@ -300,10 +301,10 @@
           </label>
         </div>
         <article role="main">
-          <div class="section" id="interaction">
+          <section id="interaction">
 <h1>Interaction<a class="headerlink" href="#interaction" title="Permalink to this headline">#</a></h1>
 <p>A specific type of interaction object and a specific type of interaction state object are designed for each type of interaction. An interaction object stores the non-propagating data of an interaction as well as a number of instances of the corresponding interaction state object, each of which stores the propagating data of the interaction in a single step. Instances of the interaction state object are created and deleted internally by its corresponding interaction object.</p>
-<div class="section" id="create-interactions">
+<section id="create-interactions">
 <h2>Create interactions<a class="headerlink" href="#create-interactions" title="Permalink to this headline">#</a></h2>
 <dl class="py method">
 <dt class="sig sig-object py" id="abaqus.Interaction.InteractionModel.InteractionModel.contactDetection">
@@ -314,7 +315,7 @@ SurfaceToSurfaceContactExp, and Tie objects.</p>
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><dl class="simple">
 <dt><strong>name</strong></dt><dd><p>A String specifying the prefix used to generate repository keys. The default value is
-“CP-“</p>
+“CP-”</p>
 </dd>
 <dt><strong>createStepName</strong></dt><dd><p>A String specifying the name of the step in which the SurfaceToSurfaceContactStd,
 SurfaceToSurfaceContactExp, and Tie objects are created. The default value is “Initial.”</p>
@@ -2624,10 +2625,10 @@ analysis step. The default value is ON.</p>
 </pre></div>
 </div>
 </dd></dl>
-</div>
-<div class="section" id="object-features">
+</section>
+<section id="object-features">
 <h2>Object features<a class="headerlink" href="#object-features" title="Permalink to this headline">#</a></h2>
-<div class="section" id="contactcontrol">
+<section id="contactcontrol">
 <h3>ContactControl<a class="headerlink" href="#contactcontrol" title="Permalink to this headline">#</a></h3>
 <dl class="py class">
 <dt class="sig sig-object py" id="abaqus.Interaction.ContactControl.ContactControl">
@@ -2641,8 +2642,8 @@ The ContactControl object has no explicit constructor, members, or methods.</p>
 </pre></div>
 </div>
 </dd></dl>
-</div>
-<div class="section" id="contactdamage">
+</section>
+<section id="contactdamage">
 <h3>ContactDamage<a class="headerlink" href="#contactdamage" title="Permalink to this headline">#</a></h3>
 <dl class="py class">
 <dt class="sig sig-object py" id="abaqus.Interaction.ContactDamage.ContactDamage">
@@ -2937,8 +2938,8 @@ only when <a href="#id395"><span class="problematic" id="id396">*</span></a>useE
 <dd><p>This method modifies the ContactDamage object.</p>
 </dd></dl>
 </dd></dl>
-</div>
-<div class="section" id="contactdamping">
+</section>
+<section id="contactdamping">
 <h3>ContactDamping<a class="headerlink" href="#contactdamping" title="Permalink to this headline">#</a></h3>
 <dl class="py class">
 <dt class="sig sig-object py" id="abaqus.Interaction.ContactDamping.ContactDamping">
@@ -3056,8 +3057,8 @@ data are described below.</p>
 <dd><p>This method modifies the ContactDamping object.</p>
 </dd></dl>
 </dd></dl>
-</div>
-<div class="section" id="contactinitialization">
+</section>
+<section id="contactinitialization">
 <h3>ContactInitialization<a class="headerlink" href="#contactinitialization" title="Permalink to this headline">#</a></h3>
 <dl class="py class">
 <dt class="sig sig-object py" id="abaqus.Interaction.ContactInitialization.ContactInitialization">
@@ -3072,8 +3073,8 @@ constructor, members, or methods.</p>
 </pre></div>
 </div>
 </dd></dl>
-</div>
-<div class="section" id="contactproperty">
+</section>
+<section id="contactproperty">
 <h3>ContactProperty<a class="headerlink" href="#contactproperty" title="Permalink to this headline">#</a></h3>
 <dl class="py class">
 <dt class="sig sig-object py" id="abaqus.Interaction.ContactProperty.ContactProperty">
@@ -3769,8 +3770,8 @@ table data are described below.</p>
 </div>
 </dd></dl>
 </dd></dl>
-</div>
-<div class="section" id="contactpropertyassignment">
+</section>
+<section id="contactpropertyassignment">
 <h3>ContactPropertyAssignment<a class="headerlink" href="#contactpropertyassignment" title="Permalink to this headline">#</a></h3>
 <dl class="py class">
 <dt class="sig sig-object py" id="abaqus.Interaction.ContactPropertyAssignment.ContactPropertyAssignment">
@@ -3870,8 +3871,8 @@ Eulerian material surface.*surfPair* and <em>indices</em> arguments are mutually
 </dl>
 </dd></dl>
 </dd></dl>
-</div>
-<div class="section" id="contactstabilization">
+</section>
+<section id="contactstabilization">
 <h3>ContactStabilization<a class="headerlink" href="#contactstabilization" title="Permalink to this headline">#</a></h3>
 <dl class="py class">
 <dt class="sig sig-object py" id="abaqus.Interaction.ContactStabilization.ContactStabilization">
@@ -3886,8 +3887,8 @@ methods.</p>
 </pre></div>
 </div>
 </dd></dl>
-</div>
-<div class="section" id="id479">
+</section>
+<section id="id479">
 <h3>Interaction<a class="headerlink" href="#id479" title="Permalink to this headline">#</a></h3>
 <dl class="py class">
 <dt class="sig sig-object py" id="abaqus.Interaction.Interaction.Interaction">
@@ -4010,8 +4011,8 @@ is available during the step in which the interaction was deactivated originally
 <dd><p>This method suppresses an interaction.</p>
 </dd></dl>
 </dd></dl>
-</div>
-<div class="section" id="initializationassignment">
+</section>
+<section id="initializationassignment">
 <h3>InitializationAssignment<a class="headerlink" href="#initializationassignment" title="Permalink to this headline">#</a></h3>
 <dl class="py class">
 <dt class="sig sig-object py" id="abaqus.Interaction.InitializationAssignment.InitializationAssignment">
@@ -4106,8 +4107,8 @@ delete.</p>
 </dl>
 </dd></dl>
 </dd></dl>
-</div>
-<div class="section" id="interactionproperty">
+</section>
+<section id="interactionproperty">
 <h3>InteractionProperty<a class="headerlink" href="#interactionproperty" title="Permalink to this headline">#</a></h3>
 <dl class="py class">
 <dt class="sig sig-object py" id="abaqus.Interaction.InteractionProperty.InteractionProperty">
@@ -4124,8 +4125,8 @@ methods.</p>
 </pre></div>
 </div>
 </dd></dl>
-</div>
-<div class="section" id="interactionstate">
+</section>
+<section id="interactionstate">
 <h3>InteractionState<a class="headerlink" href="#interactionstate" title="Permalink to this headline">#</a></h3>
 <dl class="py class">
 <dt class="sig sig-object py" id="abaqus.Interaction.InteractionState.InteractionState">
@@ -4162,8 +4163,8 @@ Possible values are:</p>
 </dd>
 </dl>
 </dd></dl>
-</div>
-<div class="section" id="acousticimpedance">
+</section>
+<section id="acousticimpedance">
 <h3>AcousticImpedance<a class="headerlink" href="#acousticimpedance" title="Permalink to this headline">#</a></h3>
 <dl class="py class">
 <dt class="sig sig-object py" id="abaqus.Interaction.AcousticImpedance.AcousticImpedance">
@@ -4326,8 +4327,8 @@ the specified step.</p>
 </dl>
 </dd></dl>
 </dd></dl>
-</div>
-<div class="section" id="acousticimpedanceprop">
+</section>
+<section id="acousticimpedanceprop">
 <h3>AcousticImpedanceProp<a class="headerlink" href="#acousticimpedanceprop" title="Permalink to this headline">#</a></h3>
 <dl class="py class">
 <dt class="sig sig-object py" id="abaqus.Interaction.AcousticImpedanceProp.AcousticImpedanceProp">
@@ -4416,8 +4417,8 @@ OFF.</p>
 </dl>
 </dd></dl>
 </dd></dl>
-</div>
-<div class="section" id="acousticimpedancestate">
+</section>
+<section id="acousticimpedancestate">
 <h3>AcousticImpedanceState<a class="headerlink" href="#acousticimpedancestate" title="Permalink to this headline">#</a></h3>
 <dl class="py class">
 <dt class="sig sig-object py" id="abaqus.Interaction.AcousticImpedanceState.AcousticImpedanceState">
@@ -4467,8 +4468,8 @@ Possible values are:</p>
 </dd>
 </dl>
 </dd></dl>
-</div>
-<div class="section" id="actuatorsensor">
+</section>
+<section id="actuatorsensor">
 <h3>ActuatorSensor<a class="headerlink" href="#actuatorsensor" title="Permalink to this headline">#</a></h3>
 <dl class="py class">
 <dt class="sig sig-object py" id="abaqus.Interaction.ActuatorSensor.ActuatorSensor">
@@ -4564,8 +4565,8 @@ created. <em>createStepName</em> must be set to ‘Initial’.</p>
 <dd><p>This method modifies the ActuatorSensor object.</p>
 </dd></dl>
 </dd></dl>
-</div>
-<div class="section" id="actuatorsensorprop">
+</section>
+<section id="actuatorsensorprop">
 <h3>ActuatorSensorProp<a class="headerlink" href="#actuatorsensorprop" title="Permalink to this headline">#</a></h3>
 <dl class="py class">
 <dt class="sig sig-object py" id="abaqus.Interaction.ActuatorSensorProp.ActuatorSensorProp">
@@ -4650,8 +4651,8 @@ value is an empty sequence.</p>
 </dl>
 </dd></dl>
 </dd></dl>
-</div>
-<div class="section" id="actuatorsensorstate">
+</section>
+<section id="actuatorsensorstate">
 <h3>ActuatorSensorState<a class="headerlink" href="#actuatorsensorstate" title="Permalink to this headline">#</a></h3>
 <dl class="py class">
 <dt class="sig sig-object py" id="abaqus.Interaction.ActuatorSensorState.ActuatorSensorState">
@@ -4690,8 +4691,8 @@ Possible values are:</p>
 </dd>
 </dl>
 </dd></dl>
-</div>
-<div class="section" id="cavityradiation">
+</section>
+<section id="cavityradiation">
 <h3>CavityRadiation<a class="headerlink" href="#cavityradiation" title="Permalink to this headline">#</a></h3>
 <dl class="py class">
 <dt class="sig sig-object py" id="abaqus.Interaction.CavityRadiation.CavityRadiation">
@@ -5215,8 +5216,8 @@ value is 0.05.</p>
 </dl>
 </dd></dl>
 </dd></dl>
-</div>
-<div class="section" id="cavityradiationprop">
+</section>
+<section id="cavityradiationprop">
 <h3>CavityRadiationProp<a class="headerlink" href="#cavityradiationprop" title="Permalink to this headline">#</a></h3>
 <dl class="py class">
 <dt class="sig sig-object py" id="abaqus.Interaction.CavityRadiationProp.CavityRadiationProp">
@@ -5305,8 +5306,8 @@ the data depend on field variables.Value of the second field variable.Etc.</p>
 </dl>
 </dd></dl>
 </dd></dl>
-</div>
-<div class="section" id="cavityradiationstate">
+</section>
+<section id="cavityradiationstate">
 <h3>CavityRadiationState<a class="headerlink" href="#cavityradiationstate" title="Permalink to this headline">#</a></h3>
 <dl class="py class">
 <dt class="sig sig-object py" id="abaqus.Interaction.CavityRadiationState.CavityRadiationState">
@@ -5366,8 +5367,8 @@ are:NOT_YET_ACTIVECREATEDPROPAGATEDMODIFIEDDEACTIVATEDNO_LONGER_ACTIVETYPE_NOT_A
 </dd>
 </dl>
 </dd></dl>
-</div>
-<div class="section" id="cohesivebehavior">
+</section>
+<section id="cohesivebehavior">
 <h3>CohesiveBehavior<a class="headerlink" href="#cohesivebehavior" title="Permalink to this headline">#</a></h3>
 <dl class="py class">
 <dt class="sig sig-object py" id="abaqus.Interaction.CohesiveBehavior.CohesiveBehavior">
@@ -5477,8 +5478,8 @@ items in the table data are described below. This argument is valid only for
 <dd><p>This method modifies the CohesiveBehavior object.</p>
 </dd></dl>
 </dd></dl>
-</div>
-<div class="section" id="concentratedfilmcondition">
+</section>
+<section id="concentratedfilmcondition">
 <h3>ConcentratedFilmCondition<a class="headerlink" href="#concentratedfilmcondition" title="Permalink to this headline">#</a></h3>
 <dl class="py class">
 <dt class="sig sig-object py" id="abaqus.Interaction.ConcentratedFilmCondition.ConcentratedFilmCondition">
@@ -5665,8 +5666,8 @@ object in the specified step.</p>
 </dl>
 </dd></dl>
 </dd></dl>
-</div>
-<div class="section" id="concentratedfilmconditionstate">
+</section>
+<section id="concentratedfilmconditionstate">
 <h3>ConcentratedFilmConditionState<a class="headerlink" href="#concentratedfilmconditionstate" title="Permalink to this headline">#</a></h3>
 <dl class="py class">
 <dt class="sig sig-object py" id="abaqus.Interaction.ConcentratedFilmConditionState.ConcentratedFilmConditionState">
@@ -5743,8 +5744,8 @@ Possible values are:</p>
 </dd>
 </dl>
 </dd></dl>
-</div>
-<div class="section" id="concentratedradiationtoambient">
+</section>
+<section id="concentratedradiationtoambient">
 <h3>ConcentratedRadiationToAmbient<a class="headerlink" href="#concentratedradiationtoambient" title="Permalink to this headline">#</a></h3>
 <dl class="py class">
 <dt class="sig sig-object py" id="abaqus.Interaction.ConcentratedRadiationToAmbient.ConcentratedRadiationToAmbient">
@@ -5890,8 +5891,8 @@ and ANALYTICAL_FIELD. The default value is UNIFORM.</p>
 </dl>
 </dd></dl>
 </dd></dl>
-</div>
-<div class="section" id="concentratedradiationtoambientstate">
+</section>
+<section id="concentratedradiationtoambientstate">
 <h3>ConcentratedRadiationToAmbientState<a class="headerlink" href="#concentratedradiationtoambientstate" title="Permalink to this headline">#</a></h3>
 <dl class="py class">
 <dt class="sig sig-object py" id="abaqus.Interaction.ConcentratedRadiationToAmbientState.ConcentratedRadiationToAmbientState">
@@ -5958,8 +5959,8 @@ Possible values are:</p>
 </dd>
 </dl>
 </dd></dl>
-</div>
-<div class="section" id="contactexp">
+</section>
+<section id="contactexp">
 <h3>ContactExp<a class="headerlink" href="#contactexp" title="Permalink to this headline">#</a></h3>
 <dl class="py class">
 <dt class="sig sig-object py" id="abaqus.Interaction.ContactExp.ContactExp">
@@ -6015,8 +6016,8 @@ contact domain.</p>
 </dd>
 </dl>
 </dd></dl>
-</div>
-<div class="section" id="contactstd">
+</section>
+<section id="contactstd">
 <h3>ContactStd<a class="headerlink" href="#contactstd" title="Permalink to this headline">#</a></h3>
 <dl class="py class">
 <dt class="sig sig-object py" id="abaqus.Interaction.ContactStd.ContactStd">
@@ -6084,8 +6085,8 @@ is False.</p>
 </dd>
 </dl>
 </dd></dl>
-</div>
-<div class="section" id="contacttangentialbehavior">
+</section>
+<section id="contacttangentialbehavior">
 <h3>ContactTangentialBehavior<a class="headerlink" href="#contacttangentialbehavior" title="Permalink to this headline">#</a></h3>
 <dl class="py class">
 <dt class="sig sig-object py" id="abaqus.Interaction.ContactTangentialBehavior.ContactTangentialBehavior">
@@ -6273,8 +6274,8 @@ there is no upper limit. The default value is None.</p>
 <dd><p>This method modifies the ContactTangentialBehavior object.</p>
 </dd></dl>
 </dd></dl>
-</div>
-<div class="section" id="cyclicsymmetry">
+</section>
+<section id="cyclicsymmetry">
 <h3>CyclicSymmetry<a class="headerlink" href="#cyclicsymmetry" title="Permalink to this headline">#</a></h3>
 <dl class="py class">
 <dt class="sig sig-object py" id="abaqus.Interaction.CyclicSymmetry.CyclicSymmetry">
@@ -6481,8 +6482,8 @@ The default value is 0.</p>
 This command is valid only during the step in which the interaction is created.</p>
 </dd></dl>
 </dd></dl>
-</div>
-<div class="section" id="cyclicsymmetrystate">
+</section>
+<section id="cyclicsymmetrystate">
 <h3>CyclicSymmetryState<a class="headerlink" href="#cyclicsymmetrystate" title="Permalink to this headline">#</a></h3>
 <dl class="py class">
 <dt class="sig sig-object py" id="abaqus.Interaction.CyclicSymmetryState.CyclicSymmetryState">
@@ -6563,8 +6564,8 @@ Possible values are:</p>
 </dd>
 </dl>
 </dd></dl>
-</div>
-<div class="section" id="elasticfoundation">
+</section>
+<section id="elasticfoundation">
 <h3>ElasticFoundation<a class="headerlink" href="#elasticfoundation" title="Permalink to this headline">#</a></h3>
 <dl class="py class">
 <dt class="sig sig-object py" id="abaqus.Interaction.ElasticFoundation.ElasticFoundation">
@@ -6660,8 +6661,8 @@ specified step.</p>
 </dl>
 </dd></dl>
 </dd></dl>
-</div>
-<div class="section" id="elasticfoundationstate">
+</section>
+<section id="elasticfoundationstate">
 <h3>ElasticFoundationState<a class="headerlink" href="#elasticfoundationstate" title="Permalink to this headline">#</a></h3>
 <dl class="py class">
 <dt class="sig sig-object py" id="abaqus.Interaction.ElasticFoundationState.ElasticFoundationState">
@@ -6706,8 +6707,8 @@ Possible values are:</p>
 </dd>
 </dl>
 </dd></dl>
-</div>
-<div class="section" id="expcontactcontrol">
+</section>
+<section id="expcontactcontrol">
 <h3>ExpContactControl<a class="headerlink" href="#expcontactcontrol" title="Permalink to this headline">#</a></h3>
 <dl class="py class">
 <dt class="sig sig-object py" id="abaqus.Interaction.ExpContactControl.ExpContactControl">
@@ -6832,8 +6833,8 @@ considered to be highly warped. The default value is 20.0.</p>
 </dl>
 </dd></dl>
 </dd></dl>
-</div>
-<div class="section" id="expinitialization">
+</section>
+<section id="expinitialization">
 <h3>ExpInitialization<a class="headerlink" href="#expinitialization" title="Permalink to this headline">#</a></h3>
 <dl class="py class">
 <dt class="sig sig-object py" id="abaqus.Interaction.ExpInitialization.ExpInitialization">
@@ -6980,8 +6981,8 @@ when <a href="#id632"><span class="problematic" id="id633">*</span></a>overclosu
 </dl>
 </dd></dl>
 </dd></dl>
-</div>
-<div class="section" id="filmcondition">
+</section>
+<section id="filmcondition">
 <h3>FilmCondition<a class="headerlink" href="#filmcondition" title="Permalink to this headline">#</a></h3>
 <dl class="py class">
 <dt class="sig sig-object py" id="abaqus.Interaction.FilmCondition.FilmCondition">
@@ -7151,8 +7152,8 @@ specified step.</p>
 </dl>
 </dd></dl>
 </dd></dl>
-</div>
-<div class="section" id="filmconditionprop">
+</section>
+<section id="filmconditionprop">
 <h3>FilmConditionProp<a class="headerlink" href="#filmconditionprop" title="Permalink to this headline">#</a></h3>
 <dl class="py class">
 <dt class="sig sig-object py" id="abaqus.Interaction.FilmConditionProp.FilmConditionProp">
@@ -7247,8 +7248,8 @@ The FilmConditionProp object is derived from the InteractionProperty object.</p>
 </dl>
 </dd></dl>
 </dd></dl>
-</div>
-<div class="section" id="filmconditionstate">
+</section>
+<section id="filmconditionstate">
 <h3>FilmConditionState<a class="headerlink" href="#filmconditionstate" title="Permalink to this headline">#</a></h3>
 <dl class="py class">
 <dt class="sig sig-object py" id="abaqus.Interaction.FilmConditionState.FilmConditionState">
@@ -7324,8 +7325,8 @@ Possible values are:</p>
 </dd>
 </dl>
 </dd></dl>
-</div>
-<div class="section" id="fluidcavity">
+</section>
+<section id="fluidcavity">
 <h3>FluidCavity<a class="headerlink" href="#fluidcavity" title="Permalink to this headline">#</a></h3>
 <dl class="py class">
 <dt class="sig sig-object py" id="abaqus.Interaction.FluidCavity.FluidCavity">
@@ -7429,8 +7430,8 @@ normals. The default value is ON.</p>
 </dl>
 </dd></dl>
 </dd></dl>
-</div>
-<div class="section" id="fluidcavityproperty">
+</section>
+<section id="fluidcavityproperty">
 <h3>FluidCavityProperty<a class="headerlink" href="#fluidcavityproperty" title="Permalink to this headline">#</a></h3>
 <dl class="py class">
 <dt class="sig sig-object py" id="abaqus.Interaction.FluidCavityProperty.FluidCavityProperty">
@@ -7689,8 +7690,8 @@ sequence contains the following data:
 </dl>
 </dd></dl>
 </dd></dl>
-</div>
-<div class="section" id="fluidcavitystate">
+</section>
+<section id="fluidcavitystate">
 <h3>FluidCavityState<a class="headerlink" href="#fluidcavitystate" title="Permalink to this headline">#</a></h3>
 <dl class="py class">
 <dt class="sig sig-object py" id="abaqus.Interaction.FluidCavityState.FluidCavityState">
@@ -7729,8 +7730,8 @@ Possible values are:</p>
 </dd>
 </dl>
 </dd></dl>
-</div>
-<div class="section" id="fluidexchange">
+</section>
+<section id="fluidexchange">
 <h3>FluidExchange<a class="headerlink" href="#fluidexchange" title="Permalink to this headline">#</a></h3>
 <dl class="py class">
 <dt class="sig sig-object py" id="abaqus.Interaction.FluidExchange.FluidExchange">
@@ -7826,8 +7827,8 @@ argument is applicable only when <a href="#id782"><span class="problematic" id="
 </dl>
 </dd></dl>
 </dd></dl>
-</div>
-<div class="section" id="fluidexchangeproperty">
+</section>
+<section id="fluidexchangeproperty">
 <h3>FluidExchangeProperty<a class="headerlink" href="#fluidexchangeproperty" title="Permalink to this headline">#</a></h3>
 <dl class="py class">
 <dt class="sig sig-object py" id="abaqus.Interaction.FluidExchangeProperty.FluidExchangeProperty">
@@ -7974,8 +7975,8 @@ is applicable only when <a href="#id824"><span class="problematic" id="id825">*<
 </dl>
 </dd></dl>
 </dd></dl>
-</div>
-<div class="section" id="fluidexchangestate">
+</section>
+<section id="fluidexchangestate">
 <h3>FluidExchangeState<a class="headerlink" href="#fluidexchangestate" title="Permalink to this headline">#</a></h3>
 <dl class="py class">
 <dt class="sig sig-object py" id="abaqus.Interaction.FluidExchangeState.FluidExchangeState">
@@ -8014,8 +8015,8 @@ Possible values are:</p>
 </dd>
 </dl>
 </dd></dl>
-</div>
-<div class="section" id="fluidinflator">
+</section>
+<section id="fluidinflator">
 <h3>FluidInflator<a class="headerlink" href="#fluidinflator" title="Permalink to this headline">#</a></h3>
 <dl class="py class">
 <dt class="sig sig-object py" id="abaqus.Interaction.FluidInflator.FluidInflator">
@@ -8106,8 +8107,8 @@ rate.</p>
 </dl>
 </dd></dl>
 </dd></dl>
-</div>
-<div class="section" id="fluidinflatorproperty">
+</section>
+<section id="fluidinflatorproperty">
 <h3>FluidInflatorProperty<a class="headerlink" href="#fluidinflatorproperty" title="Permalink to this headline">#</a></h3>
 <dl class="py class">
 <dt class="sig sig-object py" id="abaqus.Interaction.FluidInflatorProperty.FluidInflatorProperty">
@@ -8249,8 +8250,8 @@ corresponding to entered fluid behavior.</p>
 </dl>
 </dd></dl>
 </dd></dl>
-</div>
-<div class="section" id="fluidinflatorstate">
+</section>
+<section id="fluidinflatorstate">
 <h3>FluidInflatorState<a class="headerlink" href="#fluidinflatorstate" title="Permalink to this headline">#</a></h3>
 <dl class="py class">
 <dt class="sig sig-object py" id="abaqus.Interaction.FluidInflatorState.FluidInflatorState">
@@ -8289,8 +8290,8 @@ Possible values are:</p>
 </dd>
 </dl>
 </dd></dl>
-</div>
-<div class="section" id="fracturecriterion">
+</section>
+<section id="fracturecriterion">
 <h3>FractureCriterion<a class="headerlink" href="#fracturecriterion" title="Permalink to this headline">#</a></h3>
 <dl class="py class">
 <dt class="sig sig-object py" id="abaqus.Interaction.FractureCriterion.FractureCriterion">
@@ -8425,8 +8426,8 @@ value is DEFAULT.</p>
 <dd><p>This method modifies the FractureCriterion object.</p>
 </dd></dl>
 </dd></dl>
-</div>
-<div class="section" id="gapelectricalconductance">
+</section>
+<section id="gapelectricalconductance">
 <h3>GapElectricalConductance<a class="headerlink" href="#gapelectricalconductance" title="Permalink to this headline">#</a></h3>
 <dl class="py class">
 <dt class="sig sig-object py" id="abaqus.Interaction.GapElectricalConductance.GapElectricalConductance">
@@ -8531,8 +8532,8 @@ table data are described below.</p>
 <dd><p>This method modifies the GapElectricalConductance object.</p>
 </dd></dl>
 </dd></dl>
-</div>
-<div class="section" id="gapheatgeneration">
+</section>
+<section id="gapheatgeneration">
 <h3>GapHeatGeneration<a class="headerlink" href="#gapheatgeneration" title="Permalink to this headline">#</a></h3>
 <dl class="py class">
 <dt class="sig sig-object py" id="abaqus.Interaction.GapHeatGeneration.GapHeatGeneration">
@@ -8614,8 +8615,8 @@ The default value is 0.5.</p>
 <dd><p>This method modifies the GapHeatGeneration object.</p>
 </dd></dl>
 </dd></dl>
-</div>
-<div class="section" id="geometricproperties">
+</section>
+<section id="geometricproperties">
 <h3>GeometricProperties<a class="headerlink" href="#geometricproperties" title="Permalink to this headline">#</a></h3>
 <dl class="py class">
 <dt class="sig sig-object py" id="abaqus.Interaction.GeometricProperties.GeometricProperties">
@@ -8704,8 +8705,8 @@ argument is applicable only if <a href="#id860"><span class="problematic" id="id
 <dd><p>This method modifies the GeometricProperties object.</p>
 </dd></dl>
 </dd></dl>
-</div>
-<div class="section" id="incidentwave">
+</section>
+<section id="incidentwave">
 <h3>IncidentWave<a class="headerlink" href="#incidentwave" title="Permalink to this headline">#</a></h3>
 <dl class="py class">
 <dt class="sig sig-object py" id="abaqus.Interaction.IncidentWave.IncidentWave">
@@ -8855,8 +8856,8 @@ valid only when <a href="#id900"><span class="problematic" id="id901">*</span></
 </dl>
 </dd></dl>
 </dd></dl>
-</div>
-<div class="section" id="incidentwaveproperty">
+</section>
+<section id="incidentwaveproperty">
 <h3>IncidentWaveProperty<a class="headerlink" href="#incidentwaveproperty" title="Permalink to this headline">#</a></h3>
 <dl class="py class">
 <dt class="sig sig-object py" id="abaqus.Interaction.IncidentWaveProperty.IncidentWaveProperty">
@@ -9166,8 +9167,8 @@ to pascals. The default value is 1.0.This argument is valid only when
 </dl>
 </dd></dl>
 </dd></dl>
-</div>
-<div class="section" id="incidentwavestate">
+</section>
+<section id="incidentwavestate">
 <h3>IncidentWaveState<a class="headerlink" href="#incidentwavestate" title="Permalink to this headline">#</a></h3>
 <dl class="py class">
 <dt class="sig sig-object py" id="abaqus.Interaction.IncidentWaveState.IncidentWaveState">
@@ -9198,8 +9199,8 @@ are:NOT_YET_ACTIVECREATEDPROPAGATEDMODIFIEDDEACTIVATEDNO_LONGER_ACTIVETYPE_NOT_A
 </dd>
 </dl>
 </dd></dl>
-</div>
-<div class="section" id="mainsecondaryassignment">
+</section>
+<section id="mainsecondaryassignment">
 <h3>MainSecondaryAssignment<a class="headerlink" href="#mainsecondaryassignment" title="Permalink to this headline">#</a></h3>
 <dl class="py class">
 <dt class="sig sig-object py" id="abaqus.Interaction.MainSecondaryAssignment.MainSecondaryAssignment">
@@ -9295,8 +9296,8 @@ The SymbolicConstant BALANCED can be specified only in an Abaqus/Standard analys
 </dl>
 </dd></dl>
 </dd></dl>
-</div>
-<div class="section" id="modelchange">
+</section>
+<section id="modelchange">
 <h3>ModelChange<a class="headerlink" href="#modelchange" title="Permalink to this headline">#</a></h3>
 <dl class="py class">
 <dt class="sig sig-object py" id="abaqus.Interaction.ModelChange.ModelChange">
@@ -9435,8 +9436,8 @@ default value is OFF.</p>
 </dl>
 </dd></dl>
 </dd></dl>
-</div>
-<div class="section" id="normalbehavior">
+</section>
+<section id="normalbehavior">
 <h3>NormalBehavior<a class="headerlink" href="#normalbehavior" title="Permalink to this headline">#</a></h3>
 <dl class="py class">
 <dt class="sig sig-object py" id="abaqus.Interaction.NormalBehavior.NormalBehavior">
@@ -9565,8 +9566,8 @@ default value is 0.33333.</p>
 <dd><p>This method modifies the NormalBehavior object.</p>
 </dd></dl>
 </dd></dl>
-</div>
-<div class="section" id="polarityassignments">
+</section>
+<section id="polarityassignments">
 <h3>PolarityAssignments<a class="headerlink" href="#polarityassignments" title="Permalink to this headline">#</a></h3>
 <dl class="py class">
 <dt class="sig sig-object py" id="abaqus.Interaction.PolarityAssignments.PolarityAssignments">
@@ -9656,8 +9657,8 @@ whose index is referenced. Possible values are SPOS, SNEG, and TWO_SIDED.</p>
 </dl>
 </dd></dl>
 </dd></dl>
-</div>
-<div class="section" id="pressurepenetration">
+</section>
+<section id="pressurepenetration">
 <h3>PressurePenetration<a class="headerlink" href="#pressurepenetration" title="Permalink to this headline">#</a></h3>
 <dl class="py class">
 <dt class="sig sig-object py" id="abaqus.Interaction.PressurePenetration.PressurePenetration">
@@ -9819,8 +9820,8 @@ default value is 0.001.</p>
 </dl>
 </dd></dl>
 </dd></dl>
-</div>
-<div class="section" id="pressurepenetrationstate">
+</section>
+<section id="pressurepenetrationstate">
 <h3>PressurePenetrationState<a class="headerlink" href="#pressurepenetrationstate" title="Permalink to this headline">#</a></h3>
 <dl class="py class">
 <dt class="sig sig-object py" id="abaqus.Interaction.PressurePenetrationState.PressurePenetrationState">
@@ -9889,8 +9890,8 @@ Possible values are:</p>
 </dd>
 </dl>
 </dd></dl>
-</div>
-<div class="section" id="radiation">
+</section>
+<section id="radiation">
 <h3>Radiation<a class="headerlink" href="#radiation" title="Permalink to this headline">#</a></h3>
 <dl class="py class">
 <dt class="sig sig-object py" id="abaqus.Interaction.Radiation.Radiation">
@@ -9960,8 +9961,8 @@ clearance, dd.</p>
 <dd><p>This method modifies the Radiation object.</p>
 </dd></dl>
 </dd></dl>
-</div>
-<div class="section" id="radiationtoambient">
+</section>
+<section id="radiationtoambient">
 <h3>RadiationToAmbient<a class="headerlink" href="#radiationtoambient" title="Permalink to this headline">#</a></h3>
 <dl class="py class">
 <dt class="sig sig-object py" id="abaqus.Interaction.RadiationToAmbient.RadiationToAmbient">
@@ -10102,8 +10103,8 @@ the specified step.</p>
 </dl>
 </dd></dl>
 </dd></dl>
-</div>
-<div class="section" id="radiationtoambientstate">
+</section>
+<section id="radiationtoambientstate">
 <h3>RadiationToAmbientState<a class="headerlink" href="#radiationtoambientstate" title="Permalink to this headline">#</a></h3>
 <dl class="py class">
 <dt class="sig sig-object py" id="abaqus.Interaction.RadiationToAmbientState.RadiationToAmbientState">
@@ -10163,8 +10164,8 @@ Possible values are:</p>
 </dd>
 </dl>
 </dd></dl>
-</div>
-<div class="section" id="regionpairs">
+</section>
+<section id="regionpairs">
 <h3>RegionPairs<a class="headerlink" href="#regionpairs" title="Permalink to this headline">#</a></h3>
 <dl class="py class">
 <dt class="sig sig-object py" id="abaqus.Interaction.RegionPairs.RegionPairs">
@@ -10231,8 +10232,8 @@ references an Eulerian material surface.</p>
 </dl>
 </dd></dl>
 </dd></dl>
-</div>
-<div class="section" id="selfcontactexp">
+</section>
+<section id="selfcontactexp">
 <h3>SelfContactExp<a class="headerlink" href="#selfcontactexp" title="Permalink to this headline">#</a></h3>
 <dl class="py class">
 <dt class="sig sig-object py" id="abaqus.Interaction.SelfContactExp.SelfContactExp">
@@ -10349,8 +10350,8 @@ The default value is an empty string.</p>
 </dl>
 </dd></dl>
 </dd></dl>
-</div>
-<div class="section" id="selfcontactexpstate">
+</section>
+<section id="selfcontactexpstate">
 <h3>SelfContactExpState<a class="headerlink" href="#selfcontactexpstate" title="Permalink to this headline">#</a></h3>
 <dl class="py class">
 <dt class="sig sig-object py" id="abaqus.Interaction.SelfContactExpState.SelfContactExpState">
@@ -10412,8 +10413,8 @@ Possible values are:</p>
 </dd>
 </dl>
 </dd></dl>
-</div>
-<div class="section" id="selfcontactstd">
+</section>
+<section id="selfcontactstd">
 <h3>SelfContactStd<a class="headerlink" href="#selfcontactstd" title="Permalink to this headline">#</a></h3>
 <dl class="py class">
 <dt class="sig sig-object py" id="abaqus.Interaction.SelfContactStd.SelfContactStd">
@@ -10560,8 +10561,8 @@ The default value is an empty string.</p>
 </dl>
 </dd></dl>
 </dd></dl>
-</div>
-<div class="section" id="selfcontactstdstate">
+</section>
+<section id="selfcontactstdstate">
 <h3>SelfContactStdState<a class="headerlink" href="#selfcontactstdstate" title="Permalink to this headline">#</a></h3>
 <dl class="py class">
 <dt class="sig sig-object py" id="abaqus.Interaction.SelfContactStdState.SelfContactStdState">
@@ -10622,8 +10623,8 @@ Possible values are:</p>
 </dd>
 </dl>
 </dd></dl>
-</div>
-<div class="section" id="slidingformulationassignment">
+</section>
+<section id="slidingformulationassignment">
 <h3>SlidingFormulationAssignment<a class="headerlink" href="#slidingformulationassignment" title="Permalink to this headline">#</a></h3>
 <dl class="py class">
 <dt class="sig sig-object py" id="abaqus.Interaction.SlidingFormulationAssignment.SlidingFormulationAssignment">
@@ -10717,8 +10718,8 @@ delete.</p>
 </dl>
 </dd></dl>
 </dd></dl>
-</div>
-<div class="section" id="slidingtransitionassignment">
+</section>
+<section id="slidingtransitionassignment">
 <h3>SlidingTransitionAssignment<a class="headerlink" href="#slidingtransitionassignment" title="Permalink to this headline">#</a></h3>
 <dl class="py class">
 <dt class="sig sig-object py" id="abaqus.Interaction.SlidingTransitionAssignment.SlidingTransitionAssignment">
@@ -10811,8 +10812,8 @@ values are ELEMENT_ORDER_SMOOTHING, LINEAR_SMOOTHING, and QUADRATIC_SMOOTHING.</
 </dl>
 </dd></dl>
 </dd></dl>
-</div>
-<div class="section" id="smoothingassignment">
+</section>
+<section id="smoothingassignment">
 <h3>SmoothingAssignment<a class="headerlink" href="#smoothingassignment" title="Permalink to this headline">#</a></h3>
 <dl class="py class">
 <dt class="sig sig-object py" id="abaqus.Interaction.SmoothingAssignment.SmoothingAssignment">
@@ -10907,8 +10908,8 @@ ContactExp and ContactStd objects.</p>
 </dl>
 </dd></dl>
 </dd></dl>
-</div>
-<div class="section" id="stabilizationassignment">
+</section>
+<section id="stabilizationassignment">
 <h3>StabilizationAssignment<a class="headerlink" href="#stabilizationassignment" title="Permalink to this headline">#</a></h3>
 <dl class="py class">
 <dt class="sig sig-object py" id="abaqus.Interaction.StabilizationAssignment.StabilizationAssignment">
@@ -11002,8 +11003,8 @@ delete.</p>
 </dl>
 </dd></dl>
 </dd></dl>
-</div>
-<div class="section" id="stdcontactcontrol">
+</section>
+<section id="stdcontactcontrol">
 <h3>StdContactControl<a class="headerlink" href="#stdcontactcontrol" title="Permalink to this headline">#</a></h3>
 <dl class="py class">
 <dt class="sig sig-object py" id="abaqus.Interaction.StdContactControl.StdContactControl">
@@ -11244,8 +11245,8 @@ default value is DEFAULT.</p>
 </dl>
 </dd></dl>
 </dd></dl>
-</div>
-<div class="section" id="stdinitialization">
+</section>
+<section id="stdinitialization">
 <h3>StdInitialization<a class="headerlink" href="#stdinitialization" title="Permalink to this headline">#</a></h3>
 <dl class="py class">
 <dt class="sig sig-object py" id="abaqus.Interaction.StdInitialization.StdInitialization">
@@ -11364,8 +11365,8 @@ undergo strain-free adjustments.. The default value is None.</p>
 </dl>
 </dd></dl>
 </dd></dl>
-</div>
-<div class="section" id="stdstabilization">
+</section>
+<section id="stdstabilization">
 <h3>StdStabilization<a class="headerlink" href="#stdstabilization" title="Permalink to this headline">#</a></h3>
 <dl class="py class">
 <dt class="sig sig-object py" id="abaqus.Interaction.StdStabilization.StdStabilization">
@@ -11486,8 +11487,8 @@ default value is OFF.</p>
 </dl>
 </dd></dl>
 </dd></dl>
-</div>
-<div class="section" id="stdxplcosimulation">
+</section>
+<section id="stdxplcosimulation">
 <h3>StdXplCosimulation<a class="headerlink" href="#stdxplcosimulation" title="Permalink to this headline">#</a></h3>
 <dl class="py class">
 <dt class="sig sig-object py" id="abaqus.Interaction.StdXplCosimulation.StdXplCosimulation">
@@ -11586,8 +11587,8 @@ DEFAULT.</p>
 </dl>
 </dd></dl>
 </dd></dl>
-</div>
-<div class="section" id="stdxplcosimulationstate">
+</section>
+<section id="stdxplcosimulationstate">
 <h3>StdXplCosimulationState<a class="headerlink" href="#stdxplcosimulationstate" title="Permalink to this headline">#</a></h3>
 <dl class="py class">
 <dt class="sig sig-object py" id="abaqus.Interaction.StdXplCosimulationState.StdXplCosimulationState">
@@ -11638,8 +11639,8 @@ Possible values are:</p>
 </dd>
 </dl>
 </dd></dl>
-</div>
-<div class="section" id="surfacebeamsmoothingassignment">
+</section>
+<section id="surfacebeamsmoothingassignment">
 <h3>SurfaceBeamSmoothingAssignment<a class="headerlink" href="#surfacebeamsmoothingassignment" title="Permalink to this headline">#</a></h3>
 <dl class="py class">
 <dt class="sig sig-object py" id="abaqus.Interaction.SurfaceBeamSmoothingAssignment.SurfaceBeamSmoothingAssignment">
@@ -11732,8 +11733,8 @@ delete.</p>
 </dl>
 </dd></dl>
 </dd></dl>
-</div>
-<div class="section" id="surfacecrushtriggerassignment">
+</section>
+<section id="surfacecrushtriggerassignment">
 <h3>SurfaceCrushTriggerAssignment<a class="headerlink" href="#surfacecrushtriggerassignment" title="Permalink to this headline">#</a></h3>
 <dl class="py class">
 <dt class="sig sig-object py" id="abaqus.Interaction.SurfaceCrushTriggerAssignment.SurfaceCrushTriggerAssignment">
@@ -11836,8 +11837,8 @@ delete.</p>
 </dl>
 </dd></dl>
 </dd></dl>
-</div>
-<div class="section" id="surfacefeatureassignment">
+</section>
+<section id="surfacefeatureassignment">
 <h3>SurfaceFeatureAssignment<a class="headerlink" href="#surfacefeatureassignment" title="Permalink to this headline">#</a></h3>
 <dl class="py class">
 <dt class="sig sig-object py" id="abaqus.Interaction.SurfaceFeatureAssignment.SurfaceFeatureAssignment">
@@ -11951,8 +11952,8 @@ delete.</p>
 </dl>
 </dd></dl>
 </dd></dl>
-</div>
-<div class="section" id="surfacefrictionassignment">
+</section>
+<section id="surfacefrictionassignment">
 <h3>SurfaceFrictionAssignment<a class="headerlink" href="#surfacefrictionassignment" title="Permalink to this headline">#</a></h3>
 <dl class="py class">
 <dt class="sig sig-object py" id="abaqus.Interaction.SurfaceFrictionAssignment.SurfaceFrictionAssignment">
@@ -12047,8 +12048,8 @@ definition.</p>
 </dl>
 </dd></dl>
 </dd></dl>
-</div>
-<div class="section" id="surfaceoffsetassignment">
+</section>
+<section id="surfaceoffsetassignment">
 <h3>SurfaceOffsetAssignment<a class="headerlink" href="#surfaceoffsetassignment" title="Permalink to this headline">#</a></h3>
 <dl class="py class">
 <dt class="sig sig-object py" id="abaqus.Interaction.SurfaceOffsetAssignment.SurfaceOffsetAssignment">
@@ -12144,8 +12145,8 @@ delete.</p>
 </dl>
 </dd></dl>
 </dd></dl>
-</div>
-<div class="section" id="surfacethicknessassignment">
+</section>
+<section id="surfacethicknessassignment">
 <h3>SurfaceThicknessAssignment<a class="headerlink" href="#surfacethicknessassignment" title="Permalink to this headline">#</a></h3>
 <dl class="py class">
 <dt class="sig sig-object py" id="abaqus.Interaction.SurfaceThicknessAssignment.SurfaceThicknessAssignment">
@@ -12248,8 +12249,8 @@ second entry.</p>
 </dl>
 </dd></dl>
 </dd></dl>
-</div>
-<div class="section" id="surfacetosurfacecontactexp">
+</section>
+<section id="surfacetosurfacecontactexp">
 <h3>SurfaceToSurfaceContactExp<a class="headerlink" href="#surfacetosurfacecontactexp" title="Permalink to this headline">#</a></h3>
 <dl class="py class">
 <dt class="sig sig-object py" id="abaqus.Interaction.SurfaceToSurfaceContactExp.SurfaceToSurfaceContactExp">
@@ -12443,8 +12444,8 @@ The default value is an empty string.</p>
 pair. This command is valid only during the step in which the interaction is created.</p>
 </dd></dl>
 </dd></dl>
-</div>
-<div class="section" id="surfacetosurfacecontactstd">
+</section>
+<section id="surfacetosurfacecontactstd">
 <h3>SurfaceToSurfaceContactStd<a class="headerlink" href="#surfacetosurfacecontactstd" title="Permalink to this headline">#</a></h3>
 <dl class="py class">
 <dt class="sig sig-object py" id="abaqus.Interaction.SurfaceToSurfaceContactStd.SurfaceToSurfaceContactStd">
@@ -12801,8 +12802,8 @@ The default value is an empty string.</p>
 pair. This command is valid only for the step in which the interaction is created.</p>
 </dd></dl>
 </dd></dl>
-</div>
-<div class="section" id="surfacetosurfaceexpstate">
+</section>
+<section id="surfacetosurfaceexpstate">
 <h3>SurfaceToSurfaceExpState<a class="headerlink" href="#surfacetosurfaceexpstate" title="Permalink to this headline">#</a></h3>
 <dl class="py class">
 <dt class="sig sig-object py" id="abaqus.Interaction.SurfaceToSurfaceExpState.SurfaceToSurfaceExpState">
@@ -12864,8 +12865,8 @@ Possible values are:</p>
 </dd>
 </dl>
 </dd></dl>
-</div>
-<div class="section" id="surfacetosurfacestdstate">
+</section>
+<section id="surfacetosurfacestdstate">
 <h3>SurfaceToSurfaceStdState<a class="headerlink" href="#surfacetosurfacestdstate" title="Permalink to this headline">#</a></h3>
 <dl class="py class">
 <dt class="sig sig-object py" id="abaqus.Interaction.SurfaceToSurfaceStdState.SurfaceToSurfaceStdState">
@@ -12963,8 +12964,8 @@ Possible values are:</p>
 </dd>
 </dl>
 </dd></dl>
-</div>
-<div class="section" id="surfacevertexcriteriaassignment">
+</section>
+<section id="surfacevertexcriteriaassignment">
 <h3>SurfaceVertexCriteriaAssignment<a class="headerlink" href="#surfacevertexcriteriaassignment" title="Permalink to this headline">#</a></h3>
 <dl class="py class">
 <dt class="sig sig-object py" id="abaqus.Interaction.SurfaceVertexCriteriaAssignment.SurfaceVertexCriteriaAssignment">
@@ -13061,8 +13062,8 @@ delete.</p>
 </dl>
 </dd></dl>
 </dd></dl>
-</div>
-<div class="section" id="thermalconductance">
+</section>
+<section id="thermalconductance">
 <h3>ThermalConductance<a class="headerlink" href="#thermalconductance" title="Permalink to this headline">#</a></h3>
 <dl class="py class">
 <dt class="sig sig-object py" id="abaqus.Interaction.ThermalConductance.ThermalConductance">
@@ -13175,8 +13176,8 @@ table data are described below.</p>
 <dd><p>This method modifies the ThermalConductance object.</p>
 </dd></dl>
 </dd></dl>
-</div>
-<div class="section" id="xfemcrackgrowth">
+</section>
+<section id="xfemcrackgrowth">
 <h3>XFEMCrackGrowth<a class="headerlink" href="#xfemcrackgrowth" title="Permalink to this headline">#</a></h3>
 <dl class="py class">
 <dt class="sig sig-object py" id="abaqus.Interaction.XFEMCrackGrowth.XFEMCrackGrowth">
@@ -13282,8 +13283,8 @@ analysis step. The default value is ON.</p>
 </dl>
 </dd></dl>
 </dd></dl>
-</div>
-<div class="section" id="xfemcrackgrowthstate">
+</section>
+<section id="xfemcrackgrowthstate">
 <h3>XFEMCrackGrowthState<a class="headerlink" href="#xfemcrackgrowthstate" title="Permalink to this headline">#</a></h3>
 <dl class="py class">
 <dt class="sig sig-object py" id="abaqus.Interaction.XFEMCrackGrowthState.XFEMCrackGrowthState">
@@ -13333,9 +13334,9 @@ Possible values are:</p>
 </dd>
 </dl>
 </dd></dl>
-</div>
-</div>
-</div>
+</section>
+</section>
+</section>
 
         </article>
       </div>

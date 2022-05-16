@@ -2,7 +2,8 @@
 <html class="no-js">
   <head><meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width,initial-scale=1"/>
-    <meta name="color-scheme" content="light dark"><link rel="index" title="Index" href="../../../genindex.html" /><link rel="search" title="Search" href="../../../search.html" /><link rel="next" title="Calibration of Material" href="calibration.html" /><link rel="prev" title="Amplitude" href="amplitude.html" />
+    <meta name="color-scheme" content="light dark"><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+<link rel="index" title="Index" href="../../../genindex.html" /><link rel="search" title="Search" href="../../../search.html" /><link rel="next" title="Calibration of Material" href="calibration.html" /><link rel="prev" title="Amplitude" href="amplitude.html" />
         <link rel="canonical" href="https://pyabaqus.haiiliin.com/reference/mdb/model/bc.html" />
 
     <meta name="generator" content="sphinx-4.5.0, furo 2022.04.07"/>
@@ -300,10 +301,10 @@
           </label>
         </div>
         <article role="main">
-          <div class="section" id="boundary-condition">
+          <section id="boundary-condition">
 <h1>Boundary Condition<a class="headerlink" href="#boundary-condition" title="Permalink to this headline">#</a></h1>
 <p>A specific type of boundary condition object and a specific type of boundary condition state object are designed for each type of boundary condition. A BoundaryCondition object stores the non-propagating data of a boundary condition as well as a number of instances of the corresponding BoundaryConditionState object, each of which stores the propagating data of the boundary condition in a single step. Instances of the BoundaryConditionState object are created and deleted internally by its corresponding BoundaryCondition object.</p>
-<div class="section" id="create-boundary-conditions">
+<section id="create-boundary-conditions">
 <h2>Create boundary conditions<a class="headerlink" href="#create-boundary-conditions" title="Permalink to this headline">#</a></h2>
 <dl class="py method">
 <dt class="sig sig-object py" id="abaqus.BoundaryCondition.BoundaryConditionModel.BoundaryConditionModel.AccelerationBaseMotionBC">
@@ -1572,10 +1573,10 @@ Possible values are UNIFORM, USER_DEFINED, and FIELD. The default value is UNIFO
 </pre></div>
 </div>
 </dd></dl>
-</div>
-<div class="section" id="object-features">
+</section>
+<section id="object-features">
 <h2>Object features<a class="headerlink" href="#object-features" title="Permalink to this headline">#</a></h2>
-<div class="section" id="boundarycondition">
+<section id="boundarycondition">
 <h3>BoundaryCondition<a class="headerlink" href="#boundarycondition" title="Permalink to this headline">#</a></h3>
 <dl class="py class">
 <dt class="sig sig-object py" id="abaqus.BoundaryCondition.BoundaryCondition.BoundaryCondition">
@@ -1716,8 +1717,8 @@ the previous analysis step.</p>
 <dd><p>This method suppresses the boundary condition.</p>
 </dd></dl>
 </dd></dl>
-</div>
-<div class="section" id="boundaryconditionstate">
+</section>
+<section id="boundaryconditionstate">
 <h3>BoundaryConditionState<a class="headerlink" href="#boundaryconditionstate" title="Permalink to this headline">#</a></h3>
 <dl class="py class">
 <dt class="sig sig-object py" id="abaqus.BoundaryCondition.BoundaryConditionState.BoundaryConditionState">
@@ -1759,8 +1760,8 @@ boundary condition has no amplitude reference.</p>
 </dd>
 </dl>
 </dd></dl>
-</div>
-<div class="section" id="accelerationbasemotionbc">
+</section>
+<section id="accelerationbasemotionbc">
 <h3>AccelerationBaseMotionBC<a class="headerlink" href="#accelerationbasemotionbc" title="Permalink to this headline">#</a></h3>
 <dl class="py class">
 <dt class="sig sig-object py" id="abaqus.BoundaryCondition.AccelerationBaseMotionBC.AccelerationBaseMotionBC">
@@ -1935,8 +1936,8 @@ boundary condition is changed to have no amplitude reference. You should provide
 </dl>
 </dd></dl>
 </dd></dl>
-</div>
-<div class="section" id="accelerationbasemotionbcstate">
+</section>
+<section id="accelerationbasemotionbcstate">
 <h3>AccelerationBaseMotionBCState<a class="headerlink" href="#accelerationbasemotionbcstate" title="Permalink to this headline">#</a></h3>
 <dl class="py class">
 <dt class="sig sig-object py" id="abaqus.BoundaryCondition.AccelerationBaseMotionBCState.AccelerationBaseMotionBCState">
@@ -1985,8 +1986,8 @@ boundary condition has no amplitude reference.</p>
 </dd>
 </dl>
 </dd></dl>
-</div>
-<div class="section" id="accelerationbc">
+</section>
+<section id="accelerationbc">
 <h3>AccelerationBC<a class="headerlink" href="#accelerationbc" title="Permalink to this headline">#</a></h3>
 <dl class="py class">
 <dt class="sig sig-object py" id="abaqus.BoundaryCondition.AccelerationBC.AccelerationBC">
@@ -2213,8 +2214,8 @@ boundary condition is changed to have no amplitude reference. You should provide
 </dl>
 </dd></dl>
 </dd></dl>
-</div>
-<div class="section" id="accelerationbcstate">
+</section>
+<section id="accelerationbcstate">
 <h3>AccelerationBCState<a class="headerlink" href="#accelerationbcstate" title="Permalink to this headline">#</a></h3>
 <dl class="py class">
 <dt class="sig sig-object py" id="abaqus.BoundaryCondition.AccelerationBCState.AccelerationBCState">
@@ -2295,8 +2296,8 @@ boundary condition has no amplitude reference.</p>
 </dd>
 </dl>
 </dd></dl>
-</div>
-<div class="section" id="acousticpressurebc">
+</section>
+<section id="acousticpressurebc">
 <h3>AcousticPressureBC<a class="headerlink" href="#acousticpressurebc" title="Permalink to this headline">#</a></h3>
 <dl class="py class">
 <dt class="sig sig-object py" id="abaqus.BoundaryCondition.AcousticPressureBC.AcousticPressureBC">
@@ -2466,8 +2467,8 @@ boundary condition is changed to have no amplitude reference. You should provide
 </dl>
 </dd></dl>
 </dd></dl>
-</div>
-<div class="section" id="acousticpressurebcstate">
+</section>
+<section id="acousticpressurebcstate">
 <h3>AcousticPressureBCState<a class="headerlink" href="#acousticpressurebcstate" title="Permalink to this headline">#</a></h3>
 <dl class="py class">
 <dt class="sig sig-object py" id="abaqus.BoundaryCondition.AcousticPressureBCState.AcousticPressureBCState">
@@ -2520,9 +2521,9 @@ boundary condition has no amplitude reference.</p>
 </dd>
 </dl>
 </dd></dl>
-</div>
-</div>
-<div class="section" id="create-calibration">
+</section>
+</section>
+<section id="create-calibration">
 <h2>Create Calibration<a class="headerlink" href="#create-calibration" title="Permalink to this headline">#</a></h2>
 <dl class="py class">
 <dt class="sig sig-object py" id="abaqus.BoundaryCondition.Calibration.Calibration">
@@ -2573,7 +2574,7 @@ Calibration object stores the data that is used for specifying materials from te
 </dd>
 </dl>
 </dd></dl>
-<div class="section" id="concentrationbc">
+<section id="concentrationbc">
 <h3>ConcentrationBC<a class="headerlink" href="#concentrationbc" title="Permalink to this headline">#</a></h3>
 <dl class="py class">
 <dt class="sig sig-object py" id="abaqus.BoundaryCondition.ConcentrationBC.ConcentrationBC">
@@ -2742,8 +2743,8 @@ boundary condition is changed to have no amplitude reference. You should provide
 </dl>
 </dd></dl>
 </dd></dl>
-</div>
-<div class="section" id="concentrationbcstate">
+</section>
+<section id="concentrationbcstate">
 <h3>ConcentrationBCState<a class="headerlink" href="#concentrationbcstate" title="Permalink to this headline">#</a></h3>
 <dl class="py class">
 <dt class="sig sig-object py" id="abaqus.BoundaryCondition.ConcentrationBCState.ConcentrationBCState">
@@ -2796,8 +2797,8 @@ boundary condition has no amplitude reference.</p>
 </dd>
 </dl>
 </dd></dl>
-</div>
-<div class="section" id="connaccelerationbc">
+</section>
+<section id="connaccelerationbc">
 <h3>ConnAccelerationBC<a class="headerlink" href="#connaccelerationbc" title="Permalink to this headline">#</a></h3>
 <dl class="py class">
 <dt class="sig sig-object py" id="abaqus.BoundaryCondition.ConnAccelerationBC.ConnAccelerationBC">
@@ -3051,8 +3052,8 @@ boundary condition is changed to have no amplitude reference. You should provide
 </dl>
 </dd></dl>
 </dd></dl>
-</div>
-<div class="section" id="connaccelerationbcstate">
+</section>
+<section id="connaccelerationbcstate">
 <h3>ConnAccelerationBCState<a class="headerlink" href="#connaccelerationbcstate" title="Permalink to this headline">#</a></h3>
 <dl class="py class">
 <dt class="sig sig-object py" id="abaqus.BoundaryCondition.ConnAccelerationBCState.ConnAccelerationBCState">
@@ -3142,8 +3143,8 @@ boundary condition has no amplitude reference.</p>
 </dd>
 </dl>
 </dd></dl>
-</div>
-<div class="section" id="conndisplacementbc">
+</section>
+<section id="conndisplacementbc">
 <h3>ConnDisplacementBC<a class="headerlink" href="#conndisplacementbc" title="Permalink to this headline">#</a></h3>
 <dl class="py class">
 <dt class="sig sig-object py" id="abaqus.BoundaryCondition.ConnDisplacementBC.ConnDisplacementBC">
@@ -3422,8 +3423,8 @@ PERTURBATION_AND_BUCKLING. The default value is NOT_APPLICABLE.</p>
 </dl>
 </dd></dl>
 </dd></dl>
-</div>
-<div class="section" id="conndisplacementbcstate">
+</section>
+<section id="conndisplacementbcstate">
 <h3>ConnDisplacementBCState<a class="headerlink" href="#conndisplacementbcstate" title="Permalink to this headline">#</a></h3>
 <dl class="py class">
 <dt class="sig sig-object py" id="abaqus.BoundaryCondition.ConnDisplacementBCState.ConnDisplacementBCState">
@@ -3513,8 +3514,8 @@ boundary condition has no amplitude reference.</p>
 </dd>
 </dl>
 </dd></dl>
-</div>
-<div class="section" id="connvelocitybc">
+</section>
+<section id="connvelocitybc">
 <h3>ConnVelocityBC<a class="headerlink" href="#connvelocitybc" title="Permalink to this headline">#</a></h3>
 <dl class="py class">
 <dt class="sig sig-object py" id="abaqus.BoundaryCondition.ConnVelocityBC.ConnVelocityBC">
@@ -3764,8 +3765,8 @@ boundary condition is changed to have no amplitude reference. You should provide
 </dl>
 </dd></dl>
 </dd></dl>
-</div>
-<div class="section" id="connvelocitybcstate">
+</section>
+<section id="connvelocitybcstate">
 <h3>ConnVelocityBCState<a class="headerlink" href="#connvelocitybcstate" title="Permalink to this headline">#</a></h3>
 <dl class="py class">
 <dt class="sig sig-object py" id="abaqus.BoundaryCondition.ConnVelocityBCState.ConnVelocityBCState">
@@ -3852,8 +3853,8 @@ boundary condition has no amplitude reference.</p>
 </dd>
 </dl>
 </dd></dl>
-</div>
-<div class="section" id="displacementbasemotionbc">
+</section>
+<section id="displacementbasemotionbc">
 <h3>DisplacementBaseMotionBC<a class="headerlink" href="#displacementbasemotionbc" title="Permalink to this headline">#</a></h3>
 <dl class="py class">
 <dt class="sig sig-object py" id="abaqus.BoundaryCondition.DisplacementBaseMotionBC.DisplacementBaseMotionBC">
@@ -4028,8 +4029,8 @@ boundary condition is changed to have no amplitude reference. You should provide
 </dl>
 </dd></dl>
 </dd></dl>
-</div>
-<div class="section" id="displacementbasemotionbcstate">
+</section>
+<section id="displacementbasemotionbcstate">
 <h3>DisplacementBaseMotionBCState<a class="headerlink" href="#displacementbasemotionbcstate" title="Permalink to this headline">#</a></h3>
 <dl class="py class">
 <dt class="sig sig-object py" id="abaqus.BoundaryCondition.DisplacementBaseMotionBCState.DisplacementBaseMotionBCState">
@@ -4078,8 +4079,8 @@ boundary condition has no amplitude reference.</p>
 </dd>
 </dl>
 </dd></dl>
-</div>
-<div class="section" id="displacementbc">
+</section>
+<section id="displacementbc">
 <h3>DisplacementBC<a class="headerlink" href="#displacementbc" title="Permalink to this headline">#</a></h3>
 <dl class="py class">
 <dt class="sig sig-object py" id="abaqus.BoundaryCondition.DisplacementBC.DisplacementBC">
@@ -4345,8 +4346,8 @@ PERTURBATION_AND_BUCKLING. The default value is NOT_APPLICABLE.</p>
 </dl>
 </dd></dl>
 </dd></dl>
-</div>
-<div class="section" id="displacementbcstate">
+</section>
+<section id="displacementbcstate">
 <h3>DisplacementBCState<a class="headerlink" href="#displacementbcstate" title="Permalink to this headline">#</a></h3>
 <dl class="py class">
 <dt class="sig sig-object py" id="abaqus.BoundaryCondition.DisplacementBCState.DisplacementBCState">
@@ -4430,8 +4431,8 @@ boundary condition has no amplitude reference.</p>
 </dd>
 </dl>
 </dd></dl>
-</div>
-<div class="section" id="electricpotentialbc">
+</section>
+<section id="electricpotentialbc">
 <h3>ElectricPotentialBC<a class="headerlink" href="#electricpotentialbc" title="Permalink to this headline">#</a></h3>
 <dl class="py class">
 <dt class="sig sig-object py" id="abaqus.BoundaryCondition.ElectricPotentialBC.ElectricPotentialBC">
@@ -4601,8 +4602,8 @@ boundary condition is changed to have no amplitude reference. You should provide
 </dl>
 </dd></dl>
 </dd></dl>
-</div>
-<div class="section" id="electricpotentialbcstate">
+</section>
+<section id="electricpotentialbcstate">
 <h3>ElectricPotentialBCState<a class="headerlink" href="#electricpotentialbcstate" title="Permalink to this headline">#</a></h3>
 <dl class="py class">
 <dt class="sig sig-object py" id="abaqus.BoundaryCondition.ElectricPotentialBCState.ElectricPotentialBCState">
@@ -4655,8 +4656,8 @@ boundary condition has no amplitude reference.</p>
 </dd>
 </dl>
 </dd></dl>
-</div>
-<div class="section" id="eulerianbc">
+</section>
+<section id="eulerianbc">
 <h3>EulerianBC<a class="headerlink" href="#eulerianbc" title="Permalink to this headline">#</a></h3>
 <dl class="py class">
 <dt class="sig sig-object py" id="abaqus.BoundaryCondition.EulerianBC.EulerianBC">
@@ -4816,8 +4817,8 @@ value is ZERO_PRESSURE.</p>
 </dl>
 </dd></dl>
 </dd></dl>
-</div>
-<div class="section" id="eulerianbcstate">
+</section>
+<section id="eulerianbcstate">
 <h3>EulerianBCState<a class="headerlink" href="#eulerianbcstate" title="Permalink to this headline">#</a></h3>
 <dl class="py class">
 <dt class="sig sig-object py" id="abaqus.BoundaryCondition.EulerianBCState.EulerianBCState">
@@ -4883,8 +4884,8 @@ boundary condition has no amplitude reference.</p>
 </dd>
 </dl>
 </dd></dl>
-</div>
-<div class="section" id="eulerianmotionbc">
+</section>
+<section id="eulerianmotionbc">
 <h3>EulerianMotionBC<a class="headerlink" href="#eulerianmotionbc" title="Permalink to this headline">#</a></h3>
 <dl class="py class">
 <dt class="sig sig-object py" id="abaqus.BoundaryCondition.EulerianMotionBC.EulerianMotionBC">
@@ -5308,8 +5309,8 @@ mesh bounding box. The default value is 2.0.</p>
 </dl>
 </dd></dl>
 </dd></dl>
-</div>
-<div class="section" id="eulerianmotionbcstate">
+</section>
+<section id="eulerianmotionbcstate">
 <h3>EulerianMotionBCState<a class="headerlink" href="#eulerianmotionbcstate" title="Permalink to this headline">#</a></h3>
 <dl class="py class">
 <dt class="sig sig-object py" id="abaqus.BoundaryCondition.EulerianMotionBCState.EulerianMotionBCState">
@@ -5426,8 +5427,8 @@ boundary condition has no amplitude reference.</p>
 </dd>
 </dl>
 </dd></dl>
-</div>
-<div class="section" id="fluidcavitypressurebc">
+</section>
+<section id="fluidcavitypressurebc">
 <h3>FluidCavityPressureBC<a class="headerlink" href="#fluidcavitypressurebc" title="Permalink to this headline">#</a></h3>
 <dl class="py class">
 <dt class="sig sig-object py" id="abaqus.BoundaryCondition.FluidCavityPressureBC.FluidCavityPressureBC">
@@ -5576,8 +5577,8 @@ boundary condition is changed to have no amplitude reference. You should provide
 </dl>
 </dd></dl>
 </dd></dl>
-</div>
-<div class="section" id="fluidcavitypressurebcstate">
+</section>
+<section id="fluidcavitypressurebcstate">
 <h3>FluidCavityPressureBCState<a class="headerlink" href="#fluidcavitypressurebcstate" title="Permalink to this headline">#</a></h3>
 <dl class="py class">
 <dt class="sig sig-object py" id="abaqus.BoundaryCondition.FluidCavityPressureBCState.FluidCavityPressureBCState">
@@ -5630,8 +5631,8 @@ boundary condition has no amplitude reference.</p>
 </dd>
 </dl>
 </dd></dl>
-</div>
-<div class="section" id="magneticvectorpotentialbc">
+</section>
+<section id="magneticvectorpotentialbc">
 <h3>MagneticVectorPotentialBC<a class="headerlink" href="#magneticvectorpotentialbc" title="Permalink to this headline">#</a></h3>
 <dl class="py class">
 <dt class="sig sig-object py" id="abaqus.BoundaryCondition.MagneticVectorPotentialBC.MagneticVectorPotentialBC">
@@ -5816,8 +5817,8 @@ boundary condition is changed to have no amplitude reference. You should provide
 </dl>
 </dd></dl>
 </dd></dl>
-</div>
-<div class="section" id="materialflowbc">
+</section>
+<section id="materialflowbc">
 <h3>MaterialFlowBC<a class="headerlink" href="#materialflowbc" title="Permalink to this headline">#</a></h3>
 <dl class="py class">
 <dt class="sig sig-object py" id="abaqus.BoundaryCondition.MaterialFlowBC.MaterialFlowBC">
@@ -5987,8 +5988,8 @@ boundary condition is changed to have no amplitude reference. You should provide
 </dl>
 </dd></dl>
 </dd></dl>
-</div>
-<div class="section" id="materialflowbcstate">
+</section>
+<section id="materialflowbcstate">
 <h3>MaterialFlowBCState<a class="headerlink" href="#materialflowbcstate" title="Permalink to this headline">#</a></h3>
 <dl class="py class">
 <dt class="sig sig-object py" id="abaqus.BoundaryCondition.MaterialFlowBCState.MaterialFlowBCState">
@@ -6041,8 +6042,8 @@ boundary condition has no amplitude reference.</p>
 </dd>
 </dl>
 </dd></dl>
-</div>
-<div class="section" id="porepressurebc">
+</section>
+<section id="porepressurebc">
 <h3>PorePressureBC<a class="headerlink" href="#porepressurebc" title="Permalink to this headline">#</a></h3>
 <dl class="py class">
 <dt class="sig sig-object py" id="abaqus.BoundaryCondition.PorePressureBC.PorePressureBC">
@@ -6211,8 +6212,8 @@ boundary condition is changed to have no amplitude reference. You should provide
 </dl>
 </dd></dl>
 </dd></dl>
-</div>
-<div class="section" id="porepressurebcstate">
+</section>
+<section id="porepressurebcstate">
 <h3>PorePressureBCState<a class="headerlink" href="#porepressurebcstate" title="Permalink to this headline">#</a></h3>
 <dl class="py class">
 <dt class="sig sig-object py" id="abaqus.BoundaryCondition.PorePressureBCState.PorePressureBCState">
@@ -6265,8 +6266,8 @@ boundary condition has no amplitude reference.</p>
 </dd>
 </dl>
 </dd></dl>
-</div>
-<div class="section" id="retainednodaldofsbc">
+</section>
+<section id="retainednodaldofsbc">
 <h3>RetainedNodalDofsBC<a class="headerlink" href="#retainednodaldofsbc" title="Permalink to this headline">#</a></h3>
 <dl class="py class">
 <dt class="sig sig-object py" id="abaqus.BoundaryCondition.RetainedNodalDofsBC.RetainedNodalDofsBC">
@@ -6442,8 +6443,8 @@ the specified step.</p>
 </dl>
 </dd></dl>
 </dd></dl>
-</div>
-<div class="section" id="secondarybasebc">
+</section>
+<section id="secondarybasebc">
 <h3>SecondaryBaseBC<a class="headerlink" href="#secondarybasebc" title="Permalink to this headline">#</a></h3>
 <dl class="py class">
 <dt class="sig sig-object py" id="abaqus.BoundaryCondition.SecondaryBaseBC.SecondaryBaseBC">
@@ -6564,8 +6565,8 @@ specified step.</p>
 </dl>
 </dd></dl>
 </dd></dl>
-</div>
-<div class="section" id="secondarybasebcstate">
+</section>
+<section id="secondarybasebcstate">
 <h3>SecondaryBaseBCState<a class="headerlink" href="#secondarybasebcstate" title="Permalink to this headline">#</a></h3>
 <dl class="py class">
 <dt class="sig sig-object py" id="abaqus.BoundaryCondition.SecondaryBaseBCState.SecondaryBaseBCState">
@@ -6613,8 +6614,8 @@ boundary condition has no amplitude reference.</p>
 </dd>
 </dl>
 </dd></dl>
-</div>
-<div class="section" id="submodelbc">
+</section>
+<section id="submodelbc">
 <h3>SubmodelBC<a class="headerlink" href="#submodelbc" title="Permalink to this headline">#</a></h3>
 <dl class="py class">
 <dt class="sig sig-object py" id="abaqus.BoundaryCondition.SubmodelBC.SubmodelBC">
@@ -6838,8 +6839,8 @@ The default value is None.The <em>centerZoneSize</em> argument is applicable onl
 </dl>
 </dd></dl>
 </dd></dl>
-</div>
-<div class="section" id="submodelbcstate">
+</section>
+<section id="submodelbcstate">
 <h3>SubmodelBCState<a class="headerlink" href="#submodelbcstate" title="Permalink to this headline">#</a></h3>
 <dl class="py class">
 <dt class="sig sig-object py" id="abaqus.BoundaryCondition.SubmodelBCState.SubmodelBCState">
@@ -6925,8 +6926,8 @@ boundary condition has no amplitude reference.</p>
 </dd>
 </dl>
 </dd></dl>
-</div>
-<div class="section" id="temperaturebc">
+</section>
+<section id="temperaturebc">
 <h3>TemperatureBC<a class="headerlink" href="#temperaturebc" title="Permalink to this headline">#</a></h3>
 <dl class="py class">
 <dt class="sig sig-object py" id="abaqus.BoundaryCondition.TemperatureBC.TemperatureBC">
@@ -7102,8 +7103,8 @@ boundary condition is changed to have no amplitude reference. You should provide
 </dl>
 </dd></dl>
 </dd></dl>
-</div>
-<div class="section" id="temperaturebcstate">
+</section>
+<section id="temperaturebcstate">
 <h3>TemperatureBCState<a class="headerlink" href="#temperaturebcstate" title="Permalink to this headline">#</a></h3>
 <dl class="py class">
 <dt class="sig sig-object py" id="abaqus.BoundaryCondition.TemperatureBCState.TemperatureBCState">
@@ -7162,8 +7163,8 @@ boundary condition has no amplitude reference.</p>
 </dd>
 </dl>
 </dd></dl>
-</div>
-<div class="section" id="typebc">
+</section>
+<section id="typebc">
 <h3>TypeBC<a class="headerlink" href="#typebc" title="Permalink to this headline">#</a></h3>
 <dl class="py class">
 <dt class="sig sig-object py" id="abaqus.BoundaryCondition.TypeBC.TypeBC">
@@ -7569,8 +7570,8 @@ are XSYMM, YSYMM, ZSYMM, XASYMM, YASYMM, ZASYMM, PINNED, and ENCASTRE.</p>
 </dl>
 </dd></dl>
 </dd></dl>
-</div>
-<div class="section" id="typebcstate">
+</section>
+<section id="typebcstate">
 <h3>TypeBCState<a class="headerlink" href="#typebcstate" title="Permalink to this headline">#</a></h3>
 <dl class="py class">
 <dt class="sig sig-object py" id="abaqus.BoundaryCondition.TypeBCState.TypeBCState">
@@ -7623,8 +7624,8 @@ boundary condition has no amplitude reference.</p>
 </dd>
 </dl>
 </dd></dl>
-</div>
-<div class="section" id="velocitybasemotionbc">
+</section>
+<section id="velocitybasemotionbc">
 <h3>VelocityBaseMotionBC<a class="headerlink" href="#velocitybasemotionbc" title="Permalink to this headline">#</a></h3>
 <dl class="py class">
 <dt class="sig sig-object py" id="abaqus.BoundaryCondition.VelocityBaseMotionBC.VelocityBaseMotionBC">
@@ -7799,8 +7800,8 @@ boundary condition is changed to have no amplitude reference. You should provide
 </dl>
 </dd></dl>
 </dd></dl>
-</div>
-<div class="section" id="velocitybasemotionbcstate">
+</section>
+<section id="velocitybasemotionbcstate">
 <h3>VelocityBaseMotionBCState<a class="headerlink" href="#velocitybasemotionbcstate" title="Permalink to this headline">#</a></h3>
 <dl class="py class">
 <dt class="sig sig-object py" id="abaqus.BoundaryCondition.VelocityBaseMotionBCState.VelocityBaseMotionBCState">
@@ -7848,8 +7849,8 @@ boundary condition has no amplitude reference.</p>
 </dd>
 </dl>
 </dd></dl>
-</div>
-<div class="section" id="velocitybc">
+</section>
+<section id="velocitybc">
 <h3>VelocityBC<a class="headerlink" href="#velocitybc" title="Permalink to this headline">#</a></h3>
 <dl class="py class">
 <dt class="sig sig-object py" id="abaqus.BoundaryCondition.VelocityBC.VelocityBC">
@@ -8076,8 +8077,8 @@ boundary condition is changed to have no amplitude reference. You should provide
 </dl>
 </dd></dl>
 </dd></dl>
-</div>
-<div class="section" id="velocitybcstate">
+</section>
+<section id="velocitybcstate">
 <h3>VelocityBCState<a class="headerlink" href="#velocitybcstate" title="Permalink to this headline">#</a></h3>
 <dl class="py class">
 <dt class="sig sig-object py" id="abaqus.BoundaryCondition.VelocityBCState.VelocityBCState">
@@ -8154,9 +8155,9 @@ boundary condition has no amplitude reference.</p>
 </dd>
 </dl>
 </dd></dl>
-</div>
-</div>
-</div>
+</section>
+</section>
+</section>
 
         </article>
       </div>
