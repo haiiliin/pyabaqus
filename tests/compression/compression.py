@@ -66,8 +66,8 @@ job = mdb.Job(name='Job-1', model='Model-1')
 job.writeInput()
 
 # Submit the job
-# job.submit()
-# job.waitForCompletion()
+job.submit()
+job.waitForCompletion()
 
 # Save abaqus model
 mdb.saveAs('compression.cae')
