@@ -314,6 +314,7 @@ Python script, even without opening the Abaqus/CAE.</p>
 <ul class="simple">
 <li><p>GitHub repository: <a class="reference external" href="https://github.com/Haiiliin/pyabaqus">Haiiliin/pyabaqus: Type hints for Python scripting of Abaqus</a></p></li>
 <li><p>PyPI: <a class="reference external" href="https://pypi.org/project/pyabaqus/">pyabaqus · PyPI</a></p></li>
+<li><p>Anaconda: <a class="reference external" href="https://anaconda.org/haiiliin/pyabaqus">pyabaqus</a></p></li>
 <li><p>PDF version of this documentation: <a class="reference external" href="https://github.com/Haiiliin/pyabaqus/releases/latest/download/pyabaqus.pdf">pyabaqus.pdf</a></p></li>
 <li><p>Abaqus Executor: <a class="reference external" href="https://github.com/Haiiliin/pyabaqus-executor/releases/latest/download/executor_setup.exe">executor_setup.exe</a></p></li>
 </ul>
@@ -336,14 +337,18 @@ it using pip:</p>
 </pre></div>
 </div>
 <p><cite>pyabaqus</cite> is also uploaded to <a class="reference external" href="https://anaconda.org/haiiliin/pyabaqus">anaconda</a>, you can use
-<cite>conda</cite> to install it:</p>
-<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>conda install -c haiiliin pyabaqus
+<cite>conda</cite> to install it, since pyabaqus (from V1.0.15) depends on <cite>ipyparams</cite> and it is not distributed to
+anaconda, you have to use <cite>pip</cite> to install it manually:</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>pip install ipyparams
+conda install -c haiiliin pyabaqus
 </pre></div>
 </div>
 <p>You may install the latest development version by cloning the
 <a class="reference external" href="https://github.com/Haiiliin/pyabaqus">GitHub repository</a> and use <cite>python</cite> to install from
 the local directory:</p>
 <div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>git clone https://github.com/Haiiliin/pyabaqus.git
+<span class="nb">cd</span> pyabaqus
+pip install ipyparams
 python setup.py install
 </pre></div>
 </div>
