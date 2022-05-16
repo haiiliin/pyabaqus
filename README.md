@@ -34,8 +34,10 @@ pip install pyabaqus
 ```
 
 `pyabaqus` is also uploaded to [anaconda](https://anaconda.org/haiiliin/pyabaqus), you can use 
-`conda` to install it:
+`conda` to install it, since pyabaqus (from V1.0.15) depends on `ipyparams` and it is not distributed to 
+anaconda, you have to use `pip` to install it manually:
 ```shell
+pip install ipyparams
 conda install -c haiiliin pyabaqus
 ```
 
@@ -45,6 +47,8 @@ the local directory:
 
 ```shell
 git clone https://github.com/Haiiliin/pyabaqus.git
+cd pyabaqus
+pip install ipyparams
 python setup.py install
 ```
 

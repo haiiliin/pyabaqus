@@ -108,18 +108,19 @@ Installation
 please upgrade it to Python 3.9 or a later version if you are using an earlier version.
 
 `pyabaqus` is uploaded to `PyPI <https://pypi.org/project/pyabaqus>`_, you can simply install 
-it using pip:
+it using pip, since pyabaqus (from V1.0.15) depends on `ipyparams` and it is not distributed to
+anaconda, you have to use `pip` to install it manually:
 
 .. code-block:: sh
-
-   pip install pyabaqus
+    pip install pyabaqus
 
 `pyabaqus` is also uploaded to `anaconda <https://anaconda.org/haiiliin/pyabaqus>`_, you can use 
 `conda` to install it:
 
 .. code-block:: sh
 
-   conda install -c haiiliin pyabaqus
+    pip install ipyparams
+    conda install -c haiiliin pyabaqus
 
 You may install the latest development version by cloning the 
 `GitHub repository <https://github.com/Haiiliin/pyabaqus>`_ and use `python` to install from 
@@ -128,6 +129,8 @@ the local directory:
 .. code-block:: sh
 
     git clone https://github.com/Haiiliin/pyabaqus.git
+    cd pyabaqus
+    pip install ipyparams
     python setup.py install
 
 
