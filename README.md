@@ -14,16 +14,34 @@ Python script, even without opening the Abaqus/CAE.
 - Anaconda: [anaconda.org/haiiliin/pyabaqus](https://anaconda.org/haiiliin/pyabaqus)
 - Documentation: [haiiliin.com/pyabaqus](https://haiiliin.com/pyabaqus/)
 
+## New Features
 
-## Related project
+- **Jupyter Notebook support (Since V1.0.15)**
+  
+  You can put your Abaqus/Python script into a Jupyter Notebook.
+  When you run the notebook, the package will transfer the notebook into a plain Python file 
+  with the same name but with `.py` suffix instead of `.ipynb`, and then it will be submitted 
+  to Abaqus kernel. 
+ 
+  In order to use this feature, you have to install the following packages:
+  ```shell
+  pip install ipyparams  # to read the file name of the notebook
+  pip install notebook
+  pip install jupyterlab
+  ```
+  Or use `conda` to install (the `ipyparams` package is only distributed in `PyPI`, 
+  so you have to install it using `pip`):
+  ```shell
+  conda install jupyterlab
+  conda install jupyter notebook
+  ```
+  
+  Try the following command to make sure the `jupyter` command is available. 
+  ```shell
+  jupyter --version
+  ```
 
-Abaqus Executor is an application to run your Abaqus model more fluently,
-check it in [github.com/Haiiliin/pyabaqus-executor](https://github.com/Haiiliin/pyabaqus-executor)
-or check the [documentation](https://executor.haiiliin.com/).
-
-## Quick start
-
-### Installation
+## Installation
 
 `pyabaqus` is using type hints features that require Python 3.9 or a later version, 
 please upgrade it to Python 3.9 or a later version if you are using an earlier version.
@@ -53,42 +71,6 @@ pip install ipyparams
 python setup.py install
 ```
 
-### Write your Abaqus/Python script
+# Explore more
 
-After installing the `pyabaqus` package, you can start writing your own Abaqus/Python script 
-to build your model. You can refer 
-[pyabaqus/tests at main · Haiiliin/pyabaqus](https://github.com/Haiiliin/pyabaqus/tree/main/tests)
-for some tests of the script, for more detailed documentation, please check 
-[pyabaqus documentation](https://haiiliin.com/pyabaqus/).
-
-### Setup your Abaqus Environment
-
-In order to use Abaqus command to execute the Python script and submit the job, you need to tell 
-`pyabaqus` where the Abaqus command located. Usually, Abaqus command locates in a directory like this: 
-```shell
-C:/SIMULIA/Commands/abaqus.bat
-```
-You can add the directory `C:/SIMULIA/Commands` to the system environment variable `Path`, or you can create a new 
-system variable named `ABAQUS_BAT_PATH`, and set the value to the file path of the Abaqus command, i.e., 
-`C:/SIMULIA/Commands/abaqus.bat`.
-
-### Run your Abaqus/Python script
-
-Now you can just run your Abaqus/Python script using your own Python interpreter that `pyabaqus` is installed.
-
-- Create an Abaqus Model
-
-  ![Model](https://github.com/Haiiliin/pyabaqus/blob/main/screenshots/Model.gif "Create an Abaqus Model")
-
-- Extract Output Data
-
-  ![Output](https://github.com/Haiiliin/pyabaqus/blob/main/screenshots/Output.gif "Extract Output Data")
-
-## What next?
-
-You may wonder how does this package work, 
-you can go [pyabaqus documentation: Getting Started](https://pyabaqus.haiiliin.com/getting_started.html) for more detailed introduction and go
-[pyabaqus documentation: Tutorials](https://pyabaqus.haiiliin.com/tutorials.html) for a simple tutorial. For more documentation about 
-Abaqus/Python scripting, please check [pyabaqus documentation: User Manual](https://pyabaqus.haiiliin.com/user.html) for a list of 
-descriptions of objects and methods of Abaqus models, check [pyabaqus documentation: API References](https://pyabaqus.haiiliin.com/references.html) 
-for more detailed API references.
+For detailed usage of this package, please refer the [documentation](https://haiiliin.com/pyabaqus/).
