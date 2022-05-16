@@ -700,7 +700,7 @@ class SessionBase:
     @typing.overload
     def openOdb(self, path: str, readOnly: Boolean = OFF, readInternalSets: Boolean = OFF) -> Odb:
         """This method opens an existing output database (.odb) file and creates a new Odb object.
-        You typically execute this method outside of Abaqus/CAE when, in most cases, only one
+        You typically execute this method outside Abaqus/CAE when, in most cases, only one
         output database is open at any time. For example
         import odbAccess
         shockLoadOdb = odbAccess.openOdb(path='myOdb.odb')
@@ -780,23 +780,18 @@ class SessionBase:
 
     def openOdb(self, name: str, *args, **kwargs) -> Odb:
         """This method opens an existing output database (.odb) file and creates a new Odb object.
-        You typically execute this method outside of Abaqus/CAE when, in most cases, only one
+        You typically execute this method outside Abaqus/CAE when, in most cases, only one
         output database is open at any time. For example
         import odbAccess
         shockLoadOdb = odbAccess.openOdb(path='myOdb.odb')
         
         Parameters
         ----------
-        path
-            A String specifying the path to an existing output database (.odb) file.
-        readOnly
-            A Boolean specifying whether the file will permit only read access or both read and
-            write access. The initial value is False, indicating that both read and write access
-            will be permitted.
-        readInternalSets
-            A Boolean specifying whether the file will permit access to sets specified as Internal
-            on the database. The initial value is False, indicating that internal sets will not be
-            read.
+        name
+            A String specifying the repository key. If the*name* is not the same as the*path* to the
+            output database (.odb) file, the *path* must be specified as well. Additionally, to
+            support backwards compatibility of the interface, if the *name* parameter is omitted,
+            the *path* and *name* will be presumed to be the same.
 
         Returns
         -------
@@ -814,15 +809,8 @@ class SessionBase:
             opened.
         """
         self.odbs[name] = odb = Odb(name, *args, **kwargs)
-
-        abaqus = 'abaqus'
-        if 'ABAQUS_BAT_PATH' in os.environ.keys():
-            abaqus = os.environ['ABAQUS_BAT_PATH']
-        os.system('cd {}'.format(os.path.basename(os.path.abspath(sys.argv[0]))))
-        os.system('{} cae database={} script={}'.format(abaqus, os.path.abspath(name), os.path.abspath(sys.argv[0])))
-        self.exit()
         return odb
 
     @staticmethod
     def exit():
-        sys.exit()
+        os.system('exit')

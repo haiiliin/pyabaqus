@@ -1,6 +1,5 @@
 import os
 import sys
-from threading import Thread
 
 from .Mdb.Mdb import Mdb as AbaqusMdb
 from .Odb.Odb import Odb
@@ -19,20 +18,46 @@ class Mdb(AbaqusMdb):
         abaqus = 'abaqus'
         if 'ABAQUS_BAT_PATH' in os.environ.keys():
             abaqus = os.environ['ABAQUS_BAT_PATH']
-        os.system('cd {}'.format(os.path.basename(os.path.abspath(sys.argv[0]))))
-        os.system('{} cae -noGUI {}'.format(abaqus, os.path.abspath(sys.argv[0])))
-        
+
+        filePath = os.path.abspath(sys.argv[0])
+        fileDir = os.path.dirname(filePath)
+        fileName = os.path.basename(filePath)
+
+        os.system(f'cd {fileDir}')
+        try:  # If it is a jupyter notebook
+            import ipynbname
+            fileName = os.path.basename(ipynbname.path())
+            os.system(f'jupyter nbconvert --to python {fileName}')
+            fileName = fileName.replace('.ipynb', '.py')
+        except:
+            pass
+        os.system(f'{abaqus} cae -noGUI {fileName}')
+
 
 class Session(AbaqusSession):
-    
+
     def openOdb(self, name: str, *args, **kwargs) -> Odb:
         self.odbs[name] = odb = Odb(name, *args, **kwargs)
 
         abaqus = 'abaqus'
         if 'ABAQUS_BAT_PATH' in os.environ.keys():
             abaqus = os.environ['ABAQUS_BAT_PATH']
-        os.system('cd {}'.format(os.path.basename(os.path.abspath(sys.argv[0]))))
-        os.system('{} cae database={} script={}'.format(abaqus, os.path.abspath(name), os.path.abspath(sys.argv[0])))
+
+        filePath = os.path.abspath(sys.argv[0])
+        fileDir = os.path.dirname(filePath)
+        fileName = os.path.basename(filePath)
+        odbName = os.path.basename(os.path.abspath(name))
+
+        os.system(f'cd {fileDir}')
+        try:  # If it is a jupyter notebook
+            import ipynbname
+            fileName = os.path.basename(ipynbname.path())
+            os.system(f'jupyter nbconvert --to python {fileName}')
+            fileName = fileName.replace('.ipynb', '.py')
+        except:
+            pass
+        os.system(f'{abaqus} cae database={odbName} script={fileName}')
+
         self.exit()
         return odb
 
@@ -96,7 +121,7 @@ def submitJobByInputFile(inputFile: str, userSubroutine: str = None, options: st
     absInputFilePath = os.path.abspath(inputFile)
     workDirectory = os.path.dirname(absInputFilePath)
     jobName = os.path.basename(absInputFilePath.replace('.inp', ''))
-    
+
     if userSubroutine is not None:
         commandLine = "{} job={} user={} {}".format(abaqus, jobName, userSubroutine, options)
     else:

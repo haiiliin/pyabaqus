@@ -173,11 +173,7 @@ def openOdb(name: str, path: str = '', readOnly: Boolean = OFF):
 
 
 def openOdb(name: str, *args, **kwargs):
-    abaqus = 'abaqus'
-    if 'ABAQUS_BAT_PATH' in os.environ.keys():
-        abaqus = os.environ['ABAQUS_BAT_PATH']
-    os.system('cd {}'.format(os.path.basename(os.path.abspath(sys.argv[0]))))
-    os.system('{} cae database={} script={}'.format(abaqus, os.path.abspath(name), os.path.abspath(sys.argv[0])))
+    pass
 
 
 def upgradeOdb(existingOdbPath: str, upgradedOdbPath: str):
