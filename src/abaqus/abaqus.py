@@ -27,6 +27,8 @@ class Mdb(AbaqusMdb):
         try:  # If it is a jupyter notebook
             import ipynbname
             fileName = os.path.basename(ipynbname.path())
+            fileDir = os.path.dirname(ipynbname.path())
+            os.system(f'cd {fileDir}')
             os.system(f'jupyter nbconvert --to python {fileName}')
             fileName = fileName.replace('.ipynb', '.py')
         except:
