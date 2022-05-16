@@ -9,10 +9,10 @@ Python script, even without opening the Abaqus/CAE.
 
 ## Other links for this project
 
-- GitHub repository: [github.com/Haiiliin/pyabaqus](https://github.com/Haiiliin/pyabaqus)
-- PyPI: [pyabaqus · PyPI](https://pypi.org/project/pyabaqus/)
-- Anaconda: [pyabaqus](https://anaconda.org/haiiliin/pyabaqus)
-- Documentation: [pyabaqus documentation](https://haiiliin.com/pyabaqus/)
+- GitHub repository: [github.com/haiiliin/pyabaqus](https://github.com/haiiliin/pyabaqus)
+- PyPI: [pypi.org/project/pyabaqus](https://pypi.org/project/pyabaqus/)
+- Anaconda: [anaconda.org/haiiliin/pyabaqus](https://anaconda.org/haiiliin/pyabaqus)
+- Documentation: [haiiliin.com/pyabaqus](https://haiiliin.com/pyabaqus/)
 
 
 ## Related project
