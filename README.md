@@ -65,7 +65,7 @@ C:/SIMULIA/Commands/abaqus.bat
 ```
 You can add the directory `C:/SIMULIA/Commands` to the system environment variable `Path`, or you can create a new 
 system variable named `ABAQUS_BAT_PATH`, and set the value to the file path of the Abaqus command, i.e., 
-`C:/SIMULIA/Commands/abaqus.bat`
+`C:/SIMULIA/Commands/abaqus.bat`.
 
 ### Run your Abaqus/Python script
 
