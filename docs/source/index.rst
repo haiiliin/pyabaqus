@@ -24,6 +24,7 @@ Other links for this project
 
 * GitHub repository: `Haiiliin/pyabaqus: Type hints for Python scripting of Abaqus <https://github.com/Haiiliin/pyabaqus>`_
 * PyPI: `pyabaqus · PyPI <https://pypi.org/project/pyabaqus/>`_
+* Anaconda: `pyabaqus <https://anaconda.org/haiiliin/pyabaqus>`_
 * PDF version of this documentation: `pyabaqus.pdf <https://github.com/Haiiliin/pyabaqus/releases/latest/download/pyabaqus.pdf>`_
 * Abaqus Executor: `executor_setup.exe <https://github.com/Haiiliin/pyabaqus-executor/releases/latest/download/executor_setup.exe>`_
 
