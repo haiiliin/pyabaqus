@@ -1,6 +1,6 @@
 package:
   name: pyabaqus
-  version: 1.0.14
+  version: 1.0.15
 
 build:
   script: python setup.py install --single-version-externally-managed --record=record.txt
@@ -8,13 +8,14 @@ build:
 
 source:
   git_url: https://github.com/haiiliin/pyabaqus.git
-  git_rev: "V1.0.14"
+  git_rev: "V1.0.15"
 
 requirements:
   build:
     - python
   run:
     - python
+    - ipyparams
 
 test:
   import:

@@ -5,7 +5,7 @@ with open("README.md", "r", encoding="utf-8") as fh:
 
 setuptools.setup(
     name="pyabaqus",
-    version="1.0.14",
+    version="1.0.15",
     author="WANG Hailin",
     author_email="hailin.wang@connect.polyu.hk",
     description="Type hints for Abaqus/Python scripting",
@@ -20,6 +20,7 @@ setuptools.setup(
     python_requires='>=3.9',
     package_dir={'': 'src'},
     packages=setuptools.find_packages('src'),
+    install_requires=['ipyparams'],
     py_modules=['abaqusConstants', 'animation', 'annotationToolset', 'assembly', 'caeModules', 'caePrefsAccess',
                 'calibration', 'connectorBehavior', 'customKernel', 'deleteObjectCallback', 'displayGroupMdbToolset',
                 'displayGroupOdbToolset', 'driverUtils', 'field', 'fields', 'inpParser', 'interaction', 'material',
