@@ -84,6 +84,16 @@ You can add the directory `C:/SIMULIA/Commands` to the system environment variab
 system variable named `ABAQUS_BAT_PATH`, and set the value to the file path of the Abaqus command, i.e.,
 `C:/SIMULIA/Commands/abaqus.bat`.
 
+## Screenshots
+
+- Create an Abaqus Model
+
+  ![Model](https://github.com/Haiiliin/pyabaqus/blob/main/screenshots/Model.gif "Create an Abaqus Model")
+
+- Extract Output Data
+
+  ![Output](https://github.com/Haiiliin/pyabaqus/blob/main/screenshots/Output.gif "Extract Output Data")
+
 ## Explore more
 
 For detailed usage of this package, please refer to the [documentation](https://haiiliin.com/pyabaqus/).
