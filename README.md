@@ -19,7 +19,7 @@ Python script, even without opening the Abaqus/CAE.
 - **Jupyter Notebook support (Since V1.0.15)**
   
   You can put your Abaqus/Python script into a Jupyter Notebook.
-  When you run the notebook, the package will transfer the notebook into a plain Python file 
+  When you run the notebook, the package will convert the notebook into a plain Python file 
   with the same name but with `.py` suffix instead of `.ipynb`, and then it will be submitted 
   to Abaqus kernel. 
 
