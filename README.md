@@ -22,26 +22,26 @@ Python script, even without opening the Abaqus/CAE.
   When you run the notebook, the package will transfer the notebook into a plain Python file 
   with the same name but with `.py` suffix instead of `.ipynb`, and then it will be submitted 
   to Abaqus kernel. 
- 
-  In order to use this feature, you have to install the following packages:
-  ```shell
-  pip install ipyparams  # to read the file name of the notebook
-  pip install notebook
-  pip install jupyterlab
-  ```
-  Or use `conda` to install (the `ipyparams` package is only distributed in `PyPI`, 
-  so you have to install it using `pip`):
-  ```shell
-  conda install jupyterlab
-  conda install jupyter notebook
-  ```
-  
-  Try the following command to make sure the `jupyter` command is available. 
-  ```shell
-  jupyter --version
-  ```
 
 ## Installation
+ 
+In order to use the **Jupyter Notebook** feature, you have to install the following packages:
+```shell
+pip install ipyparams  # to read the file name of the notebook
+pip install notebook
+pip install jupyterlab
+```
+Or use `conda` to install (the `ipyparams` package is only distributed in `PyPI`, 
+so you have to install it using `pip`):
+```shell
+conda install jupyterlab
+conda install jupyter notebook
+```
+
+Try the following command to make sure the `jupyter` command is available. 
+```shell
+jupyter --version
+```
 
 `pyabaqus` is using type hints features that require Python 3.9 or a later version, 
 please upgrade it to Python 3.9 or a later version if you are using an earlier version.
@@ -53,10 +53,8 @@ pip install pyabaqus
 ```
 
 `pyabaqus` is also uploaded to [anaconda](https://anaconda.org/haiiliin/pyabaqus), you can use 
-`conda` to install it, since pyabaqus (from V1.0.15) depends on `ipyparams` and it is not distributed to 
-anaconda, you have to use `pip` to install it manually:
+`conda` to install it:
 ```shell
-pip install ipyparams
 conda install -c haiiliin pyabaqus
 ```
 
@@ -67,7 +65,6 @@ the local directory:
 ```shell
 git clone https://github.com/Haiiliin/pyabaqus.git
 cd pyabaqus
-pip install ipyparams
 python setup.py install
 ```
 
