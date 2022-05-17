@@ -71,6 +71,19 @@ cd pyabaqus
 python setup.py install
 ```
 
-# Explore more
+## Setup Abaqus Environment
 
-For detailed usage of this package, please refer the [documentation](https://haiiliin.com/pyabaqus/).
+In order to use Abaqus command to execute the Python script and submit the job, you need to tell
+`pyabaqus` where the Abaqus command is located. Usually, Abaqus command locates in a directory like this:
+
+```
+C:/SIMULIA/Commands/abaqus.bat
+```
+
+You can add the directory `C:/SIMULIA/Commands` to the system environment variable `Path`, or you can create a new
+system variable named `ABAQUS_BAT_PATH`, and set the value to the file path of the Abaqus command, i.e.,
+`C:/SIMULIA/Commands/abaqus.bat`.
+
+## Explore more
+
+For detailed usage of this package, please refer to the [documentation](https://haiiliin.com/pyabaqus/).
