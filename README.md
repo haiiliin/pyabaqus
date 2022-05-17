@@ -23,6 +23,9 @@ Python script, even without opening the Abaqus/CAE.
   with the same name but with `.py` suffix instead of `.ipynb`, and then it will be submitted 
   to Abaqus kernel. 
 
+  Go [github.com/haiiliin/pyabaqus/tree/main/tests](https://github.com/haiiliin/pyabaqus/tree/main/tests/compression)
+  for tests using Jupyter Notebooks to build the Abaqus model.
+
 ## Installation
  
 In order to use the **Jupyter Notebook** feature, you have to install the following packages:
