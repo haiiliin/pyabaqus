@@ -14,6 +14,14 @@ Python script, even without opening the Abaqus/CAE.
 - Anaconda: [anaconda.org/haiiliin/pyabaqus](https://anaconda.org/haiiliin/pyabaqus)
 - Documentation: [haiiliin.com/pyabaqus](https://haiiliin.com/pyabaqus/)
 
+## Pull Requests are Welcome
+
+Since `pyabaqus` is reconstructed from the official Abaqus documentation,
+many of the docstrings are not well formatted, for example, the Raises section, 
+the math equations, the attributes of the objects, due to the limitation of 
+my time, those things are left behind, if anyone is willing to make any 
+contributions, please feel free to create your pull requests.
+
 ## New Features
 
 - **Jupyter Notebook support (Since V1.0.15)**
