@@ -334,7 +334,7 @@ guiPreferences section of the abaqus_2021.gpr file.</p>
 </colgroup>
 <tbody>
 <tr class="row-odd"><td><p><a class="reference internal" href="#abaqus.AbaqusCAEDisplayPreferences.CaeGuiPrefs.CaeGuiPrefs.save" title="abaqus.AbaqusCAEDisplayPreferences.CaeGuiPrefs.CaeGuiPrefs.save"><code class="xref py py-obj docutils literal notranslate"><span class="pre">save</span></code></a>([backupFile])</p></td>
-<td><p>This method saves the guiPreferences section specified in the current <em>fileName</em>.</p></td>
+<td><p>This method saves the guiPreferences section specified in the current <strong>fileName</strong>.</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="#abaqus.AbaqusCAEDisplayPreferences.CaeGuiPrefs.CaeGuiPrefs.saveAs" title="abaqus.AbaqusCAEDisplayPreferences.CaeGuiPrefs.CaeGuiPrefs.saveAs"><code class="xref py py-obj docutils literal notranslate"><span class="pre">saveAs</span></code></a>(fileName)</p></td>
 <td><p>This method saves the guiPreferences settings to the specified location.</p></td>
@@ -344,11 +344,11 @@ guiPreferences section of the abaqus_2021.gpr file.</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="abaqus.AbaqusCAEDisplayPreferences.CaeGuiPrefs.CaeGuiPrefs.save">
 <span class="sig-name descname"><span class="pre">save</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">backupFile</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.BooleanType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/abaqus/AbaqusCAEDisplayPreferences/CaeGuiPrefs.html#CaeGuiPrefs.save"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#abaqus.AbaqusCAEDisplayPreferences.CaeGuiPrefs.CaeGuiPrefs.save" title="Permalink to this definition">#</a></dt>
-<dd><p>This method saves the guiPreferences section specified in the current <em>fileName</em>.</p>
+<dd><p>This method saves the guiPreferences section specified in the current <strong>fileName</strong>.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><dl class="simple">
-<dt><strong>backupFile</strong></dt><dd><p>A Boolean specifying whether Abaqus should save a numbered backup copy of the 
+<dt><strong>backupFile: Boolean</strong></dt><dd><p>A Boolean specifying whether Abaqus should save a numbered backup copy of the 
 preferences file, <em>fileName</em>. Default is True.</p>
 </dd>
 </dl>
@@ -362,7 +362,7 @@ preferences file, <em>fileName</em>. Default is True.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><dl class="simple">
-<dt><strong>fileName</strong></dt><dd><p>A String specifying the path to the preferences file.</p>
+<dt><strong>fileName: str</strong></dt><dd><p>A String specifying the path to the preferences file.</p>
 </dd>
 </dl>
 </dd>
@@ -413,8 +413,8 @@ represents.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><dl class="simple">
-<dt><strong>backupFile</strong></dt><dd><p>A Boolean specifying whether save a numbered backup copy of the preferences file, 
-<em>fileName</em>. Default is True.</p>
+<dt><strong>backupFile: Boolean</strong></dt><dd><p>A Boolean specifying whether save a numbered backup copy of the preferences file, 
+<strong>fileName</strong>. Default is True.</p>
 </dd>
 </dl>
 </dd>
@@ -424,16 +424,21 @@ represents.</p>
 <dt class="sig sig-object py" id="abaqus.AbaqusCAEDisplayPreferences.CaeKerPrefs.CaeKerPrefs.saveAs">
 <span class="sig-name descname"><span class="pre">saveAs</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">fileName</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">directory</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.SymbolicConstantType</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/abaqus/AbaqusCAEDisplayPreferences/CaeKerPrefs.html#CaeKerPrefs.saveAs"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#abaqus.AbaqusCAEDisplayPreferences.CaeKerPrefs.CaeKerPrefs.saveAs" title="Permalink to this definition">#</a></dt>
 <dd><p>This method saves the sessionOptions to the specified location.</p>
-<dl class="field-list simple">
+<dl class="field-list">
 <dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><dl class="simple">
-<dt><strong>fileName</strong></dt><dd><p>A String specifying the path to the preferences file.</p>
+<dd class="field-odd"><dl>
+<dt><strong>fileName: str</strong></dt><dd><p>A String specifying the path to the preferences file.</p>
 </dd>
-<dt><strong>directory</strong></dt><dd><p>A SymbolicConstant specifying the location of the preferences file. Possible values 
-are:CURRENT to open the preferences file in the current directory 
-(caePrefsAccess.CURRENT)HOME to open the preferences file in your home directory 
-(caePrefsAccess.HOME)The default value is HOME. Either <em>fileName</em> or <em>directory</em> must be 
-supplied. The <em>fileName</em> or <em>directory</em> arguments are mutually exclusive.</p>
+<dt><strong>directory: SymbolicConstant</strong></dt><dd><p>A SymbolicConstant specifying the location of the preferences file. Possible values 
+are:</p>
+<ul class="simple">
+<li><p>CURRENT to open the preferences file in the current directory</p></li>
+</ul>
+<p>(caePrefsAccess.CURRENT)
+- HOME to open the preferences file in your home directory 
+(caePrefsAccess.HOME)</p>
+<p>The default value is HOME. Either <strong>fileName</strong> or <strong>directory</strong> must be 
+supplied. The <strong>fileName</strong> or <strong>directory</strong> arguments are mutually exclusive.</p>
 </dd>
 </dl>
 </dd>

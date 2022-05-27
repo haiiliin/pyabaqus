@@ -333,9 +333,9 @@
 <span class="sd">        </span>
 <span class="sd">        Parameters</span>
 <span class="sd">        ----------</span>
-<span class="sd">        backupFile</span>
+<span class="sd">        backupFile: Boolean</span>
 <span class="sd">            A Boolean specifying whether save a numbered backup copy of the preferences file, </span>
-<span class="sd">            *fileName*. Default is True. </span>
+<span class="sd">            **fileName**. Default is True. </span>
 <span class="sd">        """</span>
         <span class="k">pass</span></div>
 
@@ -344,14 +344,19 @@
 <span class="sd">        </span>
 <span class="sd">        Parameters</span>
 <span class="sd">        ----------</span>
-<span class="sd">        fileName</span>
+<span class="sd">        fileName: str</span>
 <span class="sd">            A String specifying the path to the preferences file. </span>
-<span class="sd">        directory</span>
+<span class="sd">        directory: SymbolicConstant</span>
 <span class="sd">            A SymbolicConstant specifying the location of the preferences file. Possible values </span>
-<span class="sd">            are:CURRENT to open the preferences file in the current directory </span>
-<span class="sd">            (caePrefsAccess.CURRENT)HOME to open the preferences file in your home directory </span>
-<span class="sd">            (caePrefsAccess.HOME)The default value is HOME. Either *fileName* or *directory* must be </span>
-<span class="sd">            supplied. The *fileName* or *directory* arguments are mutually exclusive. </span>
+<span class="sd">            are: </span>
+<span class="sd">            </span>
+<span class="sd">            - CURRENT to open the preferences file in the current directory </span>
+<span class="sd">            (caePrefsAccess.CURRENT)</span>
+<span class="sd">            - HOME to open the preferences file in your home directory </span>
+<span class="sd">            (caePrefsAccess.HOME) </span>
+<span class="sd">            </span>
+<span class="sd">            The default value is HOME. Either **fileName** or **directory** must be </span>
+<span class="sd">            supplied. The **fileName** or **directory** arguments are mutually exclusive. </span>
 <span class="sd">        """</span>
         <span class="k">pass</span></div></div>
 </pre></div>
