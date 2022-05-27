@@ -116,21 +116,13 @@ dmypy.json
 # User Defined
 .vscode/
 .idea/
-/docs/rsts/
 /build_dist_wheel.bat
+/install.bat
 /upload.bat
-/create_apidoc.py
 /docs/make-apidoc.bat
 /docs/make-html.bat
 /docs/make-pdf.bat
-/tools/
-/abaqus/attributes.py
 /docs/source/_build/
-/abaqus/code_blokcs.py
-/abaqus/Guess.py
-/abaqus/fix-parameters.py
-/abaqus/noindex.py
-/install.bat
 /src/abaqus/attributes.py
 /src/abaqus/code_blocks.py
 /src/abaqus/fix-parameters.py

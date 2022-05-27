@@ -30,9 +30,9 @@ class CaeKerPrefs:
         
         Parameters
         ----------
-        backupFile
+        backupFile: Boolean
             A Boolean specifying whether save a numbered backup copy of the preferences file, 
-            *fileName*. Default is True. 
+            **fileName**. Default is True. 
         """
         pass
 
@@ -41,13 +41,18 @@ class CaeKerPrefs:
         
         Parameters
         ----------
-        fileName
+        fileName: str
             A String specifying the path to the preferences file. 
-        directory
+        directory: SymbolicConstant
             A SymbolicConstant specifying the location of the preferences file. Possible values 
-            are:CURRENT to open the preferences file in the current directory 
-            (caePrefsAccess.CURRENT)HOME to open the preferences file in your home directory 
-            (caePrefsAccess.HOME)The default value is HOME. Either *fileName* or *directory* must be 
-            supplied. The *fileName* or *directory* arguments are mutually exclusive. 
+            are: 
+            
+            - CURRENT to open the preferences file in the current directory 
+            (caePrefsAccess.CURRENT)
+            - HOME to open the preferences file in your home directory 
+            (caePrefsAccess.HOME) 
+            
+            The default value is HOME. Either **fileName** or **directory** must be 
+            supplied. The **fileName** or **directory** arguments are mutually exclusive. 
         """
         pass

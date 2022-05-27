@@ -1,5 +1,5 @@
 
-def SymbolicConstant(in_str):
+def SymbolicConstant(in_str) -> str:
     """
 
     :param in_str:
