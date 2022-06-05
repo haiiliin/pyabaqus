@@ -11,7 +11,7 @@ setuptools.setup(
     description="Type hints for Abaqus/Python scripting",
     long_description=long_description,
     long_description_content_type="text/markdown",
-    url="https://github.com/haiiliin/.",
+    url="https://github.com/haiiliin/pyabaqus",
     classifiers=[
         "Programming Language :: Python :: 3",
         "License :: OSI Approved :: MIT License",
