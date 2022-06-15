@@ -447,13 +447,10 @@
 <span class="sd">            third sequence specifies a point on the 3-axis.The fourth sequence specifies the </span>
 <span class="sd">            translation of the local coordinate system from the origin to its intended location.For </span>
 <span class="sd">            example, the following sequence moves a part 10 units in the *X*-direction with no </span>
-<span class="sd">            rotation:`localCoordSystem = ((1, 0, 0), (0, 1, 0),                                 (0, </span>
-<span class="sd">            0, 1), (10, 0, 0))`The following sequence moves a part 5 units in the *X*-direction with </span>
-<span class="sd">            rotation:`localCoordSystem = ((0, 1, 0), (1, 0, 0),                                 (0, </span>
-<span class="sd">            0, 1), (5, 0, 0))`transforms a part containing the two points`                           </span>
-<span class="sd">                  Pt1= (1,0,0)                                  Pt2= (2,0,0)                         </span>
-<span class="sd">                    `to`                                 Pt1 = (0, 6, 0)                             </span>
-<span class="sd">                 Pt2 = (0, 7, 0)                                                      ` </span>
+<span class="sd">            rotation: `localCoordSystem = ((1, 0, 0), (0, 1, 0), (0, 0, 1), (10, 0, 0))`The following </span>
+<span class="sd">            sequence moves a part 5 units in the *X*-direction with rotation: </span>
+<span class="sd">            `localCoordSystem = ((0, 1, 0), (1, 0, 0), (0, 0, 1), (5, 0, 0))` transforms a part </span>
+<span class="sd">            containing the two points `Pt1= (1,0,0) Pt2= (2,0,0)` to `Pt1 = (0, 6, 0) Pt2 = (0, 7, 0)` </span>
 
 <span class="sd">        Returns</span>
 <span class="sd">        -------</span>

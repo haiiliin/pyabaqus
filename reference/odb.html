@@ -3309,18 +3309,17 @@ system.</p>
 </dd>
 <dt><strong>object</strong></dt><dd><p>An OdbPart object.</p>
 </dd>
-<dt><strong>localCoordSystem</strong></dt><dd><p>A sequence of sequences of three Floats specifying the rotation and translation of the
-part instance in the global Cartesian coordinate system. The first three sequences
-specify the new local coordinate system with its center at the origin.The first sequence
-specifies a point on the 1-axis.The second sequence specifies a point on the 2-axis.The
-third sequence specifies a point on the 3-axis.The fourth sequence specifies the
-translation of the local coordinate system from the origin to its intended location.For
-example, the following sequence moves a part 10 units in the <em>X</em>-direction with no
-rotation:<cite>localCoordSystem = ((1, 0, 0), (0, 1, 0),(0,0, 1), (10, 0, 0))</cite>
-The following sequence moves a part 5 units in the <em>X</em>-direction with
-rotation:<cite>localCoordSystem = ((0, 1, 0), (1, 0, 0),(0, 0, 1), (5, 0, 0))</cite>
-transforms a part containing the two points
-Pt1= (1,0,0) Pt2= (2,0,0) <cite>to</cite> Pt1 = (0, 6, 0) Pt2 = (0, 7, 0)                                                      `</p>
+<dt><strong>localCoordSystem</strong></dt><dd><p>A sequence of sequences of three Floats specifying the rotation and translation of the 
+part instance in the global Cartesian coordinate system. The first three sequences 
+specify the new local coordinate system with its center at the origin.The first sequence 
+specifies a point on the 1-axis.The second sequence specifies a point on the 2-axis.The 
+third sequence specifies a point on the 3-axis.The fourth sequence specifies the 
+translation of the local coordinate system from the origin to its intended location.For 
+example, the following sequence moves a part 10 units in the <em>X</em>-direction with no 
+rotation:<cite>localCoordSystem = ((1, 0, 0), (0, 1, 0), (0, 0, 1), (10, 0, 0))`The following 
+sequence moves a part 5 units in the *X*-direction with rotation: 
+`localCoordSystem = ((0, 1, 0), (1, 0, 0), (0, 0, 1), (5, 0, 0))`transforms a part 
+containing the two points`Pt1= (1,0,0) Pt2= (2,0,0)</cite> to <cite>Pt1 = (0, 6, 0) Pt2 = (0, 7, 0)</cite></p>
 </dd>
 </dl>
 </dd>
@@ -3919,9 +3918,9 @@ is a String representing an output variable.</p>
 <dt class="sig sig-object py" id="abaqus.Odb.OdbInstance.OdbInstance">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">OdbInstance</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">object</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#abaqus.Odb.OdbPart.OdbPart" title="abaqus.Odb.OdbPart.OdbPart"><span class="pre">abaqus.Odb.OdbPart.OdbPart</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">localCoordSystem</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">tuple</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">()</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/abaqus/Odb/OdbInstance.html#OdbInstance"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#abaqus.Odb.OdbInstance.OdbInstance" title="Permalink to this definition">#</a></dt>
 <dd><p>This method creates an OdbInstance object from an OdbPart object.</p>
-<dl class="field-list">
+<dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><dl>
+<dd class="field-odd"><dl class="simple">
 <dt><strong>name</strong></dt><dd><p>A String specifying the instance name.</p>
 </dd>
 <dt><strong>object</strong></dt><dd><p>An OdbPart object.</p>
@@ -3933,19 +3932,10 @@ specifies a point on the 1-axis.The second sequence specifies a point on the 2-a
 third sequence specifies a point on the 3-axis.The fourth sequence specifies the 
 translation of the local coordinate system from the origin to its intended location.For 
 example, the following sequence moves a part 10 units in the <em>X</em>-direction with no 
-rotation:<cite>localCoordSystem = ((1, 0, 0), (0, 1, 0),                                 (0, 
-0, 1), (10, 0, 0))`The following sequence moves a part 5 units in the *X*-direction with 
-rotation:`localCoordSystem = ((0, 1, 0), (1, 0, 0),                                 (0, 
-0, 1), (5, 0, 0))`transforms a part containing the two points</cite></p>
-<blockquote>
-<div><blockquote>
-<div><dl class="simple">
-<dt>Pt1= (1,0,0)                                  Pt2= (2,0,0)                         </dt><dd><p><cite>to</cite>                                 Pt1 = (0, 6, 0)</p>
-</dd>
-</dl>
-</div></blockquote>
-<p>Pt2 = (0, 7, 0)                                                      `</p>
-</div></blockquote>
+rotation: <cite>localCoordSystem = ((1, 0, 0), (0, 1, 0), (0, 0, 1), (10, 0, 0))`The following 
+sequence moves a part 5 units in the *X*-direction with rotation: 
+`localCoordSystem = ((0, 1, 0), (1, 0, 0), (0, 0, 1), (5, 0, 0))</cite> transforms a part 
+containing the two points <cite>Pt1= (1,0,0) Pt2= (2,0,0)</cite> to <cite>Pt1 = (0, 6, 0) Pt2 = (0, 7, 0)</cite></p>
 </dd>
 </dl>
 </dd>
@@ -4153,9 +4143,9 @@ instance has been changed at this frame.The default value is PROPAGATED.</p>
 </table>
 </div>
 <p>This method creates an OdbInstance object from an OdbPart object.</p>
-<dl class="field-list">
+<dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><dl>
+<dd class="field-odd"><dl class="simple">
 <dt><strong>name</strong></dt><dd><p>A String specifying the instance name.</p>
 </dd>
 <dt><strong>object</strong></dt><dd><p>An OdbPart object.</p>
@@ -4167,19 +4157,10 @@ specifies a point on the 1-axis.The second sequence specifies a point on the 2-a
 third sequence specifies a point on the 3-axis.The fourth sequence specifies the 
 translation of the local coordinate system from the origin to its intended location.For 
 example, the following sequence moves a part 10 units in the <em>X</em>-direction with no 
-rotation:<cite>localCoordSystem = ((1, 0, 0), (0, 1, 0),                                 (0, 
-0, 1), (10, 0, 0))`The following sequence moves a part 5 units in the *X*-direction with 
-rotation:`localCoordSystem = ((0, 1, 0), (1, 0, 0),                                 (0, 
-0, 1), (5, 0, 0))`transforms a part containing the two points</cite></p>
-<blockquote>
-<div><blockquote>
-<div><dl class="simple">
-<dt>Pt1= (1,0,0)                                  Pt2= (2,0,0)                         </dt><dd><p><cite>to</cite>                                 Pt1 = (0, 6, 0)</p>
-</dd>
-</dl>
-</div></blockquote>
-<p>Pt2 = (0, 7, 0)                                                      `</p>
-</div></blockquote>
+rotation: <cite>localCoordSystem = ((1, 0, 0), (0, 1, 0), (0, 0, 1), (10, 0, 0))`The following 
+sequence moves a part 5 units in the *X*-direction with rotation: 
+`localCoordSystem = ((0, 1, 0), (1, 0, 0), (0, 0, 1), (5, 0, 0))</cite> transforms a part 
+containing the two points <cite>Pt1= (1,0,0) Pt2= (2,0,0)</cite> to <cite>Pt1 = (0, 6, 0) Pt2 = (0, 7, 0)</cite></p>
 </dd>
 </dl>
 </dd>

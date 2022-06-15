@@ -3433,32 +3433,47 @@ OFF.</p>
 behavior option.</p>
 <p class="rubric">Notes</p>
 <p>This object can be accessed by:</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span>import section
-mdb.models[name].sections[name].behaviorOptions[i].tangentialBehavior
-import odbSection
-session.odbs[name].sections[name].behaviorOptions[i].tangentialBehavior
-
-The table data for this object are:
-
-- If *formulation*=PENALTY, the table data specify the following:
-    - Friction coefficient in the slip direction, μμ.
-    - Slip rate, if the data depend on slip rate.
-    - Contact pressure, if the data depend on contact pressure.
-    - Temperature, if the data depend on temperature.
-    - Value of the first field variable, if the data depend on field variables.
-    - Value of the second field variable.
-    - Etc.
-- If *formulation*=EXPONENTIAL_DECAY and *exponentialDecayDefinition*=COEFFICIENTS, the table data specify the following:
-    - Static friction coefficient, μsμs.
-    - Kinetic friction coefficient, μkμk.
-    - Decay coefficient, dcdc.
-- If *formulation*=EXPONENTIAL_DECAY and *exponentialDecayDefinition*=TEST_DATA, the table data specify the following:
-    - Static coefficient of friction.
-    - Dynamic friction coefficient measured at the reference slip rate, ˙γ2γ˙2.
-    - Reference slip rate, ˙γ2γ˙2, used to measure the dynamic friction coefficient.
-    - Kinetic friction coefficient, μ∞μ∞. This value corresponds to the asymptotic value of the friction coefficient at infinite slip rate, ˙γ∞γ˙∞.
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">section</span>
+<span class="n">mdb</span><span class="o">.</span><span class="n">models</span><span class="p">[</span><span class="n">name</span><span class="p">]</span><span class="o">.</span><span class="n">sections</span><span class="p">[</span><span class="n">name</span><span class="p">]</span><span class="o">.</span><span class="n">behaviorOptions</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">.</span><span class="n">tangentialBehavior</span>
+<span class="kn">import</span> <span class="nn">odbSection</span>
+<span class="n">session</span><span class="o">.</span><span class="n">odbs</span><span class="p">[</span><span class="n">name</span><span class="p">]</span><span class="o">.</span><span class="n">sections</span><span class="p">[</span><span class="n">name</span><span class="p">]</span><span class="o">.</span><span class="n">behaviorOptions</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">.</span><span class="n">tangentialBehavior</span>
 </pre></div>
 </div>
+<p>The table data for this object are:</p>
+<ul class="simple">
+<li><dl class="simple">
+<dt>If <a href="#id397"><span class="problematic" id="id398">*</span></a>formulation*=PENALTY, the table data specify the following:</dt><dd><ul>
+<li><p>Friction coefficient in the slip direction, μμ.</p></li>
+<li><p>Slip rate, if the data depend on slip rate.</p></li>
+<li><p>Contact pressure, if the data depend on contact pressure.</p></li>
+<li><p>Temperature, if the data depend on temperature.</p></li>
+<li><p>Value of the first field variable, if the data depend on field variables.</p></li>
+<li><p>Value of the second field variable.</p></li>
+<li><p>Etc.</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>If <a href="#id399"><span class="problematic" id="id400">*</span></a>formulation*=EXPONENTIAL_DECAY and <a href="#id401"><span class="problematic" id="id402">*</span></a>exponentialDecayDefinition*=COEFFICIENTS, the table data specify the following:</dt><dd><ul>
+<li><p>Static friction coefficient, μsμs.</p></li>
+<li><p>Kinetic friction coefficient, μkμk.</p></li>
+<li><p>Decay coefficient, dcdc.</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>If <a href="#id403"><span class="problematic" id="id404">*</span></a>formulation*=EXPONENTIAL_DECAY and <a href="#id405"><span class="problematic" id="id406">*</span></a>exponentialDecayDefinition*=TEST_DATA, the table data specify the following:</dt><dd><ul>
+<li><p>Static coefficient of friction.</p></li>
+<li><p>Dynamic friction coefficient measured at the reference slip rate, ˙γ2γ˙2.</p></li>
+<li><p>Reference slip rate, ˙γ2γ˙2, used to measure the dynamic friction coefficient.</p></li>
+<li><p>Kinetic friction coefficient, μ∞μ∞. This value corresponds to the asymptotic value of the friction coefficient at infinite slip rate, ˙γ∞γ˙∞.</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
 <p>The corresponding analysis keywords are:</p>
 <ul class="simple">
 <li><p>FRICTION</p></li>

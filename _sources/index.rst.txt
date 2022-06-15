@@ -100,14 +100,14 @@ Now you can just run your Abaqus/Python script using your own Python interpreter
 
 - Create an Abaqus Model
 
-.. image:: images/Model.gif
+.. image:: images/model-code.*
     :width: 100%
     :align: center
     :alt: Create an Abaqus Model
 
 - Extract Output Data
 
-.. image:: images/Output.gif
+.. image:: images/output-code.*
     :width: 100%
     :align: center
     :alt: Extract Output Data

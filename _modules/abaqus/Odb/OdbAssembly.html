@@ -502,18 +502,17 @@
 <span class="sd">        object</span>
 <span class="sd">            An OdbPart object.</span>
 <span class="sd">        localCoordSystem</span>
-<span class="sd">            A sequence of sequences of three Floats specifying the rotation and translation of the</span>
-<span class="sd">            part instance in the global Cartesian coordinate system. The first three sequences</span>
-<span class="sd">            specify the new local coordinate system with its center at the origin.The first sequence</span>
-<span class="sd">            specifies a point on the 1-axis.The second sequence specifies a point on the 2-axis.The</span>
-<span class="sd">            third sequence specifies a point on the 3-axis.The fourth sequence specifies the</span>
-<span class="sd">            translation of the local coordinate system from the origin to its intended location.For</span>
-<span class="sd">            example, the following sequence moves a part 10 units in the *X*-direction with no</span>
-<span class="sd">            rotation:`localCoordSystem = ((1, 0, 0), (0, 1, 0),(0,0, 1), (10, 0, 0))`</span>
-<span class="sd">            The following sequence moves a part 5 units in the *X*-direction with</span>
-<span class="sd">            rotation:`localCoordSystem = ((0, 1, 0), (1, 0, 0),(0, 0, 1), (5, 0, 0))`</span>
-<span class="sd">            transforms a part containing the two points</span>
-<span class="sd">            Pt1= (1,0,0) Pt2= (2,0,0) `to` Pt1 = (0, 6, 0) Pt2 = (0, 7, 0)                                                      `</span>
+<span class="sd">            A sequence of sequences of three Floats specifying the rotation and translation of the </span>
+<span class="sd">            part instance in the global Cartesian coordinate system. The first three sequences </span>
+<span class="sd">            specify the new local coordinate system with its center at the origin.The first sequence </span>
+<span class="sd">            specifies a point on the 1-axis.The second sequence specifies a point on the 2-axis.The </span>
+<span class="sd">            third sequence specifies a point on the 3-axis.The fourth sequence specifies the </span>
+<span class="sd">            translation of the local coordinate system from the origin to its intended location.For </span>
+<span class="sd">            example, the following sequence moves a part 10 units in the *X*-direction with no </span>
+<span class="sd">            rotation:`localCoordSystem = ((1, 0, 0), (0, 1, 0), (0, 0, 1), (10, 0, 0))`The following </span>
+<span class="sd">            sequence moves a part 5 units in the *X*-direction with rotation: </span>
+<span class="sd">            `localCoordSystem = ((0, 1, 0), (1, 0, 0), (0, 0, 1), (5, 0, 0))`transforms a part </span>
+<span class="sd">            containing the two points`Pt1= (1,0,0) Pt2= (2,0,0)` to `Pt1 = (0, 6, 0) Pt2 = (0, 7, 0)` </span>
 
 <span class="sd">        Returns</span>
 <span class="sd">        -------</span>
