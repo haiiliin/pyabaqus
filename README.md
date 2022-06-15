@@ -1,6 +1,6 @@
 # pyabaqus
 
-![Maintainer](https://img.shields.io/badge/maintainer-haiiliin-blue)
+[![Maintainer](https://img.shields.io/badge/maintainer-haiiliin-blue)](https://github.com/haiiliin)
 [![Documentation Status](https://readthedocs.org/projects/pyabaqus/badge/?version=latest)](https://pyabaqus.haiiliin.com/en/latest/?badge=latest)
 [![PyPI license](https://img.shields.io/pypi/l/ansicolortags.svg)](https://pypi.python.org/pypi/ansicolortags/)
 [![PyPI pyversions](https://img.shields.io/pypi/pyversions/pyabaqus.svg)](https://pypi.python.org/pypi/pyabaqus/)
