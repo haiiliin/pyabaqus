@@ -18,7 +18,7 @@
 # -- Project information -----------------------------------------------------
 
 
-project = 'pyabaqus'
+project = 'PYABAQUS'
 copyright = '2022, WANG Hailin'
 author = 'WANG Hailin'
 
