@@ -1,7 +1,4 @@
+ipyparams
 furo
-numpy
-numpydoc
-PyQt5
 sphinx_rtd_theme
 sphinx-toolbox
-sphinxcontrib-bibtex
