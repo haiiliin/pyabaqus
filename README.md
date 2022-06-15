@@ -12,7 +12,7 @@ Python script, even without opening the Abaqus/CAE.
 - GitHub repository: [github.com/haiiliin/pyabaqus](https://github.com/haiiliin/pyabaqus)
 - PyPI: [pypi.org/project/pyabaqus](https://pypi.org/project/pyabaqus/)
 - Anaconda: [anaconda.org/haiiliin/pyabaqus](https://anaconda.org/haiiliin/pyabaqus)
-- Documentation: [haiiliin.com/pyabaqus](https://haiiliin.com/pyabaqus/)
+- Documentation: [pyabaqus.readthedocs.io](https://pyabaqus.readthedocs.io/en/latest/)
 
 ## Pull Requests are Welcome
 
