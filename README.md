@@ -62,7 +62,7 @@ pip install pyabaqus
 conda install -c haiiliin pyabaqus
 ```
 
-## Optional Requirements
+## Optional Installations
  
 In order to use the **Jupyter Notebook** feature, you have to install the following packages:
 ```shell
