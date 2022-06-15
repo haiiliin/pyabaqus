@@ -75,10 +75,6 @@ class ContourOptions(DGContourOptions):
     spectrum: str
         A String specifying the name of the color spectrum to be used in the contour plot. The
         default value is "Rainbow".
-    reversedContourLegendRange: Boolean
-        A Boolean specifying whether the contour legend should show the lowest value at the top
-        and the highest value at the bottom (**reversedContourLegendRange=ON**) or vice versa. The
-        default value is OFF.
     intervalValues: float
         A tuple of Floats specifying the interval values when **intervalType=USER_DEFINED**.
     contourMethod: SymbolicConstant
@@ -234,11 +230,6 @@ class ContourOptions(DGContourOptions):
     # default value is "Rainbow". 
     spectrum: str = ''
 
-    # A Boolean specifying whether the contour legend should show the lowest value at the top 
-    # and the highest value at the bottom (*reversedContourLegendRange*=ON) or vice versa. The 
-    # default value is OFF. 
-    reversedContourLegendRange: Boolean = OFF
-
     # A tuple of Floats specifying the interval values when *intervalType*=USER_DEFINED. 
     intervalValues: float = None
 
@@ -325,7 +316,7 @@ class ContourOptions(DGContourOptions):
                   maxAutoCompute: Boolean = ON, maxValue: float = None, minAutoCompute: Boolean = ON,
                   minValue: float = None, animationAutoLimits: SymbolicConstant = ALL_FRAMES,
                   edgeColorLine: str = '', edgeColorBandedQuilt: str = '', spectrum: str = '',
-                  reversedContourLegendRange: Boolean = OFF, outsideLimitsMode: SymbolicConstant = None,
+                  outsideLimitsMode: SymbolicConstant = None,
                   outsideLimitsAboveColor: str = '', outsideLimitsBelowColor: str = '',
                   intervalLineAttributes: SymbolicConstant = None, contourEdges: Boolean = OFF,
                   contourEdgeColor: str = '', contourEdgeStyle: SymbolicConstant = SOLID,
@@ -389,11 +380,7 @@ class ContourOptions(DGContourOptions):
             default value is "Black". 
         spectrum
             A String specifying the name of the color spectrum to be used in the contour plot. The 
-            default value is "Rainbow". 
-        reversedContourLegendRange
-            A Boolean specifying whether the contour legend should show the lowest value at the top 
-            and the highest value at the bottom (*reversedContourLegendRange*=ON) or vice versa. The 
-            default value is OFF. 
+            default value is "Rainbow".
         outsideLimitsMode
             A SymbolicConstant specifying the color of contour values that exceed the limits of the 
             plot. Possible values are SPECTRUM and SPECIFY.When *outsideLimitsMode*=SPECTRUM, the 

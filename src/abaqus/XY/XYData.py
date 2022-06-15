@@ -506,8 +506,7 @@ class XYData:
 
     def XYDataFromPath(self, path: Path, name: str, includeIntersections: Boolean, shape: SymbolicConstant,
                        pathStyle: SymbolicConstant, numIntervals: int, labelType: SymbolicConstant,
-                       viewport: str = '', removeDuplicateXYPairs: Boolean = True,
-                       includeAllElements: Boolean = False, step: int = None, frame: int = None,
+                       viewport: str = '', step: int = None, frame: int = None,
                        variable: SymbolicConstant = None, deformedMag: float = None,
                        numericForm: SymbolicConstant = REAL, complexAngle: float = 0,
                        projectOntoMesh: Boolean = False, projectionTolerance: float = 0):
@@ -546,13 +545,7 @@ class XYData:
             X_COORDINATE, Y_COORDINATE and Z_COORDINATE. 
         viewport
             A String specifying the viewport name or an Int specifying the viewport id from which to 
-            obtain values. The default is the current viewport. 
-        removeDuplicateXYPairs
-            A Boolean specifying whether to remove duplicate XY values from the final result. The 
-            default value is True. 
-        includeAllElements
-            A Boolean specifying whether to include elements which do not lie in the direction of 
-            the path. The default value is False. 
+            obtain values. The default is the current viewport.
         step
             An Int identifying the step from which to obtain values. The default value is the 
             current step. 

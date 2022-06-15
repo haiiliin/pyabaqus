@@ -40,9 +40,6 @@ class ViewCut:
         A Boolean specifying whether the cut is displayed.
     cutRange: tuple[float]
         A pair of Floats specifying the acceptable range for positioning the cut.
-    crossSectionalArea: float
-        A Float returning the cross-sectional area of the cut when **showFreeBodyCut** is set to
-        ON.
 
     Notes
     -----
@@ -96,10 +93,6 @@ class ViewCut:
 
     # A pair of Floats specifying the acceptable range for positioning the cut. 
     cutRange: tuple[float] = ()
-
-    # A Float returning the cross-sectional area of the cut when *showFreeBodyCut* is set to 
-    # ON. 
-    crossSectionalArea: float = None
 
     def __init__(self, name: str, shape: SymbolicConstant, origin: tuple,
                  normal: typing.Union[SymbolicConstant, float],

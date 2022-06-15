@@ -99,28 +99,6 @@ class MeshElementArray(list[MeshElement]):
         """
         pass
 
-    def getExteriorEdges(self):
-        """This method returns the exterior element edges for 2D/shell elements in the
-        MeshElementArray. These are edges referenced by exactly one element in the sequence.
-        Nothing is returned if the sequence contains no topologically 2D/shell elements.
-
-        Returns
-        -------
-            A MeshEdgeArray object specifying the element edges on the exterior.
-        """
-        pass
-
-    def getExteriorFaces(self):
-        """This method returns the exterior element faces for solid elements in the
-        MeshElementArray. These are faces referenced by exactly one element in the sequence.
-        Nothing is returned if the sequence contains no topologically solid elements.
-
-        Returns
-        -------
-            A MeshFaceArray object specifying the element faces on the exterior.
-        """
-        pass
-
     def getByBoundingBox(self, xMin: str = '', yMin: str = '', zMin: str = '', xMax: str = '', yMax: str = '',
                          zMax: str = ''):
         """This method returns an array of element objects that lie within the specified bounding

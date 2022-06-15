@@ -48,12 +48,6 @@ class TempDisplacementDynamicsStep(AnalysisStep):
     quadBulkViscosity: float
         A Float specifying the quadratic bulk viscosity parameter, b2b2. The default value is
         1.2.
-    improvedDtMethod: Boolean
-        A Boolean specifying whether to use the "improved" (**improvedDtMethod=ON**) or
-        "conservative" (**improvedDtMethod=OFF**) method to estimate the element stable time
-        increment for three-dimensional continuum elements and elements with plane stress
-        formulations (shell, membrane, and two-dimensional plane stress elements). The default
-        value is ON.
     previous: str
         A String specifying the name of the previous step. The new step appears after this step
         in the list of analysis steps.
@@ -181,13 +175,6 @@ class TempDisplacementDynamicsStep(AnalysisStep):
     # 1.2. 
     quadBulkViscosity: float = 1
 
-    # A Boolean specifying whether to use the "improved" (*improvedDtMethod*=ON) or 
-    # "conservative" (*improvedDtMethod*=OFF) method to estimate the element stable time 
-    # increment for three-dimensional continuum elements and elements with plane stress 
-    # formulations (shell, membrane, and two-dimensional plane stress elements). The default 
-    # value is ON. 
-    improvedDtMethod: Boolean = ON
-
     # A String specifying the name of the previous step. The new step appears after this step 
     # in the list of analysis steps. 
     previous: str = ''
@@ -288,8 +275,7 @@ class TempDisplacementDynamicsStep(AnalysisStep):
                  nlgeom: Boolean = OFF, timeIncrementationMethod: SymbolicConstant = AUTOMATIC_GLOBAL,
                  maxIncrement: float = None, scaleFactor: float = 1, userDefinedInc: float = None,
                  massScaling: MassScalingArray = PREVIOUS_STEP, linearBulkViscosity: float = 0,
-                 quadBulkViscosity: float = 1, maintainAttributes: Boolean = False,
-                 improvedDtMethod: Boolean = ON):
+                 quadBulkViscosity: float = 1, maintainAttributes: Boolean = False):
         """This method creates a TempDisplacementDynamicsStep object.
 
         Notes
@@ -337,13 +323,7 @@ class TempDisplacementDynamicsStep(AnalysisStep):
             1.2. 
         maintainAttributes
             A Boolean specifying whether to retain attributes from an existing step with the same 
-            name. The default value is False. 
-        improvedDtMethod
-            A Boolean specifying whether to use the "improved" (*improvedDtMethod*=ON) or 
-            "conservative" (*improvedDtMethod*=OFF) method to estimate the element stable time 
-            increment for three-dimensional continuum elements and elements with plane stress 
-            formulations (shell, membrane, and two-dimensional plane stress elements). The default 
-            value is ON. 
+            name. The default value is False.
 
         Returns
         -------
@@ -360,7 +340,7 @@ class TempDisplacementDynamicsStep(AnalysisStep):
                   timeIncrementationMethod: SymbolicConstant = AUTOMATIC_GLOBAL,
                   maxIncrement: float = None, scaleFactor: float = 1, userDefinedInc: float = None,
                   massScaling: MassScalingArray = PREVIOUS_STEP, linearBulkViscosity: float = 0,
-                  quadBulkViscosity: float = 1, improvedDtMethod: Boolean = ON):
+                  quadBulkViscosity: float = 1):
         """This method modifies the TempDisplacementDynamicsStep object.
         
         Parameters
@@ -392,13 +372,7 @@ class TempDisplacementDynamicsStep(AnalysisStep):
             A Float specifying the linear bulk viscosity parameter, b1b1. The default value is 0.06. 
         quadBulkViscosity
             A Float specifying the quadratic bulk viscosity parameter, b2b2. The default value is 
-            1.2. 
-        improvedDtMethod
-            A Boolean specifying whether to use the "improved" (*improvedDtMethod*=ON) or 
-            "conservative" (*improvedDtMethod*=OFF) method to estimate the element stable time 
-            increment for three-dimensional continuum elements and elements with plane stress 
-            formulations (shell, membrane, and two-dimensional plane stress elements). The default 
-            value is ON.
+            1.2.
 
         Raises
         ------

@@ -318,9 +318,9 @@ class LoadModel(ModelBase):
                                                amplitude)
         return load
 
-    def BoltLoad(self, name: str, createStepName: str, region: Region, magnitude: float,
-                 boltMethod: SymbolicConstant = APPLY_FORCE, datumAxis: DatumAxis = DatumAxis(),
-                 amplitude: str = UNSET, preTenSecPartLevel: Boolean = False) -> BoltLoad:
+    def BoltLoad(self, name: str, createStepName: str, region: Region, magnitude: float, datumAxis: DatumAxis,
+                 boltMethod: SymbolicConstant = APPLY_FORCE,
+                 amplitude: str = UNSET) -> BoltLoad:
         """This method creates a BoltLoad object.
 
         Notes
@@ -342,22 +342,17 @@ class LoadModel(ModelBase):
             A Region object specifying the region to which the load is applied.
         magnitude
             A Float specifying the bolt load magnitude.
-        boltMethod
-            A SymbolicConstant specifying the method of applying the bolt load. Possible values are
-            APPLY_FORCE and ADJUST_LENGTH. The default value is APPLY_FORCE.
         datumAxis
             A DatumAxis object specifying the orientation of the pre-tension section normal.Note:
             *datumAxis* is applicable only for Solid and Shell regions; it has no meaning for Wire
             regions.
+        boltMethod
+            A SymbolicConstant specifying the method of applying the bolt load. Possible values are
+            APPLY_FORCE and ADJUST_LENGTH. The default value is APPLY_FORCE.
         amplitude
             A String or the SymbolicConstant UNSET specifying the name of the amplitude reference.
             UNSET should be used if the load has no amplitude reference. The default value is UNSET.
             You should provide the *amplitude* argument only if it is valid for the specified step.
-        preTenSecPartLevel
-            A Boolean specifying whether the pre-tension section is to be defined at the part level.
-            The default value is False. You should provide the *preTenSecPartLevel* argument only if
-            the selected region belongs to a dependent part instance. A pre-tension section cannot
-            be defined at the part level for independent and model instances.
 
         Returns
         -------
@@ -367,8 +362,7 @@ class LoadModel(ModelBase):
         ------
             TextError.
         """
-        self.loads[name] = load = BoltLoad(name, createStepName, region, magnitude, boltMethod, datumAxis, amplitude,
-                                           preTenSecPartLevel)
+        self.loads[name] = load = BoltLoad(name, createStepName, region, magnitude, datumAxis, boltMethod, amplitude)
         return load
 
     def ConcCharge(self, name: str, createStepName: str, region: Region, magnitude: float,

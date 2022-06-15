@@ -202,30 +202,6 @@ GasketTransverseShearElastic
 
 .. autoclass:: abaqus.Material.Gasket.GasketTransverseShearElastic.GasketTransverseShearElastic
 
-Multiscale
-~~~~~~~~~~
-
-
-MeanFieldHomogenization
-***********************
-
-.. autoclass:: abaqus.Material.Multiscale.MeanFieldHomogenization.MeanFieldHomogenization
-
-MeanFieldInclusion
-******************
-
-.. autoclass:: abaqus.Material.Multiscale.MeanFieldInclusion.MeanFieldInclusion
-
-MeanFieldMatrix
-***************
-
-.. autoclass:: abaqus.Material.Multiscale.MeanFieldMatrix.MeanFieldMatrix
-
-MeanFieldVoid
-*************
-
-.. autoclass:: abaqus.Material.Multiscale.MeanFieldVoid.MeanFieldVoid
-
 Others
 ~~~~~~
 

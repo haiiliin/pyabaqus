@@ -765,7 +765,7 @@ class SectionModel(ModelBase):
                                                                 nodalThicknessField)
         return section
 
-    def HomogeneousSolidSection(self, name: str, material: str, thickness: float = 1) -> HomogeneousSolidSection:
+    def HomogeneousSolidSection(self, name: str, material: str, thickness: float = None) -> HomogeneousSolidSection:
         """This method creates a HomogeneousSolidSection object.
 
         Notes
@@ -784,8 +784,8 @@ class SectionModel(ModelBase):
         material
             A String specifying the name of the material.
         thickness
-            A Float specifying the thickness of the section. Possible values are None or greater
-            than zero. The default value is 1.0.
+            None or a Float specifying the thickness of the section. Possible values
+            are None or a floating point value such that thickness >  0.0. The default value is None.
 
         Returns
         -------

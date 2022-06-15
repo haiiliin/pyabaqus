@@ -62,10 +62,6 @@ class Drawing:
     pointColor: float
         A tuple of three Floats specifying the **Red**, **Green**, and **Blue** component values for
         the point color. Possible values for each component are between 0.0 and 1.0.
-    depthTest: Boolean
-        A Boole:py:class:`~.an` specifying whe:py:class:`~.the`r :py:class:`~.an` object's depth will be considered during rendering. The
-        default value is ON.When OFF, :py:class:`~.the` object will not be hidden by o:py:class:`~.the`r objects in front of
-        it.
 
     Notes
     -----
@@ -144,11 +140,6 @@ class Drawing:
     # A tuple of three Floats specifying the *Red*, *Green*, and *Blue* component values for 
     # the point color. Possible values for each component are between 0.0 and 1.0. 
     pointColor: float = None
-
-    # A Boolean specifying whether an object's depth will be considered during rendering. The 
-    # default value is ON.When OFF, the object will not be hidden by other objects in front of 
-    # it. 
-    depthTest: Boolean = ON
 
     def __init__(self, name: str):
         """This method creates an empty Drawing object.
@@ -395,7 +386,7 @@ class Drawing:
     def setValues(self, show: Boolean = OFF, cullBackfaces: Boolean = OFF,
                   frontFaceOrder: SymbolicConstant = CCW, smoothShade: Boolean = ON,
                   edgesInShaded: Boolean = ON, translucency: float = 1, lineSize: float = 0,
-                  pointSize: float = 0, depthTest: Boolean = ON):
+                  pointSize: float = 0):
         """This method modifies the rendering of the Drawing object.
         
         Parameters
@@ -439,11 +430,7 @@ class Drawing:
             values are 0.0 ≤ *lineSize* ≤ 5.0 with 0.0 being interpreted as the smallest possible 
             point. The default value is 0.0.A value of 0.0 will be one pixel on the output device. 
             One pixel on the screen is generally visible but one pixel on a 1200 DPI printer may not 
-            be clear. 
-        depthTest
-            A Boolean specifying whether an object's depth will be considered during rendering. The 
-            default value is ON.When OFF, the object will not be hidden by other objects in front of 
-            it.
+            be clear.
 
         Raises
         ------
