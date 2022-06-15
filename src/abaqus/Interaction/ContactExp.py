@@ -107,12 +107,7 @@ class ContactExp(Interaction):
                  surfaceOffsetAssignments: SurfaceOffsetAssignment = SurfaceOffsetAssignment(),
                  surfaceFeatureAssignments: SurfaceFeatureAssignment = SurfaceFeatureAssignment(),
                  smoothingAssignments: SmoothingAssignment = SmoothingAssignment(),
-<<<<<<< Updated upstream
-                 mainSecondaryAssignments: MainSecondaryAssignment = MainSecondaryAssignment(),
-                 polarityAssignments: PolarityAssignments = PolarityAssignments()):
-=======
                  mainSecondaryAssignments: MainSecondaryAssignment = MainSecondaryAssignment()):
->>>>>>> Stashed changes
         """This method creates a ContactExp object.
 
         Notes
