@@ -41,8 +41,6 @@ extensions = [
     'sphinx.ext.githubpages', 
 ]
 
-html_baseurl = 'https://pyabaqus.haiiliin.com/'
-
 autosummary_generate = True  # Turn on sphinx.ext.autosummary
 numpydoc_show_class_members = True
 numpydoc_show_inherited_class_members = False
