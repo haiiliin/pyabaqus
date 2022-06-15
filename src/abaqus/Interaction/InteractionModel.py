@@ -27,8 +27,6 @@ from ..Interaction.FluidCavity import FluidCavity
 from ..Interaction.FluidCavityProperty import FluidCavityProperty
 from ..Interaction.FluidExchange import FluidExchange
 from ..Interaction.FluidExchangeProperty import FluidExchangeProperty
-from ..Interaction.FluidInflator import FluidInflator
-from ..Interaction.FluidInflatorProperty import FluidInflatorProperty
 from ..Interaction.IncidentWave import IncidentWave
 from ..Interaction.IncidentWaveProperty import IncidentWaveProperty
 from ..Interaction.InitializationAssignment import InitializationAssignment
@@ -1478,101 +1476,6 @@ class InteractionModel(InteractionContactControlModel,
                                                                       temperatureDependency, fieldDependencies)
         return interaction
 
-    def FluidInflator(self, name: str, createStepName: str, cavity: str, interactionProperty: str,
-                      inflationTimeAmplitude: str = '', massFlowAmplitude: str = '') -> FluidInflator:
-        """This method creates a FluidInflator object.
-
-        Notes
-        -----
-            This function can be accessed by:
-            
-            .. code-block:: python
-            
-                mdb.models[name].FluidInflator
-        
-        Parameters
-        ----------
-        name
-            A String specifying the repository key.
-        createStepName
-            A String specifying the name of the step in which the FluidInflator object is created.
-        cavity
-            A String specifying the first FluidCavity object associated with this interaction.
-        interactionProperty
-            A String specifying the FluidInflatorProperty object associated with this interaction.
-        inflationTimeAmplitude
-            A string specifying the name of the amplitude curve defining a mapping between the
-            inflation time and the actual time.
-        massFlowAmplitude
-            A string specifying the name of the amplitude curve by which to modify the mass flow
-            rate.
-
-        Returns
-        -------
-            A FluidInflator object.
-        """
-        self.interactions[name] = interaction = FluidInflator(name, createStepName, cavity, interactionProperty,
-                                                              inflationTimeAmplitude, massFlowAmplitude)
-        return interaction
-
-    def FluidInflatorProperty(self, name: str, definition: str, effectiveArea: float, tankVolume: float,
-                              dischargeCoefficient: float = None, dataTable: tuple = (), numFluids: int = None,
-                              mixtureType: str = '', inflationTime: tuple = (), fluidbehaviorName: tuple = (),
-                              massFraction: tuple = ()) -> FluidInflatorProperty:
-        """This method creates a FluidInflatorProperty object.
-
-        Notes
-        -----
-            This function can be accessed by:
-            
-            .. code-block:: python
-            
-                mdb.models[name].FluidInflatorProperty
-        
-        Parameters
-        ----------
-        name
-            A String specifying the interaction property repository key.
-        definition
-            A Symbolic constant specifying the method used for modeling the flow characteristics of
-            inflators. The default value is *definition*=DUAL PRESSURE. The possible values are DUAL
-            PRESSURE, PRESSURE AND MASS, TANK TEST, and TEMPERATURE AND MASS.
-        effectiveArea
-            A Float specifying the total inflator orifice area. This argument is applicable only if
-            *definition*=DUAL PRESSURE or *definition*=PRESSURE AND MASS.
-        tankVolume
-            A Float specifying the tank volume. This argument is applicable only if
-            *definition*=DUAL PRESSURE or *definition*=TANK TEST.
-        dischargeCoefficient
-            A Float specifying the discharge coefficient. This argument is applicable only if
-            *definition*=DUAL PRESSURE or *definition*=PRESSURE AND MASS.
-        dataTable
-            A sequence of sequences of Floats specifying the items described in the "Table data"
-            section below.
-        numFluids
-            An Int specifying the number of gas species used for this inflator.
-        mixtureType
-            A Symbolic constant specifying whether to use mass fraction or the molar fraction for a
-            mixture of ideal gases. The default value is MASS FRACTION. The possible values are MASS
-            FRACTION or MOLAR FRACTION.
-        inflationTime
-            A sequence of sequences of Floats specifying the inflation time.
-        fluidbehaviorName
-            A sequence of sequences of Strings specifying fluid behavior names.
-        massFraction
-            A sequence of sequences of Floats specifying the mass fraction or the molar fraction
-            corresponding to entered fluid behavior.
-
-        Returns
-        -------
-            A FluidInflatorProperty object.
-        """
-        self.interactions[name] = interaction = FluidInflatorProperty(name, definition, effectiveArea, tankVolume,
-                                                                      dischargeCoefficient, dataTable, numFluids,
-                                                                      mixtureType, inflationTime, fluidbehaviorName,
-                                                                      massFraction)
-        return interaction
-
     def IncidentWave(self, name: str, createStepName: str, sourcePoint: Region, standoffPoint: Region,
                      surface: Region, interactionProperty: str, definition: SymbolicConstant = PRESSURE,
                      amplitude: str = '', imaginaryAmplitude: str = '', surfaceNormal: tuple = (),
@@ -2411,8 +2314,7 @@ class InteractionModel(InteractionContactControlModel,
                                    meanBoltDiameter: typing.Union[SymbolicConstant, float] = COMPUTED,
                                    datumAxis: DatumAxis = DatumAxis(), useReverseDatumAxis: Boolean = OFF,
                                    clearanceRegion: Region = Region(), surfaceSmoothing: SymbolicConstant = NONE,
-                                   bondingSet: Region = Region(), handedness: SymbolicConstant = RIGHT,
-                                   normalAdjustment: SymbolicConstant = None) -> SurfaceToSurfaceContactStd:
+                                   bondingSet: Region = Region()) -> SurfaceToSurfaceContactStd:
         """This method creates a SurfaceToSurfaceContactStd object.
 
         Notes
@@ -2527,13 +2429,6 @@ class InteractionModel(InteractionContactControlModel,
         bondingSet
             A Region object specifying the secondary node sub-set for bonding, used only when the
             contact property CohesiveBehavior option specifies use.
-        handedness
-            A SymbolicConstant specifying the bolt handedness formulation. Possible values are RIGHT
-            and LEFT. The default value is RIGHT.
-        normalAdjustment
-            A SymbolicConstant specifying the bolt normal adjustment formulation for all secondary
-            nodes. Possible values are UNIFORM AXIAL COMPONENT and LOCATION DEPENDENT. The default
-            value is UNIFORM AXIAL COMPONENT.
 
         Returns
         -------

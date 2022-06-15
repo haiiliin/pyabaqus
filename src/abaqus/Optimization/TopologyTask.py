@@ -52,7 +52,7 @@ class TopologyTask(OptimizationTask):
     # A repository of StopCondition objects. 
     stopConditions: dict[str, StopCondition] = dict[str, StopCondition]()
 
-    def __init__(self, name: str, abaqusSensitivities: Boolean = True,
+    def __init__(self, name: str, abaqusSensitivities: Boolean = False,
                  algorithm: SymbolicConstant = GENERAL_OPTIMIZATION, densityMoveLimit: float = 0,
                  densityUpdateStrategy: SymbolicConstant = NORMAL,
                  elementDensityDeltaStopCriteria: float = 0, filterRadius: float = None,
@@ -88,7 +88,7 @@ class TopologyTask(OptimizationTask):
             A String specifying the optimization task repository key. 
         abaqusSensitivities
             A Boolean specifying whether to use Abaqus to compute the design responses and their 
-            sensitivities. The default value is True. 
+            sensitivities. The default value is False.
         algorithm
             A SymbolicConstant specifying the optimization task algorithm. Possible values are 
             GENERAL_OPTIMIZATION and CONDITION_BASED_OPTIMIZATION. The default value is 

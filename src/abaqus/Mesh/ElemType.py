@@ -26,7 +26,7 @@ class ElemType:
                  particleConversion: SymbolicConstant = DEFAULT, particleConversionThreshold: float = 0,
                  particleConversionPPD: int = 1, particleConversionKernel: SymbolicConstant = CUBIC,
                  maxDegradation: float = None, viscosity: float = 0, linearBulkViscosity: float = 1,
-                 quadraticBulkViscosity: float = 1, numFourierModes: int = 1, nodeOffset: int = None,
+                 quadraticBulkViscosity: float = 1,
                  linearKinematicCtrl: float = None, initialGapOpening: float = None):
         """This method creates an ElemType object.
 
@@ -135,15 +135,7 @@ class ElemType:
             The default value is 1.0. 
         quadraticBulkViscosity
             A Float specifying the quadratic bulk viscosity scaling factor option for 
-            Abaqus/Explicit. The default value is 1.0. 
-        numFourierModes
-            An Int specifying the number of Fourier modes. Possible values are 1, 2, 3, and 4. The 
-            default value is 1.This argument is applicable only for axisymmetric elements with 
-            nonlinear asymmetric deformation. 
-        nodeOffset
-            An Int specifying the positive offset number for specifying the additional nodes needed 
-            in the connectivity.This argument is applicable only for axisymmetric elements with 
-            nonlinear asymmetric deformation. 
+            Abaqus/Explicit. The default value is 1.0.
         linearKinematicCtrl
             A Float specifying the linear kinematic conversion value.This argument is applicable 
             only to some Abaqus/Explicit elements. 

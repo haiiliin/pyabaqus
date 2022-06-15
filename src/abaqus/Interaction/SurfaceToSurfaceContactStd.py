@@ -63,8 +63,7 @@ class SurfaceToSurfaceContactStd(Interaction):
                  meanBoltDiameter: typing.Union[SymbolicConstant, float] = COMPUTED,
                  datumAxis: DatumAxis = DatumAxis(), useReverseDatumAxis: Boolean = OFF,
                  clearanceRegion: Region = Region(), surfaceSmoothing: SymbolicConstant = NONE,
-                 bondingSet: Region = Region(), handedness: SymbolicConstant = RIGHT,
-                 normalAdjustment: SymbolicConstant = None):
+                 bondingSet: Region = Region()):
         """This method creates a SurfaceToSurfaceContactStd object.
 
         Notes
@@ -179,14 +178,7 @@ class SurfaceToSurfaceContactStd(Interaction):
             default value is NONE. 
         bondingSet
             A Region object specifying the secondary node sub-set for bonding, used only when the 
-            contact property CohesiveBehavior option specifies use. 
-        handedness
-            A SymbolicConstant specifying the bolt handedness formulation. Possible values are RIGHT 
-            and LEFT. The default value is RIGHT. 
-        normalAdjustment
-            A SymbolicConstant specifying the bolt normal adjustment formulation for all secondary 
-            nodes. Possible values are UNIFORM AXIAL COMPONENT and LOCATION DEPENDENT. The default 
-            value is UNIFORM AXIAL COMPONENT. 
+            contact property CohesiveBehavior option specifies use.
 
         Returns
         -------

@@ -50,10 +50,9 @@ class ShapeTask(OptimizationTask):
     # A repository of StopCondition objects. 
     stopConditions: dict[str, StopCondition] = dict[str, StopCondition]()
 
-    def __init__(self, name: str, abaqusSensitivities: Boolean = True,
+    def __init__(self, name: str,
                  absoluteStepSizeControl: SymbolicConstant = MINIMUM, activateDurability: Boolean = ON,
                  additionalDurabilityFiles: str = '',
-                 algorithm: SymbolicConstant = CONDITION_BASED_OPTIMIZATION,
                  constrainedLaplacianConvergenceLevel: SymbolicConstant = NORMAL,
                  curvatureSmoothingEdgeLength: float = 5, durabilityInputfile: str = '',
                  durabilitySolver: str = FE_SAFE, equalityConstraintTolerance: float = None,
@@ -90,10 +89,7 @@ class ShapeTask(OptimizationTask):
         Parameters
         ----------
         name
-            A String specifying the optimization task repository key. 
-        abaqusSensitivities
-            A Boolean specifying whether to use Abaqus to compute the design responses and their 
-            sensitivities. The default value is True. 
+            A String specifying the optimization task repository key.
         absoluteStepSizeControl
             A SymbolicConstant specifying whether to control the permitted absolute step size by the 
             average optimization displacement or minimum optimization displacement. Possible values 
@@ -103,11 +99,7 @@ class ShapeTask(OptimizationTask):
             on. The default value is ON. 
         additionalDurabilityFiles
             A String specifying the path of additional files pertaining to durability optimization. 
-            Only valid if the *activateDurability* argument is ON. 
-        algorithm
-            A SymbolicConstant specifying the optimization task algorithm. Possible values are 
-            GENERAL_OPTIMIZATION and CONDITION_BASED_OPTIMIZATION. The default value is 
-            CONDITION_BASED_OPTIMIZATION. 
+            Only valid if the *activateDurability* argument is ON.
         constrainedLaplacianConvergenceLevel
             A SymbolicConstant specifying the constrained Laplacian convergence level. Possible 
             values are NORMAL, CONSERVATIVE, and AGGRESSIVE. The default value is NORMAL. 

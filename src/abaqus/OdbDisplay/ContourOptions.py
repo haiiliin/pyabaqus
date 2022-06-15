@@ -140,10 +140,6 @@ class ContourOptions(DGContourOptions):
         specifying the line style and line thickness. For possible values, refer to the
         **edgeLineStyle** and **edgeLineThickness** members of the :py:class:`~abaqus.PlotOptions.DGCommonOptions.DGCommonOptions` object. The
         default is ((SOLID, VERY_THIN), ).
-    legendHideOutsideLimits: Boolean
-        A Boolean specifying whether to hide the values outside the specified min/max in the
-        contour legend. This setting hides the **autoMinValue** and **autoMaxValue** from the
-        spectrum when **legendHideOutsideLimits=ON**.The default value is OFF.
 
     Notes
     -----
@@ -322,11 +318,6 @@ class ContourOptions(DGContourOptions):
     # default is ((SOLID, VERY_THIN), ). 
     intervalLineAttributes: SymbolicConstant = None
 
-    # A Boolean specifying whether to hide the values outside the specified min/max in the 
-    # contour legend. This setting hides the *autoMinValue* and *autoMaxValue* from the 
-    # spectrum when *legendHideOutsideLimits*=ON.The default value is OFF. 
-    legendHideOutsideLimits: Boolean = OFF
-
     def setValues(self, options: 'ContourOptions' = None, contourType: SymbolicConstant = BANDED,
                   contourMethod: SymbolicConstant = TEXTURE_MAPPED, tickmarkPlots: Boolean = OFF,
                   contourStyle: SymbolicConstant = UNIFORM, numIntervals: int = 12,
@@ -342,8 +333,7 @@ class ContourOptions(DGContourOptions):
                   tickmarkAxisLength: SymbolicConstant = MEDIUM, tickmarkBaseValue: float = 0,
                   tickmarkOrientation: SymbolicConstant = N2, tickmarkCurveColor: str = '',
                   averagedOrientationDisplay: Boolean = OFF, extrapolatedAveraging: Boolean = OFF,
-                  showMaxLocation: Boolean = OFF, showMinLocation: Boolean = OFF,
-                  legendHideOutsideLimits: Boolean = OFF):
+                  showMaxLocation: Boolean = OFF, showMinLocation: Boolean = OFF):
         """This method modifies the ContourOptions object.
         
         Parameters
@@ -461,10 +451,7 @@ class ContourOptions(DGContourOptions):
             OFF. 
         showMinLocation
             A Boolean specifying whether to display location of minimum value. The default value is 
-            OFF. 
-        legendHideOutsideLimits
-            A Boolean specifying whether to hide the values outside the specified minimum/maximum 
-            for the contour interval when *legendHideOutsideLimits*=ON. The default value is OFF.
+            OFF.
 
         Raises
         ------

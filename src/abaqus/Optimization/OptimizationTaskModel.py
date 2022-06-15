@@ -21,7 +21,7 @@ class OptimizationTaskModel(ModelBase):
 
     """
 
-    def BeadTask(self, name: str, abaqusSensitivities: Boolean = True,
+    def BeadTask(self, name: str,
                  algorithm: SymbolicConstant = GENERAL_OPTIMIZATION, areBCRegionsFrozen: Boolean = OFF,
                  beadIter: str = 1, beadMaxMembraneStress: str = 0, beadMinStress: str = 0,
                  beadPerturbation: str = 0, beadWidth: SymbolicConstant = DEFAULT, curveSmooth: str = 5,
@@ -46,9 +46,6 @@ class OptimizationTaskModel(ModelBase):
         ----------
         name
             A String specifying the optimization task repository key.
-        abaqusSensitivities
-            A Boolean specifying whether to use Abaqus to compute the design responses and their
-            sensitivities. The default value is True.
         algorithm
             A SymbolicConstant specifying the optimization task algorithm. Possible values are
             GENERAL_OPTIMIZATION and CONDITION_BASED_OPTIMIZATION. The default value is
@@ -116,7 +113,7 @@ class OptimizationTaskModel(ModelBase):
         -------
             A BeadTask object.
         """
-        self.optimizationTasks[name] = optimizationTask = BeadTask(name, abaqusSensitivities, algorithm,
+        self.optimizationTasks[name] = optimizationTask = BeadTask(name, algorithm,
                                                                    areBCRegionsFrozen, beadIter, beadMaxMembraneStress,
                                                                    beadMinStress, beadPerturbation, beadWidth,
                                                                    curveSmooth, filterRadius, filterRadiusBy,
@@ -127,10 +124,9 @@ class OptimizationTaskModel(ModelBase):
                                                                    groupOperator)
         return optimizationTask
 
-    def ShapeTask(self, name: str, abaqusSensitivities: Boolean = True,
+    def ShapeTask(self, name: str,
                   absoluteStepSizeControl: SymbolicConstant = MINIMUM, activateDurability: Boolean = ON,
                   additionalDurabilityFiles: str = '',
-                  algorithm: SymbolicConstant = CONDITION_BASED_OPTIMIZATION,
                   constrainedLaplacianConvergenceLevel: SymbolicConstant = NORMAL,
                   curvatureSmoothingEdgeLength: float = 5, durabilityInputfile: str = '',
                   durabilitySolver: str = FE_SAFE, equalityConstraintTolerance: float = None,
@@ -168,9 +164,6 @@ class OptimizationTaskModel(ModelBase):
         ----------
         name
             A String specifying the optimization task repository key.
-        abaqusSensitivities
-            A Boolean specifying whether to use Abaqus to compute the design responses and their
-            sensitivities. The default value is True.
         absoluteStepSizeControl
             A SymbolicConstant specifying whether to control the permitted absolute step size by the
             average optimization displacement or minimum optimization displacement. Possible values
@@ -181,10 +174,6 @@ class OptimizationTaskModel(ModelBase):
         additionalDurabilityFiles
             A String specifying the path of additional files pertaining to durability optimization.
             Only valid if the *activateDurability* argument is ON.
-        algorithm
-            A SymbolicConstant specifying the optimization task algorithm. Possible values are
-            GENERAL_OPTIMIZATION and CONDITION_BASED_OPTIMIZATION. The default value is
-            CONDITION_BASED_OPTIMIZATION.
         constrainedLaplacianConvergenceLevel
             A SymbolicConstant specifying the constrained Laplacian convergence level. Possible
             values are NORMAL, CONSERVATIVE, and AGGRESSIVE. The default value is NORMAL.
@@ -322,9 +311,9 @@ class OptimizationTaskModel(ModelBase):
         -------
             A ShapeTask object.
         """
-        self.optimizationTasks[name] = optimizationTask = ShapeTask(name, abaqusSensitivities, absoluteStepSizeControl,
+        self.optimizationTasks[name] = optimizationTask = ShapeTask(name, absoluteStepSizeControl,
                                                                     activateDurability, additionalDurabilityFiles,
-                                                                    algorithm, constrainedLaplacianConvergenceLevel,
+                                                                    constrainedLaplacianConvergenceLevel,
                                                                     curvatureSmoothingEdgeLength, durabilityInputfile,
                                                                     durabilitySolver, equalityConstraintTolerance,
                                                                     featureRecognitionAngle, filterExponent,
@@ -346,7 +335,7 @@ class OptimizationTaskModel(ModelBase):
                                                                     updateShapeBasisVectors, groupOperator)
         return optimizationTask
 
-    def SizingTask(self, name: str, abaqusSensitivities: Boolean = True,
+    def SizingTask(self, name: str,
                    elementThicknessDeltaStopCriteria: float = 0,
                    freezeBoundaryConditionRegions: Boolean = OFF, freezeLoadRegions: Boolean = ON,
                    modeTrackingRegion: str = MODEL, numFulfilledStopCriteria: int = 2,
@@ -367,9 +356,6 @@ class OptimizationTaskModel(ModelBase):
         ----------
         name
             A String specifying the optimization task repository key.
-        abaqusSensitivities
-            A Boolean specifying whether to use Abaqus to compute the design responses and their
-            sensitivities. The default value is True.
         elementThicknessDeltaStopCriteria
             A Float specifying the stop criteria based on the change in element thickness. The
             default value is 0.5 × 10–2.
@@ -408,7 +394,7 @@ class OptimizationTaskModel(ModelBase):
         -------
             A SizingTask object.
         """
-        self.optimizationTasks[name] = optimizationTask = SizingTask(name, abaqusSensitivities,
+        self.optimizationTasks[name] = optimizationTask = SizingTask(name,
                                                                      elementThicknessDeltaStopCriteria,
                                                                      freezeBoundaryConditionRegions, freezeLoadRegions,
                                                                      modeTrackingRegion, numFulfilledStopCriteria,

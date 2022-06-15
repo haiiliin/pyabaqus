@@ -818,10 +818,9 @@ class BasicOptions:
             An Int specifying the number of segments to display when *sweepElem*=ON. The default 
             value is 10 or 20, depending on characteristics of your model. 
         numericForm
-            A SymbolicConstant specifying the numeric form in which to display results that contain 
-            complex numbers. Possible values are COMPLEX_MAGNITUDE, COMPLEX_PHASE, REAL, IMAGINARY, 
-            COMPLEX_MAG_AT_ANGLE, COMPLEX_ENVELOPE_MAX_ABS, COMPLEX_ENVELOPE_MAX, and 
-            COMPLEX_ENVELOPE_MIN. The default value is REAL. 
+            A SymbolicConstant specifying the numeric form in which to display results that contain
+            complex numbers. Possible values are COMPLEX_MAGNITUDE, COMPLEX_PHASE, REAL, IMAGINARY,
+            and COMPLEX_MAG_AT_ANGLE. The default value is REAL.
         complexAngle
             A Float specifying the angle (in degrees) at which to display results that contain 
             complex numbers when *numericForm*=COMPLEX_MAG_AT_ANGLE. The default value is 0.0. 

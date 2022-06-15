@@ -44,7 +44,7 @@ class BeadTask(OptimizationTask):
     # A repository of GeometricRestriction objects. 
     geometricRestrictions: dict[str, GeometricRestriction] = dict[str, GeometricRestriction]()
 
-    def __init__(self, name: str, abaqusSensitivities: Boolean = True,
+    def __init__(self, name: str,
                  algorithm: SymbolicConstant = GENERAL_OPTIMIZATION, areBCRegionsFrozen: Boolean = OFF,
                  beadIter: str = 1, beadMaxMembraneStress: str = 0, beadMinStress: str = 0,
                  beadPerturbation: str = 0, beadWidth: SymbolicConstant = DEFAULT, curveSmooth: str = 5,
@@ -68,10 +68,7 @@ class BeadTask(OptimizationTask):
         Parameters
         ----------
         name
-            A String specifying the optimization task repository key. 
-        abaqusSensitivities
-            A Boolean specifying whether to use Abaqus to compute the design responses and their 
-            sensitivities. The default value is True. 
+            A String specifying the optimization task repository key.
         algorithm
             A SymbolicConstant specifying the optimization task algorithm. Possible values are 
             GENERAL_OPTIMIZATION and CONDITION_BASED_OPTIMIZATION. The default value is 

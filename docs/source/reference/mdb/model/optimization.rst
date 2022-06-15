@@ -290,12 +290,6 @@ TopologyMillingControl
 .. autoclass:: abaqus.Optimization.TopologyMillingControl.TopologyMillingControl
     :members:
 
-TopologyOverhangControl
-~~~~~~~~~~~~~~~~~~~~~~~
-
-.. autoclass:: abaqus.Optimization.TopologyOverhangControl.TopologyOverhangControl
-    :members:
-
 TopologyPlanarSymmetry
 ~~~~~~~~~~~~~~~~~~~~~~
 

@@ -50,7 +50,7 @@ class SizingTask(OptimizationTask):
     # A repository of StopCondition objects. 
     stopConditions: dict[str, StopCondition] = dict[str, StopCondition]()
 
-    def __init__(self, name: str, abaqusSensitivities: Boolean = True,
+    def __init__(self, name: str,
                  elementThicknessDeltaStopCriteria: float = 0,
                  freezeBoundaryConditionRegions: Boolean = OFF, freezeLoadRegions: Boolean = ON,
                  modeTrackingRegion: str = MODEL, numFulfilledStopCriteria: int = 2,
@@ -70,10 +70,7 @@ class SizingTask(OptimizationTask):
         Parameters
         ----------
         name
-            A String specifying the optimization task repository key. 
-        abaqusSensitivities
-            A Boolean specifying whether to use Abaqus to compute the design responses and their 
-            sensitivities. The default value is True. 
+            A String specifying the optimization task repository key.
         elementThicknessDeltaStopCriteria
             A Float specifying the stop criteria based on the change in element thickness. The 
             default value is 0.5 × 10–2. 

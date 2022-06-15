@@ -266,24 +266,6 @@ FluidExchangeState
 .. autoclass:: abaqus.Interaction.FluidExchangeState.FluidExchangeState
     :members:
 
-FluidInflator
-~~~~~~~~~~~~~
-
-.. autoclass:: abaqus.Interaction.FluidInflator.FluidInflator
-    :members:
-
-FluidInflatorProperty
-~~~~~~~~~~~~~~~~~~~~~
-
-.. autoclass:: abaqus.Interaction.FluidInflatorProperty.FluidInflatorProperty
-    :members:
-
-FluidInflatorState
-~~~~~~~~~~~~~~~~~~
-
-.. autoclass:: abaqus.Interaction.FluidInflatorState.FluidInflatorState
-    :members:
-
 FractureCriterion
 ~~~~~~~~~~~~~~~~~
 

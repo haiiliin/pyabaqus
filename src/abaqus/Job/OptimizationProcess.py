@@ -134,10 +134,8 @@ class OptimizationProcess:
             Defines the target volume that is to be achieved iteratively by varying the isovalue. 
             Value between 0 and 1. The default value is 0. 
         extractFormat
-            A tuple for the types of format of the output. Possible values are 
-            OPT_EXTRACT_SMOOTH_ABAQUS_INPUT_FILE, OPT_EXTRACT_SMOOTH_STL, OPT_EXTRACT_SMOOTH_IGES1, 
-            OPT_EXTRACT_SMOOTH_IGES2, or OPT_EXTRACT_SMOOTH_IGES3. The default value is 
-            OPT_EXTRACT_SMOOTH_ABAQUS_INPUT_FILE. 
+            Tuple for the types of format of the output. Values are (OPT_EXTRACT_SMOOTH_ABAQUS_INPUT_FILE,
+            OPT_EXTRACT_SMOOTH_STL). Default: OPT_EXTRACT_SMOOTH_ABAQUS_INPUT_FILE
         resultFiltering
             Possible string values are OFF or MODERATE or FULL. Defines if the element material 
             values are to be filtered (averaged locally) before the isocut, and to what extent. The 
