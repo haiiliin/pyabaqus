@@ -1,5 +1,7 @@
 # pyabaqus
- Type hints for Abaqus/Python scripting
+[![Documentation Status](https://readthedocs.org/projects/pyabaqus/badge/?version=latest)](https://pyabaqus.haiiliin.com/en/latest/?badge=latest)
+
+Type hints for Abaqus/Python scripting
 
 `pyabaqus` is a Python package providing type hints for Python scripting of Abaqus, you can 
 use it to write your Python script of Abaqus fluently, even without doing anything in Abaqus. 
