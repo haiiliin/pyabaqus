@@ -2444,8 +2444,7 @@ class InteractionModel(InteractionContactControlModel,
                                                                            halfThreadAngle, pitch, majorBoltDiameter,
                                                                            meanBoltDiameter, datumAxis,
                                                                            useReverseDatumAxis, clearanceRegion,
-                                                                           surfaceSmoothing, bondingSet, handedness,
-                                                                           normalAdjustment)
+                                                                           surfaceSmoothing, bondingSet)
         return interaction
 
     def XFEMCrackGrowth(self, name: str, createStepName: str, crackName: str,
