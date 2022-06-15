@@ -6,7 +6,7 @@
 <link rel="index" title="Index" href="../../genindex.html" /><link rel="search" title="Search" href="../../search.html" /><link rel="next" title="Display Options" href="display_options.html" /><link rel="prev" title="Animation Options" href="animation.html" />
 
     <meta name="generator" content="sphinx-4.5.0, furo 2022.06.04.1"/>
-        <title>Canvas - PYABAQUS 1.0.19 documentation</title>
+        <title>Canvas - PYABAQUS 1.1 documentation</title>
       <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/styles/furo.css?digest=40978830699223671f4072448e654b5958f38b89" />
     <link rel="stylesheet" type="text/css" href="../../_static/styles/furo-extensions.css?digest=30d1aed668e5c3a91c3e3bf6a60b675221979f0e" />
@@ -123,7 +123,7 @@
       </label>
     </div>
     <div class="header-center">
-      <a href="../../index.html"><div class="brand">PYABAQUS 1.0.19 documentation</div></a>
+      <a href="../../index.html"><div class="brand">PYABAQUS 1.1 documentation</div></a>
     </div>
     <div class="header-right">
       <div class="theme-toggle-container theme-toggle-header">
@@ -146,7 +146,7 @@
       <div class="sidebar-sticky"><a class="sidebar-brand" href="../../index.html">
   
   
-  <span class="sidebar-brand-text">PYABAQUS 1.0.19 documentation</span>
+  <span class="sidebar-brand-text">PYABAQUS 1.1 documentation</span>
   
 </a><form class="sidebar-search-container" method="get" action="../../search.html" role="search">
   <input class="sidebar-search" placeholder=Search name="q" aria-label="Search">
@@ -311,67 +311,7 @@
 <dl class="py class">
 <dt class="sig sig-object py" id="abaqus.Canvas.Viewport.Viewport">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">Viewport</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">origin</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">tuple</span><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">()</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">width</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">120</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">height</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">80</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">border</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.BooleanType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">titleBar</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.BooleanType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">titleStyle</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.SymbolicConstantType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'SYSTEM'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">customTitleString</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">''</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/abaqus/Canvas/Viewport.html#Viewport"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#abaqus.Canvas.Viewport.Viewport" title="Permalink to this definition">#</a></dt>
-<dd><p>This method creates a Viewport object with the specified origin and dimensions.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><dl class="simple">
-<dt><strong>name</strong></dt><dd><p>A String specifying the repository key.</p>
-</dd>
-<dt><strong>origin</strong></dt><dd><p>A pair of Floats specifying the <em>X</em>- and <em>Y</em>-coordinates in millimeters in the canvas 
-coordinate system of the lower left corner of the viewport. The default origin is (0, 
-0).</p>
-</dd>
-<dt><strong>width</strong></dt><dd><p>A Float specifying the width in millimeters of the viewport. Possible values are 30 ≤≤ 
-<em>width</em> ≤≤ (<em>maxWidth</em>). The default value is 120.0.Note:The maximum value of width 
-(<em>maxWidth</em>) is the width of the screen in millimeters.</p>
-</dd>
-<dt><strong>height</strong></dt><dd><p>A Float specifying the height in millimeters of the viewport. This height includes the 
-title bar. Possible values are 30 ≤≤ <em>height</em> ≤≤ (<em>maxHeight</em>). The default value is 
-80.0.Note:The maximum value of height (<em>maxHeight</em>) is the height of the screen in 
-millimeters.</p>
-</dd>
-<dt><strong>border</strong></dt><dd><p>A Boolean specifying whether the viewport border is visible in a printed image. The 
-default value is ON.</p>
-</dd>
-<dt><strong>titleBar</strong></dt><dd><p>A Boolean specifying whether the viewport title should be displayed in a printed image. 
-The default value is ON.If <em>border</em> = OFF, the title will not be visible, even if 
-<em>titleBar</em> =ON.</p>
-</dd>
-<dt><strong>titleStyle</strong></dt><dd><p>A SymbolicConstant specifying which title to use for the viewport title. Possible values 
-are CUSTOM and SYSTEM. The default value is SYSTEM.If <em>titleStyle</em> = CUSTOM, 
-<em>customTitleString</em> will be used. If <a href="#id1"><span class="problematic" id="id2">*</span></a>titleStyle*= SYSTEM, a system-generated string 
-will be used.</p>
-</dd>
-<dt><strong>customTitleString</strong></dt><dd><p>A String specifying the viewport title when <em>titleStyle</em> =CUSTOM. The default value is 
-an empty string.</p>
-</dd>
-</dl>
-</dd>
-<dt class="field-even">Returns</dt>
-<dd class="field-even"><dl class="simple">
-<dt><code class="xref py py-obj docutils literal notranslate"><span class="pre">A</span></code> <a class="reference internal" href="#abaqus.Canvas.Viewport.Viewport" title="abaqus.Canvas.Viewport.Viewport"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Viewport</span></code></a> object.</dt><dd></dd>
-</dl>
-</dd>
-<dt class="field-odd">Raises</dt>
-<dd class="field-odd"><dl class="simple">
-<dt><code class="xref py py-obj docutils literal notranslate"><span class="pre">RangeError</span></code></dt><dd><ul class="simple">
-<li><p>If the user attempts to delete the only viewport: 
-SystemError: the current viewport may not be deleted.</p></li>
-<li><p>If <em>width</em> is out of range: 
-RangeError: width must be a Float in the range: 30 &lt;= width &lt;= <em>maxWidth</em></p></li>
-<li><p>If <em>height</em> is out of range: 
-RangeError: height must be a Float in the range: 30 &lt;= width &lt;= <em>maxHeight</em></p></li>
-</ul>
-</dd>
-</dl>
-</dd>
-</dl>
-<p class="rubric">Notes</p>
-<p>This function can be accessed by:</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">session</span><span class="o">.</span><span class="n">Viewport</span>
-</pre></div>
-</div>
-<p class="rubric">Methods</p>
+<dd><p class="rubric">Methods</p>
 <div class="table-wrapper autosummary longtable docutils container">
 <table class="autosummary longtable docutils align-default">
 <colgroup>
@@ -443,80 +383,6 @@ Viewport object, see Viewport object.</p>
 </tbody>
 </table>
 </div>
-<p>This method creates a Viewport object with the specified origin and dimensions.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><dl class="simple">
-<dt><strong>name</strong></dt><dd><p>A String specifying the repository key.</p>
-</dd>
-<dt><strong>origin</strong></dt><dd><p>A pair of Floats specifying the <em>X</em>- and <em>Y</em>-coordinates in millimeters in the canvas 
-coordinate system of the lower left corner of the viewport. The default origin is (0, 
-0).</p>
-</dd>
-<dt><strong>width</strong></dt><dd><p>A Float specifying the width in millimeters of the viewport. Possible values are 30 ≤≤ 
-<em>width</em> ≤≤ (<em>maxWidth</em>). The default value is 120.0.Note:The maximum value of width 
-(<em>maxWidth</em>) is the width of the screen in millimeters.</p>
-</dd>
-<dt><strong>height</strong></dt><dd><p>A Float specifying the height in millimeters of the viewport. This height includes the 
-title bar. Possible values are 30 ≤≤ <em>height</em> ≤≤ (<em>maxHeight</em>). The default value is 
-80.0.Note:The maximum value of height (<em>maxHeight</em>) is the height of the screen in 
-millimeters.</p>
-</dd>
-<dt><strong>border</strong></dt><dd><p>A Boolean specifying whether the viewport border is visible in a printed image. The 
-default value is ON.</p>
-</dd>
-<dt><strong>titleBar</strong></dt><dd><p>A Boolean specifying whether the viewport title should be displayed in a printed image. 
-The default value is ON.If <em>border</em> = OFF, the title will not be visible, even if 
-<em>titleBar</em> =ON.</p>
-</dd>
-<dt><strong>titleStyle</strong></dt><dd><p>A SymbolicConstant specifying which title to use for the viewport title. Possible values 
-are CUSTOM and SYSTEM. The default value is SYSTEM.If <em>titleStyle</em> = CUSTOM, 
-<em>customTitleString</em> will be used. If <a href="#id3"><span class="problematic" id="id4">*</span></a>titleStyle*= SYSTEM, a system-generated string 
-will be used.</p>
-</dd>
-<dt><strong>customTitleString</strong></dt><dd><p>A String specifying the viewport title when <em>titleStyle</em> =CUSTOM. The default value is 
-an empty string.</p>
-</dd>
-</dl>
-</dd>
-<dt class="field-even">Returns</dt>
-<dd class="field-even"><dl class="simple">
-<dt><code class="xref py py-obj docutils literal notranslate"><span class="pre">A</span></code> <code class="xref py py-obj docutils literal notranslate"><span class="pre">Viewport</span></code> object.</dt><dd></dd>
-</dl>
-</dd>
-<dt class="field-odd">Raises</dt>
-<dd class="field-odd"><dl class="simple">
-<dt><code class="xref py py-obj docutils literal notranslate"><span class="pre">RangeError</span></code></dt><dd><ul class="simple">
-<li><p>If the user attempts to delete the only viewport: 
-SystemError: the current viewport may not be deleted.</p></li>
-<li><p>If <em>width</em> is out of range: 
-RangeError: width must be a Float in the range: 30 &lt;= width &lt;= <em>maxWidth</em></p></li>
-<li><p>If <em>height</em> is out of range: 
-RangeError: height must be a Float in the range: 30 &lt;= width &lt;= <em>maxHeight</em></p></li>
-</ul>
-</dd>
-</dl>
-</dd>
-</dl>
-<p class="rubric">Notes</p>
-<p>This function can be accessed by:</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">session</span><span class="o">.</span><span class="n">Viewport</span>
-</pre></div>
-</div>
-<p class="rubric">Methods</p>
-<div class="table-wrapper autosummary longtable docutils container">
-<table class="autosummary longtable docutils align-default">
-<colgroup>
-<col style="width: 10%" />
-<col style="width: 90%" />
-</colgroup>
-<tbody>
-<tr class="row-odd"><td><p><a class="reference internal" href="#abaqus.Annotation.AnnotationViewport.AnnotationViewport.plotAnnotation" title="abaqus.Annotation.AnnotationViewport.AnnotationViewport.plotAnnotation"><code class="xref py py-obj docutils literal notranslate"><span class="pre">plotAnnotation</span></code></a>(annotation[, index])</p></td>
-<td><p>This method plots an Annotation object in aViewport.</p></td>
-</tr>
-</tbody>
-</table>
-</div>
 <dl class="py method">
 <dt class="sig sig-object py" id="abaqus.Annotation.AnnotationViewport.AnnotationViewport.plotAnnotation">
 <span class="sig-name descname"><span class="pre">plotAnnotation</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">annotation</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="../mdb/annotation.html#abaqus.Annotation.Annotation.Annotation" title="abaqus.Annotation.Annotation.Annotation"><span class="pre">abaqus.Annotation.Annotation.Annotation</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">index</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0.0</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/abaqus/Annotation/AnnotationViewport.html#AnnotationViewport.plotAnnotation"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#abaqus.Annotation.AnnotationViewport.AnnotationViewport.plotAnnotation" title="Permalink to this definition">#</a></dt>
@@ -565,7 +431,7 @@ the active status for the attribute. For example:<cite>overrides={
 ‘Part-1’:(1,’00FF00’, ‘00CCFF’,                        ‘00FF00’)}</cite></p>
 </dd>
 <dt><strong>defaultOverrides: dict</strong></dt><dd><p>A <code class="xref py py-class docutils literal notranslate"><span class="pre">Dictionary</span></code> object specifying a custom color mapping similar to overrides. For
-example:<a href="#id5"><span class="problematic" id="id6">`</span></a>defaultOverrides={                        ‘Copper’:(1,’’00FF00’, ‘00CCFF’,
+example:<a href="#id1"><span class="problematic" id="id2">`</span></a>defaultOverrides={                        ‘Copper’:(1,’’00FF00’, ‘00CCFF’,
 ‘00FF00’)}`The color mapping can contain keys that have not been
 created. When the key is created, it gets the appropriate values from this mapping.</p>
 </dd>
@@ -616,7 +482,7 @@ the active status for the attribute. For example:<cite>overrides={
 ‘Part-1’:(1,’#00FF00’, ‘#00CCFF’,                        ‘#00FF00’)}</cite></p>
 </dd>
 <dt><strong>defaultOverrides</strong></dt><dd><p>A Dictionary object specifying a custom color mapping similar to overrides. For 
-example:<a href="#id7"><span class="problematic" id="id8">`</span></a>defaultOverrides={                        ‘Copper’:(1,’’#00FF00’, ‘#00CCFF’,</p>
+example:<a href="#id3"><span class="problematic" id="id4">`</span></a>defaultOverrides={                        ‘Copper’:(1,’’#00FF00’, ‘#00CCFF’,</p>
 <blockquote>
 <div><p>‘#00FF00’)}`The color mapping can contain keys that have not been</p>
 </div></blockquote>
@@ -641,7 +507,7 @@ the active status for the attribute. For example:<cite>overrides={
 ‘Part-1’:(1,’#00FF00’, ‘#00CCFF’,                        ‘#00FF00’)}</cite></p>
 </dd>
 <dt><strong>defaultOverrides</strong></dt><dd><p>A Dictionary object specifying a custom color mapping similar to overrides. For 
-example:<a href="#id9"><span class="problematic" id="id10">`</span></a>defaultOverrides={                        ‘Copper’:(1,’’#00FF00’, ‘#00CCFF’,</p>
+example:<a href="#id5"><span class="problematic" id="id6">`</span></a>defaultOverrides={                        ‘Copper’:(1,’’#00FF00’, ‘#00CCFF’,</p>
 <blockquote>
 <div><p>‘#00FF00’)}`The color mapping can contain keys that have not been</p>
 </div></blockquote>
@@ -655,8 +521,8 @@ example:<a href="#id9"><span class="problematic" id="id10">`</span></a>defaultOv
 </dd></dl>
 
 </section>
-<section id="id11">
-<h3>Canvas<a class="headerlink" href="#id11" title="Permalink to this headline">#</a></h3>
+<section id="id7">
+<h3>Canvas<a class="headerlink" href="#id7" title="Permalink to this headline">#</a></h3>
 <dl class="py class">
 <dt class="sig sig-object py" id="abaqus.Canvas.Canvas.Canvas">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">Canvas</span></span><a class="reference internal" href="../../_modules/abaqus/Canvas/Canvas.html#Canvas"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#abaqus.Canvas.Canvas.Canvas" title="Permalink to this definition">#</a></dt>
@@ -825,51 +691,6 @@ ConstrainedSketch, Odb, or XYPlot.</p>
 </dd>
 <dt><strong>assemblyDisplay: AssemblyDisplayOptions</strong></dt><dd><p>An <code class="xref py py-class docutils literal notranslate"><span class="pre">Assembly`DisplayOptions</span></code> object specifying the display options for the <code class="xref py py-class docutils literal notranslate"><span class="pre">Assembly</span></code> object.</p>
 </dd>
-</dl>
-</dd>
-</dl>
-<p class="rubric">Methods</p>
-<div class="table-wrapper autosummary longtable docutils container">
-<table class="autosummary longtable docutils align-default">
-<colgroup>
-<col style="width: 10%" />
-<col style="width: 90%" />
-</colgroup>
-<tbody>
-<tr class="row-odd"><td><p><a class="reference internal" href="#abaqus.Canvas.Layer.Layer.moveAfter" title="abaqus.Canvas.Layer.Layer.moveAfter"><code class="xref py py-obj docutils literal notranslate"><span class="pre">moveAfter</span></code></a>(name)</p></td>
-<td><p>This method moves the layer object after another object in the layer repository.</p></td>
-</tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#abaqus.Canvas.Layer.Layer.moveBefore" title="abaqus.Canvas.Layer.Layer.moveBefore"><code class="xref py py-obj docutils literal notranslate"><span class="pre">moveBefore</span></code></a>(name)</p></td>
-<td><p>This method moves the layer object before another object in the layer repository.</p></td>
-</tr>
-</tbody>
-</table>
-</div>
-<p>This method creates a Layer object in the Layer repository.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><dl class="simple">
-<dt><strong>name</strong></dt><dd><p>A String specifying the repository key.</p>
-</dd>
-<dt><strong>copyViewName</strong></dt><dd><p>A String specifying the name of the layer to copy.</p>
-</dd>
-</dl>
-</dd>
-<dt class="field-even">Returns</dt>
-<dd class="field-even"><dl class="simple">
-<dt><code class="xref py py-obj docutils literal notranslate"><span class="pre">A</span></code> <a class="reference internal" href="#abaqus.Canvas.Layer.Layer" title="abaqus.Canvas.Layer.Layer"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Layer</span></code></a> object.</dt><dd></dd>
-</dl>
-</dd>
-</dl>
-<p class="rubric">Notes</p>
-<p>This function can be accessed by:</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">session</span><span class="o">.</span><span class="n">viewports</span><span class="p">[</span><span class="n">name</span><span class="p">]</span><span class="o">.</span><span class="n">Layer</span>
-</pre></div>
-</div>
-<dl class="field-list simple">
-<dt class="field-odd">Attributes</dt>
-<dd class="field-odd"><dl class="simple">
-<dt><strong>view</strong></dt><dd></dd>
 </dl>
 </dd>
 </dl>
@@ -1310,167 +1131,6 @@ is an empty sequence.</p>
 </tbody>
 </table>
 </div>
-<p>This method creates a Viewport object with the specified origin and dimensions.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><dl class="simple">
-<dt><strong>name</strong></dt><dd><p>A String specifying the repository key.</p>
-</dd>
-<dt><strong>origin</strong></dt><dd><p>A pair of Floats specifying the <em>X</em>- and <em>Y</em>-coordinates in millimeters in the canvas 
-coordinate system of the lower left corner of the viewport. The default origin is (0, 
-0).</p>
-</dd>
-<dt><strong>width</strong></dt><dd><p>A Float specifying the width in millimeters of the viewport. Possible values are 30 ≤≤ 
-<em>width</em> ≤≤ (<em>maxWidth</em>). The default value is 120.0.Note:The maximum value of width 
-(<em>maxWidth</em>) is the width of the screen in millimeters.</p>
-</dd>
-<dt><strong>height</strong></dt><dd><p>A Float specifying the height in millimeters of the viewport. This height includes the 
-title bar. Possible values are 30 ≤≤ <em>height</em> ≤≤ (<em>maxHeight</em>). The default value is 
-80.0.Note:The maximum value of height (<em>maxHeight</em>) is the height of the screen in 
-millimeters.</p>
-</dd>
-<dt><strong>border</strong></dt><dd><p>A Boolean specifying whether the viewport border is visible in a printed image. The 
-default value is ON.</p>
-</dd>
-<dt><strong>titleBar</strong></dt><dd><p>A Boolean specifying whether the viewport title should be displayed in a printed image. 
-The default value is ON.If <em>border</em> = OFF, the title will not be visible, even if 
-<em>titleBar</em> =ON.</p>
-</dd>
-<dt><strong>titleStyle</strong></dt><dd><p>A SymbolicConstant specifying which title to use for the viewport title. Possible values 
-are CUSTOM and SYSTEM. The default value is SYSTEM.If <em>titleStyle</em> = CUSTOM, 
-<em>customTitleString</em> will be used. If <a href="#id12"><span class="problematic" id="id13">*</span></a>titleStyle*= SYSTEM, a system-generated string 
-will be used.</p>
-</dd>
-<dt><strong>customTitleString</strong></dt><dd><p>A String specifying the viewport title when <em>titleStyle</em> =CUSTOM. The default value is 
-an empty string.</p>
-</dd>
-</dl>
-</dd>
-<dt class="field-even">Returns</dt>
-<dd class="field-even"><dl class="simple">
-<dt><code class="xref py py-obj docutils literal notranslate"><span class="pre">A</span></code> <code class="xref py py-obj docutils literal notranslate"><span class="pre">Viewport</span></code> object.</dt><dd></dd>
-</dl>
-</dd>
-<dt class="field-odd">Raises</dt>
-<dd class="field-odd"><dl class="simple">
-<dt><code class="xref py py-obj docutils literal notranslate"><span class="pre">RangeError</span></code></dt><dd><ul class="simple">
-<li><p>If the user attempts to delete the only viewport: 
-SystemError: the current viewport may not be deleted.</p></li>
-<li><p>If <em>width</em> is out of range: 
-RangeError: width must be a Float in the range: 30 &lt;= width &lt;= <em>maxWidth</em></p></li>
-<li><p>If <em>height</em> is out of range: 
-RangeError: height must be a Float in the range: 30 &lt;= width &lt;= <em>maxHeight</em></p></li>
-</ul>
-</dd>
-</dl>
-</dd>
-</dl>
-<p class="rubric">Notes</p>
-<p>This function can be accessed by:</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">session</span><span class="o">.</span><span class="n">Viewport</span>
-</pre></div>
-</div>
-<dl class="field-list simple">
-<dt class="field-odd">Attributes</dt>
-<dd class="field-odd"><dl class="simple">
-<dt><strong>currentHeight</strong></dt><dd></dd>
-<dt><strong>currentWidth</strong></dt><dd></dd>
-<dt><strong>displayMode</strong></dt><dd></dd>
-<dt><strong>layerOffset</strong></dt><dd></dd>
-<dt><strong>translucency</strong></dt><dd></dd>
-<dt><strong>view</strong></dt><dd></dd>
-<dt><strong>viewManipLayers</strong></dt><dd></dd>
-<dt><strong>windowState</strong></dt><dd></dd>
-</dl>
-</dd>
-</dl>
-<p class="rubric">Methods</p>
-<div class="table-wrapper autosummary longtable docutils container">
-<table class="autosummary longtable docutils align-default">
-<colgroup>
-<col style="width: 10%" />
-<col style="width: 90%" />
-</colgroup>
-<tbody>
-<tr class="row-odd"><td><p><a class="reference internal" href="#abaqus.Canvas.ViewportBase.ViewportBase.addDrawings" title="abaqus.Canvas.ViewportBase.ViewportBase.addDrawings"><code class="xref py py-obj docutils literal notranslate"><span class="pre">addDrawings</span></code></a>([names])</p></td>
-<td><p>This method identifies the names of Drawing objects to be rendered in the Viewport.</p></td>
-</tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#abaqus.Canvas.ViewportBase.ViewportBase.bringToFront" title="abaqus.Canvas.ViewportBase.ViewportBase.bringToFront"><code class="xref py py-obj docutils literal notranslate"><span class="pre">bringToFront</span></code></a>()</p></td>
-<td><p>This method moves the Viewport object to the front.</p></td>
-</tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#abaqus.Canvas.ViewportBase.ViewportBase.disableColorCodeUpdates" title="abaqus.Canvas.ViewportBase.ViewportBase.disableColorCodeUpdates"><code class="xref py py-obj docutils literal notranslate"><span class="pre">disableColorCodeUpdates</span></code></a>()</p></td>
-<td><p>This method disables Viewport updates and internal computations triggered because of color coding.</p></td>
-</tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#abaqus.Canvas.ViewportBase.ViewportBase.disableMultipleColors" title="abaqus.Canvas.ViewportBase.ViewportBase.disableMultipleColors"><code class="xref py py-obj docutils literal notranslate"><span class="pre">disableMultipleColors</span></code></a>()</p></td>
-<td><p>This method disables applying multiple color mappings that was enabled using enableMultipleColors</p></td>
-</tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#abaqus.Canvas.ViewportBase.ViewportBase.disableRefresh" title="abaqus.Canvas.ViewportBase.ViewportBase.disableRefresh"><code class="xref py py-obj docutils literal notranslate"><span class="pre">disableRefresh</span></code></a>()</p></td>
-<td><p>This method disables Viewport refresh.</p></td>
-</tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#abaqus.Canvas.ViewportBase.ViewportBase.enableColorCodeUpdates" title="abaqus.Canvas.ViewportBase.ViewportBase.enableColorCodeUpdates"><code class="xref py py-obj docutils literal notranslate"><span class="pre">enableColorCodeUpdates</span></code></a>()</p></td>
-<td><p>This method enables Viewport color code updates disabled using disableColorCodeUpdates.</p></td>
-</tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#abaqus.Canvas.ViewportBase.ViewportBase.enableMultipleColors" title="abaqus.Canvas.ViewportBase.ViewportBase.enableMultipleColors"><code class="xref py py-obj docutils literal notranslate"><span class="pre">enableMultipleColors</span></code></a>()</p></td>
-<td><p>This method enables multiple color mappings to be applied at the same time.</p></td>
-</tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#abaqus.Canvas.ViewportBase.ViewportBase.enableRefresh" title="abaqus.Canvas.ViewportBase.ViewportBase.enableRefresh"><code class="xref py py-obj docutils literal notranslate"><span class="pre">enableRefresh</span></code></a>()</p></td>
-<td><p>This method enables Viewport refresh disabled using disableRefresh.</p></td>
-</tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#abaqus.Canvas.ViewportBase.ViewportBase.forceRefresh" title="abaqus.Canvas.ViewportBase.ViewportBase.forceRefresh"><code class="xref py py-obj docutils literal notranslate"><span class="pre">forceRefresh</span></code></a>()</p></td>
-<td><p>This method causes the Viewport to refresh immediately.</p></td>
-</tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#abaqus.Canvas.ViewportBase.ViewportBase.getActiveElementLabels" title="abaqus.Canvas.ViewportBase.ViewportBase.getActiveElementLabels"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getActiveElementLabels</span></code></a>([useCut, printResults])</p></td>
-<td><p>This method returns the element labels currently active in the viewport based on the current display group.</p></td>
-</tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#abaqus.Canvas.ViewportBase.ViewportBase.getActiveNodeLabels" title="abaqus.Canvas.ViewportBase.ViewportBase.getActiveNodeLabels"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getActiveNodeLabels</span></code></a>([useCut, printResults])</p></td>
-<td><p>This method returns the node labels currently active in the viewport based on the current display group.</p></td>
-</tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#abaqus.Canvas.ViewportBase.ViewportBase.getPrimVarMinMaxLoc" title="abaqus.Canvas.ViewportBase.ViewportBase.getPrimVarMinMaxLoc"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getPrimVarMinMaxLoc</span></code></a>()</p></td>
-<td><p>This method returns a dictionary containing the minimum, maximum and their location for the current primary variable.</p></td>
-</tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#abaqus.Canvas.ViewportBase.ViewportBase.makeCurrent" title="abaqus.Canvas.ViewportBase.ViewportBase.makeCurrent"><code class="xref py py-obj docutils literal notranslate"><span class="pre">makeCurrent</span></code></a>()</p></td>
-<td><p>This method makes theViewport object the current viewport.</p></td>
-</tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#abaqus.Canvas.ViewportBase.ViewportBase.maximize" title="abaqus.Canvas.ViewportBase.ViewportBase.maximize"><code class="xref py py-obj docutils literal notranslate"><span class="pre">maximize</span></code></a>()</p></td>
-<td><p>This method maximizes the Viewport object to fill the drawing area.</p></td>
-</tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#abaqus.Canvas.ViewportBase.ViewportBase.minimize" title="abaqus.Canvas.ViewportBase.ViewportBase.minimize"><code class="xref py py-obj docutils literal notranslate"><span class="pre">minimize</span></code></a>()</p></td>
-<td><p>This method minimizes the Viewport object to appear as an abbreviated title bar.</p></td>
-</tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#abaqus.Canvas.ViewportBase.ViewportBase.offset" title="abaqus.Canvas.ViewportBase.ViewportBase.offset"><code class="xref py py-obj docutils literal notranslate"><span class="pre">offset</span></code></a>([deltaX, deltaY])</p></td>
-<td><p>This method modifies the current <em>X</em>-<em>Y</em> location of the viewport by the specified distance.</p></td>
-</tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#abaqus.Canvas.ViewportBase.ViewportBase.removeDrawings" title="abaqus.Canvas.ViewportBase.ViewportBase.removeDrawings"><code class="xref py py-obj docutils literal notranslate"><span class="pre">removeDrawings</span></code></a>([names])</p></td>
-<td><p>This method identifies the names of Drawing objects to no longer be rendered in the Viewport.</p></td>
-</tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#abaqus.Canvas.ViewportBase.ViewportBase.restore" title="abaqus.Canvas.ViewportBase.ViewportBase.restore"><code class="xref py py-obj docutils literal notranslate"><span class="pre">restore</span></code></a>()</p></td>
-<td><p>This method restores a maximized or minimized Viewport object to its previous size and location.</p></td>
-</tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#abaqus.Canvas.ViewportBase.ViewportBase.sendToBack" title="abaqus.Canvas.ViewportBase.ViewportBase.sendToBack"><code class="xref py py-obj docutils literal notranslate"><span class="pre">sendToBack</span></code></a>()</p></td>
-<td><p>This method moves the Viewport object to the back.</p></td>
-</tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#abaqus.Canvas.ViewportBase.ViewportBase.setValues" title="abaqus.Canvas.ViewportBase.ViewportBase.setValues"><code class="xref py py-obj docutils literal notranslate"><span class="pre">setValues</span></code></a>([displayedObject, displayMode, ...])</p></td>
-<td><p>This method modifies the Viewport object.</p></td>
-</tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#abaqus.Canvas.ViewportBase.ViewportBase.timeDisplay" title="abaqus.Canvas.ViewportBase.ViewportBase.timeDisplay"><code class="xref py py-obj docutils literal notranslate"><span class="pre">timeDisplay</span></code></a>([numFrames, numSeconds, ...])</p></td>
-<td><p>This method refreshes the Viewport display <em>numFrames</em> times and then checks to see if <em>numSeconds</em> seconds have elapsed.</p></td>
-</tr>
-</tbody>
-</table>
-</div>
-<div class="table-wrapper docutils container">
-<table class="docutils align-default">
-<colgroup>
-<col style="width: 55%" />
-<col style="width: 45%" />
-</colgroup>
-<tbody>
-<tr class="row-odd"><td><p><strong>setColor</strong></p></td>
-<td></td>
-</tr>
-</tbody>
-</table>
-</div>
 <dl class="py method">
 <dt class="sig sig-object py" id="abaqus.Canvas.ViewportBase.ViewportBase.addDrawings">
 <span class="sig-name descname"><span class="pre">addDrawings</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">names</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">tuple</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">()</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/abaqus/Canvas/ViewportBase.html#ViewportBase.addDrawings"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#abaqus.Canvas.ViewportBase.ViewportBase.addDrawings" title="Permalink to this definition">#</a></dt>
@@ -1697,7 +1357,7 @@ setValues method has the following arguments:</p>
 <dd class="field-odd"><dl class="simple">
 <dt><strong>displayedObject</strong></dt><dd><p>A Displayable object specifying the object to be displayed. The Displayable type is an 
 abstract generalization. The concrete possible types are Part, Assembly, 
-ConstrainedSketch, Odb, PlyStackPlot, or XYPlot. If <a href="#id14"><span class="problematic" id="id15">*</span></a>displayedObject*=None, Abaqus 
+ConstrainedSketch, Odb, PlyStackPlot, or XYPlot. If <a href="#id8"><span class="problematic" id="id9">*</span></a>displayedObject*=None, Abaqus 
 displays an empty viewport.</p>
 </dd>
 <dt><strong>displayMode</strong></dt><dd><p>A SymbolicConstant specifying the display mode of the viewport. Possible values 
@@ -1708,7 +1368,7 @@ to be displayed simultaneously—each layer contains one <em>displayedObject</em
 viewport when <em>displayMode</em> = OVERLAY.</p>
 </dd>
 <dt><strong>viewManipLayers</strong></dt><dd><p>A SymbolicConstant specifying which layer or layers will be controlled by the view 
-manipulation tools when <a href="#id16"><span class="problematic" id="id17">*</span></a>displayMode*=OVERLAY. Possible values are ALL and CURRENT.</p>
+manipulation tools when <a href="#id10"><span class="problematic" id="id11">*</span></a>displayMode*=OVERLAY. Possible values are ALL and CURRENT.</p>
 </dd>
 <dt><strong>currentLayer</strong></dt><dd><p>A String specifying which layer is affected by options settings when <em>displayMode</em> 
 =OVERLAY. The current layer is also the only layer affected by view manipulations 
@@ -1824,7 +1484,7 @@ before each refresh. The default value is 0.0.</p>
 <li><a class="reference internal" href="#object-features">Object features</a><ul>
 <li><a class="reference internal" href="#annotation-features-of-viewport">Annotation features of Viewport</a></li>
 <li><a class="reference internal" href="#attributecolormap">AttributeColorMap</a></li>
-<li><a class="reference internal" href="#id11">Canvas</a></li>
+<li><a class="reference internal" href="#id7">Canvas</a></li>
 <li><a class="reference internal" href="#displayable">Displayable</a></li>
 <li><a class="reference internal" href="#drawingarea">DrawingArea</a></li>
 <li><a class="reference internal" href="#highlight">Highlight</a></li>

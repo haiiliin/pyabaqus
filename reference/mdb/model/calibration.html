@@ -6,7 +6,7 @@
 <link rel="index" title="Index" href="../../../genindex.html" /><link rel="search" title="Search" href="../../../search.html" /><link rel="next" title="Constraint" href="constraint.html" /><link rel="prev" title="Boundary Condition" href="bc.html" />
 
     <meta name="generator" content="sphinx-4.5.0, furo 2022.06.04.1"/>
-        <title>Calibration of Material - PYABAQUS 1.0.19 documentation</title>
+        <title>Calibration of Material - PYABAQUS 1.1 documentation</title>
       <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/styles/furo.css?digest=40978830699223671f4072448e654b5958f38b89" />
     <link rel="stylesheet" type="text/css" href="../../../_static/styles/furo-extensions.css?digest=30d1aed668e5c3a91c3e3bf6a60b675221979f0e" />
@@ -123,7 +123,7 @@
       </label>
     </div>
     <div class="header-center">
-      <a href="../../../index.html"><div class="brand">PYABAQUS 1.0.19 documentation</div></a>
+      <a href="../../../index.html"><div class="brand">PYABAQUS 1.1 documentation</div></a>
     </div>
     <div class="header-right">
       <div class="theme-toggle-container theme-toggle-header">
@@ -146,7 +146,7 @@
       <div class="sidebar-sticky"><a class="sidebar-brand" href="../../../index.html">
   
   
-  <span class="sidebar-brand-text">PYABAQUS 1.0.19 documentation</span>
+  <span class="sidebar-brand-text">PYABAQUS 1.1 documentation</span>
   
 </a><form class="sidebar-search-container" method="get" action="../../../search.html" role="search">
   <input class="sidebar-search" placeholder=Search name="q" aria-label="Search">
@@ -373,50 +373,6 @@ Calibration object stores the data that is used for specifying materials from te
 </tbody>
 </table>
 </div>
-<p>This method creates a Calibration object.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><dl class="simple">
-<dt><strong>name</strong></dt><dd><p>A String specifying the name of the new calibration.</p>
-</dd>
-</dl>
-</dd>
-<dt class="field-even">Returns</dt>
-<dd class="field-even"><dl class="simple">
-<dt><code class="xref py py-obj docutils literal notranslate"><span class="pre">A</span></code> <a class="reference internal" href="#abaqus.Calibration.Calibration.Calibration" title="abaqus.Calibration.Calibration.Calibration"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Calibration</span></code></a> object.</dt><dd></dd>
-</dl>
-</dd>
-</dl>
-<p class="rubric">Notes</p>
-<p>This function can be accessed by:</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">mdb</span><span class="o">.</span><span class="n">models</span><span class="p">[</span><span class="n">name</span><span class="p">]</span><span class="o">.</span><span class="n">Calibration</span>
-</pre></div>
-</div>
-<dl class="field-list simple">
-<dt class="field-odd">Attributes</dt>
-<dd class="field-odd"><dl class="simple">
-<dt><strong>behaviors</strong></dt><dd></dd>
-<dt><strong>dataSets</strong></dt><dd></dd>
-</dl>
-</dd>
-</dl>
-<p class="rubric">Methods</p>
-<div class="table-wrapper autosummary longtable docutils container">
-<table class="autosummary longtable docutils align-default">
-<colgroup>
-<col style="width: 10%" />
-<col style="width: 90%" />
-</colgroup>
-<tbody>
-<tr class="row-odd"><td><p><a class="reference internal" href="#abaqus.Calibration.Calibration.Calibration.Behavior" title="abaqus.Calibration.Calibration.Calibration.Behavior"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Behavior</span></code></a>(name, typeName)</p></td>
-<td><p>This method creates a Behavior object.</p></td>
-</tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#abaqus.Calibration.Calibration.Calibration.DataSet" title="abaqus.Calibration.Calibration.Calibration.DataSet"><code class="xref py py-obj docutils literal notranslate"><span class="pre">DataSet</span></code></a>(name[, data, type, form])</p></td>
-<td><p>This method creates a DataSet object.</p></td>
-</tr>
-</tbody>
-</table>
-</div>
 <dl class="py method">
 <dt class="sig sig-object py" id="abaqus.Calibration.Calibration.Calibration.Behavior">
 <span class="sig-name descname"><span class="pre">Behavior</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">typeName</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#abaqus.Calibration.Behavior.Behavior" title="abaqus.Calibration.Behavior.Behavior"><span class="pre">abaqus.Calibration.Behavior.Behavior</span></a></span></span><a class="reference internal" href="../../../_modules/abaqus/Calibration/Calibration.html#Calibration.Behavior"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#abaqus.Calibration.Calibration.Calibration.Behavior" title="Permalink to this definition">#</a></dt>
@@ -509,63 +465,6 @@ file. Only valid if the behavior is of type FeFpBehavior</p>
 </dl>
 </dd>
 </dl>
-<p class="rubric">Methods</p>
-<div class="table-wrapper autosummary longtable docutils container">
-<table class="autosummary longtable docutils align-default">
-<colgroup>
-<col style="width: 10%" />
-<col style="width: 90%" />
-</colgroup>
-<tbody>
-<tr class="row-odd"><td><p><a class="reference internal" href="#abaqus.Calibration.Behavior.Behavior.compute_E" title="abaqus.Calibration.Behavior.Behavior.compute_E"><code class="xref py py-obj docutils literal notranslate"><span class="pre">compute_E</span></code></a>(dataSet)</p></td>
-<td><p>This method computes the value of young's modulus from the existing DataSet object.</p></td>
-</tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#abaqus.Calibration.Behavior.Behavior.compute_elasticModulus" title="abaqus.Calibration.Behavior.Behavior.compute_elasticModulus"><code class="xref py py-obj docutils literal notranslate"><span class="pre">compute_elasticModulus</span></code></a>(yieldPoint)</p></td>
-<td><p>This method computes the value of the elastic modulus from the yieldpoint value.</p></td>
-</tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#abaqus.Calibration.Behavior.Behavior.compute_nu" title="abaqus.Calibration.Behavior.Behavior.compute_nu"><code class="xref py py-obj docutils literal notranslate"><span class="pre">compute_nu</span></code></a>(dataSet)</p></td>
-<td><p>This method computes the value of Poisson's Ratio from the existing DataSet object.</p></td>
-</tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#abaqus.Calibration.Behavior.Behavior.compute_plasticPoints" title="abaqus.Calibration.Behavior.Behavior.compute_plasticPoints"><code class="xref py py-obj docutils literal notranslate"><span class="pre">compute_plasticPoints</span></code></a>(dataSet, slider_val, ...)</p></td>
-<td><p>This method extracts the coordinates of the Plastic Points.</p></td>
-</tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#abaqus.Calibration.Behavior.Behavior.compute_ultimatePoint" title="abaqus.Calibration.Behavior.Behavior.compute_ultimatePoint"><code class="xref py py-obj docutils literal notranslate"><span class="pre">compute_ultimatePoint</span></code></a>(dataSet)</p></td>
-<td><p>This method computes the coordinates of the Ultimate point from the existing DataSet object.</p></td>
-</tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#abaqus.Calibration.Behavior.Behavior.mapToMaterial" title="abaqus.Calibration.Behavior.Behavior.mapToMaterial"><code class="xref py py-obj docutils literal notranslate"><span class="pre">mapToMaterial</span></code></a>(materialName)</p></td>
-<td><p>This method appends the calibration data obtained from the DataSet object to an existing material object.</p></td>
-</tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#abaqus.Calibration.Behavior.Behavior.setValues" title="abaqus.Calibration.Behavior.Behavior.setValues"><code class="xref py py-obj docutils literal notranslate"><span class="pre">setValues</span></code></a>([E, nu, ds1Name, ds2Name, ...])</p></td>
-<td><p>This method modifies the data for an existing behavior object.</p></td>
-</tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#abaqus.Calibration.Behavior.Behavior.xyDataDissect" title="abaqus.Calibration.Behavior.Behavior.xyDataDissect"><code class="xref py py-obj docutils literal notranslate"><span class="pre">xyDataDissect</span></code></a>(dsName, modelName, calibrationName)</p></td>
-<td><p>This method extracts primary, unload, reload and permanent DataSet objects from the existing DataSet object.The method is only valid for FeFpBehavior type of behavior.</p></td>
-</tr>
-</tbody>
-</table>
-</div>
-<p>This method creates a Behavior object.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><dl class="simple">
-<dt><strong>name</strong></dt><dd><p>A String specifying the name of the new behavior.</p>
-</dd>
-<dt><strong>typeName</strong></dt><dd><p>A String specifying the type of the new Behavior. Values can be “ElasIsoBehavior”, 
-“ElasPlasIsoBehavior”, “FeFpBehavior”, or a user plug-in behavior type.</p>
-</dd>
-</dl>
-</dd>
-<dt class="field-even">Returns</dt>
-<dd class="field-even"><dl class="simple">
-<dt><code class="xref py py-obj docutils literal notranslate"><span class="pre">A</span></code> <a class="reference internal" href="#abaqus.Calibration.Behavior.Behavior" title="abaqus.Calibration.Behavior.Behavior"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Behavior</span></code></a> object.</dt><dd></dd>
-</dl>
-</dd>
-</dl>
-<p class="rubric">Notes</p>
-<p>This function can be accessed by:</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">mdb</span><span class="o">.</span><span class="n">models</span><span class="p">[</span><span class="n">name</span><span class="p">]</span><span class="o">.</span><span class="n">calibrations</span><span class="p">[</span><span class="n">name</span><span class="p">]</span><span class="o">.</span><span class="n">Behavior</span>
-</pre></div>
-</div>
 <p class="rubric">Methods</p>
 <div class="table-wrapper autosummary longtable docutils container">
 <table class="autosummary longtable docutils align-default">
@@ -856,49 +755,6 @@ True.</p>
 <p>This object can be accessed by:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">calibration</span>
 <span class="n">mdb</span><span class="o">.</span><span class="n">models</span><span class="p">[</span><span class="n">name</span><span class="p">]</span><span class="o">.</span><span class="n">calibrations</span><span class="p">[</span><span class="n">name</span><span class="p">]</span><span class="o">.</span><span class="n">dataSets</span><span class="p">[</span><span class="n">name</span><span class="p">]</span>
-</pre></div>
-</div>
-<p class="rubric">Methods</p>
-<div class="table-wrapper autosummary longtable docutils container">
-<table class="autosummary longtable docutils align-default">
-<colgroup>
-<col style="width: 10%" />
-<col style="width: 90%" />
-</colgroup>
-<tbody>
-<tr class="row-odd"><td><p><a class="reference internal" href="#abaqus.Calibration.DataSet.DataSet.setValues" title="abaqus.Calibration.DataSet.DataSet.setValues"><code class="xref py py-obj docutils literal notranslate"><span class="pre">setValues</span></code></a>([data])</p></td>
-<td><p>This method modifies the data for an existing DataSet object.</p></td>
-</tr>
-</tbody>
-</table>
-</div>
-<p>This method creates a DataSet object.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><dl class="simple">
-<dt><strong>name</strong></dt><dd><p>A String specifying the name of the new dataset.</p>
-</dd>
-<dt><strong>data</strong></dt><dd><p>A sequence of pairs of Floats specifying data set type pairs. Possible values are for 
-stress/strain, force/displacement, or transverse strain/axial strain pairs.</p>
-</dd>
-<dt><strong>type</strong></dt><dd><p>A String specifying the type of the new dataset. Values can be “STRESS/STRAIN”, 
-“FORCE/DISPLACEMENT”, or “AXIALSTRAIN/TRANSVERSESTRAIN”. The default value is 
-“STRESS/STRAIN”.</p>
-</dd>
-<dt><strong>form</strong></dt><dd><p>A String specifying the form of the new dataset. Values can be “NOMINAL” or “TRUE”. The 
-default value is “NOMINAl”.</p>
-</dd>
-</dl>
-</dd>
-<dt class="field-even">Returns</dt>
-<dd class="field-even"><dl class="simple">
-<dt><code class="xref py py-obj docutils literal notranslate"><span class="pre">A</span></code> <a class="reference internal" href="#abaqus.Calibration.DataSet.DataSet" title="abaqus.Calibration.DataSet.DataSet"><code class="xref py py-obj docutils literal notranslate"><span class="pre">DataSet</span></code></a> object.</dt><dd></dd>
-</dl>
-</dd>
-</dl>
-<p class="rubric">Notes</p>
-<p>This function can be accessed by:</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">mdb</span><span class="o">.</span><span class="n">models</span><span class="p">[</span><span class="n">name</span><span class="p">]</span><span class="o">.</span><span class="n">calibrations</span><span class="p">[</span><span class="n">name</span><span class="p">]</span><span class="o">.</span><span class="n">DataSet</span>
 </pre></div>
 </div>
 <p class="rubric">Methods</p>

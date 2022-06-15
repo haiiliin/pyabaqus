@@ -6,7 +6,7 @@
 <link rel="index" title="Index" href="../../genindex.html" /><link rel="search" title="Search" href="../../search.html" /><link rel="next" title="Canvas" href="canvas.html" /><link rel="prev" title="Abaqus Session" href="../session.html" />
 
     <meta name="generator" content="sphinx-4.5.0, furo 2022.06.04.1"/>
-        <title>Animation Options - PYABAQUS 1.0.19 documentation</title>
+        <title>Animation Options - PYABAQUS 1.1 documentation</title>
       <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/styles/furo.css?digest=40978830699223671f4072448e654b5958f38b89" />
     <link rel="stylesheet" type="text/css" href="../../_static/styles/furo-extensions.css?digest=30d1aed668e5c3a91c3e3bf6a60b675221979f0e" />
@@ -123,7 +123,7 @@
       </label>
     </div>
     <div class="header-center">
-      <a href="../../index.html"><div class="brand">PYABAQUS 1.0.19 documentation</div></a>
+      <a href="../../index.html"><div class="brand">PYABAQUS 1.1 documentation</div></a>
     </div>
     <div class="header-right">
       <div class="theme-toggle-container theme-toggle-header">
@@ -146,7 +146,7 @@
       <div class="sidebar-sticky"><a class="sidebar-brand" href="../../index.html">
   
   
-  <span class="sidebar-brand-text">PYABAQUS 1.0.19 documentation</span>
+  <span class="sidebar-brand-text">PYABAQUS 1.1 documentation</span>
   
 </a><form class="sidebar-search-container" method="get" action="../../search.html" role="search">
   <input class="sidebar-search" placeholder=Search name="q" aria-label="Search">
@@ -908,48 +908,6 @@ dimensions.</p>
 </tbody>
 </table>
 </div>
-<p>This method creates an ImageAnimation object from the specified filename and format.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><dl class="simple">
-<dt><strong>fileName</strong></dt><dd><p>A String specifying the name of the animation file to generate.</p>
-</dd>
-<dt><strong>format</strong></dt><dd><p>A SymbolicConstant specifying the format of the generated file. Possible values are AVI, 
-QUICKTIME.</p>
-</dd>
-</dl>
-</dd>
-<dt class="field-even">Returns</dt>
-<dd class="field-even"><dl class="simple">
-<dt><code class="xref py py-obj docutils literal notranslate"><span class="pre">An</span></code> <a class="reference internal" href="#abaqus.Animation.ImageAnimation.ImageAnimation" title="abaqus.Animation.ImageAnimation.ImageAnimation"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ImageAnimation</span></code></a> object.</dt><dd></dd>
-</dl>
-</dd>
-</dl>
-<p class="rubric">Notes</p>
-<p>This function can be accessed by:</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">session</span><span class="o">.</span><span class="n">ImageAnimation</span>
-</pre></div>
-</div>
-<p class="rubric">Methods</p>
-<div class="table-wrapper autosummary longtable docutils container">
-<table class="autosummary longtable docutils align-default">
-<colgroup>
-<col style="width: 10%" />
-<col style="width: 90%" />
-</colgroup>
-<tbody>
-<tr class="row-odd"><td><p><a class="reference internal" href="#abaqus.Animation.ImageAnimation.ImageAnimation.close" title="abaqus.Animation.ImageAnimation.ImageAnimation.close"><code class="xref py py-obj docutils literal notranslate"><span class="pre">close</span></code></a>()</p></td>
-<td><p>This method closes the ImageAnimation object.</p></td>
-</tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#abaqus.Animation.ImageAnimation.ImageAnimation.closed" title="abaqus.Animation.ImageAnimation.ImageAnimation.closed"><code class="xref py py-obj docutils literal notranslate"><span class="pre">closed</span></code></a>()</p></td>
-<td><p>This method indicates if the ImageAnimation is open or closed for writing animation frames.</p></td>
-</tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#abaqus.Animation.ImageAnimation.ImageAnimation.writeFrame" title="abaqus.Animation.ImageAnimation.ImageAnimation.writeFrame"><code class="xref py py-obj docutils literal notranslate"><span class="pre">writeFrame</span></code></a>([canvasObjects])</p></td>
-<td><p>This method adds a frame to the ImageAnimation object.</p></td>
-</tr>
-</tbody>
-</table>
-</div>
 <dl class="py method">
 <dt class="sig sig-object py" id="abaqus.Animation.ImageAnimation.ImageAnimation.close">
 <span class="sig-name descname"><span class="pre">close</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/abaqus/Animation/ImageAnimation.html#ImageAnimation.close"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#abaqus.Animation.ImageAnimation.ImageAnimation.close" title="Permalink to this definition">#</a></dt>
@@ -1063,96 +1021,6 @@ Upon creation, the Movie object is added to the session.movies repository.</p>
 </dd>
 <dt><strong>memory: int</strong></dt><dd><p>An Int specifying the memory taken by the movie frames as selected.</p>
 </dd>
-</dl>
-</dd>
-</dl>
-<p class="rubric">Methods</p>
-<div class="table-wrapper autosummary longtable docutils container">
-<table class="autosummary longtable docutils align-default">
-<colgroup>
-<col style="width: 10%" />
-<col style="width: 90%" />
-</colgroup>
-<tbody>
-<tr class="row-odd"><td><p><a class="reference internal" href="#abaqus.Animation.Movie.Movie.setValues" title="abaqus.Animation.Movie.Movie.setValues"><code class="xref py py-obj docutils literal notranslate"><span class="pre">setValues</span></code></a>([startFrame, endFrame, ...])</p></td>
-<td><p>This method modifies the Movie object.</p></td>
-</tr>
-</tbody>
-</table>
-</div>
-<p>This method creates a Movie object from the contents of the specified file.</p>
-<dl class="field-list">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><dl class="simple">
-<dt><strong>name</strong></dt><dd><p>A String specifying the repository name for the movie.</p>
-</dd>
-<dt><strong>fileName</strong></dt><dd><p>A String specifying the file from which the movie is to be read. The file extension must 
-be specified and indicates the movie format (.avi, .mov, .mpeg, or .wmv).</p>
-</dd>
-<dt><strong>startFrame</strong></dt><dd><p>An Int specifying the first frame to be displayed from this movie. The default value is 
-0.</p>
-</dd>
-<dt><strong>endFrame</strong></dt><dd><p>An Int specifying the last frame to be displayed from this movie. A negative number will 
-indicate reverse numbering: -1 is the last frame of the movie. The default value is −1.</p>
-</dd>
-<dt><strong>timelineStartFrame</strong></dt><dd><p>An Int specifying the global timeline frame number that corresponds to <em>startFrame</em>. A 
-value of 0 will indicate the first frame to be displayed in the viewport. The default 
-value is 0.</p>
-</dd>
-<dt><strong>timelineEndFrame</strong></dt><dd><p>An Int specifying the global timeline frame number that corresponds to <em>endFrame</em>. A 
-negative number will indicate reverse numbering: -1 indicates the last frame to be 
-displayed in the viewport. The default value is −1.</p>
-</dd>
-<dt><strong>timelineStartTime</strong></dt><dd><p>A Float specifying the global timeline time that corresponds to the time of 
-<em>startFrame</em>. The default value is 0.0.</p>
-</dd>
-<dt><strong>timelineEndTime</strong></dt><dd><p>The SymbolicConstant END_FRAME_TIME or a Float specifying the global timeline time that 
-corresponds to the time of <em>endFrame</em>. The SymbolicConstant END_FRAME_TIME indicates the 
-time in this movie corresponding to <em>endFrame</em>. The default value is END_FRAME_TIME.</p>
-</dd>
-</dl>
-</dd>
-<dt class="field-even">Returns</dt>
-<dd class="field-even"><dl class="simple">
-<dt><code class="xref py py-obj docutils literal notranslate"><span class="pre">A</span></code> <a class="reference internal" href="#abaqus.Animation.Movie.Movie" title="abaqus.Animation.Movie.Movie"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Movie</span></code></a> object.</dt><dd></dd>
-</dl>
-</dd>
-<dt class="field-odd">Raises</dt>
-<dd class="field-odd"><dl class="simple">
-<dt>ValueError.</dt><dd></dd>
-</dl>
-<ul class="simple">
-<li><dl class="simple">
-<dt><code class="xref py py-obj docutils literal notranslate"><span class="pre">If</span></code> <em>fileName</em> <code class="xref py py-obj docutils literal notranslate"><span class="pre">does</span></code> <code class="xref py py-obj docutils literal notranslate"><span class="pre">not</span></code> <code class="xref py py-obj docutils literal notranslate"><span class="pre">exist</span></code> or <code class="xref py py-obj docutils literal notranslate"><span class="pre">can</span></code> <code class="xref py py-obj docutils literal notranslate"><span class="pre">not</span></code> <code class="xref py py-obj docutils literal notranslate"><span class="pre">be</span></code> read:</dt><dd><p>ValueError: Unable to open movie file</p>
-</dd>
-</dl>
-</li>
-<li><dl class="simple">
-<dt><code class="xref py py-obj docutils literal notranslate"><span class="pre">If</span></code> <em>fileName</em> <code class="xref py py-obj docutils literal notranslate"><span class="pre">references</span></code> <code class="xref py py-obj docutils literal notranslate"><span class="pre">an</span></code> <code class="xref py py-obj docutils literal notranslate"><span class="pre">unsupported</span></code> <code class="xref py py-obj docutils literal notranslate"><span class="pre">movie</span></code> <code class="xref py py-obj docutils literal notranslate"><span class="pre">file</span></code> format:</dt><dd><p>ValueError: Unsupported movie format</p>
-</dd>
-</dl>
-</li>
-<li><dl class="simple">
-<dt><code class="xref py py-obj docutils literal notranslate"><span class="pre">If</span></code> <code class="xref py py-obj docutils literal notranslate"><span class="pre">the</span></code> <code class="xref py py-obj docutils literal notranslate"><span class="pre">contents</span></code> <code class="xref py py-obj docutils literal notranslate"><span class="pre">of</span></code> <em>fileName</em> <code class="xref py py-obj docutils literal notranslate"><span class="pre">are</span></code> <code class="xref py py-obj docutils literal notranslate"><span class="pre">corrupt</span></code> or <code class="xref py py-obj docutils literal notranslate"><span class="pre">can</span></code> <code class="xref py py-obj docutils literal notranslate"><span class="pre">not</span></code> <code class="xref py py-obj docutils literal notranslate"><span class="pre">be</span></code> decoded:</dt><dd><p>ValueError: Unable to decode movie file</p>
-</dd>
-</dl>
-</li>
-</ul>
-</dd>
-</dl>
-<p class="rubric">Notes</p>
-<p>This function can be accessed by:</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">session</span><span class="o">.</span><span class="n">Movie</span>
-</pre></div>
-</div>
-<dl class="field-list simple">
-<dt class="field-odd">Attributes</dt>
-<dd class="field-odd"><dl class="simple">
-<dt><strong>duration</strong></dt><dd></dd>
-<dt><strong>height</strong></dt><dd></dd>
-<dt><strong>memory</strong></dt><dd></dd>
-<dt><strong>numFrames</strong></dt><dd></dd>
-<dt><strong>width</strong></dt><dd></dd>
 </dl>
 </dd>
 </dl>

@@ -6,7 +6,7 @@
 <link rel="index" title="Index" href="../../../genindex.html" /><link rel="search" title="Search" href="../../../search.html" /><link rel="next" title="Optimization" href="optimization.html" /><link rel="prev" title="Material" href="material.html" />
 
     <meta name="generator" content="sphinx-4.5.0, furo 2022.06.04.1"/>
-        <title>Mesh - PYABAQUS 1.0.19 documentation</title>
+        <title>Mesh - PYABAQUS 1.1 documentation</title>
       <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/styles/furo.css?digest=40978830699223671f4072448e654b5958f38b89" />
     <link rel="stylesheet" type="text/css" href="../../../_static/styles/furo-extensions.css?digest=30d1aed668e5c3a91c3e3bf6a60b675221979f0e" />
@@ -123,7 +123,7 @@
       </label>
     </div>
     <div class="header-center">
-      <a href="../../../index.html"><div class="brand">PYABAQUS 1.0.19 documentation</div></a>
+      <a href="../../../index.html"><div class="brand">PYABAQUS 1.1 documentation</div></a>
     </div>
     <div class="header-right">
       <div class="theme-toggle-container theme-toggle-header">
@@ -146,7 +146,7 @@
       <div class="sidebar-sticky"><a class="sidebar-brand" href="../../../index.html">
   
   
-  <span class="sidebar-brand-text">PYABAQUS 1.0.19 documentation</span>
+  <span class="sidebar-brand-text">PYABAQUS 1.1 documentation</span>
   
 </a><form class="sidebar-search-container" method="get" action="../../../search.html" role="search">
   <input class="sidebar-search" placeholder=Search name="q" aria-label="Search">
@@ -1580,135 +1580,6 @@ command.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">mesh</span>
 </pre></div>
 </div>
-<p>This method creates an ElemType object.</p>
-<dl class="field-list">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><dl>
-<dt><strong>elemCode</strong></dt><dd><p>A SymbolicConstant specifying the Abaqus element code or just the element shape. 
-Possible values are:</p>
-<ul class="simple">
-<li><p>C3D8R, specifying a 8-node linear brick, reduced integration with hourglass control.</p></li>
-<li><p>CODE, specifying add more codes.</p></li>
-<li><p>UNKNOWN_TRI, specifying an unknown element type associated with a triangular shape.</p></li>
-<li><p>UNKNOWN_QUAD, specifying an unknown element type associated with a quadrilateral</p></li>
-</ul>
-<p>shape. 
-- UNKNOWN_HEX, specifying an unknown element type associated with a hexahedral shape. 
-- UNKNOWN_WEDGE, specifying an unknown element type associated with a wedge shape. 
-- UNKNOWN_TET, specifying an unknown element type associated with a tetrahedral shape.</p>
-</dd>
-<dt><strong>elemLibrary</strong></dt><dd><p>A SymbolicConstant specifying the Abaqus element library to use. Possible values are 
-STANDARD and EXPLICIT. The default value is STANDARD.</p>
-</dd>
-<dt><strong>hourglassStiffness</strong></dt><dd><p>A Float specifying the hourglass stiffness. (For shell elements this is the membrane 
-hourglass stiffness.) A value of zero indicates the default value should be used. The 
-default value will be used where appropriate. The default value is 0.0.This argument is 
-applicable only to some Abaqus/Standard elements.</p>
-</dd>
-<dt><strong>bendingHourglass</strong></dt><dd><p>A Float specifying the bending hourglass stiffness. A value of zero indicates the 
-default value should be used. The default value will be used where appropriate. The 
-default value is 0.0.This argument is applicable only to some Abaqus/Standard elements.</p>
-</dd>
-<dt><strong>drillingHourglass</strong></dt><dd><p>A Float specifying the drilling hourglass scaling factor. A value of zero indicates the 
-default value should be used. The default value will be used where appropriate. The 
-default value is 0.0.This argument is applicable only to some Abaqus/Standard elements.</p>
-</dd>
-<dt><strong>kinematicSplit</strong></dt><dd><p>A SymbolicConstant specifying the kinematic split control. Possible values are 
-AVERAGE_STRAIN, ORTHOGONAL, and CENTROID. The default value is AVERAGE_STRAIN.This 
-argument is applicable only to some Abaqus/Explicit elements.</p>
-</dd>
-<dt><strong>distortionControl</strong></dt><dd><p>A Boolean specifying whether to prevent negative element volumes or other excessive 
-distortions in crushable materials. The default value is OFF.This argument is applicable 
-only to some Abaqus/Explicit elements.</p>
-</dd>
-<dt><strong>lengthRatio</strong></dt><dd><p>A Float specifying the length ratio for distortion control in crushable materials. 
-Possible values are 0.0 ≤≤ <em>lengthRatio</em> ≤≤ 1.0. The default value is 
-<em>lengthRatio*=0.10.1This argument is applicable only when *distortionControl</em> is ON.</p>
-</dd>
-<dt><strong>secondOrderAccuracy</strong></dt><dd><p>A Boolean specifying the second-order accuracy option. The default value is OFF.This 
-argument is applicable only to some Abaqus/Explicit elements.</p>
-</dd>
-<dt><strong>hourglassControl</strong></dt><dd><p>A SymbolicConstant specifying the hourglass control. Possible values are 
-RELAX_STIFFNESS, STIFFNESS, VISCOUS, ENHANCED, and COMBINED. The default value is 
-ENHANCED.This argument is applicable only to some Abaqus/Explicit elements.</p>
-</dd>
-<dt><strong>weightFactor</strong></dt><dd><p>A Float specifying a weight factor when <a href="#id55"><span class="problematic" id="id56">*</span></a>hourglassControl*=COMBINED. The default value 
-is 0.5.This argument is applicable only to some Abaqus/Explicit elements.</p>
-</dd>
-<dt><strong>displacementHourglass</strong></dt><dd><p>A Float specifying the displacement hourglass scaling factor. The default value will be 
-used where appropriate. The default value is 1.0.This argument is applicable only to 
-some Abaqus/Explicit elements.</p>
-</dd>
-<dt><strong>rotationalHourglass</strong></dt><dd><p>A Float specifying the rotational hourglass scaling factor. The default value will be 
-used where appropriate. The default value is 1.0.This argument is applicable only to 
-some Abaqus/Explicit elements.</p>
-</dd>
-<dt><strong>outOfPlaneDisplacementHourglass</strong></dt><dd><p>A Float specifying the out-of-plane displacement hourglass scaling factor. The default 
-value will be used where appropriate. The default value is 1.0.This argument is 
-applicable only to some Abaqus/Explicit elements.</p>
-</dd>
-<dt><strong>elemDeletion</strong></dt><dd><p>A SymbolicConstant specifying the element deletion option. Possible values are DEFAULT, 
-ON, and OFF. The default value is DEFAULT.</p>
-</dd>
-<dt><strong>particleConversion</strong></dt><dd><p>A SymbolicConstant specifying the particle conversion option for smoothed particle 
-hydrodynamics. When not OFF or DEFAULT this argument refers to the criterion used for 
-conversion of elements to particles. Possible values are DEFAULT, OFF, TIME, STRAIN, and 
-STRESS. The default value is DEFAULT.This argument is applicable only to some 
-Abaqus/Explicit elements.</p>
-</dd>
-<dt><strong>particleConversionThreshold</strong></dt><dd><p>A Float specifying the threshold value for the particle conversion criterion specified 
-by <em>particleConversion</em>. The default value is 0.0.This argument is applicable only to 
-some Abaqus/Explicit elements.</p>
-</dd>
-<dt><strong>particleConversionPPD</strong></dt><dd><p>An Int specifying the number of particles per direction for element conversion when 
-<em>particleConversion</em> is specified. The default value is 1.This argument is applicable 
-only to some Abaqus/Explicit elements.</p>
-</dd>
-<dt><strong>particleConversionKernel</strong></dt><dd><p>A SymbolicConstant specifying the interpolation function for particle conversion when 
-<em>particleConversion</em> is specified. Possible values are CUBIC, QUADRATIC, and QUINTIC. 
-The default value is CUBIC.This argument is applicable only to some Abaqus/Explicit 
-elements.</p>
-</dd>
-<dt><strong>maxDegradation</strong></dt><dd><p>A Float specifying the maximum degradation option for damage control. The default value 
-is −1.0.</p>
-</dd>
-<dt><strong>viscosity</strong></dt><dd><p>A Float specifying the viscosity option. The default value is 0.0.This argument is 
-applicable only to some Abaqus/Standard elements.</p>
-</dd>
-<dt><strong>linearBulkViscosity</strong></dt><dd><p>A Float specifying the linear bulk viscosity scaling factor option for Abaqus/Explicit. 
-The default value is 1.0.</p>
-</dd>
-<dt><strong>quadraticBulkViscosity</strong></dt><dd><p>A Float specifying the quadratic bulk viscosity scaling factor option for 
-Abaqus/Explicit. The default value is 1.0.</p>
-</dd>
-<dt><strong>numFourierModes</strong></dt><dd><p>An Int specifying the number of Fourier modes. Possible values are 1, 2, 3, and 4. The 
-default value is 1.This argument is applicable only for axisymmetric elements with 
-nonlinear asymmetric deformation.</p>
-</dd>
-<dt><strong>nodeOffset</strong></dt><dd><p>An Int specifying the positive offset number for specifying the additional nodes needed 
-in the connectivity.This argument is applicable only for axisymmetric elements with 
-nonlinear asymmetric deformation.</p>
-</dd>
-<dt><strong>linearKinematicCtrl</strong></dt><dd><p>A Float specifying the linear kinematic conversion value.This argument is applicable 
-only to some Abaqus/Explicit elements.</p>
-</dd>
-<dt><strong>initialGapOpening</strong></dt><dd><p>A Float specifying the initial gap opening.This parameter is applicable only to some 
-Abaqus/Standard elements.</p>
-</dd>
-</dl>
-</dd>
-<dt class="field-even">Returns</dt>
-<dd class="field-even"><dl class="simple">
-<dt>elemType: <a class="reference internal" href="#abaqus.Mesh.ElemType.ElemType" title="abaqus.Mesh.ElemType.ElemType"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ElemType</span></code></a></dt><dd><p>An ElemType object</p>
-</dd>
-</dl>
-</dd>
-</dl>
-<p class="rubric">Notes</p>
-<p>This function can be accessed by:</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">mesh</span><span class="o">.</span><span class="n">ElemType</span>
-</pre></div>
-</div>
 </dd></dl>
 
 </section>
@@ -1855,42 +1726,6 @@ all elements in the mesh are included.</p>
 <span class="kn">import</span> <span class="nn">assembly</span>
 <span class="n">mdb</span><span class="o">.</span><span class="n">models</span><span class="p">[</span><span class="n">name</span><span class="p">]</span><span class="o">.</span><span class="n">rootAssembly</span><span class="o">.</span><span class="n">allInstances</span><span class="p">[</span><span class="n">name</span><span class="p">]</span><span class="o">.</span><span class="n">elementEdges</span>
 <span class="n">mdb</span><span class="o">.</span><span class="n">models</span><span class="p">[</span><span class="n">name</span><span class="p">]</span><span class="o">.</span><span class="n">rootAssembly</span><span class="o">.</span><span class="n">instances</span><span class="p">[</span><span class="n">name</span><span class="p">]</span><span class="o">.</span><span class="n">elementEdges</span>
-</pre></div>
-</div>
-<p class="rubric">Methods</p>
-<div class="table-wrapper autosummary longtable docutils container">
-<table class="autosummary longtable docutils align-default">
-<colgroup>
-<col style="width: 10%" />
-<col style="width: 90%" />
-</colgroup>
-<tbody>
-<tr class="row-odd"><td><p><a class="reference internal" href="#abaqus.Mesh.MeshEdgeArray.MeshEdgeArray.getMask" title="abaqus.Mesh.MeshEdgeArray.MeshEdgeArray.getMask"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getMask</span></code></a>()</p></td>
-<td><p>This method returns a string specifying the object or objects.</p></td>
-</tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#abaqus.Mesh.MeshEdgeArray.MeshEdgeArray.getSequenceFromMask" title="abaqus.Mesh.MeshEdgeArray.MeshEdgeArray.getSequenceFromMask"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getSequenceFromMask</span></code></a>(mask)</p></td>
-<td><p>This method returns the objects in the MeshEdgeArray identified using the specified <em>mask</em>.</p></td>
-</tr>
-</tbody>
-</table>
-</div>
-<p>This method creates a MeshEdgeArray object.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><dl class="simple">
-<dt><strong>elemEdges</strong></dt><dd><p>A list of MeshEdge objects.</p>
-</dd>
-</dl>
-</dd>
-<dt class="field-even">Returns</dt>
-<dd class="field-even"><dl class="simple">
-<dt><code class="xref py py-obj docutils literal notranslate"><span class="pre">A</span></code> <a class="reference internal" href="#abaqus.Mesh.MeshEdgeArray.MeshEdgeArray" title="abaqus.Mesh.MeshEdgeArray.MeshEdgeArray"><code class="xref py py-obj docutils literal notranslate"><span class="pre">MeshEdgeArray</span></code></a> object.</dt><dd></dd>
-</dl>
-</dd>
-</dl>
-<p class="rubric">Notes</p>
-<p>This function can be accessed by:</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">mesh</span><span class="o">.</span><span class="n">MeshEdgeArray</span>
 </pre></div>
 </div>
 <p class="rubric">Methods</p>
@@ -2196,66 +2031,6 @@ in use by any other element of the same part.</p>
 <span class="n">mdb</span><span class="o">.</span><span class="n">models</span><span class="p">[</span><span class="n">name</span><span class="p">]</span><span class="o">.</span><span class="n">rootAssembly</span><span class="o">.</span><span class="n">modelInstances</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">.</span><span class="n">surfaces</span><span class="p">[</span><span class="n">name</span><span class="p">]</span><span class="o">.</span><span class="n">elements</span>
 <span class="n">mdb</span><span class="o">.</span><span class="n">models</span><span class="p">[</span><span class="n">name</span><span class="p">]</span><span class="o">.</span><span class="n">rootAssembly</span><span class="o">.</span><span class="n">sets</span><span class="p">[</span><span class="n">name</span><span class="p">]</span><span class="o">.</span><span class="n">elements</span>
 <span class="n">mdb</span><span class="o">.</span><span class="n">models</span><span class="p">[</span><span class="n">name</span><span class="p">]</span><span class="o">.</span><span class="n">rootAssembly</span><span class="o">.</span><span class="n">surfaces</span><span class="p">[</span><span class="n">name</span><span class="p">]</span><span class="o">.</span><span class="n">elements</span>
-</pre></div>
-</div>
-<p class="rubric">Methods</p>
-<div class="table-wrapper autosummary longtable docutils container">
-<table class="autosummary longtable docutils align-default">
-<colgroup>
-<col style="width: 10%" />
-<col style="width: 90%" />
-</colgroup>
-<tbody>
-<tr class="row-odd"><td><p><a class="reference internal" href="#abaqus.Mesh.MeshElementArray.MeshElementArray.getBoundingBox" title="abaqus.Mesh.MeshElementArray.MeshElementArray.getBoundingBox"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getBoundingBox</span></code></a>()</p></td>
-<td><p>This method returns a dictionary of two tuples representing minimum and maximum boundary values of the bounding box of the minimum size containing the element sequence.</p></td>
-</tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#abaqus.Mesh.MeshElementArray.MeshElementArray.getByBoundingBox" title="abaqus.Mesh.MeshElementArray.MeshElementArray.getByBoundingBox"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getByBoundingBox</span></code></a>([xMin, yMin, zMin, xMax, ...])</p></td>
-<td><p>This method returns an array of element objects that lie within the specified bounding box.</p></td>
-</tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#abaqus.Mesh.MeshElementArray.MeshElementArray.getByBoundingCylinder" title="abaqus.Mesh.MeshElementArray.MeshElementArray.getByBoundingCylinder"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getByBoundingCylinder</span></code></a>(center1, center2, radius)</p></td>
-<td><p>This method returns an array of element objects that lie within the specified bounding cylinder.</p></td>
-</tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#abaqus.Mesh.MeshElementArray.MeshElementArray.getByBoundingSphere" title="abaqus.Mesh.MeshElementArray.MeshElementArray.getByBoundingSphere"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getByBoundingSphere</span></code></a>(center, radius)</p></td>
-<td><p>This method returns an array of element objects that lie within the specified bounding sphere.</p></td>
-</tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#abaqus.Mesh.MeshElementArray.MeshElementArray.getExteriorEdges" title="abaqus.Mesh.MeshElementArray.MeshElementArray.getExteriorEdges"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getExteriorEdges</span></code></a>()</p></td>
-<td><p>This method returns the exterior element edges for 2D/shell elements in the MeshElementArray.</p></td>
-</tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#abaqus.Mesh.MeshElementArray.MeshElementArray.getExteriorFaces" title="abaqus.Mesh.MeshElementArray.MeshElementArray.getExteriorFaces"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getExteriorFaces</span></code></a>()</p></td>
-<td><p>This method returns the exterior element faces for solid elements in the MeshElementArray.</p></td>
-</tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#abaqus.Mesh.MeshElementArray.MeshElementArray.getFromLabel" title="abaqus.Mesh.MeshElementArray.MeshElementArray.getFromLabel"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getFromLabel</span></code></a>(label)</p></td>
-<td><p>This method returns the object in the MeshElementArray with the given label.</p></td>
-</tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#abaqus.Mesh.MeshElementArray.MeshElementArray.getMask" title="abaqus.Mesh.MeshElementArray.MeshElementArray.getMask"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getMask</span></code></a>()</p></td>
-<td><p>This method returns a string specifying the object or objects.</p></td>
-</tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#abaqus.Mesh.MeshElementArray.MeshElementArray.getSequenceFromMask" title="abaqus.Mesh.MeshElementArray.MeshElementArray.getSequenceFromMask"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getSequenceFromMask</span></code></a>(mask)</p></td>
-<td><p>This method returns the objects in the MeshElementArray identified using the specified <em>mask</em>.</p></td>
-</tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#abaqus.Mesh.MeshElementArray.MeshElementArray.sequenceFromLabels" title="abaqus.Mesh.MeshElementArray.MeshElementArray.sequenceFromLabels"><code class="xref py py-obj docutils literal notranslate"><span class="pre">sequenceFromLabels</span></code></a>(labels)</p></td>
-<td><p>This method returns the objects in the MeshElementArray identified using the specified labels.</p></td>
-</tr>
-</tbody>
-</table>
-</div>
-<p>This method creates a MeshElementArray object.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><dl class="simple">
-<dt><strong>elements</strong></dt><dd><p>A list of MeshElement objects.</p>
-</dd>
-</dl>
-</dd>
-<dt class="field-even">Returns</dt>
-<dd class="field-even"><dl class="simple">
-<dt><code class="xref py py-obj docutils literal notranslate"><span class="pre">A</span></code> <a class="reference internal" href="#abaqus.Mesh.MeshElementArray.MeshElementArray" title="abaqus.Mesh.MeshElementArray.MeshElementArray"><code class="xref py py-obj docutils literal notranslate"><span class="pre">MeshElementArray</span></code></a> object.</dt><dd></dd>
-</dl>
-</dd>
-</dl>
-<p class="rubric">Notes</p>
-<p>This function can be accessed by:</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">mesh</span><span class="o">.</span><span class="n">MeshElementArray</span>
 </pre></div>
 </div>
 <p class="rubric">Methods</p>
@@ -2896,42 +2671,6 @@ collapsed such that a normal cannot be computed, a zero-length vector is returne
 </tbody>
 </table>
 </div>
-<p>This method creates a MeshFaceArray object.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><dl class="simple">
-<dt><strong>elemFaces</strong></dt><dd><p>A list of MeshFace objects.</p>
-</dd>
-</dl>
-</dd>
-<dt class="field-even">Returns</dt>
-<dd class="field-even"><dl class="simple">
-<dt><code class="xref py py-obj docutils literal notranslate"><span class="pre">A</span></code> <a class="reference internal" href="#abaqus.Mesh.MeshFaceArray.MeshFaceArray" title="abaqus.Mesh.MeshFaceArray.MeshFaceArray"><code class="xref py py-obj docutils literal notranslate"><span class="pre">MeshFaceArray</span></code></a> object.</dt><dd></dd>
-</dl>
-</dd>
-</dl>
-<p class="rubric">Notes</p>
-<p>This function can be accessed by:</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">mesh</span><span class="o">.</span><span class="n">MeshFaceArray</span>
-</pre></div>
-</div>
-<p class="rubric">Methods</p>
-<div class="table-wrapper autosummary longtable docutils container">
-<table class="autosummary longtable docutils align-default">
-<colgroup>
-<col style="width: 10%" />
-<col style="width: 90%" />
-</colgroup>
-<tbody>
-<tr class="row-odd"><td><p><a class="reference internal" href="#abaqus.Mesh.MeshFaceArray.MeshFaceArray.getMask" title="abaqus.Mesh.MeshFaceArray.MeshFaceArray.getMask"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getMask</span></code></a>()</p></td>
-<td><p>This method returns a string specifying the object or objects.</p></td>
-</tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#abaqus.Mesh.MeshFaceArray.MeshFaceArray.getSequenceFromMask" title="abaqus.Mesh.MeshFaceArray.MeshFaceArray.getSequenceFromMask"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getSequenceFromMask</span></code></a>(mask)</p></td>
-<td><p>This method returns the objects in the MeshFaceArray identified using the specified <em>mask</em>.</p></td>
-</tr>
-</tbody>
-</table>
-</div>
 <dl class="py method">
 <dt class="sig sig-object py" id="abaqus.Mesh.MeshFaceArray.MeshFaceArray.getMask">
 <span class="sig-name descname"><span class="pre">getMask</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../../_modules/abaqus/Mesh/MeshFaceArray.html#MeshFaceArray.getMask"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#abaqus.Mesh.MeshFaceArray.MeshFaceArray.getMask" title="Permalink to this definition">#</a></dt>
@@ -3024,65 +2763,6 @@ internal numbering of the node repository. The index does not refer to the node 
 </dd>
 <dt><strong>coordinates: float</strong></dt><dd><p>A tuple of three Floats specifying the coordinates of the new node.</p>
 </dd>
-</dl>
-</dd>
-</dl>
-<p class="rubric">Methods</p>
-<div class="table-wrapper autosummary longtable docutils container">
-<table class="autosummary longtable docutils align-default">
-<colgroup>
-<col style="width: 10%" />
-<col style="width: 90%" />
-</colgroup>
-<tbody>
-<tr class="row-odd"><td><p><a class="reference internal" href="#abaqus.Mesh.MeshNode.MeshNode.getElemEdges" title="abaqus.Mesh.MeshNode.MeshNode.getElemEdges"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getElemEdges</span></code></a>()</p></td>
-<td><p>This method returns a tuple of element edge objects that share the node.</p></td>
-</tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#abaqus.Mesh.MeshNode.MeshNode.getElemFaces" title="abaqus.Mesh.MeshNode.MeshNode.getElemFaces"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getElemFaces</span></code></a>()</p></td>
-<td><p>This method returns a tuple of element face objects that share the node.</p></td>
-</tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#abaqus.Mesh.MeshNode.MeshNode.getElements" title="abaqus.Mesh.MeshNode.MeshNode.getElements"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getElements</span></code></a>()</p></td>
-<td><p>This method returns a tuple of element objects that share the node.</p></td>
-</tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#abaqus.Mesh.MeshNode.MeshNode.getNodesByFeatureEdge" title="abaqus.Mesh.MeshNode.MeshNode.getNodesByFeatureEdge"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getNodesByFeatureEdge</span></code></a>(angle)</p></td>
-<td><p>This method returns an array of mesh node objects that are obtained by recursively finding adjacent nodes along a feature edge that are at an angle of less than or equal to the specified face angle.</p></td>
-</tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#abaqus.Mesh.MeshNode.MeshNode.setValues" title="abaqus.Mesh.MeshNode.MeshNode.setValues"><code class="xref py py-obj docutils literal notranslate"><span class="pre">setValues</span></code></a>([label])</p></td>
-<td><p>This method modifies the MeshNode object.</p></td>
-</tr>
-</tbody>
-</table>
-</div>
-<p>This method creates a node on an orphan mesh part.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><dl class="simple">
-<dt><strong>coordinates</strong></dt><dd><p>A sequence of three Floats specifying the coordinates of the new node.</p>
-</dd>
-<dt><strong>localCsys</strong></dt><dd><p>A DatumCsys object specifying the local coordinate system. If unspecified, the global 
-coordinate system will be used.</p>
-</dd>
-<dt><strong>label</strong></dt><dd><p>An Int specifying the node label.</p>
-</dd>
-</dl>
-</dd>
-<dt class="field-even">Returns</dt>
-<dd class="field-even"><dl class="simple">
-<dt>node: <a class="reference internal" href="#abaqus.Mesh.MeshNode.MeshNode" title="abaqus.Mesh.MeshNode.MeshNode"><code class="xref py py-obj docutils literal notranslate"><span class="pre">MeshNode</span></code></a></dt><dd><p>A MeshNode object</p>
-</dd>
-</dl>
-</dd>
-</dl>
-<p class="rubric">Notes</p>
-<p>This function can be accessed by:</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">mdb</span><span class="o">.</span><span class="n">models</span><span class="p">[</span><span class="n">name</span><span class="p">]</span><span class="o">.</span><span class="n">parts</span><span class="p">[</span><span class="o">*</span><span class="n">name</span><span class="o">*</span><span class="p">]</span><span class="o">.</span><span class="n">Node</span>
-</pre></div>
-</div>
-<dl class="field-list simple">
-<dt class="field-odd">Attributes</dt>
-<dd class="field-odd"><dl class="simple">
-<dt><strong>coordinates</strong></dt><dd></dd>
-<dt><strong>label</strong></dt><dd></dd>
 </dl>
 </dd>
 </dl>
@@ -3229,63 +2909,6 @@ any other node of the same part.</p>
 <span class="n">mdb</span><span class="o">.</span><span class="n">models</span><span class="p">[</span><span class="n">name</span><span class="p">]</span><span class="o">.</span><span class="n">rootAssembly</span><span class="o">.</span><span class="n">nodes</span>
 <span class="n">mdb</span><span class="o">.</span><span class="n">models</span><span class="p">[</span><span class="n">name</span><span class="p">]</span><span class="o">.</span><span class="n">rootAssembly</span><span class="o">.</span><span class="n">sets</span><span class="p">[</span><span class="n">name</span><span class="p">]</span><span class="o">.</span><span class="n">nodes</span>
 <span class="n">mdb</span><span class="o">.</span><span class="n">models</span><span class="p">[</span><span class="n">name</span><span class="p">]</span><span class="o">.</span><span class="n">rootAssembly</span><span class="o">.</span><span class="n">surfaces</span><span class="p">[</span><span class="n">name</span><span class="p">]</span><span class="o">.</span><span class="n">nodes</span>
-</pre></div>
-</div>
-<p class="rubric">Methods</p>
-<div class="table-wrapper autosummary longtable docutils container">
-<table class="autosummary longtable docutils align-default">
-<colgroup>
-<col style="width: 10%" />
-<col style="width: 90%" />
-</colgroup>
-<tbody>
-<tr class="row-odd"><td><p><a class="reference internal" href="#abaqus.Mesh.MeshNodeArray.MeshNodeArray.getBoundingBox" title="abaqus.Mesh.MeshNodeArray.MeshNodeArray.getBoundingBox"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getBoundingBox</span></code></a>()</p></td>
-<td><p>This method returns a dictionary of two tuples representing minimum and maximum boundary values of the bounding box of the minimum size containing the node sequence.</p></td>
-</tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#abaqus.Mesh.MeshNodeArray.MeshNodeArray.getByBoundingBox" title="abaqus.Mesh.MeshNodeArray.MeshNodeArray.getByBoundingBox"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getByBoundingBox</span></code></a>([xMin, yMin, zMin, xMax, ...])</p></td>
-<td><p>This method returns an array of nodes that lie within the specified bounding box.</p></td>
-</tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#abaqus.Mesh.MeshNodeArray.MeshNodeArray.getByBoundingCylinder" title="abaqus.Mesh.MeshNodeArray.MeshNodeArray.getByBoundingCylinder"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getByBoundingCylinder</span></code></a>(center1, center2, radius)</p></td>
-<td><p>This method returns an array of node objects that lie within the specified bounding cylinder.</p></td>
-</tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#abaqus.Mesh.MeshNodeArray.MeshNodeArray.getByBoundingSphere" title="abaqus.Mesh.MeshNodeArray.MeshNodeArray.getByBoundingSphere"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getByBoundingSphere</span></code></a>(center, radius)</p></td>
-<td><p>This method returns an array of node objects that lie within the specified bounding sphere.</p></td>
-</tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#abaqus.Mesh.MeshNodeArray.MeshNodeArray.getClosest" title="abaqus.Mesh.MeshNodeArray.MeshNodeArray.getClosest"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getClosest</span></code></a>(coordinates[, numToFind, ...])</p></td>
-<td><p>This method returns the node or nodes closest to the given point or set of points.</p></td>
-</tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#abaqus.Mesh.MeshNodeArray.MeshNodeArray.getFromLabel" title="abaqus.Mesh.MeshNodeArray.MeshNodeArray.getFromLabel"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getFromLabel</span></code></a>(label)</p></td>
-<td><p>This method returns the object in the MeshNodeArray with the given label.</p></td>
-</tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#abaqus.Mesh.MeshNodeArray.MeshNodeArray.getMask" title="abaqus.Mesh.MeshNodeArray.MeshNodeArray.getMask"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getMask</span></code></a>()</p></td>
-<td><p>This method returns a string specifying the object or objects.</p></td>
-</tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#abaqus.Mesh.MeshNodeArray.MeshNodeArray.getSequenceFromMask" title="abaqus.Mesh.MeshNodeArray.MeshNodeArray.getSequenceFromMask"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getSequenceFromMask</span></code></a>(mask)</p></td>
-<td><p>This method returns the objects in the MeshNodeArray identified using the specified <em>mask</em>.</p></td>
-</tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#abaqus.Mesh.MeshNodeArray.MeshNodeArray.sequenceFromLabels" title="abaqus.Mesh.MeshNodeArray.MeshNodeArray.sequenceFromLabels"><code class="xref py py-obj docutils literal notranslate"><span class="pre">sequenceFromLabels</span></code></a>(labels)</p></td>
-<td><p>This method returns the objects in the MeshNodeArray identified using the specified labels.</p></td>
-</tr>
-</tbody>
-</table>
-</div>
-<p>This method creates a MeshNodeArray object.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><dl class="simple">
-<dt><strong>nodes</strong></dt><dd><p>A list of MeshNode objects.</p>
-</dd>
-</dl>
-</dd>
-<dt class="field-even">Returns</dt>
-<dd class="field-even"><dl class="simple">
-<dt><code class="xref py py-obj docutils literal notranslate"><span class="pre">A</span></code> <a class="reference internal" href="#abaqus.Mesh.MeshNodeArray.MeshNodeArray" title="abaqus.Mesh.MeshNodeArray.MeshNodeArray"><code class="xref py py-obj docutils literal notranslate"><span class="pre">MeshNodeArray</span></code></a> object.</dt><dd></dd>
-</dl>
-</dd>
-</dl>
-<p class="rubric">Notes</p>
-<p>This function can be accessed by:</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">mesh</span><span class="o">.</span><span class="n">MeshNodeArray</span>
 </pre></div>
 </div>
 <p class="rubric">Methods</p>
@@ -4080,7 +3703,7 @@ are:</p>
 </ul>
 </div></blockquote>
 <p>The return value is dependent on the <em>attribute</em> argument. 
-- If <a href="#id57"><span class="problematic" id="id58">*</span></a>attribute*=EDGE_SEEDING_METHOD, the return value is a SymbolicConstant specifying 
+- If <a href="#id55"><span class="problematic" id="id56">*</span></a>attribute*=EDGE_SEEDING_METHOD, the return value is a SymbolicConstant specifying 
 the edge seeding method used to create the seeds along the edge. Possible values are:</p>
 <blockquote>
 <div><ul class="simple">
@@ -4092,7 +3715,7 @@ the edge seeding method used to create the seeds along the edge. Possible values
 </ul>
 </div></blockquote>
 <ul class="simple">
-<li><p>If <a href="#id59"><span class="problematic" id="id60">*</span></a>attribute*=BIAS_METHOD, the return value is a SymbolicConstant specifying the bias</p></li>
+<li><p>If <a href="#id57"><span class="problematic" id="id58">*</span></a>attribute*=BIAS_METHOD, the return value is a SymbolicConstant specifying the bias</p></li>
 </ul>
 <p>type used to create the seeds along the edge. Possible values are:</p>
 <blockquote>
@@ -4103,29 +3726,29 @@ the edge seeding method used to create the seeds along the edge. Possible values
 </ul>
 </div></blockquote>
 <ul class="simple">
-<li><p>If <a href="#id61"><span class="problematic" id="id62">*</span></a>attribute*=NUMBER, the return value is an Int specifying the number of element</p></li>
+<li><p>If <a href="#id59"><span class="problematic" id="id60">*</span></a>attribute*=NUMBER, the return value is an Int specifying the number of element</p></li>
 </ul>
 <p>seeds along the edge. 
-- If <a href="#id63"><span class="problematic" id="id64">*</span></a>attribute*=AVERAGE_SIZE, the return value is a Float specifying the average 
+- If <a href="#id61"><span class="problematic" id="id62">*</span></a>attribute*=AVERAGE_SIZE, the return value is a Float specifying the average 
 element size along the edge. 
-- If <a href="#id65"><span class="problematic" id="id66">*</span></a>attribute*=DEVIATION_FACTOR, the return value is a Float specifying the deviation 
+- If <a href="#id63"><span class="problematic" id="id64">*</span></a>attribute*=DEVIATION_FACTOR, the return value is a Float specifying the deviation 
 factor h/Lh/L, where hh is the chordal deviation and LL is the element length. If edge 
 seeds are not defined, the return value is zero. 
-- If <a href="#id67"><span class="problematic" id="id68">*</span></a>attribute*=MIN_SIZE_FACTOR, the return value is a Float specifying the size of the 
+- If <a href="#id65"><span class="problematic" id="id66">*</span></a>attribute*=MIN_SIZE_FACTOR, the return value is a Float specifying the size of the 
 smallest allowable element as a fraction of the specified global element size. If edge 
 seeds are not defined, the return value is zero. 
-- If <a href="#id69"><span class="problematic" id="id70">*</span></a>attribute*=BIAS_RATIO, the return value is a Float specifying the length ratio of 
+- If <a href="#id67"><span class="problematic" id="id68">*</span></a>attribute*=BIAS_RATIO, the return value is a Float specifying the length ratio of 
 the largest element to the smallest element. 
-- If <a href="#id71"><span class="problematic" id="id72">*</span></a>attribute*=BIAS_MIN_SIZE, the return value is a Float specifying the length of the 
+- If <a href="#id69"><span class="problematic" id="id70">*</span></a>attribute*=BIAS_MIN_SIZE, the return value is a Float specifying the length of the 
 largest element; only applicable if the EDGE_SEEDING_METHOD is BIASED and seeds were 
 specified by minimum and maximum sizes. 
-- If <a href="#id73"><span class="problematic" id="id74">*</span></a>attribute*=BIAS_MAX_SIZE, the return value is a Float specifying the length of the 
+- If <a href="#id71"><span class="problematic" id="id72">*</span></a>attribute*=BIAS_MAX_SIZE, the return value is a Float specifying the length of the 
 largest element; only applicable if the EDGE_SEEDING_METHOD is BIASED and seeds were 
 specified by minimum and maximum sizes. 
-- If <a href="#id75"><span class="problematic" id="id76">*</span></a>attribute*=VERTEX_ADJ_TO_SMALLEST_ELEM, the return value is an Int specifying the 
+- If <a href="#id73"><span class="problematic" id="id74">*</span></a>attribute*=VERTEX_ADJ_TO_SMALLEST_ELEM, the return value is an Int specifying the 
 ID of the vertex next to the smallest element; only applicable if the 
 EDGE_SEEDING_METHOD is BIASED. 
-- If <a href="#id77"><span class="problematic" id="id78">*</span></a>attribute*=SMALLEST_ELEM_LOCATION, the return value is a SymbolicConstant 
+- If <a href="#id75"><span class="problematic" id="id76">*</span></a>attribute*=SMALLEST_ELEM_LOCATION, the return value is a SymbolicConstant 
 specifying the location of smallest elements for double bias seeds; only applicable if 
 the EDGE_SEEDING_METHOD is BIASED and BIAS_METHOD is DOUBLE. Possible values are:</p>
 <blockquote>
@@ -4136,7 +3759,7 @@ the EDGE_SEEDING_METHOD is BIASED and BIAS_METHOD is DOUBLE. Possible values are
 </ul>
 </div></blockquote>
 <ul class="simple">
-<li><p>If <a href="#id79"><span class="problematic" id="id80">*</span></a>attribute*=CONSTRAINT, the return value is a SymbolicConstant specifying how close</p></li>
+<li><p>If <a href="#id77"><span class="problematic" id="id78">*</span></a>attribute*=CONSTRAINT, the return value is a SymbolicConstant specifying how close</p></li>
 </ul>
 <p>the seeds must be matched by the mesh. Possible values are:</p>
 <blockquote>
@@ -4242,7 +3865,7 @@ elements.</p>
 </ul>
 </div></blockquote>
 <p>The return value depends on the value of the <em>attribute</em> argument. 
-- If <a href="#id81"><span class="problematic" id="id82">*</span></a>attribute*=ELEM_SHAPE, the return value is a SymbolicConstant specifying the 
+- If <a href="#id79"><span class="problematic" id="id80">*</span></a>attribute*=ELEM_SHAPE, the return value is a SymbolicConstant specifying the 
 element shape used during meshing. Possible values are:</p>
 <blockquote>
 <div><ul class="simple">
@@ -4257,7 +3880,7 @@ element shape used during meshing. Possible values are:</p>
 </ul>
 </div></blockquote>
 <ul class="simple">
-<li><p>If <a href="#id83"><span class="problematic" id="id84">*</span></a>attribute*=TECHNIQUE, the return value is a SymbolicConstant specifying the</p></li>
+<li><p>If <a href="#id81"><span class="problematic" id="id82">*</span></a>attribute*=TECHNIQUE, the return value is a SymbolicConstant specifying the</p></li>
 </ul>
 <p>meshing technique to be used during meshing. Possible values are:</p>
 <blockquote>
@@ -4270,7 +3893,7 @@ element shape used during meshing. Possible values are:</p>
 </div></blockquote>
 <p>Where UNMESHABLE indicates that no meshing technique is applicable with the currently 
 assigned element shape. 
-- If <a href="#id85"><span class="problematic" id="id86">*</span></a>attribute*=ALGORITHM, the return value is a SymbolicConstant specifying the 
+- If <a href="#id83"><span class="problematic" id="id84">*</span></a>attribute*=ALGORITHM, the return value is a SymbolicConstant specifying the 
 meshing algorithm to be used during meshing. Possible values are:</p>
 <blockquote>
 <div><ul class="simple">
@@ -4282,10 +3905,10 @@ meshing algorithm to be used during meshing. Possible values are:</p>
 </ul>
 </div></blockquote>
 <p>Where NONE indicates that no algorithm is applicable. 
-- If <a href="#id87"><span class="problematic" id="id88">*</span></a>attribute*=MIN_TRANSITION, the return value is a Boolean indicating whether 
+- If <a href="#id85"><span class="problematic" id="id86">*</span></a>attribute*=MIN_TRANSITION, the return value is a Boolean indicating whether 
 minimum transition will be used during meshing. This option is applicable only to the 
 following: 
-- Free quadrilateral meshing or sweep hexahedral meshing with <a href="#id89"><span class="problematic" id="id90">*</span></a>algorithm*=MEDIAL_AXIS. 
+- Free quadrilateral meshing or sweep hexahedral meshing with <a href="#id87"><span class="problematic" id="id88">*</span></a>algorithm*=MEDIAL_AXIS. 
 - Structured quadrilateral meshing.</p>
 </dd>
 </dl>
@@ -4341,14 +3964,14 @@ are:
 - DEVIATION_FACTOR 
 - MIN_SIZE_FACTOR 
 The return value depends on the value of the <em>attribute</em> argument. 
-- If <a href="#id91"><span class="problematic" id="id92">*</span></a>attribute*=SIZE, the return value is a Float specifying the assigned global 
+- If <a href="#id89"><span class="problematic" id="id90">*</span></a>attribute*=SIZE, the return value is a Float specifying the assigned global 
 element size. If part seeds are not defined, the return value is zero. 
-- If <a href="#id93"><span class="problematic" id="id94">*</span></a>attribute*=DEFAULT_SIZE, the return value is a Float specifying a suggested 
+- If <a href="#id91"><span class="problematic" id="id92">*</span></a>attribute*=DEFAULT_SIZE, the return value is a Float specifying a suggested 
 default global element size based upon the part geometry. 
-- If <a href="#id95"><span class="problematic" id="id96">*</span></a>attribute*=DEVIATION_FACTOR, the return value is a Float specifying the deviation 
+- If <a href="#id93"><span class="problematic" id="id94">*</span></a>attribute*=DEVIATION_FACTOR, the return value is a Float specifying the deviation 
 factor h/Lh/L, where hh is the chordal deviation and LL is the element length. If part 
 seeds are not defined, the return value is zero. 
-- If <a href="#id97"><span class="problematic" id="id98">*</span></a>attribute*=MIN_SIZE_FACTOR, the return value is a Float specifying the size of the 
+- If <a href="#id95"><span class="problematic" id="id96">*</span></a>attribute*=MIN_SIZE_FACTOR, the return value is a Float specifying the size of the 
 smallest allowable element as a fraction of the specified global element size. If part 
 seeds are not defined, the return value is zero.</p>
 </dd>
@@ -4446,8 +4069,8 @@ values are:
 </dd>
 <dt><strong>end1Edges</strong></dt><dd><p>A sequence of Edge objects specifying the edges to seed. The smallest elements will be 
 positioned near the end where the normalized curve parameter=0.0. You must provide 
-either the <em>end1Edges</em> or the <em>end2Edges</em> argument or both when <a href="#id99"><span class="problematic" id="id100">*</span></a>biasMethod*=SINGLE and 
-omit both of them when <a href="#id101"><span class="problematic" id="id102">*</span></a>biasMethod*=DOUBLE.Note:You can determine which end is which by 
+either the <em>end1Edges</em> or the <em>end2Edges</em> argument or both when <a href="#id97"><span class="problematic" id="id98">*</span></a>biasMethod*=SINGLE and 
+omit both of them when <a href="#id99"><span class="problematic" id="id100">*</span></a>biasMethod*=DOUBLE.Note:You can determine which end is which by 
 the order of the vertex indices returned by 
 [getVertices()](<a class="reference external" href="https://help.3ds.com/2022/english/DSSIMULIA_Established/SIMACAEKERRefMap/simaker-c-edgepyc.htm?ContextScope=all#simaker-edgegetverticespyc">https://help.3ds.com/2022/english/DSSIMULIA_Established/SIMACAEKERRefMap/simaker-c-edgepyc.htm?ContextScope=all#simaker-edgegetverticespyc</a>).</p>
 </dd>
@@ -4456,8 +4079,8 @@ positioned near the end where the normalized curve parameter=1.0.</p>
 </dd>
 <dt><strong>centerEdges</strong></dt><dd><p>A sequence of Edge objects specifying the edges to seed. The smallest elements will be 
 positioned near edge center. You must provide either the <em>centerEdges</em> or the <em>endEdges</em> 
-argument or both when <a href="#id103"><span class="problematic" id="id104">*</span></a>biasMethod*=DOUBLE and omit both of them when 
-<a href="#id105"><span class="problematic" id="id106">*</span></a>biasMethod*=SINGLE.</p>
+argument or both when <a href="#id101"><span class="problematic" id="id102">*</span></a>biasMethod*=DOUBLE and omit both of them when 
+<a href="#id103"><span class="problematic" id="id104">*</span></a>biasMethod*=SINGLE.</p>
 </dd>
 <dt><strong>endEdges</strong></dt><dd><p>A sequence of Edge objects specifying the edges to seed. The smallest elements will be 
 positioned near edge ends.</p>
@@ -4706,7 +4329,7 @@ will be used. If algorithm is not specified, the default</p>
 <dt><strong>minTransition</strong></dt><dd><p>A Boolean specifying whether minimum transition is to be applied. The default value is 
 ON. If unspecified, the existing value will remain unchanged. This option is applicable 
 only in the following cases: 
-- Free quadrilateral meshing or hexahedral sweep meshing with <a href="#id107"><span class="problematic" id="id108">*</span></a>algorithm*=MEDIAL_AXIS. 
+- Free quadrilateral meshing or hexahedral sweep meshing with <a href="#id105"><span class="problematic" id="id106">*</span></a>algorithm*=MEDIAL_AXIS. 
 - Structured quadrilateral meshing.</p>
 </dd>
 <dt><strong>sizeGrowth</strong></dt><dd><p>A SymbolicConstant specifying element size growth to be applied when generating the 
@@ -4742,7 +4365,7 @@ revolvable region.</p>
 </dd>
 <dt><strong>sense</strong></dt><dd><p>A SymbolicConstant specifying the sweep sense. The sense will affect only how gasket 
 elements will be created; it will have no effect if gasket elements are not used. 
-Possible values are FORWARD or REVERSE.If <a href="#id109"><span class="problematic" id="id110">*</span></a>sense*=FORWARD, the sense of the given edge’s 
+Possible values are FORWARD or REVERSE.If <a href="#id107"><span class="problematic" id="id108">*</span></a>sense*=FORWARD, the sense of the given edge’s 
 underlying curve will be used.</p>
 </dd>
 </dl>

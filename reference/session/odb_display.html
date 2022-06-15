@@ -6,7 +6,7 @@
 <link rel="index" title="Index" href="../../genindex.html" /><link rel="search" title="Search" href="../../search.html" /><link rel="next" title="Path and Probe" href="path.html" /><link rel="prev" title="FieldReport" href="field_report.html" />
 
     <meta name="generator" content="sphinx-4.5.0, furo 2022.06.04.1"/>
-        <title>Odb Display - PYABAQUS 1.0.19 documentation</title>
+        <title>Odb Display - PYABAQUS 1.1 documentation</title>
       <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/styles/furo.css?digest=40978830699223671f4072448e654b5958f38b89" />
     <link rel="stylesheet" type="text/css" href="../../_static/styles/furo-extensions.css?digest=30d1aed668e5c3a91c3e3bf6a60b675221979f0e" />
@@ -123,7 +123,7 @@
       </label>
     </div>
     <div class="header-center">
-      <a href="../../index.html"><div class="brand">PYABAQUS 1.0.19 documentation</div></a>
+      <a href="../../index.html"><div class="brand">PYABAQUS 1.1 documentation</div></a>
     </div>
     <div class="header-right">
       <div class="theme-toggle-container theme-toggle-header">
@@ -146,7 +146,7 @@
       <div class="sidebar-sticky"><a class="sidebar-brand" href="../../index.html">
   
   
-  <span class="sidebar-brand-text">PYABAQUS 1.0.19 documentation</span>
+  <span class="sidebar-brand-text">PYABAQUS 1.1 documentation</span>
   
 </a><form class="sidebar-search-container" method="get" action="../../search.html" role="search">
   <input class="sidebar-search" placeholder=Search name="q" aria-label="Search">
@@ -2516,94 +2516,6 @@ ON.</p>
 <dt><strong>crossSectionalArea: float</strong></dt><dd><p>A Float returning the cross-sectional area of the cut when <strong>showFreeBodyCut</strong> is set to
 ON.</p>
 </dd>
-</dl>
-</dd>
-</dl>
-<p class="rubric">Methods</p>
-<div class="table-wrapper autosummary longtable docutils container">
-<table class="autosummary longtable docutils align-default">
-<colgroup>
-<col style="width: 10%" />
-<col style="width: 90%" />
-</colgroup>
-<tbody>
-<tr class="row-odd"><td><p><a class="reference internal" href="#abaqus.OdbDisplay.ViewCut.ViewCut.setValues" title="abaqus.OdbDisplay.ViewCut.ViewCut.setValues"><code class="xref py py-obj docutils literal notranslate"><span class="pre">setValues</span></code></a>([angle, motion, position, radius, ...])</p></td>
-<td><p>This method modifies the ViewCut object.</p></td>
-</tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#abaqus.OdbDisplay.ViewCut.ViewCut.updateVariable" title="abaqus.OdbDisplay.ViewCut.ViewCut.updateVariable"><code class="xref py py-obj docutils literal notranslate"><span class="pre">updateVariable</span></code></a>()</p></td>
-<td><p>This method updates the field associated with an isosurface cut to be consistent with the current primary variable.</p></td>
-</tr>
-</tbody>
-</table>
-</div>
-<p>This method creates a ViewCut object.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><dl class="simple">
-<dt><strong>name</strong></dt><dd><p>A String specifying the repository key.</p>
-</dd>
-<dt><strong>shape</strong></dt><dd><p>A SymbolicConstant specifying the shape of the ViewCut object. Possible values are 
-PLANE, CYLINDER, SPHERE, and ISOSURFACE.</p>
-</dd>
-<dt><strong>origin</strong></dt><dd><p>A sequence of three Floats specifying the X-, Y-, and Z-coordinates of the origin of the 
-plane, cylinder or sphere cut. This origin is not required if the cut shape is 
-ISOSURFACE or if the cut is defined by the <em>csysName</em> argument.</p>
-</dd>
-<dt><strong>normal</strong></dt><dd><p>A sequence of Floats specifying the X-, Y-, and Z-coordinates of the normal axis to the 
-plane defining the cut, when the plane is defined using the <em>origin</em> argument or a 
-SymbolicConstant defining this normal axis, when the cut is defined by the <em>csysName</em> 
-argument. Possible values are AXIS_1, AXIS_2, AXIS_3. This axis is not required if the 
-cut <em>shape</em> is CYLINDER, SPHERE or ISOSURFACE.</p>
-</dd>
-<dt><strong>axis2</strong></dt><dd><p>A sequence of three Floats specifying the X-, Y-, and Z-coordinates of the second axis 
-of the plane defining the cut, when the plane is defined using the <em>origin</em> argument or 
-a SymbolicConstant defining this second axis, when the cut is defined by the <em>csysName</em> 
-argument. Possible values are AXIS_1, AXIS_2, AXIS_3. This axis is used to rotate the 
-plane cut. It is not required if the cut <em>shape</em> is CYLINDER, SPHERE or ISOSURFACE.</p>
-</dd>
-<dt><strong>csysName</strong></dt><dd><p>A String specifying the name of the DatumCsys object to be used to define the cut. This 
-name is not required if the cut <em>shape</em> is ISOSURFACE or if the cut is defined by the 
-<em>origin</em> argument.</p>
-</dd>
-<dt><strong>cylinderAxis</strong></dt><dd><p>A sequence of Floats specifying the X-, Y-, and Z-coordinates of the cylinder axis 
-defining the cut, when the cut is defined using the <em>origin</em> argument or a 
-SymbolicConstant defining this cylinder axis, when the cut is defined by the <em>csysName</em> 
-argument. Possible values are AXIS_1, AXIS_2, AXIS_3. This axis is not required if the 
-cut <em>shape</em> is PLANE, SPHERE, or ISOSURFACE.</p>
-</dd>
-<dt><strong>followDeformation</strong></dt><dd><p>A Boolean specifying whether the cut will follow the deformation or be static. The 
-default value is OFF.</p>
-</dd>
-<dt><strong>overrideAveraging</strong></dt><dd><p>A Boolean specifying averaging for element based fields associated with isosurface cuts 
-will be set to compute-average with a threshold of 100% when true. The current field 
-options will be used when false. The default value is ON.</p>
-</dd>
-<dt><strong>referenceFrame</strong></dt><dd><p>A SymbolicConstant specifying which reference frame will be used when the cut follows 
-the deformation. Possible values are FIRST_FRAME, LAST_FRAME, and CURRENT_FRAME. The 
-default value is FIRST_FRAME.</p>
-</dd>
-</dl>
-</dd>
-<dt class="field-even">Returns</dt>
-<dd class="field-even"><dl class="simple">
-<dt><code class="xref py py-obj docutils literal notranslate"><span class="pre">A</span></code> <a class="reference internal" href="#abaqus.OdbDisplay.ViewCut.ViewCut" title="abaqus.OdbDisplay.ViewCut.ViewCut"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ViewCut</span></code></a> object.</dt><dd></dd>
-</dl>
-</dd>
-</dl>
-<p class="rubric">Notes</p>
-<p>This function can be accessed by:</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">session</span><span class="o">.</span><span class="n">viewports</span><span class="p">[</span><span class="n">name</span><span class="p">]</span><span class="o">.</span><span class="n">layers</span><span class="p">[</span><span class="n">name</span><span class="p">]</span><span class="o">.</span><span class="n">odbDisplay</span><span class="o">.</span><span class="n">ViewCut</span>
-<span class="n">session</span><span class="o">.</span><span class="n">viewports</span><span class="p">[</span><span class="n">name</span><span class="p">]</span><span class="o">.</span><span class="n">odbDisplay</span><span class="o">.</span><span class="n">ViewCut</span>
-</pre></div>
-</div>
-<dl class="field-list simple">
-<dt class="field-odd">Attributes</dt>
-<dd class="field-odd"><dl class="simple">
-<dt><strong>angle</strong></dt><dd></dd>
-<dt><strong>crossSectionalArea</strong></dt><dd></dd>
-<dt><strong>position</strong></dt><dd></dd>
-<dt><strong>radius</strong></dt><dd></dd>
-<dt><strong>value</strong></dt><dd></dd>
 </dl>
 </dd>
 </dl>
