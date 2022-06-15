@@ -5,10 +5,10 @@
     <meta name="color-scheme" content="light dark"><link rel="index" title="Index" href="../../../genindex.html" /><link rel="search" title="Search" href="../../../search.html" />
         <link rel="canonical" href="https://pyabaqus.haiiliin.com/_modules/abaqus/Odb/FieldBulkData.html" />
 
-    <meta name="generator" content="sphinx-4.5.0, furo 2022.04.07"/>
-        <title>abaqus.Odb.FieldBulkData - pyabaqus 1.0.16 documentation</title>
+    <meta name="generator" content="sphinx-4.5.0, furo 2022.06.04.1"/>
+        <title>abaqus.Odb.FieldBulkData - pyabaqus 1.0.18 documentation</title>
       <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/styles/furo.css?digest=68f4518137b9aefe99b631505a2064c3c42c9852" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/styles/furo.css?digest=40978830699223671f4072448e654b5958f38b89" />
     <link rel="stylesheet" type="text/css" href="../../../_static/styles/furo-extensions.css?digest=30d1aed668e5c3a91c3e3bf6a60b675221979f0e" />
     
     
@@ -123,7 +123,7 @@
       </label>
     </div>
     <div class="header-center">
-      <a href="../../../index.html"><div class="brand">pyabaqus 1.0.16 documentation</div></a>
+      <a href="../../../index.html"><div class="brand">pyabaqus 1.0.18 documentation</div></a>
     </div>
     <div class="header-right">
       <div class="theme-toggle-container theme-toggle-header">
@@ -146,7 +146,7 @@
       <div class="sidebar-sticky"><a class="sidebar-brand" href="../../../index.html">
   
   
-  <span class="sidebar-brand-text">pyabaqus 1.0.16 documentation</span>
+  <span class="sidebar-brand-text">pyabaqus 1.0.18 documentation</span>
   
 </a><form class="sidebar-search-container" method="get" action="../../../search.html" role="search">
   <input class="sidebar-search" placeholder=Search name="q" aria-label="Search">
@@ -286,7 +286,8 @@
           </svg>
           <span>Back to top</span>
         </a>
-        <div class="content-icon-container"><div class="theme-toggle-container theme-toggle-content">
+        <div class="content-icon-container">
+          <div class="theme-toggle-container theme-toggle-content">
             <button class="theme-toggle">
               <div class="visually-hidden">Toggle Light / Dark / Auto color theme</div>
               <svg class="theme-icon-when-auto"><use href="#svg-sun-half"></use></svg>
@@ -308,7 +309,7 @@
 
 
 <div class="viewcode-block" id="FieldBulkData"><a class="viewcode-back" href="../../../reference/odb.html#abaqus.Odb.FieldBulkData.FieldBulkData">[docs]</a><span class="k">class</span> <span class="nc">FieldBulkData</span><span class="p">:</span>
-    <span class="sd">"""The FieldBulkData object represents the entire field data for a class of elements or</span>
+    <span class="sd">&quot;&quot;&quot;The FieldBulkData object represents the entire field data for a class of elements or</span>
 <span class="sd">    nodes. All elements in a class correspond to the same element type and material. </span>
 
 <span class="sd">    Attributes</span>
@@ -378,7 +379,7 @@
 <span class="sd">        import odbAccess</span>
 <span class="sd">        session.odbs[name].steps[name].frames[i].fieldOutputs[name].bulkDataBlocks[i]</span>
 
-<span class="sd">    """</span>
+<span class="sd">    &quot;&quot;&quot;</span>
 
     <span class="c1"># A SymbolicConstant specifying the position of the output in the element. Possible values </span>
     <span class="c1"># are: </span>
@@ -397,7 +398,7 @@
     <span class="nb">type</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="kc">None</span>
 
     <span class="c1"># An OdbInstance object specifying the part to which the labels belong. </span>
-    <span class="n">instance</span><span class="p">:</span> <span class="n">OdbInstance</span> <span class="o">=</span> <span class="n">OdbInstance</span><span class="p">(</span><span class="s1">'instance'</span><span class="p">,</span> <span class="n">OdbPart</span><span class="p">(</span><span class="s1">'part'</span><span class="p">,</span> <span class="n">THREE_D</span><span class="p">,</span> <span class="n">DEFORMABLE_BODY</span><span class="p">))</span>
+    <span class="n">instance</span><span class="p">:</span> <span class="n">OdbInstance</span> <span class="o">=</span> <span class="n">OdbInstance</span><span class="p">(</span><span class="s1">&#39;instance&#39;</span><span class="p">,</span> <span class="n">OdbPart</span><span class="p">(</span><span class="s1">&#39;part&#39;</span><span class="p">,</span> <span class="n">THREE_D</span><span class="p">,</span> <span class="n">DEFORMABLE_BODY</span><span class="p">))</span>
 
     <span class="c1"># A SectionPoint object specifying the section point number of the current block of data. </span>
     <span class="n">sectionPoint</span><span class="p">:</span> <span class="n">SectionPoint</span> <span class="o">=</span> <span class="kc">None</span>

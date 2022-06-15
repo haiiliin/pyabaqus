@@ -5,10 +5,10 @@
     <meta name="color-scheme" content="light dark"><link rel="index" title="Index" href="../../../genindex.html" /><link rel="search" title="Search" href="../../../search.html" />
         <link rel="canonical" href="https://pyabaqus.haiiliin.com/_modules/abaqus/Constraint/ConstraintModel.html" />
 
-    <meta name="generator" content="sphinx-4.5.0, furo 2022.04.07"/>
-        <title>abaqus.Constraint.ConstraintModel - pyabaqus 1.0.16 documentation</title>
+    <meta name="generator" content="sphinx-4.5.0, furo 2022.06.04.1"/>
+        <title>abaqus.Constraint.ConstraintModel - pyabaqus 1.0.18 documentation</title>
       <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/styles/furo.css?digest=68f4518137b9aefe99b631505a2064c3c42c9852" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/styles/furo.css?digest=40978830699223671f4072448e654b5958f38b89" />
     <link rel="stylesheet" type="text/css" href="../../../_static/styles/furo-extensions.css?digest=30d1aed668e5c3a91c3e3bf6a60b675221979f0e" />
     
     
@@ -123,7 +123,7 @@
       </label>
     </div>
     <div class="header-center">
-      <a href="../../../index.html"><div class="brand">pyabaqus 1.0.16 documentation</div></a>
+      <a href="../../../index.html"><div class="brand">pyabaqus 1.0.18 documentation</div></a>
     </div>
     <div class="header-right">
       <div class="theme-toggle-container theme-toggle-header">
@@ -146,7 +146,7 @@
       <div class="sidebar-sticky"><a class="sidebar-brand" href="../../../index.html">
   
   
-  <span class="sidebar-brand-text">pyabaqus 1.0.16 documentation</span>
+  <span class="sidebar-brand-text">pyabaqus 1.0.18 documentation</span>
   
 </a><form class="sidebar-search-container" method="get" action="../../../search.html" role="search">
   <input class="sidebar-search" placeholder=Search name="q" aria-label="Search">
@@ -286,7 +286,8 @@
           </svg>
           <span>Back to top</span>
         </a>
-        <div class="content-icon-container"><div class="theme-toggle-container theme-toggle-content">
+        <div class="content-icon-container">
+          <div class="theme-toggle-container theme-toggle-content">
             <button class="theme-toggle">
               <div class="visually-hidden">Toggle Light / Dark / Auto color theme</div>
               <svg class="theme-icon-when-auto"><use href="#svg-sun-half"></use></svg>
@@ -320,7 +321,7 @@
 
 
 <div class="viewcode-block" id="ConstraintModel"><a class="viewcode-back" href="../../../user/mdb/model/constraint.html#abaqus.Constraint.ConstraintModel.ConstraintModel">[docs]</a><span class="k">class</span> <span class="nc">ConstraintModel</span><span class="p">(</span><span class="n">ModelBase</span><span class="p">):</span>
-    <span class="sd">"""Abaqus creates a Model object named `Model-1` when a session is started.</span>
+    <span class="sd">&quot;&quot;&quot;Abaqus creates a Model object named `Model-1` when a session is started.</span>
 
 <span class="sd">    Notes</span>
 <span class="sd">    -----</span>
@@ -330,10 +331,10 @@
 
 <span class="sd">        mdb.models[name]</span>
 
-<span class="sd">    """</span>
+<span class="sd">    &quot;&quot;&quot;</span>
 
 <div class="viewcode-block" id="ConstraintModel.AdjustPoints"><a class="viewcode-back" href="../../../reference/mdb/model/constraint.html#abaqus.Constraint.ConstraintModel.ConstraintModel.AdjustPoints">[docs]</a>    <span class="k">def</span> <span class="nf">AdjustPoints</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">surface</span><span class="p">:</span> <span class="n">Region</span><span class="p">,</span> <span class="n">controlPoints</span><span class="p">:</span> <span class="n">Region</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">AdjustPoints</span><span class="p">:</span>
-        <span class="sd">"""This method creates an AdjustPoints object.</span>
+        <span class="sd">&quot;&quot;&quot;This method creates an AdjustPoints object.</span>
 
 <span class="sd">        Notes</span>
 <span class="sd">        -----</span>
@@ -355,7 +356,7 @@
 <span class="sd">        Returns</span>
 <span class="sd">        -------</span>
 <span class="sd">            An AdjustPoints object.</span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">constraints</span><span class="p">[</span><span class="n">name</span><span class="p">]</span> <span class="o">=</span> <span class="n">constraint</span> <span class="o">=</span> <span class="n">AdjustPoints</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">surface</span><span class="p">,</span> <span class="n">controlPoints</span><span class="p">)</span>
         <span class="k">return</span> <span class="n">constraint</span></div>
 
@@ -364,7 +365,7 @@
                  <span class="n">adjust</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="n">OFF</span><span class="p">,</span> <span class="n">localCsys</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">u1</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="n">ON</span><span class="p">,</span> <span class="n">u2</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="n">ON</span><span class="p">,</span>
                  <span class="n">u3</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="n">ON</span><span class="p">,</span> <span class="n">ur1</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="n">ON</span><span class="p">,</span> <span class="n">ur2</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="n">ON</span><span class="p">,</span> <span class="n">ur3</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="n">ON</span><span class="p">,</span>
                  <span class="n">weightingMethod</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="n">UNIFORM</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Coupling</span><span class="p">:</span>
-        <span class="sd">"""This method creates a Coupling object.</span>
+        <span class="sd">&quot;&quot;&quot;This method creates a Coupling object.</span>
 
 <span class="sd">        Notes</span>
 <span class="sd">        -----</span>
@@ -393,7 +394,7 @@
 <span class="sd">            value is OFF.</span>
 <span class="sd">        localCsys</span>
 <span class="sd">            None or a DatumCsys object specifying the initial orientation of the local coordinate</span>
-<span class="sd">            system for the coupling's degrees of freedom. If *localCsys*=None, the coupling is</span>
+<span class="sd">            system for the coupling&#39;s degrees of freedom. If *localCsys*=None, the coupling is</span>
 <span class="sd">            defined in the global coordinate system. The default value is None.</span>
 <span class="sd">        u1</span>
 <span class="sd">            A Boolean specifying if the displacement component in the 1-direction is constrained to</span>
@@ -428,13 +429,13 @@
 <span class="sd">        Returns</span>
 <span class="sd">        -------</span>
 <span class="sd">            A Coupling object.</span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">constraints</span><span class="p">[</span><span class="n">name</span><span class="p">]</span> <span class="o">=</span> <span class="n">constraint</span> <span class="o">=</span> <span class="n">Coupling</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">surface</span><span class="p">,</span> <span class="n">controlPoint</span><span class="p">,</span> <span class="n">influenceRadius</span><span class="p">,</span> <span class="n">couplingType</span><span class="p">,</span>
                                                        <span class="n">adjust</span><span class="p">,</span> <span class="n">localCsys</span><span class="p">,</span> <span class="n">u1</span><span class="p">,</span> <span class="n">u2</span><span class="p">,</span> <span class="n">u3</span><span class="p">,</span> <span class="n">ur1</span><span class="p">,</span> <span class="n">ur2</span><span class="p">,</span> <span class="n">ur3</span><span class="p">,</span> <span class="n">weightingMethod</span><span class="p">)</span>
         <span class="k">return</span> <span class="n">constraint</span></div>
 
 <div class="viewcode-block" id="ConstraintModel.DisplayBody"><a class="viewcode-back" href="../../../reference/mdb/model/constraint.html#abaqus.Constraint.ConstraintModel.ConstraintModel.DisplayBody">[docs]</a>    <span class="k">def</span> <span class="nf">DisplayBody</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">instance</span><span class="p">:</span> <span class="n">PartInstance</span><span class="p">,</span> <span class="n">controlPoints</span><span class="p">:</span> <span class="n">ModelDotArray</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">DisplayBody</span><span class="p">:</span>
-        <span class="sd">"""This method creates a DisplayBody object.</span>
+        <span class="sd">&quot;&quot;&quot;This method creates a DisplayBody object.</span>
 
 <span class="sd">        Notes</span>
 <span class="sd">        -----</span>
@@ -460,14 +461,14 @@
 <span class="sd">        Returns</span>
 <span class="sd">        -------</span>
 <span class="sd">            A DisplayBody object.</span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">constraints</span><span class="p">[</span><span class="n">name</span><span class="p">]</span> <span class="o">=</span> <span class="n">constraint</span> <span class="o">=</span> <span class="n">DisplayBody</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">instance</span><span class="p">,</span> <span class="n">controlPoints</span><span class="p">)</span>
         <span class="k">return</span> <span class="n">constraint</span></div>
 
 <div class="viewcode-block" id="ConstraintModel.EmbeddedRegion"><a class="viewcode-back" href="../../../reference/mdb/model/constraint.html#abaqus.Constraint.ConstraintModel.ConstraintModel.EmbeddedRegion">[docs]</a>    <span class="k">def</span> <span class="nf">EmbeddedRegion</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">embeddedRegion</span><span class="p">:</span> <span class="n">Region</span><span class="p">,</span> <span class="n">hostRegion</span><span class="p">:</span> <span class="n">Region</span><span class="p">,</span>
                        <span class="n">weightFactorTolerance</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">toleranceMethod</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="n">BOTH</span><span class="p">,</span>
                        <span class="n">absoluteTolerance</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="n">fractionalTolerance</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mi">0</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">EmbeddedRegion</span><span class="p">:</span>
-        <span class="sd">"""This method creates a EmbeddedRegion object.</span>
+        <span class="sd">&quot;&quot;&quot;This method creates a EmbeddedRegion object.</span>
 
 <span class="sd">        Notes</span>
 <span class="sd">        -----</span>
@@ -508,13 +509,13 @@
 <span class="sd">        Returns</span>
 <span class="sd">        -------</span>
 <span class="sd">            An EmbeddedRegion object.</span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">constraints</span><span class="p">[</span><span class="n">name</span><span class="p">]</span> <span class="o">=</span> <span class="n">constraint</span> <span class="o">=</span> <span class="n">EmbeddedRegion</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">embeddedRegion</span><span class="p">,</span> <span class="n">hostRegion</span><span class="p">,</span> <span class="n">weightFactorTolerance</span><span class="p">,</span>
                                                              <span class="n">toleranceMethod</span><span class="p">,</span> <span class="n">absoluteTolerance</span><span class="p">,</span> <span class="n">fractionalTolerance</span><span class="p">)</span>
         <span class="k">return</span> <span class="n">constraint</span></div>
 
 <div class="viewcode-block" id="ConstraintModel.Equation"><a class="viewcode-back" href="../../../reference/mdb/model/constraint.html#abaqus.Constraint.ConstraintModel.ConstraintModel.Equation">[docs]</a>    <span class="k">def</span> <span class="nf">Equation</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">terms</span><span class="p">:</span> <span class="nb">tuple</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Equation</span><span class="p">:</span>
-        <span class="sd">"""This method creates an Equation object.</span>
+        <span class="sd">&quot;&quot;&quot;This method creates an Equation object.</span>
 
 <span class="sd">        Notes</span>
 <span class="sd">        -----</span>
@@ -540,14 +541,14 @@
 <span class="sd">        ------</span>
 <span class="sd">            - If *terms* does not contain more than one entry:</span>
 <span class="sd">              Equation must have two or more terms.</span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">constraints</span><span class="p">[</span><span class="n">name</span><span class="p">]</span> <span class="o">=</span> <span class="n">constraint</span> <span class="o">=</span> <span class="n">Equation</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">terms</span><span class="p">)</span>
         <span class="k">return</span> <span class="n">constraint</span></div>
 
 <div class="viewcode-block" id="ConstraintModel.MultipointConstraint"><a class="viewcode-back" href="../../../reference/mdb/model/constraint.html#abaqus.Constraint.ConstraintModel.ConstraintModel.MultipointConstraint">[docs]</a>    <span class="k">def</span> <span class="nf">MultipointConstraint</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">surface</span><span class="p">:</span> <span class="n">Region</span><span class="p">,</span> <span class="n">controlPoint</span><span class="p">:</span> <span class="n">Region</span><span class="p">,</span> <span class="n">mpcType</span><span class="p">:</span> <span class="n">SymbolicConstant</span><span class="p">,</span>
                              <span class="n">csys</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">userType</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span>
                              <span class="n">userMode</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="n">DOF_MODE_MPC</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">MultipointConstraint</span><span class="p">:</span>
-        <span class="sd">"""This method creates a MultipointConstraint object.</span>
+        <span class="sd">&quot;&quot;&quot;This method creates a MultipointConstraint object.</span>
 
 <span class="sd">        Notes</span>
 <span class="sd">        -----</span>
@@ -571,7 +572,7 @@
 <span class="sd">            BEAM_MPC, ELBOW_MPC, PIN_MPC, LINK_MPC, TIE_MPC, and USER_MPC.</span>
 <span class="sd">        csys</span>
 <span class="sd">            None or a DatumCsys object specifying the initial orientation of the local coordinate</span>
-<span class="sd">            system for the MultipointConstraint's degrees of freedom. If *localCsys*=None, the</span>
+<span class="sd">            system for the MultipointConstraint&#39;s degrees of freedom. If *localCsys*=None, the</span>
 <span class="sd">            MultipointConstraint is defined in the global coordinate system. The default value is</span>
 <span class="sd">            None.</span>
 <span class="sd">        userType</span>
@@ -586,7 +587,7 @@
 <span class="sd">        Returns</span>
 <span class="sd">        -------</span>
 <span class="sd">            A MultipointConstraint object.</span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">constraints</span><span class="p">[</span><span class="n">name</span><span class="p">]</span> <span class="o">=</span> <span class="n">constraint</span> <span class="o">=</span> <span class="n">MultipointConstraint</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">surface</span><span class="p">,</span> <span class="n">controlPoint</span><span class="p">,</span> <span class="n">mpcType</span><span class="p">,</span> <span class="n">csys</span><span class="p">,</span> <span class="n">userType</span><span class="p">,</span>
                                                                    <span class="n">userMode</span><span class="p">)</span>
         <span class="k">return</span> <span class="n">constraint</span></div>
@@ -594,7 +595,7 @@
 <div class="viewcode-block" id="ConstraintModel.RigidBody"><a class="viewcode-back" href="../../../reference/mdb/model/constraint.html#abaqus.Constraint.ConstraintModel.ConstraintModel.RigidBody">[docs]</a>    <span class="k">def</span> <span class="nf">RigidBody</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">refPointRegion</span><span class="p">:</span> <span class="n">Region</span><span class="p">,</span> <span class="n">bodyRegion</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">tieRegion</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
                   <span class="n">pinRegion</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">surfaceRegion</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">refPointAtCOM</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="n">OFF</span><span class="p">,</span>
                   <span class="n">isothermal</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="n">OFF</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">RigidBody</span><span class="p">:</span>
-        <span class="sd">"""This method creates a RigidBody object.</span>
+        <span class="sd">&quot;&quot;&quot;This method creates a RigidBody object.</span>
 
 <span class="sd">        Notes</span>
 <span class="sd">        -----</span>
@@ -632,7 +633,7 @@
 <span class="sd">        Returns</span>
 <span class="sd">        -------</span>
 <span class="sd">            A RigidBody object.</span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">constraints</span><span class="p">[</span><span class="n">name</span><span class="p">]</span> <span class="o">=</span> <span class="n">constraint</span> <span class="o">=</span> <span class="n">RigidBody</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">refPointRegion</span><span class="p">,</span> <span class="n">bodyRegion</span><span class="p">,</span> <span class="n">tieRegion</span><span class="p">,</span> <span class="n">pinRegion</span><span class="p">,</span>
                                                         <span class="n">surfaceRegion</span><span class="p">,</span> <span class="n">refPointAtCOM</span><span class="p">,</span> <span class="n">isothermal</span><span class="p">)</span>
         <span class="k">return</span> <span class="n">constraint</span></div>
@@ -641,7 +642,7 @@
                            <span class="n">positionToleranceMethod</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="n">COMPUTED</span><span class="p">,</span> <span class="n">positionTolerance</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span>
                            <span class="n">influenceDistanceMethod</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="n">DEFAULT</span><span class="p">,</span>
                            <span class="n">influenceDistance</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mi">0</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">ShellSolidCoupling</span><span class="p">:</span>
-        <span class="sd">"""This method creates a ShellSolidCoupling object.</span>
+        <span class="sd">&quot;&quot;&quot;This method creates a ShellSolidCoupling object.</span>
 
 <span class="sd">        Notes</span>
 <span class="sd">        -----</span>
@@ -677,7 +678,7 @@
 <span class="sd">        Returns</span>
 <span class="sd">        -------</span>
 <span class="sd">            A ShellSolidCoupling object.</span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">constraints</span><span class="p">[</span><span class="n">name</span><span class="p">]</span> <span class="o">=</span> <span class="n">constraint</span> <span class="o">=</span> <span class="n">ShellSolidCoupling</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">shellEdge</span><span class="p">,</span> <span class="n">solidFace</span><span class="p">,</span> <span class="n">positionToleranceMethod</span><span class="p">,</span>
                                                                  <span class="n">positionTolerance</span><span class="p">,</span> <span class="n">influenceDistanceMethod</span><span class="p">,</span>
                                                                  <span class="n">influenceDistance</span><span class="p">)</span>
@@ -688,7 +689,7 @@
             <span class="n">tieRotations</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="n">ON</span><span class="p">,</span> <span class="n">constraintRatioMethod</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="n">DEFAULT</span><span class="p">,</span>
             <span class="n">constraintRatio</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="n">constraintEnforcement</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="n">SOLVER_DEFAULT</span><span class="p">,</span>
             <span class="n">thickness</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="n">ON</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Tie</span><span class="p">:</span>
-        <span class="sd">"""This method creates a Tie object.</span>
+        <span class="sd">&quot;&quot;&quot;This method creates a Tie object.</span>
 
 <span class="sd">        Notes</span>
 <span class="sd">        -----</span>
@@ -736,7 +737,7 @@
 <span class="sd">        Returns</span>
 <span class="sd">        -------</span>
 <span class="sd">            A Tie object.</span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">constraints</span><span class="p">[</span><span class="n">name</span><span class="p">]</span> <span class="o">=</span> <span class="n">constraint</span> <span class="o">=</span> <span class="n">Tie</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">main</span><span class="p">,</span> <span class="n">secondary</span><span class="p">,</span> <span class="n">adjust</span><span class="p">,</span> <span class="n">positionToleranceMethod</span><span class="p">,</span>
                                                   <span class="n">positionTolerance</span><span class="p">,</span> <span class="n">tieRotations</span><span class="p">,</span> <span class="n">constraintRatioMethod</span><span class="p">,</span>
                                                   <span class="n">constraintRatio</span><span class="p">,</span> <span class="n">constraintEnforcement</span><span class="p">,</span> <span class="n">thickness</span><span class="p">)</span>

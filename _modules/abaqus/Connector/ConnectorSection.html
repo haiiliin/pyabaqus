@@ -5,10 +5,10 @@
     <meta name="color-scheme" content="light dark"><link rel="index" title="Index" href="../../../genindex.html" /><link rel="search" title="Search" href="../../../search.html" />
         <link rel="canonical" href="https://pyabaqus.haiiliin.com/_modules/abaqus/Connector/ConnectorSection.html" />
 
-    <meta name="generator" content="sphinx-4.5.0, furo 2022.04.07"/>
-        <title>abaqus.Connector.ConnectorSection - pyabaqus 1.0.16 documentation</title>
+    <meta name="generator" content="sphinx-4.5.0, furo 2022.06.04.1"/>
+        <title>abaqus.Connector.ConnectorSection - pyabaqus 1.0.18 documentation</title>
       <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/styles/furo.css?digest=68f4518137b9aefe99b631505a2064c3c42c9852" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/styles/furo.css?digest=40978830699223671f4072448e654b5958f38b89" />
     <link rel="stylesheet" type="text/css" href="../../../_static/styles/furo-extensions.css?digest=30d1aed668e5c3a91c3e3bf6a60b675221979f0e" />
     
     
@@ -123,7 +123,7 @@
       </label>
     </div>
     <div class="header-center">
-      <a href="../../../index.html"><div class="brand">pyabaqus 1.0.16 documentation</div></a>
+      <a href="../../../index.html"><div class="brand">pyabaqus 1.0.18 documentation</div></a>
     </div>
     <div class="header-right">
       <div class="theme-toggle-container theme-toggle-header">
@@ -146,7 +146,7 @@
       <div class="sidebar-sticky"><a class="sidebar-brand" href="../../../index.html">
   
   
-  <span class="sidebar-brand-text">pyabaqus 1.0.16 documentation</span>
+  <span class="sidebar-brand-text">pyabaqus 1.0.18 documentation</span>
   
 </a><form class="sidebar-search-container" method="get" action="../../../search.html" role="search">
   <input class="sidebar-search" placeholder=Search name="q" aria-label="Search">
@@ -286,7 +286,8 @@
           </svg>
           <span>Back to top</span>
         </a>
-        <div class="content-icon-container"><div class="theme-toggle-container theme-toggle-content">
+        <div class="content-icon-container">
+          <div class="theme-toggle-container theme-toggle-content">
             <button class="theme-toggle">
               <div class="visually-hidden">Toggle Light / Dark / Auto color theme</div>
               <svg class="theme-icon-when-auto"><use href="#svg-sun-half"></use></svg>
@@ -332,7 +333,7 @@
                         <span class="n">evolutionPotentials</span><span class="p">:</span> <span class="n">ConnectorPotentialArray</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
                         <span class="n">initiationTable</span><span class="p">:</span> <span class="nb">tuple</span> <span class="o">=</span> <span class="p">(),</span> <span class="n">evolutionTable</span><span class="p">:</span> <span class="nb">tuple</span> <span class="o">=</span> <span class="p">(),</span> <span class="n">affectedComponents</span><span class="p">:</span> <span class="nb">tuple</span> <span class="o">=</span> <span class="p">(),</span>
                         <span class="n">components</span><span class="p">:</span> <span class="nb">tuple</span> <span class="o">=</span> <span class="p">()):</span>
-        <span class="sd">"""This method creates a connector damage behavior option for a ConnectorSection object.</span>
+        <span class="sd">&quot;&quot;&quot;This method creates a connector damage behavior option for a ConnectorSection object.</span>
 
 <span class="sd">        Notes</span>
 <span class="sd">        -----</span>
@@ -438,7 +439,7 @@
 <span class="sd">        Raises</span>
 <span class="sd">        ------</span>
 <span class="sd">            ValueError and TextError. </span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="n">option</span> <span class="o">=</span> <span class="n">ConnectorDamage</span><span class="p">()</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">behaviorOptions</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">option</span><span class="p">)</span>
         <span class="k">return</span> <span class="n">option</span></div>
@@ -447,7 +448,7 @@
                          <span class="n">dependencies</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="n">temperatureDependency</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="n">OFF</span><span class="p">,</span>
                          <span class="n">frequencyDependency</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="n">OFF</span><span class="p">,</span> <span class="n">table</span><span class="p">:</span> <span class="nb">tuple</span> <span class="o">=</span> <span class="p">(),</span>
                          <span class="n">independentComponents</span><span class="p">:</span> <span class="nb">tuple</span> <span class="o">=</span> <span class="p">(),</span> <span class="n">components</span><span class="p">:</span> <span class="nb">tuple</span> <span class="o">=</span> <span class="p">()):</span>
-        <span class="sd">"""This method creates a connector damping behavior option for a ConnectorSection object.</span>
+        <span class="sd">&quot;&quot;&quot;This method creates a connector damping behavior option for a ConnectorSection object.</span>
 
 <span class="sd">        Notes</span>
 <span class="sd">        -----</span>
@@ -467,7 +468,7 @@
 <span class="sd">            values are LINEAR and NONLINEAR. The default value is LINEAR. </span>
 <span class="sd">        coupling</span>
 <span class="sd">            A SymbolicConstant specifying whether the damping behavior is coupled between the </span>
-<span class="sd">            connector's components of relative motion. If *behavior*=LINEAR, then possible values </span>
+<span class="sd">            connector&#39;s components of relative motion. If *behavior*=LINEAR, then possible values </span>
 <span class="sd">            are UNCOUPLED and COUPLED. If *behavior*=NONLINEAR, then possible values are UNCOUPLED, </span>
 <span class="sd">            COUPLED_POSITION, and COUPLED_MOTION. Possible values are UNCOUPLED, COUPLED, </span>
 <span class="sd">            COUPLED_POSITION, and COUPLED_MOTION. The default value is UNCOUPLED. </span>
@@ -501,7 +502,7 @@
 <span class="sd">        Raises</span>
 <span class="sd">        ------</span>
 <span class="sd">            ValueError and TextError. </span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="n">option</span> <span class="o">=</span> <span class="n">ConnectorDamping</span><span class="p">()</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">behaviorOptions</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">option</span><span class="p">)</span>
         <span class="k">return</span> <span class="n">option</span></div>
@@ -510,7 +511,7 @@
                             <span class="n">dependencies</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="n">temperatureDependency</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="n">OFF</span><span class="p">,</span>
                             <span class="n">frequencyDependency</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="n">OFF</span><span class="p">,</span> <span class="n">table</span><span class="p">:</span> <span class="nb">tuple</span> <span class="o">=</span> <span class="p">(),</span>
                             <span class="n">independentComponents</span><span class="p">:</span> <span class="nb">tuple</span> <span class="o">=</span> <span class="p">(),</span> <span class="n">components</span><span class="p">:</span> <span class="nb">tuple</span> <span class="o">=</span> <span class="p">()):</span>
-        <span class="sd">"""This method creates a connector elasticity behavior option for a ConnectorSection</span>
+        <span class="sd">&quot;&quot;&quot;This method creates a connector elasticity behavior option for a ConnectorSection</span>
 <span class="sd">        object.</span>
 
 <span class="sd">        Notes</span>
@@ -531,7 +532,7 @@
 <span class="sd">            rigid. Possible values are LINEAR, NONLINEAR, and RIGID. The default value is LINEAR. </span>
 <span class="sd">        coupling</span>
 <span class="sd">            A SymbolicConstant specifying whether the elastic behavior is coupled between the </span>
-<span class="sd">            connector's components of relative motion. If *behavior*=LINEAR, then possible values </span>
+<span class="sd">            connector&#39;s components of relative motion. If *behavior*=LINEAR, then possible values </span>
 <span class="sd">            are UNCOUPLED and COUPLED. If *behavior*=NONLINEAR, then possible values are UNCOUPLED, </span>
 <span class="sd">            COUPLED_POSITION, and COUPLED_MOTION. Possible values are UNCOUPLED, COUPLED, </span>
 <span class="sd">            COUPLED_POSITION, and COUPLED_MOTION. The default value is UNCOUPLED.This argument is </span>
@@ -568,7 +569,7 @@
 <span class="sd">        Raises</span>
 <span class="sd">        ------</span>
 <span class="sd">            ValueError and TextError. </span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="n">option</span> <span class="o">=</span> <span class="n">ConnectorElasticity</span><span class="p">()</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">behaviorOptions</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">option</span><span class="p">)</span>
         <span class="k">return</span> <span class="n">option</span></div>
@@ -576,7 +577,7 @@
 <div class="viewcode-block" id="ConnectorSection.ConnectorFailure"><a class="viewcode-back" href="../../../reference/mdb/model/section/connector.html#abaqus.Connector.ConnectorSection.ConnectorSection.ConnectorFailure">[docs]</a>    <span class="k">def</span> <span class="nf">ConnectorFailure</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">releaseComponent</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="n">ALL</span><span class="p">,</span> <span class="n">minMotion</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
                          <span class="n">maxMotion</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">minForce</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">maxForce</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
                          <span class="n">components</span><span class="p">:</span> <span class="nb">tuple</span> <span class="o">=</span> <span class="p">()):</span>
-        <span class="sd">"""This method creates a connector failure behavior option for a ConnectorSection object.</span>
+        <span class="sd">&quot;&quot;&quot;This method creates a connector failure behavior option for a ConnectorSection object.</span>
 
 <span class="sd">        Notes</span>
 <span class="sd">        -----</span>
@@ -596,10 +597,10 @@
 <span class="sd">            is specified, only that motion component fails when the failure criteria are satisfied. </span>
 <span class="sd">            If *releaseComponent*=ALL, all motion components fail. The default value is ALL. </span>
 <span class="sd">        minMotion</span>
-<span class="sd">            None or a Float specifying the lower bound for the connector's relative position for all </span>
+<span class="sd">            None or a Float specifying the lower bound for the connector&#39;s relative position for all </span>
 <span class="sd">            specified components, or no lower bound. The default value is None. </span>
 <span class="sd">        maxMotion</span>
-<span class="sd">            None or a Float specifying the upper bound for the connector's relative position for all </span>
+<span class="sd">            None or a Float specifying the upper bound for the connector&#39;s relative position for all </span>
 <span class="sd">            specified components, or no upper bound. The default value is None. </span>
 <span class="sd">        minForce</span>
 <span class="sd">            None or a Float specifying the lower bound of the force or moment in the directions of </span>
@@ -621,7 +622,7 @@
 <span class="sd">        Raises</span>
 <span class="sd">        ------</span>
 <span class="sd">            ValueError and TextError. </span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="n">option</span> <span class="o">=</span> <span class="n">ConnectorFailure</span><span class="p">()</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">behaviorOptions</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">option</span><span class="p">)</span>
         <span class="k">return</span> <span class="n">option</span></div>
@@ -635,7 +636,7 @@
                           <span class="n">forcePotentialOperator</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="n">SUM</span><span class="p">,</span> <span class="n">forcePotentialExponent</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mi">2</span><span class="p">,</span>
                           <span class="n">connectorPotentials</span><span class="p">:</span> <span class="n">ConnectorPotentialArray</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
                           <span class="n">table</span><span class="p">:</span> <span class="nb">tuple</span> <span class="o">=</span> <span class="p">(),</span> <span class="n">independentComponents</span><span class="p">:</span> <span class="nb">tuple</span> <span class="o">=</span> <span class="p">()):</span>
-        <span class="sd">"""This method creates a connector friction behavior option for a ConnectorSection object.</span>
+        <span class="sd">&quot;&quot;&quot;This method creates a connector friction behavior option for a ConnectorSection object.</span>
 <span class="sd">        Depending upon the arguments provided, the friction behavior can be Coulomb-like or</span>
 <span class="sd">        hysteretic in nature.</span>
 
@@ -746,7 +747,7 @@
 <span class="sd">        Raises</span>
 <span class="sd">        ------</span>
 <span class="sd">            ValueError and TextError. </span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="n">option</span> <span class="o">=</span> <span class="n">ConnectorFriction</span><span class="p">()</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">behaviorOptions</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">option</span><span class="p">)</span>
         <span class="k">return</span> <span class="n">option</span></div>
@@ -754,7 +755,7 @@
 <div class="viewcode-block" id="ConnectorSection.ConnectorLock"><a class="viewcode-back" href="../../../reference/mdb/model/section/connector.html#abaqus.Connector.ConnectorSection.ConnectorSection.ConnectorLock">[docs]</a>    <span class="k">def</span> <span class="nf">ConnectorLock</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">lockingComponent</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="n">ALL</span><span class="p">,</span> <span class="n">minMotion</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
                       <span class="n">maxMotion</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">minForce</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">maxForce</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
                       <span class="n">components</span><span class="p">:</span> <span class="nb">tuple</span> <span class="o">=</span> <span class="p">()):</span>
-        <span class="sd">"""This method creates a connector lock behavior option for a ConnectorSection.</span>
+        <span class="sd">&quot;&quot;&quot;This method creates a connector lock behavior option for a ConnectorSection.</span>
 
 <span class="sd">        Notes</span>
 <span class="sd">        -----</span>
@@ -775,10 +776,10 @@
 <span class="sd">            satisfied. If *lockingComponent*=ALL, all motion components are locked. The default </span>
 <span class="sd">            value is ALL. </span>
 <span class="sd">        minMotion</span>
-<span class="sd">            None or a Float specifying the lower bound for the connector's relative position for all </span>
+<span class="sd">            None or a Float specifying the lower bound for the connector&#39;s relative position for all </span>
 <span class="sd">            specified components, or no lower bound. The default value is None. </span>
 <span class="sd">        maxMotion</span>
-<span class="sd">            None or a Float specifying the upper bound for the connector's relative position for all </span>
+<span class="sd">            None or a Float specifying the upper bound for the connector&#39;s relative position for all </span>
 <span class="sd">            specified components, or no upper bound. The default value is None. </span>
 <span class="sd">        minForce</span>
 <span class="sd">            None or a Float specifying the lower bound of the force or moment in the directions of </span>
@@ -800,7 +801,7 @@
 <span class="sd">        Raises</span>
 <span class="sd">        ------</span>
 <span class="sd">            ValueError and TextError. </span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="n">option</span> <span class="o">=</span> <span class="n">ConnectorLock</span><span class="p">()</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">behaviorOptions</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">option</span><span class="p">)</span>
         <span class="k">return</span> <span class="n">option</span></div>
@@ -813,7 +814,7 @@
                             <span class="n">forcePotentialExponent</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mi">2</span><span class="p">,</span>
                             <span class="n">connectorPotentials</span><span class="p">:</span> <span class="n">ConnectorPotentialArray</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
                             <span class="n">isotropicTable</span><span class="p">:</span> <span class="nb">tuple</span> <span class="o">=</span> <span class="p">(),</span> <span class="n">kinematicTable</span><span class="p">:</span> <span class="nb">tuple</span> <span class="o">=</span> <span class="p">(),</span> <span class="n">components</span><span class="p">:</span> <span class="nb">tuple</span> <span class="o">=</span> <span class="p">()):</span>
-        <span class="sd">"""This method creates a connector plasticity behavior option for a ConnectorSection</span>
+        <span class="sd">&quot;&quot;&quot;This method creates a connector plasticity behavior option for a ConnectorSection</span>
 <span class="sd">        object.</span>
 
 <span class="sd">        Notes</span>
@@ -890,7 +891,7 @@
 <span class="sd">        Raises</span>
 <span class="sd">        ------</span>
 <span class="sd">            ValueError and TextError. </span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="n">option</span> <span class="o">=</span> <span class="n">ConnectorPlasticity</span><span class="p">()</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">behaviorOptions</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">option</span><span class="p">)</span>
         <span class="k">return</span> <span class="n">option</span></div>
@@ -898,7 +899,7 @@
 <div class="viewcode-block" id="ConnectorSection.ConnectorPotential"><a class="viewcode-back" href="../../../reference/mdb/model/section/connector.html#abaqus.Connector.ConnectorSection.ConnectorSection.ConnectorPotential">[docs]</a>    <span class="k">def</span> <span class="nf">ConnectorPotential</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">componentStyle</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="n">COMPONENT_NUMBER</span><span class="p">,</span> <span class="n">componentNumber</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span>
                            <span class="n">sign</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="n">POSITIVE</span><span class="p">,</span> <span class="n">scaleFactor</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span> <span class="n">positiveExponent</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mi">2</span><span class="p">,</span>
                            <span class="n">shiftFactor</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="n">hFunction</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="n">ABS</span><span class="p">):</span>
-        <span class="sd">"""This method creates a connector potential object to be used in conjunction with an</span>
+        <span class="sd">&quot;&quot;&quot;This method creates a connector potential object to be used in conjunction with an</span>
 <span class="sd">        allowable connector behavior option.</span>
 
 <span class="sd">        Notes</span>
@@ -946,13 +947,13 @@
 <span class="sd">        Raises</span>
 <span class="sd">        ------</span>
 <span class="sd">            ValueError and TextError. </span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="n">option</span> <span class="o">=</span> <span class="n">ConnectorPotential</span><span class="p">()</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">behaviorOptions</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">option</span><span class="p">)</span>
         <span class="k">return</span> <span class="n">option</span></div>
 
 <div class="viewcode-block" id="ConnectorSection.ConnectorStop"><a class="viewcode-back" href="../../../reference/mdb/model/section/connector.html#abaqus.Connector.ConnectorSection.ConnectorSection.ConnectorStop">[docs]</a>    <span class="k">def</span> <span class="nf">ConnectorStop</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">minMotion</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">maxMotion</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">components</span><span class="p">:</span> <span class="nb">tuple</span> <span class="o">=</span> <span class="p">()):</span>
-        <span class="sd">"""This method creates a connector stop behavior option for a ConnectorSection object.</span>
+        <span class="sd">&quot;&quot;&quot;This method creates a connector stop behavior option for a ConnectorSection object.</span>
 
 <span class="sd">        Notes</span>
 <span class="sd">        -----</span>
@@ -968,10 +969,10 @@
 <span class="sd">        Parameters</span>
 <span class="sd">        ----------</span>
 <span class="sd">        minMotion</span>
-<span class="sd">            None or a Float specifying the lower bound for the connector's relative position for all </span>
+<span class="sd">            None or a Float specifying the lower bound for the connector&#39;s relative position for all </span>
 <span class="sd">            specified components, or no lower bound. The default value is None. </span>
 <span class="sd">        maxMotion</span>
-<span class="sd">            None or a Float specifying the upper bound for the connector's relative position for all </span>
+<span class="sd">            None or a Float specifying the upper bound for the connector&#39;s relative position for all </span>
 <span class="sd">            specified components, or no upper bound. The default value is None. </span>
 <span class="sd">        components</span>
 <span class="sd">            A sequence of Ints specifying the components of relative motion for which the behavior </span>
@@ -985,13 +986,13 @@
 <span class="sd">        Raises</span>
 <span class="sd">        ------</span>
 <span class="sd">            ValueError and TextError. </span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="n">option</span> <span class="o">=</span> <span class="n">ConnectorStop</span><span class="p">()</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">behaviorOptions</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">option</span><span class="p">)</span>
         <span class="k">return</span> <span class="n">option</span></div>
 
 <div class="viewcode-block" id="ConnectorSection.DerivedComponent"><a class="viewcode-back" href="../../../reference/mdb/model/section/connector.html#abaqus.Connector.ConnectorSection.ConnectorSection.DerivedComponent">[docs]</a>    <span class="k">def</span> <span class="nf">DerivedComponent</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="sd">"""This method creates a DerivedComponent object.</span>
+        <span class="sd">&quot;&quot;&quot;This method creates a DerivedComponent object.</span>
 
 <span class="sd">        Notes</span>
 <span class="sd">        -----</span>
@@ -1015,7 +1016,7 @@
 <span class="sd">        Raises</span>
 <span class="sd">        ------</span>
 <span class="sd">            ValueError and TextError.</span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="n">option</span> <span class="o">=</span> <span class="n">DerivedComponent</span><span class="p">()</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">behaviorOptions</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">option</span><span class="p">)</span>
         <span class="k">return</span> <span class="n">option</span></div>
@@ -1025,7 +1026,7 @@
                            <span class="n">dependencies</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="n">exponentialDecayDefinition</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="n">COEFFICIENTS</span><span class="p">,</span>
                            <span class="n">shearStressLimit</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">maximumElasticSlip</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="n">FRACTION</span><span class="p">,</span>
                            <span class="n">fraction</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">absoluteDistance</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">table</span><span class="p">:</span> <span class="nb">tuple</span> <span class="o">=</span> <span class="p">()):</span>
-        <span class="sd">"""This method creates a TangentialBehavior object.</span>
+        <span class="sd">&quot;&quot;&quot;This method creates a TangentialBehavior object.</span>
 
 <span class="sd">        Notes</span>
 <span class="sd">        -----</span>
@@ -1074,7 +1075,7 @@
 <span class="sd">        Returns</span>
 <span class="sd">        -------</span>
 <span class="sd">            A TangentialBehavior object. .</span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="n">option</span> <span class="o">=</span> <span class="n">TangentialBehavior</span><span class="p">()</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">behaviorOptions</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">option</span><span class="p">)</span>
         <span class="k">return</span> <span class="n">option</span></div>

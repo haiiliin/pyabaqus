@@ -5,10 +5,10 @@
     <meta name="color-scheme" content="light dark"><link rel="index" title="Index" href="../../../genindex.html" /><link rel="search" title="Search" href="../../../search.html" />
         <link rel="canonical" href="https://pyabaqus.haiiliin.com/_modules/abaqus/Load/InertiaRelief.html" />
 
-    <meta name="generator" content="sphinx-4.5.0, furo 2022.04.07"/>
-        <title>abaqus.Load.InertiaRelief - pyabaqus 1.0.16 documentation</title>
+    <meta name="generator" content="sphinx-4.5.0, furo 2022.06.04.1"/>
+        <title>abaqus.Load.InertiaRelief - pyabaqus 1.0.18 documentation</title>
       <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/styles/furo.css?digest=68f4518137b9aefe99b631505a2064c3c42c9852" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/styles/furo.css?digest=40978830699223671f4072448e654b5958f38b89" />
     <link rel="stylesheet" type="text/css" href="../../../_static/styles/furo-extensions.css?digest=30d1aed668e5c3a91c3e3bf6a60b675221979f0e" />
     
     
@@ -123,7 +123,7 @@
       </label>
     </div>
     <div class="header-center">
-      <a href="../../../index.html"><div class="brand">pyabaqus 1.0.16 documentation</div></a>
+      <a href="../../../index.html"><div class="brand">pyabaqus 1.0.18 documentation</div></a>
     </div>
     <div class="header-right">
       <div class="theme-toggle-container theme-toggle-header">
@@ -146,7 +146,7 @@
       <div class="sidebar-sticky"><a class="sidebar-brand" href="../../../index.html">
   
   
-  <span class="sidebar-brand-text">pyabaqus 1.0.16 documentation</span>
+  <span class="sidebar-brand-text">pyabaqus 1.0.18 documentation</span>
   
 </a><form class="sidebar-search-container" method="get" action="../../../search.html" role="search">
   <input class="sidebar-search" placeholder=Search name="q" aria-label="Search">
@@ -286,7 +286,8 @@
           </svg>
           <span>Back to top</span>
         </a>
-        <div class="content-icon-container"><div class="theme-toggle-container theme-toggle-content">
+        <div class="content-icon-container">
+          <div class="theme-toggle-container theme-toggle-content">
             <button class="theme-toggle">
               <div class="visually-hidden">Toggle Light / Dark / Auto color theme</div>
               <svg class="theme-icon-when-auto"><use href="#svg-sun-half"></use></svg>
@@ -307,7 +308,7 @@
 
 
 <div class="viewcode-block" id="InertiaRelief"><a class="viewcode-back" href="../../../reference/mdb/model/load.html#abaqus.Load.InertiaRelief.InertiaRelief">[docs]</a><span class="k">class</span> <span class="nc">InertiaRelief</span><span class="p">(</span><span class="n">Load</span><span class="p">):</span>
-    <span class="sd">"""The InertiaRelief object defines an inertia relief load.</span>
+    <span class="sd">&quot;&quot;&quot;The InertiaRelief object defines an inertia relief load.</span>
 <span class="sd">    The InertiaRelief object is derived from the Load object. </span>
 
 <span class="sd">    Attributes</span>
@@ -331,10 +332,10 @@
 <span class="sd">        import load</span>
 <span class="sd">        mdb.models[name].loads[name]</span>
 
-<span class="sd">    """</span>
+<span class="sd">    &quot;&quot;&quot;</span>
 
     <span class="c1"># A String specifying the load repository key. </span>
-    <span class="n">name</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">''</span>
+    <span class="n">name</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span>
 
     <span class="c1"># None or a DatumCsys object specifying the local coordinate system of the rigid body </span>
     <span class="c1"># degrees of freedom for the inertia relief load. If *localCoordinates*=None, the free </span>
@@ -348,7 +349,7 @@
     <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">createStepName</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">u1</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="n">OFF</span><span class="p">,</span> <span class="n">u2</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="n">OFF</span><span class="p">,</span> <span class="n">u3</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="n">OFF</span><span class="p">,</span>
                  <span class="n">ur1</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="n">OFF</span><span class="p">,</span> <span class="n">ur2</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="n">OFF</span><span class="p">,</span> <span class="n">ur3</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="n">OFF</span><span class="p">,</span> <span class="n">referencePoint</span><span class="p">:</span> <span class="nb">tuple</span> <span class="o">=</span> <span class="p">(),</span>
                  <span class="n">localCoordinates</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="kc">None</span><span class="p">):</span>
-        <span class="sd">"""This method creates an InertiaRelief object.</span>
+        <span class="sd">&quot;&quot;&quot;This method creates an InertiaRelief object.</span>
 
 <span class="sd">        Notes</span>
 <span class="sd">        -----</span>
@@ -393,14 +394,14 @@
 <span class="sd">        Returns</span>
 <span class="sd">        -------</span>
 <span class="sd">            An InertiaRelief object.</span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">()</span>
         <span class="k">pass</span>
 
 <div class="viewcode-block" id="InertiaRelief.setValues"><a class="viewcode-back" href="../../../reference/mdb/model/load.html#abaqus.Load.InertiaRelief.InertiaRelief.setValues">[docs]</a>    <span class="k">def</span> <span class="nf">setValues</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">u1</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="n">OFF</span><span class="p">,</span> <span class="n">u2</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="n">OFF</span><span class="p">,</span> <span class="n">u3</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="n">OFF</span><span class="p">,</span> <span class="n">ur1</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="n">OFF</span><span class="p">,</span>
                   <span class="n">ur2</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="n">OFF</span><span class="p">,</span> <span class="n">ur3</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="n">OFF</span><span class="p">,</span> <span class="n">referencePoint</span><span class="p">:</span> <span class="nb">tuple</span> <span class="o">=</span> <span class="p">(),</span>
                   <span class="n">localCoordinates</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="kc">None</span><span class="p">):</span>
-        <span class="sd">"""This method modifies the data for an existing InertiaRelief object in the step where it</span>
+        <span class="sd">&quot;&quot;&quot;This method modifies the data for an existing InertiaRelief object in the step where it</span>
 <span class="sd">        is created.</span>
 <span class="sd">        </span>
 <span class="sd">        Parameters</span>
@@ -430,13 +431,13 @@
 <span class="sd">            degrees of freedom for the inertia relief load. If *localCoordinates*=None, the free </span>
 <span class="sd">            directions are defined in the global coordinate system. When this member is queried, it </span>
 <span class="sd">            returns an Int. The default value is None. </span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span></div>
 
 <div class="viewcode-block" id="InertiaRelief.setValuesInStep"><a class="viewcode-back" href="../../../reference/mdb/model/load.html#abaqus.Load.InertiaRelief.InertiaRelief.setValuesInStep">[docs]</a>    <span class="k">def</span> <span class="nf">setValuesInStep</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">stepName</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">u1</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="n">OFF</span><span class="p">,</span> <span class="n">u2</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="n">OFF</span><span class="p">,</span> <span class="n">u3</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="n">OFF</span><span class="p">,</span>
                         <span class="n">ur1</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="n">OFF</span><span class="p">,</span> <span class="n">ur2</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="n">OFF</span><span class="p">,</span> <span class="n">ur3</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="n">OFF</span><span class="p">,</span> <span class="n">referencePoint</span><span class="p">:</span> <span class="nb">tuple</span> <span class="o">=</span> <span class="p">(),</span>
                         <span class="n">fixed</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="n">OFF</span><span class="p">):</span>
-        <span class="sd">"""This method modifies the propagating data for an existing InertiaRelief object in the</span>
+        <span class="sd">&quot;&quot;&quot;This method modifies the propagating data for an existing InertiaRelief object in the</span>
 <span class="sd">        specified step.</span>
 <span class="sd">        </span>
 <span class="sd">        Parameters</span>
@@ -465,7 +466,7 @@
 <span class="sd">        fixed</span>
 <span class="sd">            A Boolean specifying whether the inertia relief loading should remain fixed at the </span>
 <span class="sd">            current loading at the start of the step. The default value is OFF. </span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span></div></div>
 </pre></div>
         </article>

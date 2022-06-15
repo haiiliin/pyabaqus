@@ -5,10 +5,10 @@
     <meta name="color-scheme" content="light dark"><link rel="index" title="Index" href="../../../genindex.html" /><link rel="search" title="Search" href="../../../search.html" />
         <link rel="canonical" href="https://pyabaqus.haiiliin.com/_modules/abaqus/Mesh/MeshElementArray.html" />
 
-    <meta name="generator" content="sphinx-4.5.0, furo 2022.04.07"/>
-        <title>abaqus.Mesh.MeshElementArray - pyabaqus 1.0.16 documentation</title>
+    <meta name="generator" content="sphinx-4.5.0, furo 2022.06.04.1"/>
+        <title>abaqus.Mesh.MeshElementArray - pyabaqus 1.0.18 documentation</title>
       <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/styles/furo.css?digest=68f4518137b9aefe99b631505a2064c3c42c9852" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/styles/furo.css?digest=40978830699223671f4072448e654b5958f38b89" />
     <link rel="stylesheet" type="text/css" href="../../../_static/styles/furo-extensions.css?digest=30d1aed668e5c3a91c3e3bf6a60b675221979f0e" />
     
     
@@ -123,7 +123,7 @@
       </label>
     </div>
     <div class="header-center">
-      <a href="../../../index.html"><div class="brand">pyabaqus 1.0.16 documentation</div></a>
+      <a href="../../../index.html"><div class="brand">pyabaqus 1.0.18 documentation</div></a>
     </div>
     <div class="header-right">
       <div class="theme-toggle-container theme-toggle-header">
@@ -146,7 +146,7 @@
       <div class="sidebar-sticky"><a class="sidebar-brand" href="../../../index.html">
   
   
-  <span class="sidebar-brand-text">pyabaqus 1.0.16 documentation</span>
+  <span class="sidebar-brand-text">pyabaqus 1.0.18 documentation</span>
   
 </a><form class="sidebar-search-container" method="get" action="../../../search.html" role="search">
   <input class="sidebar-search" placeholder=Search name="q" aria-label="Search">
@@ -286,7 +286,8 @@
           </svg>
           <span>Back to top</span>
         </a>
-        <div class="content-icon-container"><div class="theme-toggle-container theme-toggle-content">
+        <div class="content-icon-container">
+          <div class="theme-toggle-container theme-toggle-content">
             <button class="theme-toggle">
               <div class="visually-hidden">Toggle Light / Dark / Auto color theme</div>
               <svg class="theme-icon-when-auto"><use href="#svg-sun-half"></use></svg>
@@ -305,7 +306,7 @@
 
 
 <div class="viewcode-block" id="MeshElementArray"><a class="viewcode-back" href="../../../reference/mdb/model/mesh.html#abaqus.Mesh.MeshElementArray.MeshElementArray">[docs]</a><span class="k">class</span> <span class="nc">MeshElementArray</span><span class="p">(</span><span class="nb">list</span><span class="p">[</span><span class="n">MeshElement</span><span class="p">]):</span>
-    <span class="sd">"""The MeshElementArray is a sequence of MeshElement objects.</span>
+    <span class="sd">&quot;&quot;&quot;The MeshElementArray is a sequence of MeshElement objects.</span>
 
 <span class="sd">    Notes</span>
 <span class="sd">    -----</span>
@@ -339,10 +340,10 @@
 <span class="sd">        mdb.models[name].rootAssembly.sets[name].elements</span>
 <span class="sd">        mdb.models[name].rootAssembly.surfaces[name].elements</span>
 
-<span class="sd">    """</span>
+<span class="sd">    &quot;&quot;&quot;</span>
 
     <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">elements</span><span class="p">:</span> <span class="nb">list</span><span class="p">[</span><span class="n">MeshElement</span><span class="p">]):</span>
-        <span class="sd">"""This method creates a MeshElementArray object.</span>
+        <span class="sd">&quot;&quot;&quot;This method creates a MeshElementArray object.</span>
 
 <span class="sd">        Notes</span>
 <span class="sd">        -----</span>
@@ -360,11 +361,11 @@
 <span class="sd">        Returns</span>
 <span class="sd">        -------</span>
 <span class="sd">            A MeshElementArray object.</span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">()</span>
 
 <div class="viewcode-block" id="MeshElementArray.getFromLabel"><a class="viewcode-back" href="../../../reference/mdb/model/mesh.html#abaqus.Mesh.MeshElementArray.MeshElementArray.getFromLabel">[docs]</a>    <span class="k">def</span> <span class="nf">getFromLabel</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">label</span><span class="p">:</span> <span class="nb">int</span><span class="p">):</span>
-        <span class="sd">"""This method returns the object in the MeshElementArray with the given label.</span>
+        <span class="sd">&quot;&quot;&quot;This method returns the object in the MeshElementArray with the given label.</span>
 <span class="sd">        </span>
 <span class="sd">        Parameters</span>
 <span class="sd">        ----------</span>
@@ -374,11 +375,11 @@
 <span class="sd">        Returns</span>
 <span class="sd">        -------</span>
 <span class="sd">            A MeshElement object.</span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span></div>
 
 <div class="viewcode-block" id="MeshElementArray.getSequenceFromMask"><a class="viewcode-back" href="../../../reference/mdb/model/mesh.html#abaqus.Mesh.MeshElementArray.MeshElementArray.getSequenceFromMask">[docs]</a>    <span class="k">def</span> <span class="nf">getSequenceFromMask</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">mask</span><span class="p">:</span> <span class="nb">str</span><span class="p">):</span>
-        <span class="sd">"""This method returns the objects in the MeshElementArray identified using the specified</span>
+        <span class="sd">&quot;&quot;&quot;This method returns the objects in the MeshElementArray identified using the specified</span>
 <span class="sd">        *mask*. This command is generated when the JournalOptions are set to COMPRESSEDINDEX.</span>
 <span class="sd">        When a large number of objects are involved, this method is highly efficient.</span>
 <span class="sd">        </span>
@@ -390,43 +391,43 @@
 <span class="sd">        Returns</span>
 <span class="sd">        -------</span>
 <span class="sd">            A MeshElementArray object.</span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span></div>
 
 <div class="viewcode-block" id="MeshElementArray.getMask"><a class="viewcode-back" href="../../../reference/mdb/model/mesh.html#abaqus.Mesh.MeshElementArray.MeshElementArray.getMask">[docs]</a>    <span class="k">def</span> <span class="nf">getMask</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="sd">"""This method returns a string specifying the object or objects.</span>
+        <span class="sd">&quot;&quot;&quot;This method returns a string specifying the object or objects.</span>
 
 <span class="sd">        Returns</span>
 <span class="sd">        -------</span>
 <span class="sd">            A String specifying the object or objects.</span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span></div>
 
 <div class="viewcode-block" id="MeshElementArray.getExteriorEdges"><a class="viewcode-back" href="../../../reference/mdb/model/mesh.html#abaqus.Mesh.MeshElementArray.MeshElementArray.getExteriorEdges">[docs]</a>    <span class="k">def</span> <span class="nf">getExteriorEdges</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="sd">"""This method returns the exterior element edges for 2D/shell elements in the</span>
+        <span class="sd">&quot;&quot;&quot;This method returns the exterior element edges for 2D/shell elements in the</span>
 <span class="sd">        MeshElementArray. These are edges referenced by exactly one element in the sequence.</span>
 <span class="sd">        Nothing is returned if the sequence contains no topologically 2D/shell elements.</span>
 
 <span class="sd">        Returns</span>
 <span class="sd">        -------</span>
 <span class="sd">            A MeshEdgeArray object specifying the element edges on the exterior.</span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span></div>
 
 <div class="viewcode-block" id="MeshElementArray.getExteriorFaces"><a class="viewcode-back" href="../../../reference/mdb/model/mesh.html#abaqus.Mesh.MeshElementArray.MeshElementArray.getExteriorFaces">[docs]</a>    <span class="k">def</span> <span class="nf">getExteriorFaces</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="sd">"""This method returns the exterior element faces for solid elements in the</span>
+        <span class="sd">&quot;&quot;&quot;This method returns the exterior element faces for solid elements in the</span>
 <span class="sd">        MeshElementArray. These are faces referenced by exactly one element in the sequence.</span>
 <span class="sd">        Nothing is returned if the sequence contains no topologically solid elements.</span>
 
 <span class="sd">        Returns</span>
 <span class="sd">        -------</span>
 <span class="sd">            A MeshFaceArray object specifying the element faces on the exterior.</span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span></div>
 
-<div class="viewcode-block" id="MeshElementArray.getByBoundingBox"><a class="viewcode-back" href="../../../reference/mdb/model/mesh.html#abaqus.Mesh.MeshElementArray.MeshElementArray.getByBoundingBox">[docs]</a>    <span class="k">def</span> <span class="nf">getByBoundingBox</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">xMin</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">''</span><span class="p">,</span> <span class="n">yMin</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">''</span><span class="p">,</span> <span class="n">zMin</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">''</span><span class="p">,</span> <span class="n">xMax</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">''</span><span class="p">,</span> <span class="n">yMax</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">''</span><span class="p">,</span>
-                         <span class="n">zMax</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">''</span><span class="p">):</span>
-        <span class="sd">"""This method returns an array of element objects that lie within the specified bounding</span>
+<div class="viewcode-block" id="MeshElementArray.getByBoundingBox"><a class="viewcode-back" href="../../../reference/mdb/model/mesh.html#abaqus.Mesh.MeshElementArray.MeshElementArray.getByBoundingBox">[docs]</a>    <span class="k">def</span> <span class="nf">getByBoundingBox</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">xMin</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">yMin</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">zMin</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">xMax</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">yMax</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span><span class="p">,</span>
+                         <span class="n">zMax</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;This method returns an array of element objects that lie within the specified bounding</span>
 <span class="sd">        box.</span>
 <span class="sd">        </span>
 <span class="sd">        Parameters</span>
@@ -447,11 +448,11 @@
 <span class="sd">        Returns</span>
 <span class="sd">        -------</span>
 <span class="sd">            A MeshElementArray object, which is a sequence of MeshElement objects.</span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span></div>
 
 <div class="viewcode-block" id="MeshElementArray.getByBoundingCylinder"><a class="viewcode-back" href="../../../reference/mdb/model/mesh.html#abaqus.Mesh.MeshElementArray.MeshElementArray.getByBoundingCylinder">[docs]</a>    <span class="k">def</span> <span class="nf">getByBoundingCylinder</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">center1</span><span class="p">:</span> <span class="nb">tuple</span><span class="p">,</span> <span class="n">center2</span><span class="p">:</span> <span class="nb">tuple</span><span class="p">,</span> <span class="n">radius</span><span class="p">:</span> <span class="nb">str</span><span class="p">):</span>
-        <span class="sd">"""This method returns an array of element objects that lie within the specified bounding</span>
+        <span class="sd">&quot;&quot;&quot;This method returns an array of element objects that lie within the specified bounding</span>
 <span class="sd">        cylinder.</span>
 <span class="sd">        </span>
 <span class="sd">        Parameters</span>
@@ -467,11 +468,11 @@
 <span class="sd">        Returns</span>
 <span class="sd">        -------</span>
 <span class="sd">            A MeshElementArray object, which is a sequence of MeshElement objects.</span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span></div>
 
 <div class="viewcode-block" id="MeshElementArray.getByBoundingSphere"><a class="viewcode-back" href="../../../reference/mdb/model/mesh.html#abaqus.Mesh.MeshElementArray.MeshElementArray.getByBoundingSphere">[docs]</a>    <span class="k">def</span> <span class="nf">getByBoundingSphere</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">center</span><span class="p">:</span> <span class="nb">tuple</span><span class="p">,</span> <span class="n">radius</span><span class="p">:</span> <span class="nb">str</span><span class="p">):</span>
-        <span class="sd">"""This method returns an array of element objects that lie within the specified bounding</span>
+        <span class="sd">&quot;&quot;&quot;This method returns an array of element objects that lie within the specified bounding</span>
 <span class="sd">        sphere.</span>
 <span class="sd">        </span>
 <span class="sd">        Parameters</span>
@@ -484,11 +485,11 @@
 <span class="sd">        Returns</span>
 <span class="sd">        -------</span>
 <span class="sd">            A MeshElementArray object, which is a sequence of MeshElement objects.</span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span></div>
 
 <div class="viewcode-block" id="MeshElementArray.getBoundingBox"><a class="viewcode-back" href="../../../reference/mdb/model/mesh.html#abaqus.Mesh.MeshElementArray.MeshElementArray.getBoundingBox">[docs]</a>    <span class="k">def</span> <span class="nf">getBoundingBox</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="sd">"""This method returns a dictionary of two tuples representing minimum and maximum boundary</span>
+        <span class="sd">&quot;&quot;&quot;This method returns a dictionary of two tuples representing minimum and maximum boundary</span>
 <span class="sd">        values of the bounding box of the minimum size containing the element sequence.</span>
 
 <span class="sd">        Returns</span>
@@ -498,11 +499,11 @@
 <span class="sd">            the bounding box. </span>
 <span class="sd">            *high*: a tuple of three floats representing the maximum x, y, and z boundary values of </span>
 <span class="sd">            the bounding box.</span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span></div>
 
 <div class="viewcode-block" id="MeshElementArray.sequenceFromLabels"><a class="viewcode-back" href="../../../reference/mdb/model/mesh.html#abaqus.Mesh.MeshElementArray.MeshElementArray.sequenceFromLabels">[docs]</a>    <span class="k">def</span> <span class="nf">sequenceFromLabels</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">labels</span><span class="p">:</span> <span class="nb">tuple</span><span class="p">):</span>
-        <span class="sd">"""This method returns the objects in the MeshElementArray identified using the specified</span>
+        <span class="sd">&quot;&quot;&quot;This method returns the objects in the MeshElementArray identified using the specified</span>
 <span class="sd">        labels.</span>
 <span class="sd">        </span>
 <span class="sd">        Parameters</span>
@@ -518,7 +519,7 @@
 <span class="sd">        ------</span>
 <span class="sd">            - An exception occurs if the resulting sequence is empty. </span>
 <span class="sd">              Error: The mask results in an empty sequence </span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span></div></div>
 </pre></div>
         </article>

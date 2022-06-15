@@ -5,10 +5,10 @@
     <meta name="color-scheme" content="light dark"><link rel="index" title="Index" href="../../../genindex.html" /><link rel="search" title="Search" href="../../../search.html" />
         <link rel="canonical" href="https://pyabaqus.haiiliin.com/_modules/abaqus/Annotation/Annotation.html" />
 
-    <meta name="generator" content="sphinx-4.5.0, furo 2022.04.07"/>
-        <title>abaqus.Annotation.Annotation - pyabaqus 1.0.16 documentation</title>
+    <meta name="generator" content="sphinx-4.5.0, furo 2022.06.04.1"/>
+        <title>abaqus.Annotation.Annotation - pyabaqus 1.0.18 documentation</title>
       <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/styles/furo.css?digest=68f4518137b9aefe99b631505a2064c3c42c9852" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/styles/furo.css?digest=40978830699223671f4072448e654b5958f38b89" />
     <link rel="stylesheet" type="text/css" href="../../../_static/styles/furo-extensions.css?digest=30d1aed668e5c3a91c3e3bf6a60b675221979f0e" />
     
     
@@ -123,7 +123,7 @@
       </label>
     </div>
     <div class="header-center">
-      <a href="../../../index.html"><div class="brand">pyabaqus 1.0.16 documentation</div></a>
+      <a href="../../../index.html"><div class="brand">pyabaqus 1.0.18 documentation</div></a>
     </div>
     <div class="header-right">
       <div class="theme-toggle-container theme-toggle-header">
@@ -146,7 +146,7 @@
       <div class="sidebar-sticky"><a class="sidebar-brand" href="../../../index.html">
   
   
-  <span class="sidebar-brand-text">pyabaqus 1.0.16 documentation</span>
+  <span class="sidebar-brand-text">pyabaqus 1.0.18 documentation</span>
   
 </a><form class="sidebar-search-container" method="get" action="../../../search.html" role="search">
   <input class="sidebar-search" placeholder=Search name="q" aria-label="Search">
@@ -286,7 +286,8 @@
           </svg>
           <span>Back to top</span>
         </a>
-        <div class="content-icon-container"><div class="theme-toggle-container theme-toggle-content">
+        <div class="content-icon-container">
+          <div class="theme-toggle-container theme-toggle-content">
             <button class="theme-toggle">
               <div class="visually-hidden">Toggle Light / Dark / Auto color theme</div>
               <svg class="theme-icon-when-auto"><use href="#svg-sun-half"></use></svg>
@@ -304,7 +305,7 @@
 <span></span>
 
 <div class="viewcode-block" id="Annotation"><a class="viewcode-back" href="../../../reference/mdb/annotation.html#abaqus.Annotation.Annotation.Annotation">[docs]</a><span class="k">class</span> <span class="nc">Annotation</span><span class="p">:</span>
-    <span class="sd">"""The Annotation object is the abstract base type for other Annotation objects. The</span>
+    <span class="sd">&quot;&quot;&quot;The Annotation object is the abstract base type for other Annotation objects. The</span>
 <span class="sd">    Annotation object has no explicit constructor. The methods and members of the Annotation </span>
 <span class="sd">    object are common to all objects derived from Annotation. </span>
 
@@ -324,53 +325,53 @@
 <span class="sd">        session.odbs[name].userData.annotations[name]</span>
 <span class="sd">        session.viewports[name].annotationsToPlot[i]</span>
 
-<span class="sd">    """</span>
+<span class="sd">    &quot;&quot;&quot;</span>
 
     <span class="c1"># A String specifying the annotation repository key. </span>
-    <span class="n">name</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">''</span>
+    <span class="n">name</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span>
 
 <div class="viewcode-block" id="Annotation.bringToFront"><a class="viewcode-back" href="../../../reference/mdb/annotation.html#abaqus.Annotation.Annotation.Annotation.bringToFront">[docs]</a>    <span class="k">def</span> <span class="nf">bringToFront</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="sd">"""This method brings the Annotation object to the top of the annotation stack.</span>
-<span class="sd">        """</span>
+        <span class="sd">&quot;&quot;&quot;This method brings the Annotation object to the top of the annotation stack.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span></div>
 
 <div class="viewcode-block" id="Annotation.sendToBack"><a class="viewcode-back" href="../../../reference/mdb/annotation.html#abaqus.Annotation.Annotation.Annotation.sendToBack">[docs]</a>    <span class="k">def</span> <span class="nf">sendToBack</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="sd">"""This method sends the Annotation object to the bottom of the annotation stack.</span>
-<span class="sd">        """</span>
+        <span class="sd">&quot;&quot;&quot;This method sends the Annotation object to the bottom of the annotation stack.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span></div>
 
 <div class="viewcode-block" id="Annotation.bringForward"><a class="viewcode-back" href="../../../reference/mdb/annotation.html#abaqus.Annotation.Annotation.Annotation.bringForward">[docs]</a>    <span class="k">def</span> <span class="nf">bringForward</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="sd">"""This method brings the Annotation object one position up in the annotation stack.</span>
-<span class="sd">        """</span>
+        <span class="sd">&quot;&quot;&quot;This method brings the Annotation object one position up in the annotation stack.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span></div>
 
 <div class="viewcode-block" id="Annotation.sendBackward"><a class="viewcode-back" href="../../../reference/mdb/annotation.html#abaqus.Annotation.Annotation.Annotation.sendBackward">[docs]</a>    <span class="k">def</span> <span class="nf">sendBackward</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="sd">"""This method sends the Annotation object one position down in the annotation stack.</span>
-<span class="sd">        """</span>
+        <span class="sd">&quot;&quot;&quot;This method sends the Annotation object one position down in the annotation stack.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span></div>
 
 <div class="viewcode-block" id="Annotation.moveBefore"><a class="viewcode-back" href="../../../reference/mdb/annotation.html#abaqus.Annotation.Annotation.Annotation.moveBefore">[docs]</a>    <span class="k">def</span> <span class="nf">moveBefore</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">:</span> <span class="nb">str</span><span class="p">):</span>
-        <span class="sd">"""This method moves the Annotation object before another object in the same repository.</span>
+        <span class="sd">&quot;&quot;&quot;This method moves the Annotation object before another object in the same repository.</span>
 <span class="sd">        </span>
 <span class="sd">        Parameters</span>
 <span class="sd">        ----------</span>
 <span class="sd">        name</span>
 <span class="sd">            A String specifying the name of the other Annotation object.</span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span></div>
 
 <div class="viewcode-block" id="Annotation.moveAfter"><a class="viewcode-back" href="../../../reference/mdb/annotation.html#abaqus.Annotation.Annotation.Annotation.moveAfter">[docs]</a>    <span class="k">def</span> <span class="nf">moveAfter</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">:</span> <span class="nb">str</span><span class="p">):</span>
-        <span class="sd">"""This method moves the Annotation object after another object in the same repository.</span>
+        <span class="sd">&quot;&quot;&quot;This method moves the Annotation object after another object in the same repository.</span>
 <span class="sd">        </span>
 <span class="sd">        Parameters</span>
 <span class="sd">        ----------</span>
 <span class="sd">        name</span>
 <span class="sd">            A String specifying the name of the other Annotation object. </span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span></div>
 
 <div class="viewcode-block" id="Annotation.translate"><a class="viewcode-back" href="../../../reference/mdb/annotation.html#abaqus.Annotation.Annotation.Annotation.translate">[docs]</a>    <span class="k">def</span> <span class="nf">translate</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">y</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="kc">None</span><span class="p">):</span>
-        <span class="sd">"""This method translates the Annotation object on the viewport plane.</span>
+        <span class="sd">&quot;&quot;&quot;This method translates the Annotation object on the viewport plane.</span>
 <span class="sd">        </span>
 <span class="sd">        Parameters</span>
 <span class="sd">        ----------</span>
@@ -378,7 +379,7 @@
 <span class="sd">            A Float specifying the *X* translation amount in millimeters. </span>
 <span class="sd">        y</span>
 <span class="sd">            A Float specifying the *Y* translation amount in millimeters. </span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span></div></div>
 </pre></div>
         </article>

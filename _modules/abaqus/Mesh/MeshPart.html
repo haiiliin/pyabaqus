@@ -5,10 +5,10 @@
     <meta name="color-scheme" content="light dark"><link rel="index" title="Index" href="../../../genindex.html" /><link rel="search" title="Search" href="../../../search.html" />
         <link rel="canonical" href="https://pyabaqus.haiiliin.com/_modules/abaqus/Mesh/MeshPart.html" />
 
-    <meta name="generator" content="sphinx-4.5.0, furo 2022.04.07"/>
-        <title>abaqus.Mesh.MeshPart - pyabaqus 1.0.16 documentation</title>
+    <meta name="generator" content="sphinx-4.5.0, furo 2022.06.04.1"/>
+        <title>abaqus.Mesh.MeshPart - pyabaqus 1.0.18 documentation</title>
       <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/styles/furo.css?digest=68f4518137b9aefe99b631505a2064c3c42c9852" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/styles/furo.css?digest=40978830699223671f4072448e654b5958f38b89" />
     <link rel="stylesheet" type="text/css" href="../../../_static/styles/furo-extensions.css?digest=30d1aed668e5c3a91c3e3bf6a60b675221979f0e" />
     
     
@@ -123,7 +123,7 @@
       </label>
     </div>
     <div class="header-center">
-      <a href="../../../index.html"><div class="brand">pyabaqus 1.0.16 documentation</div></a>
+      <a href="../../../index.html"><div class="brand">pyabaqus 1.0.18 documentation</div></a>
     </div>
     <div class="header-right">
       <div class="theme-toggle-container theme-toggle-header">
@@ -146,7 +146,7 @@
       <div class="sidebar-sticky"><a class="sidebar-brand" href="../../../index.html">
   
   
-  <span class="sidebar-brand-text">pyabaqus 1.0.16 documentation</span>
+  <span class="sidebar-brand-text">pyabaqus 1.0.18 documentation</span>
   
 </a><form class="sidebar-search-container" method="get" action="../../../search.html" role="search">
   <input class="sidebar-search" placeholder=Search name="q" aria-label="Search">
@@ -286,7 +286,8 @@
           </svg>
           <span>Back to top</span>
         </a>
-        <div class="content-icon-container"><div class="theme-toggle-container theme-toggle-content">
+        <div class="content-icon-container">
+          <div class="theme-toggle-container theme-toggle-content">
             <button class="theme-toggle">
               <div class="visually-hidden">Toggle Light / Dark / Auto color theme</div>
               <svg class="theme-icon-when-auto"><use href="#svg-sun-half"></use></svg>
@@ -318,7 +319,7 @@
 
 
 <div class="viewcode-block" id="MeshPart"><a class="viewcode-back" href="../../../reference/mdb/model/mesh.html#abaqus.Mesh.MeshPart.MeshPart">[docs]</a><span class="k">class</span> <span class="nc">MeshPart</span><span class="p">(</span><span class="n">PartBase</span><span class="p">):</span>
-    <span class="sd">"""The following commands operate on Part objects. For more information about the Part </span>
+    <span class="sd">&quot;&quot;&quot;The following commands operate on Part objects. For more information about the Part </span>
 <span class="sd">    object, see Part object. </span>
 
 <span class="sd">    Notes</span>
@@ -329,10 +330,10 @@
 
 <span class="sd">        import mesh</span>
 
-<span class="sd">    """</span>
+<span class="sd">    &quot;&quot;&quot;</span>
 
 <div class="viewcode-block" id="MeshPart.assignStackDirection"><a class="viewcode-back" href="../../../reference/mdb/model/mesh.html#abaqus.Mesh.MeshPart.MeshPart.assignStackDirection">[docs]</a>    <span class="k">def</span> <span class="nf">assignStackDirection</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">cells</span><span class="p">:</span> <span class="nb">tuple</span><span class="p">[</span><span class="n">Cell</span><span class="p">],</span> <span class="n">referenceRegion</span><span class="p">:</span> <span class="n">Face</span><span class="p">):</span>
-        <span class="sd">"""This method assigns a stack direction to geometric cells. The stack direction will be</span>
+        <span class="sd">&quot;&quot;&quot;This method assigns a stack direction to geometric cells. The stack direction will be</span>
 <span class="sd">        used to orient the elements during mesh generation.</span>
 <span class="sd">        </span>
 <span class="sd">        Parameters</span>
@@ -341,13 +342,13 @@
 <span class="sd">            A sequence of Cell objects specifying regions where to assign the stack direction. </span>
 <span class="sd">        referenceRegion</span>
 <span class="sd">            A Face object specifying the top side of the stack direction. </span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span></div>
 
 <div class="viewcode-block" id="MeshPart.associateMeshWithGeometry"><a class="viewcode-back" href="../../../reference/mdb/model/mesh.html#abaqus.Mesh.MeshPart.MeshPart.associateMeshWithGeometry">[docs]</a>    <span class="k">def</span> <span class="nf">associateMeshWithGeometry</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">geometricEntity</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">elements</span><span class="p">:</span> <span class="nb">tuple</span><span class="p">[</span><span class="n">MeshElement</span><span class="p">]</span> <span class="o">=</span> <span class="p">(),</span>
                                   <span class="n">elemFaces</span><span class="p">:</span> <span class="nb">tuple</span><span class="p">[</span><span class="n">MeshFace</span><span class="p">]</span> <span class="o">=</span> <span class="p">(),</span> <span class="n">elemEdges</span><span class="p">:</span> <span class="nb">tuple</span><span class="p">[</span><span class="n">MeshEdge</span><span class="p">]</span> <span class="o">=</span> <span class="p">(),</span>
                                   <span class="n">node</span><span class="p">:</span> <span class="n">MeshNode</span> <span class="o">=</span> <span class="n">MeshNode</span><span class="p">((</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">))):</span>
-        <span class="sd">"""This method associates a geometric entity with mesh entities that are either orphan</span>
+        <span class="sd">&quot;&quot;&quot;This method associates a geometric entity with mesh entities that are either orphan</span>
 <span class="sd">        elements, bounds orphan elements, or were created using the bottom-up meshing technique.</span>
 <span class="sd">        </span>
 <span class="sd">        Parameters</span>
@@ -370,7 +371,7 @@
 <span class="sd">            geometric edge. </span>
 <span class="sd">        node</span>
 <span class="sd">            A MeshNode object specifying the mesh node to be associated with the geometric vertex. </span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span></div>
 
 <div class="viewcode-block" id="MeshPart.createVirtualTopology"><a class="viewcode-back" href="../../../reference/mdb/model/mesh.html#abaqus.Mesh.MeshPart.MeshPart.createVirtualTopology">[docs]</a>    <span class="k">def</span> <span class="nf">createVirtualTopology</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">regions</span><span class="p">:</span> <span class="nb">tuple</span><span class="p">[</span><span class="n">Face</span><span class="p">]</span> <span class="o">=</span> <span class="p">(),</span> <span class="n">mergeShortEdges</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="kc">False</span><span class="p">,</span>
@@ -381,7 +382,7 @@
                               <span class="n">thinStairFaceThreshold</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">ignoreRedundantEntities</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="kc">False</span><span class="p">,</span>
                               <span class="n">cornerAngleTolerance</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mi">30</span><span class="p">,</span> <span class="n">applyBlendControls</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="kc">False</span><span class="p">,</span>
                               <span class="n">blendSubtendedAngleTolerance</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">blendRadiusTolerance</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="kc">None</span><span class="p">):</span>
-        <span class="sd">"""This method creates a virtual topology feature by automatically merging faces and edges</span>
+        <span class="sd">&quot;&quot;&quot;This method creates a virtual topology feature by automatically merging faces and edges</span>
 <span class="sd">        based on a set of geometric parameters. The edges and vertices that are being merged</span>
 <span class="sd">        will be ignored during mesh generation.</span>
 <span class="sd">        </span>
@@ -458,11 +459,11 @@
 <span class="sd">        -------</span>
 <span class="sd">        feature: Feature</span>
 <span class="sd">            A Feature object</span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span></div>
 
 <div class="viewcode-block" id="MeshPart.deleteBoundaryLayerControls"><a class="viewcode-back" href="../../../reference/mdb/model/mesh.html#abaqus.Mesh.MeshPart.MeshPart.deleteBoundaryLayerControls">[docs]</a>    <span class="k">def</span> <span class="nf">deleteBoundaryLayerControls</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">regions</span><span class="p">:</span> <span class="nb">tuple</span><span class="p">[</span><span class="n">Cell</span><span class="p">]):</span>
-        <span class="sd">"""This method deletes the control parameters for boundary layer mesh for all the specified</span>
+        <span class="sd">&quot;&quot;&quot;This method deletes the control parameters for boundary layer mesh for all the specified</span>
 <span class="sd">        regions.</span>
 <span class="sd">        </span>
 <span class="sd">        Parameters</span>
@@ -470,11 +471,11 @@
 <span class="sd">        regions</span>
 <span class="sd">            A sequence of Cell objects specifying the regions for which to set the boundary layer </span>
 <span class="sd">            mesh control parameters. </span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span></div>
 
-<div class="viewcode-block" id="MeshPart.deleteMesh"><a class="viewcode-back" href="../../../reference/mdb/model/mesh.html#abaqus.Mesh.MeshPart.MeshPart.deleteMesh">[docs]</a>    <span class="k">def</span> <span class="nf">deleteMesh</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">regions</span><span class="p">:</span> <span class="nb">tuple</span><span class="p">[</span><span class="s1">'Part'</span><span class="p">]):</span>
-        <span class="sd">"""This method deletes a subset of the mesh that contains the native elements from the</span>
+<div class="viewcode-block" id="MeshPart.deleteMesh"><a class="viewcode-back" href="../../../reference/mdb/model/mesh.html#abaqus.Mesh.MeshPart.MeshPart.deleteMesh">[docs]</a>    <span class="k">def</span> <span class="nf">deleteMesh</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">regions</span><span class="p">:</span> <span class="nb">tuple</span><span class="p">[</span><span class="s1">&#39;Part&#39;</span><span class="p">]):</span>
+        <span class="sd">&quot;&quot;&quot;This method deletes a subset of the mesh that contains the native elements from the</span>
 <span class="sd">        given parts or regions.</span>
 <span class="sd">        </span>
 <span class="sd">        Parameters</span>
@@ -482,11 +483,11 @@
 <span class="sd">        regions</span>
 <span class="sd">            A sequence of Part objects or Region objects specifying the parts or regions from which </span>
 <span class="sd">            the native mesh is to be deleted. </span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span></div>
 
 <div class="viewcode-block" id="MeshPart.deleteMeshAssociationWithGeometry"><a class="viewcode-back" href="../../../reference/mdb/model/mesh.html#abaqus.Mesh.MeshPart.MeshPart.deleteMeshAssociationWithGeometry">[docs]</a>    <span class="k">def</span> <span class="nf">deleteMeshAssociationWithGeometry</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">geometricEntities</span><span class="p">:</span> <span class="nb">tuple</span><span class="p">[</span><span class="n">Cell</span><span class="p">],</span> <span class="n">addBoundingEntities</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="kc">False</span><span class="p">):</span>
-        <span class="sd">"""This method deletes the association of geometric entities with mesh entities.</span>
+        <span class="sd">&quot;&quot;&quot;This method deletes the association of geometric entities with mesh entities.</span>
 <span class="sd">        </span>
 <span class="sd">        Parameters</span>
 <span class="sd">        ----------</span>
@@ -499,17 +500,17 @@
 <span class="sd">            *geometricEntities* contains a face, this boolean indicates whether the edges and </span>
 <span class="sd">            vertices that bound the face will also be disassociated from the mesh. The default value </span>
 <span class="sd">            is False. </span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span></div>
 
 <div class="viewcode-block" id="MeshPart.deletePreviewMesh"><a class="viewcode-back" href="../../../reference/mdb/model/mesh.html#abaqus.Mesh.MeshPart.MeshPart.deletePreviewMesh">[docs]</a>    <span class="k">def</span> <span class="nf">deletePreviewMesh</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="sd">"""This method deletes all boundary meshes in the parts. See the *boundaryPreview* argument</span>
+        <span class="sd">&quot;&quot;&quot;This method deletes all boundary meshes in the parts. See the *boundaryPreview* argument</span>
 <span class="sd">        of generateMesh for information about generating boundary meshes.</span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span></div>
 
-<div class="viewcode-block" id="MeshPart.deleteSeeds"><a class="viewcode-back" href="../../../reference/mdb/model/mesh.html#abaqus.Mesh.MeshPart.MeshPart.deleteSeeds">[docs]</a>    <span class="k">def</span> <span class="nf">deleteSeeds</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">regions</span><span class="p">:</span> <span class="nb">tuple</span><span class="p">[</span><span class="s1">'Part'</span><span class="p">]):</span>
-        <span class="sd">"""This method deletes the global edge seeds from the given parts or deletes the local edge</span>
+<div class="viewcode-block" id="MeshPart.deleteSeeds"><a class="viewcode-back" href="../../../reference/mdb/model/mesh.html#abaqus.Mesh.MeshPart.MeshPart.deleteSeeds">[docs]</a>    <span class="k">def</span> <span class="nf">deleteSeeds</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">regions</span><span class="p">:</span> <span class="nb">tuple</span><span class="p">[</span><span class="s1">&#39;Part&#39;</span><span class="p">]):</span>
+        <span class="sd">&quot;&quot;&quot;This method deletes the global edge seeds from the given parts or deletes the local edge</span>
 <span class="sd">        seeds from the given edges.</span>
 <span class="sd">        </span>
 <span class="sd">        Parameters</span>
@@ -517,13 +518,13 @@
 <span class="sd">        regions</span>
 <span class="sd">            A sequence of Part objects or Edge objects specifying the parts or edges from which the </span>
 <span class="sd">            seeds are to be deleted. </span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span></div>
 
-<div class="viewcode-block" id="MeshPart.generateMesh"><a class="viewcode-back" href="../../../reference/mdb/model/mesh.html#abaqus.Mesh.MeshPart.MeshPart.generateMesh">[docs]</a>    <span class="k">def</span> <span class="nf">generateMesh</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">regions</span><span class="p">:</span> <span class="nb">tuple</span><span class="p">[</span><span class="s1">'Part'</span><span class="p">]</span> <span class="o">=</span> <span class="p">(),</span> <span class="n">seedConstraintOverride</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="n">OFF</span><span class="p">,</span>
+<div class="viewcode-block" id="MeshPart.generateMesh"><a class="viewcode-back" href="../../../reference/mdb/model/mesh.html#abaqus.Mesh.MeshPart.MeshPart.generateMesh">[docs]</a>    <span class="k">def</span> <span class="nf">generateMesh</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">regions</span><span class="p">:</span> <span class="nb">tuple</span><span class="p">[</span><span class="s1">&#39;Part&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="p">(),</span> <span class="n">seedConstraintOverride</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="n">OFF</span><span class="p">,</span>
                      <span class="n">meshTechniqueOverride</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="n">OFF</span><span class="p">,</span> <span class="n">boundaryPreview</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="n">OFF</span><span class="p">,</span>
                      <span class="n">boundaryMeshOverride</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="n">OFF</span><span class="p">):</span>
-        <span class="sd">"""This method generates a mesh in the given parts or regions.</span>
+        <span class="sd">&quot;&quot;&quot;This method generates a mesh in the given parts or regions.</span>
 <span class="sd">        </span>
 <span class="sd">        Parameters</span>
 <span class="sd">        ----------</span>
@@ -546,15 +547,15 @@
 <span class="sd">            preview mesh. This option will only have an effect if any of the specified regions are </span>
 <span class="sd">            to be meshed with tetrahedral elements and a boundary preview mesh already exists. The </span>
 <span class="sd">            default value is OFF. </span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span></div>
 
 <div class="viewcode-block" id="MeshPart.generateBottomUpExtrudedMesh"><a class="viewcode-back" href="../../../reference/mdb/model/mesh.html#abaqus.Mesh.MeshPart.MeshPart.generateBottomUpExtrudedMesh">[docs]</a>    <span class="k">def</span> <span class="nf">generateBottomUpExtrudedMesh</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">cell</span><span class="p">:</span> <span class="n">Cell</span><span class="p">,</span> <span class="n">numberOfLayers</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">extrudeVector</span><span class="p">:</span> <span class="nb">tuple</span><span class="p">,</span>
-                                     <span class="n">geometrySourceSide</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">''</span><span class="p">,</span>
+                                     <span class="n">geometrySourceSide</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span><span class="p">,</span>
                                      <span class="n">elemFacesSourceSide</span><span class="p">:</span> <span class="nb">tuple</span><span class="p">[</span><span class="n">MeshFace</span><span class="p">]</span> <span class="o">=</span> <span class="p">(),</span> <span class="n">elemSourceSide</span><span class="p">:</span> <span class="nb">tuple</span> <span class="o">=</span> <span class="p">(),</span>
-                                     <span class="n">depth</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">targetSide</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">''</span><span class="p">,</span> <span class="n">biasRatio</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span>
+                                     <span class="n">depth</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">targetSide</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">biasRatio</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span>
                                      <span class="n">extendElementSets</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="kc">False</span><span class="p">):</span>
-        <span class="sd">"""This method generates solid elements by extruding a 2D mesh along a vector, either on an</span>
+        <span class="sd">&quot;&quot;&quot;This method generates solid elements by extruding a 2D mesh along a vector, either on an</span>
 <span class="sd">        orphan mesh or within a cell region using a bottom-up technique.</span>
 <span class="sd">        </span>
 <span class="sd">        Parameters</span>
@@ -592,16 +593,16 @@
 <span class="sd">            A Boolean specifying whether existing element sets that include source elements will be </span>
 <span class="sd">            extended to also include extruded elements. This argument is ignored for native parts. </span>
 <span class="sd">            The default value is False. </span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span></div>
 
-<div class="viewcode-block" id="MeshPart.generateBottomUpSweptMesh"><a class="viewcode-back" href="../../../reference/mdb/model/mesh.html#abaqus.Mesh.MeshPart.MeshPart.generateBottomUpSweptMesh">[docs]</a>    <span class="k">def</span> <span class="nf">generateBottomUpSweptMesh</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">cell</span><span class="p">:</span> <span class="n">Cell</span><span class="p">,</span> <span class="n">geometrySourceSide</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">''</span><span class="p">,</span>
+<div class="viewcode-block" id="MeshPart.generateBottomUpSweptMesh"><a class="viewcode-back" href="../../../reference/mdb/model/mesh.html#abaqus.Mesh.MeshPart.MeshPart.generateBottomUpSweptMesh">[docs]</a>    <span class="k">def</span> <span class="nf">generateBottomUpSweptMesh</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">cell</span><span class="p">:</span> <span class="n">Cell</span><span class="p">,</span> <span class="n">geometrySourceSide</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span><span class="p">,</span>
                                   <span class="n">elemFacesSourceSide</span><span class="p">:</span> <span class="nb">tuple</span><span class="p">[</span><span class="n">MeshFace</span><span class="p">]</span> <span class="o">=</span> <span class="p">(),</span>
-                                  <span class="n">elemSourceSide</span><span class="p">:</span> <span class="nb">tuple</span> <span class="o">=</span> <span class="p">(),</span> <span class="n">geometryConnectingSides</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">''</span><span class="p">,</span>
+                                  <span class="n">elemSourceSide</span><span class="p">:</span> <span class="nb">tuple</span> <span class="o">=</span> <span class="p">(),</span> <span class="n">geometryConnectingSides</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span><span class="p">,</span>
                                   <span class="n">elemFacesConnectingSides</span><span class="p">:</span> <span class="nb">tuple</span><span class="p">[</span><span class="n">MeshFace</span><span class="p">]</span> <span class="o">=</span> <span class="p">(),</span> <span class="n">elemConnectingSides</span><span class="p">:</span> <span class="nb">tuple</span> <span class="o">=</span> <span class="p">(),</span>
                                   <span class="n">targetSide</span><span class="p">:</span> <span class="n">Face</span> <span class="o">=</span> <span class="n">Face</span><span class="p">(),</span> <span class="n">numberOfLayers</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
                                   <span class="n">extendElementSets</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="kc">False</span><span class="p">):</span>
-        <span class="sd">"""This method generates solid elements by sweeping a 2D mesh, either on an orphan mesh or</span>
+        <span class="sd">&quot;&quot;&quot;This method generates solid elements by sweeping a 2D mesh, either on an orphan mesh or</span>
 <span class="sd">        within a cell region using a bottom-up technique.</span>
 <span class="sd">        </span>
 <span class="sd">        Parameters</span>
@@ -634,14 +635,14 @@
 <span class="sd">            A Boolean specifying whether existing element sets that include source elements will be </span>
 <span class="sd">            extended to also include swept elements. This argument is ignored for native parts. The </span>
 <span class="sd">            default value is False. </span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span></div>
 
 <div class="viewcode-block" id="MeshPart.generateBottomUpRevolvedMesh"><a class="viewcode-back" href="../../../reference/mdb/model/mesh.html#abaqus.Mesh.MeshPart.MeshPart.generateBottomUpRevolvedMesh">[docs]</a>    <span class="k">def</span> <span class="nf">generateBottomUpRevolvedMesh</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">cell</span><span class="p">:</span> <span class="n">Cell</span><span class="p">,</span> <span class="n">numberOfLayers</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">axisOfRevolution</span><span class="p">:</span> <span class="nb">tuple</span><span class="p">,</span>
                                      <span class="n">angleOfRevolution</span><span class="p">:</span> <span class="nb">float</span><span class="p">,</span>
-                                     <span class="n">geometrySourceSide</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">''</span><span class="p">,</span> <span class="n">elemFacesSourceSide</span><span class="p">:</span> <span class="nb">tuple</span><span class="p">[</span><span class="n">MeshFace</span><span class="p">]</span> <span class="o">=</span> <span class="p">(),</span>
+                                     <span class="n">geometrySourceSide</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">elemFacesSourceSide</span><span class="p">:</span> <span class="nb">tuple</span><span class="p">[</span><span class="n">MeshFace</span><span class="p">]</span> <span class="o">=</span> <span class="p">(),</span>
                                      <span class="n">elemSourceSide</span><span class="p">:</span> <span class="nb">tuple</span> <span class="o">=</span> <span class="p">(),</span> <span class="n">extendElementSets</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="kc">False</span><span class="p">):</span>
-        <span class="sd">"""This method generates solid elements by revolving a 2D mesh around an axis, either on an</span>
+        <span class="sd">&quot;&quot;&quot;This method generates solid elements by revolving a 2D mesh around an axis, either on an</span>
 <span class="sd">        orphan mesh or within a cell region using a bottom-up technique.</span>
 <span class="sd">        </span>
 <span class="sd">        Parameters</span>
@@ -673,11 +674,11 @@
 <span class="sd">            A Boolean specifying whether existing element sets that include source elements will be </span>
 <span class="sd">            extended to also include extruded elements. This argument is ignored for native parts. </span>
 <span class="sd">            The default value is False. </span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span></div>
 
 <div class="viewcode-block" id="MeshPart.getEdgeSeeds"><a class="viewcode-back" href="../../../reference/mdb/model/mesh.html#abaqus.Mesh.MeshPart.MeshPart.getEdgeSeeds">[docs]</a>    <span class="k">def</span> <span class="nf">getEdgeSeeds</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">edge</span><span class="p">:</span> <span class="n">Edge</span><span class="p">,</span> <span class="n">attribute</span><span class="p">:</span> <span class="n">typing</span><span class="o">.</span><span class="n">Union</span><span class="p">[</span><span class="n">SymbolicConstant</span><span class="p">,</span> <span class="nb">float</span><span class="p">]):</span>
-        <span class="sd">"""This method returns an edge seed parameter for a specified edge of a part.</span>
+        <span class="sd">&quot;&quot;&quot;This method returns an edge seed parameter for a specified edge of a part.</span>
 <span class="sd">        </span>
 <span class="sd">        Parameters</span>
 <span class="sd">        ----------</span>
@@ -760,11 +761,11 @@
 <span class="sd">        -------</span>
 <span class="sd">            The return value is a Float, an Int, or a SymbolicConstant depending on the value of the </span>
 <span class="sd">            *attribute* argument.</span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span></div>
 
 <div class="viewcode-block" id="MeshPart.getElementType"><a class="viewcode-back" href="../../../reference/mdb/model/mesh.html#abaqus.Mesh.MeshPart.MeshPart.getElementType">[docs]</a>    <span class="k">def</span> <span class="nf">getElementType</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">region</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">elemShape</span><span class="p">:</span> <span class="n">SymbolicConstant</span><span class="p">):</span>
-        <span class="sd">"""This method returns the ElemType object of a given element shape assigned to a region of</span>
+        <span class="sd">&quot;&quot;&quot;This method returns the ElemType object of a given element shape assigned to a region of</span>
 <span class="sd">        a part.</span>
 <span class="sd">        </span>
 <span class="sd">        Parameters</span>
@@ -791,11 +792,11 @@
 <span class="sd">            - TypeError </span>
 <span class="sd">              The region cannot be associated with element types or the *elemShape* is not </span>
 <span class="sd">            consistent with the dimension of the *region*. </span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span></div>
 
 <div class="viewcode-block" id="MeshPart.getIncompatibleMeshInterfaces"><a class="viewcode-back" href="../../../reference/mdb/model/mesh.html#abaqus.Mesh.MeshPart.MeshPart.getIncompatibleMeshInterfaces">[docs]</a>    <span class="k">def</span> <span class="nf">getIncompatibleMeshInterfaces</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">cells</span><span class="p">:</span> <span class="nb">tuple</span><span class="p">[</span><span class="n">Cell</span><span class="p">]</span> <span class="o">=</span> <span class="p">()):</span>
-        <span class="sd">"""This method returns a sequence of face objects that are meshed with incompatible</span>
+        <span class="sd">&quot;&quot;&quot;This method returns a sequence of face objects that are meshed with incompatible</span>
 <span class="sd">        elements.</span>
 <span class="sd">        </span>
 <span class="sd">        Parameters</span>
@@ -806,11 +807,11 @@
 <span class="sd">        Returns</span>
 <span class="sd">        -------</span>
 <span class="sd">            A sequence of Face objects.</span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span></div>
 
 <div class="viewcode-block" id="MeshPart.getMeshControl"><a class="viewcode-back" href="../../../reference/mdb/model/mesh.html#abaqus.Mesh.MeshPart.MeshPart.getMeshControl">[docs]</a>    <span class="k">def</span> <span class="nf">getMeshControl</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">region</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">attribute</span><span class="p">:</span> <span class="n">SymbolicConstant</span><span class="p">):</span>
-        <span class="sd">"""This method returns a mesh control parameter for the specified region of a part.</span>
+        <span class="sd">&quot;&quot;&quot;This method returns a mesh control parameter for the specified region of a part.</span>
 <span class="sd">        </span>
 <span class="sd">        Parameters</span>
 <span class="sd">        ----------</span>
@@ -871,11 +872,11 @@
 <span class="sd">        ------</span>
 <span class="sd">            - TypeError </span>
 <span class="sd">              The region cannot carry mesh controls. </span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span></div>
 
 <div class="viewcode-block" id="MeshPart.getMeshStats"><a class="viewcode-back" href="../../../reference/mdb/model/mesh.html#abaqus.Mesh.MeshPart.MeshPart.getMeshStats">[docs]</a>    <span class="k">def</span> <span class="nf">getMeshStats</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">regions</span><span class="p">:</span> <span class="nb">tuple</span><span class="p">):</span>
-        <span class="sd">"""This method returns the mesh statistics for the given regions.</span>
+        <span class="sd">&quot;&quot;&quot;This method returns the mesh statistics for the given regions.</span>
 <span class="sd">        </span>
 <span class="sd">        Parameters</span>
 <span class="sd">        ----------</span>
@@ -885,11 +886,11 @@
 <span class="sd">        Returns</span>
 <span class="sd">        -------</span>
 <span class="sd">            A MeshStats object.</span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span></div>
 
 <div class="viewcode-block" id="MeshPart.getPartSeeds"><a class="viewcode-back" href="../../../reference/mdb/model/mesh.html#abaqus.Mesh.MeshPart.MeshPart.getPartSeeds">[docs]</a>    <span class="k">def</span> <span class="nf">getPartSeeds</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">attribute</span><span class="p">:</span> <span class="n">typing</span><span class="o">.</span><span class="n">Union</span><span class="p">[</span><span class="n">SymbolicConstant</span><span class="p">,</span> <span class="nb">float</span><span class="p">]):</span>
-        <span class="sd">"""This method returns a part seed parameter for the part.</span>
+        <span class="sd">&quot;&quot;&quot;This method returns a part seed parameter for the part.</span>
 <span class="sd">        </span>
 <span class="sd">        Parameters</span>
 <span class="sd">        ----------</span>
@@ -920,21 +921,21 @@
 <span class="sd">        ------</span>
 <span class="sd">            - An exception occurs if the part does not contain native geometry. </span>
 <span class="sd">              Error: Part does not contain native geometry </span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span></div>
 
 <div class="viewcode-block" id="MeshPart.getUnmeshedRegions"><a class="viewcode-back" href="../../../reference/mdb/model/mesh.html#abaqus.Mesh.MeshPart.MeshPart.getUnmeshedRegions">[docs]</a>    <span class="k">def</span> <span class="nf">getUnmeshedRegions</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="sd">"""This method returns all geometric regions in the part that require a mesh for submitting</span>
+        <span class="sd">&quot;&quot;&quot;This method returns all geometric regions in the part that require a mesh for submitting</span>
 <span class="sd">        an analysis but are either unmeshed or are meshed incompletely.</span>
 
 <span class="sd">        Returns</span>
 <span class="sd">        -------</span>
 <span class="sd">            A Region object, or None.</span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span></div>
 
 <div class="viewcode-block" id="MeshPart.ignoreEntity"><a class="viewcode-back" href="../../../reference/mdb/model/mesh.html#abaqus.Mesh.MeshPart.MeshPart.ignoreEntity">[docs]</a>    <span class="k">def</span> <span class="nf">ignoreEntity</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">entities</span><span class="p">:</span> <span class="nb">tuple</span><span class="p">):</span>
-        <span class="sd">"""This method creates a virtual topology feature. Virtual topology allows unimportant</span>
+        <span class="sd">&quot;&quot;&quot;This method creates a virtual topology feature. Virtual topology allows unimportant</span>
 <span class="sd">        entities to be ignored during mesh generation. You can combine two adjacent faces by</span>
 <span class="sd">        specifying a common edge to ignore. Similarly, you can combine two adjacent edges by</span>
 <span class="sd">        specifying a common vertex to ignore.</span>
@@ -948,11 +949,11 @@
 <span class="sd">        -------</span>
 <span class="sd">        feature: Feature</span>
 <span class="sd">            A Feature object</span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span></div>
 
 <div class="viewcode-block" id="MeshPart.restoreIgnoredEntity"><a class="viewcode-back" href="../../../reference/mdb/model/mesh.html#abaqus.Mesh.MeshPart.MeshPart.restoreIgnoredEntity">[docs]</a>    <span class="k">def</span> <span class="nf">restoreIgnoredEntity</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">entities</span><span class="p">:</span> <span class="nb">tuple</span><span class="p">[</span><span class="n">IgnoredVertex</span><span class="p">]):</span>
-        <span class="sd">"""This method restores vertices and edges that have been merged using a virtual topology</span>
+        <span class="sd">&quot;&quot;&quot;This method restores vertices and edges that have been merged using a virtual topology</span>
 <span class="sd">        feature.</span>
 <span class="sd">        </span>
 <span class="sd">        Parameters</span>
@@ -965,13 +966,13 @@
 <span class="sd">        -------</span>
 <span class="sd">        feature: Feature</span>
 <span class="sd">            A Feature object</span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span></div>
 
 <div class="viewcode-block" id="MeshPart.seedEdgeByBias"><a class="viewcode-back" href="../../../reference/mdb/model/mesh.html#abaqus.Mesh.MeshPart.MeshPart.seedEdgeByBias">[docs]</a>    <span class="k">def</span> <span class="nf">seedEdgeByBias</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">biasMethod</span><span class="p">:</span> <span class="n">SymbolicConstant</span><span class="p">,</span> <span class="n">end1Edges</span><span class="p">:</span> <span class="nb">tuple</span><span class="p">[</span><span class="n">Edge</span><span class="p">],</span> <span class="n">end2Edges</span><span class="p">:</span> <span class="nb">tuple</span><span class="p">[</span><span class="n">Edge</span><span class="p">],</span>
                        <span class="n">centerEdges</span><span class="p">:</span> <span class="nb">tuple</span><span class="p">[</span><span class="n">Edge</span><span class="p">],</span> <span class="n">endEdges</span><span class="p">:</span> <span class="nb">tuple</span><span class="p">[</span><span class="n">Edge</span><span class="p">],</span> <span class="n">ratio</span><span class="p">:</span> <span class="nb">float</span><span class="p">,</span> <span class="n">number</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span>
                        <span class="n">minSize</span><span class="p">:</span> <span class="nb">float</span><span class="p">,</span> <span class="n">maxSize</span><span class="p">:</span> <span class="nb">float</span><span class="p">,</span> <span class="n">constraint</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="n">FREE</span><span class="p">):</span>
-        <span class="sd">"""This method seeds the given edges nonuniformly using the specified number of elements</span>
+        <span class="sd">&quot;&quot;&quot;This method seeds the given edges nonuniformly using the specified number of elements</span>
 <span class="sd">        and bias ratio or the specified minimum and maximum element sizes.</span>
 <span class="sd">        </span>
 <span class="sd">        Parameters</span>
@@ -1020,11 +1021,11 @@
 <span class="sd">            - FINER: The resulting mesh can be finer than the specified seeds. </span>
 <span class="sd">            - FIXED: The seeds must be exactly matched by the mesh (only with respect to the number </span>
 <span class="sd">            of elements, not to the nodal positioning). </span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span></div>
 
 <div class="viewcode-block" id="MeshPart.seedEdgeByNumber"><a class="viewcode-back" href="../../../reference/mdb/model/mesh.html#abaqus.Mesh.MeshPart.MeshPart.seedEdgeByNumber">[docs]</a>    <span class="k">def</span> <span class="nf">seedEdgeByNumber</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">edges</span><span class="p">:</span> <span class="nb">tuple</span><span class="p">[</span><span class="n">Edge</span><span class="p">],</span> <span class="n">number</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">constraint</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="n">FREE</span><span class="p">):</span>
-        <span class="sd">"""This method seeds the given edges uniformly based on the number of elements along the</span>
+        <span class="sd">&quot;&quot;&quot;This method seeds the given edges uniformly based on the number of elements along the</span>
 <span class="sd">        edges.</span>
 <span class="sd">        </span>
 <span class="sd">        Parameters</span>
@@ -1043,12 +1044,12 @@
 <span class="sd">            - FINER: The resulting mesh can be finer than the specified seeds. </span>
 <span class="sd">            - FIXED: The seeds must be exactly matched by the mesh (only with respect to the number </span>
 <span class="sd">            of elements, not to the nodal positioning). </span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span></div>
 
 <div class="viewcode-block" id="MeshPart.seedEdgeBySize"><a class="viewcode-back" href="../../../reference/mdb/model/mesh.html#abaqus.Mesh.MeshPart.MeshPart.seedEdgeBySize">[docs]</a>    <span class="k">def</span> <span class="nf">seedEdgeBySize</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">edges</span><span class="p">:</span> <span class="nb">tuple</span><span class="p">[</span><span class="n">Edge</span><span class="p">],</span> <span class="n">size</span><span class="p">:</span> <span class="nb">float</span><span class="p">,</span> <span class="n">deviationFactor</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
                        <span class="n">minSizeFactor</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">constraint</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="n">FREE</span><span class="p">):</span>
-        <span class="sd">"""This method seeds the given edges either uniformly or following edge curvature</span>
+        <span class="sd">&quot;&quot;&quot;This method seeds the given edges either uniformly or following edge curvature</span>
 <span class="sd">        distribution, based on the desired element size.</span>
 <span class="sd">        </span>
 <span class="sd">        Parameters</span>
@@ -1072,12 +1073,12 @@
 <span class="sd">            - FINER: The resulting mesh can be finer than the specified seeds. </span>
 <span class="sd">            - FIXED: The seeds must be exactly matched by the mesh (only with respect to the number </span>
 <span class="sd">            of elements, not to the nodal positioning). </span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span></div>
 
 <div class="viewcode-block" id="MeshPart.seedPart"><a class="viewcode-back" href="../../../reference/mdb/model/mesh.html#abaqus.Mesh.MeshPart.MeshPart.seedPart">[docs]</a>    <span class="k">def</span> <span class="nf">seedPart</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">size</span><span class="p">:</span> <span class="nb">float</span><span class="p">,</span> <span class="n">deviationFactor</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">minSizeFactor</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
                  <span class="n">constraint</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="n">FREE</span><span class="p">):</span>
-        <span class="sd">"""This method assigns global edge seeds to the given parts.</span>
+        <span class="sd">&quot;&quot;&quot;This method assigns global edge seeds to the given parts.</span>
 <span class="sd">        </span>
 <span class="sd">        Parameters</span>
 <span class="sd">        ----------</span>
@@ -1094,12 +1095,12 @@
 <span class="sd">            default value is FREE. If unspecified, the existing constraint will remain unchanged. </span>
 <span class="sd">            Possible values are:FREE: The resulting mesh can be finer or coarser than the specified </span>
 <span class="sd">            seeds.FINER: The resulting mesh can be finer than the specified seeds. </span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span></div>
 
 <div class="viewcode-block" id="MeshPart.setBoundaryLayerControls"><a class="viewcode-back" href="../../../reference/mdb/model/mesh.html#abaqus.Mesh.MeshPart.MeshPart.setBoundaryLayerControls">[docs]</a>    <span class="k">def</span> <span class="nf">setBoundaryLayerControls</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">regions</span><span class="p">:</span> <span class="nb">tuple</span><span class="p">[</span><span class="n">Cell</span><span class="p">],</span> <span class="n">firstElemSize</span><span class="p">:</span> <span class="nb">float</span><span class="p">,</span> <span class="n">growthFactor</span><span class="p">:</span> <span class="nb">float</span><span class="p">,</span> <span class="n">numLayers</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span>
-                                 <span class="n">inactiveFaces</span><span class="p">:</span> <span class="nb">tuple</span><span class="p">[</span><span class="n">Face</span><span class="p">]</span> <span class="o">=</span> <span class="p">(),</span> <span class="n">setName</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">''</span><span class="p">):</span>
-        <span class="sd">"""This method sets the control parameters for boundary layer mesh for the specified</span>
+                                 <span class="n">inactiveFaces</span><span class="p">:</span> <span class="nb">tuple</span><span class="p">[</span><span class="n">Face</span><span class="p">]</span> <span class="o">=</span> <span class="p">(),</span> <span class="n">setName</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;This method sets the control parameters for boundary layer mesh for the specified</span>
 <span class="sd">        regions.</span>
 <span class="sd">        </span>
 <span class="sd">        Parameters</span>
@@ -1122,11 +1123,11 @@
 <span class="sd">            selected regions. </span>
 <span class="sd">        setName</span>
 <span class="sd">            A String specifying a unique name for a set that will contain boundary layer elements. </span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span></div>
 
 <div class="viewcode-block" id="MeshPart.setElementType"><a class="viewcode-back" href="../../../reference/mdb/model/mesh.html#abaqus.Mesh.MeshPart.MeshPart.setElementType">[docs]</a>    <span class="k">def</span> <span class="nf">setElementType</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">regions</span><span class="p">:</span> <span class="nb">tuple</span><span class="p">,</span> <span class="n">elemTypes</span><span class="p">:</span> <span class="nb">tuple</span><span class="p">[</span><span class="n">ElemType</span><span class="p">]):</span>
-        <span class="sd">"""This method assigns element types to the specified regions.</span>
+        <span class="sd">&quot;&quot;&quot;This method assigns element types to the specified regions.</span>
 <span class="sd">        </span>
 <span class="sd">        Parameters</span>
 <span class="sd">        ----------</span>
@@ -1150,11 +1151,11 @@
 <span class="sd">            includes only this object in the setElementType command. An exception will be thrown </span>
 <span class="sd">            because the Wedge and Tet elements will remain linear (i.e., As Is) and become </span>
 <span class="sd">            incompatible with the newly assigned quadratic Hex element. </span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span></div>
 
 <div class="viewcode-block" id="MeshPart.setLogicalCorners"><a class="viewcode-back" href="../../../reference/mdb/model/mesh.html#abaqus.Mesh.MeshPart.MeshPart.setLogicalCorners">[docs]</a>    <span class="k">def</span> <span class="nf">setLogicalCorners</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">region</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">corners</span><span class="p">:</span> <span class="nb">str</span><span class="p">):</span>
-        <span class="sd">"""This method sets the logical corners for a mappable face region.</span>
+        <span class="sd">&quot;&quot;&quot;This method sets the logical corners for a mappable face region.</span>
 <span class="sd">        </span>
 <span class="sd">        Parameters</span>
 <span class="sd">        ----------</span>
@@ -1163,13 +1164,13 @@
 <span class="sd">        corners</span>
 <span class="sd">            Three, four, or five ConstrainedSketchVertex objects defining the logical corners for a given mappable</span>
 <span class="sd">            face region. </span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span></div>
 
 <div class="viewcode-block" id="MeshPart.setMeshControls"><a class="viewcode-back" href="../../../reference/mdb/model/mesh.html#abaqus.Mesh.MeshPart.MeshPart.setMeshControls">[docs]</a>    <span class="k">def</span> <span class="nf">setMeshControls</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">regions</span><span class="p">:</span> <span class="nb">tuple</span><span class="p">,</span> <span class="n">elemShape</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">technique</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
                         <span class="n">algorithm</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">minTransition</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="n">ON</span><span class="p">,</span>
                         <span class="n">sizeGrowth</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">allowMapped</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="n">OFF</span><span class="p">):</span>
-        <span class="sd">"""This method sets the mesh control parameters for the specified regions.</span>
+        <span class="sd">&quot;&quot;&quot;This method sets the mesh control parameters for the specified regions.</span>
 <span class="sd">        </span>
 <span class="sd">        Parameters</span>
 <span class="sd">        ----------</span>
@@ -1232,11 +1233,11 @@
 <span class="sd">            - Hexahedral or hexahedral-dominated sweep meshing with *algorithm*=ADVANCING_FRONT. </span>
 <span class="sd">            - Free tetrahedral meshing. *allowMapped*=True implies that mapped triangular meshing </span>
 <span class="sd">            can be used on faces that bound three-dimensional *regions*. </span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span></div>
 
 <div class="viewcode-block" id="MeshPart.setSweepPath"><a class="viewcode-back" href="../../../reference/mdb/model/mesh.html#abaqus.Mesh.MeshPart.MeshPart.setSweepPath">[docs]</a>    <span class="k">def</span> <span class="nf">setSweepPath</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">region</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">edge</span><span class="p">:</span> <span class="n">Edge</span><span class="p">,</span> <span class="n">sense</span><span class="p">:</span> <span class="n">SymbolicConstant</span><span class="p">):</span>
-        <span class="sd">"""This method sets the sweep path for a sweepable region or the revolve path for a</span>
+        <span class="sd">&quot;&quot;&quot;This method sets the sweep path for a sweepable region or the revolve path for a</span>
 <span class="sd">        revolvable region.</span>
 <span class="sd">        </span>
 <span class="sd">        Parameters</span>
@@ -1248,14 +1249,14 @@
 <span class="sd">        sense</span>
 <span class="sd">            A SymbolicConstant specifying the sweep sense. The sense will affect only how gasket </span>
 <span class="sd">            elements will be created; it will have no effect if gasket elements are not used. </span>
-<span class="sd">            Possible values are FORWARD or REVERSE.If *sense*=FORWARD, the sense of the given edge's </span>
+<span class="sd">            Possible values are FORWARD or REVERSE.If *sense*=FORWARD, the sense of the given edge&#39;s </span>
 <span class="sd">            underlying curve will be used. </span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span></div>
 
 <div class="viewcode-block" id="MeshPart.verifyMeshQuality"><a class="viewcode-back" href="../../../reference/mdb/model/mesh.html#abaqus.Mesh.MeshPart.MeshPart.verifyMeshQuality">[docs]</a>    <span class="k">def</span> <span class="nf">verifyMeshQuality</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">criterion</span><span class="p">:</span> <span class="n">SymbolicConstant</span><span class="p">,</span> <span class="n">threshold</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
                           <span class="n">elemShape</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">regions</span><span class="p">:</span> <span class="nb">tuple</span> <span class="o">=</span> <span class="p">()):</span>
-        <span class="sd">"""This method tests the mesh quality of a part and returns poor-quality elements.</span>
+        <span class="sd">&quot;&quot;&quot;This method tests the mesh quality of a part and returns poor-quality elements.</span>
 <span class="sd">        </span>
 <span class="sd">        Parameters</span>
 <span class="sd">        ----------</span>
@@ -1266,7 +1267,7 @@
 <span class="sd">            When this criterion is specified Abaqus/CAE will invoke the element quality checks </span>
 <span class="sd">            included with the input file processor for Abaqus/Standard and Abaqus/Explicit. </span>
 <span class="sd">            - ANGULAR_DEVIATION </span>
-<span class="sd">            The maximum amount (in degrees) that an element's face corner angles deviate from the </span>
+<span class="sd">            The maximum amount (in degrees) that an element&#39;s face corner angles deviate from the </span>
 <span class="sd">            ideal angle. The ideal angle is 90° for quadrilateral element faces and 60° for </span>
 <span class="sd">            triangular element faces. Elements with an angular deviation larger than the specified </span>
 <span class="sd">            threshold will fail this test. </span>
@@ -1280,13 +1281,13 @@
 <span class="sd">            associated geometry by the length of the element edge. Elements with a geometric </span>
 <span class="sd">            deviation factor larger than the specified threshold will fail this test. </span>
 <span class="sd">            - LARGE_ANGLE </span>
-<span class="sd">            The largest corner angle on any of an element's faces. Elements with face angles larger </span>
+<span class="sd">            The largest corner angle on any of an element&#39;s faces. Elements with face angles larger </span>
 <span class="sd">            than the specified threshold (in degrees) will fail this test. </span>
 <span class="sd">            - LONGEST_EDGE </span>
-<span class="sd">            The length of an element's longest edge. Elements with an edge longer than the specified </span>
+<span class="sd">            The length of an element&#39;s longest edge. Elements with an edge longer than the specified </span>
 <span class="sd">            threshold will fail this test. </span>
 <span class="sd">            - MAX_FREQUENCY </span>
-<span class="sd">            An estimate of an element's contribution to the initial maximum allowable frequency for </span>
+<span class="sd">            An estimate of an element&#39;s contribution to the initial maximum allowable frequency for </span>
 <span class="sd">            Abaqus/Standard analyses. This calculation requires appropriate section assignments and </span>
 <span class="sd">            material definitions. Elements whose maximum allowable frequency is smaller than the </span>
 <span class="sd">            given value will fail this test. </span>
@@ -1295,13 +1296,13 @@
 <span class="sd">            element area or volume and the optimal element area or volume. Elements with a shape </span>
 <span class="sd">            factor smaller than the specified threshold will fail this test. </span>
 <span class="sd">            - SHORTEST_EDGE </span>
-<span class="sd">            The length of an element's shortest edge. Elements with an edge shorter than the </span>
+<span class="sd">            The length of an element&#39;s shortest edge. Elements with an edge shorter than the </span>
 <span class="sd">            specified threshold will fail this test. </span>
 <span class="sd">            - SMALL_ANGLE </span>
-<span class="sd">            The smallest corner angle on any of an element's faces. Elements with face angles </span>
+<span class="sd">            The smallest corner angle on any of an element&#39;s faces. Elements with face angles </span>
 <span class="sd">            smaller than the given value (in degrees) will fail this test. </span>
 <span class="sd">            - STABLE_TIME_INCREMENT </span>
-<span class="sd">            An estimate of an element's contribution to the initial maximum stable time increment </span>
+<span class="sd">            An estimate of an element&#39;s contribution to the initial maximum stable time increment </span>
 <span class="sd">            for Abaqus/Explicit analyses. This calculation requires appropriate section assignments </span>
 <span class="sd">            and material definitions. Elements that require a time increment smaller than the given </span>
 <span class="sd">            value will fail this test. </span>
@@ -1322,11 +1323,11 @@
 <span class="sd">            A Dictionary object containing values for some number of the following keys: </span>
 <span class="sd">            failedElements, warningElements, naElements (sequences of MeshElement objects); </span>
 <span class="sd">            numElements (Int); average, worst (Float); worstElement (MeshElement object) . </span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span></div>
 
 <div class="viewcode-block" id="MeshPart.Node"><a class="viewcode-back" href="../../../reference/mdb/model/mesh.html#abaqus.Mesh.MeshPart.MeshPart.Node">[docs]</a>    <span class="k">def</span> <span class="nf">Node</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">coordinates</span><span class="p">:</span> <span class="nb">tuple</span><span class="p">,</span> <span class="n">localCsys</span><span class="p">:</span> <span class="n">DatumCsys</span> <span class="o">=</span> <span class="n">DatumCsys</span><span class="p">(),</span> <span class="n">label</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="kc">None</span><span class="p">):</span>
-        <span class="sd">"""This method creates a node on an orphan mesh part.</span>
+        <span class="sd">&quot;&quot;&quot;This method creates a node on an orphan mesh part.</span>
 
 <span class="sd">        Notes</span>
 <span class="sd">        -----</span>
@@ -1349,7 +1350,7 @@
 <span class="sd">        Returns</span>
 <span class="sd">        -------</span>
 <span class="sd">            A MeshNode object.</span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="n">node</span> <span class="o">=</span> <span class="n">MeshNode</span><span class="p">(</span><span class="n">coordinates</span><span class="p">,</span> <span class="n">localCsys</span><span class="p">,</span> <span class="n">label</span><span class="p">)</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">nodes</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">node</span><span class="p">)</span>
         <span class="k">return</span> <span class="n">node</span></div></div>

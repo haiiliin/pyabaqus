@@ -5,10 +5,10 @@
     <meta name="color-scheme" content="light dark"><link rel="index" title="Index" href="../../../genindex.html" /><link rel="search" title="Search" href="../../../search.html" />
         <link rel="canonical" href="https://pyabaqus.haiiliin.com/_modules/abaqus/StepOutput/FieldOutputRequest.html" />
 
-    <meta name="generator" content="sphinx-4.5.0, furo 2022.04.07"/>
-        <title>abaqus.StepOutput.FieldOutputRequest - pyabaqus 1.0.16 documentation</title>
+    <meta name="generator" content="sphinx-4.5.0, furo 2022.06.04.1"/>
+        <title>abaqus.StepOutput.FieldOutputRequest - pyabaqus 1.0.18 documentation</title>
       <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/styles/furo.css?digest=68f4518137b9aefe99b631505a2064c3c42c9852" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/styles/furo.css?digest=40978830699223671f4072448e654b5958f38b89" />
     <link rel="stylesheet" type="text/css" href="../../../_static/styles/furo-extensions.css?digest=30d1aed668e5c3a91c3e3bf6a60b675221979f0e" />
     
     
@@ -123,7 +123,7 @@
       </label>
     </div>
     <div class="header-center">
-      <a href="../../../index.html"><div class="brand">pyabaqus 1.0.16 documentation</div></a>
+      <a href="../../../index.html"><div class="brand">pyabaqus 1.0.18 documentation</div></a>
     </div>
     <div class="header-right">
       <div class="theme-toggle-container theme-toggle-header">
@@ -146,7 +146,7 @@
       <div class="sidebar-sticky"><a class="sidebar-brand" href="../../../index.html">
   
   
-  <span class="sidebar-brand-text">pyabaqus 1.0.16 documentation</span>
+  <span class="sidebar-brand-text">pyabaqus 1.0.18 documentation</span>
   
 </a><form class="sidebar-search-container" method="get" action="../../../search.html" role="search">
   <input class="sidebar-search" placeholder=Search name="q" aria-label="Search">
@@ -286,7 +286,8 @@
           </svg>
           <span>Back to top</span>
         </a>
-        <div class="content-icon-container"><div class="theme-toggle-container theme-toggle-content">
+        <div class="content-icon-container">
+          <div class="theme-toggle-container theme-toggle-content">
             <button class="theme-toggle">
               <div class="visually-hidden">Toggle Light / Dark / Auto color theme</div>
               <svg class="theme-icon-when-auto"><use href="#svg-sun-half"></use></svg>
@@ -307,7 +308,7 @@
 
 
 <div class="viewcode-block" id="FieldOutputRequest"><a class="viewcode-back" href="../../../reference/mdb/model/output.html#abaqus.StepOutput.FieldOutputRequest.FieldOutputRequest">[docs]</a><span class="k">class</span> <span class="nc">FieldOutputRequest</span><span class="p">:</span>
-    <span class="sd">"""The FieldOutputRequest object defines a field output request.</span>
+    <span class="sd">&quot;&quot;&quot;The FieldOutputRequest object defines a field output request.</span>
 
 <span class="sd">    Attributes</span>
 <span class="sd">    ----------</span>
@@ -341,10 +342,10 @@
 <span class="sd">            - OUTPUT</span>
 <span class="sd">            - RADIATION OUTPUT</span>
 
-<span class="sd">    """</span>
+<span class="sd">    &quot;&quot;&quot;</span>
 
     <span class="c1"># A String specifying a bolt load from which output is requested. </span>
-    <span class="n">boltLoad</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">''</span>
+    <span class="n">boltLoad</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span>
 
     <span class="c1"># The SymbolicConstant MODEL or a Region object specifying the region from which output is </span>
     <span class="c1"># requested. The SymbolicConstant MODEL represents the whole model. The default value is </span>
@@ -359,15 +360,15 @@
                  <span class="n">variables</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="n">PRESELECT</span><span class="p">,</span> <span class="n">frequency</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span>
                  <span class="n">modes</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="n">ALL</span><span class="p">,</span>
                  <span class="n">timeInterval</span><span class="p">:</span> <span class="n">typing</span><span class="o">.</span><span class="n">Union</span><span class="p">[</span><span class="n">SymbolicConstant</span><span class="p">,</span> <span class="nb">float</span><span class="p">]</span> <span class="o">=</span> <span class="n">EVERY_TIME_INCREMENT</span><span class="p">,</span>
-                 <span class="n">numIntervals</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">20</span><span class="p">,</span> <span class="n">timeMarks</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="n">OFF</span><span class="p">,</span> <span class="n">boltLoad</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">''</span><span class="p">,</span>
+                 <span class="n">numIntervals</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">20</span><span class="p">,</span> <span class="n">timeMarks</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="n">OFF</span><span class="p">,</span> <span class="n">boltLoad</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span><span class="p">,</span>
                  <span class="n">sectionPoints</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="n">DEFAULT</span><span class="p">,</span> <span class="n">interactions</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
                  <span class="n">rebar</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="n">EXCLUDE</span><span class="p">,</span> <span class="nb">filter</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
-                 <span class="n">directions</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="n">ON</span><span class="p">,</span> <span class="n">fasteners</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">''</span><span class="p">,</span> <span class="n">assembledFastener</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">''</span><span class="p">,</span>
-                 <span class="n">assembledFastenerSet</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">''</span><span class="p">,</span> <span class="n">exteriorOnly</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="n">OFF</span><span class="p">,</span> <span class="n">layupNames</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">''</span><span class="p">,</span>
+                 <span class="n">directions</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="n">ON</span><span class="p">,</span> <span class="n">fasteners</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">assembledFastener</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span><span class="p">,</span>
+                 <span class="n">assembledFastenerSet</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">exteriorOnly</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="n">OFF</span><span class="p">,</span> <span class="n">layupNames</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span><span class="p">,</span>
                  <span class="n">layupLocationMethod</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="n">SPECIFIED</span><span class="p">,</span> <span class="n">outputAtPlyTop</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="kc">False</span><span class="p">,</span>
                  <span class="n">outputAtPlyMid</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="kc">True</span><span class="p">,</span> <span class="n">outputAtPlyBottom</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="kc">False</span><span class="p">,</span>
                  <span class="n">position</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="n">INTEGRATION_POINTS</span><span class="p">):</span>
-        <span class="sd">"""This method creates a FieldOutputRequest object.</span>
+        <span class="sd">&quot;&quot;&quot;This method creates a FieldOutputRequest object.</span>
 
 <span class="sd">        Notes</span>
 <span class="sd">        -----</span>
@@ -455,11 +456,11 @@
 <span class="sd">            A SymbolicConstant specifying the position on an element where output needs to be </span>
 <span class="sd">            written. Possible values are INTEGRATION_POINTS, AVERAGED_AT_NODES, CENTROIDAL, and </span>
 <span class="sd">            NODES. The default value is INTEGRATION_POINTS. </span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span>
 
 <div class="viewcode-block" id="FieldOutputRequest.deactivate"><a class="viewcode-back" href="../../../reference/mdb/model/output.html#abaqus.StepOutput.FieldOutputRequest.FieldOutputRequest.deactivate">[docs]</a>    <span class="k">def</span> <span class="nf">deactivate</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">stepName</span><span class="p">:</span> <span class="nb">str</span><span class="p">):</span>
-        <span class="sd">"""This method deactivates the field output request in the specified step and all its</span>
+        <span class="sd">&quot;&quot;&quot;This method deactivates the field output request in the specified step and all its</span>
 <span class="sd">        subsequent steps.</span>
 <span class="sd">        </span>
 <span class="sd">        Parameters</span>
@@ -467,11 +468,11 @@
 <span class="sd">        stepName</span>
 <span class="sd">            A String specifying the name of the step in which the field output request is </span>
 <span class="sd">            deactivated.</span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span></div>
 
 <div class="viewcode-block" id="FieldOutputRequest.move"><a class="viewcode-back" href="../../../reference/mdb/model/output.html#abaqus.StepOutput.FieldOutputRequest.FieldOutputRequest.move">[docs]</a>    <span class="k">def</span> <span class="nf">move</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">fromStepName</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">toStepName</span><span class="p">:</span> <span class="nb">str</span><span class="p">):</span>
-        <span class="sd">"""This method moves the field output request state object from one step to a different</span>
+        <span class="sd">&quot;&quot;&quot;This method moves the field output request state object from one step to a different</span>
 <span class="sd">        step.</span>
 <span class="sd">        </span>
 <span class="sd">        Parameters</span>
@@ -482,11 +483,11 @@
 <span class="sd">        toStepName</span>
 <span class="sd">            A String specifying the name of the step to which the field output request state is </span>
 <span class="sd">            moved.</span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span></div>
 
 <div class="viewcode-block" id="FieldOutputRequest.reset"><a class="viewcode-back" href="../../../reference/mdb/model/output.html#abaqus.StepOutput.FieldOutputRequest.FieldOutputRequest.reset">[docs]</a>    <span class="k">def</span> <span class="nf">reset</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">stepName</span><span class="p">:</span> <span class="nb">str</span><span class="p">):</span>
-        <span class="sd">"""This method resets the field output request state of the specified step to the state of</span>
+        <span class="sd">&quot;&quot;&quot;This method resets the field output request state of the specified step to the state of</span>
 <span class="sd">        the previous step.</span>
 <span class="sd">        </span>
 <span class="sd">        Parameters</span>
@@ -494,31 +495,31 @@
 <span class="sd">        stepName</span>
 <span class="sd">            A String specifying the name of the step in which the field output request state is </span>
 <span class="sd">            reset.</span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span></div>
 
 <div class="viewcode-block" id="FieldOutputRequest.resume"><a class="viewcode-back" href="../../../reference/mdb/model/output.html#abaqus.StepOutput.FieldOutputRequest.FieldOutputRequest.resume">[docs]</a>    <span class="k">def</span> <span class="nf">resume</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="sd">"""This method resumes the field output request that was previously suppressed.</span>
-<span class="sd">        """</span>
+        <span class="sd">&quot;&quot;&quot;This method resumes the field output request that was previously suppressed.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span></div>
 
 <div class="viewcode-block" id="FieldOutputRequest.suppress"><a class="viewcode-back" href="../../../reference/mdb/model/output.html#abaqus.StepOutput.FieldOutputRequest.FieldOutputRequest.suppress">[docs]</a>    <span class="k">def</span> <span class="nf">suppress</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="sd">"""This method suppresses the field output request.</span>
-<span class="sd">        """</span>
+        <span class="sd">&quot;&quot;&quot;This method suppresses the field output request.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span></div>
 
 <div class="viewcode-block" id="FieldOutputRequest.setValues"><a class="viewcode-back" href="../../../reference/mdb/model/output.html#abaqus.StepOutput.FieldOutputRequest.FieldOutputRequest.setValues">[docs]</a>    <span class="k">def</span> <span class="nf">setValues</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">region</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="n">MODEL</span><span class="p">,</span> <span class="n">variables</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="n">PRESELECT</span><span class="p">,</span>
                   <span class="n">frequency</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span> <span class="n">modes</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="n">ALL</span><span class="p">,</span>
                   <span class="n">timeInterval</span><span class="p">:</span> <span class="n">typing</span><span class="o">.</span><span class="n">Union</span><span class="p">[</span><span class="n">SymbolicConstant</span><span class="p">,</span> <span class="nb">float</span><span class="p">]</span> <span class="o">=</span> <span class="n">EVERY_TIME_INCREMENT</span><span class="p">,</span>
-                  <span class="n">numIntervals</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">20</span><span class="p">,</span> <span class="n">timeMarks</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="n">OFF</span><span class="p">,</span> <span class="n">boltLoad</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">''</span><span class="p">,</span>
+                  <span class="n">numIntervals</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">20</span><span class="p">,</span> <span class="n">timeMarks</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="n">OFF</span><span class="p">,</span> <span class="n">boltLoad</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span><span class="p">,</span>
                   <span class="n">sectionPoints</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="n">DEFAULT</span><span class="p">,</span> <span class="n">interactions</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
                   <span class="n">rebar</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="n">EXCLUDE</span><span class="p">,</span> <span class="nb">filter</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
-                  <span class="n">directions</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="n">ON</span><span class="p">,</span> <span class="n">fasteners</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">''</span><span class="p">,</span> <span class="n">assembledFastener</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">''</span><span class="p">,</span>
-                  <span class="n">assembledFastenerSet</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">''</span><span class="p">,</span> <span class="n">exteriorOnly</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="n">OFF</span><span class="p">,</span> <span class="n">layupNames</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">''</span><span class="p">,</span>
+                  <span class="n">directions</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="n">ON</span><span class="p">,</span> <span class="n">fasteners</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">assembledFastener</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span><span class="p">,</span>
+                  <span class="n">assembledFastenerSet</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">exteriorOnly</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="n">OFF</span><span class="p">,</span> <span class="n">layupNames</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span><span class="p">,</span>
                   <span class="n">layupLocationMethod</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="n">SPECIFIED</span><span class="p">,</span> <span class="n">outputAtPlyTop</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="kc">False</span><span class="p">,</span>
                   <span class="n">outputAtPlyMid</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="kc">True</span><span class="p">,</span> <span class="n">outputAtPlyBottom</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="kc">False</span><span class="p">,</span>
                   <span class="n">position</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="n">INTEGRATION_POINTS</span><span class="p">):</span>
-        <span class="sd">"""This method modifies the data for an existing FieldOutputRequest object in the step</span>
+        <span class="sd">&quot;&quot;&quot;This method modifies the data for an existing FieldOutputRequest object in the step</span>
 <span class="sd">        where it is created.</span>
 <span class="sd">        </span>
 <span class="sd">        Parameters</span>
@@ -595,14 +596,14 @@
 <span class="sd">            A SymbolicConstant specifying the position on an element where output needs to be </span>
 <span class="sd">            written. Possible values are INTEGRATION_POINTS, AVERAGED_AT_NODES, CENTROIDAL, and </span>
 <span class="sd">            NODES. The default value is INTEGRATION_POINTS. </span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span></div>
 
 <div class="viewcode-block" id="FieldOutputRequest.setValuesInStep"><a class="viewcode-back" href="../../../reference/mdb/model/output.html#abaqus.StepOutput.FieldOutputRequest.FieldOutputRequest.setValuesInStep">[docs]</a>    <span class="k">def</span> <span class="nf">setValuesInStep</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">stepName</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">variables</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">frequency</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span>
                         <span class="n">modes</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="n">ALL</span><span class="p">,</span>
                         <span class="n">timeInterval</span><span class="p">:</span> <span class="n">typing</span><span class="o">.</span><span class="n">Union</span><span class="p">[</span><span class="n">SymbolicConstant</span><span class="p">,</span> <span class="nb">float</span><span class="p">]</span> <span class="o">=</span> <span class="n">EVERY_TIME_INCREMENT</span><span class="p">,</span>
                         <span class="n">numIntervals</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">20</span><span class="p">,</span> <span class="n">timePoints</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">timeMarks</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="n">OFF</span><span class="p">):</span>
-        <span class="sd">"""This method modifies the propagating data for an existing FieldOutputRequest object in</span>
+        <span class="sd">&quot;&quot;&quot;This method modifies the propagating data for an existing FieldOutputRequest object in</span>
 <span class="sd">        the specified step.</span>
 <span class="sd">        </span>
 <span class="sd">        Parameters</span>
@@ -632,7 +633,7 @@
 <span class="sd">        timeMarks</span>
 <span class="sd">            A Boolean specifying when to write results to the output database. The default value is </span>
 <span class="sd">            OFF. </span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span></div></div>
 </pre></div>
         </article>

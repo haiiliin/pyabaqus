@@ -5,10 +5,10 @@
     <meta name="color-scheme" content="light dark"><link rel="index" title="Index" href="../../../genindex.html" /><link rel="search" title="Search" href="../../../search.html" />
         <link rel="canonical" href="https://pyabaqus.haiiliin.com/_modules/abaqus/Interaction/ContactProperty.html" />
 
-    <meta name="generator" content="sphinx-4.5.0, furo 2022.04.07"/>
-        <title>abaqus.Interaction.ContactProperty - pyabaqus 1.0.16 documentation</title>
+    <meta name="generator" content="sphinx-4.5.0, furo 2022.06.04.1"/>
+        <title>abaqus.Interaction.ContactProperty - pyabaqus 1.0.18 documentation</title>
       <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/styles/furo.css?digest=68f4518137b9aefe99b631505a2064c3c42c9852" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/styles/furo.css?digest=40978830699223671f4072448e654b5958f38b89" />
     <link rel="stylesheet" type="text/css" href="../../../_static/styles/furo-extensions.css?digest=30d1aed668e5c3a91c3e3bf6a60b675221979f0e" />
     
     
@@ -123,7 +123,7 @@
       </label>
     </div>
     <div class="header-center">
-      <a href="../../../index.html"><div class="brand">pyabaqus 1.0.16 documentation</div></a>
+      <a href="../../../index.html"><div class="brand">pyabaqus 1.0.18 documentation</div></a>
     </div>
     <div class="header-right">
       <div class="theme-toggle-container theme-toggle-header">
@@ -146,7 +146,7 @@
       <div class="sidebar-sticky"><a class="sidebar-brand" href="../../../index.html">
   
   
-  <span class="sidebar-brand-text">pyabaqus 1.0.16 documentation</span>
+  <span class="sidebar-brand-text">pyabaqus 1.0.18 documentation</span>
   
 </a><form class="sidebar-search-container" method="get" action="../../../search.html" role="search">
   <input class="sidebar-search" placeholder=Search name="q" aria-label="Search">
@@ -286,7 +286,8 @@
           </svg>
           <span>Back to top</span>
         </a>
-        <div class="content-icon-container"><div class="theme-toggle-container theme-toggle-content">
+        <div class="content-icon-container">
+          <div class="theme-toggle-container theme-toggle-content">
             <button class="theme-toggle">
               <div class="visually-hidden">Toggle Light / Dark / Auto color theme</div>
               <svg class="theme-icon-when-auto"><use href="#svg-sun-half"></use></svg>
@@ -319,7 +320,7 @@
 
 
 <div class="viewcode-block" id="ContactProperty"><a class="viewcode-back" href="../../../reference/mdb/model/interaction.html#abaqus.Interaction.ContactProperty.ContactProperty">[docs]</a><span class="k">class</span> <span class="nc">ContactProperty</span><span class="p">(</span><span class="n">InteractionProperty</span><span class="p">):</span>
-    <span class="sd">"""The ContactProperty object defines a contact interaction property.</span>
+    <span class="sd">&quot;&quot;&quot;The ContactProperty object defines a contact interaction property.</span>
 <span class="sd">    The ContactProperty object is derived from the InteractionProperty object. </span>
 
 <span class="sd">    Attributes</span>
@@ -360,7 +361,7 @@
 
 <span class="sd">    - SURFACE INTERACTION</span>
 
-<span class="sd">    """</span>
+<span class="sd">    &quot;&quot;&quot;</span>
 
     <span class="c1"># A ContactTangentialBehavior object. </span>
     <span class="n">tangentialBehavior</span><span class="p">:</span> <span class="n">ContactTangentialBehavior</span> <span class="o">=</span> <span class="n">ContactTangentialBehavior</span><span class="p">()</span>
@@ -396,7 +397,7 @@
     <span class="n">electricalConductance</span><span class="p">:</span> <span class="n">GapElectricalConductance</span> <span class="o">=</span> <span class="n">GapElectricalConductance</span><span class="p">()</span>
 
     <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">:</span> <span class="nb">str</span><span class="p">):</span>
-        <span class="sd">"""This method creates a ContactProperty object.</span>
+        <span class="sd">&quot;&quot;&quot;This method creates a ContactProperty object.</span>
 
 <span class="sd">        Notes</span>
 <span class="sd">        -----</span>
@@ -414,7 +415,7 @@
 <span class="sd">        Returns</span>
 <span class="sd">        -------</span>
 <span class="sd">            A ContactProperty object.</span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">()</span>
         <span class="k">pass</span>
 
@@ -426,7 +427,7 @@
                            <span class="n">maximumElasticSlip</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="n">FRACTION</span><span class="p">,</span> <span class="n">fraction</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span>
                            <span class="n">absoluteDistance</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="n">elasticSlipStiffness</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
                            <span class="n">nStateDependentVars</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="n">useProperties</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="n">OFF</span><span class="p">):</span>
-        <span class="sd">"""This method creates a ContactTangentialBehavior object.</span>
+        <span class="sd">&quot;&quot;&quot;This method creates a ContactTangentialBehavior object.</span>
 
 <span class="sd">        Notes</span>
 <span class="sd">        -----</span>
@@ -482,7 +483,7 @@
 <span class="sd">        Returns</span>
 <span class="sd">        -------</span>
 <span class="sd">            A ContactTangentialBehavior object.</span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">tangentialBehavior</span> <span class="o">=</span> <span class="n">ContactTangentialBehavior</span><span class="p">(</span><span class="n">formulation</span><span class="p">,</span> <span class="n">directionality</span><span class="p">,</span> <span class="n">slipRateDependency</span><span class="p">,</span>
                                                             <span class="n">pressureDependency</span><span class="p">,</span> <span class="n">temperatureDependency</span><span class="p">,</span> <span class="n">dependencies</span><span class="p">,</span>
                                                             <span class="n">exponentialDecayDefinition</span><span class="p">,</span> <span class="n">table</span><span class="p">,</span> <span class="n">shearStressLimit</span><span class="p">,</span>
@@ -498,7 +499,7 @@
                        <span class="n">initialStiffnessScaleFactor</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span> <span class="n">clearanceAtZeroContactPressure</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span>
                        <span class="n">stiffnessBehavior</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="n">LINEAR</span><span class="p">,</span> <span class="n">stiffnessRatio</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span>
                        <span class="n">upperQuadraticFactor</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="n">lowerQuadraticRatio</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mi">0</span><span class="p">):</span>
-        <span class="sd">"""This method creates a NormalBehavior object.</span>
+        <span class="sd">&quot;&quot;&quot;This method creates a NormalBehavior object.</span>
 
 <span class="sd">        Notes</span>
 <span class="sd">        -----</span>
@@ -542,9 +543,9 @@
 <span class="sd">            pressure-overclosure curve) directly. The default value is 0.0.</span>
 <span class="sd">        contactStiffnessScaleFactor</span>
 <span class="sd">            A Float specifying scale factor for the penalty stiffness or the geometric scaling of</span>
-<span class="sd">            the "base" stiffness. The default value is 1.0.</span>
+<span class="sd">            the &quot;base&quot; stiffness. The default value is 1.0.</span>
 <span class="sd">        initialStiffnessScaleFactor</span>
-<span class="sd">            A Float specifying an additional scale factor for the "base" default contact stiffness.</span>
+<span class="sd">            A Float specifying an additional scale factor for the &quot;base&quot; default contact stiffness.</span>
 <span class="sd">            The default value is 1.0.</span>
 <span class="sd">        clearanceAtZeroContactPressure</span>
 <span class="sd">            A Float specifying the clearance at which the contact pressure is zero. The default</span>
@@ -571,7 +572,7 @@
 <span class="sd">        Returns</span>
 <span class="sd">        -------</span>
 <span class="sd">            A NormalBehavior object.</span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">normalBehavior</span> <span class="o">=</span> <span class="n">NormalBehavior</span><span class="p">(</span><span class="n">contactStiffness</span><span class="p">,</span> <span class="n">pressureOverclosure</span><span class="p">,</span> <span class="n">allowSeparation</span><span class="p">,</span> <span class="n">maxStiffness</span><span class="p">,</span>
                                              <span class="n">table</span><span class="p">,</span> <span class="n">constraintEnforcementMethod</span><span class="p">,</span> <span class="n">overclosureFactor</span><span class="p">,</span> <span class="n">overclosureMeasure</span><span class="p">,</span>
                                              <span class="n">contactStiffnessScaleFactor</span><span class="p">,</span> <span class="n">initialStiffnessScaleFactor</span><span class="p">,</span>
@@ -582,7 +583,7 @@
 <div class="viewcode-block" id="ContactProperty.Damping"><a class="viewcode-back" href="../../../reference/mdb/model/interaction.html#abaqus.Interaction.ContactProperty.ContactProperty.Damping">[docs]</a>    <span class="k">def</span> <span class="nf">Damping</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">definition</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="n">DAMPING_COEFFICIENT</span><span class="p">,</span>
                 <span class="n">tangentFraction</span><span class="p">:</span> <span class="n">typing</span><span class="o">.</span><span class="n">Union</span><span class="p">[</span><span class="n">SymbolicConstant</span><span class="p">,</span> <span class="nb">float</span><span class="p">]</span> <span class="o">=</span> <span class="n">DEFAULT</span><span class="p">,</span>
                 <span class="n">clearanceDependence</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="n">STEP</span><span class="p">,</span> <span class="n">table</span><span class="p">:</span> <span class="nb">tuple</span> <span class="o">=</span> <span class="p">()):</span>
-        <span class="sd">"""This method creates a ContactDamping object.</span>
+        <span class="sd">&quot;&quot;&quot;This method creates a ContactDamping object.</span>
 
 <span class="sd">        Notes</span>
 <span class="sd">        -----</span>
@@ -612,7 +613,7 @@
 <span class="sd">        Returns</span>
 <span class="sd">        -------</span>
 <span class="sd">            A ContactDamping object.</span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">damping</span> <span class="o">=</span> <span class="n">ContactDamping</span><span class="p">(</span><span class="n">definition</span><span class="p">,</span> <span class="n">tangentFraction</span><span class="p">,</span> <span class="n">clearanceDependence</span><span class="p">,</span> <span class="n">table</span><span class="p">)</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">damping</span></div>
 
@@ -623,7 +624,7 @@
                <span class="n">modeMixRatio</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="n">ENERGY</span><span class="p">,</span> <span class="n">exponent</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
                <span class="n">evolTempDep</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="n">OFF</span><span class="p">,</span> <span class="n">evolDependencies</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="n">evolTable</span><span class="p">:</span> <span class="nb">tuple</span> <span class="o">=</span> <span class="p">(),</span>
                <span class="n">useStabilization</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="n">OFF</span><span class="p">,</span> <span class="n">viscosityCoef</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="kc">None</span><span class="p">):</span>
-        <span class="sd">"""This method creates a ContactDamage object.</span>
+        <span class="sd">&quot;&quot;&quot;This method creates a ContactDamage object.</span>
 
 <span class="sd">        Notes</span>
 <span class="sd">        -----</span>
@@ -695,7 +696,7 @@
 <span class="sd">        Returns</span>
 <span class="sd">        -------</span>
 <span class="sd">            A ContactDamage object.</span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">damage</span> <span class="o">=</span> <span class="n">ContactDamage</span><span class="p">(</span><span class="n">initTable</span><span class="p">,</span> <span class="n">criterion</span><span class="p">,</span> <span class="n">initTempDep</span><span class="p">,</span> <span class="n">initDependencies</span><span class="p">,</span> <span class="n">useEvolution</span><span class="p">,</span> <span class="n">evolutionType</span><span class="p">,</span>
                                     <span class="n">softening</span><span class="p">,</span> <span class="n">useMixedMode</span><span class="p">,</span> <span class="n">mixedModeType</span><span class="p">,</span> <span class="n">modeMixRatio</span><span class="p">,</span> <span class="n">exponent</span><span class="p">,</span> <span class="n">evolTempDep</span><span class="p">,</span>
                                     <span class="n">evolDependencies</span><span class="p">,</span> <span class="n">evolTable</span><span class="p">,</span> <span class="n">useStabilization</span><span class="p">,</span> <span class="n">viscosityCoef</span><span class="p">)</span>
@@ -706,7 +707,7 @@
                           <span class="n">dependencies</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="n">tolerance</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span>
                           <span class="n">specifyUnstableCrackProp</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="n">OFF</span><span class="p">,</span>
                           <span class="n">unstableTolerance</span><span class="p">:</span> <span class="n">typing</span><span class="o">.</span><span class="n">Union</span><span class="p">[</span><span class="n">SymbolicConstant</span><span class="p">,</span> <span class="nb">float</span><span class="p">]</span> <span class="o">=</span> <span class="n">DEFAULT</span><span class="p">):</span>
-        <span class="sd">"""This method creates a FractureCriterion object.</span>
+        <span class="sd">&quot;&quot;&quot;This method creates a FractureCriterion object.</span>
 
 <span class="sd">        Notes</span>
 <span class="sd">        -----</span>
@@ -746,7 +747,7 @@
 <span class="sd">        Returns</span>
 <span class="sd">        -------</span>
 <span class="sd">            A FractureCriterion object.</span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">fractureCriterion</span> <span class="o">=</span> <span class="n">FractureCriterion</span><span class="p">(</span><span class="n">initTable</span><span class="p">,</span> <span class="nb">type</span><span class="p">,</span> <span class="n">mixedModeBehavior</span><span class="p">,</span> <span class="n">temperatureDependency</span><span class="p">,</span>
                                                    <span class="n">dependencies</span><span class="p">,</span> <span class="n">tolerance</span><span class="p">,</span> <span class="n">specifyUnstableCrackProp</span><span class="p">,</span> <span class="n">unstableTolerance</span><span class="p">)</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">fractureCriterion</span></div>
@@ -754,7 +755,7 @@
 <div class="viewcode-block" id="ContactProperty.CohesiveBehavior"><a class="viewcode-back" href="../../../reference/mdb/model/interaction.html#abaqus.Interaction.ContactProperty.ContactProperty.CohesiveBehavior">[docs]</a>    <span class="k">def</span> <span class="nf">CohesiveBehavior</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">repeatedContacts</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="n">OFF</span><span class="p">,</span> <span class="n">eligibility</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="n">ALL_NODES</span><span class="p">,</span>
                          <span class="n">defaultPenalties</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="n">ON</span><span class="p">,</span> <span class="n">coupling</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="n">UNCOUPLED</span><span class="p">,</span>
                          <span class="n">temperatureDependency</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="n">OFF</span><span class="p">,</span> <span class="n">dependencies</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="n">table</span><span class="p">:</span> <span class="nb">tuple</span> <span class="o">=</span> <span class="p">()):</span>
-        <span class="sd">"""This method creates a CohesiveBehavior object.</span>
+        <span class="sd">&quot;&quot;&quot;This method creates a CohesiveBehavior object.</span>
 
 <span class="sd">        Notes</span>
 <span class="sd">        -----</span>
@@ -793,7 +794,7 @@
 <span class="sd">        Returns</span>
 <span class="sd">        -------</span>
 <span class="sd">            A CohesiveBehavior object.</span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">cohesiveBehavior</span> <span class="o">=</span> <span class="n">CohesiveBehavior</span><span class="p">(</span><span class="n">repeatedContacts</span><span class="p">,</span> <span class="n">eligibility</span><span class="p">,</span> <span class="n">defaultPenalties</span><span class="p">,</span> <span class="n">coupling</span><span class="p">,</span>
                                                  <span class="n">temperatureDependency</span><span class="p">,</span> <span class="n">dependencies</span><span class="p">,</span> <span class="n">table</span><span class="p">)</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">cohesiveBehavior</span></div>
@@ -804,7 +805,7 @@
                            <span class="n">clearanceDepTable</span><span class="p">:</span> <span class="nb">tuple</span> <span class="o">=</span> <span class="p">(),</span> <span class="n">temperatureDependencyP</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="n">OFF</span><span class="p">,</span>
                            <span class="n">massFlowRateDependencyP</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="n">OFF</span><span class="p">,</span> <span class="n">dependenciesP</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span>
                            <span class="n">pressureDepTable</span><span class="p">:</span> <span class="nb">tuple</span> <span class="o">=</span> <span class="p">()):</span>
-        <span class="sd">"""This method creates a ThermalConductance object.</span>
+        <span class="sd">&quot;&quot;&quot;This method creates a ThermalConductance object.</span>
 
 <span class="sd">        Notes</span>
 <span class="sd">        -----</span>
@@ -851,7 +852,7 @@
 <span class="sd">        Returns</span>
 <span class="sd">        -------</span>
 <span class="sd">            A ThermalConductance object.</span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">thermalConductance</span> <span class="o">=</span> <span class="n">ThermalConductance</span><span class="p">(</span><span class="n">definition</span><span class="p">,</span> <span class="n">clearanceDependency</span><span class="p">,</span> <span class="n">pressureDependency</span><span class="p">,</span>
                                                      <span class="n">temperatureDependencyC</span><span class="p">,</span> <span class="n">massFlowRateDependencyC</span><span class="p">,</span> <span class="n">dependenciesC</span><span class="p">,</span>
                                                      <span class="n">clearanceDepTable</span><span class="p">,</span> <span class="n">temperatureDependencyP</span><span class="p">,</span> <span class="n">massFlowRateDependencyP</span><span class="p">,</span>
@@ -859,7 +860,7 @@
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">thermalConductance</span></div>
 
 <div class="viewcode-block" id="ContactProperty.HeatGeneration"><a class="viewcode-back" href="../../../reference/mdb/model/interaction.html#abaqus.Interaction.ContactProperty.ContactProperty.HeatGeneration">[docs]</a>    <span class="k">def</span> <span class="nf">HeatGeneration</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">conversionFraction</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span> <span class="n">secondaryFraction</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mi">0</span><span class="p">):</span>
-        <span class="sd">"""This method creates a GapHeatGeneration object.</span>
+        <span class="sd">&quot;&quot;&quot;This method creates a GapHeatGeneration object.</span>
 
 <span class="sd">        Notes</span>
 <span class="sd">        -----</span>
@@ -881,12 +882,12 @@
 <span class="sd">        Returns</span>
 <span class="sd">        -------</span>
 <span class="sd">            A GapHeatGeneration object.</span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">heatGeneration</span> <span class="o">=</span> <span class="n">GapHeatGeneration</span><span class="p">(</span><span class="n">conversionFraction</span><span class="p">,</span> <span class="n">secondaryFraction</span><span class="p">)</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">heatGeneration</span></div>
 
 <div class="viewcode-block" id="ContactProperty.Radiation"><a class="viewcode-back" href="../../../reference/mdb/model/interaction.html#abaqus.Interaction.ContactProperty.ContactProperty.Radiation">[docs]</a>    <span class="k">def</span> <span class="nf">Radiation</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">mainEmissivity</span><span class="p">:</span> <span class="nb">float</span><span class="p">,</span> <span class="n">secondaryEmissivity</span><span class="p">:</span> <span class="nb">float</span><span class="p">,</span> <span class="n">table</span><span class="p">:</span> <span class="nb">tuple</span><span class="p">):</span>
-        <span class="sd">"""This method creates a Radiation object.</span>
+        <span class="sd">&quot;&quot;&quot;This method creates a Radiation object.</span>
 
 <span class="sd">        Notes</span>
 <span class="sd">        -----</span>
@@ -909,14 +910,14 @@
 <span class="sd">        Returns</span>
 <span class="sd">        -------</span>
 <span class="sd">            A Radiation object.</span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">radiation</span> <span class="o">=</span> <span class="n">Radiation</span><span class="p">(</span><span class="n">mainEmissivity</span><span class="p">,</span> <span class="n">secondaryEmissivity</span><span class="p">,</span> <span class="n">table</span><span class="p">)</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">radiation</span></div>
 
 <div class="viewcode-block" id="ContactProperty.GeometricProperties"><a class="viewcode-back" href="../../../reference/mdb/model/interaction.html#abaqus.Interaction.ContactProperty.ContactProperty.GeometricProperties">[docs]</a>    <span class="k">def</span> <span class="nf">GeometricProperties</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">contactArea</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span> <span class="n">padThickness</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">trackingThickness</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
                             <span class="n">dependentVariables</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="n">numProperties</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span>
                             <span class="n">useUnsymmetricEqunProcedure</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="n">OFF</span><span class="p">,</span> <span class="n">modelType</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="kc">None</span><span class="p">):</span>
-        <span class="sd">"""This method creates a GeometricProperties object.</span>
+        <span class="sd">&quot;&quot;&quot;This method creates a GeometricProperties object.</span>
 
 <span class="sd">        Notes</span>
 <span class="sd">        -----</span>
@@ -958,7 +959,7 @@
 <span class="sd">        Returns</span>
 <span class="sd">        -------</span>
 <span class="sd">            A GeometricProperties object.</span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">geometricProperties</span> <span class="o">=</span> <span class="n">GeometricProperties</span><span class="p">(</span><span class="n">contactArea</span><span class="p">,</span> <span class="n">padThickness</span><span class="p">,</span> <span class="n">trackingThickness</span><span class="p">,</span> <span class="n">dependentVariables</span><span class="p">,</span>
                                                        <span class="n">numProperties</span><span class="p">,</span> <span class="n">useUnsymmetricEqunProcedure</span><span class="p">,</span> <span class="n">modelType</span><span class="p">)</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">geometricProperties</span></div>
@@ -968,7 +969,7 @@
                               <span class="n">dependenciesC</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="n">clearanceDepTable</span><span class="p">:</span> <span class="nb">tuple</span> <span class="o">=</span> <span class="p">(),</span>
                               <span class="n">temperatureDependencyP</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="n">OFF</span><span class="p">,</span> <span class="n">dependenciesP</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span>
                               <span class="n">pressureDepTable</span><span class="p">:</span> <span class="nb">tuple</span> <span class="o">=</span> <span class="p">()):</span>
-        <span class="sd">"""This method creates a GapElectricalConductance object.</span>
+        <span class="sd">&quot;&quot;&quot;This method creates a GapElectricalConductance object.</span>
 
 <span class="sd">        Notes</span>
 <span class="sd">        -----</span>
@@ -1009,7 +1010,7 @@
 <span class="sd">        Returns</span>
 <span class="sd">        -------</span>
 <span class="sd">            A GapElectricalConductance object.</span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">electricalConductance</span> <span class="o">=</span> <span class="n">GapElectricalConductance</span><span class="p">(</span><span class="n">definition</span><span class="p">,</span> <span class="n">clearanceDependency</span><span class="p">,</span> <span class="n">pressureDependency</span><span class="p">,</span>
                                                               <span class="n">temperatureDependencyC</span><span class="p">,</span> <span class="n">dependenciesC</span><span class="p">,</span> <span class="n">clearanceDepTable</span><span class="p">,</span>
                                                               <span class="n">temperatureDependencyP</span><span class="p">,</span> <span class="n">dependenciesP</span><span class="p">,</span> <span class="n">pressureDepTable</span><span class="p">)</span>

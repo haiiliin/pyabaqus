@@ -5,10 +5,10 @@
     <meta name="color-scheme" content="light dark"><link rel="index" title="Index" href="../../../genindex.html" /><link rel="search" title="Search" href="../../../search.html" />
         <link rel="canonical" href="https://pyabaqus.haiiliin.com/_modules/abaqus/Canvas/AttributeColorMap.html" />
 
-    <meta name="generator" content="sphinx-4.5.0, furo 2022.04.07"/>
-        <title>abaqus.Canvas.AttributeColorMap - pyabaqus 1.0.16 documentation</title>
+    <meta name="generator" content="sphinx-4.5.0, furo 2022.06.04.1"/>
+        <title>abaqus.Canvas.AttributeColorMap - pyabaqus 1.0.18 documentation</title>
       <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/styles/furo.css?digest=68f4518137b9aefe99b631505a2064c3c42c9852" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/styles/furo.css?digest=40978830699223671f4072448e654b5958f38b89" />
     <link rel="stylesheet" type="text/css" href="../../../_static/styles/furo-extensions.css?digest=30d1aed668e5c3a91c3e3bf6a60b675221979f0e" />
     
     
@@ -123,7 +123,7 @@
       </label>
     </div>
     <div class="header-center">
-      <a href="../../../index.html"><div class="brand">pyabaqus 1.0.16 documentation</div></a>
+      <a href="../../../index.html"><div class="brand">pyabaqus 1.0.18 documentation</div></a>
     </div>
     <div class="header-right">
       <div class="theme-toggle-container theme-toggle-header">
@@ -146,7 +146,7 @@
       <div class="sidebar-sticky"><a class="sidebar-brand" href="../../../index.html">
   
   
-  <span class="sidebar-brand-text">pyabaqus 1.0.16 documentation</span>
+  <span class="sidebar-brand-text">pyabaqus 1.0.18 documentation</span>
   
 </a><form class="sidebar-search-container" method="get" action="../../../search.html" role="search">
   <input class="sidebar-search" placeholder=Search name="q" aria-label="Search">
@@ -286,7 +286,8 @@
           </svg>
           <span>Back to top</span>
         </a>
-        <div class="content-icon-container"><div class="theme-toggle-container theme-toggle-content">
+        <div class="content-icon-container">
+          <div class="theme-toggle-container theme-toggle-content">
             <button class="theme-toggle">
               <div class="visually-hidden">Toggle Light / Dark / Auto color theme</div>
               <svg class="theme-icon-when-auto"><use href="#svg-sun-half"></use></svg>
@@ -305,7 +306,7 @@
 
 
 <div class="viewcode-block" id="AttributeColorMap"><a class="viewcode-back" href="../../../reference/session/canvas.html#abaqus.Canvas.AttributeColorMap.AttributeColorMap">[docs]</a><span class="k">class</span> <span class="nc">AttributeColorMap</span><span class="p">:</span>
-    <span class="sd">"""The AttributeColorMap object is used to store values and attributes associated with</span>
+    <span class="sd">&quot;&quot;&quot;The AttributeColorMap object is used to store values and attributes associated with</span>
 <span class="sd">    AttributeColorMap type objects. AttributeColorMap objects can be modified using the </span>
 <span class="sd">    methods described below. The methods accessed via the Viewport object cause the </span>
 <span class="sd">    AttributeColorMap object to be updated in the session.viewports[name].colorMappings </span>
@@ -321,11 +322,11 @@
 <span class="sd">        an attribute in the map; the corresponding values specify the color definition to apply</span>
 <span class="sd">        to that attribute in the form (0|1, wire color, edge color, face color). The 0|1 defines</span>
 <span class="sd">        the active status for the attribute. For example:`overrides={</span>
-<span class="sd">        'Part-1':(1,'00FF00', '00CCFF',                        '00FF00')}`</span>
+<span class="sd">        &#39;Part-1&#39;:(1,&#39;00FF00&#39;, &#39;00CCFF&#39;,                        &#39;00FF00&#39;)}`</span>
 <span class="sd">    defaultOverrides: dict</span>
 <span class="sd">        A :py:class:`~.Dictionary` object specifying a custom color mapping similar to overrides. For</span>
-<span class="sd">        example:`defaultOverrides={                        'Copper':(1,''00FF00', '00CCFF',</span>
-<span class="sd">        '00FF00')}`The color mapping can contain keys that have not been</span>
+<span class="sd">        example:`defaultOverrides={                        &#39;Copper&#39;:(1,&#39;&#39;00FF00&#39;, &#39;00CCFF&#39;,</span>
+<span class="sd">        &#39;00FF00&#39;)}`The color mapping can contain keys that have not been</span>
 <span class="sd">        created. When the key is created, it gets the appropriate values from this mapping.</span>
 <span class="sd">    attributeColors: dict</span>
 <span class="sd">        A :py:class:`~.Dictionary` object specifying the color settings of each attribute as described in the</span>
@@ -340,7 +341,7 @@
 <span class="sd">    </span>
 <span class="sd">        session.viewports[name].colorMappings[name]</span>
 
-<span class="sd">    """</span>
+<span class="sd">    &quot;&quot;&quot;</span>
 
     <span class="c1"># A SymbolicConstant specifying the type of AttributeColorMap . Possible values are </span>
     <span class="c1"># MATERIAL_MAP, SECTION_MAP, PART_MAP, ELSET_MAP, AVERAGING_REGION_MAP, and ELTYPE_MAP. </span>
@@ -350,12 +351,12 @@
     <span class="c1"># an attribute in the map; the corresponding values specify the color definition to apply </span>
     <span class="c1"># to that attribute in the form (0|1, wire color, edge color, face color). The 0|1 defines </span>
     <span class="c1"># the active status for the attribute. For example:`overrides={                        </span>
-    <span class="c1"># 'Part-1':(1,'#00FF00', '#00CCFF',                        '#00FF00')}` </span>
+    <span class="c1"># &#39;Part-1&#39;:(1,&#39;#00FF00&#39;, &#39;#00CCFF&#39;,                        &#39;#00FF00&#39;)}` </span>
     <span class="n">overrides</span><span class="p">:</span> <span class="nb">dict</span> <span class="o">=</span> <span class="kc">None</span>
 
     <span class="c1"># A Dictionary object specifying a custom color mapping similar to overrides. For </span>
-    <span class="c1"># example:`defaultOverrides={                        'Copper':(1,''#00FF00', '#00CCFF',    </span>
-    <span class="c1">#                     '#00FF00')}`The color mapping can contain keys that have not been </span>
+    <span class="c1"># example:`defaultOverrides={                        &#39;Copper&#39;:(1,&#39;&#39;#00FF00&#39;, &#39;#00CCFF&#39;,    </span>
+    <span class="c1">#                     &#39;#00FF00&#39;)}`The color mapping can contain keys that have not been </span>
     <span class="c1"># created. When the key is created, it gets the appropriate values from this mapping. </span>
     <span class="n">defaultOverrides</span><span class="p">:</span> <span class="nb">dict</span> <span class="o">=</span> <span class="kc">None</span>
 
@@ -365,12 +366,12 @@
     <span class="n">attributeColors</span><span class="p">:</span> <span class="nb">dict</span> <span class="o">=</span> <span class="kc">None</span>
 
 <div class="viewcode-block" id="AttributeColorMap.setDefaults"><a class="viewcode-back" href="../../../reference/session/canvas.html#abaqus.Canvas.AttributeColorMap.AttributeColorMap.setDefaults">[docs]</a>    <span class="k">def</span> <span class="nf">setDefaults</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="sd">"""This method resets the AttributeColorMap object to its default state.</span>
-<span class="sd">        """</span>
+        <span class="sd">&quot;&quot;&quot;This method resets the AttributeColorMap object to its default state.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span></div>
 
 <div class="viewcode-block" id="AttributeColorMap.setValues"><a class="viewcode-back" href="../../../reference/session/canvas.html#abaqus.Canvas.AttributeColorMap.AttributeColorMap.setValues">[docs]</a>    <span class="k">def</span> <span class="nf">setValues</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">overrides</span><span class="p">:</span> <span class="nb">dict</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">defaultOverrides</span><span class="p">:</span> <span class="nb">dict</span> <span class="o">=</span> <span class="kc">None</span><span class="p">):</span>
-        <span class="sd">"""This method modifies the AttributeColorMap object.</span>
+        <span class="sd">&quot;&quot;&quot;This method modifies the AttributeColorMap object.</span>
 <span class="sd">        </span>
 <span class="sd">        Parameters</span>
 <span class="sd">        ----------</span>
@@ -379,17 +380,17 @@
 <span class="sd">            an attribute in the map; the corresponding values specify the color definition to apply </span>
 <span class="sd">            to that attribute in the form (0|1, wire color, edge color, face color). The 0|1 defines </span>
 <span class="sd">            the active status for the attribute. For example:`overrides={                        </span>
-<span class="sd">            'Part-1':(1,'#00FF00', '#00CCFF',                        '#00FF00')}` </span>
+<span class="sd">            &#39;Part-1&#39;:(1,&#39;#00FF00&#39;, &#39;#00CCFF&#39;,                        &#39;#00FF00&#39;)}` </span>
 <span class="sd">        defaultOverrides</span>
 <span class="sd">            A Dictionary object specifying a custom color mapping similar to overrides. For </span>
-<span class="sd">            example:`defaultOverrides={                        'Copper':(1,''#00FF00', '#00CCFF',    </span>
-<span class="sd">                                '#00FF00')}`The color mapping can contain keys that have not been </span>
+<span class="sd">            example:`defaultOverrides={                        &#39;Copper&#39;:(1,&#39;&#39;#00FF00&#39;, &#39;#00CCFF&#39;,    </span>
+<span class="sd">                                &#39;#00FF00&#39;)}`The color mapping can contain keys that have not been </span>
 <span class="sd">            created. When the key is created, it gets the appropriate values from this mapping. </span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span></div>
 
 <div class="viewcode-block" id="AttributeColorMap.updateOverrides"><a class="viewcode-back" href="../../../reference/session/canvas.html#abaqus.Canvas.AttributeColorMap.AttributeColorMap.updateOverrides">[docs]</a>    <span class="k">def</span> <span class="nf">updateOverrides</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">overrides</span><span class="p">:</span> <span class="nb">dict</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">defaultOverrides</span><span class="p">:</span> <span class="nb">dict</span> <span class="o">=</span> <span class="kc">None</span><span class="p">):</span>
-        <span class="sd">"""This method specifies additional overrides to be added to the current object definition.</span>
+        <span class="sd">&quot;&quot;&quot;This method specifies additional overrides to be added to the current object definition.</span>
 <span class="sd">        </span>
 <span class="sd">        Parameters</span>
 <span class="sd">        ----------</span>
@@ -398,13 +399,13 @@
 <span class="sd">            an attribute in the map; the corresponding values specify the color definition to apply </span>
 <span class="sd">            to that attribute in the form (0|1, wire color, edge color, face color). The 0|1 defines </span>
 <span class="sd">            the active status for the attribute. For example:`overrides={                        </span>
-<span class="sd">            'Part-1':(1,'#00FF00', '#00CCFF',                        '#00FF00')}` </span>
+<span class="sd">            &#39;Part-1&#39;:(1,&#39;#00FF00&#39;, &#39;#00CCFF&#39;,                        &#39;#00FF00&#39;)}` </span>
 <span class="sd">        defaultOverrides</span>
 <span class="sd">            A Dictionary object specifying a custom color mapping similar to overrides. For </span>
-<span class="sd">            example:`defaultOverrides={                        'Copper':(1,''#00FF00', '#00CCFF',    </span>
-<span class="sd">                                '#00FF00')}`The color mapping can contain keys that have not been </span>
+<span class="sd">            example:`defaultOverrides={                        &#39;Copper&#39;:(1,&#39;&#39;#00FF00&#39;, &#39;#00CCFF&#39;,    </span>
+<span class="sd">                                &#39;#00FF00&#39;)}`The color mapping can contain keys that have not been </span>
 <span class="sd">            created. When the key is created, it gets the appropriate values from this mapping. </span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span></div></div>
 </pre></div>
         </article>

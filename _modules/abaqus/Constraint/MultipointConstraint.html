@@ -5,10 +5,10 @@
     <meta name="color-scheme" content="light dark"><link rel="index" title="Index" href="../../../genindex.html" /><link rel="search" title="Search" href="../../../search.html" />
         <link rel="canonical" href="https://pyabaqus.haiiliin.com/_modules/abaqus/Constraint/MultipointConstraint.html" />
 
-    <meta name="generator" content="sphinx-4.5.0, furo 2022.04.07"/>
-        <title>abaqus.Constraint.MultipointConstraint - pyabaqus 1.0.16 documentation</title>
+    <meta name="generator" content="sphinx-4.5.0, furo 2022.06.04.1"/>
+        <title>abaqus.Constraint.MultipointConstraint - pyabaqus 1.0.18 documentation</title>
       <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/styles/furo.css?digest=68f4518137b9aefe99b631505a2064c3c42c9852" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/styles/furo.css?digest=40978830699223671f4072448e654b5958f38b89" />
     <link rel="stylesheet" type="text/css" href="../../../_static/styles/furo-extensions.css?digest=30d1aed668e5c3a91c3e3bf6a60b675221979f0e" />
     
     
@@ -123,7 +123,7 @@
       </label>
     </div>
     <div class="header-center">
-      <a href="../../../index.html"><div class="brand">pyabaqus 1.0.16 documentation</div></a>
+      <a href="../../../index.html"><div class="brand">pyabaqus 1.0.18 documentation</div></a>
     </div>
     <div class="header-right">
       <div class="theme-toggle-container theme-toggle-header">
@@ -146,7 +146,7 @@
       <div class="sidebar-sticky"><a class="sidebar-brand" href="../../../index.html">
   
   
-  <span class="sidebar-brand-text">pyabaqus 1.0.16 documentation</span>
+  <span class="sidebar-brand-text">pyabaqus 1.0.18 documentation</span>
   
 </a><form class="sidebar-search-container" method="get" action="../../../search.html" role="search">
   <input class="sidebar-search" placeholder=Search name="q" aria-label="Search">
@@ -286,7 +286,8 @@
           </svg>
           <span>Back to top</span>
         </a>
-        <div class="content-icon-container"><div class="theme-toggle-container theme-toggle-content">
+        <div class="content-icon-container">
+          <div class="theme-toggle-container theme-toggle-content">
             <button class="theme-toggle">
               <div class="visually-hidden">Toggle Light / Dark / Auto color theme</div>
               <svg class="theme-icon-when-auto"><use href="#svg-sun-half"></use></svg>
@@ -307,7 +308,7 @@
 
 
 <div class="viewcode-block" id="MultipointConstraint"><a class="viewcode-back" href="../../../reference/mdb/model/constraint.html#abaqus.Constraint.MultipointConstraint.MultipointConstraint">[docs]</a><span class="k">class</span> <span class="nc">MultipointConstraint</span><span class="p">(</span><span class="n">Constraint</span><span class="p">):</span>
-    <span class="sd">"""The MultipointConstraint object defines a constraint between a group of</span>
+    <span class="sd">&quot;&quot;&quot;The MultipointConstraint object defines a constraint between a group of</span>
 <span class="sd">    MultipointConstraint nodes located on a region and a reference point. </span>
 <span class="sd">    The MultipointConstraint object is derived from the ConstrainedSketchConstraint object.</span>
 
@@ -330,7 +331,7 @@
 
 <span class="sd">    - MPC</span>
 
-<span class="sd">    """</span>
+<span class="sd">    &quot;&quot;&quot;</span>
 
     <span class="c1"># A Boolean specifying whether the constraint is suppressed or not. The default value is </span>
     <span class="c1"># OFF. </span>
@@ -338,7 +339,7 @@
 
     <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">surface</span><span class="p">:</span> <span class="n">Region</span><span class="p">,</span> <span class="n">controlPoint</span><span class="p">:</span> <span class="n">Region</span><span class="p">,</span> <span class="n">mpcType</span><span class="p">:</span> <span class="n">SymbolicConstant</span><span class="p">,</span>
                  <span class="n">csys</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">userType</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="n">userMode</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="n">DOF_MODE_MPC</span><span class="p">):</span>
-        <span class="sd">"""This method creates a MultipointConstraint object.</span>
+        <span class="sd">&quot;&quot;&quot;This method creates a MultipointConstraint object.</span>
 
 <span class="sd">        Notes</span>
 <span class="sd">        -----</span>
@@ -362,7 +363,7 @@
 <span class="sd">            BEAM_MPC, ELBOW_MPC, PIN_MPC, LINK_MPC, TIE_MPC, and USER_MPC. </span>
 <span class="sd">        csys</span>
 <span class="sd">            None or a DatumCsys object specifying the initial orientation of the local coordinate </span>
-<span class="sd">            system for the MultipointConstraint's degrees of freedom. If *localCsys*=None, the </span>
+<span class="sd">            system for the MultipointConstraint&#39;s degrees of freedom. If *localCsys*=None, the </span>
 <span class="sd">            MultipointConstraint is defined in the global coordinate system. The default value is </span>
 <span class="sd">            None. </span>
 <span class="sd">        userType</span>
@@ -377,18 +378,18 @@
 <span class="sd">        Returns</span>
 <span class="sd">        -------</span>
 <span class="sd">            A MultipointConstraint object.</span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">()</span>
         <span class="k">pass</span>
 
 <div class="viewcode-block" id="MultipointConstraint.setValues"><a class="viewcode-back" href="../../../reference/mdb/model/constraint.html#abaqus.Constraint.MultipointConstraint.MultipointConstraint.setValues">[docs]</a>    <span class="k">def</span> <span class="nf">setValues</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">csys</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">userType</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="n">userMode</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="n">DOF_MODE_MPC</span><span class="p">):</span>
-        <span class="sd">"""This method modifies the MultipointConstraint object.</span>
+        <span class="sd">&quot;&quot;&quot;This method modifies the MultipointConstraint object.</span>
 <span class="sd">        </span>
 <span class="sd">        Parameters</span>
 <span class="sd">        ----------</span>
 <span class="sd">        csys</span>
 <span class="sd">            None or a DatumCsys object specifying the initial orientation of the local coordinate </span>
-<span class="sd">            system for the MultipointConstraint's degrees of freedom. If *localCsys*=None, the </span>
+<span class="sd">            system for the MultipointConstraint&#39;s degrees of freedom. If *localCsys*=None, the </span>
 <span class="sd">            MultipointConstraint is defined in the global coordinate system. The default value is </span>
 <span class="sd">            None. </span>
 <span class="sd">        userType</span>
@@ -399,7 +400,7 @@
 <span class="sd">            A SymbolicConstant specifying the mode of the constraint when it is user-defined. </span>
 <span class="sd">            Possible values are DOF_MODE_MPC and NODE_MODE_MPC. The default value is </span>
 <span class="sd">            DOF_MODE_MPC.The *userMode* argument applies only when *mpcType*=USER_MPC. </span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span></div></div>
 </pre></div>
         </article>

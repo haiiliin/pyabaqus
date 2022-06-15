@@ -5,10 +5,10 @@
     <meta name="color-scheme" content="light dark"><link rel="index" title="Index" href="../../../genindex.html" /><link rel="search" title="Search" href="../../../search.html" />
         <link rel="canonical" href="https://pyabaqus.haiiliin.com/_modules/abaqus/Interaction/FluidInflatorProperty.html" />
 
-    <meta name="generator" content="sphinx-4.5.0, furo 2022.04.07"/>
-        <title>abaqus.Interaction.FluidInflatorProperty - pyabaqus 1.0.16 documentation</title>
+    <meta name="generator" content="sphinx-4.5.0, furo 2022.06.04.1"/>
+        <title>abaqus.Interaction.FluidInflatorProperty - pyabaqus 1.0.18 documentation</title>
       <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/styles/furo.css?digest=68f4518137b9aefe99b631505a2064c3c42c9852" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/styles/furo.css?digest=40978830699223671f4072448e654b5958f38b89" />
     <link rel="stylesheet" type="text/css" href="../../../_static/styles/furo-extensions.css?digest=30d1aed668e5c3a91c3e3bf6a60b675221979f0e" />
     
     
@@ -123,7 +123,7 @@
       </label>
     </div>
     <div class="header-center">
-      <a href="../../../index.html"><div class="brand">pyabaqus 1.0.16 documentation</div></a>
+      <a href="../../../index.html"><div class="brand">pyabaqus 1.0.18 documentation</div></a>
     </div>
     <div class="header-right">
       <div class="theme-toggle-container theme-toggle-header">
@@ -146,7 +146,7 @@
       <div class="sidebar-sticky"><a class="sidebar-brand" href="../../../index.html">
   
   
-  <span class="sidebar-brand-text">pyabaqus 1.0.16 documentation</span>
+  <span class="sidebar-brand-text">pyabaqus 1.0.18 documentation</span>
   
 </a><form class="sidebar-search-container" method="get" action="../../../search.html" role="search">
   <input class="sidebar-search" placeholder=Search name="q" aria-label="Search">
@@ -286,7 +286,8 @@
           </svg>
           <span>Back to top</span>
         </a>
-        <div class="content-icon-container"><div class="theme-toggle-container theme-toggle-content">
+        <div class="content-icon-container">
+          <div class="theme-toggle-container theme-toggle-content">
             <button class="theme-toggle">
               <div class="visually-hidden">Toggle Light / Dark / Auto color theme</div>
               <svg class="theme-icon-when-auto"><use href="#svg-sun-half"></use></svg>
@@ -305,7 +306,7 @@
 
 
 <div class="viewcode-block" id="FluidInflatorProperty"><a class="viewcode-back" href="../../../reference/mdb/model/interaction.html#abaqus.Interaction.FluidInflatorProperty.FluidInflatorProperty">[docs]</a><span class="k">class</span> <span class="nc">FluidInflatorProperty</span><span class="p">(</span><span class="n">ContactProperty</span><span class="p">):</span>
-    <span class="sd">"""The FluidInflatorProperty object is an interaction property that defines a fluid</span>
+    <span class="sd">&quot;&quot;&quot;The FluidInflatorProperty object is an interaction property that defines a fluid</span>
 <span class="sd">    inflator property to model the deployment of an airbag. The inflator property defines </span>
 <span class="sd">    the mass flow rate and temperature as a function of inflation time either directly or by </span>
 <span class="sd">    entering tank test data. It also defines the mixture of gases entering the fluid cavity. </span>
@@ -343,13 +344,13 @@
 
 <span class="sd">    - FLUID INFLATOR PROPERTY</span>
 
-<span class="sd">    """</span>
+<span class="sd">    &quot;&quot;&quot;</span>
 
     <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">definition</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">effectiveArea</span><span class="p">:</span> <span class="nb">float</span><span class="p">,</span> <span class="n">tankVolume</span><span class="p">:</span> <span class="nb">float</span><span class="p">,</span>
                  <span class="n">dischargeCoefficient</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">dataTable</span><span class="p">:</span> <span class="nb">tuple</span> <span class="o">=</span> <span class="p">(),</span> <span class="n">numFluids</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
-                 <span class="n">mixtureType</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">''</span><span class="p">,</span> <span class="n">inflationTime</span><span class="p">:</span> <span class="nb">tuple</span> <span class="o">=</span> <span class="p">(),</span> <span class="n">fluidbehaviorName</span><span class="p">:</span> <span class="nb">tuple</span> <span class="o">=</span> <span class="p">(),</span>
+                 <span class="n">mixtureType</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">inflationTime</span><span class="p">:</span> <span class="nb">tuple</span> <span class="o">=</span> <span class="p">(),</span> <span class="n">fluidbehaviorName</span><span class="p">:</span> <span class="nb">tuple</span> <span class="o">=</span> <span class="p">(),</span>
                  <span class="n">massFraction</span><span class="p">:</span> <span class="nb">tuple</span> <span class="o">=</span> <span class="p">()):</span>
-        <span class="sd">"""This method creates a FluidInflatorProperty object.</span>
+        <span class="sd">&quot;&quot;&quot;This method creates a FluidInflatorProperty object.</span>
 
 <span class="sd">        Notes</span>
 <span class="sd">        -----</span>
@@ -377,7 +378,7 @@
 <span class="sd">            A Float specifying the discharge coefficient. This argument is applicable only if </span>
 <span class="sd">            *definition*=DUAL PRESSURE or *definition*=PRESSURE AND MASS. </span>
 <span class="sd">        dataTable</span>
-<span class="sd">            A sequence of sequences of Floats specifying the items described in the "Table data" </span>
+<span class="sd">            A sequence of sequences of Floats specifying the items described in the &quot;Table data&quot; </span>
 <span class="sd">            section below. </span>
 <span class="sd">        numFluids</span>
 <span class="sd">            An Int specifying the number of gas species used for this inflator. </span>
@@ -396,14 +397,14 @@
 <span class="sd">        Returns</span>
 <span class="sd">        -------</span>
 <span class="sd">            A FluidInflatorProperty object.</span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="n">name</span><span class="p">)</span>
         <span class="k">pass</span>
 
 <div class="viewcode-block" id="FluidInflatorProperty.setValues"><a class="viewcode-back" href="../../../reference/mdb/model/interaction.html#abaqus.Interaction.FluidInflatorProperty.FluidInflatorProperty.setValues">[docs]</a>    <span class="k">def</span> <span class="nf">setValues</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">dischargeCoefficient</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">dataTable</span><span class="p">:</span> <span class="nb">tuple</span> <span class="o">=</span> <span class="p">(),</span> <span class="n">numFluids</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
-                  <span class="n">mixtureType</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">''</span><span class="p">,</span> <span class="n">inflationTime</span><span class="p">:</span> <span class="nb">tuple</span> <span class="o">=</span> <span class="p">(),</span> <span class="n">fluidbehaviorName</span><span class="p">:</span> <span class="nb">tuple</span> <span class="o">=</span> <span class="p">(),</span>
+                  <span class="n">mixtureType</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">inflationTime</span><span class="p">:</span> <span class="nb">tuple</span> <span class="o">=</span> <span class="p">(),</span> <span class="n">fluidbehaviorName</span><span class="p">:</span> <span class="nb">tuple</span> <span class="o">=</span> <span class="p">(),</span>
                   <span class="n">massFraction</span><span class="p">:</span> <span class="nb">tuple</span> <span class="o">=</span> <span class="p">()):</span>
-        <span class="sd">"""This method modifies the FluidInflatorProperty object.</span>
+        <span class="sd">&quot;&quot;&quot;This method modifies the FluidInflatorProperty object.</span>
 <span class="sd">        </span>
 <span class="sd">        Parameters</span>
 <span class="sd">        ----------</span>
@@ -411,7 +412,7 @@
 <span class="sd">            A Float specifying the discharge coefficient. This argument is applicable only if </span>
 <span class="sd">            *definition*=DUAL PRESSURE or *definition*=PRESSURE AND MASS. </span>
 <span class="sd">        dataTable</span>
-<span class="sd">            A sequence of sequences of Floats specifying the items described in the "Table data" </span>
+<span class="sd">            A sequence of sequences of Floats specifying the items described in the &quot;Table data&quot; </span>
 <span class="sd">            section below. </span>
 <span class="sd">        numFluids</span>
 <span class="sd">            An Int specifying the number of gas species used for this inflator. </span>
@@ -426,7 +427,7 @@
 <span class="sd">        massFraction</span>
 <span class="sd">            A sequence of sequences of Floats specifying the mass fraction or the molar fraction </span>
 <span class="sd">            corresponding to entered fluid behavior. </span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span></div></div>
 </pre></div>
         </article>

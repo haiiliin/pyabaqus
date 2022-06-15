@@ -5,10 +5,10 @@
     <meta name="color-scheme" content="light dark"><link rel="index" title="Index" href="../../../genindex.html" /><link rel="search" title="Search" href="../../../search.html" />
         <link rel="canonical" href="https://pyabaqus.haiiliin.com/_modules/abaqus/Interaction/InteractionModel.html" />
 
-    <meta name="generator" content="sphinx-4.5.0, furo 2022.04.07"/>
-        <title>abaqus.Interaction.InteractionModel - pyabaqus 1.0.16 documentation</title>
+    <meta name="generator" content="sphinx-4.5.0, furo 2022.06.04.1"/>
+        <title>abaqus.Interaction.InteractionModel - pyabaqus 1.0.18 documentation</title>
       <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/styles/furo.css?digest=68f4518137b9aefe99b631505a2064c3c42c9852" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/styles/furo.css?digest=40978830699223671f4072448e654b5958f38b89" />
     <link rel="stylesheet" type="text/css" href="../../../_static/styles/furo-extensions.css?digest=30d1aed668e5c3a91c3e3bf6a60b675221979f0e" />
     
     
@@ -123,7 +123,7 @@
       </label>
     </div>
     <div class="header-center">
-      <a href="../../../index.html"><div class="brand">pyabaqus 1.0.16 documentation</div></a>
+      <a href="../../../index.html"><div class="brand">pyabaqus 1.0.18 documentation</div></a>
     </div>
     <div class="header-right">
       <div class="theme-toggle-container theme-toggle-header">
@@ -146,7 +146,7 @@
       <div class="sidebar-sticky"><a class="sidebar-brand" href="../../../index.html">
   
   
-  <span class="sidebar-brand-text">pyabaqus 1.0.16 documentation</span>
+  <span class="sidebar-brand-text">pyabaqus 1.0.18 documentation</span>
   
 </a><form class="sidebar-search-container" method="get" action="../../../search.html" role="search">
   <input class="sidebar-search" placeholder=Search name="q" aria-label="Search">
@@ -286,7 +286,8 @@
           </svg>
           <span>Back to top</span>
         </a>
-        <div class="content-icon-container"><div class="theme-toggle-container theme-toggle-content">
+        <div class="content-icon-container">
+          <div class="theme-toggle-container theme-toggle-content">
             <button class="theme-toggle">
               <div class="visually-hidden">Toggle Light / Dark / Auto color theme</div>
               <svg class="theme-icon-when-auto"><use href="#svg-sun-half"></use></svg>
@@ -369,7 +370,7 @@
 <div class="viewcode-block" id="InteractionModel"><a class="viewcode-back" href="../../../user/mdb/model/interaction.html#abaqus.Interaction.InteractionModel.InteractionModel">[docs]</a><span class="k">class</span> <span class="nc">InteractionModel</span><span class="p">(</span><span class="n">InteractionContactControlModel</span><span class="p">,</span>
                        <span class="n">InteractionContactInitializationModel</span><span class="p">,</span>
                        <span class="n">InteractionPropertyModel</span><span class="p">):</span>
-    <span class="sd">"""Abaqus creates a Model object named `Model-1` when a session is started.</span>
+    <span class="sd">&quot;&quot;&quot;Abaqus creates a Model object named `Model-1` when a session is started.</span>
 
 <span class="sd">    Notes</span>
 <span class="sd">    -----</span>
@@ -379,10 +380,10 @@
 
 <span class="sd">        mdb.models[name]</span>
 
-<span class="sd">    """</span>
+<span class="sd">    &quot;&quot;&quot;</span>
 
-<div class="viewcode-block" id="InteractionModel.contactDetection"><a class="viewcode-back" href="../../../reference/mdb/model/interaction.html#abaqus.Interaction.InteractionModel.InteractionModel.contactDetection">[docs]</a>    <span class="k">def</span> <span class="nf">contactDetection</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">''</span><span class="p">,</span> <span class="n">createStepName</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">''</span><span class="p">,</span> <span class="n">searchDomain</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="n">MODEL</span><span class="p">,</span>
-                         <span class="n">defaultType</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="n">CONTACT</span><span class="p">,</span> <span class="n">interactionProperty</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">''</span><span class="p">,</span>
+<div class="viewcode-block" id="InteractionModel.contactDetection"><a class="viewcode-back" href="../../../reference/mdb/model/interaction.html#abaqus.Interaction.InteractionModel.InteractionModel.contactDetection">[docs]</a>    <span class="k">def</span> <span class="nf">contactDetection</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">createStepName</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">searchDomain</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="n">MODEL</span><span class="p">,</span>
+                         <span class="n">defaultType</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="n">CONTACT</span><span class="p">,</span> <span class="n">interactionProperty</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span><span class="p">,</span>
                          <span class="n">separationTolerance</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">extendByAngle</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mi">20</span><span class="p">,</span>
                          <span class="n">mergeWithinAngle</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mi">20</span><span class="p">,</span> <span class="n">searchSingleInstances</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="n">OFF</span><span class="p">,</span>
                          <span class="n">nameEachSurfaceFound</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="n">ON</span><span class="p">,</span> <span class="n">createUnionOfMainSurfaces</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="n">OFF</span><span class="p">,</span>
@@ -394,17 +395,17 @@
                          <span class="n">includeNonOverlapping</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="n">OFF</span><span class="p">,</span>
                          <span class="n">meshedGeometrySearchTechnique</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="n">USE_GEOMETRY</span><span class="p">,</span>
                          <span class="n">useShellThickness</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="n">ON</span><span class="p">,</span> <span class="n">surfaceSmoothing</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="kc">None</span><span class="p">):</span>
-        <span class="sd">"""This method uses contact detection to create SurfaceToSurfaceContactStd,</span>
+        <span class="sd">&quot;&quot;&quot;This method uses contact detection to create SurfaceToSurfaceContactStd,</span>
 <span class="sd">        SurfaceToSurfaceContactExp, and Tie objects.</span>
 <span class="sd">        </span>
 <span class="sd">        Parameters</span>
 <span class="sd">        ----------</span>
 <span class="sd">        name</span>
 <span class="sd">            A String specifying the prefix used to generate repository keys. The default value is</span>
-<span class="sd">            "CP-"</span>
+<span class="sd">            &quot;CP-&quot;</span>
 <span class="sd">        createStepName</span>
 <span class="sd">            A String specifying the name of the step in which the SurfaceToSurfaceContactStd,</span>
-<span class="sd">            SurfaceToSurfaceContactExp, and Tie objects are created. The default value is "Initial."</span>
+<span class="sd">            SurfaceToSurfaceContactExp, and Tie objects are created. The default value is &quot;Initial.&quot;</span>
 <span class="sd">        searchDomain</span>
 <span class="sd">            A SymbolicConstant MODEL or a sequence of Strings specifying the names of instances to</span>
 <span class="sd">            search. MODEL indicates the whole model is searched. The default value is MODEL.</span>
@@ -477,11 +478,11 @@
 <span class="sd">        Returns</span>
 <span class="sd">        -------</span>
 <span class="sd">            None.</span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span></div>
 
     <span class="k">def</span> <span class="nf">getSurfaceSeparation</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="sd">"""This method returns a list of all possible contacts that can be created using the</span>
+        <span class="sd">&quot;&quot;&quot;This method returns a list of all possible contacts that can be created using the</span>
 <span class="sd">        ContactDetection method.</span>
 
 <span class="sd">        Returns</span>
@@ -493,14 +494,14 @@
 <span class="sd">            A float specifying the separation distance between the main surface and the secondary</span>
 <span class="sd">            surface.</span>
 <span class="sd">            A boolean specifying whether or not contact surfaces are overclosed..</span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span>
 
 <div class="viewcode-block" id="InteractionModel.AcousticImpedance"><a class="viewcode-back" href="../../../reference/mdb/model/interaction.html#abaqus.Interaction.InteractionModel.InteractionModel.AcousticImpedance">[docs]</a>    <span class="k">def</span> <span class="nf">AcousticImpedance</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">createStepName</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">surface</span><span class="p">:</span> <span class="n">Region</span><span class="p">,</span> <span class="n">definition</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="n">TABULAR</span><span class="p">,</span>
-                          <span class="n">interactionProperty</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">''</span><span class="p">,</span> <span class="n">nonreflectingType</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="n">PLANE</span><span class="p">,</span>
+                          <span class="n">interactionProperty</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">nonreflectingType</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="n">PLANE</span><span class="p">,</span>
                           <span class="n">radius</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span> <span class="n">semimajorAxis</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span> <span class="n">eccentricity</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span>
                           <span class="n">centerCoordinates</span><span class="p">:</span> <span class="nb">tuple</span> <span class="o">=</span> <span class="p">(),</span> <span class="n">directionCosine</span><span class="p">:</span> <span class="nb">tuple</span> <span class="o">=</span> <span class="p">())</span> <span class="o">-&gt;</span> <span class="n">AcousticImpedance</span><span class="p">:</span>
-        <span class="sd">"""This method creates an AcousticImpedance object.</span>
+        <span class="sd">&quot;&quot;&quot;This method creates an AcousticImpedance object.</span>
 
 <span class="sd">        Notes</span>
 <span class="sd">        -----</span>
@@ -554,7 +555,7 @@
 <span class="sd">        Returns</span>
 <span class="sd">        -------</span>
 <span class="sd">            An AcousticImpedance object.</span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">interactions</span><span class="p">[</span><span class="n">name</span><span class="p">]</span> <span class="o">=</span> <span class="n">interaction</span> <span class="o">=</span> <span class="n">AcousticImpedance</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">createStepName</span><span class="p">,</span> <span class="n">surface</span><span class="p">,</span> <span class="n">definition</span><span class="p">,</span>
                                                                   <span class="n">interactionProperty</span><span class="p">,</span> <span class="n">nonreflectingType</span><span class="p">,</span> <span class="n">radius</span><span class="p">,</span>
                                                                   <span class="n">semimajorAxis</span><span class="p">,</span> <span class="n">eccentricity</span><span class="p">,</span> <span class="n">centerCoordinates</span><span class="p">,</span>
@@ -563,7 +564,7 @@
 
 <div class="viewcode-block" id="InteractionModel.AcousticImpedanceProp"><a class="viewcode-back" href="../../../reference/mdb/model/interaction.html#abaqus.Interaction.InteractionModel.InteractionModel.AcousticImpedanceProp">[docs]</a>    <span class="k">def</span> <span class="nf">AcousticImpedanceProp</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">tableType</span><span class="p">:</span> <span class="n">SymbolicConstant</span><span class="p">,</span> <span class="n">table</span><span class="p">:</span> <span class="nb">tuple</span><span class="p">,</span>
                               <span class="n">frequencyDependency</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="n">OFF</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">AcousticImpedanceProp</span><span class="p">:</span>
-        <span class="sd">"""This method creates an AcousticImpedanceProp object.</span>
+        <span class="sd">&quot;&quot;&quot;This method creates an AcousticImpedanceProp object.</span>
 
 <span class="sd">        Notes</span>
 <span class="sd">        -----</span>
@@ -594,14 +595,14 @@
 <span class="sd">        Returns</span>
 <span class="sd">        -------</span>
 <span class="sd">            An AcousticImpedanceProp object.</span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">interactions</span><span class="p">[</span><span class="n">name</span><span class="p">]</span> <span class="o">=</span> <span class="n">interaction</span> <span class="o">=</span> <span class="n">AcousticImpedanceProp</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">tableType</span><span class="p">,</span> <span class="n">table</span><span class="p">,</span> <span class="n">frequencyDependency</span><span class="p">)</span>
         <span class="k">return</span> <span class="n">interaction</span></div>
 
 <div class="viewcode-block" id="InteractionModel.ActuatorSensor"><a class="viewcode-back" href="../../../reference/mdb/model/interaction.html#abaqus.Interaction.InteractionModel.InteractionModel.ActuatorSensor">[docs]</a>    <span class="k">def</span> <span class="nf">ActuatorSensor</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">createStepName</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">point</span><span class="p">:</span> <span class="n">Region</span><span class="p">,</span> <span class="n">interactionProperty</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
                        <span class="n">noCoordComponents</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">unsymm</span><span class="p">:</span> <span class="n">Boolean</span><span class="p">,</span> <span class="n">noSolutionDepVar</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">userSubUel</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
                        <span class="n">dof</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">solutionDepVars</span><span class="p">:</span> <span class="nb">tuple</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">ActuatorSensor</span><span class="p">:</span>
-        <span class="sd">"""This method creates an ActuatorSensor object.</span>
+        <span class="sd">&quot;&quot;&quot;This method creates an ActuatorSensor object.</span>
 
 <span class="sd">        Notes</span>
 <span class="sd">        -----</span>
@@ -617,7 +618,7 @@
 <span class="sd">            A String specifying the repository key.</span>
 <span class="sd">        createStepName</span>
 <span class="sd">            A String specifying the name of the step in which the actuator/sensor interaction is</span>
-<span class="sd">            created. *createStepName* must be set to 'Initial'.</span>
+<span class="sd">            created. *createStepName* must be set to &#39;Initial&#39;.</span>
 <span class="sd">        point</span>
 <span class="sd">            A Region object specifying the point at which the constraint is applied.</span>
 <span class="sd">        interactionProperty</span>
@@ -640,7 +641,7 @@
 <span class="sd">        Returns</span>
 <span class="sd">        -------</span>
 <span class="sd">            An ActuatorSensor object.</span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">interactions</span><span class="p">[</span><span class="n">name</span><span class="p">]</span> <span class="o">=</span> <span class="n">interaction</span> <span class="o">=</span> <span class="n">ActuatorSensor</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">createStepName</span><span class="p">,</span> <span class="n">point</span><span class="p">,</span> <span class="n">interactionProperty</span><span class="p">,</span>
                                                                <span class="n">noCoordComponents</span><span class="p">,</span> <span class="n">unsymm</span><span class="p">,</span> <span class="n">noSolutionDepVar</span><span class="p">,</span> <span class="n">userSubUel</span><span class="p">,</span>
                                                                <span class="n">dof</span><span class="p">,</span> <span class="n">solutionDepVars</span><span class="p">)</span>
@@ -648,7 +649,7 @@
 
 <div class="viewcode-block" id="InteractionModel.ActuatorSensorProp"><a class="viewcode-back" href="../../../reference/mdb/model/interaction.html#abaqus.Interaction.InteractionModel.InteractionModel.ActuatorSensorProp">[docs]</a>    <span class="k">def</span> <span class="nf">ActuatorSensorProp</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">realProperties</span><span class="p">:</span> <span class="nb">tuple</span> <span class="o">=</span> <span class="p">(),</span>
                            <span class="n">integerProperties</span><span class="p">:</span> <span class="nb">tuple</span> <span class="o">=</span> <span class="p">())</span> <span class="o">-&gt;</span> <span class="n">ActuatorSensorProp</span><span class="p">:</span>
-        <span class="sd">"""This method creates an ActuatorSensorProp object.</span>
+        <span class="sd">&quot;&quot;&quot;This method creates an ActuatorSensorProp object.</span>
 
 <span class="sd">        Notes</span>
 <span class="sd">        -----</span>
@@ -672,7 +673,7 @@
 <span class="sd">        Returns</span>
 <span class="sd">        -------</span>
 <span class="sd">            An ActuatorSensorProp object.</span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">interactions</span><span class="p">[</span><span class="n">name</span><span class="p">]</span> <span class="o">=</span> <span class="n">interaction</span> <span class="o">=</span> <span class="n">ActuatorSensorProp</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">realProperties</span><span class="p">,</span> <span class="n">integerProperties</span><span class="p">)</span>
         <span class="k">return</span> <span class="n">interaction</span></div>
 
@@ -685,15 +686,15 @@
                         <span class="n">cyclicRotPt</span><span class="p">:</span> <span class="n">ModelDot</span> <span class="o">=</span> <span class="n">ModelDot</span><span class="p">(),</span> <span class="n">cyclicRotEndPt</span><span class="p">:</span> <span class="n">ModelDot</span> <span class="o">=</span> <span class="n">ModelDot</span><span class="p">(),</span>
                         <span class="n">cyclicSymPt</span><span class="p">:</span> <span class="n">ModelDot</span> <span class="o">=</span> <span class="n">ModelDot</span><span class="p">(),</span> <span class="n">periodicSymmetries</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span>
                         <span class="n">periodicImages_1</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">2</span><span class="p">,</span> <span class="n">periodicImages_2</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">2</span><span class="p">,</span> <span class="n">periodicImages_3</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">2</span><span class="p">,</span>
-                        <span class="n">periodicSymAxis_1</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">''</span><span class="p">,</span> <span class="n">periodicSymAxis_2</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">''</span><span class="p">,</span> <span class="n">periodicSymPlane_1</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">''</span><span class="p">,</span>
-                        <span class="n">periodicSymPlane_2</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">''</span><span class="p">,</span> <span class="n">periodicSymPlane_3</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">''</span><span class="p">,</span>
+                        <span class="n">periodicSymAxis_1</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">periodicSymAxis_2</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">periodicSymPlane_1</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span><span class="p">,</span>
+                        <span class="n">periodicSymPlane_2</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">periodicSymPlane_3</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span><span class="p">,</span>
                         <span class="n">periodicDistance_1</span><span class="p">:</span> <span class="nb">tuple</span> <span class="o">=</span> <span class="p">(),</span> <span class="n">periodicDistance_2</span><span class="p">:</span> <span class="nb">tuple</span> <span class="o">=</span> <span class="p">(),</span>
                         <span class="n">periodicDistance_3</span><span class="p">:</span> <span class="nb">tuple</span> <span class="o">=</span> <span class="p">(),</span> <span class="n">periodicSymZ</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">periodicDistZ</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
-                        <span class="n">reflectionSymmetries</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="n">reflectionSymAxis_1</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">''</span><span class="p">,</span>
-                        <span class="n">reflectionSymAxis_2</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">''</span><span class="p">,</span> <span class="n">reflectionSymPlane_1</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">''</span><span class="p">,</span>
-                        <span class="n">reflectionSymPlane_2</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">''</span><span class="p">,</span> <span class="n">reflectionSymPlane_3</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">''</span><span class="p">,</span>
+                        <span class="n">reflectionSymmetries</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="n">reflectionSymAxis_1</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span><span class="p">,</span>
+                        <span class="n">reflectionSymAxis_2</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">reflectionSymPlane_1</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span><span class="p">,</span>
+                        <span class="n">reflectionSymPlane_2</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">reflectionSymPlane_3</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span><span class="p">,</span>
                         <span class="n">reflectionSymZ</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="kc">None</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">CavityRadiation</span><span class="p">:</span>
-        <span class="sd">"""This method creates a CavityRadiation object.</span>
+        <span class="sd">&quot;&quot;&quot;This method creates a CavityRadiation object.</span>
 
 <span class="sd">        Notes</span>
 <span class="sd">        -----</span>
@@ -860,7 +861,7 @@
 <span class="sd">        Returns</span>
 <span class="sd">        -------</span>
 <span class="sd">            A CavityRadiation object.</span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">interactions</span><span class="p">[</span><span class="n">name</span><span class="p">]</span> <span class="o">=</span> <span class="n">interaction</span> <span class="o">=</span> <span class="n">CavityRadiation</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">createStepName</span><span class="p">,</span> <span class="n">surfaces</span><span class="p">,</span> <span class="n">surfaceEmissivities</span><span class="p">,</span>
                                                                 <span class="n">ambientTemp</span><span class="p">,</span> <span class="n">blocking</span><span class="p">,</span> <span class="n">blockingSurfaces</span><span class="p">,</span> <span class="n">rangeOfView</span><span class="p">,</span>
                                                                 <span class="n">surfaceReflection</span><span class="p">,</span> <span class="n">viewfactorAccurTol</span><span class="p">,</span>
@@ -880,7 +881,7 @@
 
 <div class="viewcode-block" id="InteractionModel.CavityRadiationProp"><a class="viewcode-back" href="../../../reference/mdb/model/interaction.html#abaqus.Interaction.InteractionModel.InteractionModel.CavityRadiationProp">[docs]</a>    <span class="k">def</span> <span class="nf">CavityRadiationProp</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">temperatureDependency</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="n">OFF</span><span class="p">,</span> <span class="n">dependencies</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span>
                             <span class="nb">property</span><span class="p">:</span> <span class="nb">tuple</span> <span class="o">=</span> <span class="p">())</span> <span class="o">-&gt;</span> <span class="n">CavityRadiationProp</span><span class="p">:</span>
-        <span class="sd">"""This method creates a CavityRadiationProp object.</span>
+        <span class="sd">&quot;&quot;&quot;This method creates a CavityRadiationProp object.</span>
 
 <span class="sd">        Notes</span>
 <span class="sd">        -----</span>
@@ -906,17 +907,17 @@
 <span class="sd">        Returns</span>
 <span class="sd">        -------</span>
 <span class="sd">            A CavityRadiationProp object.</span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">interactions</span><span class="p">[</span><span class="n">name</span><span class="p">]</span> <span class="o">=</span> <span class="n">interaction</span> <span class="o">=</span> <span class="n">CavityRadiationProp</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">temperatureDependency</span><span class="p">,</span> <span class="n">dependencies</span><span class="p">,</span> <span class="nb">property</span><span class="p">)</span>
         <span class="k">return</span> <span class="n">interaction</span></div>
 
 <div class="viewcode-block" id="InteractionModel.ConcentratedFilmCondition"><a class="viewcode-back" href="../../../reference/mdb/model/interaction.html#abaqus.Interaction.InteractionModel.InteractionModel.ConcentratedFilmCondition">[docs]</a>    <span class="k">def</span> <span class="nf">ConcentratedFilmCondition</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">createStepName</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">region</span><span class="p">:</span> <span class="n">Region</span><span class="p">,</span> <span class="n">definition</span><span class="p">:</span> <span class="n">SymbolicConstant</span><span class="p">,</span>
                                   <span class="n">nodalArea</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span> <span class="n">explicitRegionType</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="n">LAGRANGIAN</span><span class="p">,</span>
-                                  <span class="n">interactionProperty</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">''</span><span class="p">,</span> <span class="n">field</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">''</span><span class="p">,</span> <span class="n">sinkTemperature</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span>
-                                  <span class="n">sinkAmplitude</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">''</span><span class="p">,</span> <span class="n">filmCoeff</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="n">filmCoeffAmplitude</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">''</span><span class="p">,</span>
-                                  <span class="n">sinkFieldName</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">''</span><span class="p">,</span>
+                                  <span class="n">interactionProperty</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">field</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">sinkTemperature</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span>
+                                  <span class="n">sinkAmplitude</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">filmCoeff</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="n">filmCoeffAmplitude</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span><span class="p">,</span>
+                                  <span class="n">sinkFieldName</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span><span class="p">,</span>
                                   <span class="n">sinkDistributionType</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="n">UNIFORM</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">ConcentratedFilmCondition</span><span class="p">:</span>
-        <span class="sd">"""This method creates a ConcentratedFilmCondition object.</span>
+        <span class="sd">&quot;&quot;&quot;This method creates a ConcentratedFilmCondition object.</span>
 
 <span class="sd">        Notes</span>
 <span class="sd">        -----</span>
@@ -987,7 +988,7 @@
 <span class="sd">        Returns</span>
 <span class="sd">        -------</span>
 <span class="sd">            A ConcentratedFilmCondition object.</span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">interactions</span><span class="p">[</span><span class="n">name</span><span class="p">]</span> <span class="o">=</span> <span class="n">interaction</span> <span class="o">=</span> <span class="n">ConcentratedFilmCondition</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">createStepName</span><span class="p">,</span> <span class="n">region</span><span class="p">,</span> <span class="n">definition</span><span class="p">,</span>
                                                                           <span class="n">nodalArea</span><span class="p">,</span> <span class="n">explicitRegionType</span><span class="p">,</span>
                                                                           <span class="n">interactionProperty</span><span class="p">,</span> <span class="n">field</span><span class="p">,</span> <span class="n">sinkTemperature</span><span class="p">,</span>
@@ -997,9 +998,9 @@
 
 <div class="viewcode-block" id="InteractionModel.ConcentratedRadiationToAmbient"><a class="viewcode-back" href="../../../reference/mdb/model/interaction.html#abaqus.Interaction.InteractionModel.InteractionModel.ConcentratedRadiationToAmbient">[docs]</a>    <span class="k">def</span> <span class="nf">ConcentratedRadiationToAmbient</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">createStepName</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">region</span><span class="p">:</span> <span class="n">Region</span><span class="p">,</span> <span class="n">ambientTemperature</span><span class="p">:</span> <span class="nb">float</span><span class="p">,</span>
                                        <span class="n">ambientTemperatureAmp</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">emissivity</span><span class="p">:</span> <span class="nb">float</span><span class="p">,</span> <span class="n">nodalArea</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span>
-                                       <span class="n">explicitRegionType</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="n">LAGRANGIAN</span><span class="p">,</span> <span class="n">field</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">''</span><span class="p">,</span>
+                                       <span class="n">explicitRegionType</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="n">LAGRANGIAN</span><span class="p">,</span> <span class="n">field</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span><span class="p">,</span>
                                        <span class="n">distributionType</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="n">UNIFORM</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">ConcentratedRadiationToAmbient</span><span class="p">:</span>
-        <span class="sd">"""This method creates a ConcentratedRadiationToAmbient object.</span>
+        <span class="sd">&quot;&quot;&quot;This method creates a ConcentratedRadiationToAmbient object.</span>
 
 <span class="sd">        Notes</span>
 <span class="sd">        -----</span>
@@ -1048,7 +1049,7 @@
 <span class="sd">        Returns</span>
 <span class="sd">        -------</span>
 <span class="sd">            A ConcentratedRadiationToAmbient object.</span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">interactions</span><span class="p">[</span><span class="n">name</span><span class="p">]</span> <span class="o">=</span> <span class="n">interaction</span> <span class="o">=</span> <span class="n">ConcentratedRadiationToAmbient</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">createStepName</span><span class="p">,</span> <span class="n">region</span><span class="p">,</span>
                                                                                <span class="n">ambientTemperature</span><span class="p">,</span>
                                                                                <span class="n">ambientTemperatureAmp</span><span class="p">,</span> <span class="n">emissivity</span><span class="p">,</span>
@@ -1068,7 +1069,7 @@
                    <span class="n">surfaceFrictionAssignments</span><span class="p">:</span> <span class="n">SurfaceFrictionAssignment</span> <span class="o">=</span> <span class="n">SurfaceFrictionAssignment</span><span class="p">(),</span>
                    <span class="n">mainSecondaryAssignments</span><span class="p">:</span> <span class="n">MainSecondaryAssignment</span> <span class="o">=</span> <span class="n">MainSecondaryAssignment</span><span class="p">(),</span>
                    <span class="n">polarityAssignments</span><span class="p">:</span> <span class="n">PolarityAssignments</span> <span class="o">=</span> <span class="n">PolarityAssignments</span><span class="p">())</span> <span class="o">-&gt;</span> <span class="n">ContactExp</span><span class="p">:</span>
-        <span class="sd">"""This method creates a ContactExp object.</span>
+        <span class="sd">&quot;&quot;&quot;This method creates a ContactExp object.</span>
 
 <span class="sd">        Notes</span>
 <span class="sd">        -----</span>
@@ -1125,7 +1126,7 @@
 <span class="sd">        Returns</span>
 <span class="sd">        -------</span>
 <span class="sd">            A ContactExp object.</span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">interactions</span><span class="p">[</span><span class="n">name</span><span class="p">]</span> <span class="o">=</span> <span class="n">interaction</span> <span class="o">=</span> <span class="n">ContactExp</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">createStepName</span><span class="p">,</span> <span class="n">useAllstar</span><span class="p">,</span> <span class="n">globalSmoothing</span><span class="p">,</span>
                                                            <span class="n">includedPairs</span><span class="p">,</span> <span class="n">excludedPairs</span><span class="p">,</span> <span class="n">contactPropertyAssignments</span><span class="p">,</span>
                                                            <span class="n">surfaceThicknessAssignments</span><span class="p">,</span> <span class="n">surfaceOffsetAssignments</span><span class="p">,</span>
@@ -1135,7 +1136,7 @@
         <span class="k">return</span> <span class="n">interaction</span></div>
 
 <div class="viewcode-block" id="InteractionModel.ContactProperty"><a class="viewcode-back" href="../../../reference/mdb/model/interaction.html#abaqus.Interaction.InteractionModel.InteractionModel.ContactProperty">[docs]</a>    <span class="k">def</span> <span class="nf">ContactProperty</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">ContactProperty</span><span class="p">:</span>
-        <span class="sd">"""This method creates a ContactProperty object.</span>
+        <span class="sd">&quot;&quot;&quot;This method creates a ContactProperty object.</span>
 
 <span class="sd">        Notes</span>
 <span class="sd">        -----</span>
@@ -1153,7 +1154,7 @@
 <span class="sd">        Returns</span>
 <span class="sd">        -------</span>
 <span class="sd">            A ContactProperty object.</span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="n">interactionProperties</span> <span class="o">=</span> <span class="n">ContactProperty</span><span class="p">(</span><span class="n">name</span><span class="p">)</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">interactions</span><span class="p">[</span><span class="n">name</span><span class="p">]</span> <span class="o">=</span> <span class="n">interactionProperties</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">interactionProperties</span><span class="p">[</span><span class="n">name</span><span class="p">]</span> <span class="o">=</span> <span class="n">interactionProperties</span>
@@ -1174,7 +1175,7 @@
                    <span class="n">smoothingAssignments</span><span class="p">:</span> <span class="n">SmoothingAssignment</span> <span class="o">=</span> <span class="n">SmoothingAssignment</span><span class="p">(),</span>
                    <span class="n">slidingTransitionAssignments</span><span class="p">:</span> <span class="n">SlidingTransitionAssignment</span> <span class="o">=</span> <span class="n">SlidingTransitionAssignment</span><span class="p">(),</span>
                    <span class="n">slidingFormulationAssignments</span><span class="p">:</span> <span class="n">SlidingFormulationAssignment</span> <span class="o">=</span> <span class="n">SlidingFormulationAssignment</span><span class="p">())</span> <span class="o">-&gt;</span> <span class="n">ContactStd</span><span class="p">:</span>
-        <span class="sd">"""This method creates a ContactStd object.</span>
+        <span class="sd">&quot;&quot;&quot;This method creates a ContactStd object.</span>
 
 <span class="sd">        Notes</span>
 <span class="sd">        -----</span>
@@ -1240,7 +1241,7 @@
 <span class="sd">        Returns</span>
 <span class="sd">        -------</span>
 <span class="sd">            A ContactStd object.</span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">interactions</span><span class="p">[</span><span class="n">name</span><span class="p">]</span> <span class="o">=</span> <span class="n">interaction</span> <span class="o">=</span> <span class="n">ContactStd</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">createStepName</span><span class="p">,</span> <span class="n">useAllstar</span><span class="p">,</span> <span class="n">globalSmoothing</span><span class="p">,</span>
                                                            <span class="n">includedPairs</span><span class="p">,</span> <span class="n">excludedPairs</span><span class="p">,</span> <span class="n">contactPropertyAssignments</span><span class="p">,</span>
                                                            <span class="n">surfaceThicknessAssignments</span><span class="p">,</span> <span class="n">surfaceOffsetAssignments</span><span class="p">,</span>
@@ -1257,7 +1258,7 @@
                        <span class="n">lowestNodalDiameter</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="n">highestNodalDiameter</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span>
                        <span class="n">excitationNodalDiameter</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="n">adjustTie</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="n">ON</span><span class="p">,</span> <span class="n">positionTolerance</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span>
                        <span class="n">positionToleranceMethod</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="n">COMPUTED_TOLERANCE</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">CyclicSymmetry</span><span class="p">:</span>
-        <span class="sd">"""This method creates a CyclicSymmetry object.</span>
+        <span class="sd">&quot;&quot;&quot;This method creates a CyclicSymmetry object.</span>
 
 <span class="sd">        Notes</span>
 <span class="sd">        -----</span>
@@ -1321,7 +1322,7 @@
 <span class="sd">        Returns</span>
 <span class="sd">        -------</span>
 <span class="sd">            A CyclicSymmetry object.</span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">interactions</span><span class="p">[</span><span class="n">name</span><span class="p">]</span> <span class="o">=</span> <span class="n">interaction</span> <span class="o">=</span> <span class="n">CyclicSymmetry</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">createStepName</span><span class="p">,</span> <span class="n">main</span><span class="p">,</span> <span class="n">secondary</span><span class="p">,</span> <span class="n">repetitiveSectors</span><span class="p">,</span>
                                                                <span class="n">axisPoint1</span><span class="p">,</span> <span class="n">axisPoint2</span><span class="p">,</span> <span class="n">extractedNodalDiameter</span><span class="p">,</span>
                                                                <span class="n">lowestNodalDiameter</span><span class="p">,</span> <span class="n">highestNodalDiameter</span><span class="p">,</span>
@@ -1330,7 +1331,7 @@
         <span class="k">return</span> <span class="n">interaction</span></div>
 
 <div class="viewcode-block" id="InteractionModel.ElasticFoundation"><a class="viewcode-back" href="../../../reference/mdb/model/interaction.html#abaqus.Interaction.InteractionModel.InteractionModel.ElasticFoundation">[docs]</a>    <span class="k">def</span> <span class="nf">ElasticFoundation</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">createStepName</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">surface</span><span class="p">:</span> <span class="n">Region</span><span class="p">,</span> <span class="n">stiffness</span><span class="p">:</span> <span class="nb">float</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">ElasticFoundation</span><span class="p">:</span>
-        <span class="sd">"""This method creates an ElasticFoundation object.</span>
+        <span class="sd">&quot;&quot;&quot;This method creates an ElasticFoundation object.</span>
 
 <span class="sd">        Notes</span>
 <span class="sd">        -----</span>
@@ -1346,7 +1347,7 @@
 <span class="sd">            A String specifying the repository key.</span>
 <span class="sd">        createStepName</span>
 <span class="sd">            A String specifying the name of the step in which the ElasticFoundation object is</span>
-<span class="sd">            created. *createStepName* must be set to 'Initial'.</span>
+<span class="sd">            created. *createStepName* must be set to &#39;Initial&#39;.</span>
 <span class="sd">        surface</span>
 <span class="sd">            A Region object specifying the surface to which the foundation applies.</span>
 <span class="sd">        stiffness</span>
@@ -1355,14 +1356,14 @@
 <span class="sd">        Returns</span>
 <span class="sd">        -------</span>
 <span class="sd">            An ElasticFoundation object.</span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">interactions</span><span class="p">[</span><span class="n">name</span><span class="p">]</span> <span class="o">=</span> <span class="n">interaction</span> <span class="o">=</span> <span class="n">ElasticFoundation</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">createStepName</span><span class="p">,</span> <span class="n">surface</span><span class="p">,</span> <span class="n">stiffness</span><span class="p">)</span>
         <span class="k">return</span> <span class="n">interaction</span></div>
 
 <div class="viewcode-block" id="InteractionModel.ExpContactControl"><a class="viewcode-back" href="../../../reference/mdb/model/interaction.html#abaqus.Interaction.InteractionModel.InteractionModel.ExpContactControl">[docs]</a>    <span class="k">def</span> <span class="nf">ExpContactControl</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">globTrkChoice</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="n">DEFAULT</span><span class="p">,</span> <span class="n">globTrkInc</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
                           <span class="n">fastLocalTrk</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="n">ON</span><span class="p">,</span> <span class="n">scalePenalty</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span> <span class="n">warpCheckPeriod</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">20</span><span class="p">,</span>
                           <span class="n">warpCutoff</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mi">20</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">ExpContactControl</span><span class="p">:</span>
-        <span class="sd">"""This method creates an ExpContactControl object.</span>
+        <span class="sd">&quot;&quot;&quot;This method creates an ExpContactControl object.</span>
 
 <span class="sd">        Notes</span>
 <span class="sd">        -----</span>
@@ -1405,7 +1406,7 @@
 <span class="sd">        Raises</span>
 <span class="sd">        ------</span>
 <span class="sd">            RangeError.</span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">interactions</span><span class="p">[</span><span class="n">name</span><span class="p">]</span> <span class="o">=</span> <span class="n">interaction</span> <span class="o">=</span> <span class="n">ExpContactControl</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">globTrkChoice</span><span class="p">,</span> <span class="n">globTrkInc</span><span class="p">,</span> <span class="n">fastLocalTrk</span><span class="p">,</span>
                                                                   <span class="n">scalePenalty</span><span class="p">,</span> <span class="n">warpCheckPeriod</span><span class="p">,</span> <span class="n">warpCutoff</span><span class="p">)</span>
         <span class="k">return</span> <span class="n">interaction</span></div>
@@ -1415,7 +1416,7 @@
                           <span class="n">openingTolerance</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">overclosureTolerance</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
                           <span class="n">adjustNodalCoords</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="kc">True</span><span class="p">,</span> <span class="n">secondaryNodesetName</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
                           <span class="n">stepFraction</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mi">1</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">ExpInitialization</span><span class="p">:</span>
-        <span class="sd">"""This method creates an ExpInitialization object.</span>
+        <span class="sd">&quot;&quot;&quot;This method creates an ExpInitialization object.</span>
 
 <span class="sd">        Notes</span>
 <span class="sd">        -----</span>
@@ -1469,7 +1470,7 @@
 <span class="sd">        Raises</span>
 <span class="sd">        ------</span>
 <span class="sd">            RangeError.</span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">interactions</span><span class="p">[</span><span class="n">name</span><span class="p">]</span> <span class="o">=</span> <span class="n">interaction</span> <span class="o">=</span> <span class="n">ExpInitialization</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">overclosureType</span><span class="p">,</span> <span class="n">interferenceDistance</span><span class="p">,</span>
                                                                   <span class="n">clearanceDistance</span><span class="p">,</span> <span class="n">openingTolerance</span><span class="p">,</span>
                                                                   <span class="n">overclosureTolerance</span><span class="p">,</span> <span class="n">adjustNodalCoords</span><span class="p">,</span>
@@ -1477,10 +1478,10 @@
         <span class="k">return</span> <span class="n">interaction</span></div>
 
 <div class="viewcode-block" id="InteractionModel.FilmCondition"><a class="viewcode-back" href="../../../reference/mdb/model/interaction.html#abaqus.Interaction.InteractionModel.InteractionModel.FilmCondition">[docs]</a>    <span class="k">def</span> <span class="nf">FilmCondition</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">createStepName</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">surface</span><span class="p">:</span> <span class="n">Region</span><span class="p">,</span> <span class="n">definition</span><span class="p">:</span> <span class="n">SymbolicConstant</span><span class="p">,</span>
-                      <span class="n">interactionProperty</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">''</span><span class="p">,</span> <span class="n">sinkTemperature</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="n">sinkAmplitude</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">''</span><span class="p">,</span>
-                      <span class="n">filmCoeff</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="n">filmCoeffAmplitude</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">''</span><span class="p">,</span> <span class="n">field</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">''</span><span class="p">,</span>
-                      <span class="n">sinkFieldName</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">''</span><span class="p">,</span> <span class="n">sinkDistributionType</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="n">UNIFORM</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">FilmCondition</span><span class="p">:</span>
-        <span class="sd">"""This method creates a FilmCondition object.</span>
+                      <span class="n">interactionProperty</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">sinkTemperature</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="n">sinkAmplitude</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span><span class="p">,</span>
+                      <span class="n">filmCoeff</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="n">filmCoeffAmplitude</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">field</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span><span class="p">,</span>
+                      <span class="n">sinkFieldName</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">sinkDistributionType</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="n">UNIFORM</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">FilmCondition</span><span class="p">:</span>
+        <span class="sd">&quot;&quot;&quot;This method creates a FilmCondition object.</span>
 
 <span class="sd">        Notes</span>
 <span class="sd">        -----</span>
@@ -1542,7 +1543,7 @@
 <span class="sd">        Returns</span>
 <span class="sd">        -------</span>
 <span class="sd">            A FilmCondition object.</span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">interactions</span><span class="p">[</span><span class="n">name</span><span class="p">]</span> <span class="o">=</span> <span class="n">interaction</span> <span class="o">=</span> <span class="n">FilmCondition</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">createStepName</span><span class="p">,</span> <span class="n">surface</span><span class="p">,</span> <span class="n">definition</span><span class="p">,</span>
                                                               <span class="n">interactionProperty</span><span class="p">,</span> <span class="n">sinkTemperature</span><span class="p">,</span> <span class="n">sinkAmplitude</span><span class="p">,</span>
                                                               <span class="n">filmCoeff</span><span class="p">,</span> <span class="n">filmCoeffAmplitude</span><span class="p">,</span> <span class="n">field</span><span class="p">,</span> <span class="n">sinkFieldName</span><span class="p">,</span>
@@ -1551,7 +1552,7 @@
 
 <div class="viewcode-block" id="InteractionModel.FilmConditionProp"><a class="viewcode-back" href="../../../reference/mdb/model/interaction.html#abaqus.Interaction.InteractionModel.InteractionModel.FilmConditionProp">[docs]</a>    <span class="k">def</span> <span class="nf">FilmConditionProp</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">temperatureDependency</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="n">OFF</span><span class="p">,</span> <span class="n">dependencies</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span>
                           <span class="nb">property</span><span class="p">:</span> <span class="nb">tuple</span> <span class="o">=</span> <span class="p">())</span> <span class="o">-&gt;</span> <span class="n">FilmConditionProp</span><span class="p">:</span>
-        <span class="sd">"""This method creates a FilmConditionProp object.</span>
+        <span class="sd">&quot;&quot;&quot;This method creates a FilmConditionProp object.</span>
 
 <span class="sd">        Notes</span>
 <span class="sd">        -----</span>
@@ -1580,14 +1581,14 @@
 <span class="sd">        Returns</span>
 <span class="sd">        -------</span>
 <span class="sd">            A FilmConditionProp object.</span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">interactions</span><span class="p">[</span><span class="n">name</span><span class="p">]</span> <span class="o">=</span> <span class="n">interaction</span> <span class="o">=</span> <span class="n">FilmConditionProp</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">temperatureDependency</span><span class="p">,</span> <span class="n">dependencies</span><span class="p">,</span> <span class="nb">property</span><span class="p">)</span>
         <span class="k">return</span> <span class="n">interaction</span></div>
 
 <div class="viewcode-block" id="InteractionModel.FluidCavity"><a class="viewcode-back" href="../../../reference/mdb/model/interaction.html#abaqus.Interaction.InteractionModel.InteractionModel.FluidCavity">[docs]</a>    <span class="k">def</span> <span class="nf">FluidCavity</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">createStepName</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">cavityPoint</span><span class="p">:</span> <span class="n">Region</span><span class="p">,</span> <span class="n">cavitySurface</span><span class="p">:</span> <span class="n">Region</span><span class="p">,</span>
                     <span class="n">interactionProperty</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">ambientPressure</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="n">thickness</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span>
                     <span class="n">useAdiabatic</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="n">OFF</span><span class="p">,</span> <span class="n">checkNormals</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="n">ON</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">FluidCavity</span><span class="p">:</span>
-        <span class="sd">"""This method creates an FluidCavity object.</span>
+        <span class="sd">&quot;&quot;&quot;This method creates an FluidCavity object.</span>
 
 <span class="sd">        Notes</span>
 <span class="sd">        -----</span>
@@ -1625,7 +1626,7 @@
 <span class="sd">        Returns</span>
 <span class="sd">        -------</span>
 <span class="sd">            A FluidCavity object.</span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">interactions</span><span class="p">[</span><span class="n">name</span><span class="p">]</span> <span class="o">=</span> <span class="n">interaction</span> <span class="o">=</span> <span class="n">FluidCavity</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">createStepName</span><span class="p">,</span> <span class="n">cavityPoint</span><span class="p">,</span> <span class="n">cavitySurface</span><span class="p">,</span>
                                                             <span class="n">interactionProperty</span><span class="p">,</span> <span class="n">ambientPressure</span><span class="p">,</span> <span class="n">thickness</span><span class="p">,</span>
                                                             <span class="n">useAdiabatic</span><span class="p">,</span> <span class="n">checkNormals</span><span class="p">)</span>
@@ -1640,7 +1641,7 @@
                             <span class="n">useCapacity</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="n">OFF</span><span class="p">,</span> <span class="n">capacityType</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="n">POLYNOMIAL</span><span class="p">,</span>
                             <span class="n">capacityTempDep</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="n">OFF</span><span class="p">,</span> <span class="n">capacityDependencies</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span>
                             <span class="n">capacityTable</span><span class="p">:</span> <span class="nb">tuple</span> <span class="o">=</span> <span class="p">())</span> <span class="o">-&gt;</span> <span class="n">FluidCavityProperty</span><span class="p">:</span>
-        <span class="sd">"""This method creates a FluidCavityProperty object.</span>
+        <span class="sd">&quot;&quot;&quot;This method creates a FluidCavityProperty object.</span>
 
 <span class="sd">        Notes</span>
 <span class="sd">        -----</span>
@@ -1746,7 +1747,7 @@
 <span class="sd">        Returns</span>
 <span class="sd">        -------</span>
 <span class="sd">            A FluidCavityProperty object.</span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">interactions</span><span class="p">[</span><span class="n">name</span><span class="p">]</span> <span class="o">=</span> <span class="n">interaction</span> <span class="o">=</span> <span class="n">FluidCavityProperty</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">definition</span><span class="p">,</span> <span class="n">fluidDensity</span><span class="p">,</span> <span class="n">molecularWeight</span><span class="p">,</span>
                                                                     <span class="n">useExpansion</span><span class="p">,</span> <span class="n">expansionTempDep</span><span class="p">,</span>
                                                                     <span class="n">expansionDependencies</span><span class="p">,</span> <span class="n">referenceTemperature</span><span class="p">,</span>
@@ -1757,9 +1758,9 @@
         <span class="k">return</span> <span class="n">interaction</span></div>
 
 <div class="viewcode-block" id="InteractionModel.FluidExchange"><a class="viewcode-back" href="../../../reference/mdb/model/interaction.html#abaqus.Interaction.InteractionModel.InteractionModel.FluidExchange">[docs]</a>    <span class="k">def</span> <span class="nf">FluidExchange</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">createStepName</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">firstCavity</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">interactionProperty</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
-                      <span class="n">definition</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="n">TO_ENVIRONMENT</span><span class="p">,</span> <span class="n">secondCavity</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">''</span><span class="p">,</span>
+                      <span class="n">definition</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="n">TO_ENVIRONMENT</span><span class="p">,</span> <span class="n">secondCavity</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span><span class="p">,</span>
                       <span class="n">exchangeArea</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mi">1</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">FluidExchange</span><span class="p">:</span>
-        <span class="sd">"""This method creates an FluidExchange object.</span>
+        <span class="sd">&quot;&quot;&quot;This method creates an FluidExchange object.</span>
 
 <span class="sd">        Notes</span>
 <span class="sd">        -----</span>
@@ -1792,7 +1793,7 @@
 <span class="sd">        Returns</span>
 <span class="sd">        -------</span>
 <span class="sd">            A FluidExchange object.</span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">interactions</span><span class="p">[</span><span class="n">name</span><span class="p">]</span> <span class="o">=</span> <span class="n">interaction</span> <span class="o">=</span> <span class="n">FluidExchange</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">createStepName</span><span class="p">,</span> <span class="n">firstCavity</span><span class="p">,</span> <span class="n">interactionProperty</span><span class="p">,</span>
                                                               <span class="n">definition</span><span class="p">,</span> <span class="n">secondCavity</span><span class="p">,</span> <span class="n">exchangeArea</span><span class="p">)</span>
         <span class="k">return</span> <span class="n">interaction</span></div>
@@ -1800,7 +1801,7 @@
 <div class="viewcode-block" id="InteractionModel.FluidExchangeProperty"><a class="viewcode-back" href="../../../reference/mdb/model/interaction.html#abaqus.Interaction.InteractionModel.InteractionModel.FluidExchangeProperty">[docs]</a>    <span class="k">def</span> <span class="nf">FluidExchangeProperty</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">dataTable</span><span class="p">:</span> <span class="nb">tuple</span><span class="p">,</span> <span class="n">definition</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="n">BULK_VISCOSITY</span><span class="p">,</span>
                               <span class="n">pressureDependency</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="n">OFF</span><span class="p">,</span> <span class="n">temperatureDependency</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="n">OFF</span><span class="p">,</span>
                               <span class="n">fieldDependencies</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">0</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">FluidExchangeProperty</span><span class="p">:</span>
-        <span class="sd">"""This method creates a FluidExchangeProperty object.</span>
+        <span class="sd">&quot;&quot;&quot;This method creates a FluidExchangeProperty object.</span>
 
 <span class="sd">        Notes</span>
 <span class="sd">        -----</span>
@@ -1875,14 +1876,14 @@
 <span class="sd">        Returns</span>
 <span class="sd">        -------</span>
 <span class="sd">            A FluidExchangeProperty object.</span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">interactions</span><span class="p">[</span><span class="n">name</span><span class="p">]</span> <span class="o">=</span> <span class="n">interaction</span> <span class="o">=</span> <span class="n">FluidExchangeProperty</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">dataTable</span><span class="p">,</span> <span class="n">definition</span><span class="p">,</span> <span class="n">pressureDependency</span><span class="p">,</span>
                                                                       <span class="n">temperatureDependency</span><span class="p">,</span> <span class="n">fieldDependencies</span><span class="p">)</span>
         <span class="k">return</span> <span class="n">interaction</span></div>
 
 <div class="viewcode-block" id="InteractionModel.FluidInflator"><a class="viewcode-back" href="../../../reference/mdb/model/interaction.html#abaqus.Interaction.InteractionModel.InteractionModel.FluidInflator">[docs]</a>    <span class="k">def</span> <span class="nf">FluidInflator</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">createStepName</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">cavity</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">interactionProperty</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
-                      <span class="n">inflationTimeAmplitude</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">''</span><span class="p">,</span> <span class="n">massFlowAmplitude</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">''</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">FluidInflator</span><span class="p">:</span>
-        <span class="sd">"""This method creates a FluidInflator object.</span>
+                      <span class="n">inflationTimeAmplitude</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">massFlowAmplitude</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">FluidInflator</span><span class="p">:</span>
+        <span class="sd">&quot;&quot;&quot;This method creates a FluidInflator object.</span>
 
 <span class="sd">        Notes</span>
 <span class="sd">        -----</span>
@@ -1912,16 +1913,16 @@
 <span class="sd">        Returns</span>
 <span class="sd">        -------</span>
 <span class="sd">            A FluidInflator object.</span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">interactions</span><span class="p">[</span><span class="n">name</span><span class="p">]</span> <span class="o">=</span> <span class="n">interaction</span> <span class="o">=</span> <span class="n">FluidInflator</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">createStepName</span><span class="p">,</span> <span class="n">cavity</span><span class="p">,</span> <span class="n">interactionProperty</span><span class="p">,</span>
                                                               <span class="n">inflationTimeAmplitude</span><span class="p">,</span> <span class="n">massFlowAmplitude</span><span class="p">)</span>
         <span class="k">return</span> <span class="n">interaction</span></div>
 
 <div class="viewcode-block" id="InteractionModel.FluidInflatorProperty"><a class="viewcode-back" href="../../../reference/mdb/model/interaction.html#abaqus.Interaction.InteractionModel.InteractionModel.FluidInflatorProperty">[docs]</a>    <span class="k">def</span> <span class="nf">FluidInflatorProperty</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">definition</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">effectiveArea</span><span class="p">:</span> <span class="nb">float</span><span class="p">,</span> <span class="n">tankVolume</span><span class="p">:</span> <span class="nb">float</span><span class="p">,</span>
                               <span class="n">dischargeCoefficient</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">dataTable</span><span class="p">:</span> <span class="nb">tuple</span> <span class="o">=</span> <span class="p">(),</span> <span class="n">numFluids</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
-                              <span class="n">mixtureType</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">''</span><span class="p">,</span> <span class="n">inflationTime</span><span class="p">:</span> <span class="nb">tuple</span> <span class="o">=</span> <span class="p">(),</span> <span class="n">fluidbehaviorName</span><span class="p">:</span> <span class="nb">tuple</span> <span class="o">=</span> <span class="p">(),</span>
+                              <span class="n">mixtureType</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">inflationTime</span><span class="p">:</span> <span class="nb">tuple</span> <span class="o">=</span> <span class="p">(),</span> <span class="n">fluidbehaviorName</span><span class="p">:</span> <span class="nb">tuple</span> <span class="o">=</span> <span class="p">(),</span>
                               <span class="n">massFraction</span><span class="p">:</span> <span class="nb">tuple</span> <span class="o">=</span> <span class="p">())</span> <span class="o">-&gt;</span> <span class="n">FluidInflatorProperty</span><span class="p">:</span>
-        <span class="sd">"""This method creates a FluidInflatorProperty object.</span>
+        <span class="sd">&quot;&quot;&quot;This method creates a FluidInflatorProperty object.</span>
 
 <span class="sd">        Notes</span>
 <span class="sd">        -----</span>
@@ -1949,7 +1950,7 @@
 <span class="sd">            A Float specifying the discharge coefficient. This argument is applicable only if</span>
 <span class="sd">            *definition*=DUAL PRESSURE or *definition*=PRESSURE AND MASS.</span>
 <span class="sd">        dataTable</span>
-<span class="sd">            A sequence of sequences of Floats specifying the items described in the "Table data"</span>
+<span class="sd">            A sequence of sequences of Floats specifying the items described in the &quot;Table data&quot;</span>
 <span class="sd">            section below.</span>
 <span class="sd">        numFluids</span>
 <span class="sd">            An Int specifying the number of gas species used for this inflator.</span>
@@ -1968,7 +1969,7 @@
 <span class="sd">        Returns</span>
 <span class="sd">        -------</span>
 <span class="sd">            A FluidInflatorProperty object.</span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">interactions</span><span class="p">[</span><span class="n">name</span><span class="p">]</span> <span class="o">=</span> <span class="n">interaction</span> <span class="o">=</span> <span class="n">FluidInflatorProperty</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">definition</span><span class="p">,</span> <span class="n">effectiveArea</span><span class="p">,</span> <span class="n">tankVolume</span><span class="p">,</span>
                                                                       <span class="n">dischargeCoefficient</span><span class="p">,</span> <span class="n">dataTable</span><span class="p">,</span> <span class="n">numFluids</span><span class="p">,</span>
                                                                       <span class="n">mixtureType</span><span class="p">,</span> <span class="n">inflationTime</span><span class="p">,</span> <span class="n">fluidbehaviorName</span><span class="p">,</span>
@@ -1977,10 +1978,10 @@
 
 <div class="viewcode-block" id="InteractionModel.IncidentWave"><a class="viewcode-back" href="../../../reference/mdb/model/interaction.html#abaqus.Interaction.InteractionModel.InteractionModel.IncidentWave">[docs]</a>    <span class="k">def</span> <span class="nf">IncidentWave</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">createStepName</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">sourcePoint</span><span class="p">:</span> <span class="n">Region</span><span class="p">,</span> <span class="n">standoffPoint</span><span class="p">:</span> <span class="n">Region</span><span class="p">,</span>
                      <span class="n">surface</span><span class="p">:</span> <span class="n">Region</span><span class="p">,</span> <span class="n">interactionProperty</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">definition</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="n">PRESSURE</span><span class="p">,</span>
-                     <span class="n">amplitude</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">''</span><span class="p">,</span> <span class="n">imaginaryAmplitude</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">''</span><span class="p">,</span> <span class="n">surfaceNormal</span><span class="p">:</span> <span class="nb">tuple</span> <span class="o">=</span> <span class="p">(),</span>
+                     <span class="n">amplitude</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">imaginaryAmplitude</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">surfaceNormal</span><span class="p">:</span> <span class="nb">tuple</span> <span class="o">=</span> <span class="p">(),</span>
                      <span class="n">initialDepth</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">referenceMagnitude</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
                      <span class="n">detonationTime</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">magnitudeFactor</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mi">1</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">IncidentWave</span><span class="p">:</span>
-        <span class="sd">"""This method creates an IncidentWave object.</span>
+        <span class="sd">&quot;&quot;&quot;This method creates an IncidentWave object.</span>
 
 <span class="sd">        Notes</span>
 <span class="sd">        -----</span>
@@ -2043,7 +2044,7 @@
 <span class="sd">        Returns</span>
 <span class="sd">        -------</span>
 <span class="sd">            An IncidentWave object.</span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">interactions</span><span class="p">[</span><span class="n">name</span><span class="p">]</span> <span class="o">=</span> <span class="n">interaction</span> <span class="o">=</span> <span class="n">IncidentWave</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">createStepName</span><span class="p">,</span> <span class="n">sourcePoint</span><span class="p">,</span> <span class="n">standoffPoint</span><span class="p">,</span> <span class="n">surface</span><span class="p">,</span>
                                                              <span class="n">interactionProperty</span><span class="p">,</span> <span class="n">definition</span><span class="p">,</span> <span class="n">amplitude</span><span class="p">,</span>
                                                              <span class="n">imaginaryAmplitude</span><span class="p">,</span> <span class="n">surfaceNormal</span><span class="p">,</span> <span class="n">initialDepth</span><span class="p">,</span>
@@ -2062,7 +2063,7 @@
                              <span class="n">genDecayB</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="n">genDecayC</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="n">seedNumber</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
                              <span class="n">massTNT</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">massFactor</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span> <span class="n">lengthFactor</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span>
                              <span class="n">timeFactor</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span> <span class="n">pressureFactor</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mi">1</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">IncidentWaveProperty</span><span class="p">:</span>
-        <span class="sd">"""This method creates an IncidentWaveProperty object.</span>
+        <span class="sd">&quot;&quot;&quot;This method creates an IncidentWaveProperty object.</span>
 
 <span class="sd">        Notes</span>
 <span class="sd">        -----</span>
@@ -2195,7 +2196,7 @@
 <span class="sd">        Returns</span>
 <span class="sd">        -------</span>
 <span class="sd">            An IncidentWaveProperty object.</span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">interactions</span><span class="p">[</span><span class="n">name</span><span class="p">]</span> <span class="o">=</span> <span class="n">interaction</span> <span class="o">=</span> <span class="n">IncidentWaveProperty</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">definition</span><span class="p">,</span> <span class="n">propagationModel</span><span class="p">,</span> <span class="n">soundSpeed</span><span class="p">,</span>
                                                                      <span class="n">fluidDensity</span><span class="p">,</span> <span class="n">specificHeatRatio</span><span class="p">,</span> <span class="n">gravity</span><span class="p">,</span>
                                                                      <span class="n">atmosphericPressure</span><span class="p">,</span> <span class="n">dragCoefficient</span><span class="p">,</span> <span class="n">dragExponent</span><span class="p">,</span>
@@ -2211,7 +2212,7 @@
 <div class="viewcode-block" id="InteractionModel.ModelChange"><a class="viewcode-back" href="../../../reference/mdb/model/interaction.html#abaqus.Interaction.InteractionModel.InteractionModel.ModelChange">[docs]</a>    <span class="k">def</span> <span class="nf">ModelChange</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">createStepName</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">isRestart</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="n">OFF</span><span class="p">,</span>
                     <span class="n">regionType</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="n">GEOMETRY</span><span class="p">,</span> <span class="n">region</span><span class="p">:</span> <span class="n">Region</span> <span class="o">=</span> <span class="n">Region</span><span class="p">(),</span>
                     <span class="n">activeInStep</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="n">OFF</span><span class="p">,</span> <span class="n">includeStrain</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="n">OFF</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">ModelChange</span><span class="p">:</span>
-        <span class="sd">"""This method creates a ModelChange object.</span>
+        <span class="sd">&quot;&quot;&quot;This method creates a ModelChange object.</span>
 
 <span class="sd">        Notes</span>
 <span class="sd">        -----</span>
@@ -2249,7 +2250,7 @@
 <span class="sd">        Returns</span>
 <span class="sd">        -------</span>
 <span class="sd">            A ModelChange object.</span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">interactions</span><span class="p">[</span><span class="n">name</span><span class="p">]</span> <span class="o">=</span> <span class="n">interaction</span> <span class="o">=</span> <span class="n">ModelChange</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">createStepName</span><span class="p">,</span> <span class="n">isRestart</span><span class="p">,</span> <span class="n">regionType</span><span class="p">,</span> <span class="n">region</span><span class="p">,</span>
                                                             <span class="n">activeInStep</span><span class="p">,</span> <span class="n">includeStrain</span><span class="p">)</span>
         <span class="k">return</span> <span class="n">interaction</span></div>
@@ -2257,7 +2258,7 @@
 <div class="viewcode-block" id="InteractionModel.PressurePenetration"><a class="viewcode-back" href="../../../reference/mdb/model/interaction.html#abaqus.Interaction.InteractionModel.InteractionModel.PressurePenetration">[docs]</a>    <span class="k">def</span> <span class="nf">PressurePenetration</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">createStepName</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">contactInteraction</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">mainPoints</span><span class="p">:</span> <span class="n">RegionArray</span><span class="p">,</span>
                             <span class="n">secondaryPoints</span><span class="p">:</span> <span class="n">RegionArray</span><span class="p">,</span> <span class="n">penetrationPressure</span><span class="p">:</span> <span class="nb">float</span><span class="p">,</span> <span class="n">criticalPressure</span><span class="p">:</span> <span class="nb">float</span><span class="p">,</span>
                             <span class="n">amplitude</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="n">UNSET</span><span class="p">,</span> <span class="n">penetrationTime</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mi">0</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">PressurePenetration</span><span class="p">:</span>
-        <span class="sd">"""This method creates a PressurePenetration object.</span>
+        <span class="sd">&quot;&quot;&quot;This method creates a PressurePenetration object.</span>
 
 <span class="sd">        Notes</span>
 <span class="sd">        -----</span>
@@ -2300,16 +2301,16 @@
 <span class="sd">        Returns</span>
 <span class="sd">        -------</span>
 <span class="sd">            A PressurePenetration object.</span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">interactions</span><span class="p">[</span><span class="n">name</span><span class="p">]</span> <span class="o">=</span> <span class="n">interaction</span> <span class="o">=</span> <span class="n">PressurePenetration</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">createStepName</span><span class="p">,</span> <span class="n">contactInteraction</span><span class="p">,</span>
                                                                     <span class="n">mainPoints</span><span class="p">,</span> <span class="n">secondaryPoints</span><span class="p">,</span> <span class="n">penetrationPressure</span><span class="p">,</span>
                                                                     <span class="n">criticalPressure</span><span class="p">,</span> <span class="n">amplitude</span><span class="p">,</span> <span class="n">penetrationTime</span><span class="p">)</span>
         <span class="k">return</span> <span class="n">interaction</span></div>
 
-<div class="viewcode-block" id="InteractionModel.RadiationToAmbient"><a class="viewcode-back" href="../../../reference/mdb/model/interaction.html#abaqus.Interaction.InteractionModel.InteractionModel.RadiationToAmbient">[docs]</a>    <span class="k">def</span> <span class="nf">RadiationToAmbient</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">createStepName</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">surface</span><span class="p">:</span> <span class="n">Region</span><span class="p">,</span> <span class="n">emissivity</span><span class="p">:</span> <span class="nb">float</span><span class="p">,</span> <span class="n">field</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">''</span><span class="p">,</span>
+<div class="viewcode-block" id="InteractionModel.RadiationToAmbient"><a class="viewcode-back" href="../../../reference/mdb/model/interaction.html#abaqus.Interaction.InteractionModel.InteractionModel.RadiationToAmbient">[docs]</a>    <span class="k">def</span> <span class="nf">RadiationToAmbient</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">createStepName</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">surface</span><span class="p">:</span> <span class="n">Region</span><span class="p">,</span> <span class="n">emissivity</span><span class="p">:</span> <span class="nb">float</span><span class="p">,</span> <span class="n">field</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span><span class="p">,</span>
                            <span class="n">distributionType</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="n">UNIFORM</span><span class="p">,</span> <span class="n">radiationType</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="n">AMBIENT</span><span class="p">,</span>
-                           <span class="n">ambientTemperature</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="n">ambientTemperatureAmp</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">''</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">RadiationToAmbient</span><span class="p">:</span>
-        <span class="sd">"""This method creates a RadiationToAmbient object.</span>
+                           <span class="n">ambientTemperature</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="n">ambientTemperatureAmp</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">RadiationToAmbient</span><span class="p">:</span>
+        <span class="sd">&quot;&quot;&quot;This method creates a RadiationToAmbient object.</span>
 
 <span class="sd">        Notes</span>
 <span class="sd">        -----</span>
@@ -2356,15 +2357,15 @@
 <span class="sd">        Returns</span>
 <span class="sd">        -------</span>
 <span class="sd">            A RadiationToAmbient object.</span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">interactions</span><span class="p">[</span><span class="n">name</span><span class="p">]</span> <span class="o">=</span> <span class="n">interaction</span> <span class="o">=</span> <span class="n">RadiationToAmbient</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">createStepName</span><span class="p">,</span> <span class="n">surface</span><span class="p">,</span> <span class="n">emissivity</span><span class="p">,</span> <span class="n">field</span><span class="p">,</span>
                                                                    <span class="n">distributionType</span><span class="p">,</span> <span class="n">radiationType</span><span class="p">,</span> <span class="n">ambientTemperature</span><span class="p">,</span>
                                                                    <span class="n">ambientTemperatureAmp</span><span class="p">)</span>
         <span class="k">return</span> <span class="n">interaction</span></div>
 
 <div class="viewcode-block" id="InteractionModel.SelfContactExp"><a class="viewcode-back" href="../../../reference/mdb/model/interaction.html#abaqus.Interaction.InteractionModel.InteractionModel.SelfContactExp">[docs]</a>    <span class="k">def</span> <span class="nf">SelfContactExp</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">createStepName</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">surface</span><span class="p">:</span> <span class="n">Region</span><span class="p">,</span> <span class="n">interactionProperty</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
-                       <span class="n">mechanicalConstraint</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="n">KINEMATIC</span><span class="p">,</span> <span class="n">contactControls</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">''</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">SelfContactExp</span><span class="p">:</span>
-        <span class="sd">"""This method creates a SelfContactExp object.</span>
+                       <span class="n">mechanicalConstraint</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="n">KINEMATIC</span><span class="p">,</span> <span class="n">contactControls</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">SelfContactExp</span><span class="p">:</span>
+        <span class="sd">&quot;&quot;&quot;This method creates a SelfContactExp object.</span>
 
 <span class="sd">        Notes</span>
 <span class="sd">        -----</span>
@@ -2396,15 +2397,15 @@
 <span class="sd">        Returns</span>
 <span class="sd">        -------</span>
 <span class="sd">            A SelfContactExp object.</span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">interactions</span><span class="p">[</span><span class="n">name</span><span class="p">]</span> <span class="o">=</span> <span class="n">interaction</span> <span class="o">=</span> <span class="n">SelfContactExp</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">createStepName</span><span class="p">,</span> <span class="n">surface</span><span class="p">,</span> <span class="n">interactionProperty</span><span class="p">,</span>
                                                                <span class="n">mechanicalConstraint</span><span class="p">,</span> <span class="n">contactControls</span><span class="p">)</span>
         <span class="k">return</span> <span class="n">interaction</span></div>
 
 <div class="viewcode-block" id="InteractionModel.SelfContactStd"><a class="viewcode-back" href="../../../reference/mdb/model/interaction.html#abaqus.Interaction.InteractionModel.InteractionModel.SelfContactStd">[docs]</a>    <span class="k">def</span> <span class="nf">SelfContactStd</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">createStepName</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">surface</span><span class="p">:</span> <span class="n">Region</span><span class="p">,</span> <span class="n">interactionProperty</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
                        <span class="n">enforcement</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="n">SURFACE_TO_SURFACE</span><span class="p">,</span> <span class="n">thickness</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="n">ON</span><span class="p">,</span>
-                       <span class="n">smooth</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="n">contactControls</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">''</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">SelfContactStd</span><span class="p">:</span>
-        <span class="sd">"""This method creates a SelfContactStd object.</span>
+                       <span class="n">smooth</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="n">contactControls</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">SelfContactStd</span><span class="p">:</span>
+        <span class="sd">&quot;&quot;&quot;This method creates a SelfContactStd object.</span>
 
 <span class="sd">        Notes</span>
 <span class="sd">        -----</span>
@@ -2443,7 +2444,7 @@
 <span class="sd">        Returns</span>
 <span class="sd">        -------</span>
 <span class="sd">            A SelfContactStd object.</span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">interactions</span><span class="p">[</span><span class="n">name</span><span class="p">]</span> <span class="o">=</span> <span class="n">interaction</span> <span class="o">=</span> <span class="n">SelfContactStd</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">createStepName</span><span class="p">,</span> <span class="n">surface</span><span class="p">,</span> <span class="n">interactionProperty</span><span class="p">,</span>
                                                                <span class="n">enforcement</span><span class="p">,</span> <span class="n">thickness</span><span class="p">,</span> <span class="n">smooth</span><span class="p">,</span> <span class="n">contactControls</span><span class="p">)</span>
         <span class="k">return</span> <span class="n">interaction</span></div>
@@ -2457,7 +2458,7 @@
                           <span class="n">tangFraction</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span> <span class="n">eosFraction</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span>
                           <span class="n">zeroDampingChoice</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="n">COMPUTE</span><span class="p">,</span> <span class="n">zeroDamping</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
                           <span class="n">enforceWithLagrangeMultipliers</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="n">DEFAULT</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">StdContactControl</span><span class="p">:</span>
-        <span class="sd">"""This method creates an StdContactControl object.</span>
+        <span class="sd">&quot;&quot;&quot;This method creates an StdContactControl object.</span>
 
 <span class="sd">        Notes</span>
 <span class="sd">        -----</span>
@@ -2558,7 +2559,7 @@
 <span class="sd">        Raises</span>
 <span class="sd">        ------</span>
 <span class="sd">            RangeError.</span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">interactions</span><span class="p">[</span><span class="n">name</span><span class="p">]</span> <span class="o">=</span> <span class="n">interaction</span> <span class="o">=</span> <span class="n">StdContactControl</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">stiffnessScaleFactor</span><span class="p">,</span> <span class="n">penetrationTolChoice</span><span class="p">,</span>
                                                                   <span class="n">relativePenetrationTolerance</span><span class="p">,</span>
                                                                   <span class="n">absolutePenetrationTolerance</span><span class="p">,</span> <span class="n">frictionOnset</span><span class="p">,</span>
@@ -2571,7 +2572,7 @@
 <div class="viewcode-block" id="InteractionModel.StdInitialization"><a class="viewcode-back" href="../../../reference/mdb/model/interaction.html#abaqus.Interaction.InteractionModel.InteractionModel.StdInitialization">[docs]</a>    <span class="k">def</span> <span class="nf">StdInitialization</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">overclosureType</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="n">ADJUST</span><span class="p">,</span>
                           <span class="n">interferenceDistance</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">clearanceDistance</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
                           <span class="n">openingTolerance</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">overclosureTolerance</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="kc">None</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">StdInitialization</span><span class="p">:</span>
-        <span class="sd">"""This method creates a StdInitialization object.</span>
+        <span class="sd">&quot;&quot;&quot;This method creates a StdInitialization object.</span>
 
 <span class="sd">        Notes</span>
 <span class="sd">        -----</span>
@@ -2611,16 +2612,16 @@
 <span class="sd">        Raises</span>
 <span class="sd">        ------</span>
 <span class="sd">            RangeError.</span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">interactions</span><span class="p">[</span><span class="n">name</span><span class="p">]</span> <span class="o">=</span> <span class="n">interaction</span> <span class="o">=</span> <span class="n">StdInitialization</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">overclosureType</span><span class="p">,</span> <span class="n">interferenceDistance</span><span class="p">,</span>
                                                                   <span class="n">clearanceDistance</span><span class="p">,</span> <span class="n">openingTolerance</span><span class="p">,</span>
                                                                   <span class="n">overclosureTolerance</span><span class="p">)</span>
         <span class="k">return</span> <span class="n">interaction</span></div>
 
 <div class="viewcode-block" id="InteractionModel.StdStabilization"><a class="viewcode-back" href="../../../reference/mdb/model/interaction.html#abaqus.Interaction.InteractionModel.InteractionModel.StdStabilization">[docs]</a>    <span class="k">def</span> <span class="nf">StdStabilization</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">zeroDistance</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">reductionFactor</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span>
-                         <span class="n">scaleFactor</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span> <span class="n">tangentialFactor</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="n">amplitude</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">''</span><span class="p">,</span>
+                         <span class="n">scaleFactor</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span> <span class="n">tangentialFactor</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="n">amplitude</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span><span class="p">,</span>
                          <span class="n">reset</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="n">OFF</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">StdStabilization</span><span class="p">:</span>
-        <span class="sd">"""This method creates a StdStabilization object.</span>
+        <span class="sd">&quot;&quot;&quot;This method creates a StdStabilization object.</span>
 
 <span class="sd">        Notes</span>
 <span class="sd">        -----</span>
@@ -2661,7 +2662,7 @@
 <span class="sd">        Raises</span>
 <span class="sd">        ------</span>
 <span class="sd">            RangeError.</span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">interactions</span><span class="p">[</span><span class="n">name</span><span class="p">]</span> <span class="o">=</span> <span class="n">interaction</span> <span class="o">=</span> <span class="n">StdStabilization</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">zeroDistance</span><span class="p">,</span> <span class="n">reductionFactor</span><span class="p">,</span> <span class="n">scaleFactor</span><span class="p">,</span>
                                                                  <span class="n">tangentialFactor</span><span class="p">,</span> <span class="n">amplitude</span><span class="p">,</span> <span class="n">reset</span><span class="p">)</span>
         <span class="k">return</span> <span class="n">interaction</span></div>
@@ -2669,7 +2670,7 @@
 <div class="viewcode-block" id="InteractionModel.StdXplCosimulation"><a class="viewcode-back" href="../../../reference/mdb/model/interaction.html#abaqus.Interaction.InteractionModel.InteractionModel.StdXplCosimulation">[docs]</a>    <span class="k">def</span> <span class="nf">StdXplCosimulation</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">createStepName</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">region</span><span class="p">:</span> <span class="n">Region</span><span class="p">,</span>
                            <span class="n">incrementation</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="n">ALLOW_SUBCYCLING</span><span class="p">,</span> <span class="n">stepSize</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span>
                            <span class="n">stepSizeDefinition</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="n">DEFAULT</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">StdXplCosimulation</span><span class="p">:</span>
-        <span class="sd">"""This method creates a StdXplCosimulation object.</span>
+        <span class="sd">&quot;&quot;&quot;This method creates a StdXplCosimulation object.</span>
 
 <span class="sd">        Notes</span>
 <span class="sd">        -----</span>
@@ -2705,7 +2706,7 @@
 <span class="sd">        Returns</span>
 <span class="sd">        -------</span>
 <span class="sd">            A StdXplCosimulation object.</span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">interactions</span><span class="p">[</span><span class="n">name</span><span class="p">]</span> <span class="o">=</span> <span class="n">interaction</span> <span class="o">=</span> <span class="n">StdXplCosimulation</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">createStepName</span><span class="p">,</span> <span class="n">region</span><span class="p">,</span> <span class="n">incrementation</span><span class="p">,</span>
                                                                    <span class="n">stepSize</span><span class="p">,</span> <span class="n">stepSizeDefinition</span><span class="p">)</span>
         <span class="k">return</span> <span class="n">interaction</span></div>
@@ -2714,14 +2715,14 @@
                                    <span class="n">sliding</span><span class="p">:</span> <span class="n">SymbolicConstant</span><span class="p">,</span> <span class="n">interactionProperty</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
                                    <span class="n">mechanicalConstraint</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="n">KINEMATIC</span><span class="p">,</span>
                                    <span class="n">weightingFactorType</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="n">DEFAULT</span><span class="p">,</span> <span class="n">weightingFactor</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span>
-                                   <span class="n">contactControls</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">''</span><span class="p">,</span>
+                                   <span class="n">contactControls</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span><span class="p">,</span>
                                    <span class="n">initialClearance</span><span class="p">:</span> <span class="n">typing</span><span class="o">.</span><span class="n">Union</span><span class="p">[</span><span class="n">SymbolicConstant</span><span class="p">,</span> <span class="nb">float</span><span class="p">]</span> <span class="o">=</span> <span class="n">OMIT</span><span class="p">,</span>
                                    <span class="n">halfThreadAngle</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">pitch</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
                                    <span class="n">majorBoltDiameter</span><span class="p">:</span> <span class="n">typing</span><span class="o">.</span><span class="n">Union</span><span class="p">[</span><span class="n">SymbolicConstant</span><span class="p">,</span> <span class="nb">float</span><span class="p">]</span> <span class="o">=</span> <span class="n">COMPUTED</span><span class="p">,</span>
                                    <span class="n">meanBoltDiameter</span><span class="p">:</span> <span class="n">typing</span><span class="o">.</span><span class="n">Union</span><span class="p">[</span><span class="n">SymbolicConstant</span><span class="p">,</span> <span class="nb">float</span><span class="p">]</span> <span class="o">=</span> <span class="n">COMPUTED</span><span class="p">,</span>
                                    <span class="n">datumAxis</span><span class="p">:</span> <span class="n">DatumAxis</span> <span class="o">=</span> <span class="n">DatumAxis</span><span class="p">(),</span> <span class="n">useReverseDatumAxis</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="n">OFF</span><span class="p">,</span>
                                    <span class="n">clearanceRegion</span><span class="p">:</span> <span class="n">Region</span> <span class="o">=</span> <span class="n">Region</span><span class="p">())</span> <span class="o">-&gt;</span> <span class="n">SurfaceToSurfaceContactExp</span><span class="p">:</span>
-        <span class="sd">"""This method creates a SurfaceToSurfaceContactExp object.</span>
+        <span class="sd">&quot;&quot;&quot;This method creates a SurfaceToSurfaceContactExp object.</span>
 
 <span class="sd">        Notes</span>
 <span class="sd">        -----</span>
@@ -2788,7 +2789,7 @@
 <span class="sd">        Returns</span>
 <span class="sd">        -------</span>
 <span class="sd">            A SurfaceToSurfaceContactExp object.</span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">interactions</span><span class="p">[</span><span class="n">name</span><span class="p">]</span> <span class="o">=</span> <span class="n">interaction</span> <span class="o">=</span> <span class="n">SurfaceToSurfaceContactExp</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">createStepName</span><span class="p">,</span> <span class="n">main</span><span class="p">,</span> <span class="n">secondary</span><span class="p">,</span>
                                                                            <span class="n">sliding</span><span class="p">,</span> <span class="n">interactionProperty</span><span class="p">,</span>
                                                                            <span class="n">mechanicalConstraint</span><span class="p">,</span> <span class="n">weightingFactorType</span><span class="p">,</span>
@@ -2803,10 +2804,10 @@
                                    <span class="n">sliding</span><span class="p">:</span> <span class="n">SymbolicConstant</span><span class="p">,</span> <span class="n">interactionProperty</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
                                    <span class="n">interferenceType</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="n">NONE</span><span class="p">,</span> <span class="n">overclosure</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span>
                                    <span class="n">interferenceDirectionType</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="n">COMPUTED</span><span class="p">,</span> <span class="n">direction</span><span class="p">:</span> <span class="nb">tuple</span> <span class="o">=</span> <span class="p">(),</span>
-                                   <span class="n">amplitude</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">''</span><span class="p">,</span> <span class="n">smooth</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="n">hcrit</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="n">extensionZone</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span>
+                                   <span class="n">amplitude</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">smooth</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="n">hcrit</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="n">extensionZone</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span>
                                    <span class="n">adjustMethod</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="n">NONE</span><span class="p">,</span> <span class="n">adjustTolerance</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span>
                                    <span class="n">adjustSet</span><span class="p">:</span> <span class="n">Region</span> <span class="o">=</span> <span class="n">Region</span><span class="p">(),</span> <span class="n">enforcement</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="n">SURFACE_TO_SURFACE</span><span class="p">,</span>
-                                   <span class="n">thickness</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="n">ON</span><span class="p">,</span> <span class="n">contactControls</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">''</span><span class="p">,</span> <span class="n">tied</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="n">OFF</span><span class="p">,</span>
+                                   <span class="n">thickness</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="n">ON</span><span class="p">,</span> <span class="n">contactControls</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">tied</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="n">OFF</span><span class="p">,</span>
                                    <span class="n">initialClearance</span><span class="p">:</span> <span class="n">typing</span><span class="o">.</span><span class="n">Union</span><span class="p">[</span><span class="n">SymbolicConstant</span><span class="p">,</span> <span class="nb">float</span><span class="p">]</span> <span class="o">=</span> <span class="n">OMIT</span><span class="p">,</span>
                                    <span class="n">halfThreadAngle</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">pitch</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
                                    <span class="n">majorBoltDiameter</span><span class="p">:</span> <span class="n">typing</span><span class="o">.</span><span class="n">Union</span><span class="p">[</span><span class="n">SymbolicConstant</span><span class="p">,</span> <span class="nb">float</span><span class="p">]</span> <span class="o">=</span> <span class="n">COMPUTED</span><span class="p">,</span>
@@ -2815,7 +2816,7 @@
                                    <span class="n">clearanceRegion</span><span class="p">:</span> <span class="n">Region</span> <span class="o">=</span> <span class="n">Region</span><span class="p">(),</span> <span class="n">surfaceSmoothing</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="n">NONE</span><span class="p">,</span>
                                    <span class="n">bondingSet</span><span class="p">:</span> <span class="n">Region</span> <span class="o">=</span> <span class="n">Region</span><span class="p">(),</span> <span class="n">handedness</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="n">RIGHT</span><span class="p">,</span>
                                    <span class="n">normalAdjustment</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="kc">None</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">SurfaceToSurfaceContactStd</span><span class="p">:</span>
-        <span class="sd">"""This method creates a SurfaceToSurfaceContactStd object.</span>
+        <span class="sd">&quot;&quot;&quot;This method creates a SurfaceToSurfaceContactStd object.</span>
 
 <span class="sd">        Notes</span>
 <span class="sd">        -----</span>
@@ -2897,7 +2898,7 @@
 <span class="sd">            interaction. The empty string indicates that the default contact controls will be used.</span>
 <span class="sd">            The default value is an empty string.</span>
 <span class="sd">        tied</span>
-<span class="sd">            A Boolean specifying whether the surfaces are to be "tied" together for the duration of</span>
+<span class="sd">            A Boolean specifying whether the surfaces are to be &quot;tied&quot; together for the duration of</span>
 <span class="sd">            the simulation. The default value is OFF.</span>
 <span class="sd">        initialClearance</span>
 <span class="sd">            A SymbolicConstant or a Float specifying the initial clearance at regions of contact.</span>
@@ -2940,7 +2941,7 @@
 <span class="sd">        Returns</span>
 <span class="sd">        -------</span>
 <span class="sd">            A SurfaceToSurfaceContactStd object.</span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">interactions</span><span class="p">[</span><span class="n">name</span><span class="p">]</span> <span class="o">=</span> <span class="n">interaction</span> <span class="o">=</span> <span class="n">SurfaceToSurfaceContactStd</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">createStepName</span><span class="p">,</span> <span class="n">master</span><span class="p">,</span> <span class="n">slave</span><span class="p">,</span> <span class="n">sliding</span><span class="p">,</span>
                                                                            <span class="n">interactionProperty</span><span class="p">,</span> <span class="n">interferenceType</span><span class="p">,</span>
                                                                            <span class="n">overclosure</span><span class="p">,</span> <span class="n">interferenceDirectionType</span><span class="p">,</span>
@@ -2957,7 +2958,7 @@
 
 <div class="viewcode-block" id="InteractionModel.XFEMCrackGrowth"><a class="viewcode-back" href="../../../reference/mdb/model/interaction.html#abaqus.Interaction.InteractionModel.InteractionModel.XFEMCrackGrowth">[docs]</a>    <span class="k">def</span> <span class="nf">XFEMCrackGrowth</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">createStepName</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">crackName</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
                         <span class="n">allowGrowth</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="n">ON</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">XFEMCrackGrowth</span><span class="p">:</span>
-        <span class="sd">"""This method creates an XFEMCrackGrowth object.</span>
+        <span class="sd">&quot;&quot;&quot;This method creates an XFEMCrackGrowth object.</span>
 
 <span class="sd">        Notes</span>
 <span class="sd">        -----</span>
@@ -2982,7 +2983,7 @@
 <span class="sd">        Returns</span>
 <span class="sd">        -------</span>
 <span class="sd">            A XFEMCrackGrowth object.</span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">interactions</span><span class="p">[</span><span class="n">name</span><span class="p">]</span> <span class="o">=</span> <span class="n">interaction</span> <span class="o">=</span> <span class="n">XFEMCrackGrowth</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">createStepName</span><span class="p">,</span> <span class="n">crackName</span><span class="p">,</span> <span class="n">allowGrowth</span><span class="p">)</span>
         <span class="k">return</span> <span class="n">interaction</span></div></div>
 </pre></div>

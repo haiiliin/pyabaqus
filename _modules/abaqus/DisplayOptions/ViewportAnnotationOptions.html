@@ -5,10 +5,10 @@
     <meta name="color-scheme" content="light dark"><link rel="index" title="Index" href="../../../genindex.html" /><link rel="search" title="Search" href="../../../search.html" />
         <link rel="canonical" href="https://pyabaqus.haiiliin.com/_modules/abaqus/DisplayOptions/ViewportAnnotationOptions.html" />
 
-    <meta name="generator" content="sphinx-4.5.0, furo 2022.04.07"/>
-        <title>abaqus.DisplayOptions.ViewportAnnotationOptions - pyabaqus 1.0.16 documentation</title>
+    <meta name="generator" content="sphinx-4.5.0, furo 2022.06.04.1"/>
+        <title>abaqus.DisplayOptions.ViewportAnnotationOptions - pyabaqus 1.0.18 documentation</title>
       <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/styles/furo.css?digest=68f4518137b9aefe99b631505a2064c3c42c9852" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/styles/furo.css?digest=40978830699223671f4072448e654b5958f38b89" />
     <link rel="stylesheet" type="text/css" href="../../../_static/styles/furo-extensions.css?digest=30d1aed668e5c3a91c3e3bf6a60b675221979f0e" />
     
     
@@ -123,7 +123,7 @@
       </label>
     </div>
     <div class="header-center">
-      <a href="../../../index.html"><div class="brand">pyabaqus 1.0.16 documentation</div></a>
+      <a href="../../../index.html"><div class="brand">pyabaqus 1.0.18 documentation</div></a>
     </div>
     <div class="header-right">
       <div class="theme-toggle-container theme-toggle-header">
@@ -146,7 +146,7 @@
       <div class="sidebar-sticky"><a class="sidebar-brand" href="../../../index.html">
   
   
-  <span class="sidebar-brand-text">pyabaqus 1.0.16 documentation</span>
+  <span class="sidebar-brand-text">pyabaqus 1.0.18 documentation</span>
   
 </a><form class="sidebar-search-container" method="get" action="../../../search.html" role="search">
   <input class="sidebar-search" placeholder=Search name="q" aria-label="Search">
@@ -286,7 +286,8 @@
           </svg>
           <span>Back to top</span>
         </a>
-        <div class="content-icon-container"><div class="theme-toggle-container theme-toggle-content">
+        <div class="content-icon-container">
+          <div class="theme-toggle-container theme-toggle-content">
             <button class="theme-toggle">
               <div class="visually-hidden">Toggle Light / Dark / Auto color theme</div>
               <svg class="theme-icon-when-auto"><use href="#svg-sun-half"></use></svg>
@@ -305,7 +306,7 @@
 
 
 <div class="viewcode-block" id="ViewportAnnotationOptions"><a class="viewcode-back" href="../../../reference/session/display_options.html#abaqus.DisplayOptions.ViewportAnnotationOptions.ViewportAnnotationOptions">[docs]</a><span class="k">class</span> <span class="nc">ViewportAnnotationOptions</span><span class="p">:</span>
-    <span class="sd">"""The ViewportAnnotationOptions object stores settings that control how annotations are</span>
+    <span class="sd">&quot;&quot;&quot;The ViewportAnnotationOptions object stores settings that control how annotations are</span>
 <span class="sd">    rendered in a particular viewport. ViewportAnnotationOptions objects are accessed in one </span>
 <span class="sd">    of two ways: </span>
 <span class="sd">    - The default viewport annotations. These settings are used as defaults when other </span>
@@ -325,22 +326,22 @@
 <span class="sd">        session.defaultViewportAnnotationOptions</span>
 <span class="sd">        session.viewports[name].viewportAnnotationOptions</span>
 
-<span class="sd">    """</span>
+<span class="sd">    &quot;&quot;&quot;</span>
 
-<div class="viewcode-block" id="ViewportAnnotationOptions.setValues"><a class="viewcode-back" href="../../../reference/session/display_options.html#abaqus.DisplayOptions.ViewportAnnotationOptions.ViewportAnnotationOptions.setValues">[docs]</a>    <span class="k">def</span> <span class="nf">setValues</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">triad</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="n">ON</span><span class="p">,</span> <span class="n">triadPosition</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">triadColor</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">''</span><span class="p">,</span>
-                  <span class="n">triadLabels</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="n">NUMBERS</span><span class="p">,</span> <span class="n">triadFont</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">''</span><span class="p">,</span> <span class="n">triadSize</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">4</span><span class="p">,</span>
+<div class="viewcode-block" id="ViewportAnnotationOptions.setValues"><a class="viewcode-back" href="../../../reference/session/display_options.html#abaqus.DisplayOptions.ViewportAnnotationOptions.ViewportAnnotationOptions.setValues">[docs]</a>    <span class="k">def</span> <span class="nf">setValues</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">triad</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="n">ON</span><span class="p">,</span> <span class="n">triadPosition</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">triadColor</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span><span class="p">,</span>
+                  <span class="n">triadLabels</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="n">NUMBERS</span><span class="p">,</span> <span class="n">triadFont</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">triadSize</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">4</span><span class="p">,</span>
                   <span class="n">legend</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="n">ON</span><span class="p">,</span> <span class="n">legendMinMax</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="n">OFF</span><span class="p">,</span> <span class="n">legendBox</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="n">ON</span><span class="p">,</span>
-                  <span class="n">legendDecimalPlaces</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">3</span><span class="p">,</span> <span class="n">legendPosition</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">legendFont</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">''</span><span class="p">,</span>
-                  <span class="n">legendTextColor</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">''</span><span class="p">,</span> <span class="n">legendBackgroundStyle</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="n">TRANSPARENT</span><span class="p">,</span>
-                  <span class="n">legendBackgroundColor</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">''</span><span class="p">,</span> <span class="n">title</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="n">ON</span><span class="p">,</span> <span class="n">titleBox</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="n">OFF</span><span class="p">,</span>
-                  <span class="n">titlePosition</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">titleFont</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">''</span><span class="p">,</span> <span class="n">titleTextColor</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">''</span><span class="p">,</span>
-                  <span class="n">titleBackgroundStyle</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="n">TRANSPARENT</span><span class="p">,</span> <span class="n">titleBackgroundColor</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">''</span><span class="p">,</span>
+                  <span class="n">legendDecimalPlaces</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">3</span><span class="p">,</span> <span class="n">legendPosition</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">legendFont</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span><span class="p">,</span>
+                  <span class="n">legendTextColor</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">legendBackgroundStyle</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="n">TRANSPARENT</span><span class="p">,</span>
+                  <span class="n">legendBackgroundColor</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">title</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="n">ON</span><span class="p">,</span> <span class="n">titleBox</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="n">OFF</span><span class="p">,</span>
+                  <span class="n">titlePosition</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">titleFont</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">titleTextColor</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span><span class="p">,</span>
+                  <span class="n">titleBackgroundStyle</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="n">TRANSPARENT</span><span class="p">,</span> <span class="n">titleBackgroundColor</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span><span class="p">,</span>
                   <span class="n">state</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="n">ON</span><span class="p">,</span> <span class="n">stateBox</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="n">OFF</span><span class="p">,</span> <span class="n">statePosition</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
-                  <span class="n">stateFont</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">''</span><span class="p">,</span> <span class="n">stateTextColor</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">''</span><span class="p">,</span>
-                  <span class="n">stateBackgroundStyle</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="n">TRANSPARENT</span><span class="p">,</span> <span class="n">stateBackgroundColor</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">''</span><span class="p">,</span>
+                  <span class="n">stateFont</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">stateTextColor</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span><span class="p">,</span>
+                  <span class="n">stateBackgroundStyle</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="n">TRANSPARENT</span><span class="p">,</span> <span class="n">stateBackgroundColor</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span><span class="p">,</span>
                   <span class="n">compass</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="n">ON</span><span class="p">,</span> <span class="n">compassScale</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span>
                   <span class="n">compassPrivilegedPlane</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="n">XZPLANE</span><span class="p">):</span>
-        <span class="sd">"""This method modifies the ViewportAnnotationOptions object.</span>
+        <span class="sd">&quot;&quot;&quot;This method modifies the ViewportAnnotationOptions object.</span>
 <span class="sd">        </span>
 <span class="sd">        Parameters</span>
 <span class="sd">        ----------</span>
@@ -353,14 +354,14 @@
 <span class="sd">            default value is (6, 12). </span>
 <span class="sd">        triadColor</span>
 <span class="sd">            A String specifying the color of the view orientation triad. Possible values are any </span>
-<span class="sd">            valid color. The default value is "White". </span>
+<span class="sd">            valid color. The default value is &quot;White&quot;. </span>
 <span class="sd">        triadLabels</span>
 <span class="sd">            A SymbolicConstant specifying how the view orientation triad is labeled. Possible values </span>
 <span class="sd">            are:NUMBERS, specifying the label axes 1, 2, 3.LETTERS, specifying the label axes X, Y, </span>
 <span class="sd">            Z.The default value is NUMBERS. </span>
 <span class="sd">        triadFont</span>
 <span class="sd">            A String specifying the font of the view orientation triad labels. Possible values are </span>
-<span class="sd">            any valid font. The default value is "-*-verdana-bold-r-normal--120-*". </span>
+<span class="sd">            any valid font. The default value is &quot;-*-verdana-bold-r-normal--120-*&quot;. </span>
 <span class="sd">        triadSize</span>
 <span class="sd">            An Int specifying the length of each triad axis as a percentage of the viewport size. </span>
 <span class="sd">            Possible values are 1 ≤≤ *legendDecimalPlaces* ≤≤ 50. The default value is 4. </span>
@@ -381,10 +382,10 @@
 <span class="sd">            (2, 98). </span>
 <span class="sd">        legendFont</span>
 <span class="sd">            A String specifying the font of the legend labels. Possible values are any valid font. </span>
-<span class="sd">            The default value is "-*-verdana-medium-r-*-*-*-120-*-*-*-*-iso8859-1". </span>
+<span class="sd">            The default value is &quot;-*-verdana-medium-r-*-*-*-120-*-*-*-*-iso8859-1&quot;. </span>
 <span class="sd">        legendTextColor</span>
 <span class="sd">            A String specifying the color of the legend. Possible values are any valid color. The </span>
-<span class="sd">            default value is "White". </span>
+<span class="sd">            default value is &quot;White&quot;. </span>
 <span class="sd">        legendBackgroundStyle</span>
 <span class="sd">            A SymbolicConstant specifying the legend background style. Possible values are MATCH, </span>
 <span class="sd">            TRANSPARENT, and OTHER. The default value is TRANSPARENT.The default color when OTHER is </span>
@@ -403,10 +404,10 @@
 <span class="sd">            value is (13, 20). </span>
 <span class="sd">        titleFont</span>
 <span class="sd">            A String specifying the font of the title. Possible values are any valid font. The </span>
-<span class="sd">            default value is "-*-verdana-medium-r-*-*-*-120-*-*-*-*-iso8859-1". </span>
+<span class="sd">            default value is &quot;-*-verdana-medium-r-*-*-*-120-*-*-*-*-iso8859-1&quot;. </span>
 <span class="sd">        titleTextColor</span>
 <span class="sd">            A String specifying the color of the title. Possible values are any valid color. The </span>
-<span class="sd">            default value is "White". </span>
+<span class="sd">            default value is &quot;White&quot;. </span>
 <span class="sd">        titleBackgroundStyle</span>
 <span class="sd">            A SymbolicConstant specifying the title block background style. Possible values are </span>
 <span class="sd">            MATCH, TRANSPARENT, and OTHER. The default value is TRANSPARENT.The default color when </span>
@@ -425,10 +426,10 @@
 <span class="sd">            value is (13, 12). </span>
 <span class="sd">        stateFont</span>
 <span class="sd">            A String specifying the font of the state label. Possible values are any valid font. The </span>
-<span class="sd">            default value is "-*-verdana-medium-r-*-*-*-120-*-*-*-*-iso8859-1". </span>
+<span class="sd">            default value is &quot;-*-verdana-medium-r-*-*-*-120-*-*-*-*-iso8859-1&quot;. </span>
 <span class="sd">        stateTextColor</span>
 <span class="sd">            A String specifying the color of the state block label. Possible values are any valid </span>
-<span class="sd">            color. The default value is "White". </span>
+<span class="sd">            color. The default value is &quot;White&quot;. </span>
 <span class="sd">        stateBackgroundStyle</span>
 <span class="sd">            A SymbolicConstant specifying the state block background style. Possible values are </span>
 <span class="sd">            MATCH, TRANSPARENT, and OTHER. The default value is TRANSPARENT.The default color when </span>
@@ -449,7 +450,7 @@
 <span class="sd">        Raises</span>
 <span class="sd">        ------</span>
 <span class="sd">        RangeError</span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span></div></div>
 </pre></div>
         </article>

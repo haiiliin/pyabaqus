@@ -5,10 +5,10 @@
     <meta name="color-scheme" content="light dark"><link rel="index" title="Index" href="../../../genindex.html" /><link rel="search" title="Search" href="../../../search.html" />
         <link rel="canonical" href="https://pyabaqus.haiiliin.com/_modules/abaqus/DisplayGroup/DisplayGroupInstance.html" />
 
-    <meta name="generator" content="sphinx-4.5.0, furo 2022.04.07"/>
-        <title>abaqus.DisplayGroup.DisplayGroupInstance - pyabaqus 1.0.16 documentation</title>
+    <meta name="generator" content="sphinx-4.5.0, furo 2022.06.04.1"/>
+        <title>abaqus.DisplayGroup.DisplayGroupInstance - pyabaqus 1.0.18 documentation</title>
       <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/styles/furo.css?digest=68f4518137b9aefe99b631505a2064c3c42c9852" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/styles/furo.css?digest=40978830699223671f4072448e654b5958f38b89" />
     <link rel="stylesheet" type="text/css" href="../../../_static/styles/furo-extensions.css?digest=30d1aed668e5c3a91c3e3bf6a60b675221979f0e" />
     
     
@@ -123,7 +123,7 @@
       </label>
     </div>
     <div class="header-center">
-      <a href="../../../index.html"><div class="brand">pyabaqus 1.0.16 documentation</div></a>
+      <a href="../../../index.html"><div class="brand">pyabaqus 1.0.18 documentation</div></a>
     </div>
     <div class="header-right">
       <div class="theme-toggle-container theme-toggle-header">
@@ -146,7 +146,7 @@
       <div class="sidebar-sticky"><a class="sidebar-brand" href="../../../index.html">
   
   
-  <span class="sidebar-brand-text">pyabaqus 1.0.16 documentation</span>
+  <span class="sidebar-brand-text">pyabaqus 1.0.18 documentation</span>
   
 </a><form class="sidebar-search-container" method="get" action="../../../search.html" role="search">
   <input class="sidebar-search" placeholder=Search name="q" aria-label="Search">
@@ -286,7 +286,8 @@
           </svg>
           <span>Back to top</span>
         </a>
-        <div class="content-icon-container"><div class="theme-toggle-container theme-toggle-content">
+        <div class="content-icon-container">
+          <div class="theme-toggle-container theme-toggle-content">
             <button class="theme-toggle">
               <div class="visually-hidden">Toggle Light / Dark / Auto color theme</div>
               <svg class="theme-icon-when-auto"><use href="#svg-sun-half"></use></svg>
@@ -306,7 +307,7 @@
 
 
 <div class="viewcode-block" id="DisplayGroupInstance"><a class="viewcode-back" href="../../../reference/session/display.html#abaqus.DisplayGroup.DisplayGroupInstance.DisplayGroupInstance">[docs]</a><span class="k">class</span> <span class="nc">DisplayGroupInstance</span><span class="p">:</span>
-    <span class="sd">"""A DisplayGroupInstance object stores the IDs of the entities displayed in a viewport.</span>
+    <span class="sd">&quot;&quot;&quot;A DisplayGroupInstance object stores the IDs of the entities displayed in a viewport.</span>
 <span class="sd">    The DisplayGroupInstance object has no constructor. When you set a display group to be </span>
 <span class="sd">    plotted in a viewport, Abaqus/CAE creates a DisplayGroupInstance object for each display </span>
 <span class="sd">    group and places it in the DisplayGroupInstanceRepository object. </span>
@@ -342,10 +343,10 @@
 <span class="sd">        session.viewports[name].odbDisplay.displayGroupInstances[name]</span>
 <span class="sd">        session.viewports[name].partDisplay.displayGroupInstances[name]</span>
 
-<span class="sd">    """</span>
+<span class="sd">    &quot;&quot;&quot;</span>
 
     <span class="c1"># A String specifying the repository key. </span>
-    <span class="n">name</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">''</span>
+    <span class="n">name</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span>
 
     <span class="c1"># A Boolean specifying whether the display options stored on the DisplayGroupInstance </span>
     <span class="c1"># object should be synchronized with changes to the viewport display options. This member </span>
@@ -360,7 +361,7 @@
     <span class="n">odbDisplayOptions</span><span class="p">:</span> <span class="n">OdbDisplayOptions</span> <span class="o">=</span> <span class="n">OdbDisplayOptions</span><span class="p">()</span>
 
 <div class="viewcode-block" id="DisplayGroupInstance.nodes"><a class="viewcode-back" href="../../../reference/session/display.html#abaqus.DisplayGroup.DisplayGroupInstance.DisplayGroupInstance.nodes">[docs]</a>    <span class="k">def</span> <span class="nf">nodes</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="sd">"""This method is used to obtain the list of nodes present in the DisplayGroupInstance</span>
+        <span class="sd">&quot;&quot;&quot;This method is used to obtain the list of nodes present in the DisplayGroupInstance</span>
 <span class="sd">        object. It returns a Dictionary object keyed by part instance names, the value of which</span>
 <span class="sd">        is a list of user node labels belonging to the part instance and contained in the</span>
 <span class="sd">        DisplayGroupInstance object. This method is available only for DisplayGroupInstance</span>
@@ -370,11 +371,11 @@
 <span class="sd">        Returns</span>
 <span class="sd">        -------</span>
 <span class="sd">            A Dictionary object.</span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span></div>
 
 <div class="viewcode-block" id="DisplayGroupInstance.elements"><a class="viewcode-back" href="../../../reference/session/display.html#abaqus.DisplayGroup.DisplayGroupInstance.DisplayGroupInstance.elements">[docs]</a>    <span class="k">def</span> <span class="nf">elements</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="sd">"""This method returns the list of elements present in the DisplayGroupInstance object. The</span>
+        <span class="sd">&quot;&quot;&quot;This method returns the list of elements present in the DisplayGroupInstance object. The</span>
 <span class="sd">        elements method returns a Dictionary object that uses part instance names for the keys.</span>
 <span class="sd">        The value of the items in the Dictionary object is a List of user element labels that</span>
 <span class="sd">        belong to the part instance and are contained in the DisplayGroupInstance object. This</span>
@@ -384,11 +385,11 @@
 <span class="sd">        Returns</span>
 <span class="sd">        -------</span>
 <span class="sd">            A Dictionary object.</span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span></div>
 
 <div class="viewcode-block" id="DisplayGroupInstance.setValues"><a class="viewcode-back" href="../../../reference/session/display.html#abaqus.DisplayGroup.DisplayGroupInstance.DisplayGroupInstance.setValues">[docs]</a>    <span class="k">def</span> <span class="nf">setValues</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">lockOptions</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="n">OFF</span><span class="p">):</span>
-        <span class="sd">"""This method modifies the DisplayGroupInstance object. The setValues method is available</span>
+        <span class="sd">&quot;&quot;&quot;This method modifies the DisplayGroupInstance object. The setValues method is available</span>
 <span class="sd">        only for DisplayGroupInstance objects that are members of the DisplayGroupInstance</span>
 <span class="sd">        repository member of the OdbDisplay object.</span>
 <span class="sd">        </span>
@@ -400,7 +401,7 @@
 <span class="sd">            is available only for DisplayGroupInstance objects that are members of the </span>
 <span class="sd">            DisplayGroupInstance repository member of the OdbDisplay object. The default value is </span>
 <span class="sd">            OFF. </span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span></div></div>
 </pre></div>
         </article>

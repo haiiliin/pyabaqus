@@ -5,10 +5,10 @@
     <meta name="color-scheme" content="light dark"><link rel="index" title="Index" href="../../../genindex.html" /><link rel="search" title="Search" href="../../../search.html" />
         <link rel="canonical" href="https://pyabaqus.haiiliin.com/_modules/abaqus/Property/MaterialOrientation.html" />
 
-    <meta name="generator" content="sphinx-4.5.0, furo 2022.04.07"/>
-        <title>abaqus.Property.MaterialOrientation - pyabaqus 1.0.16 documentation</title>
+    <meta name="generator" content="sphinx-4.5.0, furo 2022.06.04.1"/>
+        <title>abaqus.Property.MaterialOrientation - pyabaqus 1.0.18 documentation</title>
       <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/styles/furo.css?digest=68f4518137b9aefe99b631505a2064c3c42c9852" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/styles/furo.css?digest=40978830699223671f4072448e654b5958f38b89" />
     <link rel="stylesheet" type="text/css" href="../../../_static/styles/furo-extensions.css?digest=30d1aed668e5c3a91c3e3bf6a60b675221979f0e" />
     
     
@@ -123,7 +123,7 @@
       </label>
     </div>
     <div class="header-center">
-      <a href="../../../index.html"><div class="brand">pyabaqus 1.0.16 documentation</div></a>
+      <a href="../../../index.html"><div class="brand">pyabaqus 1.0.18 documentation</div></a>
     </div>
     <div class="header-right">
       <div class="theme-toggle-container theme-toggle-header">
@@ -146,7 +146,7 @@
       <div class="sidebar-sticky"><a class="sidebar-brand" href="../../../index.html">
   
   
-  <span class="sidebar-brand-text">pyabaqus 1.0.16 documentation</span>
+  <span class="sidebar-brand-text">pyabaqus 1.0.18 documentation</span>
   
 </a><form class="sidebar-search-container" method="get" action="../../../search.html" role="search">
   <input class="sidebar-search" placeholder=Search name="q" aria-label="Search">
@@ -286,7 +286,8 @@
           </svg>
           <span>Back to top</span>
         </a>
-        <div class="content-icon-container"><div class="theme-toggle-container theme-toggle-content">
+        <div class="content-icon-container">
+          <div class="theme-toggle-container theme-toggle-content">
             <button class="theme-toggle">
               <div class="visually-hidden">Toggle Light / Dark / Auto color theme</div>
               <svg class="theme-icon-when-auto"><use href="#svg-sun-half"></use></svg>
@@ -309,7 +310,7 @@
 
 
 <div class="viewcode-block" id="MaterialOrientation"><a class="viewcode-back" href="../../../reference/mdb/model/property.html#abaqus.Property.MaterialOrientation.MaterialOrientation">[docs]</a><span class="k">class</span> <span class="nc">MaterialOrientation</span><span class="p">:</span>
-    <span class="sd">"""The MaterialOrientation object represents the orientation of the material properties and</span>
+    <span class="sd">&quot;&quot;&quot;The MaterialOrientation object represents the orientation of the material properties and</span>
 <span class="sd">    composite layups. </span>
 
 <span class="sd">    Attributes</span>
@@ -336,7 +337,7 @@
 <span class="sd">        session.odbs[name].rootAssembly.instances[name].materialOrientations[i]</span>
 <span class="sd">        session.odbs[name].steps[name].frames[i].fieldOutputs[name].values[i].instance.materialOrientations[i]</span>
 
-<span class="sd">    """</span>
+<span class="sd">    &quot;&quot;&quot;</span>
 
     <span class="c1"># A SymbolicConstant specifying the method used to describe the additional rotation when a </span>
     <span class="c1"># valid orientation is specified. Possible values are ROTATION_NONE, ROTATION_ANGLE, and </span>
@@ -345,11 +346,11 @@
 
     <span class="c1"># A String specifying the name of the DiscreteField object specifying the additional </span>
     <span class="c1"># rotation. The default value is an empty string. </span>
-    <span class="n">additionalRotationField</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">''</span>
+    <span class="n">additionalRotationField</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span>
 
     <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">region</span><span class="p">:</span> <span class="n">Set</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">localCsys</span><span class="p">:</span> <span class="n">DatumCsys</span> <span class="o">=</span> <span class="n">DatumCsys</span><span class="p">(),</span>
                  <span class="n">axis</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="n">AXIS_1</span><span class="p">,</span> <span class="n">angle</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span>
-                 <span class="n">stackDirection</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="n">STACK_3</span><span class="p">,</span> <span class="n">fieldName</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">''</span><span class="p">,</span>
+                 <span class="n">stackDirection</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="n">STACK_3</span><span class="p">,</span> <span class="n">fieldName</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span><span class="p">,</span>
                  <span class="n">orientationType</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="n">GLOBAL</span><span class="p">,</span>
                  <span class="n">normalAxisDirection</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="n">AXIS_3</span><span class="p">,</span>
                  <span class="n">normalAxisDefinition</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="n">NORMAL_VECTOR</span><span class="p">,</span>
@@ -359,7 +360,7 @@
                  <span class="n">primaryAxisDefinition</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="n">PRIMARY_VECTOR</span><span class="p">,</span>
                  <span class="n">primaryAxisRegion</span><span class="p">:</span> <span class="n">Set</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">primaryAxisDatum</span><span class="p">:</span> <span class="n">DatumAxis</span> <span class="o">=</span> <span class="n">DatumAxis</span><span class="p">(),</span>
                  <span class="n">flipPrimaryDirection</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="n">OFF</span><span class="p">,</span> <span class="n">primaryAxisVector</span><span class="p">:</span> <span class="nb">tuple</span> <span class="o">=</span> <span class="p">()):</span>
-        <span class="sd">"""This method creates a MaterialOrientation object.</span>
+        <span class="sd">&quot;&quot;&quot;This method creates a MaterialOrientation object.</span>
 
 <span class="sd">        Notes</span>
 <span class="sd">        -----</span>
@@ -376,7 +377,7 @@
 <span class="sd">        localCsys</span>
 <span class="sd">            A DatumCsys object specifying the local coordinate system or None, describing the </span>
 <span class="sd">            material orientation for the given region. In the ODB, this member was previously </span>
-<span class="sd">            accessible using "csys," but support has now been added for localCsys and the csys </span>
+<span class="sd">            accessible using &quot;csys,&quot; but support has now been added for localCsys and the csys </span>
 <span class="sd">            member will be deprecated. </span>
 <span class="sd">        axis</span>
 <span class="sd">            A SymbolicConstant specifying the axis of a datum coordinate system about which an </span>
@@ -440,13 +441,13 @@
 <span class="sd">        Returns</span>
 <span class="sd">        -------</span>
 <span class="sd">            A MaterialOrientation object.</span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span>
 
 <div class="viewcode-block" id="MaterialOrientation.ReferenceOrientation"><a class="viewcode-back" href="../../../reference/mdb/model/property.html#abaqus.Property.MaterialOrientation.MaterialOrientation.ReferenceOrientation">[docs]</a>    <span class="k">def</span> <span class="nf">ReferenceOrientation</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">localCsys</span><span class="p">:</span> <span class="n">DatumCsys</span> <span class="o">=</span> <span class="n">DatumCsys</span><span class="p">(),</span> <span class="n">axis</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="n">AXIS_1</span><span class="p">,</span>
                              <span class="n">angle</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span>
-                             <span class="n">stackDirection</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="n">STACK_3</span><span class="p">,</span> <span class="n">fieldName</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">''</span><span class="p">,</span>
-                             <span class="n">orientationType</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="n">GLOBAL</span><span class="p">,</span> <span class="n">additionalRotationField</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">''</span><span class="p">,</span>
+                             <span class="n">stackDirection</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="n">STACK_3</span><span class="p">,</span> <span class="n">fieldName</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span><span class="p">,</span>
+                             <span class="n">orientationType</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="n">GLOBAL</span><span class="p">,</span> <span class="n">additionalRotationField</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span><span class="p">,</span>
                              <span class="n">additionalRotationType</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="n">ROTATION_NONE</span><span class="p">,</span>
                              <span class="n">normalAxisDirection</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="n">AXIS_3</span><span class="p">,</span>
                              <span class="n">normalAxisDefinition</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="n">VECTOR</span><span class="p">,</span> <span class="n">normalAxisRegion</span><span class="p">:</span> <span class="n">Surface</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
@@ -455,7 +456,7 @@
                              <span class="n">primaryAxisDefinition</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="n">VECTOR</span><span class="p">,</span> <span class="n">primaryAxisRegion</span><span class="p">:</span> <span class="n">Set</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
                              <span class="n">primaryAxisDatum</span><span class="p">:</span> <span class="n">DatumAxis</span> <span class="o">=</span> <span class="n">DatumAxis</span><span class="p">(),</span> <span class="n">flipPrimaryDirection</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="n">OFF</span><span class="p">,</span>
                              <span class="n">primaryAxisVector</span><span class="p">:</span> <span class="nb">tuple</span> <span class="o">=</span> <span class="p">()):</span>
-        <span class="sd">"""This method creates a MaterialOrientation object.</span>
+        <span class="sd">&quot;&quot;&quot;This method creates a MaterialOrientation object.</span>
 
 <span class="sd">        Notes</span>
 <span class="sd">        -----</span>
@@ -470,7 +471,7 @@
 <span class="sd">        localCsys</span>
 <span class="sd">            A DatumCsys object specifying the local coordinate system or None, describing the </span>
 <span class="sd">            material orientation for the given region. In the ODB, this member was previously </span>
-<span class="sd">            accessible using "csys," but support has now been added for localCsys and the csys </span>
+<span class="sd">            accessible using &quot;csys,&quot; but support has now been added for localCsys and the csys </span>
 <span class="sd">            member will be deprecated. </span>
 <span class="sd">        axis</span>
 <span class="sd">            A SymbolicConstant specifying the axis of a datum coordinate system about which an </span>
@@ -541,12 +542,12 @@
 <span class="sd">        Returns</span>
 <span class="sd">        -------</span>
 <span class="sd">            A MaterialOrientation object.</span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span></div>
 
 <div class="viewcode-block" id="MaterialOrientation.setValues"><a class="viewcode-back" href="../../../reference/mdb/model/property.html#abaqus.Property.MaterialOrientation.MaterialOrientation.setValues">[docs]</a>    <span class="k">def</span> <span class="nf">setValues</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="sd">"""This method modifies the MaterialOrientation object.</span>
-<span class="sd">        """</span>
+        <span class="sd">&quot;&quot;&quot;This method modifies the MaterialOrientation object.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span></div></div>
 </pre></div>
         </article>

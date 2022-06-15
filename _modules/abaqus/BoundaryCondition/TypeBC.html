@@ -5,10 +5,10 @@
     <meta name="color-scheme" content="light dark"><link rel="index" title="Index" href="../../../genindex.html" /><link rel="search" title="Search" href="../../../search.html" />
         <link rel="canonical" href="https://pyabaqus.haiiliin.com/_modules/abaqus/BoundaryCondition/TypeBC.html" />
 
-    <meta name="generator" content="sphinx-4.5.0, furo 2022.04.07"/>
-        <title>abaqus.BoundaryCondition.TypeBC - pyabaqus 1.0.16 documentation</title>
+    <meta name="generator" content="sphinx-4.5.0, furo 2022.06.04.1"/>
+        <title>abaqus.BoundaryCondition.TypeBC - pyabaqus 1.0.18 documentation</title>
       <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/styles/furo.css?digest=68f4518137b9aefe99b631505a2064c3c42c9852" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/styles/furo.css?digest=40978830699223671f4072448e654b5958f38b89" />
     <link rel="stylesheet" type="text/css" href="../../../_static/styles/furo-extensions.css?digest=30d1aed668e5c3a91c3e3bf6a60b675221979f0e" />
     
     
@@ -123,7 +123,7 @@
       </label>
     </div>
     <div class="header-center">
-      <a href="../../../index.html"><div class="brand">pyabaqus 1.0.16 documentation</div></a>
+      <a href="../../../index.html"><div class="brand">pyabaqus 1.0.18 documentation</div></a>
     </div>
     <div class="header-right">
       <div class="theme-toggle-container theme-toggle-header">
@@ -146,7 +146,7 @@
       <div class="sidebar-sticky"><a class="sidebar-brand" href="../../../index.html">
   
   
-  <span class="sidebar-brand-text">pyabaqus 1.0.16 documentation</span>
+  <span class="sidebar-brand-text">pyabaqus 1.0.18 documentation</span>
   
 </a><form class="sidebar-search-container" method="get" action="../../../search.html" role="search">
   <input class="sidebar-search" placeholder=Search name="q" aria-label="Search">
@@ -286,7 +286,8 @@
           </svg>
           <span>Back to top</span>
         </a>
-        <div class="content-icon-container"><div class="theme-toggle-container theme-toggle-content">
+        <div class="content-icon-container">
+          <div class="theme-toggle-container theme-toggle-content">
             <button class="theme-toggle">
               <div class="visually-hidden">Toggle Light / Dark / Auto color theme</div>
               <svg class="theme-icon-when-auto"><use href="#svg-sun-half"></use></svg>
@@ -307,7 +308,7 @@
 
 
 <div class="viewcode-block" id="TypeBC"><a class="viewcode-back" href="../../../reference/mdb/model/bc.html#abaqus.BoundaryCondition.TypeBC.TypeBC">[docs]</a><span class="k">class</span> <span class="nc">TypeBC</span><span class="p">(</span><span class="n">BoundaryCondition</span><span class="p">):</span>
-    <span class="sd">"""The TypeBC object stores the data for several types of predefined boundary conditions</span>
+    <span class="sd">&quot;&quot;&quot;The TypeBC object stores the data for several types of predefined boundary conditions</span>
 <span class="sd">    that are commonly used in stress/displacement analyses. </span>
 <span class="sd">    The TypeBC object is derived from the BoundaryCondition object. </span>
 
@@ -326,7 +327,7 @@
 <span class="sd">        A :py:class:`~abaqus.Region.Region.Region` object specifying the region to which the boundary condition is applied.</span>
 <span class="sd">    localCsys: str</span>
 <span class="sd">        None or a :py:class:`~abaqus.Datum.DatumCsys.DatumCsys` object specifying the local coordinate system of the boundary</span>
-<span class="sd">        condition's degrees of freedom. If **localCsys=None**, the degrees of freedom are defined</span>
+<span class="sd">        condition&#39;s degrees of freedom. If **localCsys=None**, the degrees of freedom are defined</span>
 <span class="sd">        in the global coordinate system. The default value is None.</span>
 
 <span class="sd">    Notes</span>
@@ -338,10 +339,10 @@
 <span class="sd">        import load</span>
 <span class="sd">        mdb.models[name].boundaryConditions[name]</span>
 
-<span class="sd">    """</span>
+<span class="sd">    &quot;&quot;&quot;</span>
 
     <span class="c1"># A String specifying the boundary condition repository key. </span>
-    <span class="n">name</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">''</span>
+    <span class="n">name</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span>
 
     <span class="c1"># A SymbolicConstant specifying how the boundary condition is defined in a BUCKLE </span>
     <span class="c1"># analysis. Possible values are NOT_APPLICABLE, STRESS_PERTURBATION, BUCKLING_MODES, and </span>
@@ -356,13 +357,13 @@
     <span class="n">region</span><span class="p">:</span> <span class="n">Region</span> <span class="o">=</span> <span class="n">Region</span><span class="p">()</span>
 
     <span class="c1"># None or a DatumCsys object specifying the local coordinate system of the boundary </span>
-    <span class="c1"># condition's degrees of freedom. If *localCsys*=None, the degrees of freedom are defined </span>
+    <span class="c1"># condition&#39;s degrees of freedom. If *localCsys*=None, the degrees of freedom are defined </span>
     <span class="c1"># in the global coordinate system. The default value is None. </span>
     <span class="n">localCsys</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="kc">None</span>
 
 <div class="viewcode-block" id="TypeBC.EncastreBC"><a class="viewcode-back" href="../../../reference/mdb/model/bc.html#abaqus.BoundaryCondition.TypeBC.TypeBC.EncastreBC">[docs]</a>    <span class="k">def</span> <span class="nf">EncastreBC</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">createStepName</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">region</span><span class="p">:</span> <span class="n">Region</span><span class="p">,</span>
                    <span class="n">buckleCase</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="n">NOT_APPLICABLE</span><span class="p">,</span> <span class="n">localCsys</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="kc">None</span><span class="p">):</span>
-        <span class="sd">"""This method creates an encastre TypeBC object.</span>
+        <span class="sd">&quot;&quot;&quot;This method creates an encastre TypeBC object.</span>
 
 <span class="sd">        Notes</span>
 <span class="sd">        -----</span>
@@ -386,18 +387,18 @@
 <span class="sd">            PERTURBATION_AND_BUCKLING. The default value is NOT_APPLICABLE. </span>
 <span class="sd">        localCsys</span>
 <span class="sd">            None or a DatumCsys object specifying the local coordinate system of the boundary </span>
-<span class="sd">            condition's degrees of freedom. If *localCsys*=None, the degrees of freedom are defined </span>
+<span class="sd">            condition&#39;s degrees of freedom. If *localCsys*=None, the degrees of freedom are defined </span>
 <span class="sd">            in the global coordinate system. The default value is None. </span>
 
 <span class="sd">        Returns</span>
 <span class="sd">        -------</span>
 <span class="sd">            A TypeBC object.</span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span></div>
 
 <div class="viewcode-block" id="TypeBC.PinnedBC"><a class="viewcode-back" href="../../../reference/mdb/model/bc.html#abaqus.BoundaryCondition.TypeBC.TypeBC.PinnedBC">[docs]</a>    <span class="k">def</span> <span class="nf">PinnedBC</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">createStepName</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">region</span><span class="p">:</span> <span class="n">Region</span><span class="p">,</span>
                  <span class="n">buckleCase</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="n">NOT_APPLICABLE</span><span class="p">,</span> <span class="n">localCsys</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="kc">None</span><span class="p">):</span>
-        <span class="sd">"""This method creates a pinned TypeBC object.</span>
+        <span class="sd">&quot;&quot;&quot;This method creates a pinned TypeBC object.</span>
 
 <span class="sd">        Notes</span>
 <span class="sd">        -----</span>
@@ -421,18 +422,18 @@
 <span class="sd">            PERTURBATION_AND_BUCKLING. The default value is NOT_APPLICABLE. </span>
 <span class="sd">        localCsys</span>
 <span class="sd">            None or a DatumCsys object specifying the local coordinate system of the boundary </span>
-<span class="sd">            condition's degrees of freedom. If *localCsys*=None, the degrees of freedom are defined </span>
+<span class="sd">            condition&#39;s degrees of freedom. If *localCsys*=None, the degrees of freedom are defined </span>
 <span class="sd">            in the global coordinate system. The default value is None. </span>
 
 <span class="sd">        Returns</span>
 <span class="sd">        -------</span>
 <span class="sd">            A TypeBC object.</span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span></div>
 
 <div class="viewcode-block" id="TypeBC.XsymmBC"><a class="viewcode-back" href="../../../reference/mdb/model/bc.html#abaqus.BoundaryCondition.TypeBC.TypeBC.XsymmBC">[docs]</a>    <span class="k">def</span> <span class="nf">XsymmBC</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">createStepName</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">region</span><span class="p">:</span> <span class="n">Region</span><span class="p">,</span>
                 <span class="n">buckleCase</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="n">NOT_APPLICABLE</span><span class="p">,</span> <span class="n">localCsys</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="kc">None</span><span class="p">):</span>
-        <span class="sd">"""This method creates a TypeBC object that specifies symmetry about the *X*-axis.</span>
+        <span class="sd">&quot;&quot;&quot;This method creates a TypeBC object that specifies symmetry about the *X*-axis.</span>
 
 <span class="sd">        Notes</span>
 <span class="sd">        -----</span>
@@ -456,18 +457,18 @@
 <span class="sd">            PERTURBATION_AND_BUCKLING. The default value is NOT_APPLICABLE. </span>
 <span class="sd">        localCsys</span>
 <span class="sd">            None or a DatumCsys object specifying the local coordinate system of the boundary </span>
-<span class="sd">            condition's degrees of freedom. If *localCsys*=None, the degrees of freedom are defined </span>
+<span class="sd">            condition&#39;s degrees of freedom. If *localCsys*=None, the degrees of freedom are defined </span>
 <span class="sd">            in the global coordinate system. The default value is None. </span>
 
 <span class="sd">        Returns</span>
 <span class="sd">        -------</span>
 <span class="sd">            A TypeBC object.</span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span></div>
 
 <div class="viewcode-block" id="TypeBC.YsymmBC"><a class="viewcode-back" href="../../../reference/mdb/model/bc.html#abaqus.BoundaryCondition.TypeBC.TypeBC.YsymmBC">[docs]</a>    <span class="k">def</span> <span class="nf">YsymmBC</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">createStepName</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">region</span><span class="p">:</span> <span class="n">Region</span><span class="p">,</span>
                 <span class="n">buckleCase</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="n">NOT_APPLICABLE</span><span class="p">,</span> <span class="n">localCsys</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="kc">None</span><span class="p">):</span>
-        <span class="sd">"""This method creates a TypeBC object that specifies symmetry about the *Y*-axis.</span>
+        <span class="sd">&quot;&quot;&quot;This method creates a TypeBC object that specifies symmetry about the *Y*-axis.</span>
 
 <span class="sd">        Notes</span>
 <span class="sd">        -----</span>
@@ -491,18 +492,18 @@
 <span class="sd">            PERTURBATION_AND_BUCKLING. The default value is NOT_APPLICABLE. </span>
 <span class="sd">        localCsys</span>
 <span class="sd">            None or a DatumCsys object specifying the local coordinate system of the boundary </span>
-<span class="sd">            condition's degrees of freedom. If *localCsys*=None, the degrees of freedom are defined </span>
+<span class="sd">            condition&#39;s degrees of freedom. If *localCsys*=None, the degrees of freedom are defined </span>
 <span class="sd">            in the global coordinate system. The default value is None. </span>
 
 <span class="sd">        Returns</span>
 <span class="sd">        -------</span>
 <span class="sd">            A TypeBC object.</span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span></div>
 
 <div class="viewcode-block" id="TypeBC.ZsymmBC"><a class="viewcode-back" href="../../../reference/mdb/model/bc.html#abaqus.BoundaryCondition.TypeBC.TypeBC.ZsymmBC">[docs]</a>    <span class="k">def</span> <span class="nf">ZsymmBC</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">createStepName</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">region</span><span class="p">:</span> <span class="n">Region</span><span class="p">,</span>
                 <span class="n">buckleCase</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="n">NOT_APPLICABLE</span><span class="p">,</span> <span class="n">localCsys</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="kc">None</span><span class="p">):</span>
-        <span class="sd">"""This method creates a TypeBC object that specifies symmetry about the *Z*-axis.</span>
+        <span class="sd">&quot;&quot;&quot;This method creates a TypeBC object that specifies symmetry about the *Z*-axis.</span>
 
 <span class="sd">        Notes</span>
 <span class="sd">        -----</span>
@@ -526,18 +527,18 @@
 <span class="sd">            PERTURBATION_AND_BUCKLING. The default value is NOT_APPLICABLE. </span>
 <span class="sd">        localCsys</span>
 <span class="sd">            None or a DatumCsys object specifying the local coordinate system of the boundary </span>
-<span class="sd">            condition's degrees of freedom. If *localCsys*=None, the degrees of freedom are defined </span>
+<span class="sd">            condition&#39;s degrees of freedom. If *localCsys*=None, the degrees of freedom are defined </span>
 <span class="sd">            in the global coordinate system. The default value is None. </span>
 
 <span class="sd">        Returns</span>
 <span class="sd">        -------</span>
 <span class="sd">            A TypeBC object.</span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span></div>
 
 <div class="viewcode-block" id="TypeBC.XasymmBC"><a class="viewcode-back" href="../../../reference/mdb/model/bc.html#abaqus.BoundaryCondition.TypeBC.TypeBC.XasymmBC">[docs]</a>    <span class="k">def</span> <span class="nf">XasymmBC</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">createStepName</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">region</span><span class="p">:</span> <span class="n">Region</span><span class="p">,</span>
                  <span class="n">buckleCase</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="n">NOT_APPLICABLE</span><span class="p">,</span> <span class="n">localCsys</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="kc">None</span><span class="p">):</span>
-        <span class="sd">"""This method creates a TypeBC object that specifies antisymmetry about the *X*-axis.</span>
+        <span class="sd">&quot;&quot;&quot;This method creates a TypeBC object that specifies antisymmetry about the *X*-axis.</span>
 
 <span class="sd">        Notes</span>
 <span class="sd">        -----</span>
@@ -561,18 +562,18 @@
 <span class="sd">            PERTURBATION_AND_BUCKLING. The default value is NOT_APPLICABLE. </span>
 <span class="sd">        localCsys</span>
 <span class="sd">            None or a DatumCsys object specifying the local coordinate system of the boundary </span>
-<span class="sd">            condition's degrees of freedom. If *localCsys*=None, the degrees of freedom are defined </span>
+<span class="sd">            condition&#39;s degrees of freedom. If *localCsys*=None, the degrees of freedom are defined </span>
 <span class="sd">            in the global coordinate system. The default value is None. </span>
 
 <span class="sd">        Returns</span>
 <span class="sd">        -------</span>
 <span class="sd">            A TypeBC object.</span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span></div>
 
 <div class="viewcode-block" id="TypeBC.YasymmBC"><a class="viewcode-back" href="../../../reference/mdb/model/bc.html#abaqus.BoundaryCondition.TypeBC.TypeBC.YasymmBC">[docs]</a>    <span class="k">def</span> <span class="nf">YasymmBC</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">createStepName</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">region</span><span class="p">:</span> <span class="n">Region</span><span class="p">,</span>
                  <span class="n">buckleCase</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="n">NOT_APPLICABLE</span><span class="p">,</span> <span class="n">localCsys</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="kc">None</span><span class="p">):</span>
-        <span class="sd">"""This method creates a TypeBC object that specifies antisymmetry about the *Y*-axis.</span>
+        <span class="sd">&quot;&quot;&quot;This method creates a TypeBC object that specifies antisymmetry about the *Y*-axis.</span>
 
 <span class="sd">        Notes</span>
 <span class="sd">        -----</span>
@@ -596,18 +597,18 @@
 <span class="sd">            PERTURBATION_AND_BUCKLING. The default value is NOT_APPLICABLE. </span>
 <span class="sd">        localCsys</span>
 <span class="sd">            None or a DatumCsys object specifying the local coordinate system of the boundary </span>
-<span class="sd">            condition's degrees of freedom. If *localCsys*=None, the degrees of freedom are defined </span>
+<span class="sd">            condition&#39;s degrees of freedom. If *localCsys*=None, the degrees of freedom are defined </span>
 <span class="sd">            in the global coordinate system. The default value is None. </span>
 
 <span class="sd">        Returns</span>
 <span class="sd">        -------</span>
 <span class="sd">            A TypeBC object.</span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span></div>
 
 <div class="viewcode-block" id="TypeBC.ZasymmBC"><a class="viewcode-back" href="../../../reference/mdb/model/bc.html#abaqus.BoundaryCondition.TypeBC.TypeBC.ZasymmBC">[docs]</a>    <span class="k">def</span> <span class="nf">ZasymmBC</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">createStepName</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">region</span><span class="p">:</span> <span class="n">Region</span><span class="p">,</span>
                  <span class="n">buckleCase</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="n">NOT_APPLICABLE</span><span class="p">,</span> <span class="n">localCsys</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="kc">None</span><span class="p">):</span>
-        <span class="sd">"""This method creates a TypeBC object that specifies antisymmetry about the *Z*-axis.</span>
+        <span class="sd">&quot;&quot;&quot;This method creates a TypeBC object that specifies antisymmetry about the *Z*-axis.</span>
 
 <span class="sd">        Notes</span>
 <span class="sd">        -----</span>
@@ -631,18 +632,18 @@
 <span class="sd">            PERTURBATION_AND_BUCKLING. The default value is NOT_APPLICABLE. </span>
 <span class="sd">        localCsys</span>
 <span class="sd">            None or a DatumCsys object specifying the local coordinate system of the boundary </span>
-<span class="sd">            condition's degrees of freedom. If *localCsys*=None, the degrees of freedom are defined </span>
+<span class="sd">            condition&#39;s degrees of freedom. If *localCsys*=None, the degrees of freedom are defined </span>
 <span class="sd">            in the global coordinate system. The default value is None. </span>
 
 <span class="sd">        Returns</span>
 <span class="sd">        -------</span>
 <span class="sd">            A TypeBC object.</span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span></div>
 
 <div class="viewcode-block" id="TypeBC.setValues"><a class="viewcode-back" href="../../../reference/mdb/model/bc.html#abaqus.BoundaryCondition.TypeBC.TypeBC.setValues">[docs]</a>    <span class="k">def</span> <span class="nf">setValues</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">region</span><span class="p">:</span> <span class="n">Region</span> <span class="o">=</span> <span class="n">Region</span><span class="p">(),</span> <span class="n">typeName</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
                   <span class="n">buckleCase</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="n">NOT_APPLICABLE</span><span class="p">,</span> <span class="n">localCsys</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="kc">None</span><span class="p">):</span>
-        <span class="sd">"""This method modifies the data for an existing TypeBC object in the step where it is</span>
+        <span class="sd">&quot;&quot;&quot;This method modifies the data for an existing TypeBC object in the step where it is</span>
 <span class="sd">        created.</span>
 <span class="sd">        </span>
 <span class="sd">        Parameters</span>
@@ -658,13 +659,13 @@
 <span class="sd">            PERTURBATION_AND_BUCKLING. The default value is NOT_APPLICABLE. </span>
 <span class="sd">        localCsys</span>
 <span class="sd">            None or a DatumCsys object specifying the local coordinate system of the boundary </span>
-<span class="sd">            condition's degrees of freedom. If *localCsys*=None, the degrees of freedom are defined </span>
+<span class="sd">            condition&#39;s degrees of freedom. If *localCsys*=None, the degrees of freedom are defined </span>
 <span class="sd">            in the global coordinate system. The default value is None. </span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span></div>
 
 <div class="viewcode-block" id="TypeBC.setValuesInStep"><a class="viewcode-back" href="../../../reference/mdb/model/bc.html#abaqus.BoundaryCondition.TypeBC.TypeBC.setValuesInStep">[docs]</a>    <span class="k">def</span> <span class="nf">setValuesInStep</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">stepName</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">typeName</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="kc">None</span><span class="p">):</span>
-        <span class="sd">"""This method always returns a value error for a TypeBC; it is inherited from the</span>
+        <span class="sd">&quot;&quot;&quot;This method always returns a value error for a TypeBC; it is inherited from the</span>
 <span class="sd">        BoundaryCondition object.</span>
 <span class="sd">        </span>
 <span class="sd">        Parameters</span>
@@ -679,7 +680,7 @@
 <span class="sd">        ------</span>
 <span class="sd">            - Value Error: </span>
 <span class="sd">              A Symmetry/Antisymmetry/Encastre BC cannot be edited in a propagated step. </span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span></div></div>
 </pre></div>
         </article>

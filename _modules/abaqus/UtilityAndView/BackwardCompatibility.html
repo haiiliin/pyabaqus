@@ -5,10 +5,10 @@
     <meta name="color-scheme" content="light dark"><link rel="index" title="Index" href="../../../genindex.html" /><link rel="search" title="Search" href="../../../search.html" />
         <link rel="canonical" href="https://pyabaqus.haiiliin.com/_modules/abaqus/UtilityAndView/BackwardCompatibility.html" />
 
-    <meta name="generator" content="sphinx-4.5.0, furo 2022.04.07"/>
-        <title>abaqus.UtilityAndView.BackwardCompatibility - pyabaqus 1.0.16 documentation</title>
+    <meta name="generator" content="sphinx-4.5.0, furo 2022.06.04.1"/>
+        <title>abaqus.UtilityAndView.BackwardCompatibility - pyabaqus 1.0.18 documentation</title>
       <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/styles/furo.css?digest=68f4518137b9aefe99b631505a2064c3c42c9852" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/styles/furo.css?digest=40978830699223671f4072448e654b5958f38b89" />
     <link rel="stylesheet" type="text/css" href="../../../_static/styles/furo-extensions.css?digest=30d1aed668e5c3a91c3e3bf6a60b675221979f0e" />
     
     
@@ -123,7 +123,7 @@
       </label>
     </div>
     <div class="header-center">
-      <a href="../../../index.html"><div class="brand">pyabaqus 1.0.16 documentation</div></a>
+      <a href="../../../index.html"><div class="brand">pyabaqus 1.0.18 documentation</div></a>
     </div>
     <div class="header-right">
       <div class="theme-toggle-container theme-toggle-header">
@@ -146,7 +146,7 @@
       <div class="sidebar-sticky"><a class="sidebar-brand" href="../../../index.html">
   
   
-  <span class="sidebar-brand-text">pyabaqus 1.0.16 documentation</span>
+  <span class="sidebar-brand-text">pyabaqus 1.0.18 documentation</span>
   
 </a><form class="sidebar-search-container" method="get" action="../../../search.html" role="search">
   <input class="sidebar-search" placeholder=Search name="q" aria-label="Search">
@@ -286,7 +286,8 @@
           </svg>
           <span>Back to top</span>
         </a>
-        <div class="content-icon-container"><div class="theme-toggle-container theme-toggle-content">
+        <div class="content-icon-container">
+          <div class="theme-toggle-container theme-toggle-content">
             <button class="theme-toggle">
               <div class="visually-hidden">Toggle Light / Dark / Auto color theme</div>
               <svg class="theme-icon-when-auto"><use href="#svg-sun-half"></use></svg>
@@ -305,7 +306,7 @@
 
 
 <div class="viewcode-block" id="BackwardCompatibility"><a class="viewcode-back" href="../../../reference/kernel/utility.html#abaqus.UtilityAndView.BackwardCompatibility.BackwardCompatibility">[docs]</a><span class="k">class</span> <span class="nc">BackwardCompatibility</span><span class="p">:</span>
-    <span class="sd">"""The BackwardCompatibility object enables the user to control access to deprecated</span>
+    <span class="sd">&quot;&quot;&quot;The BackwardCompatibility object enables the user to control access to deprecated</span>
 <span class="sd">    commands in the Abaqus Scripting Interface and to collect data on which deprecated </span>
 <span class="sd">    commands have been used. This enables the user to check that no deprecated methods, </span>
 <span class="sd">    members, or arguments have been used. Data are recorded on any deprecated members, </span>
@@ -333,7 +334,7 @@
 <span class="sd">    backwardCompatibility.resetDeprecatedMethodsUsed() </span>
 <span class="sd">    backwardCompatibility.resetDeprecatedMembersUsed() </span>
 <span class="sd">    backwardCompatibility.resetDeprecatedArgsUsed() </span>
-<span class="sd">    execfile('createLug.py') </span>
+<span class="sd">    execfile(&#39;createLug.py&#39;) </span>
 <span class="sd">    print backwardCompatibility.getDeprecatedMethodsUsed() </span>
 <span class="sd">    print backwardCompatibility.getDeprecatedMembersUsed() </span>
 <span class="sd">    print backwardCompatibility.getDeprecatedArgsUsed() </span>
@@ -358,7 +359,7 @@
 <span class="sd">    </span>
 <span class="sd">        backwardCompatibility</span>
 
-<span class="sd">    """</span>
+<span class="sd">    &quot;&quot;&quot;</span>
 
     <span class="c1"># A Boolean specifying whether deprecated members, methods, and arguments can be seen and </span>
     <span class="c1"># used. Possible values are ON and OFF. The default value is ON. </span>
@@ -373,38 +374,38 @@
     <span class="n">showKeysInReport</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="kc">False</span>
 
 <div class="viewcode-block" id="BackwardCompatibility.getDeprecatedMethodsUsed"><a class="viewcode-back" href="../../../reference/kernel/utility.html#abaqus.UtilityAndView.BackwardCompatibility.BackwardCompatibility.getDeprecatedMethodsUsed">[docs]</a>    <span class="k">def</span> <span class="nf">getDeprecatedMethodsUsed</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="sd">"""This method returns a list of deprecated methods used since the last call to</span>
+        <span class="sd">&quot;&quot;&quot;This method returns a list of deprecated methods used since the last call to</span>
 <span class="sd">        resetDeprecatedMethodsUsed.</span>
 
 <span class="sd">        Returns</span>
 <span class="sd">        -------</span>
 <span class="sd">            A list of Strings.</span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span></div>
 
 <div class="viewcode-block" id="BackwardCompatibility.getDeprecatedArgsUsed"><a class="viewcode-back" href="../../../reference/kernel/utility.html#abaqus.UtilityAndView.BackwardCompatibility.BackwardCompatibility.getDeprecatedArgsUsed">[docs]</a>    <span class="k">def</span> <span class="nf">getDeprecatedArgsUsed</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="sd">"""This method returns a list of deprecated arguments used since the last call to</span>
+        <span class="sd">&quot;&quot;&quot;This method returns a list of deprecated arguments used since the last call to</span>
 <span class="sd">        resetDeprecatedArgsUsed.</span>
 
 <span class="sd">        Returns</span>
 <span class="sd">        -------</span>
 <span class="sd">            A list of Strings.</span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span></div>
 
 <div class="viewcode-block" id="BackwardCompatibility.resetDeprecatedMethodsUsed"><a class="viewcode-back" href="../../../reference/kernel/utility.html#abaqus.UtilityAndView.BackwardCompatibility.BackwardCompatibility.resetDeprecatedMethodsUsed">[docs]</a>    <span class="k">def</span> <span class="nf">resetDeprecatedMethodsUsed</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="sd">"""This method clears the list of deprecated methods used.</span>
-<span class="sd">        """</span>
+        <span class="sd">&quot;&quot;&quot;This method clears the list of deprecated methods used.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span></div>
 
 <div class="viewcode-block" id="BackwardCompatibility.resetDeprecatedArgsUsed"><a class="viewcode-back" href="../../../reference/kernel/utility.html#abaqus.UtilityAndView.BackwardCompatibility.BackwardCompatibility.resetDeprecatedArgsUsed">[docs]</a>    <span class="k">def</span> <span class="nf">resetDeprecatedArgsUsed</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="sd">"""This method clears the list of deprecated arguments used.</span>
-<span class="sd">        """</span>
+        <span class="sd">&quot;&quot;&quot;This method clears the list of deprecated arguments used.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span></div>
 
 <div class="viewcode-block" id="BackwardCompatibility.setValues"><a class="viewcode-back" href="../../../reference/kernel/utility.html#abaqus.UtilityAndView.BackwardCompatibility.BackwardCompatibility.setValues">[docs]</a>    <span class="k">def</span> <span class="nf">setValues</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">includeDeprecated</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="n">ON</span><span class="p">,</span> <span class="n">reportDeprecated</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="kc">True</span><span class="p">,</span>
                   <span class="n">showKeysInReport</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="kc">False</span><span class="p">):</span>
-        <span class="sd">"""This method modifies the BackwardCompatibility object.</span>
+        <span class="sd">&quot;&quot;&quot;This method modifies the BackwardCompatibility object.</span>
 <span class="sd">        </span>
 <span class="sd">        Parameters</span>
 <span class="sd">        ----------</span>
@@ -417,7 +418,7 @@
 <span class="sd">        showKeysInReport</span>
 <span class="sd">            A Boolean specifying whether the keys and indices are included in the report that is </span>
 <span class="sd">            displayed when *reportDeprecated* is True. The default value is False. </span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span></div></div>
 </pre></div>
         </article>

@@ -5,10 +5,10 @@
     <meta name="color-scheme" content="light dark"><link rel="index" title="Index" href="../../../genindex.html" /><link rel="search" title="Search" href="../../../search.html" />
         <link rel="canonical" href="https://pyabaqus.haiiliin.com/_modules/abaqus/Material/Material.html" />
 
-    <meta name="generator" content="sphinx-4.5.0, furo 2022.04.07"/>
-        <title>abaqus.Material.Material - pyabaqus 1.0.16 documentation</title>
+    <meta name="generator" content="sphinx-4.5.0, furo 2022.06.04.1"/>
+        <title>abaqus.Material.Material - pyabaqus 1.0.18 documentation</title>
       <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/styles/furo.css?digest=68f4518137b9aefe99b631505a2064c3c42c9852" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/styles/furo.css?digest=40978830699223671f4072448e654b5958f38b89" />
     <link rel="stylesheet" type="text/css" href="../../../_static/styles/furo-extensions.css?digest=30d1aed668e5c3a91c3e3bf6a60b675221979f0e" />
     
     
@@ -123,7 +123,7 @@
       </label>
     </div>
     <div class="header-center">
-      <a href="../../../index.html"><div class="brand">pyabaqus 1.0.16 documentation</div></a>
+      <a href="../../../index.html"><div class="brand">pyabaqus 1.0.18 documentation</div></a>
     </div>
     <div class="header-right">
       <div class="theme-toggle-container theme-toggle-header">
@@ -146,7 +146,7 @@
       <div class="sidebar-sticky"><a class="sidebar-brand" href="../../../index.html">
   
   
-  <span class="sidebar-brand-text">pyabaqus 1.0.16 documentation</span>
+  <span class="sidebar-brand-text">pyabaqus 1.0.18 documentation</span>
   
 </a><form class="sidebar-search-container" method="get" action="../../../search.html" role="search">
   <input class="sidebar-search" placeholder=Search name="q" aria-label="Search">
@@ -286,7 +286,8 @@
           </svg>
           <span>Back to top</span>
         </a>
-        <div class="content-icon-container"><div class="theme-toggle-container theme-toggle-content">
+        <div class="content-icon-container">
+          <div class="theme-toggle-container theme-toggle-content">
             <button class="theme-toggle">
               <div class="visually-hidden">Toggle Light / Dark / Auto color theme</div>
               <svg class="theme-icon-when-auto"><use href="#svg-sun-half"></use></svg>
@@ -362,7 +363,7 @@
 
 
 <div class="viewcode-block" id="Material"><a class="viewcode-back" href="../../../user/mdb/model/material.html#abaqus.Material.Material.Material">[docs]</a><span class="k">class</span> <span class="nc">Material</span><span class="p">(</span><span class="n">MaterialBase</span><span class="p">):</span>
-    <span class="sd">"""A Material object is the object used to specify a material. The Material object stores</span>
+    <span class="sd">&quot;&quot;&quot;A Material object is the object used to specify a material. The Material object stores</span>
 <span class="sd">    the various settings that determine how a material behaves. </span>
 <span class="sd">    A material is created by combining one or more individual material options and sub </span>
 <span class="sd">    options. A particular material option is associated with the Material object through a </span>
@@ -531,12 +532,12 @@
 
 <span class="sd">    - MATERIAL</span>
 
-<span class="sd">    """</span>
+<span class="sd">    &quot;&quot;&quot;</span>
 
 <div class="viewcode-block" id="Material.AcousticMedium"><a class="viewcode-back" href="../../../reference/mdb/model/material.html#abaqus.Material.Material.Material.AcousticMedium">[docs]</a>    <span class="k">def</span> <span class="nf">AcousticMedium</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">acousticVolumetricDrag</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="n">OFF</span><span class="p">,</span> <span class="n">temperatureDependencyB</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="n">OFF</span><span class="p">,</span>
                        <span class="n">temperatureDependencyV</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="n">OFF</span><span class="p">,</span> <span class="n">dependenciesB</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="n">dependenciesV</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span>
                        <span class="n">bulkTable</span><span class="p">:</span> <span class="nb">tuple</span> <span class="o">=</span> <span class="p">(),</span> <span class="n">volumetricTable</span><span class="p">:</span> <span class="nb">tuple</span> <span class="o">=</span> <span class="p">())</span> <span class="o">-&gt;</span> <span class="n">AcousticMedium</span><span class="p">:</span>
-        <span class="sd">"""This method creates an AcousticMedium object.</span>
+        <span class="sd">&quot;&quot;&quot;This method creates an AcousticMedium object.</span>
 
 <span class="sd">        Notes</span>
 <span class="sd">        -----</span>
@@ -588,14 +589,14 @@
 <span class="sd">        Raises</span>
 <span class="sd">        ------</span>
 <span class="sd">        RangeError</span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">acousticMedium</span> <span class="o">=</span> <span class="n">AcousticMedium</span><span class="p">(</span><span class="n">acousticVolumetricDrag</span><span class="p">,</span> <span class="n">temperatureDependencyB</span><span class="p">,</span> <span class="n">temperatureDependencyV</span><span class="p">,</span>
                                              <span class="n">dependenciesB</span><span class="p">,</span> <span class="n">dependenciesV</span><span class="p">,</span> <span class="n">bulkTable</span><span class="p">,</span> <span class="n">volumetricTable</span><span class="p">)</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">acousticMedium</span></div>
 
 <div class="viewcode-block" id="Material.BrittleCracking"><a class="viewcode-back" href="../../../reference/mdb/model/material.html#abaqus.Material.Material.Material.BrittleCracking">[docs]</a>    <span class="k">def</span> <span class="nf">BrittleCracking</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">table</span><span class="p">:</span> <span class="nb">tuple</span><span class="p">,</span> <span class="n">temperatureDependency</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="n">OFF</span><span class="p">,</span> <span class="n">dependencies</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span>
                         <span class="nb">type</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="n">STRAIN</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">BrittleCracking</span><span class="p">:</span>
-        <span class="sd">"""This method creates a BrittleCracking object.</span>
+        <span class="sd">&quot;&quot;&quot;This method creates a BrittleCracking object.</span>
 
 <span class="sd">        Notes</span>
 <span class="sd">        -----</span>
@@ -621,12 +622,12 @@
 <span class="sd">        Returns</span>
 <span class="sd">        -------</span>
 <span class="sd">            A BrittleCracking object.</span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">brittleCracking</span> <span class="o">=</span> <span class="n">BrittleCracking</span><span class="p">(</span><span class="n">table</span><span class="p">,</span> <span class="n">temperatureDependency</span><span class="p">,</span> <span class="n">dependencies</span><span class="p">,</span> <span class="nb">type</span><span class="p">)</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">brittleCracking</span></div>
 
 <div class="viewcode-block" id="Material.CapPlasticity"><a class="viewcode-back" href="../../../reference/mdb/model/material.html#abaqus.Material.Material.Material.CapPlasticity">[docs]</a>    <span class="k">def</span> <span class="nf">CapPlasticity</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">table</span><span class="p">:</span> <span class="nb">tuple</span><span class="p">,</span> <span class="n">temperatureDependency</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="n">OFF</span><span class="p">,</span> <span class="n">dependencies</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">0</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">CapPlasticity</span><span class="p">:</span>
-        <span class="sd">"""This method creates a CapPlasticity object.</span>
+        <span class="sd">&quot;&quot;&quot;This method creates a CapPlasticity object.</span>
 
 <span class="sd">        Notes</span>
 <span class="sd">        -----</span>
@@ -653,13 +654,13 @@
 <span class="sd">        Raises</span>
 <span class="sd">        ------</span>
 <span class="sd">        RangeError</span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">capPlasticity</span> <span class="o">=</span> <span class="n">CapPlasticity</span><span class="p">(</span><span class="n">table</span><span class="p">,</span> <span class="n">temperatureDependency</span><span class="p">,</span> <span class="n">dependencies</span><span class="p">)</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">capPlasticity</span></div>
 
 <div class="viewcode-block" id="Material.CastIronPlasticity"><a class="viewcode-back" href="../../../reference/mdb/model/material.html#abaqus.Material.Material.Material.CastIronPlasticity">[docs]</a>    <span class="k">def</span> <span class="nf">CastIronPlasticity</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">table</span><span class="p">:</span> <span class="nb">tuple</span><span class="p">,</span> <span class="n">temperatureDependency</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="n">OFF</span><span class="p">,</span>
                            <span class="n">dependencies</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">0</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">CastIronPlasticity</span><span class="p">:</span>
-        <span class="sd">"""This method creates a CastIronPlasticity object.</span>
+        <span class="sd">&quot;&quot;&quot;This method creates a CastIronPlasticity object.</span>
 
 <span class="sd">        Notes</span>
 <span class="sd">        -----</span>
@@ -686,13 +687,13 @@
 <span class="sd">        Raises</span>
 <span class="sd">        ------</span>
 <span class="sd">        RangeError</span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">castIronPlasticity</span> <span class="o">=</span> <span class="n">CastIronPlasticity</span><span class="p">(</span><span class="n">table</span><span class="p">,</span> <span class="n">temperatureDependency</span><span class="p">,</span> <span class="n">dependencies</span><span class="p">)</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">castIronPlasticity</span></div>
 
 <div class="viewcode-block" id="Material.ClayPlasticity"><a class="viewcode-back" href="../../../reference/mdb/model/material.html#abaqus.Material.Material.Material.ClayPlasticity">[docs]</a>    <span class="k">def</span> <span class="nf">ClayPlasticity</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">table</span><span class="p">:</span> <span class="nb">tuple</span><span class="p">,</span> <span class="n">intercept</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">hardening</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="n">EXPONENTIAL</span><span class="p">,</span>
                        <span class="n">temperatureDependency</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="n">OFF</span><span class="p">,</span> <span class="n">dependencies</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">0</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">ClayPlasticity</span><span class="p">:</span>
-        <span class="sd">"""This method creates a ClayPlasticity object.</span>
+        <span class="sd">&quot;&quot;&quot;This method creates a ClayPlasticity object.</span>
 
 <span class="sd">        Notes</span>
 <span class="sd">        -----</span>
@@ -726,12 +727,12 @@
 <span class="sd">        Raises</span>
 <span class="sd">        ------</span>
 <span class="sd">        RangeError</span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">clayPlasticity</span> <span class="o">=</span> <span class="n">ClayPlasticity</span><span class="p">(</span><span class="n">table</span><span class="p">,</span> <span class="n">intercept</span><span class="p">,</span> <span class="n">hardening</span><span class="p">,</span> <span class="n">temperatureDependency</span><span class="p">,</span> <span class="n">dependencies</span><span class="p">)</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">clayPlasticity</span></div>
 
 <div class="viewcode-block" id="Material.Concrete"><a class="viewcode-back" href="../../../reference/mdb/model/material.html#abaqus.Material.Material.Material.Concrete">[docs]</a>    <span class="k">def</span> <span class="nf">Concrete</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">table</span><span class="p">:</span> <span class="nb">tuple</span><span class="p">,</span> <span class="n">temperatureDependency</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="n">OFF</span><span class="p">,</span> <span class="n">dependencies</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">0</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Concrete</span><span class="p">:</span>
-        <span class="sd">"""This method creates a Concrete object.</span>
+        <span class="sd">&quot;&quot;&quot;This method creates a Concrete object.</span>
 
 <span class="sd">        Notes</span>
 <span class="sd">        -----</span>
@@ -758,13 +759,13 @@
 <span class="sd">        Raises</span>
 <span class="sd">        ------</span>
 <span class="sd">        RangeError</span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">concrete</span> <span class="o">=</span> <span class="n">Concrete</span><span class="p">(</span><span class="n">table</span><span class="p">,</span> <span class="n">temperatureDependency</span><span class="p">,</span> <span class="n">dependencies</span><span class="p">)</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">concrete</span></div>
 
 <div class="viewcode-block" id="Material.ConcreteDamagedPlasticity"><a class="viewcode-back" href="../../../reference/mdb/model/material.html#abaqus.Material.Material.Material.ConcreteDamagedPlasticity">[docs]</a>    <span class="k">def</span> <span class="nf">ConcreteDamagedPlasticity</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">table</span><span class="p">:</span> <span class="nb">tuple</span><span class="p">,</span> <span class="n">temperatureDependency</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="n">OFF</span><span class="p">,</span>
                                   <span class="n">dependencies</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">0</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">ConcreteDamagedPlasticity</span><span class="p">:</span>
-        <span class="sd">"""This method creates a ConcreteDamagedPlasticity object.</span>
+        <span class="sd">&quot;&quot;&quot;This method creates a ConcreteDamagedPlasticity object.</span>
 
 <span class="sd">        Notes</span>
 <span class="sd">        -----</span>
@@ -791,13 +792,13 @@
 <span class="sd">        Raises</span>
 <span class="sd">        ------</span>
 <span class="sd">        RangeError</span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">concreteDamagedPlasticity</span> <span class="o">=</span> <span class="n">ConcreteDamagedPlasticity</span><span class="p">(</span><span class="n">table</span><span class="p">,</span> <span class="n">temperatureDependency</span><span class="p">,</span> <span class="n">dependencies</span><span class="p">)</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">concreteDamagedPlasticity</span></div>
 
 <div class="viewcode-block" id="Material.Conductivity"><a class="viewcode-back" href="../../../reference/mdb/model/material.html#abaqus.Material.Material.Material.Conductivity">[docs]</a>    <span class="k">def</span> <span class="nf">Conductivity</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">table</span><span class="p">:</span> <span class="nb">tuple</span><span class="p">,</span> <span class="nb">type</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="n">ISOTROPIC</span><span class="p">,</span> <span class="n">temperatureDependency</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="n">OFF</span><span class="p">,</span>
                      <span class="n">dependencies</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">0</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Conductivity</span><span class="p">:</span>
-        <span class="sd">"""This method creates a Conductivity object.</span>
+        <span class="sd">&quot;&quot;&quot;This method creates a Conductivity object.</span>
 
 <span class="sd">        Notes</span>
 <span class="sd">        -----</span>
@@ -827,13 +828,13 @@
 <span class="sd">        Raises</span>
 <span class="sd">        ------</span>
 <span class="sd">        RangeError</span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">conductivity</span> <span class="o">=</span> <span class="n">Conductivity</span><span class="p">(</span><span class="n">table</span><span class="p">,</span> <span class="nb">type</span><span class="p">,</span> <span class="n">temperatureDependency</span><span class="p">,</span> <span class="n">dependencies</span><span class="p">)</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">conductivity</span></div>
 
 <div class="viewcode-block" id="Material.Creep"><a class="viewcode-back" href="../../../reference/mdb/model/material.html#abaqus.Material.Material.Material.Creep">[docs]</a>    <span class="k">def</span> <span class="nf">Creep</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">table</span><span class="p">:</span> <span class="nb">tuple</span><span class="p">,</span> <span class="n">law</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="n">STRAIN</span><span class="p">,</span> <span class="n">temperatureDependency</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="n">OFF</span><span class="p">,</span>
               <span class="n">dependencies</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="n">time</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="n">TOTAL</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Creep</span><span class="p">:</span>
-        <span class="sd">"""This method creates a Creep object.</span>
+        <span class="sd">&quot;&quot;&quot;This method creates a Creep object.</span>
 
 <span class="sd">        Notes</span>
 <span class="sd">        -----</span>
@@ -867,13 +868,13 @@
 <span class="sd">        Raises</span>
 <span class="sd">        ------</span>
 <span class="sd">        RangeError</span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">creep</span> <span class="o">=</span> <span class="n">Creep</span><span class="p">(</span><span class="n">table</span><span class="p">,</span> <span class="n">law</span><span class="p">,</span> <span class="n">temperatureDependency</span><span class="p">,</span> <span class="n">dependencies</span><span class="p">,</span> <span class="n">time</span><span class="p">)</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">creep</span></div>
 
 <div class="viewcode-block" id="Material.CrushableFoam"><a class="viewcode-back" href="../../../reference/mdb/model/material.html#abaqus.Material.Material.Material.CrushableFoam">[docs]</a>    <span class="k">def</span> <span class="nf">CrushableFoam</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">table</span><span class="p">:</span> <span class="nb">tuple</span><span class="p">,</span> <span class="n">hardening</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="n">VOLUMETRIC</span><span class="p">,</span>
                       <span class="n">temperatureDependency</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="n">OFF</span><span class="p">,</span> <span class="n">dependencies</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">0</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">CrushableFoam</span><span class="p">:</span>
-        <span class="sd">"""This method creates a CrushableFoam object.</span>
+        <span class="sd">&quot;&quot;&quot;This method creates a CrushableFoam object.</span>
 
 <span class="sd">        Notes</span>
 <span class="sd">        -----</span>
@@ -903,12 +904,12 @@
 <span class="sd">        Raises</span>
 <span class="sd">        ------</span>
 <span class="sd">        RangeError</span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">crushableFoam</span> <span class="o">=</span> <span class="n">CrushableFoam</span><span class="p">(</span><span class="n">table</span><span class="p">,</span> <span class="n">hardening</span><span class="p">,</span> <span class="n">temperatureDependency</span><span class="p">,</span> <span class="n">dependencies</span><span class="p">)</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">crushableFoam</span></div>
 
 <div class="viewcode-block" id="Material.Damping"><a class="viewcode-back" href="../../../reference/mdb/model/material.html#abaqus.Material.Material.Material.Damping">[docs]</a>    <span class="k">def</span> <span class="nf">Damping</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">alpha</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="n">beta</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="n">composite</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="n">structural</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mi">0</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Damping</span><span class="p">:</span>
-        <span class="sd">"""This method creates a Damping object.</span>
+        <span class="sd">&quot;&quot;&quot;This method creates a Damping object.</span>
 
 <span class="sd">        Notes</span>
 <span class="sd">        -----</span>
@@ -942,12 +943,12 @@
 <span class="sd">        Raises</span>
 <span class="sd">        ------</span>
 <span class="sd">        RangeError</span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">damping</span> <span class="o">=</span> <span class="n">Damping</span><span class="p">(</span><span class="n">alpha</span><span class="p">,</span> <span class="n">beta</span><span class="p">,</span> <span class="n">composite</span><span class="p">,</span> <span class="n">structural</span><span class="p">)</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">damping</span></div>
 
 <div class="viewcode-block" id="Material.DeformationPlasticity"><a class="viewcode-back" href="../../../reference/mdb/model/material.html#abaqus.Material.Material.Material.DeformationPlasticity">[docs]</a>    <span class="k">def</span> <span class="nf">DeformationPlasticity</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">table</span><span class="p">:</span> <span class="nb">tuple</span><span class="p">,</span> <span class="n">temperatureDependency</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="n">OFF</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">DeformationPlasticity</span><span class="p">:</span>
-        <span class="sd">"""This method creates a DeformationPlasticity object.</span>
+        <span class="sd">&quot;&quot;&quot;This method creates a DeformationPlasticity object.</span>
 
 <span class="sd">        Notes</span>
 <span class="sd">        -----</span>
@@ -972,13 +973,13 @@
 <span class="sd">        Raises</span>
 <span class="sd">        ------</span>
 <span class="sd">        RangeError</span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">deformationPlasticity</span> <span class="o">=</span> <span class="n">DeformationPlasticity</span><span class="p">(</span><span class="n">table</span><span class="p">,</span> <span class="n">temperatureDependency</span><span class="p">)</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">deformationPlasticity</span></div>
 
 <div class="viewcode-block" id="Material.Density"><a class="viewcode-back" href="../../../reference/mdb/model/material.html#abaqus.Material.Material.Material.Density">[docs]</a>    <span class="k">def</span> <span class="nf">Density</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">table</span><span class="p">:</span> <span class="nb">tuple</span><span class="p">,</span> <span class="n">temperatureDependency</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="n">OFF</span><span class="p">,</span> <span class="n">dependencies</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span>
-                <span class="n">distributionType</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="n">UNIFORM</span><span class="p">,</span> <span class="n">fieldName</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">''</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Density</span><span class="p">:</span>
-        <span class="sd">"""This method creates a Density object.</span>
+                <span class="n">distributionType</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="n">UNIFORM</span><span class="p">,</span> <span class="n">fieldName</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Density</span><span class="p">:</span>
+        <span class="sd">&quot;&quot;&quot;This method creates a Density object.</span>
 
 <span class="sd">        Notes</span>
 <span class="sd">        -----</span>
@@ -1020,12 +1021,12 @@
 <span class="sd">        Raises</span>
 <span class="sd">        ------</span>
 <span class="sd">        RangeError</span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">density</span> <span class="o">=</span> <span class="n">Density</span><span class="p">(</span><span class="n">table</span><span class="p">,</span> <span class="n">temperatureDependency</span><span class="p">,</span> <span class="n">dependencies</span><span class="p">,</span> <span class="n">distributionType</span><span class="p">,</span> <span class="n">fieldName</span><span class="p">)</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">density</span></div>
 
 <div class="viewcode-block" id="Material.Depvar"><a class="viewcode-back" href="../../../reference/mdb/model/material.html#abaqus.Material.Material.Material.Depvar">[docs]</a>    <span class="k">def</span> <span class="nf">Depvar</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">deleteVar</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="n">n</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">0</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Depvar</span><span class="p">:</span>
-        <span class="sd">"""This method creates a Depvar object.</span>
+        <span class="sd">&quot;&quot;&quot;This method creates a Depvar object.</span>
 
 <span class="sd">        Notes</span>
 <span class="sd">        -----</span>
@@ -1052,13 +1053,13 @@
 <span class="sd">        Raises</span>
 <span class="sd">        ------</span>
 <span class="sd">        RangeError</span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">depvar</span> <span class="o">=</span> <span class="n">Depvar</span><span class="p">(</span><span class="n">deleteVar</span><span class="p">,</span> <span class="n">n</span><span class="p">)</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">depvar</span></div>
 
 <div class="viewcode-block" id="Material.Dielectric"><a class="viewcode-back" href="../../../reference/mdb/model/material.html#abaqus.Material.Material.Material.Dielectric">[docs]</a>    <span class="k">def</span> <span class="nf">Dielectric</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">table</span><span class="p">:</span> <span class="nb">tuple</span><span class="p">,</span> <span class="nb">type</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="n">ISOTROPIC</span><span class="p">,</span> <span class="n">frequencyDependency</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="n">OFF</span><span class="p">,</span>
                    <span class="n">temperatureDependency</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="n">OFF</span><span class="p">,</span> <span class="n">dependencies</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">0</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Dielectric</span><span class="p">:</span>
-        <span class="sd">"""This method creates a Dielectric object.</span>
+        <span class="sd">&quot;&quot;&quot;This method creates a Dielectric object.</span>
 
 <span class="sd">        Notes</span>
 <span class="sd">        -----</span>
@@ -1086,13 +1087,13 @@
 <span class="sd">        Returns</span>
 <span class="sd">        -------</span>
 <span class="sd">            A Dielectric object.</span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">dielectric</span> <span class="o">=</span> <span class="n">Dielectric</span><span class="p">(</span><span class="n">table</span><span class="p">,</span> <span class="nb">type</span><span class="p">,</span> <span class="n">frequencyDependency</span><span class="p">,</span> <span class="n">temperatureDependency</span><span class="p">,</span> <span class="n">dependencies</span><span class="p">)</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">dielectric</span></div>
 
 <div class="viewcode-block" id="Material.Diffusivity"><a class="viewcode-back" href="../../../reference/mdb/model/material.html#abaqus.Material.Material.Material.Diffusivity">[docs]</a>    <span class="k">def</span> <span class="nf">Diffusivity</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">table</span><span class="p">:</span> <span class="nb">tuple</span><span class="p">,</span> <span class="nb">type</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="n">ISOTROPIC</span><span class="p">,</span> <span class="n">law</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="n">GENERAL</span><span class="p">,</span>
                     <span class="n">temperatureDependency</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="n">OFF</span><span class="p">,</span> <span class="n">dependencies</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">0</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Diffusivity</span><span class="p">:</span>
-        <span class="sd">"""This method creates a Diffusivity object.</span>
+        <span class="sd">&quot;&quot;&quot;This method creates a Diffusivity object.</span>
 
 <span class="sd">        Notes</span>
 <span class="sd">        -----</span>
@@ -1125,14 +1126,14 @@
 <span class="sd">        Raises</span>
 <span class="sd">        ------</span>
 <span class="sd">        RangeError</span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">diffusivity</span> <span class="o">=</span> <span class="n">Diffusivity</span><span class="p">(</span><span class="n">table</span><span class="p">,</span> <span class="nb">type</span><span class="p">,</span> <span class="n">law</span><span class="p">,</span> <span class="n">temperatureDependency</span><span class="p">,</span> <span class="n">dependencies</span><span class="p">)</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">diffusivity</span></div>
 
 <div class="viewcode-block" id="Material.DruckerPrager"><a class="viewcode-back" href="../../../reference/mdb/model/material.html#abaqus.Material.Material.Material.DruckerPrager">[docs]</a>    <span class="k">def</span> <span class="nf">DruckerPrager</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">table</span><span class="p">:</span> <span class="nb">tuple</span><span class="p">,</span> <span class="n">shearCriterion</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="n">LINEAR</span><span class="p">,</span> <span class="n">eccentricity</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span>
                       <span class="n">testData</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="n">OFF</span><span class="p">,</span> <span class="n">temperatureDependency</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="n">OFF</span><span class="p">,</span>
                       <span class="n">dependencies</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">0</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">DruckerPrager</span><span class="p">:</span>
-        <span class="sd">"""This method creates a DruckerPrager object.</span>
+        <span class="sd">&quot;&quot;&quot;This method creates a DruckerPrager object.</span>
 
 <span class="sd">        Notes</span>
 <span class="sd">        -----</span>
@@ -1173,7 +1174,7 @@
 <span class="sd">        Raises</span>
 <span class="sd">        ------</span>
 <span class="sd">        RangeError</span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">druckerPrager</span> <span class="o">=</span> <span class="n">DruckerPrager</span><span class="p">(</span><span class="n">table</span><span class="p">,</span> <span class="n">shearCriterion</span><span class="p">,</span> <span class="n">eccentricity</span><span class="p">,</span> <span class="n">testData</span><span class="p">,</span> <span class="n">temperatureDependency</span><span class="p">,</span>
                                            <span class="n">dependencies</span><span class="p">)</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">druckerPrager</span></div>
@@ -1181,7 +1182,7 @@
 <div class="viewcode-block" id="Material.Elastic"><a class="viewcode-back" href="../../../reference/mdb/model/material.html#abaqus.Material.Material.Material.Elastic">[docs]</a>    <span class="k">def</span> <span class="nf">Elastic</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">table</span><span class="p">:</span> <span class="nb">tuple</span><span class="p">,</span> <span class="nb">type</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="n">ISOTROPIC</span><span class="p">,</span> <span class="n">noCompression</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="n">OFF</span><span class="p">,</span>
                 <span class="n">noTension</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="n">OFF</span><span class="p">,</span> <span class="n">temperatureDependency</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="n">OFF</span><span class="p">,</span> <span class="n">dependencies</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span>
                 <span class="n">moduli</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="n">LONG_TERM</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Elastic</span><span class="p">:</span>
-        <span class="sd">"""This method creates an Elastic object.</span>
+        <span class="sd">&quot;&quot;&quot;This method creates an Elastic object.</span>
 
 <span class="sd">        Notes</span>
 <span class="sd">        -----</span>
@@ -1194,8 +1195,8 @@
 
 <span class="sd">        The table data for this object are:</span>
 <span class="sd">        - If **type**=ISOTROPIC, the table data specify the following:</span>
-<span class="sd">            - The Young's modulus, E.</span>
-<span class="sd">            - The Poisson's ratio, v.</span>
+<span class="sd">            - The Young&#39;s modulus, E.</span>
+<span class="sd">            - The Poisson&#39;s ratio, v.</span>
 <span class="sd">            - Temperature, if the data depend on temperature.</span>
 <span class="sd">            - Value of the first field variable, if the data depend on field variables.</span>
 <span class="sd">            - Value of the second field variable.</span>
@@ -1330,14 +1331,14 @@
 <span class="sd">        Raises</span>
 <span class="sd">        ------</span>
 <span class="sd">        RangeError</span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">elastic</span> <span class="o">=</span> <span class="n">Elastic</span><span class="p">(</span><span class="n">table</span><span class="p">,</span> <span class="nb">type</span><span class="p">,</span> <span class="n">noCompression</span><span class="p">,</span> <span class="n">noTension</span><span class="p">,</span> <span class="n">temperatureDependency</span><span class="p">,</span> <span class="n">dependencies</span><span class="p">,</span> <span class="n">moduli</span><span class="p">)</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">elastic</span></div>
 
 <div class="viewcode-block" id="Material.ElectricalConductivity"><a class="viewcode-back" href="../../../reference/mdb/model/material.html#abaqus.Material.Material.Material.ElectricalConductivity">[docs]</a>    <span class="k">def</span> <span class="nf">ElectricalConductivity</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">table</span><span class="p">:</span> <span class="nb">tuple</span><span class="p">,</span> <span class="nb">type</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="n">ISOTROPIC</span><span class="p">,</span>
                                <span class="n">frequencyDependency</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="n">OFF</span><span class="p">,</span>
                                <span class="n">temperatureDependency</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="n">OFF</span><span class="p">,</span> <span class="n">dependencies</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">0</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">ElectricalConductivity</span><span class="p">:</span>
-        <span class="sd">"""This method creates an ElectricalConductivity object.</span>
+        <span class="sd">&quot;&quot;&quot;This method creates an ElectricalConductivity object.</span>
 
 <span class="sd">        Notes</span>
 <span class="sd">        -----</span>
@@ -1369,7 +1370,7 @@
 <span class="sd">        Raises</span>
 <span class="sd">        ------</span>
 <span class="sd">        RangeError</span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">electricalConductivity</span> <span class="o">=</span> <span class="n">ElectricalConductivity</span><span class="p">(</span><span class="n">table</span><span class="p">,</span> <span class="nb">type</span><span class="p">,</span> <span class="n">frequencyDependency</span><span class="p">,</span> <span class="n">temperatureDependency</span><span class="p">,</span>
                                                              <span class="n">dependencies</span><span class="p">)</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">electricalConductivity</span></div>
@@ -1378,7 +1379,7 @@
             <span class="n">dependencies</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="n">detonationEnergy</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="n">solidTable</span><span class="p">:</span> <span class="nb">tuple</span> <span class="o">=</span> <span class="p">(),</span>
             <span class="n">gasTable</span><span class="p">:</span> <span class="nb">tuple</span> <span class="o">=</span> <span class="p">(),</span> <span class="n">reactionTable</span><span class="p">:</span> <span class="nb">tuple</span> <span class="o">=</span> <span class="p">(),</span> <span class="n">gasSpecificTable</span><span class="p">:</span> <span class="nb">tuple</span> <span class="o">=</span> <span class="p">(),</span>
             <span class="n">table</span><span class="p">:</span> <span class="nb">tuple</span> <span class="o">=</span> <span class="p">())</span> <span class="o">-&gt;</span> <span class="n">Eos</span><span class="p">:</span>
-        <span class="sd">"""This method creates an Eos object.</span>
+        <span class="sd">&quot;&quot;&quot;This method creates an Eos object.</span>
 
 <span class="sd">        Notes</span>
 <span class="sd">        -----</span>
@@ -1452,14 +1453,14 @@
 
 <span class="sd">        Raises</span>
 <span class="sd">        ------</span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">eos</span> <span class="o">=</span> <span class="n">Eos</span><span class="p">(</span><span class="nb">type</span><span class="p">,</span> <span class="n">temperatureDependency</span><span class="p">,</span> <span class="n">dependencies</span><span class="p">,</span> <span class="n">detonationEnergy</span><span class="p">,</span> <span class="n">solidTable</span><span class="p">,</span> <span class="n">gasTable</span><span class="p">,</span> <span class="n">reactionTable</span><span class="p">,</span>
                        <span class="n">gasSpecificTable</span><span class="p">,</span> <span class="n">table</span><span class="p">)</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">eos</span></div>
 
 <div class="viewcode-block" id="Material.Expansion"><a class="viewcode-back" href="../../../reference/mdb/model/material.html#abaqus.Material.Material.Material.Expansion">[docs]</a>    <span class="k">def</span> <span class="nf">Expansion</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="nb">type</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="n">ISOTROPIC</span><span class="p">,</span> <span class="n">userSubroutine</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="n">OFF</span><span class="p">,</span> <span class="n">zero</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span>
                   <span class="n">temperatureDependency</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="n">OFF</span><span class="p">,</span> <span class="n">dependencies</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="n">table</span><span class="p">:</span> <span class="nb">tuple</span> <span class="o">=</span> <span class="p">())</span> <span class="o">-&gt;</span> <span class="n">Expansion</span><span class="p">:</span>
-        <span class="sd">"""This method creates an Expansion object.</span>
+        <span class="sd">&quot;&quot;&quot;This method creates an Expansion object.</span>
 
 <span class="sd">        Notes</span>
 <span class="sd">        -----</span>
@@ -1496,13 +1497,13 @@
 <span class="sd">        Raises</span>
 <span class="sd">        ------</span>
 <span class="sd">        RangeError</span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">expansion</span> <span class="o">=</span> <span class="n">Expansion</span><span class="p">(</span><span class="nb">type</span><span class="p">,</span> <span class="n">userSubroutine</span><span class="p">,</span> <span class="n">zero</span><span class="p">,</span> <span class="n">temperatureDependency</span><span class="p">,</span> <span class="n">dependencies</span><span class="p">,</span> <span class="n">table</span><span class="p">)</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">expansion</span></div>
 
 <div class="viewcode-block" id="Material.FluidLeakoff"><a class="viewcode-back" href="../../../reference/mdb/model/material.html#abaqus.Material.Material.Material.FluidLeakoff">[docs]</a>    <span class="k">def</span> <span class="nf">FluidLeakoff</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">temperatureDependency</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="n">OFF</span><span class="p">,</span> <span class="n">dependencies</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span>
                      <span class="nb">type</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="n">COEFFICIENTS</span><span class="p">,</span> <span class="n">table</span><span class="p">:</span> <span class="nb">tuple</span> <span class="o">=</span> <span class="p">())</span> <span class="o">-&gt;</span> <span class="n">FluidLeakoff</span><span class="p">:</span>
-        <span class="sd">"""This method creates a FluidLeakoff object.</span>
+        <span class="sd">&quot;&quot;&quot;This method creates a FluidLeakoff object.</span>
 
 <span class="sd">        Notes</span>
 <span class="sd">        -----</span>
@@ -1529,13 +1530,13 @@
 <span class="sd">        Returns</span>
 <span class="sd">        -------</span>
 <span class="sd">            A FluidLeakoff object.</span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">fluidLeakoff</span> <span class="o">=</span> <span class="n">FluidLeakoff</span><span class="p">(</span><span class="n">temperatureDependency</span><span class="p">,</span> <span class="n">dependencies</span><span class="p">,</span> <span class="nb">type</span><span class="p">,</span> <span class="n">table</span><span class="p">)</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">fluidLeakoff</span></div>
 
 <div class="viewcode-block" id="Material.GapFlow"><a class="viewcode-back" href="../../../reference/mdb/model/material.html#abaqus.Material.Material.Material.GapFlow">[docs]</a>    <span class="k">def</span> <span class="nf">GapFlow</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">table</span><span class="p">:</span> <span class="nb">tuple</span><span class="p">,</span> <span class="n">kmax</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">temperatureDependency</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="n">OFF</span><span class="p">,</span>
                 <span class="n">dependencies</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="nb">type</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="n">NEWTONIAN</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">GapFlow</span><span class="p">:</span>
-        <span class="sd">"""This method creates a GapFlow object.</span>
+        <span class="sd">&quot;&quot;&quot;This method creates a GapFlow object.</span>
 
 <span class="sd">        Notes</span>
 <span class="sd">        -----</span>
@@ -1565,13 +1566,13 @@
 <span class="sd">        Returns</span>
 <span class="sd">        -------</span>
 <span class="sd">            A GapFlow object.</span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">gapFlow</span> <span class="o">=</span> <span class="n">GapFlow</span><span class="p">(</span><span class="n">table</span><span class="p">,</span> <span class="n">kmax</span><span class="p">,</span> <span class="n">temperatureDependency</span><span class="p">,</span> <span class="n">dependencies</span><span class="p">,</span> <span class="nb">type</span><span class="p">)</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">gapFlow</span></div>
 
 <div class="viewcode-block" id="Material.GasketMembraneElastic"><a class="viewcode-back" href="../../../reference/mdb/model/material.html#abaqus.Material.Material.Material.GasketMembraneElastic">[docs]</a>    <span class="k">def</span> <span class="nf">GasketMembraneElastic</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">table</span><span class="p">:</span> <span class="nb">tuple</span><span class="p">,</span> <span class="n">temperatureDependency</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="n">OFF</span><span class="p">,</span>
                               <span class="n">dependencies</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">0</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">GasketMembraneElastic</span><span class="p">:</span>
-        <span class="sd">"""This method creates a GasketMembraneElastic object.</span>
+        <span class="sd">&quot;&quot;&quot;This method creates a GasketMembraneElastic object.</span>
 
 <span class="sd">        Notes</span>
 <span class="sd">        -----</span>
@@ -1598,7 +1599,7 @@
 <span class="sd">        Raises</span>
 <span class="sd">        ------</span>
 <span class="sd">        RangeError</span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">gasketMembraneElastic</span> <span class="o">=</span> <span class="n">GasketMembraneElastic</span><span class="p">(</span><span class="n">table</span><span class="p">,</span> <span class="n">temperatureDependency</span><span class="p">,</span> <span class="n">dependencies</span><span class="p">)</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">gasketMembraneElastic</span></div>
 
@@ -1608,7 +1609,7 @@
                                 <span class="n">variableUnits</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="n">STRESS</span><span class="p">,</span> <span class="n">yieldOnset</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span>
                                 <span class="n">yieldOnsetMethod</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="n">RELATIVE_SLOPE_DROP</span><span class="p">,</span>
                                 <span class="n">unloadingTable</span><span class="p">:</span> <span class="nb">tuple</span> <span class="o">=</span> <span class="p">())</span> <span class="o">-&gt;</span> <span class="n">GasketThicknessBehavior</span><span class="p">:</span>
-        <span class="sd">"""This method creates a GasketThicknessBehavior object.</span>
+        <span class="sd">&quot;&quot;&quot;This method creates a GasketThicknessBehavior object.</span>
 
 <span class="sd">        Notes</span>
 <span class="sd">        -----</span>
@@ -1667,7 +1668,7 @@
 <span class="sd">        Raises</span>
 <span class="sd">        ------</span>
 <span class="sd">        RangeError</span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">gasketThicknessBehavior</span> <span class="o">=</span> <span class="n">GasketThicknessBehavior</span><span class="p">(</span><span class="n">table</span><span class="p">,</span> <span class="n">temperatureDependency</span><span class="p">,</span> <span class="n">dependencies</span><span class="p">,</span>
                                                                <span class="n">tensileStiffnessFactor</span><span class="p">,</span> <span class="nb">type</span><span class="p">,</span> <span class="n">unloadingDependencies</span><span class="p">,</span>
                                                                <span class="n">unloadingTemperatureDependency</span><span class="p">,</span> <span class="n">variableUnits</span><span class="p">,</span>
@@ -1677,7 +1678,7 @@
 <div class="viewcode-block" id="Material.GasketTransverseShearElastic"><a class="viewcode-back" href="../../../reference/mdb/model/material.html#abaqus.Material.Material.Material.GasketTransverseShearElastic">[docs]</a>    <span class="k">def</span> <span class="nf">GasketTransverseShearElastic</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">table</span><span class="p">:</span> <span class="nb">tuple</span><span class="p">,</span> <span class="n">variableUnits</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="n">STRESS</span><span class="p">,</span>
                                      <span class="n">temperatureDependency</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="n">OFF</span><span class="p">,</span>
                                      <span class="n">dependencies</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">0</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">GasketTransverseShearElastic</span><span class="p">:</span>
-        <span class="sd">"""This method creates a GasketTransverseShearElastic object.</span>
+        <span class="sd">&quot;&quot;&quot;This method creates a GasketTransverseShearElastic object.</span>
 
 <span class="sd">        Notes</span>
 <span class="sd">        -----</span>
@@ -1707,13 +1708,13 @@
 <span class="sd">        Raises</span>
 <span class="sd">        ------</span>
 <span class="sd">        RangeError</span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">gasketTransverseShearElastic</span> <span class="o">=</span> <span class="n">GasketTransverseShearElastic</span><span class="p">(</span><span class="n">table</span><span class="p">,</span> <span class="n">variableUnits</span><span class="p">,</span> <span class="n">temperatureDependency</span><span class="p">,</span>
                                                                          <span class="n">dependencies</span><span class="p">)</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">gasketTransverseShearElastic</span></div>
 
 <div class="viewcode-block" id="Material.Gel"><a class="viewcode-back" href="../../../reference/mdb/model/material.html#abaqus.Material.Material.Material.Gel">[docs]</a>    <span class="k">def</span> <span class="nf">Gel</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">table</span><span class="p">:</span> <span class="nb">tuple</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Gel</span><span class="p">:</span>
-        <span class="sd">"""This method creates a Gel object.</span>
+        <span class="sd">&quot;&quot;&quot;This method creates a Gel object.</span>
 
 <span class="sd">        Notes</span>
 <span class="sd">        -----</span>
@@ -1732,7 +1733,7 @@
 <span class="sd">        Returns</span>
 <span class="sd">        -------</span>
 <span class="sd">            A Gel object.</span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">gel</span> <span class="o">=</span> <span class="n">Gel</span><span class="p">(</span><span class="n">table</span><span class="p">)</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">gel</span></div>
 
@@ -1746,7 +1747,7 @@
                      <span class="n">anisotropicType</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="n">FUNG_ANISOTROPIC</span><span class="p">,</span>
                      <span class="n">formulation</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="n">STRAIN</span><span class="p">,</span> <span class="n">behaviorType</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="n">INCOMPRESSIBLE</span><span class="p">,</span>
                      <span class="n">dependencies</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="n">localDirections</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">0</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Hyperelastic</span><span class="p">:</span>
-        <span class="sd">"""This method creates a Hyperelastic object.</span>
+        <span class="sd">&quot;&quot;&quot;This method creates a Hyperelastic object.</span>
 
 <span class="sd">        Notes</span>
 <span class="sd">        -----</span>
@@ -1827,7 +1828,7 @@
 <span class="sd">        ------</span>
 <span class="sd">        InvalidNameError</span>
 <span class="sd">        RangeError </span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">hyperelastic</span> <span class="o">=</span> <span class="n">Hyperelastic</span><span class="p">(</span><span class="n">table</span><span class="p">,</span> <span class="nb">type</span><span class="p">,</span> <span class="n">moduliTimeScale</span><span class="p">,</span> <span class="n">temperatureDependency</span><span class="p">,</span> <span class="n">n</span><span class="p">,</span> <span class="n">beta</span><span class="p">,</span> <span class="n">testData</span><span class="p">,</span>
                                          <span class="n">compressible</span><span class="p">,</span> <span class="n">properties</span><span class="p">,</span> <span class="n">deviatoricResponse</span><span class="p">,</span> <span class="n">volumetricResponse</span><span class="p">,</span> <span class="n">poissonRatio</span><span class="p">,</span>
                                          <span class="n">materialType</span><span class="p">,</span> <span class="n">anisotropicType</span><span class="p">,</span> <span class="n">formulation</span><span class="p">,</span> <span class="n">behaviorType</span><span class="p">,</span> <span class="n">dependencies</span><span class="p">,</span>
@@ -1837,7 +1838,7 @@
 <div class="viewcode-block" id="Material.Hyperfoam"><a class="viewcode-back" href="../../../reference/mdb/model/material.html#abaqus.Material.Material.Material.Hyperfoam">[docs]</a>    <span class="k">def</span> <span class="nf">Hyperfoam</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">testData</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="n">OFF</span><span class="p">,</span> <span class="n">poisson</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">n</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span>
                   <span class="n">temperatureDependency</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="n">OFF</span><span class="p">,</span> <span class="n">moduli</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="n">LONG_TERM</span><span class="p">,</span>
                   <span class="n">table</span><span class="p">:</span> <span class="nb">tuple</span> <span class="o">=</span> <span class="p">())</span> <span class="o">-&gt;</span> <span class="n">Hyperfoam</span><span class="p">:</span>
-        <span class="sd">"""This method creates a Hyperfoam object.</span>
+        <span class="sd">&quot;&quot;&quot;This method creates a Hyperfoam object.</span>
 
 <span class="sd">        Notes</span>
 <span class="sd">        -----</span>
@@ -1853,7 +1854,7 @@
 <span class="sd">        testData</span>
 <span class="sd">            A Boolean specifying whether test data are supplied. The default value is OFF. </span>
 <span class="sd">        poisson</span>
-<span class="sd">            None or a Float specifying the effective Poisson's ratio, νν, of the material. This </span>
+<span class="sd">            None or a Float specifying the effective Poisson&#39;s ratio, νν, of the material. This </span>
 <span class="sd">            argument is valid only when *testData*=ON. The default value is None. </span>
 <span class="sd">        n</span>
 <span class="sd">            An Int specifying the order of the strain energy potential. Possible values are 1 ≤n≤≤n≤ </span>
@@ -1874,12 +1875,12 @@
 <span class="sd">        Raises</span>
 <span class="sd">        ------</span>
 <span class="sd">        RangeError</span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">hyperfoam</span> <span class="o">=</span> <span class="n">Hyperfoam</span><span class="p">(</span><span class="n">testData</span><span class="p">,</span> <span class="n">poisson</span><span class="p">,</span> <span class="n">n</span><span class="p">,</span> <span class="n">temperatureDependency</span><span class="p">,</span> <span class="n">moduli</span><span class="p">,</span> <span class="n">table</span><span class="p">)</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">hyperfoam</span></div>
 
 <div class="viewcode-block" id="Material.Hypoelastic"><a class="viewcode-back" href="../../../reference/mdb/model/material.html#abaqus.Material.Material.Material.Hypoelastic">[docs]</a>    <span class="k">def</span> <span class="nf">Hypoelastic</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">table</span><span class="p">:</span> <span class="nb">tuple</span><span class="p">,</span> <span class="n">user</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="n">OFF</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Hypoelastic</span><span class="p">:</span>
-        <span class="sd">"""This method creates a Hypoelastic object.</span>
+        <span class="sd">&quot;&quot;&quot;This method creates a Hypoelastic object.</span>
 
 <span class="sd">        Notes</span>
 <span class="sd">        -----</span>
@@ -1901,12 +1902,12 @@
 <span class="sd">        Returns</span>
 <span class="sd">        -------</span>
 <span class="sd">            A Hypoelastic object.</span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">hypoelastic</span> <span class="o">=</span> <span class="n">Hypoelastic</span><span class="p">(</span><span class="n">table</span><span class="p">,</span> <span class="n">user</span><span class="p">)</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">hypoelastic</span></div>
 
 <div class="viewcode-block" id="Material.InelasticHeatFraction"><a class="viewcode-back" href="../../../reference/mdb/model/material.html#abaqus.Material.Material.Material.InelasticHeatFraction">[docs]</a>    <span class="k">def</span> <span class="nf">InelasticHeatFraction</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">fraction</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mi">0</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">InelasticHeatFraction</span><span class="p">:</span>
-        <span class="sd">"""This method creates an InelasticHeatFraction object.</span>
+        <span class="sd">&quot;&quot;&quot;This method creates an InelasticHeatFraction object.</span>
 
 <span class="sd">        Notes</span>
 <span class="sd">        -----</span>
@@ -1931,12 +1932,12 @@
 <span class="sd">        Raises</span>
 <span class="sd">        ------</span>
 <span class="sd">        RangeError</span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">inelasticHeatFraction</span> <span class="o">=</span> <span class="n">InelasticHeatFraction</span><span class="p">(</span><span class="n">fraction</span><span class="p">)</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">inelasticHeatFraction</span></div>
 
 <div class="viewcode-block" id="Material.JouleHeatFraction"><a class="viewcode-back" href="../../../reference/mdb/model/material.html#abaqus.Material.Material.Material.JouleHeatFraction">[docs]</a>    <span class="k">def</span> <span class="nf">JouleHeatFraction</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">fraction</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mi">1</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">JouleHeatFraction</span><span class="p">:</span>
-        <span class="sd">"""This method creates a JouleHeatFraction object.</span>
+        <span class="sd">&quot;&quot;&quot;This method creates a JouleHeatFraction object.</span>
 
 <span class="sd">        Notes</span>
 <span class="sd">        -----</span>
@@ -1960,12 +1961,12 @@
 <span class="sd">        Raises</span>
 <span class="sd">        ------</span>
 <span class="sd">        RangeError</span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">jouleHeatFraction</span> <span class="o">=</span> <span class="n">JouleHeatFraction</span><span class="p">(</span><span class="n">fraction</span><span class="p">)</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">jouleHeatFraction</span></div>
 
 <div class="viewcode-block" id="Material.LatentHeat"><a class="viewcode-back" href="../../../reference/mdb/model/material.html#abaqus.Material.Material.Material.LatentHeat">[docs]</a>    <span class="k">def</span> <span class="nf">LatentHeat</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">table</span><span class="p">:</span> <span class="nb">tuple</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">LatentHeat</span><span class="p">:</span>
-        <span class="sd">"""This method creates a LatentHeat object.</span>
+        <span class="sd">&quot;&quot;&quot;This method creates a LatentHeat object.</span>
 
 <span class="sd">        Notes</span>
 <span class="sd">        -----</span>
@@ -1988,7 +1989,7 @@
 <span class="sd">        Raises</span>
 <span class="sd">        ------</span>
 <span class="sd">        RangeError</span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">latentHeat</span> <span class="o">=</span> <span class="n">LatentHeat</span><span class="p">(</span><span class="n">table</span><span class="p">)</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">latentHeat</span></div>
 
@@ -1996,7 +1997,7 @@
                        <span class="n">extrapolateStressStrainCurve</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="n">OFF</span><span class="p">,</span>
                        <span class="n">strainRateType</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="n">VOLUMETRIC</span><span class="p">,</span> <span class="n">mu0</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">mu1</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span>
                        <span class="n">alpha</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mi">2</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">LowDensityFoam</span><span class="p">:</span>
-        <span class="sd">"""This method creates a LowDensityFoam object.</span>
+        <span class="sd">&quot;&quot;&quot;This method creates a LowDensityFoam object.</span>
 
 <span class="sd">        Notes</span>
 <span class="sd">        -----</span>
@@ -2036,7 +2037,7 @@
 <span class="sd">        Raises</span>
 <span class="sd">        ------</span>
 <span class="sd">        RangeError</span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">lowDensityFoam</span> <span class="o">=</span> <span class="n">LowDensityFoam</span><span class="p">(</span><span class="n">elementRemoval</span><span class="p">,</span> <span class="n">maxAllowablePrincipalStress</span><span class="p">,</span> <span class="n">extrapolateStressStrainCurve</span><span class="p">,</span>
                                              <span class="n">strainRateType</span><span class="p">,</span> <span class="n">mu0</span><span class="p">,</span> <span class="n">mu1</span><span class="p">,</span> <span class="n">alpha</span><span class="p">)</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">lowDensityFoam</span></div>
@@ -2044,7 +2045,7 @@
 <div class="viewcode-block" id="Material.MagneticPermeability"><a class="viewcode-back" href="../../../reference/mdb/model/material.html#abaqus.Material.Material.Material.MagneticPermeability">[docs]</a>    <span class="k">def</span> <span class="nf">MagneticPermeability</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">table</span><span class="p">:</span> <span class="nb">tuple</span><span class="p">,</span> <span class="n">table2</span><span class="p">:</span> <span class="nb">tuple</span><span class="p">,</span> <span class="n">table3</span><span class="p">:</span> <span class="nb">tuple</span><span class="p">,</span> <span class="nb">type</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="n">ISOTROPIC</span><span class="p">,</span>
                              <span class="n">frequencyDependency</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="n">OFF</span><span class="p">,</span> <span class="n">temperatureDependency</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="n">OFF</span><span class="p">,</span>
                              <span class="n">dependencies</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="n">nonlinearBH</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="n">OFF</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">MagneticPermeability</span><span class="p">:</span>
-        <span class="sd">"""This method creates a MagneticPermeability object.</span>
+        <span class="sd">&quot;&quot;&quot;This method creates a MagneticPermeability object.</span>
 
 <span class="sd">        Notes</span>
 <span class="sd">        -----</span>
@@ -2089,7 +2090,7 @@
 <span class="sd">        Raises</span>
 <span class="sd">        ------</span>
 <span class="sd">        RangeError</span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">magneticPermeability</span> <span class="o">=</span> <span class="n">MagneticPermeability</span><span class="p">(</span><span class="n">table</span><span class="p">,</span> <span class="n">table2</span><span class="p">,</span> <span class="n">table3</span><span class="p">,</span> <span class="nb">type</span><span class="p">,</span> <span class="n">frequencyDependency</span><span class="p">,</span>
                                                          <span class="n">temperatureDependency</span><span class="p">,</span> <span class="n">dependencies</span><span class="p">,</span> <span class="n">nonlinearBH</span><span class="p">)</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">magneticPermeability</span></div>
@@ -2098,7 +2099,7 @@
                               <span class="n">meridionalEccentricity</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span>
                               <span class="n">temperatureDependency</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="n">OFF</span><span class="p">,</span> <span class="n">dependencies</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span>
                               <span class="n">useTensionCutoff</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="n">OFF</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">MohrCoulombPlasticity</span><span class="p">:</span>
-        <span class="sd">"""This method creates a MohrCoulombPlasticity object.</span>
+        <span class="sd">&quot;&quot;&quot;This method creates a MohrCoulombPlasticity object.</span>
 
 <span class="sd">        Notes</span>
 <span class="sd">        -----</span>
@@ -2135,13 +2136,13 @@
 <span class="sd">        Raises</span>
 <span class="sd">        ------</span>
 <span class="sd">        RangeError</span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">mohrCoulombPlasticity</span> <span class="o">=</span> <span class="n">MohrCoulombPlasticity</span><span class="p">(</span><span class="n">table</span><span class="p">,</span> <span class="n">deviatoricEccentricity</span><span class="p">,</span> <span class="n">meridionalEccentricity</span><span class="p">,</span>
                                                            <span class="n">temperatureDependency</span><span class="p">,</span> <span class="n">dependencies</span><span class="p">,</span> <span class="n">useTensionCutoff</span><span class="p">)</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">mohrCoulombPlasticity</span></div>
 
 <div class="viewcode-block" id="Material.MoistureSwelling"><a class="viewcode-back" href="../../../reference/mdb/model/material.html#abaqus.Material.Material.Material.MoistureSwelling">[docs]</a>    <span class="k">def</span> <span class="nf">MoistureSwelling</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">table</span><span class="p">:</span> <span class="nb">tuple</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">MoistureSwelling</span><span class="p">:</span>
-        <span class="sd">"""This method creates a MoistureSwelling object.</span>
+        <span class="sd">&quot;&quot;&quot;This method creates a MoistureSwelling object.</span>
 
 <span class="sd">        Notes</span>
 <span class="sd">        -----</span>
@@ -2160,14 +2161,14 @@
 <span class="sd">        Returns</span>
 <span class="sd">        -------</span>
 <span class="sd">            A MoistureSwelling object.</span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">moistureSwelling</span> <span class="o">=</span> <span class="n">MoistureSwelling</span><span class="p">(</span><span class="n">table</span><span class="p">)</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">moistureSwelling</span></div>
 
 <div class="viewcode-block" id="Material.Permeability"><a class="viewcode-back" href="../../../reference/mdb/model/material.html#abaqus.Material.Material.Material.Permeability">[docs]</a>    <span class="k">def</span> <span class="nf">Permeability</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">specificWeight</span><span class="p">:</span> <span class="nb">float</span><span class="p">,</span> <span class="n">inertialDragCoefficient</span><span class="p">:</span> <span class="nb">float</span><span class="p">,</span> <span class="n">table</span><span class="p">:</span> <span class="nb">tuple</span><span class="p">,</span>
                      <span class="nb">type</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="n">ISOTROPIC</span><span class="p">,</span> <span class="n">temperatureDependency</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="n">OFF</span><span class="p">,</span>
                      <span class="n">dependencies</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">0</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Permeability</span><span class="p">:</span>
-        <span class="sd">"""This method creates a Permeability object.</span>
+        <span class="sd">&quot;&quot;&quot;This method creates a Permeability object.</span>
 
 <span class="sd">        Notes</span>
 <span class="sd">        -----</span>
@@ -2201,14 +2202,14 @@
 <span class="sd">        Raises</span>
 <span class="sd">        ------</span>
 <span class="sd">        RangeError</span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">permeability</span> <span class="o">=</span> <span class="n">Permeability</span><span class="p">(</span><span class="n">specificWeight</span><span class="p">,</span> <span class="n">inertialDragCoefficient</span><span class="p">,</span> <span class="n">table</span><span class="p">,</span> <span class="nb">type</span><span class="p">,</span> <span class="n">temperatureDependency</span><span class="p">,</span>
                                          <span class="n">dependencies</span><span class="p">)</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">permeability</span></div>
 
 <div class="viewcode-block" id="Material.Piezoelectric"><a class="viewcode-back" href="../../../reference/mdb/model/material.html#abaqus.Material.Material.Material.Piezoelectric">[docs]</a>    <span class="k">def</span> <span class="nf">Piezoelectric</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">table</span><span class="p">:</span> <span class="nb">tuple</span><span class="p">,</span> <span class="nb">type</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="n">STRESS</span><span class="p">,</span> <span class="n">temperatureDependency</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="n">OFF</span><span class="p">,</span>
                       <span class="n">dependencies</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">0</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Piezoelectric</span><span class="p">:</span>
-        <span class="sd">"""This method creates a Piezoelectric object.</span>
+        <span class="sd">&quot;&quot;&quot;This method creates a Piezoelectric object.</span>
 
 <span class="sd">        Notes</span>
 <span class="sd">        -----</span>
@@ -2234,14 +2235,14 @@
 <span class="sd">        Returns</span>
 <span class="sd">        -------</span>
 <span class="sd">            A Piezoelectric object.</span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">piezoelectric</span> <span class="o">=</span> <span class="n">Piezoelectric</span><span class="p">(</span><span class="n">table</span><span class="p">,</span> <span class="nb">type</span><span class="p">,</span> <span class="n">temperatureDependency</span><span class="p">,</span> <span class="n">dependencies</span><span class="p">)</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">piezoelectric</span></div>
 
 <div class="viewcode-block" id="Material.Plastic"><a class="viewcode-back" href="../../../reference/mdb/model/material.html#abaqus.Material.Material.Material.Plastic">[docs]</a>    <span class="k">def</span> <span class="nf">Plastic</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">table</span><span class="p">:</span> <span class="nb">tuple</span><span class="p">,</span> <span class="n">hardening</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="n">ISOTROPIC</span><span class="p">,</span> <span class="n">rate</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="n">OFF</span><span class="p">,</span>
                 <span class="n">dataType</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="n">HALF_CYCLE</span><span class="p">,</span> <span class="n">strainRangeDependency</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="n">OFF</span><span class="p">,</span>
                 <span class="n">numBackstresses</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span> <span class="n">temperatureDependency</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="n">OFF</span><span class="p">,</span> <span class="n">dependencies</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">0</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Plastic</span><span class="p">:</span>
-        <span class="sd">"""This method creates a Plastic object.</span>
+        <span class="sd">&quot;&quot;&quot;This method creates a Plastic object.</span>
 
 <span class="sd">        Notes</span>
 <span class="sd">        -----</span>
@@ -2283,14 +2284,14 @@
 <span class="sd">        Raises</span>
 <span class="sd">        ------</span>
 <span class="sd">        RangeError</span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">plastic</span> <span class="o">=</span> <span class="n">Plastic</span><span class="p">(</span><span class="n">table</span><span class="p">,</span> <span class="n">hardening</span><span class="p">,</span> <span class="n">rate</span><span class="p">,</span> <span class="n">dataType</span><span class="p">,</span> <span class="n">strainRangeDependency</span><span class="p">,</span> <span class="n">numBackstresses</span><span class="p">,</span>
                                <span class="n">temperatureDependency</span><span class="p">,</span> <span class="n">dependencies</span><span class="p">)</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">plastic</span></div>
 
 <div class="viewcode-block" id="Material.PoreFluidExpansion"><a class="viewcode-back" href="../../../reference/mdb/model/material.html#abaqus.Material.Material.Material.PoreFluidExpansion">[docs]</a>    <span class="k">def</span> <span class="nf">PoreFluidExpansion</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">table</span><span class="p">:</span> <span class="nb">tuple</span><span class="p">,</span> <span class="n">zero</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="n">temperatureDependency</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="n">OFF</span><span class="p">,</span>
                            <span class="n">dependencies</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">0</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">PoreFluidExpansion</span><span class="p">:</span>
-        <span class="sd">"""This method creates a PoreFluidExpansion object.</span>
+        <span class="sd">&quot;&quot;&quot;This method creates a PoreFluidExpansion object.</span>
 
 <span class="sd">        Notes</span>
 <span class="sd">        -----</span>
@@ -2319,12 +2320,12 @@
 <span class="sd">        Raises</span>
 <span class="sd">        ------</span>
 <span class="sd">        RangeError</span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">poreFluidExpansion</span> <span class="o">=</span> <span class="n">PoreFluidExpansion</span><span class="p">(</span><span class="n">table</span><span class="p">,</span> <span class="n">zero</span><span class="p">,</span> <span class="n">temperatureDependency</span><span class="p">,</span> <span class="n">dependencies</span><span class="p">)</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">poreFluidExpansion</span></div>
 
 <div class="viewcode-block" id="Material.PorousBulkModuli"><a class="viewcode-back" href="../../../reference/mdb/model/material.html#abaqus.Material.Material.Material.PorousBulkModuli">[docs]</a>    <span class="k">def</span> <span class="nf">PorousBulkModuli</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">table</span><span class="p">:</span> <span class="nb">tuple</span><span class="p">,</span> <span class="n">temperatureDependency</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="n">OFF</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">PorousBulkModuli</span><span class="p">:</span>
-        <span class="sd">"""This method creates a PorousBulkModuli object.</span>
+        <span class="sd">&quot;&quot;&quot;This method creates a PorousBulkModuli object.</span>
 
 <span class="sd">        Notes</span>
 <span class="sd">        -----</span>
@@ -2345,13 +2346,13 @@
 <span class="sd">        Returns</span>
 <span class="sd">        -------</span>
 <span class="sd">            A PorousBulkModuli object.</span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">porousBulkModuli</span> <span class="o">=</span> <span class="n">PorousBulkModuli</span><span class="p">(</span><span class="n">table</span><span class="p">,</span> <span class="n">temperatureDependency</span><span class="p">)</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">porousBulkModuli</span></div>
 
 <div class="viewcode-block" id="Material.PorousElastic"><a class="viewcode-back" href="../../../reference/mdb/model/material.html#abaqus.Material.Material.Material.PorousElastic">[docs]</a>    <span class="k">def</span> <span class="nf">PorousElastic</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">table</span><span class="p">:</span> <span class="nb">tuple</span><span class="p">,</span> <span class="n">shear</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="n">POISSON</span><span class="p">,</span> <span class="n">temperatureDependency</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="n">OFF</span><span class="p">,</span>
                       <span class="n">dependencies</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">0</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">PorousElastic</span><span class="p">:</span>
-        <span class="sd">"""This method creates a PorousElastic object.</span>
+        <span class="sd">&quot;&quot;&quot;This method creates a PorousElastic object.</span>
 
 <span class="sd">        Notes</span>
 <span class="sd">        -----</span>
@@ -2381,13 +2382,13 @@
 <span class="sd">        Raises</span>
 <span class="sd">        ------</span>
 <span class="sd">        RangeError</span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">porousElastic</span> <span class="o">=</span> <span class="n">PorousElastic</span><span class="p">(</span><span class="n">table</span><span class="p">,</span> <span class="n">shear</span><span class="p">,</span> <span class="n">temperatureDependency</span><span class="p">,</span> <span class="n">dependencies</span><span class="p">)</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">porousElastic</span></div>
 
 <div class="viewcode-block" id="Material.PorousMetalPlasticity"><a class="viewcode-back" href="../../../reference/mdb/model/material.html#abaqus.Material.Material.Material.PorousMetalPlasticity">[docs]</a>    <span class="k">def</span> <span class="nf">PorousMetalPlasticity</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">table</span><span class="p">:</span> <span class="nb">tuple</span><span class="p">,</span> <span class="n">relativeDensity</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">temperatureDependency</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="n">OFF</span><span class="p">,</span>
                               <span class="n">dependencies</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">0</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">PorousMetalPlasticity</span><span class="p">:</span>
-        <span class="sd">"""This method creates a PorousMetalPlasticity object.</span>
+        <span class="sd">&quot;&quot;&quot;This method creates a PorousMetalPlasticity object.</span>
 
 <span class="sd">        Notes</span>
 <span class="sd">        -----</span>
@@ -2417,13 +2418,13 @@
 <span class="sd">        Raises</span>
 <span class="sd">        ------</span>
 <span class="sd">        RangeError</span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">porousMetalPlasticity</span> <span class="o">=</span> <span class="n">PorousMetalPlasticity</span><span class="p">(</span><span class="n">table</span><span class="p">,</span> <span class="n">relativeDensity</span><span class="p">,</span> <span class="n">temperatureDependency</span><span class="p">,</span> <span class="n">dependencies</span><span class="p">)</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">porousMetalPlasticity</span></div>
 
 <div class="viewcode-block" id="Material.Regularization"><a class="viewcode-back" href="../../../reference/mdb/model/material.html#abaqus.Material.Material.Material.Regularization">[docs]</a>    <span class="k">def</span> <span class="nf">Regularization</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">rtol</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span>
                        <span class="n">strainRateRegularization</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="n">LOGARITHMIC</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Regularization</span><span class="p">:</span>
-        <span class="sd">"""This method creates a Regularization object.</span>
+        <span class="sd">&quot;&quot;&quot;This method creates a Regularization object.</span>
 
 <span class="sd">        Notes</span>
 <span class="sd">        -----</span>
@@ -2451,12 +2452,12 @@
 <span class="sd">        Raises</span>
 <span class="sd">        ------</span>
 <span class="sd">        RangeError</span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">regularization</span> <span class="o">=</span> <span class="n">Regularization</span><span class="p">(</span><span class="n">rtol</span><span class="p">,</span> <span class="n">strainRateRegularization</span><span class="p">)</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">regularization</span></div>
 
 <div class="viewcode-block" id="Material.Solubility"><a class="viewcode-back" href="../../../reference/mdb/model/material.html#abaqus.Material.Material.Material.Solubility">[docs]</a>    <span class="k">def</span> <span class="nf">Solubility</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">table</span><span class="p">:</span> <span class="nb">tuple</span><span class="p">,</span> <span class="n">temperatureDependency</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="n">OFF</span><span class="p">,</span> <span class="n">dependencies</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">0</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Solubility</span><span class="p">:</span>
-        <span class="sd">"""This method creates a Solubility object.</span>
+        <span class="sd">&quot;&quot;&quot;This method creates a Solubility object.</span>
 
 <span class="sd">        Notes</span>
 <span class="sd">        -----</span>
@@ -2483,14 +2484,14 @@
 <span class="sd">        Raises</span>
 <span class="sd">        ------</span>
 <span class="sd">        RangeError</span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">solubility</span> <span class="o">=</span> <span class="n">Solubility</span><span class="p">(</span><span class="n">table</span><span class="p">,</span> <span class="n">temperatureDependency</span><span class="p">,</span> <span class="n">dependencies</span><span class="p">)</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">solubility</span></div>
 
 <div class="viewcode-block" id="Material.Sorption"><a class="viewcode-back" href="../../../reference/mdb/model/material.html#abaqus.Material.Material.Material.Sorption">[docs]</a>    <span class="k">def</span> <span class="nf">Sorption</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">absorptionTable</span><span class="p">:</span> <span class="nb">tuple</span><span class="p">,</span> <span class="n">lawAbsorption</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="n">TABULAR</span><span class="p">,</span>
                  <span class="n">exsorption</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="n">OFF</span><span class="p">,</span> <span class="n">lawExsorption</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="n">TABULAR</span><span class="p">,</span>
                  <span class="n">scanning</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="n">exsorptionTable</span><span class="p">:</span> <span class="nb">tuple</span> <span class="o">=</span> <span class="p">())</span> <span class="o">-&gt;</span> <span class="n">Sorption</span><span class="p">:</span>
-        <span class="sd">"""This method creates a Sorption object.</span>
+        <span class="sd">&quot;&quot;&quot;This method creates a Sorption object.</span>
 
 <span class="sd">        Notes</span>
 <span class="sd">        -----</span>
@@ -2528,13 +2529,13 @@
 <span class="sd">        Raises</span>
 <span class="sd">        ------</span>
 <span class="sd">        RangeError</span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">sorption</span> <span class="o">=</span> <span class="n">Sorption</span><span class="p">(</span><span class="n">absorptionTable</span><span class="p">,</span> <span class="n">lawAbsorption</span><span class="p">,</span> <span class="n">exsorption</span><span class="p">,</span> <span class="n">lawExsorption</span><span class="p">,</span> <span class="n">scanning</span><span class="p">,</span> <span class="n">exsorptionTable</span><span class="p">)</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">sorption</span></div>
 
 <div class="viewcode-block" id="Material.SpecificHeat"><a class="viewcode-back" href="../../../reference/mdb/model/material.html#abaqus.Material.Material.Material.SpecificHeat">[docs]</a>    <span class="k">def</span> <span class="nf">SpecificHeat</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">table</span><span class="p">:</span> <span class="nb">tuple</span><span class="p">,</span> <span class="n">law</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="n">CONSTANTVOLUME</span><span class="p">,</span>
                      <span class="n">temperatureDependency</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="n">OFF</span><span class="p">,</span> <span class="n">dependencies</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">0</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">SpecificHeat</span><span class="p">:</span>
-        <span class="sd">"""This method creates a SpecificHeat object.</span>
+        <span class="sd">&quot;&quot;&quot;This method creates a SpecificHeat object.</span>
 
 <span class="sd">        Notes</span>
 <span class="sd">        -----</span>
@@ -2564,13 +2565,13 @@
 <span class="sd">        Raises</span>
 <span class="sd">        ------</span>
 <span class="sd">        RangeError</span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">specificHeat</span> <span class="o">=</span> <span class="n">SpecificHeat</span><span class="p">(</span><span class="n">table</span><span class="p">,</span> <span class="n">law</span><span class="p">,</span> <span class="n">temperatureDependency</span><span class="p">,</span> <span class="n">dependencies</span><span class="p">)</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">specificHeat</span></div>
 
 <div class="viewcode-block" id="Material.Swelling"><a class="viewcode-back" href="../../../reference/mdb/model/material.html#abaqus.Material.Material.Material.Swelling">[docs]</a>    <span class="k">def</span> <span class="nf">Swelling</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">table</span><span class="p">:</span> <span class="nb">tuple</span><span class="p">,</span> <span class="n">law</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="n">INPUT</span><span class="p">,</span> <span class="n">temperatureDependency</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="n">OFF</span><span class="p">,</span>
                  <span class="n">dependencies</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">0</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Swelling</span><span class="p">:</span>
-        <span class="sd">"""This method creates a Swelling object.</span>
+        <span class="sd">&quot;&quot;&quot;This method creates a Swelling object.</span>
 
 <span class="sd">        Notes</span>
 <span class="sd">        -----</span>
@@ -2601,14 +2602,14 @@
 <span class="sd">        Raises</span>
 <span class="sd">        ------</span>
 <span class="sd">        RangeError</span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">swelling</span> <span class="o">=</span> <span class="n">Swelling</span><span class="p">(</span><span class="n">table</span><span class="p">,</span> <span class="n">law</span><span class="p">,</span> <span class="n">temperatureDependency</span><span class="p">,</span> <span class="n">dependencies</span><span class="p">)</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">swelling</span></div>
 
 <div class="viewcode-block" id="Material.UserMaterial"><a class="viewcode-back" href="../../../reference/mdb/model/material.html#abaqus.Material.Material.Material.UserMaterial">[docs]</a>    <span class="k">def</span> <span class="nf">UserMaterial</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="nb">type</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="n">MECHANICAL</span><span class="p">,</span> <span class="n">unsymm</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="n">OFF</span><span class="p">,</span>
                      <span class="n">mechanicalConstants</span><span class="p">:</span> <span class="nb">tuple</span> <span class="o">=</span> <span class="p">(),</span> <span class="n">thermalConstants</span><span class="p">:</span> <span class="nb">tuple</span> <span class="o">=</span> <span class="p">(),</span> <span class="n">effmod</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="n">OFF</span><span class="p">,</span>
                      <span class="n">hybridFormulation</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="n">INCREMENTAL</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">UserMaterial</span><span class="p">:</span>
-        <span class="sd">"""This method creates a UserMaterial object.</span>
+        <span class="sd">&quot;&quot;&quot;This method creates a UserMaterial object.</span>
 
 <span class="sd">        Notes</span>
 <span class="sd">        -----</span>
@@ -2653,12 +2654,12 @@
 <span class="sd">        Raises</span>
 <span class="sd">        ------</span>
 <span class="sd">        RangeError</span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">userMaterial</span> <span class="o">=</span> <span class="n">UserMaterial</span><span class="p">(</span><span class="nb">type</span><span class="p">,</span> <span class="n">unsymm</span><span class="p">,</span> <span class="n">mechanicalConstants</span><span class="p">,</span> <span class="n">thermalConstants</span><span class="p">,</span> <span class="n">effmod</span><span class="p">,</span> <span class="n">hybridFormulation</span><span class="p">)</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">userMaterial</span></div>
 
 <div class="viewcode-block" id="Material.UserOutputVariables"><a class="viewcode-back" href="../../../reference/mdb/model/material.html#abaqus.Material.Material.Material.UserOutputVariables">[docs]</a>    <span class="k">def</span> <span class="nf">UserOutputVariables</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">n</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">0</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">UserOutputVariables</span><span class="p">:</span>
-        <span class="sd">"""This method creates a UserOutputVariables object.</span>
+        <span class="sd">&quot;&quot;&quot;This method creates a UserOutputVariables object.</span>
 
 <span class="sd">        Notes</span>
 <span class="sd">        -----</span>
@@ -2682,7 +2683,7 @@
 <span class="sd">        Raises</span>
 <span class="sd">        ------</span>
 <span class="sd">        RangeError</span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">userOutputVariables</span> <span class="o">=</span> <span class="n">UserOutputVariables</span><span class="p">(</span><span class="n">n</span><span class="p">)</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">userOutputVariables</span></div>
 
@@ -2690,7 +2691,7 @@
                      <span class="nb">type</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="n">ISOTROPIC</span><span class="p">,</span> <span class="n">preload</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="n">NONE</span><span class="p">,</span>
                      <span class="n">time</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="n">PRONY</span><span class="p">,</span> <span class="n">errtol</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="n">nmax</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">13</span><span class="p">,</span>
                      <span class="n">volumetricTable</span><span class="p">:</span> <span class="nb">tuple</span> <span class="o">=</span> <span class="p">())</span> <span class="o">-&gt;</span> <span class="n">Viscoelastic</span><span class="p">:</span>
-        <span class="sd">"""This method creates a Viscoelastic object.</span>
+        <span class="sd">&quot;&quot;&quot;This method creates a Viscoelastic object.</span>
 
 <span class="sd">        Notes</span>
 <span class="sd">        -----</span>
@@ -2747,13 +2748,13 @@
 <span class="sd">        Raises</span>
 <span class="sd">        ------</span>
 <span class="sd">        RangeError</span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">viscoelastic</span> <span class="o">=</span> <span class="n">Viscoelastic</span><span class="p">(</span><span class="n">domain</span><span class="p">,</span> <span class="n">table</span><span class="p">,</span> <span class="n">frequency</span><span class="p">,</span> <span class="nb">type</span><span class="p">,</span> <span class="n">preload</span><span class="p">,</span> <span class="n">time</span><span class="p">,</span> <span class="n">errtol</span><span class="p">,</span> <span class="n">nmax</span><span class="p">,</span> <span class="n">volumetricTable</span><span class="p">)</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">viscoelastic</span></div>
 
 <div class="viewcode-block" id="Material.Viscosity"><a class="viewcode-back" href="../../../reference/mdb/model/material.html#abaqus.Material.Material.Material.Viscosity">[docs]</a>    <span class="k">def</span> <span class="nf">Viscosity</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">table</span><span class="p">:</span> <span class="nb">tuple</span><span class="p">,</span> <span class="nb">type</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="n">NEWTONIAN</span><span class="p">,</span> <span class="n">temperatureDependency</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="n">OFF</span><span class="p">,</span>
                   <span class="n">dependencies</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">0</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Viscosity</span><span class="p">:</span>
-        <span class="sd">"""This method creates a Viscosity object.</span>
+        <span class="sd">&quot;&quot;&quot;This method creates a Viscosity object.</span>
 
 <span class="sd">        Notes</span>
 <span class="sd">        -----</span>
@@ -2782,13 +2783,13 @@
 <span class="sd">        Raises</span>
 <span class="sd">        ------</span>
 <span class="sd">        RangeError</span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">viscosity</span> <span class="o">=</span> <span class="n">Viscosity</span><span class="p">(</span><span class="n">table</span><span class="p">,</span> <span class="nb">type</span><span class="p">,</span> <span class="n">temperatureDependency</span><span class="p">,</span> <span class="n">dependencies</span><span class="p">)</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">viscosity</span></div>
 
 <div class="viewcode-block" id="Material.Viscous"><a class="viewcode-back" href="../../../reference/mdb/model/material.html#abaqus.Material.Material.Material.Viscous">[docs]</a>    <span class="k">def</span> <span class="nf">Viscous</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">table</span><span class="p">:</span> <span class="nb">tuple</span><span class="p">,</span> <span class="n">law</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="n">STRAIN</span><span class="p">,</span> <span class="n">temperatureDependency</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="n">OFF</span><span class="p">,</span>
                 <span class="n">dependencies</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="n">time</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="n">TOTAL</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Viscous</span><span class="p">:</span>
-        <span class="sd">"""This method creates a Viscous object.</span>
+        <span class="sd">&quot;&quot;&quot;This method creates a Viscous object.</span>
 
 <span class="sd">        Notes</span>
 <span class="sd">        -----</span>
@@ -2818,7 +2819,7 @@
 <span class="sd">        Returns</span>
 <span class="sd">        -------</span>
 <span class="sd">            A Viscous object.</span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">viscous</span> <span class="o">=</span> <span class="n">Viscous</span><span class="p">(</span><span class="n">table</span><span class="p">,</span> <span class="n">law</span><span class="p">,</span> <span class="n">temperatureDependency</span><span class="p">,</span> <span class="n">dependencies</span><span class="p">,</span> <span class="n">time</span><span class="p">)</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">viscous</span></div></div>
 </pre></div>

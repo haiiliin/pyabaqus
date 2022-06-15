@@ -5,10 +5,10 @@
     <meta name="color-scheme" content="light dark"><link rel="index" title="Index" href="../../../genindex.html" /><link rel="search" title="Search" href="../../../search.html" />
         <link rel="canonical" href="https://pyabaqus.haiiliin.com/_modules/abaqus/Session/NetworkDatabaseConnector.html" />
 
-    <meta name="generator" content="sphinx-4.5.0, furo 2022.04.07"/>
-        <title>abaqus.Session.NetworkDatabaseConnector - pyabaqus 1.0.16 documentation</title>
+    <meta name="generator" content="sphinx-4.5.0, furo 2022.06.04.1"/>
+        <title>abaqus.Session.NetworkDatabaseConnector - pyabaqus 1.0.18 documentation</title>
       <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/styles/furo.css?digest=68f4518137b9aefe99b631505a2064c3c42c9852" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/styles/furo.css?digest=40978830699223671f4072448e654b5958f38b89" />
     <link rel="stylesheet" type="text/css" href="../../../_static/styles/furo-extensions.css?digest=30d1aed668e5c3a91c3e3bf6a60b675221979f0e" />
     
     
@@ -123,7 +123,7 @@
       </label>
     </div>
     <div class="header-center">
-      <a href="../../../index.html"><div class="brand">pyabaqus 1.0.16 documentation</div></a>
+      <a href="../../../index.html"><div class="brand">pyabaqus 1.0.18 documentation</div></a>
     </div>
     <div class="header-right">
       <div class="theme-toggle-container theme-toggle-header">
@@ -146,7 +146,7 @@
       <div class="sidebar-sticky"><a class="sidebar-brand" href="../../../index.html">
   
   
-  <span class="sidebar-brand-text">pyabaqus 1.0.16 documentation</span>
+  <span class="sidebar-brand-text">pyabaqus 1.0.18 documentation</span>
   
 </a><form class="sidebar-search-container" method="get" action="../../../search.html" role="search">
   <input class="sidebar-search" placeholder=Search name="q" aria-label="Search">
@@ -286,7 +286,8 @@
           </svg>
           <span>Back to top</span>
         </a>
-        <div class="content-icon-container"><div class="theme-toggle-container theme-toggle-content">
+        <div class="content-icon-container">
+          <div class="theme-toggle-container theme-toggle-content">
             <button class="theme-toggle">
               <div class="visually-hidden">Toggle Light / Dark / Auto color theme</div>
               <svg class="theme-icon-when-auto"><use href="#svg-sun-half"></use></svg>
@@ -305,7 +306,7 @@
 
 
 <div class="viewcode-block" id="NetworkDatabaseConnector"><a class="viewcode-back" href="../../../reference/session.html#abaqus.Session.NetworkDatabaseConnector.NetworkDatabaseConnector">[docs]</a><span class="k">class</span> <span class="nc">NetworkDatabaseConnector</span><span class="p">:</span>
-    <span class="sd">"""The NetworkDatabaseConnector object allows you to access an output database on a remote</span>
+    <span class="sd">&quot;&quot;&quot;The NetworkDatabaseConnector object allows you to access an output database on a remote</span>
 <span class="sd">    system. </span>
 
 <span class="sd">    Attributes</span>
@@ -321,16 +322,16 @@
 
 <span class="sd">        session.networkDatabaseConnectors[name]</span>
 
-<span class="sd">    """</span>
+<span class="sd">    &quot;&quot;&quot;</span>
 
     <span class="c1"># A Boolean specifying if the connection between the client and the server is established. </span>
     <span class="n">connected</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="n">OFF</span>
 
-    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">hostName</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">directory</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">remoteAbaqusDriverName</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">''</span><span class="p">,</span>
-                 <span class="n">remoteLoginMechanism</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="n">SSH</span><span class="p">,</span> <span class="n">sshPath</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">''</span><span class="p">,</span> <span class="n">serverPort</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">hostName</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">directory</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">remoteAbaqusDriverName</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span><span class="p">,</span>
+                 <span class="n">remoteLoginMechanism</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="n">SSH</span><span class="p">,</span> <span class="n">sshPath</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">serverPort</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span>
                  <span class="n">connectionPort</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="n">serverTimeout</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">86400</span><span class="p">,</span>
                  <span class="n">allowAutomaticStartup</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="n">ON</span><span class="p">):</span>
-        <span class="sd">"""This method creates a NetworkDatabaseConnector object that you can use to access a</span>
+        <span class="sd">&quot;&quot;&quot;This method creates a NetworkDatabaseConnector object that you can use to access a</span>
 <span class="sd">        remote output database. You can create a network database connector from any platform:</span>
 <span class="sd">        Windows or Linux. However, the network database connector server must reside on a Linux</span>
 <span class="sd">        platform; you cannot access an output database that resides on a remote Windows system.</span>
@@ -377,11 +378,11 @@
 <span class="sd">        Returns</span>
 <span class="sd">        -------</span>
 <span class="sd">            A NetworkDatabaseConnector object.</span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span>
 
 <div class="viewcode-block" id="NetworkDatabaseConnector.start"><a class="viewcode-back" href="../../../reference/session.html#abaqus.Session.NetworkDatabaseConnector.NetworkDatabaseConnector.start">[docs]</a>    <span class="k">def</span> <span class="nf">start</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">serverPort</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="n">serverTimeout</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">86400</span><span class="p">):</span>
-        <span class="sd">"""This method starts the remote network database connector server on the remote host.</span>
+        <span class="sd">&quot;&quot;&quot;This method starts the remote network database connector server on the remote host.</span>
 <span class="sd">        </span>
 <span class="sd">        Parameters</span>
 <span class="sd">        ----------</span>
@@ -393,18 +394,18 @@
 <span class="sd">            An Int specifying the timeout in seconds for the remote server. For example: 86400 </span>
 <span class="sd">            corresponds to one day. The server exits if it does not receive any communication from </span>
 <span class="sd">            the client during the time specified. The default value is 86400. </span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span></div>
 
 <div class="viewcode-block" id="NetworkDatabaseConnector.stop"><a class="viewcode-back" href="../../../reference/session.html#abaqus.Session.NetworkDatabaseConnector.NetworkDatabaseConnector.stop">[docs]</a>    <span class="k">def</span> <span class="nf">stop</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="sd">"""This method stops the remote network database connector server on the remote host.</span>
-<span class="sd">        """</span>
+        <span class="sd">&quot;&quot;&quot;This method stops the remote network database connector server on the remote host.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span></div>
 
-<div class="viewcode-block" id="NetworkDatabaseConnector.setValues"><a class="viewcode-back" href="../../../reference/session.html#abaqus.Session.NetworkDatabaseConnector.NetworkDatabaseConnector.setValues">[docs]</a>    <span class="k">def</span> <span class="nf">setValues</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">remoteAbaqusDriverName</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">''</span><span class="p">,</span> <span class="n">remoteLoginMechanism</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="n">SSH</span><span class="p">,</span>
-                  <span class="n">sshPath</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">''</span><span class="p">,</span> <span class="n">serverPort</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="n">connectionPort</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span>
+<div class="viewcode-block" id="NetworkDatabaseConnector.setValues"><a class="viewcode-back" href="../../../reference/session.html#abaqus.Session.NetworkDatabaseConnector.NetworkDatabaseConnector.setValues">[docs]</a>    <span class="k">def</span> <span class="nf">setValues</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">remoteAbaqusDriverName</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">remoteLoginMechanism</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="n">SSH</span><span class="p">,</span>
+                  <span class="n">sshPath</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">serverPort</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="n">connectionPort</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span>
                   <span class="n">serverTimeout</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">86400</span><span class="p">,</span> <span class="n">allowAutomaticStartup</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="n">ON</span><span class="p">):</span>
-        <span class="sd">"""This method modifies the NetworkDatabaseConnector object.</span>
+        <span class="sd">&quot;&quot;&quot;This method modifies the NetworkDatabaseConnector object.</span>
 <span class="sd">        </span>
 <span class="sd">        Parameters</span>
 <span class="sd">        ----------</span>
@@ -429,7 +430,7 @@
 <span class="sd">        allowAutomaticStartup</span>
 <span class="sd">            A Boolean specifying whether to start the remote network database connector server. The </span>
 <span class="sd">            default value is ON. </span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span></div></div>
 </pre></div>
         </article>

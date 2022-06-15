@@ -5,10 +5,10 @@
     <meta name="color-scheme" content="light dark"><link rel="index" title="Index" href="../../../genindex.html" /><link rel="search" title="Search" href="../../../search.html" />
         <link rel="canonical" href="https://pyabaqus.haiiliin.com/_modules/abaqus/Constraint/Tie.html" />
 
-    <meta name="generator" content="sphinx-4.5.0, furo 2022.04.07"/>
-        <title>abaqus.Constraint.Tie - pyabaqus 1.0.16 documentation</title>
+    <meta name="generator" content="sphinx-4.5.0, furo 2022.06.04.1"/>
+        <title>abaqus.Constraint.Tie - pyabaqus 1.0.18 documentation</title>
       <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/styles/furo.css?digest=68f4518137b9aefe99b631505a2064c3c42c9852" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/styles/furo.css?digest=40978830699223671f4072448e654b5958f38b89" />
     <link rel="stylesheet" type="text/css" href="../../../_static/styles/furo-extensions.css?digest=30d1aed668e5c3a91c3e3bf6a60b675221979f0e" />
     
     
@@ -123,7 +123,7 @@
       </label>
     </div>
     <div class="header-center">
-      <a href="../../../index.html"><div class="brand">pyabaqus 1.0.16 documentation</div></a>
+      <a href="../../../index.html"><div class="brand">pyabaqus 1.0.18 documentation</div></a>
     </div>
     <div class="header-right">
       <div class="theme-toggle-container theme-toggle-header">
@@ -146,7 +146,7 @@
       <div class="sidebar-sticky"><a class="sidebar-brand" href="../../../index.html">
   
   
-  <span class="sidebar-brand-text">pyabaqus 1.0.16 documentation</span>
+  <span class="sidebar-brand-text">pyabaqus 1.0.18 documentation</span>
   
 </a><form class="sidebar-search-container" method="get" action="../../../search.html" role="search">
   <input class="sidebar-search" placeholder=Search name="q" aria-label="Search">
@@ -286,7 +286,8 @@
           </svg>
           <span>Back to top</span>
         </a>
-        <div class="content-icon-container"><div class="theme-toggle-container theme-toggle-content">
+        <div class="content-icon-container">
+          <div class="theme-toggle-container theme-toggle-content">
             <button class="theme-toggle">
               <div class="visually-hidden">Toggle Light / Dark / Auto color theme</div>
               <svg class="theme-icon-when-auto"><use href="#svg-sun-half"></use></svg>
@@ -307,7 +308,7 @@
 
 
 <div class="viewcode-block" id="Tie"><a class="viewcode-back" href="../../../reference/mdb/model/constraint.html#abaqus.Constraint.Tie.Tie">[docs]</a><span class="k">class</span> <span class="nc">Tie</span><span class="p">(</span><span class="n">Constraint</span><span class="p">):</span>
-    <span class="sd">"""The Tie object defines two surfaces to be tied together for the duration of a</span>
+    <span class="sd">&quot;&quot;&quot;The Tie object defines two surfaces to be tied together for the duration of a</span>
 <span class="sd">    simulation. </span>
 <span class="sd">    The Tie object is derived from the ConstrainedSketchConstraint object.</span>
 
@@ -330,7 +331,7 @@
 
 <span class="sd">    - TIE</span>
 
-<span class="sd">    """</span>
+<span class="sd">    &quot;&quot;&quot;</span>
 
     <span class="c1"># A Boolean specifying whether the constraint is suppressed or not. The default value is </span>
     <span class="c1"># OFF. </span>
@@ -341,7 +342,7 @@
                  <span class="n">tieRotations</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="n">ON</span><span class="p">,</span> <span class="n">constraintRatioMethod</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="n">DEFAULT</span><span class="p">,</span>
                  <span class="n">constraintRatio</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="n">constraintEnforcement</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="n">SOLVER_DEFAULT</span><span class="p">,</span>
                  <span class="n">thickness</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="n">ON</span><span class="p">):</span>
-        <span class="sd">"""This method creates a Tie object.</span>
+        <span class="sd">&quot;&quot;&quot;This method creates a Tie object.</span>
 
 <span class="sd">        Notes</span>
 <span class="sd">        -----</span>
@@ -389,21 +390,21 @@
 <span class="sd">        Returns</span>
 <span class="sd">        -------</span>
 <span class="sd">            A Tie object.</span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">()</span>
         <span class="k">pass</span>
 
 <div class="viewcode-block" id="Tie.swapSurfaces"><a class="viewcode-back" href="../../../reference/mdb/model/constraint.html#abaqus.Constraint.Tie.Tie.swapSurfaces">[docs]</a>    <span class="k">def</span> <span class="nf">swapSurfaces</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="sd">"""This method switches the main and secondary surfaces of a tied constraint. This command</span>
+        <span class="sd">&quot;&quot;&quot;This method switches the main and secondary surfaces of a tied constraint. This command</span>
 <span class="sd">        is valid only during the step in which the interaction is created.</span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span></div>
 
 <div class="viewcode-block" id="Tie.setValues"><a class="viewcode-back" href="../../../reference/mdb/model/constraint.html#abaqus.Constraint.Tie.Tie.setValues">[docs]</a>    <span class="k">def</span> <span class="nf">setValues</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">adjust</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="n">ON</span><span class="p">,</span> <span class="n">positionToleranceMethod</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="n">COMPUTED</span><span class="p">,</span>
                   <span class="n">positionTolerance</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="n">tieRotations</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="n">ON</span><span class="p">,</span>
                   <span class="n">constraintRatioMethod</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="n">DEFAULT</span><span class="p">,</span> <span class="n">constraintRatio</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span>
                   <span class="n">constraintEnforcement</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="n">SOLVER_DEFAULT</span><span class="p">,</span> <span class="n">thickness</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="n">ON</span><span class="p">):</span>
-        <span class="sd">"""This method modifies the Tie object.</span>
+        <span class="sd">&quot;&quot;&quot;This method modifies the Tie object.</span>
 <span class="sd">        </span>
 <span class="sd">        Parameters</span>
 <span class="sd">        ----------</span>
@@ -433,7 +434,7 @@
 <span class="sd">        thickness</span>
 <span class="sd">            A Boolean specifying whether shell element thickness is considered. The default value is </span>
 <span class="sd">            ON. </span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span></div></div>
 </pre></div>
         </article>

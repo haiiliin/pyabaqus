@@ -5,10 +5,10 @@
     <meta name="color-scheme" content="light dark"><link rel="index" title="Index" href="../../../genindex.html" /><link rel="search" title="Search" href="../../../search.html" />
         <link rel="canonical" href="https://pyabaqus.haiiliin.com/_modules/abaqus/UtilityAndView/Method.html" />
 
-    <meta name="generator" content="sphinx-4.5.0, furo 2022.04.07"/>
-        <title>abaqus.UtilityAndView.Method - pyabaqus 1.0.16 documentation</title>
+    <meta name="generator" content="sphinx-4.5.0, furo 2022.06.04.1"/>
+        <title>abaqus.UtilityAndView.Method - pyabaqus 1.0.18 documentation</title>
       <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/styles/furo.css?digest=68f4518137b9aefe99b631505a2064c3c42c9852" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/styles/furo.css?digest=40978830699223671f4072448e654b5958f38b89" />
     <link rel="stylesheet" type="text/css" href="../../../_static/styles/furo-extensions.css?digest=30d1aed668e5c3a91c3e3bf6a60b675221979f0e" />
     
     
@@ -123,7 +123,7 @@
       </label>
     </div>
     <div class="header-center">
-      <a href="../../../index.html"><div class="brand">pyabaqus 1.0.16 documentation</div></a>
+      <a href="../../../index.html"><div class="brand">pyabaqus 1.0.18 documentation</div></a>
     </div>
     <div class="header-right">
       <div class="theme-toggle-container theme-toggle-header">
@@ -146,7 +146,7 @@
       <div class="sidebar-sticky"><a class="sidebar-brand" href="../../../index.html">
   
   
-  <span class="sidebar-brand-text">pyabaqus 1.0.16 documentation</span>
+  <span class="sidebar-brand-text">pyabaqus 1.0.18 documentation</span>
   
 </a><form class="sidebar-search-container" method="get" action="../../../search.html" role="search">
   <input class="sidebar-search" placeholder=Search name="q" aria-label="Search">
@@ -286,7 +286,8 @@
           </svg>
           <span>Back to top</span>
         </a>
-        <div class="content-icon-container"><div class="theme-toggle-container theme-toggle-content">
+        <div class="content-icon-container">
+          <div class="theme-toggle-container theme-toggle-content">
             <button class="theme-toggle">
               <div class="visually-hidden">Toggle Light / Dark / Auto color theme</div>
               <svg class="theme-icon-when-auto"><use href="#svg-sun-half"></use></svg>
@@ -303,7 +304,7 @@
           <h1>Source code for abaqus.UtilityAndView.Method</h1><div class="highlight"><pre>
 <span></span><span class="kn">from</span> <span class="nn">abaqusConstants</span> <span class="kn">import</span> <span class="o">*</span>
 
-<span class="sd">"""The methodCallback module provides functions that allow you to register a callback that </span>
+<span class="sd">&quot;&quot;&quot;The methodCallback module provides functions that allow you to register a callback that </span>
 <span class="sd">will be invoked when certain Abaqus Scripting Interface commands are about to be </span>
 <span class="sd">executed. This callback allows you to augment the standard behavior of Abaqus Scripting </span>
 <span class="sd">Interface commands. </span>
@@ -313,8 +314,8 @@
 <span class="sd">import methodCallback </span>
 <span class="sd">from job import JobType </span>
 <span class="sd">def myCallback(callingObject, arguments, keywordArguments, userData): </span>
-<span class="sd">    print 'An input file  is about to be written.' </span>
-<span class="sd">methodCallback.addCallback(JobType, 'writeInput', myCallback) </span>
+<span class="sd">    print &#39;An input file  is about to be written.&#39; </span>
+<span class="sd">methodCallback.addCallback(JobType, &#39;writeInput&#39;, myCallback) </span>
 
 <span class="sd">Notes</span>
 <span class="sd">-----</span>
@@ -324,12 +325,12 @@
 <span class="sd">    </span>
 <span class="sd">        import methodCallback</span>
 
-<span class="sd">"""</span>
+<span class="sd">&quot;&quot;&quot;</span>
 
 
 <div class="viewcode-block" id="addCallback"><a class="viewcode-back" href="../../../reference/kernel/utility.html#abaqus.UtilityAndView.Method.addCallback">[docs]</a><span class="k">def</span> <span class="nf">addCallback</span><span class="p">(</span><span class="n">caller</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">methodName</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">callback</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">userData</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
                <span class="n">callAfter</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="n">OFF</span><span class="p">):</span>
-    <span class="sd">"""This method adds a callback function that will be invoked when certain Abaqus/CAE</span>
+    <span class="sd">&quot;&quot;&quot;This method adds a callback function that will be invoked when certain Abaqus/CAE</span>
 <span class="sd">    commands are about to be executed.</span>
 
 <span class="sd">    Notes</span>
@@ -367,12 +368,12 @@
 <span class="sd">        including the following statement:`returnValue = getMethodReturnValue()`The </span>
 <span class="sd">        getMethodReturnValue function is in the global namespace of the callback function. </span>
 
-<span class="sd">    """</span>
+<span class="sd">    &quot;&quot;&quot;</span>
     <span class="k">pass</span></div>
 
 
 <div class="viewcode-block" id="removeCallback"><a class="viewcode-back" href="../../../reference/kernel/utility.html#abaqus.UtilityAndView.Method.removeCallback">[docs]</a><span class="k">def</span> <span class="nf">removeCallback</span><span class="p">(</span><span class="n">caller</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">methodName</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">callback</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">userData</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="kc">None</span><span class="p">):</span>
-    <span class="sd">"""This method removes a callback added by the addCallback method. To successfully remove a</span>
+    <span class="sd">&quot;&quot;&quot;This method removes a callback added by the addCallback method. To successfully remove a</span>
 <span class="sd">    callback, all arguments must exactly match those used when the callback was added.</span>
 
 <span class="sd">    Notes</span>
@@ -403,7 +404,7 @@
 <span class="sd">        Any type of data. This data will be passed to the callback function. The default value </span>
 <span class="sd">        is None. </span>
 
-<span class="sd">    """</span>
+<span class="sd">    &quot;&quot;&quot;</span>
     <span class="k">pass</span></div>
 </pre></div>
         </article>

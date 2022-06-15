@@ -6,10 +6,10 @@
 <link rel="index" title="Index" href="../../genindex.html" /><link rel="search" title="Search" href="../../search.html" /><link rel="next" title="Annotation" href="annotation.html" /><link rel="prev" title="Step Miscellaneous" href="model/step/step_miscellaneous.html" />
         <link rel="canonical" href="https://pyabaqus.haiiliin.com/reference/mdb/job.html" />
 
-    <meta name="generator" content="sphinx-4.5.0, furo 2022.04.07"/>
-        <title>Job - pyabaqus 1.0.16 documentation</title>
+    <meta name="generator" content="sphinx-4.5.0, furo 2022.06.04.1"/>
+        <title>Job - pyabaqus 1.0.18 documentation</title>
       <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/styles/furo.css?digest=68f4518137b9aefe99b631505a2064c3c42c9852" />
+    <link rel="stylesheet" type="text/css" href="../../_static/styles/furo.css?digest=40978830699223671f4072448e654b5958f38b89" />
     <link rel="stylesheet" type="text/css" href="../../_static/styles/furo-extensions.css?digest=30d1aed668e5c3a91c3e3bf6a60b675221979f0e" />
     
     
@@ -124,7 +124,7 @@
       </label>
     </div>
     <div class="header-center">
-      <a href="../../index.html"><div class="brand">pyabaqus 1.0.16 documentation</div></a>
+      <a href="../../index.html"><div class="brand">pyabaqus 1.0.18 documentation</div></a>
     </div>
     <div class="header-right">
       <div class="theme-toggle-container theme-toggle-header">
@@ -147,7 +147,7 @@
       <div class="sidebar-sticky"><a class="sidebar-brand" href="../../index.html">
   
   
-  <span class="sidebar-brand-text">pyabaqus 1.0.16 documentation</span>
+  <span class="sidebar-brand-text">pyabaqus 1.0.18 documentation</span>
   
 </a><form class="sidebar-search-container" method="get" action="../../search.html" role="search">
   <input class="sidebar-search" placeholder=Search name="q" aria-label="Search">
@@ -287,7 +287,8 @@
           </svg>
           <span>Back to top</span>
         </a>
-        <div class="content-icon-container"><div class="theme-toggle-container theme-toggle-content">
+        <div class="content-icon-container">
+          <div class="theme-toggle-container theme-toggle-content">
             <button class="theme-toggle">
               <div class="visually-hidden">Toggle Light / Dark / Auto color theme</div>
               <svg class="theme-icon-when-auto"><use href="#svg-sun-half"></use></svg>
@@ -311,7 +312,7 @@
 <h2>Create queues in Session<a class="headerlink" href="#create-queues-in-session" title="Permalink to this headline">#</a></h2>
 <dl class="py method">
 <dt class="sig sig-object py" id="abaqus.Job.JobSession.JobSession.Queue">
-<span class="sig-prename descclassname"><span class="pre">JobSession.</span></span><span class="sig-name descname"><span class="pre">Queue</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">queueName</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">hostName</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fileCopy</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.BooleanType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">directory</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">driver</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">remotePlatform</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.SymbolicConstantType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'Linux'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">filesToCopy</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'ALL'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">deleteAfterCopy</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.BooleanType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">description</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">''</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">→</span> <span class="sig-return-typehint"><a class="reference internal" href="#abaqus.Job.Queue.Queue" title="abaqus.Job.Queue.Queue"><span class="pre">abaqus.Job.Queue.Queue</span></a></span></span><a class="reference internal" href="../../_modules/abaqus/Job/JobSession.html#JobSession.Queue"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#abaqus.Job.JobSession.JobSession.Queue" title="Permalink to this definition">#</a></dt>
+<span class="sig-prename descclassname"><span class="pre">JobSession.</span></span><span class="sig-name descname"><span class="pre">Queue</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">queueName</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">hostName</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fileCopy</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.BooleanType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">directory</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">driver</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">remotePlatform</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.SymbolicConstantType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'Linux'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">filesToCopy</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'ALL'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">deleteAfterCopy</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.BooleanType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">description</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">''</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#abaqus.Job.Queue.Queue" title="abaqus.Job.Queue.Queue"><span class="pre">abaqus.Job.Queue.Queue</span></a></span></span><a class="reference internal" href="../../_modules/abaqus/Job/JobSession.html#JobSession.Queue"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#abaqus.Job.JobSession.JobSession.Queue" title="Permalink to this definition">#</a></dt>
 <dd><p>This method creates a Queue object.
 Note:Remote queues are available only on Linux platforms.</p>
 <dl class="field-list simple">
@@ -372,6 +373,7 @@ local machine. The default value is OFF.</p>
 </pre></div>
 </div>
 </dd></dl>
+
 </section>
 <section id="features-of-the-job">
 <h2>Features of the job<a class="headerlink" href="#features-of-the-job" title="Permalink to this headline">#</a></h2>
@@ -454,16 +456,17 @@ available.</p>
 </dd>
 </dl>
 <p class="rubric">Methods</p>
-<div class="table-wrapper"><table class="autosummary longtable docutils align-default">
+<div class="table-wrapper autosummary longtable docutils container">
+<table class="autosummary longtable docutils align-default">
 <colgroup>
-<col style="width: 10%"/>
-<col style="width: 90%"/>
+<col style="width: 10%" />
+<col style="width: 90%" />
 </colgroup>
 <tbody>
 <tr class="row-odd"><td><p><a class="reference internal" href="#abaqus.Job.Coexecution.Coexecution.kill" title="abaqus.Job.Coexecution.Coexecution.kill"><code class="xref py py-obj docutils literal notranslate"><span class="pre">kill</span></code></a>()</p></td>
 <td><p>This method kills the analysis of a co-execution.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#abaqus.Job.Coexecution.Coexecution.submit" title="abaqus.Job.Coexecution.Coexecution.submit"><code class="xref py py-obj docutils literal notranslate"><span class="pre">submit</span></code></a>([consistencyChecking, datacheckJob, ...])</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#abaqus.Job.Coexecution.Coexecution.submit" title="abaqus.Job.Coexecution.Coexecution.submit"><code class="xref py py-obj docutils literal notranslate"><span class="pre">submit</span></code></a>([consistencyChecking, datacheckJob, ...])</p></td>
 <td><p>This method submits a co-execution for analysis.</p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="#abaqus.Job.Coexecution.Coexecution.waitForCompletion" title="abaqus.Job.Coexecution.Coexecution.waitForCompletion"><code class="xref py py-obj docutils literal notranslate"><span class="pre">waitForCompletion</span></code></a>()</p></td>
@@ -473,12 +476,14 @@ available.</p>
 <td><p>This method writes an input file for each analysis in the co-execution.</p></td>
 </tr>
 </tbody>
-</table></div>
+</table>
+</div>
 <dl class="py method">
 <dt class="sig sig-object py" id="abaqus.Job.Coexecution.Coexecution.kill">
 <span class="sig-name descname"><span class="pre">kill</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/abaqus/Job/Coexecution.html#Coexecution.kill"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#abaqus.Job.Coexecution.Coexecution.kill" title="Permalink to this definition">#</a></dt>
 <dd><p>This method kills the analysis of a co-execution.</p>
 </dd></dl>
+
 <dl class="py method">
 <dt class="sig sig-object py" id="abaqus.Job.Coexecution.Coexecution.submit">
 <span class="sig-name descname"><span class="pre">submit</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">consistencyChecking</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.BooleanType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">datacheckJob</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.BooleanType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">continueJob</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.BooleanType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/abaqus/Job/Coexecution.html#Coexecution.submit"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#abaqus.Job.Coexecution.Coexecution.submit" title="Permalink to this definition">#</a></dt>
@@ -502,6 +507,7 @@ True.</p>
 </dd>
 </dl>
 </dd></dl>
+
 <dl class="py method">
 <dt class="sig sig-object py" id="abaqus.Job.Coexecution.Coexecution.waitForCompletion">
 <span class="sig-name descname"><span class="pre">waitForCompletion</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/abaqus/Job/Coexecution.html#Coexecution.waitForCompletion"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#abaqus.Job.Coexecution.Coexecution.waitForCompletion" title="Permalink to this definition">#</a></dt>
@@ -510,6 +516,7 @@ you call the waitForCompletion method and the <em>status</em> member is neither 
 RUNNING, Abaqus assumes the analysis has either completed or aborted and returns
 immediately.</p>
 </dd></dl>
+
 <dl class="py method">
 <dt class="sig sig-object py" id="abaqus.Job.Coexecution.Coexecution.writeInput">
 <span class="sig-name descname"><span class="pre">writeInput</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">consistencyChecking</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.BooleanType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">1</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/abaqus/Job/Coexecution.html#Coexecution.writeInput"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#abaqus.Job.Coexecution.Coexecution.writeInput" title="Permalink to this definition">#</a></dt>
@@ -525,7 +532,9 @@ unless you are absolutely sure the models are all consistent.</p>
 </dd>
 </dl>
 </dd></dl>
+
 </dd></dl>
+
 </section>
 <section id="id1">
 <h3>Job<a class="headerlink" href="#id1" title="Permalink to this headline">#</a></h3>
@@ -647,10 +656,11 @@ available.</p>
 </dd>
 </dl>
 <p class="rubric">Methods</p>
-<div class="table-wrapper"><table class="autosummary longtable docutils align-default">
+<div class="table-wrapper autosummary longtable docutils container">
+<table class="autosummary longtable docutils align-default">
 <colgroup>
-<col style="width: 10%"/>
-<col style="width: 90%"/>
+<col style="width: 10%" />
+<col style="width: 90%" />
 </colgroup>
 <tbody>
 <tr class="row-odd"><td><p><a class="reference internal" href="#abaqus.Job.Job.Job.clearMessage" title="abaqus.Job.Job.Job.clearMessage"><code class="xref py py-obj docutils literal notranslate"><span class="pre">clearMessage</span></code></a>()</p></td>
@@ -659,24 +669,27 @@ available.</p>
 <tr class="row-even"><td><p><a class="reference internal" href="#abaqus.Job.Job.Job.kill" title="abaqus.Job.Job.Job.kill"><code class="xref py py-obj docutils literal notranslate"><span class="pre">kill</span></code></a>()</p></td>
 <td><p>This method kills the analysis of a job.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#abaqus.Job.Job.Job.submit" title="abaqus.Job.Job.Job.submit"><code class="xref py py-obj docutils literal notranslate"><span class="pre">submit</span></code></a>([consistencyChecking, datacheckJob, ...])</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#abaqus.Job.Job.Job.submit" title="abaqus.Job.Job.Job.submit"><code class="xref py py-obj docutils literal notranslate"><span class="pre">submit</span></code></a>([consistencyChecking, datacheckJob, ...])</p></td>
 <td><p>This method submits a job for analysis.</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="#abaqus.Job.Job.Job.waitForCompletion" title="abaqus.Job.Job.Job.waitForCompletion"><code class="xref py py-obj docutils literal notranslate"><span class="pre">waitForCompletion</span></code></a>()</p></td>
 <td><p>This method interrupts the execution of the script until the end of the analysis.</p></td>
 </tr>
 </tbody>
-</table></div>
+</table>
+</div>
 <dl class="py method">
 <dt class="sig sig-object py" id="abaqus.Job.Job.Job.clearMessage">
 <span class="sig-name descname"><span class="pre">clearMessage</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/abaqus/Job/Job.html#Job.clearMessage"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#abaqus.Job.Job.Job.clearMessage" title="Permalink to this definition">#</a></dt>
 <dd><p>This method clears <em>messages</em> and sets the <em>status</em> to NONE.</p>
 </dd></dl>
+
 <dl class="py method">
 <dt class="sig sig-object py" id="abaqus.Job.Job.Job.kill">
 <span class="sig-name descname"><span class="pre">kill</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/abaqus/Job/Job.html#Job.kill"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#abaqus.Job.Job.Job.kill" title="Permalink to this definition">#</a></dt>
 <dd><p>This method kills the analysis of a job.</p>
 </dd></dl>
+
 <dl class="py method">
 <dt class="sig sig-object py" id="abaqus.Job.Job.Job.submit">
 <span class="sig-name descname"><span class="pre">submit</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">consistencyChecking</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.BooleanType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">datacheckJob</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.BooleanType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">continueJob</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.BooleanType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/abaqus/Job/Job.html#Job.submit"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#abaqus.Job.Job.Job.submit" title="Permalink to this definition">#</a></dt>
@@ -698,6 +711,7 @@ value is False. The datacheckJob and continueJob arguments cannot both be True.<
 </dd>
 </dl>
 </dd></dl>
+
 <dl class="py method">
 <dt class="sig sig-object py" id="abaqus.Job.Job.Job.waitForCompletion">
 <span class="sig-name descname"><span class="pre">waitForCompletion</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/abaqus/Job/Job.html#Job.waitForCompletion"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#abaqus.Job.Job.Job.waitForCompletion" title="Permalink to this definition">#</a></dt>
@@ -706,7 +720,9 @@ call the waitForCompletion method and the <em>status</em> member is neither SUBM
 RUNNING, Abaqus assumes the analysis has either completed or aborted and returns
 immediately.</p>
 </dd></dl>
+
 </dd></dl>
+
 </section>
 <section id="jobfrominputfile">
 <h3>JobFromInputFile<a class="headerlink" href="#jobfrominputfile" title="Permalink to this headline">#</a></h3>
@@ -745,17 +761,19 @@ RUNNING, ABORTED, TERMINATED, COMPLETED, CHECK_RUNNING, and CHECK_COMPLETED.If t
 </dd>
 </dl>
 <p class="rubric">Methods</p>
-<div class="table-wrapper"><table class="autosummary longtable docutils align-default">
+<div class="table-wrapper autosummary longtable docutils container">
+<table class="autosummary longtable docutils align-default">
 <colgroup>
-<col style="width: 10%"/>
-<col style="width: 90%"/>
+<col style="width: 10%" />
+<col style="width: 90%" />
 </colgroup>
 <tbody>
-<tr class="row-odd"><td><p><a class="reference internal" href="#abaqus.Job.JobFromInputFile.JobFromInputFile.setValues" title="abaqus.Job.JobFromInputFile.JobFromInputFile.setValues"><code class="xref py py-obj docutils literal notranslate"><span class="pre">setValues</span></code></a>([type, queue, waitHours, ...])</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#abaqus.Job.JobFromInputFile.JobFromInputFile.setValues" title="abaqus.Job.JobFromInputFile.JobFromInputFile.setValues"><code class="xref py py-obj docutils literal notranslate"><span class="pre">setValues</span></code></a>([type, queue, waitHours, ...])</p></td>
 <td><p>This method modifies the JobFromInputFile object.</p></td>
 </tr>
 </tbody>
-</table></div>
+</table>
+</div>
 <p>This method creates an analysis job using an input file for the model definition.</p>
 <dl class="field-list">
 <dt class="field-odd">Parameters</dt>
@@ -867,17 +885,19 @@ available.</p>
 </dd>
 </dl>
 <p class="rubric">Methods</p>
-<div class="table-wrapper"><table class="autosummary longtable docutils align-default">
+<div class="table-wrapper autosummary longtable docutils container">
+<table class="autosummary longtable docutils align-default">
 <colgroup>
-<col style="width: 10%"/>
-<col style="width: 90%"/>
+<col style="width: 10%" />
+<col style="width: 90%" />
 </colgroup>
 <tbody>
-<tr class="row-odd"><td><p><a class="reference internal" href="#abaqus.Job.JobFromInputFile.JobFromInputFile.setValues" title="abaqus.Job.JobFromInputFile.JobFromInputFile.setValues"><code class="xref py py-obj docutils literal notranslate"><span class="pre">setValues</span></code></a>([type, queue, waitHours, ...])</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#abaqus.Job.JobFromInputFile.JobFromInputFile.setValues" title="abaqus.Job.JobFromInputFile.JobFromInputFile.setValues"><code class="xref py py-obj docutils literal notranslate"><span class="pre">setValues</span></code></a>([type, queue, waitHours, ...])</p></td>
 <td><p>This method modifies the JobFromInputFile object.</p></td>
 </tr>
 </tbody>
-</table></div>
+</table>
+</div>
 <dl class="py method">
 <dt class="sig sig-object py" id="abaqus.Job.JobFromInputFile.JobFromInputFile.setValues">
 <span class="sig-name descname"><span class="pre">setValues</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">type</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.SymbolicConstantType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'ANALYSIS'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">queue</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">waitHours</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">waitMinutes</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">atTime</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">scratch</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">userSubroutine</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">numCpus</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">memory</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">90</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">memoryUnits</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.SymbolicConstantType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'PERCENTAGE'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">explicitPrecision</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.SymbolicConstantType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'SINGLE'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">nodalOutputPrecision</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.SymbolicConstantType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'SINGLE'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">parallelizationMethodExplicit</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.SymbolicConstantType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'DOMAIN'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">numDomains</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">activateLoadBalancing</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.BooleanType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">multiprocessingMode</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.SymbolicConstantType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'DEFAULT'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">licenseType</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.SymbolicConstantType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'DEFAULT'</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/abaqus/Job/JobFromInputFile.html#JobFromInputFile.setValues"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#abaqus.Job.JobFromInputFile.JobFromInputFile.setValues" title="Permalink to this definition">#</a></dt>
@@ -954,7 +974,9 @@ available.</p>
 </dd>
 </dl>
 </dd></dl>
+
 </dd></dl>
+
 </section>
 <section id="message">
 <h3>Message<a class="headerlink" href="#message" title="Permalink to this headline">#</a></h3>
@@ -1011,6 +1033,7 @@ DataObject.</p>
 </dd>
 </dl>
 </dd></dl>
+
 </section>
 <section id="messagearray">
 <h3>MessageArray<a class="headerlink" href="#messagearray" title="Permalink to this headline">#</a></h3>
@@ -1018,18 +1041,21 @@ DataObject.</p>
 <dt class="sig sig-object py" id="abaqus.Job.MessageArray.MessageArray">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">MessageArray</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">iterable</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">()</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">/</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/abaqus/Job/MessageArray.html#MessageArray"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#abaqus.Job.MessageArray.MessageArray" title="Permalink to this definition">#</a></dt>
 <dd><p class="rubric">Methods</p>
-<div class="table-wrapper"><table class="docutils align-default">
+<div class="table-wrapper docutils container">
+<table class="docutils align-default">
 <colgroup>
-<col style="width: 50%"/>
-<col style="width: 50%"/>
+<col style="width: 50%" />
+<col style="width: 50%" />
 </colgroup>
 <tbody>
 <tr class="row-odd"><td><p><strong>findAt</strong></p></td>
 <td></td>
 </tr>
 </tbody>
-</table></div>
+</table>
+</div>
 </dd></dl>
+
 </section>
 <section id="modeljob">
 <h3>ModelJob<a class="headerlink" href="#modeljob" title="Permalink to this headline">#</a></h3>
@@ -1148,10 +1174,11 @@ value is an empty string.</p>
 </dd>
 </dl>
 <p class="rubric">Methods</p>
-<div class="table-wrapper"><table class="autosummary longtable docutils align-default">
+<div class="table-wrapper autosummary longtable docutils container">
+<table class="autosummary longtable docutils align-default">
 <colgroup>
-<col style="width: 10%"/>
-<col style="width: 90%"/>
+<col style="width: 10%" />
+<col style="width: 90%" />
 </colgroup>
 <tbody>
 <tr class="row-odd"><td><p><a class="reference internal" href="#abaqus.Job.ModelJob.ModelJob.setValues" title="abaqus.Job.ModelJob.ModelJob.setValues"><code class="xref py py-obj docutils literal notranslate"><span class="pre">setValues</span></code></a>()</p></td>
@@ -1161,7 +1188,8 @@ value is an empty string.</p>
 <td><p>This method writes an input file.</p></td>
 </tr>
 </tbody>
-</table></div>
+</table>
+</div>
 <p>This method creates an analysis job using a model on a model database (MDB) for the
 model definition.</p>
 <dl class="field-list simple">
@@ -1273,10 +1301,11 @@ available.</p>
 </dd>
 </dl>
 <p class="rubric">Methods</p>
-<div class="table-wrapper"><table class="autosummary longtable docutils align-default">
+<div class="table-wrapper autosummary longtable docutils container">
+<table class="autosummary longtable docutils align-default">
 <colgroup>
-<col style="width: 10%"/>
-<col style="width: 90%"/>
+<col style="width: 10%" />
+<col style="width: 90%" />
 </colgroup>
 <tbody>
 <tr class="row-odd"><td><p><a class="reference internal" href="#abaqus.Job.ModelJob.ModelJob.setValues" title="abaqus.Job.ModelJob.ModelJob.setValues"><code class="xref py py-obj docutils literal notranslate"><span class="pre">setValues</span></code></a>()</p></td>
@@ -1286,12 +1315,14 @@ available.</p>
 <td><p>This method writes an input file.</p></td>
 </tr>
 </tbody>
-</table></div>
+</table>
+</div>
 <dl class="py method">
 <dt class="sig sig-object py" id="abaqus.Job.ModelJob.ModelJob.setValues">
 <span class="sig-name descname"><span class="pre">setValues</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/abaqus/Job/ModelJob.html#ModelJob.setValues"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#abaqus.Job.ModelJob.ModelJob.setValues" title="Permalink to this definition">#</a></dt>
 <dd><p>This method modifies the ModelJob object.</p>
 </dd></dl>
+
 <dl class="py method">
 <dt class="sig sig-object py" id="abaqus.Job.ModelJob.ModelJob.writeInput">
 <span class="sig-name descname"><span class="pre">writeInput</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">consistencyChecking</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.BooleanType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">1</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/abaqus/Job/ModelJob.html#ModelJob.writeInput"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#abaqus.Job.ModelJob.ModelJob.writeInput" title="Permalink to this definition">#</a></dt>
@@ -1307,7 +1338,9 @@ absolutely sure the model is consistent.</p>
 </dd>
 </dl>
 </dd></dl>
+
 </dd></dl>
+
 </section>
 <section id="optimizationprocess">
 <h3>OptimizationProcess<a class="headerlink" href="#optimizationprocess" title="Permalink to this headline">#</a></h3>
@@ -1323,16 +1356,17 @@ defined using an optimization task.</p>
 </pre></div>
 </div>
 <p class="rubric">Methods</p>
-<div class="table-wrapper"><table class="autosummary longtable docutils align-default">
+<div class="table-wrapper autosummary longtable docutils container">
+<table class="autosummary longtable docutils align-default">
 <colgroup>
-<col style="width: 10%"/>
-<col style="width: 90%"/>
+<col style="width: 10%" />
+<col style="width: 90%" />
 </colgroup>
 <tbody>
-<tr class="row-odd"><td><p><a class="reference internal" href="#abaqus.Job.OptimizationProcess.OptimizationProcess.extract" title="abaqus.Job.OptimizationProcess.OptimizationProcess.extract"><code class="xref py py-obj docutils literal notranslate"><span class="pre">extract</span></code></a>(outputFileName, designCycle[, ...])</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#abaqus.Job.OptimizationProcess.OptimizationProcess.extract" title="abaqus.Job.OptimizationProcess.OptimizationProcess.extract"><code class="xref py py-obj docutils literal notranslate"><span class="pre">extract</span></code></a>(outputFileName, designCycle[, ...])</p></td>
 <td><p>This method extracts a surface mesh from the optimized model.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#abaqus.Job.OptimizationProcess.OptimizationProcess.setValues" title="abaqus.Job.OptimizationProcess.OptimizationProcess.setValues"><code class="xref py py-obj docutils literal notranslate"><span class="pre">setValues</span></code></a>([description, maxDesignCycle, ...])</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#abaqus.Job.OptimizationProcess.OptimizationProcess.setValues" title="abaqus.Job.OptimizationProcess.OptimizationProcess.setValues"><code class="xref py py-obj docutils literal notranslate"><span class="pre">setValues</span></code></a>([description, maxDesignCycle, ...])</p></td>
 <td><p>This method modifies the OptimizationProcess object.</p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="#abaqus.Job.OptimizationProcess.OptimizationProcess.submit" title="abaqus.Job.OptimizationProcess.OptimizationProcess.submit"><code class="xref py py-obj docutils literal notranslate"><span class="pre">submit</span></code></a>([validate])</p></td>
@@ -1345,7 +1379,8 @@ defined using an optimization task.</p>
 <td><p>This method allows you to write par and input files for an optimization task.</p></td>
 </tr>
 </tbody>
-</table></div>
+</table>
+</div>
 <p>This method creates an OptimizationProcess object.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -1405,16 +1440,17 @@ and so on. The default value is None.</p>
 </pre></div>
 </div>
 <p class="rubric">Methods</p>
-<div class="table-wrapper"><table class="autosummary longtable docutils align-default">
+<div class="table-wrapper autosummary longtable docutils container">
+<table class="autosummary longtable docutils align-default">
 <colgroup>
-<col style="width: 10%"/>
-<col style="width: 90%"/>
+<col style="width: 10%" />
+<col style="width: 90%" />
 </colgroup>
 <tbody>
-<tr class="row-odd"><td><p><a class="reference internal" href="#abaqus.Job.OptimizationProcess.OptimizationProcess.extract" title="abaqus.Job.OptimizationProcess.OptimizationProcess.extract"><code class="xref py py-obj docutils literal notranslate"><span class="pre">extract</span></code></a>(outputFileName, designCycle[, ...])</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#abaqus.Job.OptimizationProcess.OptimizationProcess.extract" title="abaqus.Job.OptimizationProcess.OptimizationProcess.extract"><code class="xref py py-obj docutils literal notranslate"><span class="pre">extract</span></code></a>(outputFileName, designCycle[, ...])</p></td>
 <td><p>This method extracts a surface mesh from the optimized model.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#abaqus.Job.OptimizationProcess.OptimizationProcess.setValues" title="abaqus.Job.OptimizationProcess.OptimizationProcess.setValues"><code class="xref py py-obj docutils literal notranslate"><span class="pre">setValues</span></code></a>([description, maxDesignCycle, ...])</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#abaqus.Job.OptimizationProcess.OptimizationProcess.setValues" title="abaqus.Job.OptimizationProcess.OptimizationProcess.setValues"><code class="xref py py-obj docutils literal notranslate"><span class="pre">setValues</span></code></a>([description, maxDesignCycle, ...])</p></td>
 <td><p>This method modifies the OptimizationProcess object.</p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="#abaqus.Job.OptimizationProcess.OptimizationProcess.submit" title="abaqus.Job.OptimizationProcess.OptimizationProcess.submit"><code class="xref py py-obj docutils literal notranslate"><span class="pre">submit</span></code></a>([validate])</p></td>
@@ -1427,7 +1463,8 @@ and so on. The default value is None.</p>
 <td><p>This method allows you to write par and input files for an optimization task.</p></td>
 </tr>
 </tbody>
-</table></div>
+</table>
+</div>
 <dl class="py method">
 <dt class="sig sig-object py" id="abaqus.Job.OptimizationProcess.OptimizationProcess.extract">
 <span class="sig-name descname"><span class="pre">extract</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">outputFileName</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">designCycle</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">isoValue</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">smoothCycles</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">5</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">reductionPercent</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">reductionAngle</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">targetVolume</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">extractFormat</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">tuple</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'OPT_EXTRACT_SMOOTH_ABAQUS_INPUT_FILE'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">resultFiltering</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">instances</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">''</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/abaqus/Job/OptimizationProcess.html#OptimizationProcess.extract"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#abaqus.Job.OptimizationProcess.OptimizationProcess.extract" title="Permalink to this definition">#</a></dt>
@@ -1474,6 +1511,7 @@ specified, no part instance is selected and surface is generated for the whole m
 </dd>
 </dl>
 </dd></dl>
+
 <dl class="py method">
 <dt class="sig sig-object py" id="abaqus.Job.OptimizationProcess.OptimizationProcess.setValues">
 <span class="sig-name descname"><span class="pre">setValues</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">description</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">maxDesignCycle</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">15</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dataSaveFrequency</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'OPT_DATASAVE_SPECIFY_CYCLE'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">saveInitial</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.BooleanType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">saveFirst</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.BooleanType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">saveLast</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.BooleanType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">saveEvery</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/abaqus/Job/OptimizationProcess.html#OptimizationProcess.setValues"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#abaqus.Job.OptimizationProcess.OptimizationProcess.setValues" title="Permalink to this definition">#</a></dt>
@@ -1511,6 +1549,7 @@ and so on. The default value is None.</p>
 </dd>
 </dl>
 </dd></dl>
+
 <dl class="py method">
 <dt class="sig sig-object py" id="abaqus.Job.OptimizationProcess.OptimizationProcess.submit">
 <span class="sig-name descname"><span class="pre">submit</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">validate</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.BooleanType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/abaqus/Job/OptimizationProcess.html#OptimizationProcess.submit"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#abaqus.Job.OptimizationProcess.OptimizationProcess.submit" title="Permalink to this definition">#</a></dt>
@@ -1525,6 +1564,7 @@ process only. The default value is False.</p>
 </dd>
 </dl>
 </dd></dl>
+
 <dl class="py method">
 <dt class="sig sig-object py" id="abaqus.Job.OptimizationProcess.OptimizationProcess.waitForCompletion">
 <span class="sig-name descname"><span class="pre">waitForCompletion</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/abaqus/Job/OptimizationProcess.html#OptimizationProcess.waitForCompletion"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#abaqus.Job.OptimizationProcess.OptimizationProcess.waitForCompletion" title="Permalink to this definition">#</a></dt>
@@ -1533,12 +1573,15 @@ you call the waitForCompletion method and the <em>status</em> member is neither 
 RUNNING, Abaqus assumes the analysis has either completed or aborted and returns
 immediately.</p>
 </dd></dl>
+
 <dl class="py method">
 <dt class="sig sig-object py" id="abaqus.Job.OptimizationProcess.OptimizationProcess.writeParAndInputFiles">
 <span class="sig-name descname"><span class="pre">writeParAndInputFiles</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/abaqus/Job/OptimizationProcess.html#OptimizationProcess.writeParAndInputFiles"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#abaqus.Job.OptimizationProcess.OptimizationProcess.writeParAndInputFiles" title="Permalink to this definition">#</a></dt>
 <dd><p>This method allows you to write par and input files for an optimization task.</p>
 </dd></dl>
+
 </dd></dl>
+
 </section>
 <section id="queue">
 <h3>Queue<a class="headerlink" href="#queue" title="Permalink to this headline">#</a></h3>
@@ -1613,6 +1656,7 @@ local machine. The default value is OFF.</p>
 </pre></div>
 </div>
 </dd></dl>
+
 </section>
 </section>
 </section>

@@ -5,10 +5,10 @@
     <meta name="color-scheme" content="light dark"><link rel="index" title="Index" href="../../../genindex.html" /><link rel="search" title="Search" href="../../../search.html" />
         <link rel="canonical" href="https://pyabaqus.haiiliin.com/_modules/abaqus/BasicGeometry/Edge.html" />
 
-    <meta name="generator" content="sphinx-4.5.0, furo 2022.04.07"/>
-        <title>abaqus.BasicGeometry.Edge - pyabaqus 1.0.16 documentation</title>
+    <meta name="generator" content="sphinx-4.5.0, furo 2022.06.04.1"/>
+        <title>abaqus.BasicGeometry.Edge - pyabaqus 1.0.18 documentation</title>
       <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/styles/furo.css?digest=68f4518137b9aefe99b631505a2064c3c42c9852" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/styles/furo.css?digest=40978830699223671f4072448e654b5958f38b89" />
     <link rel="stylesheet" type="text/css" href="../../../_static/styles/furo-extensions.css?digest=30d1aed668e5c3a91c3e3bf6a60b675221979f0e" />
     
     
@@ -123,7 +123,7 @@
       </label>
     </div>
     <div class="header-center">
-      <a href="../../../index.html"><div class="brand">pyabaqus 1.0.16 documentation</div></a>
+      <a href="../../../index.html"><div class="brand">pyabaqus 1.0.18 documentation</div></a>
     </div>
     <div class="header-right">
       <div class="theme-toggle-container theme-toggle-header">
@@ -146,7 +146,7 @@
       <div class="sidebar-sticky"><a class="sidebar-brand" href="../../../index.html">
   
   
-  <span class="sidebar-brand-text">pyabaqus 1.0.16 documentation</span>
+  <span class="sidebar-brand-text">pyabaqus 1.0.18 documentation</span>
   
 </a><form class="sidebar-search-container" method="get" action="../../../search.html" role="search">
   <input class="sidebar-search" placeholder=Search name="q" aria-label="Search">
@@ -286,7 +286,8 @@
           </svg>
           <span>Back to top</span>
         </a>
-        <div class="content-icon-container"><div class="theme-toggle-container theme-toggle-content">
+        <div class="content-icon-container">
+          <div class="theme-toggle-container theme-toggle-content">
             <button class="theme-toggle">
               <div class="visually-hidden">Toggle Light / Dark / Auto color theme</div>
               <svg class="theme-icon-when-auto"><use href="#svg-sun-half"></use></svg>
@@ -305,7 +306,7 @@
 
 
 <div class="viewcode-block" id="Edge"><a class="viewcode-back" href="../../../reference/mdb/model/part_assembly/geometry.html#abaqus.BasicGeometry.Edge.Edge">[docs]</a><span class="k">class</span> <span class="nc">Edge</span><span class="p">:</span>
-    <span class="sd">"""Edges are one-dimensional regions of geometry.</span>
+    <span class="sd">&quot;&quot;&quot;Edges are one-dimensional regions of geometry.</span>
 
 <span class="sd">    Attributes</span>
 <span class="sd">    ----------</span>
@@ -355,7 +356,7 @@
 <span class="sd">        mdb.models[name].rootAssembly.sets[name].edges[i]</span>
 <span class="sd">        mdb.models[name].rootAssembly.surfaces[name].edges[i]</span>
 
-<span class="sd">    """</span>
+<span class="sd">    &quot;&quot;&quot;</span>
 
     <span class="c1"># An Int specifying the index of the edge in the EdgeArray. </span>
     <span class="n">index</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="kc">None</span>
@@ -376,18 +377,18 @@
     <span class="n">instanceName</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="kc">None</span>
 
 <div class="viewcode-block" id="Edge.isTangentFlipped"><a class="viewcode-back" href="../../../reference/mdb/model/part_assembly/geometry.html#abaqus.BasicGeometry.Edge.Edge.isTangentFlipped">[docs]</a>    <span class="k">def</span> <span class="nf">isTangentFlipped</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="sd">"""This method determines whether the tangent to the edge is flipped from its default</span>
+        <span class="sd">&quot;&quot;&quot;This method determines whether the tangent to the edge is flipped from its default</span>
 <span class="sd">        direction by the use of the flipTangent method on a Part object.</span>
 
 <span class="sd">        Returns</span>
 <span class="sd">        -------</span>
 <span class="sd">            A Boolean value of True if the tangent is flipped and False if not.</span>
 <span class="sd">            </span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span></div>
 
 <div class="viewcode-block" id="Edge.getCurvature"><a class="viewcode-back" href="../../../reference/mdb/model/part_assembly/geometry.html#abaqus.BasicGeometry.Edge.Edge.getCurvature">[docs]</a>    <span class="k">def</span> <span class="nf">getCurvature</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">parameter</span><span class="p">:</span> <span class="nb">float</span><span class="p">,</span> <span class="n">point</span><span class="p">:</span> <span class="nb">tuple</span><span class="p">):</span>
-        <span class="sd">"""This method returns curvature information at a location on the edge.</span>
+        <span class="sd">&quot;&quot;&quot;This method returns curvature information at a location on the edge.</span>
 <span class="sd">        </span>
 <span class="sd">        Parameters</span>
 <span class="sd">        ----------</span>
@@ -401,41 +402,41 @@
 
 <span class="sd">        Returns</span>
 <span class="sd">        -------</span>
-<span class="sd">            A dictionary with keys 'evaluationPoint', 'curvature', 'radius', and 'tangent', where </span>
-<span class="sd">            'evaluationPoint' specifies the location at which the curvature was computed; </span>
-<span class="sd">            'curvature' specifies the curvature vector at that location; 'radius' is the radius of </span>
-<span class="sd">            curvature; and 'tangent' specifies the tangent to the edge at that location. </span>
+<span class="sd">            A dictionary with keys &#39;evaluationPoint&#39;, &#39;curvature&#39;, &#39;radius&#39;, and &#39;tangent&#39;, where </span>
+<span class="sd">            &#39;evaluationPoint&#39; specifies the location at which the curvature was computed; </span>
+<span class="sd">            &#39;curvature&#39; specifies the curvature vector at that location; &#39;radius&#39; is the radius of </span>
+<span class="sd">            curvature; and &#39;tangent&#39; specifies the tangent to the edge at that location. </span>
 
 <span class="sd">        Raises</span>
 <span class="sd">        ------</span>
 <span class="sd">            The given edge is straight. </span>
 <span class="sd">            </span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span></div>
 
 <div class="viewcode-block" id="Edge.getFaces"><a class="viewcode-back" href="../../../reference/mdb/model/part_assembly/geometry.html#abaqus.BasicGeometry.Edge.Edge.getFaces">[docs]</a>    <span class="k">def</span> <span class="nf">getFaces</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="sd">"""This method returns a sequence consisting of the face ids of the faces which share this</span>
+        <span class="sd">&quot;&quot;&quot;This method returns a sequence consisting of the face ids of the faces which share this</span>
 <span class="sd">        edge.</span>
 
 <span class="sd">        Returns</span>
 <span class="sd">        -------</span>
 <span class="sd">            A tuple of integers.</span>
 <span class="sd">            </span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span></div>
 
 <div class="viewcode-block" id="Edge.getAdjacentEdges"><a class="viewcode-back" href="../../../reference/mdb/model/part_assembly/geometry.html#abaqus.BasicGeometry.Edge.Edge.getAdjacentEdges">[docs]</a>    <span class="k">def</span> <span class="nf">getAdjacentEdges</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="sd">"""This method returns an array of Edge objects that share at least one vertex of the edge.</span>
+        <span class="sd">&quot;&quot;&quot;This method returns an array of Edge objects that share at least one vertex of the edge.</span>
 
 <span class="sd">        Returns</span>
 <span class="sd">        -------</span>
 <span class="sd">            An EdgeArray object, which is a sequence of Edge objects.</span>
 <span class="sd">            </span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span></div>
 
 <div class="viewcode-block" id="Edge.getEdgesByEdgeAngle"><a class="viewcode-back" href="../../../reference/mdb/model/part_assembly/geometry.html#abaqus.BasicGeometry.Edge.Edge.getEdgesByEdgeAngle">[docs]</a>    <span class="k">def</span> <span class="nf">getEdgesByEdgeAngle</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">angle</span><span class="p">:</span> <span class="nb">str</span><span class="p">):</span>
-        <span class="sd">"""This method returns an array of Edge objects that are obtained by recursively finding</span>
+        <span class="sd">&quot;&quot;&quot;This method returns an array of Edge objects that are obtained by recursively finding</span>
 <span class="sd">        adjacent edges that are at an angle of less than or equal to the specified face angle.</span>
 <span class="sd">        </span>
 <span class="sd">        Parameters</span>
@@ -447,31 +448,31 @@
 <span class="sd">        -------</span>
 <span class="sd">            An EdgeArray object, which is a sequence of Edgeobjects.</span>
 <span class="sd">            </span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span></div>
 
 <div class="viewcode-block" id="Edge.getNodes"><a class="viewcode-back" href="../../../reference/mdb/model/part_assembly/geometry.html#abaqus.BasicGeometry.Edge.Edge.getNodes">[docs]</a>    <span class="k">def</span> <span class="nf">getNodes</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="sd">"""This method returns an array of node objects that are associated with the edge.</span>
+        <span class="sd">&quot;&quot;&quot;This method returns an array of node objects that are associated with the edge.</span>
 
 <span class="sd">        Returns</span>
 <span class="sd">        -------</span>
 <span class="sd">            A MeshNodeArray object, which is a sequence of MeshNode objects.</span>
 <span class="sd">            </span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span></div>
 
 <div class="viewcode-block" id="Edge.getElements"><a class="viewcode-back" href="../../../reference/mdb/model/part_assembly/geometry.html#abaqus.BasicGeometry.Edge.Edge.getElements">[docs]</a>    <span class="k">def</span> <span class="nf">getElements</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="sd">"""This method returns an array of element objects that are associated with the edge.</span>
+        <span class="sd">&quot;&quot;&quot;This method returns an array of element objects that are associated with the edge.</span>
 
 <span class="sd">        Returns</span>
 <span class="sd">        -------</span>
 <span class="sd">            A MeshElementArray object which is a sequence of MeshElement objects.</span>
 <span class="sd">            </span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span></div>
 
 <div class="viewcode-block" id="Edge.getRadius"><a class="viewcode-back" href="../../../reference/mdb/model/part_assembly/geometry.html#abaqus.BasicGeometry.Edge.Edge.getRadius">[docs]</a>    <span class="k">def</span> <span class="nf">getRadius</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="sd">"""This method returns the radius of circular edges.</span>
+        <span class="sd">&quot;&quot;&quot;This method returns the radius of circular edges.</span>
 
 <span class="sd">        Returns</span>
 <span class="sd">        -------</span>
@@ -481,11 +482,11 @@
 <span class="sd">        ------</span>
 <span class="sd">            The given edges is not circular. </span>
 <span class="sd">            </span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span></div>
 
 <div class="viewcode-block" id="Edge.getSize"><a class="viewcode-back" href="../../../reference/mdb/model/part_assembly/geometry.html#abaqus.BasicGeometry.Edge.Edge.getSize">[docs]</a>    <span class="k">def</span> <span class="nf">getSize</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">printResults</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="kc">True</span><span class="p">):</span>
-        <span class="sd">"""This method returns a Float indicating the length of the edge.</span>
+        <span class="sd">&quot;&quot;&quot;This method returns a Float indicating the length of the edge.</span>
 <span class="sd">        </span>
 <span class="sd">        Parameters</span>
 <span class="sd">        ----------</span>
@@ -496,11 +497,11 @@
 <span class="sd">        -------</span>
 <span class="sd">            A Float.</span>
 <span class="sd">            </span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span></div>
 
 <div class="viewcode-block" id="Edge.getVertices"><a class="viewcode-back" href="../../../reference/mdb/model/part_assembly/geometry.html#abaqus.BasicGeometry.Edge.Edge.getVertices">[docs]</a>    <span class="k">def</span> <span class="nf">getVertices</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="sd">"""This method returns a sequence of indices of the vertices that bound this edge. The</span>
+        <span class="sd">&quot;&quot;&quot;This method returns a sequence of indices of the vertices that bound this edge. The</span>
 <span class="sd">        first index refers to the vertex where the normalized curve parameter = 0.0, and the</span>
 <span class="sd">        second index refers to the vertex where the normalized curve parameter = 1.0. If the</span>
 <span class="sd">        edge is a closed curve, only one vertex index is returned.</span>
@@ -509,7 +510,7 @@
 <span class="sd">        -------</span>
 <span class="sd">            A tuple of integers.</span>
 <span class="sd">            </span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span></div></div>
 </pre></div>
         </article>

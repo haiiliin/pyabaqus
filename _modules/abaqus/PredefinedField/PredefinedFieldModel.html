@@ -5,10 +5,10 @@
     <meta name="color-scheme" content="light dark"><link rel="index" title="Index" href="../../../genindex.html" /><link rel="search" title="Search" href="../../../search.html" />
         <link rel="canonical" href="https://pyabaqus.haiiliin.com/_modules/abaqus/PredefinedField/PredefinedFieldModel.html" />
 
-    <meta name="generator" content="sphinx-4.5.0, furo 2022.04.07"/>
-        <title>abaqus.PredefinedField.PredefinedFieldModel - pyabaqus 1.0.16 documentation</title>
+    <meta name="generator" content="sphinx-4.5.0, furo 2022.06.04.1"/>
+        <title>abaqus.PredefinedField.PredefinedFieldModel - pyabaqus 1.0.18 documentation</title>
       <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/styles/furo.css?digest=68f4518137b9aefe99b631505a2064c3c42c9852" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/styles/furo.css?digest=40978830699223671f4072448e654b5958f38b89" />
     <link rel="stylesheet" type="text/css" href="../../../_static/styles/furo-extensions.css?digest=30d1aed668e5c3a91c3e3bf6a60b675221979f0e" />
     
     
@@ -123,7 +123,7 @@
       </label>
     </div>
     <div class="header-center">
-      <a href="../../../index.html"><div class="brand">pyabaqus 1.0.16 documentation</div></a>
+      <a href="../../../index.html"><div class="brand">pyabaqus 1.0.18 documentation</div></a>
     </div>
     <div class="header-right">
       <div class="theme-toggle-container theme-toggle-header">
@@ -146,7 +146,7 @@
       <div class="sidebar-sticky"><a class="sidebar-brand" href="../../../index.html">
   
   
-  <span class="sidebar-brand-text">pyabaqus 1.0.16 documentation</span>
+  <span class="sidebar-brand-text">pyabaqus 1.0.18 documentation</span>
   
 </a><form class="sidebar-search-container" method="get" action="../../../search.html" role="search">
   <input class="sidebar-search" placeholder=Search name="q" aria-label="Search">
@@ -286,7 +286,8 @@
           </svg>
           <span>Back to top</span>
         </a>
-        <div class="content-icon-container"><div class="theme-toggle-container theme-toggle-content">
+        <div class="content-icon-container">
+          <div class="theme-toggle-container theme-toggle-content">
             <button class="theme-toggle">
               <div class="visually-hidden">Toggle Light / Dark / Auto color theme</div>
               <svg class="theme-icon-when-auto"><use href="#svg-sun-half"></use></svg>
@@ -317,7 +318,7 @@
 
 <div class="viewcode-block" id="PredefinedFieldModel"><a class="viewcode-back" href="../../../user/mdb/model/predefined.html#abaqus.PredefinedField.PredefinedFieldModel.PredefinedFieldModel">[docs]</a><span class="k">class</span> <span class="nc">PredefinedFieldModel</span><span class="p">(</span><span class="n">ModelBase</span><span class="p">,</span> <span class="n">Field</span><span class="p">,</span> <span class="n">FluidCavityPressure</span><span class="p">,</span> <span class="n">InitialState</span><span class="p">,</span> <span class="n">KinematicHardening</span><span class="p">,</span> <span class="n">MaterialAssignment</span><span class="p">,</span>
                            <span class="n">Stress</span><span class="p">,</span> <span class="n">Temperature</span><span class="p">,</span> <span class="n">Velocity</span><span class="p">):</span>
-    <span class="sd">"""Abaqus creates a Model object named `Model-1` when a session is started.</span>
+    <span class="sd">&quot;&quot;&quot;Abaqus creates a Model object named `Model-1` when a session is started.</span>
 
 <span class="sd">    Notes</span>
 <span class="sd">    -----</span>
@@ -327,16 +328,16 @@
 
 <span class="sd">        mdb.models[name]</span>
 
-<span class="sd">    """</span>
+<span class="sd">    &quot;&quot;&quot;</span>
 
-<div class="viewcode-block" id="PredefinedFieldModel.Field"><a class="viewcode-back" href="../../../reference/mdb/model/predefined.html#abaqus.PredefinedField.PredefinedFieldModel.PredefinedFieldModel.Field">[docs]</a>    <span class="k">def</span> <span class="nf">Field</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">createStepName</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">region</span><span class="p">:</span> <span class="n">Region</span><span class="p">,</span> <span class="n">outputVariable</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">''</span><span class="p">,</span>
+<div class="viewcode-block" id="PredefinedFieldModel.Field"><a class="viewcode-back" href="../../../reference/mdb/model/predefined.html#abaqus.PredefinedField.PredefinedFieldModel.PredefinedFieldModel.Field">[docs]</a>    <span class="k">def</span> <span class="nf">Field</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">createStepName</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">region</span><span class="p">:</span> <span class="n">Region</span><span class="p">,</span> <span class="n">outputVariable</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span><span class="p">,</span>
               <span class="n">fieldVariableNum</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">distributionType</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="n">UNIFORM</span><span class="p">,</span>
               <span class="n">crossSectionDistribution</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="n">CONSTANT_THROUGH_THICKNESS</span><span class="p">,</span>
-              <span class="n">field</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">''</span><span class="p">,</span> <span class="n">amplitude</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="n">UNSET</span><span class="p">,</span> <span class="n">fileName</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">''</span><span class="p">,</span>
+              <span class="n">field</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">amplitude</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="n">UNSET</span><span class="p">,</span> <span class="n">fileName</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span><span class="p">,</span>
               <span class="n">beginStep</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">beginIncrement</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
               <span class="n">endStep</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">endIncrement</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
-              <span class="n">interpolate</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="n">OFF</span><span class="p">,</span> <span class="n">magnitudes</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">''</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Field</span><span class="p">:</span>
-        <span class="sd">"""This method creates a Field object.</span>
+              <span class="n">interpolate</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="n">OFF</span><span class="p">,</span> <span class="n">magnitudes</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Field</span><span class="p">:</span>
+        <span class="sd">&quot;&quot;&quot;This method creates a Field object.</span>
 
 <span class="sd">        Notes</span>
 <span class="sd">        -----</span>
@@ -429,7 +430,7 @@
 <span class="sd">        Returns</span>
 <span class="sd">        -------</span>
 <span class="sd">            A Field object.</span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">predefinedFields</span><span class="p">[</span><span class="n">name</span><span class="p">]</span> <span class="o">=</span> <span class="n">predefinedField</span> <span class="o">=</span> <span class="n">Field</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">createStepName</span><span class="p">,</span> <span class="n">region</span><span class="p">,</span> <span class="n">outputVariable</span><span class="p">,</span>
                                                               <span class="n">fieldVariableNum</span><span class="p">,</span> <span class="n">distributionType</span><span class="p">,</span>
                                                               <span class="n">crossSectionDistribution</span><span class="p">,</span> <span class="n">field</span><span class="p">,</span> <span class="n">amplitude</span><span class="p">,</span> <span class="n">fileName</span><span class="p">,</span>
@@ -438,7 +439,7 @@
         <span class="k">return</span> <span class="n">predefinedField</span></div>
 
 <div class="viewcode-block" id="PredefinedFieldModel.FluidCavityPressure"><a class="viewcode-back" href="../../../reference/mdb/model/predefined.html#abaqus.PredefinedField.PredefinedFieldModel.PredefinedFieldModel.FluidCavityPressure">[docs]</a>    <span class="k">def</span> <span class="nf">FluidCavityPressure</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">fluidCavity</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">fluidPressure</span><span class="p">:</span> <span class="nb">float</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">FluidCavityPressure</span><span class="p">:</span>
-        <span class="sd">"""This method creates a FluidCavityPressure object.</span>
+        <span class="sd">&quot;&quot;&quot;This method creates a FluidCavityPressure object.</span>
 
 <span class="sd">        Notes</span>
 <span class="sd">        -----</span>
@@ -460,14 +461,14 @@
 <span class="sd">        Returns</span>
 <span class="sd">        -------</span>
 <span class="sd">            A FluidCavityPressure object.</span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">predefinedFields</span><span class="p">[</span><span class="n">name</span><span class="p">]</span> <span class="o">=</span> <span class="n">predefinedField</span> <span class="o">=</span> <span class="n">FluidCavityPressure</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">fluidCavity</span><span class="p">,</span> <span class="n">fluidPressure</span><span class="p">)</span>
         <span class="k">return</span> <span class="n">predefinedField</span></div>
 
 <div class="viewcode-block" id="PredefinedFieldModel.InitialState"><a class="viewcode-back" href="../../../reference/mdb/model/predefined.html#abaqus.PredefinedField.PredefinedFieldModel.PredefinedFieldModel.InitialState">[docs]</a>    <span class="k">def</span> <span class="nf">InitialState</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">instances</span><span class="p">:</span> <span class="n">PartInstanceArray</span><span class="p">,</span> <span class="n">fileName</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
                      <span class="n">endStep</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="n">LAST_STEP</span><span class="p">,</span> <span class="n">endIncrement</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="n">STEP_END</span><span class="p">,</span>
                      <span class="n">updateReferenceConfiguration</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="n">OFF</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">InitialState</span><span class="p">:</span>
-        <span class="sd">"""This method creates an InitialState predefined field object.</span>
+        <span class="sd">&quot;&quot;&quot;This method creates an InitialState predefined field object.</span>
 
 <span class="sd">        Notes</span>
 <span class="sd">        -----</span>
@@ -501,7 +502,7 @@
 <span class="sd">        Returns</span>
 <span class="sd">        -------</span>
 <span class="sd">            An InitialState object.</span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">predefinedFields</span><span class="p">[</span><span class="n">name</span><span class="p">]</span> <span class="o">=</span> <span class="n">predefinedField</span> <span class="o">=</span> <span class="n">InitialState</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">instances</span><span class="p">,</span> <span class="n">fileName</span><span class="p">,</span> <span class="n">endStep</span><span class="p">,</span> <span class="n">endIncrement</span><span class="p">,</span>
                                                                      <span class="n">updateReferenceConfiguration</span><span class="p">)</span>
         <span class="k">return</span> <span class="n">predefinedField</span></div>
@@ -510,7 +511,7 @@
                            <span class="n">backStress</span><span class="p">:</span> <span class="nb">tuple</span> <span class="o">=</span> <span class="p">(),</span> <span class="n">sectPtNum</span><span class="p">:</span> <span class="nb">tuple</span> <span class="o">=</span> <span class="p">(),</span>
                            <span class="n">definition</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="n">KINEMATIC_HARDENING</span><span class="p">,</span> <span class="n">rebarLayerNames</span><span class="p">:</span> <span class="nb">tuple</span> <span class="o">=</span> <span class="p">(),</span>
                            <span class="n">distributionType</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="n">MAGNITUDE</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">KinematicHardening</span><span class="p">:</span>
-        <span class="sd">"""This method creates a KinematicHardening object.</span>
+        <span class="sd">&quot;&quot;&quot;This method creates a KinematicHardening object.</span>
 
 <span class="sd">        Notes</span>
 <span class="sd">        -----</span>
@@ -550,7 +551,7 @@
 <span class="sd">        Returns</span>
 <span class="sd">        -------</span>
 <span class="sd">            A KinematicHardening object.</span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">predefinedFields</span><span class="p">[</span><span class="n">name</span><span class="p">]</span> <span class="o">=</span> <span class="n">predefinedField</span> <span class="o">=</span> <span class="n">KinematicHardening</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">region</span><span class="p">,</span> <span class="n">numBackStress</span><span class="p">,</span>
                                                                            <span class="n">equivPlasticStrain</span><span class="p">,</span> <span class="n">backStress</span><span class="p">,</span> <span class="n">sectPtNum</span><span class="p">,</span>
                                                                            <span class="n">definition</span><span class="p">,</span> <span class="n">rebarLayerNames</span><span class="p">,</span>
@@ -560,7 +561,7 @@
 <div class="viewcode-block" id="PredefinedFieldModel.MaterialAssignment"><a class="viewcode-back" href="../../../reference/mdb/model/predefined.html#abaqus.PredefinedField.PredefinedFieldModel.PredefinedFieldModel.MaterialAssignment">[docs]</a>    <span class="k">def</span> <span class="nf">MaterialAssignment</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">instanceList</span><span class="p">:</span> <span class="n">PartInstanceArray</span><span class="p">,</span> <span class="n">useFields</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="n">OFF</span><span class="p">,</span>
                            <span class="n">assignmentList</span><span class="p">:</span> <span class="nb">tuple</span> <span class="o">=</span> <span class="p">(),</span> <span class="n">fieldList</span><span class="p">:</span> <span class="nb">tuple</span> <span class="o">=</span> <span class="p">(),</span>
                            <span class="n">colorList</span><span class="p">:</span> <span class="nb">tuple</span> <span class="o">=</span> <span class="p">())</span> <span class="o">-&gt;</span> <span class="n">MaterialAssignment</span><span class="p">:</span>
-        <span class="sd">"""This method creates a MaterialAssignment predefined field object.</span>
+        <span class="sd">&quot;&quot;&quot;This method creates a MaterialAssignment predefined field object.</span>
 
 <span class="sd">        Notes</span>
 <span class="sd">        -----</span>
@@ -600,7 +601,7 @@
 <span class="sd">        Returns</span>
 <span class="sd">        -------</span>
 <span class="sd">            A MaterialAssignment object.</span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">predefinedFields</span><span class="p">[</span><span class="n">name</span><span class="p">]</span> <span class="o">=</span> <span class="n">predefinedField</span> <span class="o">=</span> <span class="n">MaterialAssignment</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">instanceList</span><span class="p">,</span> <span class="n">useFields</span><span class="p">,</span>
                                                                            <span class="n">assignmentList</span><span class="p">,</span> <span class="n">fieldList</span><span class="p">,</span> <span class="n">colorList</span><span class="p">)</span>
         <span class="k">return</span> <span class="n">predefinedField</span></div>
@@ -608,7 +609,7 @@
 <div class="viewcode-block" id="PredefinedFieldModel.Stress"><a class="viewcode-back" href="../../../reference/mdb/model/predefined.html#abaqus.PredefinedField.PredefinedFieldModel.PredefinedFieldModel.Stress">[docs]</a>    <span class="k">def</span> <span class="nf">Stress</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">region</span><span class="p">:</span> <span class="n">Region</span><span class="p">,</span> <span class="n">distributionType</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="n">UNIFORM</span><span class="p">,</span>
                <span class="n">sigma11</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">sigma22</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">sigma33</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
                <span class="n">sigma12</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">sigma13</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">sigma23</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="kc">None</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Stress</span><span class="p">:</span>
-        <span class="sd">"""This method creates a Stress predefined field object.</span>
+        <span class="sd">&quot;&quot;&quot;This method creates a Stress predefined field object.</span>
 
 <span class="sd">        Notes</span>
 <span class="sd">        -----</span>
@@ -644,7 +645,7 @@
 <span class="sd">        Returns</span>
 <span class="sd">        -------</span>
 <span class="sd">            A Stress object.</span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">predefinedFields</span><span class="p">[</span><span class="n">name</span><span class="p">]</span> <span class="o">=</span> <span class="n">predefinedField</span> <span class="o">=</span> <span class="n">Stress</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">region</span><span class="p">,</span> <span class="n">distributionType</span><span class="p">,</span> <span class="n">sigma11</span><span class="p">,</span> <span class="n">sigma22</span><span class="p">,</span>
                                                                <span class="n">sigma33</span><span class="p">,</span> <span class="n">sigma12</span><span class="p">,</span> <span class="n">sigma13</span><span class="p">,</span> <span class="n">sigma23</span><span class="p">)</span>
         <span class="k">return</span> <span class="n">predefinedField</span></div>
@@ -652,12 +653,12 @@
 <div class="viewcode-block" id="PredefinedFieldModel.Temperature"><a class="viewcode-back" href="../../../reference/mdb/model/predefined.html#abaqus.PredefinedField.PredefinedFieldModel.PredefinedFieldModel.Temperature">[docs]</a>    <span class="k">def</span> <span class="nf">Temperature</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">createStepName</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">region</span><span class="p">:</span> <span class="n">Region</span><span class="p">,</span>
                     <span class="n">distributionType</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="n">UNIFORM</span><span class="p">,</span>
                     <span class="n">crossSectionDistribution</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="n">CONSTANT_THROUGH_THICKNESS</span><span class="p">,</span>
-                    <span class="n">field</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">''</span><span class="p">,</span> <span class="n">amplitude</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="n">UNSET</span><span class="p">,</span> <span class="n">fileName</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">''</span><span class="p">,</span>
+                    <span class="n">field</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">amplitude</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="n">UNSET</span><span class="p">,</span> <span class="n">fileName</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span><span class="p">,</span>
                     <span class="n">beginStep</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">beginIncrement</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
                     <span class="n">endStep</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">endIncrement</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
-                    <span class="n">interpolate</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="n">OFF</span><span class="p">,</span> <span class="n">magnitudes</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">''</span><span class="p">,</span>
+                    <span class="n">interpolate</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="n">OFF</span><span class="p">,</span> <span class="n">magnitudes</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span><span class="p">,</span>
                     <span class="n">absoluteExteriorTolerance</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="n">exteriorTolerance</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mi">0</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Temperature</span><span class="p">:</span>
-        <span class="sd">"""This method creates a Temperature object.</span>
+        <span class="sd">&quot;&quot;&quot;This method creates a Temperature object.</span>
 
 <span class="sd">        Notes</span>
 <span class="sd">        -----</span>
@@ -752,7 +753,7 @@
 <span class="sd">        Returns</span>
 <span class="sd">        -------</span>
 <span class="sd">            A Temperature object.</span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">predefinedFields</span><span class="p">[</span><span class="n">name</span><span class="p">]</span> <span class="o">=</span> <span class="n">predefinedField</span> <span class="o">=</span> <span class="n">Temperature</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">createStepName</span><span class="p">,</span> <span class="n">region</span><span class="p">,</span> <span class="n">distributionType</span><span class="p">,</span>
                                                                     <span class="n">crossSectionDistribution</span><span class="p">,</span> <span class="n">field</span><span class="p">,</span> <span class="n">amplitude</span><span class="p">,</span>
                                                                     <span class="n">fileName</span><span class="p">,</span> <span class="n">beginStep</span><span class="p">,</span> <span class="n">beginIncrement</span><span class="p">,</span> <span class="n">endStep</span><span class="p">,</span>
@@ -761,9 +762,9 @@
         <span class="k">return</span> <span class="n">predefinedField</span></div>
 
 <div class="viewcode-block" id="PredefinedFieldModel.Velocity"><a class="viewcode-back" href="../../../reference/mdb/model/predefined.html#abaqus.PredefinedField.PredefinedFieldModel.PredefinedFieldModel.Velocity">[docs]</a>    <span class="k">def</span> <span class="nf">Velocity</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">region</span><span class="p">:</span> <span class="n">Region</span><span class="p">,</span> <span class="n">velocity1</span><span class="p">:</span> <span class="nb">float</span><span class="p">,</span> <span class="n">velocity2</span><span class="p">:</span> <span class="nb">float</span><span class="p">,</span> <span class="n">velocity3</span><span class="p">:</span> <span class="nb">float</span><span class="p">,</span>
-                 <span class="n">omega</span><span class="p">:</span> <span class="nb">float</span><span class="p">,</span> <span class="n">axisBegin</span><span class="p">:</span> <span class="nb">tuple</span><span class="p">,</span> <span class="n">axisEnd</span><span class="p">:</span> <span class="nb">tuple</span><span class="p">,</span> <span class="n">field</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">''</span><span class="p">,</span>
+                 <span class="n">omega</span><span class="p">:</span> <span class="nb">float</span><span class="p">,</span> <span class="n">axisBegin</span><span class="p">:</span> <span class="nb">tuple</span><span class="p">,</span> <span class="n">axisEnd</span><span class="p">:</span> <span class="nb">tuple</span><span class="p">,</span> <span class="n">field</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span><span class="p">,</span>
                  <span class="n">distributionType</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="n">MAGNITUDE</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Velocity</span><span class="p">:</span>
-        <span class="sd">"""This method creates a Velocity predefined field object.</span>
+        <span class="sd">&quot;&quot;&quot;This method creates a Velocity predefined field object.</span>
 
 <span class="sd">        Notes</span>
 <span class="sd">        -----</span>
@@ -804,7 +805,7 @@
 <span class="sd">        Returns</span>
 <span class="sd">        -------</span>
 <span class="sd">            A Velocity object.</span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">predefinedFields</span><span class="p">[</span><span class="n">name</span><span class="p">]</span> <span class="o">=</span> <span class="n">predefinedField</span> <span class="o">=</span> <span class="n">Velocity</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">region</span><span class="p">,</span> <span class="n">velocity1</span><span class="p">,</span> <span class="n">velocity2</span><span class="p">,</span> <span class="n">velocity3</span><span class="p">,</span> <span class="n">omega</span><span class="p">,</span>
                                                                  <span class="n">axisBegin</span><span class="p">,</span> <span class="n">axisEnd</span><span class="p">,</span> <span class="n">field</span><span class="p">,</span> <span class="n">distributionType</span><span class="p">)</span>
         <span class="k">return</span> <span class="n">predefinedField</span></div></div>

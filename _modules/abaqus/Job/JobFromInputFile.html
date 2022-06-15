@@ -5,10 +5,10 @@
     <meta name="color-scheme" content="light dark"><link rel="index" title="Index" href="../../../genindex.html" /><link rel="search" title="Search" href="../../../search.html" />
         <link rel="canonical" href="https://pyabaqus.haiiliin.com/_modules/abaqus/Job/JobFromInputFile.html" />
 
-    <meta name="generator" content="sphinx-4.5.0, furo 2022.04.07"/>
-        <title>abaqus.Job.JobFromInputFile - pyabaqus 1.0.16 documentation</title>
+    <meta name="generator" content="sphinx-4.5.0, furo 2022.06.04.1"/>
+        <title>abaqus.Job.JobFromInputFile - pyabaqus 1.0.18 documentation</title>
       <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/styles/furo.css?digest=68f4518137b9aefe99b631505a2064c3c42c9852" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/styles/furo.css?digest=40978830699223671f4072448e654b5958f38b89" />
     <link rel="stylesheet" type="text/css" href="../../../_static/styles/furo-extensions.css?digest=30d1aed668e5c3a91c3e3bf6a60b675221979f0e" />
     
     
@@ -123,7 +123,7 @@
       </label>
     </div>
     <div class="header-center">
-      <a href="../../../index.html"><div class="brand">pyabaqus 1.0.16 documentation</div></a>
+      <a href="../../../index.html"><div class="brand">pyabaqus 1.0.18 documentation</div></a>
     </div>
     <div class="header-right">
       <div class="theme-toggle-container theme-toggle-header">
@@ -146,7 +146,7 @@
       <div class="sidebar-sticky"><a class="sidebar-brand" href="../../../index.html">
   
   
-  <span class="sidebar-brand-text">pyabaqus 1.0.16 documentation</span>
+  <span class="sidebar-brand-text">pyabaqus 1.0.18 documentation</span>
   
 </a><form class="sidebar-search-container" method="get" action="../../../search.html" role="search">
   <input class="sidebar-search" placeholder=Search name="q" aria-label="Search">
@@ -286,7 +286,8 @@
           </svg>
           <span>Back to top</span>
         </a>
-        <div class="content-icon-container"><div class="theme-toggle-container theme-toggle-content">
+        <div class="content-icon-container">
+          <div class="theme-toggle-container theme-toggle-content">
             <button class="theme-toggle">
               <div class="visually-hidden">Toggle Light / Dark / Auto color theme</div>
               <svg class="theme-icon-when-auto"><use href="#svg-sun-half"></use></svg>
@@ -307,7 +308,7 @@
 
 
 <div class="viewcode-block" id="JobFromInputFile"><a class="viewcode-back" href="../../../reference/mdb/job.html#abaqus.Job.JobFromInputFile.JobFromInputFile">[docs]</a><span class="k">class</span> <span class="nc">JobFromInputFile</span><span class="p">(</span><span class="n">Job</span><span class="p">):</span>
-    <span class="sd">"""The JobFromInputFile object defines a Job object which analyzes a model contained in an</span>
+    <span class="sd">&quot;&quot;&quot;The JobFromInputFile object defines a Job object which analyzes a model contained in an</span>
 <span class="sd">    input file. </span>
 <span class="sd">    The JobFromInputFile object is derived from the Job object. </span>
 
@@ -339,7 +340,7 @@
 <span class="sd">        import job</span>
 <span class="sd">        mdb.jobs[name]</span>
 
-<span class="sd">    """</span>
+<span class="sd">    &quot;&quot;&quot;</span>
 
     <span class="c1"># A Boolean specifying whether to retrieve the recommended memory settings from the last </span>
     <span class="c1"># datacheck or analysis run and use those values in subsequent submissions. The default </span>
@@ -362,16 +363,16 @@
     <span class="c1"># A tuple of Strings specifying the environment variables and their values. </span>
     <span class="n">environment</span><span class="p">:</span> <span class="nb">tuple</span> <span class="o">=</span> <span class="p">()</span>
 
-    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">inputFileName</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="nb">type</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="n">ANALYSIS</span><span class="p">,</span> <span class="n">queue</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">''</span><span class="p">,</span>
-                 <span class="n">waitHours</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="n">waitMinutes</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="n">atTime</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">''</span><span class="p">,</span> <span class="n">scratch</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">''</span><span class="p">,</span>
-                 <span class="n">userSubroutine</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">''</span><span class="p">,</span> <span class="n">numCpus</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span> <span class="n">memory</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">90</span><span class="p">,</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">inputFileName</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="nb">type</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="n">ANALYSIS</span><span class="p">,</span> <span class="n">queue</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span><span class="p">,</span>
+                 <span class="n">waitHours</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="n">waitMinutes</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="n">atTime</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">scratch</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span><span class="p">,</span>
+                 <span class="n">userSubroutine</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">numCpus</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span> <span class="n">memory</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">90</span><span class="p">,</span>
                  <span class="n">memoryUnits</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="n">PERCENTAGE</span><span class="p">,</span>
                  <span class="n">explicitPrecision</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="n">SINGLE</span><span class="p">,</span>
                  <span class="n">nodalOutputPrecision</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="n">SINGLE</span><span class="p">,</span>
                  <span class="n">parallelizationMethodExplicit</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="n">DOMAIN</span><span class="p">,</span> <span class="n">numDomains</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span>
                  <span class="n">activateLoadBalancing</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="n">OFF</span><span class="p">,</span> <span class="n">multiprocessingMode</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="n">DEFAULT</span><span class="p">,</span>
                  <span class="n">licenseType</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="n">DEFAULT</span><span class="p">):</span>
-        <span class="sd">"""This method creates an analysis job using an input file for the model definition.</span>
+        <span class="sd">&quot;&quot;&quot;This method creates an analysis job using an input file for the model definition.</span>
 
 <span class="sd">        Notes</span>
 <span class="sd">        -----</span>
@@ -416,7 +417,7 @@
 <span class="sd">            A String specifying the location of the scratch directory. The default value is an empty </span>
 <span class="sd">            string. </span>
 <span class="sd">        userSubroutine</span>
-<span class="sd">            A String specifying the file containing the user's subroutine definitions. The default </span>
+<span class="sd">            A String specifying the file containing the user&#39;s subroutine definitions. The default </span>
 <span class="sd">            value is an empty string. </span>
 <span class="sd">        numCpus</span>
 <span class="sd">            An Int specifying the number of CPUs to use for this analysis if parallel processing is </span>
@@ -466,19 +467,19 @@
 <span class="sd">            ValueError </span>
 <span class="sd">            - If the user attempts to provide RESTART as a value to argument type: </span>
 <span class="sd">              ValueError: RESTART of input file job is not currently supported </span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">()</span>
         <span class="k">pass</span>
 
-<div class="viewcode-block" id="JobFromInputFile.setValues"><a class="viewcode-back" href="../../../reference/mdb/job.html#abaqus.Job.JobFromInputFile.JobFromInputFile.setValues">[docs]</a>    <span class="k">def</span> <span class="nf">setValues</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="nb">type</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="n">ANALYSIS</span><span class="p">,</span> <span class="n">queue</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">''</span><span class="p">,</span> <span class="n">waitHours</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span>
-                  <span class="n">waitMinutes</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="n">atTime</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">''</span><span class="p">,</span> <span class="n">scratch</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">''</span><span class="p">,</span> <span class="n">userSubroutine</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">''</span><span class="p">,</span>
+<div class="viewcode-block" id="JobFromInputFile.setValues"><a class="viewcode-back" href="../../../reference/mdb/job.html#abaqus.Job.JobFromInputFile.JobFromInputFile.setValues">[docs]</a>    <span class="k">def</span> <span class="nf">setValues</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="nb">type</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="n">ANALYSIS</span><span class="p">,</span> <span class="n">queue</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">waitHours</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span>
+                  <span class="n">waitMinutes</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="n">atTime</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">scratch</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">userSubroutine</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span><span class="p">,</span>
                   <span class="n">numCpus</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span> <span class="n">memory</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">90</span><span class="p">,</span> <span class="n">memoryUnits</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="n">PERCENTAGE</span><span class="p">,</span>
                   <span class="n">explicitPrecision</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="n">SINGLE</span><span class="p">,</span>
                   <span class="n">nodalOutputPrecision</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="n">SINGLE</span><span class="p">,</span>
                   <span class="n">parallelizationMethodExplicit</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="n">DOMAIN</span><span class="p">,</span> <span class="n">numDomains</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span>
                   <span class="n">activateLoadBalancing</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="n">OFF</span><span class="p">,</span> <span class="n">multiprocessingMode</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="n">DEFAULT</span><span class="p">,</span>
                   <span class="n">licenseType</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="n">DEFAULT</span><span class="p">):</span>
-        <span class="sd">"""This method modifies the JobFromInputFile object.</span>
+        <span class="sd">&quot;&quot;&quot;This method modifies the JobFromInputFile object.</span>
 <span class="sd">        </span>
 <span class="sd">        Parameters</span>
 <span class="sd">        ----------</span>
@@ -508,7 +509,7 @@
 <span class="sd">            A String specifying the location of the scratch directory. The default value is an empty </span>
 <span class="sd">            string. </span>
 <span class="sd">        userSubroutine</span>
-<span class="sd">            A String specifying the file containing the user's subroutine definitions. The default </span>
+<span class="sd">            A String specifying the file containing the user&#39;s subroutine definitions. The default </span>
 <span class="sd">            value is an empty string. </span>
 <span class="sd">        numCpus</span>
 <span class="sd">            An Int specifying the number of CPUs to use for this analysis if parallel processing is </span>
@@ -547,7 +548,7 @@
 <span class="sd">            DSLS SimUnit license model. Possible values are DEFAULT, TOKEN, and CREDIT. The default </span>
 <span class="sd">            value is DEFAULT.If the license model is not the DSLS SimUnit, the licenseType is not </span>
 <span class="sd">            available. </span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span></div></div>
 </pre></div>
         </article>

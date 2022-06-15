@@ -5,10 +5,10 @@
     <meta name="color-scheme" content="light dark"><link rel="index" title="Index" href="../../../genindex.html" /><link rel="search" title="Search" href="../../../search.html" />
         <link rel="canonical" href="https://pyabaqus.haiiliin.com/_modules/abaqus/Assembly/AssemblyModel.html" />
 
-    <meta name="generator" content="sphinx-4.5.0, furo 2022.04.07"/>
-        <title>abaqus.Assembly.AssemblyModel - pyabaqus 1.0.16 documentation</title>
+    <meta name="generator" content="sphinx-4.5.0, furo 2022.06.04.1"/>
+        <title>abaqus.Assembly.AssemblyModel - pyabaqus 1.0.18 documentation</title>
       <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/styles/furo.css?digest=68f4518137b9aefe99b631505a2064c3c42c9852" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/styles/furo.css?digest=40978830699223671f4072448e654b5958f38b89" />
     <link rel="stylesheet" type="text/css" href="../../../_static/styles/furo-extensions.css?digest=30d1aed668e5c3a91c3e3bf6a60b675221979f0e" />
     
     
@@ -123,7 +123,7 @@
       </label>
     </div>
     <div class="header-center">
-      <a href="../../../index.html"><div class="brand">pyabaqus 1.0.16 documentation</div></a>
+      <a href="../../../index.html"><div class="brand">pyabaqus 1.0.18 documentation</div></a>
     </div>
     <div class="header-right">
       <div class="theme-toggle-container theme-toggle-header">
@@ -146,7 +146,7 @@
       <div class="sidebar-sticky"><a class="sidebar-brand" href="../../../index.html">
   
   
-  <span class="sidebar-brand-text">pyabaqus 1.0.16 documentation</span>
+  <span class="sidebar-brand-text">pyabaqus 1.0.18 documentation</span>
   
 </a><form class="sidebar-search-container" method="get" action="../../../search.html" role="search">
   <input class="sidebar-search" placeholder=Search name="q" aria-label="Search">
@@ -286,7 +286,8 @@
           </svg>
           <span>Back to top</span>
         </a>
-        <div class="content-icon-container"><div class="theme-toggle-container theme-toggle-content">
+        <div class="content-icon-container">
+          <div class="theme-toggle-container theme-toggle-content">
             <button class="theme-toggle">
               <div class="visually-hidden">Toggle Light / Dark / Auto color theme</div>
               <svg class="theme-icon-when-auto"><use href="#svg-sun-half"></use></svg>
@@ -313,7 +314,7 @@
 
 
 <span class="k">class</span> <span class="nc">AssemblyModel</span><span class="p">(</span><span class="n">ModelBase</span><span class="p">):</span>
-    <span class="sd">"""Abaqus creates a Model object named `Model-1` when a session is started.</span>
+    <span class="sd">&quot;&quot;&quot;Abaqus creates a Model object named `Model-1` when a session is started.</span>
 
 <span class="sd">    Notes</span>
 <span class="sd">    -----</span>
@@ -323,10 +324,10 @@
 
 <span class="sd">        mdb.models[name]</span>
 
-<span class="sd">    """</span>
+<span class="sd">    &quot;&quot;&quot;</span>
 
 <div class="viewcode-block" id="AssemblyModel.Instance"><a class="viewcode-back" href="../../../user/mdb/model/assembly.html#abaqus.Assembly.AssemblyModel.AssemblyModel.Instance">[docs]</a>    <span class="k">def</span> <span class="nf">Instance</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">objectToCopy</span><span class="p">:</span> <span class="n">PartInstance</span><span class="p">):</span>
-        <span class="sd">"""This method copies a PartInstance object from the specified model and creates a new</span>
+        <span class="sd">&quot;&quot;&quot;This method copies a PartInstance object from the specified model and creates a new</span>
 <span class="sd">        PartInstance object.</span>
 
 <span class="sd">        Notes</span>
@@ -347,11 +348,11 @@
 <span class="sd">        Returns</span>
 <span class="sd">        -------</span>
 <span class="sd">            A Model object.</span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">return</span> <span class="bp">self</span></div>
 
     <span class="k">def</span> <span class="nf">convertAllSketches</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">regenerate</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="kc">True</span><span class="p">,</span> <span class="n">convertReversedSketches</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="kc">True</span><span class="p">):</span>
-        <span class="sd">"""This method converts all sketches from Abaqus 6.5 or earlier to the equivalent</span>
+        <span class="sd">&quot;&quot;&quot;This method converts all sketches from Abaqus 6.5 or earlier to the equivalent</span>
 <span class="sd">        ConstrainedSketch objects.</span>
 <span class="sd">        </span>
 <span class="sd">        Parameters</span>
@@ -368,11 +369,11 @@
 <span class="sd">        -------</span>
 <span class="sd">            A list of strings describing any warnings or errors encountered during the conversion </span>
 <span class="sd">            process.</span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span>
 
     <span class="k">def</span> <span class="nf">linkInstances</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">instancesMap</span><span class="p">:</span> <span class="nb">tuple</span><span class="p">):</span>
-        <span class="sd">"""This method links the selected PartInstance objects to the corresponding PartInstance</span>
+        <span class="sd">&quot;&quot;&quot;This method links the selected PartInstance objects to the corresponding PartInstance</span>
 <span class="sd">        objects from the specified models. If all instances of a Part are selected for linking,</span>
 <span class="sd">        the Part will be linked as well. If not, a new linked child Part object will be created</span>
 <span class="sd">        and added to the repository.</span>
@@ -387,7 +388,7 @@
 <span class="sd">        -------</span>
 <span class="sd">            A list of strings describing any warnings or errors encountered during the conversion </span>
 <span class="sd">            process.</span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span>
 </pre></div>
         </article>

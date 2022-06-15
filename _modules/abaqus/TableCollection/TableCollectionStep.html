@@ -5,10 +5,10 @@
     <meta name="color-scheme" content="light dark"><link rel="index" title="Index" href="../../../genindex.html" /><link rel="search" title="Search" href="../../../search.html" />
         <link rel="canonical" href="https://pyabaqus.haiiliin.com/_modules/abaqus/TableCollection/TableCollectionStep.html" />
 
-    <meta name="generator" content="sphinx-4.5.0, furo 2022.04.07"/>
-        <title>abaqus.TableCollection.TableCollectionStep - pyabaqus 1.0.16 documentation</title>
+    <meta name="generator" content="sphinx-4.5.0, furo 2022.06.04.1"/>
+        <title>abaqus.TableCollection.TableCollectionStep - pyabaqus 1.0.18 documentation</title>
       <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/styles/furo.css?digest=68f4518137b9aefe99b631505a2064c3c42c9852" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/styles/furo.css?digest=40978830699223671f4072448e654b5958f38b89" />
     <link rel="stylesheet" type="text/css" href="../../../_static/styles/furo-extensions.css?digest=30d1aed668e5c3a91c3e3bf6a60b675221979f0e" />
     
     
@@ -123,7 +123,7 @@
       </label>
     </div>
     <div class="header-center">
-      <a href="../../../index.html"><div class="brand">pyabaqus 1.0.16 documentation</div></a>
+      <a href="../../../index.html"><div class="brand">pyabaqus 1.0.18 documentation</div></a>
     </div>
     <div class="header-right">
       <div class="theme-toggle-container theme-toggle-header">
@@ -146,7 +146,7 @@
       <div class="sidebar-sticky"><a class="sidebar-brand" href="../../../index.html">
   
   
-  <span class="sidebar-brand-text">pyabaqus 1.0.16 documentation</span>
+  <span class="sidebar-brand-text">pyabaqus 1.0.18 documentation</span>
   
 </a><form class="sidebar-search-container" method="get" action="../../../search.html" role="search">
   <input class="sidebar-search" placeholder=Search name="q" aria-label="Search">
@@ -286,7 +286,8 @@
           </svg>
           <span>Back to top</span>
         </a>
-        <div class="content-icon-container"><div class="theme-toggle-container theme-toggle-content">
+        <div class="content-icon-container">
+          <div class="theme-toggle-container theme-toggle-content">
             <button class="theme-toggle">
               <div class="visually-hidden">Toggle Light / Dark / Auto color theme</div>
               <svg class="theme-icon-when-auto"><use href="#svg-sun-half"></use></svg>
@@ -306,7 +307,7 @@
 
 
 <div class="viewcode-block" id="TableCollectionStep"><a class="viewcode-back" href="../../../reference/kernel/table_collection.html#abaqus.TableCollection.TableCollectionStep.TableCollectionStep">[docs]</a><span class="k">class</span> <span class="nc">TableCollectionStep</span><span class="p">(</span><span class="n">StepBase</span><span class="p">):</span>
-    <span class="sd">"""The Step object stores the parameters that determine the context of the step. The Step</span>
+    <span class="sd">&quot;&quot;&quot;The Step object stores the parameters that determine the context of the step. The Step</span>
 <span class="sd">    object is the abstract base type for other Step objects. The Step object has no explicit </span>
 <span class="sd">    constructor. The methods and members of the Step object are common to all objects </span>
 <span class="sd">    derived from the Step. </span>
@@ -320,11 +321,11 @@
 <span class="sd">        import step</span>
 <span class="sd">        mdb.models[name].steps[name]</span>
 
-<span class="sd">    """</span>
+<span class="sd">    &quot;&quot;&quot;</span>
 
-<div class="viewcode-block" id="TableCollectionStep.ActivateElements"><a class="viewcode-back" href="../../../reference/kernel/table_collection.html#abaqus.TableCollection.TableCollectionStep.TableCollectionStep.ActivateElements">[docs]</a>    <span class="k">def</span> <span class="nf">ActivateElements</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">tableCollection</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">activation</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">eigenTimeConst</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">''</span><span class="p">,</span>
-                         <span class="n">expansionTimeConstant</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">''</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">ActivateElements</span><span class="p">:</span>
-        <span class="sd">"""This method creates an ActivateElements object.</span>
+<div class="viewcode-block" id="TableCollectionStep.ActivateElements"><a class="viewcode-back" href="../../../reference/kernel/table_collection.html#abaqus.TableCollection.TableCollectionStep.TableCollectionStep.ActivateElements">[docs]</a>    <span class="k">def</span> <span class="nf">ActivateElements</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">tableCollection</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">activation</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">eigenTimeConst</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span><span class="p">,</span>
+                         <span class="n">expansionTimeConstant</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">ActivateElements</span><span class="p">:</span>
+        <span class="sd">&quot;&quot;&quot;This method creates an ActivateElements object.</span>
 
 <span class="sd">        Notes</span>
 <span class="sd">        -----</span>
@@ -351,8 +352,8 @@
 <span class="sd">        -------</span>
 <span class="sd">        elements: ActivateElements</span>
 <span class="sd">            An ActivateElements object.</span>
-<span class="sd">        """</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">activateElements</span><span class="p">[</span><span class="s1">'activation'</span><span class="p">]</span> <span class="o">=</span> <span class="n">activateElements</span> <span class="o">=</span> <span class="n">ActivateElements</span><span class="p">(</span><span class="n">tableCollection</span><span class="p">,</span> <span class="n">activation</span><span class="p">,</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">activateElements</span><span class="p">[</span><span class="s1">&#39;activation&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">activateElements</span> <span class="o">=</span> <span class="n">ActivateElements</span><span class="p">(</span><span class="n">tableCollection</span><span class="p">,</span> <span class="n">activation</span><span class="p">,</span>
                                                                                   <span class="n">eigenTimeConst</span><span class="p">,</span> <span class="n">expansionTimeConstant</span><span class="p">)</span>
         <span class="k">return</span> <span class="n">activateElements</span></div></div>
 </pre></div>

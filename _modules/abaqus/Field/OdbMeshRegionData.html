@@ -5,10 +5,10 @@
     <meta name="color-scheme" content="light dark"><link rel="index" title="Index" href="../../../genindex.html" /><link rel="search" title="Search" href="../../../search.html" />
         <link rel="canonical" href="https://pyabaqus.haiiliin.com/_modules/abaqus/Field/OdbMeshRegionData.html" />
 
-    <meta name="generator" content="sphinx-4.5.0, furo 2022.04.07"/>
-        <title>abaqus.Field.OdbMeshRegionData - pyabaqus 1.0.16 documentation</title>
+    <meta name="generator" content="sphinx-4.5.0, furo 2022.06.04.1"/>
+        <title>abaqus.Field.OdbMeshRegionData - pyabaqus 1.0.18 documentation</title>
       <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/styles/furo.css?digest=68f4518137b9aefe99b631505a2064c3c42c9852" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/styles/furo.css?digest=40978830699223671f4072448e654b5958f38b89" />
     <link rel="stylesheet" type="text/css" href="../../../_static/styles/furo-extensions.css?digest=30d1aed668e5c3a91c3e3bf6a60b675221979f0e" />
     
     
@@ -123,7 +123,7 @@
       </label>
     </div>
     <div class="header-center">
-      <a href="../../../index.html"><div class="brand">pyabaqus 1.0.16 documentation</div></a>
+      <a href="../../../index.html"><div class="brand">pyabaqus 1.0.18 documentation</div></a>
     </div>
     <div class="header-right">
       <div class="theme-toggle-container theme-toggle-header">
@@ -146,7 +146,7 @@
       <div class="sidebar-sticky"><a class="sidebar-brand" href="../../../index.html">
   
   
-  <span class="sidebar-brand-text">pyabaqus 1.0.16 documentation</span>
+  <span class="sidebar-brand-text">pyabaqus 1.0.18 documentation</span>
   
 </a><form class="sidebar-search-container" method="get" action="../../../search.html" role="search">
   <input class="sidebar-search" placeholder=Search name="q" aria-label="Search">
@@ -286,7 +286,8 @@
           </svg>
           <span>Back to top</span>
         </a>
-        <div class="content-icon-container"><div class="theme-toggle-container theme-toggle-content">
+        <div class="content-icon-container">
+          <div class="theme-toggle-container theme-toggle-content">
             <button class="theme-toggle">
               <div class="visually-hidden">Toggle Light / Dark / Auto color theme</div>
               <svg class="theme-icon-when-auto"><use href="#svg-sun-half"></use></svg>
@@ -305,7 +306,7 @@
 
 
 <div class="viewcode-block" id="OdbMeshRegionData"><a class="viewcode-back" href="../../../reference/mdb/model/field.html#abaqus.Field.OdbMeshRegionData.OdbMeshRegionData">[docs]</a><span class="k">class</span> <span class="nc">OdbMeshRegionData</span><span class="p">:</span>
-    <span class="sd">"""The OdbMeshRegionData object defines the external source data of MappedField from an ODB</span>
+    <span class="sd">&quot;&quot;&quot;The OdbMeshRegionData object defines the external source data of MappedField from an ODB</span>
 <span class="sd">    file. </span>
 
 <span class="sd">    Attributes</span>
@@ -413,7 +414,7 @@
 <span class="sd">        import field</span>
 <span class="sd">        mdb.models[name].analyticalFields[name].odbMeshRegionData</span>
 
-<span class="sd">    """</span>
+<span class="sd">    &quot;&quot;&quot;</span>
 
     <span class="c1"># An Int specifying the step index. Possible values are 0 ≤≤ *stepIndex* ≤≤ (*numSteps* − </span>
     <span class="c1"># 1). The default value is 0. </span>
@@ -516,10 +517,10 @@
     <span class="c1"># A String specifying the name of the output database file (including the .odb extension) </span>
     <span class="c1"># to be read into as the source data. This String can also be the full path to the output </span>
     <span class="c1"># database file if it is located in another directory. </span>
-    <span class="n">odbFileName</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">''</span>
+    <span class="n">odbFileName</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span>
 
     <span class="c1"># A String specifying the field output variable. </span>
-    <span class="n">variableLabel</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">''</span>
+    <span class="n">variableLabel</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span>
 
     <span class="c1"># A SymbolicConstant specifying the position where the output is displayed in the </span>
     <span class="c1"># viewport. Possible values </span>
@@ -535,10 +536,10 @@
                  <span class="n">includeFeatureBoundaries</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="n">ON</span><span class="p">,</span> <span class="n">featureAngle</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mi">20</span><span class="p">,</span>
                  <span class="n">averageOnlyDisplayed</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="n">OFF</span><span class="p">,</span> <span class="n">averagingThreshold</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mi">75</span><span class="p">,</span>
                  <span class="n">computeOrder</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="n">EXTRAPOLATE_COMPUTE_AVERAGE</span><span class="p">,</span>
-                 <span class="n">numericForm</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="n">REAL</span><span class="p">,</span> <span class="n">complexAngle</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="n">sectionPoint</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">''</span><span class="p">,</span>
-                 <span class="n">refinementType</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">refinementLabel</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">''</span><span class="p">,</span>
+                 <span class="n">numericForm</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="n">REAL</span><span class="p">,</span> <span class="n">complexAngle</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="n">sectionPoint</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span><span class="p">,</span>
+                 <span class="n">refinementType</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">refinementLabel</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span><span class="p">,</span>
                  <span class="n">displayOutputPosition</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="kc">None</span><span class="p">):</span>
-        <span class="sd">"""This method creates an OdbMeshRegionData object.</span>
+        <span class="sd">&quot;&quot;&quot;This method creates an OdbMeshRegionData object.</span>
 
 <span class="sd">        Notes</span>
 <span class="sd">        -----</span>
@@ -644,9 +645,9 @@
 <span class="sd">            ​	A Dictionary with String keys and String values. Each key specifies a region in the </span>
 <span class="sd">            model; the corresponding value specifies a section point within that region. For </span>
 <span class="sd">            example: </span>
-<span class="sd">            sectionPoint={'shell &lt; MAT &gt; &lt; 7 section points &gt;':'SPOS</span>
-<span class="sd">            (fraction = 1.0)', 'shell &lt; MAT &gt; &lt; 5 section points &gt;': </span>
-<span class="sd">            'SPOS, (fraction = 1.0)', } </span>
+<span class="sd">            sectionPoint={&#39;shell &lt; MAT &gt; &lt; 7 section points &gt;&#39;:&#39;SPOS</span>
+<span class="sd">            (fraction = 1.0)&#39;, &#39;shell &lt; MAT &gt; &lt; 5 section points &gt;&#39;: </span>
+<span class="sd">            &#39;SPOS, (fraction = 1.0)&#39;, } </span>
 <span class="sd">        refinementType</span>
 <span class="sd">            ​	A SymbolicConstant specifying the type of the FieldOutput object. Possible values for </span>
 <span class="sd">            the SymbolicConstant are NO_REFINEMENT, INVARIANT and COMPONENT. Default argument is </span>
@@ -667,12 +668,12 @@
 <span class="sd">        Raises</span>
 <span class="sd">        ------</span>
 <span class="sd">            TextException. </span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span>
 
 <div class="viewcode-block" id="OdbMeshRegionData.setValues"><a class="viewcode-back" href="../../../reference/mdb/model/field.html#abaqus.Field.OdbMeshRegionData.OdbMeshRegionData.setValues">[docs]</a>    <span class="k">def</span> <span class="nf">setValues</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="sd">"""This method modifies the OdbMeshRegionData object.</span>
-<span class="sd">        """</span>
+        <span class="sd">&quot;&quot;&quot;This method modifies the OdbMeshRegionData object.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span></div></div>
 </pre></div>
         </article>

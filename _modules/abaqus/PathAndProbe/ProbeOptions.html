@@ -5,10 +5,10 @@
     <meta name="color-scheme" content="light dark"><link rel="index" title="Index" href="../../../genindex.html" /><link rel="search" title="Search" href="../../../search.html" />
         <link rel="canonical" href="https://pyabaqus.haiiliin.com/_modules/abaqus/PathAndProbe/ProbeOptions.html" />
 
-    <meta name="generator" content="sphinx-4.5.0, furo 2022.04.07"/>
-        <title>abaqus.PathAndProbe.ProbeOptions - pyabaqus 1.0.16 documentation</title>
+    <meta name="generator" content="sphinx-4.5.0, furo 2022.06.04.1"/>
+        <title>abaqus.PathAndProbe.ProbeOptions - pyabaqus 1.0.18 documentation</title>
       <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/styles/furo.css?digest=68f4518137b9aefe99b631505a2064c3c42c9852" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/styles/furo.css?digest=40978830699223671f4072448e654b5958f38b89" />
     <link rel="stylesheet" type="text/css" href="../../../_static/styles/furo-extensions.css?digest=30d1aed668e5c3a91c3e3bf6a60b675221979f0e" />
     
     
@@ -123,7 +123,7 @@
       </label>
     </div>
     <div class="header-center">
-      <a href="../../../index.html"><div class="brand">pyabaqus 1.0.16 documentation</div></a>
+      <a href="../../../index.html"><div class="brand">pyabaqus 1.0.18 documentation</div></a>
     </div>
     <div class="header-right">
       <div class="theme-toggle-container theme-toggle-header">
@@ -146,7 +146,7 @@
       <div class="sidebar-sticky"><a class="sidebar-brand" href="../../../index.html">
   
   
-  <span class="sidebar-brand-text">pyabaqus 1.0.16 documentation</span>
+  <span class="sidebar-brand-text">pyabaqus 1.0.18 documentation</span>
   
 </a><form class="sidebar-search-container" method="get" action="../../../search.html" role="search">
   <input class="sidebar-search" placeholder=Search name="q" aria-label="Search">
@@ -286,7 +286,8 @@
           </svg>
           <span>Back to top</span>
         </a>
-        <div class="content-icon-container"><div class="theme-toggle-container theme-toggle-content">
+        <div class="content-icon-container">
+          <div class="theme-toggle-container theme-toggle-content">
             <button class="theme-toggle">
               <div class="visually-hidden">Toggle Light / Dark / Auto color theme</div>
               <svg class="theme-icon-when-auto"><use href="#svg-sun-half"></use></svg>
@@ -305,7 +306,7 @@
 
 
 <div class="viewcode-block" id="ProbeOptions"><a class="viewcode-back" href="../../../reference/session/path.html#abaqus.PathAndProbe.ProbeOptions.ProbeOptions">[docs]</a><span class="k">class</span> <span class="nc">ProbeOptions</span><span class="p">:</span>
-    <span class="sd">"""The ProbeOptions object is used to store settings associated with probing a model or an</span>
+    <span class="sd">&quot;&quot;&quot;The ProbeOptions object is used to store settings associated with probing a model or an</span>
 <span class="sd">    *X–Y* plot. The ProbeOptions object has no constructor. Abaqus creates the </span>
 <span class="sd">    *defaultProbeOptions* and the *probeOptions* members when you import the Visualization </span>
 <span class="sd">    module. When probing is initiated for the first time, the values in the *probeOptions* </span>
@@ -314,11 +315,11 @@
 <span class="sd">    Attributes</span>
 <span class="sd">    ----------</span>
 <span class="sd">    probeEntity: SymbolicConstant</span>
-<span class="sd">        A SymbolicConstant specifying the entity being probed when **probeObject**="ODB". Possible</span>
+<span class="sd">        A SymbolicConstant specifying the entity being probed when **probeObject**=&quot;ODB&quot;. Possible</span>
 <span class="sd">        values are NODE and ELEMENT. The default value is ELEMENT.</span>
 <span class="sd">    probeOutputPosition: SymbolicConstant</span>
 <span class="sd">        A SymbolicConstant specifying the output position to probe for field output results when</span>
-<span class="sd">        **probeObject**="ODB". Possible values are NODAL, INTEGRATION_POINT, ELEMENT_FACE,</span>
+<span class="sd">        **probeObject**=&quot;ODB&quot;. Possible values are NODAL, INTEGRATION_POINT, ELEMENT_FACE,</span>
 <span class="sd">        ELEMENT_NODAL, and ELEMENT_CENTROID.When **probeEntity=NODE**, the only possible value is</span>
 <span class="sd">        NODAL. When **probeEntity=ELEMENT**, the only possible values are INTEGRATION_POINT,</span>
 <span class="sd">        ELEMENT_FACE, ELEMENT_NODAL, and ELEMENT_CENTROID, and the default is INTEGRATION_POINT.</span>
@@ -378,7 +379,7 @@
 <span class="sd">        **probeObject=XYPlot**. This member is read-only.</span>
 <span class="sd">    probeObject: str</span>
 <span class="sd">        A String specifying the type of the :py:class:`~.displayed` object being probed. Possible values are</span>
-<span class="sd">        "ODB" and "XYPlot". This member is read-only.</span>
+<span class="sd">        &quot;ODB&quot; and &quot;XYPlot&quot;. This member is read-only.</span>
 
 <span class="sd">    Notes</span>
 <span class="sd">    -----</span>
@@ -390,14 +391,14 @@
 <span class="sd">        session.defaultProbeOptions</span>
 <span class="sd">        session.probeOptions</span>
 
-<span class="sd">    """</span>
+<span class="sd">    &quot;&quot;&quot;</span>
 
-    <span class="c1"># A SymbolicConstant specifying the entity being probed when *probeObject*="ODB". Possible </span>
+    <span class="c1"># A SymbolicConstant specifying the entity being probed when *probeObject*=&quot;ODB&quot;. Possible </span>
     <span class="c1"># values are NODE and ELEMENT. The default value is ELEMENT. </span>
     <span class="n">probeEntity</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="n">ELEMENT</span>
 
     <span class="c1"># A SymbolicConstant specifying the output position to probe for field output results when </span>
-    <span class="c1"># *probeObject*="ODB". Possible values are NODAL, INTEGRATION_POINT, ELEMENT_FACE, </span>
+    <span class="c1"># *probeObject*=&quot;ODB&quot;. Possible values are NODAL, INTEGRATION_POINT, ELEMENT_FACE, </span>
     <span class="c1"># ELEMENT_NODAL, and ELEMENT_CENTROID.When *probeEntity*=NODE, the only possible value is </span>
     <span class="c1"># NODAL. When *probeEntity*=ELEMENT, the only possible values are INTEGRATION_POINT, </span>
     <span class="c1"># ELEMENT_FACE, ELEMENT_NODAL, and ELEMENT_CENTROID, and the default is INTEGRATION_POINT. </span>
@@ -474,17 +475,17 @@
     <span class="n">isFieldOutputAvailable</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="n">OFF</span>
 
     <span class="c1"># A String specifying the type of the displayed object being probed. Possible values are </span>
-    <span class="c1"># "ODB" and "XYPlot". This member is read-only. </span>
-    <span class="n">probeObject</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">''</span>
+    <span class="c1"># &quot;ODB&quot; and &quot;XYPlot&quot;. This member is read-only. </span>
+    <span class="n">probeObject</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span>
 
-<div class="viewcode-block" id="ProbeOptions.setValues"><a class="viewcode-back" href="../../../reference/session/path.html#abaqus.PathAndProbe.ProbeOptions.ProbeOptions.setValues">[docs]</a>    <span class="k">def</span> <span class="nf">setValues</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">options</span><span class="p">:</span> <span class="s1">'ProbeOptions'</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">probeEntity</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="n">ELEMENT</span><span class="p">,</span>
+<div class="viewcode-block" id="ProbeOptions.setValues"><a class="viewcode-back" href="../../../reference/session/path.html#abaqus.PathAndProbe.ProbeOptions.ProbeOptions.setValues">[docs]</a>    <span class="k">def</span> <span class="nf">setValues</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">options</span><span class="p">:</span> <span class="s1">&#39;ProbeOptions&#39;</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">probeEntity</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="n">ELEMENT</span><span class="p">,</span>
                   <span class="n">probeOutputPosition</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">partInstance</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="n">ON</span><span class="p">,</span>
                   <span class="n">elementID</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="n">ON</span><span class="p">,</span> <span class="n">elementType</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="n">ON</span><span class="p">,</span> <span class="n">elementConnectivity</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="n">ON</span><span class="p">,</span>
                   <span class="n">elementFieldResults</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="n">ON</span><span class="p">,</span> <span class="n">nodeId</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="n">ON</span><span class="p">,</span> <span class="n">baseCoordinates</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="n">ON</span><span class="p">,</span>
                   <span class="n">deformedCoordinates</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="n">ON</span><span class="p">,</span> <span class="n">attachedElements</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="n">ON</span><span class="p">,</span>
                   <span class="n">nodeFieldResults</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="n">ON</span><span class="p">,</span> <span class="n">legend</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="n">ON</span><span class="p">,</span> <span class="n">xValue</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="n">ON</span><span class="p">,</span>
                   <span class="n">yValue</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="n">ON</span><span class="p">,</span> <span class="n">sequenceID</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="n">ON</span><span class="p">,</span> <span class="n">interpolateXy</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="n">OFF</span><span class="p">):</span>
-        <span class="sd">"""This method modifies the settings on the ProbeOptions object.</span>
+        <span class="sd">&quot;&quot;&quot;This method modifies the settings on the ProbeOptions object.</span>
 <span class="sd">        </span>
 <span class="sd">        Parameters</span>
 <span class="sd">        ----------</span>
@@ -493,11 +494,11 @@
 <span class="sd">            supplied to setValues, they will override the values in *options*. The default value is </span>
 <span class="sd">            None. </span>
 <span class="sd">        probeEntity</span>
-<span class="sd">            A SymbolicConstant specifying the entity being probed when *probeObject*="ODB". Possible </span>
+<span class="sd">            A SymbolicConstant specifying the entity being probed when *probeObject*=&quot;ODB&quot;. Possible </span>
 <span class="sd">            values are NODE and ELEMENT. The default value is ELEMENT. </span>
 <span class="sd">        probeOutputPosition</span>
 <span class="sd">            A SymbolicConstant specifying the output position to probe for field output results when </span>
-<span class="sd">            *probeObject*="ODB". Possible values are NODAL, INTEGRATION_POINT, ELEMENT_FACE, </span>
+<span class="sd">            *probeObject*=&quot;ODB&quot;. Possible values are NODAL, INTEGRATION_POINT, ELEMENT_FACE, </span>
 <span class="sd">            ELEMENT_NODAL, and ELEMENT_CENTROID.When *probeEntity*=NODE, the only possible value is </span>
 <span class="sd">            NODAL. When *probeEntity*=ELEMENT, the only possible values are INTEGRATION_POINT, </span>
 <span class="sd">            ELEMENT_FACE, ELEMENT_NODAL, and ELEMENT_CENTROID, and the default is INTEGRATION_POINT. </span>
@@ -552,7 +553,7 @@
 <span class="sd">            *probeObject*=XYPlot. When *interpolateXy*=OFF, probing returns the nearest *X–Y* data </span>
 <span class="sd">            point on the curve. When *interpolateXy*=ON, probing interpolates data to return a value </span>
 <span class="sd">            at the nearest point on the curve. The default value is OFF. </span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span></div></div>
 </pre></div>
         </article>

@@ -5,10 +5,10 @@
     <meta name="color-scheme" content="light dark"><link rel="index" title="Index" href="../../../genindex.html" /><link rel="search" title="Search" href="../../../search.html" />
         <link rel="canonical" href="https://pyabaqus.haiiliin.com/_modules/abaqus/BasicGeometry/FaceArray.html" />
 
-    <meta name="generator" content="sphinx-4.5.0, furo 2022.04.07"/>
-        <title>abaqus.BasicGeometry.FaceArray - pyabaqus 1.0.16 documentation</title>
+    <meta name="generator" content="sphinx-4.5.0, furo 2022.06.04.1"/>
+        <title>abaqus.BasicGeometry.FaceArray - pyabaqus 1.0.18 documentation</title>
       <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/styles/furo.css?digest=68f4518137b9aefe99b631505a2064c3c42c9852" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/styles/furo.css?digest=40978830699223671f4072448e654b5958f38b89" />
     <link rel="stylesheet" type="text/css" href="../../../_static/styles/furo-extensions.css?digest=30d1aed668e5c3a91c3e3bf6a60b675221979f0e" />
     
     
@@ -123,7 +123,7 @@
       </label>
     </div>
     <div class="header-center">
-      <a href="../../../index.html"><div class="brand">pyabaqus 1.0.16 documentation</div></a>
+      <a href="../../../index.html"><div class="brand">pyabaqus 1.0.18 documentation</div></a>
     </div>
     <div class="header-right">
       <div class="theme-toggle-container theme-toggle-header">
@@ -146,7 +146,7 @@
       <div class="sidebar-sticky"><a class="sidebar-brand" href="../../../index.html">
   
   
-  <span class="sidebar-brand-text">pyabaqus 1.0.16 documentation</span>
+  <span class="sidebar-brand-text">pyabaqus 1.0.18 documentation</span>
   
 </a><form class="sidebar-search-container" method="get" action="../../../search.html" role="search">
   <input class="sidebar-search" placeholder=Search name="q" aria-label="Search">
@@ -286,7 +286,8 @@
           </svg>
           <span>Back to top</span>
         </a>
-        <div class="content-icon-container"><div class="theme-toggle-container theme-toggle-content">
+        <div class="content-icon-container">
+          <div class="theme-toggle-container theme-toggle-content">
             <button class="theme-toggle">
               <div class="visually-hidden">Toggle Light / Dark / Auto color theme</div>
               <svg class="theme-icon-when-auto"><use href="#svg-sun-half"></use></svg>
@@ -306,7 +307,7 @@
 
 
 <div class="viewcode-block" id="FaceArray"><a class="viewcode-back" href="../../../reference/mdb/model/part_assembly/geometry.html#abaqus.BasicGeometry.FaceArray.FaceArray">[docs]</a><span class="k">class</span> <span class="nc">FaceArray</span><span class="p">:</span>
-    <span class="sd">"""The FaceArray is a sequence of Face objects. If the part is modified, then FaceArray</span>
+    <span class="sd">&quot;&quot;&quot;The FaceArray is a sequence of Face objects. If the part is modified, then FaceArray</span>
 <span class="sd">    must be updated for that part. </span>
 
 <span class="sd">    Notes</span>
@@ -339,10 +340,10 @@
 <span class="sd">        mdb.models[name].rootAssembly.sets[name].faces</span>
 <span class="sd">        mdb.models[name].rootAssembly.surfaces[name].faces</span>
 
-<span class="sd">    """</span>
+<span class="sd">    &quot;&quot;&quot;</span>
 
     <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">faces</span><span class="p">:</span> <span class="nb">list</span><span class="p">[</span><span class="n">Face</span><span class="p">]):</span>
-        <span class="sd">"""This method creates a FaceArray object.</span>
+        <span class="sd">&quot;&quot;&quot;This method creates a FaceArray object.</span>
 
 <span class="sd">        Notes</span>
 <span class="sd">        -----</span>
@@ -361,11 +362,11 @@
 <span class="sd">        -------</span>
 <span class="sd">            A FaceArray object.</span>
 <span class="sd">            </span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span>
 
 <div class="viewcode-block" id="FaceArray.findAt"><a class="viewcode-back" href="../../../reference/mdb/model/part_assembly/geometry.html#abaqus.BasicGeometry.FaceArray.FaceArray.findAt">[docs]</a>    <span class="k">def</span> <span class="nf">findAt</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">coordinates</span><span class="p">:</span> <span class="nb">tuple</span><span class="p">,</span> <span class="n">normal</span><span class="p">:</span> <span class="nb">tuple</span> <span class="o">=</span> <span class="p">(),</span> <span class="n">printWarning</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="kc">True</span><span class="p">):</span>
-        <span class="sd">"""This method returns the object or objects in the FaceArray located at the given</span>
+        <span class="sd">&quot;&quot;&quot;This method returns the object or objects in the FaceArray located at the given</span>
 <span class="sd">        coordinates.</span>
 <span class="sd">        findAt initially uses the ACIS tolerance of 1E-6. As a result, findAt returns any face</span>
 <span class="sd">        that is at the arbitrary point specified or at a distance of less than 1E-6 from the</span>
@@ -385,7 +386,7 @@
 <span class="sd">            find.findAt returns either a Face object or a sequence of Face objects based on the type </span>
 <span class="sd">            of input.If *coordinates* is a sequence of Floats, findAt returns the Face object at </span>
 <span class="sd">            that point.If you omit the *coordinates* keyword argument, findAt accepts as arguments a </span>
-<span class="sd">            sequence of pairs of sequences describing each face's coordinate and normal, and findAt </span>
+<span class="sd">            sequence of pairs of sequences describing each face&#39;s coordinate and normal, and findAt </span>
 <span class="sd">            returns a sequence of Face objects at the given locations. If you omit the *coordinates* </span>
 <span class="sd">            keyword argument, you must also omit the *normal* argument.</span>
 <span class="sd">            `faces = f.findAt(((-16.438578, -41.835673, -24.19804), ), ((25.210364, -35.689868, 1.860314), ), ((26.727683, -38.207055, 4.164759), ))` </span>
@@ -400,22 +401,22 @@
 <span class="sd">        -------</span>
 <span class="sd">            A Face object.</span>
 <span class="sd">            </span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span></div>
 
 <div class="viewcode-block" id="FaceArray.getExteriorEdges"><a class="viewcode-back" href="../../../reference/mdb/model/part_assembly/geometry.html#abaqus.BasicGeometry.FaceArray.FaceArray.getExteriorEdges">[docs]</a>    <span class="k">def</span> <span class="nf">getExteriorEdges</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="sd">"""This method returns the edges on the exterior of the faces in the FaceArray. That is, it</span>
+        <span class="sd">&quot;&quot;&quot;This method returns the edges on the exterior of the faces in the FaceArray. That is, it</span>
 <span class="sd">        returns the edges that are referenced by exactly one of the faces in the sequence.</span>
 
 <span class="sd">        Returns</span>
 <span class="sd">        -------</span>
 <span class="sd">            An EdgeArray object specifying the exterior edges.</span>
 <span class="sd">            </span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span></div>
 
 <div class="viewcode-block" id="FaceArray.getSequenceFromMask"><a class="viewcode-back" href="../../../reference/mdb/model/part_assembly/geometry.html#abaqus.BasicGeometry.FaceArray.FaceArray.getSequenceFromMask">[docs]</a>    <span class="k">def</span> <span class="nf">getSequenceFromMask</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">mask</span><span class="p">:</span> <span class="nb">str</span><span class="p">):</span>
-        <span class="sd">"""This method returns the object or objects in the FaceArray identified using the</span>
+        <span class="sd">&quot;&quot;&quot;This method returns the object or objects in the FaceArray identified using the</span>
 <span class="sd">        specified *mask*. This command is generated when the JournalOptions are set to</span>
 <span class="sd">        COMPRESSEDINDEX. When a large number of objects are involved, this method is highly</span>
 <span class="sd">        efficient.</span>
@@ -429,22 +430,22 @@
 <span class="sd">        -------</span>
 <span class="sd">            A Face object or a sequence of Face objects.</span>
 <span class="sd">            </span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span></div>
 
 <div class="viewcode-block" id="FaceArray.getMask"><a class="viewcode-back" href="../../../reference/mdb/model/part_assembly/geometry.html#abaqus.BasicGeometry.FaceArray.FaceArray.getMask">[docs]</a>    <span class="k">def</span> <span class="nf">getMask</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="sd">"""This method returns a string specifying the object or objects.</span>
+        <span class="sd">&quot;&quot;&quot;This method returns a string specifying the object or objects.</span>
 
 <span class="sd">        Returns</span>
 <span class="sd">        -------</span>
 <span class="sd">            A String specifying the object or objects.</span>
 <span class="sd">            </span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span></div>
 
-<div class="viewcode-block" id="FaceArray.getByBoundingBox"><a class="viewcode-back" href="../../../reference/mdb/model/part_assembly/geometry.html#abaqus.BasicGeometry.FaceArray.FaceArray.getByBoundingBox">[docs]</a>    <span class="k">def</span> <span class="nf">getByBoundingBox</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">xMin</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">''</span><span class="p">,</span> <span class="n">yMin</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">''</span><span class="p">,</span> <span class="n">zMin</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">''</span><span class="p">,</span> <span class="n">xMax</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">''</span><span class="p">,</span> <span class="n">yMax</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">''</span><span class="p">,</span>
-                         <span class="n">zMax</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">''</span><span class="p">):</span>
-        <span class="sd">"""This method returns an array of face objects that lie within the specified bounding box.</span>
+<div class="viewcode-block" id="FaceArray.getByBoundingBox"><a class="viewcode-back" href="../../../reference/mdb/model/part_assembly/geometry.html#abaqus.BasicGeometry.FaceArray.FaceArray.getByBoundingBox">[docs]</a>    <span class="k">def</span> <span class="nf">getByBoundingBox</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">xMin</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">yMin</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">zMin</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">xMax</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">yMax</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span><span class="p">,</span>
+                         <span class="n">zMax</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;This method returns an array of face objects that lie within the specified bounding box.</span>
 <span class="sd">        </span>
 <span class="sd">        Parameters</span>
 <span class="sd">        ----------</span>
@@ -465,11 +466,11 @@
 <span class="sd">        -------</span>
 <span class="sd">            A FaceArray object, which is a sequence of Face objects.</span>
 <span class="sd">            </span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span></div>
 
 <div class="viewcode-block" id="FaceArray.getByBoundingCylinder"><a class="viewcode-back" href="../../../reference/mdb/model/part_assembly/geometry.html#abaqus.BasicGeometry.FaceArray.FaceArray.getByBoundingCylinder">[docs]</a>    <span class="k">def</span> <span class="nf">getByBoundingCylinder</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">center1</span><span class="p">:</span> <span class="nb">tuple</span><span class="p">,</span> <span class="n">center2</span><span class="p">:</span> <span class="nb">tuple</span><span class="p">,</span> <span class="n">radius</span><span class="p">:</span> <span class="nb">str</span><span class="p">):</span>
-        <span class="sd">"""This method returns an array of face objects that lie within the specified bounding</span>
+        <span class="sd">&quot;&quot;&quot;This method returns an array of face objects that lie within the specified bounding</span>
 <span class="sd">        cylinder.</span>
 <span class="sd">        </span>
 <span class="sd">        Parameters</span>
@@ -487,11 +488,11 @@
 <span class="sd">        -------</span>
 <span class="sd">            A FaceArray object, which is a sequence of Face objects.</span>
 <span class="sd">            </span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span></div>
 
 <div class="viewcode-block" id="FaceArray.getByBoundingSphere"><a class="viewcode-back" href="../../../reference/mdb/model/part_assembly/geometry.html#abaqus.BasicGeometry.FaceArray.FaceArray.getByBoundingSphere">[docs]</a>    <span class="k">def</span> <span class="nf">getByBoundingSphere</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">center</span><span class="p">:</span> <span class="nb">tuple</span><span class="p">,</span> <span class="n">radius</span><span class="p">:</span> <span class="nb">str</span><span class="p">):</span>
-        <span class="sd">"""This method returns an array of face objects that lie within the specified bounding</span>
+        <span class="sd">&quot;&quot;&quot;This method returns an array of face objects that lie within the specified bounding</span>
 <span class="sd">        sphere.</span>
 <span class="sd">        </span>
 <span class="sd">        Parameters</span>
@@ -505,11 +506,11 @@
 <span class="sd">        -------</span>
 <span class="sd">            A FaceArray object, which is a sequence of Face objects.</span>
 <span class="sd">            </span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span></div>
 
 <div class="viewcode-block" id="FaceArray.getBoundingBox"><a class="viewcode-back" href="../../../reference/mdb/model/part_assembly/geometry.html#abaqus.BasicGeometry.FaceArray.FaceArray.getBoundingBox">[docs]</a>    <span class="k">def</span> <span class="nf">getBoundingBox</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="sd">"""This method returns a dictionary of two tuples representing minimum and maximum boundary</span>
+        <span class="sd">&quot;&quot;&quot;This method returns a dictionary of two tuples representing minimum and maximum boundary</span>
 <span class="sd">        values of the bounding box of the minimum size containing the face sequence.</span>
 
 <span class="sd">        Returns</span>
@@ -520,11 +521,11 @@
 <span class="sd">            *high*: a tuple of three floats representing the maximum *X*-, *Y*-, and *Z*-boundary </span>
 <span class="sd">            values of the bounding box.</span>
 <span class="sd">            </span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span></div>
 
-<div class="viewcode-block" id="FaceArray.getClosest"><a class="viewcode-back" href="../../../reference/mdb/model/part_assembly/geometry.html#abaqus.BasicGeometry.FaceArray.FaceArray.getClosest">[docs]</a>    <span class="k">def</span> <span class="nf">getClosest</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">coordinates</span><span class="p">:</span> <span class="nb">tuple</span><span class="p">,</span> <span class="n">searchTolerance</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">''</span><span class="p">):</span>
-        <span class="sd">"""This method returns an object or objects in the FaceArray closest to the given set of</span>
+<div class="viewcode-block" id="FaceArray.getClosest"><a class="viewcode-back" href="../../../reference/mdb/model/part_assembly/geometry.html#abaqus.BasicGeometry.FaceArray.FaceArray.getClosest">[docs]</a>    <span class="k">def</span> <span class="nf">getClosest</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">coordinates</span><span class="p">:</span> <span class="nb">tuple</span><span class="p">,</span> <span class="n">searchTolerance</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;This method returns an object or objects in the FaceArray closest to the given set of</span>
 <span class="sd">        points, where the given points need not lie on the faces in the FaceArray.</span>
 <span class="sd">        </span>
 <span class="sd">        Parameters</span>
@@ -533,7 +534,7 @@
 <span class="sd">            A sequence of a sequence of floats, where each sequence of floats describes the *X*-, </span>
 <span class="sd">            *Y*-, and *Z*-coordinates of a </span>
 <span class="sd">            point.`r=f.getClosest(coordinates=((20.0,20.0,10.0),(-1.0, -15.0, 15),))``r.keys()``[0, </span>
-<span class="sd">            1]``r[0]``(mdb.models['Model-1'].parts['Part-1'].faces[0],                               </span>
+<span class="sd">            1]``r[0]``(mdb.models[&#39;Model-1&#39;].parts[&#39;Part-1&#39;].faces[0],                               </span>
 <span class="sd">              (15.7090625762939, 20.0, 10.0))` </span>
 <span class="sd">        searchTolerance</span>
 <span class="sd">            A double specifying the distance within which the closest object must lie. The default </span>
@@ -554,7 +555,7 @@
 <span class="sd">            - An exception occurs if the resulting sequence is empty. </span>
 <span class="sd">              Error: The mask results in an empty sequence </span>
 <span class="sd">            </span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span></div></div>
 </pre></div>
         </article>

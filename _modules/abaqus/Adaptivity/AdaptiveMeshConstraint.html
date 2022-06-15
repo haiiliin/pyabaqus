@@ -5,10 +5,10 @@
     <meta name="color-scheme" content="light dark"><link rel="index" title="Index" href="../../../genindex.html" /><link rel="search" title="Search" href="../../../search.html" />
         <link rel="canonical" href="https://pyabaqus.haiiliin.com/_modules/abaqus/Adaptivity/AdaptiveMeshConstraint.html" />
 
-    <meta name="generator" content="sphinx-4.5.0, furo 2022.04.07"/>
-        <title>abaqus.Adaptivity.AdaptiveMeshConstraint - pyabaqus 1.0.16 documentation</title>
+    <meta name="generator" content="sphinx-4.5.0, furo 2022.06.04.1"/>
+        <title>abaqus.Adaptivity.AdaptiveMeshConstraint - pyabaqus 1.0.18 documentation</title>
       <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/styles/furo.css?digest=68f4518137b9aefe99b631505a2064c3c42c9852" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/styles/furo.css?digest=40978830699223671f4072448e654b5958f38b89" />
     <link rel="stylesheet" type="text/css" href="../../../_static/styles/furo-extensions.css?digest=30d1aed668e5c3a91c3e3bf6a60b675221979f0e" />
     
     
@@ -123,7 +123,7 @@
       </label>
     </div>
     <div class="header-center">
-      <a href="../../../index.html"><div class="brand">pyabaqus 1.0.16 documentation</div></a>
+      <a href="../../../index.html"><div class="brand">pyabaqus 1.0.18 documentation</div></a>
     </div>
     <div class="header-right">
       <div class="theme-toggle-container theme-toggle-header">
@@ -146,7 +146,7 @@
       <div class="sidebar-sticky"><a class="sidebar-brand" href="../../../index.html">
   
   
-  <span class="sidebar-brand-text">pyabaqus 1.0.16 documentation</span>
+  <span class="sidebar-brand-text">pyabaqus 1.0.18 documentation</span>
   
 </a><form class="sidebar-search-container" method="get" action="../../../search.html" role="search">
   <input class="sidebar-search" placeholder=Search name="q" aria-label="Search">
@@ -286,7 +286,8 @@
           </svg>
           <span>Back to top</span>
         </a>
-        <div class="content-icon-container"><div class="theme-toggle-container theme-toggle-content">
+        <div class="content-icon-container">
+          <div class="theme-toggle-container theme-toggle-content">
             <button class="theme-toggle">
               <div class="visually-hidden">Toggle Light / Dark / Auto color theme</div>
               <svg class="theme-icon-when-auto"><use href="#svg-sun-half"></use></svg>
@@ -307,7 +308,7 @@
 
 
 <div class="viewcode-block" id="AdaptiveMeshConstraint"><a class="viewcode-back" href="../../../reference/mdb/model/adaptivity.html#abaqus.Adaptivity.AdaptiveMeshConstraint.AdaptiveMeshConstraint">[docs]</a><span class="k">class</span> <span class="nc">AdaptiveMeshConstraint</span><span class="p">:</span>
-    <span class="sd">"""The AdaptiveMeshConstraint object is the abstract base type for other Arbitrary</span>
+    <span class="sd">&quot;&quot;&quot;The AdaptiveMeshConstraint object is the abstract base type for other Arbitrary</span>
 <span class="sd">    Lagrangian Eularian (ALE) style AdaptiveMeshConstraint objects. The </span>
 <span class="sd">    AdaptiveMeshConstraint object has no explicit constructor. The methods and members of </span>
 <span class="sd">    the AdaptiveMeshConstraint object are common to all objects derived from the </span>
@@ -324,7 +325,7 @@
 <span class="sd">        A :py:class:`~abaqus.Region.Region.Region` object specifying the region to which the adaptive mesh constraint is applied.</span>
 <span class="sd">    localCsys: DatumCsys</span>
 <span class="sd">        None or a :py:class:`~abaqus.Datum.DatumCsys.DatumCsys` object specifying the local coordinate system of the adaptive mesh</span>
-<span class="sd">        constraint's degrees of freedom. If **localCsys=None**, the degrees of freedom are defined</span>
+<span class="sd">        constraint&#39;s degrees of freedom. If **localCsys=None**, the degrees of freedom are defined</span>
 <span class="sd">        in the global coordinate system. The default value is None.</span>
 
 <span class="sd">    Notes</span>
@@ -336,10 +337,10 @@
 <span class="sd">        import step</span>
 <span class="sd">        mdb.models[name].adaptiveMeshConstraints[name]</span>
 
-<span class="sd">    """</span>
+<span class="sd">    &quot;&quot;&quot;</span>
 
     <span class="c1"># A String specifying the adaptive mesh constraint repository key. </span>
-    <span class="n">name</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">''</span>
+    <span class="n">name</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span>
 
     <span class="c1"># A SymbolicConstant specifying the category of the adaptive mesh constraint. Possible </span>
     <span class="c1"># values are MECHANICAL and THERMAL. </span>
@@ -349,13 +350,13 @@
     <span class="n">region</span><span class="p">:</span> <span class="n">Region</span> <span class="o">=</span> <span class="n">Region</span><span class="p">()</span>
 
     <span class="c1"># None or a DatumCsys object specifying the local coordinate system of the adaptive mesh </span>
-    <span class="c1"># constraint's degrees of freedom. If *localCsys*=None, the degrees of freedom are defined </span>
+    <span class="c1"># constraint&#39;s degrees of freedom. If *localCsys*=None, the degrees of freedom are defined </span>
     <span class="c1"># in the global coordinate system. The default value is None. </span>
     <span class="n">localCsys</span><span class="p">:</span> <span class="n">DatumCsys</span> <span class="o">=</span> <span class="kc">None</span>
 
-    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">''</span><span class="p">,</span> <span class="n">category</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">region</span><span class="p">:</span> <span class="n">Region</span> <span class="o">=</span> <span class="n">Region</span><span class="p">(),</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">category</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">region</span><span class="p">:</span> <span class="n">Region</span> <span class="o">=</span> <span class="n">Region</span><span class="p">(),</span>
                  <span class="n">localCsys</span><span class="p">:</span> <span class="n">DatumCsys</span> <span class="o">=</span> <span class="kc">None</span><span class="p">):</span>
-        <span class="sd">"""The AdaptiveMeshConstraint object is the abstract base type for other Arbitrary</span>
+        <span class="sd">&quot;&quot;&quot;The AdaptiveMeshConstraint object is the abstract base type for other Arbitrary</span>
 <span class="sd">        Lagrangian Eularian (ALE) style AdaptiveMeshConstraint objects. The</span>
 <span class="sd">        AdaptiveMeshConstraint object has no explicit constructor. The methods and members of</span>
 <span class="sd">        the AdaptiveMeshConstraint object are common to all objects derived from the</span>
@@ -380,14 +381,14 @@
 <span class="sd">        region</span>
 <span class="sd">            A Region object specifying the region to which the adaptive mesh constraint is applied.</span>
 <span class="sd">        localCsys</span>
-<span class="sd">            None or a DatumCsys object specifying the local coordinate system of the adaptive mesh  constraint's</span>
+<span class="sd">            None or a DatumCsys object specifying the local coordinate system of the adaptive mesh  constraint&#39;s</span>
 <span class="sd">            degrees of freedom. If *localCsys*=None, the degrees of freedom are defined  in the global coordinate</span>
 <span class="sd">            system. The default value is None.</span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span>
 
 <div class="viewcode-block" id="AdaptiveMeshConstraint.deactivate"><a class="viewcode-back" href="../../../reference/mdb/model/adaptivity.html#abaqus.Adaptivity.AdaptiveMeshConstraint.AdaptiveMeshConstraint.deactivate">[docs]</a>    <span class="k">def</span> <span class="nf">deactivate</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">stepName</span><span class="p">:</span> <span class="nb">str</span><span class="p">):</span>
-        <span class="sd">"""This method deactivates the adaptive mesh constraint in the specified step and all</span>
+        <span class="sd">&quot;&quot;&quot;This method deactivates the adaptive mesh constraint in the specified step and all</span>
 <span class="sd">        subsequent steps.</span>
 <span class="sd">        </span>
 <span class="sd">        Parameters</span>
@@ -399,11 +400,11 @@
 <span class="sd">        Raises</span>
 <span class="sd">        ------</span>
 <span class="sd">            TextError. </span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span></div>
 
 <div class="viewcode-block" id="AdaptiveMeshConstraint.move"><a class="viewcode-back" href="../../../reference/mdb/model/adaptivity.html#abaqus.Adaptivity.AdaptiveMeshConstraint.AdaptiveMeshConstraint.move">[docs]</a>    <span class="k">def</span> <span class="nf">move</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">fromStepName</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">toStepName</span><span class="p">:</span> <span class="nb">str</span><span class="p">):</span>
-        <span class="sd">"""This method moves the adaptive mesh constraint state from one step to a different step.</span>
+        <span class="sd">&quot;&quot;&quot;This method moves the adaptive mesh constraint state from one step to a different step.</span>
 <span class="sd">        </span>
 <span class="sd">        Parameters</span>
 <span class="sd">        ----------</span>
@@ -417,11 +418,11 @@
 <span class="sd">        Raises</span>
 <span class="sd">        ------</span>
 <span class="sd">            TextError. </span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span></div>
 
 <div class="viewcode-block" id="AdaptiveMeshConstraint.reset"><a class="viewcode-back" href="../../../reference/mdb/model/adaptivity.html#abaqus.Adaptivity.AdaptiveMeshConstraint.AdaptiveMeshConstraint.reset">[docs]</a>    <span class="k">def</span> <span class="nf">reset</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">stepName</span><span class="p">:</span> <span class="nb">str</span><span class="p">):</span>
-        <span class="sd">"""This method resets the adaptive mesh constraint state of the specified step to the state</span>
+        <span class="sd">&quot;&quot;&quot;This method resets the adaptive mesh constraint state of the specified step to the state</span>
 <span class="sd">        of the previous analysis step.</span>
 <span class="sd">        </span>
 <span class="sd">        Parameters</span>
@@ -433,27 +434,27 @@
 <span class="sd">        Raises</span>
 <span class="sd">        ------</span>
 <span class="sd">            TextError. </span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span></div>
 
 <div class="viewcode-block" id="AdaptiveMeshConstraint.resume"><a class="viewcode-back" href="../../../reference/mdb/model/adaptivity.html#abaqus.Adaptivity.AdaptiveMeshConstraint.AdaptiveMeshConstraint.resume">[docs]</a>    <span class="k">def</span> <span class="nf">resume</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="sd">"""This method resumes the adaptive mesh constraint that was previously suppressed.</span>
-<span class="sd">        """</span>
+        <span class="sd">&quot;&quot;&quot;This method resumes the adaptive mesh constraint that was previously suppressed.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span></div>
 
 <div class="viewcode-block" id="AdaptiveMeshConstraint.suppress"><a class="viewcode-back" href="../../../reference/mdb/model/adaptivity.html#abaqus.Adaptivity.AdaptiveMeshConstraint.AdaptiveMeshConstraint.suppress">[docs]</a>    <span class="k">def</span> <span class="nf">suppress</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="sd">"""This method suppresses the adaptive mesh constraint.</span>
-<span class="sd">        """</span>
+        <span class="sd">&quot;&quot;&quot;This method suppresses the adaptive mesh constraint.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span></div>
 
 <div class="viewcode-block" id="AdaptiveMeshConstraint.delete"><a class="viewcode-back" href="../../../reference/mdb/model/adaptivity.html#abaqus.Adaptivity.AdaptiveMeshConstraint.AdaptiveMeshConstraint.delete">[docs]</a>    <span class="k">def</span> <span class="nf">delete</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">indices</span><span class="p">:</span> <span class="nb">tuple</span><span class="p">):</span>
-        <span class="sd">"""This method allows you to delete existing adaptive mesh constraints.</span>
+        <span class="sd">&quot;&quot;&quot;This method allows you to delete existing adaptive mesh constraints.</span>
 <span class="sd">        </span>
 <span class="sd">        Parameters</span>
 <span class="sd">        ----------</span>
 <span class="sd">        indices</span>
 <span class="sd">            A sequence of Ints specifying the index of each adaptive mesh constraint to delete. </span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span></div></div>
 </pre></div>
         </article>

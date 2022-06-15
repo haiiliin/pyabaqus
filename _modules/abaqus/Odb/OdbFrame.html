@@ -5,10 +5,10 @@
     <meta name="color-scheme" content="light dark"><link rel="index" title="Index" href="../../../genindex.html" /><link rel="search" title="Search" href="../../../search.html" />
         <link rel="canonical" href="https://pyabaqus.haiiliin.com/_modules/abaqus/Odb/OdbFrame.html" />
 
-    <meta name="generator" content="sphinx-4.5.0, furo 2022.04.07"/>
-        <title>abaqus.Odb.OdbFrame - pyabaqus 1.0.16 documentation</title>
+    <meta name="generator" content="sphinx-4.5.0, furo 2022.06.04.1"/>
+        <title>abaqus.Odb.OdbFrame - pyabaqus 1.0.18 documentation</title>
       <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/styles/furo.css?digest=68f4518137b9aefe99b631505a2064c3c42c9852" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/styles/furo.css?digest=40978830699223671f4072448e654b5958f38b89" />
     <link rel="stylesheet" type="text/css" href="../../../_static/styles/furo-extensions.css?digest=30d1aed668e5c3a91c3e3bf6a60b675221979f0e" />
     
     
@@ -123,7 +123,7 @@
       </label>
     </div>
     <div class="header-center">
-      <a href="../../../index.html"><div class="brand">pyabaqus 1.0.16 documentation</div></a>
+      <a href="../../../index.html"><div class="brand">pyabaqus 1.0.18 documentation</div></a>
     </div>
     <div class="header-right">
       <div class="theme-toggle-container theme-toggle-header">
@@ -146,7 +146,7 @@
       <div class="sidebar-sticky"><a class="sidebar-brand" href="../../../index.html">
   
   
-  <span class="sidebar-brand-text">pyabaqus 1.0.16 documentation</span>
+  <span class="sidebar-brand-text">pyabaqus 1.0.18 documentation</span>
   
 </a><form class="sidebar-search-container" method="get" action="../../../search.html" role="search">
   <input class="sidebar-search" placeholder=Search name="q" aria-label="Search">
@@ -286,7 +286,8 @@
           </svg>
           <span>Back to top</span>
         </a>
-        <div class="content-icon-container"><div class="theme-toggle-container theme-toggle-content">
+        <div class="content-icon-container">
+          <div class="theme-toggle-container theme-toggle-content">
             <button class="theme-toggle">
               <div class="visually-hidden">Toggle Light / Dark / Auto color theme</div>
               <svg class="theme-icon-when-auto"><use href="#svg-sun-half"></use></svg>
@@ -309,7 +310,7 @@
 
 
 <div class="viewcode-block" id="OdbFrame"><a class="viewcode-back" href="../../../reference/odb.html#abaqus.Odb.OdbFrame.OdbFrame">[docs]</a><span class="k">class</span> <span class="nc">OdbFrame</span><span class="p">:</span>
-    <span class="sd">"""The domain of the OdbFrame object is taken from the parent step.</span>
+    <span class="sd">&quot;&quot;&quot;The domain of the OdbFrame object is taken from the parent step.</span>
 
 <span class="sd">    Attributes</span>
 <span class="sd">    ----------</span>
@@ -324,7 +325,7 @@
 <span class="sd">        the **procedureType** member of the :py:class:`~abaqus.Step.Step.Step` object=FREQUENCY. The default value is 0.0.</span>
 <span class="sd">    mode: int</span>
 <span class="sd">        An Int specifying the eigenmode. This member is valid only if **domain=MODAL**.</span>
-<span class="sd">    associatedFrame: 'OdbFrame'</span>
+<span class="sd">    associatedFrame: &#39;OdbFrame&#39;</span>
 <span class="sd">        An :py:class:`~abaqus.Odb.OdbFrame.OdbFrame` object specifying the real or imaginary portion of the data corresponding to</span>
 <span class="sd">        this cyclic symmetry mode.</span>
 <span class="sd">    fieldOutputs: dict[str, FieldOutput]</span>
@@ -342,7 +343,7 @@
 <span class="sd">        import odbAccess</span>
 <span class="sd">        session.odbs[name].steps[name].frames[i]</span>
 
-<span class="sd">    """</span>
+<span class="sd">    &quot;&quot;&quot;</span>
 
     <span class="c1"># An Int specifying the cyclic mode number associated with the data stored on this frame. </span>
     <span class="c1"># Only frequency analyses of cyclic symmetry models possess cyclic mode numbers. </span>
@@ -361,18 +362,18 @@
 
     <span class="c1"># An OdbFrame object specifying the real or imaginary portion of the data corresponding to </span>
     <span class="c1"># this cyclic symmetry mode. </span>
-    <span class="n">associatedFrame</span><span class="p">:</span> <span class="s1">'OdbFrame'</span> <span class="o">=</span> <span class="kc">None</span>
+    <span class="n">associatedFrame</span><span class="p">:</span> <span class="s1">&#39;OdbFrame&#39;</span> <span class="o">=</span> <span class="kc">None</span>
 
     <span class="c1"># A repository of FieldOutput objects specifying the key to the *fieldOutputs*repository </span>
     <span class="c1"># is a String representing an output variable. </span>
     <span class="n">fieldOutputs</span><span class="p">:</span> <span class="nb">dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">FieldOutput</span><span class="p">]</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">FieldOutput</span><span class="p">]()</span>
 
     <span class="c1"># An OdbLoadCase object specifying the load case for the frame. </span>
-    <span class="n">loadCase</span><span class="p">:</span> <span class="n">OdbLoadCase</span> <span class="o">=</span> <span class="n">OdbLoadCase</span><span class="p">(</span><span class="s1">'loadCase'</span><span class="p">)</span>
+    <span class="n">loadCase</span><span class="p">:</span> <span class="n">OdbLoadCase</span> <span class="o">=</span> <span class="n">OdbLoadCase</span><span class="p">(</span><span class="s1">&#39;loadCase&#39;</span><span class="p">)</span>
 
     <span class="nd">@typing</span><span class="o">.</span><span class="n">overload</span>
-    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">incrementNumber</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">frameValue</span><span class="p">:</span> <span class="nb">float</span><span class="p">,</span> <span class="n">description</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">''</span><span class="p">):</span>
-        <span class="sd">"""This method creates an OdbFrame object and appends it to the frame sequence.</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">incrementNumber</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">frameValue</span><span class="p">:</span> <span class="nb">float</span><span class="p">,</span> <span class="n">description</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;This method creates an OdbFrame object and appends it to the frame sequence.</span>
 
 <span class="sd">        Notes</span>
 <span class="sd">        -----</span>
@@ -398,12 +399,12 @@
 <span class="sd">        Returns</span>
 <span class="sd">        -------</span>
 <span class="sd">            An OdbFrame object.</span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span>
 
     <span class="nd">@typing</span><span class="o">.</span><span class="n">overload</span>
-    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">mode</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">frequency</span><span class="p">:</span> <span class="nb">float</span><span class="p">,</span> <span class="n">description</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">''</span><span class="p">):</span>
-        <span class="sd">"""This constructor creates an OdbFrame object in the frequency domain and appends it to</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">mode</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">frequency</span><span class="p">:</span> <span class="nb">float</span><span class="p">,</span> <span class="n">description</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;This constructor creates an OdbFrame object in the frequency domain and appends it to</span>
 <span class="sd">        the frame sequence. The arguments to the constructor are valid only when</span>
 <span class="sd">        *domain*=FREQUENCY or *domain*=MODAL.</span>
 
@@ -428,12 +429,12 @@
 <span class="sd">        Returns</span>
 <span class="sd">        -------</span>
 <span class="sd">            An OdbFrame object.</span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span>
 
     <span class="nd">@typing</span><span class="o">.</span><span class="n">overload</span>
-    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">loadCase</span><span class="p">:</span> <span class="n">OdbLoadCase</span><span class="p">,</span> <span class="n">description</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">''</span><span class="p">,</span> <span class="n">frequency</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mi">0</span><span class="p">):</span>
-        <span class="sd">"""This constructor creates an OdbFrame object for a specific load case and appends it to</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">loadCase</span><span class="p">:</span> <span class="n">OdbLoadCase</span><span class="p">,</span> <span class="n">description</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">frequency</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mi">0</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;This constructor creates an OdbFrame object for a specific load case and appends it to</span>
 <span class="sd">        the frame sequence.</span>
 
 <span class="sd">        Notes</span>
@@ -457,7 +458,7 @@
 <span class="sd">        Returns</span>
 <span class="sd">        -------</span>
 <span class="sd">            An OdbFrame object.</span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span>
 
     <span class="k">def</span> <span class="nf">Frame</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
@@ -466,7 +467,7 @@
     <span class="nd">@typing</span><span class="o">.</span><span class="n">overload</span>
     <span class="k">def</span> <span class="nf">FieldOutput</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">description</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="nb">type</span><span class="p">:</span> <span class="n">SymbolicConstant</span><span class="p">,</span> <span class="n">componentLabels</span><span class="p">:</span> <span class="nb">tuple</span> <span class="o">=</span> <span class="p">(),</span>
                     <span class="n">validInvariants</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">isEngineeringTensor</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="n">OFF</span><span class="p">):</span>
-        <span class="sd">"""This method creates a FieldOutput object.</span>
+        <span class="sd">&quot;&quot;&quot;This method creates a FieldOutput object.</span>
 
 <span class="sd">        Notes</span>
 <span class="sd">        -----</span>
@@ -490,8 +491,8 @@
 <span class="sd">        componentLabels</span>
 <span class="sd">            A sequence of Strings specifying the labels for each component of the value. The length</span>
 <span class="sd">            of the sequence must match the type. If *type*=TENSOR, the default value is *name* with</span>
-<span class="sd">            the suffixes ('11', '22', '33', '12', '13', '23'). If *type*=VECTOR, the default value</span>
-<span class="sd">            is *name* with the suffixes ('1', '2', '3'). If *type*=SCALAR, the default value is an</span>
+<span class="sd">            the suffixes (&#39;11&#39;, &#39;22&#39;, &#39;33&#39;, &#39;12&#39;, &#39;13&#39;, &#39;23&#39;). If *type*=VECTOR, the default value</span>
+<span class="sd">            is *name* with the suffixes (&#39;1&#39;, &#39;2&#39;, &#39;3&#39;). If *type*=SCALAR, the default value is an</span>
 <span class="sd">            empty sequence.</span>
 <span class="sd">        validInvariants</span>
 <span class="sd">            A sequence of SymbolicConstants specifying which invariants should be calculated for</span>
@@ -508,12 +509,12 @@
 <span class="sd">        Returns</span>
 <span class="sd">        -------</span>
 <span class="sd">            A FieldOutput object.</span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span>
 
     <span class="nd">@typing</span><span class="o">.</span><span class="n">overload</span>
-    <span class="k">def</span> <span class="nf">FieldOutput</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">field</span><span class="p">:</span> <span class="s1">'FieldOutput'</span><span class="p">,</span> <span class="n">name</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">''</span><span class="p">,</span> <span class="n">description</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">''</span><span class="p">):</span>
-        <span class="sd">"""This method creates a FieldOutput object from an existing FieldOutput object of the same</span>
+    <span class="k">def</span> <span class="nf">FieldOutput</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">field</span><span class="p">:</span> <span class="s1">&#39;FieldOutput&#39;</span><span class="p">,</span> <span class="n">name</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">description</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;This method creates a FieldOutput object from an existing FieldOutput object of the same</span>
 <span class="sd">        output database.</span>
 
 <span class="sd">        Notes</span>
@@ -537,12 +538,12 @@
 <span class="sd">        Returns</span>
 <span class="sd">        -------</span>
 <span class="sd">            A FieldOutput object.</span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span>
 
     <span class="k">def</span> <span class="nf">FieldOutput</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
-        <span class="k">if</span> <span class="s1">'name'</span> <span class="ow">in</span> <span class="n">kwargs</span><span class="o">.</span><span class="n">keys</span><span class="p">():</span>
-            <span class="n">name</span> <span class="o">=</span> <span class="n">kwargs</span><span class="p">[</span><span class="s1">'name'</span><span class="p">]</span>
+        <span class="k">if</span> <span class="s1">&#39;name&#39;</span> <span class="ow">in</span> <span class="n">kwargs</span><span class="o">.</span><span class="n">keys</span><span class="p">():</span>
+            <span class="n">name</span> <span class="o">=</span> <span class="n">kwargs</span><span class="p">[</span><span class="s1">&#39;name&#39;</span><span class="p">]</span>
         <span class="k">else</span><span class="p">:</span>
             <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">args</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">FieldOutput</span><span class="p">):</span>
                 <span class="n">name</span> <span class="o">=</span> <span class="n">args</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>

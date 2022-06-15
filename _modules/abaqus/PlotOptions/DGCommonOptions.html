@@ -5,10 +5,10 @@
     <meta name="color-scheme" content="light dark"><link rel="index" title="Index" href="../../../genindex.html" /><link rel="search" title="Search" href="../../../search.html" />
         <link rel="canonical" href="https://pyabaqus.haiiliin.com/_modules/abaqus/PlotOptions/DGCommonOptions.html" />
 
-    <meta name="generator" content="sphinx-4.5.0, furo 2022.04.07"/>
-        <title>abaqus.PlotOptions.DGCommonOptions - pyabaqus 1.0.16 documentation</title>
+    <meta name="generator" content="sphinx-4.5.0, furo 2022.06.04.1"/>
+        <title>abaqus.PlotOptions.DGCommonOptions - pyabaqus 1.0.18 documentation</title>
       <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/styles/furo.css?digest=68f4518137b9aefe99b631505a2064c3c42c9852" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/styles/furo.css?digest=40978830699223671f4072448e654b5958f38b89" />
     <link rel="stylesheet" type="text/css" href="../../../_static/styles/furo-extensions.css?digest=30d1aed668e5c3a91c3e3bf6a60b675221979f0e" />
     
     
@@ -123,7 +123,7 @@
       </label>
     </div>
     <div class="header-center">
-      <a href="../../../index.html"><div class="brand">pyabaqus 1.0.16 documentation</div></a>
+      <a href="../../../index.html"><div class="brand">pyabaqus 1.0.18 documentation</div></a>
     </div>
     <div class="header-right">
       <div class="theme-toggle-container theme-toggle-header">
@@ -146,7 +146,7 @@
       <div class="sidebar-sticky"><a class="sidebar-brand" href="../../../index.html">
   
   
-  <span class="sidebar-brand-text">pyabaqus 1.0.16 documentation</span>
+  <span class="sidebar-brand-text">pyabaqus 1.0.18 documentation</span>
   
 </a><form class="sidebar-search-container" method="get" action="../../../search.html" role="search">
   <input class="sidebar-search" placeholder=Search name="q" aria-label="Search">
@@ -286,7 +286,8 @@
           </svg>
           <span>Back to top</span>
         </a>
-        <div class="content-icon-container"><div class="theme-toggle-container theme-toggle-content">
+        <div class="content-icon-container">
+          <div class="theme-toggle-container theme-toggle-content">
             <button class="theme-toggle">
               <div class="visually-hidden">Toggle Light / Dark / Auto color theme</div>
               <svg class="theme-icon-when-auto"><use href="#svg-sun-half"></use></svg>
@@ -305,7 +306,7 @@
 
 
 <div class="viewcode-block" id="DGCommonOptions"><a class="viewcode-back" href="../../../reference/session/plot_options.html#abaqus.PlotOptions.DGCommonOptions.DGCommonOptions">[docs]</a><span class="k">class</span> <span class="nc">DGCommonOptions</span><span class="p">:</span>
-    <span class="sd">"""The DGCommonOptions object stores values and attributes that are common to all plot</span>
+    <span class="sd">&quot;&quot;&quot;The DGCommonOptions object stores values and attributes that are common to all plot</span>
 <span class="sd">    states. The DGCommonOptions object has no constructor command. Abaqus creates an </span>
 <span class="sd">    *odbDisplayOptions.commonOptions* member when a display group instance is created, using </span>
 <span class="sd">    values from *odbDisplay.commonOptions*. </span>
@@ -373,40 +374,40 @@
 <span class="sd">        0.0≤≤ **translucencyFactor** ≤≤ 1.0. The default value is 0.3.</span>
 <span class="sd">    edgeColorWireHide: str</span>
 <span class="sd">        A String specifying the color to be used to plot the edges of the model when</span>
-<span class="sd">        **renderStyle=WIREFRAME** or HIDDEN. The default value is "White".</span>
+<span class="sd">        **renderStyle=WIREFRAME** or HIDDEN. The default value is &quot;White&quot;.</span>
 <span class="sd">    edgeColorFillShade: str</span>
 <span class="sd">        A String specifying the color to be used to plot the edges of the model when</span>
-<span class="sd">        **renderStyle=FILLED** or SHADED. The default value is "Black".</span>
+<span class="sd">        **renderStyle=FILLED** or SHADED. The default value is &quot;Black&quot;.</span>
 <span class="sd">    fillColor: str</span>
 <span class="sd">        A String specifying the color to be used to fill elements when **renderStyle=FILLED** or</span>
-<span class="sd">        SHADED. The default value is "White".</span>
+<span class="sd">        SHADED. The default value is &quot;White&quot;.</span>
 <span class="sd">    labelFont: str</span>
 <span class="sd">        A String specifying the label font to be used for all model labels. The default value is</span>
-<span class="sd">        "-*-courier-medium-r-normal-*-*-120-*-*-m-*-*-*".</span>
+<span class="sd">        &quot;-*-courier-medium-r-normal-*-*-120-*-*-m-*-*-*&quot;.</span>
 <span class="sd">    elemLabelColor: str</span>
 <span class="sd">        A String specifying the color to be used to plot the element labels. The default value</span>
-<span class="sd">        is "Cyan".</span>
+<span class="sd">        is &quot;Cyan&quot;.</span>
 <span class="sd">    faceLabelColor: str</span>
 <span class="sd">        A String specifying the color to be used to plot the face labels. The default value is</span>
-<span class="sd">        "Red".</span>
+<span class="sd">        &quot;Red&quot;.</span>
 <span class="sd">    nodeLabelColor: str</span>
 <span class="sd">        A String specifying the color to be used to plot the node labels. The default value is</span>
-<span class="sd">        "Yellow".</span>
+<span class="sd">        &quot;Yellow&quot;.</span>
 <span class="sd">    nodeSymbolColor: str</span>
 <span class="sd">        A String specifying the color to be used to plot the node symbols. The default value is</span>
-<span class="sd">        "Yellow".</span>
+<span class="sd">        &quot;Yellow&quot;.</span>
 <span class="sd">    faceNormalColor: str</span>
 <span class="sd">        A String specifying the color to be used to plot the normal to a nonbeam element or to a</span>
-<span class="sd">        surface. The default value is "Red".</span>
+<span class="sd">        surface. The default value is &quot;Red&quot;.</span>
 <span class="sd">    beamN1Color: str</span>
 <span class="sd">        A String specifying the color to be used to plot an arrow along the beam n1n1-direction.</span>
-<span class="sd">        The default value is "Blue".</span>
+<span class="sd">        The default value is &quot;Blue&quot;.</span>
 <span class="sd">    beamN2Color: str</span>
 <span class="sd">        A String specifying the color to be used to plot an arrow along the beam n2n2-direction.</span>
-<span class="sd">        The default value is "Red".</span>
+<span class="sd">        The default value is &quot;Red&quot;.</span>
 <span class="sd">    beamTangentColor: str</span>
 <span class="sd">        A String specifying the color to be used to plot an arrow along the tangent to a beam.</span>
-<span class="sd">        The default value is "White".</span>
+<span class="sd">        The default value is &quot;White&quot;.</span>
 <span class="sd">    coordinateScaleFactors: float</span>
 <span class="sd">        A tuple of three Floats specifying the coordinate scaling in each of the three</span>
 <span class="sd">        coordinate directions when **coordinateScale=ON**. The default value is (1, 1, 1).</span>
@@ -424,7 +425,7 @@
 <span class="sd">        session.viewports[name].odbDisplay.displayGroupInstances[name].odbDisplayOptions.commonOptions</span>
 <span class="sd">        session.viewports[name].partDisplay.displayGroupInstances[name].odbDisplayOptions.commonOptions</span>
 
-<span class="sd">    """</span>
+<span class="sd">    &quot;&quot;&quot;</span>
 
     <span class="c1"># A SymbolicConstant specifying the render style of the plot. Possible values are </span>
     <span class="c1"># WIREFRAME, FILLED, HIDDEN, and SHADED. The default value is SHADED. </span>
@@ -507,52 +508,52 @@
     <span class="n">translucencyFactor</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mi">0</span>
 
     <span class="c1"># A String specifying the color to be used to plot the edges of the model when </span>
-    <span class="c1"># *renderStyle*=WIREFRAME or HIDDEN. The default value is "White". </span>
-    <span class="n">edgeColorWireHide</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">''</span>
+    <span class="c1"># *renderStyle*=WIREFRAME or HIDDEN. The default value is &quot;White&quot;. </span>
+    <span class="n">edgeColorWireHide</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span>
 
     <span class="c1"># A String specifying the color to be used to plot the edges of the model when </span>
-    <span class="c1"># *renderStyle*=FILLED or SHADED. The default value is "Black". </span>
-    <span class="n">edgeColorFillShade</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">''</span>
+    <span class="c1"># *renderStyle*=FILLED or SHADED. The default value is &quot;Black&quot;. </span>
+    <span class="n">edgeColorFillShade</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span>
 
     <span class="c1"># A String specifying the color to be used to fill elements when *renderStyle*=FILLED or </span>
-    <span class="c1"># SHADED. The default value is "White". </span>
-    <span class="n">fillColor</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">''</span>
+    <span class="c1"># SHADED. The default value is &quot;White&quot;. </span>
+    <span class="n">fillColor</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span>
 
     <span class="c1"># A String specifying the label font to be used for all model labels. The default value is </span>
-    <span class="c1"># "-*-courier-medium-r-normal-*-*-120-*-*-m-*-*-*". </span>
-    <span class="n">labelFont</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">''</span>
+    <span class="c1"># &quot;-*-courier-medium-r-normal-*-*-120-*-*-m-*-*-*&quot;. </span>
+    <span class="n">labelFont</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span>
 
     <span class="c1"># A String specifying the color to be used to plot the element labels. The default value </span>
-    <span class="c1"># is "Cyan". </span>
-    <span class="n">elemLabelColor</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">''</span>
+    <span class="c1"># is &quot;Cyan&quot;. </span>
+    <span class="n">elemLabelColor</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span>
 
     <span class="c1"># A String specifying the color to be used to plot the face labels. The default value is </span>
-    <span class="c1"># "Red". </span>
-    <span class="n">faceLabelColor</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">''</span>
+    <span class="c1"># &quot;Red&quot;. </span>
+    <span class="n">faceLabelColor</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span>
 
     <span class="c1"># A String specifying the color to be used to plot the node labels. The default value is </span>
-    <span class="c1"># "Yellow". </span>
-    <span class="n">nodeLabelColor</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">''</span>
+    <span class="c1"># &quot;Yellow&quot;. </span>
+    <span class="n">nodeLabelColor</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span>
 
     <span class="c1"># A String specifying the color to be used to plot the node symbols. The default value is </span>
-    <span class="c1"># "Yellow". </span>
-    <span class="n">nodeSymbolColor</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">''</span>
+    <span class="c1"># &quot;Yellow&quot;. </span>
+    <span class="n">nodeSymbolColor</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span>
 
     <span class="c1"># A String specifying the color to be used to plot the normal to a nonbeam element or to a </span>
-    <span class="c1"># surface. The default value is "Red". </span>
-    <span class="n">faceNormalColor</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">''</span>
+    <span class="c1"># surface. The default value is &quot;Red&quot;. </span>
+    <span class="n">faceNormalColor</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span>
 
     <span class="c1"># A String specifying the color to be used to plot an arrow along the beam n1n1-direction. </span>
-    <span class="c1"># The default value is "Blue". </span>
-    <span class="n">beamN1Color</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">''</span>
+    <span class="c1"># The default value is &quot;Blue&quot;. </span>
+    <span class="n">beamN1Color</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span>
 
     <span class="c1"># A String specifying the color to be used to plot an arrow along the beam n2n2-direction. </span>
-    <span class="c1"># The default value is "Red". </span>
-    <span class="n">beamN2Color</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">''</span>
+    <span class="c1"># The default value is &quot;Red&quot;. </span>
+    <span class="n">beamN2Color</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span>
 
     <span class="c1"># A String specifying the color to be used to plot an arrow along the tangent to a beam. </span>
-    <span class="c1"># The default value is "White". </span>
-    <span class="n">beamTangentColor</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">''</span>
+    <span class="c1"># The default value is &quot;White&quot;. </span>
+    <span class="n">beamTangentColor</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span>
 
     <span class="c1"># A tuple of three Floats specifying the coordinate scaling in each of the three </span>
     <span class="c1"># coordinate directions when *coordinateScale*=ON. The default value is (1, 1, 1). </span>

@@ -5,10 +5,10 @@
     <meta name="color-scheme" content="light dark"><link rel="index" title="Index" href="../../../genindex.html" /><link rel="search" title="Search" href="../../../search.html" />
         <link rel="canonical" href="https://pyabaqus.haiiliin.com/_modules/abaqus/OdbDisplay/OrientationOptions.html" />
 
-    <meta name="generator" content="sphinx-4.5.0, furo 2022.04.07"/>
-        <title>abaqus.OdbDisplay.OrientationOptions - pyabaqus 1.0.16 documentation</title>
+    <meta name="generator" content="sphinx-4.5.0, furo 2022.06.04.1"/>
+        <title>abaqus.OdbDisplay.OrientationOptions - pyabaqus 1.0.18 documentation</title>
       <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/styles/furo.css?digest=68f4518137b9aefe99b631505a2064c3c42c9852" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/styles/furo.css?digest=40978830699223671f4072448e654b5958f38b89" />
     <link rel="stylesheet" type="text/css" href="../../../_static/styles/furo-extensions.css?digest=30d1aed668e5c3a91c3e3bf6a60b675221979f0e" />
     
     
@@ -123,7 +123,7 @@
       </label>
     </div>
     <div class="header-center">
-      <a href="../../../index.html"><div class="brand">pyabaqus 1.0.16 documentation</div></a>
+      <a href="../../../index.html"><div class="brand">pyabaqus 1.0.18 documentation</div></a>
     </div>
     <div class="header-right">
       <div class="theme-toggle-container theme-toggle-header">
@@ -146,7 +146,7 @@
       <div class="sidebar-sticky"><a class="sidebar-brand" href="../../../index.html">
   
   
-  <span class="sidebar-brand-text">pyabaqus 1.0.16 documentation</span>
+  <span class="sidebar-brand-text">pyabaqus 1.0.18 documentation</span>
   
 </a><form class="sidebar-search-container" method="get" action="../../../search.html" role="search">
   <input class="sidebar-search" placeholder=Search name="q" aria-label="Search">
@@ -286,7 +286,8 @@
           </svg>
           <span>Back to top</span>
         </a>
-        <div class="content-icon-container"><div class="theme-toggle-container theme-toggle-content">
+        <div class="content-icon-container">
+          <div class="theme-toggle-container theme-toggle-content">
             <button class="theme-toggle">
               <div class="visually-hidden">Toggle Light / Dark / Auto color theme</div>
               <svg class="theme-icon-when-auto"><use href="#svg-sun-half"></use></svg>
@@ -306,7 +307,7 @@
 
 
 <div class="viewcode-block" id="OrientationOptions"><a class="viewcode-back" href="../../../reference/session/odb_display.html#abaqus.OdbDisplay.OrientationOptions.OrientationOptions">[docs]</a><span class="k">class</span> <span class="nc">OrientationOptions</span><span class="p">(</span><span class="n">DGOrientationOptions</span><span class="p">):</span>
-    <span class="sd">"""The OrientationOptions object stores values and attributes associated with a material</span>
+    <span class="sd">&quot;&quot;&quot;The OrientationOptions object stores values and attributes associated with a material</span>
 <span class="sd">    orientation plot. The OrientationOptions object has no constructor command. Abaqus </span>
 <span class="sd">    creates a *defaultOdbDisplay.materialOrientationOptions* member when you import the </span>
 <span class="sd">    Visualization module. Abaqus creates a *materialOrientationOptions* member when it </span>
@@ -348,13 +349,13 @@
 <span class="sd">        Possible values are MODEL_SIZE and SCREEN_SIZE. The default value is MODEL_SIZE.</span>
 <span class="sd">    axis1Color: str</span>
 <span class="sd">        A String specifying the color of axis 1 of the material orientation triad. The default</span>
-<span class="sd">        value is "Cyan".</span>
+<span class="sd">        value is &quot;Cyan&quot;.</span>
 <span class="sd">    axis2Color: str</span>
 <span class="sd">        A String specifying the color of axis 2 of the material orientation triad. The default</span>
-<span class="sd">        value is "Yellow".</span>
+<span class="sd">        value is &quot;Yellow&quot;.</span>
 <span class="sd">    axis3Color: str</span>
 <span class="sd">        A String specifying the color of axis 3 of the material orientation triad. The default</span>
-<span class="sd">        value is "Red".</span>
+<span class="sd">        value is &quot;Red&quot;.</span>
 
 <span class="sd">    Notes</span>
 <span class="sd">    -----</span>
@@ -373,7 +374,7 @@
 <span class="sd">        session.viewports[name].odbDisplay.materialOrientationOptions</span>
 <span class="sd">        session.viewports[name].partDisplay.displayGroupInstances[name].odbDisplayOptions.materialOrientationOptions</span>
 
-<span class="sd">    """</span>
+<span class="sd">    &quot;&quot;&quot;</span>
 
     <span class="c1"># A Boolean specifying whether axis 1 of the material orientation triad should be </span>
     <span class="c1"># displayed. The default value is ON. </span>
@@ -408,23 +409,23 @@
     <span class="n">scaleMode</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="n">MODEL_SIZE</span>
 
     <span class="c1"># A String specifying the color of axis 1 of the material orientation triad. The default </span>
-    <span class="c1"># value is "Cyan". </span>
-    <span class="n">axis1Color</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">''</span>
+    <span class="c1"># value is &quot;Cyan&quot;. </span>
+    <span class="n">axis1Color</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span>
 
     <span class="c1"># A String specifying the color of axis 2 of the material orientation triad. The default </span>
-    <span class="c1"># value is "Yellow". </span>
-    <span class="n">axis2Color</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">''</span>
+    <span class="c1"># value is &quot;Yellow&quot;. </span>
+    <span class="n">axis2Color</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span>
 
     <span class="c1"># A String specifying the color of axis 3 of the material orientation triad. The default </span>
-    <span class="c1"># value is "Red". </span>
-    <span class="n">axis3Color</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">''</span>
+    <span class="c1"># value is &quot;Red&quot;. </span>
+    <span class="n">axis3Color</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span>
 
-<div class="viewcode-block" id="OrientationOptions.setValues"><a class="viewcode-back" href="../../../reference/session/odb_display.html#abaqus.OdbDisplay.OrientationOptions.OrientationOptions.setValues">[docs]</a>    <span class="k">def</span> <span class="nf">setValues</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">options</span><span class="p">:</span> <span class="s1">'OrientationOptions'</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">axis1Color</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">''</span><span class="p">,</span> <span class="n">showAxis1</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="n">ON</span><span class="p">,</span>
-                  <span class="n">axis2Color</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">''</span><span class="p">,</span> <span class="n">showAxis2</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="n">ON</span><span class="p">,</span> <span class="n">axis3Color</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">''</span><span class="p">,</span>
+<div class="viewcode-block" id="OrientationOptions.setValues"><a class="viewcode-back" href="../../../reference/session/odb_display.html#abaqus.OdbDisplay.OrientationOptions.OrientationOptions.setValues">[docs]</a>    <span class="k">def</span> <span class="nf">setValues</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">options</span><span class="p">:</span> <span class="s1">&#39;OrientationOptions&#39;</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">axis1Color</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">showAxis1</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="n">ON</span><span class="p">,</span>
+                  <span class="n">axis2Color</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">showAxis2</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="n">ON</span><span class="p">,</span> <span class="n">axis3Color</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span><span class="p">,</span>
                   <span class="n">showAxis3</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="n">ON</span><span class="p">,</span> <span class="n">symbolSize</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mi">12</span><span class="p">,</span>
                   <span class="n">lineThickness</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="n">VERY_THIN</span><span class="p">,</span> <span class="n">orientation</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="n">PLY</span><span class="p">,</span>
                   <span class="n">arrowheadStyle</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="n">NONE</span><span class="p">,</span> <span class="n">scaleMode</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="n">MODEL_SIZE</span><span class="p">):</span>
-        <span class="sd">"""This method modifies the OrientationOptions object.</span>
+        <span class="sd">&quot;&quot;&quot;This method modifies the OrientationOptions object.</span>
 <span class="sd">        </span>
 <span class="sd">        Parameters</span>
 <span class="sd">        ----------</span>
@@ -434,19 +435,19 @@
 <span class="sd">            value is None. </span>
 <span class="sd">        axis1Color</span>
 <span class="sd">            A String specifying the color of axis 1 of the material orientation triad. The default </span>
-<span class="sd">            value is "Cyan". </span>
+<span class="sd">            value is &quot;Cyan&quot;. </span>
 <span class="sd">        showAxis1</span>
 <span class="sd">            A Boolean specifying whether axis 1 of the material orientation triad should be </span>
 <span class="sd">            displayed. The default value is ON. </span>
 <span class="sd">        axis2Color</span>
 <span class="sd">            A String specifying the color of axis 2 of the material orientation triad. The default </span>
-<span class="sd">            value is "Yellow". </span>
+<span class="sd">            value is &quot;Yellow&quot;. </span>
 <span class="sd">        showAxis2</span>
 <span class="sd">            A Boolean specifying whether axis 2 of the material orientation triad should be </span>
 <span class="sd">            displayed. The default value is ON. </span>
 <span class="sd">        axis3Color</span>
 <span class="sd">            A String specifying the color of axis 3 of the material orientation triad. The default </span>
-<span class="sd">            value is "Red". </span>
+<span class="sd">            value is &quot;Red&quot;. </span>
 <span class="sd">        showAxis3</span>
 <span class="sd">            A Boolean specifying whether axis 3 of the material orientation triad should be </span>
 <span class="sd">            displayed. The default value is ON. </span>
@@ -469,7 +470,7 @@
 <span class="sd">        Raises</span>
 <span class="sd">        ------</span>
 <span class="sd">        RangeError</span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span></div></div>
 </pre></div>
         </article>

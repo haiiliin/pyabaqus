@@ -5,10 +5,10 @@
     <meta name="color-scheme" content="light dark"><link rel="index" title="Index" href="../../../genindex.html" /><link rel="search" title="Search" href="../../../search.html" />
         <link rel="canonical" href="https://pyabaqus.haiiliin.com/_modules/abaqus/PlotOptions/PlyStackPlotOptions.html" />
 
-    <meta name="generator" content="sphinx-4.5.0, furo 2022.04.07"/>
-        <title>abaqus.PlotOptions.PlyStackPlotOptions - pyabaqus 1.0.16 documentation</title>
+    <meta name="generator" content="sphinx-4.5.0, furo 2022.06.04.1"/>
+        <title>abaqus.PlotOptions.PlyStackPlotOptions - pyabaqus 1.0.18 documentation</title>
       <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/styles/furo.css?digest=68f4518137b9aefe99b631505a2064c3c42c9852" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/styles/furo.css?digest=40978830699223671f4072448e654b5958f38b89" />
     <link rel="stylesheet" type="text/css" href="../../../_static/styles/furo-extensions.css?digest=30d1aed668e5c3a91c3e3bf6a60b675221979f0e" />
     
     
@@ -123,7 +123,7 @@
       </label>
     </div>
     <div class="header-center">
-      <a href="../../../index.html"><div class="brand">pyabaqus 1.0.16 documentation</div></a>
+      <a href="../../../index.html"><div class="brand">pyabaqus 1.0.18 documentation</div></a>
     </div>
     <div class="header-right">
       <div class="theme-toggle-container theme-toggle-header">
@@ -146,7 +146,7 @@
       <div class="sidebar-sticky"><a class="sidebar-brand" href="../../../index.html">
   
   
-  <span class="sidebar-brand-text">pyabaqus 1.0.16 documentation</span>
+  <span class="sidebar-brand-text">pyabaqus 1.0.18 documentation</span>
   
 </a><form class="sidebar-search-container" method="get" action="../../../search.html" role="search">
   <input class="sidebar-search" placeholder=Search name="q" aria-label="Search">
@@ -286,7 +286,8 @@
           </svg>
           <span>Back to top</span>
         </a>
-        <div class="content-icon-container"><div class="theme-toggle-container theme-toggle-content">
+        <div class="content-icon-container">
+          <div class="theme-toggle-container theme-toggle-content">
             <button class="theme-toggle">
               <div class="visually-hidden">Toggle Light / Dark / Auto color theme</div>
               <svg class="theme-icon-when-auto"><use href="#svg-sun-half"></use></svg>
@@ -305,7 +306,7 @@
 
 
 <div class="viewcode-block" id="PlyStackPlotOptions"><a class="viewcode-back" href="../../../reference/session/plot_options.html#abaqus.PlotOptions.PlyStackPlotOptions.PlyStackPlotOptions">[docs]</a><span class="k">class</span> <span class="nc">PlyStackPlotOptions</span><span class="p">:</span>
-    <span class="sd">"""The PlyStackPlotOptions object stores values and attributes associated with aViewport</span>
+    <span class="sd">&quot;&quot;&quot;The PlyStackPlotOptions object stores values and attributes associated with aViewport</span>
 <span class="sd">    object. The PlyStackPlotOptions object has no constructor command. Abaqus creates the </span>
 <span class="sd">    *detailPlotOptions.plyStackPlotPlotOptions* member whenever a Viewport is created. </span>
 
@@ -317,26 +318,26 @@
 <span class="sd">    </span>
 <span class="sd">        session.viewports[name].detailPlotOptions.plyStackPlotOptions</span>
 
-<span class="sd">    """</span>
+<span class="sd">    &quot;&quot;&quot;</span>
 
 <div class="viewcode-block" id="PlyStackPlotOptions.setValues"><a class="viewcode-back" href="../../../reference/session/plot_options.html#abaqus.PlotOptions.PlyStackPlotOptions.PlyStackPlotOptions.setValues">[docs]</a>    <span class="k">def</span> <span class="nf">setValues</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">renderStyle</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="n">SHADED</span><span class="p">,</span> <span class="n">showEdges</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="n">OFF</span><span class="p">,</span>
                   <span class="n">edgeStyle</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="n">SOLID</span><span class="p">,</span> <span class="n">edgeThickness</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="n">VERY_THIN</span><span class="p">,</span>
                   <span class="n">plyDisplay</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="n">UNSYMMETRIC</span><span class="p">,</span> <span class="n">startLayer</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span> <span class="n">numLayers</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">30</span><span class="p">,</span>
-                  <span class="n">evenNumPlyColor</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">''</span><span class="p">,</span> <span class="n">oddNumPlyColor</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">''</span><span class="p">,</span> <span class="n">showFibers</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="n">ON</span><span class="p">,</span>
-                  <span class="n">fiberColor</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">''</span><span class="p">,</span> <span class="n">fiberStyle</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="n">SOLID</span><span class="p">,</span>
+                  <span class="n">evenNumPlyColor</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">oddNumPlyColor</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">showFibers</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="n">ON</span><span class="p">,</span>
+                  <span class="n">fiberColor</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">fiberStyle</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="n">SOLID</span><span class="p">,</span>
                   <span class="n">fiberThickness</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="n">VERY_THIN</span><span class="p">,</span> <span class="n">fiberSpacing</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span>
-                  <span class="n">showReferencePlane</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="n">OFF</span><span class="p">,</span> <span class="n">referenceSurfaceColor</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">''</span><span class="p">,</span>
+                  <span class="n">showReferencePlane</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="n">OFF</span><span class="p">,</span> <span class="n">referenceSurfaceColor</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span><span class="p">,</span>
                   <span class="n">translucency</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="n">OFF</span><span class="p">,</span> <span class="n">translucencyFactor</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span>
                   <span class="n">translucencySort</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="n">OFF</span><span class="p">,</span> <span class="n">showReferenceOutline</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="n">OFF</span><span class="p">,</span>
-                  <span class="n">referenceOutlineColor</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">''</span><span class="p">,</span> <span class="n">referenceOutlineStyle</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="n">SOLID</span><span class="p">,</span>
-                  <span class="n">referenceOutlineThickness</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="n">VERY_THIN</span><span class="p">,</span> <span class="n">allLabelsFont</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">''</span><span class="p">,</span>
-                  <span class="n">showMaterialNames</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="n">OFF</span><span class="p">,</span> <span class="n">materialNamesColor</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">''</span><span class="p">,</span>
-                  <span class="n">showOrientationNames</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="n">OFF</span><span class="p">,</span> <span class="n">orientationNamesColor</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">''</span><span class="p">,</span>
-                  <span class="n">showStateBlock</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="n">ON</span><span class="p">,</span> <span class="n">stateBlockColor</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">''</span><span class="p">,</span> <span class="n">showPlyNames</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="n">ON</span><span class="p">,</span>
-                  <span class="n">plyNamesColor</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">''</span><span class="p">,</span> <span class="n">showThicknessLabels</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="n">ON</span><span class="p">,</span>
-                  <span class="n">thicknessLabelsColor</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">''</span><span class="p">,</span> <span class="n">showIntPoints</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="n">OFF</span><span class="p">,</span> <span class="n">intPointsColor</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">''</span><span class="p">,</span>
+                  <span class="n">referenceOutlineColor</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">referenceOutlineStyle</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="n">SOLID</span><span class="p">,</span>
+                  <span class="n">referenceOutlineThickness</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="n">VERY_THIN</span><span class="p">,</span> <span class="n">allLabelsFont</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span><span class="p">,</span>
+                  <span class="n">showMaterialNames</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="n">OFF</span><span class="p">,</span> <span class="n">materialNamesColor</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span><span class="p">,</span>
+                  <span class="n">showOrientationNames</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="n">OFF</span><span class="p">,</span> <span class="n">orientationNamesColor</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span><span class="p">,</span>
+                  <span class="n">showStateBlock</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="n">ON</span><span class="p">,</span> <span class="n">stateBlockColor</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">showPlyNames</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="n">ON</span><span class="p">,</span>
+                  <span class="n">plyNamesColor</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">showThicknessLabels</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="n">ON</span><span class="p">,</span>
+                  <span class="n">thicknessLabelsColor</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">showIntPoints</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="n">OFF</span><span class="p">,</span> <span class="n">intPointsColor</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span><span class="p">,</span>
                   <span class="n">sizeX</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span> <span class="n">sizeY</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span> <span class="n">sizeZ</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mi">0</span><span class="p">):</span>
-        <span class="sd">"""This method modifies the PlyStackPlotOptions object.</span>
+        <span class="sd">&quot;&quot;&quot;This method modifies the PlyStackPlotOptions object.</span>
 <span class="sd">        </span>
 <span class="sd">        Parameters</span>
 <span class="sd">        ----------</span>
@@ -362,15 +363,15 @@
 <span class="sd">        evenNumPlyColor</span>
 <span class="sd">            A String specifying the ply color for the even numbered plies. The numbering is based on </span>
 <span class="sd">            the displayed plies and not on the actual ply number in the layup. The default value is </span>
-<span class="sd">            "#A2B3FF". </span>
+<span class="sd">            &quot;#A2B3FF&quot;. </span>
 <span class="sd">        oddNumPlyColor</span>
 <span class="sd">            A String specifying the ply color for the odd numbered plies. The numbering is based on </span>
 <span class="sd">            the displayed plies and not on the actual ply number in the layup. The default value is </span>
-<span class="sd">            "#ECC9AD". </span>
+<span class="sd">            &quot;#ECC9AD&quot;. </span>
 <span class="sd">        showFibers</span>
 <span class="sd">            A Boolean specifying whether to show the fibers. The default value is ON. </span>
 <span class="sd">        fiberColor</span>
-<span class="sd">            A String specifying the fiber color. The default value is "Red". </span>
+<span class="sd">            A String specifying the fiber color. The default value is &quot;Red&quot;. </span>
 <span class="sd">        fiberStyle</span>
 <span class="sd">            A SymbolicConstant specifying the fiber style. Possible values are SOLID, DASHED, </span>
 <span class="sd">            DOTTED, and DOT_DASH. The default value is SOLID. </span>
@@ -382,7 +383,7 @@
 <span class="sd">        showReferencePlane</span>
 <span class="sd">            A Boolean specifying whether to show the reference surface. The default value is OFF. </span>
 <span class="sd">        referenceSurfaceColor</span>
-<span class="sd">            A String specifying the reference surface color. The default value is "White". </span>
+<span class="sd">            A String specifying the reference surface color. The default value is &quot;White&quot;. </span>
 <span class="sd">        translucency</span>
 <span class="sd">            A Boolean specifying whether to set translucency. The default value is OFF. </span>
 <span class="sd">        translucencyFactor</span>
@@ -393,7 +394,7 @@
 <span class="sd">        showReferenceOutline</span>
 <span class="sd">            A Boolean specifying whether to show the reference outline. The default value is OFF. </span>
 <span class="sd">        referenceOutlineColor</span>
-<span class="sd">            A String specifying the reference outline color. The default value is "Red". </span>
+<span class="sd">            A String specifying the reference outline color. The default value is &quot;Red&quot;. </span>
 <span class="sd">        referenceOutlineStyle</span>
 <span class="sd">            A SymbolicConstant specifying the reference outline style. Possible values are SOLID, </span>
 <span class="sd">            DASHED, DOTTED, and DOT_DASH. The default value is SOLID. </span>
@@ -408,38 +409,38 @@
 <span class="sd">        showMaterialNames</span>
 <span class="sd">            A Boolean specifying whether to show the material names. The default value is OFF. </span>
 <span class="sd">        materialNamesColor</span>
-<span class="sd">            A String specifying the material names text color. The default value is "Green". </span>
+<span class="sd">            A String specifying the material names text color. The default value is &quot;Green&quot;. </span>
 <span class="sd">        showOrientationNames</span>
 <span class="sd">            A Boolean specifying whether to show the orientation names or the fiber angles. The </span>
 <span class="sd">            default value is OFF. </span>
 <span class="sd">        orientationNamesColor</span>
 <span class="sd">            A String specifying the orientation names fiber angles text color. The default value is </span>
-<span class="sd">            "Orange". </span>
+<span class="sd">            &quot;Orange&quot;. </span>
 <span class="sd">        showStateBlock</span>
 <span class="sd">            A Boolean specifying whether to show the state block. The default value is ON. </span>
 <span class="sd">        stateBlockColor</span>
-<span class="sd">            A String specifying the state block text color. The default value is "White". </span>
+<span class="sd">            A String specifying the state block text color. The default value is &quot;White&quot;. </span>
 <span class="sd">        showPlyNames</span>
 <span class="sd">            A Boolean specifying whether to show the ply names. The default value is ON. </span>
 <span class="sd">        plyNamesColor</span>
-<span class="sd">            A String specifying the ply names text color. The default value is "Yellow". </span>
+<span class="sd">            A String specifying the ply names text color. The default value is &quot;Yellow&quot;. </span>
 <span class="sd">        showThicknessLabels</span>
 <span class="sd">            A Boolean specifying whether to show the thickness labels. The default value is ON. </span>
 <span class="sd">        thicknessLabelsColor</span>
-<span class="sd">            A String specifying the thickness labels text color. The default value is "Red". </span>
+<span class="sd">            A String specifying the thickness labels text color. The default value is &quot;Red&quot;. </span>
 <span class="sd">        showIntPoints</span>
 <span class="sd">            A Boolean specifying whether to show the through thickness integration points. The </span>
 <span class="sd">            default value is OFF. </span>
 <span class="sd">        intPointsColor</span>
 <span class="sd">            A String specifying the through thickness integration points color. The default value is </span>
-<span class="sd">            "Blue". </span>
+<span class="sd">            &quot;Blue&quot;. </span>
 <span class="sd">        sizeX</span>
 <span class="sd">            A Float specifying the size of the ply in the X-direction. The default value is 1.5. </span>
 <span class="sd">        sizeY</span>
 <span class="sd">            A Float specifying the size of the ply in the Y-direction. The default value is 1.0. </span>
 <span class="sd">        sizeZ</span>
 <span class="sd">            A Float specifying the size of the ply in the Z-direction. The default value is 0.8. </span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span></div></div>
 </pre></div>
         </article>

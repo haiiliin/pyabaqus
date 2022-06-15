@@ -5,10 +5,10 @@
     <meta name="color-scheme" content="light dark"><link rel="index" title="Index" href="../../../genindex.html" /><link rel="search" title="Search" href="../../../search.html" />
         <link rel="canonical" href="https://pyabaqus.haiiliin.com/_modules/abaqus/BasicGeometry/IgnoredEdge.html" />
 
-    <meta name="generator" content="sphinx-4.5.0, furo 2022.04.07"/>
-        <title>abaqus.BasicGeometry.IgnoredEdge - pyabaqus 1.0.16 documentation</title>
+    <meta name="generator" content="sphinx-4.5.0, furo 2022.06.04.1"/>
+        <title>abaqus.BasicGeometry.IgnoredEdge - pyabaqus 1.0.18 documentation</title>
       <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/styles/furo.css?digest=68f4518137b9aefe99b631505a2064c3c42c9852" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/styles/furo.css?digest=40978830699223671f4072448e654b5958f38b89" />
     <link rel="stylesheet" type="text/css" href="../../../_static/styles/furo-extensions.css?digest=30d1aed668e5c3a91c3e3bf6a60b675221979f0e" />
     
     
@@ -123,7 +123,7 @@
       </label>
     </div>
     <div class="header-center">
-      <a href="../../../index.html"><div class="brand">pyabaqus 1.0.16 documentation</div></a>
+      <a href="../../../index.html"><div class="brand">pyabaqus 1.0.18 documentation</div></a>
     </div>
     <div class="header-right">
       <div class="theme-toggle-container theme-toggle-header">
@@ -146,7 +146,7 @@
       <div class="sidebar-sticky"><a class="sidebar-brand" href="../../../index.html">
   
   
-  <span class="sidebar-brand-text">pyabaqus 1.0.16 documentation</span>
+  <span class="sidebar-brand-text">pyabaqus 1.0.18 documentation</span>
   
 </a><form class="sidebar-search-container" method="get" action="../../../search.html" role="search">
   <input class="sidebar-search" placeholder=Search name="q" aria-label="Search">
@@ -286,7 +286,8 @@
           </svg>
           <span>Back to top</span>
         </a>
-        <div class="content-icon-container"><div class="theme-toggle-container theme-toggle-content">
+        <div class="content-icon-container">
+          <div class="theme-toggle-container theme-toggle-content">
             <button class="theme-toggle">
               <div class="visually-hidden">Toggle Light / Dark / Auto color theme</div>
               <svg class="theme-icon-when-auto"><use href="#svg-sun-half"></use></svg>
@@ -302,7 +303,7 @@
         <article role="main">
           <h1>Source code for abaqus.BasicGeometry.IgnoredEdge</h1><div class="highlight"><pre>
 <div class="viewcode-block" id="IgnoredEdge"><a class="viewcode-back" href="../../../reference/mdb/model/part_assembly/geometry.html#abaqus.BasicGeometry.IgnoredEdge.IgnoredEdge">[docs]</a><span></span><span class="k">class</span> <span class="nc">IgnoredEdge</span><span class="p">:</span>
-    <span class="sd">"""An IgnoredEdge object is a one-dimensional region of geometry that has been abstracted</span>
+    <span class="sd">&quot;&quot;&quot;An IgnoredEdge object is a one-dimensional region of geometry that has been abstracted</span>
 <span class="sd">    away by a virtual topology feature. </span>
 
 <span class="sd">    Attributes</span>
@@ -325,7 +326,7 @@
 <span class="sd">        mdb.models[name].rootAssembly.allInstances[name].ignoredEdges[i]</span>
 <span class="sd">        mdb.models[name].rootAssembly.instances[name].ignoredEdges[i]</span>
 
-<span class="sd">    """</span>
+<span class="sd">    &quot;&quot;&quot;</span>
 
     <span class="c1"># An Int specifying the index of the IgnoredEdge in the IgnoredEdgeArray. </span>
     <span class="n">index</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="kc">None</span>
@@ -335,7 +336,7 @@
     <span class="n">pointOn</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="kc">None</span>
 
 <div class="viewcode-block" id="IgnoredEdge.getSize"><a class="viewcode-back" href="../../../reference/mdb/model/part_assembly/geometry.html#abaqus.BasicGeometry.IgnoredEdge.IgnoredEdge.getSize">[docs]</a>    <span class="k">def</span> <span class="nf">getSize</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">printResults</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="kc">True</span><span class="p">):</span>
-        <span class="sd">"""This method returns a Float indicating the length of the edge.</span>
+        <span class="sd">&quot;&quot;&quot;This method returns a Float indicating the length of the edge.</span>
 <span class="sd">        </span>
 <span class="sd">        Parameters</span>
 <span class="sd">        ----------</span>
@@ -346,11 +347,11 @@
 <span class="sd">        -------</span>
 <span class="sd">            A Float.</span>
 <span class="sd">            </span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span></div>
 
 <div class="viewcode-block" id="IgnoredEdge.getRadius"><a class="viewcode-back" href="../../../reference/mdb/model/part_assembly/geometry.html#abaqus.BasicGeometry.IgnoredEdge.IgnoredEdge.getRadius">[docs]</a>    <span class="k">def</span> <span class="nf">getRadius</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="sd">"""This method returns the radius of a circular IgnoredEdge object.</span>
+        <span class="sd">&quot;&quot;&quot;This method returns the radius of a circular IgnoredEdge object.</span>
 
 <span class="sd">        Returns</span>
 <span class="sd">        -------</span>
@@ -360,11 +361,11 @@
 <span class="sd">        ------</span>
 <span class="sd">            The given IgnoredEdge object is not circular. </span>
 <span class="sd">            </span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span></div>
 
 <div class="viewcode-block" id="IgnoredEdge.getCurvature"><a class="viewcode-back" href="../../../reference/mdb/model/part_assembly/geometry.html#abaqus.BasicGeometry.IgnoredEdge.IgnoredEdge.getCurvature">[docs]</a>    <span class="k">def</span> <span class="nf">getCurvature</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">parameter</span><span class="p">:</span> <span class="nb">float</span><span class="p">,</span> <span class="n">point</span><span class="p">:</span> <span class="nb">tuple</span><span class="p">):</span>
-        <span class="sd">"""This method returns curvature information at a location on the IgnoredEdge object.</span>
+        <span class="sd">&quot;&quot;&quot;This method returns curvature information at a location on the IgnoredEdge object.</span>
 <span class="sd">        </span>
 <span class="sd">        Parameters</span>
 <span class="sd">        ----------</span>
@@ -379,16 +380,16 @@
 
 <span class="sd">        Returns</span>
 <span class="sd">        -------</span>
-<span class="sd">            A dictionary with keys 'evaluationPoint', 'curvature', 'radius', 'tangent'. Where </span>
-<span class="sd">            'evaluationPoint' specifies the location at which the curvature was computed. </span>
-<span class="sd">            'curvature' specifies the curvature vector at that location. 'radius' is the Radius of </span>
-<span class="sd">            curvature and 'tangent' specifies the tangent to the IgnoredEdge at that location. </span>
+<span class="sd">            A dictionary with keys &#39;evaluationPoint&#39;, &#39;curvature&#39;, &#39;radius&#39;, &#39;tangent&#39;. Where </span>
+<span class="sd">            &#39;evaluationPoint&#39; specifies the location at which the curvature was computed. </span>
+<span class="sd">            &#39;curvature&#39; specifies the curvature vector at that location. &#39;radius&#39; is the Radius of </span>
+<span class="sd">            curvature and &#39;tangent&#39; specifies the tangent to the IgnoredEdge at that location. </span>
 
 <span class="sd">        Raises</span>
 <span class="sd">        ------</span>
 <span class="sd">            The given IgnoredEdge is straight. </span>
 <span class="sd">            </span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span></div></div>
 </pre></div>
         </article>

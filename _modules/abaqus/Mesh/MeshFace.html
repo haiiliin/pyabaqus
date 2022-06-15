@@ -5,10 +5,10 @@
     <meta name="color-scheme" content="light dark"><link rel="index" title="Index" href="../../../genindex.html" /><link rel="search" title="Search" href="../../../search.html" />
         <link rel="canonical" href="https://pyabaqus.haiiliin.com/_modules/abaqus/Mesh/MeshFace.html" />
 
-    <meta name="generator" content="sphinx-4.5.0, furo 2022.04.07"/>
-        <title>abaqus.Mesh.MeshFace - pyabaqus 1.0.16 documentation</title>
+    <meta name="generator" content="sphinx-4.5.0, furo 2022.06.04.1"/>
+        <title>abaqus.Mesh.MeshFace - pyabaqus 1.0.18 documentation</title>
       <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/styles/furo.css?digest=68f4518137b9aefe99b631505a2064c3c42c9852" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/styles/furo.css?digest=40978830699223671f4072448e654b5958f38b89" />
     <link rel="stylesheet" type="text/css" href="../../../_static/styles/furo-extensions.css?digest=30d1aed668e5c3a91c3e3bf6a60b675221979f0e" />
     
     
@@ -123,7 +123,7 @@
       </label>
     </div>
     <div class="header-center">
-      <a href="../../../index.html"><div class="brand">pyabaqus 1.0.16 documentation</div></a>
+      <a href="../../../index.html"><div class="brand">pyabaqus 1.0.18 documentation</div></a>
     </div>
     <div class="header-right">
       <div class="theme-toggle-container theme-toggle-header">
@@ -146,7 +146,7 @@
       <div class="sidebar-sticky"><a class="sidebar-brand" href="../../../index.html">
   
   
-  <span class="sidebar-brand-text">pyabaqus 1.0.16 documentation</span>
+  <span class="sidebar-brand-text">pyabaqus 1.0.18 documentation</span>
   
 </a><form class="sidebar-search-container" method="get" action="../../../search.html" role="search">
   <input class="sidebar-search" placeholder=Search name="q" aria-label="Search">
@@ -286,7 +286,8 @@
           </svg>
           <span>Back to top</span>
         </a>
-        <div class="content-icon-container"><div class="theme-toggle-container theme-toggle-content">
+        <div class="content-icon-container">
+          <div class="theme-toggle-container theme-toggle-content">
             <button class="theme-toggle">
               <div class="visually-hidden">Toggle Light / Dark / Auto color theme</div>
               <svg class="theme-icon-when-auto"><use href="#svg-sun-half"></use></svg>
@@ -302,7 +303,7 @@
         <article role="main">
           <h1>Source code for abaqus.Mesh.MeshFace</h1><div class="highlight"><pre>
 <div class="viewcode-block" id="MeshFace"><a class="viewcode-back" href="../../../reference/mdb/model/mesh.html#abaqus.Mesh.MeshFace.MeshFace">[docs]</a><span></span><span class="k">class</span> <span class="nc">MeshFace</span><span class="p">:</span>
-    <span class="sd">"""The MeshFace object refers to an element face. It has no constructor or members. A</span>
+    <span class="sd">&quot;&quot;&quot;The MeshFace object refers to an element face. It has no constructor or members. A</span>
 <span class="sd">    MeshFace object can be accessed via a MeshFaceArray or a repository on a part or part </span>
 <span class="sd">    instance. </span>
 
@@ -328,7 +329,7 @@
 <span class="sd">        mdb.models[name].rootAssembly.instances[name].elementFaces[i]</span>
 <span class="sd">        mdb.models[name].rootAssembly.instances[name].elemFaces[i]</span>
 
-<span class="sd">    """</span>
+<span class="sd">    &quot;&quot;&quot;</span>
 
     <span class="c1"># An Int specifying an Int specifying the element label. </span>
     <span class="n">label</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="kc">None</span>
@@ -337,37 +338,37 @@
     <span class="n">face</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="kc">None</span>
 
 <div class="viewcode-block" id="MeshFace.getElemEdges"><a class="viewcode-back" href="../../../reference/mdb/model/mesh.html#abaqus.Mesh.MeshFace.MeshFace.getElemEdges">[docs]</a>    <span class="k">def</span> <span class="nf">getElemEdges</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="sd">"""This method returns a tuple of unique element edges on the element face.</span>
+        <span class="sd">&quot;&quot;&quot;This method returns a tuple of unique element edges on the element face.</span>
 
 <span class="sd">        Returns</span>
 <span class="sd">        -------</span>
 <span class="sd">        edges: tuple[MeshEdge]</span>
 <span class="sd">            A tuple of MeshEdge objects</span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span></div>
 
 <div class="viewcode-block" id="MeshFace.getElements"><a class="viewcode-back" href="../../../reference/mdb/model/mesh.html#abaqus.Mesh.MeshFace.MeshFace.getElements">[docs]</a>    <span class="k">def</span> <span class="nf">getElements</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="sd">"""This method returns a tuple of elements that share the element face.</span>
+        <span class="sd">&quot;&quot;&quot;This method returns a tuple of elements that share the element face.</span>
 
 <span class="sd">        Returns</span>
 <span class="sd">        -------</span>
 <span class="sd">        elements: tuple[MeshElement]</span>
 <span class="sd">            A tuple of MeshElement objects</span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span></div>
 
 <div class="viewcode-block" id="MeshFace.getNodes"><a class="viewcode-back" href="../../../reference/mdb/model/mesh.html#abaqus.Mesh.MeshFace.MeshFace.getNodes">[docs]</a>    <span class="k">def</span> <span class="nf">getNodes</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="sd">"""This method returns a tuple of nodes on the element face.</span>
+        <span class="sd">&quot;&quot;&quot;This method returns a tuple of nodes on the element face.</span>
 
 <span class="sd">        Returns</span>
 <span class="sd">        -------</span>
 <span class="sd">        nodes: tuple[MeshNode]</span>
 <span class="sd">            A tuple of MeshNode objects</span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span></div>
 
 <div class="viewcode-block" id="MeshFace.getNodesByFaceAngle"><a class="viewcode-back" href="../../../reference/mdb/model/mesh.html#abaqus.Mesh.MeshFace.MeshFace.getNodesByFaceAngle">[docs]</a>    <span class="k">def</span> <span class="nf">getNodesByFaceAngle</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">angle</span><span class="p">:</span> <span class="nb">str</span><span class="p">):</span>
-        <span class="sd">"""This method returns an array of mesh node objects that are obtained by recursively</span>
+        <span class="sd">&quot;&quot;&quot;This method returns an array of mesh node objects that are obtained by recursively</span>
 <span class="sd">        finding adjacent element faces that are at an angle of less than or equal to the</span>
 <span class="sd">        specified angle.</span>
 <span class="sd">        </span>
@@ -380,22 +381,22 @@
 <span class="sd">        -------</span>
 <span class="sd">        nodes: MeshNodeArray</span>
 <span class="sd">            A MeshNodeArray object, which is a sequence of MeshNode objects</span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span></div>
 
 <div class="viewcode-block" id="MeshFace.getNormal"><a class="viewcode-back" href="../../../reference/mdb/model/mesh.html#abaqus.Mesh.MeshFace.MeshFace.getNormal">[docs]</a>    <span class="k">def</span> <span class="nf">getNormal</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="sd">"""This method returns the normal direction for the element face.</span>
+        <span class="sd">&quot;&quot;&quot;This method returns the normal direction for the element face.</span>
 
 <span class="sd">        Returns</span>
 <span class="sd">        -------</span>
 <span class="sd">        normal: tuple[float]</span>
 <span class="sd">            A tuple of 3 floats representing the unit normal vector. If the element face is </span>
 <span class="sd">            collapsed such that a normal cannot be computed, a zero-length vector is returned.</span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span></div>
 
 <div class="viewcode-block" id="MeshFace.getElemFacesByFaceAngle"><a class="viewcode-back" href="../../../reference/mdb/model/mesh.html#abaqus.Mesh.MeshFace.MeshFace.getElemFacesByFaceAngle">[docs]</a>    <span class="k">def</span> <span class="nf">getElemFacesByFaceAngle</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">angle</span><span class="p">:</span> <span class="nb">str</span><span class="p">):</span>
-        <span class="sd">"""This method returns an array of element face objects that are obtained by recursively</span>
+        <span class="sd">&quot;&quot;&quot;This method returns an array of element face objects that are obtained by recursively</span>
 <span class="sd">        finding adjacent element faces that are at an angle of less than or equal to the</span>
 <span class="sd">        specified angle.</span>
 <span class="sd">        </span>
@@ -408,11 +409,11 @@
 <span class="sd">        -------</span>
 <span class="sd">        faces: MeshFaceArray</span>
 <span class="sd">            A MeshFaceArray object, which is a sequence of MeshFace objects.</span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span></div>
 
 <div class="viewcode-block" id="MeshFace.getElemEdgesByFaceAngle"><a class="viewcode-back" href="../../../reference/mdb/model/mesh.html#abaqus.Mesh.MeshFace.MeshFace.getElemEdgesByFaceAngle">[docs]</a>    <span class="k">def</span> <span class="nf">getElemEdgesByFaceAngle</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">angle</span><span class="p">:</span> <span class="nb">str</span><span class="p">):</span>
-        <span class="sd">"""This method returns an array of element edge objects that are obtained by recursively</span>
+        <span class="sd">&quot;&quot;&quot;This method returns an array of element edge objects that are obtained by recursively</span>
 <span class="sd">        finding adjacent element edges that are at an angle of less than or equal to the</span>
 <span class="sd">        specified face angle.</span>
 <span class="sd">        </span>
@@ -425,11 +426,11 @@
 <span class="sd">        -------</span>
 <span class="sd">        edges: MeshEdgeArray</span>
 <span class="sd">            A MeshEdgeArray object, which is a sequence of MeshEdge objects.</span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span></div>
 
 <div class="viewcode-block" id="MeshFace.getElementsByFaceAngle"><a class="viewcode-back" href="../../../reference/mdb/model/mesh.html#abaqus.Mesh.MeshFace.MeshFace.getElementsByFaceAngle">[docs]</a>    <span class="k">def</span> <span class="nf">getElementsByFaceAngle</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">angle</span><span class="p">:</span> <span class="nb">str</span><span class="p">):</span>
-        <span class="sd">"""This method returns an array of mesh Element objects that are obtained by recursively</span>
+        <span class="sd">&quot;&quot;&quot;This method returns an array of mesh Element objects that are obtained by recursively</span>
 <span class="sd">        finding adjacent element faces that are at an angle of less than or equal to the</span>
 <span class="sd">        specified angle.</span>
 <span class="sd">        </span>
@@ -442,11 +443,11 @@
 <span class="sd">        -------</span>
 <span class="sd">        elements: MeshElementArray</span>
 <span class="sd">            A MeshElementArray object, which is a sequence of MeshElement objects.</span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span></div>
 
 <div class="viewcode-block" id="MeshFace.getElemFacesByLimitingAngle"><a class="viewcode-back" href="../../../reference/mdb/model/mesh.html#abaqus.Mesh.MeshFace.MeshFace.getElemFacesByLimitingAngle">[docs]</a>    <span class="k">def</span> <span class="nf">getElemFacesByLimitingAngle</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">angle</span><span class="p">:</span> <span class="nb">str</span><span class="p">):</span>
-        <span class="sd">"""This method returns an array of element edge objects that are obtained by recursively</span>
+        <span class="sd">&quot;&quot;&quot;This method returns an array of element edge objects that are obtained by recursively</span>
 <span class="sd">        finding adjacent element faces that are at an angle of less than or equal to the</span>
 <span class="sd">        specified face angle with the seed face.</span>
 <span class="sd">        </span>
@@ -459,22 +460,22 @@
 <span class="sd">        -------</span>
 <span class="sd">        faces: MeshFaceArray</span>
 <span class="sd">            A MeshFaceArray object, which is a sequence of MeshFace objects.</span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span></div>
 
 <div class="viewcode-block" id="MeshFace.getElementsViaTopology"><a class="viewcode-back" href="../../../reference/mdb/model/mesh.html#abaqus.Mesh.MeshFace.MeshFace.getElementsViaTopology">[docs]</a>    <span class="k">def</span> <span class="nf">getElementsViaTopology</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="sd">"""This method returns an array of mesh Element objects that are obtained by recursively</span>
+        <span class="sd">&quot;&quot;&quot;This method returns an array of mesh Element objects that are obtained by recursively</span>
 <span class="sd">        finding adjacent elements via topology.</span>
 
 <span class="sd">        Returns</span>
 <span class="sd">        -------</span>
 <span class="sd">        elements: MeshElementArray</span>
 <span class="sd">            A MeshElementArray object, which is a sequence of MeshElement objects.</span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span></div>
 
 <div class="viewcode-block" id="MeshFace.getElemFacesByLayer"><a class="viewcode-back" href="../../../reference/mdb/model/mesh.html#abaqus.Mesh.MeshFace.MeshFace.getElemFacesByLayer">[docs]</a>    <span class="k">def</span> <span class="nf">getElemFacesByLayer</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">numLayers</span><span class="p">:</span> <span class="nb">str</span><span class="p">):</span>
-        <span class="sd">"""This method returns an array of element face objects, obtained by traversing shell</span>
+        <span class="sd">&quot;&quot;&quot;This method returns an array of element face objects, obtained by traversing shell</span>
 <span class="sd">        elements or the exterior of a solid mesh, and recursively finding adjacent element faces</span>
 <span class="sd">        by layer.</span>
 <span class="sd">        </span>
@@ -487,7 +488,7 @@
 <span class="sd">        -------</span>
 <span class="sd">        faces: MeshFaceArray</span>
 <span class="sd">            A MeshFaceArray object, which is a sequence of MeshFace objects.</span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span></div></div>
 </pre></div>
         </article>

@@ -5,10 +5,10 @@
     <meta name="color-scheme" content="light dark"><link rel="index" title="Index" href="../../../genindex.html" /><link rel="search" title="Search" href="../../../search.html" />
         <link rel="canonical" href="https://pyabaqus.haiiliin.com/_modules/abaqus/Section/BeamSection.html" />
 
-    <meta name="generator" content="sphinx-4.5.0, furo 2022.04.07"/>
-        <title>abaqus.Section.BeamSection - pyabaqus 1.0.16 documentation</title>
+    <meta name="generator" content="sphinx-4.5.0, furo 2022.06.04.1"/>
+        <title>abaqus.Section.BeamSection - pyabaqus 1.0.18 documentation</title>
       <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/styles/furo.css?digest=68f4518137b9aefe99b631505a2064c3c42c9852" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/styles/furo.css?digest=40978830699223671f4072448e654b5958f38b89" />
     <link rel="stylesheet" type="text/css" href="../../../_static/styles/furo-extensions.css?digest=30d1aed668e5c3a91c3e3bf6a60b675221979f0e" />
     
     
@@ -123,7 +123,7 @@
       </label>
     </div>
     <div class="header-center">
-      <a href="../../../index.html"><div class="brand">pyabaqus 1.0.16 documentation</div></a>
+      <a href="../../../index.html"><div class="brand">pyabaqus 1.0.18 documentation</div></a>
     </div>
     <div class="header-right">
       <div class="theme-toggle-container theme-toggle-header">
@@ -146,7 +146,7 @@
       <div class="sidebar-sticky"><a class="sidebar-brand" href="../../../index.html">
   
   
-  <span class="sidebar-brand-text">pyabaqus 1.0.16 documentation</span>
+  <span class="sidebar-brand-text">pyabaqus 1.0.18 documentation</span>
   
 </a><form class="sidebar-search-container" method="get" action="../../../search.html" role="search">
   <input class="sidebar-search" placeholder=Search name="q" aria-label="Search">
@@ -286,7 +286,8 @@
           </svg>
           <span>Back to top</span>
         </a>
-        <div class="content-icon-container"><div class="theme-toggle-container theme-toggle-content">
+        <div class="content-icon-container">
+          <div class="theme-toggle-container theme-toggle-content">
             <button class="theme-toggle">
               <div class="visually-hidden">Toggle Light / Dark / Auto color theme</div>
               <svg class="theme-icon-when-auto"><use href="#svg-sun-half"></use></svg>
@@ -307,7 +308,7 @@
 
 
 <div class="viewcode-block" id="BeamSection"><a class="viewcode-back" href="../../../reference/mdb/model/section.html#abaqus.Section.BeamSection.BeamSection">[docs]</a><span class="k">class</span> <span class="nc">BeamSection</span><span class="p">(</span><span class="n">Section</span><span class="p">):</span>
-    <span class="sd">"""The BeamSection object defines the properties of a beam section.</span>
+    <span class="sd">&quot;&quot;&quot;The BeamSection object defines the properties of a beam section.</span>
 <span class="sd">    The BeamSection object is derived from the Section object. </span>
 
 <span class="sd">    Attributes</span>
@@ -328,7 +329,7 @@
 
 <span class="sd">        The table data for this object are:</span>
 <span class="sd">        The table data specify the following:</span>
-<span class="sd">            - E, the Young's modulus of the section.</span>
+<span class="sd">            - E, the Young&#39;s modulus of the section.</span>
 <span class="sd">            - G, the torsional shear modulus of the section.</span>
 <span class="sd">            - Thermal expansion coefficient, if using thermal expansion.</span>
 <span class="sd">            - Temperature, if the data depend on temperature.</span>
@@ -346,7 +347,7 @@
 <span class="sd">            - SHEAR CENTER</span>
 <span class="sd">            - SECTION POINTS</span>
 
-<span class="sd">    """</span>
+<span class="sd">    &quot;&quot;&quot;</span>
 
     <span class="c1"># A TransverseShearBeam object specifying the transverse shear stiffness properties. </span>
     <span class="n">beamTransverseShear</span><span class="p">:</span> <span class="n">TransverseShearBeam</span> <span class="o">=</span> <span class="n">TransverseShearBeam</span><span class="p">(</span><span class="n">ANALYSIS_DEFAULT</span><span class="p">)</span>
@@ -359,9 +360,9 @@
                  <span class="n">submerged</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="n">FULLY</span><span class="p">,</span> <span class="n">fluidMassDensity</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
                  <span class="n">crossSectionRadius</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">lateralMassCoef</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span> <span class="n">axialMassCoef</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span>
                  <span class="n">massOffsetX</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="n">massOffsetY</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="n">beamShape</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="n">CONSTANT</span><span class="p">,</span>
-                 <span class="n">material</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">''</span><span class="p">,</span> <span class="n">table</span><span class="p">:</span> <span class="nb">tuple</span> <span class="o">=</span> <span class="p">(),</span> <span class="n">outputPts</span><span class="p">:</span> <span class="nb">tuple</span> <span class="o">=</span> <span class="p">(),</span>
-                 <span class="n">centroid</span><span class="p">:</span> <span class="nb">tuple</span><span class="p">[</span><span class="nb">float</span><span class="p">]</span> <span class="o">=</span> <span class="p">(),</span> <span class="n">shearCenter</span><span class="p">:</span> <span class="nb">tuple</span><span class="p">[</span><span class="nb">float</span><span class="p">]</span> <span class="o">=</span> <span class="p">(),</span> <span class="n">profileEnd</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">''</span><span class="p">):</span>
-        <span class="sd">"""This method creates a BeamSection object.</span>
+                 <span class="n">material</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">table</span><span class="p">:</span> <span class="nb">tuple</span> <span class="o">=</span> <span class="p">(),</span> <span class="n">outputPts</span><span class="p">:</span> <span class="nb">tuple</span> <span class="o">=</span> <span class="p">(),</span>
+                 <span class="n">centroid</span><span class="p">:</span> <span class="nb">tuple</span><span class="p">[</span><span class="nb">float</span><span class="p">]</span> <span class="o">=</span> <span class="p">(),</span> <span class="n">shearCenter</span><span class="p">:</span> <span class="nb">tuple</span><span class="p">[</span><span class="nb">float</span><span class="p">]</span> <span class="o">=</span> <span class="p">(),</span> <span class="n">profileEnd</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;This method creates a BeamSection object.</span>
 
 <span class="sd">        Notes</span>
 <span class="sd">        -----</span>
@@ -383,7 +384,7 @@
 <span class="sd">            A String specifying the name of the profile. This argument represents the start profile </span>
 <span class="sd">            in case of *beamShape*=TAPERED. </span>
 <span class="sd">        poissonRatio</span>
-<span class="sd">            A Float specifying the Poisson's ratio of the section. The default value is 0.0. </span>
+<span class="sd">            A Float specifying the Poisson&#39;s ratio of the section. The default value is 0.0. </span>
 <span class="sd">        thermalExpansion</span>
 <span class="sd">            A Boolean specifying whether to use thermal expansion data. The default value is OFF. </span>
 <span class="sd">        temperatureDependency</span>
@@ -443,7 +444,7 @@
 <span class="sd">            is available for manipulating the model database but not for the ODB API. </span>
 <span class="sd">        material</span>
 <span class="sd">            A String specifying the name of the material. The default value is an empty string. The </span>
-<span class="sd">            material is required when *integration* is "DURING_ANALYSIS". </span>
+<span class="sd">            material is required when *integration* is &quot;DURING_ANALYSIS&quot;. </span>
 <span class="sd">        table</span>
 <span class="sd">            A sequence of sequences of Floats specifying the items described below. The default </span>
 <span class="sd">            value is an empty sequence. </span>
@@ -465,7 +466,7 @@
 <span class="sd">        Returns</span>
 <span class="sd">        -------</span>
 <span class="sd">            A BeamSection object.</span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">()</span>
         <span class="k">pass</span>
 
@@ -476,15 +477,15 @@
                   <span class="n">useFluidInertia</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="n">OFF</span><span class="p">,</span> <span class="n">submerged</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="n">FULLY</span><span class="p">,</span>
                   <span class="n">fluidMassDensity</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">crossSectionRadius</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
                   <span class="n">lateralMassCoef</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span> <span class="n">axialMassCoef</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="n">massOffsetX</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span>
-                  <span class="n">massOffsetY</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="n">beamShape</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="n">CONSTANT</span><span class="p">,</span> <span class="n">material</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">''</span><span class="p">,</span>
+                  <span class="n">massOffsetY</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="n">beamShape</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="n">CONSTANT</span><span class="p">,</span> <span class="n">material</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span><span class="p">,</span>
                   <span class="n">table</span><span class="p">:</span> <span class="nb">tuple</span> <span class="o">=</span> <span class="p">(),</span> <span class="n">outputPts</span><span class="p">:</span> <span class="nb">tuple</span> <span class="o">=</span> <span class="p">(),</span> <span class="n">centroid</span><span class="p">:</span> <span class="nb">tuple</span><span class="p">[</span><span class="nb">float</span><span class="p">]</span> <span class="o">=</span> <span class="p">(),</span>
-                  <span class="n">shearCenter</span><span class="p">:</span> <span class="nb">tuple</span><span class="p">[</span><span class="nb">float</span><span class="p">]</span> <span class="o">=</span> <span class="p">(),</span> <span class="n">profileEnd</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">''</span><span class="p">):</span>
-        <span class="sd">"""This method modifies the BeamSection object.</span>
+                  <span class="n">shearCenter</span><span class="p">:</span> <span class="nb">tuple</span><span class="p">[</span><span class="nb">float</span><span class="p">]</span> <span class="o">=</span> <span class="p">(),</span> <span class="n">profileEnd</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;This method modifies the BeamSection object.</span>
 <span class="sd">        </span>
 <span class="sd">        Parameters</span>
 <span class="sd">        ----------</span>
 <span class="sd">        poissonRatio</span>
-<span class="sd">            A Float specifying the Poisson's ratio of the section. The default value is 0.0. </span>
+<span class="sd">            A Float specifying the Poisson&#39;s ratio of the section. The default value is 0.0. </span>
 <span class="sd">        thermalExpansion</span>
 <span class="sd">            A Boolean specifying whether to use thermal expansion data. The default value is OFF. </span>
 <span class="sd">        temperatureDependency</span>
@@ -544,7 +545,7 @@
 <span class="sd">            is available for manipulating the model database but not for the ODB API. </span>
 <span class="sd">        material</span>
 <span class="sd">            A String specifying the name of the material. The default value is an empty string. The </span>
-<span class="sd">            material is required when *integration* is "DURING_ANALYSIS". </span>
+<span class="sd">            material is required when *integration* is &quot;DURING_ANALYSIS&quot;. </span>
 <span class="sd">        table</span>
 <span class="sd">            A sequence of sequences of Floats specifying the items described below. The default </span>
 <span class="sd">            value is an empty sequence. </span>
@@ -562,7 +563,7 @@
 <span class="sd">            same as that of the start profile. This argument is valid only when *beamShape*=TAPERED. </span>
 <span class="sd">            The default value is an empty string. This parameter is available for manipulating the </span>
 <span class="sd">            model database but not for the ODB API. </span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span></div></div>
 </pre></div>
         </article>

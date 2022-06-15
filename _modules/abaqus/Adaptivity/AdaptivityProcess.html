@@ -5,10 +5,10 @@
     <meta name="color-scheme" content="light dark"><link rel="index" title="Index" href="../../../genindex.html" /><link rel="search" title="Search" href="../../../search.html" />
         <link rel="canonical" href="https://pyabaqus.haiiliin.com/_modules/abaqus/Adaptivity/AdaptivityProcess.html" />
 
-    <meta name="generator" content="sphinx-4.5.0, furo 2022.04.07"/>
-        <title>abaqus.Adaptivity.AdaptivityProcess - pyabaqus 1.0.16 documentation</title>
+    <meta name="generator" content="sphinx-4.5.0, furo 2022.06.04.1"/>
+        <title>abaqus.Adaptivity.AdaptivityProcess - pyabaqus 1.0.18 documentation</title>
       <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/styles/furo.css?digest=68f4518137b9aefe99b631505a2064c3c42c9852" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/styles/furo.css?digest=40978830699223671f4072448e654b5958f38b89" />
     <link rel="stylesheet" type="text/css" href="../../../_static/styles/furo-extensions.css?digest=30d1aed668e5c3a91c3e3bf6a60b675221979f0e" />
     
     
@@ -123,7 +123,7 @@
       </label>
     </div>
     <div class="header-center">
-      <a href="../../../index.html"><div class="brand">pyabaqus 1.0.16 documentation</div></a>
+      <a href="../../../index.html"><div class="brand">pyabaqus 1.0.18 documentation</div></a>
     </div>
     <div class="header-right">
       <div class="theme-toggle-container theme-toggle-header">
@@ -146,7 +146,7 @@
       <div class="sidebar-sticky"><a class="sidebar-brand" href="../../../index.html">
   
   
-  <span class="sidebar-brand-text">pyabaqus 1.0.16 documentation</span>
+  <span class="sidebar-brand-text">pyabaqus 1.0.18 documentation</span>
   
 </a><form class="sidebar-search-container" method="get" action="../../../search.html" role="search">
   <input class="sidebar-search" placeholder=Search name="q" aria-label="Search">
@@ -286,7 +286,8 @@
           </svg>
           <span>Back to top</span>
         </a>
-        <div class="content-icon-container"><div class="theme-toggle-container theme-toggle-content">
+        <div class="content-icon-container">
+          <div class="theme-toggle-container theme-toggle-content">
             <button class="theme-toggle">
               <div class="visually-hidden">Toggle Light / Dark / Auto color theme</div>
               <svg class="theme-icon-when-auto"><use href="#svg-sun-half"></use></svg>
@@ -307,7 +308,7 @@
 
 
 <div class="viewcode-block" id="AdaptivityProcess"><a class="viewcode-back" href="../../../reference/mdb/model/adaptivity.html#abaqus.Adaptivity.AdaptivityProcess.AdaptivityProcess">[docs]</a><span class="k">class</span> <span class="nc">AdaptivityProcess</span><span class="p">:</span>
-    <span class="sd">"""The AdaptivityProcess object defines a series of jobs that will be submitted for</span>
+    <span class="sd">&quot;&quot;&quot;The AdaptivityProcess object defines a series of jobs that will be submitted for</span>
 <span class="sd">    analysis. Abaqus performs adaptive remeshing between each job. </span>
 
 <span class="sd">    Attributes</span>
@@ -328,7 +329,7 @@
 <span class="sd">        import job</span>
 <span class="sd">        mdb.adaptivityProcesses[name]</span>
 
-<span class="sd">    """</span>
+<span class="sd">    &quot;&quot;&quot;</span>
 
     <span class="c1"># A SymbolicConstant specifying the status of the adaptivity process. Possible values are </span>
     <span class="c1"># SUBMITTED, RUNNING, ABORTED, TERMINATED, and COMPLETED. </span>
@@ -338,8 +339,8 @@
     <span class="c1"># received during running the adaptivity process. </span>
     <span class="n">iterations</span><span class="p">:</span> <span class="nb">dict</span><span class="p">[</span><span class="nb">int</span><span class="p">,</span> <span class="n">AdaptivityIteration</span><span class="p">]</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">AdaptivityIteration</span><span class="p">]()</span>
 
-    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">job</span><span class="p">:</span> <span class="n">ModelJob</span><span class="p">,</span> <span class="n">maxIterations</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">3</span><span class="p">,</span> <span class="n">jobPrefix</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">''</span><span class="p">):</span>
-        <span class="sd">"""This method creates an AdaptivityProcess object.</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">job</span><span class="p">:</span> <span class="n">ModelJob</span><span class="p">,</span> <span class="n">maxIterations</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">3</span><span class="p">,</span> <span class="n">jobPrefix</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;This method creates an AdaptivityProcess object.</span>
 
 <span class="sd">        Notes</span>
 <span class="sd">        -----</span>
@@ -372,12 +373,12 @@
 <span class="sd">        Raises</span>
 <span class="sd">        ------</span>
 <span class="sd">            AbaqusException. </span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span>
 
 <div class="viewcode-block" id="AdaptivityProcess.submit"><a class="viewcode-back" href="../../../reference/mdb/model/adaptivity.html#abaqus.Adaptivity.AdaptivityProcess.AdaptivityProcess.submit">[docs]</a>    <span class="k">def</span> <span class="nf">submit</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">waitForCompletion</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="n">OFF</span><span class="p">,</span> <span class="n">datacheckJob</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="kc">False</span><span class="p">,</span>
                <span class="n">continueJob</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="kc">False</span><span class="p">):</span>
-        <span class="sd">"""This method begins the process of analysis and adaptive remeshing.</span>
+        <span class="sd">&quot;&quot;&quot;This method begins the process of analysis and adaptive remeshing.</span>
 <span class="sd">        </span>
 <span class="sd">        Parameters</span>
 <span class="sd">        ----------</span>
@@ -390,11 +391,11 @@
 <span class="sd">        continueJob</span>
 <span class="sd">            A Boolean specifying whether to run the adaptivity as a continuation analysis. The </span>
 <span class="sd">            default value is False. The datacheckJob and continueJob arguments cannot both be True. </span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span></div>
 
-<div class="viewcode-block" id="AdaptivityProcess.setValues"><a class="viewcode-back" href="../../../reference/mdb/model/adaptivity.html#abaqus.Adaptivity.AdaptivityProcess.AdaptivityProcess.setValues">[docs]</a>    <span class="k">def</span> <span class="nf">setValues</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">maxIterations</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">3</span><span class="p">,</span> <span class="n">jobPrefix</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">''</span><span class="p">):</span>
-        <span class="sd">"""This method modifies the AdaptivityProcess object.</span>
+<div class="viewcode-block" id="AdaptivityProcess.setValues"><a class="viewcode-back" href="../../../reference/mdb/model/adaptivity.html#abaqus.Adaptivity.AdaptivityProcess.AdaptivityProcess.setValues">[docs]</a>    <span class="k">def</span> <span class="nf">setValues</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">maxIterations</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">3</span><span class="p">,</span> <span class="n">jobPrefix</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;This method modifies the AdaptivityProcess object.</span>
 <span class="sd">        </span>
 <span class="sd">        Parameters</span>
 <span class="sd">        ----------</span>
@@ -406,11 +407,11 @@
 <span class="sd">            A String specifying the prefix to use for jobs created by the adaptivity process. An </span>
 <span class="sd">            empty string indicates that the name of the adaptivity process should be used. The </span>
 <span class="sd">            default value is an empty string. </span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span></div>
 
 <div class="viewcode-block" id="AdaptivityProcess.AdaptivityIteration"><a class="viewcode-back" href="../../../reference/mdb/model/adaptivity.html#abaqus.Adaptivity.AdaptivityProcess.AdaptivityProcess.AdaptivityIteration">[docs]</a>    <span class="k">def</span> <span class="nf">AdaptivityIteration</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">iteration</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">jobName</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">modelName</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">odbPath</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">remeshingErrors</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">AdaptivityIteration</span><span class="p">:</span>
-        <span class="sd">"""This method creates an AdaptivityIteration object.</span>
+        <span class="sd">&quot;&quot;&quot;This method creates an AdaptivityIteration object.</span>
 
 <span class="sd">        Notes</span>
 <span class="sd">        -----</span>
@@ -438,7 +439,7 @@
 <span class="sd">        Returns</span>
 <span class="sd">        -------</span>
 <span class="sd">            An AdaptivityIteration object.</span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">iterations</span><span class="p">[</span><span class="n">iteration</span><span class="p">]</span> <span class="o">=</span> <span class="n">iteration</span> <span class="o">=</span> <span class="n">AdaptivityIteration</span><span class="p">(</span><span class="n">iteration</span><span class="p">,</span> <span class="n">jobName</span><span class="p">,</span> <span class="n">modelName</span><span class="p">,</span> <span class="n">odbPath</span><span class="p">,</span>
                                                                      <span class="n">remeshingErrors</span><span class="p">)</span>
         <span class="k">return</span> <span class="n">iteration</span></div></div>

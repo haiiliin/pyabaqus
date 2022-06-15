@@ -5,10 +5,10 @@
     <meta name="color-scheme" content="light dark"><link rel="index" title="Index" href="../../../genindex.html" /><link rel="search" title="Search" href="../../../search.html" />
         <link rel="canonical" href="https://pyabaqus.haiiliin.com/_modules/abaqus/XY/AreaStyle.html" />
 
-    <meta name="generator" content="sphinx-4.5.0, furo 2022.04.07"/>
-        <title>abaqus.XY.AreaStyle - pyabaqus 1.0.16 documentation</title>
+    <meta name="generator" content="sphinx-4.5.0, furo 2022.06.04.1"/>
+        <title>abaqus.XY.AreaStyle - pyabaqus 1.0.18 documentation</title>
       <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/styles/furo.css?digest=68f4518137b9aefe99b631505a2064c3c42c9852" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/styles/furo.css?digest=40978830699223671f4072448e654b5958f38b89" />
     <link rel="stylesheet" type="text/css" href="../../../_static/styles/furo-extensions.css?digest=30d1aed668e5c3a91c3e3bf6a60b675221979f0e" />
     
     
@@ -123,7 +123,7 @@
       </label>
     </div>
     <div class="header-center">
-      <a href="../../../index.html"><div class="brand">pyabaqus 1.0.16 documentation</div></a>
+      <a href="../../../index.html"><div class="brand">pyabaqus 1.0.18 documentation</div></a>
     </div>
     <div class="header-right">
       <div class="theme-toggle-container theme-toggle-header">
@@ -146,7 +146,7 @@
       <div class="sidebar-sticky"><a class="sidebar-brand" href="../../../index.html">
   
   
-  <span class="sidebar-brand-text">pyabaqus 1.0.16 documentation</span>
+  <span class="sidebar-brand-text">pyabaqus 1.0.18 documentation</span>
   
 </a><form class="sidebar-search-container" method="get" action="../../../search.html" role="search">
   <input class="sidebar-search" placeholder=Search name="q" aria-label="Search">
@@ -286,7 +286,8 @@
           </svg>
           <span>Back to top</span>
         </a>
-        <div class="content-icon-container"><div class="theme-toggle-container theme-toggle-content">
+        <div class="content-icon-container">
+          <div class="theme-toggle-container theme-toggle-content">
             <button class="theme-toggle">
               <div class="visually-hidden">Toggle Light / Dark / Auto color theme</div>
               <svg class="theme-icon-when-auto"><use href="#svg-sun-half"></use></svg>
@@ -305,7 +306,7 @@
 
 
 <div class="viewcode-block" id="AreaStyle"><a class="viewcode-back" href="../../../reference/session/xy.html#abaqus.XY.AreaStyle.AreaStyle">[docs]</a><span class="k">class</span> <span class="nc">AreaStyle</span><span class="p">:</span>
-    <span class="sd">"""The AreaStyle object is used to define how areas are to be filled when drawing XY-plot</span>
+    <span class="sd">&quot;&quot;&quot;The AreaStyle object is used to define how areas are to be filled when drawing XY-plot</span>
 <span class="sd">    objects. </span>
 <span class="sd">    AreaStyle objects are automatically created whenever an Area object is created. </span>
 <span class="sd">    AreaStyle objects can be created using the methods described below. </span>
@@ -334,10 +335,10 @@
 <span class="sd">        session.xyPlots[name].charts[name].tagAreaStyle</span>
 <span class="sd">        session.xyPlots[name].title.area.style</span>
 
-<span class="sd">    """</span>
+<span class="sd">    &quot;&quot;&quot;</span>
 
-    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">color</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">''</span><span class="p">,</span> <span class="n">fill</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="n">ON</span><span class="p">,</span> <span class="n">style</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="n">SOLID</span><span class="p">):</span>
-        <span class="sd">"""This method creates an AreaStyle.</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">color</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">fill</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="n">ON</span><span class="p">,</span> <span class="n">style</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="n">SOLID</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;This method creates an AreaStyle.</span>
 
 <span class="sd">        Notes</span>
 <span class="sd">        -----</span>
@@ -352,7 +353,7 @@
 <span class="sd">        ----------</span>
 <span class="sd">        color</span>
 <span class="sd">            A String specifying the color to be used when filling an area with this AreaStyle </span>
-<span class="sd">            object. The default value is "White". </span>
+<span class="sd">            object. The default value is &quot;White&quot;. </span>
 <span class="sd">        fill</span>
 <span class="sd">            A Boolean specifying whether to fill the area when using this AreaStyle. The default </span>
 <span class="sd">            value is ON. </span>
@@ -367,24 +368,24 @@
 <span class="sd">        Raises</span>
 <span class="sd">        ------</span>
 <span class="sd">            ColorError </span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span>
 
-<div class="viewcode-block" id="AreaStyle.setValues"><a class="viewcode-back" href="../../../reference/session/xy.html#abaqus.XY.AreaStyle.AreaStyle.setValues">[docs]</a>    <span class="k">def</span> <span class="nf">setValues</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">color</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">''</span><span class="p">,</span> <span class="n">fill</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="n">ON</span><span class="p">,</span> <span class="n">style</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="n">SOLID</span><span class="p">):</span>
-        <span class="sd">"""This method modifies the AreaStyle object.</span>
+<div class="viewcode-block" id="AreaStyle.setValues"><a class="viewcode-back" href="../../../reference/session/xy.html#abaqus.XY.AreaStyle.AreaStyle.setValues">[docs]</a>    <span class="k">def</span> <span class="nf">setValues</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">color</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">fill</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="n">ON</span><span class="p">,</span> <span class="n">style</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="n">SOLID</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;This method modifies the AreaStyle object.</span>
 <span class="sd">        </span>
 <span class="sd">        Parameters</span>
 <span class="sd">        ----------</span>
 <span class="sd">        color</span>
 <span class="sd">            A String specifying the color to be used when filling an area with this AreaStyle </span>
-<span class="sd">            object. The default value is "White". </span>
+<span class="sd">            object. The default value is &quot;White&quot;. </span>
 <span class="sd">        fill</span>
 <span class="sd">            A Boolean specifying whether to fill the area when using this AreaStyle. The default </span>
 <span class="sd">            value is ON. </span>
 <span class="sd">        style</span>
 <span class="sd">            A SymbolicConstant specifying the area pattern style to be used when filling an area </span>
 <span class="sd">            using this AreaStyle. The default value is SOLID. </span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span></div></div>
 </pre></div>
         </article>

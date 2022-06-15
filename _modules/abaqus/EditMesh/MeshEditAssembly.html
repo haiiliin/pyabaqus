@@ -5,10 +5,10 @@
     <meta name="color-scheme" content="light dark"><link rel="index" title="Index" href="../../../genindex.html" /><link rel="search" title="Search" href="../../../search.html" />
         <link rel="canonical" href="https://pyabaqus.haiiliin.com/_modules/abaqus/EditMesh/MeshEditAssembly.html" />
 
-    <meta name="generator" content="sphinx-4.5.0, furo 2022.04.07"/>
-        <title>abaqus.EditMesh.MeshEditAssembly - pyabaqus 1.0.16 documentation</title>
+    <meta name="generator" content="sphinx-4.5.0, furo 2022.06.04.1"/>
+        <title>abaqus.EditMesh.MeshEditAssembly - pyabaqus 1.0.18 documentation</title>
       <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/styles/furo.css?digest=68f4518137b9aefe99b631505a2064c3c42c9852" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/styles/furo.css?digest=40978830699223671f4072448e654b5958f38b89" />
     <link rel="stylesheet" type="text/css" href="../../../_static/styles/furo-extensions.css?digest=30d1aed668e5c3a91c3e3bf6a60b675221979f0e" />
     
     
@@ -123,7 +123,7 @@
       </label>
     </div>
     <div class="header-center">
-      <a href="../../../index.html"><div class="brand">pyabaqus 1.0.16 documentation</div></a>
+      <a href="../../../index.html"><div class="brand">pyabaqus 1.0.18 documentation</div></a>
     </div>
     <div class="header-right">
       <div class="theme-toggle-container theme-toggle-header">
@@ -146,7 +146,7 @@
       <div class="sidebar-sticky"><a class="sidebar-brand" href="../../../index.html">
   
   
-  <span class="sidebar-brand-text">pyabaqus 1.0.16 documentation</span>
+  <span class="sidebar-brand-text">pyabaqus 1.0.18 documentation</span>
   
 </a><form class="sidebar-search-container" method="get" action="../../../search.html" role="search">
   <input class="sidebar-search" placeholder=Search name="q" aria-label="Search">
@@ -286,7 +286,8 @@
           </svg>
           <span>Back to top</span>
         </a>
-        <div class="content-icon-container"><div class="theme-toggle-container theme-toggle-content">
+        <div class="content-icon-container">
+          <div class="theme-toggle-container theme-toggle-content">
             <button class="theme-toggle">
               <div class="visually-hidden">Toggle Light / Dark / Auto color theme</div>
               <svg class="theme-icon-when-auto"><use href="#svg-sun-half"></use></svg>
@@ -312,7 +313,7 @@
 
 
 <div class="viewcode-block" id="MeshEditAssembly"><a class="viewcode-back" href="../../../reference/mdb/edit_mesh.html#abaqus.EditMesh.MeshEditAssembly.MeshEditAssembly">[docs]</a><span class="k">class</span> <span class="nc">MeshEditAssembly</span><span class="p">(</span><span class="n">AssemblyBase</span><span class="p">):</span>
-    <span class="sd">"""An Assembly object is a container for instances of parts. The Assembly object has no</span>
+    <span class="sd">&quot;&quot;&quot;An Assembly object is a container for instances of parts. The Assembly object has no</span>
 <span class="sd">    constructor command. Abaqus creates the *rootAssembly* member when a Model object is </span>
 <span class="sd">    created. </span>
 
@@ -325,10 +326,10 @@
 <span class="sd">        import assembly</span>
 <span class="sd">        mdb.models[name].rootAssembly</span>
 
-<span class="sd">    """</span>
+<span class="sd">    &quot;&quot;&quot;</span>
 
 <div class="viewcode-block" id="MeshEditAssembly.collapseMeshEdge"><a class="viewcode-back" href="../../../reference/mdb/edit_mesh.html#abaqus.EditMesh.MeshEditAssembly.MeshEditAssembly.collapseMeshEdge">[docs]</a>    <span class="k">def</span> <span class="nf">collapseMeshEdge</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">edge</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">collapseMethod</span><span class="p">:</span> <span class="n">SymbolicConstant</span><span class="p">):</span>
-        <span class="sd">"""This method collapses an edge of a quadrilateral or triangular element of a part</span>
+        <span class="sd">&quot;&quot;&quot;This method collapses an edge of a quadrilateral or triangular element of a part</span>
 <span class="sd">        instance.</span>
 <span class="sd">        </span>
 <span class="sd">        Parameters</span>
@@ -338,21 +339,21 @@
 <span class="sd">        collapseMethod</span>
 <span class="sd">            A SymbolicConstant specifying the method used to collapse the edge. Possible values are </span>
 <span class="sd">            FORWARD, REVERSE, and AVERAGE. </span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span></div>
 
 <div class="viewcode-block" id="MeshEditAssembly.combineElement"><a class="viewcode-back" href="../../../reference/mdb/edit_mesh.html#abaqus.EditMesh.MeshEditAssembly.MeshEditAssembly.combineElement">[docs]</a>    <span class="k">def</span> <span class="nf">combineElement</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">elements</span><span class="p">:</span> <span class="nb">tuple</span><span class="p">):</span>
-        <span class="sd">"""This method combines two triangular elements of a part instance.</span>
+        <span class="sd">&quot;&quot;&quot;This method combines two triangular elements of a part instance.</span>
 <span class="sd">        </span>
 <span class="sd">        Parameters</span>
 <span class="sd">        ----------</span>
 <span class="sd">        elements</span>
 <span class="sd">            A sequence of triangular MeshElement objects specifying the elements to combine. </span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span></div>
 
 <div class="viewcode-block" id="MeshEditAssembly.deleteElement"><a class="viewcode-back" href="../../../reference/mdb/edit_mesh.html#abaqus.EditMesh.MeshEditAssembly.MeshEditAssembly.deleteElement">[docs]</a>    <span class="k">def</span> <span class="nf">deleteElement</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">elements</span><span class="p">:</span> <span class="nb">tuple</span><span class="p">[</span><span class="n">MeshElement</span><span class="p">],</span> <span class="n">deleteUnreferencedNodes</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="n">OFF</span><span class="p">):</span>
-        <span class="sd">"""This method deletes the given elements from a part instance. The elements must have been</span>
+        <span class="sd">&quot;&quot;&quot;This method deletes the given elements from a part instance. The elements must have been</span>
 <span class="sd">        generated using the bottom-up meshing technique.</span>
 <span class="sd">        </span>
 <span class="sd">        Parameters</span>
@@ -362,11 +363,11 @@
 <span class="sd">        deleteUnreferencedNodes</span>
 <span class="sd">            A Boolean specifying whether to delete all those associated nodes that become </span>
 <span class="sd">            unreferenced after the given elements are deleted. The default value is OFF. </span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span></div>
 
 <div class="viewcode-block" id="MeshEditAssembly.projectNode"><a class="viewcode-back" href="../../../reference/mdb/edit_mesh.html#abaqus.EditMesh.MeshEditAssembly.MeshEditAssembly.projectNode">[docs]</a>    <span class="k">def</span> <span class="nf">projectNode</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">nodes</span><span class="p">:</span> <span class="nb">tuple</span><span class="p">[</span><span class="n">MeshNode</span><span class="p">],</span> <span class="n">projectionReference</span><span class="p">:</span> <span class="nb">str</span><span class="p">):</span>
-        <span class="sd">"""This method projects the given nodes of a part instance onto a mesh entity, geometric</span>
+        <span class="sd">&quot;&quot;&quot;This method projects the given nodes of a part instance onto a mesh entity, geometric</span>
 <span class="sd">        entity, or a datum object.</span>
 <span class="sd">        </span>
 <span class="sd">        Parameters</span>
@@ -377,14 +378,14 @@
 <span class="sd">            An object specifying the target for the node projection operation. The </span>
 <span class="sd">            *projectionReference* can be any one of the following objects: MeshNode, MeshEdge, </span>
 <span class="sd">            MeshFace, ConstrainedSketchVertex, Edge, Face, DatumPoint, DatumAxis, or DatumPlane.</span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span></div>
 
 <div class="viewcode-block" id="MeshEditAssembly.editNode"><a class="viewcode-back" href="../../../reference/mdb/edit_mesh.html#abaqus.EditMesh.MeshEditAssembly.MeshEditAssembly.editNode">[docs]</a>    <span class="k">def</span> <span class="nf">editNode</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">nodes</span><span class="p">:</span> <span class="nb">tuple</span><span class="p">[</span><span class="n">MeshNode</span><span class="p">],</span> <span class="n">coordinate1</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">coordinate2</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
                  <span class="n">coordinate3</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">coordinates</span><span class="p">:</span> <span class="nb">tuple</span> <span class="o">=</span> <span class="p">(),</span> <span class="n">offset1</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
                  <span class="n">offset2</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">offset3</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">localCsys</span><span class="p">:</span> <span class="n">DatumCsys</span> <span class="o">=</span> <span class="n">DatumCsys</span><span class="p">(),</span>
                  <span class="n">projectToGeometry</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="n">ON</span><span class="p">):</span>
-        <span class="sd">"""This method changes the coordinates of the given nodes on a part instance.</span>
+        <span class="sd">&quot;&quot;&quot;This method changes the coordinates of the given nodes on a part instance.</span>
 <span class="sd">        </span>
 <span class="sd">        Parameters</span>
 <span class="sd">        ----------</span>
@@ -425,13 +426,13 @@
 <span class="sd">        Raises</span>
 <span class="sd">        ------</span>
 <span class="sd">            A coordinate and an offset may not both be specified for the same coordinate component. </span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span></div>
 
     <span class="nd">@typing</span><span class="o">.</span><span class="n">overload</span>
     <span class="k">def</span> <span class="nf">mergeNodes</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">nodes</span><span class="p">:</span> <span class="nb">tuple</span><span class="p">[</span><span class="n">MeshNode</span><span class="p">],</span> <span class="n">tolerance</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
                    <span class="n">removeDuplicateElements</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="kc">True</span><span class="p">):</span>
-        <span class="sd">"""Merge the nodes of a part instance. The nodes must have been generated using the</span>
+        <span class="sd">&quot;&quot;&quot;Merge the nodes of a part instance. The nodes must have been generated using the</span>
 <span class="sd">        bottom-up meshing technique.</span>
 <span class="sd">        </span>
 <span class="sd">        Parameters</span>
@@ -445,12 +446,12 @@
 <span class="sd">        removeDuplicateElements</span>
 <span class="sd">            A Boolean specifying whether elements with the same connectivity after the merge will </span>
 <span class="sd">            merged into a single element. The default value is True. </span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span>
 
     <span class="nd">@typing</span><span class="o">.</span><span class="n">overload</span>
     <span class="k">def</span> <span class="nf">mergeNodes</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">node1</span><span class="p">:</span> <span class="n">MeshNode</span><span class="p">,</span> <span class="n">node2</span><span class="p">:</span> <span class="n">MeshNode</span><span class="p">,</span> <span class="n">removeDuplicateElements</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="kc">True</span><span class="p">):</span>
-        <span class="sd">"""Merge two nodes of a part instance. At least one of the two nodes must have been</span>
+        <span class="sd">&quot;&quot;&quot;Merge two nodes of a part instance. At least one of the two nodes must have been</span>
 <span class="sd">        generated using the bottom-up meshing technique.</span>
 <span class="sd">        </span>
 <span class="sd">        Parameters</span>
@@ -462,25 +463,25 @@
 <span class="sd">        removeDuplicateElements</span>
 <span class="sd">            A Boolean specifying whether elements with the same connectivity after the merge will </span>
 <span class="sd">            merged into a single element. The default value is True. </span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span>
 
     <span class="k">def</span> <span class="nf">mergeNodes</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
         <span class="k">pass</span>
 
 <div class="viewcode-block" id="MeshEditAssembly.splitElement"><a class="viewcode-back" href="../../../reference/mdb/edit_mesh.html#abaqus.EditMesh.MeshEditAssembly.MeshEditAssembly.splitElement">[docs]</a>    <span class="k">def</span> <span class="nf">splitElement</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">elements</span><span class="p">:</span> <span class="nb">tuple</span><span class="p">):</span>
-        <span class="sd">"""This method splits quadrilateral elements into triangular elements.</span>
+        <span class="sd">&quot;&quot;&quot;This method splits quadrilateral elements into triangular elements.</span>
 <span class="sd">        </span>
 <span class="sd">        Parameters</span>
 <span class="sd">        ----------</span>
 <span class="sd">        elements</span>
 <span class="sd">            A sequence of quadrilateral MeshElement objects specifying the elements to split. Each </span>
 <span class="sd">            quadrilateral element is split into two triangular elements by the shorter diagonal. </span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span></div>
 
 <div class="viewcode-block" id="MeshEditAssembly.splitMeshEdge"><a class="viewcode-back" href="../../../reference/mdb/edit_mesh.html#abaqus.EditMesh.MeshEditAssembly.MeshEditAssembly.splitMeshEdge">[docs]</a>    <span class="k">def</span> <span class="nf">splitMeshEdge</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">edge</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">parameter</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mi">0</span><span class="p">):</span>
-        <span class="sd">"""This method splits an edge of a quadrilateral or triangular element of a part instance.</span>
+        <span class="sd">&quot;&quot;&quot;This method splits an edge of a quadrilateral or triangular element of a part instance.</span>
 <span class="sd">        </span>
 <span class="sd">        Parameters</span>
 <span class="sd">        ----------</span>
@@ -489,24 +490,24 @@
 <span class="sd">        parameter</span>
 <span class="sd">            A Float specifying the normalized distance along the *edge* at which to split. Possible </span>
 <span class="sd">            values are 0.0 &lt;&lt; *parameter* &lt;&lt; 1.0. The default value is 0.5. </span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span></div>
 
 <div class="viewcode-block" id="MeshEditAssembly.swapMeshEdge"><a class="viewcode-back" href="../../../reference/mdb/edit_mesh.html#abaqus.EditMesh.MeshEditAssembly.MeshEditAssembly.swapMeshEdge">[docs]</a>    <span class="k">def</span> <span class="nf">swapMeshEdge</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">edge</span><span class="p">:</span> <span class="nb">str</span><span class="p">):</span>
-        <span class="sd">"""This method swaps the diagonal of two adjacent triangular elements of a part instance.</span>
+        <span class="sd">&quot;&quot;&quot;This method swaps the diagonal of two adjacent triangular elements of a part instance.</span>
 <span class="sd">        </span>
 <span class="sd">        Parameters</span>
 <span class="sd">        ----------</span>
 <span class="sd">        edge</span>
 <span class="sd">            A single MeshEdge object specifying the element edge to swap. </span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span></div>
 
 <div class="viewcode-block" id="MeshEditAssembly.generateMeshByOffset"><a class="viewcode-back" href="../../../reference/mdb/edit_mesh.html#abaqus.EditMesh.MeshEditAssembly.MeshEditAssembly.generateMeshByOffset">[docs]</a>    <span class="k">def</span> <span class="nf">generateMeshByOffset</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">region</span><span class="p">:</span> <span class="n">Region</span><span class="p">,</span> <span class="n">meshType</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">totalThickness</span><span class="p">:</span> <span class="nb">float</span><span class="p">,</span> <span class="n">distanceBetweenLayers</span><span class="p">:</span> <span class="nb">float</span><span class="p">,</span>
                              <span class="n">numLayers</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">offsetDirection</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="n">OUTWARD</span><span class="p">,</span> <span class="n">initialOffset</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mf">0.0</span><span class="p">,</span>
                              <span class="n">shareNodes</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="kc">False</span><span class="p">,</span> <span class="n">deleteBaseElements</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="kc">False</span><span class="p">,</span>
                              <span class="n">constantThicknessCorners</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="kc">False</span><span class="p">,</span> <span class="n">extendElementSets</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="kc">False</span><span class="p">):</span>
-        <span class="sd">"""This method generates a solid or shell mesh from an orphan mesh surface by generating</span>
+        <span class="sd">&quot;&quot;&quot;This method generates a solid or shell mesh from an orphan mesh surface by generating</span>
 <span class="sd">        layers of elements that propagate out normal to the surface boundary.</span>
 <span class="sd">        </span>
 <span class="sd">        Parameters</span>
@@ -542,26 +543,26 @@
 <span class="sd">        extendElementSets</span>
 <span class="sd">            A Boolean specifying whether existing element sets that include base elements will be </span>
 <span class="sd">            extended to include corresponding offset elements. The default value is False. </span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span></div>
 
 <div class="viewcode-block" id="MeshEditAssembly.redoMeshEdit"><a class="viewcode-back" href="../../../reference/mdb/edit_mesh.html#abaqus.EditMesh.MeshEditAssembly.MeshEditAssembly.redoMeshEdit">[docs]</a>    <span class="k">def</span> <span class="nf">redoMeshEdit</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="sd">"""This method executes the edit mesh or the bottom-up meshing operation most recently</span>
+        <span class="sd">&quot;&quot;&quot;This method executes the edit mesh or the bottom-up meshing operation most recently</span>
 <span class="sd">        undone by the undoMeshEdit method on an assembly. A redo action must be currently</span>
 <span class="sd">        available for the assembly. This implies that the user must have executed the</span>
 <span class="sd">        undoMeshEdit method on the assembly and that the user has not subsequently executed any</span>
 <span class="sd">        further edit mesh commands on the assembly. It also implies that the user provided a</span>
 <span class="sd">        sufficient cache allowance to store the undo operation.</span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span></div>
 
 <div class="viewcode-block" id="MeshEditAssembly.undoMeshEdit"><a class="viewcode-back" href="../../../reference/mdb/edit_mesh.html#abaqus.EditMesh.MeshEditAssembly.MeshEditAssembly.undoMeshEdit">[docs]</a>    <span class="k">def</span> <span class="nf">undoMeshEdit</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="sd">"""This method undoes the most recent edit mesh or the bottom-up meshing operation on an</span>
+        <span class="sd">&quot;&quot;&quot;This method undoes the most recent edit mesh or the bottom-up meshing operation on an</span>
 <span class="sd">        assembly and restores the mesh on the affected part instance to its previous state. An</span>
 <span class="sd">        edit mesh undo action must be available for the assembly. This implies that prior to</span>
 <span class="sd">        executing an edit mesh command on the assembly, the user enabled edit mesh undo with a</span>
 <span class="sd">        sufficient cache allowance to store the edit mesh operation.</span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span></div></div>
 </pre></div>
         </article>

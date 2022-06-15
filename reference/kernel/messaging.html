@@ -6,10 +6,10 @@
 <link rel="index" title="Index" href="../../genindex.html" /><link rel="search" title="Search" href="../../search.html" /><link rel="next" title="Table Collection" href="table_collection.html" /><link rel="prev" title="Custom Kernel" href="kernel.html" />
         <link rel="canonical" href="https://pyabaqus.haiiliin.com/reference/kernel/messaging.html" />
 
-    <meta name="generator" content="sphinx-4.5.0, furo 2022.04.07"/>
-        <title>Messaging - pyabaqus 1.0.16 documentation</title>
+    <meta name="generator" content="sphinx-4.5.0, furo 2022.06.04.1"/>
+        <title>Messaging - pyabaqus 1.0.18 documentation</title>
       <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/styles/furo.css?digest=68f4518137b9aefe99b631505a2064c3c42c9852" />
+    <link rel="stylesheet" type="text/css" href="../../_static/styles/furo.css?digest=40978830699223671f4072448e654b5958f38b89" />
     <link rel="stylesheet" type="text/css" href="../../_static/styles/furo-extensions.css?digest=30d1aed668e5c3a91c3e3bf6a60b675221979f0e" />
     
     
@@ -124,7 +124,7 @@
       </label>
     </div>
     <div class="header-center">
-      <a href="../../index.html"><div class="brand">pyabaqus 1.0.16 documentation</div></a>
+      <a href="../../index.html"><div class="brand">pyabaqus 1.0.18 documentation</div></a>
     </div>
     <div class="header-right">
       <div class="theme-toggle-container theme-toggle-header">
@@ -147,7 +147,7 @@
       <div class="sidebar-sticky"><a class="sidebar-brand" href="../../index.html">
   
   
-  <span class="sidebar-brand-text">pyabaqus 1.0.16 documentation</span>
+  <span class="sidebar-brand-text">pyabaqus 1.0.18 documentation</span>
   
 </a><form class="sidebar-search-container" method="get" action="../../search.html" role="search">
   <input class="sidebar-search" placeholder=Search name="q" aria-label="Search">
@@ -287,7 +287,8 @@
           </svg>
           <span>Back to top</span>
         </a>
-        <div class="content-icon-container"><div class="theme-toggle-container theme-toggle-content">
+        <div class="content-icon-container">
+          <div class="theme-toggle-container theme-toggle-content">
             <button class="theme-toggle">
               <div class="visually-hidden">Toggle Light / Dark / Auto color theme</div>
               <svg class="theme-icon-when-auto"><use href="#svg-sun-half"></use></svg>
@@ -379,6 +380,7 @@ Possible values are BatchPre, Packager, Standard, Explicit, and Calculator.</p>
 </dd>
 </dl>
 </dd></dl>
+
 </section>
 <section id="monitormgr">
 <h3>MonitorMgr<a class="headerlink" href="#monitormgr" title="Permalink to this headline">#</a></h3>
@@ -395,23 +397,25 @@ object.)</p>
 </pre></div>
 </div>
 <p class="rubric">Methods</p>
-<div class="table-wrapper"><table class="autosummary longtable docutils align-default">
+<div class="table-wrapper autosummary longtable docutils container">
+<table class="autosummary longtable docutils align-default">
 <colgroup>
-<col style="width: 10%"/>
-<col style="width: 90%"/>
+<col style="width: 10%" />
+<col style="width: 90%" />
 </colgroup>
 <tbody>
-<tr class="row-odd"><td><p><a class="reference internal" href="#abaqus.Messaging.MonitorMgr.MonitorMgr.addMessageCallback" title="abaqus.Messaging.MonitorMgr.MonitorMgr.addMessageCallback"><code class="xref py py-obj docutils literal notranslate"><span class="pre">addMessageCallback</span></code></a>(jobName, messageType, ...)</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#abaqus.Messaging.MonitorMgr.MonitorMgr.addMessageCallback" title="abaqus.Messaging.MonitorMgr.MonitorMgr.addMessageCallback"><code class="xref py py-obj docutils literal notranslate"><span class="pre">addMessageCallback</span></code></a>(jobName, messageType, ...)</p></td>
 <td><p>This method specifies a callback function that will be called when the specified message is received from the analysis product.</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="#abaqus.Messaging.MonitorMgr.MonitorMgr.checkMonitorStatus" title="abaqus.Messaging.MonitorMgr.MonitorMgr.checkMonitorStatus"><code class="xref py py-obj docutils literal notranslate"><span class="pre">checkMonitorStatus</span></code></a>()</p></td>
 <td><p>This method raises a MonitorError exception if the monitoring status is not ENABLED.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#abaqus.Messaging.MonitorMgr.MonitorMgr.removeMessageCallback" title="abaqus.Messaging.MonitorMgr.MonitorMgr.removeMessageCallback"><code class="xref py py-obj docutils literal notranslate"><span class="pre">removeMessageCallback</span></code></a>(jobName, messageType, ...)</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#abaqus.Messaging.MonitorMgr.MonitorMgr.removeMessageCallback" title="abaqus.Messaging.MonitorMgr.MonitorMgr.removeMessageCallback"><code class="xref py py-obj docutils literal notranslate"><span class="pre">removeMessageCallback</span></code></a>(jobName, messageType, ...)</p></td>
 <td><p>This method removes a callback function.</p></td>
 </tr>
 </tbody>
-</table></div>
+</table>
+</div>
 <dl class="py method">
 <dt class="sig sig-object py" id="abaqus.Messaging.MonitorMgr.MonitorMgr.addMessageCallback">
 <span class="sig-name descname"><span class="pre">addMessageCallback</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">jobName</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">messageType</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.SymbolicConstantType</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">callback</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.SymbolicConstantType</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">userData</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">''</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/abaqus/Messaging/MonitorMgr.html#MonitorMgr.addMessageCallback"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#abaqus.Messaging.MonitorMgr.MonitorMgr.addMessageCallback" title="Permalink to this definition">#</a></dt>
@@ -439,6 +443,7 @@ passed as the <em>userData</em> argument to the addMessageCallback method.</p>
 </dd>
 </dl>
 </dd></dl>
+
 <dl class="py method">
 <dt class="sig sig-object py" id="abaqus.Messaging.MonitorMgr.MonitorMgr.checkMonitorStatus">
 <span class="sig-name descname"><span class="pre">checkMonitorStatus</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/abaqus/Messaging/MonitorMgr.html#MonitorMgr.checkMonitorStatus"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#abaqus.Messaging.MonitorMgr.MonitorMgr.checkMonitorStatus" title="Permalink to this definition">#</a></dt>
@@ -452,6 +457,7 @@ passed as the <em>userData</em> argument to the addMessageCallback method.</p>
 </dd>
 </dl>
 </dd></dl>
+
 <dl class="py method">
 <dt class="sig sig-object py" id="abaqus.Messaging.MonitorMgr.MonitorMgr.removeMessageCallback">
 <span class="sig-name descname"><span class="pre">removeMessageCallback</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">jobName</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">messageType</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.SymbolicConstantType</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">callback</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">userData</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/abaqus/Messaging/MonitorMgr.html#MonitorMgr.removeMessageCallback"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#abaqus.Messaging.MonitorMgr.MonitorMgr.removeMessageCallback" title="Permalink to this definition">#</a></dt>
@@ -501,7 +507,9 @@ the original call to addMessageCallback.</p>
 </dd>
 </dl>
 </dd></dl>
+
 </dd></dl>
+
 </section>
 </section>
 </section>

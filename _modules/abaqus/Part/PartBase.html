@@ -5,10 +5,10 @@
     <meta name="color-scheme" content="light dark"><link rel="index" title="Index" href="../../../genindex.html" /><link rel="search" title="Search" href="../../../search.html" />
         <link rel="canonical" href="https://pyabaqus.haiiliin.com/_modules/abaqus/Part/PartBase.html" />
 
-    <meta name="generator" content="sphinx-4.5.0, furo 2022.04.07"/>
-        <title>abaqus.Part.PartBase - pyabaqus 1.0.16 documentation</title>
+    <meta name="generator" content="sphinx-4.5.0, furo 2022.06.04.1"/>
+        <title>abaqus.Part.PartBase - pyabaqus 1.0.18 documentation</title>
       <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/styles/furo.css?digest=68f4518137b9aefe99b631505a2064c3c42c9852" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/styles/furo.css?digest=40978830699223671f4072448e654b5958f38b89" />
     <link rel="stylesheet" type="text/css" href="../../../_static/styles/furo-extensions.css?digest=30d1aed668e5c3a91c3e3bf6a60b675221979f0e" />
     
     
@@ -123,7 +123,7 @@
       </label>
     </div>
     <div class="header-center">
-      <a href="../../../index.html"><div class="brand">pyabaqus 1.0.16 documentation</div></a>
+      <a href="../../../index.html"><div class="brand">pyabaqus 1.0.18 documentation</div></a>
     </div>
     <div class="header-right">
       <div class="theme-toggle-container theme-toggle-header">
@@ -146,7 +146,7 @@
       <div class="sidebar-sticky"><a class="sidebar-brand" href="../../../index.html">
   
   
-  <span class="sidebar-brand-text">pyabaqus 1.0.16 documentation</span>
+  <span class="sidebar-brand-text">pyabaqus 1.0.18 documentation</span>
   
 </a><form class="sidebar-search-container" method="get" action="../../../search.html" role="search">
   <input class="sidebar-search" placeholder=Search name="q" aria-label="Search">
@@ -286,7 +286,8 @@
           </svg>
           <span>Back to top</span>
         </a>
-        <div class="content-icon-container"><div class="theme-toggle-container theme-toggle-content">
+        <div class="content-icon-container">
+          <div class="theme-toggle-container theme-toggle-content">
             <button class="theme-toggle">
               <div class="visually-hidden">Toggle Light / Dark / Auto color theme</div>
               <svg class="theme-icon-when-auto"><use href="#svg-sun-half"></use></svg>
@@ -343,7 +344,7 @@
 
 
 <span class="k">class</span> <span class="nc">PartBase</span><span class="p">(</span><span class="n">Feature</span><span class="p">):</span>
-    <span class="sd">"""The Part object defines the physical attributes of a structure. Parts are instanced into</span>
+    <span class="sd">&quot;&quot;&quot;The Part object defines the physical attributes of a structure. Parts are instanced into</span>
 <span class="sd">    the assembly and positioned before an analysis. </span>
 
 <span class="sd">    Attributes</span>
@@ -377,8 +378,8 @@
 <span class="sd">        A repository of :py:class:`~abaqus.Feature.Feature.Feature` objects specifying all Feature objects in the part.</span>
 <span class="sd">        The Feature</span>
 <span class="sd">        objects in the featuresById repository are the same as the Feature objects in the </span>
-<span class="sd">        features' repository. However, the key to the objects in the featuresById repository is</span>
-<span class="sd">        an integer specifying the *ID*, whereas the key to the objects in the features'</span>
+<span class="sd">        features&#39; repository. However, the key to the objects in the featuresById repository is</span>
+<span class="sd">        an integer specifying the *ID*, whereas the key to the objects in the features&#39;</span>
 <span class="sd">        repository is a string specifying the **name**.</span>
 <span class="sd">        datums: list[Datum]</span>
 <span class="sd">        A repository of :py:class:`~abaqus.Datum.Datum.Datum` objects specifying all the datums in the part.</span>
@@ -453,7 +454,7 @@
 <span class="sd">        import part</span>
 <span class="sd">        mdb.models[name].parts[name]</span>
 
-<span class="sd">    """</span>
+<span class="sd">    &quot;&quot;&quot;</span>
 
     <span class="c1"># A Boolean specifying the validity of the geometry of the part. The value is computed, </span>
     <span class="c1"># but it can be set to ON to perform feature and mesh operations on an invalid part. There </span>
@@ -490,7 +491,7 @@
 
     <span class="c1"># A repository of Feature objects specifying all Feature objects in the part. The Feature </span>
     <span class="c1"># objects in the featuresById repository are the same as the Feature objects in the </span>
-    <span class="c1"># features' repository. However, the key to the objects in the featuresById repository is</span>
+    <span class="c1"># features&#39; repository. However, the key to the objects in the featuresById repository is</span>
     <span class="c1"># an integer specifying the *ID*, whereas the key to the objects in the features </span>
     <span class="c1"># repository is a string specifying the *name*. </span>
     <span class="n">featuresById</span><span class="p">:</span> <span class="nb">dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Feature</span><span class="p">]</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Feature</span><span class="p">]()</span>
@@ -570,7 +571,7 @@
     <span class="nd">@typing</span><span class="o">.</span><span class="n">overload</span>
     <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">dimensionality</span><span class="p">:</span> <span class="n">SymbolicConstant</span><span class="p">,</span> <span class="nb">type</span><span class="p">:</span> <span class="n">SymbolicConstant</span><span class="p">,</span>
                  <span class="n">twist</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="n">OFF</span><span class="p">):</span>
-        <span class="sd">"""This method creates a Part object and places it in the parts repository.</span>
+        <span class="sd">&quot;&quot;&quot;This method creates a Part object and places it in the parts repository.</span>
 
 <span class="sd">        Notes</span>
 <span class="sd">        -----</span>
@@ -599,13 +600,13 @@
 <span class="sd">        -------</span>
 <span class="sd">        part: Part</span>
 <span class="sd">            A Part object</span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span>
 
     <span class="nd">@typing</span><span class="o">.</span><span class="n">overload</span>
     <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">objectToCopy</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">scale</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span> <span class="n">mirrorPlane</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="n">NONE</span><span class="p">,</span>
                  <span class="n">compressFeatureList</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="n">OFF</span><span class="p">,</span> <span class="n">separate</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="n">OFF</span><span class="p">):</span>
-        <span class="sd">"""This method copies a Part object and places the copy in the parts repository.</span>
+        <span class="sd">&quot;&quot;&quot;This method copies a Part object and places the copy in the parts repository.</span>
 
 <span class="sd">        Notes</span>
 <span class="sd">        -----</span>
@@ -643,14 +644,14 @@
 <span class="sd">        -------</span>
 <span class="sd">        part: Part</span>
 <span class="sd">            A Part object</span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span>
 
     <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
         <span class="k">pass</span>
 
 <div class="viewcode-block" id="PartBase.PartFromBooleanCut"><a class="viewcode-back" href="../../../reference/mdb/model/part.html#abaqus.Part.PartBase.PartBase.PartFromBooleanCut">[docs]</a>    <span class="k">def</span> <span class="nf">PartFromBooleanCut</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">instanceToBeCut</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">cuttingInstances</span><span class="p">:</span> <span class="nb">tuple</span><span class="p">[</span><span class="n">PartInstance</span><span class="p">]):</span>
-        <span class="sd">"""This method creates a Part in the parts repository after subtracting or cutting the</span>
+        <span class="sd">&quot;&quot;&quot;This method creates a Part in the parts repository after subtracting or cutting the</span>
 <span class="sd">        geometries of a group of part instances from that of a base part instance.</span>
 
 <span class="sd">        Notes</span>
@@ -675,13 +676,13 @@
 <span class="sd">        -------</span>
 <span class="sd">        part: Part</span>
 <span class="sd">            A Part object</span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span></div>
 
 <div class="viewcode-block" id="PartBase.PartFromBooleanMerge"><a class="viewcode-back" href="../../../reference/mdb/model/part.html#abaqus.Part.PartBase.PartBase.PartFromBooleanMerge">[docs]</a>    <span class="k">def</span> <span class="nf">PartFromBooleanMerge</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">instances</span><span class="p">:</span> <span class="nb">tuple</span><span class="p">[</span><span class="n">PartInstance</span><span class="p">],</span> <span class="n">keepIntersections</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="kc">False</span><span class="p">,</span>
                              <span class="n">mergeNodes</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="n">BOUNDARY_ONLY</span><span class="p">,</span> <span class="n">nodeMergingTolerance</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
                              <span class="n">removeDuplicateElements</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="n">ON</span><span class="p">,</span> <span class="n">domain</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="n">GEOMETRY</span><span class="p">):</span>
-        <span class="sd">"""This method creates a Part in the parts repository after merging two or more part</span>
+        <span class="sd">&quot;&quot;&quot;This method creates a Part in the parts repository after merging two or more part</span>
 <span class="sd">        instances. The part instances can be either Abaqus native parts or orphan mesh parts,</span>
 <span class="sd">        but they cannot be a combination of both.</span>
 
@@ -722,11 +723,11 @@
 <span class="sd">        -------</span>
 <span class="sd">        part: Part</span>
 <span class="sd">            A Part object</span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span></div>
 
-<div class="viewcode-block" id="PartBase.PartFromExtrude2DMesh"><a class="viewcode-back" href="../../../reference/mdb/model/part.html#abaqus.Part.PartBase.PartBase.PartFromExtrude2DMesh">[docs]</a>    <span class="k">def</span> <span class="nf">PartFromExtrude2DMesh</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">part</span><span class="p">:</span> <span class="s1">'PartBase'</span><span class="p">,</span> <span class="n">depth</span><span class="p">:</span> <span class="nb">float</span><span class="p">,</span> <span class="n">elementSize</span><span class="p">:</span> <span class="nb">float</span><span class="p">):</span>
-        <span class="sd">"""This method creates a Part object by extruding an existing two-dimensional orphan mesh</span>
+<div class="viewcode-block" id="PartBase.PartFromExtrude2DMesh"><a class="viewcode-back" href="../../../reference/mdb/model/part.html#abaqus.Part.PartBase.PartBase.PartFromExtrude2DMesh">[docs]</a>    <span class="k">def</span> <span class="nf">PartFromExtrude2DMesh</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">part</span><span class="p">:</span> <span class="s1">&#39;PartBase&#39;</span><span class="p">,</span> <span class="n">depth</span><span class="p">:</span> <span class="nb">float</span><span class="p">,</span> <span class="n">elementSize</span><span class="p">:</span> <span class="nb">float</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;This method creates a Part object by extruding an existing two-dimensional orphan mesh</span>
 <span class="sd">        Part object in the positive *Z*-direction and places it in the parts repository.</span>
 
 <span class="sd">        Notes</span>
@@ -758,7 +759,7 @@
 <span class="sd">              Cannot extrude a 3D part. </span>
 <span class="sd">            - If the specified part is a rigid body: </span>
 <span class="sd">              Cannot change dimension of a rigid body. </span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span></div>
 
 <div class="viewcode-block" id="PartBase.PartFromGeometryFile"><a class="viewcode-back" href="../../../reference/mdb/model/part.html#abaqus.Part.PartBase.PartBase.PartFromGeometryFile">[docs]</a>    <span class="k">def</span> <span class="nf">PartFromGeometryFile</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">geometryFile</span><span class="p">:</span> <span class="n">AcisFile</span><span class="p">,</span> <span class="n">dimensionality</span><span class="p">:</span> <span class="n">SymbolicConstant</span><span class="p">,</span>
@@ -766,7 +767,7 @@
                              <span class="n">booleanSolids</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="n">FALSE</span><span class="p">,</span> <span class="n">retainBoundary</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="n">FALSE</span><span class="p">,</span>
                              <span class="n">usePartNameFromFile</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="n">OFF</span><span class="p">,</span> <span class="n">stitchTolerance</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span> <span class="n">twist</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="n">OFF</span><span class="p">,</span>
                              <span class="n">scale</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span> <span class="n">convertToAnalytical</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="n">convertToPrecise</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">0</span><span class="p">):</span>
-        <span class="sd">"""This method creates a Part object and places it in the parts repository.</span>
+        <span class="sd">&quot;&quot;&quot;This method creates a Part object and places it in the parts repository.</span>
 
 <span class="sd">        Notes</span>
 <span class="sd">        -----</span>
@@ -839,12 +840,12 @@
 <span class="sd">              PartError: dimensionality does not match the contents of the file </span>
 <span class="sd">            - If the type does not correspond to what is found in the ACIS file: </span>
 <span class="sd">              PartError: type does not match the contents of the file </span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span></div>
 
 <div class="viewcode-block" id="PartBase.PartFromInstanceMesh"><a class="viewcode-back" href="../../../reference/mdb/model/part.html#abaqus.Part.PartBase.PartBase.PartFromInstanceMesh">[docs]</a>    <span class="k">def</span> <span class="nf">PartFromInstanceMesh</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">partInstances</span><span class="p">:</span> <span class="nb">tuple</span><span class="p">[</span><span class="n">PartInstance</span><span class="p">]</span> <span class="o">=</span> <span class="p">(),</span> <span class="n">copyPartSets</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="kc">False</span><span class="p">,</span>
                              <span class="n">copyAssemblySets</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="kc">False</span><span class="p">):</span>
-        <span class="sd">"""This method creates a Part object containing the mesh found in the supplied PartInstance</span>
+        <span class="sd">&quot;&quot;&quot;This method creates a Part object containing the mesh found in the supplied PartInstance</span>
 <span class="sd">        objects and places the new Part object in the parts repository.</span>
 
 <span class="sd">        Notes</span>
@@ -881,11 +882,11 @@
 <span class="sd">              The current assembly does not contain a mesh for a mesh part. </span>
 <span class="sd">            - If the specified part instances do not contain a mesh: </span>
 <span class="sd">              The selected part instances do not have a mesh for a mesh part. </span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span></div>
 
 <div class="viewcode-block" id="PartBase.PartFromMesh"><a class="viewcode-back" href="../../../reference/mdb/model/part.html#abaqus.Part.PartBase.PartBase.PartFromMesh">[docs]</a>    <span class="k">def</span> <span class="nf">PartFromMesh</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">copySets</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="kc">False</span><span class="p">):</span>
-        <span class="sd">"""This method creates a Part object containing the mesh found in the part and places the</span>
+        <span class="sd">&quot;&quot;&quot;This method creates a Part object containing the mesh found in the part and places the</span>
 <span class="sd">        new Part object in the parts repository.</span>
 
 <span class="sd">        Notes</span>
@@ -910,11 +911,11 @@
 <span class="sd">            A Part object</span>
 <span class="sd">            - If the part does not contain a mesh: </span>
 <span class="sd">              The current part does not contain a mesh for a mesh part. </span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span></div>
 
-<div class="viewcode-block" id="PartBase.PartFromMeshMirror"><a class="viewcode-back" href="../../../reference/mdb/model/part.html#abaqus.Part.PartBase.PartBase.PartFromMeshMirror">[docs]</a>    <span class="k">def</span> <span class="nf">PartFromMeshMirror</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">part</span><span class="p">:</span> <span class="s1">'PartBase'</span><span class="p">,</span> <span class="n">point1</span><span class="p">:</span> <span class="nb">tuple</span><span class="p">,</span> <span class="n">point2</span><span class="p">:</span> <span class="nb">tuple</span><span class="p">):</span>
-        <span class="sd">"""This method creates a Part object by mirroring an existing orphan mesh Part object about</span>
+<div class="viewcode-block" id="PartBase.PartFromMeshMirror"><a class="viewcode-back" href="../../../reference/mdb/model/part.html#abaqus.Part.PartBase.PartBase.PartFromMeshMirror">[docs]</a>    <span class="k">def</span> <span class="nf">PartFromMeshMirror</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">part</span><span class="p">:</span> <span class="s1">&#39;PartBase&#39;</span><span class="p">,</span> <span class="n">point1</span><span class="p">:</span> <span class="nb">tuple</span><span class="p">,</span> <span class="n">point2</span><span class="p">:</span> <span class="nb">tuple</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;This method creates a Part object by mirroring an existing orphan mesh Part object about</span>
 <span class="sd">        a specified plane and places it in the parts repository. The result is a union of the</span>
 <span class="sd">        original and the mirrored copy. Contrast the PartFromMeshMirror method with the</span>
 <span class="sd">        *mirrorPlane* argument of the Part copy constructor. The *mirrorPlane* argument creates</span>
@@ -954,13 +955,13 @@
 <span class="sd">            - If the specified part is two-dimensional and the plane is not parallel to the </span>
 <span class="sd">            *Z*-axis: </span>
 <span class="sd">              Mirror plane must be parallel to Z axis for 2D parts </span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span></div>
 
 <div class="viewcode-block" id="PartBase.PartFromNodesAndElements"><a class="viewcode-back" href="../../../reference/mdb/model/part.html#abaqus.Part.PartBase.PartBase.PartFromNodesAndElements">[docs]</a>    <span class="k">def</span> <span class="nf">PartFromNodesAndElements</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">dimensionality</span><span class="p">:</span> <span class="n">SymbolicConstant</span><span class="p">,</span> <span class="nb">type</span><span class="p">:</span> <span class="n">SymbolicConstant</span><span class="p">,</span>
                                  <span class="n">nodes</span><span class="p">:</span> <span class="nb">tuple</span><span class="p">,</span>
                                  <span class="n">elements</span><span class="p">:</span> <span class="nb">tuple</span><span class="p">,</span> <span class="n">twist</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="n">OFF</span><span class="p">):</span>
-        <span class="sd">"""This method creates a Part object from nodes and elements and places it in the parts</span>
+        <span class="sd">&quot;&quot;&quot;This method creates a Part object from nodes and elements and places it in the parts</span>
 <span class="sd">        repository.</span>
 
 <span class="sd">        Notes</span>
@@ -999,13 +1000,13 @@
 <span class="sd">        -------</span>
 <span class="sd">        part: Part</span>
 <span class="sd">            A Part object</span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span></div>
 
-<div class="viewcode-block" id="PartBase.PartFromOdb"><a class="viewcode-back" href="../../../reference/mdb/model/part.html#abaqus.Part.PartBase.PartBase.PartFromOdb">[docs]</a>    <span class="k">def</span> <span class="nf">PartFromOdb</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">odb</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">fileName</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">''</span><span class="p">,</span> <span class="n">instance</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">''</span><span class="p">,</span> <span class="n">elementSet</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">''</span><span class="p">,</span>
+<div class="viewcode-block" id="PartBase.PartFromOdb"><a class="viewcode-back" href="../../../reference/mdb/model/part.html#abaqus.Part.PartBase.PartBase.PartFromOdb">[docs]</a>    <span class="k">def</span> <span class="nf">PartFromOdb</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">odb</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">fileName</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">instance</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">elementSet</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span><span class="p">,</span>
                     <span class="n">shape</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="n">UNDEFORMED</span><span class="p">,</span> <span class="n">step</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">frame</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
                     <span class="n">twist</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="n">OFF</span><span class="p">):</span>
-        <span class="sd">"""This method creates an orphan mesh Part object by reading an output database. The new</span>
+        <span class="sd">&quot;&quot;&quot;This method creates an orphan mesh Part object by reading an output database. The new</span>
 <span class="sd">        part is placed in the parts repository.</span>
 
 <span class="sd">        Notes</span>
@@ -1068,11 +1069,11 @@
 <span class="sd">              OdiError: Invalid step index: i. Available step indices: 0 - j. </span>
 <span class="sd">            - If the frame number is invalid: </span>
 <span class="sd">              OdiError: Invalid frame index: i. Available frame indices: 0 - j. </span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span></div>
 
-<div class="viewcode-block" id="PartBase.PartFromSection3DMeshByPlane"><a class="viewcode-back" href="../../../reference/mdb/model/part.html#abaqus.Part.PartBase.PartBase.PartFromSection3DMeshByPlane">[docs]</a>    <span class="k">def</span> <span class="nf">PartFromSection3DMeshByPlane</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">part</span><span class="p">:</span> <span class="s1">'PartBase'</span><span class="p">,</span> <span class="n">point1</span><span class="p">:</span> <span class="nb">float</span><span class="p">,</span> <span class="n">point2</span><span class="p">:</span> <span class="nb">float</span><span class="p">,</span> <span class="n">point3</span><span class="p">:</span> <span class="nb">tuple</span><span class="p">):</span>
-        <span class="sd">"""This method creates a Part object by cutting an existing three-dimensional orphan mesh</span>
+<div class="viewcode-block" id="PartBase.PartFromSection3DMeshByPlane"><a class="viewcode-back" href="../../../reference/mdb/model/part.html#abaqus.Part.PartBase.PartBase.PartFromSection3DMeshByPlane">[docs]</a>    <span class="k">def</span> <span class="nf">PartFromSection3DMeshByPlane</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">part</span><span class="p">:</span> <span class="s1">&#39;PartBase&#39;</span><span class="p">,</span> <span class="n">point1</span><span class="p">:</span> <span class="nb">float</span><span class="p">,</span> <span class="n">point2</span><span class="p">:</span> <span class="nb">float</span><span class="p">,</span> <span class="n">point3</span><span class="p">:</span> <span class="nb">tuple</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;This method creates a Part object by cutting an existing three-dimensional orphan mesh</span>
 <span class="sd">        Part object by a plane and places it in the parts repository. This method is valid only</span>
 <span class="sd">        for orphan mesh parts composed of 8-node brick elements.</span>
 
@@ -1116,11 +1117,11 @@
 <span class="sd">              Local axis point projects to origin. </span>
 <span class="sd">            - If no elements are cut by the specified plane: </span>
 <span class="sd">              Cannot reduce part dimension. </span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span></div>
 
 <div class="viewcode-block" id="PartBase.PartFromSubstructure"><a class="viewcode-back" href="../../../reference/mdb/model/part.html#abaqus.Part.PartBase.PartBase.PartFromSubstructure">[docs]</a>    <span class="k">def</span> <span class="nf">PartFromSubstructure</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">substructureFile</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">odbFile</span><span class="p">:</span> <span class="nb">str</span><span class="p">):</span>
-        <span class="sd">"""This method creates a substructure Part object by reading a substructure sim file and</span>
+        <span class="sd">&quot;&quot;&quot;This method creates a substructure Part object by reading a substructure sim file and</span>
 <span class="sd">        places it in the parts repository.</span>
 
 <span class="sd">        Notes</span>
@@ -1152,12 +1153,12 @@
 <span class="sd">              The output database is missing nodes and elements.Nested substructures are not </span>
 <span class="sd">            supported.The substructure sim file was generated using a version that is different from </span>
 <span class="sd">            the current version. </span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span></div>
 
-<div class="viewcode-block" id="PartBase.Part2DGeomFrom2DMesh"><a class="viewcode-back" href="../../../reference/mdb/model/part.html#abaqus.Part.PartBase.PartBase.Part2DGeomFrom2DMesh">[docs]</a>    <span class="k">def</span> <span class="nf">Part2DGeomFrom2DMesh</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">part</span><span class="p">:</span> <span class="s1">'PartBase'</span><span class="p">,</span> <span class="n">featureAngle</span><span class="p">:</span> <span class="nb">float</span><span class="p">,</span> <span class="n">splineCurvatureLimit</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mi">90</span><span class="p">,</span>
+<div class="viewcode-block" id="PartBase.Part2DGeomFrom2DMesh"><a class="viewcode-back" href="../../../reference/mdb/model/part.html#abaqus.Part.PartBase.PartBase.Part2DGeomFrom2DMesh">[docs]</a>    <span class="k">def</span> <span class="nf">Part2DGeomFrom2DMesh</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">part</span><span class="p">:</span> <span class="s1">&#39;PartBase&#39;</span><span class="p">,</span> <span class="n">featureAngle</span><span class="p">:</span> <span class="nb">float</span><span class="p">,</span> <span class="n">splineCurvatureLimit</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mi">90</span><span class="p">,</span>
                              <span class="n">twist</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="n">OFF</span><span class="p">):</span>
-        <span class="sd">"""This method creates a geometric Part object from the outline of an existing</span>
+        <span class="sd">&quot;&quot;&quot;This method creates a geometric Part object from the outline of an existing</span>
 <span class="sd">        two-dimensional orphan mesh Part object and places it in the parts repository. If the</span>
 <span class="sd">        Part2DGeomFrom2DMesh method cannot create a valid two-dimensional shell section from the</span>
 <span class="sd">        two-dimensional mesh, the method fails and creates an empty geometry part with a failed</span>
@@ -1200,20 +1201,20 @@
 <span class="sd">              Cannot create a geometry from a 3D part. </span>
 <span class="sd">            If the specified part is a rigid body: </span>
 <span class="sd">              Cannot create a geometry from a rigid body. </span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span></div>
 
     <span class="k">def</span> <span class="nf">setValues</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
-        <span class="sd">"""This method modifies the Part object.</span>
+        <span class="sd">&quot;&quot;&quot;This method modifies the Part object.</span>
 
 <span class="sd">        Raises</span>
 <span class="sd">        ------</span>
 <span class="sd">        RangeError</span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span>
 
     <span class="k">def</span> <span class="nf">addGeomToSketch</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">sketch</span><span class="p">:</span> <span class="n">ConstrainedSketch</span><span class="p">):</span>
-        <span class="sd">"""This method converts a part into a sketch by projecting all of the edges of the part</span>
+        <span class="sd">&quot;&quot;&quot;This method converts a part into a sketch by projecting all of the edges of the part</span>
 <span class="sd">        onto the X-Y plane of the sketch. You can use addGeomToSketch with a part of any</span>
 <span class="sd">        modeling space.</span>
 <span class="sd">        </span>
@@ -1221,12 +1222,12 @@
 <span class="sd">        ----------</span>
 <span class="sd">        sketch</span>
 <span class="sd">            A ConstrainedSketch object. </span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span>
 
     <span class="k">def</span> <span class="nf">assignThickness</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">faces</span><span class="p">:</span> <span class="nb">tuple</span><span class="p">[</span><span class="n">Face</span><span class="p">],</span> <span class="n">thickness</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">topFaces</span><span class="p">:</span> <span class="nb">tuple</span><span class="p">[</span><span class="n">Face</span><span class="p">]</span> <span class="o">=</span> <span class="p">(),</span>
                         <span class="n">bottomFaces</span><span class="p">:</span> <span class="nb">tuple</span><span class="p">[</span><span class="n">Face</span><span class="p">]</span> <span class="o">=</span> <span class="p">()):</span>
-        <span class="sd">"""This method assigns thickness data to shell faces. The thickness can be used while</span>
+        <span class="sd">&quot;&quot;&quot;This method assigns thickness data to shell faces. The thickness can be used while</span>
 <span class="sd">        assigning shell and membrane sections to faces.</span>
 <span class="sd">        </span>
 <span class="sd">        Parameters</span>
@@ -1250,17 +1251,17 @@
 <span class="sd">            thickness is twice the distance to the *bottomFaces*. This argument will be ignored if </span>
 <span class="sd">            *thickness* is specified. Either *thickness*, *topFaces*, or *bottomFaces* must be </span>
 <span class="sd">            specified. </span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span>
 
     <span class="k">def</span> <span class="nf">backup</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="sd">"""This method makes a backup copy of the features in the part. Use the restore method to</span>
-<span class="sd">        retrieve the part's features from the backup.</span>
-<span class="sd">        """</span>
+        <span class="sd">&quot;&quot;&quot;This method makes a backup copy of the features in the part. Use the restore method to</span>
+<span class="sd">        retrieve the part&#39;s features from the backup.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span>
 
     <span class="k">def</span> <span class="nf">checkGeometry</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">detailed</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="n">OFF</span><span class="p">,</span> <span class="n">reportFacetErrors</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="n">OFF</span><span class="p">,</span> <span class="n">level</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="kc">None</span><span class="p">):</span>
-        <span class="sd">"""This method checks the validity of the geometry of the part and prints a count of all</span>
+        <span class="sd">&quot;&quot;&quot;This method checks the validity of the geometry of the part and prints a count of all</span>
 <span class="sd">        topological entities on the part (faces, edges, vertices, etc.).</span>
 <span class="sd">        </span>
 <span class="sd">        Parameters</span>
@@ -1276,32 +1277,32 @@
 <span class="sd">            with higher values reporting less and less important errors. The default value is 20, </span>
 <span class="sd">            which reports all critical errors. When the default value is used, the stored validity </span>
 <span class="sd">            status is updated to agree with the result of this check. </span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span>
 
     <span class="k">def</span> <span class="nf">clearGeometryCache</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="sd">"""This method clears the geometry cache. Clearing the geometry cache reduces the amount of</span>
+        <span class="sd">&quot;&quot;&quot;This method clears the geometry cache. Clearing the geometry cache reduces the amount of</span>
 <span class="sd">        memory being used to cache part features.</span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span>
 
     <span class="k">def</span> <span class="nf">deleteAllFeatures</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="sd">"""This method deletes all the features in the part.</span>
-<span class="sd">        """</span>
+        <span class="sd">&quot;&quot;&quot;This method deletes all the features in the part.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span>
 
     <span class="k">def</span> <span class="nf">deleteFeatures</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">featureNames</span><span class="p">:</span> <span class="nb">tuple</span><span class="p">):</span>
-        <span class="sd">"""This method deletes the given features.</span>
+        <span class="sd">&quot;&quot;&quot;This method deletes the given features.</span>
 <span class="sd">        </span>
 <span class="sd">        Parameters</span>
 <span class="sd">        ----------</span>
 <span class="sd">        featureNames</span>
 <span class="sd">            A sequence of Strings specifying the feature names that will be deleted from the part. </span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span>
 
-    <span class="k">def</span> <span class="nf">getAngle</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">plane1</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">plane2</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">line1</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">line2</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">commonVertex</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">''</span><span class="p">):</span>
-        <span class="sd">"""This method returns the angle between the specified entities.</span>
+    <span class="k">def</span> <span class="nf">getAngle</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">plane1</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">plane2</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">line1</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">line2</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">commonVertex</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;This method returns the angle between the specified entities.</span>
 <span class="sd">        </span>
 <span class="sd">        Parameters</span>
 <span class="sd">        ----------</span>
@@ -1330,11 +1331,11 @@
 <span class="sd">        angle: float</span>
 <span class="sd">            A Float specifying the angle between the specified entities. If you provide a plane as </span>
 <span class="sd">            an argument, Abaqus/CAE computes the angle using the normal to the plane.</span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span>
 
     <span class="k">def</span> <span class="nf">getArea</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">faces</span><span class="p">:</span> <span class="nb">tuple</span><span class="p">[</span><span class="n">Face</span><span class="p">],</span> <span class="n">relativeAccuracy</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mi">0</span><span class="p">):</span>
-        <span class="sd">"""This method returns the total surface area of a given face or group of faces.</span>
+        <span class="sd">&quot;&quot;&quot;This method returns the total surface area of a given face or group of faces.</span>
 <span class="sd">        </span>
 <span class="sd">        Parameters</span>
 <span class="sd">        ----------</span>
@@ -1348,11 +1349,11 @@
 <span class="sd">        -------</span>
 <span class="sd">        area: float</span>
 <span class="sd">            A Float specifying the sum of the calculated areas of the given faces.</span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span>
 
     <span class="k">def</span> <span class="nf">getAssociatedCADPaths</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="sd">"""This method returns the paths to the associated CAD part and root file. These are only</span>
+        <span class="sd">&quot;&quot;&quot;This method returns the paths to the associated CAD part and root file. These are only</span>
 <span class="sd">        available if the part was imported from one of the supported CAD softwares using the</span>
 <span class="sd">        Associative Import capability. The root file can be the assembly file or the part file,</span>
 <span class="sd">        depending on what which one was imported.</span>
@@ -1361,11 +1362,11 @@
 <span class="sd">        -------`</span>
 <span class="sd">        paths: tuple</span>
 <span class="sd">            A sequence containing the path to the associated CAD part and assembly file</span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span>
 
     <span class="k">def</span> <span class="nf">getCADParameters</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="sd">"""This method returns the names and values of the CAD parameters associated with the part.</span>
+        <span class="sd">&quot;&quot;&quot;This method returns the names and values of the CAD parameters associated with the part.</span>
 <span class="sd">        These are only available if the part was imported from one of the supported CAD</span>
 <span class="sd">        softwares using the Associative Import capability, and if the parameter names defined in</span>
 <span class="sd">        that CAD software are prefixed with the string ABQ.</span>
@@ -1375,11 +1376,11 @@
 <span class="sd">        paras: dict</span>
 <span class="sd">            A dictionary object representing a map of the name of the parameter and its associated </span>
 <span class="sd">            value.</span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span>
 
     <span class="k">def</span> <span class="nf">getCentroid</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">faces</span><span class="p">:</span> <span class="nb">tuple</span><span class="p">[</span><span class="n">Face</span><span class="p">],</span> <span class="n">cells</span><span class="p">:</span> <span class="nb">tuple</span><span class="p">[</span><span class="n">Face</span><span class="p">],</span> <span class="n">relativeAccuracy</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mi">0</span><span class="p">):</span>
-        <span class="sd">"""Depending on the arguments provided, this method returns the following:</span>
+        <span class="sd">&quot;&quot;&quot;Depending on the arguments provided, this method returns the following:</span>
 <span class="sd">            - The location of the centroid of a given face or group of faces.</span>
 <span class="sd">            - The location of the centroid of a given cell or group of cells.</span>
 <span class="sd">        faces</span>
@@ -1396,11 +1397,11 @@
 <span class="sd">        -------</span>
 <span class="sd">        centroid: tuple[float]</span>
 <span class="sd">            A sequence of Floats specifying the *X*-, *Y*-, and *Z*-coordinates of the centroid.</span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span>
 
     <span class="k">def</span> <span class="nf">getCoordinates</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">entity</span><span class="p">:</span> <span class="nb">str</span><span class="p">):</span>
-        <span class="sd">"""This method returns the coordinates of specified point.</span>
+        <span class="sd">&quot;&quot;&quot;This method returns the coordinates of specified point.</span>
 <span class="sd">        </span>
 <span class="sd">        Parameters</span>
 <span class="sd">        ----------</span>
@@ -1410,11 +1411,11 @@
 <span class="sd">        Returns</span>
 <span class="sd">        -------</span>
 <span class="sd">            A tuple of 3 Floats representing the coordinates of the specified point.</span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span>
 
     <span class="k">def</span> <span class="nf">getCurvature</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">edges</span><span class="p">:</span> <span class="nb">tuple</span><span class="p">[</span><span class="n">Edge</span><span class="p">],</span> <span class="n">samplePoints</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">100</span><span class="p">):</span>
-        <span class="sd">"""This method returns the maximum curvature of a given edge or group of edges. For an arc,</span>
+        <span class="sd">&quot;&quot;&quot;This method returns the maximum curvature of a given edge or group of edges. For an arc,</span>
 <span class="sd">        the curvature is constant over the entire edge, and equal to the inverse of the radius.</span>
 <span class="sd">        For a straight line, the curvature is constant and equal to 0. For a spline edge, the</span>
 <span class="sd">        curvature varies over a range, and this methods computes the maximum.</span>
@@ -1432,11 +1433,11 @@
 <span class="sd">        -------</span>
 <span class="sd">        curvature: float</span>
 <span class="sd">            A Float specifying the maximum curvature.</span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span>
 
     <span class="k">def</span> <span class="nf">getDistance</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">entity1</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">entity2</span><span class="p">:</span> <span class="nb">str</span><span class="p">):</span>
-        <span class="sd">"""Depending on the arguments provided, this method returns one of the following:</span>
+        <span class="sd">&quot;&quot;&quot;Depending on the arguments provided, this method returns one of the following:</span>
 <span class="sd">            - The distance between two points.</span>
 <span class="sd">            - The minimum distance between a point and an edge.</span>
 <span class="sd">            - The minimum distance between two edges.</span>
@@ -1454,11 +1455,11 @@
 <span class="sd">        -------</span>
 <span class="sd">        distance: float</span>
 <span class="sd">            A Float specifying the distance between *entity1* and *entity2*.</span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span>
 
     <span class="k">def</span> <span class="nf">getLength</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">edges</span><span class="p">:</span> <span class="nb">tuple</span><span class="p">[</span><span class="n">Edge</span><span class="p">]):</span>
-        <span class="sd">"""This method returns the length of a given edge or group of edges.</span>
+        <span class="sd">&quot;&quot;&quot;This method returns the length of a given edge or group of edges.</span>
 <span class="sd">        </span>
 <span class="sd">        Parameters</span>
 <span class="sd">        ----------</span>
@@ -1469,11 +1470,11 @@
 <span class="sd">        -------</span>
 <span class="sd">        length: float</span>
 <span class="sd">            A Float specifying the total length</span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span>
 
     <span class="k">def</span> <span class="nf">getPerimeter</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">faces</span><span class="p">:</span> <span class="nb">tuple</span><span class="p">[</span><span class="n">Face</span><span class="p">]):</span>
-        <span class="sd">"""This method returns the total perimeter of a given face or group of faces. All faces</span>
+        <span class="sd">&quot;&quot;&quot;This method returns the total perimeter of a given face or group of faces. All faces</span>
 <span class="sd">        need to be on the same part. If the specified faces have shared edges, these edges are</span>
 <span class="sd">        excluded from the computation, thus providing the length of the outer perimeter of the</span>
 <span class="sd">        specified faces.</span>
@@ -1487,11 +1488,11 @@
 <span class="sd">        -------</span>
 <span class="sd">        perimeter: float</span>
 <span class="sd">            A Float specifying the perimeter</span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span>
 
     <span class="k">def</span> <span class="nf">getVolume</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">cells</span><span class="p">:</span> <span class="nb">tuple</span><span class="p">[</span><span class="n">Cell</span><span class="p">],</span> <span class="n">relativeAccuracy</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mi">0</span><span class="p">):</span>
-        <span class="sd">"""This method returns the volume area of a given cell or group of cells.</span>
+        <span class="sd">&quot;&quot;&quot;This method returns the volume area of a given cell or group of cells.</span>
 <span class="sd">        </span>
 <span class="sd">        Parameters</span>
 <span class="sd">        ----------</span>
@@ -1505,13 +1506,13 @@
 <span class="sd">        -------</span>
 <span class="sd">        volume: float</span>
 <span class="sd">            A Float specifying the sum of the areas of the given faces</span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span>
 
-    <span class="k">def</span> <span class="nf">getMassProperties</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">regions</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">''</span><span class="p">,</span> <span class="n">relativeAccuracy</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="n">LOW</span><span class="p">,</span> <span class="n">useMesh</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="kc">False</span><span class="p">,</span>
-                          <span class="n">specifyDensity</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="kc">False</span><span class="p">,</span> <span class="n">density</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">''</span><span class="p">,</span> <span class="n">specifyThickness</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="kc">False</span><span class="p">,</span>
-                          <span class="n">thickness</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">''</span><span class="p">,</span> <span class="n">miAboutCenterOfMass</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="kc">True</span><span class="p">,</span> <span class="n">miAboutPoint</span><span class="p">:</span> <span class="nb">tuple</span> <span class="o">=</span> <span class="p">()):</span>
-        <span class="sd">"""This method returns the mass properties of a part or region. Only beams, trusses,</span>
+    <span class="k">def</span> <span class="nf">getMassProperties</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">regions</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">relativeAccuracy</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="n">LOW</span><span class="p">,</span> <span class="n">useMesh</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="kc">False</span><span class="p">,</span>
+                          <span class="n">specifyDensity</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="kc">False</span><span class="p">,</span> <span class="n">density</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">specifyThickness</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="kc">False</span><span class="p">,</span>
+                          <span class="n">thickness</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">miAboutCenterOfMass</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="kc">True</span><span class="p">,</span> <span class="n">miAboutPoint</span><span class="p">:</span> <span class="nb">tuple</span> <span class="o">=</span> <span class="p">()):</span>
+        <span class="sd">&quot;&quot;&quot;This method returns the mass properties of a part or region. Only beams, trusses,</span>
 <span class="sd">        shells, solids, point, nonstructural mass, and rotary inertia elements are supported.</span>
 <span class="sd">        </span>
 <span class="sd">        Parameters</span>
@@ -1614,11 +1615,11 @@
 <span class="sd">            UNSUPPORTED_NON_STRUCTURAL_MASS_PROPORTIONAL: Non-structural mass with Mass Proportional </span>
 <span class="sd">            distribution is not supported. Results are computed using Volume Proportional </span>
 <span class="sd">            distribution.</span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span>
 
     <span class="k">def</span> <span class="nf">getFeatureFaces</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">:</span> <span class="nb">str</span><span class="p">):</span>
-        <span class="sd">"""This method returns a sequence of Face objects that are created by the given feature.</span>
+        <span class="sd">&quot;&quot;&quot;This method returns a sequence of Face objects that are created by the given feature.</span>
 <span class="sd">        </span>
 <span class="sd">        Parameters</span>
 <span class="sd">        ----------</span>
@@ -1634,11 +1635,11 @@
 <span class="sd">        ------</span>
 <span class="sd">            - An exception occurs if a feature with the given name does not exist. </span>
 <span class="sd">              Error : Incorrect feature name. </span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span>
 
     <span class="k">def</span> <span class="nf">getFeatureEdges</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">:</span> <span class="nb">str</span><span class="p">):</span>
-        <span class="sd">"""This method returns a sequence of Edge objects that are created by the given feature.</span>
+        <span class="sd">&quot;&quot;&quot;This method returns a sequence of Edge objects that are created by the given feature.</span>
 <span class="sd">        </span>
 <span class="sd">        Parameters</span>
 <span class="sd">        ----------</span>
@@ -1654,11 +1655,11 @@
 <span class="sd">        ------</span>
 <span class="sd">            - An exception occurs if a feature with the given name does not exist. </span>
 <span class="sd">              Error : Incorrect feature name. </span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span>
 
     <span class="k">def</span> <span class="nf">getFeatureCells</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">:</span> <span class="nb">str</span><span class="p">):</span>
-        <span class="sd">"""This method returns a sequence of Cell objects that are created by the given feature.</span>
+        <span class="sd">&quot;&quot;&quot;This method returns a sequence of Cell objects that are created by the given feature.</span>
 <span class="sd">        </span>
 <span class="sd">        Parameters</span>
 <span class="sd">        ----------</span>
@@ -1674,11 +1675,11 @@
 <span class="sd">        ------</span>
 <span class="sd">            - An exception occurs if a feature with the given name does not exist. </span>
 <span class="sd">              Error : Incorrect feature name. </span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span>
 
     <span class="k">def</span> <span class="nf">getFeatureVertices</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">:</span> <span class="nb">str</span><span class="p">):</span>
-        <span class="sd">"""This method returns a sequence of ConstrainedSketchVertex objects that are created by the given feature.</span>
+        <span class="sd">&quot;&quot;&quot;This method returns a sequence of ConstrainedSketchVertex objects that are created by the given feature.</span>
 <span class="sd">        </span>
 <span class="sd">        Parameters</span>
 <span class="sd">        ----------</span>
@@ -1694,11 +1695,11 @@
 <span class="sd">        ------</span>
 <span class="sd">            - An exception occurs if a feature with the given name does not exist. </span>
 <span class="sd">              Error : Incorrect feature name. </span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span>
 
     <span class="k">def</span> <span class="nf">isAlignedWithSketch</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="sd">"""This method checks if the normal of an analytical rigid surface part is aligned with</span>
+        <span class="sd">&quot;&quot;&quot;This method checks if the normal of an analytical rigid surface part is aligned with</span>
 <span class="sd">        that of its sketch.</span>
 
 <span class="sd">        Returns</span>
@@ -1710,17 +1711,17 @@
 <span class="sd">        ------</span>
 <span class="sd">            - If the part is not an analytical rigid part: </span>
 <span class="sd">              AbaqusException: Can only be used with analytical rigid parts. </span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span>
 
     <span class="k">def</span> <span class="nf">printAssignedSections</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="sd">"""This method prints information on each section that has been assigned to a region of the</span>
+        <span class="sd">&quot;&quot;&quot;This method prints information on each section that has been assigned to a region of the</span>
 <span class="sd">        part.</span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span>
 
     <span class="k">def</span> <span class="nf">projectEdgesOntoSketch</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">sketch</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">edges</span><span class="p">:</span> <span class="nb">tuple</span><span class="p">,</span> <span class="n">constrainToBackground</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="kc">True</span><span class="p">):</span>
-        <span class="sd">"""This method projects the selected edges of a part onto the specified ConstrainedSketch</span>
+        <span class="sd">&quot;&quot;&quot;This method projects the selected edges of a part onto the specified ConstrainedSketch</span>
 <span class="sd">        object. The edges appear as sketch geometry after projection. If the plane of projection</span>
 <span class="sd">        is not parallel to the specified edge, the resultant sketch geometry may be of a</span>
 <span class="sd">        different type. For example, a circular edge can be projected as an ellipse or a line</span>
@@ -1737,13 +1738,13 @@
 <span class="sd">        constrainToBackground</span>
 <span class="sd">            A Boolean that determines whether the projected edges need to constrained to the </span>
 <span class="sd">            background geometry. The default is True. </span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span>
 
     <span class="k">def</span> <span class="nf">projectReferencesOntoSketch</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">sketch</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="nb">filter</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="n">ALL_EDGES</span><span class="p">,</span>
                                     <span class="n">upToFeature</span><span class="p">:</span> <span class="n">Feature</span> <span class="o">=</span> <span class="n">Feature</span><span class="p">(),</span>
                                     <span class="n">edges</span><span class="p">:</span> <span class="nb">tuple</span> <span class="o">=</span> <span class="p">(),</span> <span class="n">vertices</span><span class="p">:</span> <span class="nb">tuple</span> <span class="o">=</span> <span class="p">()):</span>
-        <span class="sd">"""This method projects the vertices of specified edges, and datum points from the part</span>
+        <span class="sd">&quot;&quot;&quot;This method projects the vertices of specified edges, and datum points from the part</span>
 <span class="sd">        onto the specified ConstrainedSketch object. The vertices and datum points appear on the</span>
 <span class="sd">        sketch as reference geometry.</span>
 <span class="sd">        </span>
@@ -1767,11 +1768,11 @@
 <span class="sd">        vertices</span>
 <span class="sd">            A sequence of candidate vertices to be projected onto the sketch. By default, all </span>
 <span class="sd">            vertices are candidates for projection. </span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span>
 
     <span class="k">def</span> <span class="nf">queryAttributes</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">printResults</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="n">OFF</span><span class="p">):</span>
-        <span class="sd">"""This method prints the following information about a part:</span>
+        <span class="sd">&quot;&quot;&quot;This method prints the following information about a part:</span>
 <span class="sd">            - the name, modeling space, and analysis type; and</span>
 <span class="sd">            - whether twist is included (only available when the modeling space is axisymmetric and</span>
 <span class="sd">        the analysis type is deformable); and</span>
@@ -1789,23 +1790,23 @@
 <span class="sd">            A Dictionary object with string keys and integer values which returns the above </span>
 <span class="sd">            information with the keys being numVertices, numEdges, numFaces, numCells, </span>
 <span class="sd">            numWiredEdges, numShellFaces and numSolidFaces.</span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span>
 
     <span class="k">def</span> <span class="nf">queryCachedStates</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="sd">"""This method displays the position of geometric states relative to the sequence of</span>
+        <span class="sd">&quot;&quot;&quot;This method displays the position of geometric states relative to the sequence of</span>
 <span class="sd">        features in the part cache. The output is displayed in the message area.</span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span>
 
     <span class="k">def</span> <span class="nf">queryGeometry</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">relativeAccuracy</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="n">printResults</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="kc">True</span><span class="p">):</span>
-        <span class="sd">"""This method prints the following information about a part:</span>
+        <span class="sd">&quot;&quot;&quot;This method prints the following information about a part:</span>
 <span class="sd">            - the name, modeling space, and analysis type;</span>
 <span class="sd">            - whether twist is included (only available when the modeling space is axisymmetric and</span>
 <span class="sd">        the analysis type is deformable);</span>
-<span class="sd">            - a 3D point representing the minimum of the part's bounding box;</span>
-<span class="sd">            - a 3D point representing the maximum of the part's bounding box;</span>
-<span class="sd">            - a 3D point representing the part's centroid (only on 3D solid parts); and</span>
+<span class="sd">            - a 3D point representing the minimum of the part&#39;s bounding box;</span>
+<span class="sd">            - a 3D point representing the maximum of the part&#39;s bounding box;</span>
+<span class="sd">            - a 3D point representing the part&#39;s centroid (only on 3D solid parts); and</span>
 <span class="sd">            - the volume (only on 3D solid parts).</span>
 <span class="sd">        </span>
 <span class="sd">        Parameters</span>
@@ -1822,82 +1823,82 @@
 <span class="sd">        geometry: dict</span>
 <span class="sd">            A Dictionary object with string keys, which returns the above information with the keys </span>
 <span class="sd">            being name, space, type, volume, centroid, category and boundingBox.</span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span>
 
     <span class="k">def</span> <span class="nf">queryRegionsMissingSections</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="sd">"""This method returns all regions in the part that do not have a section assignment but</span>
+        <span class="sd">&quot;&quot;&quot;This method returns all regions in the part that do not have a section assignment but</span>
 <span class="sd">        require one for analysis.</span>
 
 <span class="sd">        Returns</span>
 <span class="sd">        -------</span>
 <span class="sd">        region: Region</span>
 <span class="sd">            A Region object, or None</span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span>
 
     <span class="k">def</span> <span class="nf">queryDisjointPlyRegions</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="sd">"""This method provides a list of all composite plys in the current part which have</span>
+        <span class="sd">&quot;&quot;&quot;This method provides a list of all composite plys in the current part which have</span>
 <span class="sd">        disjoint regions.</span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span>
 
     <span class="k">def</span> <span class="nf">regenerate</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="sd">"""This method regenerates a part. When you modify features, it may be convenient to</span>
+        <span class="sd">&quot;&quot;&quot;This method regenerates a part. When you modify features, it may be convenient to</span>
 <span class="sd">        postpone regeneration until you make all your changes, since regeneration can be time</span>
 <span class="sd">        consuming.</span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span>
 
     <span class="k">def</span> <span class="nf">regenerationWarnings</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="sd">"""This method prints any regeneration warnings associated with the features.</span>
-<span class="sd">        """</span>
+        <span class="sd">&quot;&quot;&quot;This method prints any regeneration warnings associated with the features.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span>
 
     <span class="k">def</span> <span class="nf">removeInvalidGeometry</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="sd">"""Removes all invalid entities from the part, leaving a valid part. This is not recorded</span>
+        <span class="sd">&quot;&quot;&quot;Removes all invalid entities from the part, leaving a valid part. This is not recorded</span>
 <span class="sd">        as a feature in the feature list, therefore it should be used on parts that have a</span>
 <span class="sd">        single feature (such as an imported part).</span>
 <span class="sd">        Note:This may remove valid entities that are connected to invalid ones. You can identify</span>
 <span class="sd">        invalid entities using the query toolset before using this command.</span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span>
 
     <span class="k">def</span> <span class="nf">restore</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="sd">"""This method restores the parameters of all features in the assembly to the value they</span>
+        <span class="sd">&quot;&quot;&quot;This method restores the parameters of all features in the assembly to the value they</span>
 <span class="sd">        had before a failed regeneration. Use the restore method after a failed regeneration,</span>
 <span class="sd">        followed by a regenerate command.</span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span>
 
     <span class="k">def</span> <span class="nf">resumeAllFeatures</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="sd">"""This method resumes all the suppressed features in the part.</span>
-<span class="sd">        """</span>
+        <span class="sd">&quot;&quot;&quot;This method resumes all the suppressed features in the part.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span>
 
     <span class="k">def</span> <span class="nf">resumeFeatures</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">featureNames</span><span class="p">:</span> <span class="nb">tuple</span><span class="p">):</span>
-        <span class="sd">"""This method resumes the specified suppressed features in the part.</span>
+        <span class="sd">&quot;&quot;&quot;This method resumes the specified suppressed features in the part.</span>
 <span class="sd">        </span>
 <span class="sd">        Parameters</span>
 <span class="sd">        ----------</span>
 <span class="sd">        featureNames</span>
 <span class="sd">            A tuple of names of features which are to be resumed. </span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span>
 
     <span class="k">def</span> <span class="nf">resumeLastSetFeatures</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="sd">"""This method resumes the last set of features to be suppressed in the part.</span>
-<span class="sd">        """</span>
+        <span class="sd">&quot;&quot;&quot;This method resumes the last set of features to be suppressed in the part.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span>
 
     <span class="k">def</span> <span class="nf">saveGeometryCache</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="sd">"""This method caches the current geometry. Caching the current geometry improves</span>
+        <span class="sd">&quot;&quot;&quot;This method caches the current geometry. Caching the current geometry improves</span>
 <span class="sd">        regeneration performance.</span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span>
 
-    <span class="k">def</span> <span class="nf">setAssociatedCADPaths</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">partFile</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">''</span><span class="p">,</span> <span class="n">rootFile</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">''</span><span class="p">):</span>
-        <span class="sd">"""This method sets the paths to the associated CAD part and root file. This method is only</span>
+    <span class="k">def</span> <span class="nf">setAssociatedCADPaths</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">partFile</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">rootFile</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;This method sets the paths to the associated CAD part and root file. This method is only</span>
 <span class="sd">        available if the part was imported from one of the supported CAD softwares using the</span>
 <span class="sd">        Associative Import capability. The root file can be the assembly file or the part file,</span>
 <span class="sd">        depending on the one that was imported. This method can be used to specify the new paths</span>
@@ -1910,21 +1911,21 @@
 <span class="sd">        rootFile</span>
 <span class="sd">            A String specifying the name of the root associated CAD file. This can be the same as </span>
 <span class="sd">            the part file or can be the assembly file, depending on the one that was imported. </span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span>
 
     <span class="k">def</span> <span class="nf">suppressFeatures</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">featureNames</span><span class="p">:</span> <span class="nb">tuple</span><span class="p">):</span>
-        <span class="sd">"""This method suppresses the given features.</span>
+        <span class="sd">&quot;&quot;&quot;This method suppresses the given features.</span>
 <span class="sd">        </span>
 <span class="sd">        Parameters</span>
 <span class="sd">        ----------</span>
 <span class="sd">        featureNames</span>
 <span class="sd">            A tuple of names of features which are to be suppressed in the part. </span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span>
 
     <span class="k">def</span> <span class="nf">writeAcisFile</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">fileName</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">version</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="kc">None</span><span class="p">):</span>
-        <span class="sd">"""This method exports the geometry of the part to a named file in ACIS format.</span>
+        <span class="sd">&quot;&quot;&quot;This method exports the geometry of the part to a named file in ACIS format.</span>
 <span class="sd">        </span>
 <span class="sd">        Parameters</span>
 <span class="sd">        ----------</span>
@@ -1938,11 +1939,11 @@
 <span class="sd">        ------</span>
 <span class="sd">            - If the part is an orphan mesh part: </span>
 <span class="sd">              Cannot export orphan mesh parts to ACIS. </span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span>
 
-    <span class="k">def</span> <span class="nf">writeCADParameters</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">paramFile</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">modifiedParams</span><span class="p">:</span> <span class="nb">tuple</span> <span class="o">=</span> <span class="p">(),</span> <span class="n">updatePaths</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">''</span><span class="p">):</span>
-        <span class="sd">"""This method writes the parameters that were imported from the CAD system to a parameter</span>
+    <span class="k">def</span> <span class="nf">writeCADParameters</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">paramFile</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">modifiedParams</span><span class="p">:</span> <span class="nb">tuple</span> <span class="o">=</span> <span class="p">(),</span> <span class="n">updatePaths</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;This method writes the parameters that were imported from the CAD system to a parameter</span>
 <span class="sd">        file.</span>
 <span class="sd">        </span>
 <span class="sd">        Parameters</span>
@@ -1956,11 +1957,11 @@
 <span class="sd">            A Bool specifying whether to update the path of the CAD model file specified in the </span>
 <span class="sd">            *parameterFile* to the current directory, if the CAD model is present in the current </span>
 <span class="sd">            directory. </span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span>
 
     <span class="k">def</span> <span class="nf">writeIgesFile</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">fileName</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">flavor</span><span class="p">:</span> <span class="n">SymbolicConstant</span><span class="p">):</span>
-        <span class="sd">"""This method exports the geometry of the part to a named file in IGES format.</span>
+        <span class="sd">&quot;&quot;&quot;This method exports the geometry of the part to a named file in IGES format.</span>
 <span class="sd">        </span>
 <span class="sd">        Parameters</span>
 <span class="sd">        ----------</span>
@@ -1974,11 +1975,11 @@
 <span class="sd">        ------</span>
 <span class="sd">            - If the part is an orphan mesh part: </span>
 <span class="sd">              Cannot export orphan mesh parts to IGES. </span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span>
 
     <span class="k">def</span> <span class="nf">writeStepFile</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">fileName</span><span class="p">:</span> <span class="nb">str</span><span class="p">):</span>
-        <span class="sd">"""This method exports the geometry of the part to a named file in STEP format.</span>
+        <span class="sd">&quot;&quot;&quot;This method exports the geometry of the part to a named file in STEP format.</span>
 <span class="sd">        </span>
 <span class="sd">        Parameters</span>
 <span class="sd">        ----------</span>
@@ -1989,11 +1990,11 @@
 <span class="sd">        ------</span>
 <span class="sd">            - If the part contains no geometry: </span>
 <span class="sd">              Parterror: Cannot export orphan mesh parts to STEP. </span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span>
 
     <span class="k">def</span> <span class="nf">writeVdaFile</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">fileName</span><span class="p">:</span> <span class="nb">str</span><span class="p">):</span>
-        <span class="sd">"""This method exports the geometry of the part to a named file in VDA-FS format.</span>
+        <span class="sd">&quot;&quot;&quot;This method exports the geometry of the part to a named file in VDA-FS format.</span>
 <span class="sd">        </span>
 <span class="sd">        Parameters</span>
 <span class="sd">        ----------</span>
@@ -2004,13 +2005,13 @@
 <span class="sd">        ------</span>
 <span class="sd">            - If the part is an orphan mesh part: </span>
 <span class="sd">              Cannot export orphan mesh parts to VDA-FS. </span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span>
 
     <span class="k">def</span> <span class="nf">copyMeshPattern</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">elements</span><span class="p">:</span> <span class="nb">tuple</span><span class="p">[</span><span class="n">MeshElement</span><span class="p">]</span> <span class="o">=</span> <span class="p">(),</span> <span class="n">faces</span><span class="p">:</span> <span class="nb">tuple</span><span class="p">[</span><span class="n">Face</span><span class="p">]</span> <span class="o">=</span> <span class="p">(),</span>
                         <span class="n">elemFaces</span><span class="p">:</span> <span class="nb">tuple</span><span class="p">[</span><span class="n">MeshFace</span><span class="p">]</span> <span class="o">=</span> <span class="p">(),</span> <span class="n">targetFace</span><span class="p">:</span> <span class="n">MeshFace</span> <span class="o">=</span> <span class="n">MeshFace</span><span class="p">(),</span>
                         <span class="n">nodes</span><span class="p">:</span> <span class="nb">tuple</span><span class="p">[</span><span class="n">MeshNode</span><span class="p">]</span> <span class="o">=</span> <span class="p">(),</span> <span class="n">coordinates</span><span class="p">:</span> <span class="nb">tuple</span> <span class="o">=</span> <span class="p">()):</span>
-        <span class="sd">"""This method copies a mesh pattern from a source region consisting of a set of shell</span>
+        <span class="sd">&quot;&quot;&quot;This method copies a mesh pattern from a source region consisting of a set of shell</span>
 <span class="sd">        elements or element faces onto a target face, mapping nodes and elements in a one-one</span>
 <span class="sd">        correspondence between source and target.</span>
 <span class="sd">        </span>
@@ -2035,37 +2036,37 @@
 <span class="sd">            of given nodes, and be ordered to correspond to the given nodes in *ascending order* </span>
 <span class="sd">            according to index. These coordinates are positions of the nodes of a mesh that will be </span>
 <span class="sd">            the target face corresponding to nodes provided. </span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span>
 
     <span class="k">def</span> <span class="nf">smoothNodes</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">nodes</span><span class="p">:</span> <span class="nb">tuple</span><span class="p">[</span><span class="n">MeshNode</span><span class="p">]):</span>
-        <span class="sd">"""This method smooths the given nodes of a native mesh, moving them locally to a more</span>
+        <span class="sd">&quot;&quot;&quot;This method smooths the given nodes of a native mesh, moving them locally to a more</span>
 <span class="sd">        optimal location that improves the quality of the mesh</span>
 <span class="sd">        </span>
 <span class="sd">        Parameters</span>
 <span class="sd">        ----------</span>
 <span class="sd">        nodes</span>
 <span class="sd">            A sequence of MeshNode objects or a Set object containing nodes. </span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span>
 
     <span class="k">def</span> <span class="nf">Lock</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="sd">"""This method locks the part. Locking the part prevents any further changes to the part</span>
+        <span class="sd">&quot;&quot;&quot;This method locks the part. Locking the part prevents any further changes to the part</span>
 <span class="sd">        that can trigger regeneration of the part.</span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span>
 
     <span class="k">def</span> <span class="nf">Unlock</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="sd">"""This method unlocks the part. Unlocking the part allows it to be regenerated after any</span>
+        <span class="sd">&quot;&quot;&quot;This method unlocks the part. Unlocking the part allows it to be regenerated after any</span>
 <span class="sd">        modifications to the part.</span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span>
 
     <span class="k">def</span> <span class="nf">LockForUpgrade</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="sd">"""This method locks the part for upgrade. Locking the part prevents any further changes to</span>
+        <span class="sd">&quot;&quot;&quot;This method locks the part for upgrade. Locking the part prevents any further changes to</span>
 <span class="sd">        the part that can trigger regeneration of the part. When the part is unlocked, all the</span>
 <span class="sd">        parts are upgraded and regenrated.</span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span>
 </pre></div>
         </article>

@@ -5,10 +5,10 @@
     <meta name="color-scheme" content="light dark"><link rel="index" title="Index" href="../../../genindex.html" /><link rel="search" title="Search" href="../../../search.html" />
         <link rel="canonical" href="https://pyabaqus.haiiliin.com/_modules/abaqus/Optimization/OptimizationTask.html" />
 
-    <meta name="generator" content="sphinx-4.5.0, furo 2022.04.07"/>
-        <title>abaqus.Optimization.OptimizationTask - pyabaqus 1.0.16 documentation</title>
+    <meta name="generator" content="sphinx-4.5.0, furo 2022.06.04.1"/>
+        <title>abaqus.Optimization.OptimizationTask - pyabaqus 1.0.18 documentation</title>
       <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/styles/furo.css?digest=68f4518137b9aefe99b631505a2064c3c42c9852" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/styles/furo.css?digest=40978830699223671f4072448e654b5958f38b89" />
     <link rel="stylesheet" type="text/css" href="../../../_static/styles/furo-extensions.css?digest=30d1aed668e5c3a91c3e3bf6a60b675221979f0e" />
     
     
@@ -123,7 +123,7 @@
       </label>
     </div>
     <div class="header-center">
-      <a href="../../../index.html"><div class="brand">pyabaqus 1.0.16 documentation</div></a>
+      <a href="../../../index.html"><div class="brand">pyabaqus 1.0.18 documentation</div></a>
     </div>
     <div class="header-right">
       <div class="theme-toggle-container theme-toggle-header">
@@ -146,7 +146,7 @@
       <div class="sidebar-sticky"><a class="sidebar-brand" href="../../../index.html">
   
   
-  <span class="sidebar-brand-text">pyabaqus 1.0.16 documentation</span>
+  <span class="sidebar-brand-text">pyabaqus 1.0.18 documentation</span>
   
 </a><form class="sidebar-search-container" method="get" action="../../../search.html" role="search">
   <input class="sidebar-search" placeholder=Search name="q" aria-label="Search">
@@ -286,7 +286,8 @@
           </svg>
           <span>Back to top</span>
         </a>
-        <div class="content-icon-container"><div class="theme-toggle-container theme-toggle-content">
+        <div class="content-icon-container">
+          <div class="theme-toggle-container theme-toggle-content">
             <button class="theme-toggle">
               <div class="visually-hidden">Toggle Light / Dark / Auto color theme</div>
               <svg class="theme-icon-when-auto"><use href="#svg-sun-half"></use></svg>
@@ -352,7 +353,7 @@
                                  <span class="n">operation</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="n">SUM</span><span class="p">,</span> <span class="n">region</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="n">MODEL</span><span class="p">,</span>
                                  <span class="n">shellLayer</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="n">MAXIMUM</span><span class="p">,</span> <span class="n">stepOperation</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="n">SUM</span><span class="p">,</span>
                                  <span class="n">stepOptions</span><span class="p">:</span> <span class="n">StepOptionArray</span> <span class="o">=</span> <span class="kc">None</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">SingleTermDesignResponse</span><span class="p">:</span>
-        <span class="sd">"""This method creates a SingleTermDesignResponse object.</span>
+        <span class="sd">&quot;&quot;&quot;This method creates a SingleTermDesignResponse object.</span>
 
 <span class="sd">        Notes</span>
 <span class="sd">        -----</span>
@@ -393,7 +394,7 @@
 <span class="sd">        Returns</span>
 <span class="sd">        -------</span>
 <span class="sd">            A SingleTermDesignResponse object.</span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">designResponses</span><span class="p">[</span><span class="n">name</span><span class="p">]</span> <span class="o">=</span> <span class="n">singleTermDesignResponse</span> <span class="o">=</span> <span class="n">SingleTermDesignResponse</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">identifier</span><span class="p">,</span> <span class="n">csys</span><span class="p">,</span>
                                                                                          <span class="n">drivingRegion</span><span class="p">,</span> <span class="n">operation</span><span class="p">,</span>
                                                                                          <span class="n">region</span><span class="p">,</span> <span class="n">shellLayer</span><span class="p">,</span>
@@ -402,7 +403,7 @@
 
 <div class="viewcode-block" id="OptimizationTask.ObjectiveFunction"><a class="viewcode-back" href="../../../reference/mdb/model/optimization.html#abaqus.Optimization.OptimizationTask.OptimizationTask.ObjectiveFunction">[docs]</a>    <span class="k">def</span> <span class="nf">ObjectiveFunction</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">objectives</span><span class="p">:</span> <span class="n">OptimizationObjectiveArray</span><span class="p">,</span>
                           <span class="n">target</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="n">MINIMIZE</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">ObjectiveFunction</span><span class="p">:</span>
-        <span class="sd">"""This method creates an ObjectiveFunction object.</span>
+        <span class="sd">&quot;&quot;&quot;This method creates an ObjectiveFunction object.</span>
 
 <span class="sd">        Notes</span>
 <span class="sd">        -----</span>
@@ -430,13 +431,13 @@
 <span class="sd">        ------</span>
 <span class="sd">        InvalidNameError</span>
 <span class="sd">        RangeError</span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">objectiveFunctions</span><span class="p">[</span><span class="n">name</span><span class="p">]</span> <span class="o">=</span> <span class="n">objectiveFunction</span> <span class="o">=</span> <span class="n">ObjectiveFunction</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">objectives</span><span class="p">,</span> <span class="n">target</span><span class="p">)</span>
         <span class="k">return</span> <span class="n">objectiveFunction</span></div>
 
 <div class="viewcode-block" id="OptimizationTask.OptimizationConstraint"><a class="viewcode-back" href="../../../reference/mdb/model/optimization.html#abaqus.Optimization.OptimizationTask.OptimizationTask.OptimizationConstraint">[docs]</a>    <span class="k">def</span> <span class="nf">OptimizationConstraint</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">designResponse</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">restrictionValue</span><span class="p">:</span> <span class="nb">float</span><span class="p">,</span>
                                <span class="n">restrictionMethod</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="n">ABSOLUTE_EQUAL</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">OptimizationConstraint</span><span class="p">:</span>
-        <span class="sd">"""This method creates an OptimizationConstraint object.</span>
+        <span class="sd">&quot;&quot;&quot;This method creates an OptimizationConstraint object.</span>
 
 <span class="sd">        Notes</span>
 <span class="sd">        -----</span>
@@ -468,7 +469,7 @@
 <span class="sd">        ------</span>
 <span class="sd">        InvalidNameError</span>
 <span class="sd">        RangeError</span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">optimizationConstraints</span><span class="p">[</span><span class="n">name</span><span class="p">]</span> <span class="o">=</span> <span class="n">optimizationConstraint</span> <span class="o">=</span> <span class="n">OptimizationConstraint</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">designResponse</span><span class="p">,</span>
                                                                                              <span class="n">restrictionValue</span><span class="p">,</span>
                                                                                              <span class="n">restrictionMethod</span><span class="p">)</span>
@@ -476,7 +477,7 @@
 
 <div class="viewcode-block" id="OptimizationTask.BeadFixedRegion"><a class="viewcode-back" href="../../../reference/mdb/model/optimization.html#abaqus.Optimization.OptimizationTask.OptimizationTask.BeadFixedRegion">[docs]</a>    <span class="k">def</span> <span class="nf">BeadFixedRegion</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">region</span><span class="p">:</span> <span class="n">Region</span><span class="p">,</span> <span class="n">csys</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">u1</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="n">OFF</span><span class="p">,</span> <span class="n">u2</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="n">OFF</span><span class="p">,</span>
                         <span class="n">u3</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="n">OFF</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">BeadFixedRegion</span><span class="p">:</span>
-        <span class="sd">"""This method creates a BeadFixedRegion object.</span>
+        <span class="sd">&quot;&quot;&quot;This method creates a BeadFixedRegion object.</span>
 
 <span class="sd">        Notes</span>
 <span class="sd">        -----</span>
@@ -509,12 +510,12 @@
 <span class="sd">        Returns</span>
 <span class="sd">        -------</span>
 <span class="sd">            A BeadFixedRegion object.</span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">geometricRestrictions</span><span class="p">[</span><span class="n">name</span><span class="p">]</span> <span class="o">=</span> <span class="n">geometricRestriction</span> <span class="o">=</span> <span class="n">BeadFixedRegion</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">region</span><span class="p">,</span> <span class="n">csys</span><span class="p">,</span> <span class="n">u1</span><span class="p">,</span> <span class="n">u2</span><span class="p">,</span> <span class="n">u3</span><span class="p">)</span>
         <span class="k">return</span> <span class="n">geometricRestriction</span></div>
 
 <div class="viewcode-block" id="OptimizationTask.BeadGrowth"><a class="viewcode-back" href="../../../reference/mdb/model/optimization.html#abaqus.Optimization.OptimizationTask.OptimizationTask.BeadGrowth">[docs]</a>    <span class="k">def</span> <span class="nf">BeadGrowth</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">region</span><span class="p">:</span> <span class="n">Region</span><span class="p">,</span> <span class="n">beadGrowth</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="n">shrink</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mi">0</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">BeadGrowth</span><span class="p">:</span>
-        <span class="sd">"""This method creates a BeadGrowth object.</span>
+        <span class="sd">&quot;&quot;&quot;This method creates a BeadGrowth object.</span>
 
 <span class="sd">        Notes</span>
 <span class="sd">        -----</span>
@@ -540,13 +541,13 @@
 <span class="sd">        Returns</span>
 <span class="sd">        -------</span>
 <span class="sd">            A BeadGrowth object.</span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">geometricRestrictions</span><span class="p">[</span><span class="n">name</span><span class="p">]</span> <span class="o">=</span> <span class="n">geometricRestriction</span> <span class="o">=</span> <span class="n">BeadGrowth</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">region</span><span class="p">,</span> <span class="n">beadGrowth</span><span class="p">,</span> <span class="n">shrink</span><span class="p">)</span>
         <span class="k">return</span> <span class="n">geometricRestriction</span></div>
 
 <div class="viewcode-block" id="OptimizationTask.BeadPenetrationCheck"><a class="viewcode-back" href="../../../reference/mdb/model/optimization.html#abaqus.Optimization.OptimizationTask.OptimizationTask.BeadPenetrationCheck">[docs]</a>    <span class="k">def</span> <span class="nf">BeadPenetrationCheck</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">beadPenetrationCheckRegion</span><span class="p">:</span> <span class="n">Region</span><span class="p">,</span>
                              <span class="n">region</span><span class="p">:</span> <span class="n">Region</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">BeadPenetrationCheck</span><span class="p">:</span>
-        <span class="sd">"""This method creates a BeadPenetrationCheck object.</span>
+        <span class="sd">&quot;&quot;&quot;This method creates a BeadPenetrationCheck object.</span>
 
 <span class="sd">        Notes</span>
 <span class="sd">        -----</span>
@@ -568,14 +569,14 @@
 <span class="sd">        Returns</span>
 <span class="sd">        -------</span>
 <span class="sd">            A BeadPenetrationCheck object.</span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">geometricRestrictions</span><span class="p">[</span><span class="n">name</span><span class="p">]</span> <span class="o">=</span> <span class="n">geometricRestriction</span> <span class="o">=</span> <span class="n">BeadPenetrationCheck</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">beadPenetrationCheckRegion</span><span class="p">,</span>
                                                                                        <span class="n">region</span><span class="p">)</span>
         <span class="k">return</span> <span class="n">geometricRestriction</span></div>
 
 <div class="viewcode-block" id="OptimizationTask.BeadPlanarSymmetry"><a class="viewcode-back" href="../../../reference/mdb/model/optimization.html#abaqus.Optimization.OptimizationTask.OptimizationTask.BeadPlanarSymmetry">[docs]</a>    <span class="k">def</span> <span class="nf">BeadPlanarSymmetry</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">region</span><span class="p">:</span> <span class="n">Region</span><span class="p">,</span> <span class="n">axis</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="n">AXIS_1</span><span class="p">,</span>
                            <span class="n">csys</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="kc">None</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">BeadPlanarSymmetry</span><span class="p">:</span>
-        <span class="sd">"""This method creates a BeadPlanarSymmetry object.</span>
+        <span class="sd">&quot;&quot;&quot;This method creates a BeadPlanarSymmetry object.</span>
 
 <span class="sd">        Notes</span>
 <span class="sd">        -----</span>
@@ -602,12 +603,12 @@
 <span class="sd">        Returns</span>
 <span class="sd">        -------</span>
 <span class="sd">            A BeadPlanarSymmetry object.</span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">geometricRestrictions</span><span class="p">[</span><span class="n">name</span><span class="p">]</span> <span class="o">=</span> <span class="n">geometricRestriction</span> <span class="o">=</span> <span class="n">BeadPlanarSymmetry</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">region</span><span class="p">,</span> <span class="n">axis</span><span class="p">,</span> <span class="n">csys</span><span class="p">)</span>
         <span class="k">return</span> <span class="n">geometricRestriction</span></div>
 
 <div class="viewcode-block" id="OptimizationTask.BeadPointSymmetry"><a class="viewcode-back" href="../../../reference/mdb/model/optimization.html#abaqus.Optimization.OptimizationTask.OptimizationTask.BeadPointSymmetry">[docs]</a>    <span class="k">def</span> <span class="nf">BeadPointSymmetry</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">region</span><span class="p">:</span> <span class="n">Region</span><span class="p">,</span> <span class="n">csys</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="kc">None</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">BeadPointSymmetry</span><span class="p">:</span>
-        <span class="sd">"""This method creates a BeadPointSymmetry object.</span>
+        <span class="sd">&quot;&quot;&quot;This method creates a BeadPointSymmetry object.</span>
 
 <span class="sd">        Notes</span>
 <span class="sd">        -----</span>
@@ -631,13 +632,13 @@
 <span class="sd">        Returns</span>
 <span class="sd">        -------</span>
 <span class="sd">            A BeadPointSymmetry object.</span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">geometricRestrictions</span><span class="p">[</span><span class="n">name</span><span class="p">]</span> <span class="o">=</span> <span class="n">geometricRestriction</span> <span class="o">=</span> <span class="n">BeadPointSymmetry</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">region</span><span class="p">,</span> <span class="n">csys</span><span class="p">)</span>
         <span class="k">return</span> <span class="n">geometricRestriction</span></div>
 
 <div class="viewcode-block" id="OptimizationTask.BeadRotationalSymmetry"><a class="viewcode-back" href="../../../reference/mdb/model/optimization.html#abaqus.Optimization.OptimizationTask.OptimizationTask.BeadRotationalSymmetry">[docs]</a>    <span class="k">def</span> <span class="nf">BeadRotationalSymmetry</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">angle</span><span class="p">:</span> <span class="nb">float</span><span class="p">,</span> <span class="n">region</span><span class="p">:</span> <span class="n">Region</span><span class="p">,</span> <span class="n">axis</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="n">AXIS_1</span><span class="p">,</span>
                                <span class="n">csys</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="kc">None</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">BeadRotationalSymmetry</span><span class="p">:</span>
-        <span class="sd">"""This method creates a BeadRotationalSymmetry object.</span>
+        <span class="sd">&quot;&quot;&quot;This method creates a BeadRotationalSymmetry object.</span>
 
 <span class="sd">        Notes</span>
 <span class="sd">        -----</span>
@@ -666,7 +667,7 @@
 <span class="sd">        Returns</span>
 <span class="sd">        -------</span>
 <span class="sd">            A BeadRotationalSymmetry object.</span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">geometricRestrictions</span><span class="p">[</span><span class="n">name</span><span class="p">]</span> <span class="o">=</span> <span class="n">geometricRestriction</span> <span class="o">=</span> <span class="n">BeadRotationalSymmetry</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">angle</span><span class="p">,</span> <span class="n">region</span><span class="p">,</span> <span class="n">axis</span><span class="p">,</span>
                                                                                          <span class="n">csys</span><span class="p">)</span>
         <span class="k">return</span> <span class="n">geometricRestriction</span></div>
@@ -676,7 +677,7 @@
                         <span class="n">movementRestriction</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="n">VECTOR</span><span class="p">,</span>
                         <span class="n">presumeFeasibleRegionAtStart</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="n">ON</span><span class="p">,</span> <span class="n">u1</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="n">ON</span><span class="p">,</span> <span class="n">u2</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="n">ON</span><span class="p">,</span>
                         <span class="n">u3</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="n">ON</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">DesignDirection</span><span class="p">:</span>
-        <span class="sd">"""This method creates a DesignDirection object.</span>
+        <span class="sd">&quot;&quot;&quot;This method creates a DesignDirection object.</span>
 
 <span class="sd">        Notes</span>
 <span class="sd">        -----</span>
@@ -728,7 +729,7 @@
 <span class="sd">        Returns</span>
 <span class="sd">        -------</span>
 <span class="sd">            A DesignDirection object.</span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">geometricRestrictions</span><span class="p">[</span><span class="n">name</span><span class="p">]</span> <span class="o">=</span> <span class="n">geometricRestriction</span> <span class="o">=</span> <span class="n">DesignDirection</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">region</span><span class="p">,</span> <span class="n">csys</span><span class="p">,</span> <span class="n">mainPoint</span><span class="p">,</span>
                                                                                   <span class="n">mainPointDetermination</span><span class="p">,</span>
                                                                                   <span class="n">movementRestriction</span><span class="p">,</span>
@@ -741,7 +742,7 @@
                      <span class="n">mainPointDetermination</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="n">MAXIMUM</span><span class="p">,</span>
                      <span class="n">presumeFeasibleRegionAtStart</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="n">ON</span><span class="p">,</span> <span class="n">tolerance1</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span>
                      <span class="n">tolerance2</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="n">tolerance3</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="n">undercutTolerance</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mi">0</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">DrillControl</span><span class="p">:</span>
-        <span class="sd">"""This method creates a DrillControl object.</span>
+        <span class="sd">&quot;&quot;&quot;This method creates a DrillControl object.</span>
 
 <span class="sd">        Notes</span>
 <span class="sd">        -----</span>
@@ -793,7 +794,7 @@
 <span class="sd">        Returns</span>
 <span class="sd">        -------</span>
 <span class="sd">            A DrillControl object.</span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">geometricRestrictions</span><span class="p">[</span><span class="n">name</span><span class="p">]</span> <span class="o">=</span> <span class="n">geometricRestriction</span> <span class="o">=</span> <span class="n">DrillControl</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">clientDirection</span><span class="p">,</span> <span class="n">region</span><span class="p">,</span> <span class="n">csys</span><span class="p">,</span>
                                                                                <span class="n">drawAngle</span><span class="p">,</span> <span class="n">mainPoint</span><span class="p">,</span>
                                                                                <span class="n">mainPointDetermination</span><span class="p">,</span>
@@ -804,7 +805,7 @@
 
 <div class="viewcode-block" id="OptimizationTask.FixedRegion"><a class="viewcode-back" href="../../../reference/mdb/model/optimization.html#abaqus.Optimization.OptimizationTask.OptimizationTask.FixedRegion">[docs]</a>    <span class="k">def</span> <span class="nf">FixedRegion</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">region</span><span class="p">:</span> <span class="n">Region</span><span class="p">,</span> <span class="n">csys</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">presumeFeasibleRegionAtStart</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="n">ON</span><span class="p">,</span>
                     <span class="n">u1</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="n">OFF</span><span class="p">,</span> <span class="n">u2</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="n">OFF</span><span class="p">,</span> <span class="n">u3</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="n">OFF</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">FixedRegion</span><span class="p">:</span>
-        <span class="sd">"""This method creates a FixedRegion object.</span>
+        <span class="sd">&quot;&quot;&quot;This method creates a FixedRegion object.</span>
 
 <span class="sd">        Notes</span>
 <span class="sd">        -----</span>
@@ -842,13 +843,13 @@
 <span class="sd">        Returns</span>
 <span class="sd">        -------</span>
 <span class="sd">            A FixedRegion object.</span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">geometricRestrictions</span><span class="p">[</span><span class="n">name</span><span class="p">]</span> <span class="o">=</span> <span class="n">geometricRestriction</span> <span class="o">=</span> <span class="n">FixedRegion</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">region</span><span class="p">,</span> <span class="n">csys</span><span class="p">,</span>
                                                                               <span class="n">presumeFeasibleRegionAtStart</span><span class="p">,</span> <span class="n">u1</span><span class="p">,</span> <span class="n">u2</span><span class="p">,</span> <span class="n">u3</span><span class="p">)</span>
         <span class="k">return</span> <span class="n">geometricRestriction</span></div>
 
 <div class="viewcode-block" id="OptimizationTask.FrozenArea"><a class="viewcode-back" href="../../../reference/mdb/model/optimization.html#abaqus.Optimization.OptimizationTask.OptimizationTask.FrozenArea">[docs]</a>    <span class="k">def</span> <span class="nf">FrozenArea</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">region</span><span class="p">:</span> <span class="n">Region</span> <span class="o">=</span> <span class="n">Region</span><span class="p">())</span> <span class="o">-&gt;</span> <span class="n">FrozenArea</span><span class="p">:</span>
-        <span class="sd">"""This method creates a FrozenArea object.</span>
+        <span class="sd">&quot;&quot;&quot;This method creates a FrozenArea object.</span>
 
 <span class="sd">        Notes</span>
 <span class="sd">        -----</span>
@@ -870,13 +871,13 @@
 <span class="sd">        Returns</span>
 <span class="sd">        -------</span>
 <span class="sd">            A FrozenArea object.</span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">geometricRestrictions</span><span class="p">[</span><span class="n">name</span><span class="p">]</span> <span class="o">=</span> <span class="n">geometricRestriction</span> <span class="o">=</span> <span class="n">FrozenArea</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">region</span><span class="p">)</span>
         <span class="k">return</span> <span class="n">geometricRestriction</span></div>
 
 <div class="viewcode-block" id="OptimizationTask.Growth"><a class="viewcode-back" href="../../../reference/mdb/model/optimization.html#abaqus.Optimization.OptimizationTask.OptimizationTask.Growth">[docs]</a>    <span class="k">def</span> <span class="nf">Growth</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">region</span><span class="p">:</span> <span class="n">Region</span><span class="p">,</span> <span class="n">growth</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span>
                <span class="n">presumeFeasibleRegionAtStart</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="n">ON</span><span class="p">,</span> <span class="n">shrink</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mi">0</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Growth</span><span class="p">:</span>
-        <span class="sd">"""This method creates a Growth object.</span>
+        <span class="sd">&quot;&quot;&quot;This method creates a Growth object.</span>
 
 <span class="sd">        Notes</span>
 <span class="sd">        -----</span>
@@ -907,14 +908,14 @@
 <span class="sd">        Returns</span>
 <span class="sd">        -------</span>
 <span class="sd">            A Growth object.</span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">geometricRestrictions</span><span class="p">[</span><span class="n">name</span><span class="p">]</span> <span class="o">=</span> <span class="n">geometricRestriction</span> <span class="o">=</span> <span class="n">Growth</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">region</span><span class="p">,</span> <span class="n">growth</span><span class="p">,</span>
                                                                          <span class="n">presumeFeasibleRegionAtStart</span><span class="p">,</span> <span class="n">shrink</span><span class="p">)</span>
         <span class="k">return</span> <span class="n">geometricRestriction</span></div>
 
 <div class="viewcode-block" id="OptimizationTask.PenetrationCheck"><a class="viewcode-back" href="../../../reference/mdb/model/optimization.html#abaqus.Optimization.OptimizationTask.OptimizationTask.PenetrationCheck">[docs]</a>    <span class="k">def</span> <span class="nf">PenetrationCheck</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">penetrationCheckRegion</span><span class="p">:</span> <span class="n">Region</span><span class="p">,</span> <span class="n">region</span><span class="p">:</span> <span class="n">Region</span><span class="p">,</span>
                          <span class="n">presumeFeasibleRegionAtStart</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="n">ON</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">PenetrationCheck</span><span class="p">:</span>
-        <span class="sd">"""This method creates a PenetrationCheck object.</span>
+        <span class="sd">&quot;&quot;&quot;This method creates a PenetrationCheck object.</span>
 
 <span class="sd">        Notes</span>
 <span class="sd">        -----</span>
@@ -941,7 +942,7 @@
 <span class="sd">        Returns</span>
 <span class="sd">        -------</span>
 <span class="sd">            A PenetrationCheck object.</span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">geometricRestrictions</span><span class="p">[</span><span class="n">name</span><span class="p">]</span> <span class="o">=</span> <span class="n">geometricRestriction</span> <span class="o">=</span> <span class="n">PenetrationCheck</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">penetrationCheckRegion</span><span class="p">,</span> <span class="n">region</span><span class="p">,</span>
                                                                                    <span class="n">presumeFeasibleRegionAtStart</span><span class="p">)</span>
         <span class="k">return</span> <span class="n">geometricRestriction</span></div>
@@ -952,7 +953,7 @@
                            <span class="n">presumeFeasibleRegionAtStart</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="n">ON</span><span class="p">,</span> <span class="n">tolerance1</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span>
                            <span class="n">tolerance2</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="n">tolerance3</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span>
                            <span class="n">undercutTolerance</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mi">0</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">ShapeDemoldControl</span><span class="p">:</span>
-        <span class="sd">"""This method creates a ShapeDemoldControl object.</span>
+        <span class="sd">&quot;&quot;&quot;This method creates a ShapeDemoldControl object.</span>
 
 <span class="sd">        Notes</span>
 <span class="sd">        -----</span>
@@ -1005,7 +1006,7 @@
 <span class="sd">        Returns</span>
 <span class="sd">        -------</span>
 <span class="sd">            A ShapeDemoldControl object.</span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">geometricRestrictions</span><span class="p">[</span><span class="n">name</span><span class="p">]</span> <span class="o">=</span> <span class="n">geometricRestriction</span> <span class="o">=</span> <span class="n">ShapeDemoldControl</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">pullDirection</span><span class="p">,</span> <span class="n">region</span><span class="p">,</span>
                                                                                      <span class="n">collisionCheckRegion</span><span class="p">,</span> <span class="n">csys</span><span class="p">,</span>
                                                                                      <span class="n">drawAngle</span><span class="p">,</span> <span class="n">mainPointDetermination</span><span class="p">,</span>
@@ -1016,8 +1017,8 @@
 
 <div class="viewcode-block" id="OptimizationTask.ShapeMemberSize"><a class="viewcode-back" href="../../../reference/mdb/model/optimization.html#abaqus.Optimization.OptimizationTask.OptimizationTask.ShapeMemberSize">[docs]</a>    <span class="k">def</span> <span class="nf">ShapeMemberSize</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">region</span><span class="p">:</span> <span class="n">Region</span><span class="p">,</span> <span class="n">maxThickness</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="n">minThickness</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span>
                         <span class="n">sizeRestriction</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="n">MINIMUM</span><span class="p">,</span> <span class="n">assignNodeGroupRegion</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="n">OFF</span><span class="p">,</span>
-                        <span class="n">nodeGroupRegion</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">''</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">ShapeMemberSize</span><span class="p">:</span>
-        <span class="sd">"""This method creates a ShapeMemberSize object.</span>
+                        <span class="n">nodeGroupRegion</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">ShapeMemberSize</span><span class="p">:</span>
+        <span class="sd">&quot;&quot;&quot;This method creates a ShapeMemberSize object.</span>
 
 <span class="sd">        Notes</span>
 <span class="sd">        -----</span>
@@ -1050,7 +1051,7 @@
 <span class="sd">        Returns</span>
 <span class="sd">        -------</span>
 <span class="sd">            A ShapeMemberSize object.</span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">geometricRestrictions</span><span class="p">[</span><span class="n">name</span><span class="p">]</span> <span class="o">=</span> <span class="n">geometricRestriction</span> <span class="o">=</span> <span class="n">ShapeMemberSize</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">region</span><span class="p">,</span> <span class="n">maxThickness</span><span class="p">,</span>
                                                                                   <span class="n">minThickness</span><span class="p">,</span> <span class="n">sizeRestriction</span><span class="p">,</span>
                                                                                   <span class="n">assignNodeGroupRegion</span><span class="p">,</span>
@@ -1062,7 +1063,7 @@
                             <span class="n">mainPointDetermination</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="n">MAXIMUM</span><span class="p">,</span>
                             <span class="n">presumeFeasibleRegionAtStart</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="n">ON</span><span class="p">,</span> <span class="n">tolerance1</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span>
                             <span class="n">tolerance2</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="n">tolerance3</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mi">0</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">ShapePlanarSymmetry</span><span class="p">:</span>
-        <span class="sd">"""This method creates a ShapePlanarSymmetry object.</span>
+        <span class="sd">&quot;&quot;&quot;This method creates a ShapePlanarSymmetry object.</span>
 
 <span class="sd">        Notes</span>
 <span class="sd">        -----</span>
@@ -1110,7 +1111,7 @@
 <span class="sd">        Returns</span>
 <span class="sd">        -------</span>
 <span class="sd">            A ShapePlanarSymmetry object.</span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">geometricRestrictions</span><span class="p">[</span><span class="n">name</span><span class="p">]</span> <span class="o">=</span> <span class="n">geometricRestriction</span> <span class="o">=</span> <span class="n">ShapePlanarSymmetry</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">clientDirection</span><span class="p">,</span> <span class="n">region</span><span class="p">,</span>
                                                                                       <span class="n">allowNonSymmetricMesh</span><span class="p">,</span> <span class="n">csys</span><span class="p">,</span>
                                                                                       <span class="n">mainPointDetermination</span><span class="p">,</span>
@@ -1123,7 +1124,7 @@
                            <span class="n">mainPointDetermination</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="n">MAXIMUM</span><span class="p">,</span>
                            <span class="n">presumeFeasibleRegionAtStart</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="n">ON</span><span class="p">,</span> <span class="n">tolerance1</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span>
                            <span class="n">tolerance2</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="n">tolerance3</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mi">0</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">ShapePointSymmetry</span><span class="p">:</span>
-        <span class="sd">"""This method creates a ShapePointSymmetry object.</span>
+        <span class="sd">&quot;&quot;&quot;This method creates a ShapePointSymmetry object.</span>
 
 <span class="sd">        Notes</span>
 <span class="sd">        -----</span>
@@ -1164,7 +1165,7 @@
 <span class="sd">        Returns</span>
 <span class="sd">        -------</span>
 <span class="sd">            A ShapePointSymmetry object.</span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">geometricRestrictions</span><span class="p">[</span><span class="n">name</span><span class="p">]</span> <span class="o">=</span> <span class="n">geometricRestriction</span> <span class="o">=</span> <span class="n">ShapePointSymmetry</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">region</span><span class="p">,</span> <span class="n">csys</span><span class="p">,</span>
                                                                                      <span class="n">mainPointDetermination</span><span class="p">,</span>
                                                                                      <span class="n">presumeFeasibleRegionAtStart</span><span class="p">,</span>
@@ -1177,7 +1178,7 @@
                                 <span class="n">presumeFeasibleRegionAtStart</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="n">ON</span><span class="p">,</span> <span class="n">startPoint</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
                                 <span class="n">tolerance1</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="n">tolerance2</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span>
                                 <span class="n">tolerance3</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mi">0</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">ShapeRotationalSymmetry</span><span class="p">:</span>
-        <span class="sd">"""This method creates a ShapeRotationalSymmetry object.</span>
+        <span class="sd">&quot;&quot;&quot;This method creates a ShapeRotationalSymmetry object.</span>
 
 <span class="sd">        Notes</span>
 <span class="sd">        -----</span>
@@ -1234,7 +1235,7 @@
 <span class="sd">        Returns</span>
 <span class="sd">        -------</span>
 <span class="sd">            A ShapeRotationalSymmetry object.</span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">geometricRestrictions</span><span class="p">[</span><span class="n">name</span><span class="p">]</span> <span class="o">=</span> <span class="n">geometricRestriction</span> <span class="o">=</span> <span class="n">ShapeRotationalSymmetry</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">clientDirection</span><span class="p">,</span> <span class="n">region</span><span class="p">,</span>
                                                                                           <span class="n">allowNonSymmetricMesh</span><span class="p">,</span> <span class="n">angle</span><span class="p">,</span>
                                                                                           <span class="n">csys</span><span class="p">,</span> <span class="n">mainPoint</span><span class="p">,</span>
@@ -1245,7 +1246,7 @@
         <span class="k">return</span> <span class="n">geometricRestriction</span></div>
 
     <span class="k">def</span> <span class="nf">SizingClusterAreas</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">regions</span><span class="p">:</span> <span class="nb">tuple</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">SizingClusterAreas</span><span class="p">:</span>
-        <span class="sd">"""This method creates a SizingClusterAreas object.</span>
+        <span class="sd">&quot;&quot;&quot;This method creates a SizingClusterAreas object.</span>
 
 <span class="sd">        Notes</span>
 <span class="sd">        -----</span>
@@ -1266,13 +1267,13 @@
 <span class="sd">        Returns</span>
 <span class="sd">        -------</span>
 <span class="sd">            A SizingClusterAreas object.</span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">geometricRestrictions</span><span class="p">[</span><span class="n">name</span><span class="p">]</span> <span class="o">=</span> <span class="n">geometricRestriction</span> <span class="o">=</span> <span class="n">SizingClusterAreas</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">regions</span><span class="p">)</span>
         <span class="k">return</span> <span class="n">geometricRestriction</span>
 
 <div class="viewcode-block" id="OptimizationTask.SizingCyclicSymmetry"><a class="viewcode-back" href="../../../reference/mdb/model/optimization.html#abaqus.Optimization.OptimizationTask.OptimizationTask.SizingCyclicSymmetry">[docs]</a>    <span class="k">def</span> <span class="nf">SizingCyclicSymmetry</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">region</span><span class="p">:</span> <span class="n">Region</span><span class="p">,</span> <span class="n">translation</span><span class="p">:</span> <span class="nb">float</span><span class="p">,</span> <span class="n">axis</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="n">AXIS_1</span><span class="p">,</span>
                              <span class="n">csys</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">ignoreFrozenArea</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="n">OFF</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">SizingCyclicSymmetry</span><span class="p">:</span>
-        <span class="sd">"""This method creates a SizingCyclicSymmetry object.</span>
+        <span class="sd">&quot;&quot;&quot;This method creates a SizingCyclicSymmetry object.</span>
 
 <span class="sd">        Notes</span>
 <span class="sd">        -----</span>
@@ -1304,13 +1305,13 @@
 <span class="sd">        Returns</span>
 <span class="sd">        -------</span>
 <span class="sd">            A SizingCyclicSymmetry object.</span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">geometricRestrictions</span><span class="p">[</span><span class="n">name</span><span class="p">]</span> <span class="o">=</span> <span class="n">geometricRestriction</span> <span class="o">=</span> <span class="n">SizingCyclicSymmetry</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">region</span><span class="p">,</span> <span class="n">translation</span><span class="p">,</span> <span class="n">axis</span><span class="p">,</span>
                                                                                        <span class="n">csys</span><span class="p">,</span> <span class="n">ignoreFrozenArea</span><span class="p">)</span>
         <span class="k">return</span> <span class="n">geometricRestriction</span></div>
 
 <div class="viewcode-block" id="OptimizationTask.SizingFrozenArea"><a class="viewcode-back" href="../../../reference/mdb/model/optimization.html#abaqus.Optimization.OptimizationTask.OptimizationTask.SizingFrozenArea">[docs]</a>    <span class="k">def</span> <span class="nf">SizingFrozenArea</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">region</span><span class="p">:</span> <span class="n">Region</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">SizingFrozenArea</span><span class="p">:</span>
-        <span class="sd">"""This method creates a SizingFrozenArea object.</span>
+        <span class="sd">&quot;&quot;&quot;This method creates a SizingFrozenArea object.</span>
 
 <span class="sd">        Notes</span>
 <span class="sd">        -----</span>
@@ -1330,12 +1331,12 @@
 <span class="sd">        Returns</span>
 <span class="sd">        -------</span>
 <span class="sd">            A SizingFrozenArea object.</span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">geometricRestrictions</span><span class="p">[</span><span class="n">name</span><span class="p">]</span> <span class="o">=</span> <span class="n">geometricRestriction</span> <span class="o">=</span> <span class="n">SizingFrozenArea</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">region</span><span class="p">)</span>
         <span class="k">return</span> <span class="n">geometricRestriction</span></div>
 
 <div class="viewcode-block" id="OptimizationTask.SizingMemberSize"><a class="viewcode-back" href="../../../reference/mdb/model/optimization.html#abaqus.Optimization.OptimizationTask.OptimizationTask.SizingMemberSize">[docs]</a>    <span class="k">def</span> <span class="nf">SizingMemberSize</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">region</span><span class="p">:</span> <span class="n">Region</span><span class="p">,</span> <span class="n">minWidth</span><span class="p">:</span> <span class="nb">float</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">SizingMemberSize</span><span class="p">:</span>
-        <span class="sd">"""This method creates a SizingMemberSize object.</span>
+        <span class="sd">&quot;&quot;&quot;This method creates a SizingMemberSize object.</span>
 
 <span class="sd">        Notes</span>
 <span class="sd">        -----</span>
@@ -1359,13 +1360,13 @@
 
 <span class="sd">        Raises</span>
 <span class="sd">        ------</span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">geometricRestrictions</span><span class="p">[</span><span class="n">name</span><span class="p">]</span> <span class="o">=</span> <span class="n">geometricRestriction</span> <span class="o">=</span> <span class="n">SizingMemberSize</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">region</span><span class="p">,</span> <span class="n">minWidth</span><span class="p">)</span>
         <span class="k">return</span> <span class="n">geometricRestriction</span></div>
 
 <div class="viewcode-block" id="OptimizationTask.SizingPlanarSymmetry"><a class="viewcode-back" href="../../../reference/mdb/model/optimization.html#abaqus.Optimization.OptimizationTask.OptimizationTask.SizingPlanarSymmetry">[docs]</a>    <span class="k">def</span> <span class="nf">SizingPlanarSymmetry</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">region</span><span class="p">:</span> <span class="n">Region</span><span class="p">,</span> <span class="n">axis</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="n">AXIS_1</span><span class="p">,</span> <span class="n">csys</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
                              <span class="n">ignoreFrozenArea</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="n">OFF</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">SizingPlanarSymmetry</span><span class="p">:</span>
-        <span class="sd">"""This method creates a SizingPlanarSymmetry object.</span>
+        <span class="sd">&quot;&quot;&quot;This method creates a SizingPlanarSymmetry object.</span>
 
 <span class="sd">        Notes</span>
 <span class="sd">        -----</span>
@@ -1394,14 +1395,14 @@
 <span class="sd">        Returns</span>
 <span class="sd">        -------</span>
 <span class="sd">            A SizingPlanarSymmetry object.</span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">geometricRestrictions</span><span class="p">[</span><span class="n">name</span><span class="p">]</span> <span class="o">=</span> <span class="n">geometricRestriction</span> <span class="o">=</span> <span class="n">SizingPlanarSymmetry</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">region</span><span class="p">,</span> <span class="n">axis</span><span class="p">,</span> <span class="n">csys</span><span class="p">,</span>
                                                                                        <span class="n">ignoreFrozenArea</span><span class="p">)</span>
         <span class="k">return</span> <span class="n">geometricRestriction</span></div>
 
 <div class="viewcode-block" id="OptimizationTask.SizingPointSymmetry"><a class="viewcode-back" href="../../../reference/mdb/model/optimization.html#abaqus.Optimization.OptimizationTask.OptimizationTask.SizingPointSymmetry">[docs]</a>    <span class="k">def</span> <span class="nf">SizingPointSymmetry</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">region</span><span class="p">:</span> <span class="n">Region</span><span class="p">,</span> <span class="n">csys</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
                             <span class="n">ignoreFrozenArea</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="n">OFF</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">SizingPointSymmetry</span><span class="p">:</span>
-        <span class="sd">"""This method creates a SizingPointSymmetry object.</span>
+        <span class="sd">&quot;&quot;&quot;This method creates a SizingPointSymmetry object.</span>
 
 <span class="sd">        Notes</span>
 <span class="sd">        -----</span>
@@ -1427,14 +1428,14 @@
 <span class="sd">        Returns</span>
 <span class="sd">        -------</span>
 <span class="sd">            A SizingPointSymmetry object.</span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">geometricRestrictions</span><span class="p">[</span><span class="n">name</span><span class="p">]</span> <span class="o">=</span> <span class="n">geometricRestriction</span> <span class="o">=</span> <span class="n">SizingPointSymmetry</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">region</span><span class="p">,</span> <span class="n">csys</span><span class="p">,</span>
                                                                                       <span class="n">ignoreFrozenArea</span><span class="p">)</span>
         <span class="k">return</span> <span class="n">geometricRestriction</span></div>
 
 <div class="viewcode-block" id="OptimizationTask.SizingRotationalSymmetry"><a class="viewcode-back" href="../../../reference/mdb/model/optimization.html#abaqus.Optimization.OptimizationTask.OptimizationTask.SizingRotationalSymmetry">[docs]</a>    <span class="k">def</span> <span class="nf">SizingRotationalSymmetry</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">angle</span><span class="p">:</span> <span class="nb">float</span><span class="p">,</span> <span class="n">region</span><span class="p">:</span> <span class="n">Region</span><span class="p">,</span> <span class="n">axis</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="n">AXIS_1</span><span class="p">,</span>
                                  <span class="n">csys</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">ignoreFrozenArea</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="n">OFF</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">SizingRotationalSymmetry</span><span class="p">:</span>
-        <span class="sd">"""This method creates a SizingRotationalSymmetry object.</span>
+        <span class="sd">&quot;&quot;&quot;This method creates a SizingRotationalSymmetry object.</span>
 
 <span class="sd">        Notes</span>
 <span class="sd">        -----</span>
@@ -1465,7 +1466,7 @@
 <span class="sd">        Returns</span>
 <span class="sd">        -------</span>
 <span class="sd">            A SizingRotationalSymmetry object.</span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">geometricRestrictions</span><span class="p">[</span><span class="n">name</span><span class="p">]</span> <span class="o">=</span> <span class="n">geometricRestriction</span> <span class="o">=</span> <span class="n">SizingRotationalSymmetry</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">angle</span><span class="p">,</span> <span class="n">region</span><span class="p">,</span> <span class="n">axis</span><span class="p">,</span>
                                                                                            <span class="n">csys</span><span class="p">,</span> <span class="n">ignoreFrozenArea</span><span class="p">)</span>
         <span class="k">return</span> <span class="n">geometricRestriction</span></div>
@@ -1474,7 +1475,7 @@
                            <span class="n">approach</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="n">FREE_FORM</span><span class="p">,</span> <span class="n">csys</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">freeFormRegion</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
                            <span class="n">presumeFeasibleRegionAtStart</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="n">ON</span><span class="p">,</span> <span class="n">revolvedRegion</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
                            <span class="n">tolerance1</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="n">tolerance2</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="n">tolerance3</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mi">0</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">SlideRegionControl</span><span class="p">:</span>
-        <span class="sd">"""This method creates a SlideRegionControl object.</span>
+        <span class="sd">&quot;&quot;&quot;This method creates a SlideRegionControl object.</span>
 
 <span class="sd">        Notes</span>
 <span class="sd">        -----</span>
@@ -1527,7 +1528,7 @@
 <span class="sd">        Returns</span>
 <span class="sd">        -------</span>
 <span class="sd">            A SlideRegionControl object.</span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">geometricRestrictions</span><span class="p">[</span><span class="n">name</span><span class="p">]</span> <span class="o">=</span> <span class="n">geometricRestriction</span> <span class="o">=</span> <span class="n">SlideRegionControl</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">clientDirection</span><span class="p">,</span> <span class="n">region</span><span class="p">,</span>
                                                                                      <span class="n">approach</span><span class="p">,</span> <span class="n">csys</span><span class="p">,</span> <span class="n">freeFormRegion</span><span class="p">,</span>
                                                                                      <span class="n">presumeFeasibleRegionAtStart</span><span class="p">,</span>
@@ -1540,7 +1541,7 @@
                      <span class="n">mainPointDetermination</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="n">MAXIMUM</span><span class="p">,</span>
                      <span class="n">presumeFeasibleRegionAtStart</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="n">ON</span><span class="p">,</span> <span class="n">tolerance1</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span>
                      <span class="n">tolerance2</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="n">tolerance3</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="n">undercutTolerance</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mi">0</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">StampControl</span><span class="p">:</span>
-        <span class="sd">"""This method creates a StampControl object.</span>
+        <span class="sd">&quot;&quot;&quot;This method creates a StampControl object.</span>
 
 <span class="sd">        Notes</span>
 <span class="sd">        -----</span>
@@ -1591,7 +1592,7 @@
 <span class="sd">        Returns</span>
 <span class="sd">        -------</span>
 <span class="sd">            A StampControl object.</span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">geometricRestrictions</span><span class="p">[</span><span class="n">name</span><span class="p">]</span> <span class="o">=</span> <span class="n">geometricRestriction</span> <span class="o">=</span> <span class="n">StampControl</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">clientDirection</span><span class="p">,</span> <span class="n">region</span><span class="p">,</span> <span class="n">csys</span><span class="p">,</span>
                                                                                <span class="n">drawAngle</span><span class="p">,</span> <span class="n">mainPoint</span><span class="p">,</span>
                                                                                <span class="n">mainPointDetermination</span><span class="p">,</span>
@@ -1602,7 +1603,7 @@
 
 <div class="viewcode-block" id="OptimizationTask.TopologyCyclicSymmetry"><a class="viewcode-back" href="../../../reference/mdb/model/optimization.html#abaqus.Optimization.OptimizationTask.OptimizationTask.TopologyCyclicSymmetry">[docs]</a>    <span class="k">def</span> <span class="nf">TopologyCyclicSymmetry</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">region</span><span class="p">:</span> <span class="n">Region</span><span class="p">,</span> <span class="n">translation</span><span class="p">:</span> <span class="nb">float</span><span class="p">,</span> <span class="n">axis</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="n">AXIS_1</span><span class="p">,</span>
                                <span class="n">csys</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">ignoreFrozenArea</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="n">OFF</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">TopologyCyclicSymmetry</span><span class="p">:</span>
-        <span class="sd">"""This method creates a TopologyCyclicSymmetry object.</span>
+        <span class="sd">&quot;&quot;&quot;This method creates a TopologyCyclicSymmetry object.</span>
 
 <span class="sd">        Notes</span>
 <span class="sd">        -----</span>
@@ -1636,7 +1637,7 @@
 <span class="sd">        Returns</span>
 <span class="sd">        -------</span>
 <span class="sd">            A TopologyCyclicSymmetry object.</span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">geometricRestrictions</span><span class="p">[</span><span class="n">name</span><span class="p">]</span> <span class="o">=</span> <span class="n">geometricRestriction</span> <span class="o">=</span> <span class="n">TopologyCyclicSymmetry</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">region</span><span class="p">,</span> <span class="n">translation</span><span class="p">,</span>
                                                                                          <span class="n">axis</span><span class="p">,</span> <span class="n">csys</span><span class="p">,</span> <span class="n">ignoreFrozenArea</span><span class="p">)</span>
         <span class="k">return</span> <span class="n">geometricRestriction</span></div>
@@ -1644,7 +1645,7 @@
 <div class="viewcode-block" id="OptimizationTask.TopologyDemoldControl"><a class="viewcode-back" href="../../../reference/mdb/model/optimization.html#abaqus.Optimization.OptimizationTask.OptimizationTask.TopologyDemoldControl">[docs]</a>    <span class="k">def</span> <span class="nf">TopologyDemoldControl</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">region</span><span class="p">:</span> <span class="n">Region</span><span class="p">,</span> <span class="n">csys</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">draftAngle</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span>
                               <span class="n">collisionCheckRegion</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="n">DEMOLD_REGION</span><span class="p">,</span> <span class="n">pointRegion</span><span class="p">:</span> <span class="n">Region</span> <span class="o">=</span> <span class="n">Region</span><span class="p">(),</span>
                               <span class="n">pullDirection</span><span class="p">:</span> <span class="nb">tuple</span> <span class="o">=</span> <span class="p">(),</span> <span class="n">technique</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="n">AUTO</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">TopologyDemoldControl</span><span class="p">:</span>
-        <span class="sd">"""This method creates a TopologyDemoldControl object.</span>
+        <span class="sd">&quot;&quot;&quot;This method creates a TopologyDemoldControl object.</span>
 
 <span class="sd">        Notes</span>
 <span class="sd">        -----</span>
@@ -1686,7 +1687,7 @@
 <span class="sd">        Returns</span>
 <span class="sd">        -------</span>
 <span class="sd">            A TopologyDemoldControl object.</span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">geometricRestrictions</span><span class="p">[</span><span class="n">name</span><span class="p">]</span> <span class="o">=</span> <span class="n">geometricRestriction</span> <span class="o">=</span> <span class="n">TopologyDemoldControl</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">region</span><span class="p">,</span> <span class="n">csys</span><span class="p">,</span> <span class="n">draftAngle</span><span class="p">,</span>
                                                                                         <span class="n">collisionCheckRegion</span><span class="p">,</span>
                                                                                         <span class="n">pointRegion</span><span class="p">,</span> <span class="n">pullDirection</span><span class="p">,</span>
@@ -1695,7 +1696,7 @@
 
 <div class="viewcode-block" id="OptimizationTask.TopologyMemberSize"><a class="viewcode-back" href="../../../reference/mdb/model/optimization.html#abaqus.Optimization.OptimizationTask.OptimizationTask.TopologyMemberSize">[docs]</a>    <span class="k">def</span> <span class="nf">TopologyMemberSize</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">region</span><span class="p">:</span> <span class="n">Region</span><span class="p">,</span> <span class="n">maxThickness</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="n">minThickness</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span>
                            <span class="n">separation</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="n">sizeRestriction</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="n">MINIMUM</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">TopologyMemberSize</span><span class="p">:</span>
-        <span class="sd">"""This method creates a TopologyMemberSize object.</span>
+        <span class="sd">&quot;&quot;&quot;This method creates a TopologyMemberSize object.</span>
 
 <span class="sd">        Notes</span>
 <span class="sd">        -----</span>
@@ -1727,7 +1728,7 @@
 <span class="sd">        Returns</span>
 <span class="sd">        -------</span>
 <span class="sd">            A TopologyMemberSize object.</span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">geometricRestrictions</span><span class="p">[</span><span class="n">name</span><span class="p">]</span> <span class="o">=</span> <span class="n">geometricRestriction</span> <span class="o">=</span> <span class="n">TopologyMemberSize</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">region</span><span class="p">,</span> <span class="n">maxThickness</span><span class="p">,</span>
                                                                                      <span class="n">minThickness</span><span class="p">,</span> <span class="n">separation</span><span class="p">,</span>
                                                                                      <span class="n">sizeRestriction</span><span class="p">)</span>
@@ -1736,7 +1737,7 @@
 <div class="viewcode-block" id="OptimizationTask.TopologyMillingControl"><a class="viewcode-back" href="../../../reference/mdb/model/optimization.html#abaqus.Optimization.OptimizationTask.OptimizationTask.TopologyMillingControl">[docs]</a>    <span class="k">def</span> <span class="nf">TopologyMillingControl</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">millingDirections</span><span class="p">:</span> <span class="nb">tuple</span><span class="p">,</span> <span class="n">region</span><span class="p">:</span> <span class="n">Region</span><span class="p">,</span> <span class="n">csys</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
                                <span class="n">millingCheckRegion</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="n">MILLING_REGION</span><span class="p">,</span>
                                <span class="n">radius</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="kc">None</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">TopologyMillingControl</span><span class="p">:</span>
-        <span class="sd">"""This method creates a TopologyMillingControl object.</span>
+        <span class="sd">&quot;&quot;&quot;This method creates a TopologyMillingControl object.</span>
 
 <span class="sd">        Notes</span>
 <span class="sd">        -----</span>
@@ -1772,7 +1773,7 @@
 <span class="sd">        Returns</span>
 <span class="sd">        -------</span>
 <span class="sd">            A TopologyMillingControl object.</span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">geometricRestrictions</span><span class="p">[</span><span class="n">name</span><span class="p">]</span> <span class="o">=</span> <span class="n">geometricRestriction</span> <span class="o">=</span> <span class="n">TopologyMillingControl</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">millingDirections</span><span class="p">,</span>
                                                                                          <span class="n">region</span><span class="p">,</span> <span class="n">csys</span><span class="p">,</span>
                                                                                          <span class="n">millingCheckRegion</span><span class="p">,</span> <span class="n">radius</span><span class="p">)</span>
@@ -1782,7 +1783,7 @@
                                 <span class="n">draftAngle</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mi">45</span><span class="p">,</span> <span class="n">overhangCheckRegion</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="n">OVERHANG_REGION</span><span class="p">,</span>
                                 <span class="n">pointRegion</span><span class="p">:</span> <span class="n">Region</span> <span class="o">=</span> <span class="n">Region</span><span class="p">(),</span> <span class="n">radius</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
                                 <span class="n">technique</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="n">AUTO</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">TopologyOverhangControl</span><span class="p">:</span>
-        <span class="sd">"""This method creates a TopologyOverhangControl object.</span>
+        <span class="sd">&quot;&quot;&quot;This method creates a TopologyOverhangControl object.</span>
 
 <span class="sd">        Notes</span>
 <span class="sd">        -----</span>
@@ -1826,7 +1827,7 @@
 <span class="sd">        Returns</span>
 <span class="sd">        -------</span>
 <span class="sd">            A TopologyOverhangControl object.</span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">geometricRestrictions</span><span class="p">[</span><span class="n">name</span><span class="p">]</span> <span class="o">=</span> <span class="n">geometricRestriction</span> <span class="o">=</span> <span class="n">TopologyOverhangControl</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">pullDirection</span><span class="p">,</span> <span class="n">region</span><span class="p">,</span>
                                                                                           <span class="n">csys</span><span class="p">,</span> <span class="n">draftAngle</span><span class="p">,</span>
                                                                                           <span class="n">overhangCheckRegion</span><span class="p">,</span>
@@ -1836,7 +1837,7 @@
 
 <div class="viewcode-block" id="OptimizationTask.TopologyPlanarSymmetry"><a class="viewcode-back" href="../../../reference/mdb/model/optimization.html#abaqus.Optimization.OptimizationTask.OptimizationTask.TopologyPlanarSymmetry">[docs]</a>    <span class="k">def</span> <span class="nf">TopologyPlanarSymmetry</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">region</span><span class="p">:</span> <span class="n">Region</span><span class="p">,</span> <span class="n">axis</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="n">AXIS_1</span><span class="p">,</span> <span class="n">csys</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
                                <span class="n">ignoreFrozenArea</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="n">OFF</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">TopologyPlanarSymmetry</span><span class="p">:</span>
-        <span class="sd">"""This method creates a TopologyPlanarSymmetry object.</span>
+        <span class="sd">&quot;&quot;&quot;This method creates a TopologyPlanarSymmetry object.</span>
 
 <span class="sd">        Notes</span>
 <span class="sd">        -----</span>
@@ -1867,14 +1868,14 @@
 <span class="sd">        Returns</span>
 <span class="sd">        -------</span>
 <span class="sd">            A TopologyPlanarSymmetry object.</span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">geometricRestrictions</span><span class="p">[</span><span class="n">name</span><span class="p">]</span> <span class="o">=</span> <span class="n">geometricRestriction</span> <span class="o">=</span> <span class="n">TopologyPlanarSymmetry</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">region</span><span class="p">,</span> <span class="n">axis</span><span class="p">,</span> <span class="n">csys</span><span class="p">,</span>
                                                                                          <span class="n">ignoreFrozenArea</span><span class="p">)</span>
         <span class="k">return</span> <span class="n">geometricRestriction</span></div>
 
 <div class="viewcode-block" id="OptimizationTask.TopologyPointSymmetry"><a class="viewcode-back" href="../../../reference/mdb/model/optimization.html#abaqus.Optimization.OptimizationTask.OptimizationTask.TopologyPointSymmetry">[docs]</a>    <span class="k">def</span> <span class="nf">TopologyPointSymmetry</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">region</span><span class="p">:</span> <span class="n">Region</span><span class="p">,</span> <span class="n">csys</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
                               <span class="n">ignoreFrozenArea</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="n">OFF</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">TopologyPointSymmetry</span><span class="p">:</span>
-        <span class="sd">"""This method creates a TopologyPointSymmetry object.</span>
+        <span class="sd">&quot;&quot;&quot;This method creates a TopologyPointSymmetry object.</span>
 
 <span class="sd">        Notes</span>
 <span class="sd">        -----</span>
@@ -1902,14 +1903,14 @@
 <span class="sd">        Returns</span>
 <span class="sd">        -------</span>
 <span class="sd">            A TopologyPointSymmetry object.</span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">geometricRestrictions</span><span class="p">[</span><span class="n">name</span><span class="p">]</span> <span class="o">=</span> <span class="n">geometricRestriction</span> <span class="o">=</span> <span class="n">TopologyPointSymmetry</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">region</span><span class="p">,</span> <span class="n">csys</span><span class="p">,</span>
                                                                                         <span class="n">ignoreFrozenArea</span><span class="p">)</span>
         <span class="k">return</span> <span class="n">geometricRestriction</span></div>
 
 <div class="viewcode-block" id="OptimizationTask.TopologyRotationalSymmetry"><a class="viewcode-back" href="../../../reference/mdb/model/optimization.html#abaqus.Optimization.OptimizationTask.OptimizationTask.TopologyRotationalSymmetry">[docs]</a>    <span class="k">def</span> <span class="nf">TopologyRotationalSymmetry</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">angle</span><span class="p">:</span> <span class="nb">float</span><span class="p">,</span> <span class="n">region</span><span class="p">:</span> <span class="n">Region</span><span class="p">,</span> <span class="n">axis</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="n">AXIS_1</span><span class="p">,</span>
                                    <span class="n">csys</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">ignoreFrozenArea</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="n">OFF</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">TopologyRotationalSymmetry</span><span class="p">:</span>
-        <span class="sd">"""This method creates a TopologyRotationalSymmetry object.</span>
+        <span class="sd">&quot;&quot;&quot;This method creates a TopologyRotationalSymmetry object.</span>
 
 <span class="sd">        Notes</span>
 <span class="sd">        -----</span>
@@ -1942,7 +1943,7 @@
 <span class="sd">        Returns</span>
 <span class="sd">        -------</span>
 <span class="sd">            A TopologyRotationalSymmetry object.</span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">geometricRestrictions</span><span class="p">[</span><span class="n">name</span><span class="p">]</span> <span class="o">=</span> <span class="n">geometricRestriction</span> <span class="o">=</span> <span class="n">TopologyRotationalSymmetry</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">angle</span><span class="p">,</span> <span class="n">region</span><span class="p">,</span> <span class="n">axis</span><span class="p">,</span>
                                                                                              <span class="n">csys</span><span class="p">,</span> <span class="n">ignoreFrozenArea</span><span class="p">)</span>
         <span class="k">return</span> <span class="n">geometricRestriction</span></div>
@@ -1951,7 +1952,7 @@
                     <span class="n">mainPoint</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">mainPointDetermination</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="n">MAXIMUM</span><span class="p">,</span>
                     <span class="n">presumeFeasibleRegionAtStart</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="n">ON</span><span class="p">,</span> <span class="n">tolerance1</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span>
                     <span class="n">tolerance2</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="n">tolerance3</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mi">0</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">TurnControl</span><span class="p">:</span>
-        <span class="sd">"""This method creates a TurnControl object.</span>
+        <span class="sd">&quot;&quot;&quot;This method creates a TurnControl object.</span>
 
 <span class="sd">        Notes</span>
 <span class="sd">        -----</span>
@@ -1999,7 +2000,7 @@
 <span class="sd">        Returns</span>
 <span class="sd">        -------</span>
 <span class="sd">            A TurnControl object.</span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">geometricRestrictions</span><span class="p">[</span><span class="n">name</span><span class="p">]</span> <span class="o">=</span> <span class="n">geometricRestriction</span> <span class="o">=</span> <span class="n">TurnControl</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">clientDirection</span><span class="p">,</span> <span class="n">region</span><span class="p">,</span> <span class="n">csys</span><span class="p">,</span>
                                                                               <span class="n">mainPoint</span><span class="p">,</span> <span class="n">mainPointDetermination</span><span class="p">,</span>
                                                                               <span class="n">presumeFeasibleRegionAtStart</span><span class="p">,</span> <span class="n">tolerance1</span><span class="p">,</span>

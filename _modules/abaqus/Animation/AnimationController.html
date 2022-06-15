@@ -5,10 +5,10 @@
     <meta name="color-scheme" content="light dark"><link rel="index" title="Index" href="../../../genindex.html" /><link rel="search" title="Search" href="../../../search.html" />
         <link rel="canonical" href="https://pyabaqus.haiiliin.com/_modules/abaqus/Animation/AnimationController.html" />
 
-    <meta name="generator" content="sphinx-4.5.0, furo 2022.04.07"/>
-        <title>abaqus.Animation.AnimationController - pyabaqus 1.0.16 documentation</title>
+    <meta name="generator" content="sphinx-4.5.0, furo 2022.06.04.1"/>
+        <title>abaqus.Animation.AnimationController - pyabaqus 1.0.18 documentation</title>
       <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/styles/furo.css?digest=68f4518137b9aefe99b631505a2064c3c42c9852" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/styles/furo.css?digest=40978830699223671f4072448e654b5958f38b89" />
     <link rel="stylesheet" type="text/css" href="../../../_static/styles/furo-extensions.css?digest=30d1aed668e5c3a91c3e3bf6a60b675221979f0e" />
     
     
@@ -123,7 +123,7 @@
       </label>
     </div>
     <div class="header-center">
-      <a href="../../../index.html"><div class="brand">pyabaqus 1.0.16 documentation</div></a>
+      <a href="../../../index.html"><div class="brand">pyabaqus 1.0.18 documentation</div></a>
     </div>
     <div class="header-right">
       <div class="theme-toggle-container theme-toggle-header">
@@ -146,7 +146,7 @@
       <div class="sidebar-sticky"><a class="sidebar-brand" href="../../../index.html">
   
   
-  <span class="sidebar-brand-text">pyabaqus 1.0.16 documentation</span>
+  <span class="sidebar-brand-text">pyabaqus 1.0.18 documentation</span>
   
 </a><form class="sidebar-search-container" method="get" action="../../../search.html" role="search">
   <input class="sidebar-search" placeholder=Search name="q" aria-label="Search">
@@ -286,7 +286,8 @@
           </svg>
           <span>Back to top</span>
         </a>
-        <div class="content-icon-container"><div class="theme-toggle-container theme-toggle-content">
+        <div class="content-icon-container">
+          <div class="theme-toggle-container theme-toggle-content">
             <button class="theme-toggle">
               <div class="visually-hidden">Toggle Light / Dark / Auto color theme</div>
               <svg class="theme-icon-when-auto"><use href="#svg-sun-half"></use></svg>
@@ -305,7 +306,7 @@
 
 
 <div class="viewcode-block" id="AnimationController"><a class="viewcode-back" href="../../../reference/session/animation.html#abaqus.Animation.AnimationController.AnimationController">[docs]</a><span class="k">class</span> <span class="nc">AnimationController</span><span class="p">:</span>
-    <span class="sd">"""The AnimationController object controls all object-based animation to be displayed in</span>
+    <span class="sd">&quot;&quot;&quot;The AnimationController object controls all object-based animation to be displayed in</span>
 <span class="sd">    the viewports. The AnimationController object has no constructor. Abaqus creates the </span>
 <span class="sd">    *animationController* member when it creates the Session object. </span>
 
@@ -327,7 +328,7 @@
 <span class="sd">        import animation</span>
 <span class="sd">        session.viewports[name].animationController</span>
 
-<span class="sd">    """</span>
+<span class="sd">    &quot;&quot;&quot;</span>
 
     <span class="c1"># A SymbolicConstant specifying the type of movie to play. Possible values are </span>
     <span class="c1"># SCALE_FACTOR, HARMONIC, TIME_HISTORY, and NONE. The default value is NONE. </span>
@@ -338,7 +339,7 @@
     <span class="n">state</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="n">STOP</span>
 
 <div class="viewcode-block" id="AnimationController.play"><a class="viewcode-back" href="../../../reference/session/animation.html#abaqus.Animation.AnimationController.AnimationController.play">[docs]</a>    <span class="k">def</span> <span class="nf">play</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">duration</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="n">UNLIMITED</span><span class="p">):</span>
-        <span class="sd">"""This method begins the animation.</span>
+        <span class="sd">&quot;&quot;&quot;This method begins the animation.</span>
 <span class="sd">        </span>
 <span class="sd">        Parameters</span>
 <span class="sd">        ----------</span>
@@ -350,26 +351,26 @@
 <span class="sd">        ------</span>
 <span class="sd">            - If *animationType*=NONE: </span>
 <span class="sd">              AnimationError: animationType not set </span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span></div>
 
 <div class="viewcode-block" id="AnimationController.stop"><a class="viewcode-back" href="../../../reference/session/animation.html#abaqus.Animation.AnimationController.AnimationController.stop">[docs]</a>    <span class="k">def</span> <span class="nf">stop</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="sd">"""This method stops the animation.</span>
-<span class="sd">        """</span>
+        <span class="sd">&quot;&quot;&quot;This method stops the animation.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span></div>
 
 <div class="viewcode-block" id="AnimationController.incrementFrame"><a class="viewcode-back" href="../../../reference/session/animation.html#abaqus.Animation.AnimationController.AnimationController.incrementFrame">[docs]</a>    <span class="k">def</span> <span class="nf">incrementFrame</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="sd">"""This method increments the animation frame.</span>
-<span class="sd">        """</span>
+        <span class="sd">&quot;&quot;&quot;This method increments the animation frame.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span></div>
 
 <div class="viewcode-block" id="AnimationController.decrementFrame"><a class="viewcode-back" href="../../../reference/session/animation.html#abaqus.Animation.AnimationController.AnimationController.decrementFrame">[docs]</a>    <span class="k">def</span> <span class="nf">decrementFrame</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="sd">"""This method decrements the animation frame.</span>
-<span class="sd">        """</span>
+        <span class="sd">&quot;&quot;&quot;This method decrements the animation frame.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span></div>
 
 <div class="viewcode-block" id="AnimationController.showFrame"><a class="viewcode-back" href="../../../reference/session/animation.html#abaqus.Animation.AnimationController.AnimationController.showFrame">[docs]</a>    <span class="k">def</span> <span class="nf">showFrame</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">frame</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">value</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="kc">None</span><span class="p">):</span>
-        <span class="sd">"""This method renders the specified frame of the animation.</span>
+        <span class="sd">&quot;&quot;&quot;This method renders the specified frame of the animation.</span>
 <span class="sd">        </span>
 <span class="sd">        Parameters</span>
 <span class="sd">        ----------</span>
@@ -380,21 +381,21 @@
 <span class="sd">            nearest to this value, for *animationType*=HARMONIC the frame with the angle nearest to </span>
 <span class="sd">            this value, for *animationType*=SCALE_FACTOR the frame with the scale value nearest to </span>
 <span class="sd">            this value. </span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span></div>
 
 <div class="viewcode-block" id="AnimationController.showFirstFrame"><a class="viewcode-back" href="../../../reference/session/animation.html#abaqus.Animation.AnimationController.AnimationController.showFirstFrame">[docs]</a>    <span class="k">def</span> <span class="nf">showFirstFrame</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="sd">"""This method renders the first frame of the animation.</span>
-<span class="sd">        """</span>
+        <span class="sd">&quot;&quot;&quot;This method renders the first frame of the animation.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span></div>
 
 <div class="viewcode-block" id="AnimationController.showLastFrame"><a class="viewcode-back" href="../../../reference/session/animation.html#abaqus.Animation.AnimationController.AnimationController.showLastFrame">[docs]</a>    <span class="k">def</span> <span class="nf">showLastFrame</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="sd">"""This method renders the last frame of the animation.</span>
-<span class="sd">        """</span>
+        <span class="sd">&quot;&quot;&quot;This method renders the last frame of the animation.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span></div>
 
 <div class="viewcode-block" id="AnimationController.setValues"><a class="viewcode-back" href="../../../reference/session/animation.html#abaqus.Animation.AnimationController.AnimationController.setValues">[docs]</a>    <span class="k">def</span> <span class="nf">setValues</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">animationType</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="n">NONE</span><span class="p">):</span>
-        <span class="sd">"""This method modifies the AnimationController object.</span>
+        <span class="sd">&quot;&quot;&quot;This method modifies the AnimationController object.</span>
 <span class="sd">        </span>
 <span class="sd">        Parameters</span>
 <span class="sd">        ----------</span>
@@ -405,7 +406,7 @@
 <span class="sd">        Raises</span>
 <span class="sd">        ------</span>
 <span class="sd">        RangeError</span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span></div></div>
 </pre></div>
         </article>

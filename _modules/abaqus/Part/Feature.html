@@ -5,10 +5,10 @@
     <meta name="color-scheme" content="light dark"><link rel="index" title="Index" href="../../../genindex.html" /><link rel="search" title="Search" href="../../../search.html" />
         <link rel="canonical" href="https://pyabaqus.haiiliin.com/_modules/abaqus/Part/Feature.html" />
 
-    <meta name="generator" content="sphinx-4.5.0, furo 2022.04.07"/>
-        <title>abaqus.Part.Feature - pyabaqus 1.0.16 documentation</title>
+    <meta name="generator" content="sphinx-4.5.0, furo 2022.06.04.1"/>
+        <title>abaqus.Part.Feature - pyabaqus 1.0.18 documentation</title>
       <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/styles/furo.css?digest=68f4518137b9aefe99b631505a2064c3c42c9852" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/styles/furo.css?digest=40978830699223671f4072448e654b5958f38b89" />
     <link rel="stylesheet" type="text/css" href="../../../_static/styles/furo-extensions.css?digest=30d1aed668e5c3a91c3e3bf6a60b675221979f0e" />
     
     
@@ -123,7 +123,7 @@
       </label>
     </div>
     <div class="header-center">
-      <a href="../../../index.html"><div class="brand">pyabaqus 1.0.16 documentation</div></a>
+      <a href="../../../index.html"><div class="brand">pyabaqus 1.0.18 documentation</div></a>
     </div>
     <div class="header-right">
       <div class="theme-toggle-container theme-toggle-header">
@@ -146,7 +146,7 @@
       <div class="sidebar-sticky"><a class="sidebar-brand" href="../../../index.html">
   
   
-  <span class="sidebar-brand-text">pyabaqus 1.0.16 documentation</span>
+  <span class="sidebar-brand-text">pyabaqus 1.0.18 documentation</span>
   
 </a><form class="sidebar-search-container" method="get" action="../../../search.html" role="search">
   <input class="sidebar-search" placeholder=Search name="q" aria-label="Search">
@@ -286,7 +286,8 @@
           </svg>
           <span>Back to top</span>
         </a>
-        <div class="content-icon-container"><div class="theme-toggle-container theme-toggle-content">
+        <div class="content-icon-container">
+          <div class="theme-toggle-container theme-toggle-content">
             <button class="theme-toggle">
               <div class="visually-hidden">Toggle Light / Dark / Auto color theme</div>
               <svg class="theme-icon-when-auto"><use href="#svg-sun-half"></use></svg>
@@ -312,7 +313,7 @@
 
 
 <div class="viewcode-block" id="Feature"><a class="viewcode-back" href="../../../reference/mdb/model/part.html#abaqus.Part.Part.Feature">[docs]</a><span class="k">class</span> <span class="nc">Feature</span><span class="p">(</span><span class="n">BaseFeature</span><span class="p">):</span>
-    <span class="sd">"""The following commands operate on Feature objects. For more information about the </span>
+    <span class="sd">&quot;&quot;&quot;The following commands operate on Feature objects. For more information about the </span>
 <span class="sd">    Feature object, see Feature object. </span>
 
 <span class="sd">    Notes</span>
@@ -323,10 +324,10 @@
 
 <span class="sd">        import part</span>
 
-<span class="sd">    """</span>
+<span class="sd">    &quot;&quot;&quot;</span>
 
 <div class="viewcode-block" id="Feature.AutoRepair"><a class="viewcode-back" href="../../../reference/mdb/model/part.html#abaqus.Part.Part.Feature.AutoRepair">[docs]</a>    <span class="k">def</span> <span class="nf">AutoRepair</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="sd">"""This method carries out a sequence of geometry repair operations if it contains invalid</span>
+        <span class="sd">&quot;&quot;&quot;This method carries out a sequence of geometry repair operations if it contains invalid</span>
 <span class="sd">        entities. It is expected to improve the geometry, but it does not guarantee that the</span>
 <span class="sd">        number of invalid entities will decrease. In some cases, it can also increase the number</span>
 <span class="sd">        of invalid entities. Since a number of geometry repair operations and validity checks</span>
@@ -344,11 +345,11 @@
 <span class="sd">        -------</span>
 <span class="sd">        feature: Feature</span>
 <span class="sd">            A Feature object</span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span></div>
 
 <div class="viewcode-block" id="Feature.AddCells"><a class="viewcode-back" href="../../../reference/mdb/model/part.html#abaqus.Part.Part.Feature.AddCells">[docs]</a>    <span class="k">def</span> <span class="nf">AddCells</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">faceList</span><span class="p">:</span> <span class="nb">tuple</span><span class="p">[</span><span class="n">Face</span><span class="p">],</span> <span class="n">flipped</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="n">OFF</span><span class="p">):</span>
-        <span class="sd">"""This method tries to convert a shell entity to a solid entity. The conversion is not</span>
+        <span class="sd">&quot;&quot;&quot;This method tries to convert a shell entity to a solid entity. The conversion is not</span>
 <span class="sd">        always successful.</span>
 
 <span class="sd">        Notes</span>
@@ -373,11 +374,11 @@
 <span class="sd">        -------</span>
 <span class="sd">        feature: Feature</span>
 <span class="sd">            A Feature object</span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span></div>
 
 <div class="viewcode-block" id="Feature.AnalyticRigidSurf2DPlanar"><a class="viewcode-back" href="../../../reference/mdb/model/part.html#abaqus.Part.Part.Feature.AnalyticRigidSurf2DPlanar">[docs]</a>    <span class="k">def</span> <span class="nf">AnalyticRigidSurf2DPlanar</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">sketch</span><span class="p">:</span> <span class="n">ConstrainedSketch</span><span class="p">):</span>
-        <span class="sd">"""This method creates a first Feature object for an analytical rigid surface by creating a</span>
+        <span class="sd">&quot;&quot;&quot;This method creates a first Feature object for an analytical rigid surface by creating a</span>
 <span class="sd">        planar wire from the given ConstrainedSketch object.</span>
 
 <span class="sd">        Notes</span>
@@ -397,11 +398,11 @@
 <span class="sd">        -------</span>
 <span class="sd">        feature: Feature</span>
 <span class="sd">            A Feature object</span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span></div>
 
 <div class="viewcode-block" id="Feature.AnalyticRigidSurfExtrude"><a class="viewcode-back" href="../../../reference/mdb/model/part.html#abaqus.Part.Part.Feature.AnalyticRigidSurfExtrude">[docs]</a>    <span class="k">def</span> <span class="nf">AnalyticRigidSurfExtrude</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">sketch</span><span class="p">:</span> <span class="n">ConstrainedSketch</span><span class="p">,</span> <span class="n">depth</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mi">1</span><span class="p">):</span>
-        <span class="sd">"""This method creates a first Feature object for an analytical rigid surface by extruding</span>
+        <span class="sd">&quot;&quot;&quot;This method creates a first Feature object for an analytical rigid surface by extruding</span>
 <span class="sd">        the given ConstrainedSketch object by the given depth, creating a surface.</span>
 
 <span class="sd">        Notes</span>
@@ -423,11 +424,11 @@
 <span class="sd">        -------</span>
 <span class="sd">        feature: Feature</span>
 <span class="sd">            A Feature object</span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span></div>
 
 <div class="viewcode-block" id="Feature.AnalyticRigidSurfRevolve"><a class="viewcode-back" href="../../../reference/mdb/model/part.html#abaqus.Part.Part.Feature.AnalyticRigidSurfRevolve">[docs]</a>    <span class="k">def</span> <span class="nf">AnalyticRigidSurfRevolve</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">sketch</span><span class="p">:</span> <span class="n">ConstrainedSketch</span><span class="p">):</span>
-        <span class="sd">"""This method creates a first Feature object for an analytical rigid surface by revolving</span>
+        <span class="sd">&quot;&quot;&quot;This method creates a first Feature object for an analytical rigid surface by revolving</span>
 <span class="sd">        the given ConstrainedSketch object by 360° about the *Y*-axis.</span>
 
 <span class="sd">        Notes</span>
@@ -447,11 +448,11 @@
 <span class="sd">        -------</span>
 <span class="sd">        feature: Feature</span>
 <span class="sd">            A Feature object</span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span></div>
 
 <div class="viewcode-block" id="Feature.AssignMidsurfaceRegion"><a class="viewcode-back" href="../../../reference/mdb/model/part.html#abaqus.Part.Part.Feature.AssignMidsurfaceRegion">[docs]</a>    <span class="k">def</span> <span class="nf">AssignMidsurfaceRegion</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">cellList</span><span class="p">:</span> <span class="nb">tuple</span><span class="p">[</span><span class="n">Cell</span><span class="p">]):</span>
-        <span class="sd">"""This method assign a mid-surface property to sequence of Cell objects. If a reference</span>
+        <span class="sd">&quot;&quot;&quot;This method assign a mid-surface property to sequence of Cell objects. If a reference</span>
 <span class="sd">        representation of the part does not exist, it creates one. It also copies the *cells* to</span>
 <span class="sd">        the reference representation and deletes the *cells* from the active representation of</span>
 <span class="sd">        the part.</span>
@@ -474,11 +475,11 @@
 <span class="sd">        -------</span>
 <span class="sd">        feature: Feature</span>
 <span class="sd">            A Feature object</span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span></div>
 
 <div class="viewcode-block" id="Feature.BaseSolidExtrude"><a class="viewcode-back" href="../../../reference/mdb/model/part.html#abaqus.Part.Part.Feature.BaseSolidExtrude">[docs]</a>    <span class="k">def</span> <span class="nf">BaseSolidExtrude</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">sketch</span><span class="p">:</span> <span class="n">ConstrainedSketch</span><span class="p">,</span> <span class="n">depth</span><span class="p">:</span> <span class="nb">float</span><span class="p">,</span> <span class="n">draftAngle</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">pitch</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="kc">None</span><span class="p">):</span>
-        <span class="sd">"""This method creates a first Feature object by extruding the given ConstrainedSketch</span>
+        <span class="sd">&quot;&quot;&quot;This method creates a first Feature object by extruding the given ConstrainedSketch</span>
 <span class="sd">        object by the given depth, creating a solid. The ConstrainedSketch object must define a</span>
 <span class="sd">        closed profile.</span>
 
@@ -513,13 +514,13 @@
 <span class="sd">        Returns</span>
 <span class="sd">        -------</span>
 <span class="sd">            A Feature object.</span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span></div>
 
 <div class="viewcode-block" id="Feature.BaseSolidRevolve"><a class="viewcode-back" href="../../../reference/mdb/model/part.html#abaqus.Part.Part.Feature.BaseSolidRevolve">[docs]</a>    <span class="k">def</span> <span class="nf">BaseSolidRevolve</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">sketch</span><span class="p">:</span> <span class="n">ConstrainedSketch</span><span class="p">,</span> <span class="n">angle</span><span class="p">:</span> <span class="nb">float</span><span class="p">,</span> <span class="n">pitch</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
                          <span class="n">flipRevolveDirection</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="n">OFF</span><span class="p">,</span> <span class="n">flipPitchDirection</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="n">OFF</span><span class="p">,</span>
                          <span class="n">moveSketchNormalToPath</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="n">OFF</span><span class="p">):</span>
-        <span class="sd">"""This method creates a first Feature object by revolving the given ConstrainedSketch</span>
+        <span class="sd">&quot;&quot;&quot;This method creates a first Feature object by revolving the given ConstrainedSketch</span>
 <span class="sd">        object by the given angle, creating a solid. The ConstrainedSketch object must define a</span>
 <span class="sd">        closed profile and an axis of revolution. The axis is defined by a single construction</span>
 <span class="sd">        line.</span>
@@ -567,11 +568,11 @@
 <span class="sd">        Raises</span>
 <span class="sd">        ------</span>
 <span class="sd">        RangeError</span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span></div>
 
 <div class="viewcode-block" id="Feature.BaseSolidSweep"><a class="viewcode-back" href="../../../reference/mdb/model/part.html#abaqus.Part.Part.Feature.BaseSolidSweep">[docs]</a>    <span class="k">def</span> <span class="nf">BaseSolidSweep</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">sketch</span><span class="p">:</span> <span class="n">ConstrainedSketch</span><span class="p">,</span> <span class="n">path</span><span class="p">:</span> <span class="n">ConstrainedSketch</span><span class="p">):</span>
-        <span class="sd">"""This method creates a first Feature object by sweeping the given profile</span>
+        <span class="sd">&quot;&quot;&quot;This method creates a first Feature object by sweeping the given profile</span>
 <span class="sd">        ConstrainedSketch object along the path defined by the path ConstrainedSketch object,</span>
 <span class="sd">        creating a solid. The profile ConstrainedSketch object must define a closed profile. The</span>
 <span class="sd">        origin of the profile sketch is positioned at the start of the sweep path and swept</span>
@@ -596,11 +597,11 @@
 <span class="sd">        -------</span>
 <span class="sd">        feature: Feature</span>
 <span class="sd">            A Feature object</span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span></div>
 
 <div class="viewcode-block" id="Feature.BaseShell"><a class="viewcode-back" href="../../../reference/mdb/model/part.html#abaqus.Part.Part.Feature.BaseShell">[docs]</a>    <span class="k">def</span> <span class="nf">BaseShell</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">sketch</span><span class="p">:</span> <span class="n">ConstrainedSketch</span><span class="p">):</span>
-        <span class="sd">"""This method creates a first Feature object by creating a planar shell from the given</span>
+        <span class="sd">&quot;&quot;&quot;This method creates a first Feature object by creating a planar shell from the given</span>
 <span class="sd">        ConstrainedSketch object. The ConstrainedSketch object must define a closed profile.</span>
 
 <span class="sd">        Notes</span>
@@ -620,11 +621,11 @@
 <span class="sd">        -------</span>
 <span class="sd">        feature: Feature</span>
 <span class="sd">            A Feature object</span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span></div>
 
 <div class="viewcode-block" id="Feature.BaseShellExtrude"><a class="viewcode-back" href="../../../reference/mdb/model/part.html#abaqus.Part.Part.Feature.BaseShellExtrude">[docs]</a>    <span class="k">def</span> <span class="nf">BaseShellExtrude</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">sketch</span><span class="p">:</span> <span class="n">ConstrainedSketch</span><span class="p">,</span> <span class="n">depth</span><span class="p">:</span> <span class="nb">float</span><span class="p">,</span> <span class="n">draftAngle</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">pitch</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="kc">None</span><span class="p">):</span>
-        <span class="sd">"""This method creates a first Feature object by extruding the given ConstrainedSketch</span>
+        <span class="sd">&quot;&quot;&quot;This method creates a first Feature object by extruding the given ConstrainedSketch</span>
 <span class="sd">        object by the given depth, creating a shell. The ConstrainedSketch object can define</span>
 <span class="sd">        either an open or closed profile.</span>
 
@@ -663,13 +664,13 @@
 <span class="sd">        Raises</span>
 <span class="sd">        ------</span>
 <span class="sd">        RangeError</span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span></div>
 
 <div class="viewcode-block" id="Feature.BaseShellRevolve"><a class="viewcode-back" href="../../../reference/mdb/model/part.html#abaqus.Part.Part.Feature.BaseShellRevolve">[docs]</a>    <span class="k">def</span> <span class="nf">BaseShellRevolve</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">sketch</span><span class="p">:</span> <span class="n">ConstrainedSketch</span><span class="p">,</span> <span class="n">angle</span><span class="p">:</span> <span class="nb">float</span><span class="p">,</span> <span class="n">pitch</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
                          <span class="n">flipRevolveDirection</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="n">OFF</span><span class="p">,</span> <span class="n">flipPitchDirection</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="n">OFF</span><span class="p">,</span>
                          <span class="n">moveSketchNormalToPath</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="n">OFF</span><span class="p">):</span>
-        <span class="sd">"""This method creates a first Feature object by revolving the given ConstrainedSketch</span>
+        <span class="sd">&quot;&quot;&quot;This method creates a first Feature object by revolving the given ConstrainedSketch</span>
 <span class="sd">        object by the given angle, creating a shell. The ConstrainedSketch object can define</span>
 <span class="sd">        either an open or closed profile and an axis of revolution. The axis is defined by a</span>
 <span class="sd">        single construction line.</span>
@@ -714,11 +715,11 @@
 <span class="sd">        -------</span>
 <span class="sd">        feature: Feature</span>
 <span class="sd">            A Feature object</span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span></div>
 
 <div class="viewcode-block" id="Feature.BaseShellSweep"><a class="viewcode-back" href="../../../reference/mdb/model/part.html#abaqus.Part.Part.Feature.BaseShellSweep">[docs]</a>    <span class="k">def</span> <span class="nf">BaseShellSweep</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">sketch</span><span class="p">:</span> <span class="n">ConstrainedSketch</span><span class="p">,</span> <span class="n">path</span><span class="p">:</span> <span class="n">ConstrainedSketch</span><span class="p">):</span>
-        <span class="sd">"""This method creates a first Feature object by sweeping the given section</span>
+        <span class="sd">&quot;&quot;&quot;This method creates a first Feature object by sweeping the given section</span>
 <span class="sd">        ConstrainedSketch object along the path defined by the path ConstrainedSketch object,</span>
 <span class="sd">        creating a shell. The ConstrainedSketch object can define either an open or closed</span>
 <span class="sd">        profile. The origin of the profile sketch is positioned at the start of the sweep path</span>
@@ -743,11 +744,11 @@
 <span class="sd">        -------</span>
 <span class="sd">        feature: Feature</span>
 <span class="sd">            A Feature object</span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span></div>
 
 <div class="viewcode-block" id="Feature.BaseWire"><a class="viewcode-back" href="../../../reference/mdb/model/part.html#abaqus.Part.Part.Feature.BaseWire">[docs]</a>    <span class="k">def</span> <span class="nf">BaseWire</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">sketch</span><span class="p">:</span> <span class="n">ConstrainedSketch</span><span class="p">):</span>
-        <span class="sd">"""This method creates a first Feature object by creating a planar wire from the given</span>
+        <span class="sd">&quot;&quot;&quot;This method creates a first Feature object by creating a planar wire from the given</span>
 <span class="sd">        ConstrainedSketch object.</span>
 
 <span class="sd">        Notes</span>
@@ -767,11 +768,11 @@
 <span class="sd">        -------</span>
 <span class="sd">        feature: Feature</span>
 <span class="sd">            A Feature object</span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span></div>
 
 <div class="viewcode-block" id="Feature.BlendFaces"><a class="viewcode-back" href="../../../reference/mdb/model/part.html#abaqus.Part.Part.Feature.BlendFaces">[docs]</a>    <span class="k">def</span> <span class="nf">BlendFaces</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">side1</span><span class="p">:</span> <span class="nb">tuple</span><span class="p">[</span><span class="n">Edge</span><span class="p">],</span> <span class="n">side2</span><span class="p">:</span> <span class="nb">tuple</span><span class="p">,</span> <span class="n">method</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">path</span><span class="p">:</span> <span class="n">Edge</span> <span class="o">=</span> <span class="n">Edge</span><span class="p">()):</span>
-        <span class="sd">"""This method creates a Feature object by creating new faces that blends two sets of</span>
+        <span class="sd">&quot;&quot;&quot;This method creates a Feature object by creating new faces that blends two sets of</span>
 <span class="sd">        faces.</span>
 
 <span class="sd">        Notes</span>
@@ -805,11 +806,11 @@
 <span class="sd">        -------</span>
 <span class="sd">        feature: Feature</span>
 <span class="sd">            A Feature object</span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span></div>
 
 <div class="viewcode-block" id="Feature.Chamfer"><a class="viewcode-back" href="../../../reference/mdb/model/part.html#abaqus.Part.Part.Feature.Chamfer">[docs]</a>    <span class="k">def</span> <span class="nf">Chamfer</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">length</span><span class="p">:</span> <span class="nb">float</span><span class="p">,</span> <span class="n">edgeList</span><span class="p">:</span> <span class="nb">tuple</span><span class="p">[</span><span class="n">Edge</span><span class="p">]):</span>
-        <span class="sd">"""This method creates an additional Feature object by chamfering the given list of edges</span>
+        <span class="sd">&quot;&quot;&quot;This method creates an additional Feature object by chamfering the given list of edges</span>
 <span class="sd">        with a given length.</span>
 
 <span class="sd">        Notes</span>
@@ -831,11 +832,11 @@
 <span class="sd">        -------</span>
 <span class="sd">        feature: Feature</span>
 <span class="sd">            A Feature object</span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span></div>
 
 <div class="viewcode-block" id="Feature.Mirror"><a class="viewcode-back" href="../../../reference/mdb/model/part.html#abaqus.Part.Part.Feature.Mirror">[docs]</a>    <span class="k">def</span> <span class="nf">Mirror</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">mirrorPlane</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">keepOriginal</span><span class="p">:</span> <span class="n">Boolean</span><span class="p">,</span> <span class="n">keepInternalBoundaries</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="n">OFF</span><span class="p">):</span>
-        <span class="sd">"""This method mirrors existing part geometry across a plane to create new geometry.</span>
+        <span class="sd">&quot;&quot;&quot;This method mirrors existing part geometry across a plane to create new geometry.</span>
 
 <span class="sd">        Notes</span>
 <span class="sd">        -----</span>
@@ -859,11 +860,11 @@
 <span class="sd">        -------</span>
 <span class="sd">        feature: Feature</span>
 <span class="sd">            A Feature object</span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span></div>
 
 <div class="viewcode-block" id="Feature.ConvertToAnalytical"><a class="viewcode-back" href="../../../reference/mdb/model/part.html#abaqus.Part.Part.Feature.ConvertToAnalytical">[docs]</a>    <span class="k">def</span> <span class="nf">ConvertToAnalytical</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="sd">"""This method attempts to change entities into a simpler form that will speed up</span>
+        <span class="sd">&quot;&quot;&quot;This method attempts to change entities into a simpler form that will speed up</span>
 <span class="sd">        processing and make entities available during feature operations.</span>
 
 <span class="sd">        Notes</span>
@@ -878,11 +879,11 @@
 <span class="sd">        -------</span>
 <span class="sd">        feature: Feature</span>
 <span class="sd">            A Feature object</span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span></div>
 
 <div class="viewcode-block" id="Feature.ConvertToPrecise"><a class="viewcode-back" href="../../../reference/mdb/model/part.html#abaqus.Part.Part.Feature.ConvertToPrecise">[docs]</a>    <span class="k">def</span> <span class="nf">ConvertToPrecise</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">method</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="n">RECOMPUTE_GEOMETRY</span><span class="p">):</span>
-        <span class="sd">"""This method attempts to change imprecise entities so that the geometry becomes precise.</span>
+        <span class="sd">&quot;&quot;&quot;This method attempts to change imprecise entities so that the geometry becomes precise.</span>
 
 <span class="sd">        Notes</span>
 <span class="sd">        -----</span>
@@ -903,11 +904,11 @@
 <span class="sd">        -------</span>
 <span class="sd">        feature: Feature</span>
 <span class="sd">            A Feature object</span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span></div>
 
 <div class="viewcode-block" id="Feature.CoverEdges"><a class="viewcode-back" href="../../../reference/mdb/model/part.html#abaqus.Part.Part.Feature.CoverEdges">[docs]</a>    <span class="k">def</span> <span class="nf">CoverEdges</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">edgeList</span><span class="p">:</span> <span class="nb">tuple</span><span class="p">[</span><span class="n">Edge</span><span class="p">],</span> <span class="n">tryAnalytical</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="kc">False</span><span class="p">):</span>
-        <span class="sd">"""This method generates a face using the given edges as the face's boundaries. The</span>
+        <span class="sd">&quot;&quot;&quot;This method generates a face using the given edges as the face&#39;s boundaries. The</span>
 <span class="sd">        CoverEdges method generates a face by creating the geometry consisting of the underlying</span>
 <span class="sd">        surface, associated edges, and vertices.</span>
 
@@ -939,12 +940,12 @@
 <span class="sd">              Parterror: Cannot find a closed loop </span>
 <span class="sd">            - If the underlying surface is too difficult to fit: </span>
 <span class="sd">              Parterror: Cannot construct face geometry </span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span></div>
 
 <div class="viewcode-block" id="Feature.Cut"><a class="viewcode-back" href="../../../reference/mdb/model/part.html#abaqus.Part.Part.Feature.Cut">[docs]</a>    <span class="k">def</span> <span class="nf">Cut</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">sketchPlane</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">sketchPlaneSide</span><span class="p">:</span> <span class="n">SymbolicConstant</span><span class="p">,</span> <span class="n">sketchUpEdge</span><span class="p">:</span> <span class="n">Edge</span><span class="p">,</span>
             <span class="n">sketch</span><span class="p">:</span> <span class="n">ConstrainedSketch</span><span class="p">,</span> <span class="n">sketchOrientation</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="kc">None</span><span class="p">):</span>
-        <span class="sd">"""This method creates an additional Feature object by cutting a hole using the given</span>
+        <span class="sd">&quot;&quot;&quot;This method creates an additional Feature object by cutting a hole using the given</span>
 <span class="sd">        ConstrainedSketch object.</span>
 
 <span class="sd">        Notes</span>
@@ -975,14 +976,14 @@
 <span class="sd">        -------</span>
 <span class="sd">        feature: Feature</span>
 <span class="sd">            A Feature object</span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span></div>
 
 <div class="viewcode-block" id="Feature.CutExtrude"><a class="viewcode-back" href="../../../reference/mdb/model/part.html#abaqus.Part.Part.Feature.CutExtrude">[docs]</a>    <span class="k">def</span> <span class="nf">CutExtrude</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">sketchPlane</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">sketchPlaneSide</span><span class="p">:</span> <span class="n">SymbolicConstant</span><span class="p">,</span> <span class="n">sketchUpEdge</span><span class="p">:</span> <span class="n">Edge</span><span class="p">,</span>
                    <span class="n">sketchOrientation</span><span class="p">:</span> <span class="n">SymbolicConstant</span><span class="p">,</span> <span class="n">sketch</span><span class="p">:</span> <span class="n">ConstrainedSketch</span><span class="p">,</span> <span class="n">depth</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
-                   <span class="n">upToFace</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">''</span><span class="p">,</span> <span class="n">draftAngle</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">pitch</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+                   <span class="n">upToFace</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">draftAngle</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">pitch</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
                    <span class="n">flipExtrudeDirection</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="n">OFF</span><span class="p">):</span>
-        <span class="sd">"""This method creates an additional Feature object by extruding the given</span>
+        <span class="sd">&quot;&quot;&quot;This method creates an additional Feature object by extruding the given</span>
 <span class="sd">        ConstrainedSketch object by the given depth and cutting away material in the solid and</span>
 <span class="sd">        shell regions of the part. The ConstrainedSketch object must define a closed profile.</span>
 <span class="sd">        The CutExtrude method creates a blind cut (using *depth*), an up-to-face cut (using</span>
@@ -1041,14 +1042,14 @@
 <span class="sd">        -------</span>
 <span class="sd">        feature: Feature</span>
 <span class="sd">            A Feature object</span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span></div>
 
 <div class="viewcode-block" id="Feature.CutLoft"><a class="viewcode-back" href="../../../reference/mdb/model/part.html#abaqus.Part.Part.Feature.CutLoft">[docs]</a>    <span class="k">def</span> <span class="nf">CutLoft</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">loftsections</span><span class="p">:</span> <span class="nb">tuple</span><span class="p">,</span> <span class="n">startCondition</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
                 <span class="n">endCondition</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">startTangent</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
                 <span class="n">startMagnitude</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">endTangent</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">endMagnitude</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
                 <span class="n">globalSmoothing</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="n">OFF</span><span class="p">):</span>
-        <span class="sd">"""This method creates an additional Feature object by lofting between the given sections</span>
+        <span class="sd">&quot;&quot;&quot;This method creates an additional Feature object by lofting between the given sections</span>
 <span class="sd">        and cutting away material from the part. You define the sections using a sequence of</span>
 <span class="sd">        edges from the part or an EdgeArray.</span>
 
@@ -1108,14 +1109,14 @@
 <span class="sd">        -------</span>
 <span class="sd">        feature: Feature</span>
 <span class="sd">            A Feature object</span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span></div>
 
 <div class="viewcode-block" id="Feature.CutRevolve"><a class="viewcode-back" href="../../../reference/mdb/model/part.html#abaqus.Part.Part.Feature.CutRevolve">[docs]</a>    <span class="k">def</span> <span class="nf">CutRevolve</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">sketchPlane</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">sketchPlaneSide</span><span class="p">:</span> <span class="n">SymbolicConstant</span><span class="p">,</span> <span class="n">sketchUpEdge</span><span class="p">:</span> <span class="n">Edge</span><span class="p">,</span>
                    <span class="n">sketchOrientation</span><span class="p">:</span> <span class="n">SymbolicConstant</span><span class="p">,</span> <span class="n">sketch</span><span class="p">:</span> <span class="n">ConstrainedSketch</span><span class="p">,</span> <span class="n">angle</span><span class="p">:</span> <span class="nb">float</span><span class="p">,</span>
                    <span class="n">pitch</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">flipRevolveDirection</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="n">OFF</span><span class="p">,</span>
                    <span class="n">flipPitchDirection</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="n">OFF</span><span class="p">,</span> <span class="n">moveSketchNormalToPath</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="n">OFF</span><span class="p">):</span>
-        <span class="sd">"""This method creates an additional Feature object by revolving the given</span>
+        <span class="sd">&quot;&quot;&quot;This method creates an additional Feature object by revolving the given</span>
 <span class="sd">        ConstrainedSketch object by the given angle and cutting away material from the part. The</span>
 <span class="sd">        ConstrainedSketch object must define a closed profile and an axis of revolution.</span>
 
@@ -1169,15 +1170,15 @@
 <span class="sd">        -------</span>
 <span class="sd">        feature: Feature</span>
 <span class="sd">            A Feature object</span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span></div>
 
-<div class="viewcode-block" id="Feature.CutSweep"><a class="viewcode-back" href="../../../reference/mdb/model/part.html#abaqus.Part.Part.Feature.CutSweep">[docs]</a>    <span class="k">def</span> <span class="nf">CutSweep</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">path</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">profile</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">pathPlane</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">''</span><span class="p">,</span> <span class="n">pathUpEdge</span><span class="p">:</span> <span class="n">Edge</span> <span class="o">=</span> <span class="n">Edge</span><span class="p">(),</span>
-                 <span class="n">pathOrientation</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">sketchPlane</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">''</span><span class="p">,</span>
+<div class="viewcode-block" id="Feature.CutSweep"><a class="viewcode-back" href="../../../reference/mdb/model/part.html#abaqus.Part.Part.Feature.CutSweep">[docs]</a>    <span class="k">def</span> <span class="nf">CutSweep</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">path</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">profile</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">pathPlane</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">pathUpEdge</span><span class="p">:</span> <span class="n">Edge</span> <span class="o">=</span> <span class="n">Edge</span><span class="p">(),</span>
+                 <span class="n">pathOrientation</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">sketchPlane</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span><span class="p">,</span>
                  <span class="n">sketchUpEdge</span><span class="p">:</span> <span class="n">Edge</span> <span class="o">=</span> <span class="n">Edge</span><span class="p">(),</span> <span class="n">sketchOrientation</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
                  <span class="n">draftAngle</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">pitch</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">profileNormal</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="n">OFF</span><span class="p">,</span>
                  <span class="n">flipSweepDirection</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="n">OFF</span><span class="p">):</span>
-        <span class="sd">"""This method creates an additional Feature object by sweeping the given ConstrainedSketch</span>
+        <span class="sd">&quot;&quot;&quot;This method creates an additional Feature object by sweeping the given ConstrainedSketch</span>
 <span class="sd">        object along a path which may be a ConstrainedSketch or a sequence of Edge objects and</span>
 <span class="sd">        cutting away material from the part. If the profile section is a ConstrainedSketch</span>
 <span class="sd">        object, it must define a closed profile. The section sketch can be created at the normal</span>
@@ -1250,13 +1251,13 @@
 <span class="sd">        -------</span>
 <span class="sd">        feature: Feature</span>
 <span class="sd">            A Feature object</span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span></div>
 
 <div class="viewcode-block" id="Feature.ExtendFaces"><a class="viewcode-back" href="../../../reference/mdb/model/part.html#abaqus.Part.Part.Feature.ExtendFaces">[docs]</a>    <span class="k">def</span> <span class="nf">ExtendFaces</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">faces</span><span class="p">:</span> <span class="nb">tuple</span><span class="p">[</span><span class="n">Face</span><span class="p">]</span> <span class="o">=</span> <span class="p">(),</span> <span class="n">extendAlong</span><span class="p">:</span> <span class="nb">tuple</span><span class="p">[</span><span class="n">Edge</span><span class="p">]</span> <span class="o">=</span> <span class="p">(),</span> <span class="n">distance</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
                     <span class="n">upToFaces</span><span class="p">:</span> <span class="nb">tuple</span><span class="p">[</span><span class="n">Face</span><span class="p">]</span> <span class="o">=</span> <span class="p">(),</span> <span class="n">trimToExtendedTargetSurfaces</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="kc">True</span><span class="p">,</span>
                     <span class="n">upToReferenceRep</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="n">OFF</span><span class="p">):</span>
-        <span class="sd">"""This method extends faces along its free edges by offsetting the external edges along</span>
+        <span class="sd">&quot;&quot;&quot;This method extends faces along its free edges by offsetting the external edges along</span>
 <span class="sd">        the surfaces. One of *distance*, *upToReferenceRep*, or *upToFaces* must be used to</span>
 <span class="sd">        specify how far the faces need to be extended.</span>
 
@@ -1295,12 +1296,12 @@
 <span class="sd">        -------</span>
 <span class="sd">        feature: Feature</span>
 <span class="sd">            A Feature object</span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span></div>
 
 <div class="viewcode-block" id="Feature.FaceFromElementFaces"><a class="viewcode-back" href="../../../reference/mdb/model/part.html#abaqus.Part.Part.Feature.FaceFromElementFaces">[docs]</a>    <span class="k">def</span> <span class="nf">FaceFromElementFaces</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">elementFaces</span><span class="p">:</span> <span class="n">Region</span><span class="p">,</span> <span class="n">stitch</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="n">OFF</span><span class="p">,</span> <span class="n">stitchTolerance</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
                              <span class="n">analyticFitTolerance</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">associateFace</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="n">OFF</span><span class="p">):</span>
-        <span class="sd">"""This method creates a geometry face from a collection of orphan element faces.</span>
+        <span class="sd">&quot;&quot;&quot;This method creates a geometry face from a collection of orphan element faces.</span>
 
 <span class="sd">        Notes</span>
 <span class="sd">        -----</span>
@@ -1334,13 +1335,13 @@
 <span class="sd">        -------</span>
 <span class="sd">        feature: Feature</span>
 <span class="sd">            A Feature object</span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span></div>
 
 <div class="viewcode-block" id="Feature.HoleBlindFromEdges"><a class="viewcode-back" href="../../../reference/mdb/model/part.html#abaqus.Part.Part.Feature.HoleBlindFromEdges">[docs]</a>    <span class="k">def</span> <span class="nf">HoleBlindFromEdges</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">plane</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">planeSide</span><span class="p">:</span> <span class="n">SymbolicConstant</span><span class="p">,</span> <span class="n">diameter</span><span class="p">:</span> <span class="nb">float</span><span class="p">,</span> <span class="n">edge1</span><span class="p">:</span> <span class="n">Edge</span><span class="p">,</span>
                            <span class="n">distance1</span><span class="p">:</span> <span class="nb">float</span><span class="p">,</span>
                            <span class="n">edge2</span><span class="p">:</span> <span class="n">Edge</span><span class="p">,</span> <span class="n">distance2</span><span class="p">:</span> <span class="nb">float</span><span class="p">,</span> <span class="n">depth</span><span class="p">:</span> <span class="nb">float</span><span class="p">):</span>
-        <span class="sd">"""This method creates an additional Feature object by creating a circular blind hole of</span>
+        <span class="sd">&quot;&quot;&quot;This method creates an additional Feature object by creating a circular blind hole of</span>
 <span class="sd">        the given diameter and depth and cutting away material in the solid and shell regions of</span>
 <span class="sd">        the part. The center of the hole is offset from two non-parallel straight edges by the</span>
 <span class="sd">        given distances.</span>
@@ -1377,11 +1378,11 @@
 <span class="sd">        -------</span>
 <span class="sd">        feature: Feature</span>
 <span class="sd">            A Feature object</span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span></div>
 
 <div class="viewcode-block" id="Feature.HoleFromEdges"><a class="viewcode-back" href="../../../reference/mdb/model/part.html#abaqus.Part.Part.Feature.HoleFromEdges">[docs]</a>    <span class="k">def</span> <span class="nf">HoleFromEdges</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">diameter</span><span class="p">:</span> <span class="nb">float</span><span class="p">,</span> <span class="n">edge1</span><span class="p">:</span> <span class="n">Edge</span><span class="p">,</span> <span class="n">distance1</span><span class="p">:</span> <span class="nb">float</span><span class="p">,</span> <span class="n">edge2</span><span class="p">:</span> <span class="n">Edge</span><span class="p">,</span> <span class="n">distance2</span><span class="p">:</span> <span class="nb">float</span><span class="p">):</span>
-        <span class="sd">"""This method creates an additional Feature object by creating a circular hole of the</span>
+        <span class="sd">&quot;&quot;&quot;This method creates an additional Feature object by creating a circular hole of the</span>
 <span class="sd">        given diameter in a 2D planar part and cutting away material in the shell and wire</span>
 <span class="sd">        regions of the part. The center of the hole is offset from two non-parallel straight</span>
 <span class="sd">        edges by the given distances.</span>
@@ -1411,13 +1412,13 @@
 <span class="sd">        -------</span>
 <span class="sd">        feature: Feature</span>
 <span class="sd">            A Feature object</span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span></div>
 
 <div class="viewcode-block" id="Feature.HoleThruAllFromEdges"><a class="viewcode-back" href="../../../reference/mdb/model/part.html#abaqus.Part.Part.Feature.HoleThruAllFromEdges">[docs]</a>    <span class="k">def</span> <span class="nf">HoleThruAllFromEdges</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">plane</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">planeSide</span><span class="p">:</span> <span class="n">SymbolicConstant</span><span class="p">,</span> <span class="n">diameter</span><span class="p">:</span> <span class="nb">float</span><span class="p">,</span> <span class="n">edge1</span><span class="p">:</span> <span class="n">Edge</span><span class="p">,</span>
                              <span class="n">distance1</span><span class="p">:</span> <span class="nb">float</span><span class="p">,</span>
                              <span class="n">edge2</span><span class="p">:</span> <span class="n">Edge</span><span class="p">,</span> <span class="n">distance2</span><span class="p">:</span> <span class="nb">float</span><span class="p">):</span>
-        <span class="sd">"""This method creates an additional Feature object by creating a circular through hole of</span>
+        <span class="sd">&quot;&quot;&quot;This method creates an additional Feature object by creating a circular through hole of</span>
 <span class="sd">        the given diameter and cutting away material in the solid and shell regions of the part.</span>
 <span class="sd">        The center of the hole is offset from two non-parallel straight edges by the given</span>
 <span class="sd">        distances.</span>
@@ -1452,11 +1453,11 @@
 <span class="sd">        -------</span>
 <span class="sd">        feature: Feature</span>
 <span class="sd">            A Feature object</span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span></div>
 
 <div class="viewcode-block" id="Feature.MergeEdges"><a class="viewcode-back" href="../../../reference/mdb/model/part.html#abaqus.Part.Part.Feature.MergeEdges">[docs]</a>    <span class="k">def</span> <span class="nf">MergeEdges</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">edgeList</span><span class="p">:</span> <span class="nb">tuple</span><span class="p">[</span><span class="n">Edge</span><span class="p">]</span> <span class="o">=</span> <span class="p">(),</span> <span class="n">extendSelection</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="n">OFF</span><span class="p">):</span>
-        <span class="sd">"""This method merges edges either by extending the user selection or using only the</span>
+        <span class="sd">&quot;&quot;&quot;This method merges edges either by extending the user selection or using only the</span>
 <span class="sd">        selected edges.</span>
 
 <span class="sd">        Notes</span>
@@ -1480,13 +1481,13 @@
 <span class="sd">        -------</span>
 <span class="sd">        feature: Feature</span>
 <span class="sd">            A Feature object</span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span></div>
 
 <div class="viewcode-block" id="Feature.OffsetFaces"><a class="viewcode-back" href="../../../reference/mdb/model/part.html#abaqus.Part.Part.Feature.OffsetFaces">[docs]</a>    <span class="k">def</span> <span class="nf">OffsetFaces</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">faceList</span><span class="p">:</span> <span class="nb">tuple</span><span class="p">[</span><span class="n">Face</span><span class="p">],</span> <span class="n">distance</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">targetFaces</span><span class="p">:</span> <span class="nb">tuple</span><span class="p">[</span><span class="n">Face</span><span class="p">]</span> <span class="o">=</span> <span class="p">(),</span>
                     <span class="n">targetFacesMethod</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">fractionDistance</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
                     <span class="n">trimToReferenceRep</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="n">OFF</span><span class="p">):</span>
-        <span class="sd">"""This method creates new faces by offsetting existing faces.</span>
+        <span class="sd">&quot;&quot;&quot;This method creates new faces by offsetting existing faces.</span>
 
 <span class="sd">        Notes</span>
 <span class="sd">        -----</span>
@@ -1527,11 +1528,11 @@
 <span class="sd">        -------</span>
 <span class="sd">        feature: Feature</span>
 <span class="sd">            A Feature object</span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span></div>
 
 <div class="viewcode-block" id="Feature.RemoveCells"><a class="viewcode-back" href="../../../reference/mdb/model/part.html#abaqus.Part.Part.Feature.RemoveCells">[docs]</a>    <span class="k">def</span> <span class="nf">RemoveCells</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">cellList</span><span class="p">:</span> <span class="nb">tuple</span><span class="p">[</span><span class="n">Cell</span><span class="p">]):</span>
-        <span class="sd">"""This method converts a solid entity to a shell entity.</span>
+        <span class="sd">&quot;&quot;&quot;This method converts a solid entity to a shell entity.</span>
 
 <span class="sd">        Notes</span>
 <span class="sd">        -----</span>
@@ -1554,11 +1555,11 @@
 <span class="sd">        ------</span>
 <span class="sd">            - If the intended volume to be turned into a shell entity is not three-dimensional. </span>
 <span class="sd">              Parterror: ConstrainedSketchGeometry that is not 3-dimensional does not contain cells.</span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span></div>
 
 <div class="viewcode-block" id="Feature.RemoveFaces"><a class="viewcode-back" href="../../../reference/mdb/model/part.html#abaqus.Part.Part.Feature.RemoveFaces">[docs]</a>    <span class="k">def</span> <span class="nf">RemoveFaces</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">faceList</span><span class="p">:</span> <span class="nb">tuple</span><span class="p">[</span><span class="n">Face</span><span class="p">],</span> <span class="n">deleteCells</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="kc">False</span><span class="p">):</span>
-        <span class="sd">"""This method removes faces from a solid entity or from a shell entity.</span>
+        <span class="sd">&quot;&quot;&quot;This method removes faces from a solid entity or from a shell entity.</span>
 
 <span class="sd">        Notes</span>
 <span class="sd">        -----</span>
@@ -1580,11 +1581,11 @@
 <span class="sd">        -------</span>
 <span class="sd">        feature: Feature</span>
 <span class="sd">            A Feature object</span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span></div>
 
 <div class="viewcode-block" id="Feature.RemoveFacesAndStitch"><a class="viewcode-back" href="../../../reference/mdb/model/part.html#abaqus.Part.Part.Feature.RemoveFacesAndStitch">[docs]</a>    <span class="k">def</span> <span class="nf">RemoveFacesAndStitch</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">faceList</span><span class="p">:</span> <span class="nb">tuple</span><span class="p">[</span><span class="n">Face</span><span class="p">]):</span>
-        <span class="sd">"""This method removes faces from a solid entity and attempts to close the resulting gap by</span>
+        <span class="sd">&quot;&quot;&quot;This method removes faces from a solid entity and attempts to close the resulting gap by</span>
 <span class="sd">        extending the neighboring faces of the solid.</span>
 
 <span class="sd">        Notes</span>
@@ -1604,12 +1605,12 @@
 <span class="sd">        -------</span>
 <span class="sd">        feature: Feature</span>
 <span class="sd">            A Feature object</span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span></div>
 
 <div class="viewcode-block" id="Feature.RemoveRedundantEntities"><a class="viewcode-back" href="../../../reference/mdb/model/part.html#abaqus.Part.Part.Feature.RemoveRedundantEntities">[docs]</a>    <span class="k">def</span> <span class="nf">RemoveRedundantEntities</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">vertexList</span><span class="p">:</span> <span class="nb">tuple</span><span class="p">[</span><span class="n">Vertex</span><span class="p">]</span> <span class="o">=</span> <span class="p">(),</span> <span class="n">edgeList</span><span class="p">:</span> <span class="nb">tuple</span><span class="p">[</span><span class="n">Edge</span><span class="p">]</span> <span class="o">=</span> <span class="p">(),</span>
                                 <span class="n">removeEdgeVertices</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="kc">True</span><span class="p">):</span>
-        <span class="sd">"""This method removes redundant edges and vertices from a solid or a shell entity. One of</span>
+        <span class="sd">&quot;&quot;&quot;This method removes redundant edges and vertices from a solid or a shell entity. One of</span>
 <span class="sd">        the two arguments is required.</span>
 
 <span class="sd">        Notes</span>
@@ -1638,12 +1639,12 @@
 <span class="sd">        ------</span>
 <span class="sd">            - If the selected entity is not a redundant entity. </span>
 <span class="sd">              Parterror: None of the selected entities are redundant. </span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span></div>
 
 <div class="viewcode-block" id="Feature.RepairFaceNormals"><a class="viewcode-back" href="../../../reference/mdb/model/part.html#abaqus.Part.Part.Feature.RepairFaceNormals">[docs]</a>    <span class="k">def</span> <span class="nf">RepairFaceNormals</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">faceList</span><span class="p">:</span> <span class="nb">tuple</span><span class="p">[</span><span class="n">Face</span><span class="p">]</span> <span class="o">=</span> <span class="p">()):</span>
-        <span class="sd">"""This method works on the entire part or a sequence of shell faces. When the entire part</span>
-<span class="sd">        is selected, it aligns all the shell face normals, and inverts all of the solid faces'</span>
+        <span class="sd">&quot;&quot;&quot;This method works on the entire part or a sequence of shell faces. When the entire part</span>
+<span class="sd">        is selected, it aligns all the shell face normals, and inverts all of the solid faces&#39;</span>
 <span class="sd">        normals if the solid was originally inside out. When a few shell faces are selected, it</span>
 <span class="sd">        inverts the normals of the selected faces.</span>
 
@@ -1664,11 +1665,11 @@
 <span class="sd">        -------</span>
 <span class="sd">        feature: Feature</span>
 <span class="sd">            A Feature object</span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span></div>
 
 <div class="viewcode-block" id="Feature.RepairInvalidEdges"><a class="viewcode-back" href="../../../reference/mdb/model/part.html#abaqus.Part.Part.Feature.RepairInvalidEdges">[docs]</a>    <span class="k">def</span> <span class="nf">RepairInvalidEdges</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">edgeList</span><span class="p">:</span> <span class="nb">tuple</span><span class="p">[</span><span class="n">Edge</span><span class="p">]):</span>
-        <span class="sd">"""This method repairs invalid edges. It will always attempt to improve edges even if none</span>
+        <span class="sd">&quot;&quot;&quot;This method repairs invalid edges. It will always attempt to improve edges even if none</span>
 <span class="sd">        of selected edges are initially invalid and may leave behind invalid edges that could</span>
 <span class="sd">        not be repaired.</span>
 
@@ -1689,11 +1690,11 @@
 <span class="sd">        -------</span>
 <span class="sd">        feature: Feature</span>
 <span class="sd">            A Feature object</span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span></div>
 
 <div class="viewcode-block" id="Feature.RepairSliver"><a class="viewcode-back" href="../../../reference/mdb/model/part.html#abaqus.Part.Part.Feature.RepairSliver">[docs]</a>    <span class="k">def</span> <span class="nf">RepairSliver</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">face</span><span class="p">:</span> <span class="n">Face</span><span class="p">,</span> <span class="n">point1</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">point2</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">toleranceChecks</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="kc">True</span><span class="p">):</span>
-        <span class="sd">"""This method repairs the selected sliver from the selected face. The sliver area is</span>
+        <span class="sd">&quot;&quot;&quot;This method repairs the selected sliver from the selected face. The sliver area is</span>
 <span class="sd">        specified using two points. A face partition is carried out at the specified points and</span>
 <span class="sd">        the smaller of the two faces is removed.</span>
 
@@ -1723,11 +1724,11 @@
 <span class="sd">        -------</span>
 <span class="sd">        feature: Feature</span>
 <span class="sd">            A Feature object</span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span></div>
 
 <div class="viewcode-block" id="Feature.RepairSmallEdges"><a class="viewcode-back" href="../../../reference/mdb/model/part.html#abaqus.Part.Part.Feature.RepairSmallEdges">[docs]</a>    <span class="k">def</span> <span class="nf">RepairSmallEdges</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">edgeList</span><span class="p">:</span> <span class="nb">tuple</span><span class="p">[</span><span class="n">Edge</span><span class="p">],</span> <span class="n">toleranceChecks</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="kc">True</span><span class="p">):</span>
-        <span class="sd">"""This method repairs small edges. This method will attempt to replace selected small</span>
+        <span class="sd">&quot;&quot;&quot;This method repairs small edges. This method will attempt to replace selected small</span>
 <span class="sd">        edges with vertices and extend the adjacent faces and edges. This method might leave</span>
 <span class="sd">        behind some small edges that cannot be removed.</span>
 
@@ -1751,11 +1752,11 @@
 <span class="sd">        -------</span>
 <span class="sd">        feature: Feature</span>
 <span class="sd">            A Feature object</span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span></div>
 
 <div class="viewcode-block" id="Feature.RepairSmallFaces"><a class="viewcode-back" href="../../../reference/mdb/model/part.html#abaqus.Part.Part.Feature.RepairSmallFaces">[docs]</a>    <span class="k">def</span> <span class="nf">RepairSmallFaces</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">faceList</span><span class="p">:</span> <span class="nb">tuple</span><span class="p">[</span><span class="n">Face</span><span class="p">],</span> <span class="n">toleranceChecks</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="kc">True</span><span class="p">):</span>
-        <span class="sd">"""This method repairs small faces. It will attempt to replace the selected small faces</span>
+        <span class="sd">&quot;&quot;&quot;This method repairs small faces. It will attempt to replace the selected small faces</span>
 <span class="sd">        with edges or vertices and extend the adjacent faces. This method might leave behind</span>
 <span class="sd">        some small faces that cannot be removed.</span>
 
@@ -1779,11 +1780,11 @@
 <span class="sd">        -------</span>
 <span class="sd">        feature: Feature</span>
 <span class="sd">            A Feature object</span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span></div>
 
 <div class="viewcode-block" id="Feature.ReplaceFaces"><a class="viewcode-back" href="../../../reference/mdb/model/part.html#abaqus.Part.Part.Feature.ReplaceFaces">[docs]</a>    <span class="k">def</span> <span class="nf">ReplaceFaces</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">faceList</span><span class="p">:</span> <span class="nb">tuple</span><span class="p">[</span><span class="n">Face</span><span class="p">],</span> <span class="n">stitch</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="kc">True</span><span class="p">):</span>
-        <span class="sd">"""This method replaces the selected faces with a single face. If one single face is</span>
+        <span class="sd">&quot;&quot;&quot;This method replaces the selected faces with a single face. If one single face is</span>
 <span class="sd">        selected, that alone is replaced with a new face.</span>
 
 <span class="sd">        Notes</span>
@@ -1806,11 +1807,11 @@
 <span class="sd">        -------</span>
 <span class="sd">        feature: Feature</span>
 <span class="sd">            A Feature object</span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span></div>
 
 <div class="viewcode-block" id="Feature.Round"><a class="viewcode-back" href="../../../reference/mdb/model/part.html#abaqus.Part.Part.Feature.Round">[docs]</a>    <span class="k">def</span> <span class="nf">Round</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">radius</span><span class="p">:</span> <span class="nb">float</span><span class="p">,</span> <span class="n">edgeList</span><span class="p">:</span> <span class="nb">tuple</span><span class="p">[</span><span class="n">Edge</span><span class="p">],</span> <span class="n">vertexList</span><span class="p">:</span> <span class="nb">tuple</span><span class="p">[</span><span class="n">Vertex</span><span class="p">]):</span>
-        <span class="sd">"""This method creates an additional Feature object by rounding (filleting) the given list</span>
+        <span class="sd">&quot;&quot;&quot;This method creates an additional Feature object by rounding (filleting) the given list</span>
 <span class="sd">        of entities with the given radius.</span>
 
 <span class="sd">        Notes</span>
@@ -1838,12 +1839,12 @@
 <span class="sd">        -------</span>
 <span class="sd">        feature: Feature</span>
 <span class="sd">            A Feature object</span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span></div>
 
 <div class="viewcode-block" id="Feature.Shell"><a class="viewcode-back" href="../../../reference/mdb/model/part.html#abaqus.Part.Part.Feature.Shell">[docs]</a>    <span class="k">def</span> <span class="nf">Shell</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">sketchPlane</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">sketchPlaneSide</span><span class="p">:</span> <span class="n">SymbolicConstant</span><span class="p">,</span> <span class="n">sketchUpEdge</span><span class="p">:</span> <span class="n">Edge</span><span class="p">,</span>
               <span class="n">sketch</span><span class="p">:</span> <span class="n">ConstrainedSketch</span><span class="p">,</span> <span class="n">sketchOrientation</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="n">RIGHT</span><span class="p">):</span>
-        <span class="sd">"""This method creates an additional Feature object by creating a planar shell from the</span>
+        <span class="sd">&quot;&quot;&quot;This method creates an additional Feature object by creating a planar shell from the</span>
 <span class="sd">        given ConstrainedSketch object. The ConstrainedSketch object must define a closed</span>
 <span class="sd">        profile.</span>
 
@@ -1875,15 +1876,15 @@
 <span class="sd">        -------</span>
 <span class="sd">        feature: Feature</span>
 <span class="sd">            A Feature object</span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span></div>
 
 <div class="viewcode-block" id="Feature.ShellExtrude"><a class="viewcode-back" href="../../../reference/mdb/model/part.html#abaqus.Part.Part.Feature.ShellExtrude">[docs]</a>    <span class="k">def</span> <span class="nf">ShellExtrude</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">sketchPlane</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">sketchPlaneSide</span><span class="p">:</span> <span class="n">SymbolicConstant</span><span class="p">,</span> <span class="n">sketchUpEdge</span><span class="p">:</span> <span class="n">Edge</span><span class="p">,</span>
-                     <span class="n">sketch</span><span class="p">:</span> <span class="n">ConstrainedSketch</span><span class="p">,</span> <span class="n">depth</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">upToFace</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">''</span><span class="p">,</span>
+                     <span class="n">sketch</span><span class="p">:</span> <span class="n">ConstrainedSketch</span><span class="p">,</span> <span class="n">depth</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">upToFace</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span><span class="p">,</span>
                      <span class="n">sketchOrientation</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="n">RIGHT</span><span class="p">,</span> <span class="n">draftAngle</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
                      <span class="n">pitch</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">flipExtrudeDirection</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="n">OFF</span><span class="p">,</span>
                      <span class="n">keepInternalBoundaries</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="n">OFF</span><span class="p">):</span>
-        <span class="sd">"""This method creates an additional Feature object by extruding the given</span>
+        <span class="sd">&quot;&quot;&quot;This method creates an additional Feature object by extruding the given</span>
 <span class="sd">        ConstrainedSketch object by the given depth, creating a shell protrusion. The</span>
 <span class="sd">        ConstrainedSketch object can define either an open or closed profile.</span>
 
@@ -1943,7 +1944,7 @@
 <span class="sd">        -------</span>
 <span class="sd">        feature: Feature</span>
 <span class="sd">            A Feature object</span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span></div>
 
 <div class="viewcode-block" id="Feature.ShellLoft"><a class="viewcode-back" href="../../../reference/mdb/model/part.html#abaqus.Part.Part.Feature.ShellLoft">[docs]</a>    <span class="k">def</span> <span class="nf">ShellLoft</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">loftsections</span><span class="p">:</span> <span class="nb">tuple</span><span class="p">,</span> <span class="n">startCondition</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
@@ -1951,7 +1952,7 @@
                   <span class="n">startMagnitude</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">endTangent</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">endMagnitude</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
                   <span class="n">paths</span><span class="p">:</span> <span class="nb">tuple</span> <span class="o">=</span> <span class="p">(),</span> <span class="n">globalSmoothing</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="n">OFF</span><span class="p">,</span>
                   <span class="n">keepInternalBoundaries</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="n">OFF</span><span class="p">):</span>
-        <span class="sd">"""This method creates an additional Feature object by lofting between the given sections</span>
+        <span class="sd">&quot;&quot;&quot;This method creates an additional Feature object by lofting between the given sections</span>
 <span class="sd">        and adding shell faces to the part. You define the sections using a sequence of edges</span>
 <span class="sd">        from the part or an EdgeArray.</span>
 
@@ -2023,7 +2024,7 @@
 <span class="sd">        -------</span>
 <span class="sd">        feature: Feature</span>
 <span class="sd">            A Feature object</span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span></div>
 
 <div class="viewcode-block" id="Feature.ShellRevolve"><a class="viewcode-back" href="../../../reference/mdb/model/part.html#abaqus.Part.Part.Feature.ShellRevolve">[docs]</a>    <span class="k">def</span> <span class="nf">ShellRevolve</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">sketchPlane</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">sketchPlaneSide</span><span class="p">:</span> <span class="n">SymbolicConstant</span><span class="p">,</span> <span class="n">sketchUpEdge</span><span class="p">:</span> <span class="n">Edge</span><span class="p">,</span>
@@ -2031,7 +2032,7 @@
                      <span class="n">pitch</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">flipRevolveDirection</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="n">OFF</span><span class="p">,</span>
                      <span class="n">flipPitchDirection</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="n">OFF</span><span class="p">,</span> <span class="n">moveSketchNormalToPath</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="n">OFF</span><span class="p">,</span>
                      <span class="n">keepInternalBoundaries</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="n">OFF</span><span class="p">):</span>
-        <span class="sd">"""This method creates an additional Feature object by revolving the given</span>
+        <span class="sd">&quot;&quot;&quot;This method creates an additional Feature object by revolving the given</span>
 <span class="sd">        ConstrainedSketch object by the given angle, creating a shell protrusion. The</span>
 <span class="sd">        ConstrainedSketch object can define either an open or closed profile and an axis of</span>
 <span class="sd">        revolution. The axis is defined by a single construction line. For a description of the</span>
@@ -2090,15 +2091,15 @@
 <span class="sd">        -------</span>
 <span class="sd">        feature: Feature</span>
 <span class="sd">            A Feature object</span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span></div>
 
-<div class="viewcode-block" id="Feature.ShellSweep"><a class="viewcode-back" href="../../../reference/mdb/model/part.html#abaqus.Part.Part.Feature.ShellSweep">[docs]</a>    <span class="k">def</span> <span class="nf">ShellSweep</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">path</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">profile</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">pathPlane</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">''</span><span class="p">,</span> <span class="n">pathUpEdge</span><span class="p">:</span> <span class="n">Edge</span> <span class="o">=</span> <span class="n">Edge</span><span class="p">(),</span>
-                   <span class="n">pathOrientation</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">sketchPlane</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">''</span><span class="p">,</span>
+<div class="viewcode-block" id="Feature.ShellSweep"><a class="viewcode-back" href="../../../reference/mdb/model/part.html#abaqus.Part.Part.Feature.ShellSweep">[docs]</a>    <span class="k">def</span> <span class="nf">ShellSweep</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">path</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">profile</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">pathPlane</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">pathUpEdge</span><span class="p">:</span> <span class="n">Edge</span> <span class="o">=</span> <span class="n">Edge</span><span class="p">(),</span>
+                   <span class="n">pathOrientation</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">sketchPlane</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span><span class="p">,</span>
                    <span class="n">sketchUpEdge</span><span class="p">:</span> <span class="n">Edge</span> <span class="o">=</span> <span class="n">Edge</span><span class="p">(),</span> <span class="n">sketchOrientation</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
                    <span class="n">draftAngle</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">pitch</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">profileNormal</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="n">OFF</span><span class="p">,</span>
                    <span class="n">flipSweepDirection</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="n">OFF</span><span class="p">,</span> <span class="n">keepInternalBoundaries</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="n">OFF</span><span class="p">):</span>
-        <span class="sd">"""This method creates an additional Feature object by sweeping the given ConstrainedSketch</span>
+        <span class="sd">&quot;&quot;&quot;This method creates an additional Feature object by sweeping the given ConstrainedSketch</span>
 <span class="sd">        object or a sequence of Edge objects along a path which may be a ConstrainedSketch or a</span>
 <span class="sd">        sequence of Edge objects, creating a shell swept protrusion. The section can be an open</span>
 <span class="sd">        or a closed profile. The section sketch can be created at the normal plane at the start</span>
@@ -2174,15 +2175,15 @@
 <span class="sd">        -------</span>
 <span class="sd">        feature: Feature</span>
 <span class="sd">            A Feature object</span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span></div>
 
 <div class="viewcode-block" id="Feature.SolidExtrude"><a class="viewcode-back" href="../../../reference/mdb/model/part.html#abaqus.Part.Part.Feature.SolidExtrude">[docs]</a>    <span class="k">def</span> <span class="nf">SolidExtrude</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">sketchPlane</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">sketchPlaneSide</span><span class="p">:</span> <span class="n">SymbolicConstant</span><span class="p">,</span> <span class="n">sketchUpEdge</span><span class="p">:</span> <span class="n">Edge</span><span class="p">,</span>
-                     <span class="n">sketch</span><span class="p">:</span> <span class="n">ConstrainedSketch</span><span class="p">,</span> <span class="n">depth</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">upToFace</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">''</span><span class="p">,</span>
+                     <span class="n">sketch</span><span class="p">:</span> <span class="n">ConstrainedSketch</span><span class="p">,</span> <span class="n">depth</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">upToFace</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span><span class="p">,</span>
                      <span class="n">sketchOrientation</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="n">RIGHT</span><span class="p">,</span> <span class="n">draftAngle</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
                      <span class="n">pitch</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">flipExtrudeDirection</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="n">OFF</span><span class="p">,</span>
                      <span class="n">keepInternalBoundaries</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="n">OFF</span><span class="p">):</span>
-        <span class="sd">"""This method creates an additional Feature object by extruding the given</span>
+        <span class="sd">&quot;&quot;&quot;This method creates an additional Feature object by extruding the given</span>
 <span class="sd">        ConstrainedSketch object by the given depth, creating a solid protrusion. The</span>
 <span class="sd">        ConstrainedSketch object must define a closed profile.</span>
 
@@ -2242,7 +2243,7 @@
 <span class="sd">        -------</span>
 <span class="sd">        feature: Feature</span>
 <span class="sd">            A Feature object</span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span></div>
 
 <div class="viewcode-block" id="Feature.SolidLoft"><a class="viewcode-back" href="../../../reference/mdb/model/part.html#abaqus.Part.Part.Feature.SolidLoft">[docs]</a>    <span class="k">def</span> <span class="nf">SolidLoft</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">loftsections</span><span class="p">:</span> <span class="nb">tuple</span><span class="p">,</span> <span class="n">startCondition</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
@@ -2250,7 +2251,7 @@
                   <span class="n">startMagnitude</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">endTangent</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">endMagnitude</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
                   <span class="n">paths</span><span class="p">:</span> <span class="nb">tuple</span> <span class="o">=</span> <span class="p">(),</span> <span class="n">globalSmoothing</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="n">OFF</span><span class="p">,</span>
                   <span class="n">keepInternalBoundaries</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="n">OFF</span><span class="p">):</span>
-        <span class="sd">"""This method creates an additional Feature object by lofting between the given sections</span>
+        <span class="sd">&quot;&quot;&quot;This method creates an additional Feature object by lofting between the given sections</span>
 <span class="sd">        and adding material to the part. You define the sections using a sequence of edges from</span>
 <span class="sd">        the part or an EdgeArray.</span>
 
@@ -2321,7 +2322,7 @@
 <span class="sd">        -------</span>
 <span class="sd">        feature: Feature</span>
 <span class="sd">            A Feature object</span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span></div>
 
 <div class="viewcode-block" id="Feature.SolidRevolve"><a class="viewcode-back" href="../../../reference/mdb/model/part.html#abaqus.Part.Part.Feature.SolidRevolve">[docs]</a>    <span class="k">def</span> <span class="nf">SolidRevolve</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">sketchPlane</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">sketchPlaneSide</span><span class="p">:</span> <span class="n">SymbolicConstant</span><span class="p">,</span> <span class="n">sketchUpEdge</span><span class="p">:</span> <span class="n">Edge</span><span class="p">,</span>
@@ -2329,7 +2330,7 @@
                      <span class="n">pitch</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">flipRevolveDirection</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="n">OFF</span><span class="p">,</span>
                      <span class="n">flipPitchDirection</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="n">OFF</span><span class="p">,</span> <span class="n">moveSketchNormalToPath</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="n">OFF</span><span class="p">,</span>
                      <span class="n">keepInternalBoundaries</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="n">OFF</span><span class="p">):</span>
-        <span class="sd">"""This method creates an additional Feature object by revolving the given</span>
+        <span class="sd">&quot;&quot;&quot;This method creates an additional Feature object by revolving the given</span>
 <span class="sd">        ConstrainedSketch object by the given angle, creating a solid protrusion. The</span>
 <span class="sd">        ConstrainedSketch object must define a closed profile and an axis of revolution. The</span>
 <span class="sd">        axis is defined by a single construction line.</span>
@@ -2387,15 +2388,15 @@
 <span class="sd">        -------</span>
 <span class="sd">        feature: Feature</span>
 <span class="sd">            A Feature object</span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span></div>
 
-<div class="viewcode-block" id="Feature.SolidSweep"><a class="viewcode-back" href="../../../reference/mdb/model/part.html#abaqus.Part.Part.Feature.SolidSweep">[docs]</a>    <span class="k">def</span> <span class="nf">SolidSweep</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">path</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">profile</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">pathPlane</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">''</span><span class="p">,</span> <span class="n">pathUpEdge</span><span class="p">:</span> <span class="n">Edge</span> <span class="o">=</span> <span class="n">Edge</span><span class="p">(),</span>
-                   <span class="n">pathOrientation</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">sketchPlane</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">''</span><span class="p">,</span>
+<div class="viewcode-block" id="Feature.SolidSweep"><a class="viewcode-back" href="../../../reference/mdb/model/part.html#abaqus.Part.Part.Feature.SolidSweep">[docs]</a>    <span class="k">def</span> <span class="nf">SolidSweep</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">path</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">profile</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">pathPlane</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">pathUpEdge</span><span class="p">:</span> <span class="n">Edge</span> <span class="o">=</span> <span class="n">Edge</span><span class="p">(),</span>
+                   <span class="n">pathOrientation</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">sketchPlane</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span><span class="p">,</span>
                    <span class="n">sketchUpEdge</span><span class="p">:</span> <span class="n">Edge</span> <span class="o">=</span> <span class="n">Edge</span><span class="p">(),</span> <span class="n">sketchOrientation</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
                    <span class="n">draftAngle</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">pitch</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">profileNormal</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="n">OFF</span><span class="p">,</span>
                    <span class="n">flipSweepDirection</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="n">OFF</span><span class="p">,</span> <span class="n">keepInternalBoundaries</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="n">OFF</span><span class="p">):</span>
-        <span class="sd">"""This method creates an additional Feature object by sweeping the given ConstrainedSketch</span>
+        <span class="sd">&quot;&quot;&quot;This method creates an additional Feature object by sweeping the given ConstrainedSketch</span>
 <span class="sd">        object or a Face object along a path which may be a ConstrainedSketch or a sequence of</span>
 <span class="sd">        Edge objects, creating a solid swept protrusion. If the profile section is a</span>
 <span class="sd">        ConstrainedSketch object, it must define a closed profile. The section sketch can be</span>
@@ -2471,11 +2472,11 @@
 <span class="sd">        -------</span>
 <span class="sd">        feature: Feature</span>
 <span class="sd">            A Feature object</span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span></div>
 
 <div class="viewcode-block" id="Feature.Stitch"><a class="viewcode-back" href="../../../reference/mdb/model/part.html#abaqus.Part.Part.Feature.Stitch">[docs]</a>    <span class="k">def</span> <span class="nf">Stitch</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">edgeList</span><span class="p">:</span> <span class="nb">tuple</span><span class="p">[</span><span class="n">Edge</span><span class="p">]</span> <span class="o">=</span> <span class="p">(),</span> <span class="n">stitchTolerance</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="kc">None</span><span class="p">):</span>
-        <span class="sd">"""This method attempts to create a valid part by binding together free and imprecise edges</span>
+        <span class="sd">&quot;&quot;&quot;This method attempts to create a valid part by binding together free and imprecise edges</span>
 <span class="sd">        of all the faces of a part. If *edgeList* is not given, a global stitch will be</span>
 <span class="sd">        performed. If *stitchTolerance* is not specified, a value of 1.0 will be used.</span>
 
@@ -2501,12 +2502,12 @@
 <span class="sd">        -------</span>
 <span class="sd">        feature: Feature</span>
 <span class="sd">            A Feature object</span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span></div>
 
 <div class="viewcode-block" id="Feature.Wire"><a class="viewcode-back" href="../../../reference/mdb/model/part.html#abaqus.Part.Part.Feature.Wire">[docs]</a>    <span class="k">def</span> <span class="nf">Wire</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">sketchPlane</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">sketchPlaneSide</span><span class="p">:</span> <span class="n">SymbolicConstant</span><span class="p">,</span> <span class="n">sketchUpEdge</span><span class="p">:</span> <span class="n">Edge</span><span class="p">,</span>
              <span class="n">sketch</span><span class="p">:</span> <span class="n">ConstrainedSketch</span><span class="p">,</span> <span class="n">sketchOrientation</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="n">RIGHT</span><span class="p">):</span>
-        <span class="sd">"""This method creates an additional Feature object by creating a planar wire from the</span>
+        <span class="sd">&quot;&quot;&quot;This method creates an additional Feature object by creating a planar wire from the</span>
 <span class="sd">        given ConstrainedSketch object. The ConstrainedSketch object must define a closed</span>
 <span class="sd">        profile.</span>
 
@@ -2538,11 +2539,11 @@
 <span class="sd">        -------</span>
 <span class="sd">        feature: Feature</span>
 <span class="sd">            A Feature object</span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span></div>
 
 <div class="viewcode-block" id="Feature.WireSpline"><a class="viewcode-back" href="../../../reference/mdb/model/part.html#abaqus.Part.Part.Feature.WireSpline">[docs]</a>    <span class="k">def</span> <span class="nf">WireSpline</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">points</span><span class="p">:</span> <span class="nb">tuple</span><span class="p">,</span> <span class="n">mergeType</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="n">IMPRINT</span><span class="p">,</span> <span class="n">smoothClosedSpline</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="n">OFF</span><span class="p">):</span>
-        <span class="sd">"""This method creates an additional Feature object by creating a spline wire that passes</span>
+        <span class="sd">&quot;&quot;&quot;This method creates an additional Feature object by creating a spline wire that passes</span>
 <span class="sd">        through a sequence of given points. Each point can be a datum point, a vertex, an</span>
 <span class="sd">        interesting point, or a tuple.</span>
 
@@ -2578,11 +2579,11 @@
 <span class="sd">        -------</span>
 <span class="sd">        feature: Feature</span>
 <span class="sd">            A Feature object</span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span></div>
 
 <div class="viewcode-block" id="Feature.WirePolyLine"><a class="viewcode-back" href="../../../reference/mdb/model/part.html#abaqus.Part.Part.Feature.WirePolyLine">[docs]</a>    <span class="k">def</span> <span class="nf">WirePolyLine</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">points</span><span class="p">:</span> <span class="nb">tuple</span><span class="p">,</span> <span class="n">mergeType</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="n">IMPRINT</span><span class="p">,</span> <span class="n">meshable</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="n">ON</span><span class="p">):</span>
-        <span class="sd">"""This method creates an additional Feature object by creating a polyline wire that passes</span>
+        <span class="sd">&quot;&quot;&quot;This method creates an additional Feature object by creating a polyline wire that passes</span>
 <span class="sd">        through a sequence of given points. Each point can be a datum point, a vertex, an</span>
 <span class="sd">        interesting point, or a tuple.</span>
 
@@ -2616,11 +2617,11 @@
 <span class="sd">        -------</span>
 <span class="sd">        feature: Feature</span>
 <span class="sd">            A Feature object</span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span></div>
 
 <div class="viewcode-block" id="Feature.WireFromEdge"><a class="viewcode-back" href="../../../reference/mdb/model/part.html#abaqus.Part.Part.Feature.WireFromEdge">[docs]</a>    <span class="k">def</span> <span class="nf">WireFromEdge</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">edgeList</span><span class="p">:</span> <span class="nb">str</span><span class="p">):</span>
-        <span class="sd">"""This method creates an additional Feature object by creating a Wire by selecting one or</span>
+        <span class="sd">&quot;&quot;&quot;This method creates an additional Feature object by creating a Wire by selecting one or</span>
 <span class="sd">        more Edge objects of a Solid or Shell part.</span>
 
 <span class="sd">        Notes</span>
@@ -2640,7 +2641,7 @@
 <span class="sd">        -------</span>
 <span class="sd">        feature: Feature</span>
 <span class="sd">            A Feature object</span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span></div></div>
 </pre></div>
         </article>

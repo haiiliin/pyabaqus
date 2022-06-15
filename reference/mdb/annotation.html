@@ -6,10 +6,10 @@
 <link rel="index" title="Index" href="../../genindex.html" /><link rel="search" title="Search" href="../../search.html" /><link rel="next" title="Edit Mesh" href="edit_mesh.html" /><link rel="prev" title="Job" href="job.html" />
         <link rel="canonical" href="https://pyabaqus.haiiliin.com/reference/mdb/annotation.html" />
 
-    <meta name="generator" content="sphinx-4.5.0, furo 2022.04.07"/>
-        <title>Annotation - pyabaqus 1.0.16 documentation</title>
+    <meta name="generator" content="sphinx-4.5.0, furo 2022.06.04.1"/>
+        <title>Annotation - pyabaqus 1.0.18 documentation</title>
       <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/styles/furo.css?digest=68f4518137b9aefe99b631505a2064c3c42c9852" />
+    <link rel="stylesheet" type="text/css" href="../../_static/styles/furo.css?digest=40978830699223671f4072448e654b5958f38b89" />
     <link rel="stylesheet" type="text/css" href="../../_static/styles/furo-extensions.css?digest=30d1aed668e5c3a91c3e3bf6a60b675221979f0e" />
     
     
@@ -124,7 +124,7 @@
       </label>
     </div>
     <div class="header-center">
-      <a href="../../index.html"><div class="brand">pyabaqus 1.0.16 documentation</div></a>
+      <a href="../../index.html"><div class="brand">pyabaqus 1.0.18 documentation</div></a>
     </div>
     <div class="header-right">
       <div class="theme-toggle-container theme-toggle-header">
@@ -147,7 +147,7 @@
       <div class="sidebar-sticky"><a class="sidebar-brand" href="../../index.html">
   
   
-  <span class="sidebar-brand-text">pyabaqus 1.0.16 documentation</span>
+  <span class="sidebar-brand-text">pyabaqus 1.0.18 documentation</span>
   
 </a><form class="sidebar-search-container" method="get" action="../../search.html" role="search">
   <input class="sidebar-search" placeholder=Search name="q" aria-label="Search">
@@ -287,7 +287,8 @@
           </svg>
           <span>Back to top</span>
         </a>
-        <div class="content-icon-container"><div class="theme-toggle-container theme-toggle-content">
+        <div class="content-icon-container">
+          <div class="theme-toggle-container theme-toggle-content">
             <button class="theme-toggle">
               <div class="visually-hidden">Toggle Light / Dark / Auto color theme</div>
               <svg class="theme-icon-when-auto"><use href="#svg-sun-half"></use></svg>
@@ -308,7 +309,7 @@
 <h2>Create annotations<a class="headerlink" href="#create-annotations" title="Permalink to this headline">#</a></h2>
 <dl class="py method">
 <dt class="sig sig-object py" id="abaqus.Annotation.AnimationUserData.AnimationUserData.Arrow">
-<span class="sig-prename descclassname"><span class="pre">AnimationUserData.</span></span><span class="sig-name descname"><span class="pre">Arrow</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">startPoint</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">tuple</span><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">()</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">endPoint</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">tuple</span><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">()</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">startAnchor</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Union</span><span class="p"><span class="pre">[</span></span><span class="pre">abaqusConstants.SymbolicConstantType</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'BOTTOM_LEFT'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">endAnchor</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Union</span><span class="p"><span class="pre">[</span></span><span class="pre">abaqusConstants.SymbolicConstantType</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'BOTTOM_LEFT'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">startHeadStyle</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.SymbolicConstantType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'NONE'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">endHeadStyle</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.SymbolicConstantType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'FILLED_ARROW'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">startGap</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">endGap</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">color</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">lineStyle</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.SymbolicConstantType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'SOLID'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">lineThickness</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.SymbolicConstantType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'VERY_THIN'</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">→</span> <span class="sig-return-typehint"><a class="reference internal" href="#abaqus.Annotation.Arrow.Arrow" title="abaqus.Annotation.Arrow.Arrow"><span class="pre">abaqus.Annotation.Arrow.Arrow</span></a></span></span><a class="reference internal" href="../../_modules/abaqus/Annotation/AnimationUserData.html#AnimationUserData.Arrow"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#abaqus.Annotation.AnimationUserData.AnimationUserData.Arrow" title="Permalink to this definition">#</a></dt>
+<span class="sig-prename descclassname"><span class="pre">AnimationUserData.</span></span><span class="sig-name descname"><span class="pre">Arrow</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">startPoint</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">tuple</span><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">()</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">endPoint</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">tuple</span><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">()</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">startAnchor</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Union</span><span class="p"><span class="pre">[</span></span><span class="pre">abaqusConstants.SymbolicConstantType</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'BOTTOM_LEFT'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">endAnchor</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Union</span><span class="p"><span class="pre">[</span></span><span class="pre">abaqusConstants.SymbolicConstantType</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'BOTTOM_LEFT'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">startHeadStyle</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.SymbolicConstantType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'NONE'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">endHeadStyle</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.SymbolicConstantType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'FILLED_ARROW'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">startGap</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">endGap</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">color</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">lineStyle</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.SymbolicConstantType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'SOLID'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">lineThickness</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.SymbolicConstantType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'VERY_THIN'</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#abaqus.Annotation.Arrow.Arrow" title="abaqus.Annotation.Arrow.Arrow"><span class="pre">abaqus.Annotation.Arrow.Arrow</span></a></span></span><a class="reference internal" href="../../_modules/abaqus/Annotation/AnimationUserData.html#AnimationUserData.Arrow"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#abaqus.Annotation.AnimationUserData.AnimationUserData.Arrow" title="Permalink to this definition">#</a></dt>
 <dd><p>This method creates an Arrow object.</p>
 <dl class="field-list">
 <dt class="field-odd">Parameters</dt>
@@ -419,9 +420,10 @@ VERY_THIN, THIN, MEDIUM, and THICK. The default value is VERY_THIN.</p>
 </pre></div>
 </div>
 </dd></dl>
+
 <dl class="py method">
 <dt class="sig sig-object py" id="abaqus.Annotation.AnimationUserData.AnimationUserData.Text">
-<span class="sig-prename descclassname"><span class="pre">AnimationUserData.</span></span><span class="sig-name descname"><span class="pre">Text</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">text</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">offset</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">tuple</span><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">()</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">anchor</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Union</span><span class="p"><span class="pre">[</span></span><span class="pre">abaqusConstants.SymbolicConstantType</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'BOTTOM_LEFT'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">referencePoint</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Union</span><span class="p"><span class="pre">[</span></span><span class="pre">abaqusConstants.SymbolicConstantType</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'BOTTOM_LEFT'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">rotationAngle</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">color</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">font</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">backgroundStyle</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.SymbolicConstantType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'TRANSPARENT'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">backgroundColor</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">box</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.BooleanType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">justification</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.SymbolicConstantType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'JUSTIFY_LEFT'</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">→</span> <span class="sig-return-typehint"><a class="reference internal" href="#abaqus.Annotation.Text.Text" title="abaqus.Annotation.Text.Text"><span class="pre">abaqus.Annotation.Text.Text</span></a></span></span><a class="reference internal" href="../../_modules/abaqus/Annotation/AnimationUserData.html#AnimationUserData.Text"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#abaqus.Annotation.AnimationUserData.AnimationUserData.Text" title="Permalink to this definition">#</a></dt>
+<span class="sig-prename descclassname"><span class="pre">AnimationUserData.</span></span><span class="sig-name descname"><span class="pre">Text</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">text</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">offset</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">tuple</span><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">()</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">anchor</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Union</span><span class="p"><span class="pre">[</span></span><span class="pre">abaqusConstants.SymbolicConstantType</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'BOTTOM_LEFT'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">referencePoint</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Union</span><span class="p"><span class="pre">[</span></span><span class="pre">abaqusConstants.SymbolicConstantType</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'BOTTOM_LEFT'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">rotationAngle</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">color</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">font</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">backgroundStyle</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.SymbolicConstantType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'TRANSPARENT'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">backgroundColor</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">box</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.BooleanType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">justification</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.SymbolicConstantType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'JUSTIFY_LEFT'</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#abaqus.Annotation.Text.Text" title="abaqus.Annotation.Text.Text"><span class="pre">abaqus.Annotation.Text.Text</span></a></span></span><a class="reference internal" href="../../_modules/abaqus/Annotation/AnimationUserData.html#AnimationUserData.Text"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#abaqus.Annotation.AnimationUserData.AnimationUserData.Text" title="Permalink to this definition">#</a></dt>
 <dd><p>This method creates a Text object.</p>
 <dl class="field-list">
 <dt class="field-odd">Parameters</dt>
@@ -509,6 +511,7 @@ JUSTIFY_LEFT.</p>
 </pre></div>
 </div>
 </dd></dl>
+
 <dl class="py method">
 <dt class="sig sig-object py" id="abaqus.Annotation.AnimationUserData.AnimationUserData.XYData">
 <span class="sig-prename descclassname"><span class="pre">AnimationUserData.</span></span><span class="sig-name descname"><span class="pre">XYData</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name:</span> <span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">data:</span> <span class="pre">tuple</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sourceDescription:</span> <span class="pre">str</span> <span class="pre">=</span> <span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">contentDescription:</span> <span class="pre">str</span> <span class="pre">=</span> <span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">positionDescription:</span> <span class="pre">str</span> <span class="pre">=</span> <span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">legendLabel:</span> <span class="pre">str</span> <span class="pre">=</span> <span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">xValuesLabel:</span> <span class="pre">str</span> <span class="pre">=</span> <span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">yValuesLabel:</span> <span class="pre">str</span> <span class="pre">=</span> <span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">axis1QuantityType:</span> <span class="pre">abaqus.XY.QuantityType.QuantityType</span> <span class="pre">=</span> <span class="pre">&lt;abaqus.XY.QuantityType.QuantityType</span> <span class="pre">object&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">axis2QuantityType:</span> <span class="pre">abaqus.XY.QuantityType.QuantityType</span> <span class="pre">=</span> <span class="pre">&lt;abaqus.XY.QuantityType.QuantityType</span> <span class="pre">object&gt;</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#abaqus.Annotation.AnimationUserData.AnimationUserData.XYData" title="Permalink to this definition">#</a></dt>
@@ -558,6 +561,7 @@ values.</p>
 </pre></div>
 </div>
 </dd></dl>
+
 </section>
 <section id="object-features">
 <h2>Object features<a class="headerlink" href="#object-features" title="Permalink to this headline">#</a></h2>
@@ -586,10 +590,11 @@ object are common to all objects derived from Annotation.</p>
 </dd>
 </dl>
 <p class="rubric">Methods</p>
-<div class="table-wrapper"><table class="autosummary longtable docutils align-default">
+<div class="table-wrapper autosummary longtable docutils container">
+<table class="autosummary longtable docutils align-default">
 <colgroup>
-<col style="width: 10%"/>
-<col style="width: 90%"/>
+<col style="width: 10%" />
+<col style="width: 90%" />
 </colgroup>
 <tbody>
 <tr class="row-odd"><td><p><a class="reference internal" href="#abaqus.Annotation.Annotation.Annotation.bringForward" title="abaqus.Annotation.Annotation.Annotation.bringForward"><code class="xref py py-obj docutils literal notranslate"><span class="pre">bringForward</span></code></a>()</p></td>
@@ -610,21 +615,24 @@ object are common to all objects derived from Annotation.</p>
 <tr class="row-even"><td><p><a class="reference internal" href="#abaqus.Annotation.Annotation.Annotation.sendToBack" title="abaqus.Annotation.Annotation.Annotation.sendToBack"><code class="xref py py-obj docutils literal notranslate"><span class="pre">sendToBack</span></code></a>()</p></td>
 <td><p>This method sends the Annotation object to the bottom of the annotation stack.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#abaqus.Annotation.Annotation.Annotation.translate" title="abaqus.Annotation.Annotation.Annotation.translate"><code class="xref py py-obj docutils literal notranslate"><span class="pre">translate</span></code></a>([x, y])</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#abaqus.Annotation.Annotation.Annotation.translate" title="abaqus.Annotation.Annotation.Annotation.translate"><code class="xref py py-obj docutils literal notranslate"><span class="pre">translate</span></code></a>([x, y])</p></td>
 <td><p>This method translates the Annotation object on the viewport plane.</p></td>
 </tr>
 </tbody>
-</table></div>
+</table>
+</div>
 <dl class="py method">
 <dt class="sig sig-object py" id="abaqus.Annotation.Annotation.Annotation.bringForward">
 <span class="sig-name descname"><span class="pre">bringForward</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/abaqus/Annotation/Annotation.html#Annotation.bringForward"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#abaqus.Annotation.Annotation.Annotation.bringForward" title="Permalink to this definition">#</a></dt>
 <dd><p>This method brings the Annotation object one position up in the annotation stack.</p>
 </dd></dl>
+
 <dl class="py method">
 <dt class="sig sig-object py" id="abaqus.Annotation.Annotation.Annotation.bringToFront">
 <span class="sig-name descname"><span class="pre">bringToFront</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/abaqus/Annotation/Annotation.html#Annotation.bringToFront"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#abaqus.Annotation.Annotation.Annotation.bringToFront" title="Permalink to this definition">#</a></dt>
 <dd><p>This method brings the Annotation object to the top of the annotation stack.</p>
 </dd></dl>
+
 <dl class="py method">
 <dt class="sig sig-object py" id="abaqus.Annotation.Annotation.Annotation.moveAfter">
 <span class="sig-name descname"><span class="pre">moveAfter</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/abaqus/Annotation/Annotation.html#Annotation.moveAfter"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#abaqus.Annotation.Annotation.Annotation.moveAfter" title="Permalink to this definition">#</a></dt>
@@ -638,6 +646,7 @@ object are common to all objects derived from Annotation.</p>
 </dd>
 </dl>
 </dd></dl>
+
 <dl class="py method">
 <dt class="sig sig-object py" id="abaqus.Annotation.Annotation.Annotation.moveBefore">
 <span class="sig-name descname"><span class="pre">moveBefore</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/abaqus/Annotation/Annotation.html#Annotation.moveBefore"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#abaqus.Annotation.Annotation.Annotation.moveBefore" title="Permalink to this definition">#</a></dt>
@@ -651,16 +660,19 @@ object are common to all objects derived from Annotation.</p>
 </dd>
 </dl>
 </dd></dl>
+
 <dl class="py method">
 <dt class="sig sig-object py" id="abaqus.Annotation.Annotation.Annotation.sendBackward">
 <span class="sig-name descname"><span class="pre">sendBackward</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/abaqus/Annotation/Annotation.html#Annotation.sendBackward"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#abaqus.Annotation.Annotation.Annotation.sendBackward" title="Permalink to this definition">#</a></dt>
 <dd><p>This method sends the Annotation object one position down in the annotation stack.</p>
 </dd></dl>
+
 <dl class="py method">
 <dt class="sig sig-object py" id="abaqus.Annotation.Annotation.Annotation.sendToBack">
 <span class="sig-name descname"><span class="pre">sendToBack</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/abaqus/Annotation/Annotation.html#Annotation.sendToBack"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#abaqus.Annotation.Annotation.Annotation.sendToBack" title="Permalink to this definition">#</a></dt>
 <dd><p>This method sends the Annotation object to the bottom of the annotation stack.</p>
 </dd></dl>
+
 <dl class="py method">
 <dt class="sig sig-object py" id="abaqus.Annotation.Annotation.Annotation.translate">
 <span class="sig-name descname"><span class="pre">translate</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/abaqus/Annotation/Annotation.html#Annotation.translate"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#abaqus.Annotation.Annotation.Annotation.translate" title="Permalink to this definition">#</a></dt>
@@ -676,7 +688,9 @@ object are common to all objects derived from Annotation.</p>
 </dd>
 </dl>
 </dd></dl>
+
 </dd></dl>
+
 </section>
 <section id="annotationstoplotarray">
 <h3>AnnotationsToPlotArray<a class="headerlink" href="#annotationstoplotarray" title="Permalink to this headline">#</a></h3>
@@ -693,10 +707,11 @@ can control which annotations are displayed in a particular viewport.</p>
 </pre></div>
 </div>
 <p class="rubric">Methods</p>
-<div class="table-wrapper"><table class="autosummary longtable docutils align-default">
+<div class="table-wrapper autosummary longtable docutils container">
+<table class="autosummary longtable docutils align-default">
 <colgroup>
-<col style="width: 10%"/>
-<col style="width: 90%"/>
+<col style="width: 10%" />
+<col style="width: 90%" />
 </colgroup>
 <tbody>
 <tr class="row-odd"><td><p><a class="reference internal" href="#abaqus.Annotation.AnnotationsToPlotArray.AnnotationsToPlotArray.bringForward" title="abaqus.Annotation.AnnotationsToPlotArray.AnnotationsToPlotArray.bringForward"><code class="xref py py-obj docutils literal notranslate"><span class="pre">bringForward</span></code></a>(index)</p></td>
@@ -705,10 +720,10 @@ can control which annotations are displayed in a particular viewport.</p>
 <tr class="row-even"><td><p><a class="reference internal" href="#abaqus.Annotation.AnnotationsToPlotArray.AnnotationsToPlotArray.bringToFront" title="abaqus.Annotation.AnnotationsToPlotArray.AnnotationsToPlotArray.bringToFront"><code class="xref py py-obj docutils literal notranslate"><span class="pre">bringToFront</span></code></a>(index)</p></td>
 <td><p>This method brings the Annotation object to the beginning of the AnnotationsToPlotArray sequence.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#abaqus.Annotation.AnnotationsToPlotArray.AnnotationsToPlotArray.moveAfter" title="abaqus.Annotation.AnnotationsToPlotArray.AnnotationsToPlotArray.moveAfter"><code class="xref py py-obj docutils literal notranslate"><span class="pre">moveAfter</span></code></a>(index, other)</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#abaqus.Annotation.AnnotationsToPlotArray.AnnotationsToPlotArray.moveAfter" title="abaqus.Annotation.AnnotationsToPlotArray.AnnotationsToPlotArray.moveAfter"><code class="xref py py-obj docutils literal notranslate"><span class="pre">moveAfter</span></code></a>(index, other)</p></td>
 <td><p>This method moves the Annotation object after another object in the same AnnotationsToPlotArray sequence.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#abaqus.Annotation.AnnotationsToPlotArray.AnnotationsToPlotArray.moveBefore" title="abaqus.Annotation.AnnotationsToPlotArray.AnnotationsToPlotArray.moveBefore"><code class="xref py py-obj docutils literal notranslate"><span class="pre">moveBefore</span></code></a>(index, other)</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#abaqus.Annotation.AnnotationsToPlotArray.AnnotationsToPlotArray.moveBefore" title="abaqus.Annotation.AnnotationsToPlotArray.AnnotationsToPlotArray.moveBefore"><code class="xref py py-obj docutils literal notranslate"><span class="pre">moveBefore</span></code></a>(index, other)</p></td>
 <td><p>This method moves the Annotation object before another object in the same AnnotationsToPlotArray sequence.</p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="#abaqus.Annotation.AnnotationsToPlotArray.AnnotationsToPlotArray.sendBackward" title="abaqus.Annotation.AnnotationsToPlotArray.AnnotationsToPlotArray.sendBackward"><code class="xref py py-obj docutils literal notranslate"><span class="pre">sendBackward</span></code></a>(index)</p></td>
@@ -718,7 +733,8 @@ can control which annotations are displayed in a particular viewport.</p>
 <td><p>This method sends the Annotation object to the end of the AnnotationsToPlotArray sequence.</p></td>
 </tr>
 </tbody>
-</table></div>
+</table>
+</div>
 <dl class="py method">
 <dt class="sig sig-object py" id="abaqus.Annotation.AnnotationsToPlotArray.AnnotationsToPlotArray.bringForward">
 <span class="sig-name descname"><span class="pre">bringForward</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">index</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/abaqus/Annotation/AnnotationsToPlotArray.html#AnnotationsToPlotArray.bringForward"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#abaqus.Annotation.AnnotationsToPlotArray.AnnotationsToPlotArray.bringForward" title="Permalink to this definition">#</a></dt>
@@ -734,6 +750,7 @@ sequence.</p>
 </dd>
 </dl>
 </dd></dl>
+
 <dl class="py method">
 <dt class="sig sig-object py" id="abaqus.Annotation.AnnotationsToPlotArray.AnnotationsToPlotArray.bringToFront">
 <span class="sig-name descname"><span class="pre">bringToFront</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">index</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/abaqus/Annotation/AnnotationsToPlotArray.html#AnnotationsToPlotArray.bringToFront"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#abaqus.Annotation.AnnotationsToPlotArray.AnnotationsToPlotArray.bringToFront" title="Permalink to this definition">#</a></dt>
@@ -749,6 +766,7 @@ sequence.</p>
 </dd>
 </dl>
 </dd></dl>
+
 <dl class="py method">
 <dt class="sig sig-object py" id="abaqus.Annotation.AnnotationsToPlotArray.AnnotationsToPlotArray.moveAfter">
 <span class="sig-name descname"><span class="pre">moveAfter</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">index</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">other</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/abaqus/Annotation/AnnotationsToPlotArray.html#AnnotationsToPlotArray.moveAfter"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#abaqus.Annotation.AnnotationsToPlotArray.AnnotationsToPlotArray.moveAfter" title="Permalink to this definition">#</a></dt>
@@ -767,6 +785,7 @@ AnnotationsToPlotArray sequence after which this object will be moved.</p>
 </dd>
 </dl>
 </dd></dl>
+
 <dl class="py method">
 <dt class="sig sig-object py" id="abaqus.Annotation.AnnotationsToPlotArray.AnnotationsToPlotArray.moveBefore">
 <span class="sig-name descname"><span class="pre">moveBefore</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">index</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">other</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/abaqus/Annotation/AnnotationsToPlotArray.html#AnnotationsToPlotArray.moveBefore"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#abaqus.Annotation.AnnotationsToPlotArray.AnnotationsToPlotArray.moveBefore" title="Permalink to this definition">#</a></dt>
@@ -785,6 +804,7 @@ sequence before which this object will be moved.</p>
 </dd>
 </dl>
 </dd></dl>
+
 <dl class="py method">
 <dt class="sig sig-object py" id="abaqus.Annotation.AnnotationsToPlotArray.AnnotationsToPlotArray.sendBackward">
 <span class="sig-name descname"><span class="pre">sendBackward</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">index</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/abaqus/Annotation/AnnotationsToPlotArray.html#AnnotationsToPlotArray.sendBackward"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#abaqus.Annotation.AnnotationsToPlotArray.AnnotationsToPlotArray.sendBackward" title="Permalink to this definition">#</a></dt>
@@ -800,6 +820,7 @@ sequence.</p>
 </dd>
 </dl>
 </dd></dl>
+
 <dl class="py method">
 <dt class="sig sig-object py" id="abaqus.Annotation.AnnotationsToPlotArray.AnnotationsToPlotArray.sendToBack">
 <span class="sig-name descname"><span class="pre">sendToBack</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">index</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/abaqus/Annotation/AnnotationsToPlotArray.html#AnnotationsToPlotArray.sendToBack"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#abaqus.Annotation.AnnotationsToPlotArray.AnnotationsToPlotArray.sendToBack" title="Permalink to this definition">#</a></dt>
@@ -815,7 +836,9 @@ sequence.</p>
 </dd>
 </dl>
 </dd></dl>
+
 </dd></dl>
+
 </section>
 <section id="annotationviewport">
 <h3>AnnotationViewport<a class="headerlink" href="#annotationviewport" title="Permalink to this headline">#</a></h3>
@@ -830,17 +853,19 @@ Viewport object, see Viewport object.</p>
 </pre></div>
 </div>
 <p class="rubric">Methods</p>
-<div class="table-wrapper"><table class="autosummary longtable docutils align-default">
+<div class="table-wrapper autosummary longtable docutils container">
+<table class="autosummary longtable docutils align-default">
 <colgroup>
-<col style="width: 10%"/>
-<col style="width: 90%"/>
+<col style="width: 10%" />
+<col style="width: 90%" />
 </colgroup>
 <tbody>
-<tr class="row-odd"><td><p><a class="reference internal" href="../session/canvas.html#abaqus.Annotation.AnnotationViewport.AnnotationViewport.plotAnnotation" title="abaqus.Annotation.AnnotationViewport.AnnotationViewport.plotAnnotation"><code class="xref py py-obj docutils literal notranslate"><span class="pre">plotAnnotation</span></code></a>(annotation[, index])</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="../session/canvas.html#abaqus.Annotation.AnnotationViewport.AnnotationViewport.plotAnnotation" title="abaqus.Annotation.AnnotationViewport.AnnotationViewport.plotAnnotation"><code class="xref py py-obj docutils literal notranslate"><span class="pre">plotAnnotation</span></code></a>(annotation[, index])</p></td>
 <td><p>This method plots an Annotation object in aViewport.</p></td>
 </tr>
 </tbody>
-</table></div>
+</table>
+</div>
 <p>This method creates a Viewport object with the specified origin and dimensions.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -902,17 +927,19 @@ RangeError: height must be a Float in the range: 30 &lt;= width &lt;= <em>maxHei
 </pre></div>
 </div>
 <p class="rubric">Methods</p>
-<div class="table-wrapper"><table class="autosummary longtable docutils align-default">
+<div class="table-wrapper autosummary longtable docutils container">
+<table class="autosummary longtable docutils align-default">
 <colgroup>
-<col style="width: 10%"/>
-<col style="width: 90%"/>
+<col style="width: 10%" />
+<col style="width: 90%" />
 </colgroup>
 <tbody>
-<tr class="row-odd"><td><p><a class="reference internal" href="../session/canvas.html#abaqus.Annotation.AnnotationViewport.AnnotationViewport.plotAnnotation" title="abaqus.Annotation.AnnotationViewport.AnnotationViewport.plotAnnotation"><code class="xref py py-obj docutils literal notranslate"><span class="pre">plotAnnotation</span></code></a>(annotation[, index])</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="../session/canvas.html#abaqus.Annotation.AnnotationViewport.AnnotationViewport.plotAnnotation" title="abaqus.Annotation.AnnotationViewport.AnnotationViewport.plotAnnotation"><code class="xref py py-obj docutils literal notranslate"><span class="pre">plotAnnotation</span></code></a>(annotation[, index])</p></td>
 <td><p>This method plots an Annotation object in aViewport.</p></td>
 </tr>
 </tbody>
-</table></div>
+</table>
+</div>
 <dl class="py method">
 <dt class="sig sig-object py" id="abaqus.Annotation.AnnotationViewport.AnnotationViewport.plotAnnotation">
 <span class="sig-name descname"><span class="pre">plotAnnotation</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">annotation</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#abaqus.Annotation.Annotation.Annotation" title="abaqus.Annotation.Annotation.Annotation"><span class="pre">abaqus.Annotation.Annotation.Annotation</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">index</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0.0</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/abaqus/Annotation/AnnotationViewport.html#AnnotationViewport.plotAnnotation"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#abaqus.Annotation.AnnotationViewport.AnnotationViewport.plotAnnotation" title="Permalink to this definition">#</a></dt>
@@ -929,7 +956,9 @@ plot. The default value is zero.</p>
 </dd>
 </dl>
 </dd></dl>
+
 </dd></dl>
+
 </section>
 <section id="arrow">
 <h3>Arrow<a class="headerlink" href="#arrow" title="Permalink to this headline">#</a></h3>
@@ -947,23 +976,25 @@ The Arrow object is derived from the Annotation object.</p>
 </pre></div>
 </div>
 <p class="rubric">Methods</p>
-<div class="table-wrapper"><table class="autosummary longtable docutils align-default">
+<div class="table-wrapper autosummary longtable docutils container">
+<table class="autosummary longtable docutils align-default">
 <colgroup>
-<col style="width: 10%"/>
-<col style="width: 90%"/>
+<col style="width: 10%" />
+<col style="width: 90%" />
 </colgroup>
 <tbody>
-<tr class="row-odd"><td><p><a class="reference internal" href="#abaqus.Annotation.Arrow.Arrow.setValues" title="abaqus.Annotation.Arrow.Arrow.setValues"><code class="xref py py-obj docutils literal notranslate"><span class="pre">setValues</span></code></a>([startPoint, endPoint, ...])</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#abaqus.Annotation.Arrow.Arrow.setValues" title="abaqus.Annotation.Arrow.Arrow.setValues"><code class="xref py py-obj docutils literal notranslate"><span class="pre">setValues</span></code></a>([startPoint, endPoint, ...])</p></td>
 <td><p>This method modifies the Arrow object.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#abaqus.Annotation.Arrow.Arrow.translateEndPoint" title="abaqus.Annotation.Arrow.Arrow.translateEndPoint"><code class="xref py py-obj docutils literal notranslate"><span class="pre">translateEndPoint</span></code></a>([x, y])</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#abaqus.Annotation.Arrow.Arrow.translateEndPoint" title="abaqus.Annotation.Arrow.Arrow.translateEndPoint"><code class="xref py py-obj docutils literal notranslate"><span class="pre">translateEndPoint</span></code></a>([x, y])</p></td>
 <td><p>This method translates the end point of the Arrow object on the viewport plane.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#abaqus.Annotation.Arrow.Arrow.translateStartPoint" title="abaqus.Annotation.Arrow.Arrow.translateStartPoint"><code class="xref py py-obj docutils literal notranslate"><span class="pre">translateStartPoint</span></code></a>([x, y])</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#abaqus.Annotation.Arrow.Arrow.translateStartPoint" title="abaqus.Annotation.Arrow.Arrow.translateStartPoint"><code class="xref py py-obj docutils literal notranslate"><span class="pre">translateStartPoint</span></code></a>([x, y])</p></td>
 <td><p>This method translates the start point of the Arrow object on the viewport plane.</p></td>
 </tr>
 </tbody>
-</table></div>
+</table>
+</div>
 <p>This method creates an Arrow object.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -1062,23 +1093,25 @@ VERY_THIN, THIN, MEDIUM, and THICK. The default value is VERY_THIN.</p>
 </pre></div>
 </div>
 <p class="rubric">Methods</p>
-<div class="table-wrapper"><table class="autosummary longtable docutils align-default">
+<div class="table-wrapper autosummary longtable docutils container">
+<table class="autosummary longtable docutils align-default">
 <colgroup>
-<col style="width: 10%"/>
-<col style="width: 90%"/>
+<col style="width: 10%" />
+<col style="width: 90%" />
 </colgroup>
 <tbody>
-<tr class="row-odd"><td><p><a class="reference internal" href="#abaqus.Annotation.Arrow.Arrow.setValues" title="abaqus.Annotation.Arrow.Arrow.setValues"><code class="xref py py-obj docutils literal notranslate"><span class="pre">setValues</span></code></a>([startPoint, endPoint, ...])</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#abaqus.Annotation.Arrow.Arrow.setValues" title="abaqus.Annotation.Arrow.Arrow.setValues"><code class="xref py py-obj docutils literal notranslate"><span class="pre">setValues</span></code></a>([startPoint, endPoint, ...])</p></td>
 <td><p>This method modifies the Arrow object.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#abaqus.Annotation.Arrow.Arrow.translateEndPoint" title="abaqus.Annotation.Arrow.Arrow.translateEndPoint"><code class="xref py py-obj docutils literal notranslate"><span class="pre">translateEndPoint</span></code></a>([x, y])</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#abaqus.Annotation.Arrow.Arrow.translateEndPoint" title="abaqus.Annotation.Arrow.Arrow.translateEndPoint"><code class="xref py py-obj docutils literal notranslate"><span class="pre">translateEndPoint</span></code></a>([x, y])</p></td>
 <td><p>This method translates the end point of the Arrow object on the viewport plane.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#abaqus.Annotation.Arrow.Arrow.translateStartPoint" title="abaqus.Annotation.Arrow.Arrow.translateStartPoint"><code class="xref py py-obj docutils literal notranslate"><span class="pre">translateStartPoint</span></code></a>([x, y])</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#abaqus.Annotation.Arrow.Arrow.translateStartPoint" title="abaqus.Annotation.Arrow.Arrow.translateStartPoint"><code class="xref py py-obj docutils literal notranslate"><span class="pre">translateStartPoint</span></code></a>([x, y])</p></td>
 <td><p>This method translates the start point of the Arrow object on the viewport plane.</p></td>
 </tr>
 </tbody>
-</table></div>
+</table>
+</div>
 <dl class="py method">
 <dt class="sig sig-object py" id="abaqus.Annotation.Arrow.Arrow.setValues">
 <span class="sig-name descname"><span class="pre">setValues</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">startPoint</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">tuple</span><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">()</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">endPoint</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">tuple</span><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">()</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">startAnchor</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Union</span><span class="p"><span class="pre">[</span></span><span class="pre">abaqusConstants.SymbolicConstantType</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'BOTTOM_LEFT'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">endAnchor</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Union</span><span class="p"><span class="pre">[</span></span><span class="pre">abaqusConstants.SymbolicConstantType</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'BOTTOM_LEFT'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">startHeadStyle</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.SymbolicConstantType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'NONE'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">endHeadStyle</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.SymbolicConstantType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'FILLED_ARROW'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">startGap</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">endGap</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">color</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">lineStyle</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.SymbolicConstantType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'SOLID'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">lineThickness</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.SymbolicConstantType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'VERY_THIN'</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/abaqus/Annotation/Arrow.html#Arrow.setValues"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#abaqus.Annotation.Arrow.Arrow.setValues" title="Permalink to this definition">#</a></dt>
@@ -1136,6 +1169,7 @@ VERY_THIN, THIN, MEDIUM, and THICK. The default value is VERY_THIN.</p>
 </dd>
 </dl>
 </dd></dl>
+
 <dl class="py method">
 <dt class="sig sig-object py" id="abaqus.Annotation.Arrow.Arrow.translateEndPoint">
 <span class="sig-name descname"><span class="pre">translateEndPoint</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/abaqus/Annotation/Arrow.html#Arrow.translateEndPoint"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#abaqus.Annotation.Arrow.Arrow.translateEndPoint" title="Permalink to this definition">#</a></dt>
@@ -1151,6 +1185,7 @@ VERY_THIN, THIN, MEDIUM, and THICK. The default value is VERY_THIN.</p>
 </dd>
 </dl>
 </dd></dl>
+
 <dl class="py method">
 <dt class="sig sig-object py" id="abaqus.Annotation.Arrow.Arrow.translateStartPoint">
 <span class="sig-name descname"><span class="pre">translateStartPoint</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/abaqus/Annotation/Arrow.html#Arrow.translateStartPoint"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#abaqus.Annotation.Arrow.Arrow.translateStartPoint" title="Permalink to this definition">#</a></dt>
@@ -1166,7 +1201,9 @@ VERY_THIN, THIN, MEDIUM, and THICK. The default value is VERY_THIN.</p>
 </dd>
 </dl>
 </dd></dl>
+
 </dd></dl>
+
 </section>
 <section id="text">
 <h3>Text<a class="headerlink" href="#text" title="Permalink to this headline">#</a></h3>
@@ -1194,17 +1231,19 @@ The Text object is derived from the Annotation object.</p>
 </dd>
 </dl>
 <p class="rubric">Methods</p>
-<div class="table-wrapper"><table class="autosummary longtable docutils align-default">
+<div class="table-wrapper autosummary longtable docutils container">
+<table class="autosummary longtable docutils align-default">
 <colgroup>
-<col style="width: 10%"/>
-<col style="width: 90%"/>
+<col style="width: 10%" />
+<col style="width: 90%" />
 </colgroup>
 <tbody>
-<tr class="row-odd"><td><p><a class="reference internal" href="#abaqus.Annotation.Text.Text.setValues" title="abaqus.Annotation.Text.Text.setValues"><code class="xref py py-obj docutils literal notranslate"><span class="pre">setValues</span></code></a>([text, offset, anchor, ...])</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#abaqus.Annotation.Text.Text.setValues" title="abaqus.Annotation.Text.Text.setValues"><code class="xref py py-obj docutils literal notranslate"><span class="pre">setValues</span></code></a>([text, offset, anchor, ...])</p></td>
 <td><p>This method modifies the Text object.</p></td>
 </tr>
 </tbody>
-</table></div>
+</table>
+</div>
 <p>This method creates a Text object.</p>
 <dl class="field-list">
 <dt class="field-odd">Parameters</dt>
@@ -1299,17 +1338,19 @@ JUSTIFY_LEFT.</p>
 </dd>
 </dl>
 <p class="rubric">Methods</p>
-<div class="table-wrapper"><table class="autosummary longtable docutils align-default">
+<div class="table-wrapper autosummary longtable docutils container">
+<table class="autosummary longtable docutils align-default">
 <colgroup>
-<col style="width: 10%"/>
-<col style="width: 90%"/>
+<col style="width: 10%" />
+<col style="width: 90%" />
 </colgroup>
 <tbody>
-<tr class="row-odd"><td><p><a class="reference internal" href="#abaqus.Annotation.Text.Text.setValues" title="abaqus.Annotation.Text.Text.setValues"><code class="xref py py-obj docutils literal notranslate"><span class="pre">setValues</span></code></a>([text, offset, anchor, ...])</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#abaqus.Annotation.Text.Text.setValues" title="abaqus.Annotation.Text.Text.setValues"><code class="xref py py-obj docutils literal notranslate"><span class="pre">setValues</span></code></a>([text, offset, anchor, ...])</p></td>
 <td><p>This method modifies the Text object.</p></td>
 </tr>
 </tbody>
-</table></div>
+</table>
+</div>
 <dl class="py method">
 <dt class="sig sig-object py" id="abaqus.Annotation.Text.Text.setValues">
 <span class="sig-name descname"><span class="pre">setValues</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">text</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">offset</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">tuple</span><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">()</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">anchor</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Union</span><span class="p"><span class="pre">[</span></span><span class="pre">abaqusConstants.SymbolicConstantType</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'BOTTOM_LEFT'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">referencePoint</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Union</span><span class="p"><span class="pre">[</span></span><span class="pre">abaqusConstants.SymbolicConstantType</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'BOTTOM_LEFT'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">rotationAngle</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">color</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">font</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">backgroundStyle</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.SymbolicConstantType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'TRANSPARENT'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">backgroundColor</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">box</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.BooleanType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">justification</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.SymbolicConstantType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'JUSTIFY_LEFT'</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/abaqus/Annotation/Text.html#Text.setValues"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#abaqus.Annotation.Text.Text.setValues" title="Permalink to this definition">#</a></dt>
@@ -1362,7 +1403,9 @@ JUSTIFY_LEFT.</p>
 </dd>
 </dl>
 </dd></dl>
+
 </dd></dl>
+
 </section>
 </section>
 </section>

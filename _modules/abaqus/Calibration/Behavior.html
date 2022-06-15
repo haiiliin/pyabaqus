@@ -5,10 +5,10 @@
     <meta name="color-scheme" content="light dark"><link rel="index" title="Index" href="../../../genindex.html" /><link rel="search" title="Search" href="../../../search.html" />
         <link rel="canonical" href="https://pyabaqus.haiiliin.com/_modules/abaqus/Calibration/Behavior.html" />
 
-    <meta name="generator" content="sphinx-4.5.0, furo 2022.04.07"/>
-        <title>abaqus.Calibration.Behavior - pyabaqus 1.0.16 documentation</title>
+    <meta name="generator" content="sphinx-4.5.0, furo 2022.06.04.1"/>
+        <title>abaqus.Calibration.Behavior - pyabaqus 1.0.18 documentation</title>
       <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/styles/furo.css?digest=68f4518137b9aefe99b631505a2064c3c42c9852" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/styles/furo.css?digest=40978830699223671f4072448e654b5958f38b89" />
     <link rel="stylesheet" type="text/css" href="../../../_static/styles/furo-extensions.css?digest=30d1aed668e5c3a91c3e3bf6a60b675221979f0e" />
     
     
@@ -123,7 +123,7 @@
       </label>
     </div>
     <div class="header-center">
-      <a href="../../../index.html"><div class="brand">pyabaqus 1.0.16 documentation</div></a>
+      <a href="../../../index.html"><div class="brand">pyabaqus 1.0.18 documentation</div></a>
     </div>
     <div class="header-right">
       <div class="theme-toggle-container theme-toggle-header">
@@ -146,7 +146,7 @@
       <div class="sidebar-sticky"><a class="sidebar-brand" href="../../../index.html">
   
   
-  <span class="sidebar-brand-text">pyabaqus 1.0.16 documentation</span>
+  <span class="sidebar-brand-text">pyabaqus 1.0.18 documentation</span>
   
 </a><form class="sidebar-search-container" method="get" action="../../../search.html" role="search">
   <input class="sidebar-search" placeholder=Search name="q" aria-label="Search">
@@ -286,7 +286,8 @@
           </svg>
           <span>Back to top</span>
         </a>
-        <div class="content-icon-container"><div class="theme-toggle-container theme-toggle-content">
+        <div class="content-icon-container">
+          <div class="theme-toggle-container theme-toggle-content">
             <button class="theme-toggle">
               <div class="visually-hidden">Toggle Light / Dark / Auto color theme</div>
               <svg class="theme-icon-when-auto"><use href="#svg-sun-half"></use></svg>
@@ -306,7 +307,7 @@
 
 
 <div class="viewcode-block" id="Behavior"><a class="viewcode-back" href="../../../reference/mdb/model/calibration.html#abaqus.Calibration.Behavior.Behavior">[docs]</a><span class="k">class</span> <span class="nc">Behavior</span><span class="p">:</span>
-    <span class="sd">"""The Behavior object specifies the method used for calibrating a material.</span>
+    <span class="sd">&quot;&quot;&quot;The Behavior object specifies the method used for calibrating a material.</span>
 
 <span class="sd">    Attributes</span>
 <span class="sd">    ----------</span>
@@ -330,24 +331,24 @@
 <span class="sd">        import calibration</span>
 <span class="sd">        mdb.models[name].calibrations[name].behaviors[name]</span>
 
-<span class="sd">    """</span>
+<span class="sd">    &quot;&quot;&quot;</span>
 
     <span class="c1"># A string specifying the name of the model to which the behavior belongs. </span>
-    <span class="n">modelName</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">''</span>
+    <span class="n">modelName</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span>
 
     <span class="c1"># A string specifying the name of calibration to which the behavior belongs. </span>
-    <span class="n">calibrationName</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">''</span>
+    <span class="n">calibrationName</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span>
 
     <span class="c1"># A String specifying the name of the dataset containing all the raw data in the test data </span>
     <span class="c1"># file. Only valid if the behavior is of type FeFpBehavior </span>
-    <span class="n">biAxialAllName</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">''</span>
+    <span class="n">biAxialAllName</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span>
 
     <span class="c1"># A String specifying the name of the dataset containing all the raw data in the test data </span>
     <span class="c1"># file. Only valid if the behavior is of type FeFpBehavior </span>
-    <span class="n">uniAxialAllName</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">''</span>
+    <span class="n">uniAxialAllName</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span>
 
     <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">typeName</span><span class="p">:</span> <span class="nb">str</span><span class="p">):</span>
-        <span class="sd">"""This method creates a Behavior object.</span>
+        <span class="sd">&quot;&quot;&quot;This method creates a Behavior object.</span>
 
 <span class="sd">        Notes</span>
 <span class="sd">        -----</span>
@@ -362,31 +363,31 @@
 <span class="sd">        name</span>
 <span class="sd">            A String specifying the name of the new behavior. </span>
 <span class="sd">        typeName</span>
-<span class="sd">            A String specifying the type of the new Behavior. Values can be "ElasIsoBehavior", </span>
-<span class="sd">            "ElasPlasIsoBehavior", "FeFpBehavior", or a user plug-in behavior type. </span>
+<span class="sd">            A String specifying the type of the new Behavior. Values can be &quot;ElasIsoBehavior&quot;, </span>
+<span class="sd">            &quot;ElasPlasIsoBehavior&quot;, &quot;FeFpBehavior&quot;, or a user plug-in behavior type. </span>
 
 <span class="sd">        Returns</span>
 <span class="sd">        -------</span>
 <span class="sd">            A Behavior object.</span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span>
 
-<div class="viewcode-block" id="Behavior.setValues"><a class="viewcode-back" href="../../../reference/mdb/model/calibration.html#abaqus.Calibration.Behavior.Behavior.setValues">[docs]</a>    <span class="k">def</span> <span class="nf">setValues</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">E</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">''</span><span class="p">,</span> <span class="n">nu</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">''</span><span class="p">,</span> <span class="n">ds1Name</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">''</span><span class="p">,</span> <span class="n">ds2Name</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">''</span><span class="p">,</span> <span class="n">materialName</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">''</span><span class="p">,</span>
-                  <span class="n">yieldPoint</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">''</span><span class="p">,</span> <span class="n">ultimatePoint</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">''</span><span class="p">,</span> <span class="n">plasticPoints</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">''</span><span class="p">,</span>
-                  <span class="n">PoissonsRatio</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">''</span><span class="p">,</span> <span class="n">elasticModulus</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">''</span><span class="p">,</span> <span class="n">plasticPointsRange</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">''</span><span class="p">,</span>
-                  <span class="n">name</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">''</span><span class="p">,</span> <span class="n">uniaxialName</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">''</span><span class="p">,</span> <span class="n">biaxialName</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">''</span><span class="p">,</span> <span class="n">interpolation</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">''</span><span class="p">,</span>
-                  <span class="n">uniWeight</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">''</span><span class="p">,</span> <span class="n">biWeight</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">''</span><span class="p">,</span> <span class="n">uMullinsReload</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">''</span><span class="p">,</span>
-                  <span class="n">uMullinsUnload</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">''</span><span class="p">,</span> <span class="n">uPYieldPoint</span><span class="p">:</span> <span class="nb">tuple</span> <span class="o">=</span> <span class="p">(),</span> <span class="n">uPermSet</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">''</span><span class="p">,</span>
-                  <span class="n">uPrimary</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">''</span><span class="p">,</span> <span class="n">bMullinsReload</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">''</span><span class="p">,</span> <span class="n">bMullinsUnload</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">''</span><span class="p">,</span>
-                  <span class="n">bPYieldPoint</span><span class="p">:</span> <span class="nb">tuple</span> <span class="o">=</span> <span class="p">(),</span> <span class="n">bPermSet</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">''</span><span class="p">,</span> <span class="n">bPrimary</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">''</span><span class="p">):</span>
-        <span class="sd">"""This method modifies the data for an existing behavior object.</span>
+<div class="viewcode-block" id="Behavior.setValues"><a class="viewcode-back" href="../../../reference/mdb/model/calibration.html#abaqus.Calibration.Behavior.Behavior.setValues">[docs]</a>    <span class="k">def</span> <span class="nf">setValues</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">E</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">nu</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">ds1Name</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">ds2Name</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">materialName</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span><span class="p">,</span>
+                  <span class="n">yieldPoint</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">ultimatePoint</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">plasticPoints</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span><span class="p">,</span>
+                  <span class="n">PoissonsRatio</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">elasticModulus</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">plasticPointsRange</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span><span class="p">,</span>
+                  <span class="n">name</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">uniaxialName</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">biaxialName</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">interpolation</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span><span class="p">,</span>
+                  <span class="n">uniWeight</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">biWeight</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">uMullinsReload</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span><span class="p">,</span>
+                  <span class="n">uMullinsUnload</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">uPYieldPoint</span><span class="p">:</span> <span class="nb">tuple</span> <span class="o">=</span> <span class="p">(),</span> <span class="n">uPermSet</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span><span class="p">,</span>
+                  <span class="n">uPrimary</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">bMullinsReload</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">bMullinsUnload</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span><span class="p">,</span>
+                  <span class="n">bPYieldPoint</span><span class="p">:</span> <span class="nb">tuple</span> <span class="o">=</span> <span class="p">(),</span> <span class="n">bPermSet</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">bPrimary</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;This method modifies the data for an existing behavior object.</span>
 <span class="sd">        </span>
 <span class="sd">        Parameters</span>
 <span class="sd">        ----------</span>
 <span class="sd">        E</span>
-<span class="sd">            Young's modulus. Only valid if the behavior type is ElasIsoBehavior. </span>
+<span class="sd">            Young&#39;s modulus. Only valid if the behavior type is ElasIsoBehavior. </span>
 <span class="sd">        nu</span>
-<span class="sd">            Poisson's ratio. Only valid if the behavior type is ElasIsoBehavior. </span>
+<span class="sd">            Poisson&#39;s ratio. Only valid if the behavior type is ElasIsoBehavior. </span>
 <span class="sd">        ds1Name</span>
 <span class="sd">            The name of the first data set. Only valid if the behavior type is ElasIsoBehavior or </span>
 <span class="sd">            ElasPlasIsoBehavior </span>
@@ -405,9 +406,9 @@
 <span class="sd">            Stress/strain values for the Plastic portion of material curve. Only valid if the</span>
 <span class="sd">            behavior type is ElasPlasIsoBehavior </span>
 <span class="sd">        PoissonsRatio</span>
-<span class="sd">            Poisson's Ratio. Only valid if the behavior type is ElasPlasIsoBehavior </span>
+<span class="sd">            Poisson&#39;s Ratio. Only valid if the behavior type is ElasPlasIsoBehavior </span>
 <span class="sd">        elasticModulus</span>
-<span class="sd">            Young's Modulus for the elastic portion of the material curve. Only valid if the </span>
+<span class="sd">            Young&#39;s Modulus for the elastic portion of the material curve. Only valid if the </span>
 <span class="sd">            behavior type is ElasPlasIsoBehavior </span>
 <span class="sd">        plasticPointsRange</span>
 <span class="sd">            Extent of the material Plastic points. Only valid if the behavior type is</span>
@@ -419,7 +420,7 @@
 <span class="sd">        biaxialName</span>
 <span class="sd">            Name of the biaxial dataset. Only valid if the behavior type is FeFpBehavior </span>
 <span class="sd">        interpolation</span>
-<span class="sd">            'linear' specifies linear interpolation between data points, otherwise 'logarithmic'. </span>
+<span class="sd">            &#39;linear&#39; specifies linear interpolation between data points, otherwise &#39;logarithmic&#39;. </span>
 <span class="sd">            Only valid if the behavior type is FeFpBehavior </span>
 <span class="sd">        uniWeight</span>
 <span class="sd">            Uniaxial weight factor, uniWeight + biWeight should equal 1.0. Only valid if the </span>
@@ -457,13 +458,13 @@
 <span class="sd">        bPrimary</span>
 <span class="sd">            A string specifying name of Primary DataSet object. Only valid if the behavior is of </span>
 <span class="sd">            type FeFpBehavior </span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span></div>
 
 <div class="viewcode-block" id="Behavior.mapToMaterial"><a class="viewcode-back" href="../../../reference/mdb/model/calibration.html#abaqus.Calibration.Behavior.Behavior.mapToMaterial">[docs]</a>    <span class="k">def</span> <span class="nf">mapToMaterial</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">materialName</span><span class="p">:</span> <span class="nb">str</span><span class="p">):</span>
-        <span class="sd">"""This method appends the calibration data obtained from the DataSet object to an existing</span>
-<span class="sd">        material object. In the case of ElasIsoBehavior, it appends the young's modulus and</span>
-<span class="sd">        poisson's ratio. For ElasPlasIsoBehavior it appends the young's modulus, poisson's ratio</span>
+        <span class="sd">&quot;&quot;&quot;This method appends the calibration data obtained from the DataSet object to an existing</span>
+<span class="sd">        material object. In the case of ElasIsoBehavior, it appends the young&#39;s modulus and</span>
+<span class="sd">        poisson&#39;s ratio. For ElasPlasIsoBehavior it appends the young&#39;s modulus, poisson&#39;s ratio</span>
 <span class="sd">        and Plastic points range and for FeFpBehavior it appends Plastic points range and</span>
 <span class="sd">        Mullins effect properties.</span>
 <span class="sd">        </span>
@@ -471,11 +472,11 @@
 <span class="sd">        ----------</span>
 <span class="sd">        materialName</span>
 <span class="sd">            A String specifying the name of the existing material </span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span></div>
 
 <div class="viewcode-block" id="Behavior.compute_E"><a class="viewcode-back" href="../../../reference/mdb/model/calibration.html#abaqus.Calibration.Behavior.Behavior.compute_E">[docs]</a>    <span class="k">def</span> <span class="nf">compute_E</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">dataSet</span><span class="p">:</span> <span class="n">DataSet</span><span class="p">):</span>
-        <span class="sd">"""This method computes the value of young's modulus from the existing DataSet object. The</span>
+        <span class="sd">&quot;&quot;&quot;This method computes the value of young&#39;s modulus from the existing DataSet object. The</span>
 <span class="sd">        method is only valid for ElasIsoBehavior type of behavior.</span>
 <span class="sd">        </span>
 <span class="sd">        Parameters</span>
@@ -487,11 +488,11 @@
 <span class="sd">        -------</span>
 <span class="sd">            A tuple consisting of a and b values of the regression line(y = ax + b), coefficient of </span>
 <span class="sd">            determination(r-squared) value and the start and end-points of the line.</span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span></div>
 
 <div class="viewcode-block" id="Behavior.compute_nu"><a class="viewcode-back" href="../../../reference/mdb/model/calibration.html#abaqus.Calibration.Behavior.Behavior.compute_nu">[docs]</a>    <span class="k">def</span> <span class="nf">compute_nu</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">dataSet</span><span class="p">:</span> <span class="n">DataSet</span><span class="p">):</span>
-        <span class="sd">"""This method computes the value of Poisson's Ratio from the existing DataSet object. The</span>
+        <span class="sd">&quot;&quot;&quot;This method computes the value of Poisson&#39;s Ratio from the existing DataSet object. The</span>
 <span class="sd">        method is only valid for ElasIsoBehavior and ElasPlasIsoBehavior type of behavior.</span>
 <span class="sd">        </span>
 <span class="sd">        Parameters</span>
@@ -503,11 +504,11 @@
 <span class="sd">        -------</span>
 <span class="sd">            A tuple consisting of a and b values of the regression line(y = ax + b), coefficient of </span>
 <span class="sd">            determination(r-squared) value and the start and end-points of the line.</span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span></div>
 
 <div class="viewcode-block" id="Behavior.compute_ultimatePoint"><a class="viewcode-back" href="../../../reference/mdb/model/calibration.html#abaqus.Calibration.Behavior.Behavior.compute_ultimatePoint">[docs]</a>    <span class="k">def</span> <span class="nf">compute_ultimatePoint</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">dataSet</span><span class="p">:</span> <span class="n">DataSet</span><span class="p">):</span>
-        <span class="sd">"""This method computes the coordinates of the Ultimate point from the existing DataSet</span>
+        <span class="sd">&quot;&quot;&quot;This method computes the coordinates of the Ultimate point from the existing DataSet</span>
 <span class="sd">        object. The method is only valid for ElasPlasIsoBehavior type of behavior.</span>
 <span class="sd">        </span>
 <span class="sd">        Parameters</span>
@@ -518,11 +519,11 @@
 <span class="sd">        Returns</span>
 <span class="sd">        -------</span>
 <span class="sd">            Coordinates of the ultimate point.</span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span></div>
 
 <div class="viewcode-block" id="Behavior.compute_elasticModulus"><a class="viewcode-back" href="../../../reference/mdb/model/calibration.html#abaqus.Calibration.Behavior.Behavior.compute_elasticModulus">[docs]</a>    <span class="k">def</span> <span class="nf">compute_elasticModulus</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">yieldPoint</span><span class="p">:</span> <span class="nb">tuple</span><span class="p">):</span>
-        <span class="sd">"""This method computes the value of the elastic modulus from the yieldpoint value. The</span>
+        <span class="sd">&quot;&quot;&quot;This method computes the value of the elastic modulus from the yieldpoint value. The</span>
 <span class="sd">        method is only valid for ElasPlasIsoBehavior type of behavior.</span>
 <span class="sd">        </span>
 <span class="sd">        Parameters</span>
@@ -533,11 +534,11 @@
 <span class="sd">        Returns</span>
 <span class="sd">        -------</span>
 <span class="sd">            A float specifying the value of elastic modulus.</span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span></div>
 
-<div class="viewcode-block" id="Behavior.compute_plasticPoints"><a class="viewcode-back" href="../../../reference/mdb/model/calibration.html#abaqus.Calibration.Behavior.Behavior.compute_plasticPoints">[docs]</a>    <span class="k">def</span> <span class="nf">compute_plasticPoints</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">dataSet</span><span class="p">:</span> <span class="n">DataSet</span><span class="p">,</span> <span class="n">slider_val</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">start_index</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">end_index</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">yp</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">''</span><span class="p">):</span>
-        <span class="sd">"""This method extracts the coordinates of the Plastic Points. The method is only valid for</span>
+<div class="viewcode-block" id="Behavior.compute_plasticPoints"><a class="viewcode-back" href="../../../reference/mdb/model/calibration.html#abaqus.Calibration.Behavior.Behavior.compute_plasticPoints">[docs]</a>    <span class="k">def</span> <span class="nf">compute_plasticPoints</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">dataSet</span><span class="p">:</span> <span class="n">DataSet</span><span class="p">,</span> <span class="n">slider_val</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">start_index</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">end_index</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">yp</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;This method extracts the coordinates of the Plastic Points. The method is only valid for</span>
 <span class="sd">        ElasPlasIsoBehavior type of behavior.</span>
 <span class="sd">        </span>
 <span class="sd">        Parameters</span>
@@ -556,11 +557,11 @@
 <span class="sd">        Returns</span>
 <span class="sd">        -------</span>
 <span class="sd">            A sequence of coordinates of the Plastic points.. </span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span></div>
 
 <div class="viewcode-block" id="Behavior.xyDataDissect"><a class="viewcode-back" href="../../../reference/mdb/model/calibration.html#abaqus.Calibration.Behavior.Behavior.xyDataDissect">[docs]</a>    <span class="k">def</span> <span class="nf">xyDataDissect</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">dsName</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">modelName</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">calibrationName</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">biaxial</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="kc">True</span><span class="p">):</span>
-        <span class="sd">"""This method extracts primary, unload, reload and permanent DataSet objects from the</span>
+        <span class="sd">&quot;&quot;&quot;This method extracts primary, unload, reload and permanent DataSet objects from the</span>
 <span class="sd">        existing DataSet object.The method is only valid for FeFpBehavior type of behavior.</span>
 <span class="sd">        </span>
 <span class="sd">        Parameters</span>
@@ -579,7 +580,7 @@
 <span class="sd">        -------</span>
 <span class="sd">            A sequence of strings specifying names of the DataSet objects containing loading, </span>
 <span class="sd">            unloading, reloading and primary datasets.</span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span></div></div>
 </pre></div>
         </article>

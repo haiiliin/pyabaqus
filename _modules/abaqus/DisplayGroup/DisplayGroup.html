@@ -5,10 +5,10 @@
     <meta name="color-scheme" content="light dark"><link rel="index" title="Index" href="../../../genindex.html" /><link rel="search" title="Search" href="../../../search.html" />
         <link rel="canonical" href="https://pyabaqus.haiiliin.com/_modules/abaqus/DisplayGroup/DisplayGroup.html" />
 
-    <meta name="generator" content="sphinx-4.5.0, furo 2022.04.07"/>
-        <title>abaqus.DisplayGroup.DisplayGroup - pyabaqus 1.0.16 documentation</title>
+    <meta name="generator" content="sphinx-4.5.0, furo 2022.06.04.1"/>
+        <title>abaqus.DisplayGroup.DisplayGroup - pyabaqus 1.0.18 documentation</title>
       <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/styles/furo.css?digest=68f4518137b9aefe99b631505a2064c3c42c9852" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/styles/furo.css?digest=40978830699223671f4072448e654b5958f38b89" />
     <link rel="stylesheet" type="text/css" href="../../../_static/styles/furo-extensions.css?digest=30d1aed668e5c3a91c3e3bf6a60b675221979f0e" />
     
     
@@ -123,7 +123,7 @@
       </label>
     </div>
     <div class="header-center">
-      <a href="../../../index.html"><div class="brand">pyabaqus 1.0.16 documentation</div></a>
+      <a href="../../../index.html"><div class="brand">pyabaqus 1.0.18 documentation</div></a>
     </div>
     <div class="header-right">
       <div class="theme-toggle-container theme-toggle-header">
@@ -146,7 +146,7 @@
       <div class="sidebar-sticky"><a class="sidebar-brand" href="../../../index.html">
   
   
-  <span class="sidebar-brand-text">pyabaqus 1.0.16 documentation</span>
+  <span class="sidebar-brand-text">pyabaqus 1.0.18 documentation</span>
   
 </a><form class="sidebar-search-container" method="get" action="../../../search.html" role="search">
   <input class="sidebar-search" placeholder=Search name="q" aria-label="Search">
@@ -286,7 +286,8 @@
           </svg>
           <span>Back to top</span>
         </a>
-        <div class="content-icon-container"><div class="theme-toggle-container theme-toggle-content">
+        <div class="content-icon-container">
+          <div class="theme-toggle-container theme-toggle-content">
             <button class="theme-toggle">
               <div class="visually-hidden">Toggle Light / Dark / Auto color theme</div>
               <svg class="theme-icon-when-auto"><use href="#svg-sun-half"></use></svg>
@@ -306,7 +307,7 @@
 
 
 <div class="viewcode-block" id="DisplayGroup"><a class="viewcode-back" href="../../../reference/session/display.html#abaqus.DisplayGroup.DisplayGroup.DisplayGroup">[docs]</a><span class="k">class</span> <span class="nc">DisplayGroup</span><span class="p">:</span>
-    <span class="sd">"""DisplayGroup objects are used to select a subset of the entities displayed in the</span>
+    <span class="sd">&quot;&quot;&quot;DisplayGroup objects are used to select a subset of the entities displayed in the</span>
 <span class="sd">    viewport. </span>
 
 <span class="sd">    Attributes</span>
@@ -344,7 +345,7 @@
 <span class="sd">        session.viewports[name].odbDisplay.displayGroup</span>
 <span class="sd">        session.viewports[name].partDisplay.displayGroup</span>
 
-<span class="sd">    """</span>
+<span class="sd">    &quot;&quot;&quot;</span>
 
     <span class="c1"># A Boolean specifying whether Undo is possible or not. </span>
     <span class="n">canUndo</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="n">OFF</span>
@@ -353,7 +354,7 @@
     <span class="n">canRedo</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="n">OFF</span>
 
     <span class="c1"># A String specifying the repository key. </span>
-    <span class="n">name</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">''</span>
+    <span class="n">name</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span>
 
     <span class="c1"># A SymbolicConstant specifying the module in which the display group has been created. </span>
     <span class="c1"># The possible values are PART, ASSEMBLY, PART_ASSEMBLY, ODB, and ALL. </span>
@@ -361,14 +362,14 @@
 
     <span class="c1"># A String specifying the name of the model to which the display group belongs when the </span>
     <span class="c1"># module is part- or assembly-based. </span>
-    <span class="n">modelName</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">''</span>
+    <span class="n">modelName</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span>
 
     <span class="c1"># A String specifying the name of the part to which the display group belongs when the </span>
     <span class="c1"># module is part-based. </span>
-    <span class="n">partName</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">''</span>
+    <span class="n">partName</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span>
 
     <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">leaf</span><span class="p">:</span> <span class="n">Leaf</span><span class="p">):</span>
-        <span class="sd">"""This method creates a DisplayGroup object.</span>
+        <span class="sd">&quot;&quot;&quot;This method creates a DisplayGroup object.</span>
 
 <span class="sd">        Notes</span>
 <span class="sd">        -----</span>
@@ -388,70 +389,70 @@
 <span class="sd">        Returns</span>
 <span class="sd">        -------</span>
 <span class="sd">            A DisplayGroup object.</span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span>
 
 <div class="viewcode-block" id="DisplayGroup.add"><a class="viewcode-back" href="../../../reference/session/display.html#abaqus.DisplayGroup.DisplayGroup.DisplayGroup.add">[docs]</a>    <span class="k">def</span> <span class="nf">add</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">leaf</span><span class="p">:</span> <span class="n">Leaf</span><span class="p">):</span>
-        <span class="sd">"""This method adds the specified items to the display group.</span>
+        <span class="sd">&quot;&quot;&quot;This method adds the specified items to the display group.</span>
 <span class="sd">        </span>
 <span class="sd">        Parameters</span>
 <span class="sd">        ----------</span>
 <span class="sd">        leaf</span>
 <span class="sd">            A Leaf object specifying the items to add to the display group. </span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span></div>
 
 <div class="viewcode-block" id="DisplayGroup.either"><a class="viewcode-back" href="../../../reference/session/display.html#abaqus.DisplayGroup.DisplayGroup.DisplayGroup.either">[docs]</a>    <span class="k">def</span> <span class="nf">either</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">leaf</span><span class="p">:</span> <span class="n">Leaf</span><span class="p">):</span>
-        <span class="sd">"""This method redefines the display group to be only those items that are not shared by</span>
+        <span class="sd">&quot;&quot;&quot;This method redefines the display group to be only those items that are not shared by</span>
 <span class="sd">        the *leaf* argument and by the display group.</span>
 <span class="sd">        </span>
 <span class="sd">        Parameters</span>
 <span class="sd">        ----------</span>
 <span class="sd">        leaf</span>
 <span class="sd">            A Leaf object specifying the items to be excluded from the display group. </span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span></div>
 
 <div class="viewcode-block" id="DisplayGroup.intersect"><a class="viewcode-back" href="../../../reference/session/display.html#abaqus.DisplayGroup.DisplayGroup.DisplayGroup.intersect">[docs]</a>    <span class="k">def</span> <span class="nf">intersect</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">leaf</span><span class="p">:</span> <span class="n">Leaf</span><span class="p">):</span>
-        <span class="sd">"""This method redefines the display group to be only those items that are shared by the</span>
+        <span class="sd">&quot;&quot;&quot;This method redefines the display group to be only those items that are shared by the</span>
 <span class="sd">        *leaf* argument and the display group.</span>
 <span class="sd">        </span>
 <span class="sd">        Parameters</span>
 <span class="sd">        ----------</span>
 <span class="sd">        leaf</span>
 <span class="sd">            A Leaf object specifying the items to be included in the display group. </span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span></div>
 
 <div class="viewcode-block" id="DisplayGroup.redoLast"><a class="viewcode-back" href="../../../reference/session/display.html#abaqus.DisplayGroup.DisplayGroup.DisplayGroup.redoLast">[docs]</a>    <span class="k">def</span> <span class="nf">redoLast</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="sd">"""This method redoes the last undone operation on the display group.</span>
-<span class="sd">        """</span>
+        <span class="sd">&quot;&quot;&quot;This method redoes the last undone operation on the display group.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span></div>
 
 <div class="viewcode-block" id="DisplayGroup.remove"><a class="viewcode-back" href="../../../reference/session/display.html#abaqus.DisplayGroup.DisplayGroup.DisplayGroup.remove">[docs]</a>    <span class="k">def</span> <span class="nf">remove</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">leaf</span><span class="p">:</span> <span class="n">Leaf</span><span class="p">):</span>
-        <span class="sd">"""This method removes the specified items from the display group.</span>
+        <span class="sd">&quot;&quot;&quot;This method removes the specified items from the display group.</span>
 <span class="sd">        </span>
 <span class="sd">        Parameters</span>
 <span class="sd">        ----------</span>
 <span class="sd">        leaf</span>
 <span class="sd">            A Leaf object specifying the items to remove from the display group. </span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span></div>
 
 <div class="viewcode-block" id="DisplayGroup.replace"><a class="viewcode-back" href="../../../reference/session/display.html#abaqus.DisplayGroup.DisplayGroup.DisplayGroup.replace">[docs]</a>    <span class="k">def</span> <span class="nf">replace</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">leaf</span><span class="p">:</span> <span class="n">Leaf</span><span class="p">):</span>
-        <span class="sd">"""This method replaces the contents of the display group with the specified items.</span>
+        <span class="sd">&quot;&quot;&quot;This method replaces the contents of the display group with the specified items.</span>
 <span class="sd">        </span>
 <span class="sd">        Parameters</span>
 <span class="sd">        ----------</span>
 <span class="sd">        leaf</span>
 <span class="sd">            A Leaf object specifying the items with which to replace the current display group </span>
 <span class="sd">            contents. </span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span></div>
 
 <div class="viewcode-block" id="DisplayGroup.undoLast"><a class="viewcode-back" href="../../../reference/session/display.html#abaqus.DisplayGroup.DisplayGroup.DisplayGroup.undoLast">[docs]</a>    <span class="k">def</span> <span class="nf">undoLast</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="sd">"""This method undoes the last operation performed on the display group.</span>
-<span class="sd">        """</span>
+        <span class="sd">&quot;&quot;&quot;This method undoes the last operation performed on the display group.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span></div></div>
 </pre></div>
         </article>

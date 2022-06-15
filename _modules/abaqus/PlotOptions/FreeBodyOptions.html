@@ -5,10 +5,10 @@
     <meta name="color-scheme" content="light dark"><link rel="index" title="Index" href="../../../genindex.html" /><link rel="search" title="Search" href="../../../search.html" />
         <link rel="canonical" href="https://pyabaqus.haiiliin.com/_modules/abaqus/PlotOptions/FreeBodyOptions.html" />
 
-    <meta name="generator" content="sphinx-4.5.0, furo 2022.04.07"/>
-        <title>abaqus.PlotOptions.FreeBodyOptions - pyabaqus 1.0.16 documentation</title>
+    <meta name="generator" content="sphinx-4.5.0, furo 2022.06.04.1"/>
+        <title>abaqus.PlotOptions.FreeBodyOptions - pyabaqus 1.0.18 documentation</title>
       <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/styles/furo.css?digest=68f4518137b9aefe99b631505a2064c3c42c9852" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/styles/furo.css?digest=40978830699223671f4072448e654b5958f38b89" />
     <link rel="stylesheet" type="text/css" href="../../../_static/styles/furo-extensions.css?digest=30d1aed668e5c3a91c3e3bf6a60b675221979f0e" />
     
     
@@ -123,7 +123,7 @@
       </label>
     </div>
     <div class="header-center">
-      <a href="../../../index.html"><div class="brand">pyabaqus 1.0.16 documentation</div></a>
+      <a href="../../../index.html"><div class="brand">pyabaqus 1.0.18 documentation</div></a>
     </div>
     <div class="header-right">
       <div class="theme-toggle-container theme-toggle-header">
@@ -146,7 +146,7 @@
       <div class="sidebar-sticky"><a class="sidebar-brand" href="../../../index.html">
   
   
-  <span class="sidebar-brand-text">pyabaqus 1.0.16 documentation</span>
+  <span class="sidebar-brand-text">pyabaqus 1.0.18 documentation</span>
   
 </a><form class="sidebar-search-container" method="get" action="../../../search.html" role="search">
   <input class="sidebar-search" placeholder=Search name="q" aria-label="Search">
@@ -286,7 +286,8 @@
           </svg>
           <span>Back to top</span>
         </a>
-        <div class="content-icon-container"><div class="theme-toggle-container theme-toggle-content">
+        <div class="content-icon-container">
+          <div class="theme-toggle-container theme-toggle-content">
             <button class="theme-toggle">
               <div class="visually-hidden">Toggle Light / Dark / Auto color theme</div>
               <svg class="theme-icon-when-auto"><use href="#svg-sun-half"></use></svg>
@@ -305,7 +306,7 @@
 
 
 <div class="viewcode-block" id="FreeBodyOptions"><a class="viewcode-back" href="../../../reference/session/plot_options.html#abaqus.PlotOptions.FreeBodyOptions.FreeBodyOptions">[docs]</a><span class="k">class</span> <span class="nc">FreeBodyOptions</span><span class="p">:</span>
-    <span class="sd">"""The FreeBodyOptions object stores values and attributes associated with a free body</span>
+    <span class="sd">&quot;&quot;&quot;The FreeBodyOptions object stores values and attributes associated with a free body</span>
 <span class="sd">    plot. The FreeBodyOptions object has no constructor command. Abaqus creates a </span>
 <span class="sd">    *defaultOdbDisplay.freeBodyOptions* member when you import the Visualization module. </span>
 <span class="sd">    Abaqus creates a *FreeBodyOptions* member when it creates the OdbDisplay object, using </span>
@@ -328,12 +329,12 @@
 <span class="sd">        session.viewports[name].layers[name].odbDisplay.freeBodyOptions</span>
 <span class="sd">        session.viewports[name].odbDisplay.freeBodyOptions</span>
 
-<span class="sd">    """</span>
+<span class="sd">    &quot;&quot;&quot;</span>
 
-<div class="viewcode-block" id="FreeBodyOptions.setValues"><a class="viewcode-back" href="../../../reference/session/plot_options.html#abaqus.PlotOptions.FreeBodyOptions.FreeBodyOptions.setValues">[docs]</a>    <span class="k">def</span> <span class="nf">setValues</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">comp1ColorF</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">''</span><span class="p">,</span> <span class="n">comp1ColorM</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">''</span><span class="p">,</span> <span class="n">comp2ColorF</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">''</span><span class="p">,</span>
-                  <span class="n">comp2ColorM</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">''</span><span class="p">,</span> <span class="n">comp3ColorF</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">''</span><span class="p">,</span> <span class="n">comp3ColorM</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">''</span><span class="p">,</span>
-                  <span class="n">resultantColorF</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">''</span><span class="p">,</span> <span class="n">resultantColorM</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">''</span><span class="p">,</span> <span class="n">textColorF</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">''</span><span class="p">,</span>
-                  <span class="n">textColorM</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">''</span><span class="p">,</span> <span class="n">textFontF</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">''</span><span class="p">,</span> <span class="n">textFontM</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">''</span><span class="p">,</span>
+<div class="viewcode-block" id="FreeBodyOptions.setValues"><a class="viewcode-back" href="../../../reference/session/plot_options.html#abaqus.PlotOptions.FreeBodyOptions.FreeBodyOptions.setValues">[docs]</a>    <span class="k">def</span> <span class="nf">setValues</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">comp1ColorF</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">comp1ColorM</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">comp2ColorF</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span><span class="p">,</span>
+                  <span class="n">comp2ColorM</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">comp3ColorF</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">comp3ColorM</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span><span class="p">,</span>
+                  <span class="n">resultantColorF</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">resultantColorM</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">textColorF</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span><span class="p">,</span>
+                  <span class="n">textColorM</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">textFontF</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">textFontM</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span><span class="p">,</span>
                   <span class="n">numberFormatF</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="n">SCIENTIFIC</span><span class="p">,</span>
                   <span class="n">numberFormatM</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="n">SCIENTIFIC</span><span class="p">,</span> <span class="n">scaleModeF</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="n">MODEL_SIZE</span><span class="p">,</span>
                   <span class="n">scaleModeM</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="n">MODEL_SIZE</span><span class="p">,</span> <span class="n">vectorDisplay</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="n">RESULTANT</span><span class="p">,</span>
@@ -343,35 +344,35 @@
                   <span class="n">showComp1M</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="n">ON</span><span class="p">,</span> <span class="n">showComp2F</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="n">ON</span><span class="p">,</span> <span class="n">showComp2M</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="n">ON</span><span class="p">,</span>
                   <span class="n">showComp3F</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="n">ON</span><span class="p">,</span> <span class="n">showComp3M</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="n">ON</span><span class="p">,</span> <span class="n">showForce</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="n">ON</span><span class="p">,</span>
                   <span class="n">showMoment</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="n">ON</span><span class="p">,</span> <span class="n">constantLengthArrow</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="n">OFF</span><span class="p">):</span>
-        <span class="sd">"""This method modifies the FreeBodyOptions object.</span>
+        <span class="sd">&quot;&quot;&quot;This method modifies the FreeBodyOptions object.</span>
 <span class="sd">        </span>
 <span class="sd">        Parameters</span>
 <span class="sd">        ----------</span>
 <span class="sd">        comp1ColorF</span>
-<span class="sd">            A String specifying color of the first force component. The default value is "#FF1932". </span>
+<span class="sd">            A String specifying color of the first force component. The default value is &quot;#FF1932&quot;. </span>
 <span class="sd">        comp1ColorM</span>
-<span class="sd">            A String specifying color of the first moment component. The default value is "#0000FF". </span>
+<span class="sd">            A String specifying color of the first moment component. The default value is &quot;#0000FF&quot;. </span>
 <span class="sd">        comp2ColorF</span>
-<span class="sd">            A String specifying color of the second force component. The default value is "#FF1932". </span>
+<span class="sd">            A String specifying color of the second force component. The default value is &quot;#FF1932&quot;. </span>
 <span class="sd">        comp2ColorM</span>
 <span class="sd">            A String specifying color of the second moment component. The default value is </span>
-<span class="sd">            "#0000FF". </span>
+<span class="sd">            &quot;#0000FF&quot;. </span>
 <span class="sd">        comp3ColorF</span>
-<span class="sd">            A String specifying color of the third force component. The default value is "#FF1932". </span>
+<span class="sd">            A String specifying color of the third force component. The default value is &quot;#FF1932&quot;. </span>
 <span class="sd">        comp3ColorM</span>
-<span class="sd">            A String specifying color of the third moment component. The default value is "#0000FF". </span>
+<span class="sd">            A String specifying color of the third moment component. The default value is &quot;#0000FF&quot;. </span>
 <span class="sd">        resultantColorF</span>
-<span class="sd">            A String specifying color of the resultant force. The default value is "#FF1932". </span>
+<span class="sd">            A String specifying color of the resultant force. The default value is &quot;#FF1932&quot;. </span>
 <span class="sd">        resultantColorM</span>
-<span class="sd">            A String specifying color of the resultant moment. The default value is "#0000FF". </span>
+<span class="sd">            A String specifying color of the resultant moment. The default value is &quot;#0000FF&quot;. </span>
 <span class="sd">        textColorF</span>
-<span class="sd">            A String specifying text color for force. The default value is "Yellow". </span>
+<span class="sd">            A String specifying text color for force. The default value is &quot;Yellow&quot;. </span>
 <span class="sd">        textColorM</span>
-<span class="sd">            A String specifying text color for moment. The default value is "Yellow". </span>
+<span class="sd">            A String specifying text color for moment. The default value is &quot;Yellow&quot;. </span>
 <span class="sd">        textFontF</span>
-<span class="sd">            A String specifying text font for force. The default value is "verdana". </span>
+<span class="sd">            A String specifying text font for force. The default value is &quot;verdana&quot;. </span>
 <span class="sd">        textFontM</span>
-<span class="sd">            A String specifying text font for moment. The default value is "verdana". </span>
+<span class="sd">            A String specifying text font for moment. The default value is &quot;verdana&quot;. </span>
 <span class="sd">        numberFormatF</span>
 <span class="sd">            A SymbolicConstant specifying the number format for force. Possible values are </span>
 <span class="sd">            SCIENTIFIC, FIXED, and ENGINEERING. The default value is SCIENTIFIC. </span>
@@ -428,7 +429,7 @@
 <span class="sd">        constantLengthArrow</span>
 <span class="sd">            A Boolean specifying whether to use a constant length for all arrows. The default value </span>
 <span class="sd">            is OFF. </span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span></div></div>
 </pre></div>
         </article>

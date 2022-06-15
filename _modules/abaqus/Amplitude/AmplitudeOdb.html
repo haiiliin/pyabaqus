@@ -5,10 +5,10 @@
     <meta name="color-scheme" content="light dark"><link rel="index" title="Index" href="../../../genindex.html" /><link rel="search" title="Search" href="../../../search.html" />
         <link rel="canonical" href="https://pyabaqus.haiiliin.com/_modules/abaqus/Amplitude/AmplitudeOdb.html" />
 
-    <meta name="generator" content="sphinx-4.5.0, furo 2022.04.07"/>
-        <title>abaqus.Amplitude.AmplitudeOdb - pyabaqus 1.0.16 documentation</title>
+    <meta name="generator" content="sphinx-4.5.0, furo 2022.06.04.1"/>
+        <title>abaqus.Amplitude.AmplitudeOdb - pyabaqus 1.0.18 documentation</title>
       <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/styles/furo.css?digest=68f4518137b9aefe99b631505a2064c3c42c9852" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/styles/furo.css?digest=40978830699223671f4072448e654b5958f38b89" />
     <link rel="stylesheet" type="text/css" href="../../../_static/styles/furo-extensions.css?digest=30d1aed668e5c3a91c3e3bf6a60b675221979f0e" />
     
     
@@ -123,7 +123,7 @@
       </label>
     </div>
     <div class="header-center">
-      <a href="../../../index.html"><div class="brand">pyabaqus 1.0.16 documentation</div></a>
+      <a href="../../../index.html"><div class="brand">pyabaqus 1.0.18 documentation</div></a>
     </div>
     <div class="header-right">
       <div class="theme-toggle-container theme-toggle-header">
@@ -146,7 +146,7 @@
       <div class="sidebar-sticky"><a class="sidebar-brand" href="../../../index.html">
   
   
-  <span class="sidebar-brand-text">pyabaqus 1.0.16 documentation</span>
+  <span class="sidebar-brand-text">pyabaqus 1.0.18 documentation</span>
   
 </a><form class="sidebar-search-container" method="get" action="../../../search.html" role="search">
   <input class="sidebar-search" placeholder=Search name="q" aria-label="Search">
@@ -286,7 +286,8 @@
           </svg>
           <span>Back to top</span>
         </a>
-        <div class="content-icon-container"><div class="theme-toggle-container theme-toggle-content">
+        <div class="content-icon-container">
+          <div class="theme-toggle-container theme-toggle-content">
             <button class="theme-toggle">
               <div class="visually-hidden">Toggle Light / Dark / Auto color theme</div>
               <svg class="theme-icon-when-auto"><use href="#svg-sun-half"></use></svg>
@@ -318,7 +319,7 @@
 
 
 <div class="viewcode-block" id="AmplitudeOdb"><a class="viewcode-back" href="../../../user/mdb/model/amplitude.html#abaqus.Amplitude.AmplitudeOdb.AmplitudeOdb">[docs]</a><span class="k">class</span> <span class="nc">AmplitudeOdb</span><span class="p">(</span><span class="n">OdbBase</span><span class="p">):</span>
-    <span class="sd">"""The Odb object is the in-memory representation of an output database (ODB) file.</span>
+    <span class="sd">&quot;&quot;&quot;The Odb object is the in-memory representation of an output database (ODB) file.</span>
 
 <span class="sd">    Notes</span>
 <span class="sd">    -----</span>
@@ -329,10 +330,10 @@
 <span class="sd">        import odbAccess</span>
 <span class="sd">        session.odbs[name]</span>
 
-<span class="sd">    """</span>
+<span class="sd">    &quot;&quot;&quot;</span>
 
 <div class="viewcode-block" id="AmplitudeOdb.ActuatorAmplitude"><a class="viewcode-back" href="../../../reference/odb.html#abaqus.Amplitude.AmplitudeOdb.AmplitudeOdb.ActuatorAmplitude">[docs]</a>    <span class="k">def</span> <span class="nf">ActuatorAmplitude</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">timeSpan</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="n">STEP</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">ActuatorAmplitude</span><span class="p">:</span>
-        <span class="sd">"""This method creates a ActuatorAmplitude object.</span>
+        <span class="sd">&quot;&quot;&quot;This method creates a ActuatorAmplitude object.</span>
 
 <span class="sd">        Notes</span>
 <span class="sd">        -----</span>
@@ -359,13 +360,13 @@
 <span class="sd">        ------</span>
 <span class="sd">        InvalidNameError</span>
 <span class="sd">        RangeError</span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">amplitudes</span><span class="p">[</span><span class="n">name</span><span class="p">]</span> <span class="o">=</span> <span class="n">amplitude</span> <span class="o">=</span> <span class="n">ActuatorAmplitude</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">timeSpan</span><span class="p">)</span>
         <span class="k">return</span> <span class="n">amplitude</span></div>
 
 <div class="viewcode-block" id="AmplitudeOdb.DecayAmplitude"><a class="viewcode-back" href="../../../reference/odb.html#abaqus.Amplitude.AmplitudeOdb.AmplitudeOdb.DecayAmplitude">[docs]</a>    <span class="k">def</span> <span class="nf">DecayAmplitude</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">initial</span><span class="p">:</span> <span class="nb">float</span><span class="p">,</span> <span class="n">maximum</span><span class="p">:</span> <span class="nb">float</span><span class="p">,</span> <span class="n">start</span><span class="p">:</span> <span class="nb">float</span><span class="p">,</span> <span class="n">decayTime</span><span class="p">:</span> <span class="nb">float</span><span class="p">,</span>
                        <span class="n">timeSpan</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="n">STEP</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">DecayAmplitude</span><span class="p">:</span>
-        <span class="sd">"""This method creates a DecayAmplitude object.</span>
+        <span class="sd">&quot;&quot;&quot;This method creates a DecayAmplitude object.</span>
 
 <span class="sd">        Notes</span>
 <span class="sd">        -----</span>
@@ -400,14 +401,14 @@
 <span class="sd">        ------</span>
 <span class="sd">        InvalidNameError</span>
 <span class="sd">        RangeError</span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">amplitudes</span><span class="p">[</span><span class="n">name</span><span class="p">]</span> <span class="o">=</span> <span class="n">amplitude</span> <span class="o">=</span> <span class="n">DecayAmplitude</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">initial</span><span class="p">,</span> <span class="n">maximum</span><span class="p">,</span> <span class="n">start</span><span class="p">,</span> <span class="n">decayTime</span><span class="p">,</span> <span class="n">timeSpan</span><span class="p">)</span>
         <span class="k">return</span> <span class="n">amplitude</span></div>
 
 <div class="viewcode-block" id="AmplitudeOdb.EquallySpacedAmplitude"><a class="viewcode-back" href="../../../reference/odb.html#abaqus.Amplitude.AmplitudeOdb.AmplitudeOdb.EquallySpacedAmplitude">[docs]</a>    <span class="k">def</span> <span class="nf">EquallySpacedAmplitude</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">fixedInterval</span><span class="p">:</span> <span class="nb">float</span><span class="p">,</span> <span class="n">data</span><span class="p">:</span> <span class="nb">tuple</span><span class="p">,</span> <span class="n">begin</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span>
                                <span class="n">smooth</span><span class="p">:</span> <span class="n">typing</span><span class="o">.</span><span class="n">Union</span><span class="p">[</span><span class="n">SymbolicConstant</span><span class="p">,</span> <span class="nb">float</span><span class="p">]</span> <span class="o">=</span> <span class="n">SOLVER_DEFAULT</span><span class="p">,</span>
                                <span class="n">timeSpan</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="n">STEP</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">EquallySpacedAmplitude</span><span class="p">:</span>
-        <span class="sd">"""This method creates an EquallySpacedAmplitude object.</span>
+        <span class="sd">&quot;&quot;&quot;This method creates an EquallySpacedAmplitude object.</span>
 
 <span class="sd">        Notes</span>
 <span class="sd">        -----</span>
@@ -447,13 +448,13 @@
 <span class="sd">        ------</span>
 <span class="sd">        InvalidNameError</span>
 <span class="sd">        RangeError</span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">amplitudes</span><span class="p">[</span><span class="n">name</span><span class="p">]</span> <span class="o">=</span> <span class="n">amplitude</span> <span class="o">=</span> <span class="n">EquallySpacedAmplitude</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">fixedInterval</span><span class="p">,</span> <span class="n">data</span><span class="p">,</span> <span class="n">begin</span><span class="p">,</span> <span class="n">smooth</span><span class="p">,</span> <span class="n">timeSpan</span><span class="p">)</span>
         <span class="k">return</span> <span class="n">amplitude</span></div>
 
 <div class="viewcode-block" id="AmplitudeOdb.ModulatedAmplitude"><a class="viewcode-back" href="../../../reference/odb.html#abaqus.Amplitude.AmplitudeOdb.AmplitudeOdb.ModulatedAmplitude">[docs]</a>    <span class="k">def</span> <span class="nf">ModulatedAmplitude</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">initial</span><span class="p">:</span> <span class="nb">float</span><span class="p">,</span> <span class="n">magnitude</span><span class="p">:</span> <span class="nb">float</span><span class="p">,</span> <span class="n">start</span><span class="p">:</span> <span class="nb">float</span><span class="p">,</span> <span class="n">frequency1</span><span class="p">:</span> <span class="nb">float</span><span class="p">,</span>
                            <span class="n">frequency2</span><span class="p">:</span> <span class="nb">float</span><span class="p">,</span> <span class="n">timeSpan</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="n">STEP</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">ModulatedAmplitude</span><span class="p">:</span>
-        <span class="sd">"""This method creates a ModulatedAmplitude object.</span>
+        <span class="sd">&quot;&quot;&quot;This method creates a ModulatedAmplitude object.</span>
 
 <span class="sd">        Notes</span>
 <span class="sd">        -----</span>
@@ -492,14 +493,14 @@
 <span class="sd">        ------</span>
 <span class="sd">        InvalidNameError</span>
 <span class="sd">        RangeError</span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">amplitudes</span><span class="p">[</span><span class="n">name</span><span class="p">]</span> <span class="o">=</span> <span class="n">amplitude</span> <span class="o">=</span> <span class="n">ModulatedAmplitude</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">initial</span><span class="p">,</span> <span class="n">magnitude</span><span class="p">,</span> <span class="n">start</span><span class="p">,</span> <span class="n">frequency1</span><span class="p">,</span> <span class="n">frequency2</span><span class="p">,</span>
                                                                <span class="n">timeSpan</span><span class="p">)</span>
         <span class="k">return</span> <span class="n">amplitude</span></div>
 
 <div class="viewcode-block" id="AmplitudeOdb.PeriodicAmplitude"><a class="viewcode-back" href="../../../reference/odb.html#abaqus.Amplitude.AmplitudeOdb.AmplitudeOdb.PeriodicAmplitude">[docs]</a>    <span class="k">def</span> <span class="nf">PeriodicAmplitude</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">frequency</span><span class="p">:</span> <span class="nb">float</span><span class="p">,</span> <span class="n">start</span><span class="p">:</span> <span class="nb">float</span><span class="p">,</span> <span class="n">a_0</span><span class="p">:</span> <span class="nb">float</span><span class="p">,</span> <span class="n">data</span><span class="p">:</span> <span class="nb">tuple</span><span class="p">,</span>
                           <span class="n">timeSpan</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="n">STEP</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">PeriodicAmplitude</span><span class="p">:</span>
-        <span class="sd">"""This method creates a PeriodicAmplitude object.</span>
+        <span class="sd">&quot;&quot;&quot;This method creates a PeriodicAmplitude object.</span>
 
 <span class="sd">        Notes</span>
 <span class="sd">        -----</span>
@@ -534,14 +535,14 @@
 <span class="sd">        ------</span>
 <span class="sd">        InvalidNameError</span>
 <span class="sd">        RangeError</span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">amplitudes</span><span class="p">[</span><span class="n">name</span><span class="p">]</span> <span class="o">=</span> <span class="n">amplitude</span> <span class="o">=</span> <span class="n">PeriodicAmplitude</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">frequency</span><span class="p">,</span> <span class="n">start</span><span class="p">,</span> <span class="n">a_0</span><span class="p">,</span> <span class="n">data</span><span class="p">,</span> <span class="n">timeSpan</span><span class="p">)</span>
         <span class="k">return</span> <span class="n">amplitude</span></div>
 
 <div class="viewcode-block" id="AmplitudeOdb.PsdDefinition"><a class="viewcode-back" href="../../../reference/odb.html#abaqus.Amplitude.AmplitudeOdb.AmplitudeOdb.PsdDefinition">[docs]</a>    <span class="k">def</span> <span class="nf">PsdDefinition</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">data</span><span class="p">:</span> <span class="nb">tuple</span><span class="p">,</span> <span class="n">unitType</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="n">FORCE</span><span class="p">,</span>
                       <span class="n">referenceGravityAcceleration</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span> <span class="n">referenecePower</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span>
-                      <span class="n">user</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="n">OFF</span><span class="p">,</span> <span class="n">timeSpan</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="n">STEP</span><span class="p">,</span> <span class="n">amplitude</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">''</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">PsdDefinition</span><span class="p">:</span>
-        <span class="sd">"""This method creates a PsdDefinition object.</span>
+                      <span class="n">user</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="n">OFF</span><span class="p">,</span> <span class="n">timeSpan</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="n">STEP</span><span class="p">,</span> <span class="n">amplitude</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">PsdDefinition</span><span class="p">:</span>
+        <span class="sd">&quot;&quot;&quot;This method creates a PsdDefinition object.</span>
 
 <span class="sd">        Notes</span>
 <span class="sd">        -----</span>
@@ -590,13 +591,13 @@
 <span class="sd">        ------</span>
 <span class="sd">        InvalidNameError</span>
 <span class="sd">        RangeError</span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">amplitudes</span><span class="p">[</span><span class="n">name</span><span class="p">]</span> <span class="o">=</span> <span class="n">amplitude</span> <span class="o">=</span> <span class="n">PsdDefinition</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">data</span><span class="p">,</span> <span class="n">unitType</span><span class="p">,</span> <span class="n">referenceGravityAcceleration</span><span class="p">,</span>
                                                           <span class="n">referenecePower</span><span class="p">,</span> <span class="n">user</span><span class="p">,</span> <span class="n">timeSpan</span><span class="p">,</span> <span class="n">amplitude</span><span class="p">)</span>
         <span class="k">return</span> <span class="n">amplitude</span></div>
 
 <div class="viewcode-block" id="AmplitudeOdb.SmoothStepAmplitude"><a class="viewcode-back" href="../../../reference/odb.html#abaqus.Amplitude.AmplitudeOdb.AmplitudeOdb.SmoothStepAmplitude">[docs]</a>    <span class="k">def</span> <span class="nf">SmoothStepAmplitude</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">data</span><span class="p">:</span> <span class="nb">tuple</span><span class="p">,</span> <span class="n">timeSpan</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="n">STEP</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">SmoothStepAmplitude</span><span class="p">:</span>
-        <span class="sd">"""This method creates a SmoothStepAmplitude object.</span>
+        <span class="sd">&quot;&quot;&quot;This method creates a SmoothStepAmplitude object.</span>
 
 <span class="sd">        Notes</span>
 <span class="sd">        -----</span>
@@ -626,13 +627,13 @@
 <span class="sd">        ------</span>
 <span class="sd">        InvalidNameError</span>
 <span class="sd">        RangeError</span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">amplitudes</span><span class="p">[</span><span class="n">name</span><span class="p">]</span> <span class="o">=</span> <span class="n">amplitude</span> <span class="o">=</span> <span class="n">SmoothStepAmplitude</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">data</span><span class="p">,</span> <span class="n">timeSpan</span><span class="p">)</span>
         <span class="k">return</span> <span class="n">amplitude</span></div>
 
 <div class="viewcode-block" id="AmplitudeOdb.SolutionDependentAmplitude"><a class="viewcode-back" href="../../../reference/odb.html#abaqus.Amplitude.AmplitudeOdb.AmplitudeOdb.SolutionDependentAmplitude">[docs]</a>    <span class="k">def</span> <span class="nf">SolutionDependentAmplitude</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">initial</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span> <span class="n">minimum</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="n">maximum</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mi">1000</span><span class="p">,</span>
                                    <span class="n">timeSpan</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="n">STEP</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">SolutionDependentAmplitude</span><span class="p">:</span>
-        <span class="sd">"""This method creates a SolutionDependentAmplitude object.</span>
+        <span class="sd">&quot;&quot;&quot;This method creates a SolutionDependentAmplitude object.</span>
 
 <span class="sd">        Notes</span>
 <span class="sd">        -----</span>
@@ -668,7 +669,7 @@
 <span class="sd">        ------</span>
 <span class="sd">        InvalidNameError</span>
 <span class="sd">        RangeError</span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">amplitudes</span><span class="p">[</span><span class="n">name</span><span class="p">]</span> <span class="o">=</span> <span class="n">amplitude</span> <span class="o">=</span> <span class="n">SolutionDependentAmplitude</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">initial</span><span class="p">,</span> <span class="n">minimum</span><span class="p">,</span> <span class="n">maximum</span><span class="p">,</span> <span class="n">timeSpan</span><span class="p">)</span>
         <span class="k">return</span> <span class="n">amplitude</span></div>
 
@@ -677,8 +678,8 @@
                           <span class="n">eventUnits</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="n">EVENT_ACCELERATION</span><span class="p">,</span>
                           <span class="n">solution</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="n">ABSOLUTE_VALUE</span><span class="p">,</span> <span class="n">timeIncrement</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span>
                           <span class="n">gravity</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span> <span class="n">criticalDamping</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="n">OFF</span><span class="p">,</span> <span class="n">timeSpan</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="n">STEP</span><span class="p">,</span>
-                          <span class="n">amplitude</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">''</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">SpectrumAmplitude</span><span class="p">:</span>
-        <span class="sd">"""This method creates a SpectrumAmplitude object.</span>
+                          <span class="n">amplitude</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">SpectrumAmplitude</span><span class="p">:</span>
+        <span class="sd">&quot;&quot;&quot;This method creates a SpectrumAmplitude object.</span>
 
 <span class="sd">        Notes</span>
 <span class="sd">        -----</span>
@@ -738,7 +739,7 @@
 <span class="sd">        ------</span>
 <span class="sd">        InvalidNameError</span>
 <span class="sd">        RangeError</span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">amplitudes</span><span class="p">[</span><span class="n">name</span><span class="p">]</span> <span class="o">=</span> <span class="n">amplitude</span> <span class="o">=</span> <span class="n">SpectrumAmplitude</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">method</span><span class="p">,</span> <span class="n">data</span><span class="p">,</span> <span class="n">specificationUnits</span><span class="p">,</span> <span class="n">eventUnits</span><span class="p">,</span>
                                                               <span class="n">solution</span><span class="p">,</span> <span class="n">timeIncrement</span><span class="p">,</span> <span class="n">gravity</span><span class="p">,</span> <span class="n">criticalDamping</span><span class="p">,</span>
                                                               <span class="n">timeSpan</span><span class="p">,</span> <span class="n">amplitude</span><span class="p">)</span>
@@ -746,7 +747,7 @@
 
 <div class="viewcode-block" id="AmplitudeOdb.TabularAmplitude"><a class="viewcode-back" href="../../../reference/odb.html#abaqus.Amplitude.AmplitudeOdb.AmplitudeOdb.TabularAmplitude">[docs]</a>    <span class="k">def</span> <span class="nf">TabularAmplitude</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">data</span><span class="p">:</span> <span class="nb">tuple</span><span class="p">,</span> <span class="n">smooth</span><span class="p">:</span> <span class="n">typing</span><span class="o">.</span><span class="n">Union</span><span class="p">[</span><span class="n">SymbolicConstant</span><span class="p">,</span> <span class="nb">float</span><span class="p">]</span> <span class="o">=</span> <span class="n">SOLVER_DEFAULT</span><span class="p">,</span>
                          <span class="n">timeSpan</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="n">STEP</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">TabularAmplitude</span><span class="p">:</span>
-        <span class="sd">"""This method creates a TabularAmplitude object.</span>
+        <span class="sd">&quot;&quot;&quot;This method creates a TabularAmplitude object.</span>
 
 <span class="sd">        Notes</span>
 <span class="sd">        -----</span>
@@ -781,7 +782,7 @@
 <span class="sd">        ------</span>
 <span class="sd">        InvalidNameError</span>
 <span class="sd">        RangeError</span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">amplitudes</span><span class="p">[</span><span class="n">name</span><span class="p">]</span> <span class="o">=</span> <span class="n">amplitude</span> <span class="o">=</span> <span class="n">TabularAmplitude</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">data</span><span class="p">,</span> <span class="n">smooth</span><span class="p">,</span> <span class="n">timeSpan</span><span class="p">)</span>
         <span class="k">return</span> <span class="n">amplitude</span></div></div>
 

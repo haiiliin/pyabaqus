@@ -5,10 +5,10 @@
     <meta name="color-scheme" content="light dark"><link rel="index" title="Index" href="../../../genindex.html" /><link rel="search" title="Search" href="../../../search.html" />
         <link rel="canonical" href="https://pyabaqus.haiiliin.com/_modules/abaqus/UtilityAndView/View.html" />
 
-    <meta name="generator" content="sphinx-4.5.0, furo 2022.04.07"/>
-        <title>abaqus.UtilityAndView.View - pyabaqus 1.0.16 documentation</title>
+    <meta name="generator" content="sphinx-4.5.0, furo 2022.06.04.1"/>
+        <title>abaqus.UtilityAndView.View - pyabaqus 1.0.18 documentation</title>
       <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/styles/furo.css?digest=68f4518137b9aefe99b631505a2064c3c42c9852" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/styles/furo.css?digest=40978830699223671f4072448e654b5958f38b89" />
     <link rel="stylesheet" type="text/css" href="../../../_static/styles/furo-extensions.css?digest=30d1aed668e5c3a91c3e3bf6a60b675221979f0e" />
     
     
@@ -123,7 +123,7 @@
       </label>
     </div>
     <div class="header-center">
-      <a href="../../../index.html"><div class="brand">pyabaqus 1.0.16 documentation</div></a>
+      <a href="../../../index.html"><div class="brand">pyabaqus 1.0.18 documentation</div></a>
     </div>
     <div class="header-right">
       <div class="theme-toggle-container theme-toggle-header">
@@ -146,7 +146,7 @@
       <div class="sidebar-sticky"><a class="sidebar-brand" href="../../../index.html">
   
   
-  <span class="sidebar-brand-text">pyabaqus 1.0.16 documentation</span>
+  <span class="sidebar-brand-text">pyabaqus 1.0.18 documentation</span>
   
 </a><form class="sidebar-search-container" method="get" action="../../../search.html" role="search">
   <input class="sidebar-search" placeholder=Search name="q" aria-label="Search">
@@ -286,7 +286,8 @@
           </svg>
           <span>Back to top</span>
         </a>
-        <div class="content-icon-container"><div class="theme-toggle-container theme-toggle-content">
+        <div class="content-icon-container">
+          <div class="theme-toggle-container theme-toggle-content">
             <button class="theme-toggle">
               <div class="visually-hidden">Toggle Light / Dark / Auto color theme</div>
               <svg class="theme-icon-when-auto"><use href="#svg-sun-half"></use></svg>
@@ -305,7 +306,7 @@
 
 
 <div class="viewcode-block" id="View"><a class="viewcode-back" href="../../../reference/kernel/utility.html#abaqus.UtilityAndView.View.View">[docs]</a><span class="k">class</span> <span class="nc">View</span><span class="p">:</span>
-    <span class="sd">"""The Session and Viewport View objects store view settings for custom (both predefined</span>
+    <span class="sd">&quot;&quot;&quot;The Session and Viewport View objects store view settings for custom (both predefined</span>
 <span class="sd">    and user-defined) views. The paradigm used to define a view is based on a camera </span>
 <span class="sd">    analogy. Similar to taking a photograph with a camera, features such as camera position, </span>
 <span class="sd">    view direction, orientation, depth of field, and projection are specified to transform </span>
@@ -337,7 +338,7 @@
 <span class="sd">        session.viewports[name].view</span>
 <span class="sd">        session.views[name]</span>
 
-<span class="sd">    """</span>
+<span class="sd">    &quot;&quot;&quot;</span>
 
     <span class="c1"># A Float specifying the width in viewport millimeters of the bounding rectangle around </span>
     <span class="c1"># the viewport contents. This value does not include annotations or symbols and it is not </span>
@@ -357,7 +358,7 @@
                  <span class="n">projection</span><span class="p">:</span> <span class="n">SymbolicConstant</span><span class="p">,</span> <span class="n">cameraPosition</span><span class="p">:</span> <span class="nb">tuple</span><span class="p">,</span> <span class="n">cameraUpVector</span><span class="p">:</span> <span class="nb">tuple</span><span class="p">,</span>
                  <span class="n">cameraTarget</span><span class="p">:</span> <span class="nb">tuple</span><span class="p">,</span> <span class="n">viewOffsetX</span><span class="p">:</span> <span class="nb">float</span><span class="p">,</span> <span class="n">viewOffsetY</span><span class="p">:</span> <span class="nb">float</span><span class="p">,</span> <span class="n">autoFit</span><span class="p">:</span> <span class="n">Boolean</span><span class="p">,</span>
                  <span class="n">movieMode</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="n">OFF</span><span class="p">):</span>
-        <span class="sd">"""This method creates a View object.</span>
+        <span class="sd">&quot;&quot;&quot;This method creates a View object.</span>
 <span class="sd">        Note:All dimensions and coordinates are specified in the model coordinate system.</span>
 <span class="sd">        Note:This method cannot be used to create a View for a Layer object.</span>
 
@@ -373,8 +374,8 @@
 <span class="sd">        ----------</span>
 <span class="sd">        name</span>
 <span class="sd">            A String specifying the name of the view (also used as the repository key). Possible </span>
-<span class="sd">            values are 'Front', 'Back', 'Top', 'Bottom', 'Left', `Right', 'Iso', 'User-1', 'User-2', </span>
-<span class="sd">            'User-3', and 'User-4'. The object member associated with this argument is a </span>
+<span class="sd">            values are &#39;Front&#39;, &#39;Back&#39;, &#39;Top&#39;, &#39;Bottom&#39;, &#39;Left&#39;, `Right&#39;, &#39;Iso&#39;, &#39;User-1&#39;, &#39;User-2&#39;, </span>
+<span class="sd">            &#39;User-3&#39;, and &#39;User-4&#39;. The object member associated with this argument is a </span>
 <span class="sd">            SymbolicConstant. Possible values of the *name* member are:FRONT, BACK, TOP, BOTTOM, </span>
 <span class="sd">            LEFT, RIGHT, ISO, USER1, USER2, USER3, and USER4. </span>
 <span class="sd">        nearPlane</span>
@@ -395,7 +396,7 @@
 <span class="sd">        cameraPosition</span>
 <span class="sd">            A sequence of three Floats specifying the camera position. </span>
 <span class="sd">        cameraUpVector</span>
-<span class="sd">            A sequence of three Floats specifying the camera's up vector (the screen's positive </span>
+<span class="sd">            A sequence of three Floats specifying the camera&#39;s up vector (the screen&#39;s positive </span>
 <span class="sd">            *Y*-axis). The initial value is (0, 0, 0). </span>
 <span class="sd">        cameraTarget</span>
 <span class="sd">            A sequence of three Floats specifying the center of the scene. </span>
@@ -423,11 +424,11 @@
 <span class="sd">        Raises</span>
 <span class="sd">        ------</span>
 <span class="sd">        RangeError</span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span>
 
 <div class="viewcode-block" id="View.fitView"><a class="viewcode-back" href="../../../reference/kernel/utility.html#abaqus.UtilityAndView.View.View.fitView">[docs]</a>    <span class="k">def</span> <span class="nf">fitView</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">drawImmediately</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="kc">False</span><span class="p">):</span>
-        <span class="sd">"""This method scales the displayable object (such as a part, the assembly, or an *X–Y*</span>
+        <span class="sd">&quot;&quot;&quot;This method scales the displayable object (such as a part, the assembly, or an *X–Y*</span>
 <span class="sd">        plot) to fit the viewport.</span>
 <span class="sd">        </span>
 <span class="sd">        Parameters</span>
@@ -436,11 +437,11 @@
 <span class="sd">            A Boolean specifying the viewport should refresh immediately after the command is </span>
 <span class="sd">            processed. This is typically only used when writing a script and it is desirable to show </span>
 <span class="sd">            intermediate results before the script completes. The default value is False. </span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span></div>
 
 <div class="viewcode-block" id="View.next"><a class="viewcode-back" href="../../../reference/kernel/utility.html#abaqus.UtilityAndView.View.View.next">[docs]</a>    <span class="k">def</span> <span class="nf">next</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">drawImmediately</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="kc">False</span><span class="p">):</span>
-        <span class="sd">"""This method restores the view in the viewport to the next view setting in the list.</span>
+        <span class="sd">&quot;&quot;&quot;This method restores the view in the viewport to the next view setting in the list.</span>
 <span class="sd">        (There is a list of eight views stored for each viewport.) If there is no next view, no</span>
 <span class="sd">        action is taken.</span>
 <span class="sd">        Note:This method is not available for a Layer View.</span>
@@ -451,12 +452,12 @@
 <span class="sd">            A Boolean specifying the viewport should refresh immediately after the command is </span>
 <span class="sd">            processed. This is typically only used when writing a script and it is desirable to show </span>
 <span class="sd">            intermediate results before the script completes. The default value is False. </span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span></div>
 
 <div class="viewcode-block" id="View.pan"><a class="viewcode-back" href="../../../reference/kernel/utility.html#abaqus.UtilityAndView.View.View.pan">[docs]</a>    <span class="k">def</span> <span class="nf">pan</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">xFraction</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="n">yFraction</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="n">asMovie</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="n">OFF</span><span class="p">,</span>
             <span class="n">drawImmediately</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="kc">False</span><span class="p">):</span>
-        <span class="sd">"""This method pans the view in the viewport using absolute, not relative, mode.</span>
+        <span class="sd">&quot;&quot;&quot;This method pans the view in the viewport using absolute, not relative, mode.</span>
 <span class="sd">        </span>
 <span class="sd">        Parameters</span>
 <span class="sd">        ----------</span>
@@ -476,11 +477,11 @@
 <span class="sd">            processed. This argument is typically used only when writing a script and it is </span>
 <span class="sd">            desirable to show intermediate results before the script completes. The default value is </span>
 <span class="sd">            False. </span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span></div>
 
 <div class="viewcode-block" id="View.previous"><a class="viewcode-back" href="../../../reference/kernel/utility.html#abaqus.UtilityAndView.View.View.previous">[docs]</a>    <span class="k">def</span> <span class="nf">previous</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">drawImmediately</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="kc">False</span><span class="p">):</span>
-        <span class="sd">"""This method restores the view in the viewport to the previous view setting in the list.</span>
+        <span class="sd">&quot;&quot;&quot;This method restores the view in the viewport to the previous view setting in the list.</span>
 <span class="sd">        (There is a list of eight views stored for each viewport.) If there is no previous view,</span>
 <span class="sd">        no action is taken.</span>
 <span class="sd">        Note:This method is not available for a Layer View.</span>
@@ -492,12 +493,12 @@
 <span class="sd">            processed. This argument is typically used only when writing a script and it is </span>
 <span class="sd">            desirable to show intermediate results before the script completes. The default value is </span>
 <span class="sd">            False. </span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span></div>
 
 <div class="viewcode-block" id="View.rotate"><a class="viewcode-back" href="../../../reference/kernel/utility.html#abaqus.UtilityAndView.View.View.rotate">[docs]</a>    <span class="k">def</span> <span class="nf">rotate</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">xAngle</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="n">yAngle</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="n">zAngle</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="n">mode</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="n">MODEL</span><span class="p">,</span>
                <span class="n">asMovie</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="n">OFF</span><span class="p">,</span> <span class="n">drawImmediately</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="kc">False</span><span class="p">):</span>
-        <span class="sd">"""This method rotates the view in the viewport. If a center of rotation has been</span>
+        <span class="sd">&quot;&quot;&quot;This method rotates the view in the viewport. If a center of rotation has been</span>
 <span class="sd">        previously specified and *asMovie* is OFF then this method will honor that rotation</span>
 <span class="sd">        center.</span>
 <span class="sd">        </span>
@@ -511,9 +512,9 @@
 <span class="sd">            A Float specifying the degrees to rotate about the*Z*-axis. The default value is 0.0. </span>
 <span class="sd">        mode</span>
 <span class="sd">            A SymbolicConstant specifying the rotation mode. Possible values are:TOTAL : Set the </span>
-<span class="sd">            view to (0, 0, 1), then rotate about the screen's axes (an absolute rotation).SCREEN : </span>
-<span class="sd">            Rotate incrementally about the screen's axes (a relative rotation).MODEL : Rotate </span>
-<span class="sd">            incrementally about the model's axes (a relative rotation).The default value is MODEL. </span>
+<span class="sd">            view to (0, 0, 1), then rotate about the screen&#39;s axes (an absolute rotation).SCREEN : </span>
+<span class="sd">            Rotate incrementally about the screen&#39;s axes (a relative rotation).MODEL : Rotate </span>
+<span class="sd">            incrementally about the model&#39;s axes (a relative rotation).The default value is MODEL. </span>
 <span class="sd">        asMovie</span>
 <span class="sd">            A Boolean specifying the alternate mode of the rotate view manipulation should be used. </span>
 <span class="sd">            The default value is OFF. </span>
@@ -522,11 +523,11 @@
 <span class="sd">            processed. This argument is typically used only when writing a script and it is </span>
 <span class="sd">            desirable to show intermediate results before the script completes. The default value is </span>
 <span class="sd">            False. </span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span></div>
 
-<div class="viewcode-block" id="View.setLayerTransform"><a class="viewcode-back" href="../../../reference/kernel/utility.html#abaqus.UtilityAndView.View.View.setLayerTransform">[docs]</a>    <span class="k">def</span> <span class="nf">setLayerTransform</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">layerTransform</span><span class="p">:</span> <span class="nb">tuple</span> <span class="o">=</span> <span class="p">(),</span> <span class="n">options</span><span class="p">:</span> <span class="s1">'View'</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">drawImmediately</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="kc">False</span><span class="p">):</span>
-        <span class="sd">"""This method modifies the transformation used to position a Layer.</span>
+<div class="viewcode-block" id="View.setLayerTransform"><a class="viewcode-back" href="../../../reference/kernel/utility.html#abaqus.UtilityAndView.View.View.setLayerTransform">[docs]</a>    <span class="k">def</span> <span class="nf">setLayerTransform</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">layerTransform</span><span class="p">:</span> <span class="nb">tuple</span> <span class="o">=</span> <span class="p">(),</span> <span class="n">options</span><span class="p">:</span> <span class="s1">&#39;View&#39;</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">drawImmediately</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="kc">False</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;This method modifies the transformation used to position a Layer.</span>
 <span class="sd">        Note:This method is not available for Session and Viewport Views.</span>
 <span class="sd">        </span>
 <span class="sd">        Parameters</span>
@@ -542,11 +543,11 @@
 <span class="sd">            processed. This argument is typically used only when writing a script and it is </span>
 <span class="sd">            desirable to show intermediate results before the script completes. The default value is </span>
 <span class="sd">            False. </span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span></div>
 
 <div class="viewcode-block" id="View.setProjection"><a class="viewcode-back" href="../../../reference/kernel/utility.html#abaqus.UtilityAndView.View.View.setProjection">[docs]</a>    <span class="k">def</span> <span class="nf">setProjection</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">projection</span><span class="p">:</span> <span class="n">SymbolicConstant</span><span class="p">,</span> <span class="n">drawImmediately</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="kc">False</span><span class="p">):</span>
-        <span class="sd">"""This method modifies the appearance of three-dimensional models in the viewport.</span>
+        <span class="sd">&quot;&quot;&quot;This method modifies the appearance of three-dimensional models in the viewport.</span>
 <span class="sd">        Choosing PERSPECTIVE makes a model appear more realistic by decreasing the apparent size</span>
 <span class="sd">        of features that are farther away from the viewing point.</span>
 <span class="sd">        Note:This method is not available for a Layer View.</span>
@@ -565,11 +566,11 @@
 <span class="sd">        Raises</span>
 <span class="sd">        ------</span>
 <span class="sd">        RangeError</span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span></div>
 
 <div class="viewcode-block" id="View.setRotationCenter"><a class="viewcode-back" href="../../../reference/kernel/utility.html#abaqus.UtilityAndView.View.View.setRotationCenter">[docs]</a>    <span class="k">def</span> <span class="nf">setRotationCenter</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">rotationCenter</span><span class="p">:</span> <span class="nb">tuple</span><span class="p">):</span>
-        <span class="sd">"""This method sets the center of rotation to the specified location.</span>
+        <span class="sd">&quot;&quot;&quot;This method sets the center of rotation to the specified location.</span>
 <span class="sd">        </span>
 <span class="sd">        Parameters</span>
 <span class="sd">        ----------</span>
@@ -581,11 +582,11 @@
 <span class="sd">        ------</span>
 <span class="sd">            TypeError: rotationCenter cannot be set using a part instance and node label unless the </span>
 <span class="sd">            displayed object is an ODB </span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span></div>
 
 <div class="viewcode-block" id="View.setValues"><a class="viewcode-back" href="../../../reference/kernel/utility.html#abaqus.UtilityAndView.View.View.setValues">[docs]</a>    <span class="k">def</span> <span class="nf">setValues</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">movieMode</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="n">OFF</span><span class="p">):</span>
-        <span class="sd">"""This method modifies the View object.</span>
+        <span class="sd">&quot;&quot;&quot;This method modifies the View object.</span>
 <span class="sd">        Note:This method is not available for a Layer View.</span>
 <span class="sd">        </span>
 <span class="sd">        Parameters</span>
@@ -597,11 +598,11 @@
 <span class="sd">        Raises</span>
 <span class="sd">        ------</span>
 <span class="sd">        RangeError</span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span></div>
 
 <div class="viewcode-block" id="View.setViewpoint"><a class="viewcode-back" href="../../../reference/kernel/utility.html#abaqus.UtilityAndView.View.View.setViewpoint">[docs]</a>    <span class="k">def</span> <span class="nf">setViewpoint</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">viewVector</span><span class="p">:</span> <span class="nb">tuple</span><span class="p">,</span> <span class="n">cameraUpVector</span><span class="p">:</span> <span class="nb">tuple</span> <span class="o">=</span> <span class="p">(),</span> <span class="n">drawImmediately</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="kc">False</span><span class="p">):</span>
-        <span class="sd">"""This method sets the camera's position in the viewport.</span>
+        <span class="sd">&quot;&quot;&quot;This method sets the camera&#39;s position in the viewport.</span>
 <span class="sd">        Note:This method is not available for a Layer View.</span>
 <span class="sd">        </span>
 <span class="sd">        Parameters</span>
@@ -610,19 +611,19 @@
 <span class="sd">            A sequence of three Floats specifying the viewing vector (from the camera to the origin </span>
 <span class="sd">            of the model). </span>
 <span class="sd">        cameraUpVector</span>
-<span class="sd">            A sequence of three Floats specifying the camera's up vector (the screen's positive </span>
+<span class="sd">            A sequence of three Floats specifying the camera&#39;s up vector (the screen&#39;s positive </span>
 <span class="sd">            *Y*-axis). The initial value is (0, 0, 0). </span>
 <span class="sd">        drawImmediately</span>
 <span class="sd">            A Boolean specifying the viewport should refresh immediately after the command is </span>
 <span class="sd">            processed. This argument is typically used only when writing a script and it is </span>
 <span class="sd">            desirable to show intermediate results before the script completes. The default value is </span>
 <span class="sd">            False. </span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span></div>
 
 <div class="viewcode-block" id="View.zoom"><a class="viewcode-back" href="../../../reference/kernel/utility.html#abaqus.UtilityAndView.View.View.zoom">[docs]</a>    <span class="k">def</span> <span class="nf">zoom</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">zoomFactor</span><span class="p">:</span> <span class="nb">float</span><span class="p">,</span> <span class="n">mode</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="n">ABSOLUTE</span><span class="p">,</span> <span class="n">asMovie</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="n">OFF</span><span class="p">,</span>
              <span class="n">drawImmediately</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="kc">False</span><span class="p">):</span>
-        <span class="sd">"""This method magnifies the view in the viewport.</span>
+        <span class="sd">&quot;&quot;&quot;This method magnifies the view in the viewport.</span>
 <span class="sd">        </span>
 <span class="sd">        Parameters</span>
 <span class="sd">        ----------</span>
@@ -646,11 +647,11 @@
 <span class="sd">        Raises</span>
 <span class="sd">        ------</span>
 <span class="sd">        RangeError</span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span></div>
 
 <div class="viewcode-block" id="View.zoomRectangle"><a class="viewcode-back" href="../../../reference/kernel/utility.html#abaqus.UtilityAndView.View.View.zoomRectangle">[docs]</a>    <span class="k">def</span> <span class="nf">zoomRectangle</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">point1</span><span class="p">:</span> <span class="nb">tuple</span><span class="p">[</span><span class="nb">float</span><span class="p">],</span> <span class="n">point2</span><span class="p">:</span> <span class="nb">tuple</span><span class="p">[</span><span class="nb">float</span><span class="p">],</span> <span class="n">drawImmediately</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="kc">False</span><span class="p">):</span>
-        <span class="sd">"""This method fills the viewport with the graphics located within the given rectangle.</span>
+        <span class="sd">&quot;&quot;&quot;This method fills the viewport with the graphics located within the given rectangle.</span>
 <span class="sd">        </span>
 <span class="sd">        Parameters</span>
 <span class="sd">        ----------</span>
@@ -665,7 +666,7 @@
 <span class="sd">            processed. This argument is typically used only when writing a script and it is </span>
 <span class="sd">            desirable to show intermediate results before the script completes. The default value is </span>
 <span class="sd">            False. </span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span></div></div>
 </pre></div>
         </article>

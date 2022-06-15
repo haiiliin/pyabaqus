@@ -5,10 +5,10 @@
     <meta name="color-scheme" content="light dark"><link rel="index" title="Index" href="../../../genindex.html" /><link rel="search" title="Search" href="../../../search.html" />
         <link rel="canonical" href="https://pyabaqus.haiiliin.com/_modules/abaqus/Part/AcisMdb.html" />
 
-    <meta name="generator" content="sphinx-4.5.0, furo 2022.04.07"/>
-        <title>abaqus.Part.AcisMdb - pyabaqus 1.0.16 documentation</title>
+    <meta name="generator" content="sphinx-4.5.0, furo 2022.06.04.1"/>
+        <title>abaqus.Part.AcisMdb - pyabaqus 1.0.18 documentation</title>
       <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/styles/furo.css?digest=68f4518137b9aefe99b631505a2064c3c42c9852" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/styles/furo.css?digest=40978830699223671f4072448e654b5958f38b89" />
     <link rel="stylesheet" type="text/css" href="../../../_static/styles/furo-extensions.css?digest=30d1aed668e5c3a91c3e3bf6a60b675221979f0e" />
     
     
@@ -123,7 +123,7 @@
       </label>
     </div>
     <div class="header-center">
-      <a href="../../../index.html"><div class="brand">pyabaqus 1.0.16 documentation</div></a>
+      <a href="../../../index.html"><div class="brand">pyabaqus 1.0.18 documentation</div></a>
     </div>
     <div class="header-right">
       <div class="theme-toggle-container theme-toggle-header">
@@ -146,7 +146,7 @@
       <div class="sidebar-sticky"><a class="sidebar-brand" href="../../../index.html">
   
   
-  <span class="sidebar-brand-text">pyabaqus 1.0.16 documentation</span>
+  <span class="sidebar-brand-text">pyabaqus 1.0.18 documentation</span>
   
 </a><form class="sidebar-search-container" method="get" action="../../../search.html" role="search">
   <input class="sidebar-search" placeholder=Search name="q" aria-label="Search">
@@ -286,7 +286,8 @@
           </svg>
           <span>Back to top</span>
         </a>
-        <div class="content-icon-container"><div class="theme-toggle-container theme-toggle-content">
+        <div class="content-icon-container">
+          <div class="theme-toggle-container theme-toggle-content">
             <button class="theme-toggle">
               <div class="visually-hidden">Toggle Light / Dark / Auto color theme</div>
               <svg class="theme-icon-when-auto"><use href="#svg-sun-half"></use></svg>
@@ -307,7 +308,7 @@
 
 
 <div class="viewcode-block" id="AcisMdb"><a class="viewcode-back" href="../../../reference/mdb/model/part.html#abaqus.Part.AcisMdb.AcisMdb">[docs]</a><span class="k">class</span> <span class="nc">AcisMdb</span><span class="p">(</span><span class="n">MdbBase</span><span class="p">):</span>
-    <span class="sd">"""The Mdb object is the high-level Abaqus model database. A model database stores models</span>
+    <span class="sd">&quot;&quot;&quot;The Mdb object is the high-level Abaqus model database. A model database stores models</span>
 <span class="sd">    and analysis controls.</span>
 
 <span class="sd">    Notes</span>
@@ -318,11 +319,11 @@
 
 <span class="sd">        mdb</span>
 
-<span class="sd">    """</span>
+<span class="sd">    &quot;&quot;&quot;</span>
 
 <div class="viewcode-block" id="AcisMdb.openAcis"><a class="viewcode-back" href="../../../reference/mdb/model/part.html#abaqus.Part.AcisMdb.AcisMdb.openAcis">[docs]</a>    <span class="nd">@staticmethod</span>
     <span class="k">def</span> <span class="nf">openAcis</span><span class="p">(</span><span class="n">fileName</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">scaleFromFile</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="n">OFF</span><span class="p">):</span>
-        <span class="sd">"""This method creates an AcisFile object from a file containing ACIS-format geometry. This</span>
+        <span class="sd">&quot;&quot;&quot;This method creates an AcisFile object from a file containing ACIS-format geometry. This</span>
 <span class="sd">        object is subsequently used by the PartFromGeometryFile method.</span>
 
 <span class="sd">        Notes</span>
@@ -351,13 +352,13 @@
 <span class="sd">              Texterror: ACIS File version exceeds Kernel.</span>
 <span class="sd">            - The data in the ACIS file are corrupted.</span>
 <span class="sd">              Texterror: Failed to read ACIS file.</span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">return</span> <span class="n">AcisFile</span><span class="p">()</span></div>
 
 <div class="viewcode-block" id="AcisMdb.openCatia"><a class="viewcode-back" href="../../../reference/mdb/model/part.html#abaqus.Part.AcisMdb.AcisMdb.openCatia">[docs]</a>    <span class="nd">@staticmethod</span>
     <span class="k">def</span> <span class="nf">openCatia</span><span class="p">(</span><span class="n">fileName</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">topology</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">convertUnits</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="n">OFF</span><span class="p">,</span>
                   <span class="n">combineBodies</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="n">OFF</span><span class="p">):</span>
-        <span class="sd">"""This method creates an AcisFile object from a file containing V5-format geometry. This</span>
+        <span class="sd">&quot;&quot;&quot;This method creates an AcisFile object from a file containing V5-format geometry. This</span>
 <span class="sd">        object is subsequently used by the PartFromGeometryFile method.</span>
 
 <span class="sd">        Notes</span>
@@ -389,13 +390,13 @@
 <span class="sd">        Returns</span>
 <span class="sd">        -------</span>
 <span class="sd">            An AcisFile object.</span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">return</span> <span class="n">AcisFile</span><span class="p">()</span></div>
 
 <div class="viewcode-block" id="AcisMdb.openEnf"><a class="viewcode-back" href="../../../reference/mdb/model/part.html#abaqus.Part.AcisMdb.AcisMdb.openEnf">[docs]</a>    <span class="nd">@staticmethod</span>
     <span class="k">def</span> <span class="nf">openEnf</span><span class="p">(</span><span class="n">fileName</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">fileType</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">topology</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="n">SOLID</span><span class="p">,</span>
                 <span class="n">convertUnits</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="n">OFF</span><span class="p">):</span>
-        <span class="sd">"""This method creates an AcisFile object from a file containing Elysium Neutral</span>
+        <span class="sd">&quot;&quot;&quot;This method creates an AcisFile object from a file containing Elysium Neutral</span>
 <span class="sd">        File-format geometry that was created by CATIA V5, I-DEAS, or Pro/ENGINEER. This object</span>
 <span class="sd">        is subsequently used by the PartFromGeometryFile method.</span>
 
@@ -429,7 +430,7 @@
 <span class="sd">        Returns</span>
 <span class="sd">        -------</span>
 <span class="sd">            An AcisFile object.</span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">return</span> <span class="n">AcisFile</span><span class="p">()</span></div>
 
 <div class="viewcode-block" id="AcisMdb.openIges"><a class="viewcode-back" href="../../../reference/mdb/model/part.html#abaqus.Part.AcisMdb.AcisMdb.openIges">[docs]</a>    <span class="nd">@staticmethod</span>
@@ -437,7 +438,7 @@
                  <span class="n">scaleFromFile</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="n">OFF</span><span class="p">,</span> <span class="n">msbo</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="kc">False</span><span class="p">,</span>
                  <span class="n">includedLayers</span><span class="p">:</span> <span class="nb">tuple</span> <span class="o">=</span> <span class="p">(),</span> <span class="n">topology</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="n">SOLID</span><span class="p">,</span>
                  <span class="n">uniteWires</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="n">ON</span><span class="p">):</span>
-        <span class="sd">"""This method creates an AcisFile object from a file containing IGES-format geometry. This</span>
+        <span class="sd">&quot;&quot;&quot;This method creates an AcisFile object from a file containing IGES-format geometry. This</span>
 <span class="sd">        object is subsequently used by the PartFromGeometryFile method.</span>
 
 <span class="sd">        Notes</span>
@@ -489,12 +490,12 @@
 <span class="sd">        ------</span>
 <span class="sd">            - The data in the IGES file are corrupted.</span>
 <span class="sd">              Texterror: Failed to read IGES file.</span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">return</span> <span class="n">AcisFile</span><span class="p">()</span></div>
 
 <div class="viewcode-block" id="AcisMdb.openParasolid"><a class="viewcode-back" href="../../../reference/mdb/model/part.html#abaqus.Part.AcisMdb.AcisMdb.openParasolid">[docs]</a>    <span class="nd">@staticmethod</span>
     <span class="k">def</span> <span class="nf">openParasolid</span><span class="p">(</span><span class="n">fileName</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">topology</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="n">SOLID</span><span class="p">):</span>
-        <span class="sd">"""This method creates an AcisFile object from a file containing Parasolid-format geometry.</span>
+        <span class="sd">&quot;&quot;&quot;This method creates an AcisFile object from a file containing Parasolid-format geometry.</span>
 <span class="sd">        This object is subsequently used by the PartFromGeometryFile method.</span>
 
 <span class="sd">        Notes</span>
@@ -519,12 +520,12 @@
 <span class="sd">        Returns</span>
 <span class="sd">        -------</span>
 <span class="sd">            An AcisFile object.</span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">return</span> <span class="n">AcisFile</span><span class="p">()</span></div>
 
 <div class="viewcode-block" id="AcisMdb.openStep"><a class="viewcode-back" href="../../../reference/mdb/model/part.html#abaqus.Part.AcisMdb.AcisMdb.openStep">[docs]</a>    <span class="nd">@staticmethod</span>
     <span class="k">def</span> <span class="nf">openStep</span><span class="p">(</span><span class="n">fileName</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">scale</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mi">1</span><span class="p">):</span>
-        <span class="sd">"""This method creates an AcisFile object from a file containing STEP-format geometry. This</span>
+        <span class="sd">&quot;&quot;&quot;This method creates an AcisFile object from a file containing STEP-format geometry. This</span>
 <span class="sd">        object is subsequently used by the PartFromGeometryFile method.</span>
 
 <span class="sd">        Notes</span>
@@ -551,12 +552,12 @@
 <span class="sd">        ------</span>
 <span class="sd">            - The data in the STEP file are corrupted.</span>
 <span class="sd">              Texterror: Failed to read STEP file.</span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">return</span> <span class="n">AcisFile</span><span class="p">()</span></div>
 
 <div class="viewcode-block" id="AcisMdb.openVda"><a class="viewcode-back" href="../../../reference/mdb/model/part.html#abaqus.Part.AcisMdb.AcisMdb.openVda">[docs]</a>    <span class="nd">@staticmethod</span>
     <span class="k">def</span> <span class="nf">openVda</span><span class="p">(</span><span class="n">fileName</span><span class="p">:</span> <span class="nb">str</span><span class="p">):</span>
-        <span class="sd">"""This method creates an AcisFile object from a file containing VDA-FS-format geometry.</span>
+        <span class="sd">&quot;&quot;&quot;This method creates an AcisFile object from a file containing VDA-FS-format geometry.</span>
 <span class="sd">        This object is subsequently used by the PartFromGeometryFile method.</span>
 
 <span class="sd">        Notes</span>
@@ -580,12 +581,12 @@
 <span class="sd">        ------</span>
 <span class="sd">            - The data in the VDA-FS file are corrupted.</span>
 <span class="sd">              Texterror: Failed to read VDA file.</span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">return</span> <span class="n">AcisFile</span><span class="p">()</span></div>
 
 <div class="viewcode-block" id="AcisMdb.openSolidworks"><a class="viewcode-back" href="../../../reference/mdb/model/part.html#abaqus.Part.AcisMdb.AcisMdb.openSolidworks">[docs]</a>    <span class="nd">@staticmethod</span>
     <span class="k">def</span> <span class="nf">openSolidworks</span><span class="p">(</span><span class="n">fileName</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">topology</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="n">SOLID</span><span class="p">):</span>
-        <span class="sd">"""This method creates an AcisFile object from a file containing Solidworks format</span>
+        <span class="sd">&quot;&quot;&quot;This method creates an AcisFile object from a file containing Solidworks format</span>
 <span class="sd">        geometry. This object is subsequently used by the PartFromGeometryFile method.</span>
 
 <span class="sd">        Notes</span>
@@ -615,7 +616,7 @@
 <span class="sd">        ------</span>
 <span class="sd">            - The data in the Solidworks file are corrupted.</span>
 <span class="sd">              Texterror: Failed to read Solidworks file.</span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">return</span> <span class="n">AcisFile</span><span class="p">()</span></div></div>
 </pre></div>
         </article>

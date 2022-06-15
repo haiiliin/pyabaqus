@@ -6,10 +6,10 @@
 <link rel="index" title="Index" href="../../../../genindex.html" /><link rel="search" title="Search" href="../../../../search.html" /><link rel="next" title="Feature" href="feature.html" /><link rel="prev" title="Datum" href="datum.html" />
         <link rel="canonical" href="https://pyabaqus.haiiliin.com/reference/mdb/model/part_assembly/engineering.html" />
 
-    <meta name="generator" content="sphinx-4.5.0, furo 2022.04.07"/>
-        <title>Engineering Feature - pyabaqus 1.0.16 documentation</title>
+    <meta name="generator" content="sphinx-4.5.0, furo 2022.06.04.1"/>
+        <title>Engineering Feature - pyabaqus 1.0.18 documentation</title>
       <link rel="stylesheet" type="text/css" href="../../../../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../../../../_static/styles/furo.css?digest=68f4518137b9aefe99b631505a2064c3c42c9852" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/styles/furo.css?digest=40978830699223671f4072448e654b5958f38b89" />
     <link rel="stylesheet" type="text/css" href="../../../../_static/styles/furo-extensions.css?digest=30d1aed668e5c3a91c3e3bf6a60b675221979f0e" />
     
     
@@ -124,7 +124,7 @@
       </label>
     </div>
     <div class="header-center">
-      <a href="../../../../index.html"><div class="brand">pyabaqus 1.0.16 documentation</div></a>
+      <a href="../../../../index.html"><div class="brand">pyabaqus 1.0.18 documentation</div></a>
     </div>
     <div class="header-right">
       <div class="theme-toggle-container theme-toggle-header">
@@ -147,7 +147,7 @@
       <div class="sidebar-sticky"><a class="sidebar-brand" href="../../../../index.html">
   
   
-  <span class="sidebar-brand-text">pyabaqus 1.0.16 documentation</span>
+  <span class="sidebar-brand-text">pyabaqus 1.0.18 documentation</span>
   
 </a><form class="sidebar-search-container" method="get" action="../../../../search.html" role="search">
   <input class="sidebar-search" placeholder=Search name="q" aria-label="Search">
@@ -287,7 +287,8 @@
           </svg>
           <span>Back to top</span>
         </a>
-        <div class="content-icon-container"><div class="theme-toggle-container theme-toggle-content">
+        <div class="content-icon-container">
+          <div class="theme-toggle-container theme-toggle-content">
             <button class="theme-toggle">
               <div class="visually-hidden">Toggle Light / Dark / Auto color theme</div>
               <svg class="theme-icon-when-auto"><use href="#svg-sun-half"></use></svg>
@@ -308,7 +309,7 @@
 <h2>Create engineering features<a class="headerlink" href="#create-engineering-features" title="Permalink to this headline">#</a></h2>
 <dl class="py method">
 <dt class="sig sig-object py" id="abaqus.EngineeringFeature.EngineeringFeature.EngineeringFeature.AssembledFastener">
-<span class="sig-prename descclassname"><span class="pre">EngineeringFeature.</span></span><span class="sig-name descname"><span class="pre">AssembledFastener</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">region</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="region.html#abaqus.Region.Region.Region" title="abaqus.Region.Region.Region"><span class="pre">abaqus.Region.Region.Region</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">templateModel</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">controlSet</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="region.html#abaqus.Region.Region.Region" title="abaqus.Region.Region.Region"><span class="pre">abaqus.Region.Region.Region</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">templateSurfaces</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">tuple</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">assignedSurfaces</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">tuple</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">propertyPrefix</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">orientMethod</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.SymbolicConstantType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'NORMALS'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">localCsys</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">scriptName</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">''</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">→</span> <span class="sig-return-typehint"><a class="reference internal" href="#abaqus.EngineeringFeature.AssembledFastener.AssembledFastener" title="abaqus.EngineeringFeature.AssembledFastener.AssembledFastener"><span class="pre">abaqus.EngineeringFeature.AssembledFastener.AssembledFastener</span></a></span></span><a class="reference internal" href="../../../../_modules/abaqus/EngineeringFeature/EngineeringFeature.html#EngineeringFeature.AssembledFastener"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#abaqus.EngineeringFeature.EngineeringFeature.EngineeringFeature.AssembledFastener" title="Permalink to this definition">#</a></dt>
+<span class="sig-prename descclassname"><span class="pre">EngineeringFeature.</span></span><span class="sig-name descname"><span class="pre">AssembledFastener</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">region</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="region.html#abaqus.Region.Region.Region" title="abaqus.Region.Region.Region"><span class="pre">abaqus.Region.Region.Region</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">templateModel</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">controlSet</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="region.html#abaqus.Region.Region.Region" title="abaqus.Region.Region.Region"><span class="pre">abaqus.Region.Region.Region</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">templateSurfaces</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">tuple</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">assignedSurfaces</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">tuple</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">propertyPrefix</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">orientMethod</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.SymbolicConstantType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'NORMALS'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">localCsys</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">scriptName</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">''</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#abaqus.EngineeringFeature.AssembledFastener.AssembledFastener" title="abaqus.EngineeringFeature.AssembledFastener.AssembledFastener"><span class="pre">abaqus.EngineeringFeature.AssembledFastener.AssembledFastener</span></a></span></span><a class="reference internal" href="../../../../_modules/abaqus/EngineeringFeature/EngineeringFeature.html#EngineeringFeature.AssembledFastener"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#abaqus.EngineeringFeature.EngineeringFeature.EngineeringFeature.AssembledFastener" title="Permalink to this definition">#</a></dt>
 <dd><p>This method creates an AssembledFastener object. Although the constructor is available
 both for parts and for the assembly, AssembledFastener objects are currently supported
 only under the assembly.</p>
@@ -361,9 +362,10 @@ empty string.</p>
 </pre></div>
 </div>
 </dd></dl>
+
 <dl class="py method">
 <dt class="sig sig-object py" id="abaqus.EngineeringFeature.EngineeringFeature.EngineeringFeature.ContourIntegral">
-<span class="sig-prename descclassname"><span class="pre">EngineeringFeature.</span></span><span class="sig-name descname"><span class="pre">ContourIntegral</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">crackFront</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="region.html#abaqus.Region.RegionArray.RegionArray" title="abaqus.Region.RegionArray.RegionArray"><span class="pre">abaqus.Region.RegionArray.RegionArray</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">crackTip</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="region.html#abaqus.Region.RegionArray.RegionArray" title="abaqus.Region.RegionArray.RegionArray"><span class="pre">abaqus.Region.RegionArray.RegionArray</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">extensionDirectionMethod</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.SymbolicConstantType</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">symmetric</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.BooleanType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">listOfRegions</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.BooleanType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">crackFrontName</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">crackTipName</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">crackNormal</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">tuple</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">()</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">qVectors</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">tuple</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">()</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">midNodePosition</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">collapsedElementAtTip</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.SymbolicConstantType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'NONE'</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">→</span> <span class="sig-return-typehint"><a class="reference internal" href="#abaqus.EngineeringFeature.ContourIntegral.ContourIntegral" title="abaqus.EngineeringFeature.ContourIntegral.ContourIntegral"><span class="pre">abaqus.EngineeringFeature.ContourIntegral.ContourIntegral</span></a></span></span><a class="reference internal" href="../../../../_modules/abaqus/EngineeringFeature/EngineeringFeature.html#EngineeringFeature.ContourIntegral"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#abaqus.EngineeringFeature.EngineeringFeature.EngineeringFeature.ContourIntegral" title="Permalink to this definition">#</a></dt>
+<span class="sig-prename descclassname"><span class="pre">EngineeringFeature.</span></span><span class="sig-name descname"><span class="pre">ContourIntegral</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">crackFront</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="region.html#abaqus.Region.RegionArray.RegionArray" title="abaqus.Region.RegionArray.RegionArray"><span class="pre">abaqus.Region.RegionArray.RegionArray</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">crackTip</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="region.html#abaqus.Region.RegionArray.RegionArray" title="abaqus.Region.RegionArray.RegionArray"><span class="pre">abaqus.Region.RegionArray.RegionArray</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">extensionDirectionMethod</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.SymbolicConstantType</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">symmetric</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.BooleanType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">listOfRegions</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.BooleanType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">crackFrontName</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">crackTipName</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">crackNormal</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">tuple</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">()</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">qVectors</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">tuple</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">()</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">midNodePosition</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">collapsedElementAtTip</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.SymbolicConstantType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'NONE'</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#abaqus.EngineeringFeature.ContourIntegral.ContourIntegral" title="abaqus.EngineeringFeature.ContourIntegral.ContourIntegral"><span class="pre">abaqus.EngineeringFeature.ContourIntegral.ContourIntegral</span></a></span></span><a class="reference internal" href="../../../../_modules/abaqus/EngineeringFeature/EngineeringFeature.html#EngineeringFeature.ContourIntegral"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#abaqus.EngineeringFeature.EngineeringFeature.EngineeringFeature.ContourIntegral" title="Permalink to this definition">#</a></dt>
 <dd><p>This method creates a ContourIntegral object. Although the constructor is available both
 for parts and for the assembly, ContourIntegral objects are currently supported only
 under the assembly.</p>
@@ -430,9 +432,10 @@ SINGLE_NODE, and DUPLICATE_NODES. The default value is NONE.</p>
 </pre></div>
 </div>
 </dd></dl>
+
 <dl class="py method">
 <dt class="sig sig-object py" id="abaqus.EngineeringFeature.EngineeringFeature.EngineeringFeature.DebondVCCT">
-<span class="sig-prename descclassname"><span class="pre">EngineeringFeature.</span></span><span class="sig-name descname"><span class="pre">DebondVCCT</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">initiationStep</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">surfToSurfInteraction</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">debondingForceAmplitude</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.SymbolicConstantType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'STEP'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">printToDATFrequency</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">1</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">→</span> <span class="sig-return-typehint"><a class="reference internal" href="#abaqus.EngineeringFeature.DebondVCCT.DebondVCCT" title="abaqus.EngineeringFeature.DebondVCCT.DebondVCCT"><span class="pre">abaqus.EngineeringFeature.DebondVCCT.DebondVCCT</span></a></span></span><a class="reference internal" href="../../../../_modules/abaqus/EngineeringFeature/EngineeringFeature.html#EngineeringFeature.DebondVCCT"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#abaqus.EngineeringFeature.EngineeringFeature.EngineeringFeature.DebondVCCT" title="Permalink to this definition">#</a></dt>
+<span class="sig-prename descclassname"><span class="pre">EngineeringFeature.</span></span><span class="sig-name descname"><span class="pre">DebondVCCT</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">initiationStep</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">surfToSurfInteraction</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">debondingForceAmplitude</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.SymbolicConstantType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'STEP'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">printToDATFrequency</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">1</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#abaqus.EngineeringFeature.DebondVCCT.DebondVCCT" title="abaqus.EngineeringFeature.DebondVCCT.DebondVCCT"><span class="pre">abaqus.EngineeringFeature.DebondVCCT.DebondVCCT</span></a></span></span><a class="reference internal" href="../../../../_modules/abaqus/EngineeringFeature/EngineeringFeature.html#EngineeringFeature.DebondVCCT"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#abaqus.EngineeringFeature.EngineeringFeature.EngineeringFeature.DebondVCCT" title="Permalink to this definition">#</a></dt>
 <dd><p>This method creates a DebondVCCT object. Although the constructor is available both for
 parts and for the assembly, DebondVCCT objects are currently supported only under the
 assembly.</p>
@@ -468,9 +471,10 @@ value is 1.</p>
 </pre></div>
 </div>
 </dd></dl>
+
 <dl class="py method">
 <dt class="sig sig-object py" id="abaqus.EngineeringFeature.EngineeringFeature.EngineeringFeature.DiscreteFastener">
-<span class="sig-prename descclassname"><span class="pre">EngineeringFeature.</span></span><span class="sig-name descname"><span class="pre">DiscreteFastener</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">region</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="region.html#abaqus.Region.Region.Region" title="abaqus.Region.Region.Region"><span class="pre">abaqus.Region.Region.Region</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">influenceRadius</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Union</span><span class="p"><span class="pre">[</span></span><span class="pre">abaqusConstants.SymbolicConstantType</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ur1</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.BooleanType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ur2</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.BooleanType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ur3</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.BooleanType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">coupling</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.SymbolicConstantType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'CONTINUUM'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">weightingMethod</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.SymbolicConstantType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'UNIFORM'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">localCsys</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">→</span> <span class="sig-return-typehint"><a class="reference internal" href="#abaqus.EngineeringFeature.DiscreteFastener.DiscreteFastener" title="abaqus.EngineeringFeature.DiscreteFastener.DiscreteFastener"><span class="pre">abaqus.EngineeringFeature.DiscreteFastener.DiscreteFastener</span></a></span></span><a class="reference internal" href="../../../../_modules/abaqus/EngineeringFeature/EngineeringFeature.html#EngineeringFeature.DiscreteFastener"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#abaqus.EngineeringFeature.EngineeringFeature.EngineeringFeature.DiscreteFastener" title="Permalink to this definition">#</a></dt>
+<span class="sig-prename descclassname"><span class="pre">EngineeringFeature.</span></span><span class="sig-name descname"><span class="pre">DiscreteFastener</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">region</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="region.html#abaqus.Region.Region.Region" title="abaqus.Region.Region.Region"><span class="pre">abaqus.Region.Region.Region</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">influenceRadius</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Union</span><span class="p"><span class="pre">[</span></span><span class="pre">abaqusConstants.SymbolicConstantType</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ur1</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.BooleanType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ur2</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.BooleanType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ur3</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.BooleanType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">coupling</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.SymbolicConstantType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'CONTINUUM'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">weightingMethod</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.SymbolicConstantType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'UNIFORM'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">localCsys</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#abaqus.EngineeringFeature.DiscreteFastener.DiscreteFastener" title="abaqus.EngineeringFeature.DiscreteFastener.DiscreteFastener"><span class="pre">abaqus.EngineeringFeature.DiscreteFastener.DiscreteFastener</span></a></span></span><a class="reference internal" href="../../../../_modules/abaqus/EngineeringFeature/EngineeringFeature.html#EngineeringFeature.DiscreteFastener"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#abaqus.EngineeringFeature.EngineeringFeature.EngineeringFeature.DiscreteFastener" title="Permalink to this definition">#</a></dt>
 <dd><p>This method creates a DiscreteFastener object. Although the constructor is available
 both for parts and for the assembly, DiscreteFastener objects are currently supported
 only under the assembly.</p>
@@ -523,9 +527,10 @@ member is queried, it returns an Int. The default value is None.</p>
 </pre></div>
 </div>
 </dd></dl>
+
 <dl class="py method">
 <dt class="sig sig-object py" id="abaqus.EngineeringFeature.EngineeringFeature.EngineeringFeature.HeatCapacitance">
-<span class="sig-prename descclassname"><span class="pre">EngineeringFeature.</span></span><span class="sig-name descname"><span class="pre">HeatCapacitance</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">region</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="region.html#abaqus.Region.Region.Region" title="abaqus.Region.Region.Region"><span class="pre">abaqus.Region.Region.Region</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">table</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">tuple</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">temperatureDependency</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.BooleanType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dependencies</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">→</span> <span class="sig-return-typehint"><a class="reference internal" href="#abaqus.EngineeringFeature.HeatCapacitance.HeatCapacitance" title="abaqus.EngineeringFeature.HeatCapacitance.HeatCapacitance"><span class="pre">abaqus.EngineeringFeature.HeatCapacitance.HeatCapacitance</span></a></span></span><a class="reference internal" href="../../../../_modules/abaqus/EngineeringFeature/EngineeringFeature.html#EngineeringFeature.HeatCapacitance"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#abaqus.EngineeringFeature.EngineeringFeature.EngineeringFeature.HeatCapacitance" title="Permalink to this definition">#</a></dt>
+<span class="sig-prename descclassname"><span class="pre">EngineeringFeature.</span></span><span class="sig-name descname"><span class="pre">HeatCapacitance</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">region</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="region.html#abaqus.Region.Region.Region" title="abaqus.Region.Region.Region"><span class="pre">abaqus.Region.Region.Region</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">table</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">tuple</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">temperatureDependency</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.BooleanType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dependencies</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#abaqus.EngineeringFeature.HeatCapacitance.HeatCapacitance" title="abaqus.EngineeringFeature.HeatCapacitance.HeatCapacitance"><span class="pre">abaqus.EngineeringFeature.HeatCapacitance.HeatCapacitance</span></a></span></span><a class="reference internal" href="../../../../_modules/abaqus/EngineeringFeature/EngineeringFeature.html#EngineeringFeature.HeatCapacitance"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#abaqus.EngineeringFeature.EngineeringFeature.EngineeringFeature.HeatCapacitance" title="Permalink to this definition">#</a></dt>
 <dd><p>This method creates a HeatCapacitance object.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -556,9 +561,10 @@ the table data are described below.</p>
 </pre></div>
 </div>
 </dd></dl>
+
 <dl class="py method">
 <dt class="sig sig-object py" id="abaqus.EngineeringFeature.EngineeringFeature.EngineeringFeature.NonstructuralMass">
-<span class="sig-prename descclassname"><span class="pre">EngineeringFeature.</span></span><span class="sig-name descname"><span class="pre">NonstructuralMass</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">region</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="region.html#abaqus.Region.Region.Region" title="abaqus.Region.Region.Region"><span class="pre">abaqus.Region.Region.Region</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">units</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.SymbolicConstantType</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">magnitude</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">distribution</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.SymbolicConstantType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'MASS_PROPORTIONAL'</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">→</span> <span class="sig-return-typehint"><a class="reference internal" href="#abaqus.EngineeringFeature.NonstructuralMass.NonstructuralMass" title="abaqus.EngineeringFeature.NonstructuralMass.NonstructuralMass"><span class="pre">abaqus.EngineeringFeature.NonstructuralMass.NonstructuralMass</span></a></span></span><a class="reference internal" href="../../../../_modules/abaqus/EngineeringFeature/EngineeringFeature.html#EngineeringFeature.NonstructuralMass"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#abaqus.EngineeringFeature.EngineeringFeature.EngineeringFeature.NonstructuralMass" title="Permalink to this definition">#</a></dt>
+<span class="sig-prename descclassname"><span class="pre">EngineeringFeature.</span></span><span class="sig-name descname"><span class="pre">NonstructuralMass</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">region</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="region.html#abaqus.Region.Region.Region" title="abaqus.Region.Region.Region"><span class="pre">abaqus.Region.Region.Region</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">units</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.SymbolicConstantType</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">magnitude</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">distribution</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.SymbolicConstantType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'MASS_PROPORTIONAL'</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#abaqus.EngineeringFeature.NonstructuralMass.NonstructuralMass" title="abaqus.EngineeringFeature.NonstructuralMass.NonstructuralMass"><span class="pre">abaqus.EngineeringFeature.NonstructuralMass.NonstructuralMass</span></a></span></span><a class="reference internal" href="../../../../_modules/abaqus/EngineeringFeature/EngineeringFeature.html#EngineeringFeature.NonstructuralMass"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#abaqus.EngineeringFeature.EngineeringFeature.EngineeringFeature.NonstructuralMass" title="Permalink to this definition">#</a></dt>
 <dd><p>This method creates a NonstructuralMass object.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -591,9 +597,10 @@ MASS_PROPORTIONAL.The <em>distribution</em> argument applies only when <a href="
 </pre></div>
 </div>
 </dd></dl>
+
 <dl class="py method">
 <dt class="sig sig-object py" id="abaqus.EngineeringFeature.EngineeringFeature.EngineeringFeature.PointFastener">
-<span class="sig-prename descclassname"><span class="pre">EngineeringFeature.</span></span><span class="sig-name descname"><span class="pre">PointFastener</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">region</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="region.html#abaqus.Region.Region.Region" title="abaqus.Region.Region.Region"><span class="pre">abaqus.Region.Region.Region</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">physicalRadius</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">directionVector</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">tuple</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">targetSurfaces</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="region.html#abaqus.Region.RegionArray.RegionArray" title="abaqus.Region.RegionArray.RegionArray"><span class="pre">abaqus.Region.RegionArray.RegionArray</span></a></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'MODEL'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ur1</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.BooleanType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ur2</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.BooleanType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ur3</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.BooleanType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">attachmentMethod</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.SymbolicConstantType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'FACETOFACE'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">influenceRadius</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Union</span><span class="p"><span class="pre">[</span></span><span class="pre">abaqusConstants.SymbolicConstantType</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'DEFAULT'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">searchRadius</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Union</span><span class="p"><span class="pre">[</span></span><span class="pre">abaqusConstants.SymbolicConstantType</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'DEFAULT'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">maximumLayers</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.SymbolicConstantType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'ALL'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">coupling</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.SymbolicConstantType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'CONTINUUM'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">weightingMethod</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.SymbolicConstantType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'UNIFORM'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">additionalMass</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">adjustOrientation</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.BooleanType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">localCsys</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">connectionType</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.SymbolicConstantType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'CONNECTOR'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sectionName</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">connectorOrientationLocalCsys1</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">axis1</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.SymbolicConstantType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'AXIS_1'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">angle1</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">orient2SameAs1</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.BooleanType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">connectorOrientationLocalCsys2</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">axis2</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.SymbolicConstantType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'AXIS_1'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">angle2</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">unsorted</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.BooleanType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">→</span> <span class="sig-return-typehint"><a class="reference internal" href="#abaqus.EngineeringFeature.PointFastener.PointFastener" title="abaqus.EngineeringFeature.PointFastener.PointFastener"><span class="pre">abaqus.EngineeringFeature.PointFastener.PointFastener</span></a></span></span><a class="reference internal" href="../../../../_modules/abaqus/EngineeringFeature/EngineeringFeature.html#EngineeringFeature.PointFastener"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#abaqus.EngineeringFeature.EngineeringFeature.EngineeringFeature.PointFastener" title="Permalink to this definition">#</a></dt>
+<span class="sig-prename descclassname"><span class="pre">EngineeringFeature.</span></span><span class="sig-name descname"><span class="pre">PointFastener</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">region</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="region.html#abaqus.Region.Region.Region" title="abaqus.Region.Region.Region"><span class="pre">abaqus.Region.Region.Region</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">physicalRadius</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">directionVector</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">tuple</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">targetSurfaces</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="region.html#abaqus.Region.RegionArray.RegionArray" title="abaqus.Region.RegionArray.RegionArray"><span class="pre">abaqus.Region.RegionArray.RegionArray</span></a></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'MODEL'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ur1</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.BooleanType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ur2</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.BooleanType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ur3</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.BooleanType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">attachmentMethod</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.SymbolicConstantType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'FACETOFACE'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">influenceRadius</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Union</span><span class="p"><span class="pre">[</span></span><span class="pre">abaqusConstants.SymbolicConstantType</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'DEFAULT'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">searchRadius</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Union</span><span class="p"><span class="pre">[</span></span><span class="pre">abaqusConstants.SymbolicConstantType</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'DEFAULT'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">maximumLayers</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.SymbolicConstantType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'ALL'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">coupling</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.SymbolicConstantType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'CONTINUUM'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">weightingMethod</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.SymbolicConstantType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'UNIFORM'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">additionalMass</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">adjustOrientation</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.BooleanType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">localCsys</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">connectionType</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.SymbolicConstantType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'CONNECTOR'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sectionName</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">connectorOrientationLocalCsys1</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">axis1</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.SymbolicConstantType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'AXIS_1'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">angle1</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">orient2SameAs1</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.BooleanType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">connectorOrientationLocalCsys2</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">axis2</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.SymbolicConstantType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'AXIS_1'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">angle2</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">unsorted</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.BooleanType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#abaqus.EngineeringFeature.PointFastener.PointFastener" title="abaqus.EngineeringFeature.PointFastener.PointFastener"><span class="pre">abaqus.EngineeringFeature.PointFastener.PointFastener</span></a></span></span><a class="reference internal" href="../../../../_modules/abaqus/EngineeringFeature/EngineeringFeature.html#EngineeringFeature.PointFastener"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#abaqus.EngineeringFeature.EngineeringFeature.EngineeringFeature.PointFastener" title="Permalink to this definition">#</a></dt>
 <dd><p>This method creates a PointFastener object. Although the constructor is available both
 for parts and for the assembly, PointFastener objects are currently supported only under
 the assembly.</p>
@@ -714,9 +721,10 @@ fastening points. The default value is OFF.</p>
 </pre></div>
 </div>
 </dd></dl>
+
 <dl class="py method">
 <dt class="sig sig-object py" id="abaqus.EngineeringFeature.EngineeringFeature.EngineeringFeature.PointMassInertia">
-<span class="sig-prename descclassname"><span class="pre">EngineeringFeature.</span></span><span class="sig-name descname"><span class="pre">PointMassInertia</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">region</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="region.html#abaqus.Region.Region.Region" title="abaqus.Region.Region.Region"><span class="pre">abaqus.Region.Region.Region</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">mass</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mass1</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mass2</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mass3</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">i11</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">i22</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">i33</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">i12</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">i13</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">i23</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">localCsys</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">alpha</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">composite</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">→</span> <span class="sig-return-typehint"><a class="reference internal" href="#abaqus.EngineeringFeature.PointMassInertia.PointMassInertia" title="abaqus.EngineeringFeature.PointMassInertia.PointMassInertia"><span class="pre">abaqus.EngineeringFeature.PointMassInertia.PointMassInertia</span></a></span></span><a class="reference internal" href="../../../../_modules/abaqus/EngineeringFeature/EngineeringFeature.html#EngineeringFeature.PointMassInertia"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#abaqus.EngineeringFeature.EngineeringFeature.EngineeringFeature.PointMassInertia" title="Permalink to this definition">#</a></dt>
+<span class="sig-prename descclassname"><span class="pre">EngineeringFeature.</span></span><span class="sig-name descname"><span class="pre">PointMassInertia</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">region</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="region.html#abaqus.Region.Region.Region" title="abaqus.Region.Region.Region"><span class="pre">abaqus.Region.Region.Region</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">mass</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mass1</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mass2</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mass3</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">i11</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">i22</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">i33</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">i12</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">i13</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">i23</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">localCsys</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">alpha</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">composite</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#abaqus.EngineeringFeature.PointMassInertia.PointMassInertia" title="abaqus.EngineeringFeature.PointMassInertia.PointMassInertia"><span class="pre">abaqus.EngineeringFeature.PointMassInertia.PointMassInertia</span></a></span></span><a class="reference internal" href="../../../../_modules/abaqus/EngineeringFeature/EngineeringFeature.html#EngineeringFeature.PointMassInertia"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#abaqus.EngineeringFeature.EngineeringFeature.EngineeringFeature.PointMassInertia" title="Permalink to this definition">#</a></dt>
 <dd><p>This method creates a PointMassInertia object.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -778,9 +786,10 @@ argument applies only to Abaqus/Standard analyses.</p>
 </pre></div>
 </div>
 </dd></dl>
+
 <dl class="py method">
 <dt class="sig sig-object py" id="abaqus.EngineeringFeature.EngineeringFeature.EngineeringFeature.SpringDashpotToGround">
-<span class="sig-prename descclassname"><span class="pre">EngineeringFeature.</span></span><span class="sig-name descname"><span class="pre">SpringDashpotToGround</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">region</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="region.html#abaqus.Region.Region.Region" title="abaqus.Region.Region.Region"><span class="pre">abaqus.Region.Region.Region</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">dof</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">orientation</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">springBehavior</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.BooleanType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dashpotBehavior</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.BooleanType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">springStiffness</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dashpotCoefficient</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">→</span> <span class="sig-return-typehint"><a class="reference internal" href="#abaqus.EngineeringFeature.SpringDashpotToGround.SpringDashpotToGround" title="abaqus.EngineeringFeature.SpringDashpotToGround.SpringDashpotToGround"><span class="pre">abaqus.EngineeringFeature.SpringDashpotToGround.SpringDashpotToGround</span></a></span></span><a class="reference internal" href="../../../../_modules/abaqus/EngineeringFeature/EngineeringFeature.html#EngineeringFeature.SpringDashpotToGround"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#abaqus.EngineeringFeature.EngineeringFeature.EngineeringFeature.SpringDashpotToGround" title="Permalink to this definition">#</a></dt>
+<span class="sig-prename descclassname"><span class="pre">EngineeringFeature.</span></span><span class="sig-name descname"><span class="pre">SpringDashpotToGround</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">region</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="region.html#abaqus.Region.Region.Region" title="abaqus.Region.Region.Region"><span class="pre">abaqus.Region.Region.Region</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">dof</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">orientation</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">springBehavior</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.BooleanType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dashpotBehavior</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.BooleanType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">springStiffness</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dashpotCoefficient</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#abaqus.EngineeringFeature.SpringDashpotToGround.SpringDashpotToGround" title="abaqus.EngineeringFeature.SpringDashpotToGround.SpringDashpotToGround"><span class="pre">abaqus.EngineeringFeature.SpringDashpotToGround.SpringDashpotToGround</span></a></span></span><a class="reference internal" href="../../../../_modules/abaqus/EngineeringFeature/EngineeringFeature.html#EngineeringFeature.SpringDashpotToGround"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#abaqus.EngineeringFeature.EngineeringFeature.EngineeringFeature.SpringDashpotToGround" title="Permalink to this definition">#</a></dt>
 <dd><p>This method creates a SpringDashpotToGround object.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -825,9 +834,10 @@ is 0.0.</p>
 </pre></div>
 </div>
 </dd></dl>
+
 <dl class="py method">
 <dt class="sig sig-object py" id="abaqus.EngineeringFeature.EngineeringFeature.EngineeringFeature.TwoPointSpringDashpot">
-<span class="sig-prename descclassname"><span class="pre">EngineeringFeature.</span></span><span class="sig-name descname"><span class="pre">TwoPointSpringDashpot</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">regionPairs</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">tuple</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">axis</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.SymbolicConstantType</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dof1</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dof2</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">orientation</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">springBehavior</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.BooleanType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dashpotBehavior</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.BooleanType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">springStiffness</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dashpotCoefficient</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">→</span> <span class="sig-return-typehint"><a class="reference internal" href="#abaqus.EngineeringFeature.TwoPointSpringDashpot.TwoPointSpringDashpot" title="abaqus.EngineeringFeature.TwoPointSpringDashpot.TwoPointSpringDashpot"><span class="pre">abaqus.EngineeringFeature.TwoPointSpringDashpot.TwoPointSpringDashpot</span></a></span></span><a class="reference internal" href="../../../../_modules/abaqus/EngineeringFeature/EngineeringFeature.html#EngineeringFeature.TwoPointSpringDashpot"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#abaqus.EngineeringFeature.EngineeringFeature.EngineeringFeature.TwoPointSpringDashpot" title="Permalink to this definition">#</a></dt>
+<span class="sig-prename descclassname"><span class="pre">EngineeringFeature.</span></span><span class="sig-name descname"><span class="pre">TwoPointSpringDashpot</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">regionPairs</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">tuple</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">axis</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.SymbolicConstantType</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dof1</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dof2</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">orientation</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">springBehavior</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.BooleanType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dashpotBehavior</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.BooleanType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">springStiffness</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dashpotCoefficient</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#abaqus.EngineeringFeature.TwoPointSpringDashpot.TwoPointSpringDashpot" title="abaqus.EngineeringFeature.TwoPointSpringDashpot.TwoPointSpringDashpot"><span class="pre">abaqus.EngineeringFeature.TwoPointSpringDashpot.TwoPointSpringDashpot</span></a></span></span><a class="reference internal" href="../../../../_modules/abaqus/EngineeringFeature/EngineeringFeature.html#EngineeringFeature.TwoPointSpringDashpot"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#abaqus.EngineeringFeature.EngineeringFeature.EngineeringFeature.TwoPointSpringDashpot" title="Permalink to this definition">#</a></dt>
 <dd><p>This method creates a TwoPointSpringDashpot object.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -883,9 +893,10 @@ is 0.0.</p>
 </pre></div>
 </div>
 </dd></dl>
+
 <dl class="py method">
 <dt class="sig sig-object py" id="abaqus.EngineeringFeature.EngineeringFeature.EngineeringFeature.XFEMCrack">
-<span class="sig-prename descclassname"><span class="pre">EngineeringFeature.</span></span><span class="sig-name descname"><span class="pre">XFEMCrack</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name:</span> <span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">crackDomain:</span> <span class="pre">abaqus.Region.Region.Region</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">allowCrackGrowth:</span> <span class="pre">abaqusConstants.BooleanType</span> <span class="pre">=</span> <span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">crackLocation:</span> <span class="pre">abaqus.Region.Region.Region</span> <span class="pre">=</span> <span class="pre">&lt;abaqus.Region.Region.Region</span> <span class="pre">object&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">singularityCalcRadius:</span> <span class="pre">typing.Optional[float]</span> <span class="pre">=</span> <span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">interactionProperty:</span> <span class="pre">str</span> <span class="pre">=</span> <span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">elemId:</span> <span class="pre">tuple</span> <span class="pre">=</span> <span class="pre">()</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">nodeId:</span> <span class="pre">tuple</span> <span class="pre">=</span> <span class="pre">()</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">hasCrackFront:</span> <span class="pre">tuple</span> <span class="pre">=</span> <span class="pre">()</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">crackPlaneDist:</span> <span class="pre">tuple</span> <span class="pre">=</span> <span class="pre">()</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">crackFrontDist:</span> <span class="pre">tuple</span> <span class="pre">=</span> <span class="pre">()</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">autoDetectValue:</span> <span class="pre">str</span> <span class="pre">=</span> <span class="pre">''</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">→</span> <span class="sig-return-typehint"><a class="reference internal" href="#abaqus.EngineeringFeature.XFEMCrack.XFEMCrack" title="abaqus.EngineeringFeature.XFEMCrack.XFEMCrack"><span class="pre">abaqus.EngineeringFeature.XFEMCrack.XFEMCrack</span></a></span></span><a class="reference internal" href="../../../../_modules/abaqus/EngineeringFeature/EngineeringFeature.html#EngineeringFeature.XFEMCrack"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#abaqus.EngineeringFeature.EngineeringFeature.EngineeringFeature.XFEMCrack" title="Permalink to this definition">#</a></dt>
+<span class="sig-prename descclassname"><span class="pre">EngineeringFeature.</span></span><span class="sig-name descname"><span class="pre">XFEMCrack</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name:</span> <span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">crackDomain:</span> <span class="pre">abaqus.Region.Region.Region</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">allowCrackGrowth:</span> <span class="pre">abaqusConstants.BooleanType</span> <span class="pre">=</span> <span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">crackLocation:</span> <span class="pre">abaqus.Region.Region.Region</span> <span class="pre">=</span> <span class="pre">&lt;abaqus.Region.Region.Region</span> <span class="pre">object&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">singularityCalcRadius:</span> <span class="pre">typing.Optional[float]</span> <span class="pre">=</span> <span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">interactionProperty:</span> <span class="pre">str</span> <span class="pre">=</span> <span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">elemId:</span> <span class="pre">tuple</span> <span class="pre">=</span> <span class="pre">()</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">nodeId:</span> <span class="pre">tuple</span> <span class="pre">=</span> <span class="pre">()</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">hasCrackFront:</span> <span class="pre">tuple</span> <span class="pre">=</span> <span class="pre">()</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">crackPlaneDist:</span> <span class="pre">tuple</span> <span class="pre">=</span> <span class="pre">()</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">crackFrontDist:</span> <span class="pre">tuple</span> <span class="pre">=</span> <span class="pre">()</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">autoDetectValue:</span> <span class="pre">str</span> <span class="pre">=</span> <span class="pre">''</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#abaqus.EngineeringFeature.XFEMCrack.XFEMCrack" title="abaqus.EngineeringFeature.XFEMCrack.XFEMCrack"><span class="pre">abaqus.EngineeringFeature.XFEMCrack.XFEMCrack</span></a></span></span><a class="reference internal" href="../../../../_modules/abaqus/EngineeringFeature/EngineeringFeature.html#EngineeringFeature.XFEMCrack"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#abaqus.EngineeringFeature.EngineeringFeature.EngineeringFeature.XFEMCrack" title="Permalink to this definition">#</a></dt>
 <dd><p>This method creates a XFEMCrack object. Although the constructor is available both for
 parts and for the assembly, XFEMCrack objects are currently supported only under the
 assembly.</p>
@@ -945,6 +956,7 @@ the crack domain is shrunk.</p>
 </pre></div>
 </div>
 </dd></dl>
+
 </section>
 <section id="object-features">
 <h2>Object features<a class="headerlink" href="#object-features" title="Permalink to this headline">#</a></h2>
@@ -973,10 +985,11 @@ the crack domain is shrunk.</p>
 </dd>
 </dl>
 <p class="rubric">Methods</p>
-<div class="table-wrapper"><table class="autosummary longtable docutils align-default">
+<div class="table-wrapper autosummary longtable docutils container">
+<table class="autosummary longtable docutils align-default">
 <colgroup>
-<col style="width: 10%"/>
-<col style="width: 90%"/>
+<col style="width: 10%" />
+<col style="width: 90%" />
 </colgroup>
 <tbody>
 <tr class="row-odd"><td><p><a class="reference internal" href="#abaqus.EngineeringFeature.Crack.Crack.resume" title="abaqus.EngineeringFeature.Crack.Crack.resume"><code class="xref py py-obj docutils literal notranslate"><span class="pre">resume</span></code></a>()</p></td>
@@ -986,18 +999,22 @@ the crack domain is shrunk.</p>
 <td><p>This method suppresses the crack.</p></td>
 </tr>
 </tbody>
-</table></div>
+</table>
+</div>
 <dl class="py method">
 <dt class="sig sig-object py" id="abaqus.EngineeringFeature.Crack.Crack.resume">
 <span class="sig-name descname"><span class="pre">resume</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../../../_modules/abaqus/EngineeringFeature/Crack.html#Crack.resume"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#abaqus.EngineeringFeature.Crack.Crack.resume" title="Permalink to this definition">#</a></dt>
 <dd><p>This method resumes the crack that was previously suppressed.</p>
 </dd></dl>
+
 <dl class="py method">
 <dt class="sig sig-object py" id="abaqus.EngineeringFeature.Crack.Crack.suppress">
 <span class="sig-name descname"><span class="pre">suppress</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../../../_modules/abaqus/EngineeringFeature/Crack.html#Crack.suppress"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#abaqus.EngineeringFeature.Crack.Crack.suppress" title="Permalink to this definition">#</a></dt>
 <dd><p>This method suppresses the crack.</p>
 </dd></dl>
+
 </dd></dl>
+
 </section>
 <section id="fastener">
 <h3>Fastener<a class="headerlink" href="#fastener" title="Permalink to this headline">#</a></h3>
@@ -1026,10 +1043,11 @@ OFF.</p>
 </dd>
 </dl>
 <p class="rubric">Methods</p>
-<div class="table-wrapper"><table class="autosummary longtable docutils align-default">
+<div class="table-wrapper autosummary longtable docutils container">
+<table class="autosummary longtable docutils align-default">
 <colgroup>
-<col style="width: 10%"/>
-<col style="width: 90%"/>
+<col style="width: 10%" />
+<col style="width: 90%" />
 </colgroup>
 <tbody>
 <tr class="row-odd"><td><p><a class="reference internal" href="#abaqus.EngineeringFeature.Fastener.Fastener.resume" title="abaqus.EngineeringFeature.Fastener.Fastener.resume"><code class="xref py py-obj docutils literal notranslate"><span class="pre">resume</span></code></a>()</p></td>
@@ -1039,18 +1057,22 @@ OFF.</p>
 <td><p>This method suppresses the fastener.</p></td>
 </tr>
 </tbody>
-</table></div>
+</table>
+</div>
 <dl class="py method">
 <dt class="sig sig-object py" id="abaqus.EngineeringFeature.Fastener.Fastener.resume">
 <span class="sig-name descname"><span class="pre">resume</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../../../_modules/abaqus/EngineeringFeature/Fastener.html#Fastener.resume"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#abaqus.EngineeringFeature.Fastener.Fastener.resume" title="Permalink to this definition">#</a></dt>
 <dd><p>This method resumes the fastener that was previously suppressed.</p>
 </dd></dl>
+
 <dl class="py method">
 <dt class="sig sig-object py" id="abaqus.EngineeringFeature.Fastener.Fastener.suppress">
 <span class="sig-name descname"><span class="pre">suppress</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../../../_modules/abaqus/EngineeringFeature/Fastener.html#Fastener.suppress"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#abaqus.EngineeringFeature.Fastener.Fastener.suppress" title="Permalink to this definition">#</a></dt>
 <dd><p>This method suppresses the fastener.</p>
 </dd></dl>
+
 </dd></dl>
+
 </section>
 <section id="inertia">
 <h3>Inertia<a class="headerlink" href="#inertia" title="Permalink to this headline">#</a></h3>
@@ -1078,10 +1100,11 @@ PointMassInertia.</p>
 </dd>
 </dl>
 <p class="rubric">Methods</p>
-<div class="table-wrapper"><table class="autosummary longtable docutils align-default">
+<div class="table-wrapper autosummary longtable docutils container">
+<table class="autosummary longtable docutils align-default">
 <colgroup>
-<col style="width: 10%"/>
-<col style="width: 90%"/>
+<col style="width: 10%" />
+<col style="width: 90%" />
 </colgroup>
 <tbody>
 <tr class="row-odd"><td><p><a class="reference internal" href="#abaqus.EngineeringFeature.Inertia.Inertia.resume" title="abaqus.EngineeringFeature.Inertia.Inertia.resume"><code class="xref py py-obj docutils literal notranslate"><span class="pre">resume</span></code></a>()</p></td>
@@ -1091,18 +1114,22 @@ PointMassInertia.</p>
 <td><p>This method suppresses the inertia.</p></td>
 </tr>
 </tbody>
-</table></div>
+</table>
+</div>
 <dl class="py method">
 <dt class="sig sig-object py" id="abaqus.EngineeringFeature.Inertia.Inertia.resume">
 <span class="sig-name descname"><span class="pre">resume</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../../../_modules/abaqus/EngineeringFeature/Inertia.html#Inertia.resume"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#abaqus.EngineeringFeature.Inertia.Inertia.resume" title="Permalink to this definition">#</a></dt>
 <dd><p>This method resumes the inertia that was previously suppressed.</p>
 </dd></dl>
+
 <dl class="py method">
 <dt class="sig sig-object py" id="abaqus.EngineeringFeature.Inertia.Inertia.suppress">
 <span class="sig-name descname"><span class="pre">suppress</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../../../_modules/abaqus/EngineeringFeature/Inertia.html#Inertia.suppress"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#abaqus.EngineeringFeature.Inertia.Inertia.suppress" title="Permalink to this definition">#</a></dt>
 <dd><p>This method suppresses the inertia.</p>
 </dd></dl>
+
 </dd></dl>
+
 </section>
 <section id="springdashpot">
 <h3>SpringDashpot<a class="headerlink" href="#springdashpot" title="Permalink to this headline">#</a></h3>
@@ -1131,10 +1158,11 @@ is OFF.</p>
 </dd>
 </dl>
 <p class="rubric">Methods</p>
-<div class="table-wrapper"><table class="autosummary longtable docutils align-default">
+<div class="table-wrapper autosummary longtable docutils container">
+<table class="autosummary longtable docutils align-default">
 <colgroup>
-<col style="width: 10%"/>
-<col style="width: 90%"/>
+<col style="width: 10%" />
+<col style="width: 90%" />
 </colgroup>
 <tbody>
 <tr class="row-odd"><td><p><a class="reference internal" href="#abaqus.EngineeringFeature.SpringDashpot.SpringDashpot.resume" title="abaqus.EngineeringFeature.SpringDashpot.SpringDashpot.resume"><code class="xref py py-obj docutils literal notranslate"><span class="pre">resume</span></code></a>()</p></td>
@@ -1144,18 +1172,22 @@ is OFF.</p>
 <td><p>This method suppresses the spring/dashpot.</p></td>
 </tr>
 </tbody>
-</table></div>
+</table>
+</div>
 <dl class="py method">
 <dt class="sig sig-object py" id="abaqus.EngineeringFeature.SpringDashpot.SpringDashpot.resume">
 <span class="sig-name descname"><span class="pre">resume</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../../../_modules/abaqus/EngineeringFeature/SpringDashpot.html#SpringDashpot.resume"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#abaqus.EngineeringFeature.SpringDashpot.SpringDashpot.resume" title="Permalink to this definition">#</a></dt>
 <dd><p>This method resumes the spring/dashpot that was previously suppressed.</p>
 </dd></dl>
+
 <dl class="py method">
 <dt class="sig sig-object py" id="abaqus.EngineeringFeature.SpringDashpot.SpringDashpot.suppress">
 <span class="sig-name descname"><span class="pre">suppress</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../../../_modules/abaqus/EngineeringFeature/SpringDashpot.html#SpringDashpot.suppress"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#abaqus.EngineeringFeature.SpringDashpot.SpringDashpot.suppress" title="Permalink to this definition">#</a></dt>
 <dd><p>This method suppresses the spring/dashpot.</p>
 </dd></dl>
+
 </dd></dl>
+
 </section>
 <section id="assembledfastener">
 <h3>AssembledFastener<a class="headerlink" href="#assembledfastener" title="Permalink to this headline">#</a></h3>
@@ -1182,17 +1214,19 @@ OFF.</p>
 </dd>
 </dl>
 <p class="rubric">Methods</p>
-<div class="table-wrapper"><table class="autosummary longtable docutils align-default">
+<div class="table-wrapper autosummary longtable docutils container">
+<table class="autosummary longtable docutils align-default">
 <colgroup>
-<col style="width: 10%"/>
-<col style="width: 90%"/>
+<col style="width: 10%" />
+<col style="width: 90%" />
 </colgroup>
 <tbody>
-<tr class="row-odd"><td><p><a class="reference internal" href="#abaqus.EngineeringFeature.AssembledFastener.AssembledFastener.setValues" title="abaqus.EngineeringFeature.AssembledFastener.AssembledFastener.setValues"><code class="xref py py-obj docutils literal notranslate"><span class="pre">setValues</span></code></a>([orientMethod, localCsys, scriptName])</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#abaqus.EngineeringFeature.AssembledFastener.AssembledFastener.setValues" title="abaqus.EngineeringFeature.AssembledFastener.AssembledFastener.setValues"><code class="xref py py-obj docutils literal notranslate"><span class="pre">setValues</span></code></a>([orientMethod, localCsys, scriptName])</p></td>
 <td><p>This method modifies the AssembledFastener object.</p></td>
 </tr>
 </tbody>
-</table></div>
+</table>
+</div>
 <p>This method creates an AssembledFastener object. Although the constructor is available
 both for parts and for the assembly, AssembledFastener objects are currently supported
 only under the assembly.</p>
@@ -1245,17 +1279,19 @@ empty string.</p>
 </pre></div>
 </div>
 <p class="rubric">Methods</p>
-<div class="table-wrapper"><table class="autosummary longtable docutils align-default">
+<div class="table-wrapper autosummary longtable docutils container">
+<table class="autosummary longtable docutils align-default">
 <colgroup>
-<col style="width: 10%"/>
-<col style="width: 90%"/>
+<col style="width: 10%" />
+<col style="width: 90%" />
 </colgroup>
 <tbody>
-<tr class="row-odd"><td><p><a class="reference internal" href="#abaqus.EngineeringFeature.AssembledFastener.AssembledFastener.setValues" title="abaqus.EngineeringFeature.AssembledFastener.AssembledFastener.setValues"><code class="xref py py-obj docutils literal notranslate"><span class="pre">setValues</span></code></a>([orientMethod, localCsys, scriptName])</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#abaqus.EngineeringFeature.AssembledFastener.AssembledFastener.setValues" title="abaqus.EngineeringFeature.AssembledFastener.AssembledFastener.setValues"><code class="xref py py-obj docutils literal notranslate"><span class="pre">setValues</span></code></a>([orientMethod, localCsys, scriptName])</p></td>
 <td><p>This method modifies the AssembledFastener object.</p></td>
 </tr>
 </tbody>
-</table></div>
+</table>
+</div>
 <dl class="py method">
 <dt class="sig sig-object py" id="abaqus.EngineeringFeature.AssembledFastener.AssembledFastener.setValues">
 <span class="sig-name descname"><span class="pre">setValues</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">orientMethod</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.SymbolicConstantType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'NORMALS'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">localCsys</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">scriptName</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">''</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../../../_modules/abaqus/EngineeringFeature/AssembledFastener.html#AssembledFastener.setValues"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#abaqus.EngineeringFeature.AssembledFastener.AssembledFastener.setValues" title="Permalink to this definition">#</a></dt>
@@ -1278,7 +1314,9 @@ empty string.</p>
 </dd>
 </dl>
 </dd></dl>
+
 </dd></dl>
+
 </section>
 <section id="contourintegral">
 <h3>ContourIntegral<a class="headerlink" href="#contourintegral" title="Permalink to this headline">#</a></h3>
@@ -1309,17 +1347,19 @@ The ContourIntegral object is derived from the Crack object.</p>
 </dd>
 </dl>
 <p class="rubric">Methods</p>
-<div class="table-wrapper"><table class="autosummary longtable docutils align-default">
+<div class="table-wrapper autosummary longtable docutils container">
+<table class="autosummary longtable docutils align-default">
 <colgroup>
-<col style="width: 10%"/>
-<col style="width: 90%"/>
+<col style="width: 10%" />
+<col style="width: 90%" />
 </colgroup>
 <tbody>
-<tr class="row-odd"><td><p><a class="reference internal" href="#abaqus.EngineeringFeature.ContourIntegral.ContourIntegral.setValues" title="abaqus.EngineeringFeature.ContourIntegral.ContourIntegral.setValues"><code class="xref py py-obj docutils literal notranslate"><span class="pre">setValues</span></code></a>([symmetric, listOfRegions, ...])</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#abaqus.EngineeringFeature.ContourIntegral.ContourIntegral.setValues" title="abaqus.EngineeringFeature.ContourIntegral.ContourIntegral.setValues"><code class="xref py py-obj docutils literal notranslate"><span class="pre">setValues</span></code></a>([symmetric, listOfRegions, ...])</p></td>
 <td><p>This method modifies the ContourIntegral object.</p></td>
 </tr>
 </tbody>
-</table></div>
+</table>
+</div>
 <p>This method creates a ContourIntegral object. Although the constructor is available both
 for parts and for the assembly, ContourIntegral objects are currently supported only
 under the assembly.</p>
@@ -1386,17 +1426,19 @@ SINGLE_NODE, and DUPLICATE_NODES. The default value is NONE.</p>
 </pre></div>
 </div>
 <p class="rubric">Methods</p>
-<div class="table-wrapper"><table class="autosummary longtable docutils align-default">
+<div class="table-wrapper autosummary longtable docutils container">
+<table class="autosummary longtable docutils align-default">
 <colgroup>
-<col style="width: 10%"/>
-<col style="width: 90%"/>
+<col style="width: 10%" />
+<col style="width: 90%" />
 </colgroup>
 <tbody>
-<tr class="row-odd"><td><p><a class="reference internal" href="#abaqus.EngineeringFeature.ContourIntegral.ContourIntegral.setValues" title="abaqus.EngineeringFeature.ContourIntegral.ContourIntegral.setValues"><code class="xref py py-obj docutils literal notranslate"><span class="pre">setValues</span></code></a>([symmetric, listOfRegions, ...])</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#abaqus.EngineeringFeature.ContourIntegral.ContourIntegral.setValues" title="abaqus.EngineeringFeature.ContourIntegral.ContourIntegral.setValues"><code class="xref py py-obj docutils literal notranslate"><span class="pre">setValues</span></code></a>([symmetric, listOfRegions, ...])</p></td>
 <td><p>This method modifies the ContourIntegral object.</p></td>
 </tr>
 </tbody>
-</table></div>
+</table>
+</div>
 <dl class="py method">
 <dt class="sig sig-object py" id="abaqus.EngineeringFeature.ContourIntegral.ContourIntegral.setValues">
 <span class="sig-name descname"><span class="pre">setValues</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">symmetric</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.BooleanType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">listOfRegions</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.BooleanType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">crackFrontName</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">crackTipName</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">crackNormal</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">tuple</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">()</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">qVectors</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">tuple</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">()</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">midNodePosition</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">collapsedElementAtTip</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.SymbolicConstantType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'NONE'</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../../../_modules/abaqus/EngineeringFeature/ContourIntegral.html#ContourIntegral.setValues"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#abaqus.EngineeringFeature.ContourIntegral.ContourIntegral.setValues" title="Permalink to this definition">#</a></dt>
@@ -1440,7 +1482,9 @@ SINGLE_NODE, and DUPLICATE_NODES. The default value is NONE.</p>
 </dd>
 </dl>
 </dd></dl>
+
 </dd></dl>
+
 </section>
 <section id="debondvcct">
 <h3>DebondVCCT<a class="headerlink" href="#debondvcct" title="Permalink to this headline">#</a></h3>
@@ -1471,17 +1515,19 @@ The DebondVCCT object is derived from the Crack object.</p>
 </dd>
 </dl>
 <p class="rubric">Methods</p>
-<div class="table-wrapper"><table class="autosummary longtable docutils align-default">
+<div class="table-wrapper autosummary longtable docutils container">
+<table class="autosummary longtable docutils align-default">
 <colgroup>
-<col style="width: 10%"/>
-<col style="width: 90%"/>
+<col style="width: 10%" />
+<col style="width: 90%" />
 </colgroup>
 <tbody>
-<tr class="row-odd"><td><p><a class="reference internal" href="#abaqus.EngineeringFeature.DebondVCCT.DebondVCCT.setValues" title="abaqus.EngineeringFeature.DebondVCCT.DebondVCCT.setValues"><code class="xref py py-obj docutils literal notranslate"><span class="pre">setValues</span></code></a>([debondingForceAmplitude, ...])</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#abaqus.EngineeringFeature.DebondVCCT.DebondVCCT.setValues" title="abaqus.EngineeringFeature.DebondVCCT.DebondVCCT.setValues"><code class="xref py py-obj docutils literal notranslate"><span class="pre">setValues</span></code></a>([debondingForceAmplitude, ...])</p></td>
 <td><p>This method modifies the DebondVCCT object.</p></td>
 </tr>
 </tbody>
-</table></div>
+</table>
+</div>
 <p>This method creates a DebondVCCT object. Although the constructor is available both for
 parts and for the assembly, DebondVCCT objects are currently supported only under the
 assembly.</p>
@@ -1517,17 +1563,19 @@ value is 1.</p>
 </pre></div>
 </div>
 <p class="rubric">Methods</p>
-<div class="table-wrapper"><table class="autosummary longtable docutils align-default">
+<div class="table-wrapper autosummary longtable docutils container">
+<table class="autosummary longtable docutils align-default">
 <colgroup>
-<col style="width: 10%"/>
-<col style="width: 90%"/>
+<col style="width: 10%" />
+<col style="width: 90%" />
 </colgroup>
 <tbody>
-<tr class="row-odd"><td><p><a class="reference internal" href="#abaqus.EngineeringFeature.DebondVCCT.DebondVCCT.setValues" title="abaqus.EngineeringFeature.DebondVCCT.DebondVCCT.setValues"><code class="xref py py-obj docutils literal notranslate"><span class="pre">setValues</span></code></a>([debondingForceAmplitude, ...])</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#abaqus.EngineeringFeature.DebondVCCT.DebondVCCT.setValues" title="abaqus.EngineeringFeature.DebondVCCT.DebondVCCT.setValues"><code class="xref py py-obj docutils literal notranslate"><span class="pre">setValues</span></code></a>([debondingForceAmplitude, ...])</p></td>
 <td><p>This method modifies the DebondVCCT object.</p></td>
 </tr>
 </tbody>
-</table></div>
+</table>
+</div>
 <dl class="py method">
 <dt class="sig sig-object py" id="abaqus.EngineeringFeature.DebondVCCT.DebondVCCT.setValues">
 <span class="sig-name descname"><span class="pre">setValues</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">debondingForceAmplitude</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.SymbolicConstantType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'STEP'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">printToDATFrequency</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">1</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../../../_modules/abaqus/EngineeringFeature/DebondVCCT.html#DebondVCCT.setValues"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#abaqus.EngineeringFeature.DebondVCCT.DebondVCCT.setValues" title="Permalink to this definition">#</a></dt>
@@ -1546,7 +1594,9 @@ value is 1.</p>
 </dd>
 </dl>
 </dd></dl>
+
 </dd></dl>
+
 </section>
 <section id="discretefastener">
 <h3>DiscreteFastener<a class="headerlink" href="#discretefastener" title="Permalink to this headline">#</a></h3>
@@ -1577,17 +1627,19 @@ OFF.</p>
 </dd>
 </dl>
 <p class="rubric">Methods</p>
-<div class="table-wrapper"><table class="autosummary longtable docutils align-default">
+<div class="table-wrapper autosummary longtable docutils container">
+<table class="autosummary longtable docutils align-default">
 <colgroup>
-<col style="width: 10%"/>
-<col style="width: 90%"/>
+<col style="width: 10%" />
+<col style="width: 90%" />
 </colgroup>
 <tbody>
-<tr class="row-odd"><td><p><a class="reference internal" href="#abaqus.EngineeringFeature.DiscreteFastener.DiscreteFastener.setValues" title="abaqus.EngineeringFeature.DiscreteFastener.DiscreteFastener.setValues"><code class="xref py py-obj docutils literal notranslate"><span class="pre">setValues</span></code></a>([ur1, ur2, ur3, coupling, ...])</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#abaqus.EngineeringFeature.DiscreteFastener.DiscreteFastener.setValues" title="abaqus.EngineeringFeature.DiscreteFastener.DiscreteFastener.setValues"><code class="xref py py-obj docutils literal notranslate"><span class="pre">setValues</span></code></a>([ur1, ur2, ur3, coupling, ...])</p></td>
 <td><p>This method modifies the DiscreteFastener object.</p></td>
 </tr>
 </tbody>
-</table></div>
+</table>
+</div>
 <p>This method creates a DiscreteFastener object. Although the constructor is available
 both for parts and for the assembly, DiscreteFastener objects are currently supported
 only under the assembly.</p>
@@ -1640,17 +1692,19 @@ member is queried, it returns an Int. The default value is None.</p>
 </pre></div>
 </div>
 <p class="rubric">Methods</p>
-<div class="table-wrapper"><table class="autosummary longtable docutils align-default">
+<div class="table-wrapper autosummary longtable docutils container">
+<table class="autosummary longtable docutils align-default">
 <colgroup>
-<col style="width: 10%"/>
-<col style="width: 90%"/>
+<col style="width: 10%" />
+<col style="width: 90%" />
 </colgroup>
 <tbody>
-<tr class="row-odd"><td><p><a class="reference internal" href="#abaqus.EngineeringFeature.DiscreteFastener.DiscreteFastener.setValues" title="abaqus.EngineeringFeature.DiscreteFastener.DiscreteFastener.setValues"><code class="xref py py-obj docutils literal notranslate"><span class="pre">setValues</span></code></a>([ur1, ur2, ur3, coupling, ...])</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#abaqus.EngineeringFeature.DiscreteFastener.DiscreteFastener.setValues" title="abaqus.EngineeringFeature.DiscreteFastener.DiscreteFastener.setValues"><code class="xref py py-obj docutils literal notranslate"><span class="pre">setValues</span></code></a>([ur1, ur2, ur3, coupling, ...])</p></td>
 <td><p>This method modifies the DiscreteFastener object.</p></td>
 </tr>
 </tbody>
-</table></div>
+</table>
+</div>
 <dl class="py method">
 <dt class="sig sig-object py" id="abaqus.EngineeringFeature.DiscreteFastener.DiscreteFastener.setValues">
 <span class="sig-name descname"><span class="pre">setValues</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ur1</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.BooleanType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ur2</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.BooleanType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ur3</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.BooleanType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">coupling</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.SymbolicConstantType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'CONTINUUM'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">weightingMethod</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.SymbolicConstantType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'UNIFORM'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">localCsys</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../../../_modules/abaqus/EngineeringFeature/DiscreteFastener.html#DiscreteFastener.setValues"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#abaqus.EngineeringFeature.DiscreteFastener.DiscreteFastener.setValues" title="Permalink to this definition">#</a></dt>
@@ -1687,7 +1741,9 @@ member is queried, it returns an Int. The default value is None.</p>
 </dd>
 </dl>
 </dd></dl>
+
 </dd></dl>
+
 </section>
 <section id="engineeringfeaturebase">
 <h3>EngineeringFeatureBase<a class="headerlink" href="#engineeringfeaturebase" title="Permalink to this headline">#</a></h3>
@@ -1719,10 +1775,11 @@ repositories. The EngineeringFeature object has no explicit constructor or metho
 </dd>
 </dl>
 <p class="rubric">Methods</p>
-<div class="table-wrapper"><table class="autosummary longtable docutils align-default">
+<div class="table-wrapper autosummary longtable docutils container">
+<table class="autosummary longtable docutils align-default">
 <colgroup>
-<col style="width: 10%"/>
-<col style="width: 90%"/>
+<col style="width: 10%" />
+<col style="width: 90%" />
 </colgroup>
 <tbody>
 <tr class="row-odd"><td><p><a class="reference internal" href="#abaqus.EngineeringFeature.EngineeringFeatureBase.EngineeringFeatureBase.assignSeam" title="abaqus.EngineeringFeature.EngineeringFeatureBase.EngineeringFeatureBase.assignSeam"><code class="xref py py-obj docutils literal notranslate"><span class="pre">assignSeam</span></code></a>(regions)</p></td>
@@ -1732,7 +1789,8 @@ repositories. The EngineeringFeature object has no explicit constructor or metho
 <td><p>This method deletes a seam crack.</p></td>
 </tr>
 </tbody>
-</table></div>
+</table>
+</div>
 <dl class="py method">
 <dt class="sig sig-object py" id="abaqus.EngineeringFeature.EngineeringFeatureBase.EngineeringFeatureBase.assignSeam">
 <span class="sig-name descname"><span class="pre">assignSeam</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">regions</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">tuple</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="region.html#abaqus.Region.Region.Region" title="abaqus.Region.Region.Region"><span class="pre">abaqus.Region.Region.Region</span></a><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../../../_modules/abaqus/EngineeringFeature/EngineeringFeatureBase.html#EngineeringFeatureBase.assignSeam"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#abaqus.EngineeringFeature.EngineeringFeatureBase.EngineeringFeatureBase.assignSeam" title="Permalink to this definition">#</a></dt>
@@ -1747,6 +1805,7 @@ must be faces or edges.</p>
 </dd>
 </dl>
 </dd></dl>
+
 <dl class="py method">
 <dt class="sig sig-object py" id="abaqus.EngineeringFeature.EngineeringFeatureBase.EngineeringFeatureBase.deleteSeam">
 <span class="sig-name descname"><span class="pre">deleteSeam</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">regions</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">tuple</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="region.html#abaqus.Region.Region.Region" title="abaqus.Region.Region.Region"><span class="pre">abaqus.Region.Region.Region</span></a><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../../../_modules/abaqus/EngineeringFeature/EngineeringFeatureBase.html#EngineeringFeatureBase.deleteSeam"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#abaqus.EngineeringFeature.EngineeringFeatureBase.EngineeringFeatureBase.deleteSeam" title="Permalink to this definition">#</a></dt>
@@ -1761,7 +1820,9 @@ must be faces or edges.</p>
 </dd>
 </dl>
 </dd></dl>
+
 </dd></dl>
+
 </section>
 <section id="heatcapacitance">
 <h3>HeatCapacitance<a class="headerlink" href="#heatcapacitance" title="Permalink to this headline">#</a></h3>
@@ -1800,17 +1861,19 @@ The table data specify the following:
 </dd>
 </dl>
 <p class="rubric">Methods</p>
-<div class="table-wrapper"><table class="autosummary longtable docutils align-default">
+<div class="table-wrapper autosummary longtable docutils container">
+<table class="autosummary longtable docutils align-default">
 <colgroup>
-<col style="width: 10%"/>
-<col style="width: 90%"/>
+<col style="width: 10%" />
+<col style="width: 90%" />
 </colgroup>
 <tbody>
-<tr class="row-odd"><td><p><a class="reference internal" href="#abaqus.EngineeringFeature.HeatCapacitance.HeatCapacitance.setValues" title="abaqus.EngineeringFeature.HeatCapacitance.HeatCapacitance.setValues"><code class="xref py py-obj docutils literal notranslate"><span class="pre">setValues</span></code></a>([temperatureDependency, dependencies])</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#abaqus.EngineeringFeature.HeatCapacitance.HeatCapacitance.setValues" title="abaqus.EngineeringFeature.HeatCapacitance.HeatCapacitance.setValues"><code class="xref py py-obj docutils literal notranslate"><span class="pre">setValues</span></code></a>([temperatureDependency, dependencies])</p></td>
 <td><p>This method modifies the HeatCapacitance object.</p></td>
 </tr>
 </tbody>
-</table></div>
+</table>
+</div>
 <p>This method creates a HeatCapacitance object.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -1841,17 +1904,19 @@ the table data are described below.</p>
 </pre></div>
 </div>
 <p class="rubric">Methods</p>
-<div class="table-wrapper"><table class="autosummary longtable docutils align-default">
+<div class="table-wrapper autosummary longtable docutils container">
+<table class="autosummary longtable docutils align-default">
 <colgroup>
-<col style="width: 10%"/>
-<col style="width: 90%"/>
+<col style="width: 10%" />
+<col style="width: 90%" />
 </colgroup>
 <tbody>
-<tr class="row-odd"><td><p><a class="reference internal" href="#abaqus.EngineeringFeature.HeatCapacitance.HeatCapacitance.setValues" title="abaqus.EngineeringFeature.HeatCapacitance.HeatCapacitance.setValues"><code class="xref py py-obj docutils literal notranslate"><span class="pre">setValues</span></code></a>([temperatureDependency, dependencies])</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#abaqus.EngineeringFeature.HeatCapacitance.HeatCapacitance.setValues" title="abaqus.EngineeringFeature.HeatCapacitance.HeatCapacitance.setValues"><code class="xref py py-obj docutils literal notranslate"><span class="pre">setValues</span></code></a>([temperatureDependency, dependencies])</p></td>
 <td><p>This method modifies the HeatCapacitance object.</p></td>
 </tr>
 </tbody>
-</table></div>
+</table>
+</div>
 <dl class="py method">
 <dt class="sig sig-object py" id="abaqus.EngineeringFeature.HeatCapacitance.HeatCapacitance.setValues">
 <span class="sig-name descname"><span class="pre">setValues</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">temperatureDependency</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.BooleanType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dependencies</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../../../_modules/abaqus/EngineeringFeature/HeatCapacitance.html#HeatCapacitance.setValues"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#abaqus.EngineeringFeature.HeatCapacitance.HeatCapacitance.setValues" title="Permalink to this definition">#</a></dt>
@@ -1867,7 +1932,9 @@ the table data are described below.</p>
 </dd>
 </dl>
 </dd></dl>
+
 </dd></dl>
+
 </section>
 <section id="nonstructuralmass">
 <h3>NonstructuralMass<a class="headerlink" href="#nonstructuralmass" title="Permalink to this headline">#</a></h3>
@@ -1898,17 +1965,19 @@ The NonstructuralMass object is derived from the Inertia object.</p>
 </dd>
 </dl>
 <p class="rubric">Methods</p>
-<div class="table-wrapper"><table class="autosummary longtable docutils align-default">
+<div class="table-wrapper autosummary longtable docutils container">
+<table class="autosummary longtable docutils align-default">
 <colgroup>
-<col style="width: 10%"/>
-<col style="width: 90%"/>
+<col style="width: 10%" />
+<col style="width: 90%" />
 </colgroup>
 <tbody>
 <tr class="row-odd"><td><p><a class="reference internal" href="#abaqus.EngineeringFeature.NonstructuralMass.NonstructuralMass.setValues" title="abaqus.EngineeringFeature.NonstructuralMass.NonstructuralMass.setValues"><code class="xref py py-obj docutils literal notranslate"><span class="pre">setValues</span></code></a>([distribution])</p></td>
 <td><p>This method modifies the NonstructuralMass object.</p></td>
 </tr>
 </tbody>
-</table></div>
+</table>
+</div>
 <p>This method creates a NonstructuralMass object.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -1941,17 +2010,19 @@ MASS_PROPORTIONAL.The <em>distribution</em> argument applies only when <a href="
 </pre></div>
 </div>
 <p class="rubric">Methods</p>
-<div class="table-wrapper"><table class="autosummary longtable docutils align-default">
+<div class="table-wrapper autosummary longtable docutils container">
+<table class="autosummary longtable docutils align-default">
 <colgroup>
-<col style="width: 10%"/>
-<col style="width: 90%"/>
+<col style="width: 10%" />
+<col style="width: 90%" />
 </colgroup>
 <tbody>
 <tr class="row-odd"><td><p><a class="reference internal" href="#abaqus.EngineeringFeature.NonstructuralMass.NonstructuralMass.setValues" title="abaqus.EngineeringFeature.NonstructuralMass.NonstructuralMass.setValues"><code class="xref py py-obj docutils literal notranslate"><span class="pre">setValues</span></code></a>([distribution])</p></td>
 <td><p>This method modifies the NonstructuralMass object.</p></td>
 </tr>
 </tbody>
-</table></div>
+</table>
+</div>
 <dl class="py method">
 <dt class="sig sig-object py" id="abaqus.EngineeringFeature.NonstructuralMass.NonstructuralMass.setValues">
 <span class="sig-name descname"><span class="pre">setValues</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">distribution</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.SymbolicConstantType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'MASS_PROPORTIONAL'</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../../../_modules/abaqus/EngineeringFeature/NonstructuralMass.html#NonstructuralMass.setValues"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#abaqus.EngineeringFeature.NonstructuralMass.NonstructuralMass.setValues" title="Permalink to this definition">#</a></dt>
@@ -1967,7 +2038,9 @@ MASS_PROPORTIONAL.The <em>distribution</em> argument applies only when <a href="
 </dd>
 </dl>
 </dd></dl>
+
 </dd></dl>
+
 </section>
 <section id="pointfastener">
 <h3>PointFastener<a class="headerlink" href="#pointfastener" title="Permalink to this headline">#</a></h3>
@@ -1998,17 +2071,19 @@ OFF.</p>
 </dd>
 </dl>
 <p class="rubric">Methods</p>
-<div class="table-wrapper"><table class="autosummary longtable docutils align-default">
+<div class="table-wrapper autosummary longtable docutils container">
+<table class="autosummary longtable docutils align-default">
 <colgroup>
-<col style="width: 10%"/>
-<col style="width: 90%"/>
+<col style="width: 10%" />
+<col style="width: 90%" />
 </colgroup>
 <tbody>
-<tr class="row-odd"><td><p><a class="reference internal" href="#abaqus.EngineeringFeature.PointFastener.PointFastener.setValues" title="abaqus.EngineeringFeature.PointFastener.PointFastener.setValues"><code class="xref py py-obj docutils literal notranslate"><span class="pre">setValues</span></code></a>([directionVector, targetSurfaces, ...])</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#abaqus.EngineeringFeature.PointFastener.PointFastener.setValues" title="abaqus.EngineeringFeature.PointFastener.PointFastener.setValues"><code class="xref py py-obj docutils literal notranslate"><span class="pre">setValues</span></code></a>([directionVector, targetSurfaces, ...])</p></td>
 <td><p>This method modifies the PointFastener object.</p></td>
 </tr>
 </tbody>
-</table></div>
+</table>
+</div>
 <p>This method creates a PointFastener object. Although the constructor is available both
 for parts and for the assembly, PointFastener objects are currently supported only under
 the assembly.</p>
@@ -2129,17 +2204,19 @@ fastening points. The default value is OFF.</p>
 </pre></div>
 </div>
 <p class="rubric">Methods</p>
-<div class="table-wrapper"><table class="autosummary longtable docutils align-default">
+<div class="table-wrapper autosummary longtable docutils container">
+<table class="autosummary longtable docutils align-default">
 <colgroup>
-<col style="width: 10%"/>
-<col style="width: 90%"/>
+<col style="width: 10%" />
+<col style="width: 90%" />
 </colgroup>
 <tbody>
-<tr class="row-odd"><td><p><a class="reference internal" href="#abaqus.EngineeringFeature.PointFastener.PointFastener.setValues" title="abaqus.EngineeringFeature.PointFastener.PointFastener.setValues"><code class="xref py py-obj docutils literal notranslate"><span class="pre">setValues</span></code></a>([directionVector, targetSurfaces, ...])</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#abaqus.EngineeringFeature.PointFastener.PointFastener.setValues" title="abaqus.EngineeringFeature.PointFastener.PointFastener.setValues"><code class="xref py py-obj docutils literal notranslate"><span class="pre">setValues</span></code></a>([directionVector, targetSurfaces, ...])</p></td>
 <td><p>This method modifies the PointFastener object.</p></td>
 </tr>
 </tbody>
-</table></div>
+</table>
+</div>
 <dl class="py method">
 <dt class="sig sig-object py" id="abaqus.EngineeringFeature.PointFastener.PointFastener.setValues">
 <span class="sig-name descname"><span class="pre">setValues</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">directionVector</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">tuple</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">targetSurfaces</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="region.html#abaqus.Region.RegionArray.RegionArray" title="abaqus.Region.RegionArray.RegionArray"><span class="pre">abaqus.Region.RegionArray.RegionArray</span></a></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'MODEL'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ur1</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.BooleanType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ur2</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.BooleanType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ur3</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.BooleanType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">attachmentMethod</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.SymbolicConstantType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'FACETOFACE'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">influenceRadius</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Union</span><span class="p"><span class="pre">[</span></span><span class="pre">abaqusConstants.SymbolicConstantType</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'DEFAULT'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">searchRadius</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Union</span><span class="p"><span class="pre">[</span></span><span class="pre">abaqusConstants.SymbolicConstantType</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'DEFAULT'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">maximumLayers</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.SymbolicConstantType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'ALL'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">coupling</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.SymbolicConstantType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'CONTINUUM'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">weightingMethod</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.SymbolicConstantType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'UNIFORM'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">additionalMass</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">adjustOrientation</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.BooleanType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">localCsys</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">connectionType</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.SymbolicConstantType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'CONNECTOR'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sectionName</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">connectorOrientationLocalCsys1</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">axis1</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.SymbolicConstantType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'AXIS_1'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">angle1</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">orient2SameAs1</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.BooleanType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">connectorOrientationLocalCsys2</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">axis2</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.SymbolicConstantType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'AXIS_1'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">angle2</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">unsorted</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.BooleanType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../../../_modules/abaqus/EngineeringFeature/PointFastener.html#PointFastener.setValues"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#abaqus.EngineeringFeature.PointFastener.PointFastener.setValues" title="Permalink to this definition">#</a></dt>
@@ -2244,7 +2321,9 @@ fastening points. The default value is OFF.</p>
 </dd>
 </dl>
 </dd></dl>
+
 </dd></dl>
+
 </section>
 <section id="pointmassinertia">
 <h3>PointMassInertia<a class="headerlink" href="#pointmassinertia" title="Permalink to this headline">#</a></h3>
@@ -2275,17 +2354,19 @@ The PointMassInertia object is derived from the Inertia object.</p>
 </dd>
 </dl>
 <p class="rubric">Methods</p>
-<div class="table-wrapper"><table class="autosummary longtable docutils align-default">
+<div class="table-wrapper autosummary longtable docutils container">
+<table class="autosummary longtable docutils align-default">
 <colgroup>
-<col style="width: 10%"/>
-<col style="width: 90%"/>
+<col style="width: 10%" />
+<col style="width: 90%" />
 </colgroup>
 <tbody>
-<tr class="row-odd"><td><p><a class="reference internal" href="#abaqus.EngineeringFeature.PointMassInertia.PointMassInertia.setValues" title="abaqus.EngineeringFeature.PointMassInertia.PointMassInertia.setValues"><code class="xref py py-obj docutils literal notranslate"><span class="pre">setValues</span></code></a>([mass, mass1, mass2, mass3, i11, ...])</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#abaqus.EngineeringFeature.PointMassInertia.PointMassInertia.setValues" title="abaqus.EngineeringFeature.PointMassInertia.PointMassInertia.setValues"><code class="xref py py-obj docutils literal notranslate"><span class="pre">setValues</span></code></a>([mass, mass1, mass2, mass3, i11, ...])</p></td>
 <td><p>This method modifies the PointMassInertia object.</p></td>
 </tr>
 </tbody>
-</table></div>
+</table>
+</div>
 <p>This method creates a PointMassInertia object.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -2347,17 +2428,19 @@ argument applies only to Abaqus/Standard analyses.</p>
 </pre></div>
 </div>
 <p class="rubric">Methods</p>
-<div class="table-wrapper"><table class="autosummary longtable docutils align-default">
+<div class="table-wrapper autosummary longtable docutils container">
+<table class="autosummary longtable docutils align-default">
 <colgroup>
-<col style="width: 10%"/>
-<col style="width: 90%"/>
+<col style="width: 10%" />
+<col style="width: 90%" />
 </colgroup>
 <tbody>
-<tr class="row-odd"><td><p><a class="reference internal" href="#abaqus.EngineeringFeature.PointMassInertia.PointMassInertia.setValues" title="abaqus.EngineeringFeature.PointMassInertia.PointMassInertia.setValues"><code class="xref py py-obj docutils literal notranslate"><span class="pre">setValues</span></code></a>([mass, mass1, mass2, mass3, i11, ...])</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#abaqus.EngineeringFeature.PointMassInertia.PointMassInertia.setValues" title="abaqus.EngineeringFeature.PointMassInertia.PointMassInertia.setValues"><code class="xref py py-obj docutils literal notranslate"><span class="pre">setValues</span></code></a>([mass, mass1, mass2, mass3, i11, ...])</p></td>
 <td><p>This method modifies the PointMassInertia object.</p></td>
 </tr>
 </tbody>
-</table></div>
+</table>
+</div>
 <dl class="py method">
 <dt class="sig sig-object py" id="abaqus.EngineeringFeature.PointMassInertia.PointMassInertia.setValues">
 <span class="sig-name descname"><span class="pre">setValues</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">mass</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mass1</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mass2</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mass3</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">i11</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">i22</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">i33</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">i12</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">i13</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">i23</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">localCsys</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">alpha</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">composite</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../../../_modules/abaqus/EngineeringFeature/PointMassInertia.html#PointMassInertia.setValues"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#abaqus.EngineeringFeature.PointMassInertia.PointMassInertia.setValues" title="Permalink to this definition">#</a></dt>
@@ -2407,7 +2490,9 @@ argument applies only to Abaqus/Standard analyses.</p>
 </dd>
 </dl>
 </dd></dl>
+
 </dd></dl>
+
 </section>
 <section id="springdashpottoground">
 <h3>SpringDashpotToGround<a class="headerlink" href="#springdashpottoground" title="Permalink to this headline">#</a></h3>
@@ -2446,17 +2531,19 @@ is OFF.</p>
 </dd>
 </dl>
 <p class="rubric">Methods</p>
-<div class="table-wrapper"><table class="autosummary longtable docutils align-default">
+<div class="table-wrapper autosummary longtable docutils container">
+<table class="autosummary longtable docutils align-default">
 <colgroup>
-<col style="width: 10%"/>
-<col style="width: 90%"/>
+<col style="width: 10%" />
+<col style="width: 90%" />
 </colgroup>
 <tbody>
-<tr class="row-odd"><td><p><a class="reference internal" href="#abaqus.EngineeringFeature.SpringDashpotToGround.SpringDashpotToGround.setValues" title="abaqus.EngineeringFeature.SpringDashpotToGround.SpringDashpotToGround.setValues"><code class="xref py py-obj docutils literal notranslate"><span class="pre">setValues</span></code></a>([orientation, springBehavior, ...])</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#abaqus.EngineeringFeature.SpringDashpotToGround.SpringDashpotToGround.setValues" title="abaqus.EngineeringFeature.SpringDashpotToGround.SpringDashpotToGround.setValues"><code class="xref py py-obj docutils literal notranslate"><span class="pre">setValues</span></code></a>([orientation, springBehavior, ...])</p></td>
 <td><p>This method modifies the SpringDashpotToGround object.</p></td>
 </tr>
 </tbody>
-</table></div>
+</table>
+</div>
 <p>This method creates a SpringDashpotToGround object.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -2501,17 +2588,19 @@ is 0.0.</p>
 </pre></div>
 </div>
 <p class="rubric">Methods</p>
-<div class="table-wrapper"><table class="autosummary longtable docutils align-default">
+<div class="table-wrapper autosummary longtable docutils container">
+<table class="autosummary longtable docutils align-default">
 <colgroup>
-<col style="width: 10%"/>
-<col style="width: 90%"/>
+<col style="width: 10%" />
+<col style="width: 90%" />
 </colgroup>
 <tbody>
-<tr class="row-odd"><td><p><a class="reference internal" href="#abaqus.EngineeringFeature.SpringDashpotToGround.SpringDashpotToGround.setValues" title="abaqus.EngineeringFeature.SpringDashpotToGround.SpringDashpotToGround.setValues"><code class="xref py py-obj docutils literal notranslate"><span class="pre">setValues</span></code></a>([orientation, springBehavior, ...])</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#abaqus.EngineeringFeature.SpringDashpotToGround.SpringDashpotToGround.setValues" title="abaqus.EngineeringFeature.SpringDashpotToGround.SpringDashpotToGround.setValues"><code class="xref py py-obj docutils literal notranslate"><span class="pre">setValues</span></code></a>([orientation, springBehavior, ...])</p></td>
 <td><p>This method modifies the SpringDashpotToGround object.</p></td>
 </tr>
 </tbody>
-</table></div>
+</table>
+</div>
 <dl class="py method">
 <dt class="sig sig-object py" id="abaqus.EngineeringFeature.SpringDashpotToGround.SpringDashpotToGround.setValues">
 <span class="sig-name descname"><span class="pre">setValues</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">orientation</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">springBehavior</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.BooleanType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dashpotBehavior</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.BooleanType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">springStiffness</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dashpotCoefficient</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../../../_modules/abaqus/EngineeringFeature/SpringDashpotToGround.html#SpringDashpotToGround.setValues"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#abaqus.EngineeringFeature.SpringDashpotToGround.SpringDashpotToGround.setValues" title="Permalink to this definition">#</a></dt>
@@ -2541,7 +2630,9 @@ is 0.0.</p>
 </dd>
 </dl>
 </dd></dl>
+
 </dd></dl>
+
 </section>
 <section id="twopointspringdashpot">
 <h3>TwoPointSpringDashpot<a class="headerlink" href="#twopointspringdashpot" title="Permalink to this headline">#</a></h3>
@@ -2580,17 +2671,19 @@ is OFF.</p>
 </dd>
 </dl>
 <p class="rubric">Methods</p>
-<div class="table-wrapper"><table class="autosummary longtable docutils align-default">
+<div class="table-wrapper autosummary longtable docutils container">
+<table class="autosummary longtable docutils align-default">
 <colgroup>
-<col style="width: 10%"/>
-<col style="width: 90%"/>
+<col style="width: 10%" />
+<col style="width: 90%" />
 </colgroup>
 <tbody>
-<tr class="row-odd"><td><p><a class="reference internal" href="#abaqus.EngineeringFeature.TwoPointSpringDashpot.TwoPointSpringDashpot.setValues" title="abaqus.EngineeringFeature.TwoPointSpringDashpot.TwoPointSpringDashpot.setValues"><code class="xref py py-obj docutils literal notranslate"><span class="pre">setValues</span></code></a>([dof1, dof2, orientation, ...])</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#abaqus.EngineeringFeature.TwoPointSpringDashpot.TwoPointSpringDashpot.setValues" title="abaqus.EngineeringFeature.TwoPointSpringDashpot.TwoPointSpringDashpot.setValues"><code class="xref py py-obj docutils literal notranslate"><span class="pre">setValues</span></code></a>([dof1, dof2, orientation, ...])</p></td>
 <td><p>This method modifies the TwoPointSpringDashpot object.</p></td>
 </tr>
 </tbody>
-</table></div>
+</table>
+</div>
 <p>This method creates a TwoPointSpringDashpot object.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -2646,17 +2739,19 @@ is 0.0.</p>
 </pre></div>
 </div>
 <p class="rubric">Methods</p>
-<div class="table-wrapper"><table class="autosummary longtable docutils align-default">
+<div class="table-wrapper autosummary longtable docutils container">
+<table class="autosummary longtable docutils align-default">
 <colgroup>
-<col style="width: 10%"/>
-<col style="width: 90%"/>
+<col style="width: 10%" />
+<col style="width: 90%" />
 </colgroup>
 <tbody>
-<tr class="row-odd"><td><p><a class="reference internal" href="#abaqus.EngineeringFeature.TwoPointSpringDashpot.TwoPointSpringDashpot.setValues" title="abaqus.EngineeringFeature.TwoPointSpringDashpot.TwoPointSpringDashpot.setValues"><code class="xref py py-obj docutils literal notranslate"><span class="pre">setValues</span></code></a>([dof1, dof2, orientation, ...])</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#abaqus.EngineeringFeature.TwoPointSpringDashpot.TwoPointSpringDashpot.setValues" title="abaqus.EngineeringFeature.TwoPointSpringDashpot.TwoPointSpringDashpot.setValues"><code class="xref py py-obj docutils literal notranslate"><span class="pre">setValues</span></code></a>([dof1, dof2, orientation, ...])</p></td>
 <td><p>This method modifies the TwoPointSpringDashpot object.</p></td>
 </tr>
 </tbody>
-</table></div>
+</table>
+</div>
 <dl class="py method">
 <dt class="sig sig-object py" id="abaqus.EngineeringFeature.TwoPointSpringDashpot.TwoPointSpringDashpot.setValues">
 <span class="sig-name descname"><span class="pre">setValues</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">dof1</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dof2</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">orientation</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">springBehavior</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.BooleanType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dashpotBehavior</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">abaqusConstants.BooleanType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">springStiffness</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dashpotCoefficient</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../../../_modules/abaqus/EngineeringFeature/TwoPointSpringDashpot.html#TwoPointSpringDashpot.setValues"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#abaqus.EngineeringFeature.TwoPointSpringDashpot.TwoPointSpringDashpot.setValues" title="Permalink to this definition">#</a></dt>
@@ -2695,7 +2790,9 @@ is 0.0.</p>
 </dd>
 </dl>
 </dd></dl>
+
 </dd></dl>
+
 </section>
 <section id="xfemcrack">
 <h3>XFEMCrack<a class="headerlink" href="#xfemcrack" title="Permalink to this headline">#</a></h3>
@@ -2732,17 +2829,19 @@ The XFEMCrack object is derived from the Crack object.</p>
 </dd>
 </dl>
 <p class="rubric">Methods</p>
-<div class="table-wrapper"><table class="autosummary longtable docutils align-default">
+<div class="table-wrapper autosummary longtable docutils container">
+<table class="autosummary longtable docutils align-default">
 <colgroup>
-<col style="width: 10%"/>
-<col style="width: 90%"/>
+<col style="width: 10%" />
+<col style="width: 90%" />
 </colgroup>
 <tbody>
-<tr class="row-odd"><td><p><a class="reference internal" href="#abaqus.EngineeringFeature.XFEMCrack.XFEMCrack.setValues" title="abaqus.EngineeringFeature.XFEMCrack.XFEMCrack.setValues"><code class="xref py py-obj docutils literal notranslate"><span class="pre">setValues</span></code></a>([allowCrackGrowth, crackLocation, ...])</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#abaqus.EngineeringFeature.XFEMCrack.XFEMCrack.setValues" title="abaqus.EngineeringFeature.XFEMCrack.XFEMCrack.setValues"><code class="xref py py-obj docutils literal notranslate"><span class="pre">setValues</span></code></a>([allowCrackGrowth, crackLocation, ...])</p></td>
 <td><p>This method modifies the XFEMCrack object.</p></td>
 </tr>
 </tbody>
-</table></div>
+</table>
+</div>
 <p>This method creates a XFEMCrack object. Although the constructor is available both for
 parts and for the assembly, XFEMCrack objects are currently supported only under the
 assembly.</p>
@@ -2802,17 +2901,19 @@ the crack domain is shrunk.</p>
 </pre></div>
 </div>
 <p class="rubric">Methods</p>
-<div class="table-wrapper"><table class="autosummary longtable docutils align-default">
+<div class="table-wrapper autosummary longtable docutils container">
+<table class="autosummary longtable docutils align-default">
 <colgroup>
-<col style="width: 10%"/>
-<col style="width: 90%"/>
+<col style="width: 10%" />
+<col style="width: 90%" />
 </colgroup>
 <tbody>
-<tr class="row-odd"><td><p><a class="reference internal" href="#abaqus.EngineeringFeature.XFEMCrack.XFEMCrack.setValues" title="abaqus.EngineeringFeature.XFEMCrack.XFEMCrack.setValues"><code class="xref py py-obj docutils literal notranslate"><span class="pre">setValues</span></code></a>([allowCrackGrowth, crackLocation, ...])</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#abaqus.EngineeringFeature.XFEMCrack.XFEMCrack.setValues" title="abaqus.EngineeringFeature.XFEMCrack.XFEMCrack.setValues"><code class="xref py py-obj docutils literal notranslate"><span class="pre">setValues</span></code></a>([allowCrackGrowth, crackLocation, ...])</p></td>
 <td><p>This method modifies the XFEMCrack object.</p></td>
 </tr>
 </tbody>
-</table></div>
+</table>
+</div>
 <dl class="py method">
 <dt class="sig sig-object py" id="abaqus.EngineeringFeature.XFEMCrack.XFEMCrack.setValues">
 <span class="sig-name descname"><span class="pre">setValues</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">allowCrackGrowth:</span> <span class="pre">abaqusConstants.BooleanType</span> <span class="pre">=</span> <span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">crackLocation:</span> <span class="pre">abaqus.Region.Region.Region</span> <span class="pre">=</span> <span class="pre">&lt;abaqus.Region.Region.Region</span> <span class="pre">object&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">singularityCalcRadius:</span> <span class="pre">typing.Optional[float]</span> <span class="pre">=</span> <span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">interactionProperty:</span> <span class="pre">str</span> <span class="pre">=</span> <span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">elemId:</span> <span class="pre">tuple</span> <span class="pre">=</span> <span class="pre">()</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">nodeId:</span> <span class="pre">tuple</span> <span class="pre">=</span> <span class="pre">()</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">hasCrackFront:</span> <span class="pre">tuple</span> <span class="pre">=</span> <span class="pre">()</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">crackPlaneDist:</span> <span class="pre">tuple</span> <span class="pre">=</span> <span class="pre">()</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">crackFrontDist:</span> <span class="pre">tuple</span> <span class="pre">=</span> <span class="pre">()</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">autoDetectValue:</span> <span class="pre">str</span> <span class="pre">=</span> <span class="pre">''</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../../../_modules/abaqus/EngineeringFeature/XFEMCrack.html#XFEMCrack.setValues"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#abaqus.EngineeringFeature.XFEMCrack.XFEMCrack.setValues" title="Permalink to this definition">#</a></dt>
@@ -2857,7 +2958,9 @@ the crack domain is shrunk.</p>
 </dd>
 </dl>
 </dd></dl>
+
 </dd></dl>
+
 </section>
 </section>
 </section>

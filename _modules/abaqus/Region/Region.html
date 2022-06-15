@@ -5,10 +5,10 @@
     <meta name="color-scheme" content="light dark"><link rel="index" title="Index" href="../../../genindex.html" /><link rel="search" title="Search" href="../../../search.html" />
         <link rel="canonical" href="https://pyabaqus.haiiliin.com/_modules/abaqus/Region/Region.html" />
 
-    <meta name="generator" content="sphinx-4.5.0, furo 2022.04.07"/>
-        <title>abaqus.Region.Region - pyabaqus 1.0.16 documentation</title>
+    <meta name="generator" content="sphinx-4.5.0, furo 2022.06.04.1"/>
+        <title>abaqus.Region.Region - pyabaqus 1.0.18 documentation</title>
       <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/styles/furo.css?digest=68f4518137b9aefe99b631505a2064c3c42c9852" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/styles/furo.css?digest=40978830699223671f4072448e654b5958f38b89" />
     <link rel="stylesheet" type="text/css" href="../../../_static/styles/furo-extensions.css?digest=30d1aed668e5c3a91c3e3bf6a60b675221979f0e" />
     
     
@@ -123,7 +123,7 @@
       </label>
     </div>
     <div class="header-center">
-      <a href="../../../index.html"><div class="brand">pyabaqus 1.0.16 documentation</div></a>
+      <a href="../../../index.html"><div class="brand">pyabaqus 1.0.18 documentation</div></a>
     </div>
     <div class="header-right">
       <div class="theme-toggle-container theme-toggle-header">
@@ -146,7 +146,7 @@
       <div class="sidebar-sticky"><a class="sidebar-brand" href="../../../index.html">
   
   
-  <span class="sidebar-brand-text">pyabaqus 1.0.16 documentation</span>
+  <span class="sidebar-brand-text">pyabaqus 1.0.18 documentation</span>
   
 </a><form class="sidebar-search-container" method="get" action="../../../search.html" role="search">
   <input class="sidebar-search" placeholder=Search name="q" aria-label="Search">
@@ -286,7 +286,8 @@
           </svg>
           <span>Back to top</span>
         </a>
-        <div class="content-icon-container"><div class="theme-toggle-container theme-toggle-content">
+        <div class="content-icon-container">
+          <div class="theme-toggle-container theme-toggle-content">
             <button class="theme-toggle">
               <div class="visually-hidden">Toggle Light / Dark / Auto color theme</div>
               <svg class="theme-icon-when-auto"><use href="#svg-sun-half"></use></svg>
@@ -313,11 +314,11 @@
 
 
 <div class="viewcode-block" id="Region"><a class="viewcode-back" href="../../../reference/mdb/model/part_assembly/region.html#abaqus.Region.Region.Region">[docs]</a><span class="k">class</span> <span class="nc">Region</span><span class="p">:</span>
-    <span class="sd">"""The purpose of the Region object is to provide a link between an attribute and the</span>
+    <span class="sd">&quot;&quot;&quot;The purpose of the Region object is to provide a link between an attribute and the</span>
 <span class="sd">    geometric or discrete entities to which the attribute is applied. An attribute (Load, </span>
 <span class="sd">    BC, IC, etc.) is applied to one or more Region objects; each Region object in turn is </span>
 <span class="sd">    associated with a picked Set or Surface or with a named Set or Surface. The Region </span>
-<span class="sd">    object provides a unified interface (or "façade") to data and functionality located at </span>
+<span class="sd">    object provides a unified interface (or &quot;façade&quot;) to data and functionality located at </span>
 <span class="sd">    the Set or Surface. </span>
 <span class="sd">    A script that applies an attribute to a picked Set or Surface requires the explicit </span>
 <span class="sd">    creation of a Region object and will implicitly create a matching internal Set or </span>
@@ -333,19 +334,19 @@
 <span class="sd">    Wherever a particular Load, BC, IC, etc. command accepts a named set or a named surface, </span>
 <span class="sd">    that command will also accept a Region object. For example</span>
 <span class="sd">    myRegion = regionToolset.Region(edges=edges1) </span>
-<span class="sd">    mdb.models['Model-1'].DisplacementBC(name='BC-1'</span>
-<span class="sd">        createStepName='Initial', region=myRegion, u1=SET</span>
+<span class="sd">    mdb.models[&#39;Model-1&#39;].DisplacementBC(name=&#39;BC-1&#39;</span>
+<span class="sd">        createStepName=&#39;Initial&#39;, region=myRegion, u1=SET</span>
 <span class="sd">        u2=SET) </span>
 <span class="sd">    myRegion = regionToolset.Region(elements=e[1:100]) </span>
-<span class="sd">    p = mdb.models['mirror'].parts['COLLAR_MIRROR-1'] </span>
-<span class="sd">    p.SectionAssignment(region=myRegion, sectionName='Section-1') </span>
+<span class="sd">    p = mdb.models[&#39;mirror&#39;].parts[&#39;COLLAR_MIRROR-1&#39;] </span>
+<span class="sd">    p.SectionAssignment(region=myRegion, sectionName=&#39;Section-1&#39;) </span>
 <span class="sd">    Abaqus does not provide a regions repository; as an alternative, you should assign a </span>
 <span class="sd">    variable to a Region object and refer to the variable. The lifecycle of a Region object </span>
 <span class="sd">    is similar to the lifecycle of a Leaf object used by display groups; as a result, you </span>
 <span class="sd">    should use a Region object immediately after you create it. The contents of a Region </span>
 <span class="sd">    object are not intended to survive regeneration. If you use an out-of-date Region </span>
 <span class="sd">    object, the script is unlikely to function correctly. </span>
-<span class="sd">    Querying an attribute's Region will return a Region tuple. The contents of the tuple are </span>
+<span class="sd">    Querying an attribute&#39;s Region will return a Region tuple. The contents of the tuple are </span>
 <span class="sd">    the set name followed by the owners of the set and three flags expressed as integers. </span>
 <span class="sd">    The flags indicate the region space, the type of region and the whether the region is an </span>
 <span class="sd">    internal set. </span>
@@ -358,7 +359,7 @@
 
 <span class="sd">        import regionToolset</span>
 
-<span class="sd">    """</span>
+<span class="sd">    &quot;&quot;&quot;</span>
 
     <span class="nd">@typing</span><span class="o">.</span><span class="n">overload</span>
     <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">elements</span><span class="p">:</span> <span class="nb">tuple</span><span class="p">[</span><span class="n">Element</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">nodes</span><span class="p">:</span> <span class="nb">tuple</span><span class="p">[</span><span class="n">Node</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
@@ -367,7 +368,7 @@
                  <span class="n">xVertices</span><span class="p">:</span> <span class="nb">tuple</span><span class="p">[</span><span class="n">Vertex</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">xEdges</span><span class="p">:</span> <span class="nb">tuple</span><span class="p">[</span><span class="n">Vertex</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
                  <span class="n">xFaces</span><span class="p">:</span> <span class="nb">tuple</span><span class="p">[</span><span class="n">Vertex</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">skinFaces</span><span class="p">:</span> <span class="nb">tuple</span> <span class="o">=</span> <span class="p">(),</span> <span class="n">skinEdges</span><span class="p">:</span> <span class="nb">tuple</span> <span class="o">=</span> <span class="p">(),</span>
                  <span class="n">stringerEdges</span><span class="p">:</span> <span class="nb">tuple</span> <span class="o">=</span> <span class="p">()):</span>
-        <span class="sd">"""This command creates a set-like region. For example</span>
+        <span class="sd">&quot;&quot;&quot;This command creates a set-like region. For example</span>
 <span class="sd">        myRegion = regionToolset.Region(vertices=v[2:4]</span>
 <span class="sd">            edges=e[4:5]+e[6:9])</span>
 <span class="sd">        The arguments are the same as the arguments to the Set method, except for the *name*</span>
@@ -425,7 +426,7 @@
 <span class="sd">        Returns</span>
 <span class="sd">        -------</span>
 <span class="sd">            A Region object.</span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span>
 
     <span class="nd">@typing</span><span class="o">.</span><span class="n">overload</span>
@@ -439,7 +440,7 @@
                  <span class="n">side1Elements</span><span class="p">:</span> <span class="nb">tuple</span><span class="p">[</span><span class="n">Element</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">side2Elements</span><span class="p">:</span> <span class="nb">tuple</span><span class="p">[</span><span class="n">Element</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
                  <span class="n">side12Elements</span><span class="p">:</span> <span class="nb">tuple</span><span class="p">[</span><span class="n">Element</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">end1Elements</span><span class="p">:</span> <span class="nb">tuple</span><span class="p">[</span><span class="n">Element</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
                  <span class="n">end2Elements</span><span class="p">:</span> <span class="nb">tuple</span><span class="p">[</span><span class="n">Element</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">circumElements</span><span class="p">:</span> <span class="nb">tuple</span><span class="p">[</span><span class="n">Element</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">):</span>
-        <span class="sd">"""This command creates a surface-like region. For example</span>
+        <span class="sd">&quot;&quot;&quot;This command creates a surface-like region. For example</span>
 <span class="sd">        myRegion = regionToolset.Region(side1Faces=f[12:14])</span>
 <span class="sd">        The arguments are the same as the arguments to the Surface method, except for the *name*</span>
 <span class="sd">        argument.</span>
@@ -516,7 +517,7 @@
 <span class="sd">        Returns</span>
 <span class="sd">        -------</span>
 <span class="sd">            A Region object.</span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span>
 
     <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>

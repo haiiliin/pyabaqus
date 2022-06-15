@@ -5,10 +5,10 @@
     <meta name="color-scheme" content="light dark"><link rel="index" title="Index" href="../../../genindex.html" /><link rel="search" title="Search" href="../../../search.html" />
         <link rel="canonical" href="https://pyabaqus.haiiliin.com/_modules/abaqus/BasicGeometry/Face.html" />
 
-    <meta name="generator" content="sphinx-4.5.0, furo 2022.04.07"/>
-        <title>abaqus.BasicGeometry.Face - pyabaqus 1.0.16 documentation</title>
+    <meta name="generator" content="sphinx-4.5.0, furo 2022.06.04.1"/>
+        <title>abaqus.BasicGeometry.Face - pyabaqus 1.0.18 documentation</title>
       <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/styles/furo.css?digest=68f4518137b9aefe99b631505a2064c3c42c9852" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/styles/furo.css?digest=40978830699223671f4072448e654b5958f38b89" />
     <link rel="stylesheet" type="text/css" href="../../../_static/styles/furo-extensions.css?digest=30d1aed668e5c3a91c3e3bf6a60b675221979f0e" />
     
     
@@ -123,7 +123,7 @@
       </label>
     </div>
     <div class="header-center">
-      <a href="../../../index.html"><div class="brand">pyabaqus 1.0.16 documentation</div></a>
+      <a href="../../../index.html"><div class="brand">pyabaqus 1.0.18 documentation</div></a>
     </div>
     <div class="header-right">
       <div class="theme-toggle-container theme-toggle-header">
@@ -146,7 +146,7 @@
       <div class="sidebar-sticky"><a class="sidebar-brand" href="../../../index.html">
   
   
-  <span class="sidebar-brand-text">pyabaqus 1.0.16 documentation</span>
+  <span class="sidebar-brand-text">pyabaqus 1.0.18 documentation</span>
   
 </a><form class="sidebar-search-container" method="get" action="../../../search.html" role="search">
   <input class="sidebar-search" placeholder=Search name="q" aria-label="Search">
@@ -286,7 +286,8 @@
           </svg>
           <span>Back to top</span>
         </a>
-        <div class="content-icon-container"><div class="theme-toggle-container theme-toggle-content">
+        <div class="content-icon-container">
+          <div class="theme-toggle-container theme-toggle-content">
             <button class="theme-toggle">
               <div class="visually-hidden">Toggle Light / Dark / Auto color theme</div>
               <svg class="theme-icon-when-auto"><use href="#svg-sun-half"></use></svg>
@@ -305,7 +306,7 @@
 
 
 <div class="viewcode-block" id="Face"><a class="viewcode-back" href="../../../reference/mdb/model/part_assembly/geometry.html#abaqus.BasicGeometry.Face.Face">[docs]</a><span class="k">class</span> <span class="nc">Face</span><span class="p">:</span>
-    <span class="sd">"""Faces are two-dimensional regions of geometry.</span>
+    <span class="sd">&quot;&quot;&quot;Faces are two-dimensional regions of geometry.</span>
 
 <span class="sd">    Attributes</span>
 <span class="sd">    ----------</span>
@@ -355,7 +356,7 @@
 <span class="sd">        mdb.models[name].rootAssembly.sets[name].faces[i]</span>
 <span class="sd">        mdb.models[name].rootAssembly.surfaces[name].faces[i]</span>
 
-<span class="sd">    """</span>
+<span class="sd">    &quot;&quot;&quot;</span>
 
     <span class="c1"># An Int specifying the index of the face in the FaceArray. </span>
     <span class="n">index</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="kc">None</span>
@@ -378,18 +379,18 @@
     <span class="n">instanceName</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="kc">None</span>
 
 <div class="viewcode-block" id="Face.getCentroid"><a class="viewcode-back" href="../../../reference/mdb/model/part_assembly/geometry.html#abaqus.BasicGeometry.Face.Face.getCentroid">[docs]</a>    <span class="k">def</span> <span class="nf">getCentroid</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="sd">"""This method returns the centroid of a face.</span>
+        <span class="sd">&quot;&quot;&quot;This method returns the centroid of a face.</span>
 
 <span class="sd">        Returns</span>
 <span class="sd">        -------</span>
 <span class="sd">            A sequence of Floats specifying the *X*-, *Y*-, and *Z*-coordinates of the centroid of </span>
 <span class="sd">            the face.</span>
 <span class="sd">            </span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span></div>
 
 <div class="viewcode-block" id="Face.getCurvature"><a class="viewcode-back" href="../../../reference/mdb/model/part_assembly/geometry.html#abaqus.BasicGeometry.Face.Face.getCurvature">[docs]</a>    <span class="k">def</span> <span class="nf">getCurvature</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">point</span><span class="p">:</span> <span class="nb">tuple</span><span class="p">,</span> <span class="n">uParam</span><span class="p">:</span> <span class="nb">float</span><span class="p">,</span> <span class="n">vParam</span><span class="p">:</span> <span class="nb">float</span><span class="p">):</span>
-        <span class="sd">"""This method returns information about the curvature at a location on the face.</span>
+        <span class="sd">&quot;&quot;&quot;This method returns information about the curvature at a location on the face.</span>
 <span class="sd">        </span>
 <span class="sd">        Parameters</span>
 <span class="sd">        ----------</span>
@@ -407,27 +408,27 @@
 
 <span class="sd">        Returns</span>
 <span class="sd">        -------</span>
-<span class="sd">            A dictionary with keys 'evaluationPoint', 'principalAxis1', 'principalAxis2', </span>
-<span class="sd">            'curvature1', 'curvature2' and 'gaussianCurvature'. Where the evaluationPoint specifies </span>
-<span class="sd">            the location at which the curvature was evaluated. 'principalAxis1' and 'principalAxis2' </span>
-<span class="sd">            refer to the vectors specifying the two principal axes of the face. 'curvature1' and </span>
-<span class="sd">            'curvature2' specify the curvatures along the two principal axes.</span>
+<span class="sd">            A dictionary with keys &#39;evaluationPoint&#39;, &#39;principalAxis1&#39;, &#39;principalAxis2&#39;, </span>
+<span class="sd">            &#39;curvature1&#39;, &#39;curvature2&#39; and &#39;gaussianCurvature&#39;. Where the evaluationPoint specifies </span>
+<span class="sd">            the location at which the curvature was evaluated. &#39;principalAxis1&#39; and &#39;principalAxis2&#39; </span>
+<span class="sd">            refer to the vectors specifying the two principal axes of the face. &#39;curvature1&#39; and </span>
+<span class="sd">            &#39;curvature2&#39; specify the curvatures along the two principal axes.</span>
 <span class="sd">            </span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span></div>
 
 <div class="viewcode-block" id="Face.getElements"><a class="viewcode-back" href="../../../reference/mdb/model/part_assembly/geometry.html#abaqus.BasicGeometry.Face.Face.getElements">[docs]</a>    <span class="k">def</span> <span class="nf">getElements</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="sd">"""This method returns an array of element objects that are associated with the face.</span>
+        <span class="sd">&quot;&quot;&quot;This method returns an array of element objects that are associated with the face.</span>
 
 <span class="sd">        Returns</span>
 <span class="sd">        -------</span>
 <span class="sd">            A MeshElementArray object which is a sequence of MeshElement objects.</span>
 <span class="sd">            </span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span></div>
 
 <div class="viewcode-block" id="Face.getElementFaces"><a class="viewcode-back" href="../../../reference/mdb/model/part_assembly/geometry.html#abaqus.BasicGeometry.Face.Face.getElementFaces">[docs]</a>    <span class="k">def</span> <span class="nf">getElementFaces</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">faceSide</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="n">BOTH_SIDES</span><span class="p">):</span>
-        <span class="sd">"""This method returns an array of mesh face objects. Each mesh face object contains the</span>
+        <span class="sd">&quot;&quot;&quot;This method returns an array of mesh face objects. Each mesh face object contains the</span>
 <span class="sd">        element label and the side of the element that lies on the geometric face.</span>
 <span class="sd">        </span>
 <span class="sd">        Parameters</span>
@@ -441,11 +442,11 @@
 <span class="sd">        -------</span>
 <span class="sd">            A MeshFaceArray object which is a sequence of MeshFace objects.</span>
 <span class="sd">            </span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span></div>
 
 <div class="viewcode-block" id="Face.getNodes"><a class="viewcode-back" href="../../../reference/mdb/model/part_assembly/geometry.html#abaqus.BasicGeometry.Face.Face.getNodes">[docs]</a>    <span class="k">def</span> <span class="nf">getNodes</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">faceSide</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="n">BOTH_SIDES</span><span class="p">):</span>
-        <span class="sd">"""This method returns an array of mesh node objects. Each mesh node object contains the</span>
+        <span class="sd">&quot;&quot;&quot;This method returns an array of mesh node objects. Each mesh node object contains the</span>
 <span class="sd">        label of the node that lies on the geometric face.</span>
 <span class="sd">        </span>
 <span class="sd">        Parameters</span>
@@ -461,11 +462,11 @@
 <span class="sd">        -------</span>
 <span class="sd">            A MeshNodeArray object which is a sequence of MeshNode objects.</span>
 <span class="sd">            </span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span></div>
 
 <div class="viewcode-block" id="Face.getNormal"><a class="viewcode-back" href="../../../reference/mdb/model/part_assembly/geometry.html#abaqus.BasicGeometry.Face.Face.getNormal">[docs]</a>    <span class="k">def</span> <span class="nf">getNormal</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">point</span><span class="p">:</span> <span class="nb">tuple</span> <span class="o">=</span> <span class="p">()):</span>
-        <span class="sd">"""This method returns the normal to a face at the location specified by the *pointOn*</span>
+        <span class="sd">&quot;&quot;&quot;This method returns the normal to a face at the location specified by the *pointOn*</span>
 <span class="sd">        member. The normal at a different location on the face can be obtained by specifying the</span>
 <span class="sd">        optional *point* argument.</span>
 <span class="sd">        </span>
@@ -486,11 +487,11 @@
 <span class="sd">            An exception is raised if the optional argument *point* is provided but the point cannot </span>
 <span class="sd">            be projected onto the face. </span>
 <span class="sd">            </span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span></div>
 
 <div class="viewcode-block" id="Face.getSize"><a class="viewcode-back" href="../../../reference/mdb/model/part_assembly/geometry.html#abaqus.BasicGeometry.Face.Face.getSize">[docs]</a>    <span class="k">def</span> <span class="nf">getSize</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">printResults</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="kc">True</span><span class="p">):</span>
-        <span class="sd">"""This method returns a Float indicating the area of the face.</span>
+        <span class="sd">&quot;&quot;&quot;This method returns a Float indicating the area of the face.</span>
 <span class="sd">        </span>
 <span class="sd">        Parameters</span>
 <span class="sd">        ----------</span>
@@ -501,52 +502,52 @@
 <span class="sd">        -------</span>
 <span class="sd">            A Float.</span>
 <span class="sd">            </span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span></div>
 
 <div class="viewcode-block" id="Face.getEdges"><a class="viewcode-back" href="../../../reference/mdb/model/part_assembly/geometry.html#abaqus.BasicGeometry.Face.Face.getEdges">[docs]</a>    <span class="k">def</span> <span class="nf">getEdges</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="sd">"""This method returns a sequence consisting of the edge ids of the edges on the face.</span>
+        <span class="sd">&quot;&quot;&quot;This method returns a sequence consisting of the edge ids of the edges on the face.</span>
 
 <span class="sd">        Returns</span>
 <span class="sd">        -------</span>
 <span class="sd">            A tuple of integers.</span>
 <span class="sd">            </span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span></div>
 
 <div class="viewcode-block" id="Face.getVertices"><a class="viewcode-back" href="../../../reference/mdb/model/part_assembly/geometry.html#abaqus.BasicGeometry.Face.Face.getVertices">[docs]</a>    <span class="k">def</span> <span class="nf">getVertices</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="sd">"""This method returns a sequence consisting of the vertex ids of the vertices of the face.</span>
+        <span class="sd">&quot;&quot;&quot;This method returns a sequence consisting of the vertex ids of the vertices of the face.</span>
 
 <span class="sd">        Returns</span>
 <span class="sd">        -------</span>
 <span class="sd">            A tuple of integers.</span>
 <span class="sd">            </span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span></div>
 
 <div class="viewcode-block" id="Face.getCells"><a class="viewcode-back" href="../../../reference/mdb/model/part_assembly/geometry.html#abaqus.BasicGeometry.Face.Face.getCells">[docs]</a>    <span class="k">def</span> <span class="nf">getCells</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="sd">"""This method returns a sequence consisting of the cell ids of the cells to which this</span>
+        <span class="sd">&quot;&quot;&quot;This method returns a sequence consisting of the cell ids of the cells to which this</span>
 <span class="sd">        face belongs.</span>
 
 <span class="sd">        Returns</span>
 <span class="sd">        -------</span>
 <span class="sd">            A tuple of integers.</span>
 <span class="sd">            </span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span></div>
 
 <div class="viewcode-block" id="Face.getAdjacentFaces"><a class="viewcode-back" href="../../../reference/mdb/model/part_assembly/geometry.html#abaqus.BasicGeometry.Face.Face.getAdjacentFaces">[docs]</a>    <span class="k">def</span> <span class="nf">getAdjacentFaces</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="sd">"""This method returns an array of face objects that share at least one edge of the face.</span>
+        <span class="sd">&quot;&quot;&quot;This method returns an array of face objects that share at least one edge of the face.</span>
 
 <span class="sd">        Returns</span>
 <span class="sd">        -------</span>
 <span class="sd">            A FaceArray object which is a sequence of Face objects.</span>
 <span class="sd">            </span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span></div>
 
 <div class="viewcode-block" id="Face.getFacesByFaceAngle"><a class="viewcode-back" href="../../../reference/mdb/model/part_assembly/geometry.html#abaqus.BasicGeometry.Face.Face.getFacesByFaceAngle">[docs]</a>    <span class="k">def</span> <span class="nf">getFacesByFaceAngle</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">angle</span><span class="p">:</span> <span class="nb">str</span><span class="p">):</span>
-        <span class="sd">"""This method returns an array of Face objects that are obtained by recursively finding</span>
+        <span class="sd">&quot;&quot;&quot;This method returns an array of Face objects that are obtained by recursively finding</span>
 <span class="sd">        adjacent faces that are at an angle of less than or equal to the specified angle.</span>
 <span class="sd">        </span>
 <span class="sd">        Parameters</span>
@@ -558,40 +559,40 @@
 <span class="sd">        -------</span>
 <span class="sd">            A FaceArray object, which is a sequence of Face objects.</span>
 <span class="sd">            </span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span></div>
 
 <div class="viewcode-block" id="Face.getFacesByCurvature"><a class="viewcode-back" href="../../../reference/mdb/model/part_assembly/geometry.html#abaqus.BasicGeometry.Face.Face.getFacesByCurvature">[docs]</a>    <span class="k">def</span> <span class="nf">getFacesByCurvature</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="sd">"""This method returns an array of Face objects that are obtained by recursively finding</span>
+        <span class="sd">&quot;&quot;&quot;This method returns an array of Face objects that are obtained by recursively finding</span>
 <span class="sd">        adjacent faces that share the same curvature.</span>
 
 <span class="sd">        Returns</span>
 <span class="sd">        -------</span>
 <span class="sd">            A FaceArray object, which is a sequence of Face objects.</span>
 <span class="sd">            </span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span></div>
 
 <div class="viewcode-block" id="Face.isNormalFlipped"><a class="viewcode-back" href="../../../reference/mdb/model/part_assembly/geometry.html#abaqus.BasicGeometry.Face.Face.isNormalFlipped">[docs]</a>    <span class="k">def</span> <span class="nf">isNormalFlipped</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="sd">"""This method determines whether the normal to the face is flipped from its default</span>
+        <span class="sd">&quot;&quot;&quot;This method determines whether the normal to the face is flipped from its default</span>
 <span class="sd">        direction by the use of the flipNormal method on a Part object.</span>
 
 <span class="sd">        Returns</span>
 <span class="sd">        -------</span>
 <span class="sd">            A Boolean value of True if the normal is flipped and False if not.</span>
 <span class="sd">            </span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span></div>
 
 <div class="viewcode-block" id="Face.getCADAttributes"><a class="viewcode-back" href="../../../reference/mdb/model/part_assembly/geometry.html#abaqus.BasicGeometry.Face.Face.getCADAttributes">[docs]</a>    <span class="k">def</span> <span class="nf">getCADAttributes</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="sd">"""This method returns an array of CAD attribute strings associated with the Face when the</span>
+        <span class="sd">&quot;&quot;&quot;This method returns an array of CAD attribute strings associated with the Face when the</span>
 <span class="sd">        part was created from CAD data.</span>
 
 <span class="sd">        Returns</span>
 <span class="sd">        -------</span>
 <span class="sd">            An array of String . </span>
 <span class="sd">            </span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span></div></div>
 </pre></div>
         </article>

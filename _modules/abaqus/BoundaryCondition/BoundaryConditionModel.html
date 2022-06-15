@@ -5,10 +5,10 @@
     <meta name="color-scheme" content="light dark"><link rel="index" title="Index" href="../../../genindex.html" /><link rel="search" title="Search" href="../../../search.html" />
         <link rel="canonical" href="https://pyabaqus.haiiliin.com/_modules/abaqus/BoundaryCondition/BoundaryConditionModel.html" />
 
-    <meta name="generator" content="sphinx-4.5.0, furo 2022.04.07"/>
-        <title>abaqus.BoundaryCondition.BoundaryConditionModel - pyabaqus 1.0.16 documentation</title>
+    <meta name="generator" content="sphinx-4.5.0, furo 2022.06.04.1"/>
+        <title>abaqus.BoundaryCondition.BoundaryConditionModel - pyabaqus 1.0.18 documentation</title>
       <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/styles/furo.css?digest=68f4518137b9aefe99b631505a2064c3c42c9852" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/styles/furo.css?digest=40978830699223671f4072448e654b5958f38b89" />
     <link rel="stylesheet" type="text/css" href="../../../_static/styles/furo-extensions.css?digest=30d1aed668e5c3a91c3e3bf6a60b675221979f0e" />
     
     
@@ -123,7 +123,7 @@
       </label>
     </div>
     <div class="header-center">
-      <a href="../../../index.html"><div class="brand">pyabaqus 1.0.16 documentation</div></a>
+      <a href="../../../index.html"><div class="brand">pyabaqus 1.0.18 documentation</div></a>
     </div>
     <div class="header-right">
       <div class="theme-toggle-container theme-toggle-header">
@@ -146,7 +146,7 @@
       <div class="sidebar-sticky"><a class="sidebar-brand" href="../../../index.html">
   
   
-  <span class="sidebar-brand-text">pyabaqus 1.0.16 documentation</span>
+  <span class="sidebar-brand-text">pyabaqus 1.0.18 documentation</span>
   
 </a><form class="sidebar-search-container" method="get" action="../../../search.html" role="search">
   <input class="sidebar-search" placeholder=Search name="q" aria-label="Search">
@@ -286,7 +286,8 @@
           </svg>
           <span>Back to top</span>
         </a>
-        <div class="content-icon-container"><div class="theme-toggle-container theme-toggle-content">
+        <div class="content-icon-container">
+          <div class="theme-toggle-container theme-toggle-content">
             <button class="theme-toggle">
               <div class="visually-hidden">Toggle Light / Dark / Auto color theme</div>
               <svg class="theme-icon-when-auto"><use href="#svg-sun-half"></use></svg>
@@ -354,7 +355,7 @@
 
 
 <div class="viewcode-block" id="BoundaryConditionModel"><a class="viewcode-back" href="../../../user/mdb/model/bc.html#abaqus.BoundaryCondition.BoundaryConditionModel.BoundaryConditionModel">[docs]</a><span class="k">class</span> <span class="nc">BoundaryConditionModel</span><span class="p">(</span><span class="n">ModelBase</span><span class="p">):</span>
-    <span class="sd">"""Abaqus creates a Model object named `Model-1` when a session is started.</span>
+    <span class="sd">&quot;&quot;&quot;Abaqus creates a Model object named `Model-1` when a session is started.</span>
 
 <span class="sd">    Notes</span>
 <span class="sd">    -----</span>
@@ -364,14 +365,14 @@
 
 <span class="sd">        mdb.models[name]</span>
 
-<span class="sd">    """</span>
+<span class="sd">    &quot;&quot;&quot;</span>
 
 <div class="viewcode-block" id="BoundaryConditionModel.AccelerationBaseMotionBC"><a class="viewcode-back" href="../../../reference/mdb/model/bc.html#abaqus.BoundaryCondition.BoundaryConditionModel.BoundaryConditionModel.AccelerationBaseMotionBC">[docs]</a>    <span class="k">def</span> <span class="nf">AccelerationBaseMotionBC</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">createStepName</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">dof</span><span class="p">:</span> <span class="n">SymbolicConstant</span><span class="p">,</span>
                                  <span class="n">amplitudeScaleFactor</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span>
                                  <span class="n">centerOfRotation</span><span class="p">:</span> <span class="nb">tuple</span> <span class="o">=</span> <span class="p">(),</span> <span class="n">correlation</span><span class="p">:</span> <span class="n">CorrelationArray</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
-                                 <span class="n">secondaryBase</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">''</span><span class="p">,</span> <span class="n">useComplex</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="n">OFF</span><span class="p">,</span>
+                                 <span class="n">secondaryBase</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">useComplex</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="n">OFF</span><span class="p">,</span>
                                  <span class="n">amplitude</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="n">UNSET</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">AccelerationBaseMotionBC</span><span class="p">:</span>
-        <span class="sd">"""This method creates a AccelerationBaseMotionBC object.</span>
+        <span class="sd">&quot;&quot;&quot;This method creates a AccelerationBaseMotionBC object.</span>
 
 <span class="sd">        Notes</span>
 <span class="sd">        -----</span>
@@ -413,7 +414,7 @@
 <span class="sd">        -------</span>
 <span class="sd">        bc: AccelerationBC</span>
 <span class="sd">            An AccelerationBaseMotionBC object.</span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">boundaryConditions</span><span class="p">[</span><span class="n">name</span><span class="p">]</span> <span class="o">=</span> <span class="n">boundaryCondition</span> <span class="o">=</span> <span class="n">AccelerationBaseMotionBC</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">createStepName</span><span class="p">,</span> <span class="n">dof</span><span class="p">,</span>
                                                                                      <span class="n">amplitudeScaleFactor</span><span class="p">,</span>
                                                                                      <span class="n">centerOfRotation</span><span class="p">,</span> <span class="n">correlation</span><span class="p">,</span>
@@ -422,7 +423,7 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">steps</span><span class="p">[</span><span class="n">createStepName</span><span class="p">]</span><span class="o">.</span><span class="n">boundaryConditionStates</span><span class="p">[</span><span class="n">name</span><span class="p">]</span> <span class="o">=</span> <span class="n">AccelerationBaseMotionBCState</span><span class="p">()</span>
         <span class="k">return</span> <span class="n">boundaryCondition</span></div>
 
-<div class="viewcode-block" id="BoundaryConditionModel.AccelerationBC"><a class="viewcode-back" href="../../../reference/mdb/model/bc.html#abaqus.BoundaryCondition.BoundaryConditionModel.BoundaryConditionModel.AccelerationBC">[docs]</a>    <span class="k">def</span> <span class="nf">AccelerationBC</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">createStepName</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">region</span><span class="p">:</span> <span class="n">Region</span><span class="p">,</span> <span class="n">fieldName</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">''</span><span class="p">,</span>
+<div class="viewcode-block" id="BoundaryConditionModel.AccelerationBC"><a class="viewcode-back" href="../../../reference/mdb/model/bc.html#abaqus.BoundaryCondition.BoundaryConditionModel.BoundaryConditionModel.AccelerationBC">[docs]</a>    <span class="k">def</span> <span class="nf">AccelerationBC</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">createStepName</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">region</span><span class="p">:</span> <span class="n">Region</span><span class="p">,</span> <span class="n">fieldName</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span><span class="p">,</span>
                        <span class="n">a1</span><span class="p">:</span> <span class="n">typing</span><span class="o">.</span><span class="n">Union</span><span class="p">[</span><span class="n">SymbolicConstant</span><span class="p">,</span> <span class="nb">float</span><span class="p">]</span> <span class="o">=</span> <span class="n">UNSET</span><span class="p">,</span>
                        <span class="n">a2</span><span class="p">:</span> <span class="n">typing</span><span class="o">.</span><span class="n">Union</span><span class="p">[</span><span class="n">SymbolicConstant</span><span class="p">,</span> <span class="nb">float</span><span class="p">]</span> <span class="o">=</span> <span class="n">UNSET</span><span class="p">,</span>
                        <span class="n">a3</span><span class="p">:</span> <span class="n">typing</span><span class="o">.</span><span class="n">Union</span><span class="p">[</span><span class="n">SymbolicConstant</span><span class="p">,</span> <span class="nb">float</span><span class="p">]</span> <span class="o">=</span> <span class="n">UNSET</span><span class="p">,</span>
@@ -430,7 +431,7 @@
                        <span class="n">ar2</span><span class="p">:</span> <span class="n">typing</span><span class="o">.</span><span class="n">Union</span><span class="p">[</span><span class="n">SymbolicConstant</span><span class="p">,</span> <span class="nb">float</span><span class="p">]</span> <span class="o">=</span> <span class="n">UNSET</span><span class="p">,</span>
                        <span class="n">ar3</span><span class="p">:</span> <span class="n">typing</span><span class="o">.</span><span class="n">Union</span><span class="p">[</span><span class="n">SymbolicConstant</span><span class="p">,</span> <span class="nb">float</span><span class="p">]</span> <span class="o">=</span> <span class="n">UNSET</span><span class="p">,</span> <span class="n">amplitude</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="n">UNSET</span><span class="p">,</span>
                        <span class="n">localCsys</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">distributionType</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="n">UNIFORM</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">AccelerationBC</span><span class="p">:</span>
-        <span class="sd">"""This method creates an AccelerationBC object.</span>
+        <span class="sd">&quot;&quot;&quot;This method creates an AccelerationBC object.</span>
 
 <span class="sd">        Notes</span>
 <span class="sd">        -----</span>
@@ -482,7 +483,7 @@
 <span class="sd">            specified step.</span>
 <span class="sd">        localCsys</span>
 <span class="sd">            None or a DatumCsys object specifying the local coordinate system of the boundary</span>
-<span class="sd">            condition's degrees of freedom. If *localCsys*=None, the degrees of freedom are defined</span>
+<span class="sd">            condition&#39;s degrees of freedom. If *localCsys*=None, the degrees of freedom are defined</span>
 <span class="sd">            in the global coordinate system. The default value is None.</span>
 <span class="sd">        distributionType</span>
 <span class="sd">            A SymbolicConstant specifying how the boundary condition is distributed spatially.</span>
@@ -492,17 +493,17 @@
 <span class="sd">        -------</span>
 <span class="sd">        bc: AccelerationBC</span>
 <span class="sd">            An AccelerationBC object.</span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">boundaryConditions</span><span class="p">[</span><span class="n">name</span><span class="p">]</span> <span class="o">=</span> <span class="n">boundaryCondition</span> <span class="o">=</span> <span class="n">AccelerationBC</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">createStepName</span><span class="p">,</span> <span class="n">region</span><span class="p">,</span> <span class="n">fieldName</span><span class="p">,</span> <span class="n">a1</span><span class="p">,</span>
                                                                            <span class="n">a2</span><span class="p">,</span> <span class="n">a3</span><span class="p">,</span> <span class="n">ar1</span><span class="p">,</span> <span class="n">ar2</span><span class="p">,</span> <span class="n">ar3</span><span class="p">,</span> <span class="n">amplitude</span><span class="p">,</span> <span class="n">localCsys</span><span class="p">,</span>
                                                                            <span class="n">distributionType</span><span class="p">)</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">steps</span><span class="p">[</span><span class="n">createStepName</span><span class="p">]</span><span class="o">.</span><span class="n">boundaryConditionStates</span><span class="p">[</span><span class="n">name</span><span class="p">]</span> <span class="o">=</span> <span class="n">AccelerationBCState</span><span class="p">()</span>
         <span class="k">return</span> <span class="n">boundaryCondition</span></div>
 
-<div class="viewcode-block" id="BoundaryConditionModel.AcousticPressureBC"><a class="viewcode-back" href="../../../reference/mdb/model/bc.html#abaqus.BoundaryCondition.BoundaryConditionModel.BoundaryConditionModel.AcousticPressureBC">[docs]</a>    <span class="k">def</span> <span class="nf">AcousticPressureBC</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">createStepName</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">region</span><span class="p">:</span> <span class="n">Region</span><span class="p">,</span> <span class="n">fieldName</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">''</span><span class="p">,</span>
+<div class="viewcode-block" id="BoundaryConditionModel.AcousticPressureBC"><a class="viewcode-back" href="../../../reference/mdb/model/bc.html#abaqus.BoundaryCondition.BoundaryConditionModel.BoundaryConditionModel.AcousticPressureBC">[docs]</a>    <span class="k">def</span> <span class="nf">AcousticPressureBC</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">createStepName</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">region</span><span class="p">:</span> <span class="n">Region</span><span class="p">,</span> <span class="n">fieldName</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span><span class="p">,</span>
                            <span class="n">magnitude</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="n">distributionType</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="n">UNIFORM</span><span class="p">,</span>
                            <span class="n">amplitude</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="n">UNSET</span><span class="p">,</span> <span class="n">fixed</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="n">OFF</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">AcousticPressureBC</span><span class="p">:</span>
-        <span class="sd">"""This method creates a AcousticPressureBC object.</span>
+        <span class="sd">&quot;&quot;&quot;This method creates a AcousticPressureBC object.</span>
 
 <span class="sd">        Notes</span>
 <span class="sd">        -----</span>
@@ -543,7 +544,7 @@
 <span class="sd">        -------</span>
 <span class="sd">        bc: AcousticPressureBC</span>
 <span class="sd">            An AcousticPressureBC object.</span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">boundaryConditions</span><span class="p">[</span><span class="n">name</span><span class="p">]</span> <span class="o">=</span> <span class="n">boundaryCondition</span> <span class="o">=</span> <span class="n">AcousticPressureBC</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">createStepName</span><span class="p">,</span> <span class="n">region</span><span class="p">,</span> <span class="n">fieldName</span><span class="p">,</span>
                                                                                <span class="n">magnitude</span><span class="p">,</span> <span class="n">distributionType</span><span class="p">,</span> <span class="n">amplitude</span><span class="p">,</span>
                                                                                <span class="n">fixed</span><span class="p">)</span>
@@ -551,7 +552,7 @@
         <span class="k">return</span> <span class="n">boundaryCondition</span></div>
 
 <div class="viewcode-block" id="BoundaryConditionModel.Calibration"><a class="viewcode-back" href="../../../reference/mdb/model/bc.html#abaqus.BoundaryCondition.BoundaryConditionModel.BoundaryConditionModel.Calibration">[docs]</a>    <span class="k">def</span> <span class="nf">Calibration</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Calibration</span><span class="p">:</span>
-        <span class="sd">"""This method creates a Calibration object.</span>
+        <span class="sd">&quot;&quot;&quot;This method creates a Calibration object.</span>
 
 <span class="sd">        Notes</span>
 <span class="sd">        -----</span>
@@ -570,14 +571,14 @@
 <span class="sd">        -------</span>
 <span class="sd">        calibration: Calibration</span>
 <span class="sd">            A Calibration object.</span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">boundaryConditions</span><span class="p">[</span><span class="n">name</span><span class="p">]</span> <span class="o">=</span> <span class="n">boundaryCondition</span> <span class="o">=</span> <span class="n">Calibration</span><span class="p">(</span><span class="n">name</span><span class="p">)</span>
         <span class="k">return</span> <span class="n">boundaryCondition</span></div>
 
-<div class="viewcode-block" id="BoundaryConditionModel.ConcentrationBC"><a class="viewcode-back" href="../../../reference/mdb/model/bc.html#abaqus.BoundaryCondition.BoundaryConditionModel.BoundaryConditionModel.ConcentrationBC">[docs]</a>    <span class="k">def</span> <span class="nf">ConcentrationBC</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">createStepName</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">region</span><span class="p">:</span> <span class="n">Region</span><span class="p">,</span> <span class="n">fieldName</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">''</span><span class="p">,</span>
+<div class="viewcode-block" id="BoundaryConditionModel.ConcentrationBC"><a class="viewcode-back" href="../../../reference/mdb/model/bc.html#abaqus.BoundaryCondition.BoundaryConditionModel.BoundaryConditionModel.ConcentrationBC">[docs]</a>    <span class="k">def</span> <span class="nf">ConcentrationBC</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">createStepName</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">region</span><span class="p">:</span> <span class="n">Region</span><span class="p">,</span> <span class="n">fieldName</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span><span class="p">,</span>
                         <span class="n">magnitude</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="n">distributionType</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="n">UNIFORM</span><span class="p">,</span>
                         <span class="n">amplitude</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="n">UNSET</span><span class="p">,</span> <span class="n">fixed</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="n">OFF</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">ConcentrationBC</span><span class="p">:</span>
-        <span class="sd">"""This method creates a ConcentrationBC object.</span>
+        <span class="sd">&quot;&quot;&quot;This method creates a ConcentrationBC object.</span>
 
 <span class="sd">        Notes</span>
 <span class="sd">        -----</span>
@@ -618,22 +619,22 @@
 <span class="sd">        -------</span>
 <span class="sd">        bc: ConcentrationBC</span>
 <span class="sd">            A ConcentrationBC object.</span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">boundaryConditions</span><span class="p">[</span><span class="n">name</span><span class="p">]</span> <span class="o">=</span> <span class="n">boundaryCondition</span> <span class="o">=</span> <span class="n">ConcentrationBC</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">createStepName</span><span class="p">,</span> <span class="n">region</span><span class="p">,</span> <span class="n">fieldName</span><span class="p">,</span>
                                                                             <span class="n">magnitude</span><span class="p">,</span> <span class="n">distributionType</span><span class="p">,</span> <span class="n">amplitude</span><span class="p">,</span>
                                                                             <span class="n">fixed</span><span class="p">)</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">steps</span><span class="p">[</span><span class="n">createStepName</span><span class="p">]</span><span class="o">.</span><span class="n">boundaryConditionStates</span><span class="p">[</span><span class="n">name</span><span class="p">]</span> <span class="o">=</span> <span class="n">ConcentrationBCState</span><span class="p">()</span>
         <span class="k">return</span> <span class="n">boundaryCondition</span></div>
 
-<div class="viewcode-block" id="BoundaryConditionModel.ConnAccelerationBC"><a class="viewcode-back" href="../../../reference/mdb/model/bc.html#abaqus.BoundaryCondition.BoundaryConditionModel.BoundaryConditionModel.ConnAccelerationBC">[docs]</a>    <span class="k">def</span> <span class="nf">ConnAccelerationBC</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">createStepName</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">region</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">''</span><span class="p">,</span> <span class="n">fastenerName</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">''</span><span class="p">,</span>
-                           <span class="n">fastenerSetName</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">''</span><span class="p">,</span> <span class="n">a1</span><span class="p">:</span> <span class="n">typing</span><span class="o">.</span><span class="n">Union</span><span class="p">[</span><span class="n">SymbolicConstant</span><span class="p">,</span> <span class="nb">float</span><span class="p">]</span> <span class="o">=</span> <span class="n">UNSET</span><span class="p">,</span>
+<div class="viewcode-block" id="BoundaryConditionModel.ConnAccelerationBC"><a class="viewcode-back" href="../../../reference/mdb/model/bc.html#abaqus.BoundaryCondition.BoundaryConditionModel.BoundaryConditionModel.ConnAccelerationBC">[docs]</a>    <span class="k">def</span> <span class="nf">ConnAccelerationBC</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">createStepName</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">region</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">fastenerName</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span><span class="p">,</span>
+                           <span class="n">fastenerSetName</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">a1</span><span class="p">:</span> <span class="n">typing</span><span class="o">.</span><span class="n">Union</span><span class="p">[</span><span class="n">SymbolicConstant</span><span class="p">,</span> <span class="nb">float</span><span class="p">]</span> <span class="o">=</span> <span class="n">UNSET</span><span class="p">,</span>
                            <span class="n">a2</span><span class="p">:</span> <span class="n">typing</span><span class="o">.</span><span class="n">Union</span><span class="p">[</span><span class="n">SymbolicConstant</span><span class="p">,</span> <span class="nb">float</span><span class="p">]</span> <span class="o">=</span> <span class="n">UNSET</span><span class="p">,</span>
                            <span class="n">a3</span><span class="p">:</span> <span class="n">typing</span><span class="o">.</span><span class="n">Union</span><span class="p">[</span><span class="n">SymbolicConstant</span><span class="p">,</span> <span class="nb">float</span><span class="p">]</span> <span class="o">=</span> <span class="n">UNSET</span><span class="p">,</span>
                            <span class="n">ar1</span><span class="p">:</span> <span class="n">typing</span><span class="o">.</span><span class="n">Union</span><span class="p">[</span><span class="n">SymbolicConstant</span><span class="p">,</span> <span class="nb">float</span><span class="p">]</span> <span class="o">=</span> <span class="n">UNSET</span><span class="p">,</span>
                            <span class="n">ar2</span><span class="p">:</span> <span class="n">typing</span><span class="o">.</span><span class="n">Union</span><span class="p">[</span><span class="n">SymbolicConstant</span><span class="p">,</span> <span class="nb">float</span><span class="p">]</span> <span class="o">=</span> <span class="n">UNSET</span><span class="p">,</span>
                            <span class="n">ar3</span><span class="p">:</span> <span class="n">typing</span><span class="o">.</span><span class="n">Union</span><span class="p">[</span><span class="n">SymbolicConstant</span><span class="p">,</span> <span class="nb">float</span><span class="p">]</span> <span class="o">=</span> <span class="n">UNSET</span><span class="p">,</span> <span class="n">amplitude</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="n">UNSET</span><span class="p">,</span>
                            <span class="n">distributionType</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="n">UNIFORM</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">ConnAccelerationBC</span><span class="p">:</span>
-        <span class="sd">"""This method creates an ConnAccelerationBC object on a wire region. Alternatively, the</span>
+        <span class="sd">&quot;&quot;&quot;This method creates an ConnAccelerationBC object on a wire region. Alternatively, the</span>
 <span class="sd">        boundary condition may also be applied to a wire set referenced from an assembled</span>
 <span class="sd">        fastener template model.</span>
 
@@ -665,29 +666,29 @@
 <span class="sd">            this argument is specified, *fastenerName* must also be specified. The default value is</span>
 <span class="sd">            an empty string.</span>
 <span class="sd">        a1</span>
-<span class="sd">            A Float or a SymbolicConstant specifying the acceleration component in the connector's</span>
+<span class="sd">            A Float or a SymbolicConstant specifying the acceleration component in the connector&#39;s</span>
 <span class="sd">            local 1-direction. Possible values for the SymbolicConstant are UNSET and SET. The</span>
 <span class="sd">            default value is UNSET.Note:Although *a1*, *a2*, *a3*, *ar1*, *ar2*, and *ar3* are</span>
 <span class="sd">            optional arguments, at least one of them must be specified.</span>
 <span class="sd">        a2</span>
-<span class="sd">            A Float or a SymbolicConstant specifying the acceleration component in the connector's</span>
+<span class="sd">            A Float or a SymbolicConstant specifying the acceleration component in the connector&#39;s</span>
 <span class="sd">            local 2-direction. Possible values for the SymbolicConstant are UNSET and SET. The</span>
 <span class="sd">            default value is UNSET.</span>
 <span class="sd">        a3</span>
-<span class="sd">            A Float or a SymbolicConstant specifying the acceleration component in the connector's</span>
+<span class="sd">            A Float or a SymbolicConstant specifying the acceleration component in the connector&#39;s</span>
 <span class="sd">            local 3-direction. Possible values for the SymbolicConstant are UNSET and SET. The</span>
 <span class="sd">            default value is UNSET.</span>
 <span class="sd">        ar1</span>
 <span class="sd">            A Float or a SymbolicConstant specifying the rotational acceleration component in the</span>
-<span class="sd">            connector's local 4-direction. Possible values for the SymbolicConstant are UNSET and</span>
+<span class="sd">            connector&#39;s local 4-direction. Possible values for the SymbolicConstant are UNSET and</span>
 <span class="sd">            SET. The default value is UNSET.</span>
 <span class="sd">        ar2</span>
 <span class="sd">            A Float or a SymbolicConstant specifying the rotational acceleration component in the</span>
-<span class="sd">            connector's local 5-direction. Possible values for the SymbolicConstant are UNSET and</span>
+<span class="sd">            connector&#39;s local 5-direction. Possible values for the SymbolicConstant are UNSET and</span>
 <span class="sd">            SET. The default value is UNSET.</span>
 <span class="sd">        ar3</span>
 <span class="sd">            A Float or a SymbolicConstant specifying the rotational acceleration component in the</span>
-<span class="sd">            connector's local 6-direction. Possible values for the SymbolicConstant are UNSET and</span>
+<span class="sd">            connector&#39;s local 6-direction. Possible values for the SymbolicConstant are UNSET and</span>
 <span class="sd">            SET. The default value is UNSET.</span>
 <span class="sd">        amplitude</span>
 <span class="sd">            A String or the SymbolicConstant UNSET specifying the name of the amplitude reference.</span>
@@ -702,7 +703,7 @@
 <span class="sd">        -------</span>
 <span class="sd">        bc: ConnAccelerationBC</span>
 <span class="sd">            A ConnAccelerationBC object.</span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">boundaryConditions</span><span class="p">[</span><span class="n">name</span><span class="p">]</span> <span class="o">=</span> <span class="n">boundaryCondition</span> <span class="o">=</span> <span class="n">ConnAccelerationBC</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">createStepName</span><span class="p">,</span> <span class="n">region</span><span class="p">,</span>
                                                                                <span class="n">fastenerName</span><span class="p">,</span> <span class="n">fastenerSetName</span><span class="p">,</span> <span class="n">a1</span><span class="p">,</span> <span class="n">a2</span><span class="p">,</span>
                                                                                <span class="n">a3</span><span class="p">,</span> <span class="n">ar1</span><span class="p">,</span> <span class="n">ar2</span><span class="p">,</span> <span class="n">ar3</span><span class="p">,</span> <span class="n">amplitude</span><span class="p">,</span>
@@ -710,8 +711,8 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">steps</span><span class="p">[</span><span class="n">createStepName</span><span class="p">]</span><span class="o">.</span><span class="n">boundaryConditionStates</span><span class="p">[</span><span class="n">name</span><span class="p">]</span> <span class="o">=</span> <span class="n">ConnAccelerationBCState</span><span class="p">()</span>
         <span class="k">return</span> <span class="n">boundaryCondition</span></div>
 
-<div class="viewcode-block" id="BoundaryConditionModel.ConnDisplacementBC"><a class="viewcode-back" href="../../../reference/mdb/model/bc.html#abaqus.BoundaryCondition.BoundaryConditionModel.BoundaryConditionModel.ConnDisplacementBC">[docs]</a>    <span class="k">def</span> <span class="nf">ConnDisplacementBC</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">createStepName</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">region</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">''</span><span class="p">,</span> <span class="n">fastenerName</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">''</span><span class="p">,</span>
-                           <span class="n">fastenerSetName</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">''</span><span class="p">,</span> <span class="n">u1</span><span class="p">:</span> <span class="n">typing</span><span class="o">.</span><span class="n">Union</span><span class="p">[</span><span class="n">SymbolicConstant</span><span class="p">,</span> <span class="nb">float</span><span class="p">]</span> <span class="o">=</span> <span class="n">UNSET</span><span class="p">,</span>
+<div class="viewcode-block" id="BoundaryConditionModel.ConnDisplacementBC"><a class="viewcode-back" href="../../../reference/mdb/model/bc.html#abaqus.BoundaryCondition.BoundaryConditionModel.BoundaryConditionModel.ConnDisplacementBC">[docs]</a>    <span class="k">def</span> <span class="nf">ConnDisplacementBC</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">createStepName</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">region</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">fastenerName</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span><span class="p">,</span>
+                           <span class="n">fastenerSetName</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">u1</span><span class="p">:</span> <span class="n">typing</span><span class="o">.</span><span class="n">Union</span><span class="p">[</span><span class="n">SymbolicConstant</span><span class="p">,</span> <span class="nb">float</span><span class="p">]</span> <span class="o">=</span> <span class="n">UNSET</span><span class="p">,</span>
                            <span class="n">u2</span><span class="p">:</span> <span class="n">typing</span><span class="o">.</span><span class="n">Union</span><span class="p">[</span><span class="n">SymbolicConstant</span><span class="p">,</span> <span class="nb">float</span><span class="p">]</span> <span class="o">=</span> <span class="n">UNSET</span><span class="p">,</span>
                            <span class="n">u3</span><span class="p">:</span> <span class="n">typing</span><span class="o">.</span><span class="n">Union</span><span class="p">[</span><span class="n">SymbolicConstant</span><span class="p">,</span> <span class="nb">float</span><span class="p">]</span> <span class="o">=</span> <span class="n">UNSET</span><span class="p">,</span>
                            <span class="n">ur1</span><span class="p">:</span> <span class="n">typing</span><span class="o">.</span><span class="n">Union</span><span class="p">[</span><span class="n">SymbolicConstant</span><span class="p">,</span> <span class="nb">float</span><span class="p">]</span> <span class="o">=</span> <span class="n">UNSET</span><span class="p">,</span>
@@ -719,7 +720,7 @@
                            <span class="n">ur3</span><span class="p">:</span> <span class="n">typing</span><span class="o">.</span><span class="n">Union</span><span class="p">[</span><span class="n">SymbolicConstant</span><span class="p">,</span> <span class="nb">float</span><span class="p">]</span> <span class="o">=</span> <span class="n">UNSET</span><span class="p">,</span> <span class="n">fixed</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="n">OFF</span><span class="p">,</span>
                            <span class="n">amplitude</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="n">UNSET</span><span class="p">,</span> <span class="n">distributionType</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="n">UNIFORM</span><span class="p">,</span>
                            <span class="n">buckleCase</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="n">NOT_APPLICABLE</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">ConnDisplacementBC</span><span class="p">:</span>
-        <span class="sd">"""This method creates a ConnDisplacementBC object on a wire region. Alternatively, the</span>
+        <span class="sd">&quot;&quot;&quot;This method creates a ConnDisplacementBC object on a wire region. Alternatively, the</span>
 <span class="sd">        boundary condition may also be applied to a wire set referenced from an assembled</span>
 <span class="sd">        fastener template model.</span>
 
@@ -752,28 +753,28 @@
 <span class="sd">            an empty string.</span>
 <span class="sd">        u1</span>
 <span class="sd">            A Float, a Complex, or a SymbolicConstant specifying the displacement component in the</span>
-<span class="sd">            connector's local 1-direction. Possible values for the SymbolicConstant are UNSET and</span>
+<span class="sd">            connector&#39;s local 1-direction. Possible values for the SymbolicConstant are UNSET and</span>
 <span class="sd">            SET. The default value is UNSET.Note:Although *u1*, *u2*, *u3*, *ur1*, *ur2*, and *ur3*</span>
 <span class="sd">            are optional arguments, at least one of them must be specified.</span>
 <span class="sd">        u2</span>
 <span class="sd">            A Float, a Complex, or a SymbolicConstant specifying the displacement component in the</span>
-<span class="sd">            connector's local 2-direction. Possible values for the SymbolicConstant are UNSET and</span>
+<span class="sd">            connector&#39;s local 2-direction. Possible values for the SymbolicConstant are UNSET and</span>
 <span class="sd">            SET. The default value is UNSET.</span>
 <span class="sd">        u3</span>
 <span class="sd">            A Float, a Complex, or a SymbolicConstant specifying the displacement component in the</span>
-<span class="sd">            connector's local 3-direction. Possible values for the SymbolicConstant are UNSET and</span>
+<span class="sd">            connector&#39;s local 3-direction. Possible values for the SymbolicConstant are UNSET and</span>
 <span class="sd">            SET. The default value is UNSET.</span>
 <span class="sd">        ur1</span>
 <span class="sd">            A Float, a Complex, or a SymbolicConstant specifying the rotational component in the</span>
-<span class="sd">            connector's local 4-direction. Possible values for the SymbolicConstant are UNSET and</span>
+<span class="sd">            connector&#39;s local 4-direction. Possible values for the SymbolicConstant are UNSET and</span>
 <span class="sd">            SET. The default value is UNSET.</span>
 <span class="sd">        ur2</span>
 <span class="sd">            A Float, a Complex, or a SymbolicConstant specifying the rotational component in the</span>
-<span class="sd">            connector's local 5-direction. Possible values for the SymbolicConstant are UNSET and</span>
+<span class="sd">            connector&#39;s local 5-direction. Possible values for the SymbolicConstant are UNSET and</span>
 <span class="sd">            SET. The default value is UNSET.</span>
 <span class="sd">        ur3</span>
 <span class="sd">            A Float, a Complex, or a SymbolicConstant specifying the rotational component in the</span>
-<span class="sd">            connector's local 6-direction. Possible values for the SymbolicConstant are UNSET and</span>
+<span class="sd">            connector&#39;s local 6-direction. Possible values for the SymbolicConstant are UNSET and</span>
 <span class="sd">            SET. The default value is UNSET.</span>
 <span class="sd">        fixed</span>
 <span class="sd">            A Boolean specifying whether the boundary condition should remain fixed at the current</span>
@@ -795,7 +796,7 @@
 <span class="sd">        -------</span>
 <span class="sd">        bc: ConnDisplacementBC</span>
 <span class="sd">            A ConnDisplacementBC object.</span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">boundaryConditions</span><span class="p">[</span><span class="n">name</span><span class="p">]</span> <span class="o">=</span> <span class="n">boundaryCondition</span> <span class="o">=</span> <span class="n">ConnDisplacementBC</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">createStepName</span><span class="p">,</span> <span class="n">region</span><span class="p">,</span>
                                                                                <span class="n">fastenerName</span><span class="p">,</span> <span class="n">fastenerSetName</span><span class="p">,</span> <span class="n">u1</span><span class="p">,</span> <span class="n">u2</span><span class="p">,</span>
                                                                                <span class="n">u3</span><span class="p">,</span> <span class="n">ur1</span><span class="p">,</span> <span class="n">ur2</span><span class="p">,</span> <span class="n">ur3</span><span class="p">,</span> <span class="n">fixed</span><span class="p">,</span> <span class="n">amplitude</span><span class="p">,</span>
@@ -803,15 +804,15 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">steps</span><span class="p">[</span><span class="n">createStepName</span><span class="p">]</span><span class="o">.</span><span class="n">boundaryConditionStates</span><span class="p">[</span><span class="n">name</span><span class="p">]</span> <span class="o">=</span> <span class="n">ConnDisplacementBCState</span><span class="p">()</span>
         <span class="k">return</span> <span class="n">boundaryCondition</span></div>
 
-<div class="viewcode-block" id="BoundaryConditionModel.ConnVelocityBC"><a class="viewcode-back" href="../../../reference/mdb/model/bc.html#abaqus.BoundaryCondition.BoundaryConditionModel.BoundaryConditionModel.ConnVelocityBC">[docs]</a>    <span class="k">def</span> <span class="nf">ConnVelocityBC</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">createStepName</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">region</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">''</span><span class="p">,</span> <span class="n">fastenerName</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">''</span><span class="p">,</span>
-                       <span class="n">fastenerSetName</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">''</span><span class="p">,</span> <span class="n">v1</span><span class="p">:</span> <span class="n">typing</span><span class="o">.</span><span class="n">Union</span><span class="p">[</span><span class="n">SymbolicConstant</span><span class="p">,</span> <span class="nb">float</span><span class="p">]</span> <span class="o">=</span> <span class="n">UNSET</span><span class="p">,</span>
+<div class="viewcode-block" id="BoundaryConditionModel.ConnVelocityBC"><a class="viewcode-back" href="../../../reference/mdb/model/bc.html#abaqus.BoundaryCondition.BoundaryConditionModel.BoundaryConditionModel.ConnVelocityBC">[docs]</a>    <span class="k">def</span> <span class="nf">ConnVelocityBC</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">createStepName</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">region</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">fastenerName</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span><span class="p">,</span>
+                       <span class="n">fastenerSetName</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">v1</span><span class="p">:</span> <span class="n">typing</span><span class="o">.</span><span class="n">Union</span><span class="p">[</span><span class="n">SymbolicConstant</span><span class="p">,</span> <span class="nb">float</span><span class="p">]</span> <span class="o">=</span> <span class="n">UNSET</span><span class="p">,</span>
                        <span class="n">v2</span><span class="p">:</span> <span class="n">typing</span><span class="o">.</span><span class="n">Union</span><span class="p">[</span><span class="n">SymbolicConstant</span><span class="p">,</span> <span class="nb">float</span><span class="p">]</span> <span class="o">=</span> <span class="n">UNSET</span><span class="p">,</span>
                        <span class="n">v3</span><span class="p">:</span> <span class="n">typing</span><span class="o">.</span><span class="n">Union</span><span class="p">[</span><span class="n">SymbolicConstant</span><span class="p">,</span> <span class="nb">float</span><span class="p">]</span> <span class="o">=</span> <span class="n">UNSET</span><span class="p">,</span>
                        <span class="n">vr1</span><span class="p">:</span> <span class="n">typing</span><span class="o">.</span><span class="n">Union</span><span class="p">[</span><span class="n">SymbolicConstant</span><span class="p">,</span> <span class="nb">float</span><span class="p">]</span> <span class="o">=</span> <span class="n">UNSET</span><span class="p">,</span>
                        <span class="n">vr2</span><span class="p">:</span> <span class="n">typing</span><span class="o">.</span><span class="n">Union</span><span class="p">[</span><span class="n">SymbolicConstant</span><span class="p">,</span> <span class="nb">float</span><span class="p">]</span> <span class="o">=</span> <span class="n">UNSET</span><span class="p">,</span>
                        <span class="n">vr3</span><span class="p">:</span> <span class="n">typing</span><span class="o">.</span><span class="n">Union</span><span class="p">[</span><span class="n">SymbolicConstant</span><span class="p">,</span> <span class="nb">float</span><span class="p">]</span> <span class="o">=</span> <span class="n">UNSET</span><span class="p">,</span> <span class="n">amplitude</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="n">UNSET</span><span class="p">,</span>
                        <span class="n">distributionType</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="n">UNIFORM</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">ConnVelocityBC</span><span class="p">:</span>
-        <span class="sd">"""This method creates a ConnVelocityBC object on a wire region. Alternatively, the</span>
+        <span class="sd">&quot;&quot;&quot;This method creates a ConnVelocityBC object on a wire region. Alternatively, the</span>
 <span class="sd">        boundary condition may also be applied to a wire set referenced from an assembled</span>
 <span class="sd">        fastener template model.</span>
 
@@ -843,29 +844,29 @@
 <span class="sd">            this argument is specified, *fastenerName* must also be specified. The default value is</span>
 <span class="sd">            an empty string.</span>
 <span class="sd">        v1</span>
-<span class="sd">            A Float or a SymbolicConstant specifying the velocity component in the connector's local</span>
+<span class="sd">            A Float or a SymbolicConstant specifying the velocity component in the connector&#39;s local</span>
 <span class="sd">            1-direction. Possible values for the SymbolicConstant are UNSET and SET. The default</span>
 <span class="sd">            value is UNSET.Note:Although *v1*, *v2*, *v3*, *vr1*, *vr2*, and *vr3* are optional</span>
 <span class="sd">            arguments, at least one of them must be specified.</span>
 <span class="sd">        v2</span>
-<span class="sd">            A Float or a SymbolicConstant specifying the velocity component in the connector's local</span>
+<span class="sd">            A Float or a SymbolicConstant specifying the velocity component in the connector&#39;s local</span>
 <span class="sd">            2-direction. Possible values for the SymbolicConstant are UNSET and SET. The default</span>
 <span class="sd">            value is UNSET.</span>
 <span class="sd">        v3</span>
-<span class="sd">            A Float or a SymbolicConstant specifying the velocity component in the connector's local</span>
+<span class="sd">            A Float or a SymbolicConstant specifying the velocity component in the connector&#39;s local</span>
 <span class="sd">            3-direction. Possible values for the SymbolicConstant are UNSET and SET. The default</span>
 <span class="sd">            value is UNSET.</span>
 <span class="sd">        vr1</span>
 <span class="sd">            A Float or a SymbolicConstant specifying the rotational velocity component in the</span>
-<span class="sd">            connector's local 4-direction. Possible values for the SymbolicConstant are UNSET and</span>
+<span class="sd">            connector&#39;s local 4-direction. Possible values for the SymbolicConstant are UNSET and</span>
 <span class="sd">            SET. The default value is UNSET.</span>
 <span class="sd">        vr2</span>
 <span class="sd">            A Float or a SymbolicConstant specifying the rotational velocity component in the</span>
-<span class="sd">            connector's local 5-direction. Possible values for the SymbolicConstant are UNSET and</span>
+<span class="sd">            connector&#39;s local 5-direction. Possible values for the SymbolicConstant are UNSET and</span>
 <span class="sd">            SET. The default value is UNSET.</span>
 <span class="sd">        vr3</span>
 <span class="sd">            A Float or a SymbolicConstant specifying the rotational velocity component in the</span>
-<span class="sd">            connector's local 6-direction. Possible values for the SymbolicConstant are UNSET and</span>
+<span class="sd">            connector&#39;s local 6-direction. Possible values for the SymbolicConstant are UNSET and</span>
 <span class="sd">            SET. The default value is UNSET.</span>
 <span class="sd">        amplitude</span>
 <span class="sd">            A String or the SymbolicConstant UNSET specifying the name of the amplitude reference.</span>
@@ -880,7 +881,7 @@
 <span class="sd">        -------</span>
 <span class="sd">        bc: ConnVelocityBC</span>
 <span class="sd">            A ConnVelocityBC object.</span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">boundaryConditions</span><span class="p">[</span><span class="n">name</span><span class="p">]</span> <span class="o">=</span> <span class="n">boundaryCondition</span> <span class="o">=</span> <span class="n">ConnVelocityBC</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">createStepName</span><span class="p">,</span> <span class="n">region</span><span class="p">,</span> <span class="n">fastenerName</span><span class="p">,</span>
                                                                            <span class="n">fastenerSetName</span><span class="p">,</span> <span class="n">v1</span><span class="p">,</span> <span class="n">v2</span><span class="p">,</span> <span class="n">v3</span><span class="p">,</span> <span class="n">vr1</span><span class="p">,</span> <span class="n">vr2</span><span class="p">,</span> <span class="n">vr3</span><span class="p">,</span>
                                                                            <span class="n">amplitude</span><span class="p">,</span> <span class="n">distributionType</span><span class="p">)</span>
@@ -890,9 +891,9 @@
 <div class="viewcode-block" id="BoundaryConditionModel.DisplacementBaseMotionBC"><a class="viewcode-back" href="../../../reference/mdb/model/bc.html#abaqus.BoundaryCondition.BoundaryConditionModel.BoundaryConditionModel.DisplacementBaseMotionBC">[docs]</a>    <span class="k">def</span> <span class="nf">DisplacementBaseMotionBC</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">createStepName</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">dof</span><span class="p">:</span> <span class="n">SymbolicConstant</span><span class="p">,</span>
                                  <span class="n">amplitudeScaleFactor</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span>
                                  <span class="n">centerOfRotation</span><span class="p">:</span> <span class="nb">tuple</span> <span class="o">=</span> <span class="p">(),</span> <span class="n">correlation</span><span class="p">:</span> <span class="n">CorrelationArray</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
-                                 <span class="n">secondaryBase</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">''</span><span class="p">,</span> <span class="n">useComplex</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="n">OFF</span><span class="p">,</span>
+                                 <span class="n">secondaryBase</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">useComplex</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="n">OFF</span><span class="p">,</span>
                                  <span class="n">amplitude</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="n">UNSET</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">DisplacementBaseMotionBC</span><span class="p">:</span>
-        <span class="sd">"""This method creates a DisplacementBaseMotionBC object.</span>
+        <span class="sd">&quot;&quot;&quot;This method creates a DisplacementBaseMotionBC object.</span>
 
 <span class="sd">        Notes</span>
 <span class="sd">        -----</span>
@@ -934,7 +935,7 @@
 <span class="sd">        -------</span>
 <span class="sd">        bc: DisplacementBaseMotionBC</span>
 <span class="sd">            A DisplacementBaseMotionBC object.</span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">boundaryConditions</span><span class="p">[</span><span class="n">name</span><span class="p">]</span> <span class="o">=</span> <span class="n">boundaryCondition</span> <span class="o">=</span> <span class="n">DisplacementBaseMotionBC</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">createStepName</span><span class="p">,</span> <span class="n">dof</span><span class="p">,</span>
                                                                                      <span class="n">amplitudeScaleFactor</span><span class="p">,</span>
                                                                                      <span class="n">centerOfRotation</span><span class="p">,</span> <span class="n">correlation</span><span class="p">,</span>
@@ -943,7 +944,7 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">steps</span><span class="p">[</span><span class="n">createStepName</span><span class="p">]</span><span class="o">.</span><span class="n">boundaryConditionStates</span><span class="p">[</span><span class="n">name</span><span class="p">]</span> <span class="o">=</span> <span class="n">DisplacementBaseMotionBCState</span><span class="p">()</span>
         <span class="k">return</span> <span class="n">boundaryCondition</span></div>
 
-<div class="viewcode-block" id="BoundaryConditionModel.DisplacementBC"><a class="viewcode-back" href="../../../reference/mdb/model/bc.html#abaqus.BoundaryCondition.BoundaryConditionModel.BoundaryConditionModel.DisplacementBC">[docs]</a>    <span class="k">def</span> <span class="nf">DisplacementBC</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">createStepName</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">region</span><span class="p">:</span> <span class="n">Region</span><span class="p">,</span> <span class="n">fieldName</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">''</span><span class="p">,</span>
+<div class="viewcode-block" id="BoundaryConditionModel.DisplacementBC"><a class="viewcode-back" href="../../../reference/mdb/model/bc.html#abaqus.BoundaryCondition.BoundaryConditionModel.BoundaryConditionModel.DisplacementBC">[docs]</a>    <span class="k">def</span> <span class="nf">DisplacementBC</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">createStepName</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">region</span><span class="p">:</span> <span class="n">Region</span><span class="p">,</span> <span class="n">fieldName</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span><span class="p">,</span>
                        <span class="n">u1</span><span class="p">:</span> <span class="n">typing</span><span class="o">.</span><span class="n">Union</span><span class="p">[</span><span class="n">SymbolicConstant</span><span class="p">,</span> <span class="nb">float</span><span class="p">]</span> <span class="o">=</span> <span class="n">UNSET</span><span class="p">,</span>
                        <span class="n">u2</span><span class="p">:</span> <span class="n">typing</span><span class="o">.</span><span class="n">Union</span><span class="p">[</span><span class="n">SymbolicConstant</span><span class="p">,</span> <span class="nb">float</span><span class="p">]</span> <span class="o">=</span> <span class="n">UNSET</span><span class="p">,</span>
                        <span class="n">u3</span><span class="p">:</span> <span class="n">typing</span><span class="o">.</span><span class="n">Union</span><span class="p">[</span><span class="n">SymbolicConstant</span><span class="p">,</span> <span class="nb">float</span><span class="p">]</span> <span class="o">=</span> <span class="n">UNSET</span><span class="p">,</span>
@@ -952,7 +953,7 @@
                        <span class="n">ur3</span><span class="p">:</span> <span class="n">typing</span><span class="o">.</span><span class="n">Union</span><span class="p">[</span><span class="n">SymbolicConstant</span><span class="p">,</span> <span class="nb">float</span><span class="p">]</span> <span class="o">=</span> <span class="n">UNSET</span><span class="p">,</span> <span class="n">fixed</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="n">OFF</span><span class="p">,</span>
                        <span class="n">amplitude</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="n">UNSET</span><span class="p">,</span> <span class="n">distributionType</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="n">UNIFORM</span><span class="p">,</span>
                        <span class="n">localCsys</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">buckleCase</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="n">NOT_APPLICABLE</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">DisplacementBC</span><span class="p">:</span>
-        <span class="sd">"""This method creates a DisplacementBC object.</span>
+        <span class="sd">&quot;&quot;&quot;This method creates a DisplacementBC object.</span>
 
 <span class="sd">        Notes</span>
 <span class="sd">        -----</span>
@@ -1014,7 +1015,7 @@
 <span class="sd">            is UNIFORM.</span>
 <span class="sd">        localCsys</span>
 <span class="sd">            None or a DatumCsys object specifying the local coordinate system of the boundary</span>
-<span class="sd">            condition's degrees of freedom. If *localCsys*=None, the degrees of freedom are defined</span>
+<span class="sd">            condition&#39;s degrees of freedom. If *localCsys*=None, the degrees of freedom are defined</span>
 <span class="sd">            in the global coordinate system. The default value is None.</span>
 <span class="sd">        buckleCase</span>
 <span class="sd">            A SymbolicConstant specifying how the boundary condition is defined in a BUCKLE</span>
@@ -1025,17 +1026,17 @@
 <span class="sd">        -------</span>
 <span class="sd">        bc: DisplacementBC</span>
 <span class="sd">            A DisplacementBC object</span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">boundaryConditions</span><span class="p">[</span><span class="n">name</span><span class="p">]</span> <span class="o">=</span> <span class="n">boundaryCondition</span> <span class="o">=</span> <span class="n">DisplacementBC</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">createStepName</span><span class="p">,</span> <span class="n">region</span><span class="p">,</span> <span class="n">fieldName</span><span class="p">,</span> <span class="n">u1</span><span class="p">,</span>
                                                                            <span class="n">u2</span><span class="p">,</span> <span class="n">u3</span><span class="p">,</span> <span class="n">ur1</span><span class="p">,</span> <span class="n">ur2</span><span class="p">,</span> <span class="n">ur3</span><span class="p">,</span> <span class="n">fixed</span><span class="p">,</span> <span class="n">amplitude</span><span class="p">,</span>
                                                                            <span class="n">distributionType</span><span class="p">,</span> <span class="n">localCsys</span><span class="p">,</span> <span class="n">buckleCase</span><span class="p">)</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">steps</span><span class="p">[</span><span class="n">createStepName</span><span class="p">]</span><span class="o">.</span><span class="n">boundaryConditionStates</span><span class="p">[</span><span class="n">name</span><span class="p">]</span> <span class="o">=</span> <span class="n">DisplacementBCState</span><span class="p">()</span>
         <span class="k">return</span> <span class="n">boundaryCondition</span></div>
 
-<div class="viewcode-block" id="BoundaryConditionModel.ElectricPotentialBC"><a class="viewcode-back" href="../../../reference/mdb/model/bc.html#abaqus.BoundaryCondition.BoundaryConditionModel.BoundaryConditionModel.ElectricPotentialBC">[docs]</a>    <span class="k">def</span> <span class="nf">ElectricPotentialBC</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">createStepName</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">region</span><span class="p">:</span> <span class="n">Region</span><span class="p">,</span> <span class="n">fieldName</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">''</span><span class="p">,</span>
+<div class="viewcode-block" id="BoundaryConditionModel.ElectricPotentialBC"><a class="viewcode-back" href="../../../reference/mdb/model/bc.html#abaqus.BoundaryCondition.BoundaryConditionModel.BoundaryConditionModel.ElectricPotentialBC">[docs]</a>    <span class="k">def</span> <span class="nf">ElectricPotentialBC</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">createStepName</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">region</span><span class="p">:</span> <span class="n">Region</span><span class="p">,</span> <span class="n">fieldName</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span><span class="p">,</span>
                             <span class="n">magnitude</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="n">distributionType</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="n">UNIFORM</span><span class="p">,</span>
                             <span class="n">amplitude</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="n">UNSET</span><span class="p">,</span> <span class="n">fixed</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="n">OFF</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">ElectricPotentialBC</span><span class="p">:</span>
-        <span class="sd">"""This method creates an ElectricPotentialBC object.</span>
+        <span class="sd">&quot;&quot;&quot;This method creates an ElectricPotentialBC object.</span>
 
 <span class="sd">        Notes</span>
 <span class="sd">        -----</span>
@@ -1076,7 +1077,7 @@
 <span class="sd">        -------</span>
 <span class="sd">        bc: ElectricPotentialBC</span>
 <span class="sd">            An ElectricPotentialBC object.</span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">boundaryConditions</span><span class="p">[</span><span class="n">name</span><span class="p">]</span> <span class="o">=</span> <span class="n">boundaryCondition</span> <span class="o">=</span> <span class="n">ElectricPotentialBC</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">createStepName</span><span class="p">,</span> <span class="n">region</span><span class="p">,</span> <span class="n">fieldName</span><span class="p">,</span>
                                                                                 <span class="n">magnitude</span><span class="p">,</span> <span class="n">distributionType</span><span class="p">,</span> <span class="n">amplitude</span><span class="p">,</span>
                                                                                 <span class="n">fixed</span><span class="p">)</span>
@@ -1085,7 +1086,7 @@
 
 <div class="viewcode-block" id="BoundaryConditionModel.EulerianBC"><a class="viewcode-back" href="../../../reference/mdb/model/bc.html#abaqus.BoundaryCondition.BoundaryConditionModel.BoundaryConditionModel.EulerianBC">[docs]</a>    <span class="k">def</span> <span class="nf">EulerianBC</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">createStepName</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">region</span><span class="p">:</span> <span class="n">Region</span><span class="p">,</span> <span class="n">definition</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="n">INFLOW</span><span class="p">,</span>
                    <span class="n">inflowType</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="n">FREE</span><span class="p">,</span> <span class="n">outflowType</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="n">ZERO_PRESSURE</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">EulerianBC</span><span class="p">:</span>
-        <span class="sd">"""This method creates a EulerianBC object.</span>
+        <span class="sd">&quot;&quot;&quot;This method creates a EulerianBC object.</span>
 
 <span class="sd">        Notes</span>
 <span class="sd">        -----</span>
@@ -1118,14 +1119,14 @@
 <span class="sd">        -------</span>
 <span class="sd">        bc: EulerianBC</span>
 <span class="sd">            An EulerianBC object.</span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">boundaryConditions</span><span class="p">[</span><span class="n">name</span><span class="p">]</span> <span class="o">=</span> <span class="n">boundaryCondition</span> <span class="o">=</span> <span class="n">EulerianBC</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">createStepName</span><span class="p">,</span> <span class="n">region</span><span class="p">,</span> <span class="n">definition</span><span class="p">,</span>
                                                                        <span class="n">inflowType</span><span class="p">,</span> <span class="n">outflowType</span><span class="p">)</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">steps</span><span class="p">[</span><span class="n">createStepName</span><span class="p">]</span><span class="o">.</span><span class="n">boundaryConditionStates</span><span class="p">[</span><span class="n">name</span><span class="p">]</span> <span class="o">=</span> <span class="n">EulerianBCState</span><span class="p">()</span>
         <span class="k">return</span> <span class="n">boundaryCondition</span></div>
 
 <div class="viewcode-block" id="BoundaryConditionModel.EulerianMotionBC"><a class="viewcode-back" href="../../../reference/mdb/model/bc.html#abaqus.BoundaryCondition.BoundaryConditionModel.BoundaryConditionModel.EulerianMotionBC">[docs]</a>    <span class="k">def</span> <span class="nf">EulerianMotionBC</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">createStepName</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">instanceName</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">followRegion</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="n">ON</span><span class="p">,</span>
-                         <span class="n">region</span><span class="p">:</span> <span class="n">Region</span> <span class="o">=</span> <span class="n">Region</span><span class="p">(),</span> <span class="n">materialName</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">''</span><span class="p">,</span>
+                         <span class="n">region</span><span class="p">:</span> <span class="n">Region</span> <span class="o">=</span> <span class="n">Region</span><span class="p">(),</span> <span class="n">materialName</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span><span class="p">,</span>
                          <span class="n">ctrPosition1</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="n">FREE</span><span class="p">,</span> <span class="n">posPosition1</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="n">FREE</span><span class="p">,</span>
                          <span class="n">negPosition1</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="n">FREE</span><span class="p">,</span> <span class="n">expansionRatio1</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
                          <span class="n">contractRatio1</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="n">ctrPosition2</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="n">FREE</span><span class="p">,</span>
@@ -1135,7 +1136,7 @@
                          <span class="n">negPosition3</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="n">FREE</span><span class="p">,</span> <span class="n">expansionRatio3</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
                          <span class="n">contractRatio3</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="n">allowContraction</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="n">ON</span><span class="p">,</span> <span class="n">aspectLimit</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mi">10</span><span class="p">,</span>
                          <span class="n">vmaxFactor</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span> <span class="n">volThreshold</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="n">bufferSize</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mi">2</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">EulerianMotionBC</span><span class="p">:</span>
-        <span class="sd">"""This method creates an EulerianMotionBC object.</span>
+        <span class="sd">&quot;&quot;&quot;This method creates an EulerianMotionBC object.</span>
 
 <span class="sd">        Notes</span>
 <span class="sd">        -----</span>
@@ -1235,7 +1236,7 @@
 <span class="sd">        -------</span>
 <span class="sd">        bc: EulerianMotionBC</span>
 <span class="sd">            An EulerianMotionBC object.</span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">boundaryConditions</span><span class="p">[</span><span class="n">name</span><span class="p">]</span> <span class="o">=</span> <span class="n">boundaryCondition</span> <span class="o">=</span> <span class="n">EulerianMotionBC</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">createStepName</span><span class="p">,</span> <span class="n">instanceName</span><span class="p">,</span>
                                                                              <span class="n">followRegion</span><span class="p">,</span> <span class="n">region</span><span class="p">,</span> <span class="n">materialName</span><span class="p">,</span>
                                                                              <span class="n">ctrPosition1</span><span class="p">,</span> <span class="n">posPosition1</span><span class="p">,</span> <span class="n">negPosition1</span><span class="p">,</span>
@@ -1251,7 +1252,7 @@
 
 <div class="viewcode-block" id="BoundaryConditionModel.FluidCavityPressureBC"><a class="viewcode-back" href="../../../reference/mdb/model/bc.html#abaqus.BoundaryCondition.BoundaryConditionModel.BoundaryConditionModel.FluidCavityPressureBC">[docs]</a>    <span class="k">def</span> <span class="nf">FluidCavityPressureBC</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">createStepName</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">fluidCavity</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">magnitude</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span>
                               <span class="n">amplitude</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="n">UNSET</span><span class="p">,</span> <span class="n">fixed</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="n">OFF</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">FluidCavityPressureBC</span><span class="p">:</span>
-        <span class="sd">"""This method creates a FluidCavityPressureBC object.</span>
+        <span class="sd">&quot;&quot;&quot;This method creates a FluidCavityPressureBC object.</span>
 
 <span class="sd">        Notes</span>
 <span class="sd">        -----</span>
@@ -1284,7 +1285,7 @@
 <span class="sd">        -------</span>
 <span class="sd">        bc: FluidCavityPressureBC</span>
 <span class="sd">            A FluidCavityPressureBC object.</span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">boundaryConditions</span><span class="p">[</span><span class="n">name</span><span class="p">]</span> <span class="o">=</span> <span class="n">boundaryCondition</span> <span class="o">=</span> <span class="n">FluidCavityPressureBC</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">createStepName</span><span class="p">,</span> <span class="n">fluidCavity</span><span class="p">,</span>
                                                                                   <span class="n">magnitude</span><span class="p">,</span> <span class="n">amplitude</span><span class="p">,</span> <span class="n">fixed</span><span class="p">)</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">steps</span><span class="p">[</span><span class="n">createStepName</span><span class="p">]</span><span class="o">.</span><span class="n">boundaryConditionStates</span><span class="p">[</span><span class="n">name</span><span class="p">]</span> <span class="o">=</span> <span class="n">FluidCavityPressureBCState</span><span class="p">()</span>
@@ -1295,7 +1296,7 @@
                                   <span class="n">component2</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="n">UNSET</span><span class="p">,</span> <span class="n">component3</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="n">UNSET</span><span class="p">,</span>
                                   <span class="n">amplitude</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="n">UNSET</span><span class="p">,</span> <span class="n">distributionType</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="n">UNIFORM</span><span class="p">,</span>
                                   <span class="n">localCsys</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="kc">None</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">MagneticVectorPotentialBC</span><span class="p">:</span>
-        <span class="sd">"""This method creates a MagneticVectorPotentialBC object.</span>
+        <span class="sd">&quot;&quot;&quot;This method creates a MagneticVectorPotentialBC object.</span>
 
 <span class="sd">        Notes</span>
 <span class="sd">        -----</span>
@@ -1335,24 +1336,24 @@
 <span class="sd">            Possible values are UNIFORM and USER_DEFINED. The default value is UNIFORM.</span>
 <span class="sd">        localCsys</span>
 <span class="sd">            None or a DatumCsys object specifying the local coordinate system of the boundary</span>
-<span class="sd">            condition's degrees of freedom. If *localCsys*=None, the degrees of freedom are defined</span>
+<span class="sd">            condition&#39;s degrees of freedom. If *localCsys*=None, the degrees of freedom are defined</span>
 <span class="sd">            in the global coordinate system. The default value is None.</span>
 
 <span class="sd">        Returns</span>
 <span class="sd">        -------</span>
 <span class="sd">        bc: MagneticVectorPotentialBC</span>
 <span class="sd">            A MagneticVectorPotentialBC object.</span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">boundaryConditions</span><span class="p">[</span><span class="n">name</span><span class="p">]</span> <span class="o">=</span> <span class="n">boundaryCondition</span> <span class="o">=</span> <span class="n">MagneticVectorPotentialBC</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">createStepName</span><span class="p">,</span> <span class="n">region</span><span class="p">,</span>
                                                                                       <span class="n">component1</span><span class="p">,</span> <span class="n">component2</span><span class="p">,</span>
                                                                                       <span class="n">component3</span><span class="p">,</span> <span class="n">amplitude</span><span class="p">,</span>
                                                                                       <span class="n">distributionType</span><span class="p">,</span> <span class="n">localCsys</span><span class="p">)</span>
         <span class="k">return</span> <span class="n">boundaryCondition</span></div>
 
-<div class="viewcode-block" id="BoundaryConditionModel.MaterialFlowBC"><a class="viewcode-back" href="../../../reference/mdb/model/bc.html#abaqus.BoundaryCondition.BoundaryConditionModel.BoundaryConditionModel.MaterialFlowBC">[docs]</a>    <span class="k">def</span> <span class="nf">MaterialFlowBC</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">createStepName</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">region</span><span class="p">:</span> <span class="n">Region</span><span class="p">,</span> <span class="n">fieldName</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">''</span><span class="p">,</span>
+<div class="viewcode-block" id="BoundaryConditionModel.MaterialFlowBC"><a class="viewcode-back" href="../../../reference/mdb/model/bc.html#abaqus.BoundaryCondition.BoundaryConditionModel.BoundaryConditionModel.MaterialFlowBC">[docs]</a>    <span class="k">def</span> <span class="nf">MaterialFlowBC</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">createStepName</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">region</span><span class="p">:</span> <span class="n">Region</span><span class="p">,</span> <span class="n">fieldName</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span><span class="p">,</span>
                        <span class="n">magnitude</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="n">distributionType</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="n">UNIFORM</span><span class="p">,</span>
                        <span class="n">amplitude</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="n">UNSET</span><span class="p">,</span> <span class="n">fixed</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="n">OFF</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">MaterialFlowBC</span><span class="p">:</span>
-        <span class="sd">"""This method creates a MaterialFlowBC object.</span>
+        <span class="sd">&quot;&quot;&quot;This method creates a MaterialFlowBC object.</span>
 
 <span class="sd">        Notes</span>
 <span class="sd">        -----</span>
@@ -1393,17 +1394,17 @@
 <span class="sd">        -------</span>
 <span class="sd">        bc: MaterialFlowBC</span>
 <span class="sd">            A MaterialFlowBC object.</span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">boundaryConditions</span><span class="p">[</span><span class="n">name</span><span class="p">]</span> <span class="o">=</span> <span class="n">boundaryCondition</span> <span class="o">=</span> <span class="n">MaterialFlowBC</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">createStepName</span><span class="p">,</span> <span class="n">region</span><span class="p">,</span> <span class="n">fieldName</span><span class="p">,</span>
                                                                            <span class="n">magnitude</span><span class="p">,</span> <span class="n">distributionType</span><span class="p">,</span> <span class="n">amplitude</span><span class="p">,</span>
                                                                            <span class="n">fixed</span><span class="p">)</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">steps</span><span class="p">[</span><span class="n">createStepName</span><span class="p">]</span><span class="o">.</span><span class="n">boundaryConditionStates</span><span class="p">[</span><span class="n">name</span><span class="p">]</span> <span class="o">=</span> <span class="n">MaterialFlowBCState</span><span class="p">()</span>
         <span class="k">return</span> <span class="n">boundaryCondition</span></div>
 
-<div class="viewcode-block" id="BoundaryConditionModel.PorePressureBC"><a class="viewcode-back" href="../../../reference/mdb/model/bc.html#abaqus.BoundaryCondition.BoundaryConditionModel.BoundaryConditionModel.PorePressureBC">[docs]</a>    <span class="k">def</span> <span class="nf">PorePressureBC</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">createStepName</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">region</span><span class="p">:</span> <span class="n">Region</span><span class="p">,</span> <span class="n">fieldName</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">''</span><span class="p">,</span>
+<div class="viewcode-block" id="BoundaryConditionModel.PorePressureBC"><a class="viewcode-back" href="../../../reference/mdb/model/bc.html#abaqus.BoundaryCondition.BoundaryConditionModel.BoundaryConditionModel.PorePressureBC">[docs]</a>    <span class="k">def</span> <span class="nf">PorePressureBC</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">createStepName</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">region</span><span class="p">:</span> <span class="n">Region</span><span class="p">,</span> <span class="n">fieldName</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span><span class="p">,</span>
                        <span class="n">magnitude</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="n">distributionType</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="n">UNIFORM</span><span class="p">,</span>
                        <span class="n">amplitude</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="n">UNSET</span><span class="p">,</span> <span class="n">fixed</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="n">OFF</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">PorePressureBC</span><span class="p">:</span>
-        <span class="sd">"""This method creates a PorePressureBC object.</span>
+        <span class="sd">&quot;&quot;&quot;This method creates a PorePressureBC object.</span>
 
 <span class="sd">        Notes</span>
 <span class="sd">        -----</span>
@@ -1444,7 +1445,7 @@
 <span class="sd">        -------</span>
 <span class="sd">        bc: PorePressureBC</span>
 <span class="sd">            A PorePressureBC object.</span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">boundaryConditions</span><span class="p">[</span><span class="n">name</span><span class="p">]</span> <span class="o">=</span> <span class="n">boundaryCondition</span> <span class="o">=</span> <span class="n">PorePressureBC</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">createStepName</span><span class="p">,</span> <span class="n">region</span><span class="p">,</span> <span class="n">fieldName</span><span class="p">,</span>
                                                                            <span class="n">magnitude</span><span class="p">,</span> <span class="n">distributionType</span><span class="p">,</span> <span class="n">amplitude</span><span class="p">,</span>
                                                                            <span class="n">fixed</span><span class="p">)</span>
@@ -1454,7 +1455,7 @@
 <div class="viewcode-block" id="BoundaryConditionModel.RetainedNodalDofsBC"><a class="viewcode-back" href="../../../reference/mdb/model/bc.html#abaqus.BoundaryCondition.BoundaryConditionModel.BoundaryConditionModel.RetainedNodalDofsBC">[docs]</a>    <span class="k">def</span> <span class="nf">RetainedNodalDofsBC</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">createStepName</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">region</span><span class="p">:</span> <span class="n">Region</span><span class="p">,</span> <span class="n">u1</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="n">OFF</span><span class="p">,</span> <span class="n">u2</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="n">OFF</span><span class="p">,</span>
                             <span class="n">u3</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="n">OFF</span><span class="p">,</span> <span class="n">ur1</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="n">OFF</span><span class="p">,</span> <span class="n">ur2</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="n">OFF</span><span class="p">,</span>
                             <span class="n">ur3</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="n">OFF</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">RetainedNodalDofsBC</span><span class="p">:</span>
-        <span class="sd">"""This method creates a RetainedNodalDofsBC object.</span>
+        <span class="sd">&quot;&quot;&quot;This method creates a RetainedNodalDofsBC object.</span>
 
 <span class="sd">        Notes</span>
 <span class="sd">        -----</span>
@@ -1498,13 +1499,13 @@
 <span class="sd">        -------</span>
 <span class="sd">        bc: RetainedNodalDofsBC</span>
 <span class="sd">            A RetainedNodalDofsBC object.</span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">boundaryConditions</span><span class="p">[</span><span class="n">name</span><span class="p">]</span> <span class="o">=</span> <span class="n">boundaryCondition</span> <span class="o">=</span> <span class="n">RetainedNodalDofsBC</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">createStepName</span><span class="p">,</span> <span class="n">region</span><span class="p">,</span> <span class="n">u1</span><span class="p">,</span> <span class="n">u2</span><span class="p">,</span>
                                                                                 <span class="n">u3</span><span class="p">,</span> <span class="n">ur1</span><span class="p">,</span> <span class="n">ur2</span><span class="p">,</span> <span class="n">ur3</span><span class="p">)</span>
         <span class="k">return</span> <span class="n">boundaryCondition</span></div>
 
 <div class="viewcode-block" id="BoundaryConditionModel.SecondaryBaseBC"><a class="viewcode-back" href="../../../reference/mdb/model/bc.html#abaqus.BoundaryCondition.BoundaryConditionModel.BoundaryConditionModel.SecondaryBaseBC">[docs]</a>    <span class="k">def</span> <span class="nf">SecondaryBaseBC</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">createStepName</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">regions</span><span class="p">:</span> <span class="n">RegionArray</span><span class="p">,</span> <span class="n">dofs</span><span class="p">:</span> <span class="nb">tuple</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">SecondaryBaseBC</span><span class="p">:</span>
-        <span class="sd">"""This method creates a SecondaryBaseBC object.</span>
+        <span class="sd">&quot;&quot;&quot;This method creates a SecondaryBaseBC object.</span>
 
 <span class="sd">        Notes</span>
 <span class="sd">        -----</span>
@@ -1530,17 +1531,17 @@
 <span class="sd">        -------</span>
 <span class="sd">        bc: SecondaryBaseBC</span>
 <span class="sd">            A SecondaryBaseBC object.</span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">boundaryConditions</span><span class="p">[</span><span class="n">name</span><span class="p">]</span> <span class="o">=</span> <span class="n">boundaryCondition</span> <span class="o">=</span> <span class="n">SecondaryBaseBC</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">createStepName</span><span class="p">,</span> <span class="n">regions</span><span class="p">,</span> <span class="n">dofs</span><span class="p">)</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">steps</span><span class="p">[</span><span class="n">createStepName</span><span class="p">]</span><span class="o">.</span><span class="n">boundaryConditionStates</span><span class="p">[</span><span class="n">name</span><span class="p">]</span> <span class="o">=</span> <span class="n">SecondaryBaseBCState</span><span class="p">()</span>
         <span class="k">return</span> <span class="n">boundaryCondition</span></div>
 
 <div class="viewcode-block" id="BoundaryConditionModel.SubmodelBC"><a class="viewcode-back" href="../../../reference/mdb/model/bc.html#abaqus.BoundaryCondition.BoundaryConditionModel.BoundaryConditionModel.SubmodelBC">[docs]</a>    <span class="k">def</span> <span class="nf">SubmodelBC</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">createStepName</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">region</span><span class="p">:</span> <span class="n">Region</span><span class="p">,</span> <span class="n">dof</span><span class="p">:</span> <span class="nb">tuple</span><span class="p">,</span> <span class="n">globalStep</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
-                   <span class="n">timeScale</span><span class="p">:</span> <span class="n">Boolean</span><span class="p">,</span> <span class="n">shellThickness</span><span class="p">:</span> <span class="nb">float</span><span class="p">,</span> <span class="n">globalDrivingRegion</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">''</span><span class="p">,</span>
+                   <span class="n">timeScale</span><span class="p">:</span> <span class="n">Boolean</span><span class="p">,</span> <span class="n">shellThickness</span><span class="p">:</span> <span class="nb">float</span><span class="p">,</span> <span class="n">globalDrivingRegion</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span><span class="p">,</span>
                    <span class="n">absoluteExteriorTolerance</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">exteriorTolerance</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span>
                    <span class="n">localCsys</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">globalIncrement</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="n">centerZoneSize</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
                    <span class="n">intersectionOnly</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="n">OFF</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">SubmodelBC</span><span class="p">:</span>
-        <span class="sd">"""This method creates a SubmodelBC object.</span>
+        <span class="sd">&quot;&quot;&quot;This method creates a SubmodelBC object.</span>
 
 <span class="sd">        Notes</span>
 <span class="sd">        -----</span>
@@ -1564,10 +1565,10 @@
 <span class="sd">        globalStep</span>
 <span class="sd">            A String specifying the step in the global model from which Abaqus reads the values of</span>
 <span class="sd">            the variables that will drive the submodel analysis. The String indicates the position</span>
-<span class="sd">            of the step in the sequence of analysis steps. For example, *globalStep*='1' indicates</span>
+<span class="sd">            of the step in the sequence of analysis steps. For example, *globalStep*=&#39;1&#39; indicates</span>
 <span class="sd">            the first step.</span>
 <span class="sd">        timeScale</span>
-<span class="sd">            A Boolean specifying whether to scale the time variable for the driven nodes' amplitude</span>
+<span class="sd">            A Boolean specifying whether to scale the time variable for the driven nodes&#39; amplitude</span>
 <span class="sd">            functions to match the submodel analysis step time. The default value is OFF.</span>
 <span class="sd">        shellThickness</span>
 <span class="sd">            A Float specifying the thickness of the shell in the global model. This argument is</span>
@@ -1586,7 +1587,7 @@
 <span class="sd">            global model. The default value is 0.05.</span>
 <span class="sd">        localCsys</span>
 <span class="sd">            None or a DatumCsys object specifying the local coordinate system of the boundary</span>
-<span class="sd">            condition's degrees of freedom. If *localCsys*=None, the degrees of freedom are defined</span>
+<span class="sd">            condition&#39;s degrees of freedom. If *localCsys*=None, the degrees of freedom are defined</span>
 <span class="sd">            in the global coordinate system. The default value is None.</span>
 <span class="sd">        globalIncrement</span>
 <span class="sd">            An Int specifying the increment number in the global model step from which the solution</span>
@@ -1605,7 +1606,7 @@
 <span class="sd">        -------</span>
 <span class="sd">        bc: SubmodelBC</span>
 <span class="sd">            A SubmodelBC object.</span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">boundaryConditions</span><span class="p">[</span><span class="n">name</span><span class="p">]</span> <span class="o">=</span> <span class="n">boundaryCondition</span> <span class="o">=</span> <span class="n">SubmodelBC</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">createStepName</span><span class="p">,</span> <span class="n">region</span><span class="p">,</span> <span class="n">dof</span><span class="p">,</span> <span class="n">globalStep</span><span class="p">,</span>
                                                                        <span class="n">timeScale</span><span class="p">,</span> <span class="n">shellThickness</span><span class="p">,</span> <span class="n">globalDrivingRegion</span><span class="p">,</span>
                                                                        <span class="n">absoluteExteriorTolerance</span><span class="p">,</span> <span class="n">exteriorTolerance</span><span class="p">,</span>
@@ -1614,10 +1615,10 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">steps</span><span class="p">[</span><span class="n">createStepName</span><span class="p">]</span><span class="o">.</span><span class="n">boundaryConditionStates</span><span class="p">[</span><span class="n">name</span><span class="p">]</span> <span class="o">=</span> <span class="n">SubmodelBCState</span><span class="p">()</span>
         <span class="k">return</span> <span class="n">boundaryCondition</span></div>
 
-<div class="viewcode-block" id="BoundaryConditionModel.TemperatureBC"><a class="viewcode-back" href="../../../reference/mdb/model/bc.html#abaqus.BoundaryCondition.BoundaryConditionModel.BoundaryConditionModel.TemperatureBC">[docs]</a>    <span class="k">def</span> <span class="nf">TemperatureBC</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">createStepName</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">region</span><span class="p">:</span> <span class="n">Region</span><span class="p">,</span> <span class="n">fieldName</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">''</span><span class="p">,</span>
+<div class="viewcode-block" id="BoundaryConditionModel.TemperatureBC"><a class="viewcode-back" href="../../../reference/mdb/model/bc.html#abaqus.BoundaryCondition.BoundaryConditionModel.BoundaryConditionModel.TemperatureBC">[docs]</a>    <span class="k">def</span> <span class="nf">TemperatureBC</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">createStepName</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">region</span><span class="p">:</span> <span class="n">Region</span><span class="p">,</span> <span class="n">fieldName</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span><span class="p">,</span>
                       <span class="n">magnitude</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="n">dof</span><span class="p">:</span> <span class="nb">tuple</span> <span class="o">=</span> <span class="p">(),</span> <span class="n">amplitude</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="n">UNSET</span><span class="p">,</span>
                       <span class="n">distributionType</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="n">UNIFORM</span><span class="p">,</span> <span class="n">fixed</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="n">OFF</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">TemperatureBC</span><span class="p">:</span>
-        <span class="sd">"""This method creates a TemperatureBC object.</span>
+        <span class="sd">&quot;&quot;&quot;This method creates a TemperatureBC object.</span>
 
 <span class="sd">        Notes</span>
 <span class="sd">        -----</span>
@@ -1660,7 +1661,7 @@
 <span class="sd">        -------</span>
 <span class="sd">        bc: TemperatureBC</span>
 <span class="sd">            A TemperatureBC object.</span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">boundaryConditions</span><span class="p">[</span><span class="n">name</span><span class="p">]</span> <span class="o">=</span> <span class="n">boundaryCondition</span> <span class="o">=</span> <span class="n">TemperatureBC</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">createStepName</span><span class="p">,</span> <span class="n">region</span><span class="p">,</span> <span class="n">fieldName</span><span class="p">,</span>
                                                                           <span class="n">magnitude</span><span class="p">,</span> <span class="n">dof</span><span class="p">,</span> <span class="n">amplitude</span><span class="p">,</span> <span class="n">distributionType</span><span class="p">,</span>
                                                                           <span class="n">fixed</span><span class="p">)</span>
@@ -1670,9 +1671,9 @@
 <div class="viewcode-block" id="BoundaryConditionModel.VelocityBaseMotionBC"><a class="viewcode-back" href="../../../reference/mdb/model/bc.html#abaqus.BoundaryCondition.BoundaryConditionModel.BoundaryConditionModel.VelocityBaseMotionBC">[docs]</a>    <span class="k">def</span> <span class="nf">VelocityBaseMotionBC</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">createStepName</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">dof</span><span class="p">:</span> <span class="n">SymbolicConstant</span><span class="p">,</span>
                              <span class="n">amplitudeScaleFactor</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span>
                              <span class="n">centerOfRotation</span><span class="p">:</span> <span class="nb">tuple</span> <span class="o">=</span> <span class="p">(),</span> <span class="n">correlation</span><span class="p">:</span> <span class="n">CorrelationArray</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
-                             <span class="n">secondaryBase</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">''</span><span class="p">,</span> <span class="n">useComplex</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="n">OFF</span><span class="p">,</span>
+                             <span class="n">secondaryBase</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">useComplex</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="n">OFF</span><span class="p">,</span>
                              <span class="n">amplitude</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="n">UNSET</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">VelocityBaseMotionBC</span><span class="p">:</span>
-        <span class="sd">"""This method creates a VelocityBaseMotionBC object.</span>
+        <span class="sd">&quot;&quot;&quot;This method creates a VelocityBaseMotionBC object.</span>
 
 <span class="sd">        Notes</span>
 <span class="sd">        -----</span>
@@ -1714,7 +1715,7 @@
 <span class="sd">        -------</span>
 <span class="sd">        bc: VelocityBaseMotionBC</span>
 <span class="sd">            A VelocityBaseMotionBC object.</span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">boundaryConditions</span><span class="p">[</span><span class="n">name</span><span class="p">]</span> <span class="o">=</span> <span class="n">boundaryCondition</span> <span class="o">=</span> <span class="n">VelocityBaseMotionBC</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">createStepName</span><span class="p">,</span> <span class="n">dof</span><span class="p">,</span>
                                                                                  <span class="n">amplitudeScaleFactor</span><span class="p">,</span> <span class="n">centerOfRotation</span><span class="p">,</span>
                                                                                  <span class="n">correlation</span><span class="p">,</span> <span class="n">secondaryBase</span><span class="p">,</span> <span class="n">useComplex</span><span class="p">,</span>
@@ -1722,7 +1723,7 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">steps</span><span class="p">[</span><span class="n">createStepName</span><span class="p">]</span><span class="o">.</span><span class="n">boundaryConditionStates</span><span class="p">[</span><span class="n">name</span><span class="p">]</span> <span class="o">=</span> <span class="n">VelocityBaseMotionBCState</span><span class="p">()</span>
         <span class="k">return</span> <span class="n">boundaryCondition</span></div>
 
-<div class="viewcode-block" id="BoundaryConditionModel.VelocityBC"><a class="viewcode-back" href="../../../reference/mdb/model/bc.html#abaqus.BoundaryCondition.BoundaryConditionModel.BoundaryConditionModel.VelocityBC">[docs]</a>    <span class="k">def</span> <span class="nf">VelocityBC</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">createStepName</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">region</span><span class="p">:</span> <span class="n">Region</span><span class="p">,</span> <span class="n">fieldName</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">''</span><span class="p">,</span>
+<div class="viewcode-block" id="BoundaryConditionModel.VelocityBC"><a class="viewcode-back" href="../../../reference/mdb/model/bc.html#abaqus.BoundaryCondition.BoundaryConditionModel.BoundaryConditionModel.VelocityBC">[docs]</a>    <span class="k">def</span> <span class="nf">VelocityBC</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">createStepName</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">region</span><span class="p">:</span> <span class="n">Region</span><span class="p">,</span> <span class="n">fieldName</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span><span class="p">,</span>
                    <span class="n">v1</span><span class="p">:</span> <span class="n">typing</span><span class="o">.</span><span class="n">Union</span><span class="p">[</span><span class="n">SymbolicConstant</span><span class="p">,</span> <span class="nb">float</span><span class="p">]</span> <span class="o">=</span> <span class="n">UNSET</span><span class="p">,</span>
                    <span class="n">v2</span><span class="p">:</span> <span class="n">typing</span><span class="o">.</span><span class="n">Union</span><span class="p">[</span><span class="n">SymbolicConstant</span><span class="p">,</span> <span class="nb">float</span><span class="p">]</span> <span class="o">=</span> <span class="n">UNSET</span><span class="p">,</span>
                    <span class="n">v3</span><span class="p">:</span> <span class="n">typing</span><span class="o">.</span><span class="n">Union</span><span class="p">[</span><span class="n">SymbolicConstant</span><span class="p">,</span> <span class="nb">float</span><span class="p">]</span> <span class="o">=</span> <span class="n">UNSET</span><span class="p">,</span>
@@ -1730,7 +1731,7 @@
                    <span class="n">vr2</span><span class="p">:</span> <span class="n">typing</span><span class="o">.</span><span class="n">Union</span><span class="p">[</span><span class="n">SymbolicConstant</span><span class="p">,</span> <span class="nb">float</span><span class="p">]</span> <span class="o">=</span> <span class="n">UNSET</span><span class="p">,</span>
                    <span class="n">vr3</span><span class="p">:</span> <span class="n">typing</span><span class="o">.</span><span class="n">Union</span><span class="p">[</span><span class="n">SymbolicConstant</span><span class="p">,</span> <span class="nb">float</span><span class="p">]</span> <span class="o">=</span> <span class="n">UNSET</span><span class="p">,</span> <span class="n">amplitude</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="n">UNSET</span><span class="p">,</span>
                    <span class="n">localCsys</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">distributionType</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="n">UNIFORM</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">VelocityBC</span><span class="p">:</span>
-        <span class="sd">"""This method creates a VelocityBC object.</span>
+        <span class="sd">&quot;&quot;&quot;This method creates a VelocityBC object.</span>
 
 <span class="sd">        Notes</span>
 <span class="sd">        -----</span>
@@ -1782,7 +1783,7 @@
 <span class="sd">            specified step.</span>
 <span class="sd">        localCsys</span>
 <span class="sd">            None or a DatumCsys object specifying the local coordinate system of the boundary</span>
-<span class="sd">            condition's degrees of freedom. If *localCsys*=None, the degrees of freedom are defined</span>
+<span class="sd">            condition&#39;s degrees of freedom. If *localCsys*=None, the degrees of freedom are defined</span>
 <span class="sd">            in the global coordinate system. The default value is None.</span>
 <span class="sd">        distributionType</span>
 <span class="sd">            A SymbolicConstant specifying how the boundary condition is distributed spatially.</span>
@@ -1792,7 +1793,7 @@
 <span class="sd">        -------</span>
 <span class="sd">        bc: VelocityBC</span>
 <span class="sd">            A VelocityBC object.</span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">boundaryConditions</span><span class="p">[</span><span class="n">name</span><span class="p">]</span> <span class="o">=</span> <span class="n">boundaryCondition</span> <span class="o">=</span> <span class="n">VelocityBC</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">createStepName</span><span class="p">,</span> <span class="n">region</span><span class="p">,</span> <span class="n">fieldName</span><span class="p">,</span> <span class="n">v1</span><span class="p">,</span> <span class="n">v2</span><span class="p">,</span>
                                                                        <span class="n">v3</span><span class="p">,</span> <span class="n">vr1</span><span class="p">,</span> <span class="n">vr2</span><span class="p">,</span> <span class="n">vr3</span><span class="p">,</span> <span class="n">amplitude</span><span class="p">,</span> <span class="n">localCsys</span><span class="p">,</span>
                                                                        <span class="n">distributionType</span><span class="p">)</span>

@@ -5,10 +5,10 @@
     <meta name="color-scheme" content="light dark"><link rel="index" title="Index" href="../../../genindex.html" /><link rel="search" title="Search" href="../../../search.html" />
         <link rel="canonical" href="https://pyabaqus.haiiliin.com/_modules/abaqus/Sketcher/ConstrainedSketch.html" />
 
-    <meta name="generator" content="sphinx-4.5.0, furo 2022.04.07"/>
-        <title>abaqus.Sketcher.ConstrainedSketch - pyabaqus 1.0.16 documentation</title>
+    <meta name="generator" content="sphinx-4.5.0, furo 2022.06.04.1"/>
+        <title>abaqus.Sketcher.ConstrainedSketch - pyabaqus 1.0.18 documentation</title>
       <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/styles/furo.css?digest=68f4518137b9aefe99b631505a2064c3c42c9852" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/styles/furo.css?digest=40978830699223671f4072448e654b5958f38b89" />
     <link rel="stylesheet" type="text/css" href="../../../_static/styles/furo-extensions.css?digest=30d1aed668e5c3a91c3e3bf6a60b675221979f0e" />
     
     
@@ -123,7 +123,7 @@
       </label>
     </div>
     <div class="header-center">
-      <a href="../../../index.html"><div class="brand">pyabaqus 1.0.16 documentation</div></a>
+      <a href="../../../index.html"><div class="brand">pyabaqus 1.0.18 documentation</div></a>
     </div>
     <div class="header-right">
       <div class="theme-toggle-container theme-toggle-header">
@@ -146,7 +146,7 @@
       <div class="sidebar-sticky"><a class="sidebar-brand" href="../../../index.html">
   
   
-  <span class="sidebar-brand-text">pyabaqus 1.0.16 documentation</span>
+  <span class="sidebar-brand-text">pyabaqus 1.0.18 documentation</span>
   
 </a><form class="sidebar-search-container" method="get" action="../../../search.html" role="search">
   <input class="sidebar-search" placeholder=Search name="q" aria-label="Search">
@@ -286,7 +286,8 @@
           </svg>
           <span>Back to top</span>
         </a>
-        <div class="content-icon-container"><div class="theme-toggle-container theme-toggle-content">
+        <div class="content-icon-container">
+          <div class="theme-toggle-container theme-toggle-content">
             <button class="theme-toggle">
               <div class="visually-hidden">Toggle Light / Dark / Auto color theme</div>
               <svg class="theme-icon-when-auto"><use href="#svg-sun-half"></use></svg>
@@ -320,7 +321,7 @@
 
     <span class="nd">@typing</span><span class="o">.</span><span class="n">overload</span>
     <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">sheetSize</span><span class="p">:</span> <span class="nb">float</span><span class="p">,</span> <span class="n">gridSpacing</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">transform</span><span class="p">:</span> <span class="nb">tuple</span> <span class="o">=</span> <span class="p">()):</span>
-        <span class="sd">"""This method creates a ConstrainedSketch object. If the sketch cannot be created, the</span>
+        <span class="sd">&quot;&quot;&quot;This method creates a ConstrainedSketch object. If the sketch cannot be created, the</span>
 <span class="sd">        method returns None.</span>
 
 <span class="sd">        Notes</span>
@@ -352,12 +353,12 @@
 <span class="sd">        -------</span>
 <span class="sd">        sketch: ConstrainedSketch</span>
 <span class="sd">            A ConstrainedSketch object</span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span>
 
     <span class="nd">@typing</span><span class="o">.</span><span class="n">overload</span>
-    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">objectToCopy</span><span class="p">:</span> <span class="s1">'ConstrainedSketch'</span><span class="p">):</span>
-        <span class="sd">"""This method copies one ConstrainedSketch object to a new ConstrainedSketch object. Note:</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">objectToCopy</span><span class="p">:</span> <span class="s1">&#39;ConstrainedSketch&#39;</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;This method copies one ConstrainedSketch object to a new ConstrainedSketch object. Note:</span>
 <span class="sd">        If the name of the sketch to be copied to is __edit__, Abaqus creates an exact copy that</span>
 <span class="sd">        contains both reference geometry and a non-identity transform matrix. Otherwise, the</span>
 <span class="sd">        Sketch copy constructor strips the reference geometry from the copied sketch and sets</span>
@@ -382,14 +383,14 @@
 <span class="sd">        -------</span>
 <span class="sd">        sketch: ConstrainedSketch</span>
 <span class="sd">            A ConstrainedSketch object</span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span>
 
     <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
         <span class="k">pass</span>
 
 <div class="viewcode-block" id="ConstrainedSketch.ConstrainedSketchFromGeometryFile"><a class="viewcode-back" href="../../../reference/mdb/model/sketcher.html#abaqus.Sketcher.ConstrainedSketch.ConstrainedSketch.ConstrainedSketchFromGeometryFile">[docs]</a>    <span class="k">def</span> <span class="nf">ConstrainedSketchFromGeometryFile</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">geometryFile</span><span class="p">:</span> <span class="n">AcisFile</span><span class="p">):</span>
-        <span class="sd">"""This method creates a ConstrainedSketch object and places it in the sketches repository.</span>
+        <span class="sd">&quot;&quot;&quot;This method creates a ConstrainedSketch object and places it in the sketches repository.</span>
 
 <span class="sd">        Notes</span>
 <span class="sd">        -----</span>
@@ -411,20 +412,20 @@
 <span class="sd">        -------</span>
 <span class="sd">        sketch: ConstrainedSketch</span>
 <span class="sd">            A ConstrainedSketch object</span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span></div>
 
 <div class="viewcode-block" id="ConstrainedSketch.print"><a class="viewcode-back" href="../../../reference/mdb/model/sketcher.html#abaqus.Sketcher.ConstrainedSketch.ConstrainedSketch.print">[docs]</a>    <span class="k">def</span> <span class="nf">print</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="sd">"""This method prints the following statistics about a sketch:</span>
+        <span class="sd">&quot;&quot;&quot;This method prints the following statistics about a sketch:</span>
 <span class="sd">            - The sketch Id (a positive integer).</span>
 <span class="sd">            - The number of geometry curves (the number of ConstrainedSketchGeometry objects).</span>
 <span class="sd">            - The number of dimensions (the number of ConstrainedSketchDimension objects).</span>
 <span class="sd">            - The number of vertices (the number of ConstrainedSketchVertex objects).</span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span></div>
 
 <div class="viewcode-block" id="ConstrainedSketch.assignCenterline"><a class="viewcode-back" href="../../../reference/mdb/model/sketcher.html#abaqus.Sketcher.ConstrainedSketch.ConstrainedSketch.assignCenterline">[docs]</a>    <span class="k">def</span> <span class="nf">assignCenterline</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">line</span><span class="p">:</span> <span class="n">ConstrainedSketchGeometry</span><span class="p">):</span>
-        <span class="sd">"""This method indicates the construction line that will be used as a centerline for</span>
+        <span class="sd">&quot;&quot;&quot;This method indicates the construction line that will be used as a centerline for</span>
 <span class="sd">        revolved features.</span>
 <span class="sd">        </span>
 <span class="sd">        Parameters</span>
@@ -432,11 +433,11 @@
 <span class="sd">        line</span>
 <span class="sd">            A ConstrainedSketchGeometry object specifying a construction line that indicates the</span>
 <span class="sd">            centerline of revolved features.</span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span></div>
 
 <div class="viewcode-block" id="ConstrainedSketch.assignCenterOfTwist"><a class="viewcode-back" href="../../../reference/mdb/model/sketcher.html#abaqus.Sketcher.ConstrainedSketch.ConstrainedSketch.assignCenterOfTwist">[docs]</a>    <span class="k">def</span> <span class="nf">assignCenterOfTwist</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">point</span><span class="p">:</span> <span class="n">ConstrainedSketchVertex</span><span class="p">):</span>
-        <span class="sd">"""This method indicates the isolated point that will be used as the center of twist when</span>
+        <span class="sd">&quot;&quot;&quot;This method indicates the isolated point that will be used as the center of twist when</span>
 <span class="sd">        an extruded feature is created with twist.</span>
 <span class="sd">        </span>
 <span class="sd">        Parameters</span>
@@ -444,22 +445,22 @@
 <span class="sd">        point</span>
 <span class="sd">            A ConstrainedSketchVertex object specifying an isolated point that indicates the center</span>
 <span class="sd">            of twist for extruded features that use a twist angle.</span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span></div>
 
 <div class="viewcode-block" id="ConstrainedSketch.autoDimension"><a class="viewcode-back" href="../../../reference/mdb/model/sketcher.html#abaqus.Sketcher.ConstrainedSketch.ConstrainedSketch.autoDimension">[docs]</a>    <span class="k">def</span> <span class="nf">autoDimension</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">objectList</span><span class="p">:</span> <span class="nb">tuple</span><span class="p">):</span>
-        <span class="sd">"""This method applies dimensions to the selected ConstrainedSketchGeometry objects in an</span>
+        <span class="sd">&quot;&quot;&quot;This method applies dimensions to the selected ConstrainedSketchGeometry objects in an</span>
 <span class="sd">        effort to make the ConstrainedSketch well defined.</span>
 <span class="sd">        </span>
 <span class="sd">        Parameters</span>
 <span class="sd">        ----------</span>
 <span class="sd">        objectList</span>
 <span class="sd">            A sequence specifying the ConstrainedSketchGeometry objects to dimension.</span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span></div>
 
 <div class="viewcode-block" id="ConstrainedSketch.autoTrimCurve"><a class="viewcode-back" href="../../../reference/mdb/model/sketcher.html#abaqus.Sketcher.ConstrainedSketch.ConstrainedSketch.autoTrimCurve">[docs]</a>    <span class="k">def</span> <span class="nf">autoTrimCurve</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">curve1</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">point1</span><span class="p">:</span> <span class="nb">tuple</span><span class="p">[</span><span class="nb">float</span><span class="p">],</span> <span class="n">parameter1</span><span class="p">:</span> <span class="nb">float</span><span class="p">):</span>
-        <span class="sd">"""This method automatically trims a selected ConstrainedSketchGeometry object at the</span>
+        <span class="sd">&quot;&quot;&quot;This method automatically trims a selected ConstrainedSketchGeometry object at the</span>
 <span class="sd">        specified location. If the object does not intersect other ConstrainedSketchGeometry</span>
 <span class="sd">        objects, the entire selected object will be deleted.</span>
 <span class="sd">        </span>
@@ -473,12 +474,12 @@
 <span class="sd">        parameter1</span>
 <span class="sd">            A Float specifying the parameter location on the ConstrainedSketchGeometry where the</span>
 <span class="sd">            trimming should be applied. *point1* and *parameter1* are mutually exclusive.</span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span></div>
 
 <div class="viewcode-block" id="ConstrainedSketch.breakCurve"><a class="viewcode-back" href="../../../reference/mdb/model/sketcher.html#abaqus.Sketcher.ConstrainedSketch.ConstrainedSketch.breakCurve">[docs]</a>    <span class="k">def</span> <span class="nf">breakCurve</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">curve1</span><span class="p">:</span> <span class="n">ConstrainedSketchGeometry</span><span class="p">,</span> <span class="n">point1</span><span class="p">:</span> <span class="nb">tuple</span><span class="p">[</span><span class="nb">float</span><span class="p">],</span>
                    <span class="n">curve2</span><span class="p">:</span> <span class="n">ConstrainedSketchGeometry</span><span class="p">,</span> <span class="n">point2</span><span class="p">:</span> <span class="nb">tuple</span><span class="p">[</span><span class="nb">float</span><span class="p">]):</span>
-        <span class="sd">"""This method breaks a specified ConstrainedSketchGeometry object (*curve1*) using another</span>
+        <span class="sd">&quot;&quot;&quot;This method breaks a specified ConstrainedSketchGeometry object (*curve1*) using another</span>
 <span class="sd">        specified ConstrainedSketchGeometry object (*curve2*). If the selected</span>
 <span class="sd">        ConstrainedSketchGeometry objects intersect, then only *curve1* will be broken; *curve2*</span>
 <span class="sd">        is not affected by the operation. The location for the break is determined by the</span>
@@ -496,11 +497,11 @@
 <span class="sd">        point2</span>
 <span class="sd">            A pair of Floats specifying the location on *curve2* near where *curve1* should be</span>
 <span class="sd">            broken.</span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span></div>
 
 <div class="viewcode-block" id="ConstrainedSketch.copyMirror"><a class="viewcode-back" href="../../../reference/mdb/model/sketcher.html#abaqus.Sketcher.ConstrainedSketch.ConstrainedSketch.copyMirror">[docs]</a>    <span class="k">def</span> <span class="nf">copyMirror</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">mirrorLine</span><span class="p">:</span> <span class="n">ConstrainedSketchGeometry</span><span class="p">,</span> <span class="n">objectList</span><span class="p">:</span> <span class="nb">tuple</span><span class="p">[</span><span class="n">ConstrainedSketchGeometry</span><span class="p">]):</span>
-        <span class="sd">"""This method creates copies of the given ConstrainedSketchGeometry objects, mirrors them</span>
+        <span class="sd">&quot;&quot;&quot;This method creates copies of the given ConstrainedSketchGeometry objects, mirrors them</span>
 <span class="sd">        about a selected line, and inserts them into the appropriate repositories of the</span>
 <span class="sd">        ConstrainedSketch object.</span>
 <span class="sd">        </span>
@@ -512,11 +513,11 @@
 <span class="sd">        objectList</span>
 <span class="sd">            A sequence of ConstrainedSketchGeometry objects specifying the sketch to be copied and</span>
 <span class="sd">            mirrored.</span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span></div>
 
 <div class="viewcode-block" id="ConstrainedSketch.copyMove"><a class="viewcode-back" href="../../../reference/mdb/model/sketcher.html#abaqus.Sketcher.ConstrainedSketch.ConstrainedSketch.copyMove">[docs]</a>    <span class="k">def</span> <span class="nf">copyMove</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">vector</span><span class="p">:</span> <span class="nb">tuple</span><span class="p">,</span> <span class="n">objectList</span><span class="p">:</span> <span class="nb">tuple</span><span class="p">[</span><span class="n">ConstrainedSketchGeometry</span><span class="p">]):</span>
-        <span class="sd">"""This method creates copies of the given ConstrainedSketchGeometry objects, moves them</span>
+        <span class="sd">&quot;&quot;&quot;This method creates copies of the given ConstrainedSketchGeometry objects, moves them</span>
 <span class="sd">        from their original position, and inserts them into the appropriate repositories of the</span>
 <span class="sd">        ConstrainedSketch object.</span>
 <span class="sd">        </span>
@@ -526,11 +527,11 @@
 <span class="sd">            A sequence of two Floats specifying the translation vector.</span>
 <span class="sd">        objectList</span>
 <span class="sd">            A sequence of ConstrainedSketchGeometry objects to be copied and moved.</span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span></div>
 
 <div class="viewcode-block" id="ConstrainedSketch.copyRotate"><a class="viewcode-back" href="../../../reference/mdb/model/sketcher.html#abaqus.Sketcher.ConstrainedSketch.ConstrainedSketch.copyRotate">[docs]</a>    <span class="k">def</span> <span class="nf">copyRotate</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">centerPoint</span><span class="p">:</span> <span class="nb">tuple</span><span class="p">[</span><span class="nb">float</span><span class="p">],</span> <span class="n">angle</span><span class="p">:</span> <span class="nb">float</span><span class="p">,</span> <span class="n">objectList</span><span class="p">:</span> <span class="nb">tuple</span><span class="p">[</span><span class="n">ConstrainedSketchGeometry</span><span class="p">]):</span>
-        <span class="sd">"""This method creates copies of the given ConstrainedSketchGeometry objects, rotates them,</span>
+        <span class="sd">&quot;&quot;&quot;This method creates copies of the given ConstrainedSketchGeometry objects, rotates them,</span>
 <span class="sd">        and inserts them into the appropriate repositories of the ConstrainedSketch object.</span>
 <span class="sd">        </span>
 <span class="sd">        Parameters</span>
@@ -541,12 +542,12 @@
 <span class="sd">            A Float specifying the angle of rotation in degrees.</span>
 <span class="sd">        objectList</span>
 <span class="sd">            A sequence of ConstrainedSketchGeometry objects to be copied and moved.</span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span></div>
 
 <div class="viewcode-block" id="ConstrainedSketch.copyScale"><a class="viewcode-back" href="../../../reference/mdb/model/sketcher.html#abaqus.Sketcher.ConstrainedSketch.ConstrainedSketch.copyScale">[docs]</a>    <span class="k">def</span> <span class="nf">copyScale</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">scaleValue</span><span class="p">:</span> <span class="nb">float</span><span class="p">,</span> <span class="n">scaleCenter</span><span class="p">:</span> <span class="nb">tuple</span><span class="p">[</span><span class="nb">float</span><span class="p">],</span>
                   <span class="n">objectList</span><span class="p">:</span> <span class="nb">tuple</span><span class="p">[</span><span class="n">ConstrainedSketchGeometry</span><span class="p">]):</span>
-        <span class="sd">"""This method creates copies of the given ConstrainedSketchGeometry objects, scales them</span>
+        <span class="sd">&quot;&quot;&quot;This method creates copies of the given ConstrainedSketchGeometry objects, scales them</span>
 <span class="sd">        by the specified value about a selected point, and inserts them into the appropriate</span>
 <span class="sd">        repositories of the ConstrainedSketch object.</span>
 <span class="sd">        </span>
@@ -558,11 +559,11 @@
 <span class="sd">            A pair of Floats specifying the center of scaling.</span>
 <span class="sd">        objectList</span>
 <span class="sd">            A sequence of ConstrainedSketchGeometry objects to be copied and scaled.</span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span></div>
 
 <div class="viewcode-block" id="ConstrainedSketch.delete"><a class="viewcode-back" href="../../../reference/mdb/model/sketcher.html#abaqus.Sketcher.ConstrainedSketch.ConstrainedSketch.delete">[docs]</a>    <span class="k">def</span> <span class="nf">delete</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">objectList</span><span class="p">:</span> <span class="nb">tuple</span><span class="p">):</span>
-        <span class="sd">"""This method deletes the given ConstrainedSketchGeometry, ConstrainedSketchDimension, or</span>
+        <span class="sd">&quot;&quot;&quot;This method deletes the given ConstrainedSketchGeometry, ConstrainedSketchDimension, or</span>
 <span class="sd">        ConstrainedSketchConstraint objects.</span>
 <span class="sd">        </span>
 <span class="sd">        Parameters</span>
@@ -570,21 +571,21 @@
 <span class="sd">        objectList</span>
 <span class="sd">            A sequence of ConstrainedSketchGeometry, ConstrainedSketchDimension, or</span>
 <span class="sd">            ConstrainedSketchConstraint objects to be deleted.</span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span></div>
 
 <div class="viewcode-block" id="ConstrainedSketch.deleteParameter"><a class="viewcode-back" href="../../../reference/mdb/model/sketcher.html#abaqus.Sketcher.ConstrainedSketch.ConstrainedSketch.deleteParameter">[docs]</a>    <span class="k">def</span> <span class="nf">deleteParameter</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">:</span> <span class="nb">str</span><span class="p">):</span>
-        <span class="sd">"""The command deletes a specified parameter.</span>
+        <span class="sd">&quot;&quot;&quot;The command deletes a specified parameter.</span>
 <span class="sd">        </span>
 <span class="sd">        Parameters</span>
 <span class="sd">        ----------</span>
 <span class="sd">        name</span>
 <span class="sd">            A String specifying the name of the parameter to delete.</span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span></div>
 
 <div class="viewcode-block" id="ConstrainedSketch.dragEntity"><a class="viewcode-back" href="../../../reference/mdb/model/sketcher.html#abaqus.Sketcher.ConstrainedSketch.ConstrainedSketch.dragEntity">[docs]</a>    <span class="k">def</span> <span class="nf">dragEntity</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">entity</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">points</span><span class="p">:</span> <span class="nb">tuple</span><span class="p">):</span>
-        <span class="sd">"""This method drags a specified ConstrainedSketchGeometry or ConstrainedSketchVertex</span>
+        <span class="sd">&quot;&quot;&quot;This method drags a specified ConstrainedSketchGeometry or ConstrainedSketchVertex</span>
 <span class="sd">        object to a specific location.</span>
 <span class="sd">        </span>
 <span class="sd">        Parameters</span>
@@ -596,14 +597,14 @@
 <span class="sd">            A sequence of sequences of three Floats specifying a sequence of points along which to</span>
 <span class="sd">            drag the entity. The order of points in the sequence defines a path that determines the</span>
 <span class="sd">            solution.</span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span></div>
 
 <div class="viewcode-block" id="ConstrainedSketch.linearPattern"><a class="viewcode-back" href="../../../reference/mdb/model/sketcher.html#abaqus.Sketcher.ConstrainedSketch.ConstrainedSketch.linearPattern">[docs]</a>    <span class="k">def</span> <span class="nf">linearPattern</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">number1</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">spacing1</span><span class="p">:</span> <span class="nb">float</span><span class="p">,</span> <span class="n">angle1</span><span class="p">:</span> <span class="nb">float</span><span class="p">,</span>
                       <span class="n">vertexList</span><span class="p">:</span> <span class="nb">tuple</span><span class="p">[</span><span class="n">ConstrainedSketchVertex</span><span class="p">]</span> <span class="o">=</span> <span class="p">(),</span>
                       <span class="n">geomList</span><span class="p">:</span> <span class="nb">tuple</span><span class="p">[</span><span class="n">ConstrainedSketchGeometry</span><span class="p">]</span> <span class="o">=</span> <span class="p">(),</span> <span class="n">number2</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span>
                       <span class="n">spacing2</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">angle2</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="kc">None</span><span class="p">):</span>
-        <span class="sd">"""This method copies ConstrainedSketchGeometry objects in a linear pattern along one or</span>
+        <span class="sd">&quot;&quot;&quot;This method copies ConstrainedSketchGeometry objects in a linear pattern along one or</span>
 <span class="sd">        two directions. This method also copies any associated dimension or constraint objects</span>
 <span class="sd">        that exist between the given objects.</span>
 <span class="sd">        </span>
@@ -645,11 +646,11 @@
 <span class="sd">            - AbaqusException</span>
 <span class="sd">              Number must be greater than 1 for at least one direction</span>
 <span class="sd">            !img</span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span></div>
 
 <div class="viewcode-block" id="ConstrainedSketch.mergeVertices"><a class="viewcode-back" href="../../../reference/mdb/model/sketcher.html#abaqus.Sketcher.ConstrainedSketch.ConstrainedSketch.mergeVertices">[docs]</a>    <span class="k">def</span> <span class="nf">mergeVertices</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">value</span><span class="p">:</span> <span class="nb">float</span><span class="p">,</span> <span class="n">vertexList</span><span class="p">:</span> <span class="nb">tuple</span><span class="p">[</span><span class="n">ConstrainedSketchVertex</span><span class="p">]):</span>
-        <span class="sd">"""This method merges the ConstrainedSketchVertex objects that lie within the specified</span>
+        <span class="sd">&quot;&quot;&quot;This method merges the ConstrainedSketchVertex objects that lie within the specified</span>
 <span class="sd">        distance of each other. If only one ConstrainedSketchVertex object is selected, it will</span>
 <span class="sd">        merge all ConstrainedSketchVertex objects that lie within the specified distance of that</span>
 <span class="sd">        vertex. If more than one vertex is selected, the search will be restricted to only the</span>
@@ -661,11 +662,11 @@
 <span class="sd">            A Float specifying the search radius.</span>
 <span class="sd">        vertexList</span>
 <span class="sd">            A sequence of ConstrainedSketchVertex objects to be merged.</span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span></div>
 
 <div class="viewcode-block" id="ConstrainedSketch.move"><a class="viewcode-back" href="../../../reference/mdb/model/sketcher.html#abaqus.Sketcher.ConstrainedSketch.ConstrainedSketch.move">[docs]</a>    <span class="k">def</span> <span class="nf">move</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">vector</span><span class="p">:</span> <span class="nb">tuple</span><span class="p">,</span> <span class="n">objectList</span><span class="p">:</span> <span class="nb">tuple</span><span class="p">[</span><span class="n">ConstrainedSketchGeometry</span><span class="p">]):</span>
-        <span class="sd">"""This method translates the given ConstrainedSketchGeometry objects by the given vector.</span>
+        <span class="sd">&quot;&quot;&quot;This method translates the given ConstrainedSketchGeometry objects by the given vector.</span>
 <span class="sd">        </span>
 <span class="sd">        Parameters</span>
 <span class="sd">        ----------</span>
@@ -673,14 +674,14 @@
 <span class="sd">            A sequence of two Floats specifying the translation vector.</span>
 <span class="sd">        objectList</span>
 <span class="sd">            A sequence of ConstrainedSketchGeometry objects specifying the objects to be translated.</span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span></div>
 
 <div class="viewcode-block" id="ConstrainedSketch.offset"><a class="viewcode-back" href="../../../reference/mdb/model/sketcher.html#abaqus.Sketcher.ConstrainedSketch.ConstrainedSketch.offset">[docs]</a>    <span class="k">def</span> <span class="nf">offset</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">distance</span><span class="p">:</span> <span class="nb">float</span><span class="p">,</span> <span class="n">objectList</span><span class="p">:</span> <span class="nb">tuple</span><span class="p">[</span><span class="n">ConstrainedSketchGeometry</span><span class="p">],</span> <span class="n">side</span><span class="p">:</span> <span class="n">SymbolicConstant</span><span class="p">,</span>
                <span class="n">filletCorners</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="n">OFF</span><span class="p">):</span>
-        <span class="sd">"""This method creates copies of the selected ConstrainedSketchGeometry objects, offsets</span>
+        <span class="sd">&quot;&quot;&quot;This method creates copies of the selected ConstrainedSketchGeometry objects, offsets</span>
 <span class="sd">        them by the specified distance in the specified direction, and inserts them into the</span>
-<span class="sd">        ConstrainedSketch object's appropriate repositories. If connected objects are selected,</span>
+<span class="sd">        ConstrainedSketch object&#39;s appropriate repositories. If connected objects are selected,</span>
 <span class="sd">        trim or extend is carried out to complete the offset.</span>
 <span class="sd">        </span>
 <span class="sd">        Parameters</span>
@@ -694,13 +695,13 @@
 <span class="sd">            LEFT and RIGHT.</span>
 <span class="sd">        filletCorners</span>
 <span class="sd">            A Boolean specifying whether the corners need to be rounded instead of being extended.</span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span></div>
 
 <div class="viewcode-block" id="ConstrainedSketch.radialPattern"><a class="viewcode-back" href="../../../reference/mdb/model/sketcher.html#abaqus.Sketcher.ConstrainedSketch.ConstrainedSketch.radialPattern">[docs]</a>    <span class="k">def</span> <span class="nf">radialPattern</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">number</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">totalAngle</span><span class="p">:</span> <span class="nb">float</span><span class="p">,</span> <span class="n">centerPoint</span><span class="p">:</span> <span class="nb">tuple</span><span class="p">[</span><span class="nb">float</span><span class="p">],</span>
                       <span class="n">vertexList</span><span class="p">:</span> <span class="nb">tuple</span><span class="p">[</span><span class="n">ConstrainedSketchVertex</span><span class="p">]</span> <span class="o">=</span> <span class="p">(),</span>
                       <span class="n">geomList</span><span class="p">:</span> <span class="nb">tuple</span><span class="p">[</span><span class="n">ConstrainedSketchGeometry</span><span class="p">]</span> <span class="o">=</span> <span class="p">()):</span>
-        <span class="sd">"""This method copies ConstrainedSketchGeometry objects in a radial pattern about a</span>
+        <span class="sd">&quot;&quot;&quot;This method copies ConstrainedSketchGeometry objects in a radial pattern about a</span>
 <span class="sd">        specified center point.</span>
 <span class="sd">        </span>
 <span class="sd">        Parameters</span>
@@ -720,16 +721,16 @@
 <span class="sd">            A sequence of ConstrainedSketchVertex objects to copy.</span>
 <span class="sd">        geomList</span>
 <span class="sd">            A sequence of ConstrainedSketchGeometry objects to copy.</span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span></div>
 
 <div class="viewcode-block" id="ConstrainedSketch.resetView"><a class="viewcode-back" href="../../../reference/mdb/model/sketcher.html#abaqus.Sketcher.ConstrainedSketch.ConstrainedSketch.resetView">[docs]</a>    <span class="k">def</span> <span class="nf">resetView</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="sd">"""This method resets the view to be perpendicular to the sketching plane.</span>
-<span class="sd">        """</span>
+        <span class="sd">&quot;&quot;&quot;This method resets the view to be perpendicular to the sketching plane.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span></div>
 
 <div class="viewcode-block" id="ConstrainedSketch.rectangle"><a class="viewcode-back" href="../../../reference/mdb/model/sketcher.html#abaqus.Sketcher.ConstrainedSketch.ConstrainedSketch.rectangle">[docs]</a>    <span class="k">def</span> <span class="nf">rectangle</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">point1</span><span class="p">:</span> <span class="nb">tuple</span><span class="p">[</span><span class="nb">float</span><span class="p">],</span> <span class="n">point2</span><span class="p">:</span> <span class="nb">tuple</span><span class="p">[</span><span class="nb">float</span><span class="p">]):</span>
-        <span class="sd">"""This method creates four lines that form a rectangle with diagonal corners defined by</span>
+        <span class="sd">&quot;&quot;&quot;This method creates four lines that form a rectangle with diagonal corners defined by</span>
 <span class="sd">        the given points and inserts them into the geometry repository of the ConstrainedSketch</span>
 <span class="sd">        object.</span>
 <span class="sd">        </span>
@@ -744,11 +745,11 @@
 <span class="sd">        -------</span>
 <span class="sd">        success: int</span>
 <span class="sd">            An Int specifying the success or failure of the method. A value of 0 indicates failure</span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span></div>
 
 <div class="viewcode-block" id="ConstrainedSketch.removeGapsAndOverlaps"><a class="viewcode-back" href="../../../reference/mdb/model/sketcher.html#abaqus.Sketcher.ConstrainedSketch.ConstrainedSketch.removeGapsAndOverlaps">[docs]</a>    <span class="k">def</span> <span class="nf">removeGapsAndOverlaps</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">tolerance</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">geomList</span><span class="p">:</span> <span class="nb">tuple</span><span class="p">[</span><span class="n">ConstrainedSketchGeometry</span><span class="p">]):</span>
-        <span class="sd">"""This method removes gaps and overlaps between sketch geometries specified by the user.</span>
+        <span class="sd">&quot;&quot;&quot;This method removes gaps and overlaps between sketch geometries specified by the user.</span>
 <span class="sd">        This method is particularly useful when cleaning up imported sketches</span>
 <span class="sd">        </span>
 <span class="sd">        Parameters</span>
@@ -761,11 +762,11 @@
 <span class="sd">        geomList</span>
 <span class="sd">            A sequence of ConstrainedSketchGeometry objects where the gaps and overlaps are to be</span>
 <span class="sd">            removed.</span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span></div>
 
-<div class="viewcode-block" id="ConstrainedSketch.repairShortEdges"><a class="viewcode-back" href="../../../reference/mdb/model/sketcher.html#abaqus.Sketcher.ConstrainedSketch.ConstrainedSketch.repairShortEdges">[docs]</a>    <span class="k">def</span> <span class="nf">repairShortEdges</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">geomList</span><span class="p">:</span> <span class="nb">tuple</span><span class="p">[</span><span class="n">ConstrainedSketchGeometry</span><span class="p">],</span> <span class="n">tolerance</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">''</span><span class="p">):</span>
-        <span class="sd">"""This method deletes the short edges specified, optionally selecting only those short</span>
+<div class="viewcode-block" id="ConstrainedSketch.repairShortEdges"><a class="viewcode-back" href="../../../reference/mdb/model/sketcher.html#abaqus.Sketcher.ConstrainedSketch.ConstrainedSketch.repairShortEdges">[docs]</a>    <span class="k">def</span> <span class="nf">repairShortEdges</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">geomList</span><span class="p">:</span> <span class="nb">tuple</span><span class="p">[</span><span class="n">ConstrainedSketchGeometry</span><span class="p">],</span> <span class="n">tolerance</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;This method deletes the short edges specified, optionally selecting only those short</span>
 <span class="sd">        edges whose lengths are smaller than the specified tolerance and healing the resultant</span>
 <span class="sd">        gap in the sketch. This method is particularly useful in conjunction with</span>
 <span class="sd">        removeGapsAndOverlap when cleaning up imported sketches.</span>
@@ -779,11 +780,11 @@
 <span class="sd">            whose lengths are smaller than the given value. The default value is –1.0. This value</span>
 <span class="sd">            implies that all edges specified in *geomList* will be removed and the sketch healed to</span>
 <span class="sd">            remove gaps left by their removal.</span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span></div>
 
-<div class="viewcode-block" id="ConstrainedSketch.retrieveSketch"><a class="viewcode-back" href="../../../reference/mdb/model/sketcher.html#abaqus.Sketcher.ConstrainedSketch.ConstrainedSketch.retrieveSketch">[docs]</a>    <span class="k">def</span> <span class="nf">retrieveSketch</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">sketch</span><span class="p">:</span> <span class="s1">'ConstrainedSketch'</span><span class="p">):</span>
-        <span class="sd">"""This method copies all ConstrainedSketchGeometry, ConstrainedSketchDimension,</span>
+<div class="viewcode-block" id="ConstrainedSketch.retrieveSketch"><a class="viewcode-back" href="../../../reference/mdb/model/sketcher.html#abaqus.Sketcher.ConstrainedSketch.ConstrainedSketch.retrieveSketch">[docs]</a>    <span class="k">def</span> <span class="nf">retrieveSketch</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">sketch</span><span class="p">:</span> <span class="s1">&#39;ConstrainedSketch&#39;</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;This method copies all ConstrainedSketchGeometry, ConstrainedSketchDimension,</span>
 <span class="sd">        ConstrainedSketchConstraint, and ConstrainedSketchParameter objects from the specified</span>
 <span class="sd">        ConstrainedSketch object. The new objects are added to the existing objects (if any).</span>
 <span class="sd">        The objects in the specified ConstrainedSketch object are not modified by the retrieve</span>
@@ -793,11 +794,11 @@
 <span class="sd">        ----------</span>
 <span class="sd">        sketch</span>
 <span class="sd">            A ConstrainedSketch object specifying the object from which to copy.</span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span></div>
 
 <div class="viewcode-block" id="ConstrainedSketch.rotate"><a class="viewcode-back" href="../../../reference/mdb/model/sketcher.html#abaqus.Sketcher.ConstrainedSketch.ConstrainedSketch.rotate">[docs]</a>    <span class="k">def</span> <span class="nf">rotate</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">centerPoint</span><span class="p">:</span> <span class="nb">tuple</span><span class="p">[</span><span class="nb">float</span><span class="p">],</span> <span class="n">angle</span><span class="p">:</span> <span class="nb">float</span><span class="p">,</span> <span class="n">objectList</span><span class="p">:</span> <span class="nb">tuple</span><span class="p">):</span>
-        <span class="sd">"""This method rotates the given ConstrainedSketchGeometry objects by the given angle and</span>
+        <span class="sd">&quot;&quot;&quot;This method rotates the given ConstrainedSketchGeometry objects by the given angle and</span>
 <span class="sd">        about the given point.</span>
 <span class="sd">        </span>
 <span class="sd">        Parameters</span>
@@ -808,12 +809,12 @@
 <span class="sd">            A Float specifying the angle of rotation in degrees.</span>
 <span class="sd">        objectList</span>
 <span class="sd">            A sequence of ConstrainedSketchGeometry specifying the objects to be rotated.</span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span></div>
 
 <div class="viewcode-block" id="ConstrainedSketch.scale"><a class="viewcode-back" href="../../../reference/mdb/model/sketcher.html#abaqus.Sketcher.ConstrainedSketch.ConstrainedSketch.scale">[docs]</a>    <span class="k">def</span> <span class="nf">scale</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">scaleValue</span><span class="p">:</span> <span class="nb">float</span><span class="p">,</span> <span class="n">scaleCenter</span><span class="p">:</span> <span class="nb">tuple</span><span class="p">[</span><span class="nb">float</span><span class="p">],</span>
               <span class="n">objectList</span><span class="p">:</span> <span class="nb">tuple</span><span class="p">[</span><span class="n">ConstrainedSketchGeometry</span><span class="p">]):</span>
-        <span class="sd">"""This method scales the given ConstrainedSketchGeometry objects by the given scale factor</span>
+        <span class="sd">&quot;&quot;&quot;This method scales the given ConstrainedSketchGeometry objects by the given scale factor</span>
 <span class="sd">        and about the given point.</span>
 <span class="sd">        </span>
 <span class="sd">        Parameters</span>
@@ -824,11 +825,11 @@
 <span class="sd">            A pair of Floats specifying the center of scale.</span>
 <span class="sd">        objectList</span>
 <span class="sd">            A sequence of ConstrainedSketchGeometry objects specifying the objects to be scaled.</span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span></div>
 
 <div class="viewcode-block" id="ConstrainedSketch.setPrimaryObject"><a class="viewcode-back" href="../../../reference/mdb/model/sketcher.html#abaqus.Sketcher.ConstrainedSketch.ConstrainedSketch.setPrimaryObject">[docs]</a>    <span class="k">def</span> <span class="nf">setPrimaryObject</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">option</span><span class="p">:</span> <span class="n">SymbolicConstant</span><span class="p">):</span>
-        <span class="sd">"""This method makes the ConstrainedSketch object the primary object in the current</span>
+        <span class="sd">&quot;&quot;&quot;This method makes the ConstrainedSketch object the primary object in the current</span>
 <span class="sd">        viewport. The sketch remains the primary object in the current viewport until an</span>
 <span class="sd">        unsetPrimaryobject command is issued.</span>
 <span class="sd">        </span>
@@ -841,11 +842,11 @@
 <span class="sd">            Indicates that the sketch is superimposed on the current viewport. The view direction is</span>
 <span class="sd">            changed to be perpendicular to the sketch plane. The change is effected smoothly as an</span>
 <span class="sd">            animated sequence of many small viewing steps.</span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span></div>
 
 <div class="viewcode-block" id="ConstrainedSketch.trimExtendCurve"><a class="viewcode-back" href="../../../reference/mdb/model/sketcher.html#abaqus.Sketcher.ConstrainedSketch.ConstrainedSketch.trimExtendCurve">[docs]</a>    <span class="k">def</span> <span class="nf">trimExtendCurve</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">curve1</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">point1</span><span class="p">:</span> <span class="nb">tuple</span><span class="p">[</span><span class="nb">float</span><span class="p">],</span> <span class="n">curve2</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">point2</span><span class="p">:</span> <span class="nb">tuple</span><span class="p">[</span><span class="nb">float</span><span class="p">]):</span>
-        <span class="sd">"""This method trims or extends a specified ConstrainedSketchGeometry object (*curve1*)</span>
+        <span class="sd">&quot;&quot;&quot;This method trims or extends a specified ConstrainedSketchGeometry object (*curve1*)</span>
 <span class="sd">        using another specified ConstrainedSketchGeometry object (*curve2*). *curve2* is not</span>
 <span class="sd">        affected by the operation. The location for the trim or extend is determined by the</span>
 <span class="sd">        specified point values.</span>
@@ -863,25 +864,25 @@
 <span class="sd">        point2</span>
 <span class="sd">            A pair of Floats specifying the location on *curve2* near where *curve1* should be</span>
 <span class="sd">            trimmed or extended.</span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span></div>
 
 <div class="viewcode-block" id="ConstrainedSketch.undo"><a class="viewcode-back" href="../../../reference/mdb/model/sketcher.html#abaqus.Sketcher.ConstrainedSketch.ConstrainedSketch.undo">[docs]</a>    <span class="k">def</span> <span class="nf">undo</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="sd">"""This method undoes the effects of the last ConstrainedSketch object method.</span>
-<span class="sd">        """</span>
+        <span class="sd">&quot;&quot;&quot;This method undoes the effects of the last ConstrainedSketch object method.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span></div>
 
 <div class="viewcode-block" id="ConstrainedSketch.unsetPrimaryObject"><a class="viewcode-back" href="../../../reference/mdb/model/sketcher.html#abaqus.Sketcher.ConstrainedSketch.ConstrainedSketch.unsetPrimaryObject">[docs]</a>    <span class="k">def</span> <span class="nf">unsetPrimaryObject</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="sd">"""This method removes the ConstrainedSketch object from the current viewport, reversing</span>
+        <span class="sd">&quot;&quot;&quot;This method removes the ConstrainedSketch object from the current viewport, reversing</span>
 <span class="sd">        the effects of the setPrimaryobject command. If the *option* argument was set to</span>
 <span class="sd">        SUPERIMPOSE, the viewport will be returned to the view orientation that was in place</span>
 <span class="sd">        when the setPrimaryobject command was issued. If the *option* argument was set to</span>
 <span class="sd">        STANDALONE, the viewport will be left empty.</span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span></div>
 
 <div class="viewcode-block" id="ConstrainedSketch.writeAcisFile"><a class="viewcode-back" href="../../../reference/mdb/model/sketcher.html#abaqus.Sketcher.ConstrainedSketch.ConstrainedSketch.writeAcisFile">[docs]</a>    <span class="k">def</span> <span class="nf">writeAcisFile</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">fileName</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">version</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="kc">None</span><span class="p">):</span>
-        <span class="sd">"""This method exports the geometry of the sketch to a named file in ACIS format.</span>
+        <span class="sd">&quot;&quot;&quot;This method exports the geometry of the sketch to a named file in ACIS format.</span>
 <span class="sd">        </span>
 <span class="sd">        Parameters</span>
 <span class="sd">        ----------</span>
@@ -890,11 +891,11 @@
 <span class="sd">        version</span>
 <span class="sd">            A Float specifying the ACIS version. For example, the Float 12.0 corresponds to ACIS</span>
 <span class="sd">            Version 12.0. The default value is the current version of ACIS.</span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span></div>
 
 <div class="viewcode-block" id="ConstrainedSketch.writeIgesFile"><a class="viewcode-back" href="../../../reference/mdb/model/sketcher.html#abaqus.Sketcher.ConstrainedSketch.ConstrainedSketch.writeIgesFile">[docs]</a>    <span class="k">def</span> <span class="nf">writeIgesFile</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">filename</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">flavor</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="kc">None</span><span class="p">):</span>
-        <span class="sd">"""This method exports the geometry of the sketch to a named file in IGES format.</span>
+        <span class="sd">&quot;&quot;&quot;This method exports the geometry of the sketch to a named file in IGES format.</span>
 <span class="sd">        </span>
 <span class="sd">        Parameters</span>
 <span class="sd">        ----------</span>
@@ -903,7 +904,7 @@
 <span class="sd">        flavor</span>
 <span class="sd">            A SymbolicConstant specifying a particular flavor of IGES to export. Possible values</span>
 <span class="sd">            areSTANDARD, AUTOCAD, SOLIDWORKS, JAMA, and MSBO.</span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span></div></div>
 </pre></div>
         </article>

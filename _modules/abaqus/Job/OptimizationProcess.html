@@ -5,10 +5,10 @@
     <meta name="color-scheme" content="light dark"><link rel="index" title="Index" href="../../../genindex.html" /><link rel="search" title="Search" href="../../../search.html" />
         <link rel="canonical" href="https://pyabaqus.haiiliin.com/_modules/abaqus/Job/OptimizationProcess.html" />
 
-    <meta name="generator" content="sphinx-4.5.0, furo 2022.04.07"/>
-        <title>abaqus.Job.OptimizationProcess - pyabaqus 1.0.16 documentation</title>
+    <meta name="generator" content="sphinx-4.5.0, furo 2022.06.04.1"/>
+        <title>abaqus.Job.OptimizationProcess - pyabaqus 1.0.18 documentation</title>
       <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/styles/furo.css?digest=68f4518137b9aefe99b631505a2064c3c42c9852" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/styles/furo.css?digest=40978830699223671f4072448e654b5958f38b89" />
     <link rel="stylesheet" type="text/css" href="../../../_static/styles/furo-extensions.css?digest=30d1aed668e5c3a91c3e3bf6a60b675221979f0e" />
     
     
@@ -123,7 +123,7 @@
       </label>
     </div>
     <div class="header-center">
-      <a href="../../../index.html"><div class="brand">pyabaqus 1.0.16 documentation</div></a>
+      <a href="../../../index.html"><div class="brand">pyabaqus 1.0.18 documentation</div></a>
     </div>
     <div class="header-right">
       <div class="theme-toggle-container theme-toggle-header">
@@ -146,7 +146,7 @@
       <div class="sidebar-sticky"><a class="sidebar-brand" href="../../../index.html">
   
   
-  <span class="sidebar-brand-text">pyabaqus 1.0.16 documentation</span>
+  <span class="sidebar-brand-text">pyabaqus 1.0.18 documentation</span>
   
 </a><form class="sidebar-search-container" method="get" action="../../../search.html" role="search">
   <input class="sidebar-search" placeholder=Search name="q" aria-label="Search">
@@ -286,7 +286,8 @@
           </svg>
           <span>Back to top</span>
         </a>
-        <div class="content-icon-container"><div class="theme-toggle-container theme-toggle-content">
+        <div class="content-icon-container">
+          <div class="theme-toggle-container theme-toggle-content">
             <button class="theme-toggle">
               <div class="visually-hidden">Toggle Light / Dark / Auto color theme</div>
               <svg class="theme-icon-when-auto"><use href="#svg-sun-half"></use></svg>
@@ -305,7 +306,7 @@
 
 
 <div class="viewcode-block" id="OptimizationProcess"><a class="viewcode-back" href="../../../reference/mdb/job.html#abaqus.Job.OptimizationProcess.OptimizationProcess">[docs]</a><span class="k">class</span> <span class="nc">OptimizationProcess</span><span class="p">:</span>
-    <span class="sd">"""The OptimizationProcess object defines a process to perform an optimization of a model</span>
+    <span class="sd">&quot;&quot;&quot;The OptimizationProcess object defines a process to perform an optimization of a model</span>
 <span class="sd">    defined using an optimization task. </span>
 
 <span class="sd">    Notes</span>
@@ -317,13 +318,13 @@
 <span class="sd">        import job</span>
 <span class="sd">        mdb.optimizationProcesses[name]</span>
 
-<span class="sd">    """</span>
+<span class="sd">    &quot;&quot;&quot;</span>
 
-    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">model</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">task</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">prototypeJob</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">description</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">''</span><span class="p">,</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">model</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">task</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">prototypeJob</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">description</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span><span class="p">,</span>
                  <span class="n">maxDesignCycle</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">15</span><span class="p">,</span> <span class="n">dataSaveFrequency</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="n">OPT_DATASAVE_SPECIFY_CYCLE</span><span class="p">,</span>
                  <span class="n">saveInitial</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="kc">True</span><span class="p">,</span> <span class="n">saveFirst</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="kc">True</span><span class="p">,</span> <span class="n">saveLast</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="kc">True</span><span class="p">,</span>
                  <span class="n">saveEvery</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="kc">None</span><span class="p">):</span>
-        <span class="sd">"""This method creates an OptimizationProcess object.</span>
+        <span class="sd">&quot;&quot;&quot;This method creates an OptimizationProcess object.</span>
 
 <span class="sd">        Notes</span>
 <span class="sd">        -----</span>
@@ -379,38 +380,38 @@
 <span class="sd">        Raises</span>
 <span class="sd">        ------</span>
 <span class="sd">            AbaqusException. </span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span>
 
 <div class="viewcode-block" id="OptimizationProcess.writeParAndInputFiles"><a class="viewcode-back" href="../../../reference/mdb/job.html#abaqus.Job.OptimizationProcess.OptimizationProcess.writeParAndInputFiles">[docs]</a>    <span class="k">def</span> <span class="nf">writeParAndInputFiles</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="sd">"""This method allows you to write par and input files for an optimization task.</span>
-<span class="sd">        """</span>
+        <span class="sd">&quot;&quot;&quot;This method allows you to write par and input files for an optimization task.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span></div>
 
 <div class="viewcode-block" id="OptimizationProcess.submit"><a class="viewcode-back" href="../../../reference/mdb/job.html#abaqus.Job.OptimizationProcess.OptimizationProcess.submit">[docs]</a>    <span class="k">def</span> <span class="nf">submit</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">validate</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="kc">False</span><span class="p">):</span>
-        <span class="sd">"""This method submits an optimization process.</span>
+        <span class="sd">&quot;&quot;&quot;This method submits an optimization process.</span>
 <span class="sd">        </span>
 <span class="sd">        Parameters</span>
 <span class="sd">        ----------</span>
 <span class="sd">        validate</span>
 <span class="sd">            A Boolean specifying whether Abaqus should perform the validation of the optimization </span>
 <span class="sd">            process only. The default value is False. </span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span></div>
 
 <div class="viewcode-block" id="OptimizationProcess.waitForCompletion"><a class="viewcode-back" href="../../../reference/mdb/job.html#abaqus.Job.OptimizationProcess.OptimizationProcess.waitForCompletion">[docs]</a>    <span class="k">def</span> <span class="nf">waitForCompletion</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="sd">"""This method interrupts the execution of the script until the end of all the analyses. If</span>
+        <span class="sd">&quot;&quot;&quot;This method interrupts the execution of the script until the end of all the analyses. If</span>
 <span class="sd">        you call the waitForCompletion method and the *status* member is neither SUBMITTED nor</span>
 <span class="sd">        RUNNING, Abaqus assumes the analysis has either completed or aborted and returns</span>
 <span class="sd">        immediately.</span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span></div>
 
 <div class="viewcode-block" id="OptimizationProcess.extract"><a class="viewcode-back" href="../../../reference/mdb/job.html#abaqus.Job.OptimizationProcess.OptimizationProcess.extract">[docs]</a>    <span class="k">def</span> <span class="nf">extract</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">outputFileName</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">designCycle</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">isoValue</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="n">smoothCycles</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="mi">5</span><span class="p">,</span>
-                <span class="n">reductionPercent</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="n">reductionAngle</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">''</span><span class="p">,</span> <span class="n">targetVolume</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span>
+                <span class="n">reductionPercent</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="n">reductionAngle</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">targetVolume</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span>
                 <span class="n">extractFormat</span><span class="p">:</span> <span class="nb">tuple</span> <span class="o">=</span> <span class="n">OPT_EXTRACT_SMOOTH_ABAQUS_INPUT_FILE</span><span class="p">,</span> <span class="n">resultFiltering</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="n">OFF</span><span class="p">,</span>
-                <span class="n">instances</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">''</span><span class="p">):</span>
-        <span class="sd">"""This method extracts a surface mesh from the optimized model.</span>
+                <span class="n">instances</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;This method extracts a surface mesh from the optimized model.</span>
 <span class="sd">        </span>
 <span class="sd">        Parameters</span>
 <span class="sd">        ----------</span>
@@ -449,13 +450,13 @@
 <span class="sd">            Defines a list of names of part instances to be used for surface extraction. One file </span>
 <span class="sd">            (according to extractFormat) is created for each part instance. If the argument is not </span>
 <span class="sd">            specified, no part instance is selected and surface is generated for the whole model. </span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span></div>
 
-<div class="viewcode-block" id="OptimizationProcess.setValues"><a class="viewcode-back" href="../../../reference/mdb/job.html#abaqus.Job.OptimizationProcess.OptimizationProcess.setValues">[docs]</a>    <span class="k">def</span> <span class="nf">setValues</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">description</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">''</span><span class="p">,</span> <span class="n">maxDesignCycle</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">15</span><span class="p">,</span>
+<div class="viewcode-block" id="OptimizationProcess.setValues"><a class="viewcode-back" href="../../../reference/mdb/job.html#abaqus.Job.OptimizationProcess.OptimizationProcess.setValues">[docs]</a>    <span class="k">def</span> <span class="nf">setValues</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">description</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">maxDesignCycle</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">15</span><span class="p">,</span>
                   <span class="n">dataSaveFrequency</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="n">OPT_DATASAVE_SPECIFY_CYCLE</span><span class="p">,</span> <span class="n">saveInitial</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="kc">True</span><span class="p">,</span>
                   <span class="n">saveFirst</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="kc">True</span><span class="p">,</span> <span class="n">saveLast</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="kc">True</span><span class="p">,</span> <span class="n">saveEvery</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="kc">None</span><span class="p">):</span>
-        <span class="sd">"""This method modifies the OptimizationProcess object.</span>
+        <span class="sd">&quot;&quot;&quot;This method modifies the OptimizationProcess object.</span>
 <span class="sd">        </span>
 <span class="sd">        Parameters</span>
 <span class="sd">        ----------</span>
@@ -485,7 +486,7 @@
 <span class="sd">            OPT_DATASAVE_SPECIFY_CYCLE. Abaqus saves file iterations for every nth iteration after </span>
 <span class="sd">            iteration 1; if you set *saveEvery*=3, Abaqus saves file iterations for cycles 1, 4, 7, </span>
 <span class="sd">            and so on. The default value is None. </span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span></div></div>
 </pre></div>
         </article>

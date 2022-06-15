@@ -5,10 +5,10 @@
     <meta name="color-scheme" content="light dark"><link rel="index" title="Index" href="../../../genindex.html" /><link rel="search" title="Search" href="../../../search.html" />
         <link rel="canonical" href="https://pyabaqus.haiiliin.com/_modules/abaqus/UtilityAndView/Delete.html" />
 
-    <meta name="generator" content="sphinx-4.5.0, furo 2022.04.07"/>
-        <title>abaqus.UtilityAndView.Delete - pyabaqus 1.0.16 documentation</title>
+    <meta name="generator" content="sphinx-4.5.0, furo 2022.06.04.1"/>
+        <title>abaqus.UtilityAndView.Delete - pyabaqus 1.0.18 documentation</title>
       <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/styles/furo.css?digest=68f4518137b9aefe99b631505a2064c3c42c9852" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/styles/furo.css?digest=40978830699223671f4072448e654b5958f38b89" />
     <link rel="stylesheet" type="text/css" href="../../../_static/styles/furo-extensions.css?digest=30d1aed668e5c3a91c3e3bf6a60b675221979f0e" />
     
     
@@ -123,7 +123,7 @@
       </label>
     </div>
     <div class="header-center">
-      <a href="../../../index.html"><div class="brand">pyabaqus 1.0.16 documentation</div></a>
+      <a href="../../../index.html"><div class="brand">pyabaqus 1.0.18 documentation</div></a>
     </div>
     <div class="header-right">
       <div class="theme-toggle-container theme-toggle-header">
@@ -146,7 +146,7 @@
       <div class="sidebar-sticky"><a class="sidebar-brand" href="../../../index.html">
   
   
-  <span class="sidebar-brand-text">pyabaqus 1.0.16 documentation</span>
+  <span class="sidebar-brand-text">pyabaqus 1.0.18 documentation</span>
   
 </a><form class="sidebar-search-container" method="get" action="../../../search.html" role="search">
   <input class="sidebar-search" placeholder=Search name="q" aria-label="Search">
@@ -286,7 +286,8 @@
           </svg>
           <span>Back to top</span>
         </a>
-        <div class="content-icon-container"><div class="theme-toggle-container theme-toggle-content">
+        <div class="content-icon-container">
+          <div class="theme-toggle-container theme-toggle-content">
             <button class="theme-toggle">
               <div class="visually-hidden">Toggle Light / Dark / Auto color theme</div>
               <svg class="theme-icon-when-auto"><use href="#svg-sun-half"></use></svg>
@@ -303,15 +304,15 @@
           <h1>Source code for abaqus.UtilityAndView.Delete</h1><div class="highlight"><pre>
 <span></span><span class="kn">from</span> <span class="nn">abaqusConstants</span> <span class="kn">import</span> <span class="o">*</span>
 
-<span class="sd">"""The deleteObjectCallback module provides methods that allow you to register a callback </span>
+<span class="sd">&quot;&quot;&quot;The deleteObjectCallback module provides methods that allow you to register a callback </span>
 <span class="sd">that will be invoked when specified Abaqus Scripting Interface objects are about to be </span>
 <span class="sd">deleted. This callback allows you to examine an object before it is deleted. </span>
 <span class="sd">For example, in the following script the myCallback function is executed when any Job </span>
 <span class="sd">object is about to be deleted: </span>
 <span class="sd">import deleteObjectCallback </span>
 <span class="sd">def myCallback(path, userData): </span>
-<span class="sd">    print 'About to delete', path </span>
-<span class="sd">deleteObjectCallback.addCallback(path='mdb.jobs[*]') </span>
+<span class="sd">    print &#39;About to delete&#39;, path </span>
+<span class="sd">deleteObjectCallback.addCallback(path=&#39;mdb.jobs[*]&#39;) </span>
 
 <span class="sd">Notes</span>
 <span class="sd">-----</span>
@@ -321,11 +322,11 @@
 <span class="sd">    </span>
 <span class="sd">        import deleteObjectCallback</span>
 
-<span class="sd">"""</span>
+<span class="sd">&quot;&quot;&quot;</span>
 
 
 <div class="viewcode-block" id="deleteObjectCallback"><a class="viewcode-back" href="../../../reference/kernel/utility.html#abaqus.UtilityAndView.Delete.deleteObjectCallback">[docs]</a><span class="k">def</span> <span class="nf">deleteObjectCallback</span><span class="p">(</span><span class="n">callback</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">path</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">userData</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">includeChildren</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="kc">False</span><span class="p">):</span>
-    <span class="sd">"""This method adds a callback function that will be invoked when the specified Abaqus</span>
+    <span class="sd">&quot;&quot;&quot;This method adds a callback function that will be invoked when the specified Abaqus</span>
 <span class="sd">    Scripting Interface objects are about to be deleted. The callback is invoked only when</span>
 <span class="sd">    the object is deleted using the Python statement del object. The callback is not invoked</span>
 <span class="sd">    when the object is deleted using an Abaqus Scripting Interface command such as</span>
@@ -350,8 +351,8 @@
 <span class="sd">    path</span>
 <span class="sd">        A String specifying the path to an object or the SymbolicConstant ANY. You can include </span>
 <span class="sd">        wildcards in the path to specify a pattern to be matched. Examples of valid paths </span>
-<span class="sd">        are:`path='mdb.models[*]' path=”mdb.models['Axle*'].parts[*]” </span>
-<span class="sd">        path='mdb.models[*].materials[*]' ` </span>
+<span class="sd">        are:`path=&#39;mdb.models[*]&#39; path=”mdb.models[&#39;Axle*&#39;].parts[*]” </span>
+<span class="sd">        path=&#39;mdb.models[*].materials[*]&#39; ` </span>
 <span class="sd">    userData</span>
 <span class="sd">        Any type of data. This data will be passed to the callback function. The default value </span>
 <span class="sd">        is None. </span>
@@ -359,7 +360,7 @@
 <span class="sd">        A Boolean specifying that the callback should be called if an object owned by the object </span>
 <span class="sd">        specified by the *path* argument is about to be deleted. The default value is False. </span>
 
-<span class="sd">    """</span>
+<span class="sd">    &quot;&quot;&quot;</span>
     <span class="k">pass</span></div>
 </pre></div>
         </article>

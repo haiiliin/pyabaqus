@@ -5,10 +5,10 @@
     <meta name="color-scheme" content="light dark"><link rel="index" title="Index" href="../../../genindex.html" /><link rel="search" title="Search" href="../../../search.html" />
         <link rel="canonical" href="https://pyabaqus.haiiliin.com/_modules/abaqus/Region/RegionAssembly.html" />
 
-    <meta name="generator" content="sphinx-4.5.0, furo 2022.04.07"/>
-        <title>abaqus.Region.RegionAssembly - pyabaqus 1.0.16 documentation</title>
+    <meta name="generator" content="sphinx-4.5.0, furo 2022.06.04.1"/>
+        <title>abaqus.Region.RegionAssembly - pyabaqus 1.0.18 documentation</title>
       <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/styles/furo.css?digest=68f4518137b9aefe99b631505a2064c3c42c9852" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/styles/furo.css?digest=40978830699223671f4072448e654b5958f38b89" />
     <link rel="stylesheet" type="text/css" href="../../../_static/styles/furo-extensions.css?digest=30d1aed668e5c3a91c3e3bf6a60b675221979f0e" />
     
     
@@ -123,7 +123,7 @@
       </label>
     </div>
     <div class="header-center">
-      <a href="../../../index.html"><div class="brand">pyabaqus 1.0.16 documentation</div></a>
+      <a href="../../../index.html"><div class="brand">pyabaqus 1.0.18 documentation</div></a>
     </div>
     <div class="header-right">
       <div class="theme-toggle-container theme-toggle-header">
@@ -146,7 +146,7 @@
       <div class="sidebar-sticky"><a class="sidebar-brand" href="../../../index.html">
   
   
-  <span class="sidebar-brand-text">pyabaqus 1.0.16 documentation</span>
+  <span class="sidebar-brand-text">pyabaqus 1.0.18 documentation</span>
   
 </a><form class="sidebar-search-container" method="get" action="../../../search.html" role="search">
   <input class="sidebar-search" placeholder=Search name="q" aria-label="Search">
@@ -286,7 +286,8 @@
           </svg>
           <span>Back to top</span>
         </a>
-        <div class="content-icon-container"><div class="theme-toggle-container theme-toggle-content">
+        <div class="content-icon-container">
+          <div class="theme-toggle-container theme-toggle-content">
             <button class="theme-toggle">
               <div class="visually-hidden">Toggle Light / Dark / Auto color theme</div>
               <svg class="theme-icon-when-auto"><use href="#svg-sun-half"></use></svg>
@@ -317,7 +318,7 @@
 
 
 <span class="k">class</span> <span class="nc">RegionAssembly</span><span class="p">(</span><span class="n">RegionAssemblyBase</span><span class="p">):</span>
-    <span class="sd">"""An Assembly object is a container for instances of parts. The Assembly object has no</span>
+    <span class="sd">&quot;&quot;&quot;An Assembly object is a container for instances of parts. The Assembly object has no</span>
 <span class="sd">    constructor command. Abaqus creates the *rootAssembly* member when a Model object is </span>
 <span class="sd">    created. </span>
 
@@ -330,7 +331,7 @@
 <span class="sd">        import assembly</span>
 <span class="sd">        mdb.models[name].rootAssembly</span>
 
-<span class="sd">    """</span>
+<span class="sd">    &quot;&quot;&quot;</span>
 
 <div class="viewcode-block" id="RegionAssembly.Surface"><a class="viewcode-back" href="../../../reference/mdb/model/part_assembly/region.html#abaqus.Region.RegionAssembly.RegionAssembly.Surface">[docs]</a>    <span class="k">def</span> <span class="nf">Surface</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">side1Faces</span><span class="p">:</span> <span class="nb">tuple</span><span class="p">[</span><span class="n">Face</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">side2Faces</span><span class="p">:</span> <span class="nb">tuple</span><span class="p">[</span><span class="n">Face</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">side12Faces</span><span class="p">:</span> <span class="nb">tuple</span><span class="p">[</span><span class="n">Face</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
                 <span class="n">end1Edges</span><span class="p">:</span> <span class="nb">tuple</span><span class="p">[</span><span class="n">Face</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">end2Edges</span><span class="p">:</span> <span class="nb">tuple</span><span class="p">[</span><span class="n">Face</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">circumEdges</span><span class="p">:</span> <span class="nb">tuple</span><span class="p">[</span><span class="n">Face</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
@@ -338,11 +339,11 @@
                 <span class="n">face2Elements</span><span class="p">:</span> <span class="nb">tuple</span><span class="p">[</span><span class="n">Face</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">face3Elements</span><span class="p">:</span> <span class="nb">tuple</span><span class="p">[</span><span class="n">Face</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">face4Elements</span><span class="p">:</span> <span class="nb">tuple</span><span class="p">[</span><span class="n">Face</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
                 <span class="n">face5Elements</span><span class="p">:</span> <span class="nb">tuple</span><span class="p">[</span><span class="n">Face</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">face6Elements</span><span class="p">:</span> <span class="nb">tuple</span><span class="p">[</span><span class="n">Face</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">side1Elements</span><span class="p">:</span> <span class="nb">tuple</span><span class="p">[</span><span class="n">Face</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
                 <span class="n">side2Elements</span><span class="p">:</span> <span class="nb">tuple</span><span class="p">[</span><span class="n">Face</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">side12Elements</span><span class="p">:</span> <span class="nb">tuple</span><span class="p">[</span><span class="n">Face</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">end1Elements</span><span class="p">:</span> <span class="nb">tuple</span><span class="p">[</span><span class="n">Face</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
-                <span class="n">end2Elements</span><span class="p">:</span> <span class="nb">tuple</span><span class="p">[</span><span class="n">Face</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">circumElements</span><span class="p">:</span> <span class="nb">tuple</span><span class="p">[</span><span class="n">Face</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">name</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">''</span><span class="p">):</span>
-        <span class="sd">"""This method creates a surface from a sequence of objects in a model database. The</span>
+                <span class="n">end2Elements</span><span class="p">:</span> <span class="nb">tuple</span><span class="p">[</span><span class="n">Face</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">circumElements</span><span class="p">:</span> <span class="nb">tuple</span><span class="p">[</span><span class="n">Face</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">name</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;This method creates a surface from a sequence of objects in a model database. The</span>
 <span class="sd">        surface will apply to the sides specified by the arguments.For example</span>
-<span class="sd">        surface=mdb.models['Model-1'].parts['Part-1'].Surface(side1Faces=side1Faces,</span>
-<span class="sd">        name='Surf-1')</span>
+<span class="sd">        surface=mdb.models[&#39;Model-1&#39;].parts[&#39;Part-1&#39;].Surface(side1Faces=side1Faces,</span>
+<span class="sd">        name=&#39;Surf-1&#39;)</span>
 
 <span class="sd">        Notes</span>
 <span class="sd">        -----</span>
@@ -387,7 +388,7 @@
 <span class="sd">        Returns</span>
 <span class="sd">        -------</span>
 <span class="sd">            A Surface object.</span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="n">surface</span> <span class="o">=</span> <span class="n">Surface</span><span class="p">(</span><span class="n">side1Faces</span><span class="p">,</span> <span class="n">side2Faces</span><span class="p">,</span> <span class="n">side12Faces</span><span class="p">,</span> <span class="n">end1Edges</span><span class="p">,</span> <span class="n">end2Edges</span><span class="p">,</span> <span class="n">circumEdges</span><span class="p">,</span> <span class="n">side1Edges</span><span class="p">,</span>
                           <span class="n">side2Edges</span><span class="p">,</span> <span class="n">face1Elements</span><span class="p">,</span> <span class="n">face2Elements</span><span class="p">,</span> <span class="n">face3Elements</span><span class="p">,</span> <span class="n">face4Elements</span><span class="p">,</span> <span class="n">face5Elements</span><span class="p">,</span>
                           <span class="n">face6Elements</span><span class="p">,</span> <span class="n">side1Elements</span><span class="p">,</span> <span class="n">side2Elements</span><span class="p">,</span> <span class="n">side12Elements</span><span class="p">,</span> <span class="n">end1Elements</span><span class="p">,</span> <span class="n">end2Elements</span><span class="p">,</span>
@@ -403,7 +404,7 @@
             <span class="n">xEdges</span><span class="p">:</span> <span class="nb">tuple</span><span class="p">[</span><span class="n">Edge</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">xFaces</span><span class="p">:</span> <span class="nb">tuple</span><span class="p">[</span><span class="n">Face</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
             <span class="n">referencePoints</span><span class="p">:</span> <span class="nb">tuple</span><span class="p">[</span><span class="n">ReferencePoint</span><span class="p">]</span> <span class="o">=</span> <span class="p">(),</span> <span class="n">skinFaces</span><span class="p">:</span> <span class="nb">tuple</span> <span class="o">=</span> <span class="p">(),</span>
             <span class="n">skinEdges</span><span class="p">:</span> <span class="nb">tuple</span> <span class="o">=</span> <span class="p">(),</span> <span class="n">stringerEdges</span><span class="p">:</span> <span class="nb">tuple</span> <span class="o">=</span> <span class="p">()):</span>
-        <span class="sd">"""This method creates a set from a sequence of objects in a model database.</span>
+        <span class="sd">&quot;&quot;&quot;This method creates a set from a sequence of objects in a model database.</span>
 
 <span class="sd">        Notes</span>
 <span class="sd">        -----</span>
@@ -457,12 +458,12 @@
 <span class="sd">        Returns</span>
 <span class="sd">        -------</span>
 <span class="sd">            A Set object.</span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span>
 
     <span class="nd">@typing</span><span class="o">.</span><span class="n">overload</span>
     <span class="k">def</span> <span class="nf">Set</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">objectToCopy</span><span class="p">:</span> <span class="n">Set</span><span class="p">):</span>
-        <span class="sd">"""This method copies a set from an existing set.</span>
+        <span class="sd">&quot;&quot;&quot;This method copies a set from an existing set.</span>
 
 <span class="sd">        Notes</span>
 <span class="sd">        -----</span>
@@ -483,7 +484,7 @@
 <span class="sd">        Returns</span>
 <span class="sd">        -------</span>
 <span class="sd">            A Set object.</span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span>
 
 <div class="viewcode-block" id="RegionAssembly.Set"><a class="viewcode-back" href="../../../reference/mdb/model/part_assembly/region.html#abaqus.Region.RegionAssembly.RegionAssembly.Set">[docs]</a>    <span class="k">def</span> <span class="nf">Set</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>

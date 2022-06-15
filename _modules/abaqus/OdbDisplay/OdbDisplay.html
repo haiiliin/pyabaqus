@@ -5,10 +5,10 @@
     <meta name="color-scheme" content="light dark"><link rel="index" title="Index" href="../../../genindex.html" /><link rel="search" title="Search" href="../../../search.html" />
         <link rel="canonical" href="https://pyabaqus.haiiliin.com/_modules/abaqus/OdbDisplay/OdbDisplay.html" />
 
-    <meta name="generator" content="sphinx-4.5.0, furo 2022.04.07"/>
-        <title>abaqus.OdbDisplay.OdbDisplay - pyabaqus 1.0.16 documentation</title>
+    <meta name="generator" content="sphinx-4.5.0, furo 2022.06.04.1"/>
+        <title>abaqus.OdbDisplay.OdbDisplay - pyabaqus 1.0.18 documentation</title>
       <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/styles/furo.css?digest=68f4518137b9aefe99b631505a2064c3c42c9852" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/styles/furo.css?digest=40978830699223671f4072448e654b5958f38b89" />
     <link rel="stylesheet" type="text/css" href="../../../_static/styles/furo-extensions.css?digest=30d1aed668e5c3a91c3e3bf6a60b675221979f0e" />
     
     
@@ -123,7 +123,7 @@
       </label>
     </div>
     <div class="header-center">
-      <a href="../../../index.html"><div class="brand">pyabaqus 1.0.16 documentation</div></a>
+      <a href="../../../index.html"><div class="brand">pyabaqus 1.0.18 documentation</div></a>
     </div>
     <div class="header-right">
       <div class="theme-toggle-container theme-toggle-header">
@@ -146,7 +146,7 @@
       <div class="sidebar-sticky"><a class="sidebar-brand" href="../../../index.html">
   
   
-  <span class="sidebar-brand-text">pyabaqus 1.0.16 documentation</span>
+  <span class="sidebar-brand-text">pyabaqus 1.0.18 documentation</span>
   
 </a><form class="sidebar-search-container" method="get" action="../../../search.html" role="search">
   <input class="sidebar-search" placeholder=Search name="q" aria-label="Search">
@@ -286,7 +286,8 @@
           </svg>
           <span>Back to top</span>
         </a>
-        <div class="content-icon-container"><div class="theme-toggle-container theme-toggle-content">
+        <div class="content-icon-container">
+          <div class="theme-toggle-container theme-toggle-content">
             <button class="theme-toggle">
               <div class="visually-hidden">Toggle Light / Dark / Auto color theme</div>
               <svg class="theme-icon-when-auto"><use href="#svg-sun-half"></use></svg>
@@ -326,7 +327,7 @@
 
 
 <div class="viewcode-block" id="OdbDisplay"><a class="viewcode-back" href="../../../reference/session/odb_display.html#abaqus.OdbDisplay.OdbDisplay.OdbDisplay">[docs]</a><span class="k">class</span> <span class="nc">OdbDisplay</span><span class="p">:</span>
-    <span class="sd">"""The OdbDisplay object stores the context of an output database for a viewport. The</span>
+    <span class="sd">&quot;&quot;&quot;The OdbDisplay object stores the context of an output database for a viewport. The</span>
 <span class="sd">    OdbDisplay object has no constructor. Abaqus creates the *defaultOdbDisplay* member when </span>
 <span class="sd">    you import the Visualization module. Abaqus creates the *odbDisplay* member when a </span>
 <span class="sd">    viewport is created, using the attributes from the previous active viewport. The </span>
@@ -517,11 +518,11 @@
 <span class="sd">        import visualization</span>
 <span class="sd">        session.viewports[name].odbDisplay</span>
 
-<span class="sd">    """</span>
+<span class="sd">    &quot;&quot;&quot;</span>
 
     <span class="c1"># A String specifying the name of the output database associated with the OdbDisplay </span>
     <span class="c1"># object. </span>
-    <span class="n">name</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">''</span>
+    <span class="n">name</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span>
 
     <span class="c1"># A tuple of Strings specifying field steps. </span>
     <span class="c1"># Each item in the sequence consists of a tuple that contains the following step </span>
@@ -595,7 +596,7 @@
 
     <span class="c1"># A DisplayGroup object specifying the current display group and referring to an object in </span>
     <span class="c1"># the *displayGroups* member of Session. </span>
-    <span class="n">displayGroup</span><span class="p">:</span> <span class="n">DisplayGroup</span> <span class="o">=</span> <span class="n">DisplayGroup</span><span class="p">(</span><span class="s1">'dg'</span><span class="p">,</span> <span class="n">Leaf</span><span class="p">(</span><span class="n">EMPTY_LEAF</span><span class="p">))</span>
+    <span class="n">displayGroup</span><span class="p">:</span> <span class="n">DisplayGroup</span> <span class="o">=</span> <span class="n">DisplayGroup</span><span class="p">(</span><span class="s1">&#39;dg&#39;</span><span class="p">,</span> <span class="n">Leaf</span><span class="p">(</span><span class="n">EMPTY_LEAF</span><span class="p">))</span>
 
     <span class="c1"># A DisplayGroupInstanceRepository object. </span>
     <span class="n">displayGroupInstances</span><span class="p">:</span> <span class="n">DisplayGroupInstanceRepository</span> <span class="o">=</span> <span class="n">DisplayGroupInstanceRepository</span><span class="p">()</span>
@@ -706,29 +707,29 @@
 
     <span class="c1"># A pair of Ints specifying the step index and the frame index of the first available </span>
     <span class="c1"># frame. This sequence is read-only. </span>
-    <span class="n">firstFrame</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">''</span>
+    <span class="n">firstFrame</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span>
 
     <span class="c1"># A pair of Ints specifying the step index and the frame index of the frame previous to </span>
     <span class="c1"># the current frame. This sequence is read-only. </span>
-    <span class="n">prevFrame</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">''</span>
+    <span class="n">prevFrame</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span>
 
     <span class="c1"># A pair of Ints specifying the step index and the frame index of the frame following the </span>
     <span class="c1"># current frame. This sequence is read-only. </span>
-    <span class="n">nextFrame</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">''</span>
+    <span class="n">nextFrame</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span>
 
     <span class="c1"># A pair of Ints specifying the step index and the frame index of the last available </span>
     <span class="c1"># frame. This sequence is read-only. </span>
-    <span class="n">lastFrame</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">''</span>
+    <span class="n">lastFrame</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span>
 
 <div class="viewcode-block" id="OdbDisplay.moveCameraToCsys"><a class="viewcode-back" href="../../../reference/session/odb_display.html#abaqus.OdbDisplay.OdbDisplay.OdbDisplay.moveCameraToCsys">[docs]</a>    <span class="k">def</span> <span class="nf">moveCameraToCsys</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="sd">"""This method specifies a new position for the camera. It is available only when</span>
+        <span class="sd">&quot;&quot;&quot;This method specifies a new position for the camera. It is available only when</span>
 <span class="sd">        *movieMode*=ON (in the View object). The new camera position is the origin of the</span>
 <span class="sd">        coordinate system specified by the *cameraCsysName* member of the BasicOptions object.</span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span></div>
 
 <div class="viewcode-block" id="OdbDisplay.setDeformedVariable"><a class="viewcode-back" href="../../../reference/session/odb_display.html#abaqus.OdbDisplay.OdbDisplay.OdbDisplay.setDeformedVariable">[docs]</a>    <span class="k">def</span> <span class="nf">setDeformedVariable</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">variableLabel</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">field</span><span class="p">:</span> <span class="nb">str</span><span class="p">):</span>
-        <span class="sd">"""This method specifies the field output variable or FieldOutput object to be used when</span>
+        <span class="sd">&quot;&quot;&quot;This method specifies the field output variable or FieldOutput object to be used when</span>
 <span class="sd">        displaying the deformed shape of the model.</span>
 <span class="sd">        </span>
 <span class="sd">        Parameters</span>
@@ -743,12 +744,12 @@
 <span class="sd">            - If the viewport is not associated with any Odb object: </span>
 <span class="sd">              The current viewport is not associated with an ODB file. Requested operation </span>
 <span class="sd">            cancelled. </span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span></div>
 
     <span class="nd">@typing</span><span class="o">.</span><span class="n">overload</span>
     <span class="k">def</span> <span class="nf">setFrame</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">step</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">frame</span><span class="p">:</span> <span class="nb">int</span><span class="p">):</span>
-        <span class="sd">"""This method specifies the step and frame for the OdbDisplay object.</span>
+        <span class="sd">&quot;&quot;&quot;This method specifies the step and frame for the OdbDisplay object.</span>
 <span class="sd">        </span>
 <span class="sd">        Parameters</span>
 <span class="sd">        ----------</span>
@@ -768,18 +769,18 @@
 <span class="sd">              There are no valid step data on the odb. Requested operation cancelled. </span>
 <span class="sd">            - If an invalid step index is passed in as argument: </span>
 <span class="sd">              Invalid step index:step. Available step indices: 0 - n </span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span>
 
     <span class="nd">@typing</span><span class="o">.</span><span class="n">overload</span>
     <span class="k">def</span> <span class="nf">setFrame</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">frame</span><span class="p">:</span> <span class="n">OdbFrame</span><span class="p">):</span>
-        <span class="sd">"""This method specifies the frame for the OdbDisplay object.</span>
+        <span class="sd">&quot;&quot;&quot;This method specifies the frame for the OdbDisplay object.</span>
 <span class="sd">        </span>
 <span class="sd">        Parameters</span>
 <span class="sd">        ----------</span>
 <span class="sd">        frame</span>
 <span class="sd">            An OdbFrame object. </span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span>
 
     <span class="k">def</span> <span class="nf">setFrame</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
@@ -787,7 +788,7 @@
 
 <div class="viewcode-block" id="OdbDisplay.setPrimaryVariable"><a class="viewcode-back" href="../../../reference/session/odb_display.html#abaqus.OdbDisplay.OdbDisplay.OdbDisplay.setPrimaryVariable">[docs]</a>    <span class="k">def</span> <span class="nf">setPrimaryVariable</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">variableLabel</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">field</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">outputPosition</span><span class="p">:</span> <span class="n">SymbolicConstant</span><span class="p">,</span>
                            <span class="n">refinement</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">sectionPoint</span><span class="p">:</span> <span class="nb">dict</span> <span class="o">=</span> <span class="kc">None</span><span class="p">):</span>
-        <span class="sd">"""This method specifies the field output variable for which to obtain results.</span>
+        <span class="sd">&quot;&quot;&quot;This method specifies the field output variable for which to obtain results.</span>
 <span class="sd">        </span>
 <span class="sd">        Parameters</span>
 <span class="sd">        ----------</span>
@@ -811,19 +812,19 @@
 <span class="sd">        sectionPoint</span>
 <span class="sd">            A Dictionary with String keys and String values. Each key specifies a region in the </span>
 <span class="sd">            model; the corresponding value specifies a section point within that region. For </span>
-<span class="sd">            example:`sectionPoint={'shell &lt; MAT &gt; &lt; 7 section points &gt;':'SPOS,    (fraction = 1.0)', </span>
-<span class="sd">            'shell &lt; MAT &gt; &lt; 5 section points &gt;':    'SPOS, (fraction = 1.0)', }`</span>
+<span class="sd">            example:`sectionPoint={&#39;shell &lt; MAT &gt; &lt; 7 section points &gt;&#39;:&#39;SPOS,    (fraction = 1.0)&#39;, </span>
+<span class="sd">            &#39;shell &lt; MAT &gt; &lt; 5 section points &gt;&#39;:    &#39;SPOS, (fraction = 1.0)&#39;, }`</span>
 
 <span class="sd">        Raises</span>
 <span class="sd">        ------</span>
 <span class="sd">            - If the viewport is not associated with any Odb object: </span>
 <span class="sd">              The current viewport is not associated with an ODB file. Requested operation </span>
 <span class="sd">            cancelled. </span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span></div>
 
 <div class="viewcode-block" id="OdbDisplay.setPrimarySectionPoint"><a class="viewcode-back" href="../../../reference/session/odb_display.html#abaqus.OdbDisplay.OdbDisplay.OdbDisplay.setPrimarySectionPoint">[docs]</a>    <span class="k">def</span> <span class="nf">setPrimarySectionPoint</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">sectionPoint</span><span class="p">:</span> <span class="nb">dict</span><span class="p">,</span> <span class="n">activePly</span><span class="p">:</span> <span class="nb">str</span><span class="p">):</span>
-        <span class="sd">"""This method specifies the section point for the current primary, symbol and status</span>
+        <span class="sd">&quot;&quot;&quot;This method specifies the section point for the current primary, symbol and status</span>
 <span class="sd">        variables.</span>
 <span class="sd">        </span>
 <span class="sd">        Parameters</span>
@@ -831,8 +832,8 @@
 <span class="sd">        sectionPoint</span>
 <span class="sd">            A Dictionary with String keys and String values. Each key specifies a region in the </span>
 <span class="sd">            model; the corresponding value specifies a section point within that region. For </span>
-<span class="sd">            example:`sectionPoint={'shell &lt; MAT &gt; &lt; 7 section points &gt;':'SPOS,    (fraction = 1.0)', </span>
-<span class="sd">            'shell &lt; MAT &gt; &lt; 5 section points &gt;':    'SPOS, (fraction = 1.0)', }` </span>
+<span class="sd">            example:`sectionPoint={&#39;shell &lt; MAT &gt; &lt; 7 section points &gt;&#39;:&#39;SPOS,    (fraction = 1.0)&#39;, </span>
+<span class="sd">            &#39;shell &lt; MAT &gt; &lt; 5 section points &gt;&#39;:    &#39;SPOS, (fraction = 1.0)&#39;, }` </span>
 <span class="sd">        activePly</span>
 <span class="sd">            A String specifying the active ply name.</span>
 
@@ -841,7 +842,7 @@
 <span class="sd">            - If the viewport is not associated with any Odb object: </span>
 <span class="sd">              The current viewport is not associated with an ODB file. Requested operation </span>
 <span class="sd">            cancelled. </span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span></div>
 
 <div class="viewcode-block" id="OdbDisplay.setStatusVariable"><a class="viewcode-back" href="../../../reference/session/odb_display.html#abaqus.OdbDisplay.OdbDisplay.OdbDisplay.setStatusVariable">[docs]</a>    <span class="k">def</span> <span class="nf">setStatusVariable</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">variableLabel</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">field</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">outputPosition</span><span class="p">:</span> <span class="n">SymbolicConstant</span><span class="p">,</span>
@@ -849,7 +850,7 @@
                           <span class="n">statusMinimum</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">statusMaximum</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
                           <span class="n">statusInsideRange</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="n">OFF</span><span class="p">,</span> <span class="n">useStatus</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="n">OFF</span><span class="p">,</span>
                           <span class="n">applyStatusToUndeformed</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="kc">False</span><span class="p">):</span>
-        <span class="sd">"""This method specifies the field output variable for filtering element display based on a</span>
+        <span class="sd">&quot;&quot;&quot;This method specifies the field output variable for filtering element display based on a</span>
 <span class="sd">        status criteria.</span>
 <span class="sd">        </span>
 <span class="sd">        Parameters</span>
@@ -874,8 +875,8 @@
 <span class="sd">        sectionPoint</span>
 <span class="sd">            A Dictionary with String keys and String values. Each key specifies a region in the </span>
 <span class="sd">            model; the corresponding value specifies a section point within that region. For </span>
-<span class="sd">            example:`sectionPoint={'shell &lt; MAT &gt; &lt; 7 section points &gt;':'SPOS,    (fraction = 1.0)', </span>
-<span class="sd">            'shell &lt; MAT &gt; &lt; 5 section points &gt;':    'SPOS, (fraction = 1.0)', }` </span>
+<span class="sd">            example:`sectionPoint={&#39;shell &lt; MAT &gt; &lt; 7 section points &gt;&#39;:&#39;SPOS,    (fraction = 1.0)&#39;, </span>
+<span class="sd">            &#39;shell &lt; MAT &gt; &lt; 5 section points &gt;&#39;:    &#39;SPOS, (fraction = 1.0)&#39;, }` </span>
 <span class="sd">        statusMinimum</span>
 <span class="sd">            A Float specifying the minimum result value to be considered for element removal. </span>
 <span class="sd">        statusMaximum</span>
@@ -896,13 +897,13 @@
 <span class="sd">            - If the viewport is not associated with any Odb object: </span>
 <span class="sd">              The current viewport is not associated with an ODB file. Requested operation </span>
 <span class="sd">            cancelled. </span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span></div>
 
 <div class="viewcode-block" id="OdbDisplay.setSymbolVariable"><a class="viewcode-back" href="../../../reference/session/odb_display.html#abaqus.OdbDisplay.OdbDisplay.OdbDisplay.setSymbolVariable">[docs]</a>    <span class="k">def</span> <span class="nf">setSymbolVariable</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">variableLabel</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">field</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">outputPosition</span><span class="p">:</span> <span class="n">SymbolicConstant</span><span class="p">,</span>
                           <span class="n">refinement</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">sectionPoint</span><span class="p">:</span> <span class="nb">dict</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
                           <span class="n">tensorQuantity</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">vectorQuantity</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="kc">None</span><span class="p">):</span>
-        <span class="sd">"""This method specifies the field output variable for which to obtain results used for</span>
+        <span class="sd">&quot;&quot;&quot;This method specifies the field output variable for which to obtain results used for</span>
 <span class="sd">        symbol plots. This variable must be in the form of vector or tensor data. The output</span>
 <span class="sd">        quantity can also be specified with this command to control the display of resultants,</span>
 <span class="sd">        or components.</span>
@@ -929,8 +930,8 @@
 <span class="sd">        sectionPoint</span>
 <span class="sd">            A Dictionary with String keys and String values. Each key specifies a region in the </span>
 <span class="sd">            model; the corresponding value specifies a section point within that region. For </span>
-<span class="sd">            example:`sectionPoint={'shell &lt; MAT &gt; &lt; 7 section points &gt;':'SPOS,    (fraction = 1.0)', </span>
-<span class="sd">            'shell &lt; MAT &gt; &lt; 5 section points &gt;':    'SPOS, (fraction = 1.0)', }` </span>
+<span class="sd">            example:`sectionPoint={&#39;shell &lt; MAT &gt; &lt; 7 section points &gt;&#39;:&#39;SPOS,    (fraction = 1.0)&#39;, </span>
+<span class="sd">            &#39;shell &lt; MAT &gt; &lt; 5 section points &gt;&#39;:    &#39;SPOS, (fraction = 1.0)&#39;, }` </span>
 <span class="sd">        tensorQuantity</span>
 <span class="sd">            A SymbolicConstant specifying the tensor quantity to be displayed with the symbol. This </span>
 <span class="sd">            value is set in the SymbolOptions object. </span>
@@ -943,11 +944,11 @@
 <span class="sd">            - If the viewport is not associated with any Odb object: </span>
 <span class="sd">              The current viewport is not associated with an ODB file. Requested operation </span>
 <span class="sd">            cancelled. </span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span></div>
 
 <div class="viewcode-block" id="OdbDisplay.setStreamVariable"><a class="viewcode-back" href="../../../reference/session/odb_display.html#abaqus.OdbDisplay.OdbDisplay.OdbDisplay.setStreamVariable">[docs]</a>    <span class="k">def</span> <span class="nf">setStreamVariable</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">variableLabel</span><span class="p">:</span> <span class="nb">str</span><span class="p">):</span>
-        <span class="sd">"""This method specifies the field output variable for which to obtain results used for</span>
+        <span class="sd">&quot;&quot;&quot;This method specifies the field output variable for which to obtain results used for</span>
 <span class="sd">        stream plots. This variable must be in the form of nodal vector data.</span>
 <span class="sd">        </span>
 <span class="sd">        Parameters</span>
@@ -960,11 +961,11 @@
 <span class="sd">            - If the viewport is not associated with any Odb object: </span>
 <span class="sd">              The current viewport is not associated with an ODB file. Requested operation </span>
 <span class="sd">            cancelled. </span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span></div>
 
-<div class="viewcode-block" id="OdbDisplay.setValues"><a class="viewcode-back" href="../../../reference/session/odb_display.html#abaqus.OdbDisplay.OdbDisplay.OdbDisplay.setValues">[docs]</a>    <span class="k">def</span> <span class="nf">setValues</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">visibleDisplayGroups</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">''</span><span class="p">,</span> <span class="n">viewCut</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="n">OFF</span><span class="p">,</span> <span class="n">viewCutNames</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">''</span><span class="p">):</span>
-        <span class="sd">"""This method specifies member values for the OdbDisplay object.</span>
+<div class="viewcode-block" id="OdbDisplay.setValues"><a class="viewcode-back" href="../../../reference/session/odb_display.html#abaqus.OdbDisplay.OdbDisplay.OdbDisplay.setValues">[docs]</a>    <span class="k">def</span> <span class="nf">setValues</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">visibleDisplayGroups</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">viewCut</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="n">OFF</span><span class="p">,</span> <span class="n">viewCutNames</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;This method specifies member values for the OdbDisplay object.</span>
 <span class="sd">        </span>
 <span class="sd">        Parameters</span>
 <span class="sd">        ----------</span>
@@ -974,7 +975,7 @@
 <span class="sd">            A Boolean specifying whether to display the cut. The default value is OFF. </span>
 <span class="sd">        viewCutNames</span>
 <span class="sd">            A List of ViewCut objects. </span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span></div>
 
 <div class="viewcode-block" id="OdbDisplay.ViewCut"><a class="viewcode-back" href="../../../reference/session/odb_display.html#abaqus.OdbDisplay.OdbDisplay.OdbDisplay.ViewCut">[docs]</a>    <span class="k">def</span> <span class="nf">ViewCut</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">shape</span><span class="p">:</span> <span class="n">SymbolicConstant</span><span class="p">,</span> <span class="n">origin</span><span class="p">:</span> <span class="nb">tuple</span><span class="p">,</span>
@@ -982,7 +983,7 @@
                 <span class="n">axis2</span><span class="p">:</span> <span class="n">typing</span><span class="o">.</span><span class="n">Union</span><span class="p">[</span><span class="n">SymbolicConstant</span><span class="p">,</span> <span class="nb">float</span><span class="p">],</span> <span class="n">csysName</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
                 <span class="n">cylinderAxis</span><span class="p">:</span> <span class="n">typing</span><span class="o">.</span><span class="n">Union</span><span class="p">[</span><span class="n">SymbolicConstant</span><span class="p">,</span> <span class="nb">float</span><span class="p">],</span> <span class="n">followDeformation</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="n">OFF</span><span class="p">,</span>
                 <span class="n">overrideAveraging</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="n">ON</span><span class="p">,</span> <span class="n">referenceFrame</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="n">FIRST_FRAME</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">ViewCut</span><span class="p">:</span>
-        <span class="sd">"""This method creates a ViewCut object.</span>
+        <span class="sd">&quot;&quot;&quot;This method creates a ViewCut object.</span>
 
 <span class="sd">        Notes</span>
 <span class="sd">        -----</span>
@@ -1041,7 +1042,7 @@
 <span class="sd">        Returns</span>
 <span class="sd">        -------</span>
 <span class="sd">            A ViewCut object.</span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">viewCuts</span><span class="p">[</span><span class="n">name</span><span class="p">]</span> <span class="o">=</span> <span class="n">viewCut</span> <span class="o">=</span> <span class="n">ViewCut</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">shape</span><span class="p">,</span> <span class="n">origin</span><span class="p">,</span> <span class="n">normal</span><span class="p">,</span> <span class="n">axis2</span><span class="p">,</span> <span class="n">csysName</span><span class="p">,</span> <span class="n">cylinderAxis</span><span class="p">,</span>
                                                 <span class="n">followDeformation</span><span class="p">,</span> <span class="n">overrideAveraging</span><span class="p">,</span> <span class="n">referenceFrame</span><span class="p">)</span>
         <span class="k">return</span> <span class="n">viewCut</span></div></div>

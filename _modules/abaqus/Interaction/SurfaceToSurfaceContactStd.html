@@ -5,10 +5,10 @@
     <meta name="color-scheme" content="light dark"><link rel="index" title="Index" href="../../../genindex.html" /><link rel="search" title="Search" href="../../../search.html" />
         <link rel="canonical" href="https://pyabaqus.haiiliin.com/_modules/abaqus/Interaction/SurfaceToSurfaceContactStd.html" />
 
-    <meta name="generator" content="sphinx-4.5.0, furo 2022.04.07"/>
-        <title>abaqus.Interaction.SurfaceToSurfaceContactStd - pyabaqus 1.0.16 documentation</title>
+    <meta name="generator" content="sphinx-4.5.0, furo 2022.06.04.1"/>
+        <title>abaqus.Interaction.SurfaceToSurfaceContactStd - pyabaqus 1.0.18 documentation</title>
       <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/styles/furo.css?digest=68f4518137b9aefe99b631505a2064c3c42c9852" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/styles/furo.css?digest=40978830699223671f4072448e654b5958f38b89" />
     <link rel="stylesheet" type="text/css" href="../../../_static/styles/furo-extensions.css?digest=30d1aed668e5c3a91c3e3bf6a60b675221979f0e" />
     
     
@@ -123,7 +123,7 @@
       </label>
     </div>
     <div class="header-center">
-      <a href="../../../index.html"><div class="brand">pyabaqus 1.0.16 documentation</div></a>
+      <a href="../../../index.html"><div class="brand">pyabaqus 1.0.18 documentation</div></a>
     </div>
     <div class="header-right">
       <div class="theme-toggle-container theme-toggle-header">
@@ -146,7 +146,7 @@
       <div class="sidebar-sticky"><a class="sidebar-brand" href="../../../index.html">
   
   
-  <span class="sidebar-brand-text">pyabaqus 1.0.16 documentation</span>
+  <span class="sidebar-brand-text">pyabaqus 1.0.18 documentation</span>
   
 </a><form class="sidebar-search-container" method="get" action="../../../search.html" role="search">
   <input class="sidebar-search" placeholder=Search name="q" aria-label="Search">
@@ -286,7 +286,8 @@
           </svg>
           <span>Back to top</span>
         </a>
-        <div class="content-icon-container"><div class="theme-toggle-container theme-toggle-content">
+        <div class="content-icon-container">
+          <div class="theme-toggle-container theme-toggle-content">
             <button class="theme-toggle">
               <div class="visually-hidden">Toggle Light / Dark / Auto color theme</div>
               <svg class="theme-icon-when-auto"><use href="#svg-sun-half"></use></svg>
@@ -310,7 +311,7 @@
 
 
 <div class="viewcode-block" id="SurfaceToSurfaceContactStd"><a class="viewcode-back" href="../../../reference/mdb/model/interaction.html#abaqus.Interaction.SurfaceToSurfaceContactStd.SurfaceToSurfaceContactStd">[docs]</a><span class="k">class</span> <span class="nc">SurfaceToSurfaceContactStd</span><span class="p">(</span><span class="n">Interaction</span><span class="p">):</span>
-    <span class="sd">"""The SurfaceToSurfaceContactStd object defines surface-to-surface contact during an</span>
+    <span class="sd">&quot;&quot;&quot;The SurfaceToSurfaceContactStd object defines surface-to-surface contact during an</span>
 <span class="sd">    Abaqus/Standard analysis. </span>
 <span class="sd">    The SurfaceToSurfaceContactStd object is derived from the Interaction object. </span>
 
@@ -337,7 +338,7 @@
 <span class="sd">        import interaction</span>
 <span class="sd">        mdb.models[name].interactions[name]</span>
 
-<span class="sd">    """</span>
+<span class="sd">    &quot;&quot;&quot;</span>
 
     <span class="c1"># A SymbolicConstant specifying the choice of contact tracking algorithm. The STATE </span>
     <span class="c1"># tracking algorithm uses only normal projections and is specified by using ONE_CONFIG. </span>
@@ -356,10 +357,10 @@
                  <span class="n">sliding</span><span class="p">:</span> <span class="n">SymbolicConstant</span><span class="p">,</span> <span class="n">interactionProperty</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
                  <span class="n">interferenceType</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="n">NONE</span><span class="p">,</span> <span class="n">overclosure</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span>
                  <span class="n">interferenceDirectionType</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="n">COMPUTED</span><span class="p">,</span> <span class="n">direction</span><span class="p">:</span> <span class="nb">tuple</span> <span class="o">=</span> <span class="p">(),</span>
-                 <span class="n">amplitude</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">''</span><span class="p">,</span> <span class="n">smooth</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="n">hcrit</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="n">extensionZone</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span>
+                 <span class="n">amplitude</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">smooth</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="n">hcrit</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="n">extensionZone</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span>
                  <span class="n">adjustMethod</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="n">NONE</span><span class="p">,</span> <span class="n">adjustTolerance</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span>
                  <span class="n">adjustSet</span><span class="p">:</span> <span class="n">Region</span> <span class="o">=</span> <span class="n">Region</span><span class="p">(),</span> <span class="n">enforcement</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="n">SURFACE_TO_SURFACE</span><span class="p">,</span>
-                 <span class="n">thickness</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="n">ON</span><span class="p">,</span> <span class="n">contactControls</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">''</span><span class="p">,</span> <span class="n">tied</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="n">OFF</span><span class="p">,</span>
+                 <span class="n">thickness</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="n">ON</span><span class="p">,</span> <span class="n">contactControls</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">tied</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="n">OFF</span><span class="p">,</span>
                  <span class="n">initialClearance</span><span class="p">:</span> <span class="n">typing</span><span class="o">.</span><span class="n">Union</span><span class="p">[</span><span class="n">SymbolicConstant</span><span class="p">,</span> <span class="nb">float</span><span class="p">]</span> <span class="o">=</span> <span class="n">OMIT</span><span class="p">,</span>
                  <span class="n">halfThreadAngle</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">pitch</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
                  <span class="n">majorBoltDiameter</span><span class="p">:</span> <span class="n">typing</span><span class="o">.</span><span class="n">Union</span><span class="p">[</span><span class="n">SymbolicConstant</span><span class="p">,</span> <span class="nb">float</span><span class="p">]</span> <span class="o">=</span> <span class="n">COMPUTED</span><span class="p">,</span>
@@ -368,7 +369,7 @@
                  <span class="n">clearanceRegion</span><span class="p">:</span> <span class="n">Region</span> <span class="o">=</span> <span class="n">Region</span><span class="p">(),</span> <span class="n">surfaceSmoothing</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="n">NONE</span><span class="p">,</span>
                  <span class="n">bondingSet</span><span class="p">:</span> <span class="n">Region</span> <span class="o">=</span> <span class="n">Region</span><span class="p">(),</span> <span class="n">handedness</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="n">RIGHT</span><span class="p">,</span>
                  <span class="n">normalAdjustment</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="kc">None</span><span class="p">):</span>
-        <span class="sd">"""This method creates a SurfaceToSurfaceContactStd object.</span>
+        <span class="sd">&quot;&quot;&quot;This method creates a SurfaceToSurfaceContactStd object.</span>
 
 <span class="sd">        Notes</span>
 <span class="sd">        -----</span>
@@ -451,7 +452,7 @@
 <span class="sd">            interaction. The empty string indicates that the default contact controls will be used. </span>
 <span class="sd">            The default value is an empty string. </span>
 <span class="sd">        tied</span>
-<span class="sd">            A Boolean specifying whether the surfaces are to be "tied" together for the duration of </span>
+<span class="sd">            A Boolean specifying whether the surfaces are to be &quot;tied&quot; together for the duration of </span>
 <span class="sd">            the simulation. The default value is OFF. </span>
 <span class="sd">        initialClearance</span>
 <span class="sd">            A SymbolicConstant or a Float specifying the initial clearance at regions of contact. </span>
@@ -494,22 +495,22 @@
 <span class="sd">        Returns</span>
 <span class="sd">        -------</span>
 <span class="sd">            A SurfaceToSurfaceContactStd object.</span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">()</span>
         <span class="k">pass</span>
 
 <div class="viewcode-block" id="SurfaceToSurfaceContactStd.swapSurfaces"><a class="viewcode-back" href="../../../reference/mdb/model/interaction.html#abaqus.Interaction.SurfaceToSurfaceContactStd.SurfaceToSurfaceContactStd.swapSurfaces">[docs]</a>    <span class="k">def</span> <span class="nf">swapSurfaces</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="sd">"""This method switches the main and secondary surfaces of a surface-to-surface contact</span>
+        <span class="sd">&quot;&quot;&quot;This method switches the main and secondary surfaces of a surface-to-surface contact</span>
 <span class="sd">        pair. This command is valid only for the step in which the interaction is created.</span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span></div>
 
 <div class="viewcode-block" id="SurfaceToSurfaceContactStd.setValues"><a class="viewcode-back" href="../../../reference/mdb/model/interaction.html#abaqus.Interaction.SurfaceToSurfaceContactStd.SurfaceToSurfaceContactStd.setValues">[docs]</a>    <span class="k">def</span> <span class="nf">setValues</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">interferenceType</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="n">NONE</span><span class="p">,</span> <span class="n">overclosure</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span>
                   <span class="n">interferenceDirectionType</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="n">COMPUTED</span><span class="p">,</span> <span class="n">direction</span><span class="p">:</span> <span class="nb">tuple</span> <span class="o">=</span> <span class="p">(),</span>
-                  <span class="n">amplitude</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">''</span><span class="p">,</span> <span class="n">smooth</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="n">hcrit</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="n">extensionZone</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span>
+                  <span class="n">amplitude</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">smooth</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="n">hcrit</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="n">extensionZone</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span>
                   <span class="n">adjustMethod</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="n">NONE</span><span class="p">,</span> <span class="n">adjustTolerance</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span>
                   <span class="n">adjustSet</span><span class="p">:</span> <span class="n">Region</span> <span class="o">=</span> <span class="n">Region</span><span class="p">(),</span> <span class="n">enforcement</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="n">SURFACE_TO_SURFACE</span><span class="p">,</span>
-                  <span class="n">thickness</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="n">ON</span><span class="p">,</span> <span class="n">contactControls</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">''</span><span class="p">,</span> <span class="n">tied</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="n">OFF</span><span class="p">,</span>
+                  <span class="n">thickness</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="n">ON</span><span class="p">,</span> <span class="n">contactControls</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">tied</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="n">OFF</span><span class="p">,</span>
                   <span class="n">initialClearance</span><span class="p">:</span> <span class="n">typing</span><span class="o">.</span><span class="n">Union</span><span class="p">[</span><span class="n">SymbolicConstant</span><span class="p">,</span> <span class="nb">float</span><span class="p">]</span> <span class="o">=</span> <span class="n">OMIT</span><span class="p">,</span>
                   <span class="n">halfThreadAngle</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">pitch</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
                   <span class="n">majorBoltDiameter</span><span class="p">:</span> <span class="n">typing</span><span class="o">.</span><span class="n">Union</span><span class="p">[</span><span class="n">SymbolicConstant</span><span class="p">,</span> <span class="nb">float</span><span class="p">]</span> <span class="o">=</span> <span class="n">COMPUTED</span><span class="p">,</span>
@@ -518,7 +519,7 @@
                   <span class="n">clearanceRegion</span><span class="p">:</span> <span class="n">Region</span> <span class="o">=</span> <span class="n">Region</span><span class="p">(),</span> <span class="n">surfaceSmoothing</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="n">NONE</span><span class="p">,</span>
                   <span class="n">bondingSet</span><span class="p">:</span> <span class="n">Region</span> <span class="o">=</span> <span class="n">Region</span><span class="p">(),</span> <span class="n">handedness</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="n">RIGHT</span><span class="p">,</span>
                   <span class="n">normalAdjustment</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="kc">None</span><span class="p">):</span>
-        <span class="sd">"""This method modifies the data for an existing SurfaceToSurfaceContactStd object in the</span>
+        <span class="sd">&quot;&quot;&quot;This method modifies the data for an existing SurfaceToSurfaceContactStd object in the</span>
 <span class="sd">        step where it is created.</span>
 <span class="sd">        </span>
 <span class="sd">        Parameters</span>
@@ -579,7 +580,7 @@
 <span class="sd">            interaction. The empty string indicates that the default contact controls will be used. </span>
 <span class="sd">            The default value is an empty string. </span>
 <span class="sd">        tied</span>
-<span class="sd">            A Boolean specifying whether the surfaces are to be "tied" together for the duration of </span>
+<span class="sd">            A Boolean specifying whether the surfaces are to be &quot;tied&quot; together for the duration of </span>
 <span class="sd">            the simulation. The default value is OFF. </span>
 <span class="sd">        initialClearance</span>
 <span class="sd">            A SymbolicConstant or a Float specifying the initial clearance at regions of contact. </span>
@@ -618,13 +619,13 @@
 <span class="sd">            A SymbolicConstant specifying the bolt normal adjustment formulation for all secondary </span>
 <span class="sd">            nodes. Possible values are UNIFORM AXIAL COMPONENT and LOCATION DEPENDENT. The default </span>
 <span class="sd">            value is UNIFORM AXIAL COMPONENT. </span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span></div>
 
-<div class="viewcode-block" id="SurfaceToSurfaceContactStd.setValuesInStep"><a class="viewcode-back" href="../../../reference/mdb/model/interaction.html#abaqus.Interaction.SurfaceToSurfaceContactStd.SurfaceToSurfaceContactStd.setValuesInStep">[docs]</a>    <span class="k">def</span> <span class="nf">setValuesInStep</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">stepName</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">interactionProperty</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">''</span><span class="p">,</span> <span class="n">interferenceType</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="n">NONE</span><span class="p">,</span>
+<div class="viewcode-block" id="SurfaceToSurfaceContactStd.setValuesInStep"><a class="viewcode-back" href="../../../reference/mdb/model/interaction.html#abaqus.Interaction.SurfaceToSurfaceContactStd.SurfaceToSurfaceContactStd.setValuesInStep">[docs]</a>    <span class="k">def</span> <span class="nf">setValuesInStep</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">stepName</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">interactionProperty</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">interferenceType</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="n">NONE</span><span class="p">,</span>
                         <span class="n">overclosure</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="n">interferenceDirectionType</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="n">COMPUTED</span><span class="p">,</span>
-                        <span class="n">direction</span><span class="p">:</span> <span class="nb">tuple</span> <span class="o">=</span> <span class="p">(),</span> <span class="n">amplitude</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">''</span><span class="p">,</span> <span class="n">contactControls</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">''</span><span class="p">):</span>
-        <span class="sd">"""This method modifies the propagating data for an existing SurfaceToSurfaceContactStd</span>
+                        <span class="n">direction</span><span class="p">:</span> <span class="nb">tuple</span> <span class="o">=</span> <span class="p">(),</span> <span class="n">amplitude</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">contactControls</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;This method modifies the propagating data for an existing SurfaceToSurfaceContactStd</span>
 <span class="sd">        object in the specified step.</span>
 <span class="sd">        </span>
 <span class="sd">        Parameters</span>
@@ -663,7 +664,7 @@
 <span class="sd">            A String specifying the name of the ContactControl object associated with this </span>
 <span class="sd">            interaction. The empty string indicates that the default contact controls will be used. </span>
 <span class="sd">            The default value is an empty string. </span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span></div></div>
 </pre></div>
         </article>

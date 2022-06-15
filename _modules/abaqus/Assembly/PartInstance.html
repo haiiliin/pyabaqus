@@ -5,10 +5,10 @@
     <meta name="color-scheme" content="light dark"><link rel="index" title="Index" href="../../../genindex.html" /><link rel="search" title="Search" href="../../../search.html" />
         <link rel="canonical" href="https://pyabaqus.haiiliin.com/_modules/abaqus/Assembly/PartInstance.html" />
 
-    <meta name="generator" content="sphinx-4.5.0, furo 2022.04.07"/>
-        <title>abaqus.Assembly.PartInstance - pyabaqus 1.0.16 documentation</title>
+    <meta name="generator" content="sphinx-4.5.0, furo 2022.06.04.1"/>
+        <title>abaqus.Assembly.PartInstance - pyabaqus 1.0.18 documentation</title>
       <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/styles/furo.css?digest=68f4518137b9aefe99b631505a2064c3c42c9852" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/styles/furo.css?digest=40978830699223671f4072448e654b5958f38b89" />
     <link rel="stylesheet" type="text/css" href="../../../_static/styles/furo-extensions.css?digest=30d1aed668e5c3a91c3e3bf6a60b675221979f0e" />
     
     
@@ -123,7 +123,7 @@
       </label>
     </div>
     <div class="header-center">
-      <a href="../../../index.html"><div class="brand">pyabaqus 1.0.16 documentation</div></a>
+      <a href="../../../index.html"><div class="brand">pyabaqus 1.0.18 documentation</div></a>
     </div>
     <div class="header-right">
       <div class="theme-toggle-container theme-toggle-header">
@@ -146,7 +146,7 @@
       <div class="sidebar-sticky"><a class="sidebar-brand" href="../../../index.html">
   
   
-  <span class="sidebar-brand-text">pyabaqus 1.0.16 documentation</span>
+  <span class="sidebar-brand-text">pyabaqus 1.0.18 documentation</span>
   
 </a><form class="sidebar-search-container" method="get" action="../../../search.html" role="search">
   <input class="sidebar-search" placeholder=Search name="q" aria-label="Search">
@@ -286,7 +286,8 @@
           </svg>
           <span>Back to top</span>
         </a>
-        <div class="content-icon-container"><div class="theme-toggle-container theme-toggle-content">
+        <div class="content-icon-container">
+          <div class="theme-toggle-container theme-toggle-content">
             <button class="theme-toggle">
               <div class="visually-hidden">Toggle Light / Dark / Auto color theme</div>
               <svg class="theme-icon-when-auto"><use href="#svg-sun-half"></use></svg>
@@ -324,7 +325,7 @@
 
 
 <div class="viewcode-block" id="PartInstance"><a class="viewcode-back" href="../../../reference/mdb/model/assembly.html#abaqus.Assembly.PartInstance.PartInstance">[docs]</a><span class="k">class</span> <span class="nc">PartInstance</span><span class="p">:</span>
-    <span class="sd">"""A PartInstance object is an instance of a Part object.</span>
+    <span class="sd">&quot;&quot;&quot;A PartInstance object is an instance of a Part object.</span>
 
 <span class="sd">    Attributes</span>
 <span class="sd">    ----------</span>
@@ -414,10 +415,10 @@
 <span class="sd">        mdb.models[name].rootAssembly.allInstances[name]</span>
 <span class="sd">        mdb.models[name].rootAssembly.instances[name]</span>
 
-<span class="sd">    """</span>
+<span class="sd">    &quot;&quot;&quot;</span>
 
     <span class="c1"># A String specifying the repository key. The name must be a valid Abaqus object name. </span>
-    <span class="n">name</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">''</span>
+    <span class="n">name</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span>
 
     <span class="c1"># A Boolean specifying whether the part instance is dependent or independent. If </span>
     <span class="c1"># *dependent*=OFF, the part instance is independent. The default value is OFF. </span>
@@ -515,10 +516,10 @@
     <span class="n">referencePoints</span><span class="p">:</span> <span class="nb">dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">ReferencePoint</span><span class="p">]</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">ReferencePoint</span><span class="p">]()</span>
 
     <span class="c1"># A String specifying the name of the part from which the instance was created. </span>
-    <span class="n">partName</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">''</span>
+    <span class="n">partName</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span>
 
     <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">part</span><span class="p">:</span> <span class="n">Part</span><span class="p">,</span> <span class="n">autoOffset</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="n">OFF</span><span class="p">,</span> <span class="n">dependent</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="n">OFF</span><span class="p">):</span>
-        <span class="sd">"""This method creates a PartInstance object and puts it into the instances repository.</span>
+        <span class="sd">&quot;&quot;&quot;This method creates a PartInstance object and puts it into the instances repository.</span>
 
 <span class="sd">        Notes</span>
 <span class="sd">        -----</span>
@@ -545,7 +546,7 @@
 <span class="sd">        Returns</span>
 <span class="sd">        -------</span>
 <span class="sd">            A PartInstance object.</span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">vertices</span> <span class="o">=</span> <span class="n">part</span><span class="o">.</span><span class="n">vertices</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">ignoredEdges</span> <span class="o">=</span> <span class="n">part</span><span class="o">.</span><span class="n">ignoredEdges</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">faces</span> <span class="o">=</span> <span class="n">part</span><span class="o">.</span><span class="n">faces</span>
@@ -563,9 +564,9 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">elemEdges</span> <span class="o">=</span> <span class="n">part</span><span class="o">.</span><span class="n">elemEdges</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">elementEdges</span> <span class="o">=</span> <span class="n">part</span><span class="o">.</span><span class="n">elementEdges</span>
 
-<div class="viewcode-block" id="PartInstance.InstanceFromBooleanCut"><a class="viewcode-back" href="../../../reference/mdb/model/assembly.html#abaqus.Assembly.PartInstance.PartInstance.InstanceFromBooleanCut">[docs]</a>    <span class="k">def</span> <span class="nf">InstanceFromBooleanCut</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">instanceToBeCut</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">cuttingInstances</span><span class="p">:</span> <span class="nb">tuple</span><span class="p">[</span><span class="s1">'PartInstance'</span><span class="p">],</span>
+<div class="viewcode-block" id="PartInstance.InstanceFromBooleanCut"><a class="viewcode-back" href="../../../reference/mdb/model/assembly.html#abaqus.Assembly.PartInstance.PartInstance.InstanceFromBooleanCut">[docs]</a>    <span class="k">def</span> <span class="nf">InstanceFromBooleanCut</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">instanceToBeCut</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">cuttingInstances</span><span class="p">:</span> <span class="nb">tuple</span><span class="p">[</span><span class="s1">&#39;PartInstance&#39;</span><span class="p">],</span>
                                <span class="n">originalInstances</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="n">SUPPRESS</span><span class="p">):</span>
-        <span class="sd">"""This method creates a PartInstance in the instances repository after subtracting or</span>
+        <span class="sd">&quot;&quot;&quot;This method creates a PartInstance in the instances repository after subtracting or</span>
 <span class="sd">        cutting the geometries of a group of part instances from that of a base part instance.</span>
 
 <span class="sd">        Notes</span>
@@ -593,14 +594,14 @@
 <span class="sd">        Returns</span>
 <span class="sd">        -------</span>
 <span class="sd">            A PartInstance object.</span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span></div>
 
-<div class="viewcode-block" id="PartInstance.InstanceFromBooleanMerge"><a class="viewcode-back" href="../../../reference/mdb/model/assembly.html#abaqus.Assembly.PartInstance.PartInstance.InstanceFromBooleanMerge">[docs]</a>    <span class="k">def</span> <span class="nf">InstanceFromBooleanMerge</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">instances</span><span class="p">:</span> <span class="nb">tuple</span><span class="p">[</span><span class="s1">'PartInstance'</span><span class="p">],</span> <span class="n">keepIntersections</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="kc">False</span><span class="p">,</span>
+<div class="viewcode-block" id="PartInstance.InstanceFromBooleanMerge"><a class="viewcode-back" href="../../../reference/mdb/model/assembly.html#abaqus.Assembly.PartInstance.PartInstance.InstanceFromBooleanMerge">[docs]</a>    <span class="k">def</span> <span class="nf">InstanceFromBooleanMerge</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">instances</span><span class="p">:</span> <span class="nb">tuple</span><span class="p">[</span><span class="s1">&#39;PartInstance&#39;</span><span class="p">],</span> <span class="n">keepIntersections</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="kc">False</span><span class="p">,</span>
                                  <span class="n">originalInstances</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="n">SUPPRESS</span><span class="p">,</span> <span class="n">domain</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="n">GEOMETRY</span><span class="p">,</span>
                                  <span class="n">mergeNodes</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="n">BOUNDARY_ONLY</span><span class="p">,</span> <span class="n">nodeMergingTolerance</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
                                  <span class="n">removeDuplicateElements</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="kc">True</span><span class="p">):</span>
-        <span class="sd">"""This method creates a PartInstance in the instances repository after merging two or more</span>
+        <span class="sd">&quot;&quot;&quot;This method creates a PartInstance in the instances repository after merging two or more</span>
 <span class="sd">        part instances.</span>
 
 <span class="sd">        Notes</span>
@@ -645,12 +646,12 @@
 <span class="sd">        Returns</span>
 <span class="sd">        -------</span>
 <span class="sd">            A PartInstance object.</span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span></div>
 
 <div class="viewcode-block" id="PartInstance.LinearInstancePattern"><a class="viewcode-back" href="../../../reference/mdb/model/assembly.html#abaqus.Assembly.PartInstance.PartInstance.LinearInstancePattern">[docs]</a>    <span class="k">def</span> <span class="nf">LinearInstancePattern</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">instanceList</span><span class="p">:</span> <span class="nb">tuple</span><span class="p">,</span> <span class="n">number1</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">spacing1</span><span class="p">:</span> <span class="nb">float</span><span class="p">,</span> <span class="n">number2</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">spacing2</span><span class="p">:</span> <span class="nb">float</span><span class="p">,</span>
                               <span class="n">direction1</span><span class="p">:</span> <span class="nb">tuple</span> <span class="o">=</span> <span class="p">(),</span> <span class="n">direction2</span><span class="p">:</span> <span class="nb">tuple</span> <span class="o">=</span> <span class="p">()):</span>
-        <span class="sd">"""This method creates multiple PartInstance objects in a linear pattern and puts them into</span>
+        <span class="sd">&quot;&quot;&quot;This method creates multiple PartInstance objects in a linear pattern and puts them into</span>
 <span class="sd">        the instances repository.</span>
 
 <span class="sd">        Notes</span>
@@ -687,12 +688,12 @@
 <span class="sd">        Returns</span>
 <span class="sd">        -------</span>
 <span class="sd">            A sequence of PartInstance objects.</span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span></div>
 
 <div class="viewcode-block" id="PartInstance.RadialInstancePattern"><a class="viewcode-back" href="../../../reference/mdb/model/assembly.html#abaqus.Assembly.PartInstance.PartInstance.RadialInstancePattern">[docs]</a>    <span class="k">def</span> <span class="nf">RadialInstancePattern</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">instanceList</span><span class="p">:</span> <span class="nb">tuple</span><span class="p">,</span> <span class="n">number</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">totalAngle</span><span class="p">:</span> <span class="nb">float</span><span class="p">,</span> <span class="n">point</span><span class="p">:</span> <span class="nb">tuple</span> <span class="o">=</span> <span class="p">(),</span>
                               <span class="n">axis</span><span class="p">:</span> <span class="nb">tuple</span> <span class="o">=</span> <span class="p">()):</span>
-        <span class="sd">"""This method creates multiple PartInstance objects in a radial pattern and puts them into</span>
+        <span class="sd">&quot;&quot;&quot;This method creates multiple PartInstance objects in a radial pattern and puts them into</span>
 <span class="sd">        the instances repository.</span>
 
 <span class="sd">        Notes</span>
@@ -726,11 +727,11 @@
 <span class="sd">        Returns</span>
 <span class="sd">        -------</span>
 <span class="sd">            A sequence of PartInstance objects.</span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span></div>
 
 <div class="viewcode-block" id="PartInstance.checkGeometry"><a class="viewcode-back" href="../../../reference/mdb/model/assembly.html#abaqus.Assembly.PartInstance.PartInstance.checkGeometry">[docs]</a>    <span class="k">def</span> <span class="nf">checkGeometry</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">detailed</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="n">OFF</span><span class="p">,</span> <span class="n">level</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="kc">None</span><span class="p">):</span>
-        <span class="sd">"""This method checks the validity of the geometry of the part instance and prints a count</span>
+        <span class="sd">&quot;&quot;&quot;This method checks the validity of the geometry of the part instance and prints a count</span>
 <span class="sd">        of all topological entities on the part instance (faces, edges, vertices, etc.).</span>
 <span class="sd">        </span>
 <span class="sd">        Parameters</span>
@@ -751,12 +752,12 @@
 <span class="sd">            dependent part instance. In this case, this command should be called on the Part </span>
 <span class="sd">            instead. </span>
 <span class="sd">              The geometry of dependent part instances cannot be changed. </span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span></div>
 
 <div class="viewcode-block" id="PartInstance.Contact"><a class="viewcode-back" href="../../../reference/mdb/model/assembly.html#abaqus.Assembly.PartInstance.PartInstance.Contact">[docs]</a>    <span class="k">def</span> <span class="nf">Contact</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">movableList</span><span class="p">:</span> <span class="nb">tuple</span><span class="p">,</span> <span class="n">fixedList</span><span class="p">:</span> <span class="nb">tuple</span><span class="p">,</span> <span class="n">direction</span><span class="p">:</span> <span class="nb">tuple</span><span class="p">,</span> <span class="n">clearance</span><span class="p">:</span> <span class="nb">float</span><span class="p">,</span>
                 <span class="n">isFaceEdges</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="n">OFF</span><span class="p">):</span>
-        <span class="sd">"""This method translates an instance along the specified direction until it is in contact</span>
+        <span class="sd">&quot;&quot;&quot;This method translates an instance along the specified direction until it is in contact</span>
 <span class="sd">        with a fixed instance.</span>
 <span class="sd">        </span>
 <span class="sd">        Parameters</span>
@@ -779,45 +780,45 @@
 <span class="sd">        -------</span>
 <span class="sd">        feature: Feature</span>
 <span class="sd">            A Feature object</span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span></div>
 
 <div class="viewcode-block" id="PartInstance.ConvertConstraints"><a class="viewcode-back" href="../../../reference/mdb/model/assembly.html#abaqus.Assembly.PartInstance.PartInstance.ConvertConstraints">[docs]</a>    <span class="k">def</span> <span class="nf">ConvertConstraints</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="sd">"""This method converts the position constraints of an instance to absolute positions. The</span>
+        <span class="sd">&quot;&quot;&quot;This method converts the position constraints of an instance to absolute positions. The</span>
 <span class="sd">        method deletes the constraint features on the instance but preserves the position in</span>
 <span class="sd">        space.</span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span></div>
 
 <div class="viewcode-block" id="PartInstance.getPosition"><a class="viewcode-back" href="../../../reference/mdb/model/assembly.html#abaqus.Assembly.PartInstance.PartInstance.getPosition">[docs]</a>    <span class="k">def</span> <span class="nf">getPosition</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="sd">"""This method prints the sum of the translations and rotations applied to the PartInstance</span>
+        <span class="sd">&quot;&quot;&quot;This method prints the sum of the translations and rotations applied to the PartInstance</span>
 <span class="sd">        object.</span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span></div>
 
 <div class="viewcode-block" id="PartInstance.getRotation"><a class="viewcode-back" href="../../../reference/mdb/model/assembly.html#abaqus.Assembly.PartInstance.PartInstance.getRotation">[docs]</a>    <span class="k">def</span> <span class="nf">getRotation</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="sd">"""This method returns a tuple including the point of rotation, axis of rotation, and</span>
+        <span class="sd">&quot;&quot;&quot;This method returns a tuple including the point of rotation, axis of rotation, and</span>
 <span class="sd">        rotation angle (in degrees).</span>
 
 <span class="sd">        Returns</span>
 <span class="sd">        -------</span>
 <span class="sd">            A tuple including the point of rotation, axis of rotation, and rotation angle (in </span>
 <span class="sd">            degrees).</span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span></div>
 
 <div class="viewcode-block" id="PartInstance.getTranslation"><a class="viewcode-back" href="../../../reference/mdb/model/assembly.html#abaqus.Assembly.PartInstance.PartInstance.getTranslation">[docs]</a>    <span class="k">def</span> <span class="nf">getTranslation</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="sd">"""This method returns a tuple of three Floats representing translation in the *X*-, *Y*-,</span>
+        <span class="sd">&quot;&quot;&quot;This method returns a tuple of three Floats representing translation in the *X*-, *Y*-,</span>
 <span class="sd">        and *Z*-directions.</span>
 
 <span class="sd">        Returns</span>
 <span class="sd">        -------</span>
 <span class="sd">            A tuple of three Floats representing the translation.</span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span></div>
 
 <div class="viewcode-block" id="PartInstance.replace"><a class="viewcode-back" href="../../../reference/mdb/model/assembly.html#abaqus.Assembly.PartInstance.PartInstance.replace">[docs]</a>    <span class="k">def</span> <span class="nf">replace</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">instanceOf</span><span class="p">:</span> <span class="n">Part</span><span class="p">,</span> <span class="n">applyConstraints</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="kc">True</span><span class="p">):</span>
-        <span class="sd">"""This method replaces one instance with an instance of another part.</span>
+        <span class="sd">&quot;&quot;&quot;This method replaces one instance with an instance of another part.</span>
 <span class="sd">        </span>
 <span class="sd">        Parameters</span>
 <span class="sd">        ----------</span>
@@ -828,11 +829,11 @@
 <span class="sd">            position the new instance in the same place as the original instance. The default value </span>
 <span class="sd">            is True. A value of False indicates that constraints applies to the instance are deleted </span>
 <span class="sd">            will be deleted from the feature list. </span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span></div>
 
 <div class="viewcode-block" id="PartInstance.rotateAboutAxis"><a class="viewcode-back" href="../../../reference/mdb/model/assembly.html#abaqus.Assembly.PartInstance.PartInstance.rotateAboutAxis">[docs]</a>    <span class="k">def</span> <span class="nf">rotateAboutAxis</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">axisPoint</span><span class="p">:</span> <span class="nb">tuple</span><span class="p">,</span> <span class="n">axisDirection</span><span class="p">:</span> <span class="nb">tuple</span><span class="p">,</span> <span class="n">angle</span><span class="p">:</span> <span class="nb">float</span><span class="p">):</span>
-        <span class="sd">"""This method translates an instance by the specified amount.</span>
+        <span class="sd">&quot;&quot;&quot;This method translates an instance by the specified amount.</span>
 <span class="sd">        </span>
 <span class="sd">        Parameters</span>
 <span class="sd">        ----------</span>
@@ -844,22 +845,22 @@
 <span class="sd">        angle</span>
 <span class="sd">            A Float specifying the rotation angle in degrees. Use the right-hand rule to determine </span>
 <span class="sd">            the direction. </span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span></div>
 
 <div class="viewcode-block" id="PartInstance.translate"><a class="viewcode-back" href="../../../reference/mdb/model/assembly.html#abaqus.Assembly.PartInstance.PartInstance.translate">[docs]</a>    <span class="k">def</span> <span class="nf">translate</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">vector</span><span class="p">:</span> <span class="nb">tuple</span><span class="p">):</span>
-        <span class="sd">"""This method translates an instance by the specified amount.</span>
+        <span class="sd">&quot;&quot;&quot;This method translates an instance by the specified amount.</span>
 <span class="sd">        </span>
 <span class="sd">        Parameters</span>
 <span class="sd">        ----------</span>
 <span class="sd">        vector</span>
 <span class="sd">            A sequence of three Floats specifying a translation vector. </span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span></div>
 
 <div class="viewcode-block" id="PartInstance.translateTo"><a class="viewcode-back" href="../../../reference/mdb/model/assembly.html#abaqus.Assembly.PartInstance.PartInstance.translateTo">[docs]</a>    <span class="k">def</span> <span class="nf">translateTo</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">movableList</span><span class="p">:</span> <span class="nb">tuple</span><span class="p">,</span> <span class="n">fixedList</span><span class="p">:</span> <span class="nb">tuple</span><span class="p">,</span> <span class="n">direction</span><span class="p">:</span> <span class="nb">tuple</span><span class="p">,</span> <span class="n">clearance</span><span class="p">:</span> <span class="nb">float</span><span class="p">,</span>
                     <span class="n">vector</span><span class="p">:</span> <span class="nb">tuple</span> <span class="o">=</span> <span class="p">()):</span>
-        <span class="sd">"""This method translates an instance along the specified direction until it is in contact</span>
+        <span class="sd">&quot;&quot;&quot;This method translates an instance along the specified direction until it is in contact</span>
 <span class="sd">        with a fixed instance.</span>
 <span class="sd">        </span>
 <span class="sd">        Parameters</span>
@@ -881,7 +882,7 @@
 <span class="sd">        -------</span>
 <span class="sd">        feature: Feature</span>
 <span class="sd">            A Feature object</span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span></div></div>
 </pre></div>
         </article>

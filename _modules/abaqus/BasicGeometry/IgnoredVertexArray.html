@@ -5,10 +5,10 @@
     <meta name="color-scheme" content="light dark"><link rel="index" title="Index" href="../../../genindex.html" /><link rel="search" title="Search" href="../../../search.html" />
         <link rel="canonical" href="https://pyabaqus.haiiliin.com/_modules/abaqus/BasicGeometry/IgnoredVertexArray.html" />
 
-    <meta name="generator" content="sphinx-4.5.0, furo 2022.04.07"/>
-        <title>abaqus.BasicGeometry.IgnoredVertexArray - pyabaqus 1.0.16 documentation</title>
+    <meta name="generator" content="sphinx-4.5.0, furo 2022.06.04.1"/>
+        <title>abaqus.BasicGeometry.IgnoredVertexArray - pyabaqus 1.0.18 documentation</title>
       <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/styles/furo.css?digest=68f4518137b9aefe99b631505a2064c3c42c9852" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/styles/furo.css?digest=40978830699223671f4072448e654b5958f38b89" />
     <link rel="stylesheet" type="text/css" href="../../../_static/styles/furo-extensions.css?digest=30d1aed668e5c3a91c3e3bf6a60b675221979f0e" />
     
     
@@ -123,7 +123,7 @@
       </label>
     </div>
     <div class="header-center">
-      <a href="../../../index.html"><div class="brand">pyabaqus 1.0.16 documentation</div></a>
+      <a href="../../../index.html"><div class="brand">pyabaqus 1.0.18 documentation</div></a>
     </div>
     <div class="header-right">
       <div class="theme-toggle-container theme-toggle-header">
@@ -146,7 +146,7 @@
       <div class="sidebar-sticky"><a class="sidebar-brand" href="../../../index.html">
   
   
-  <span class="sidebar-brand-text">pyabaqus 1.0.16 documentation</span>
+  <span class="sidebar-brand-text">pyabaqus 1.0.18 documentation</span>
   
 </a><form class="sidebar-search-container" method="get" action="../../../search.html" role="search">
   <input class="sidebar-search" placeholder=Search name="q" aria-label="Search">
@@ -286,7 +286,8 @@
           </svg>
           <span>Back to top</span>
         </a>
-        <div class="content-icon-container"><div class="theme-toggle-container theme-toggle-content">
+        <div class="content-icon-container">
+          <div class="theme-toggle-container theme-toggle-content">
             <button class="theme-toggle">
               <div class="visually-hidden">Toggle Light / Dark / Auto color theme</div>
               <svg class="theme-icon-when-auto"><use href="#svg-sun-half"></use></svg>
@@ -305,7 +306,7 @@
 
 
 <div class="viewcode-block" id="IgnoredVertexArray"><a class="viewcode-back" href="../../../reference/mdb/model/part_assembly/geometry.html#abaqus.BasicGeometry.IgnoredVertexArray.IgnoredVertexArray">[docs]</a><span class="k">class</span> <span class="nc">IgnoredVertexArray</span><span class="p">:</span>
-    <span class="sd">"""The IgnoredVertexArray is a sequence of IgnoredVertex objects. If the part is modified,</span>
+    <span class="sd">&quot;&quot;&quot;The IgnoredVertexArray is a sequence of IgnoredVertex objects. If the part is modified,</span>
 <span class="sd">    then IgnoredVertexArray must be updated for that part. </span>
 
 <span class="sd">    Notes</span>
@@ -320,10 +321,10 @@
 <span class="sd">        mdb.models[name].rootAssembly.allInstances[name].ignoredVertices</span>
 <span class="sd">        mdb.models[name].rootAssembly.instances[name].ignoredVertices</span>
 
-<span class="sd">    """</span>
+<span class="sd">    &quot;&quot;&quot;</span>
 
 <div class="viewcode-block" id="IgnoredVertexArray.findAt"><a class="viewcode-back" href="../../../reference/mdb/model/part_assembly/geometry.html#abaqus.BasicGeometry.IgnoredVertexArray.IgnoredVertexArray.findAt">[docs]</a>    <span class="k">def</span> <span class="nf">findAt</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">coordinates</span><span class="p">:</span> <span class="nb">tuple</span><span class="p">,</span> <span class="n">printWarning</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="kc">True</span><span class="p">):</span>
-        <span class="sd">"""This method returns the object or objects in the IgnoredVertexArray located at the given</span>
+        <span class="sd">&quot;&quot;&quot;This method returns the object or objects in the IgnoredVertexArray located at the given</span>
 <span class="sd">        coordinates.</span>
 <span class="sd">        findAt initially uses the ACIS tolerance of 1E-6. As a result, findAt returns any</span>
 <span class="sd">        IgnoredVertex object that is at the arbitrary point specified or at a distance of less</span>
@@ -352,11 +353,11 @@
 <span class="sd">        -------</span>
 <span class="sd">            An IgnoredVertex object or a sequence of IgnoredVertex objects.</span>
 <span class="sd">            </span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span></div>
 
 <div class="viewcode-block" id="IgnoredVertexArray.getSequenceFromMask"><a class="viewcode-back" href="../../../reference/mdb/model/part_assembly/geometry.html#abaqus.BasicGeometry.IgnoredVertexArray.IgnoredVertexArray.getSequenceFromMask">[docs]</a>    <span class="k">def</span> <span class="nf">getSequenceFromMask</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">mask</span><span class="p">:</span> <span class="nb">str</span><span class="p">):</span>
-        <span class="sd">"""This method returns the object or objects in the IgnoredVertexArray identified using the</span>
+        <span class="sd">&quot;&quot;&quot;This method returns the object or objects in the IgnoredVertexArray identified using the</span>
 <span class="sd">        specified *mask*. This command is generated when the JournalOptions are set to</span>
 <span class="sd">        COMPRESSEDINDEX. When large number of objects are involved, this method is highly</span>
 <span class="sd">        efficient.</span>
@@ -370,21 +371,21 @@
 <span class="sd">        -------</span>
 <span class="sd">            An IgnoredVertex object or a sequence of IgnoredVertex objects.</span>
 <span class="sd">            </span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span></div>
 
 <div class="viewcode-block" id="IgnoredVertexArray.getMask"><a class="viewcode-back" href="../../../reference/mdb/model/part_assembly/geometry.html#abaqus.BasicGeometry.IgnoredVertexArray.IgnoredVertexArray.getMask">[docs]</a>    <span class="k">def</span> <span class="nf">getMask</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="sd">"""This method returns a string specifying the object or objects.</span>
+        <span class="sd">&quot;&quot;&quot;This method returns a string specifying the object or objects.</span>
 
 <span class="sd">        Returns</span>
 <span class="sd">        -------</span>
 <span class="sd">            A String specifying the object or objects.</span>
 <span class="sd">            </span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span></div>
 
-<div class="viewcode-block" id="IgnoredVertexArray.getClosest"><a class="viewcode-back" href="../../../reference/mdb/model/part_assembly/geometry.html#abaqus.BasicGeometry.IgnoredVertexArray.IgnoredVertexArray.getClosest">[docs]</a>    <span class="k">def</span> <span class="nf">getClosest</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">coordinates</span><span class="p">:</span> <span class="nb">tuple</span><span class="p">,</span> <span class="n">searchTolerance</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">''</span><span class="p">):</span>
-        <span class="sd">"""This method returns a object or objects in the IgnoredVertexArray closest to the given</span>
+<div class="viewcode-block" id="IgnoredVertexArray.getClosest"><a class="viewcode-back" href="../../../reference/mdb/model/part_assembly/geometry.html#abaqus.BasicGeometry.IgnoredVertexArray.IgnoredVertexArray.getClosest">[docs]</a>    <span class="k">def</span> <span class="nf">getClosest</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">coordinates</span><span class="p">:</span> <span class="nb">tuple</span><span class="p">,</span> <span class="n">searchTolerance</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;This method returns a object or objects in the IgnoredVertexArray closest to the given</span>
 <span class="sd">        set of points, where the given points need not lie on the vertices in the</span>
 <span class="sd">        IgnoredVertexArray.</span>
 <span class="sd">        </span>
@@ -394,7 +395,7 @@
 <span class="sd">            A sequence of a sequence of floats, where each sequence of floats describes the *X*-, </span>
 <span class="sd">            *Y*-, and *Z*-coordinates of a </span>
 <span class="sd">            point.`r=e.getClosest(coordinates=((20.0,20.0,10.0),(-1.0, -15.0, 15),))``r.keys()``[0, </span>
-<span class="sd">            1]``r[0]``(mdb.models['Model-1'].parts['Part-1'].ignoredVertices[3],                     </span>
+<span class="sd">            1]``r[0]``(mdb.models[&#39;Model-1&#39;].parts[&#39;Part-1&#39;].ignoredVertices[3],                     </span>
 <span class="sd">                        (15.7090625762939, 20.0, 10.0))` </span>
 <span class="sd">        searchTolerance</span>
 <span class="sd">            A double specifying the distance within which the closest object must lie. The default </span>
@@ -415,7 +416,7 @@
 <span class="sd">            - An exception occurs if the resulting sequence is empty. </span>
 <span class="sd">              Error: The mask results in an empty sequence </span>
 <span class="sd">            </span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span></div></div>
 </pre></div>
         </article>

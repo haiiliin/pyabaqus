@@ -5,10 +5,10 @@
     <meta name="color-scheme" content="light dark"><link rel="index" title="Index" href="../../../genindex.html" /><link rel="search" title="Search" href="../../../search.html" />
         <link rel="canonical" href="https://pyabaqus.haiiliin.com/_modules/abaqus/Assembly/Feature.html" />
 
-    <meta name="generator" content="sphinx-4.5.0, furo 2022.04.07"/>
-        <title>abaqus.Assembly.Feature - pyabaqus 1.0.16 documentation</title>
+    <meta name="generator" content="sphinx-4.5.0, furo 2022.06.04.1"/>
+        <title>abaqus.Assembly.Feature - pyabaqus 1.0.18 documentation</title>
       <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/styles/furo.css?digest=68f4518137b9aefe99b631505a2064c3c42c9852" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/styles/furo.css?digest=40978830699223671f4072448e654b5958f38b89" />
     <link rel="stylesheet" type="text/css" href="../../../_static/styles/furo-extensions.css?digest=30d1aed668e5c3a91c3e3bf6a60b675221979f0e" />
     
     
@@ -123,7 +123,7 @@
       </label>
     </div>
     <div class="header-center">
-      <a href="../../../index.html"><div class="brand">pyabaqus 1.0.16 documentation</div></a>
+      <a href="../../../index.html"><div class="brand">pyabaqus 1.0.18 documentation</div></a>
     </div>
     <div class="header-right">
       <div class="theme-toggle-container theme-toggle-header">
@@ -146,7 +146,7 @@
       <div class="sidebar-sticky"><a class="sidebar-brand" href="../../../index.html">
   
   
-  <span class="sidebar-brand-text">pyabaqus 1.0.16 documentation</span>
+  <span class="sidebar-brand-text">pyabaqus 1.0.18 documentation</span>
   
 </a><form class="sidebar-search-container" method="get" action="../../../search.html" role="search">
   <input class="sidebar-search" placeholder=Search name="q" aria-label="Search">
@@ -286,7 +286,8 @@
           </svg>
           <span>Back to top</span>
         </a>
-        <div class="content-icon-container"><div class="theme-toggle-container theme-toggle-content">
+        <div class="content-icon-container">
+          <div class="theme-toggle-container theme-toggle-content">
             <button class="theme-toggle">
               <div class="visually-hidden">Toggle Light / Dark / Auto color theme</div>
               <svg class="theme-icon-when-auto"><use href="#svg-sun-half"></use></svg>
@@ -308,7 +309,7 @@
 
 
 <div class="viewcode-block" id="Feature"><a class="viewcode-back" href="../../../reference/mdb/model/assembly.html#abaqus.Assembly.Feature.Feature">[docs]</a><span class="k">class</span> <span class="nc">Feature</span><span class="p">(</span><span class="n">FeatureBase</span><span class="p">):</span>
-    <span class="sd">"""The following commands operate on Feature objects. For more information about the </span>
+    <span class="sd">&quot;&quot;&quot;The following commands operate on Feature objects. For more information about the </span>
 <span class="sd">    Feature object, see Feature object. </span>
 
 <span class="sd">    Notes</span>
@@ -319,7 +320,7 @@
 
 <span class="sd">        import assembly</span>
 
-<span class="sd">    """</span>
+<span class="sd">    &quot;&quot;&quot;</span>
 
 <div class="viewcode-block" id="Feature.AttachmentLines"><a class="viewcode-back" href="../../../reference/mdb/model/assembly.html#abaqus.Assembly.Feature.Feature.AttachmentLines">[docs]</a>    <span class="nd">@staticmethod</span>
     <span class="k">def</span> <span class="nf">AttachmentLines</span><span class="p">(</span><span class="n">name</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">points</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">sourceFaces</span><span class="p">:</span> <span class="nb">tuple</span><span class="p">[</span><span class="n">Face</span><span class="p">],</span> <span class="n">sourceElementFaces</span><span class="p">:</span> <span class="nb">tuple</span><span class="p">[</span><span class="n">MeshFace</span><span class="p">],</span>
@@ -327,9 +328,9 @@
                         <span class="n">projectionMethod</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="n">PROJECT_BY_PROXIMITY</span><span class="p">,</span>
                         <span class="n">projectionDirStartPt</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">projectionDirEndPt</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
                         <span class="n">sourceToTargetProjMethod</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="n">PROJECT_BY_NUMBER</span><span class="p">,</span>
-                        <span class="n">numProjections</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">''</span><span class="p">,</span> <span class="n">projectionDistance</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">''</span><span class="p">,</span>
-                        <span class="n">flipSourceToTargetDirection</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="n">OFF</span><span class="p">,</span> <span class="n">setName</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">''</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="s1">'Feature'</span><span class="p">:</span>
-        <span class="sd">"""This method creates a Feature object by creating attachment lines between the given set</span>
+                        <span class="n">numProjections</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">projectionDistance</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span><span class="p">,</span>
+                        <span class="n">flipSourceToTargetDirection</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="n">OFF</span><span class="p">,</span> <span class="n">setName</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="s1">&#39;Feature&#39;</span><span class="p">:</span>
+        <span class="sd">&quot;&quot;&quot;This method creates a Feature object by creating attachment lines between the given set</span>
 <span class="sd">        of source and target faces. The given points are first projected onto the source faces</span>
 <span class="sd">        using the specified projection method. The points are then projected normal to the</span>
 <span class="sd">        source faces onto the target faces. The user can specify the number of projections or</span>
@@ -397,12 +398,12 @@
 <span class="sd">        Returns</span>
 <span class="sd">        -------</span>
 <span class="sd">            A Feature object.</span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">return</span> <span class="n">Feature</span><span class="p">()</span></div>
 
 <div class="viewcode-block" id="Feature.Coaxial"><a class="viewcode-back" href="../../../reference/mdb/model/assembly.html#abaqus.Assembly.Feature.Feature.Coaxial">[docs]</a>    <span class="nd">@staticmethod</span>
-    <span class="k">def</span> <span class="nf">Coaxial</span><span class="p">(</span><span class="n">movableAxis</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">fixedAxis</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">flip</span><span class="p">:</span> <span class="n">Boolean</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="s1">'Feature'</span><span class="p">:</span>
-        <span class="sd">"""This method moves an instance so that its selected face is coaxial with the selected</span>
+    <span class="k">def</span> <span class="nf">Coaxial</span><span class="p">(</span><span class="n">movableAxis</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">fixedAxis</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">flip</span><span class="p">:</span> <span class="n">Boolean</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="s1">&#39;Feature&#39;</span><span class="p">:</span>
+        <span class="sd">&quot;&quot;&quot;This method moves an instance so that its selected face is coaxial with the selected</span>
 <span class="sd">        face of a fixed instance.</span>
 
 <span class="sd">        Notes</span>
@@ -429,12 +430,12 @@
 <span class="sd">        Raises</span>
 <span class="sd">        ------</span>
 <span class="sd">            AbaqusException. </span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">return</span> <span class="n">Feature</span><span class="p">()</span></div>
 
 <div class="viewcode-block" id="Feature.CoincidentPoint"><a class="viewcode-back" href="../../../reference/mdb/model/assembly.html#abaqus.Assembly.Feature.Feature.CoincidentPoint">[docs]</a>    <span class="nd">@staticmethod</span>
-    <span class="k">def</span> <span class="nf">CoincidentPoint</span><span class="p">(</span><span class="n">movablePoint</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">fixedPoint</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="s1">'Feature'</span><span class="p">:</span>
-        <span class="sd">"""This method moves an instance so that a specified point is coincident with a specified</span>
+    <span class="k">def</span> <span class="nf">CoincidentPoint</span><span class="p">(</span><span class="n">movablePoint</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">fixedPoint</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="s1">&#39;Feature&#39;</span><span class="p">:</span>
+        <span class="sd">&quot;&quot;&quot;This method moves an instance so that a specified point is coincident with a specified</span>
 <span class="sd">        point of a fixed instance.</span>
 
 <span class="sd">        Notes</span>
@@ -458,12 +459,12 @@
 <span class="sd">        -------</span>
 <span class="sd">        feature: Feature</span>
 <span class="sd">            A Feature object</span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">return</span> <span class="n">Feature</span><span class="p">()</span></div>
 
 <div class="viewcode-block" id="Feature.EdgeToEdge"><a class="viewcode-back" href="../../../reference/mdb/model/assembly.html#abaqus.Assembly.Feature.Feature.EdgeToEdge">[docs]</a>    <span class="nd">@staticmethod</span>
-    <span class="k">def</span> <span class="nf">EdgeToEdge</span><span class="p">(</span><span class="n">movableAxis</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">fixedAxis</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">flip</span><span class="p">:</span> <span class="n">Boolean</span><span class="p">,</span> <span class="n">clearance</span><span class="p">:</span> <span class="nb">float</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="s1">'Feature'</span><span class="p">:</span>
-        <span class="sd">"""This method moves an instance so that its edge is parallel to an edge of a fixed</span>
+    <span class="k">def</span> <span class="nf">EdgeToEdge</span><span class="p">(</span><span class="n">movableAxis</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">fixedAxis</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">flip</span><span class="p">:</span> <span class="n">Boolean</span><span class="p">,</span> <span class="n">clearance</span><span class="p">:</span> <span class="nb">float</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="s1">&#39;Feature&#39;</span><span class="p">:</span>
+        <span class="sd">&quot;&quot;&quot;This method moves an instance so that its edge is parallel to an edge of a fixed</span>
 <span class="sd">        instance.</span>
 
 <span class="sd">        Notes</span>
@@ -496,12 +497,12 @@
 <span class="sd">        Raises</span>
 <span class="sd">        ------</span>
 <span class="sd">            AbaqusException. </span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">return</span> <span class="n">Feature</span><span class="p">()</span></div>
 
 <div class="viewcode-block" id="Feature.FaceToFace"><a class="viewcode-back" href="../../../reference/mdb/model/assembly.html#abaqus.Assembly.Feature.Feature.FaceToFace">[docs]</a>    <span class="nd">@staticmethod</span>
-    <span class="k">def</span> <span class="nf">FaceToFace</span><span class="p">(</span><span class="n">movablePlane</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">fixedPlane</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">flip</span><span class="p">:</span> <span class="n">Boolean</span><span class="p">,</span> <span class="n">clearance</span><span class="p">:</span> <span class="nb">float</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="s1">'Feature'</span><span class="p">:</span>
-        <span class="sd">"""This method moves an instance so that its face is coincident with a face of a fixed</span>
+    <span class="k">def</span> <span class="nf">FaceToFace</span><span class="p">(</span><span class="n">movablePlane</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">fixedPlane</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">flip</span><span class="p">:</span> <span class="n">Boolean</span><span class="p">,</span> <span class="n">clearance</span><span class="p">:</span> <span class="nb">float</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="s1">&#39;Feature&#39;</span><span class="p">:</span>
+        <span class="sd">&quot;&quot;&quot;This method moves an instance so that its face is coincident with a face of a fixed</span>
 <span class="sd">        instance.</span>
 
 <span class="sd">        Notes</span>
@@ -533,12 +534,12 @@
 <span class="sd">        Raises</span>
 <span class="sd">        ------</span>
 <span class="sd">            AbaqusException. </span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">return</span> <span class="n">Feature</span><span class="p">()</span></div>
 
 <div class="viewcode-block" id="Feature.ParallelCsys"><a class="viewcode-back" href="../../../reference/mdb/model/assembly.html#abaqus.Assembly.Feature.Feature.ParallelCsys">[docs]</a>    <span class="nd">@staticmethod</span>
-    <span class="k">def</span> <span class="nf">ParallelCsys</span><span class="p">(</span><span class="n">movableCsys</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">fixedCsys</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="s1">'Feature'</span><span class="p">:</span>
-        <span class="sd">"""This method moves an instance so that its Datum coordinate system is parallel to a Datum</span>
+    <span class="k">def</span> <span class="nf">ParallelCsys</span><span class="p">(</span><span class="n">movableCsys</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">fixedCsys</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="s1">&#39;Feature&#39;</span><span class="p">:</span>
+        <span class="sd">&quot;&quot;&quot;This method moves an instance so that its Datum coordinate system is parallel to a Datum</span>
 <span class="sd">        coordinate system of a fixed instance.</span>
 
 <span class="sd">        Notes</span>
@@ -563,12 +564,12 @@
 <span class="sd">        Raises</span>
 <span class="sd">        ------</span>
 <span class="sd">            AbaqusException. </span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">return</span> <span class="n">Feature</span><span class="p">()</span></div>
 
 <div class="viewcode-block" id="Feature.ParallelEdge"><a class="viewcode-back" href="../../../reference/mdb/model/assembly.html#abaqus.Assembly.Feature.Feature.ParallelEdge">[docs]</a>    <span class="nd">@staticmethod</span>
-    <span class="k">def</span> <span class="nf">ParallelEdge</span><span class="p">(</span><span class="n">movableAxis</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">fixedAxis</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">flip</span><span class="p">:</span> <span class="n">Boolean</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="s1">'Feature'</span><span class="p">:</span>
-        <span class="sd">"""This method moves an instance so that its edge is parallel to an edge of a fixed</span>
+    <span class="k">def</span> <span class="nf">ParallelEdge</span><span class="p">(</span><span class="n">movableAxis</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">fixedAxis</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">flip</span><span class="p">:</span> <span class="n">Boolean</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="s1">&#39;Feature&#39;</span><span class="p">:</span>
+        <span class="sd">&quot;&quot;&quot;This method moves an instance so that its edge is parallel to an edge of a fixed</span>
 <span class="sd">        instance.</span>
 
 <span class="sd">        Notes</span>
@@ -598,12 +599,12 @@
 <span class="sd">        Raises</span>
 <span class="sd">        ------</span>
 <span class="sd">            AbaqusException. </span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">return</span> <span class="n">Feature</span><span class="p">()</span></div>
 
 <div class="viewcode-block" id="Feature.ParallelFace"><a class="viewcode-back" href="../../../reference/mdb/model/assembly.html#abaqus.Assembly.Feature.Feature.ParallelFace">[docs]</a>    <span class="nd">@staticmethod</span>
-    <span class="k">def</span> <span class="nf">ParallelFace</span><span class="p">(</span><span class="n">movablePlane</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">fixedPlane</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">flip</span><span class="p">:</span> <span class="n">Boolean</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="s1">'Feature'</span><span class="p">:</span>
-        <span class="sd">"""This method moves an instance so that its face is parallel to a face of a fixed</span>
+    <span class="k">def</span> <span class="nf">ParallelFace</span><span class="p">(</span><span class="n">movablePlane</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">fixedPlane</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">flip</span><span class="p">:</span> <span class="n">Boolean</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="s1">&#39;Feature&#39;</span><span class="p">:</span>
+        <span class="sd">&quot;&quot;&quot;This method moves an instance so that its face is parallel to a face of a fixed</span>
 <span class="sd">        instance.</span>
 
 <span class="sd">        Notes</span>
@@ -633,7 +634,7 @@
 <span class="sd">        Raises</span>
 <span class="sd">        ------</span>
 <span class="sd">            AbaqusException.</span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">return</span> <span class="n">Feature</span><span class="p">()</span></div></div>
 </pre></div>
         </article>

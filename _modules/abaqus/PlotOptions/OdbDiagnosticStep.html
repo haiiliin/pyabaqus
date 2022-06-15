@@ -5,10 +5,10 @@
     <meta name="color-scheme" content="light dark"><link rel="index" title="Index" href="../../../genindex.html" /><link rel="search" title="Search" href="../../../search.html" />
         <link rel="canonical" href="https://pyabaqus.haiiliin.com/_modules/abaqus/PlotOptions/OdbDiagnosticStep.html" />
 
-    <meta name="generator" content="sphinx-4.5.0, furo 2022.04.07"/>
-        <title>abaqus.PlotOptions.OdbDiagnosticStep - pyabaqus 1.0.16 documentation</title>
+    <meta name="generator" content="sphinx-4.5.0, furo 2022.06.04.1"/>
+        <title>abaqus.PlotOptions.OdbDiagnosticStep - pyabaqus 1.0.18 documentation</title>
       <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/styles/furo.css?digest=68f4518137b9aefe99b631505a2064c3c42c9852" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/styles/furo.css?digest=40978830699223671f4072448e654b5958f38b89" />
     <link rel="stylesheet" type="text/css" href="../../../_static/styles/furo-extensions.css?digest=30d1aed668e5c3a91c3e3bf6a60b675221979f0e" />
     
     
@@ -123,7 +123,7 @@
       </label>
     </div>
     <div class="header-center">
-      <a href="../../../index.html"><div class="brand">pyabaqus 1.0.16 documentation</div></a>
+      <a href="../../../index.html"><div class="brand">pyabaqus 1.0.18 documentation</div></a>
     </div>
     <div class="header-right">
       <div class="theme-toggle-container theme-toggle-header">
@@ -146,7 +146,7 @@
       <div class="sidebar-sticky"><a class="sidebar-brand" href="../../../index.html">
   
   
-  <span class="sidebar-brand-text">pyabaqus 1.0.16 documentation</span>
+  <span class="sidebar-brand-text">pyabaqus 1.0.18 documentation</span>
   
 </a><form class="sidebar-search-container" method="get" action="../../../search.html" role="search">
   <input class="sidebar-search" placeholder=Search name="q" aria-label="Search">
@@ -286,7 +286,8 @@
           </svg>
           <span>Back to top</span>
         </a>
-        <div class="content-icon-container"><div class="theme-toggle-container theme-toggle-content">
+        <div class="content-icon-container">
+          <div class="theme-toggle-container theme-toggle-content">
             <button class="theme-toggle">
               <div class="visually-hidden">Toggle Light / Dark / Auto color theme</div>
               <svg class="theme-icon-when-auto"><use href="#svg-sun-half"></use></svg>
@@ -307,7 +308,7 @@
 
 
 <div class="viewcode-block" id="OdbDiagnosticStep"><a class="viewcode-back" href="../../../reference/session/plot_options.html#abaqus.PlotOptions.OdbDiagnosticStep.OdbDiagnosticStep">[docs]</a><span class="k">class</span> <span class="nc">OdbDiagnosticStep</span><span class="p">:</span>
-    <span class="sd">"""The OdbDiagnosticStep object stores step data.</span>
+    <span class="sd">&quot;&quot;&quot;The OdbDiagnosticStep object stores step data.</span>
 
 <span class="sd">    Attributes</span>
 <span class="sd">    ----------</span>
@@ -388,14 +389,14 @@
 <span class="sd">        import visualization</span>
 <span class="sd">        session.odbData[name].diagnosticData.steps[i]</span>
 
-<span class="sd">    """</span>
+<span class="sd">    &quot;&quot;&quot;</span>
 
     <span class="c1"># A Tuple of the status values. This attribute is read-only. </span>
     <span class="n">activeXplStatus</span><span class="p">:</span> <span class="nb">tuple</span> <span class="o">=</span> <span class="p">()</span>
 
     <span class="c1"># A float specifying the characteristic element length for the step. This attribute is </span>
     <span class="c1"># read-only. </span>
-    <span class="n">characteristicElementLength</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">''</span>
+    <span class="n">characteristicElementLength</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span>
 
     <span class="c1"># A repository of OdbContactDiagnostics objects. </span>
     <span class="n">contactDiagnostics</span><span class="p">:</span> <span class="nb">dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">OdbContactDiagnostics</span><span class="p">]</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">OdbContactDiagnostics</span><span class="p">]()</span>
@@ -406,20 +407,20 @@
 
     <span class="c1"># A String specifying the method (Linear or logarithmic) used for extrapolation. This </span>
     <span class="c1"># attribute is read-only. </span>
-    <span class="n">extrapolation</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">''</span>
+    <span class="n">extrapolation</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span>
 
     <span class="c1"># A String specifying the method of incrementation (Auto or fixed). This attribute is </span>
     <span class="c1"># read-only. </span>
-    <span class="n">incrementationScheme</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">''</span>
+    <span class="n">incrementationScheme</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span>
 
     <span class="c1"># An int specifying the number of completed increments. This attribute is read-only. </span>
-    <span class="n">incrementsCompleted</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">''</span>
+    <span class="n">incrementsCompleted</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span>
 
     <span class="c1"># A repository of OdbDiagnosticIncrement objects. </span>
     <span class="n">increments</span><span class="p">:</span> <span class="nb">dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">OdbDiagnosticIncrement</span><span class="p">]</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">OdbDiagnosticIncrement</span><span class="p">]()</span>
 
     <span class="c1"># A float specifying the initial increment size for the step. This attribute is read-only. </span>
-    <span class="n">initialTimeIncrement</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">''</span>
+    <span class="n">initialTimeIncrement</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span>
 
     <span class="c1"># A boolean specifying whether or not the effects of geometric nonlinearities are </span>
     <span class="c1"># considered. This attribute is read-only. </span>
@@ -442,49 +443,49 @@
 
     <span class="c1"># A string specifying the method of solving (Direct or Iterative). This attribute is </span>
     <span class="c1"># read-only. </span>
-    <span class="n">matrixSolver</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">''</span>
+    <span class="n">matrixSolver</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span>
 
     <span class="c1"># An int specifying the maximum number of allowed increments in the step. This attribute </span>
     <span class="c1"># is read-only. </span>
-    <span class="n">maximumNumberOfIncrements</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">''</span>
+    <span class="n">maximumNumberOfIncrements</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span>
 
     <span class="c1"># A float specifying the size of the allowed maximum time increment in the step. This </span>
     <span class="c1"># attribute is read-only. </span>
-    <span class="n">maximumTimeIncrement</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">''</span>
+    <span class="n">maximumTimeIncrement</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span>
 
     <span class="c1"># A float specifying the size of the allowed minimum time increment in the step. This </span>
     <span class="c1"># attribute is read-only. </span>
-    <span class="n">minimumTimeIncrement</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">''</span>
+    <span class="n">minimumTimeIncrement</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span>
 
     <span class="c1"># A string specifying the name of the step. This attribute is read-only. </span>
-    <span class="n">name</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">''</span>
+    <span class="n">name</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span>
 
     <span class="c1"># An int specifying the step number. This attribute is read-only. </span>
-    <span class="n">number</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">''</span>
+    <span class="n">number</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span>
 
     <span class="c1"># An int specifying the number of contact diagnostics encountered. This attribute is </span>
     <span class="c1"># read-only. </span>
-    <span class="n">numberOfContactDiagnostics</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">''</span>
+    <span class="n">numberOfContactDiagnostics</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span>
 
     <span class="c1"># An int specifying the number of increments taken in the step to complete the solution. </span>
     <span class="c1"># This attribute is read-only. </span>
-    <span class="n">numberOfIncrements</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">''</span>
+    <span class="n">numberOfIncrements</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span>
 
     <span class="c1"># An int specifying the number of the explicit status. This attribute is read-only. </span>
-    <span class="n">numberOfXplStatus</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">''</span>
+    <span class="n">numberOfXplStatus</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span>
 
     <span class="c1"># A float specifying the stabilize factor. This attribute is read-only. </span>
-    <span class="n">stabilizeFactor</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">''</span>
+    <span class="n">stabilizeFactor</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span>
 
     <span class="c1"># A float specifying the time taken for the completion of the step. This attribute is </span>
     <span class="c1"># read-only. </span>
-    <span class="n">stepTimeCompleted</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">''</span>
+    <span class="n">stepTimeCompleted</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span>
 
     <span class="c1"># A float specifying the duration for the step. This attribute is read-only. </span>
-    <span class="n">timePeriod</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">''</span>
+    <span class="n">timePeriod</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span>
 
 <div class="viewcode-block" id="OdbDiagnosticStep.extractData"><a class="viewcode-back" href="../../../reference/session/plot_options.html#abaqus.PlotOptions.OdbDiagnosticStep.OdbDiagnosticStep.extractData">[docs]</a>    <span class="k">def</span> <span class="nf">extractData</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">incrementStatistics</span><span class="p">:</span> <span class="nb">str</span><span class="p">):</span>
-        <span class="sd">"""This method creates a temporary XYData object, with increments on the x-axis and</span>
+        <span class="sd">&quot;&quot;&quot;This method creates a temporary XYData object, with increments on the x-axis and</span>
 <span class="sd">        requested output on the y-axis.</span>
 <span class="sd">        </span>
 <span class="sd">        Parameters</span>
@@ -495,7 +496,7 @@
 <span class="sd">            discontinuity iterations), NUM_EQI (the number of equivalent iterations), NUM_ITERS (the </span>
 <span class="sd">            number of iterations), STEP_TIME (the cumulative step time until that increment) or </span>
 <span class="sd">            INC_SIZE (the step time for each increment). </span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span></div></div>
 </pre></div>
         </article>

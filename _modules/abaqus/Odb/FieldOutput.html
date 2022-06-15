@@ -5,10 +5,10 @@
     <meta name="color-scheme" content="light dark"><link rel="index" title="Index" href="../../../genindex.html" /><link rel="search" title="Search" href="../../../search.html" />
         <link rel="canonical" href="https://pyabaqus.haiiliin.com/_modules/abaqus/Odb/FieldOutput.html" />
 
-    <meta name="generator" content="sphinx-4.5.0, furo 2022.04.07"/>
-        <title>abaqus.Odb.FieldOutput - pyabaqus 1.0.16 documentation</title>
+    <meta name="generator" content="sphinx-4.5.0, furo 2022.06.04.1"/>
+        <title>abaqus.Odb.FieldOutput - pyabaqus 1.0.18 documentation</title>
       <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/styles/furo.css?digest=68f4518137b9aefe99b631505a2064c3c42c9852" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/styles/furo.css?digest=40978830699223671f4072448e654b5958f38b89" />
     <link rel="stylesheet" type="text/css" href="../../../_static/styles/furo-extensions.css?digest=30d1aed668e5c3a91c3e3bf6a60b675221979f0e" />
     
     
@@ -123,7 +123,7 @@
       </label>
     </div>
     <div class="header-center">
-      <a href="../../../index.html"><div class="brand">pyabaqus 1.0.16 documentation</div></a>
+      <a href="../../../index.html"><div class="brand">pyabaqus 1.0.18 documentation</div></a>
     </div>
     <div class="header-right">
       <div class="theme-toggle-container theme-toggle-header">
@@ -146,7 +146,7 @@
       <div class="sidebar-sticky"><a class="sidebar-brand" href="../../../index.html">
   
   
-  <span class="sidebar-brand-text">pyabaqus 1.0.16 documentation</span>
+  <span class="sidebar-brand-text">pyabaqus 1.0.18 documentation</span>
   
 </a><form class="sidebar-search-container" method="get" action="../../../search.html" role="search">
   <input class="sidebar-search" placeholder=Search name="q" aria-label="Search">
@@ -286,7 +286,8 @@
           </svg>
           <span>Back to top</span>
         </a>
-        <div class="content-icon-container"><div class="theme-toggle-container theme-toggle-content">
+        <div class="content-icon-container">
+          <div class="theme-toggle-container theme-toggle-content">
             <button class="theme-toggle">
               <div class="visually-hidden">Toggle Light / Dark / Auto color theme</div>
               <svg class="theme-icon-when-auto"><use href="#svg-sun-half"></use></svg>
@@ -313,7 +314,7 @@
 
 
 <div class="viewcode-block" id="FieldOutput"><a class="viewcode-back" href="../../../reference/odb.html#abaqus.Odb.FieldOutput.FieldOutput">[docs]</a><span class="k">class</span> <span class="nc">FieldOutput</span><span class="p">:</span>
-    <span class="sd">"""A FieldOutput object contains field data for a specific output variable.</span>
+    <span class="sd">&quot;&quot;&quot;A FieldOutput object contains field data for a specific output variable.</span>
 
 <span class="sd">    Attributes</span>
 <span class="sd">    ----------</span>
@@ -343,7 +344,7 @@
 <span class="sd">        odbAccess</span>
 <span class="sd">        session.odbs[name].steps[name].frames[i].fieldOutputs[name]</span>
 
-<span class="sd">    """</span>
+<span class="sd">    &quot;&quot;&quot;</span>
 
     <span class="c1"># An Int specifying the dimension of vector or the first dimension (number of rows) of </span>
     <span class="c1"># matrix. </span>
@@ -366,7 +367,7 @@
     <span class="nd">@typing</span><span class="o">.</span><span class="n">overload</span>
     <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">description</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="nb">type</span><span class="p">:</span> <span class="n">SymbolicConstant</span><span class="p">,</span> <span class="n">componentLabels</span><span class="p">:</span> <span class="nb">tuple</span> <span class="o">=</span> <span class="p">(),</span>
                  <span class="n">validInvariants</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">isEngineeringTensor</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="n">OFF</span><span class="p">):</span>
-        <span class="sd">"""This method creates a FieldOutput object.</span>
+        <span class="sd">&quot;&quot;&quot;This method creates a FieldOutput object.</span>
 
 <span class="sd">        Notes</span>
 <span class="sd">        -----</span>
@@ -390,8 +391,8 @@
 <span class="sd">        componentLabels</span>
 <span class="sd">            A sequence of Strings specifying the labels for each component of the value. The length </span>
 <span class="sd">            of the sequence must match the type. If *type*=TENSOR, the default value is *name* with </span>
-<span class="sd">            the suffixes ('11', '22', '33', '12', '13', '23'). If *type*=VECTOR, the default value </span>
-<span class="sd">            is *name* with the suffixes ('1', '2', '3'). If *type*=SCALAR, the default value is an </span>
+<span class="sd">            the suffixes (&#39;11&#39;, &#39;22&#39;, &#39;33&#39;, &#39;12&#39;, &#39;13&#39;, &#39;23&#39;). If *type*=VECTOR, the default value </span>
+<span class="sd">            is *name* with the suffixes (&#39;1&#39;, &#39;2&#39;, &#39;3&#39;). If *type*=SCALAR, the default value is an </span>
 <span class="sd">            empty sequence. </span>
 <span class="sd">        validInvariants</span>
 <span class="sd">            A sequence of SymbolicConstants specifying which invariants should be calculated for </span>
@@ -408,12 +409,12 @@
 <span class="sd">        Returns</span>
 <span class="sd">        -------</span>
 <span class="sd">            A FieldOutput object.</span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span>
 
     <span class="nd">@typing</span><span class="o">.</span><span class="n">overload</span>
-    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">field</span><span class="p">:</span> <span class="s1">'FieldOutput'</span><span class="p">,</span> <span class="n">name</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">''</span><span class="p">,</span> <span class="n">description</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">''</span><span class="p">):</span>
-        <span class="sd">"""This method creates a FieldOutput object from an existing FieldOutput object of the same</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">field</span><span class="p">:</span> <span class="s1">&#39;FieldOutput&#39;</span><span class="p">,</span> <span class="n">name</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">description</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;This method creates a FieldOutput object from an existing FieldOutput object of the same</span>
 <span class="sd">        output database.</span>
 
 <span class="sd">        Notes</span>
@@ -437,7 +438,7 @@
 <span class="sd">        Returns</span>
 <span class="sd">        -------</span>
 <span class="sd">            A FieldOutput object.</span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span>
 
     <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
@@ -446,7 +447,7 @@
     <span class="nd">@typing</span><span class="o">.</span><span class="n">overload</span>
     <span class="k">def</span> <span class="nf">addData</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">position</span><span class="p">:</span> <span class="n">SymbolicConstant</span><span class="p">,</span> <span class="n">instance</span><span class="p">:</span> <span class="n">OdbInstance</span><span class="p">,</span> <span class="n">labels</span><span class="p">:</span> <span class="nb">tuple</span><span class="p">,</span> <span class="n">data</span><span class="p">:</span> <span class="nb">tuple</span><span class="p">,</span>
                 <span class="n">sectionPoint</span><span class="p">:</span> <span class="n">SectionPoint</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">localCoordSystem</span><span class="p">:</span> <span class="nb">tuple</span> <span class="o">=</span> <span class="p">()):</span>
-        <span class="sd">"""This method adds data to a FieldOutput object.</span>
+        <span class="sd">&quot;&quot;&quot;This method adds data to a FieldOutput object.</span>
 <span class="sd">        </span>
 <span class="sd">        Parameters</span>
 <span class="sd">        ----------</span>
@@ -500,12 +501,12 @@
 <span class="sd">            - The addData method throws many exceptions of type odbException. For example, if the </span>
 <span class="sd">            local coordinate system is specified for scalar data: </span>
 <span class="sd">              odbException: Transformation not allowed for scalar data. </span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span>
 
     <span class="nd">@typing</span><span class="o">.</span><span class="n">overload</span>
-    <span class="k">def</span> <span class="nf">addData</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">field</span><span class="p">:</span> <span class="s1">'FieldOutput'</span><span class="p">):</span>
-        <span class="sd">"""This method adds the data from a field created using the getSubset method and</span>
+    <span class="k">def</span> <span class="nf">addData</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">field</span><span class="p">:</span> <span class="s1">&#39;FieldOutput&#39;</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;This method adds the data from a field created using the getSubset method and</span>
 <span class="sd">        mathematical operators to the database. The user must create a field to contain the new</span>
 <span class="sd">        data and then use the addData method to assign the data from the fields.</span>
 <span class="sd">        </span>
@@ -519,13 +520,13 @@
 <span class="sd">            - The addData method throws many exceptions of type odbException. For example, if the </span>
 <span class="sd">            local coordinate system is specified for scalar data: </span>
 <span class="sd">              odbException: Transformation not allowed for scalar data. </span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span>
 
     <span class="nd">@typing</span><span class="o">.</span><span class="n">overload</span>
     <span class="k">def</span> <span class="nf">addData</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">position</span><span class="p">:</span> <span class="n">SymbolicConstant</span><span class="p">,</span> <span class="nb">set</span><span class="p">:</span> <span class="n">OdbSet</span><span class="p">,</span> <span class="n">data</span><span class="p">:</span> <span class="nb">tuple</span><span class="p">,</span>
                 <span class="n">sectionPoint</span><span class="p">:</span> <span class="n">SectionPoint</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">conjugateData</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="kc">None</span><span class="p">):</span>
-        <span class="sd">"""This method adds data to a FieldOutput object.</span>
+        <span class="sd">&quot;&quot;&quot;This method adds data to a FieldOutput object.</span>
 <span class="sd">        </span>
 <span class="sd">        Parameters</span>
 <span class="sd">        ----------</span>
@@ -572,7 +573,7 @@
 <span class="sd">            - The addData method throws many exceptions of type odbException. For example, if the </span>
 <span class="sd">            local coordinate system is specified for scalar data: </span>
 <span class="sd">              odbException: Transformation not allowed for scalar data. </span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span>
 
     <span class="k">def</span> <span class="nf">addData</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
@@ -580,7 +581,7 @@
 
     <span class="nd">@typing</span><span class="o">.</span><span class="n">overload</span>
     <span class="k">def</span> <span class="nf">getScalarField</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">invariant</span><span class="p">:</span> <span class="n">SymbolicConstant</span><span class="p">):</span>
-        <span class="sd">"""This method generates a scalar field containing the extracted component or calculated</span>
+        <span class="sd">&quot;&quot;&quot;This method generates a scalar field containing the extracted component or calculated</span>
 <span class="sd">        invariant values. The new field will hold values for the same nodes or elements as the</span>
 <span class="sd">        parent field. Abaqus will perform this operation on only the real part of the</span>
 <span class="sd">        FieldOutput object. The operation is not performed on the conjugate data (the imaginary</span>
@@ -596,12 +597,12 @@
 <span class="sd">        Returns</span>
 <span class="sd">        -------</span>
 <span class="sd">            AFieldOutput object.</span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span>
 
     <span class="nd">@typing</span><span class="o">.</span><span class="n">overload</span>
     <span class="k">def</span> <span class="nf">getScalarField</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">componentLabel</span><span class="p">:</span> <span class="nb">str</span><span class="p">):</span>
-        <span class="sd">"""This method generates a scalar field containing the extracted component or calculated</span>
+        <span class="sd">&quot;&quot;&quot;This method generates a scalar field containing the extracted component or calculated</span>
 <span class="sd">        invariant values. The new field will hold values for the same nodes or elements as the</span>
 <span class="sd">        parent field. Abaqus will perform this operation on only the real part of the</span>
 <span class="sd">        FieldOutput object. The operation is not performed on the conjugate data (the imaginary</span>
@@ -615,7 +616,7 @@
 <span class="sd">        Returns</span>
 <span class="sd">        -------</span>
 <span class="sd">            A FieldOutput object.</span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span>
 
     <span class="k">def</span> <span class="nf">getScalarField</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
@@ -623,7 +624,7 @@
 
     <span class="nd">@typing</span><span class="o">.</span><span class="n">overload</span>
     <span class="k">def</span> <span class="nf">getSubset</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">position</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">readOnly</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="n">OFF</span><span class="p">):</span>
-        <span class="sd">"""A FieldOutput object with a subset of the field values.</span>
+        <span class="sd">&quot;&quot;&quot;A FieldOutput object with a subset of the field values.</span>
 <span class="sd">        </span>
 <span class="sd">        Parameters</span>
 <span class="sd">        ----------</span>
@@ -650,12 +651,12 @@
 <span class="sd">        Returns</span>
 <span class="sd">        -------</span>
 <span class="sd">            A FieldOutput object.</span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span>
 
     <span class="nd">@typing</span><span class="o">.</span><span class="n">overload</span>
-    <span class="k">def</span> <span class="nf">getSubset</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">region</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">''</span><span class="p">):</span>
-        <span class="sd">"""A FieldOutput object with a subset of the field values.</span>
+    <span class="k">def</span> <span class="nf">getSubset</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">region</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;A FieldOutput object with a subset of the field values.</span>
 <span class="sd">        </span>
 <span class="sd">        Parameters</span>
 <span class="sd">        ----------</span>
@@ -666,12 +667,12 @@
 <span class="sd">        Returns</span>
 <span class="sd">        -------</span>
 <span class="sd">            A FieldOutput object.</span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span>
 
     <span class="nd">@typing</span><span class="o">.</span><span class="n">overload</span>
     <span class="k">def</span> <span class="nf">getSubset</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">localCoordSystem</span><span class="p">:</span> <span class="nb">tuple</span> <span class="o">=</span> <span class="p">()):</span>
-        <span class="sd">"""A FieldOutput object with a subset of the field values.</span>
+        <span class="sd">&quot;&quot;&quot;A FieldOutput object with a subset of the field values.</span>
 <span class="sd">        </span>
 <span class="sd">        Parameters</span>
 <span class="sd">        ----------</span>
@@ -682,12 +683,12 @@
 <span class="sd">        Returns</span>
 <span class="sd">        -------</span>
 <span class="sd">            A FieldOutput object.</span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span>
 
     <span class="nd">@typing</span><span class="o">.</span><span class="n">overload</span>
     <span class="k">def</span> <span class="nf">getSubset</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">sectionPoint</span><span class="p">:</span> <span class="n">SectionPoint</span> <span class="o">=</span> <span class="kc">None</span><span class="p">):</span>
-        <span class="sd">"""A FieldOutput object with a subset of the field values.</span>
+        <span class="sd">&quot;&quot;&quot;A FieldOutput object with a subset of the field values.</span>
 <span class="sd">        </span>
 <span class="sd">        Parameters</span>
 <span class="sd">        ----------</span>
@@ -697,12 +698,12 @@
 <span class="sd">        Returns</span>
 <span class="sd">        -------</span>
 <span class="sd">            A FieldOutput object.</span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span>
 
     <span class="nd">@typing</span><span class="o">.</span><span class="n">overload</span>
     <span class="k">def</span> <span class="nf">getSubset</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">location</span><span class="p">:</span> <span class="n">FieldLocation</span> <span class="o">=</span> <span class="n">FieldLocation</span><span class="p">()):</span>
-        <span class="sd">"""A FieldOutput object with a subset of the field values.</span>
+        <span class="sd">&quot;&quot;&quot;A FieldOutput object with a subset of the field values.</span>
 <span class="sd">        </span>
 <span class="sd">        Parameters</span>
 <span class="sd">        ----------</span>
@@ -712,12 +713,12 @@
 <span class="sd">        Returns</span>
 <span class="sd">        -------</span>
 <span class="sd">            A FieldOutput object.</span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span>
 
     <span class="nd">@typing</span><span class="o">.</span><span class="n">overload</span>
-    <span class="k">def</span> <span class="nf">getSubset</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">region</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">''</span><span class="p">):</span>
-        <span class="sd">"""A FieldOutput object with a subset of the field values.</span>
+    <span class="k">def</span> <span class="nf">getSubset</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">region</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;A FieldOutput object with a subset of the field values.</span>
 <span class="sd">        </span>
 <span class="sd">        Parameters</span>
 <span class="sd">        ----------</span>
@@ -727,12 +728,12 @@
 <span class="sd">        Returns</span>
 <span class="sd">        -------</span>
 <span class="sd">            A FieldOutput object.</span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span>
 
     <span class="nd">@typing</span><span class="o">.</span><span class="n">overload</span>
-    <span class="k">def</span> <span class="nf">getSubset</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">region</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">''</span><span class="p">):</span>
-        <span class="sd">"""A FieldOutput object with a subset of the field values.</span>
+    <span class="k">def</span> <span class="nf">getSubset</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">region</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;A FieldOutput object with a subset of the field values.</span>
 <span class="sd">        </span>
 <span class="sd">        Parameters</span>
 <span class="sd">        ----------</span>
@@ -742,12 +743,12 @@
 <span class="sd">        Returns</span>
 <span class="sd">        -------</span>
 <span class="sd">            A FieldOutput object.</span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span>
 
     <span class="nd">@typing</span><span class="o">.</span><span class="n">overload</span>
-    <span class="k">def</span> <span class="nf">getSubset</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">region</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">''</span><span class="p">):</span>
-        <span class="sd">"""A FieldOutput object with a subset of the field values.</span>
+    <span class="k">def</span> <span class="nf">getSubset</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">region</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;A FieldOutput object with a subset of the field values.</span>
 <span class="sd">        </span>
 <span class="sd">        Parameters</span>
 <span class="sd">        ----------</span>
@@ -757,12 +758,12 @@
 <span class="sd">        Returns</span>
 <span class="sd">        -------</span>
 <span class="sd">            A FieldOutput object.</span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span>
 
     <span class="nd">@typing</span><span class="o">.</span><span class="n">overload</span>
-    <span class="k">def</span> <span class="nf">getSubset</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">elementType</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">''</span><span class="p">):</span>
-        <span class="sd">"""A FieldOutput object with a subset of the field values.</span>
+    <span class="k">def</span> <span class="nf">getSubset</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">elementType</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;A FieldOutput object with a subset of the field values.</span>
 <span class="sd">        </span>
 <span class="sd">        Parameters</span>
 <span class="sd">        ----------</span>
@@ -773,15 +774,15 @@
 <span class="sd">        Returns</span>
 <span class="sd">        -------</span>
 <span class="sd">            A FieldOutput object.</span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span>
 
     <span class="k">def</span> <span class="nf">getSubset</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
         <span class="k">pass</span>
 
     <span class="nd">@typing</span><span class="o">.</span><span class="n">overload</span>
-    <span class="k">def</span> <span class="nf">getTransformedField</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">datumCsys</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">projected22Axis</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">projectionTol</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">''</span><span class="p">):</span>
-        <span class="sd">"""This method generates a new vector or tensor field containing the transformed component</span>
+    <span class="k">def</span> <span class="nf">getTransformedField</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">datumCsys</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">projected22Axis</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">projectionTol</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;This method generates a new vector or tensor field containing the transformed component</span>
 <span class="sd">        values of the parent field. The new field will hold values for the same nodes or</span>
 <span class="sd">        elements as the parent field. Results will be transformed based on the orientations</span>
 <span class="sd">        specified by the input DatumCsys object. Abaqus will perform this operation on only the</span>
@@ -812,13 +813,13 @@
 <span class="sd">            - The getTransformedField method throws an exception if the field contains any assembly </span>
 <span class="sd">            level nodes. </span>
 <span class="sd">              odbException: Cannot apply transformation to field containing assembly level nodes. </span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span>
 
     <span class="nd">@typing</span><span class="o">.</span><span class="n">overload</span>
-    <span class="k">def</span> <span class="nf">getTransformedField</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">datumCsys</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">deformationField</span><span class="p">:</span> <span class="s1">'FieldOutput'</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
-                            <span class="n">projected22Axis</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">projectionTol</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">''</span><span class="p">):</span>
-        <span class="sd">"""This method generates a new vector or tensor field containing the transformed component</span>
+    <span class="k">def</span> <span class="nf">getTransformedField</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">datumCsys</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">deformationField</span><span class="p">:</span> <span class="s1">&#39;FieldOutput&#39;</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+                            <span class="n">projected22Axis</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">projectionTol</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;This method generates a new vector or tensor field containing the transformed component</span>
 <span class="sd">        values of the parent field. The new field will hold values for the same nodes or</span>
 <span class="sd">        elements as the parent field. Results will be transformed based on the orientations</span>
 <span class="sd">        specified by the input DatumCsys object. Abaqus will perform this operation on only the</span>
@@ -852,14 +853,14 @@
 <span class="sd">            - The getTransformedField method throws an exception if the field contains any assembly </span>
 <span class="sd">            level nodes. </span>
 <span class="sd">              odbException: Cannot apply transformation to field containing assembly level nodes. </span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span>
 
     <span class="nd">@typing</span><span class="o">.</span><span class="n">overload</span>
-    <span class="k">def</span> <span class="nf">getTransformedField</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">datumCsys</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">deformationField</span><span class="p">:</span> <span class="s1">'FieldOutput'</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
-                            <span class="n">rotationField</span><span class="p">:</span> <span class="s1">'FieldOutput'</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">projected22Axis</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
-                            <span class="n">projectionTol</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">''</span><span class="p">):</span>
-        <span class="sd">"""This method generates a new vector or tensor field containing the transformed component</span>
+    <span class="k">def</span> <span class="nf">getTransformedField</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">datumCsys</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">deformationField</span><span class="p">:</span> <span class="s1">&#39;FieldOutput&#39;</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+                            <span class="n">rotationField</span><span class="p">:</span> <span class="s1">&#39;FieldOutput&#39;</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">projected22Axis</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+                            <span class="n">projectionTol</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;This method generates a new vector or tensor field containing the transformed component</span>
 <span class="sd">        values of the parent field. The new field will hold values for the same nodes or</span>
 <span class="sd">        elements as the parent field. Results will be transformed based on the orientations</span>
 <span class="sd">        specified by the input DatumCsys object. Abaqus will perform this operation on only the</span>
@@ -897,14 +898,14 @@
 <span class="sd">            - The getTransformedField method throws an exception if the field contains any assembly </span>
 <span class="sd">            level nodes. </span>
 <span class="sd">              odbException: Cannot apply transformation to field containing assembly level nodes. </span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span>
 
     <span class="k">def</span> <span class="nf">getTransformedField</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
         <span class="k">pass</span>
 
-<div class="viewcode-block" id="FieldOutput.getConnectorFieldXformedToNodeA"><a class="viewcode-back" href="../../../reference/odb.html#abaqus.Odb.FieldOutput.FieldOutput.getConnectorFieldXformedToNodeA">[docs]</a>    <span class="k">def</span> <span class="nf">getConnectorFieldXformedToNodeA</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">deformationField</span><span class="p">:</span> <span class="s1">'FieldOutput'</span> <span class="o">=</span> <span class="kc">None</span><span class="p">):</span>
-        <span class="sd">"""This method generates a new vector field containing the transformed component values of</span>
+<div class="viewcode-block" id="FieldOutput.getConnectorFieldXformedToNodeA"><a class="viewcode-back" href="../../../reference/odb.html#abaqus.Odb.FieldOutput.FieldOutput.getConnectorFieldXformedToNodeA">[docs]</a>    <span class="k">def</span> <span class="nf">getConnectorFieldXformedToNodeA</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">deformationField</span><span class="p">:</span> <span class="s1">&#39;FieldOutput&#39;</span> <span class="o">=</span> <span class="kc">None</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;This method generates a new vector field containing the transformed component values of</span>
 <span class="sd">        the parent connector field to the node A coordinate system. The new field will hold</span>
 <span class="sd">        values for the same connector elements as the parent field. Some connection types such</span>
 <span class="sd">        as Axial, Link, Slip Ring, and Radial Thrust require that the deformationField be</span>
@@ -925,25 +926,25 @@
 <span class="sd">            - The getConnectorFieldXformedToNodeA method throws an exception if the field requires a </span>
 <span class="sd">            deformationField and the argument is not supplied. </span>
 <span class="sd">              odbException: Deformation field is required for transforming this connector field. </span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span></div>
 
 <div class="viewcode-block" id="FieldOutput.setComponentLabels"><a class="viewcode-back" href="../../../reference/odb.html#abaqus.Odb.FieldOutput.FieldOutput.setComponentLabels">[docs]</a>    <span class="k">def</span> <span class="nf">setComponentLabels</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">componentLabels</span><span class="p">:</span> <span class="nb">tuple</span><span class="p">):</span>
-        <span class="sd">"""This method sets the component labels for the FieldOutput object.</span>
+        <span class="sd">&quot;&quot;&quot;This method sets the component labels for the FieldOutput object.</span>
 <span class="sd">        </span>
 <span class="sd">        Parameters</span>
 <span class="sd">        ----------</span>
 <span class="sd">        componentLabels</span>
 <span class="sd">            A sequence of Strings specifying the labels for each component of the value. The length </span>
 <span class="sd">            of the sequence must match the type. If *type*=TENSOR, the default value is *name* with </span>
-<span class="sd">            the suffixes ('11', '22', '33', '12', '13', '23'). If *type*=VECTOR, the default value </span>
-<span class="sd">            is *name* with the suffixes ('1', '2', '3'). If *type*=SCALAR, the default value is an </span>
+<span class="sd">            the suffixes (&#39;11&#39;, &#39;22&#39;, &#39;33&#39;, &#39;12&#39;, &#39;13&#39;, &#39;23&#39;). If *type*=VECTOR, the default value </span>
+<span class="sd">            is *name* with the suffixes (&#39;1&#39;, &#39;2&#39;, &#39;3&#39;). If *type*=SCALAR, the default value is an </span>
 <span class="sd">            empty sequence. </span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span></div>
 
 <div class="viewcode-block" id="FieldOutput.setDataType"><a class="viewcode-back" href="../../../reference/odb.html#abaqus.Odb.FieldOutput.FieldOutput.setDataType">[docs]</a>    <span class="k">def</span> <span class="nf">setDataType</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="nb">type</span><span class="p">:</span> <span class="n">SymbolicConstant</span><span class="p">):</span>
-        <span class="sd">"""This method sets the data type of a FieldOutput object.</span>
+        <span class="sd">&quot;&quot;&quot;This method sets the data type of a FieldOutput object.</span>
 <span class="sd">        </span>
 <span class="sd">        Parameters</span>
 <span class="sd">        ----------</span>
@@ -951,11 +952,11 @@
 <span class="sd">            A SymbolicConstant specifying the output type. Possible values are SCALAR, VECTOR, </span>
 <span class="sd">            TENSOR_3D_FULL, TENSOR_3D_PLANAR, TENSOR_3D_SURFACE, TENSOR_2D_PLANAR, and </span>
 <span class="sd">            TENSOR_2D_SURFACE. </span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span></div>
 
 <div class="viewcode-block" id="FieldOutput.setValidInvariants"><a class="viewcode-back" href="../../../reference/odb.html#abaqus.Odb.FieldOutput.FieldOutput.setValidInvariants">[docs]</a>    <span class="k">def</span> <span class="nf">setValidInvariants</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">validInvariants</span><span class="p">:</span> <span class="n">SymbolicConstant</span><span class="p">):</span>
-        <span class="sd">"""This method sets the invariants valid for the FieldOutput object.</span>
+        <span class="sd">&quot;&quot;&quot;This method sets the invariants valid for the FieldOutput object.</span>
 <span class="sd">        </span>
 <span class="sd">        Parameters</span>
 <span class="sd">        ----------</span>
@@ -976,7 +977,7 @@
 <span class="sd">            - MIN_INPLANE_PRINCIPAL </span>
 <span class="sd">            - OUTOFPLANE_PRINCIPAL </span>
 <span class="sd">            The default value is an empty sequence. </span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span></div></div>
 </pre></div>
         </article>

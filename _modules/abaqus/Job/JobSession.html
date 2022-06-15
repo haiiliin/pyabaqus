@@ -5,10 +5,10 @@
     <meta name="color-scheme" content="light dark"><link rel="index" title="Index" href="../../../genindex.html" /><link rel="search" title="Search" href="../../../search.html" />
         <link rel="canonical" href="https://pyabaqus.haiiliin.com/_modules/abaqus/Job/JobSession.html" />
 
-    <meta name="generator" content="sphinx-4.5.0, furo 2022.04.07"/>
-        <title>abaqus.Job.JobSession - pyabaqus 1.0.16 documentation</title>
+    <meta name="generator" content="sphinx-4.5.0, furo 2022.06.04.1"/>
+        <title>abaqus.Job.JobSession - pyabaqus 1.0.18 documentation</title>
       <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/styles/furo.css?digest=68f4518137b9aefe99b631505a2064c3c42c9852" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/styles/furo.css?digest=40978830699223671f4072448e654b5958f38b89" />
     <link rel="stylesheet" type="text/css" href="../../../_static/styles/furo-extensions.css?digest=30d1aed668e5c3a91c3e3bf6a60b675221979f0e" />
     
     
@@ -123,7 +123,7 @@
       </label>
     </div>
     <div class="header-center">
-      <a href="../../../index.html"><div class="brand">pyabaqus 1.0.16 documentation</div></a>
+      <a href="../../../index.html"><div class="brand">pyabaqus 1.0.18 documentation</div></a>
     </div>
     <div class="header-right">
       <div class="theme-toggle-container theme-toggle-header">
@@ -146,7 +146,7 @@
       <div class="sidebar-sticky"><a class="sidebar-brand" href="../../../index.html">
   
   
-  <span class="sidebar-brand-text">pyabaqus 1.0.16 documentation</span>
+  <span class="sidebar-brand-text">pyabaqus 1.0.18 documentation</span>
   
 </a><form class="sidebar-search-container" method="get" action="../../../search.html" role="search">
   <input class="sidebar-search" placeholder=Search name="q" aria-label="Search">
@@ -286,7 +286,8 @@
           </svg>
           <span>Back to top</span>
         </a>
-        <div class="content-icon-container"><div class="theme-toggle-container theme-toggle-content">
+        <div class="content-icon-container">
+          <div class="theme-toggle-container theme-toggle-content">
             <button class="theme-toggle">
               <div class="visually-hidden">Toggle Light / Dark / Auto color theme</div>
               <svg class="theme-icon-when-auto"><use href="#svg-sun-half"></use></svg>
@@ -308,10 +309,10 @@
 
 <span class="k">class</span> <span class="nc">JobSession</span><span class="p">(</span><span class="n">SessionBase</span><span class="p">):</span>
 
-<div class="viewcode-block" id="JobSession.Queue"><a class="viewcode-back" href="../../../user/mdb/job.html#abaqus.Job.JobSession.JobSession.Queue">[docs]</a>    <span class="k">def</span> <span class="nf">Queue</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">queueName</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">hostName</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">''</span><span class="p">,</span> <span class="n">fileCopy</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="n">ON</span><span class="p">,</span>
-              <span class="n">directory</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">''</span><span class="p">,</span> <span class="n">driver</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">''</span><span class="p">,</span> <span class="n">remotePlatform</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="s1">'Linux'</span><span class="p">,</span>
-              <span class="n">filesToCopy</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="n">ALL</span><span class="p">,</span> <span class="n">deleteAfterCopy</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="n">OFF</span><span class="p">,</span> <span class="n">description</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">''</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Queue</span><span class="p">:</span>
-        <span class="sd">"""This method creates a Queue object.</span>
+<div class="viewcode-block" id="JobSession.Queue"><a class="viewcode-back" href="../../../user/mdb/job.html#abaqus.Job.JobSession.JobSession.Queue">[docs]</a>    <span class="k">def</span> <span class="nf">Queue</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">queueName</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">hostName</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">fileCopy</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="n">ON</span><span class="p">,</span>
+              <span class="n">directory</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">driver</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">remotePlatform</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="s1">&#39;Linux&#39;</span><span class="p">,</span>
+              <span class="n">filesToCopy</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="n">ALL</span><span class="p">,</span> <span class="n">deleteAfterCopy</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="n">OFF</span><span class="p">,</span> <span class="n">description</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Queue</span><span class="p">:</span>
+        <span class="sd">&quot;&quot;&quot;This method creates a Queue object.</span>
 <span class="sd">        Note:Remote queues are available only on Linux platforms.</span>
 
 <span class="sd">        Notes</span>
@@ -337,14 +338,14 @@
 <span class="sd">            A String specifying the remote location for the execution of the simulation. The default</span>
 <span class="sd">            value is an empty string.</span>
 <span class="sd">        driver</span>
-<span class="sd">            A String specifying the designation of the remote driver. The default value is "abaqus".</span>
+<span class="sd">            A String specifying the designation of the remote driver. The default value is &quot;abaqus&quot;.</span>
 <span class="sd">        remotePlatform</span>
 <span class="sd">            A SymbolicConstant specifying the type of operating system on the remote machine. The</span>
 <span class="sd">            default value is Linux.</span>
 <span class="sd">        filesToCopy</span>
 <span class="sd">            A list of Strings specifying the files to be copied from the remote location to the</span>
 <span class="sd">            local machine, or ALL. Strings specified in a list are the extensions of the job files</span>
-<span class="sd">            that will be copied, such as ('log', 'dat', 'msg', 'sta', 'odb'). The default value is</span>
+<span class="sd">            that will be copied, such as (&#39;log&#39;, &#39;dat&#39;, &#39;msg&#39;, &#39;sta&#39;, &#39;odb&#39;). The default value is</span>
 <span class="sd">            ALL.</span>
 <span class="sd">        deleteAfterCopy</span>
 <span class="sd">            A Boolean specifying whether remote files are to be deleted after they are copied to the</span>
@@ -362,7 +363,7 @@
 <span class="sd">              Remote queue host name is not set.</span>
 <span class="sd">            - If *fileCopy*=ON and *directory* is empty:</span>
 <span class="sd">              Directory in which to run the job on the remote computer is not set.</span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">queues</span><span class="p">[</span><span class="n">name</span><span class="p">]</span> <span class="o">=</span> <span class="n">queue</span> <span class="o">=</span> <span class="n">Queue</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">queueName</span><span class="p">,</span> <span class="n">hostName</span><span class="p">,</span> <span class="n">fileCopy</span><span class="p">,</span> <span class="n">directory</span><span class="p">,</span> <span class="n">driver</span><span class="p">,</span> <span class="n">remotePlatform</span><span class="p">,</span>
                                           <span class="n">filesToCopy</span><span class="p">,</span> <span class="n">deleteAfterCopy</span><span class="p">,</span> <span class="n">description</span><span class="p">)</span>
         <span class="k">return</span> <span class="n">queue</span></div>

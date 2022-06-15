@@ -5,10 +5,10 @@
     <meta name="color-scheme" content="light dark"><link rel="index" title="Index" href="../../../genindex.html" /><link rel="search" title="Search" href="../../../search.html" />
         <link rel="canonical" href="https://pyabaqus.haiiliin.com/_modules/abaqus/PlotOptions/OptionArg.html" />
 
-    <meta name="generator" content="sphinx-4.5.0, furo 2022.04.07"/>
-        <title>abaqus.PlotOptions.OptionArg - pyabaqus 1.0.16 documentation</title>
+    <meta name="generator" content="sphinx-4.5.0, furo 2022.06.04.1"/>
+        <title>abaqus.PlotOptions.OptionArg - pyabaqus 1.0.18 documentation</title>
       <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/styles/furo.css?digest=68f4518137b9aefe99b631505a2064c3c42c9852" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/styles/furo.css?digest=40978830699223671f4072448e654b5958f38b89" />
     <link rel="stylesheet" type="text/css" href="../../../_static/styles/furo-extensions.css?digest=30d1aed668e5c3a91c3e3bf6a60b675221979f0e" />
     
     
@@ -123,7 +123,7 @@
       </label>
     </div>
     <div class="header-center">
-      <a href="../../../index.html"><div class="brand">pyabaqus 1.0.16 documentation</div></a>
+      <a href="../../../index.html"><div class="brand">pyabaqus 1.0.18 documentation</div></a>
     </div>
     <div class="header-right">
       <div class="theme-toggle-container theme-toggle-header">
@@ -146,7 +146,7 @@
       <div class="sidebar-sticky"><a class="sidebar-brand" href="../../../index.html">
   
   
-  <span class="sidebar-brand-text">pyabaqus 1.0.16 documentation</span>
+  <span class="sidebar-brand-text">pyabaqus 1.0.18 documentation</span>
   
 </a><form class="sidebar-search-container" method="get" action="../../../search.html" role="search">
   <input class="sidebar-search" placeholder=Search name="q" aria-label="Search">
@@ -286,7 +286,8 @@
           </svg>
           <span>Back to top</span>
         </a>
-        <div class="content-icon-container"><div class="theme-toggle-container theme-toggle-content">
+        <div class="content-icon-container">
+          <div class="theme-toggle-container theme-toggle-content">
             <button class="theme-toggle">
               <div class="visually-hidden">Toggle Light / Dark / Auto color theme</div>
               <svg class="theme-icon-when-auto"><use href="#svg-sun-half"></use></svg>
@@ -305,7 +306,7 @@
 
 
 <div class="viewcode-block" id="OptionArg"><a class="viewcode-back" href="../../../reference/session/plot_options.html#abaqus.PlotOptions.OptionArg.OptionArg">[docs]</a><span class="k">class</span> <span class="nc">OptionArg</span><span class="p">:</span>
-    <span class="sd">"""The OptionArg object is used to store values and attributes as a temporary object to be</span>
+    <span class="sd">&quot;&quot;&quot;The OptionArg object is used to store values and attributes as a temporary object to be</span>
 <span class="sd">    associated with a viewCutOptions object. The OptionArg object has only a constructor </span>
 <span class="sd">    command. </span>
 
@@ -326,14 +327,14 @@
 <span class="sd">        session.viewports[name].odbDisplay.viewCutOptions.belowOptions</span>
 <span class="sd">        session.viewports[name].odbDisplay.viewCutOptions.onOptions</span>
 
-<span class="sd">    """</span>
+<span class="sd">    &quot;&quot;&quot;</span>
 
     <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">renderStyle</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="n">WIREFRAME</span><span class="p">,</span> <span class="n">visibleEdges</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="n">FEATURE</span><span class="p">,</span>
-                 <span class="n">edgeColorWireHide</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">''</span><span class="p">,</span> <span class="n">edgeColorFillShade</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">''</span><span class="p">,</span>
+                 <span class="n">edgeColorWireHide</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">edgeColorFillShade</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span><span class="p">,</span>
                  <span class="n">edgeLineStyle</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="n">SOLID</span><span class="p">,</span>
                  <span class="n">edgeLineThickness</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="n">VERY_THIN</span><span class="p">,</span> <span class="n">colorCodeOverride</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="n">ON</span><span class="p">,</span>
-                 <span class="n">fillColor</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">''</span><span class="p">,</span> <span class="n">translucency</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="n">OFF</span><span class="p">,</span> <span class="n">translucencyFactor</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mi">0</span><span class="p">):</span>
-        <span class="sd">"""This method creates an OptionArg object.</span>
+                 <span class="n">fillColor</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">translucency</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="n">OFF</span><span class="p">,</span> <span class="n">translucencyFactor</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mi">0</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;This method creates an OptionArg object.</span>
 
 <span class="sd">        Notes</span>
 <span class="sd">        -----</span>
@@ -354,10 +355,10 @@
 <span class="sd">            *renderStyle*=SHADED. </span>
 <span class="sd">        edgeColorWireHide</span>
 <span class="sd">            A String specifying the color to be used to plot the edges of the undeformed plot when </span>
-<span class="sd">            *renderStyle*=WIREFRAME or HIDDEN. The default value is "Green". </span>
+<span class="sd">            *renderStyle*=WIREFRAME or HIDDEN. The default value is &quot;Green&quot;. </span>
 <span class="sd">        edgeColorFillShade</span>
 <span class="sd">            A String specifying the color to be used to plot the edges of the undeformed plot when </span>
-<span class="sd">            *renderStyle*=FILLED or SHADED. The default value is "Black". </span>
+<span class="sd">            *renderStyle*=FILLED or SHADED. The default value is &quot;Black&quot;. </span>
 <span class="sd">        edgeLineStyle</span>
 <span class="sd">            A SymbolicConstant specifying the edge line style. Possible values are SOLID, DASHED, </span>
 <span class="sd">            DOTTED, and DOT_DASH. The default value is SOLID. </span>
@@ -369,7 +370,7 @@
 <span class="sd">            override the edge and fill color settings. The default value is ON. </span>
 <span class="sd">        fillColor</span>
 <span class="sd">            A String specifying the color to be used to fill elements when *renderStyle*=FILLED or </span>
-<span class="sd">            SHADED. The default value is "Green". </span>
+<span class="sd">            SHADED. The default value is &quot;Green&quot;. </span>
 <span class="sd">        translucency</span>
 <span class="sd">            A Boolean specifying whether to set translucency. The default value is OFF. </span>
 <span class="sd">        translucencyFactor</span>
@@ -383,7 +384,7 @@
 <span class="sd">        Raises</span>
 <span class="sd">        ------</span>
 <span class="sd">        RangeError</span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span></div>
 </pre></div>
         </article>

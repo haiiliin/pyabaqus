@@ -5,10 +5,10 @@
     <meta name="color-scheme" content="light dark"><link rel="index" title="Index" href="../../../genindex.html" /><link rel="search" title="Search" href="../../../search.html" />
         <link rel="canonical" href="https://pyabaqus.haiiliin.com/_modules/abaqus/Job/ModelJob.html" />
 
-    <meta name="generator" content="sphinx-4.5.0, furo 2022.04.07"/>
-        <title>abaqus.Job.ModelJob - pyabaqus 1.0.16 documentation</title>
+    <meta name="generator" content="sphinx-4.5.0, furo 2022.06.04.1"/>
+        <title>abaqus.Job.ModelJob - pyabaqus 1.0.18 documentation</title>
       <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/styles/furo.css?digest=68f4518137b9aefe99b631505a2064c3c42c9852" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/styles/furo.css?digest=40978830699223671f4072448e654b5958f38b89" />
     <link rel="stylesheet" type="text/css" href="../../../_static/styles/furo-extensions.css?digest=30d1aed668e5c3a91c3e3bf6a60b675221979f0e" />
     
     
@@ -123,7 +123,7 @@
       </label>
     </div>
     <div class="header-center">
-      <a href="../../../index.html"><div class="brand">pyabaqus 1.0.16 documentation</div></a>
+      <a href="../../../index.html"><div class="brand">pyabaqus 1.0.18 documentation</div></a>
     </div>
     <div class="header-right">
       <div class="theme-toggle-container theme-toggle-header">
@@ -146,7 +146,7 @@
       <div class="sidebar-sticky"><a class="sidebar-brand" href="../../../index.html">
   
   
-  <span class="sidebar-brand-text">pyabaqus 1.0.16 documentation</span>
+  <span class="sidebar-brand-text">pyabaqus 1.0.18 documentation</span>
   
 </a><form class="sidebar-search-container" method="get" action="../../../search.html" role="search">
   <input class="sidebar-search" placeholder=Search name="q" aria-label="Search">
@@ -286,7 +286,8 @@
           </svg>
           <span>Back to top</span>
         </a>
-        <div class="content-icon-container"><div class="theme-toggle-container theme-toggle-content">
+        <div class="content-icon-container">
+          <div class="theme-toggle-container theme-toggle-content">
             <button class="theme-toggle">
               <div class="visually-hidden">Toggle Light / Dark / Auto color theme</div>
               <svg class="theme-icon-when-auto"><use href="#svg-sun-half"></use></svg>
@@ -307,7 +308,7 @@
 
 
 <div class="viewcode-block" id="ModelJob"><a class="viewcode-back" href="../../../reference/mdb/job.html#abaqus.Job.ModelJob.ModelJob">[docs]</a><span class="k">class</span> <span class="nc">ModelJob</span><span class="p">(</span><span class="n">Job</span><span class="p">):</span>
-    <span class="sd">"""The ModelJob object defines a Job object which analyzes a model on a model database</span>
+    <span class="sd">&quot;&quot;&quot;The ModelJob object defines a Job object which analyzes a model on a model database</span>
 <span class="sd">    (MDB). </span>
 <span class="sd">    The ModelJob object is derived from the Job object. </span>
 
@@ -402,7 +403,7 @@
 <span class="sd">        A String specifying the location of the scratch directory. The default value is an empty</span>
 <span class="sd">        string.</span>
 <span class="sd">    userSubroutine: str</span>
-<span class="sd">        A String specifying the file containing the user's subroutine definitions. The default</span>
+<span class="sd">        A String specifying the file containing the user&#39;s subroutine definitions. The default</span>
 <span class="sd">        value is an empty string.</span>
 <span class="sd">    messages: MessageArray</span>
 <span class="sd">        A :py:class:`~abaqus.Job.MessageArray.MessageArray` object specifying the messages received during an analysis.</span>
@@ -419,11 +420,11 @@
 <span class="sd">        mdb.adaptivityProcesses[name].job</span>
 <span class="sd">        mdb.jobs[name]</span>
 
-<span class="sd">    """</span>
+<span class="sd">    &quot;&quot;&quot;</span>
 
     <span class="c1"># A String specifying the name of the new job. The name must be a valid Abaqus/CAE object </span>
     <span class="c1"># name. </span>
-    <span class="n">name</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">''</span>
+    <span class="n">name</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span>
 
     <span class="c1"># A Boolean specifying whether an echo of the input data is printed. The default value is </span>
     <span class="c1"># OFF. </span>
@@ -442,10 +443,10 @@
 
     <span class="c1"># A String specifying the name of the model to be analyzed or a Model object specifying </span>
     <span class="c1"># the model to be analyzed. </span>
-    <span class="n">model</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">''</span>
+    <span class="n">model</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span>
 
     <span class="c1"># A String specifying a description of the job. </span>
-    <span class="n">description</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">''</span>
+    <span class="n">description</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span>
 
     <span class="c1"># A SymbolicConstant specifying the type of job. Possible values are ANALYSIS, </span>
     <span class="c1"># SYNTAXCHECK, RECOVER, and RESTART. The default value is ANALYSIS.If the object has the </span>
@@ -521,22 +522,22 @@
     <span class="c1"># A String specifying the name of the queue to which to submit the job. The default value </span>
     <span class="c1"># is an empty string.Note:You can use the *queue* argument when creating a Job object on a </span>
     <span class="c1"># Windows workstation; however, remote queues are available only on Linux platforms. </span>
-    <span class="n">queue</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">''</span>
+    <span class="n">queue</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span>
 
     <span class="c1"># A String specifying the time at which to submit the job. If *queue* is empty, the string </span>
     <span class="c1"># syntax must be valid for the Linux `at` command. If *queue* is set, the syntax must be </span>
     <span class="c1"># valid according to the system administrator. The default value is an empty </span>
     <span class="c1"># string.Note:You can use the *atTime* argument when creating a Job object on a Windows </span>
     <span class="c1"># workstation; however, the `at` command is available only on Linux platforms. </span>
-    <span class="n">atTime</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">''</span>
+    <span class="n">atTime</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span>
 
     <span class="c1"># A String specifying the location of the scratch directory. The default value is an empty </span>
     <span class="c1"># string. </span>
-    <span class="n">scratch</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">''</span>
+    <span class="n">scratch</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span>
 
-    <span class="c1"># A String specifying the file containing the user's subroutine definitions. The default </span>
+    <span class="c1"># A String specifying the file containing the user&#39;s subroutine definitions. The default </span>
     <span class="c1"># value is an empty string. </span>
-    <span class="n">userSubroutine</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">''</span>
+    <span class="n">userSubroutine</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span>
 
     <span class="c1"># A MessageArray object specifying the messages received during an analysis. </span>
     <span class="n">messages</span><span class="p">:</span> <span class="n">MessageArray</span> <span class="o">=</span> <span class="n">MessageArray</span><span class="p">()</span>
@@ -544,17 +545,17 @@
     <span class="c1"># A tuple of Strings specifying the environment variables and their values. </span>
     <span class="n">environment</span><span class="p">:</span> <span class="nb">tuple</span> <span class="o">=</span> <span class="p">()</span>
 
-    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">model</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">description</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">''</span><span class="p">,</span> <span class="nb">type</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="n">ANALYSIS</span><span class="p">,</span>
-                 <span class="n">queue</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">''</span><span class="p">,</span> <span class="n">waitHours</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="n">waitMinutes</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="n">atTime</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">''</span><span class="p">,</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">model</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">description</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="nb">type</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="n">ANALYSIS</span><span class="p">,</span>
+                 <span class="n">queue</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">waitHours</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="n">waitMinutes</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="n">atTime</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span><span class="p">,</span>
                  <span class="n">echoPrint</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="n">OFF</span><span class="p">,</span> <span class="n">contactPrint</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="n">OFF</span><span class="p">,</span> <span class="n">modelPrint</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="n">OFF</span><span class="p">,</span>
-                 <span class="n">historyPrint</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="n">OFF</span><span class="p">,</span> <span class="n">scratch</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">''</span><span class="p">,</span> <span class="n">userSubroutine</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">''</span><span class="p">,</span>
+                 <span class="n">historyPrint</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="n">OFF</span><span class="p">,</span> <span class="n">scratch</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">userSubroutine</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span><span class="p">,</span>
                  <span class="n">numCpus</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span> <span class="n">memory</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">90</span><span class="p">,</span> <span class="n">memoryUnits</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="n">PERCENTAGE</span><span class="p">,</span>
                  <span class="n">explicitPrecision</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="n">SINGLE</span><span class="p">,</span>
                  <span class="n">nodalOutputPrecision</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="n">SINGLE</span><span class="p">,</span>
                  <span class="n">parallelizationMethodExplicit</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="n">DOMAIN</span><span class="p">,</span> <span class="n">numDomains</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span>
                  <span class="n">activateLoadBalancing</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="n">OFF</span><span class="p">,</span> <span class="n">multiprocessingMode</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="n">DEFAULT</span><span class="p">,</span>
                  <span class="n">licenseType</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="n">DEFAULT</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
-        <span class="sd">"""This method creates an analysis job using a model on a model database (MDB) for the</span>
+        <span class="sd">&quot;&quot;&quot;This method creates an analysis job using a model on a model database (MDB) for the</span>
 <span class="sd">        model definition.</span>
 
 <span class="sd">        Notes</span>
@@ -612,7 +613,7 @@
 <span class="sd">            A String specifying the location of the scratch directory. The default value is an empty</span>
 <span class="sd">            string.</span>
 <span class="sd">        userSubroutine</span>
-<span class="sd">            A String specifying the file containing the user's subroutine definitions. The default</span>
+<span class="sd">            A String specifying the file containing the user&#39;s subroutine definitions. The default</span>
 <span class="sd">            value is an empty string.</span>
 <span class="sd">        numCpus</span>
 <span class="sd">            An Int specifying the number of CPUs to use for this analysis if parallel processing is</span>
@@ -655,11 +656,11 @@
 <span class="sd">        Returns</span>
 <span class="sd">        -------</span>
 <span class="sd">            A ModelJob object.</span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span>
 
 <div class="viewcode-block" id="ModelJob.writeInput"><a class="viewcode-back" href="../../../reference/mdb/job.html#abaqus.Job.ModelJob.ModelJob.writeInput">[docs]</a>    <span class="k">def</span> <span class="nf">writeInput</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">consistencyChecking</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="n">ON</span><span class="p">):</span>
-        <span class="sd">"""This method writes an input file.</span>
+        <span class="sd">&quot;&quot;&quot;This method writes an input file.</span>
 <span class="sd">        </span>
 <span class="sd">        Parameters</span>
 <span class="sd">        ----------</span>
@@ -667,12 +668,12 @@
 <span class="sd">            A Boolean specifying whether to perform consistency checking for the job. The default </span>
 <span class="sd">            value is ON.It is not recommended to turn the consistency checking off unless you are </span>
 <span class="sd">            absolutely sure the model is consistent. </span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span></div>
 
 <div class="viewcode-block" id="ModelJob.setValues"><a class="viewcode-back" href="../../../reference/mdb/job.html#abaqus.Job.ModelJob.ModelJob.setValues">[docs]</a>    <span class="k">def</span> <span class="nf">setValues</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="sd">"""This method modifies the ModelJob object.</span>
-<span class="sd">        """</span>
+        <span class="sd">&quot;&quot;&quot;This method modifies the ModelJob object.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span></div></div>
 </pre></div>
         </article>

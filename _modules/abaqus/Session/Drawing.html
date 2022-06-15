@@ -5,10 +5,10 @@
     <meta name="color-scheme" content="light dark"><link rel="index" title="Index" href="../../../genindex.html" /><link rel="search" title="Search" href="../../../search.html" />
         <link rel="canonical" href="https://pyabaqus.haiiliin.com/_modules/abaqus/Session/Drawing.html" />
 
-    <meta name="generator" content="sphinx-4.5.0, furo 2022.04.07"/>
-        <title>abaqus.Session.Drawing - pyabaqus 1.0.16 documentation</title>
+    <meta name="generator" content="sphinx-4.5.0, furo 2022.06.04.1"/>
+        <title>abaqus.Session.Drawing - pyabaqus 1.0.18 documentation</title>
       <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/styles/furo.css?digest=68f4518137b9aefe99b631505a2064c3c42c9852" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/styles/furo.css?digest=40978830699223671f4072448e654b5958f38b89" />
     <link rel="stylesheet" type="text/css" href="../../../_static/styles/furo-extensions.css?digest=30d1aed668e5c3a91c3e3bf6a60b675221979f0e" />
     
     
@@ -123,7 +123,7 @@
       </label>
     </div>
     <div class="header-center">
-      <a href="../../../index.html"><div class="brand">pyabaqus 1.0.16 documentation</div></a>
+      <a href="../../../index.html"><div class="brand">pyabaqus 1.0.18 documentation</div></a>
     </div>
     <div class="header-right">
       <div class="theme-toggle-container theme-toggle-header">
@@ -146,7 +146,7 @@
       <div class="sidebar-sticky"><a class="sidebar-brand" href="../../../index.html">
   
   
-  <span class="sidebar-brand-text">pyabaqus 1.0.16 documentation</span>
+  <span class="sidebar-brand-text">pyabaqus 1.0.18 documentation</span>
   
 </a><form class="sidebar-search-container" method="get" action="../../../search.html" role="search">
   <input class="sidebar-search" placeholder=Search name="q" aria-label="Search">
@@ -286,7 +286,8 @@
           </svg>
           <span>Back to top</span>
         </a>
-        <div class="content-icon-container"><div class="theme-toggle-container theme-toggle-content">
+        <div class="content-icon-container">
+          <div class="theme-toggle-container theme-toggle-content">
             <button class="theme-toggle">
               <div class="visually-hidden">Toggle Light / Dark / Auto color theme</div>
               <svg class="theme-icon-when-auto"><use href="#svg-sun-half"></use></svg>
@@ -305,7 +306,7 @@
 
 
 <div class="viewcode-block" id="Drawing"><a class="viewcode-back" href="../../../reference/session.html#abaqus.Session.Drawing.Drawing">[docs]</a><span class="k">class</span> <span class="nc">Drawing</span><span class="p">:</span>
-    <span class="sd">"""A drawing is the container for a geometric object. The Drawing object stores the vertex</span>
+    <span class="sd">&quot;&quot;&quot;A drawing is the container for a geometric object. The Drawing object stores the vertex</span>
 <span class="sd">    data and various settings that determine how the drawing will be displayed. </span>
 
 <span class="sd">    Attributes</span>
@@ -366,7 +367,7 @@
 <span class="sd">        A tuple of three Floats specifying the **Red**, **Green**, and **Blue** component values for</span>
 <span class="sd">        the point color. Possible values for each component are between 0.0 and 1.0.</span>
 <span class="sd">    depthTest: Boolean</span>
-<span class="sd">        A Boole:py:class:`~.an` specifying whe:py:class:`~.the`r :py:class:`~.an` object's depth will be considered during rendering. The</span>
+<span class="sd">        A Boole:py:class:`~.an` specifying whe:py:class:`~.the`r :py:class:`~.an` object&#39;s depth will be considered during rendering. The</span>
 <span class="sd">        default value is ON.When OFF, :py:class:`~.the` object will not be hidden by o:py:class:`~.the`r objects in front of</span>
 <span class="sd">        it.</span>
 
@@ -378,7 +379,7 @@
 
 <span class="sd">        session.drawings[name]</span>
 
-<span class="sd">    """</span>
+<span class="sd">    &quot;&quot;&quot;</span>
 
     <span class="c1"># An Int specifying the number of vertices in the vertex array after a call to the </span>
     <span class="c1"># setVertices method. The default value is 0. </span>
@@ -448,13 +449,13 @@
     <span class="c1"># the point color. Possible values for each component are between 0.0 and 1.0. </span>
     <span class="n">pointColor</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="kc">None</span>
 
-    <span class="c1"># A Boolean specifying whether an object's depth will be considered during rendering. The </span>
+    <span class="c1"># A Boolean specifying whether an object&#39;s depth will be considered during rendering. The </span>
     <span class="c1"># default value is ON.When OFF, the object will not be hidden by other objects in front of </span>
     <span class="c1"># it. </span>
     <span class="n">depthTest</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="n">ON</span>
 
     <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">:</span> <span class="nb">str</span><span class="p">):</span>
-        <span class="sd">"""This method creates an empty Drawing object.</span>
+        <span class="sd">&quot;&quot;&quot;This method creates an empty Drawing object.</span>
 
 <span class="sd">        Notes</span>
 <span class="sd">        -----</span>
@@ -478,11 +479,11 @@
 <span class="sd">            ValueError. </span>
 <span class="sd">            - If the user attempts to create a new drawing with the name of an existing drawing: </span>
 <span class="sd">              ValueError: There is already a drawing with this name </span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span>
 
 <div class="viewcode-block" id="Drawing.setVertices"><a class="viewcode-back" href="../../../reference/session.html#abaqus.Session.Drawing.Drawing.setVertices">[docs]</a>    <span class="k">def</span> <span class="nf">setVertices</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">vertexDimension</span><span class="p">:</span> <span class="nb">float</span><span class="p">,</span> <span class="n">vertexData</span><span class="p">:</span> <span class="nb">tuple</span><span class="p">):</span>
-        <span class="sd">"""This method accepts the vertex data that defines the Drawing object. It defines in an</span>
+        <span class="sd">&quot;&quot;&quot;This method accepts the vertex data that defines the Drawing object. It defines in an</span>
 <span class="sd">        array of vertices with a length equal to the length of the *vertexData* sequence divided</span>
 <span class="sd">        by *vertexDimension*.</span>
 <span class="sd">        </span>
@@ -509,11 +510,11 @@
 <span class="sd">              ValueError: *vertexData* cannot be empty. </span>
 <span class="sd">            - If setVertices has already been called and this call is sending fewer vertices: </span>
 <span class="sd">              ValueError: *vertexData* cannot be reduced </span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span></div>
 
 <div class="viewcode-block" id="Drawing.setNormals"><a class="viewcode-back" href="../../../reference/session.html#abaqus.Session.Drawing.Drawing.setNormals">[docs]</a>    <span class="k">def</span> <span class="nf">setNormals</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">normalData</span><span class="p">:</span> <span class="nb">tuple</span><span class="p">):</span>
-        <span class="sd">"""This method accepts the normal data for each vertex. It defines in an array of normal</span>
+        <span class="sd">&quot;&quot;&quot;This method accepts the normal data for each vertex. It defines in an array of normal</span>
 <span class="sd">        vectors with a length equal to the length of the *normalData* sequence divided by 3.</span>
 <span class="sd">        </span>
 <span class="sd">        Parameters</span>
@@ -535,11 +536,11 @@
 <span class="sd">              ValueError: *normalData* must have at least three values. </span>
 <span class="sd">            - If setNormals has already been called and this call is sending fewer values: </span>
 <span class="sd">              ValueError: *normalData* cannot be reduced. </span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span></div>
 
 <div class="viewcode-block" id="Drawing.setColors"><a class="viewcode-back" href="../../../reference/session.html#abaqus.Session.Drawing.Drawing.setColors">[docs]</a>    <span class="k">def</span> <span class="nf">setColors</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">colorDimension</span><span class="p">:</span> <span class="nb">float</span><span class="p">,</span> <span class="n">colorData</span><span class="p">:</span> <span class="nb">tuple</span><span class="p">):</span>
-        <span class="sd">"""This method accepts the color data for each vertex. It defines in an array of colors</span>
+        <span class="sd">&quot;&quot;&quot;This method accepts the color data for each vertex. It defines in an array of colors</span>
 <span class="sd">        with a length equal to the length of the *colorData* sequence divided by</span>
 <span class="sd">        *colorDimension*.</span>
 <span class="sd">        </span>
@@ -571,11 +572,11 @@
 <span class="sd">              ValueError: *colorData* cannot be empty. </span>
 <span class="sd">            - If setColors has already been called and this call is sending fewer colors: </span>
 <span class="sd">              ValueError: *colorData* cannot be reduced </span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span></div>
 
 <div class="viewcode-block" id="Drawing.setEdgeColor"><a class="viewcode-back" href="../../../reference/session.html#abaqus.Session.Drawing.Drawing.setEdgeColor">[docs]</a>    <span class="k">def</span> <span class="nf">setEdgeColor</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">edgeColor</span><span class="p">:</span> <span class="nb">tuple</span><span class="p">):</span>
-        <span class="sd">"""This method allows a separate, single color to be used when rendering the edges of the</span>
+        <span class="sd">&quot;&quot;&quot;This method allows a separate, single color to be used when rendering the edges of the</span>
 <span class="sd">        drawing. Once called, edges will be rendered using the specified color but facets will</span>
 <span class="sd">        continue to use the colors specified in the setColors method. An empty sequence can be</span>
 <span class="sd">        specified to resume using the colors arrays for edges.</span>
@@ -592,11 +593,11 @@
 <span class="sd">            ValueError. </span>
 <span class="sd">            - If *edgeColor* is not a sequence of 0 or 3 Floats: </span>
 <span class="sd">              ValueError: *edgeColor* must be a tuple with 3 values </span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span></div>
 
 <div class="viewcode-block" id="Drawing.setPointColor"><a class="viewcode-back" href="../../../reference/session.html#abaqus.Session.Drawing.Drawing.setPointColor">[docs]</a>    <span class="k">def</span> <span class="nf">setPointColor</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">pointColor</span><span class="p">:</span> <span class="nb">tuple</span><span class="p">):</span>
-        <span class="sd">"""This method allows a separate, single color to be used when rendering the points of the</span>
+        <span class="sd">&quot;&quot;&quot;This method allows a separate, single color to be used when rendering the points of the</span>
 <span class="sd">        drawing. Once called, points will be rendered using the specified color but facets will</span>
 <span class="sd">        continue to use the colors specified in the setColors method. An empty sequence can be</span>
 <span class="sd">        specified to resume using the colors arrays for points.</span>
@@ -613,12 +614,12 @@
 <span class="sd">            ValueError. </span>
 <span class="sd">            - If *pointColor* is a not sequence of 0 or 3 Floats: </span>
 <span class="sd">              ValueError: *pointColor* must be a tuple with 3 values </span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span></div>
 
 <div class="viewcode-block" id="Drawing.addArrayDraw"><a class="viewcode-back" href="../../../reference/session.html#abaqus.Session.Drawing.Drawing.addArrayDraw">[docs]</a>    <span class="k">def</span> <span class="nf">addArrayDraw</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="nb">type</span><span class="p">:</span> <span class="n">SymbolicConstant</span><span class="p">,</span> <span class="n">startIndex</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">numVertices</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span>
                      <span class="n">polygonMode</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="n">FILL</span><span class="p">):</span>
-        <span class="sd">"""This method adds a rendering command to the drawing and can be called multiple times to</span>
+        <span class="sd">&quot;&quot;&quot;This method adds a rendering command to the drawing and can be called multiple times to</span>
 <span class="sd">        add additional rendering commands. When the drawing is referenced by a Viewport, the</span>
 <span class="sd">        drawing commands are used the render the Drawing.</span>
 <span class="sd">        The rendering command constructs the specified type of geometric primitive using</span>
@@ -653,11 +654,11 @@
 <span class="sd">            - If (*startIndex* + *numVertices* - 1) is larger than the length of the color array and </span>
 <span class="sd">            vertex colors are required for the graphics primitive: </span>
 <span class="sd">              Drawing request extends past array size of colors. </span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span></div>
 
 <div class="viewcode-block" id="Drawing.addIndexDraw"><a class="viewcode-back" href="../../../reference/session.html#abaqus.Session.Drawing.Drawing.addIndexDraw">[docs]</a>    <span class="k">def</span> <span class="nf">addIndexDraw</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="nb">type</span><span class="p">:</span> <span class="n">SymbolicConstant</span><span class="p">,</span> <span class="n">indices</span><span class="p">:</span> <span class="nb">tuple</span><span class="p">,</span> <span class="n">polygonMode</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="n">FILL</span><span class="p">):</span>
-        <span class="sd">"""This method adds a rendering command to the drawing and can be called multiple times to</span>
+        <span class="sd">&quot;&quot;&quot;This method adds a rendering command to the drawing and can be called multiple times to</span>
 <span class="sd">        add additional rendering commands. When the drawing is referenced by a Viewport, the</span>
 <span class="sd">        drawing commands are used the render the Drawing.</span>
 <span class="sd">        The rendering command constructs the specified type of geometric primitive using</span>
@@ -692,14 +693,14 @@
 <span class="sd">            - If any value in the *indices* sequence is larger than the length of the color array </span>
 <span class="sd">            and vertex colors are required for the graphics primitive: </span>
 <span class="sd">              Drawing request extends past array size of colors. </span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span></div>
 
 <div class="viewcode-block" id="Drawing.setValues"><a class="viewcode-back" href="../../../reference/session.html#abaqus.Session.Drawing.Drawing.setValues">[docs]</a>    <span class="k">def</span> <span class="nf">setValues</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">show</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="n">OFF</span><span class="p">,</span> <span class="n">cullBackfaces</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="n">OFF</span><span class="p">,</span>
                   <span class="n">frontFaceOrder</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="n">CCW</span><span class="p">,</span> <span class="n">smoothShade</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="n">ON</span><span class="p">,</span>
                   <span class="n">edgesInShaded</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="n">ON</span><span class="p">,</span> <span class="n">translucency</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span> <span class="n">lineSize</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span>
                   <span class="n">pointSize</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="n">depthTest</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="n">ON</span><span class="p">):</span>
-        <span class="sd">"""This method modifies the rendering of the Drawing object.</span>
+        <span class="sd">&quot;&quot;&quot;This method modifies the rendering of the Drawing object.</span>
 <span class="sd">        </span>
 <span class="sd">        Parameters</span>
 <span class="sd">        ----------</span>
@@ -744,7 +745,7 @@
 <span class="sd">            One pixel on the screen is generally visible but one pixel on a 1200 DPI printer may not </span>
 <span class="sd">            be clear. </span>
 <span class="sd">        depthTest</span>
-<span class="sd">            A Boolean specifying whether an object's depth will be considered during rendering. The </span>
+<span class="sd">            A Boolean specifying whether an object&#39;s depth will be considered during rendering. The </span>
 <span class="sd">            default value is ON.When OFF, the object will not be hidden by other objects in front of </span>
 <span class="sd">            it.</span>
 
@@ -757,7 +758,7 @@
 <span class="sd">              RangeError: *lineSize* must be in the range 0.0 &lt;= value &lt;= 5.0 </span>
 <span class="sd">            - If an invalid *pointSize* value is specified: </span>
 <span class="sd">              RangeError: *pointSize* must be in the range 0.0 &lt;= value &lt;= 5.0 </span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span></div></div>
 </pre></div>
         </article>

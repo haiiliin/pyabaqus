@@ -5,10 +5,10 @@
     <meta name="color-scheme" content="light dark"><link rel="index" title="Index" href="../../../genindex.html" /><link rel="search" title="Search" href="../../../search.html" />
         <link rel="canonical" href="https://pyabaqus.haiiliin.com/_modules/abaqus/Step/ExplicitDynamicsStep.html" />
 
-    <meta name="generator" content="sphinx-4.5.0, furo 2022.04.07"/>
-        <title>abaqus.Step.ExplicitDynamicsStep - pyabaqus 1.0.16 documentation</title>
+    <meta name="generator" content="sphinx-4.5.0, furo 2022.06.04.1"/>
+        <title>abaqus.Step.ExplicitDynamicsStep - pyabaqus 1.0.18 documentation</title>
       <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/styles/furo.css?digest=68f4518137b9aefe99b631505a2064c3c42c9852" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/styles/furo.css?digest=40978830699223671f4072448e654b5958f38b89" />
     <link rel="stylesheet" type="text/css" href="../../../_static/styles/furo-extensions.css?digest=30d1aed668e5c3a91c3e3bf6a60b675221979f0e" />
     
     
@@ -123,7 +123,7 @@
       </label>
     </div>
     <div class="header-center">
-      <a href="../../../index.html"><div class="brand">pyabaqus 1.0.16 documentation</div></a>
+      <a href="../../../index.html"><div class="brand">pyabaqus 1.0.18 documentation</div></a>
     </div>
     <div class="header-right">
       <div class="theme-toggle-container theme-toggle-header">
@@ -146,7 +146,7 @@
       <div class="sidebar-sticky"><a class="sidebar-brand" href="../../../index.html">
   
   
-  <span class="sidebar-brand-text">pyabaqus 1.0.16 documentation</span>
+  <span class="sidebar-brand-text">pyabaqus 1.0.18 documentation</span>
   
 </a><form class="sidebar-search-container" method="get" action="../../../search.html" role="search">
   <input class="sidebar-search" placeholder=Search name="q" aria-label="Search">
@@ -286,7 +286,8 @@
           </svg>
           <span>Back to top</span>
         </a>
-        <div class="content-icon-container"><div class="theme-toggle-container theme-toggle-content">
+        <div class="content-icon-container">
+          <div class="theme-toggle-container theme-toggle-content">
             <button class="theme-toggle">
               <div class="visually-hidden">Toggle Light / Dark / Auto color theme</div>
               <svg class="theme-icon-when-auto"><use href="#svg-sun-half"></use></svg>
@@ -320,7 +321,7 @@
 
 
 <div class="viewcode-block" id="ExplicitDynamicsStep"><a class="viewcode-back" href="../../../reference/mdb/model/step.html#abaqus.Step.ExplicitDynamicsStep.ExplicitDynamicsStep">[docs]</a><span class="k">class</span> <span class="nc">ExplicitDynamicsStep</span><span class="p">(</span><span class="n">AnalysisStep</span><span class="p">):</span>
-    <span class="sd">"""The ExplicitDynamicsStep object is used to perform a dynamic stress/displacement</span>
+    <span class="sd">&quot;&quot;&quot;The ExplicitDynamicsStep object is used to perform a dynamic stress/displacement</span>
 <span class="sd">    analysis using explicit integration in Abaqus/Explicit. </span>
 <span class="sd">    The ExplicitDynamicsStep object is derived from the AnalysisStep object. </span>
 
@@ -357,8 +358,8 @@
 <span class="sd">        None or a Float specifying the user-defined time increment. This argument is required</span>
 <span class="sd">        only when **timeIncrementationMethod=FIXED_USER_DEFINED_INC**. The default value is None.</span>
 <span class="sd">    improvedDtMethod: Boolean</span>
-<span class="sd">        A Boolean specifying whether to use the "improved" (**improvedDtMethod=ON**) or</span>
-<span class="sd">        "conservative" (**improvedDtMethod=OFF**) method to estimate the element stable time</span>
+<span class="sd">        A Boolean specifying whether to use the &quot;improved&quot; (**improvedDtMethod=ON**) or</span>
+<span class="sd">        &quot;conservative&quot; (**improvedDtMethod=OFF**) method to estimate the element stable time</span>
 <span class="sd">        increment for three-dimensional continuum elements and elements with plane stress</span>
 <span class="sd">        formulations (shell, membrane, and two-dimensional plane stress elements). The default</span>
 <span class="sd">        value is ON.</span>
@@ -453,10 +454,10 @@
 <span class="sd">            - STEP</span>
 <span class="sd">            - VARIABLE MASS SCALING</span>
 
-<span class="sd">    """</span>
+<span class="sd">    &quot;&quot;&quot;</span>
 
     <span class="c1"># A String specifying the repository key. </span>
-    <span class="n">name</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">''</span>
+    <span class="n">name</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span>
 
     <span class="c1"># A Float specifying the total time period for the step. The default value is 1.0. </span>
     <span class="n">timePeriod</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mi">1</span>
@@ -495,8 +496,8 @@
     <span class="c1"># only when *timeIncrementationMethod*=FIXED_USER_DEFINED_INC. The default value is None. </span>
     <span class="n">userDefinedInc</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="kc">None</span>
 
-    <span class="c1"># A Boolean specifying whether to use the "improved" (*improvedDtMethod*=ON) or </span>
-    <span class="c1"># "conservative" (*improvedDtMethod*=OFF) method to estimate the element stable time </span>
+    <span class="c1"># A Boolean specifying whether to use the &quot;improved&quot; (*improvedDtMethod*=ON) or </span>
+    <span class="c1"># &quot;conservative&quot; (*improvedDtMethod*=OFF) method to estimate the element stable time </span>
     <span class="c1"># increment for three-dimensional continuum elements and elements with plane stress </span>
     <span class="c1"># formulations (shell, membrane, and two-dimensional plane stress elements). The default </span>
     <span class="c1"># value is ON. </span>
@@ -504,10 +505,10 @@
 
     <span class="c1"># A String specifying the name of the previous step. The new step appears after this step </span>
     <span class="c1"># in the list of analysis steps. </span>
-    <span class="n">previous</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">''</span>
+    <span class="n">previous</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span>
 
     <span class="c1"># A String specifying a description of the new step. The default value is an empty string. </span>
-    <span class="n">description</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">''</span>
+    <span class="n">description</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span>
 
     <span class="c1"># A MassScalingArray object specifying mass scaling controls. The default value is </span>
     <span class="c1"># PREVIOUS_STEP. </span>
@@ -598,14 +599,14 @@
     <span class="c1"># A repository of PredefinedFieldState objects. </span>
     <span class="n">predefinedFieldStates</span><span class="p">:</span> <span class="nb">dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">PredefinedFieldState</span><span class="p">]</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">PredefinedFieldState</span><span class="p">]()</span>
 
-    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">previous</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">description</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">''</span><span class="p">,</span> <span class="n">timePeriod</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">previous</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">description</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">timePeriod</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span>
                  <span class="n">nlgeom</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="n">ON</span><span class="p">,</span> <span class="n">adiabatic</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="n">OFF</span><span class="p">,</span>
                  <span class="n">timeIncrementationMethod</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="n">AUTOMATIC_GLOBAL</span><span class="p">,</span>
                  <span class="n">maxIncrement</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">scaleFactor</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span>
                  <span class="n">massScaling</span><span class="p">:</span> <span class="n">MassScalingArray</span> <span class="o">=</span> <span class="n">PREVIOUS_STEP</span><span class="p">,</span> <span class="n">linearBulkViscosity</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span>
                  <span class="n">quadBulkViscosity</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span> <span class="n">userDefinedInc</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
                  <span class="n">maintainAttributes</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="kc">False</span><span class="p">,</span> <span class="n">improvedDtMethod</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="n">ON</span><span class="p">):</span>
-        <span class="sd">"""This method creates an ExplicitDynamicsStep object.</span>
+        <span class="sd">&quot;&quot;&quot;This method creates an ExplicitDynamicsStep object.</span>
 
 <span class="sd">        Notes</span>
 <span class="sd">        -----</span>
@@ -659,8 +660,8 @@
 <span class="sd">            A Boolean specifying whether to retain attributes from an existing step with the same </span>
 <span class="sd">            name. The default value is False. </span>
 <span class="sd">        improvedDtMethod</span>
-<span class="sd">            A Boolean specifying whether to use the "improved" (*improvedDtMethod*=ON) or </span>
-<span class="sd">            "conservative" (*improvedDtMethod*=OFF) method to estimate the element stable time </span>
+<span class="sd">            A Boolean specifying whether to use the &quot;improved&quot; (*improvedDtMethod*=ON) or </span>
+<span class="sd">            &quot;conservative&quot; (*improvedDtMethod*=OFF) method to estimate the element stable time </span>
 <span class="sd">            increment for three-dimensional continuum elements and elements with plane stress </span>
 <span class="sd">            formulations (shell, membrane, and two-dimensional plane stress elements). The default </span>
 <span class="sd">            value is ON. </span>
@@ -672,17 +673,17 @@
 <span class="sd">        Raises</span>
 <span class="sd">        ------</span>
 <span class="sd">        RangeError</span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">()</span>
         <span class="k">pass</span>
 
-<div class="viewcode-block" id="ExplicitDynamicsStep.setValues"><a class="viewcode-back" href="../../../reference/mdb/model/step.html#abaqus.Step.ExplicitDynamicsStep.ExplicitDynamicsStep.setValues">[docs]</a>    <span class="k">def</span> <span class="nf">setValues</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">description</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">''</span><span class="p">,</span> <span class="n">timePeriod</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span> <span class="n">nlgeom</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="n">ON</span><span class="p">,</span>
+<div class="viewcode-block" id="ExplicitDynamicsStep.setValues"><a class="viewcode-back" href="../../../reference/mdb/model/step.html#abaqus.Step.ExplicitDynamicsStep.ExplicitDynamicsStep.setValues">[docs]</a>    <span class="k">def</span> <span class="nf">setValues</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">description</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">timePeriod</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span> <span class="n">nlgeom</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="n">ON</span><span class="p">,</span>
                   <span class="n">adiabatic</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="n">OFF</span><span class="p">,</span> <span class="n">timeIncrementationMethod</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="n">AUTOMATIC_GLOBAL</span><span class="p">,</span>
                   <span class="n">maxIncrement</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">scaleFactor</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span>
                   <span class="n">massScaling</span><span class="p">:</span> <span class="n">MassScalingArray</span> <span class="o">=</span> <span class="n">PREVIOUS_STEP</span><span class="p">,</span> <span class="n">linearBulkViscosity</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span>
                   <span class="n">quadBulkViscosity</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span> <span class="n">userDefinedInc</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
                   <span class="n">improvedDtMethod</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="n">ON</span><span class="p">):</span>
-        <span class="sd">"""This method modifies the ExplicitDynamicsStep object.</span>
+        <span class="sd">&quot;&quot;&quot;This method modifies the ExplicitDynamicsStep object.</span>
 <span class="sd">        </span>
 <span class="sd">        Parameters</span>
 <span class="sd">        ----------</span>
@@ -720,8 +721,8 @@
 <span class="sd">            None or a Float specifying the user-defined time increment. This argument is required </span>
 <span class="sd">            only when *timeIncrementationMethod*=FIXED_USER_DEFINED_INC. The default value is None. </span>
 <span class="sd">        improvedDtMethod</span>
-<span class="sd">            A Boolean specifying whether to use the "improved" (*improvedDtMethod*=ON) or </span>
-<span class="sd">            "conservative" (*improvedDtMethod*=OFF) method to estimate the element stable time </span>
+<span class="sd">            A Boolean specifying whether to use the &quot;improved&quot; (*improvedDtMethod*=ON) or </span>
+<span class="sd">            &quot;conservative&quot; (*improvedDtMethod*=OFF) method to estimate the element stable time </span>
 <span class="sd">            increment for three-dimensional continuum elements and elements with plane stress </span>
 <span class="sd">            formulations (shell, membrane, and two-dimensional plane stress elements). The default </span>
 <span class="sd">            value is ON.</span>
@@ -729,7 +730,7 @@
 <span class="sd">        Raises</span>
 <span class="sd">        ------</span>
 <span class="sd">        RangeError</span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span></div></div>
 </pre></div>
         </article>

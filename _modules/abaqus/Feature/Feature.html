@@ -5,10 +5,10 @@
     <meta name="color-scheme" content="light dark"><link rel="index" title="Index" href="../../../genindex.html" /><link rel="search" title="Search" href="../../../search.html" />
         <link rel="canonical" href="https://pyabaqus.haiiliin.com/_modules/abaqus/Feature/Feature.html" />
 
-    <meta name="generator" content="sphinx-4.5.0, furo 2022.04.07"/>
-        <title>abaqus.Feature.Feature - pyabaqus 1.0.16 documentation</title>
+    <meta name="generator" content="sphinx-4.5.0, furo 2022.06.04.1"/>
+        <title>abaqus.Feature.Feature - pyabaqus 1.0.18 documentation</title>
       <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/styles/furo.css?digest=68f4518137b9aefe99b631505a2064c3c42c9852" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/styles/furo.css?digest=40978830699223671f4072448e654b5958f38b89" />
     <link rel="stylesheet" type="text/css" href="../../../_static/styles/furo-extensions.css?digest=30d1aed668e5c3a91c3e3bf6a60b675221979f0e" />
     
     
@@ -123,7 +123,7 @@
       </label>
     </div>
     <div class="header-center">
-      <a href="../../../index.html"><div class="brand">pyabaqus 1.0.16 documentation</div></a>
+      <a href="../../../index.html"><div class="brand">pyabaqus 1.0.18 documentation</div></a>
     </div>
     <div class="header-right">
       <div class="theme-toggle-container theme-toggle-header">
@@ -146,7 +146,7 @@
       <div class="sidebar-sticky"><a class="sidebar-brand" href="../../../index.html">
   
   
-  <span class="sidebar-brand-text">pyabaqus 1.0.16 documentation</span>
+  <span class="sidebar-brand-text">pyabaqus 1.0.18 documentation</span>
   
 </a><form class="sidebar-search-container" method="get" action="../../../search.html" role="search">
   <input class="sidebar-search" placeholder=Search name="q" aria-label="Search">
@@ -286,7 +286,8 @@
           </svg>
           <span>Back to top</span>
         </a>
-        <div class="content-icon-container"><div class="theme-toggle-container theme-toggle-content">
+        <div class="content-icon-container">
+          <div class="theme-toggle-container theme-toggle-content">
             <button class="theme-toggle">
               <div class="visually-hidden">Toggle Light / Dark / Auto color theme</div>
               <svg class="theme-icon-when-auto"><use href="#svg-sun-half"></use></svg>
@@ -317,7 +318,7 @@
 
 
 <div class="viewcode-block" id="Feature"><a class="viewcode-back" href="../../../reference/mdb/model/part_assembly/feature.html#abaqus.Feature.Feature.Feature">[docs]</a><span class="k">class</span> <span class="nc">Feature</span><span class="p">:</span>
-    <span class="sd">"""Abaqus/CAE is a feature-based modeling system, and features are stored in the Feature</span>
+    <span class="sd">&quot;&quot;&quot;Abaqus/CAE is a feature-based modeling system, and features are stored in the Feature</span>
 <span class="sd">    object. The user defines the parameters of the feature, and Abaqus/CAE modifies the </span>
 <span class="sd">    model based on the value of the parameters. This evaluation of the parameters is called </span>
 <span class="sd">    regeneration of the feature. Feature objects contain both the parameters and the </span>
@@ -343,18 +344,18 @@
 <span class="sd">        mdb.models[name].rootAssembly.features[name]</span>
 <span class="sd">        mdb.models[name].rootAssembly.featuresById[i]</span>
 
-<span class="sd">    """</span>
+<span class="sd">    &quot;&quot;&quot;</span>
 
     <span class="c1"># A String specifying the repository key. </span>
-    <span class="n">name</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">''</span>
+    <span class="n">name</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span>
 
     <span class="c1"># An Int specifying the ID of the feature. </span>
     <span class="nb">id</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="kc">None</span>
 
 <div class="viewcode-block" id="Feature.AttachmentPoints"><a class="viewcode-back" href="../../../reference/mdb/model/part_assembly/feature.html#abaqus.Feature.Feature.Feature.AttachmentPoints">[docs]</a>    <span class="k">def</span> <span class="nf">AttachmentPoints</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">points</span><span class="p">:</span> <span class="nb">float</span><span class="p">,</span> <span class="n">projectionMethod</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="n">PROJECT_BY_PROXIMITY</span><span class="p">,</span>
                          <span class="n">projectOnFaces</span><span class="p">:</span> <span class="nb">tuple</span><span class="p">[</span><span class="n">Face</span><span class="p">]</span> <span class="o">=</span> <span class="p">(),</span> <span class="n">projectOnElementFaces</span><span class="p">:</span> <span class="nb">tuple</span><span class="p">[</span><span class="n">MeshFace</span><span class="p">]</span> <span class="o">=</span> <span class="p">(),</span>
-                         <span class="n">projectionDirStartPt</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">projectionDirEndPt</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">setName</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">''</span><span class="p">):</span>
-        <span class="sd">"""This method creates an attachment points Feature. Attachment points may be created using</span>
+                         <span class="n">projectionDirStartPt</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">projectionDirEndPt</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">setName</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;This method creates an attachment points Feature. Attachment points may be created using</span>
 <span class="sd">        datum points, vertices, reference points, attachment points, interesting points, orphan</span>
 <span class="sd">        mesh nodes or coordinates. Optionally, the attachment points can be projected on</span>
 <span class="sd">        geometric faces or element faces.</span>
@@ -401,19 +402,19 @@
 <span class="sd">        -------</span>
 <span class="sd">        feature: Feature</span>
 <span class="sd">            A Feature object</span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span></div>
 
 <div class="viewcode-block" id="Feature.AttachmentPointsAlongDirection"><a class="viewcode-back" href="../../../reference/mdb/model/part_assembly/feature.html#abaqus.Feature.Feature.Feature.AttachmentPointsAlongDirection">[docs]</a>    <span class="k">def</span> <span class="nf">AttachmentPointsAlongDirection</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">startPoint</span><span class="p">:</span> <span class="nb">float</span><span class="p">,</span> <span class="n">pointCreationMethod</span><span class="p">:</span> <span class="n">SymbolicConstant</span><span class="p">,</span>
-                                       <span class="n">endPoint</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">direction</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">''</span><span class="p">,</span> <span class="n">spacing</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">''</span><span class="p">,</span>
-                                       <span class="n">numPtsAlongDir</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">''</span><span class="p">,</span> <span class="n">numPtsBetweenPts</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">''</span><span class="p">,</span>
+                                       <span class="n">endPoint</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">direction</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">spacing</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span><span class="p">,</span>
+                                       <span class="n">numPtsAlongDir</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">numPtsBetweenPts</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span><span class="p">,</span>
                                        <span class="n">createPtAtStartPt</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="kc">True</span><span class="p">,</span>
                                        <span class="n">createPtAtEndPt</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="kc">True</span><span class="p">,</span>
                                        <span class="n">projectionMethod</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="n">PROJECT_BY_PROXIMITY</span><span class="p">,</span>
                                        <span class="n">projectOnFaces</span><span class="p">:</span> <span class="nb">tuple</span><span class="p">[</span><span class="n">Face</span><span class="p">]</span> <span class="o">=</span> <span class="p">(),</span> <span class="n">projectOnElementFaces</span><span class="p">:</span> <span class="nb">tuple</span><span class="p">[</span><span class="n">MeshFace</span><span class="p">]</span> <span class="o">=</span> <span class="p">(),</span>
                                        <span class="n">projectionDirStartPt</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">projectionDirEndPt</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
-                                       <span class="n">flipDirection</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="n">OFF</span><span class="p">,</span> <span class="n">setName</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">''</span><span class="p">):</span>
-        <span class="sd">"""This method creates a Feature object by creating attachment points along a direction or</span>
+                                       <span class="n">flipDirection</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="n">OFF</span><span class="p">,</span> <span class="n">setName</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;This method creates a Feature object by creating attachment points along a direction or</span>
 <span class="sd">        between two points. A Datum point, a ConstrainedSketchVertex, a Reference point, an Attachment point, an</span>
 <span class="sd">        Interesting point, or an orphan mesh Node can be specified as the start or end point.</span>
 <span class="sd">        The direction can be specified using a straight edge or a datum axis.</span>
@@ -486,22 +487,22 @@
 <span class="sd">        -------</span>
 <span class="sd">        feature: Feature</span>
 <span class="sd">            A Feature object</span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span></div>
 
-<div class="viewcode-block" id="Feature.AttachmentPointsOffsetFromEdges"><a class="viewcode-back" href="../../../reference/mdb/model/part_assembly/feature.html#abaqus.Feature.Feature.Feature.AttachmentPointsOffsetFromEdges">[docs]</a>    <span class="k">def</span> <span class="nf">AttachmentPointsOffsetFromEdges</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">edges</span><span class="p">:</span> <span class="nb">tuple</span><span class="p">,</span> <span class="n">startPoint</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">''</span><span class="p">,</span> <span class="n">flipDirection</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">''</span><span class="p">,</span>
-                                        <span class="n">pointCreationMethod</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">numberOfPoints</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">''</span><span class="p">,</span>
-                                        <span class="n">spacingBetweenPoints</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">''</span><span class="p">,</span> <span class="n">offsetFromStartPoint</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span>
+<div class="viewcode-block" id="Feature.AttachmentPointsOffsetFromEdges"><a class="viewcode-back" href="../../../reference/mdb/model/part_assembly/feature.html#abaqus.Feature.Feature.Feature.AttachmentPointsOffsetFromEdges">[docs]</a>    <span class="k">def</span> <span class="nf">AttachmentPointsOffsetFromEdges</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">edges</span><span class="p">:</span> <span class="nb">tuple</span><span class="p">,</span> <span class="n">startPoint</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">flipDirection</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span><span class="p">,</span>
+                                        <span class="n">pointCreationMethod</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">numberOfPoints</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span><span class="p">,</span>
+                                        <span class="n">spacingBetweenPoints</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">offsetFromStartPoint</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span>
                                         <span class="n">offsetFromEndPoint</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="n">spacingMethod</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="n">AUTO_FIT_PTS</span><span class="p">,</span>
-                                        <span class="n">patterningMethod</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">referenceFace</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">''</span><span class="p">,</span>
+                                        <span class="n">patterningMethod</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">referenceFace</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span><span class="p">,</span>
                                         <span class="n">startPointForPatternDirection</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
                                         <span class="n">endPointForPatternDirection</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
-                                        <span class="n">offsetFromEdges</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">''</span><span class="p">,</span> <span class="n">numberOfRows</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span> <span class="n">spacingBetweenRows</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">''</span><span class="p">,</span>
+                                        <span class="n">offsetFromEdges</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">numberOfRows</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span> <span class="n">spacingBetweenRows</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span><span class="p">,</span>
                                         <span class="n">projectionMethod</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="n">PROJECT_BY_PROXIMITY</span><span class="p">,</span>
                                         <span class="n">projectOnFaces</span><span class="p">:</span> <span class="nb">tuple</span><span class="p">[</span><span class="n">Face</span><span class="p">]</span> <span class="o">=</span> <span class="p">(),</span> <span class="n">projectOnElementFaces</span><span class="p">:</span> <span class="nb">tuple</span><span class="p">[</span><span class="n">MeshFace</span><span class="p">]</span> <span class="o">=</span> <span class="p">(),</span>
                                         <span class="n">projectionDirStartPt</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">projectionDirEndPt</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
-                                        <span class="n">setName</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">''</span><span class="p">):</span>
-        <span class="sd">"""This method creates a Feature object by creating attachment points along or offset from</span>
+                                        <span class="n">setName</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;This method creates a Feature object by creating attachment points along or offset from</span>
 <span class="sd">        one or more connected edges.</span>
 
 <span class="sd">        Notes</span>
@@ -598,11 +599,11 @@
 <span class="sd">        -------</span>
 <span class="sd">        feature: Feature</span>
 <span class="sd">            A Feature object</span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span></div>
 
 <div class="viewcode-block" id="Feature.DatumAxisByCylFace"><a class="viewcode-back" href="../../../reference/mdb/model/part_assembly/feature.html#abaqus.Feature.Feature.Feature.DatumAxisByCylFace">[docs]</a>    <span class="k">def</span> <span class="nf">DatumAxisByCylFace</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">face</span><span class="p">:</span> <span class="nb">str</span><span class="p">):</span>
-        <span class="sd">"""This method creates a Feature object and a DatumAxis object along the axis of a cylinder</span>
+        <span class="sd">&quot;&quot;&quot;This method creates a Feature object and a DatumAxis object along the axis of a cylinder</span>
 <span class="sd">        or cone.</span>
 
 <span class="sd">        Notes</span>
@@ -626,11 +627,11 @@
 <span class="sd">        Raises</span>
 <span class="sd">        ------</span>
 <span class="sd">            AbaqusException. </span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span></div>
 
 <div class="viewcode-block" id="Feature.DatumAxisByNormalToPlane"><a class="viewcode-back" href="../../../reference/mdb/model/part_assembly/feature.html#abaqus.Feature.Feature.Feature.DatumAxisByNormalToPlane">[docs]</a>    <span class="k">def</span> <span class="nf">DatumAxisByNormalToPlane</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">plane</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">point</span><span class="p">:</span> <span class="nb">int</span><span class="p">):</span>
-        <span class="sd">"""This method creates a Feature object and a DatumAxis object normal to the specified</span>
+        <span class="sd">&quot;&quot;&quot;This method creates a Feature object and a DatumAxis object normal to the specified</span>
 <span class="sd">        plane and passing through the specified point.</span>
 
 <span class="sd">        Notes</span>
@@ -656,11 +657,11 @@
 <span class="sd">        Raises</span>
 <span class="sd">        ------</span>
 <span class="sd">            AbaqusException. </span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span></div>
 
 <div class="viewcode-block" id="Feature.DatumAxisByParToEdge"><a class="viewcode-back" href="../../../reference/mdb/model/part_assembly/feature.html#abaqus.Feature.Feature.Feature.DatumAxisByParToEdge">[docs]</a>    <span class="k">def</span> <span class="nf">DatumAxisByParToEdge</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">edge</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">point</span><span class="p">:</span> <span class="nb">int</span><span class="p">):</span>
-        <span class="sd">"""This method creates a Feature object and a DatumAxis object parallel to the specified</span>
+        <span class="sd">&quot;&quot;&quot;This method creates a Feature object and a DatumAxis object parallel to the specified</span>
 <span class="sd">        edge and passing through the specified point.</span>
 
 <span class="sd">        Notes</span>
@@ -686,11 +687,11 @@
 <span class="sd">        Raises</span>
 <span class="sd">        ------</span>
 <span class="sd">            AbaqusException. </span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span></div>
 
 <div class="viewcode-block" id="Feature.DatumAxisByPrincipalAxis"><a class="viewcode-back" href="../../../reference/mdb/model/part_assembly/feature.html#abaqus.Feature.Feature.Feature.DatumAxisByPrincipalAxis">[docs]</a>    <span class="k">def</span> <span class="nf">DatumAxisByPrincipalAxis</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">principalAxis</span><span class="p">:</span> <span class="n">SymbolicConstant</span><span class="p">):</span>
-        <span class="sd">"""This method creates a Feature object and a DatumAxis object along one of the three</span>
+        <span class="sd">&quot;&quot;&quot;This method creates a Feature object and a DatumAxis object along one of the three</span>
 <span class="sd">        principal axes.</span>
 
 <span class="sd">        Notes</span>
@@ -715,12 +716,12 @@
 <span class="sd">        Raises</span>
 <span class="sd">        ------</span>
 <span class="sd">            AbaqusException. </span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span></div>
 
     <span class="nd">@typing</span><span class="o">.</span><span class="n">overload</span>
     <span class="k">def</span> <span class="nf">DatumAxisByRotation</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">line</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">axis</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">angle</span><span class="p">:</span> <span class="nb">float</span><span class="p">):</span>
-        <span class="sd">"""This method creates a Feature object and a DatumAxis object in a three-dimensional model</span>
+        <span class="sd">&quot;&quot;&quot;This method creates a Feature object and a DatumAxis object in a three-dimensional model</span>
 <span class="sd">        by rotating a line about the specified axis through the specified angle.</span>
 
 <span class="sd">        Notes</span>
@@ -750,12 +751,12 @@
 <span class="sd">        Raises</span>
 <span class="sd">        ------</span>
 <span class="sd">            AbaqusException. </span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span>
 
     <span class="nd">@typing</span><span class="o">.</span><span class="n">overload</span>
     <span class="k">def</span> <span class="nf">DatumAxisByRotation</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">line</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">point</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">angle</span><span class="p">:</span> <span class="nb">float</span><span class="p">):</span>
-        <span class="sd">"""This method creates a Feature object and a DatumAxis object in a two-dimensional model</span>
+        <span class="sd">&quot;&quot;&quot;This method creates a Feature object and a DatumAxis object in a two-dimensional model</span>
 <span class="sd">        by rotating a line about the specified point through the specified angle.</span>
 
 <span class="sd">        Notes</span>
@@ -785,14 +786,14 @@
 <span class="sd">        Raises</span>
 <span class="sd">        ------</span>
 <span class="sd">            AbaqusException. </span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span>
 
     <span class="k">def</span> <span class="nf">DatumAxisByRotation</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
         <span class="k">pass</span>
 
 <div class="viewcode-block" id="Feature.DatumAxisByThreePoint"><a class="viewcode-back" href="../../../reference/mdb/model/part_assembly/feature.html#abaqus.Feature.Feature.Feature.DatumAxisByThreePoint">[docs]</a>    <span class="k">def</span> <span class="nf">DatumAxisByThreePoint</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">point1</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">point2</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">point3</span><span class="p">:</span> <span class="nb">int</span><span class="p">):</span>
-        <span class="sd">"""This method creates a Feature object and a DatumAxis object normal to the circle</span>
+        <span class="sd">&quot;&quot;&quot;This method creates a Feature object and a DatumAxis object normal to the circle</span>
 <span class="sd">        described by three points and through its center.</span>
 
 <span class="sd">        Notes</span>
@@ -823,11 +824,11 @@
 <span class="sd">        Raises</span>
 <span class="sd">        ------</span>
 <span class="sd">            AbaqusException. </span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span></div>
 
 <div class="viewcode-block" id="Feature.DatumAxisByThruEdge"><a class="viewcode-back" href="../../../reference/mdb/model/part_assembly/feature.html#abaqus.Feature.Feature.Feature.DatumAxisByThruEdge">[docs]</a>    <span class="k">def</span> <span class="nf">DatumAxisByThruEdge</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">edge</span><span class="p">:</span> <span class="nb">str</span><span class="p">):</span>
-        <span class="sd">"""This method creates a Feature object and a DatumAxis object along the specified edge.</span>
+        <span class="sd">&quot;&quot;&quot;This method creates a Feature object and a DatumAxis object along the specified edge.</span>
 
 <span class="sd">        Notes</span>
 <span class="sd">        -----</span>
@@ -850,11 +851,11 @@
 <span class="sd">        Raises</span>
 <span class="sd">        ------</span>
 <span class="sd">            AbaqusException. </span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span></div>
 
 <div class="viewcode-block" id="Feature.DatumAxisByTwoPlane"><a class="viewcode-back" href="../../../reference/mdb/model/part_assembly/feature.html#abaqus.Feature.Feature.Feature.DatumAxisByTwoPlane">[docs]</a>    <span class="k">def</span> <span class="nf">DatumAxisByTwoPlane</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">plane1</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">plane2</span><span class="p">:</span> <span class="nb">str</span><span class="p">):</span>
-        <span class="sd">"""This method creates a Feature object and a DatumAxis object at the intersection of two</span>
+        <span class="sd">&quot;&quot;&quot;This method creates a Feature object and a DatumAxis object at the intersection of two</span>
 <span class="sd">        planes.</span>
 
 <span class="sd">        Notes</span>
@@ -880,11 +881,11 @@
 <span class="sd">        Raises</span>
 <span class="sd">        ------</span>
 <span class="sd">            AbaqusException. </span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span></div>
 
 <div class="viewcode-block" id="Feature.DatumAxisByTwoPoint"><a class="viewcode-back" href="../../../reference/mdb/model/part_assembly/feature.html#abaqus.Feature.Feature.Feature.DatumAxisByTwoPoint">[docs]</a>    <span class="k">def</span> <span class="nf">DatumAxisByTwoPoint</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">point1</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">point2</span><span class="p">:</span> <span class="nb">int</span><span class="p">):</span>
-        <span class="sd">"""This method creates a Feature object and a DatumAxis object along the line joining two</span>
+        <span class="sd">&quot;&quot;&quot;This method creates a Feature object and a DatumAxis object along the line joining two</span>
 <span class="sd">        points.</span>
 
 <span class="sd">        Notes</span>
@@ -910,11 +911,11 @@
 <span class="sd">        Raises</span>
 <span class="sd">        ------</span>
 <span class="sd">            AbaqusException. </span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span></div>
 
-<div class="viewcode-block" id="Feature.DatumCsysByDefault"><a class="viewcode-back" href="../../../reference/mdb/model/part_assembly/feature.html#abaqus.Feature.Feature.Feature.DatumCsysByDefault">[docs]</a>    <span class="k">def</span> <span class="nf">DatumCsysByDefault</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">coordSysType</span><span class="p">:</span> <span class="n">SymbolicConstant</span><span class="p">,</span> <span class="n">name</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">''</span><span class="p">):</span>
-        <span class="sd">"""This method creates a Feature object and a DatumCsys object from the specified default</span>
+<div class="viewcode-block" id="Feature.DatumCsysByDefault"><a class="viewcode-back" href="../../../reference/mdb/model/part_assembly/feature.html#abaqus.Feature.Feature.Feature.DatumCsysByDefault">[docs]</a>    <span class="k">def</span> <span class="nf">DatumCsysByDefault</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">coordSysType</span><span class="p">:</span> <span class="n">SymbolicConstant</span><span class="p">,</span> <span class="n">name</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;This method creates a Feature object and a DatumCsys object from the specified default</span>
 <span class="sd">        coordinate system at the origin.</span>
 
 <span class="sd">        Notes</span>
@@ -941,12 +942,12 @@
 <span class="sd">        Raises</span>
 <span class="sd">        ------</span>
 <span class="sd">            AbaqusException. </span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span></div>
 
 <div class="viewcode-block" id="Feature.DatumCsysByOffset"><a class="viewcode-back" href="../../../reference/mdb/model/part_assembly/feature.html#abaqus.Feature.Feature.Feature.DatumCsysByOffset">[docs]</a>    <span class="k">def</span> <span class="nf">DatumCsysByOffset</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">coordSysType</span><span class="p">:</span> <span class="n">SymbolicConstant</span><span class="p">,</span> <span class="n">datumCoordSys</span><span class="p">:</span> <span class="n">Datum</span><span class="p">,</span> <span class="n">vector</span><span class="p">:</span> <span class="nb">tuple</span><span class="p">,</span> <span class="n">point</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
-                          <span class="n">name</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">''</span><span class="p">):</span>
-        <span class="sd">"""This method creates a Feature object and a DatumCsys object by offsetting the origin of</span>
+                          <span class="n">name</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;This method creates a Feature object and a DatumCsys object by offsetting the origin of</span>
 <span class="sd">        an existing datum coordinate system to a specified point.</span>
 
 <span class="sd">        Notes</span>
@@ -984,12 +985,12 @@
 <span class="sd">        Raises</span>
 <span class="sd">        ------</span>
 <span class="sd">            AbaqusException. </span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span></div>
 
 <div class="viewcode-block" id="Feature.DatumCsysByThreePoints"><a class="viewcode-back" href="../../../reference/mdb/model/part_assembly/feature.html#abaqus.Feature.Feature.Feature.DatumCsysByThreePoints">[docs]</a>    <span class="k">def</span> <span class="nf">DatumCsysByThreePoints</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">coordSysType</span><span class="p">:</span> <span class="n">SymbolicConstant</span><span class="p">,</span> <span class="n">origin</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">point1</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">point2</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">line1</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
-                               <span class="n">line2</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">name</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">''</span><span class="p">):</span>
-        <span class="sd">"""This method creates a Feature object and a DatumCsys object from three points.</span>
+                               <span class="n">line2</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">name</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;This method creates a Feature object and a DatumCsys object from three points.</span>
 
 <span class="sd">        Notes</span>
 <span class="sd">        -----</span>
@@ -1034,11 +1035,11 @@
 <span class="sd">        Raises</span>
 <span class="sd">        ------</span>
 <span class="sd">            AbaqusException. </span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span></div>
 
-<div class="viewcode-block" id="Feature.DatumCsysByTwoLines"><a class="viewcode-back" href="../../../reference/mdb/model/part_assembly/feature.html#abaqus.Feature.Feature.Feature.DatumCsysByTwoLines">[docs]</a>    <span class="k">def</span> <span class="nf">DatumCsysByTwoLines</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">coordSysType</span><span class="p">:</span> <span class="n">SymbolicConstant</span><span class="p">,</span> <span class="n">line1</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">line2</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">name</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">''</span><span class="p">):</span>
-        <span class="sd">"""This method creates a Feature object and a DatumCsys object from two orthogonal lines.</span>
+<div class="viewcode-block" id="Feature.DatumCsysByTwoLines"><a class="viewcode-back" href="../../../reference/mdb/model/part_assembly/feature.html#abaqus.Feature.Feature.Feature.DatumCsysByTwoLines">[docs]</a>    <span class="k">def</span> <span class="nf">DatumCsysByTwoLines</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">coordSysType</span><span class="p">:</span> <span class="n">SymbolicConstant</span><span class="p">,</span> <span class="n">line1</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">line2</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">name</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;This method creates a Feature object and a DatumCsys object from two orthogonal lines.</span>
 <span class="sd">        The origin of the new datum coordinate system is placed at the intersection of the two</span>
 <span class="sd">        lines.</span>
 
@@ -1072,11 +1073,11 @@
 <span class="sd">        Raises</span>
 <span class="sd">        ------</span>
 <span class="sd">            AbaqusException. </span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span></div>
 
 <div class="viewcode-block" id="Feature.DatumPlaneByPrincipalPlane"><a class="viewcode-back" href="../../../reference/mdb/model/part_assembly/feature.html#abaqus.Feature.Feature.Feature.DatumPlaneByPrincipalPlane">[docs]</a>    <span class="k">def</span> <span class="nf">DatumPlaneByPrincipalPlane</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">principalPlane</span><span class="p">:</span> <span class="n">SymbolicConstant</span><span class="p">,</span> <span class="n">offset</span><span class="p">:</span> <span class="nb">float</span><span class="p">):</span>
-        <span class="sd">"""This method creates a Feature object and a DatumPlane object through the origin along</span>
+        <span class="sd">&quot;&quot;&quot;This method creates a Feature object and a DatumPlane object through the origin along</span>
 <span class="sd">        one of the three principal planes.</span>
 
 <span class="sd">        Notes</span>
@@ -1103,12 +1104,12 @@
 <span class="sd">        Raises</span>
 <span class="sd">        ------</span>
 <span class="sd">            AbaqusException. </span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span></div>
 
     <span class="nd">@typing</span><span class="o">.</span><span class="n">overload</span>
     <span class="k">def</span> <span class="nf">DatumPlaneByOffset</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">plane</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">flip</span><span class="p">:</span> <span class="n">SymbolicConstant</span><span class="p">,</span> <span class="n">offset</span><span class="p">:</span> <span class="nb">float</span><span class="p">):</span>
-        <span class="sd">"""This method creates a Feature object and a DatumPlane object offset by a specified</span>
+        <span class="sd">&quot;&quot;&quot;This method creates a Feature object and a DatumPlane object offset by a specified</span>
 <span class="sd">        distance from an existing plane.</span>
 
 <span class="sd">        Notes</span>
@@ -1137,12 +1138,12 @@
 <span class="sd">        Raises</span>
 <span class="sd">        ------</span>
 <span class="sd">            AbaqusException. </span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span>
 
     <span class="nd">@typing</span><span class="o">.</span><span class="n">overload</span>
     <span class="k">def</span> <span class="nf">DatumPlaneByOffset</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">plane</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">point</span><span class="p">:</span> <span class="nb">int</span><span class="p">):</span>
-        <span class="sd">"""This method creates a Feature object and a DatumPlane object offset from an existing</span>
+        <span class="sd">&quot;&quot;&quot;This method creates a Feature object and a DatumPlane object offset from an existing</span>
 <span class="sd">        plane and passing through the specified point.</span>
 
 <span class="sd">        Notes</span>
@@ -1168,14 +1169,14 @@
 <span class="sd">        Raises</span>
 <span class="sd">        ------</span>
 <span class="sd">            AbaqusException. </span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span>
 
     <span class="k">def</span> <span class="nf">DatumPlaneByOffset</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
         <span class="k">pass</span>
 
 <div class="viewcode-block" id="Feature.DatumPlaneByRotation"><a class="viewcode-back" href="../../../reference/mdb/model/part_assembly/feature.html#abaqus.Feature.Feature.Feature.DatumPlaneByRotation">[docs]</a>    <span class="k">def</span> <span class="nf">DatumPlaneByRotation</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">plane</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">axis</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">angle</span><span class="p">:</span> <span class="nb">float</span><span class="p">):</span>
-        <span class="sd">"""This method creates a Feature object and a DatumPlane object by rotating a plane about</span>
+        <span class="sd">&quot;&quot;&quot;This method creates a Feature object and a DatumPlane object by rotating a plane about</span>
 <span class="sd">        the specified axis through the specified angle.</span>
 
 <span class="sd">        Notes</span>
@@ -1203,11 +1204,11 @@
 <span class="sd">        Raises</span>
 <span class="sd">        ------</span>
 <span class="sd">            AbaqusException. </span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span></div>
 
 <div class="viewcode-block" id="Feature.DatumPlaneByThreePoints"><a class="viewcode-back" href="../../../reference/mdb/model/part_assembly/feature.html#abaqus.Feature.Feature.Feature.DatumPlaneByThreePoints">[docs]</a>    <span class="k">def</span> <span class="nf">DatumPlaneByThreePoints</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">point1</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">point2</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">point3</span><span class="p">:</span> <span class="nb">int</span><span class="p">):</span>
-        <span class="sd">"""This method creates a Feature object and a DatumPlane object defined by passing through</span>
+        <span class="sd">&quot;&quot;&quot;This method creates a Feature object and a DatumPlane object defined by passing through</span>
 <span class="sd">        three points.</span>
 
 <span class="sd">        Notes</span>
@@ -1235,11 +1236,11 @@
 <span class="sd">        Raises</span>
 <span class="sd">        ------</span>
 <span class="sd">            AbaqusException. </span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span></div>
 
 <div class="viewcode-block" id="Feature.DatumPlaneByLinePoint"><a class="viewcode-back" href="../../../reference/mdb/model/part_assembly/feature.html#abaqus.Feature.Feature.Feature.DatumPlaneByLinePoint">[docs]</a>    <span class="k">def</span> <span class="nf">DatumPlaneByLinePoint</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">line</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">point</span><span class="p">:</span> <span class="nb">int</span><span class="p">):</span>
-        <span class="sd">"""This method creates a Feature object and a DatumPlane object that pass through the</span>
+        <span class="sd">&quot;&quot;&quot;This method creates a Feature object and a DatumPlane object that pass through the</span>
 <span class="sd">        specified line and through the specified point that does not lie on the line.</span>
 
 <span class="sd">        Notes</span>
@@ -1265,11 +1266,11 @@
 <span class="sd">        Raises</span>
 <span class="sd">        ------</span>
 <span class="sd">            AbaqusException. </span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span></div>
 
 <div class="viewcode-block" id="Feature.DatumPlaneByPointNormal"><a class="viewcode-back" href="../../../reference/mdb/model/part_assembly/feature.html#abaqus.Feature.Feature.Feature.DatumPlaneByPointNormal">[docs]</a>    <span class="k">def</span> <span class="nf">DatumPlaneByPointNormal</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">point</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">normal</span><span class="p">:</span> <span class="nb">str</span><span class="p">):</span>
-        <span class="sd">"""This method creates a Feature object and a DatumPlane object normal to the specified</span>
+        <span class="sd">&quot;&quot;&quot;This method creates a Feature object and a DatumPlane object normal to the specified</span>
 <span class="sd">        line and running through the specified point.</span>
 
 <span class="sd">        Notes</span>
@@ -1295,11 +1296,11 @@
 <span class="sd">        Raises</span>
 <span class="sd">        ------</span>
 <span class="sd">            AbaqusException. </span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span></div>
 
 <div class="viewcode-block" id="Feature.DatumPlaneByTwoPoint"><a class="viewcode-back" href="../../../reference/mdb/model/part_assembly/feature.html#abaqus.Feature.Feature.Feature.DatumPlaneByTwoPoint">[docs]</a>    <span class="k">def</span> <span class="nf">DatumPlaneByTwoPoint</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">point1</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">point2</span><span class="p">:</span> <span class="nb">int</span><span class="p">):</span>
-        <span class="sd">"""This method creates a Feature object and a DatumPlane object midway between two points</span>
+        <span class="sd">&quot;&quot;&quot;This method creates a Feature object and a DatumPlane object midway between two points</span>
 <span class="sd">        and normal to the line connecting the points.</span>
 
 <span class="sd">        Notes</span>
@@ -1325,11 +1326,11 @@
 <span class="sd">        Raises</span>
 <span class="sd">        ------</span>
 <span class="sd">            AbaqusException. </span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span></div>
 
 <div class="viewcode-block" id="Feature.DatumPointByCoordinate"><a class="viewcode-back" href="../../../reference/mdb/model/part_assembly/feature.html#abaqus.Feature.Feature.Feature.DatumPointByCoordinate">[docs]</a>    <span class="k">def</span> <span class="nf">DatumPointByCoordinate</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">coords</span><span class="p">:</span> <span class="nb">tuple</span><span class="p">):</span>
-        <span class="sd">"""This method creates a Feature object and a DatumPoint object at the point defined by the</span>
+        <span class="sd">&quot;&quot;&quot;This method creates a Feature object and a DatumPoint object at the point defined by the</span>
 <span class="sd">        specified coordinates.</span>
 
 <span class="sd">        Notes</span>
@@ -1351,11 +1352,11 @@
 <span class="sd">        -------</span>
 <span class="sd">        feature: Feature</span>
 <span class="sd">            A Feature object</span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span></div>
 
 <div class="viewcode-block" id="Feature.DatumPointByOffset"><a class="viewcode-back" href="../../../reference/mdb/model/part_assembly/feature.html#abaqus.Feature.Feature.Feature.DatumPointByOffset">[docs]</a>    <span class="k">def</span> <span class="nf">DatumPointByOffset</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">point</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">vector</span><span class="p">:</span> <span class="nb">tuple</span><span class="p">):</span>
-        <span class="sd">"""This method creates a Feature object and a DatumPoint object offset from an existing</span>
+        <span class="sd">&quot;&quot;&quot;This method creates a Feature object and a DatumPoint object offset from an existing</span>
 <span class="sd">        point by a vector.</span>
 
 <span class="sd">        Notes</span>
@@ -1378,11 +1379,11 @@
 <span class="sd">        -------</span>
 <span class="sd">        feature: Feature</span>
 <span class="sd">            A Feature object</span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span></div>
 
 <div class="viewcode-block" id="Feature.DatumPointByMidPoint"><a class="viewcode-back" href="../../../reference/mdb/model/part_assembly/feature.html#abaqus.Feature.Feature.Feature.DatumPointByMidPoint">[docs]</a>    <span class="k">def</span> <span class="nf">DatumPointByMidPoint</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">point1</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">point2</span><span class="p">:</span> <span class="nb">int</span><span class="p">):</span>
-        <span class="sd">"""This method creates a Feature object and a DatumPoint object midway between two points.</span>
+        <span class="sd">&quot;&quot;&quot;This method creates a Feature object and a DatumPoint object midway between two points.</span>
 
 <span class="sd">        Notes</span>
 <span class="sd">        -----</span>
@@ -1404,11 +1405,11 @@
 <span class="sd">        -------</span>
 <span class="sd">        feature: Feature</span>
 <span class="sd">            A Feature object</span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span></div>
 
 <div class="viewcode-block" id="Feature.DatumPointByOnFace"><a class="viewcode-back" href="../../../reference/mdb/model/part_assembly/feature.html#abaqus.Feature.Feature.Feature.DatumPointByOnFace">[docs]</a>    <span class="k">def</span> <span class="nf">DatumPointByOnFace</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">face</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">edge1</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">offset1</span><span class="p">:</span> <span class="nb">float</span><span class="p">,</span> <span class="n">edge2</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">offset2</span><span class="p">:</span> <span class="nb">float</span><span class="p">):</span>
-        <span class="sd">"""This method creates a Feature object and a DatumPoint object on the specified face,</span>
+        <span class="sd">&quot;&quot;&quot;This method creates a Feature object and a DatumPoint object on the specified face,</span>
 <span class="sd">        offset from two edges.</span>
 
 <span class="sd">        Notes</span>
@@ -1440,11 +1441,11 @@
 <span class="sd">        Raises</span>
 <span class="sd">        ------</span>
 <span class="sd">            AbaqusException. </span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span></div>
 
 <div class="viewcode-block" id="Feature.DatumPointByEdgeParam"><a class="viewcode-back" href="../../../reference/mdb/model/part_assembly/feature.html#abaqus.Feature.Feature.Feature.DatumPointByEdgeParam">[docs]</a>    <span class="k">def</span> <span class="nf">DatumPointByEdgeParam</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">edge</span><span class="p">:</span> <span class="n">Edge</span><span class="p">,</span> <span class="n">parameter</span><span class="p">:</span> <span class="nb">float</span><span class="p">):</span>
-        <span class="sd">"""This method creates a Feature object and a DatumPoint object along an edge at a selected</span>
+        <span class="sd">&quot;&quot;&quot;This method creates a Feature object and a DatumPoint object along an edge at a selected</span>
 <span class="sd">        distance from one end of the edge.</span>
 
 <span class="sd">        Notes</span>
@@ -1472,11 +1473,11 @@
 <span class="sd">        ------</span>
 <span class="sd">        AbaqusException</span>
 <span class="sd">        RangeError </span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span></div>
 
 <div class="viewcode-block" id="Feature.DatumPointByProjOnEdge"><a class="viewcode-back" href="../../../reference/mdb/model/part_assembly/feature.html#abaqus.Feature.Feature.Feature.DatumPointByProjOnEdge">[docs]</a>    <span class="k">def</span> <span class="nf">DatumPointByProjOnEdge</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">point</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">edge</span><span class="p">:</span> <span class="nb">str</span><span class="p">):</span>
-        <span class="sd">"""This method creates a Feature object and a DatumPoint object along an edge by projecting</span>
+        <span class="sd">&quot;&quot;&quot;This method creates a Feature object and a DatumPoint object along an edge by projecting</span>
 <span class="sd">        an existing point along the normal to the edge.</span>
 
 <span class="sd">        Notes</span>
@@ -1502,11 +1503,11 @@
 <span class="sd">        Raises</span>
 <span class="sd">        ------</span>
 <span class="sd">            AbaqusException. </span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span></div>
 
 <div class="viewcode-block" id="Feature.DatumPointByProjOnFace"><a class="viewcode-back" href="../../../reference/mdb/model/part_assembly/feature.html#abaqus.Feature.Feature.Feature.DatumPointByProjOnFace">[docs]</a>    <span class="k">def</span> <span class="nf">DatumPointByProjOnFace</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">point</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">face</span><span class="p">:</span> <span class="n">Face</span><span class="p">):</span>
-        <span class="sd">"""This method creates a Feature object and a DatumPoint object on a specified face by</span>
+        <span class="sd">&quot;&quot;&quot;This method creates a Feature object and a DatumPoint object on a specified face by</span>
 <span class="sd">        projecting an existing point onto the face.</span>
 
 <span class="sd">        Notes</span>
@@ -1533,12 +1534,12 @@
 <span class="sd">        Raises</span>
 <span class="sd">        ------</span>
 <span class="sd">            AbaqusException. </span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span></div>
 
 <div class="viewcode-block" id="Feature.MakeSketchTransform"><a class="viewcode-back" href="../../../reference/mdb/model/part_assembly/feature.html#abaqus.Feature.Feature.Feature.MakeSketchTransform">[docs]</a>    <span class="k">def</span> <span class="nf">MakeSketchTransform</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">sketchPlane</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">origin</span><span class="p">:</span> <span class="nb">tuple</span> <span class="o">=</span> <span class="p">(),</span> <span class="n">sketchOrientation</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="n">RIGHT</span><span class="p">,</span>
-                            <span class="n">sketchPlaneSide</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="n">SIDE1</span><span class="p">,</span> <span class="n">sketchUpEdge</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">''</span><span class="p">):</span>
-        <span class="sd">"""This method creates a Transform object. A Transform object is a 4x3 matrix of Floats</span>
+                            <span class="n">sketchPlaneSide</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="n">SIDE1</span><span class="p">,</span> <span class="n">sketchUpEdge</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;This method creates a Transform object. A Transform object is a 4x3 matrix of Floats</span>
 <span class="sd">        that represents the transformation from sketch coordinates to part coordinates.</span>
 
 <span class="sd">        Notes</span>
@@ -1576,11 +1577,11 @@
 <span class="sd">        ------</span>
 <span class="sd">            - If the sketchUpEdge is parallel to the sketchPlane: </span>
 <span class="sd">              Up direction is parallel to plane normal </span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span></div>
 
 <div class="viewcode-block" id="Feature.PartitionCellByDatumPlane"><a class="viewcode-back" href="../../../reference/mdb/model/part_assembly/feature.html#abaqus.Feature.Feature.Feature.PartitionCellByDatumPlane">[docs]</a>    <span class="k">def</span> <span class="nf">PartitionCellByDatumPlane</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">cells</span><span class="p">:</span> <span class="nb">tuple</span><span class="p">[</span><span class="n">Cell</span><span class="p">],</span> <span class="n">datumPlane</span><span class="p">:</span> <span class="n">DatumPlane</span><span class="p">):</span>
-        <span class="sd">"""This method partitions one or more cells using the given datum plane.</span>
+        <span class="sd">&quot;&quot;&quot;This method partitions one or more cells using the given datum plane.</span>
 
 <span class="sd">        Notes</span>
 <span class="sd">        -----</span>
@@ -1605,11 +1606,11 @@
 <span class="sd">        Raises</span>
 <span class="sd">        ------</span>
 <span class="sd">            AbaqusException. </span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span></div>
 
 <div class="viewcode-block" id="Feature.PartitionCellByExtendFace"><a class="viewcode-back" href="../../../reference/mdb/model/part_assembly/feature.html#abaqus.Feature.Feature.Feature.PartitionCellByExtendFace">[docs]</a>    <span class="k">def</span> <span class="nf">PartitionCellByExtendFace</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">cells</span><span class="p">:</span> <span class="nb">tuple</span><span class="p">[</span><span class="n">Cell</span><span class="p">],</span> <span class="n">extendFace</span><span class="p">:</span> <span class="nb">str</span><span class="p">):</span>
-        <span class="sd">"""This method partitions one or more cells by extending the underlying geometry of a given</span>
+        <span class="sd">&quot;&quot;&quot;This method partitions one or more cells by extending the underlying geometry of a given</span>
 <span class="sd">        face to partition the target cells.</span>
 
 <span class="sd">        Notes</span>
@@ -1635,11 +1636,11 @@
 <span class="sd">        Raises</span>
 <span class="sd">        ------</span>
 <span class="sd">            AbaqusException. </span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span></div>
 
 <div class="viewcode-block" id="Feature.PartitionCellByExtrudeEdge"><a class="viewcode-back" href="../../../reference/mdb/model/part_assembly/feature.html#abaqus.Feature.Feature.Feature.PartitionCellByExtrudeEdge">[docs]</a>    <span class="k">def</span> <span class="nf">PartitionCellByExtrudeEdge</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">cells</span><span class="p">:</span> <span class="nb">tuple</span><span class="p">[</span><span class="n">Cell</span><span class="p">],</span> <span class="n">edges</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">line</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">sense</span><span class="p">:</span> <span class="n">SymbolicConstant</span><span class="p">):</span>
-        <span class="sd">"""This method partitions one or more cells by extruding selected edges in the given</span>
+        <span class="sd">&quot;&quot;&quot;This method partitions one or more cells by extruding selected edges in the given</span>
 <span class="sd">        direction.</span>
 
 <span class="sd">        Notes</span>
@@ -1673,11 +1674,11 @@
 <span class="sd">        Raises</span>
 <span class="sd">        ------</span>
 <span class="sd">            AbaqusException. </span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span></div>
 
 <div class="viewcode-block" id="Feature.PartitionCellByPatchNCorners"><a class="viewcode-back" href="../../../reference/mdb/model/part_assembly/feature.html#abaqus.Feature.Feature.Feature.PartitionCellByPatchNCorners">[docs]</a>    <span class="k">def</span> <span class="nf">PartitionCellByPatchNCorners</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">cell</span><span class="p">:</span> <span class="n">Cell</span><span class="p">,</span> <span class="n">cornerPoints</span><span class="p">:</span> <span class="nb">tuple</span><span class="p">):</span>
-        <span class="sd">"""This method partitions a cell using an N-sided cutting patch defined by the given corner</span>
+        <span class="sd">&quot;&quot;&quot;This method partitions a cell using an N-sided cutting patch defined by the given corner</span>
 <span class="sd">        points.</span>
 
 <span class="sd">        Notes</span>
@@ -1704,11 +1705,11 @@
 <span class="sd">        Raises</span>
 <span class="sd">        ------</span>
 <span class="sd">            AbaqusException. </span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span></div>
 
 <div class="viewcode-block" id="Feature.PartitionCellByPatchNEdges"><a class="viewcode-back" href="../../../reference/mdb/model/part_assembly/feature.html#abaqus.Feature.Feature.Feature.PartitionCellByPatchNEdges">[docs]</a>    <span class="k">def</span> <span class="nf">PartitionCellByPatchNEdges</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">cell</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">edges</span><span class="p">:</span> <span class="nb">tuple</span><span class="p">[</span><span class="n">Edge</span><span class="p">]):</span>
-        <span class="sd">"""This method partitions a cell using an N-sided cutting patch defined by the given edges.</span>
+        <span class="sd">&quot;&quot;&quot;This method partitions a cell using an N-sided cutting patch defined by the given edges.</span>
 
 <span class="sd">        Notes</span>
 <span class="sd">        -----</span>
@@ -1734,11 +1735,11 @@
 <span class="sd">        Raises</span>
 <span class="sd">        ------</span>
 <span class="sd">            AbaqusException. </span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span></div>
 
 <div class="viewcode-block" id="Feature.PartitionCellByPlaneNormalToEdge"><a class="viewcode-back" href="../../../reference/mdb/model/part_assembly/feature.html#abaqus.Feature.Feature.Feature.PartitionCellByPlaneNormalToEdge">[docs]</a>    <span class="k">def</span> <span class="nf">PartitionCellByPlaneNormalToEdge</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">cells</span><span class="p">:</span> <span class="nb">tuple</span><span class="p">[</span><span class="n">Cell</span><span class="p">],</span> <span class="n">edge</span><span class="p">:</span> <span class="n">Edge</span><span class="p">,</span> <span class="n">point</span><span class="p">:</span> <span class="nb">int</span><span class="p">):</span>
-        <span class="sd">"""This method partitions one or more cells using a plane normal to an edge at the given</span>
+        <span class="sd">&quot;&quot;&quot;This method partitions one or more cells using a plane normal to an edge at the given</span>
 <span class="sd">        edge point.</span>
 
 <span class="sd">        Notes</span>
@@ -1766,11 +1767,11 @@
 <span class="sd">        Raises</span>
 <span class="sd">        ------</span>
 <span class="sd">            AbaqusException. </span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span></div>
 
 <div class="viewcode-block" id="Feature.PartitionCellByPlanePointNormal"><a class="viewcode-back" href="../../../reference/mdb/model/part_assembly/feature.html#abaqus.Feature.Feature.Feature.PartitionCellByPlanePointNormal">[docs]</a>    <span class="k">def</span> <span class="nf">PartitionCellByPlanePointNormal</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">cells</span><span class="p">:</span> <span class="nb">tuple</span><span class="p">[</span><span class="n">Cell</span><span class="p">],</span> <span class="n">point</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">normal</span><span class="p">:</span> <span class="nb">str</span><span class="p">):</span>
-        <span class="sd">"""This method partitions one or more cells using a plane defined by a point and a normal</span>
+        <span class="sd">&quot;&quot;&quot;This method partitions one or more cells using a plane defined by a point and a normal</span>
 <span class="sd">        direction.</span>
 
 <span class="sd">        Notes</span>
@@ -1798,11 +1799,11 @@
 <span class="sd">        Raises</span>
 <span class="sd">        ------</span>
 <span class="sd">            AbaqusException. </span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span></div>
 
 <div class="viewcode-block" id="Feature.PartitionCellByPlaneThreePoints"><a class="viewcode-back" href="../../../reference/mdb/model/part_assembly/feature.html#abaqus.Feature.Feature.Feature.PartitionCellByPlaneThreePoints">[docs]</a>    <span class="k">def</span> <span class="nf">PartitionCellByPlaneThreePoints</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">cells</span><span class="p">:</span> <span class="nb">tuple</span><span class="p">[</span><span class="n">Cell</span><span class="p">],</span> <span class="n">point1</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">point2</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">point3</span><span class="p">:</span> <span class="nb">int</span><span class="p">):</span>
-        <span class="sd">"""This method partitions one or more cells using a plane defined by three points.</span>
+        <span class="sd">&quot;&quot;&quot;This method partitions one or more cells using a plane defined by three points.</span>
 
 <span class="sd">        Notes</span>
 <span class="sd">        -----</span>
@@ -1832,11 +1833,11 @@
 <span class="sd">        Raises</span>
 <span class="sd">        ------</span>
 <span class="sd">            AbaqusException. </span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span></div>
 
 <div class="viewcode-block" id="Feature.PartitionCellBySweepEdge"><a class="viewcode-back" href="../../../reference/mdb/model/part_assembly/feature.html#abaqus.Feature.Feature.Feature.PartitionCellBySweepEdge">[docs]</a>    <span class="k">def</span> <span class="nf">PartitionCellBySweepEdge</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">cells</span><span class="p">:</span> <span class="nb">tuple</span><span class="p">[</span><span class="n">Cell</span><span class="p">],</span> <span class="n">edges</span><span class="p">:</span> <span class="nb">tuple</span><span class="p">[</span><span class="n">Edge</span><span class="p">],</span> <span class="n">sweepPath</span><span class="p">:</span> <span class="n">Edge</span><span class="p">):</span>
-        <span class="sd">"""This method partitions one or more cells by sweeping selected edges along the given</span>
+        <span class="sd">&quot;&quot;&quot;This method partitions one or more cells by sweeping selected edges along the given</span>
 <span class="sd">        sweep path.</span>
 
 <span class="sd">        Notes</span>
@@ -1867,11 +1868,11 @@
 <span class="sd">        Raises</span>
 <span class="sd">        ------</span>
 <span class="sd">            AbaqusException. </span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span></div>
 
 <div class="viewcode-block" id="Feature.PartitionEdgeByDatumPlane"><a class="viewcode-back" href="../../../reference/mdb/model/part_assembly/feature.html#abaqus.Feature.Feature.Feature.PartitionEdgeByDatumPlane">[docs]</a>    <span class="k">def</span> <span class="nf">PartitionEdgeByDatumPlane</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">edges</span><span class="p">:</span> <span class="nb">tuple</span><span class="p">[</span><span class="n">Edge</span><span class="p">],</span> <span class="n">datumPlane</span><span class="p">:</span> <span class="n">DatumPlane</span><span class="p">):</span>
-        <span class="sd">"""This method partitions an edge where it intersects with a datum plane.</span>
+        <span class="sd">&quot;&quot;&quot;This method partitions an edge where it intersects with a datum plane.</span>
 
 <span class="sd">        Notes</span>
 <span class="sd">        -----</span>
@@ -1896,11 +1897,11 @@
 <span class="sd">        Raises</span>
 <span class="sd">        ------</span>
 <span class="sd">            AbaqusException. </span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span></div>
 
 <div class="viewcode-block" id="Feature.PartitionEdgeByParam"><a class="viewcode-back" href="../../../reference/mdb/model/part_assembly/feature.html#abaqus.Feature.Feature.Feature.PartitionEdgeByParam">[docs]</a>    <span class="k">def</span> <span class="nf">PartitionEdgeByParam</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">edges</span><span class="p">:</span> <span class="nb">tuple</span><span class="p">[</span><span class="n">Edge</span><span class="p">],</span> <span class="n">parameter</span><span class="p">:</span> <span class="nb">float</span><span class="p">):</span>
-        <span class="sd">"""This method partitions one or more edges at the given normalized edge parameter.</span>
+        <span class="sd">&quot;&quot;&quot;This method partitions one or more edges at the given normalized edge parameter.</span>
 
 <span class="sd">        Notes</span>
 <span class="sd">        -----</span>
@@ -1926,11 +1927,11 @@
 <span class="sd">        Raises</span>
 <span class="sd">        ------</span>
 <span class="sd">            AbaqusException. </span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span></div>
 
 <div class="viewcode-block" id="Feature.PartitionEdgeByPoint"><a class="viewcode-back" href="../../../reference/mdb/model/part_assembly/feature.html#abaqus.Feature.Feature.Feature.PartitionEdgeByPoint">[docs]</a>    <span class="k">def</span> <span class="nf">PartitionEdgeByPoint</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">edge</span><span class="p">:</span> <span class="n">Edge</span><span class="p">,</span> <span class="n">point</span><span class="p">:</span> <span class="nb">int</span><span class="p">):</span>
-        <span class="sd">"""This method partitions an edge at the given point.</span>
+        <span class="sd">&quot;&quot;&quot;This method partitions an edge at the given point.</span>
 
 <span class="sd">        Notes</span>
 <span class="sd">        -----</span>
@@ -1955,11 +1956,11 @@
 <span class="sd">        Raises</span>
 <span class="sd">        ------</span>
 <span class="sd">            AbaqusException. </span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span></div>
 
 <div class="viewcode-block" id="Feature.PartitionFaceByAuto"><a class="viewcode-back" href="../../../reference/mdb/model/part_assembly/feature.html#abaqus.Feature.Feature.Feature.PartitionFaceByAuto">[docs]</a>    <span class="k">def</span> <span class="nf">PartitionFaceByAuto</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">face</span><span class="p">:</span> <span class="n">Face</span><span class="p">):</span>
-        <span class="sd">"""This method automatically partitions a target face into simple regions that can be</span>
+        <span class="sd">&quot;&quot;&quot;This method automatically partitions a target face into simple regions that can be</span>
 <span class="sd">        meshed using a structured meshing technique.</span>
 
 <span class="sd">        Notes</span>
@@ -1980,12 +1981,12 @@
 <span class="sd">        -------</span>
 <span class="sd">        feature: Feature</span>
 <span class="sd">            A Feature object</span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span></div>
 
 <div class="viewcode-block" id="Feature.PartitionFaceByCurvedPathEdgeParams"><a class="viewcode-back" href="../../../reference/mdb/model/part_assembly/feature.html#abaqus.Feature.Feature.Feature.PartitionFaceByCurvedPathEdgeParams">[docs]</a>    <span class="k">def</span> <span class="nf">PartitionFaceByCurvedPathEdgeParams</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">face</span><span class="p">:</span> <span class="n">Face</span><span class="p">,</span> <span class="n">edge1</span><span class="p">:</span> <span class="n">Edge</span><span class="p">,</span> <span class="n">parameter1</span><span class="p">:</span> <span class="nb">float</span><span class="p">,</span> <span class="n">edge2</span><span class="p">:</span> <span class="n">Edge</span><span class="p">,</span>
                                             <span class="n">parameter2</span><span class="p">:</span> <span class="nb">float</span><span class="p">):</span>
-        <span class="sd">"""This method partitions a face normal to two edges, using a curved path between the two</span>
+        <span class="sd">&quot;&quot;&quot;This method partitions a face normal to two edges, using a curved path between the two</span>
 <span class="sd">        given edge points defined by the normalized edge parameters.</span>
 
 <span class="sd">        Notes</span>
@@ -2019,11 +2020,11 @@
 <span class="sd">        Raises</span>
 <span class="sd">        ------</span>
 <span class="sd">            AbaqusException. </span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span></div>
 
 <div class="viewcode-block" id="Feature.PartitionFaceByCurvedPathEdgePoints"><a class="viewcode-back" href="../../../reference/mdb/model/part_assembly/feature.html#abaqus.Feature.Feature.Feature.PartitionFaceByCurvedPathEdgePoints">[docs]</a>    <span class="k">def</span> <span class="nf">PartitionFaceByCurvedPathEdgePoints</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">face</span><span class="p">:</span> <span class="n">Face</span><span class="p">,</span> <span class="n">edge1</span><span class="p">:</span> <span class="n">Edge</span><span class="p">,</span> <span class="n">point1</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">edge2</span><span class="p">:</span> <span class="n">Edge</span><span class="p">,</span> <span class="n">point2</span><span class="p">:</span> <span class="nb">int</span><span class="p">):</span>
-        <span class="sd">"""This method partitions a face normal to two edges, using a curved path between the two</span>
+        <span class="sd">&quot;&quot;&quot;This method partitions a face normal to two edges, using a curved path between the two</span>
 <span class="sd">        given edge points.</span>
 
 <span class="sd">        Notes</span>
@@ -2055,11 +2056,11 @@
 <span class="sd">        Raises</span>
 <span class="sd">        ------</span>
 <span class="sd">            AbaqusException. </span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span></div>
 
 <div class="viewcode-block" id="Feature.PartitionFaceByDatumPlane"><a class="viewcode-back" href="../../../reference/mdb/model/part_assembly/feature.html#abaqus.Feature.Feature.Feature.PartitionFaceByDatumPlane">[docs]</a>    <span class="k">def</span> <span class="nf">PartitionFaceByDatumPlane</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">faces</span><span class="p">:</span> <span class="nb">tuple</span><span class="p">[</span><span class="n">Face</span><span class="p">],</span> <span class="n">datumPlane</span><span class="p">:</span> <span class="n">DatumPlane</span><span class="p">):</span>
-        <span class="sd">"""This method partitions one or more faces using the given datum plane.</span>
+        <span class="sd">&quot;&quot;&quot;This method partitions one or more faces using the given datum plane.</span>
 
 <span class="sd">        Notes</span>
 <span class="sd">        -----</span>
@@ -2081,11 +2082,11 @@
 <span class="sd">        -------</span>
 <span class="sd">        feature: Feature</span>
 <span class="sd">            A Feature object</span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span></div>
 
 <div class="viewcode-block" id="Feature.PartitionFaceByExtendFace"><a class="viewcode-back" href="../../../reference/mdb/model/part_assembly/feature.html#abaqus.Feature.Feature.Feature.PartitionFaceByExtendFace">[docs]</a>    <span class="k">def</span> <span class="nf">PartitionFaceByExtendFace</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">faces</span><span class="p">:</span> <span class="nb">tuple</span><span class="p">[</span><span class="n">Face</span><span class="p">],</span> <span class="n">extendFace</span><span class="p">:</span> <span class="n">Face</span><span class="p">):</span>
-        <span class="sd">"""This method partitions one or more faces by extending the underlying geometry of another</span>
+        <span class="sd">&quot;&quot;&quot;This method partitions one or more faces by extending the underlying geometry of another</span>
 <span class="sd">        given face to partition the target faces.</span>
 
 <span class="sd">        Notes</span>
@@ -2109,11 +2110,11 @@
 <span class="sd">        -------</span>
 <span class="sd">        feature: Feature</span>
 <span class="sd">            A Feature object</span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span></div>
 
 <div class="viewcode-block" id="Feature.PartitionFaceByIntersectFace"><a class="viewcode-back" href="../../../reference/mdb/model/part_assembly/feature.html#abaqus.Feature.Feature.Feature.PartitionFaceByIntersectFace">[docs]</a>    <span class="k">def</span> <span class="nf">PartitionFaceByIntersectFace</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">faces</span><span class="p">:</span> <span class="nb">tuple</span><span class="p">[</span><span class="n">Face</span><span class="p">],</span> <span class="n">cuttingFaces</span><span class="p">:</span> <span class="nb">tuple</span><span class="p">[</span><span class="n">Face</span><span class="p">]):</span>
-        <span class="sd">"""This method partitions one or more faces using the given cutting faces to partition the</span>
+        <span class="sd">&quot;&quot;&quot;This method partitions one or more faces using the given cutting faces to partition the</span>
 <span class="sd">        target faces.</span>
 
 <span class="sd">        Notes</span>
@@ -2136,11 +2137,11 @@
 <span class="sd">        -------</span>
 <span class="sd">        feature: Feature</span>
 <span class="sd">            A Feature object</span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span></div>
 
 <div class="viewcode-block" id="Feature.PartitionFaceByProjectingEdges"><a class="viewcode-back" href="../../../reference/mdb/model/part_assembly/feature.html#abaqus.Feature.Feature.Feature.PartitionFaceByProjectingEdges">[docs]</a>    <span class="k">def</span> <span class="nf">PartitionFaceByProjectingEdges</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">faces</span><span class="p">:</span> <span class="nb">tuple</span><span class="p">[</span><span class="n">Face</span><span class="p">],</span> <span class="n">edges</span><span class="p">:</span> <span class="nb">tuple</span><span class="p">[</span><span class="n">Edge</span><span class="p">],</span> <span class="n">extendEdges</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="kc">False</span><span class="p">):</span>
-        <span class="sd">"""This method partitions one or more faces by projecting the given edges on the target</span>
+        <span class="sd">&quot;&quot;&quot;This method partitions one or more faces by projecting the given edges on the target</span>
 <span class="sd">        faces.</span>
 
 <span class="sd">        Notes</span>
@@ -2167,11 +2168,11 @@
 <span class="sd">        -------</span>
 <span class="sd">        feature: Feature</span>
 <span class="sd">            A Feature object</span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span></div>
 
 <div class="viewcode-block" id="Feature.PartitionFaceByShortestPath"><a class="viewcode-back" href="../../../reference/mdb/model/part_assembly/feature.html#abaqus.Feature.Feature.Feature.PartitionFaceByShortestPath">[docs]</a>    <span class="k">def</span> <span class="nf">PartitionFaceByShortestPath</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">faces</span><span class="p">:</span> <span class="nb">tuple</span><span class="p">[</span><span class="n">Face</span><span class="p">],</span> <span class="n">point1</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">point2</span><span class="p">:</span> <span class="nb">int</span><span class="p">):</span>
-        <span class="sd">"""This method partitions one or more faces using a minimum distance path between the two</span>
+        <span class="sd">&quot;&quot;&quot;This method partitions one or more faces using a minimum distance path between the two</span>
 <span class="sd">        given points.</span>
 
 <span class="sd">        Notes</span>
@@ -2201,12 +2202,12 @@
 <span class="sd">        Raises</span>
 <span class="sd">        ------</span>
 <span class="sd">            AbaqusException. </span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span></div>
 
-<div class="viewcode-block" id="Feature.PartitionFaceBySketch"><a class="viewcode-back" href="../../../reference/mdb/model/part_assembly/feature.html#abaqus.Feature.Feature.Feature.PartitionFaceBySketch">[docs]</a>    <span class="k">def</span> <span class="nf">PartitionFaceBySketch</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">faces</span><span class="p">:</span> <span class="nb">tuple</span><span class="p">[</span><span class="n">Face</span><span class="p">],</span> <span class="n">sketch</span><span class="p">:</span> <span class="n">ConstrainedSketch</span><span class="p">,</span> <span class="n">sketchUpEdge</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">''</span><span class="p">,</span>
+<div class="viewcode-block" id="Feature.PartitionFaceBySketch"><a class="viewcode-back" href="../../../reference/mdb/model/part_assembly/feature.html#abaqus.Feature.Feature.Feature.PartitionFaceBySketch">[docs]</a>    <span class="k">def</span> <span class="nf">PartitionFaceBySketch</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">faces</span><span class="p">:</span> <span class="nb">tuple</span><span class="p">[</span><span class="n">Face</span><span class="p">],</span> <span class="n">sketch</span><span class="p">:</span> <span class="n">ConstrainedSketch</span><span class="p">,</span> <span class="n">sketchUpEdge</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span><span class="p">,</span>
                               <span class="n">sketchOrientation</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="n">RIGHT</span><span class="p">):</span>
-        <span class="sd">"""This method partitions one or more planar faces by sketching on them.</span>
+        <span class="sd">&quot;&quot;&quot;This method partitions one or more planar faces by sketching on them.</span>
 
 <span class="sd">        Notes</span>
 <span class="sd">        -----</span>
@@ -2238,13 +2239,13 @@
 <span class="sd">        Raises</span>
 <span class="sd">        ------</span>
 <span class="sd">            AbaqusException. </span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span></div>
 
 <div class="viewcode-block" id="Feature.PartitionFaceBySketchDistance"><a class="viewcode-back" href="../../../reference/mdb/model/part_assembly/feature.html#abaqus.Feature.Feature.Feature.PartitionFaceBySketchDistance">[docs]</a>    <span class="k">def</span> <span class="nf">PartitionFaceBySketchDistance</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">faces</span><span class="p">:</span> <span class="nb">tuple</span><span class="p">[</span><span class="n">Face</span><span class="p">],</span> <span class="n">sketchPlane</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">sketchPlaneSide</span><span class="p">:</span> <span class="n">SymbolicConstant</span><span class="p">,</span>
                                       <span class="n">sketchUpEdge</span><span class="p">:</span> <span class="n">Edge</span><span class="p">,</span> <span class="n">sketch</span><span class="p">:</span> <span class="n">ConstrainedSketch</span><span class="p">,</span> <span class="n">distance</span><span class="p">:</span> <span class="nb">float</span><span class="p">,</span>
                                       <span class="n">sketchOrientation</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="n">RIGHT</span><span class="p">):</span>
-        <span class="sd">"""This method partitions one or more faces by sketching on a sketch plane and then</span>
+        <span class="sd">&quot;&quot;&quot;This method partitions one or more faces by sketching on a sketch plane and then</span>
 <span class="sd">        projecting the sketch toward the target faces through the given distance.</span>
 
 <span class="sd">        Notes</span>
@@ -2283,13 +2284,13 @@
 <span class="sd">        Raises</span>
 <span class="sd">        ------</span>
 <span class="sd">            AbaqusException. </span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span></div>
 
 <div class="viewcode-block" id="Feature.PartitionFaceBySketchRefPoint"><a class="viewcode-back" href="../../../reference/mdb/model/part_assembly/feature.html#abaqus.Feature.Feature.Feature.PartitionFaceBySketchRefPoint">[docs]</a>    <span class="k">def</span> <span class="nf">PartitionFaceBySketchRefPoint</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">faces</span><span class="p">:</span> <span class="nb">tuple</span><span class="p">[</span><span class="n">Face</span><span class="p">],</span> <span class="n">sketchPlane</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">sketchUpEdge</span><span class="p">:</span> <span class="n">Edge</span><span class="p">,</span>
                                       <span class="n">sketch</span><span class="p">:</span> <span class="n">ConstrainedSketch</span><span class="p">,</span>
                                       <span class="n">point</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">sketchOrientation</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="n">RIGHT</span><span class="p">):</span>
-        <span class="sd">"""This method partitions one or more faces by sketching on a sketch plane and then</span>
+        <span class="sd">&quot;&quot;&quot;This method partitions one or more faces by sketching on a sketch plane and then</span>
 <span class="sd">        projecting the sketch toward the target faces through a distance governed by the</span>
 <span class="sd">        reference point.</span>
 
@@ -2327,13 +2328,13 @@
 <span class="sd">        Raises</span>
 <span class="sd">        ------</span>
 <span class="sd">            AbaqusException. </span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span></div>
 
 <div class="viewcode-block" id="Feature.PartitionFaceBySketchThruAll"><a class="viewcode-back" href="../../../reference/mdb/model/part_assembly/feature.html#abaqus.Feature.Feature.Feature.PartitionFaceBySketchThruAll">[docs]</a>    <span class="k">def</span> <span class="nf">PartitionFaceBySketchThruAll</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">faces</span><span class="p">:</span> <span class="nb">tuple</span><span class="p">[</span><span class="n">Face</span><span class="p">],</span> <span class="n">sketchPlane</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">sketchPlaneSide</span><span class="p">:</span> <span class="n">SymbolicConstant</span><span class="p">,</span>
                                      <span class="n">sketchUpEdge</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">sketch</span><span class="p">:</span> <span class="n">ConstrainedSketch</span><span class="p">,</span>
                                      <span class="n">sketchOrientation</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="n">RIGHT</span><span class="p">):</span>
-        <span class="sd">"""This method partitions one or more faces by sketching on a sketch plane and then</span>
+        <span class="sd">&quot;&quot;&quot;This method partitions one or more faces by sketching on a sketch plane and then</span>
 <span class="sd">        projecting toward the target faces through an infinite distance.</span>
 
 <span class="sd">        Notes</span>
@@ -2370,12 +2371,12 @@
 <span class="sd">        Raises</span>
 <span class="sd">        ------</span>
 <span class="sd">            AbaqusException. </span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span></div>
 
 <div class="viewcode-block" id="Feature.ReferencePoint"><a class="viewcode-back" href="../../../reference/mdb/model/part_assembly/feature.html#abaqus.Feature.Feature.Feature.ReferencePoint">[docs]</a>    <span class="k">def</span> <span class="nf">ReferencePoint</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">point</span><span class="p">:</span> <span class="n">typing</span><span class="o">.</span><span class="n">Union</span><span class="p">[</span><span class="nb">tuple</span><span class="p">,</span> <span class="n">Vertex</span><span class="p">,</span> <span class="n">InterestingPoint</span><span class="p">,</span> <span class="n">MeshNode</span><span class="p">,</span> <span class="n">Datum</span><span class="p">],</span>
-                       <span class="n">instanceName</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">''</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="s1">'Feature'</span><span class="p">:</span>
-        <span class="sd">"""This method creates a Feature object and a ReferencePoint object at the specified</span>
+                       <span class="n">instanceName</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="s1">&#39;Feature&#39;</span><span class="p">:</span>
+        <span class="sd">&quot;&quot;&quot;This method creates a Feature object and a ReferencePoint object at the specified</span>
 <span class="sd">        location.</span>
 
 <span class="sd">        Notes</span>
@@ -2400,11 +2401,11 @@
 <span class="sd">        -------</span>
 <span class="sd">        feature: Feature</span>
 <span class="sd">            A Feature object</span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">return</span> <span class="bp">self</span></div>
 
 <div class="viewcode-block" id="Feature.RemoveWireEdges"><a class="viewcode-back" href="../../../reference/mdb/model/part_assembly/feature.html#abaqus.Feature.Feature.Feature.RemoveWireEdges">[docs]</a>    <span class="k">def</span> <span class="nf">RemoveWireEdges</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">wireEdgeList</span><span class="p">:</span> <span class="nb">tuple</span><span class="p">[</span><span class="n">Edge</span><span class="p">]):</span>
-        <span class="sd">"""This method removes wire edges.</span>
+        <span class="sd">&quot;&quot;&quot;This method removes wire edges.</span>
 
 <span class="sd">        Notes</span>
 <span class="sd">        -----</span>
@@ -2425,11 +2426,11 @@
 <span class="sd">        -------</span>
 <span class="sd">        feature: Feature</span>
 <span class="sd">            A Feature object</span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span></div>
 
 <div class="viewcode-block" id="Feature.WirePolyLine"><a class="viewcode-back" href="../../../reference/mdb/model/part_assembly/feature.html#abaqus.Feature.Feature.Feature.WirePolyLine">[docs]</a>    <span class="k">def</span> <span class="nf">WirePolyLine</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">points</span><span class="p">:</span> <span class="nb">float</span><span class="p">,</span> <span class="n">mergeType</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="n">IMPRINT</span><span class="p">,</span> <span class="n">meshable</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="n">ON</span><span class="p">):</span>
-        <span class="sd">"""This method creates an additional Feature object by creating a series of wires joining</span>
+        <span class="sd">&quot;&quot;&quot;This method creates an additional Feature object by creating a series of wires joining</span>
 <span class="sd">        points in pairs. When such a feature is created at the Part level, then each point can</span>
 <span class="sd">        be either a datum point, a vertex, a reference point, an interesting point, an orphan</span>
 <span class="sd">        mesh node, or the coordinates of a point. When such a feature is created at the Assembly</span>
@@ -2472,36 +2473,36 @@
 <span class="sd">        -------</span>
 <span class="sd">        feature: Feature</span>
 <span class="sd">            A Feature object</span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span></div>
 
 <div class="viewcode-block" id="Feature.isSuppressed"><a class="viewcode-back" href="../../../reference/mdb/model/part_assembly/feature.html#abaqus.Feature.Feature.Feature.isSuppressed">[docs]</a>    <span class="k">def</span> <span class="nf">isSuppressed</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="sd">"""This method queries the suppressed state of the feature.</span>
+        <span class="sd">&quot;&quot;&quot;This method queries the suppressed state of the feature.</span>
 
 <span class="sd">        Returns</span>
 <span class="sd">        -------</span>
 <span class="sd">            A Boolean value of True if the feature is suppressed and False if it is not suppressed.</span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span></div>
 
 <div class="viewcode-block" id="Feature.restore"><a class="viewcode-back" href="../../../reference/mdb/model/part_assembly/feature.html#abaqus.Feature.Feature.Feature.restore">[docs]</a>    <span class="k">def</span> <span class="nf">restore</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="sd">"""This method restores the parameters of a feature to the value they had when the backup</span>
+        <span class="sd">&quot;&quot;&quot;This method restores the parameters of a feature to the value they had when the backup</span>
 <span class="sd">        method was invoked on the part or assembly. Use the restore method after the backup</span>
 <span class="sd">        method.</span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span></div>
 
 <div class="viewcode-block" id="Feature.resume"><a class="viewcode-back" href="../../../reference/mdb/model/part_assembly/feature.html#abaqus.Feature.Feature.Feature.resume">[docs]</a>    <span class="k">def</span> <span class="nf">resume</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="sd">"""This method resumes suppressed features. Resuming a feature fully restores it to the</span>
+        <span class="sd">&quot;&quot;&quot;This method resumes suppressed features. Resuming a feature fully restores it to the</span>
 <span class="sd">        part or assembly. You can resume the last feature you suppressed, all suppressed</span>
 <span class="sd">        features, or just selected features. When you resume a child feature, Abaqus/CAE also</span>
 <span class="sd">        resumes the parent features automatically.</span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span></div>
 
 <div class="viewcode-block" id="Feature.setValues"><a class="viewcode-back" href="../../../reference/mdb/model/part_assembly/feature.html#abaqus.Feature.Feature.Feature.setValues">[docs]</a>    <span class="k">def</span> <span class="nf">setValues</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">parameter</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">parameter1</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">parameter2</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
                   <span class="n">sketch</span><span class="p">:</span> <span class="n">ConstrainedSketch</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">distance</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="kc">None</span><span class="p">):</span>
-        <span class="sd">"""This method modifies the Feature object.</span>
+        <span class="sd">&quot;&quot;&quot;This method modifies the Feature object.</span>
 <span class="sd">        </span>
 <span class="sd">        Parameters</span>
 <span class="sd">        ----------</span>
@@ -2529,16 +2530,16 @@
 <span class="sd">        Raises</span>
 <span class="sd">        ------</span>
 <span class="sd">            AbaqusException. </span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span></div>
 
 <div class="viewcode-block" id="Feature.suppress"><a class="viewcode-back" href="../../../reference/mdb/model/part_assembly/feature.html#abaqus.Feature.Feature.Feature.suppress">[docs]</a>    <span class="k">def</span> <span class="nf">suppress</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="sd">"""This method suppresses features. Suppressing a feature is equivalent to temporarily</span>
+        <span class="sd">&quot;&quot;&quot;This method suppresses features. Suppressing a feature is equivalent to temporarily</span>
 <span class="sd">        removing the feature from the part or assembly. Suppressed features remain suppressed</span>
 <span class="sd">        when you regenerate a part or assembly. You cannot suppress the base feature. In</span>
 <span class="sd">        addition, if you suppress a parent feature, all of its child features are also</span>
 <span class="sd">        suppressed automatically. Suppressed features can be restored with the resume command.</span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span></div></div>
 </pre></div>
         </article>

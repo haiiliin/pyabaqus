@@ -5,10 +5,10 @@
     <meta name="color-scheme" content="light dark"><link rel="index" title="Index" href="../../../genindex.html" /><link rel="search" title="Search" href="../../../search.html" />
         <link rel="canonical" href="https://pyabaqus.haiiliin.com/_modules/abaqus/BoundaryCondition/ConnVelocityBCState.html" />
 
-    <meta name="generator" content="sphinx-4.5.0, furo 2022.04.07"/>
-        <title>abaqus.BoundaryCondition.ConnVelocityBCState - pyabaqus 1.0.16 documentation</title>
+    <meta name="generator" content="sphinx-4.5.0, furo 2022.06.04.1"/>
+        <title>abaqus.BoundaryCondition.ConnVelocityBCState - pyabaqus 1.0.18 documentation</title>
       <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/styles/furo.css?digest=68f4518137b9aefe99b631505a2064c3c42c9852" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/styles/furo.css?digest=40978830699223671f4072448e654b5958f38b89" />
     <link rel="stylesheet" type="text/css" href="../../../_static/styles/furo-extensions.css?digest=30d1aed668e5c3a91c3e3bf6a60b675221979f0e" />
     
     
@@ -123,7 +123,7 @@
       </label>
     </div>
     <div class="header-center">
-      <a href="../../../index.html"><div class="brand">pyabaqus 1.0.16 documentation</div></a>
+      <a href="../../../index.html"><div class="brand">pyabaqus 1.0.18 documentation</div></a>
     </div>
     <div class="header-right">
       <div class="theme-toggle-container theme-toggle-header">
@@ -146,7 +146,7 @@
       <div class="sidebar-sticky"><a class="sidebar-brand" href="../../../index.html">
   
   
-  <span class="sidebar-brand-text">pyabaqus 1.0.16 documentation</span>
+  <span class="sidebar-brand-text">pyabaqus 1.0.18 documentation</span>
   
 </a><form class="sidebar-search-container" method="get" action="../../../search.html" role="search">
   <input class="sidebar-search" placeholder=Search name="q" aria-label="Search">
@@ -286,7 +286,8 @@
           </svg>
           <span>Back to top</span>
         </a>
-        <div class="content-icon-container"><div class="theme-toggle-container theme-toggle-content">
+        <div class="content-icon-container">
+          <div class="theme-toggle-container theme-toggle-content">
             <button class="theme-toggle">
               <div class="visually-hidden">Toggle Light / Dark / Auto color theme</div>
               <svg class="theme-icon-when-auto"><use href="#svg-sun-half"></use></svg>
@@ -306,7 +307,7 @@
 
 
 <div class="viewcode-block" id="ConnVelocityBCState"><a class="viewcode-back" href="../../../reference/mdb/model/bc.html#abaqus.BoundaryCondition.ConnVelocityBCState.ConnVelocityBCState">[docs]</a><span class="k">class</span> <span class="nc">ConnVelocityBCState</span><span class="p">(</span><span class="n">BoundaryConditionState</span><span class="p">):</span>
-    <span class="sd">"""The ConnVelocityBCState object stores the propagating data for a velocity boundary</span>
+    <span class="sd">&quot;&quot;&quot;The ConnVelocityBCState object stores the propagating data for a velocity boundary</span>
 <span class="sd">    condition in a step. One instance of this object is created internally by the </span>
 <span class="sd">    ConnVelocityBC object for each step. The instance is also deleted internally by the </span>
 <span class="sd">    ConnVelocityBC object. </span>
@@ -316,43 +317,43 @@
 <span class="sd">    Attributes</span>
 <span class="sd">    ----------</span>
 <span class="sd">    v1: float</span>
-<span class="sd">        A Float specifying the velocity component in the connector's local 1-direction.</span>
+<span class="sd">        A Float specifying the velocity component in the connector&#39;s local 1-direction.</span>
 <span class="sd">    v2: float</span>
-<span class="sd">        A Float specifying the velocity component in the connector's local 2-direction.</span>
+<span class="sd">        A Float specifying the velocity component in the connector&#39;s local 2-direction.</span>
 <span class="sd">    v3: float</span>
-<span class="sd">        A Float specifying the velocity component in the connector's local 3-direction.</span>
+<span class="sd">        A Float specifying the velocity component in the connector&#39;s local 3-direction.</span>
 <span class="sd">    vr1: float</span>
-<span class="sd">        A Float specifying the rotational velocity component in the connector's local</span>
+<span class="sd">        A Float specifying the rotational velocity component in the connector&#39;s local</span>
 <span class="sd">        4-direction.</span>
 <span class="sd">    vr2: float</span>
-<span class="sd">        A Float specifying the rotational velocity component in the connector's local</span>
+<span class="sd">        A Float specifying the rotational velocity component in the connector&#39;s local</span>
 <span class="sd">        5-direction.</span>
 <span class="sd">    vr3: float</span>
-<span class="sd">        A Float specifying the rotational velocity component in the connector's local</span>
+<span class="sd">        A Float specifying the rotational velocity component in the connector&#39;s local</span>
 <span class="sd">        6-direction.</span>
 <span class="sd">    v1State: SymbolicConstant</span>
 <span class="sd">        A SymbolicConstant specifying the propagation state of the velocity component in the</span>
-<span class="sd">        connector's local 1-direction. Possible values are UNSET, SET, UNCHANGED, FREED, and</span>
+<span class="sd">        connector&#39;s local 1-direction. Possible values are UNSET, SET, UNCHANGED, FREED, and</span>
 <span class="sd">        MODIFIED.</span>
 <span class="sd">    v2State: SymbolicConstant</span>
 <span class="sd">        A SymbolicConstant specifying the propagation state of the velocity component in the</span>
-<span class="sd">        connector's local 2-direction. Possible values are UNSET, SET, UNCHANGED, FREED, and</span>
+<span class="sd">        connector&#39;s local 2-direction. Possible values are UNSET, SET, UNCHANGED, FREED, and</span>
 <span class="sd">        MODIFIED.</span>
 <span class="sd">    v3State: SymbolicConstant</span>
 <span class="sd">        A SymbolicConstant specifying the propagation state of the velocity component in the</span>
-<span class="sd">        connector's local 3-direction. Possible values are UNSET, SET, UNCHANGED, FREED, and</span>
+<span class="sd">        connector&#39;s local 3-direction. Possible values are UNSET, SET, UNCHANGED, FREED, and</span>
 <span class="sd">        MODIFIED.</span>
 <span class="sd">    vr1State: SymbolicConstant</span>
 <span class="sd">        A SymbolicConstant specifying the propagation state of the rotational velocity component</span>
-<span class="sd">        in the connector's local 4–direction. Possible values are UNSET, SET, UNCHANGED, FREED,</span>
+<span class="sd">        in the connector&#39;s local 4–direction. Possible values are UNSET, SET, UNCHANGED, FREED,</span>
 <span class="sd">        and MODIFIED.</span>
 <span class="sd">    vr2State: SymbolicConstant</span>
 <span class="sd">        A SymbolicConstant specifying the propagation state of the rotational velocity component</span>
-<span class="sd">        in the connector's local 5–direction. Possible values are UNSET, SET, UNCHANGED, FREED,</span>
+<span class="sd">        in the connector&#39;s local 5–direction. Possible values are UNSET, SET, UNCHANGED, FREED,</span>
 <span class="sd">        and MODIFIED.</span>
 <span class="sd">    vr3State: SymbolicConstant</span>
 <span class="sd">        A SymbolicConstant specifying the propagation state of the rotational velocity component</span>
-<span class="sd">        in the connector's local 6–direction. Possible values are UNSET, SET, UNCHANGED, FREED,</span>
+<span class="sd">        in the connector&#39;s local 6–direction. Possible values are UNSET, SET, UNCHANGED, FREED,</span>
 <span class="sd">        and MODIFIED.</span>
 <span class="sd">    amplitudeState: SymbolicConstant</span>
 <span class="sd">        A SymbolicConstant specifying the propagation state of the amplitude reference. Possible</span>
@@ -388,56 +389,56 @@
 
 <span class="sd">    - CONNECTOR MOTION</span>
 
-<span class="sd">    """</span>
+<span class="sd">    &quot;&quot;&quot;</span>
 
-    <span class="c1"># A Float specifying the velocity component in the connector's local 1-direction. </span>
+    <span class="c1"># A Float specifying the velocity component in the connector&#39;s local 1-direction. </span>
     <span class="n">v1</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="kc">None</span>
 
-    <span class="c1"># A Float specifying the velocity component in the connector's local 2-direction. </span>
+    <span class="c1"># A Float specifying the velocity component in the connector&#39;s local 2-direction. </span>
     <span class="n">v2</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="kc">None</span>
 
-    <span class="c1"># A Float specifying the velocity component in the connector's local 3-direction. </span>
+    <span class="c1"># A Float specifying the velocity component in the connector&#39;s local 3-direction. </span>
     <span class="n">v3</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="kc">None</span>
 
-    <span class="c1"># A Float specifying the rotational velocity component in the connector's local </span>
+    <span class="c1"># A Float specifying the rotational velocity component in the connector&#39;s local </span>
     <span class="c1"># 4-direction. </span>
     <span class="n">vr1</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="kc">None</span>
 
-    <span class="c1"># A Float specifying the rotational velocity component in the connector's local </span>
+    <span class="c1"># A Float specifying the rotational velocity component in the connector&#39;s local </span>
     <span class="c1"># 5-direction. </span>
     <span class="n">vr2</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="kc">None</span>
 
-    <span class="c1"># A Float specifying the rotational velocity component in the connector's local </span>
+    <span class="c1"># A Float specifying the rotational velocity component in the connector&#39;s local </span>
     <span class="c1"># 6-direction. </span>
     <span class="n">vr3</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="kc">None</span>
 
     <span class="c1"># A SymbolicConstant specifying the propagation state of the velocity component in the </span>
-    <span class="c1"># connector's local 1-direction. Possible values are UNSET, SET, UNCHANGED, FREED, and </span>
+    <span class="c1"># connector&#39;s local 1-direction. Possible values are UNSET, SET, UNCHANGED, FREED, and </span>
     <span class="c1"># MODIFIED. </span>
     <span class="n">v1State</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="kc">None</span>
 
     <span class="c1"># A SymbolicConstant specifying the propagation state of the velocity component in the </span>
-    <span class="c1"># connector's local 2-direction. Possible values are UNSET, SET, UNCHANGED, FREED, and </span>
+    <span class="c1"># connector&#39;s local 2-direction. Possible values are UNSET, SET, UNCHANGED, FREED, and </span>
     <span class="c1"># MODIFIED. </span>
     <span class="n">v2State</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="kc">None</span>
 
     <span class="c1"># A SymbolicConstant specifying the propagation state of the velocity component in the </span>
-    <span class="c1"># connector's local 3-direction. Possible values are UNSET, SET, UNCHANGED, FREED, and </span>
+    <span class="c1"># connector&#39;s local 3-direction. Possible values are UNSET, SET, UNCHANGED, FREED, and </span>
     <span class="c1"># MODIFIED. </span>
     <span class="n">v3State</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="kc">None</span>
 
     <span class="c1"># A SymbolicConstant specifying the propagation state of the rotational velocity component </span>
-    <span class="c1"># in the connector's local 4–direction. Possible values are UNSET, SET, UNCHANGED, FREED, </span>
+    <span class="c1"># in the connector&#39;s local 4–direction. Possible values are UNSET, SET, UNCHANGED, FREED, </span>
     <span class="c1"># and MODIFIED. </span>
     <span class="n">vr1State</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="kc">None</span>
 
     <span class="c1"># A SymbolicConstant specifying the propagation state of the rotational velocity component </span>
-    <span class="c1"># in the connector's local 5–direction. Possible values are UNSET, SET, UNCHANGED, FREED, </span>
+    <span class="c1"># in the connector&#39;s local 5–direction. Possible values are UNSET, SET, UNCHANGED, FREED, </span>
     <span class="c1"># and MODIFIED. </span>
     <span class="n">vr2State</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="kc">None</span>
 
     <span class="c1"># A SymbolicConstant specifying the propagation state of the rotational velocity component </span>
-    <span class="c1"># in the connector's local 6–direction. Possible values are UNSET, SET, UNCHANGED, FREED, </span>
+    <span class="c1"># in the connector&#39;s local 6–direction. Possible values are UNSET, SET, UNCHANGED, FREED, </span>
     <span class="c1"># and MODIFIED. </span>
     <span class="n">vr3State</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="kc">None</span>
 
@@ -462,7 +463,7 @@
 
     <span class="c1"># A String specifying the name of the amplitude reference. The String is empty if the </span>
     <span class="c1"># boundary condition has no amplitude reference. </span>
-    <span class="n">amplitude</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">''</span></div>
+    <span class="n">amplitude</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span></div>
 </pre></div>
         </article>
       </div>

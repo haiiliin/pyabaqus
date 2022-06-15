@@ -5,10 +5,10 @@
     <meta name="color-scheme" content="light dark"><link rel="index" title="Index" href="../../../genindex.html" /><link rel="search" title="Search" href="../../../search.html" />
         <link rel="canonical" href="https://pyabaqus.haiiliin.com/_modules/abaqus/XY/XYSessionBase.html" />
 
-    <meta name="generator" content="sphinx-4.5.0, furo 2022.04.07"/>
-        <title>abaqus.XY.XYSessionBase - pyabaqus 1.0.16 documentation</title>
+    <meta name="generator" content="sphinx-4.5.0, furo 2022.06.04.1"/>
+        <title>abaqus.XY.XYSessionBase - pyabaqus 1.0.18 documentation</title>
       <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/styles/furo.css?digest=68f4518137b9aefe99b631505a2064c3c42c9852" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/styles/furo.css?digest=40978830699223671f4072448e654b5958f38b89" />
     <link rel="stylesheet" type="text/css" href="../../../_static/styles/furo-extensions.css?digest=30d1aed668e5c3a91c3e3bf6a60b675221979f0e" />
     
     
@@ -123,7 +123,7 @@
       </label>
     </div>
     <div class="header-center">
-      <a href="../../../index.html"><div class="brand">pyabaqus 1.0.16 documentation</div></a>
+      <a href="../../../index.html"><div class="brand">pyabaqus 1.0.18 documentation</div></a>
     </div>
     <div class="header-right">
       <div class="theme-toggle-container theme-toggle-header">
@@ -146,7 +146,7 @@
       <div class="sidebar-sticky"><a class="sidebar-brand" href="../../../index.html">
   
   
-  <span class="sidebar-brand-text">pyabaqus 1.0.16 documentation</span>
+  <span class="sidebar-brand-text">pyabaqus 1.0.18 documentation</span>
   
 </a><form class="sidebar-search-container" method="get" action="../../../search.html" role="search">
   <input class="sidebar-search" placeholder=Search name="q" aria-label="Search">
@@ -286,7 +286,8 @@
           </svg>
           <span>Back to top</span>
         </a>
-        <div class="content-icon-container"><div class="theme-toggle-container theme-toggle-content">
+        <div class="content-icon-container">
+          <div class="theme-toggle-container theme-toggle-content">
             <button class="theme-toggle">
               <div class="visually-hidden">Toggle Light / Dark / Auto color theme</div>
               <svg class="theme-icon-when-auto"><use href="#svg-sun-half"></use></svg>
@@ -306,7 +307,7 @@
 
 
 <div class="viewcode-block" id="XYSessionBase"><a class="viewcode-back" href="../../../reference/session/xy.html#abaqus.XY.XYSessionBase.XYSessionBase">[docs]</a><span class="k">class</span> <span class="nc">XYSessionBase</span><span class="p">(</span><span class="n">SessionBase</span><span class="p">):</span>
-    <span class="sd">"""The following commands operate on Session objects. For more information about the </span>
+    <span class="sd">&quot;&quot;&quot;The following commands operate on Session objects. For more information about the </span>
 <span class="sd">    Session object, see Session object. </span>
 
 <span class="sd">    Notes</span>
@@ -317,16 +318,16 @@
 <span class="sd">        </span>
 <span class="sd">        import visualization</span>
 
-<span class="sd">    """</span>
+<span class="sd">    &quot;&quot;&quot;</span>
 
 <div class="viewcode-block" id="XYSessionBase.linearizeStress"><a class="viewcode-back" href="../../../reference/session/xy.html#abaqus.XY.XYSessionBase.XYSessionBase.linearizeStress">[docs]</a>    <span class="k">def</span> <span class="nf">linearizeStress</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">path</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">startPoint</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">endPoint</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">modelShape</span><span class="p">:</span> <span class="n">SymbolicConstant</span><span class="p">,</span>
                         <span class="n">components</span><span class="p">:</span> <span class="nb">tuple</span><span class="p">,</span> <span class="n">xyMembraneComps</span><span class="p">:</span> <span class="nb">tuple</span><span class="p">,</span> <span class="n">xyBendingComps</span><span class="p">:</span> <span class="nb">tuple</span><span class="p">,</span>
                         <span class="n">invariantBendingComps</span><span class="p">:</span> <span class="nb">tuple</span> <span class="o">=</span> <span class="p">(),</span> <span class="n">intervals</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">40</span><span class="p">,</span> <span class="n">radiusOfCurvature</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
                         <span class="n">oopRadiusOfCurvature</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">curvatureCorrection</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="n">OFF</span><span class="p">,</span>
-                        <span class="n">curvatureCsys</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">''</span><span class="p">,</span> <span class="n">useCurvatureCsysForOrient</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="n">OFF</span><span class="p">,</span>
-                        <span class="n">saveXy</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="n">OFF</span><span class="p">,</span> <span class="n">writeReport</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="n">OFF</span><span class="p">,</span> <span class="n">reportFile</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">''</span><span class="p">,</span>
+                        <span class="n">curvatureCsys</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">useCurvatureCsysForOrient</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="n">OFF</span><span class="p">,</span>
+                        <span class="n">saveXy</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="n">OFF</span><span class="p">,</span> <span class="n">writeReport</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="n">OFF</span><span class="p">,</span> <span class="n">reportFile</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span><span class="p">,</span>
                         <span class="n">appendToFile</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="n">OFF</span><span class="p">,</span> <span class="n">saveToPath</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="n">OFF</span><span class="p">):</span>
-        <span class="sd">"""This method is used to perform stress linearization along a defined stress line.</span>
+        <span class="sd">&quot;&quot;&quot;This method is used to perform stress linearization along a defined stress line.</span>
 <span class="sd">        </span>
 <span class="sd">        Parameters</span>
 <span class="sd">        ----------</span>
@@ -348,21 +349,21 @@
 <span class="sd">            uniform value of 1.0. </span>
 <span class="sd">        components</span>
 <span class="sd">            A sequence of Strings specifying the linearized stress components to be displayed in the </span>
-<span class="sd">            xyPlot object. Possible values are "S11", "S22", "S33", "S12", "S23", and "S13".Note:You </span>
+<span class="sd">            xyPlot object. Possible values are &quot;S11&quot;, &quot;S22&quot;, &quot;S33&quot;, &quot;S12&quot;, &quot;S23&quot;, and &quot;S13&quot;.Note:You </span>
 <span class="sd">            must provide at least one of the *components* , *xyMembraneComps* , and *xyBendingComps* </span>
 <span class="sd">            arguments. </span>
 <span class="sd">        xyMembraneComps</span>
 <span class="sd">            A sequence of Strings specifying the linearized stress membrane components to be </span>
-<span class="sd">            displayed in the xyPlot object. Possible values are "S11", "S22", "S33", "S12", "S23", </span>
-<span class="sd">            and "S13". </span>
+<span class="sd">            displayed in the xyPlot object. Possible values are &quot;S11&quot;, &quot;S22&quot;, &quot;S33&quot;, &quot;S12&quot;, &quot;S23&quot;, </span>
+<span class="sd">            and &quot;S13&quot;. </span>
 <span class="sd">        xyBendingComps</span>
 <span class="sd">            A sequence of Strings specifying the linearized stress bending components to be </span>
-<span class="sd">            displayed in the xyPlot object. Possible values are "S11", "S22", "S33", "S12", "S23", </span>
-<span class="sd">            and "S13". </span>
+<span class="sd">            displayed in the xyPlot object. Possible values are &quot;S11&quot;, &quot;S22&quot;, &quot;S33&quot;, &quot;S12&quot;, &quot;S23&quot;, </span>
+<span class="sd">            and &quot;S13&quot;. </span>
 <span class="sd">        invariantBendingComps</span>
 <span class="sd">            A sequence of Strings specifying the linearized stress bending components to be included </span>
-<span class="sd">            in the computation of the linearized stress invariants. Possible values are "S11", </span>
-<span class="sd">            "S22", "S33", "S12", "S23", and "S13". The default value of the sequence includes all </span>
+<span class="sd">            in the computation of the linearized stress invariants. Possible values are &quot;S11&quot;, </span>
+<span class="sd">            &quot;S22&quot;, &quot;S33&quot;, &quot;S12&quot;, &quot;S23&quot;, and &quot;S13&quot;. The default value of the sequence includes all </span>
 <span class="sd">            the possible values. </span>
 <span class="sd">        intervals</span>
 <span class="sd">            An Int specifying the number of equally-spaced intervals into which the stress line is </span>
@@ -422,11 +423,11 @@
 <span class="sd">            display group boundaries may fail to meet this criterion. Choose new end points, adjust </span>
 <span class="sd">            the number of intervals along the line, or modify the current display group to obtain </span>
 <span class="sd">            the stress linearization plot. </span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span></div>
 
 <div class="viewcode-block" id="XYSessionBase.setPathTolerance"><a class="viewcode-back" href="../../../reference/session/xy.html#abaqus.XY.XYSessionBase.XYSessionBase.setPathTolerance">[docs]</a>    <span class="k">def</span> <span class="nf">setPathTolerance</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">tolerance</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="mi">0</span><span class="p">):</span>
-        <span class="sd">"""This method is used to set the *tolerance* to be used when creating XYData objects by</span>
+        <span class="sd">&quot;&quot;&quot;This method is used to set the *tolerance* to be used when creating XYData objects by</span>
 <span class="sd">        extracting results along Path objects. This command should be exercised with caution</span>
 <span class="sd">        since setting a value too low or too high may result in getting no results or</span>
 <span class="sd">        unpredictable results.</span>
@@ -439,21 +440,21 @@
 <span class="sd">        Returns</span>
 <span class="sd">        -------</span>
 <span class="sd">            None . </span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span></div>
 
 <div class="viewcode-block" id="XYSessionBase.getPathTolerance"><a class="viewcode-back" href="../../../reference/session/xy.html#abaqus.XY.XYSessionBase.XYSessionBase.getPathTolerance">[docs]</a>    <span class="k">def</span> <span class="nf">getPathTolerance</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="sd">"""This method is used to get the *tolerance* used when creating XYData objects by</span>
+        <span class="sd">&quot;&quot;&quot;This method is used to get the *tolerance* used when creating XYData objects by</span>
 <span class="sd">        extracting results along Path objects.</span>
 
 <span class="sd">        Returns</span>
 <span class="sd">        -------</span>
 <span class="sd">            A Double specifying the tolerance.</span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span></div>
 
 <div class="viewcode-block" id="XYSessionBase.setLimitForXYDataPlots"><a class="viewcode-back" href="../../../reference/session/xy.html#abaqus.XY.XYSessionBase.XYSessionBase.setLimitForXYDataPlots">[docs]</a>    <span class="k">def</span> <span class="nf">setLimitForXYDataPlots</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">limit</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="kc">None</span><span class="p">):</span>
-        <span class="sd">"""This method is used to set the *limit* for number of XY data objects while creating</span>
+        <span class="sd">&quot;&quot;&quot;This method is used to set the *limit* for number of XY data objects while creating</span>
 <span class="sd">        XYData from field output.</span>
 <span class="sd">        </span>
 <span class="sd">        Parameters</span>
@@ -465,17 +466,17 @@
 <span class="sd">        Returns</span>
 <span class="sd">        -------</span>
 <span class="sd">            None . </span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span></div>
 
 <div class="viewcode-block" id="XYSessionBase.getLimitForXYDataPlots"><a class="viewcode-back" href="../../../reference/session/xy.html#abaqus.XY.XYSessionBase.XYSessionBase.getLimitForXYDataPlots">[docs]</a>    <span class="k">def</span> <span class="nf">getLimitForXYDataPlots</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="sd">"""This method is used to get the *limit* for number of XY data objects while creating</span>
+        <span class="sd">&quot;&quot;&quot;This method is used to get the *limit* for number of XY data objects while creating</span>
 <span class="sd">        XYData from field output.</span>
 
 <span class="sd">        Returns</span>
 <span class="sd">        -------</span>
 <span class="sd">            Int specifying the limit for number of XY data objects.</span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span></div></div>
 </pre></div>
         </article>

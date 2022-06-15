@@ -5,10 +5,10 @@
     <meta name="color-scheme" content="light dark"><link rel="index" title="Index" href="../../../genindex.html" /><link rel="search" title="Search" href="../../../search.html" />
         <link rel="canonical" href="https://pyabaqus.haiiliin.com/_modules/abaqus/Calibration/DataSet.html" />
 
-    <meta name="generator" content="sphinx-4.5.0, furo 2022.04.07"/>
-        <title>abaqus.Calibration.DataSet - pyabaqus 1.0.16 documentation</title>
+    <meta name="generator" content="sphinx-4.5.0, furo 2022.06.04.1"/>
+        <title>abaqus.Calibration.DataSet - pyabaqus 1.0.18 documentation</title>
       <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/styles/furo.css?digest=68f4518137b9aefe99b631505a2064c3c42c9852" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/styles/furo.css?digest=40978830699223671f4072448e654b5958f38b89" />
     <link rel="stylesheet" type="text/css" href="../../../_static/styles/furo-extensions.css?digest=30d1aed668e5c3a91c3e3bf6a60b675221979f0e" />
     
     
@@ -123,7 +123,7 @@
       </label>
     </div>
     <div class="header-center">
-      <a href="../../../index.html"><div class="brand">pyabaqus 1.0.16 documentation</div></a>
+      <a href="../../../index.html"><div class="brand">pyabaqus 1.0.18 documentation</div></a>
     </div>
     <div class="header-right">
       <div class="theme-toggle-container theme-toggle-header">
@@ -146,7 +146,7 @@
       <div class="sidebar-sticky"><a class="sidebar-brand" href="../../../index.html">
   
   
-  <span class="sidebar-brand-text">pyabaqus 1.0.16 documentation</span>
+  <span class="sidebar-brand-text">pyabaqus 1.0.18 documentation</span>
   
 </a><form class="sidebar-search-container" method="get" action="../../../search.html" role="search">
   <input class="sidebar-search" placeholder=Search name="q" aria-label="Search">
@@ -286,7 +286,8 @@
           </svg>
           <span>Back to top</span>
         </a>
-        <div class="content-icon-container"><div class="theme-toggle-container theme-toggle-content">
+        <div class="content-icon-container">
+          <div class="theme-toggle-container theme-toggle-content">
             <button class="theme-toggle">
               <div class="visually-hidden">Toggle Light / Dark / Auto color theme</div>
               <svg class="theme-icon-when-auto"><use href="#svg-sun-half"></use></svg>
@@ -302,7 +303,7 @@
         <article role="main">
           <h1>Source code for abaqus.Calibration.DataSet</h1><div class="highlight"><pre>
 <div class="viewcode-block" id="DataSet"><a class="viewcode-back" href="../../../reference/mdb/model/calibration.html#abaqus.Calibration.DataSet.DataSet">[docs]</a><span></span><span class="k">class</span> <span class="nc">DataSet</span><span class="p">:</span>
-    <span class="sd">"""The DataSetobject specifies material test data.</span>
+    <span class="sd">&quot;&quot;&quot;The DataSetobject specifies material test data.</span>
 
 <span class="sd">    Notes</span>
 <span class="sd">    -----</span>
@@ -313,10 +314,10 @@
 <span class="sd">        import calibration</span>
 <span class="sd">        mdb.models[name].calibrations[name].dataSets[name]</span>
 
-<span class="sd">    """</span>
+<span class="sd">    &quot;&quot;&quot;</span>
 
-    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">data</span><span class="p">:</span> <span class="nb">tuple</span> <span class="o">=</span> <span class="p">(),</span> <span class="nb">type</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">''</span><span class="p">,</span> <span class="n">form</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">''</span><span class="p">):</span>
-        <span class="sd">"""This method creates a DataSet object.</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">data</span><span class="p">:</span> <span class="nb">tuple</span> <span class="o">=</span> <span class="p">(),</span> <span class="nb">type</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">form</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;This method creates a DataSet object.</span>
 
 <span class="sd">        Notes</span>
 <span class="sd">        -----</span>
@@ -334,27 +335,27 @@
 <span class="sd">            A sequence of pairs of Floats specifying data set type pairs. Possible values are for </span>
 <span class="sd">            stress/strain, force/displacement, or transverse strain/axial strain pairs. </span>
 <span class="sd">        type</span>
-<span class="sd">            A String specifying the type of the new dataset. Values can be "STRESS/STRAIN", </span>
-<span class="sd">            "FORCE/DISPLACEMENT", or "AXIALSTRAIN/TRANSVERSESTRAIN". The default value is </span>
-<span class="sd">            "STRESS/STRAIN". </span>
+<span class="sd">            A String specifying the type of the new dataset. Values can be &quot;STRESS/STRAIN&quot;, </span>
+<span class="sd">            &quot;FORCE/DISPLACEMENT&quot;, or &quot;AXIALSTRAIN/TRANSVERSESTRAIN&quot;. The default value is </span>
+<span class="sd">            &quot;STRESS/STRAIN&quot;. </span>
 <span class="sd">        form</span>
-<span class="sd">            A String specifying the form of the new dataset. Values can be "NOMINAL" or "TRUE". The </span>
-<span class="sd">            default value is "NOMINAl". </span>
+<span class="sd">            A String specifying the form of the new dataset. Values can be &quot;NOMINAL&quot; or &quot;TRUE&quot;. The </span>
+<span class="sd">            default value is &quot;NOMINAl&quot;. </span>
 
 <span class="sd">        Returns</span>
 <span class="sd">        -------</span>
 <span class="sd">            A DataSet object.</span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span>
 
 <div class="viewcode-block" id="DataSet.setValues"><a class="viewcode-back" href="../../../reference/mdb/model/calibration.html#abaqus.Calibration.DataSet.DataSet.setValues">[docs]</a>    <span class="k">def</span> <span class="nf">setValues</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">data</span><span class="p">:</span> <span class="nb">tuple</span> <span class="o">=</span> <span class="p">()):</span>
-        <span class="sd">"""This method modifies the data for an existing DataSet object.</span>
+        <span class="sd">&quot;&quot;&quot;This method modifies the data for an existing DataSet object.</span>
 <span class="sd">        </span>
 <span class="sd">        Parameters</span>
 <span class="sd">        ----------</span>
 <span class="sd">        data</span>
 <span class="sd">            A sequence of pairs of Floats specifying data set type pairs. </span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span></div></div>
 </pre></div>
         </article>

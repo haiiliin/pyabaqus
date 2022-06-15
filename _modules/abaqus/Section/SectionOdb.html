@@ -5,10 +5,10 @@
     <meta name="color-scheme" content="light dark"><link rel="index" title="Index" href="../../../genindex.html" /><link rel="search" title="Search" href="../../../search.html" />
         <link rel="canonical" href="https://pyabaqus.haiiliin.com/_modules/abaqus/Section/SectionOdb.html" />
 
-    <meta name="generator" content="sphinx-4.5.0, furo 2022.04.07"/>
-        <title>abaqus.Section.SectionOdb - pyabaqus 1.0.16 documentation</title>
+    <meta name="generator" content="sphinx-4.5.0, furo 2022.06.04.1"/>
+        <title>abaqus.Section.SectionOdb - pyabaqus 1.0.18 documentation</title>
       <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/styles/furo.css?digest=68f4518137b9aefe99b631505a2064c3c42c9852" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/styles/furo.css?digest=40978830699223671f4072448e654b5958f38b89" />
     <link rel="stylesheet" type="text/css" href="../../../_static/styles/furo-extensions.css?digest=30d1aed668e5c3a91c3e3bf6a60b675221979f0e" />
     
     
@@ -123,7 +123,7 @@
       </label>
     </div>
     <div class="header-center">
-      <a href="../../../index.html"><div class="brand">pyabaqus 1.0.16 documentation</div></a>
+      <a href="../../../index.html"><div class="brand">pyabaqus 1.0.18 documentation</div></a>
     </div>
     <div class="header-right">
       <div class="theme-toggle-container theme-toggle-header">
@@ -146,7 +146,7 @@
       <div class="sidebar-sticky"><a class="sidebar-brand" href="../../../index.html">
   
   
-  <span class="sidebar-brand-text">pyabaqus 1.0.16 documentation</span>
+  <span class="sidebar-brand-text">pyabaqus 1.0.18 documentation</span>
   
 </a><form class="sidebar-search-container" method="get" action="../../../search.html" role="search">
   <input class="sidebar-search" placeholder=Search name="q" aria-label="Search">
@@ -286,7 +286,8 @@
           </svg>
           <span>Back to top</span>
         </a>
-        <div class="content-icon-container"><div class="theme-toggle-container theme-toggle-content">
+        <div class="content-icon-container">
+          <div class="theme-toggle-container theme-toggle-content">
             <button class="theme-toggle">
               <div class="visually-hidden">Toggle Light / Dark / Auto color theme</div>
               <svg class="theme-icon-when-auto"><use href="#svg-sun-half"></use></svg>
@@ -330,7 +331,7 @@
 
 <div class="viewcode-block" id="SectionOdb.AcousticInfiniteSection"><a class="viewcode-back" href="../../../reference/mdb/model/section.html#abaqus.Section.SectionOdb.SectionOdb.AcousticInfiniteSection">[docs]</a>    <span class="k">def</span> <span class="nf">AcousticInfiniteSection</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">material</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">thickness</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span>
                                 <span class="n">order</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">10</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">AcousticInfiniteSection</span><span class="p">:</span>
-        <span class="sd">"""This method creates an AcousticInfiniteSection object.</span>
+        <span class="sd">&quot;&quot;&quot;This method creates an AcousticInfiniteSection object.</span>
 
 <span class="sd">        Notes</span>
 <span class="sd">        -----</span>
@@ -363,12 +364,12 @@
 <span class="sd">        ------</span>
 <span class="sd">        InvalidNameError</span>
 <span class="sd">        RangeError</span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">sections</span><span class="p">[</span><span class="n">name</span><span class="p">]</span> <span class="o">=</span> <span class="n">section</span> <span class="o">=</span> <span class="n">AcousticInfiniteSection</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">material</span><span class="p">,</span> <span class="n">thickness</span><span class="p">,</span> <span class="n">order</span><span class="p">)</span>
         <span class="k">return</span> <span class="n">section</span></div>
 
 <div class="viewcode-block" id="SectionOdb.AcousticInterfaceSection"><a class="viewcode-back" href="../../../reference/mdb/model/section.html#abaqus.Section.SectionOdb.SectionOdb.AcousticInterfaceSection">[docs]</a>    <span class="k">def</span> <span class="nf">AcousticInterfaceSection</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">thickness</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mi">1</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">AcousticInterfaceSection</span><span class="p">:</span>
-        <span class="sd">"""This method creates an AcousticInterfaceSection object.</span>
+        <span class="sd">&quot;&quot;&quot;This method creates an AcousticInterfaceSection object.</span>
 
 <span class="sd">        Notes</span>
 <span class="sd">        -----</span>
@@ -395,7 +396,7 @@
 <span class="sd">        ------</span>
 <span class="sd">        InvalidNameError</span>
 <span class="sd">        RangeError</span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">sections</span><span class="p">[</span><span class="n">name</span><span class="p">]</span> <span class="o">=</span> <span class="n">section</span> <span class="o">=</span> <span class="n">AcousticInterfaceSection</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">thickness</span><span class="p">)</span>
         <span class="k">return</span> <span class="n">section</span></div>
 
@@ -407,9 +408,9 @@
                     <span class="n">submerged</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="n">FULLY</span><span class="p">,</span> <span class="n">fluidMassDensity</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
                     <span class="n">crossSectionRadius</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">lateralMassCoef</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span> <span class="n">axialMassCoef</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span>
                     <span class="n">massOffsetX</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="n">massOffsetY</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="n">beamShape</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="n">CONSTANT</span><span class="p">,</span>
-                    <span class="n">material</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">''</span><span class="p">,</span> <span class="n">table</span><span class="p">:</span> <span class="nb">tuple</span> <span class="o">=</span> <span class="p">(),</span> <span class="n">outputPts</span><span class="p">:</span> <span class="nb">tuple</span> <span class="o">=</span> <span class="p">(),</span>
-                    <span class="n">centroid</span><span class="p">:</span> <span class="nb">tuple</span><span class="p">[</span><span class="nb">float</span><span class="p">]</span> <span class="o">=</span> <span class="p">(),</span> <span class="n">shearCenter</span><span class="p">:</span> <span class="nb">tuple</span><span class="p">[</span><span class="nb">float</span><span class="p">]</span> <span class="o">=</span> <span class="p">(),</span> <span class="n">profileEnd</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">''</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">BeamSection</span><span class="p">:</span>
-        <span class="sd">"""This method creates a BeamSection object.</span>
+                    <span class="n">material</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">table</span><span class="p">:</span> <span class="nb">tuple</span> <span class="o">=</span> <span class="p">(),</span> <span class="n">outputPts</span><span class="p">:</span> <span class="nb">tuple</span> <span class="o">=</span> <span class="p">(),</span>
+                    <span class="n">centroid</span><span class="p">:</span> <span class="nb">tuple</span><span class="p">[</span><span class="nb">float</span><span class="p">]</span> <span class="o">=</span> <span class="p">(),</span> <span class="n">shearCenter</span><span class="p">:</span> <span class="nb">tuple</span><span class="p">[</span><span class="nb">float</span><span class="p">]</span> <span class="o">=</span> <span class="p">(),</span> <span class="n">profileEnd</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">BeamSection</span><span class="p">:</span>
+        <span class="sd">&quot;&quot;&quot;This method creates a BeamSection object.</span>
 
 <span class="sd">        Notes</span>
 <span class="sd">        -----</span>
@@ -431,7 +432,7 @@
 <span class="sd">            A String specifying the name of the profile. This argument represents the start profile</span>
 <span class="sd">            in case of *beamShape*=TAPERED.</span>
 <span class="sd">        poissonRatio</span>
-<span class="sd">            A Float specifying the Poisson's ratio of the section. The default value is 0.0.</span>
+<span class="sd">            A Float specifying the Poisson&#39;s ratio of the section. The default value is 0.0.</span>
 <span class="sd">        thermalExpansion</span>
 <span class="sd">            A Boolean specifying whether to use thermal expansion data. The default value is OFF.</span>
 <span class="sd">        temperatureDependency</span>
@@ -491,7 +492,7 @@
 <span class="sd">            is available for manipulating the model database but not for the ODB API.</span>
 <span class="sd">        material</span>
 <span class="sd">            A String specifying the name of the material. The default value is an empty string. The</span>
-<span class="sd">            material is required when *integration* is "DURING_ANALYSIS".</span>
+<span class="sd">            material is required when *integration* is &quot;DURING_ANALYSIS&quot;.</span>
 <span class="sd">        table</span>
 <span class="sd">            A sequence of sequences of Floats specifying the items described below. The default</span>
 <span class="sd">            value is an empty sequence.</span>
@@ -513,7 +514,7 @@
 <span class="sd">        Returns</span>
 <span class="sd">        -------</span>
 <span class="sd">            A BeamSection object.</span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">sections</span><span class="p">[</span><span class="n">name</span><span class="p">]</span> <span class="o">=</span> <span class="n">section</span> <span class="o">=</span> <span class="n">BeamSection</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">integration</span><span class="p">,</span> <span class="n">profile</span><span class="p">,</span> <span class="n">poissonRatio</span><span class="p">,</span> <span class="n">thermalExpansion</span><span class="p">,</span>
                                                     <span class="n">temperatureDependency</span><span class="p">,</span> <span class="n">dependencies</span><span class="p">,</span> <span class="n">density</span><span class="p">,</span> <span class="n">referenceTemperature</span><span class="p">,</span>
                                                     <span class="n">temperatureVar</span><span class="p">,</span> <span class="n">alphaDamping</span><span class="p">,</span> <span class="n">betaDamping</span><span class="p">,</span> <span class="n">compositeDamping</span><span class="p">,</span>
@@ -525,7 +526,7 @@
 <div class="viewcode-block" id="SectionOdb.CohesiveSection"><a class="viewcode-back" href="../../../reference/mdb/model/section.html#abaqus.Section.SectionOdb.SectionOdb.CohesiveSection">[docs]</a>    <span class="k">def</span> <span class="nf">CohesiveSection</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">response</span><span class="p">:</span> <span class="n">SymbolicConstant</span><span class="p">,</span> <span class="n">material</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
                         <span class="n">initialThicknessType</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="n">SOLVER_DEFAULT</span><span class="p">,</span> <span class="n">initialThickness</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span>
                         <span class="n">outOfPlaneThickness</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="kc">None</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">CohesiveSection</span><span class="p">:</span>
-        <span class="sd">"""This method creates a CohesiveSection object.</span>
+        <span class="sd">&quot;&quot;&quot;This method creates a CohesiveSection object.</span>
 
 <span class="sd">        Notes</span>
 <span class="sd">        -----</span>
@@ -566,7 +567,7 @@
 <span class="sd">        Raises</span>
 <span class="sd">        ------</span>
 <span class="sd">            RangeError and InvalidNameError.</span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">sections</span><span class="p">[</span><span class="n">name</span><span class="p">]</span> <span class="o">=</span> <span class="n">section</span> <span class="o">=</span> <span class="n">CohesiveSection</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">response</span><span class="p">,</span> <span class="n">material</span><span class="p">,</span> <span class="n">initialThicknessType</span><span class="p">,</span>
                                                         <span class="n">initialThickness</span><span class="p">,</span> <span class="n">outOfPlaneThickness</span><span class="p">)</span>
         <span class="k">return</span> <span class="n">section</span></div>
@@ -577,9 +578,9 @@
                               <span class="n">integrationRule</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="n">SIMPSON</span><span class="p">,</span> <span class="n">temperature</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="n">GRADIENT</span><span class="p">,</span>
                               <span class="n">idealization</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="n">NO_IDEALIZATION</span><span class="p">,</span> <span class="n">nTemp</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
                               <span class="n">thicknessModulus</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">useDensity</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="n">OFF</span><span class="p">,</span> <span class="n">density</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span>
-                              <span class="n">layupName</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">''</span><span class="p">,</span> <span class="n">thicknessField</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">''</span><span class="p">,</span>
-                              <span class="n">nodalThicknessField</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">''</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">CompositeShellSection</span><span class="p">:</span>
-        <span class="sd">"""This method creates a CompositeShellSection object.</span>
+                              <span class="n">layupName</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">thicknessField</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span><span class="p">,</span>
+                              <span class="n">nodalThicknessField</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">CompositeShellSection</span><span class="p">:</span>
+        <span class="sd">&quot;&quot;&quot;This method creates a CompositeShellSection object.</span>
 
 <span class="sd">        Notes</span>
 <span class="sd">        -----</span>
@@ -609,13 +610,13 @@
 <span class="sd">            prior to the analysis (ON) or integrated during the analysis (OFF). The default value is</span>
 <span class="sd">            OFF.</span>
 <span class="sd">        poissonDefinition</span>
-<span class="sd">            A SymbolicConstant specifying whether to use the default value for the Poisson's ratio.</span>
-<span class="sd">            Possible values are:DEFAULT, specifying that the default value for the Poisson's ratio</span>
+<span class="sd">            A SymbolicConstant specifying whether to use the default value for the Poisson&#39;s ratio.</span>
+<span class="sd">            Possible values are:DEFAULT, specifying that the default value for the Poisson&#39;s ratio</span>
 <span class="sd">            is 0.5 in an Abaqus/Standard analysis and is obtained from the material definition in an</span>
-<span class="sd">            Abaqus/Explicit analysis.VALUE, specifying that the Poisson's ratio used in the analysis</span>
+<span class="sd">            Abaqus/Explicit analysis.VALUE, specifying that the Poisson&#39;s ratio used in the analysis</span>
 <span class="sd">            is the value provided in *poisson*.The default value is DEFAULT.</span>
 <span class="sd">        poisson</span>
-<span class="sd">            A Float specifying the Poisson's ratio. Possible values are −1.0 ≤≤ *poisson* ≤≤ 0.5.</span>
+<span class="sd">            A Float specifying the Poisson&#39;s ratio. Possible values are −1.0 ≤≤ *poisson* ≤≤ 0.5.</span>
 <span class="sd">            This argument is valid only when *poissonDefinition*=VALUE. The default value is 0.5.</span>
 <span class="sd">        integrationRule</span>
 <span class="sd">            A SymbolicConstant specifying the shell section integration rule. Possible values are</span>
@@ -659,7 +660,7 @@
 <span class="sd">        Returns</span>
 <span class="sd">        -------</span>
 <span class="sd">            A CompositeShellSection object.</span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">sections</span><span class="p">[</span><span class="n">name</span><span class="p">]</span> <span class="o">=</span> <span class="n">section</span> <span class="o">=</span> <span class="n">CompositeShellSection</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">layup</span><span class="p">,</span> <span class="n">symmetric</span><span class="p">,</span> <span class="n">thicknessType</span><span class="p">,</span> <span class="n">preIntegrate</span><span class="p">,</span>
                                                               <span class="n">poissonDefinition</span><span class="p">,</span> <span class="n">poisson</span><span class="p">,</span> <span class="n">integrationRule</span><span class="p">,</span> <span class="n">temperature</span><span class="p">,</span>
                                                               <span class="n">idealization</span><span class="p">,</span> <span class="n">nTemp</span><span class="p">,</span> <span class="n">thicknessModulus</span><span class="p">,</span> <span class="n">useDensity</span><span class="p">,</span>
@@ -667,8 +668,8 @@
         <span class="k">return</span> <span class="n">section</span></div>
 
 <div class="viewcode-block" id="SectionOdb.CompositeSolidSection"><a class="viewcode-back" href="../../../reference/mdb/model/section.html#abaqus.Section.SectionOdb.SectionOdb.CompositeSolidSection">[docs]</a>    <span class="k">def</span> <span class="nf">CompositeSolidSection</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">layup</span><span class="p">:</span> <span class="n">SectionLayerArray</span><span class="p">,</span> <span class="n">symmetric</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="n">OFF</span><span class="p">,</span>
-                              <span class="n">layupName</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">''</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">CompositeSolidSection</span><span class="p">:</span>
-        <span class="sd">"""This method creates a CompositeSolidSection object.</span>
+                              <span class="n">layupName</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">CompositeSolidSection</span><span class="p">:</span>
+        <span class="sd">&quot;&quot;&quot;This method creates a CompositeSolidSection object.</span>
 
 <span class="sd">        Notes</span>
 <span class="sd">        -----</span>
@@ -695,7 +696,7 @@
 <span class="sd">        Returns</span>
 <span class="sd">        -------</span>
 <span class="sd">            A CompositeSolidSection object.</span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">sections</span><span class="p">[</span><span class="n">name</span><span class="p">]</span> <span class="o">=</span> <span class="n">section</span> <span class="o">=</span> <span class="n">CompositeSolidSection</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">layup</span><span class="p">,</span> <span class="n">symmetric</span><span class="p">,</span> <span class="n">layupName</span><span class="p">)</span>
         <span class="k">return</span> <span class="n">section</span></div>
 
@@ -709,7 +710,7 @@
                          <span class="n">defaultTolerance</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="n">ON</span><span class="p">,</span> <span class="n">regularization</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span>
                          <span class="n">extrapolation</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="n">CONSTANT</span><span class="p">,</span>
                          <span class="n">behaviorOptions</span><span class="p">:</span> <span class="n">ConnectorBehaviorOptionArray</span> <span class="o">=</span> <span class="kc">None</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">ConnectorSection</span><span class="p">:</span>
-        <span class="sd">"""This method creates a ConnectorSection object.</span>
+        <span class="sd">&quot;&quot;&quot;This method creates a ConnectorSection object.</span>
 
 <span class="sd">        Notes</span>
 <span class="sd">        -----</span>
@@ -808,7 +809,7 @@
 <span class="sd">        ------</span>
 <span class="sd">        InvalidNameError</span>
 <span class="sd">        RangeError</span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">sections</span><span class="p">[</span><span class="n">name</span><span class="p">]</span> <span class="o">=</span> <span class="n">section</span> <span class="o">=</span> <span class="n">ConnectorSection</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">assembledType</span><span class="p">,</span> <span class="n">rotationalType</span><span class="p">,</span> <span class="n">translationalType</span><span class="p">,</span>
                                                          <span class="n">integration</span><span class="p">,</span> <span class="n">u1ReferenceLength</span><span class="p">,</span> <span class="n">u2ReferenceLength</span><span class="p">,</span>
                                                          <span class="n">u3ReferenceLength</span><span class="p">,</span> <span class="n">ur1ReferenceAngle</span><span class="p">,</span> <span class="n">ur2ReferenceAngle</span><span class="p">,</span>
@@ -818,7 +819,7 @@
         <span class="k">return</span> <span class="n">section</span></div>
 
 <div class="viewcode-block" id="SectionOdb.EulerianSection"><a class="viewcode-back" href="../../../reference/mdb/model/section.html#abaqus.Section.SectionOdb.SectionOdb.EulerianSection">[docs]</a>    <span class="k">def</span> <span class="nf">EulerianSection</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">data</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">EulerianSection</span><span class="p">:</span>
-        <span class="sd">"""This method creates a EulerianSection object.</span>
+        <span class="sd">&quot;&quot;&quot;This method creates a EulerianSection object.</span>
 
 <span class="sd">        Notes</span>
 <span class="sd">        -----</span>
@@ -840,7 +841,7 @@
 <span class="sd">        Returns</span>
 <span class="sd">        -------</span>
 <span class="sd">            An EulerianSection object.</span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">sections</span><span class="p">[</span><span class="n">name</span><span class="p">]</span> <span class="o">=</span> <span class="n">section</span> <span class="o">=</span> <span class="n">EulerianSection</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">data</span><span class="p">)</span>
         <span class="k">return</span> <span class="n">section</span></div>
 
@@ -848,7 +849,7 @@
                       <span class="n">initialThickness</span><span class="p">:</span> <span class="n">typing</span><span class="o">.</span><span class="n">Union</span><span class="p">[</span><span class="n">SymbolicConstant</span><span class="p">,</span> <span class="nb">float</span><span class="p">]</span> <span class="o">=</span> <span class="n">DEFAULT</span><span class="p">,</span>
                       <span class="n">initialVoid</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span>
                       <span class="n">stabilizationStiffness</span><span class="p">:</span> <span class="n">typing</span><span class="o">.</span><span class="n">Union</span><span class="p">[</span><span class="n">SymbolicConstant</span><span class="p">,</span> <span class="nb">float</span><span class="p">]</span> <span class="o">=</span> <span class="n">DEFAULT</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">GasketSection</span><span class="p">:</span>
-        <span class="sd">"""This method creates a GasketSection object.</span>
+        <span class="sd">&quot;&quot;&quot;This method creates a GasketSection object.</span>
 
 <span class="sd">        Notes</span>
 <span class="sd">        -----</span>
@@ -887,7 +888,7 @@
 <span class="sd">        Returns</span>
 <span class="sd">        -------</span>
 <span class="sd">            A GasketSection object. and ValueError.</span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">sections</span><span class="p">[</span><span class="n">name</span><span class="p">]</span> <span class="o">=</span> <span class="n">section</span> <span class="o">=</span> <span class="n">GasketSection</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">material</span><span class="p">,</span> <span class="n">crossSection</span><span class="p">,</span> <span class="n">initialGap</span><span class="p">,</span> <span class="n">initialThickness</span><span class="p">,</span>
                                                       <span class="n">initialVoid</span><span class="p">,</span> <span class="n">stabilizationStiffness</span><span class="p">)</span>
         <span class="k">return</span> <span class="n">section</span></div>
@@ -897,7 +898,7 @@
                                 <span class="n">dependencies</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="n">poissonDefinition</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="n">DEFAULT</span><span class="p">,</span>
                                 <span class="n">poisson</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="n">useDensity</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="n">OFF</span><span class="p">,</span> <span class="n">density</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span>
                                 <span class="n">thermalStresses</span><span class="p">:</span> <span class="nb">tuple</span> <span class="o">=</span> <span class="p">(),</span> <span class="n">scalingData</span><span class="p">:</span> <span class="nb">tuple</span> <span class="o">=</span> <span class="p">())</span> <span class="o">-&gt;</span> <span class="n">GeneralStiffnessSection</span><span class="p">:</span>
-        <span class="sd">"""This method creates a GeneralStiffnessSection object.</span>
+        <span class="sd">&quot;&quot;&quot;This method creates a GeneralStiffnessSection object.</span>
 
 <span class="sd">        Notes</span>
 <span class="sd">        -----</span>
@@ -926,13 +927,13 @@
 <span class="sd">        dependencies</span>
 <span class="sd">            An Int specifying the number of field variable dependencies. The default value is 0.</span>
 <span class="sd">        poissonDefinition</span>
-<span class="sd">            A SymbolicConstant specifying whether to use the default value for the Poisson's ratio.</span>
-<span class="sd">            Possible values are:DEFAULT, specifying that the default value for the Poisson's ratio</span>
+<span class="sd">            A SymbolicConstant specifying whether to use the default value for the Poisson&#39;s ratio.</span>
+<span class="sd">            Possible values are:DEFAULT, specifying that the default value for the Poisson&#39;s ratio</span>
 <span class="sd">            is 0.5 in an Abaqus/Standard analysis and is obtained from the material definition in an</span>
-<span class="sd">            Abaqus/Explicit analysis.VALUE, specifying that the Poisson's ratio used in the analysis</span>
+<span class="sd">            Abaqus/Explicit analysis.VALUE, specifying that the Poisson&#39;s ratio used in the analysis</span>
 <span class="sd">            is the value provided in *poisson*.The default value is DEFAULT.</span>
 <span class="sd">        poisson</span>
-<span class="sd">            A Float specifying the Poisson's ratio. Possible values are −1.0 ≤≤ *poisson* ≤≤ 0.5.</span>
+<span class="sd">            A Float specifying the Poisson&#39;s ratio. Possible values are −1.0 ≤≤ *poisson* ≤≤ 0.5.</span>
 <span class="sd">            This argument is valid only when *poissonDefinition*=VALUE. The default value is 0.5.</span>
 <span class="sd">        useDensity</span>
 <span class="sd">            A Boolean specifying whether or not to use the value of *density*. The default value is</span>
@@ -943,7 +944,7 @@
 <span class="sd">        thermalStresses</span>
 <span class="sd">            A sequence of Floats specifying the generalized stress values caused by a unit</span>
 <span class="sd">            temperature rise. Six entries must be given if the value of *applyThermalStress* is set</span>
-<span class="sd">            to True. The default value is ("").</span>
+<span class="sd">            to True. The default value is (&quot;&quot;).</span>
 <span class="sd">        scalingData</span>
 <span class="sd">            A sequence of sequences of Floats specifying the scaling factors for given temperatures</span>
 <span class="sd">            and/or field data. Each row should contain (Y, alpha, T, F1,...,Fn). The default value</span>
@@ -952,7 +953,7 @@
 <span class="sd">        Returns</span>
 <span class="sd">        -------</span>
 <span class="sd">            A GeneralStiffnessSection object.</span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">sections</span><span class="p">[</span><span class="n">name</span><span class="p">]</span> <span class="o">=</span> <span class="n">section</span> <span class="o">=</span> <span class="n">GeneralStiffnessSection</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">stiffnessMatrix</span><span class="p">,</span> <span class="n">referenceTemperature</span><span class="p">,</span>
                                                                 <span class="n">applyThermalStress</span><span class="p">,</span> <span class="n">temperatureDependency</span><span class="p">,</span> <span class="n">dependencies</span><span class="p">,</span>
                                                                 <span class="n">poissonDefinition</span><span class="p">,</span> <span class="n">poisson</span><span class="p">,</span> <span class="n">useDensity</span><span class="p">,</span> <span class="n">density</span><span class="p">,</span>
@@ -965,8 +966,8 @@
                                 <span class="n">integrationRule</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="n">SIMPSON</span><span class="p">,</span> <span class="n">temperature</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="n">GRADIENT</span><span class="p">,</span>
                                 <span class="n">idealization</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="n">NO_IDEALIZATION</span><span class="p">,</span> <span class="n">nTemp</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
                                 <span class="n">thicknessModulus</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">useDensity</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="n">OFF</span><span class="p">,</span> <span class="n">density</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span>
-                                <span class="n">thicknessField</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">''</span><span class="p">,</span> <span class="n">nodalThicknessField</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">''</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">HomogeneousShellSection</span><span class="p">:</span>
-        <span class="sd">"""This method creates a HomogeneousShellSection object.</span>
+                                <span class="n">thicknessField</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">nodalThicknessField</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">HomogeneousShellSection</span><span class="p">:</span>
+        <span class="sd">&quot;&quot;&quot;This method creates a HomogeneousShellSection object.</span>
 
 <span class="sd">        Notes</span>
 <span class="sd">        -----</span>
@@ -1002,13 +1003,13 @@
 <span class="sd">            prior to the analysis (ON) or integrated during the analysis (OFF). The default value is</span>
 <span class="sd">            OFF.</span>
 <span class="sd">        poissonDefinition</span>
-<span class="sd">            A SymbolicConstant specifying whether to use the default value for the Poisson's ratio.</span>
-<span class="sd">            Possible values are:DEFAULT, specifying that the default value for the Poisson's ratio</span>
+<span class="sd">            A SymbolicConstant specifying whether to use the default value for the Poisson&#39;s ratio.</span>
+<span class="sd">            Possible values are:DEFAULT, specifying that the default value for the Poisson&#39;s ratio</span>
 <span class="sd">            is 0.5 in an Abaqus/Standard analysis and is obtained from the material definition in an</span>
-<span class="sd">            Abaqus/Explicit analysis.VALUE, specifying that the Poisson's ratio used in the analysis</span>
+<span class="sd">            Abaqus/Explicit analysis.VALUE, specifying that the Poisson&#39;s ratio used in the analysis</span>
 <span class="sd">            is the value provided in *poisson*.The default value is DEFAULT.</span>
 <span class="sd">        poisson</span>
-<span class="sd">            A Float specifying the Poisson's ratio. Possible values are −1.0 ≤≤ *poisson* ≤≤ 0.5.</span>
+<span class="sd">            A Float specifying the Poisson&#39;s ratio. Possible values are −1.0 ≤≤ *poisson* ≤≤ 0.5.</span>
 <span class="sd">            This argument is valid only when *poissonDefinition*=VALUE. The default value is 0.5.</span>
 <span class="sd">        integrationRule</span>
 <span class="sd">            A SymbolicConstant specifying the shell section integration rule. Possible values are</span>
@@ -1049,7 +1050,7 @@
 <span class="sd">        Returns</span>
 <span class="sd">        -------</span>
 <span class="sd">            A HomogeneousShellSection object.</span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">sections</span><span class="p">[</span><span class="n">name</span><span class="p">]</span> <span class="o">=</span> <span class="n">section</span> <span class="o">=</span> <span class="n">HomogeneousShellSection</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">material</span><span class="p">,</span> <span class="n">thickness</span><span class="p">,</span> <span class="n">numIntPts</span><span class="p">,</span> <span class="n">thicknessType</span><span class="p">,</span>
                                                                 <span class="n">preIntegrate</span><span class="p">,</span> <span class="n">poissonDefinition</span><span class="p">,</span> <span class="n">poisson</span><span class="p">,</span>
                                                                 <span class="n">integrationRule</span><span class="p">,</span> <span class="n">temperature</span><span class="p">,</span> <span class="n">idealization</span><span class="p">,</span> <span class="n">nTemp</span><span class="p">,</span>
@@ -1058,7 +1059,7 @@
         <span class="k">return</span> <span class="n">section</span></div>
 
 <div class="viewcode-block" id="SectionOdb.HomogeneousSolidSection"><a class="viewcode-back" href="../../../reference/mdb/model/section.html#abaqus.Section.SectionOdb.SectionOdb.HomogeneousSolidSection">[docs]</a>    <span class="k">def</span> <span class="nf">HomogeneousSolidSection</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">material</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">thickness</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mi">1</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">HomogeneousSolidSection</span><span class="p">:</span>
-        <span class="sd">"""This method creates a HomogeneousSolidSection object.</span>
+        <span class="sd">&quot;&quot;&quot;This method creates a HomogeneousSolidSection object.</span>
 
 <span class="sd">        Notes</span>
 <span class="sd">        -----</span>
@@ -1087,15 +1088,15 @@
 <span class="sd">        ------</span>
 <span class="sd">        InvalidNameError</span>
 <span class="sd">        RangeError</span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">sections</span><span class="p">[</span><span class="n">name</span><span class="p">]</span> <span class="o">=</span> <span class="n">section</span> <span class="o">=</span> <span class="n">HomogeneousSolidSection</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">material</span><span class="p">,</span> <span class="n">thickness</span><span class="p">)</span>
         <span class="k">return</span> <span class="n">section</span></div>
 
 <div class="viewcode-block" id="SectionOdb.MembraneSection"><a class="viewcode-back" href="../../../reference/mdb/model/section.html#abaqus.Section.SectionOdb.SectionOdb.MembraneSection">[docs]</a>    <span class="k">def</span> <span class="nf">MembraneSection</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">material</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">thickness</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span>
                         <span class="n">thicknessType</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="n">UNIFORM</span><span class="p">,</span>
                         <span class="n">poissonDefinition</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="n">DEFAULT</span><span class="p">,</span> <span class="n">poisson</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span>
-                        <span class="n">thicknessField</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">''</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">MembraneSection</span><span class="p">:</span>
-        <span class="sd">"""This method creates a MembraneSection object.</span>
+                        <span class="n">thicknessField</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">MembraneSection</span><span class="p">:</span>
+        <span class="sd">&quot;&quot;&quot;This method creates a MembraneSection object.</span>
 
 <span class="sd">        Notes</span>
 <span class="sd">        -----</span>
@@ -1120,13 +1121,13 @@
 <span class="sd">            elements. Possible values are UNIFORM, ANALYTICAL_FIELD, and DISCRETE_FIELD. The default</span>
 <span class="sd">            value is UNIFORM.</span>
 <span class="sd">        poissonDefinition</span>
-<span class="sd">            A SymbolicConstant specifying whether to use the default value for the Poisson's ratio.</span>
-<span class="sd">            Possible values are:DEFAULT, specifying that the default value for the Poisson's ratio</span>
+<span class="sd">            A SymbolicConstant specifying whether to use the default value for the Poisson&#39;s ratio.</span>
+<span class="sd">            Possible values are:DEFAULT, specifying that the default value for the Poisson&#39;s ratio</span>
 <span class="sd">            is 0.5 in an Abaqus/Standard analysis and is obtained from the material definition in an</span>
-<span class="sd">            Abaqus/Explicit analysis.VALUE, specifying that the Poisson's ratio used in the analysis</span>
+<span class="sd">            Abaqus/Explicit analysis.VALUE, specifying that the Poisson&#39;s ratio used in the analysis</span>
 <span class="sd">            is the value provided in *poisson*.The default value is DEFAULT.</span>
 <span class="sd">        poisson</span>
-<span class="sd">            A Float specifying the section Poisson's ratio. Possible values are −1.0 ≤≤ *poisson* ≤≤</span>
+<span class="sd">            A Float specifying the section Poisson&#39;s ratio. Possible values are −1.0 ≤≤ *poisson* ≤≤</span>
 <span class="sd">            0.5. This argument is valid only when *poissonDefinition*=VALUE. The default value is</span>
 <span class="sd">            0.5.</span>
 <span class="sd">        thicknessField</span>
@@ -1142,14 +1143,14 @@
 <span class="sd">        Raises</span>
 <span class="sd">        ------</span>
 <span class="sd">            RangeError and InvalidNameError.</span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">sections</span><span class="p">[</span><span class="n">name</span><span class="p">]</span> <span class="o">=</span> <span class="n">section</span> <span class="o">=</span> <span class="n">MembraneSection</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">material</span><span class="p">,</span> <span class="n">thickness</span><span class="p">,</span> <span class="n">thicknessType</span><span class="p">,</span> <span class="n">poissonDefinition</span><span class="p">,</span>
                                                         <span class="n">poisson</span><span class="p">,</span> <span class="n">thicknessField</span><span class="p">)</span>
         <span class="k">return</span> <span class="n">section</span></div>
 
 <div class="viewcode-block" id="SectionOdb.MPCSection"><a class="viewcode-back" href="../../../reference/mdb/model/section.html#abaqus.Section.SectionOdb.SectionOdb.MPCSection">[docs]</a>    <span class="k">def</span> <span class="nf">MPCSection</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">mpcType</span><span class="p">:</span> <span class="n">SymbolicConstant</span><span class="p">,</span> <span class="n">userMode</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="n">DOF_MODE</span><span class="p">,</span>
                    <span class="n">userType</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">0</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">MPCSection</span><span class="p">:</span>
-        <span class="sd">"""This method creates a MPCSection object.</span>
+        <span class="sd">&quot;&quot;&quot;This method creates a MPCSection object.</span>
 
 <span class="sd">        Notes</span>
 <span class="sd">        -----</span>
@@ -1183,13 +1184,13 @@
 <span class="sd">        Raises</span>
 <span class="sd">        ------</span>
 <span class="sd">            RangeError and InvalidNameError.</span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">sections</span><span class="p">[</span><span class="n">name</span><span class="p">]</span> <span class="o">=</span> <span class="n">section</span> <span class="o">=</span> <span class="n">MPCSection</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">mpcType</span><span class="p">,</span> <span class="n">userMode</span><span class="p">,</span> <span class="n">userType</span><span class="p">)</span>
         <span class="k">return</span> <span class="n">section</span></div>
 
 <div class="viewcode-block" id="SectionOdb.PEGSection"><a class="viewcode-back" href="../../../reference/mdb/model/section.html#abaqus.Section.SectionOdb.SectionOdb.PEGSection">[docs]</a>    <span class="k">def</span> <span class="nf">PEGSection</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">material</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">thickness</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span> <span class="n">wedgeAngle1</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span>
                    <span class="n">wedgeAngle2</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mi">0</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">PEGSection</span><span class="p">:</span>
-        <span class="sd">"""This method creates a PEGSection object.</span>
+        <span class="sd">&quot;&quot;&quot;This method creates a PEGSection object.</span>
 
 <span class="sd">        Notes</span>
 <span class="sd">        -----</span>
@@ -1224,12 +1225,12 @@
 <span class="sd">        ------</span>
 <span class="sd">        InvalidNameError</span>
 <span class="sd">        RangeError</span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">sections</span><span class="p">[</span><span class="n">name</span><span class="p">]</span> <span class="o">=</span> <span class="n">section</span> <span class="o">=</span> <span class="n">PEGSection</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">material</span><span class="p">,</span> <span class="n">thickness</span><span class="p">,</span> <span class="n">wedgeAngle1</span><span class="p">,</span> <span class="n">wedgeAngle2</span><span class="p">)</span>
         <span class="k">return</span> <span class="n">section</span></div>
 
 <div class="viewcode-block" id="SectionOdb.SurfaceSection"><a class="viewcode-back" href="../../../reference/mdb/model/section.html#abaqus.Section.SectionOdb.SectionOdb.SurfaceSection">[docs]</a>    <span class="k">def</span> <span class="nf">SurfaceSection</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">useDensity</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="n">OFF</span><span class="p">,</span> <span class="n">density</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mi">0</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">SurfaceSection</span><span class="p">:</span>
-        <span class="sd">"""This method creates a SurfaceSection object.</span>
+        <span class="sd">&quot;&quot;&quot;This method creates a SurfaceSection object.</span>
 
 <span class="sd">        Notes</span>
 <span class="sd">        -----</span>
@@ -1258,12 +1259,12 @@
 <span class="sd">        Raises</span>
 <span class="sd">        ------</span>
 <span class="sd">            RangeError and InvalidNameError.</span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">sections</span><span class="p">[</span><span class="n">name</span><span class="p">]</span> <span class="o">=</span> <span class="n">section</span> <span class="o">=</span> <span class="n">SurfaceSection</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">useDensity</span><span class="p">,</span> <span class="n">density</span><span class="p">)</span>
         <span class="k">return</span> <span class="n">section</span></div>
 
 <div class="viewcode-block" id="SectionOdb.TrussSection"><a class="viewcode-back" href="../../../reference/mdb/model/section.html#abaqus.Section.SectionOdb.SectionOdb.TrussSection">[docs]</a>    <span class="k">def</span> <span class="nf">TrussSection</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">material</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">area</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mi">1</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">TrussSection</span><span class="p">:</span>
-        <span class="sd">"""This method creates a TrussSection object.</span>
+        <span class="sd">&quot;&quot;&quot;This method creates a TrussSection object.</span>
 
 <span class="sd">        Notes</span>
 <span class="sd">        -----</span>
@@ -1291,7 +1292,7 @@
 <span class="sd">        Raises</span>
 <span class="sd">        ------</span>
 <span class="sd">            RangeError and InvalidNameError.</span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">sections</span><span class="p">[</span><span class="n">name</span><span class="p">]</span> <span class="o">=</span> <span class="n">section</span> <span class="o">=</span> <span class="n">TrussSection</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">material</span><span class="p">,</span> <span class="n">area</span><span class="p">)</span>
         <span class="k">return</span> <span class="n">section</span></div></div>
 </pre></div>

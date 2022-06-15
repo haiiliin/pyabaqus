@@ -5,10 +5,10 @@
     <meta name="color-scheme" content="light dark"><link rel="index" title="Index" href="../../../genindex.html" /><link rel="search" title="Search" href="../../../search.html" />
         <link rel="canonical" href="https://pyabaqus.haiiliin.com/_modules/abaqus/Load/ConnectorMoment.html" />
 
-    <meta name="generator" content="sphinx-4.5.0, furo 2022.04.07"/>
-        <title>abaqus.Load.ConnectorMoment - pyabaqus 1.0.16 documentation</title>
+    <meta name="generator" content="sphinx-4.5.0, furo 2022.06.04.1"/>
+        <title>abaqus.Load.ConnectorMoment - pyabaqus 1.0.18 documentation</title>
       <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/styles/furo.css?digest=68f4518137b9aefe99b631505a2064c3c42c9852" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/styles/furo.css?digest=40978830699223671f4072448e654b5958f38b89" />
     <link rel="stylesheet" type="text/css" href="../../../_static/styles/furo-extensions.css?digest=30d1aed668e5c3a91c3e3bf6a60b675221979f0e" />
     
     
@@ -123,7 +123,7 @@
       </label>
     </div>
     <div class="header-center">
-      <a href="../../../index.html"><div class="brand">pyabaqus 1.0.16 documentation</div></a>
+      <a href="../../../index.html"><div class="brand">pyabaqus 1.0.18 documentation</div></a>
     </div>
     <div class="header-right">
       <div class="theme-toggle-container theme-toggle-header">
@@ -146,7 +146,7 @@
       <div class="sidebar-sticky"><a class="sidebar-brand" href="../../../index.html">
   
   
-  <span class="sidebar-brand-text">pyabaqus 1.0.16 documentation</span>
+  <span class="sidebar-brand-text">pyabaqus 1.0.18 documentation</span>
   
 </a><form class="sidebar-search-container" method="get" action="../../../search.html" role="search">
   <input class="sidebar-search" placeholder=Search name="q" aria-label="Search">
@@ -286,7 +286,8 @@
           </svg>
           <span>Back to top</span>
         </a>
-        <div class="content-icon-container"><div class="theme-toggle-container theme-toggle-content">
+        <div class="content-icon-container">
+          <div class="theme-toggle-container theme-toggle-content">
             <button class="theme-toggle">
               <div class="visually-hidden">Toggle Light / Dark / Auto color theme</div>
               <svg class="theme-icon-when-auto"><use href="#svg-sun-half"></use></svg>
@@ -309,7 +310,7 @@
 
 
 <div class="viewcode-block" id="ConnectorMoment"><a class="viewcode-back" href="../../../reference/mdb/model/load.html#abaqus.Load.ConnectorMoment.ConnectorMoment">[docs]</a><span class="k">class</span> <span class="nc">ConnectorMoment</span><span class="p">(</span><span class="n">Load</span><span class="p">):</span>
-    <span class="sd">"""The ConnectorMoment object stores the data for a connector moment.</span>
+    <span class="sd">&quot;&quot;&quot;The ConnectorMoment object stores the data for a connector moment.</span>
 <span class="sd">    The ConnectorMoment object is derived from the Load object. </span>
 
 <span class="sd">    Attributes</span>
@@ -337,29 +338,29 @@
 <span class="sd">        import load</span>
 <span class="sd">        mdb.models[name].loads[name]</span>
 
-<span class="sd">    """</span>
+<span class="sd">    &quot;&quot;&quot;</span>
 
     <span class="c1"># A String specifying the load repository key. </span>
-    <span class="n">name</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">''</span>
+    <span class="n">name</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span>
 
     <span class="c1"># A String specifying the name of the assembled fastener to which the load will be </span>
     <span class="c1"># applied. This argument is not valid when *region* is specified. When this argument is </span>
     <span class="c1"># specified, *fastenerSetName* must also be specified. The default value is an empty </span>
     <span class="c1"># string. </span>
-    <span class="n">fastenerName</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">''</span>
+    <span class="n">fastenerName</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span>
 
     <span class="c1"># A String specifying the assembled fastener template model set to which the load will be </span>
     <span class="c1"># applied. This argument is not valid when *region* is specified. When this argument is </span>
     <span class="c1"># specified, *fastenerName* must also be specified. The default value is an empty string. </span>
-    <span class="n">fastenerSetName</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">''</span>
+    <span class="n">fastenerSetName</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span>
 
     <span class="c1"># A Region object specifying the region to which the load is applied. </span>
     <span class="n">region</span><span class="p">:</span> <span class="n">Region</span> <span class="o">=</span> <span class="n">Region</span><span class="p">()</span>
 
-    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">createStepName</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">region</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">''</span><span class="p">,</span> <span class="n">fastenerName</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">''</span><span class="p">,</span>
-                 <span class="n">fastenerSetName</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">''</span><span class="p">,</span> <span class="n">m1</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">m2</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">m3</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">createStepName</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">region</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">fastenerName</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span><span class="p">,</span>
+                 <span class="n">fastenerSetName</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">m1</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">m2</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">m3</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
                  <span class="n">amplitude</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="n">UNSET</span><span class="p">):</span>
-        <span class="sd">"""This method creates a ConnectorMoment object on a wire region. Alternatively, the load</span>
+        <span class="sd">&quot;&quot;&quot;This method creates a ConnectorMoment object on a wire region. Alternatively, the load</span>
 <span class="sd">        may also be applied to a wire set referenced from an assembled fastener template model.</span>
 
 <span class="sd">        Notes</span>
@@ -389,13 +390,13 @@
 <span class="sd">            applied. This argument is not valid when *region* is specified. When this argument is </span>
 <span class="sd">            specified, *fastenerName* must also be specified. The default value is an empty string. </span>
 <span class="sd">        m1</span>
-<span class="sd">            A Float or a Complex specifying the moment component in the connector's local </span>
+<span class="sd">            A Float or a Complex specifying the moment component in the connector&#39;s local </span>
 <span class="sd">            4-direction. </span>
 <span class="sd">        m2</span>
-<span class="sd">            A Float or a Complex specifying the moment component in the connector's local </span>
+<span class="sd">            A Float or a Complex specifying the moment component in the connector&#39;s local </span>
 <span class="sd">            5-direction. </span>
 <span class="sd">        m3</span>
-<span class="sd">            A Float or a Complex specifying the moment component in the connector's local </span>
+<span class="sd">            A Float or a Complex specifying the moment component in the connector&#39;s local </span>
 <span class="sd">            6-direction. </span>
 <span class="sd">        amplitude</span>
 <span class="sd">            A String or the SymbolicConstant UNSET specifying the name of the amplitude reference. </span>
@@ -405,13 +406,13 @@
 <span class="sd">        Returns</span>
 <span class="sd">        -------</span>
 <span class="sd">            A ConnectorMoment object.</span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">()</span>
         <span class="k">pass</span>
 
-<div class="viewcode-block" id="ConnectorMoment.setValues"><a class="viewcode-back" href="../../../reference/mdb/model/load.html#abaqus.Load.ConnectorMoment.ConnectorMoment.setValues">[docs]</a>    <span class="k">def</span> <span class="nf">setValues</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">region</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">''</span><span class="p">,</span> <span class="n">fastenerName</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">''</span><span class="p">,</span> <span class="n">fastenerSetName</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">''</span><span class="p">,</span> <span class="n">m1</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+<div class="viewcode-block" id="ConnectorMoment.setValues"><a class="viewcode-back" href="../../../reference/mdb/model/load.html#abaqus.Load.ConnectorMoment.ConnectorMoment.setValues">[docs]</a>    <span class="k">def</span> <span class="nf">setValues</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">region</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">fastenerName</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">fastenerSetName</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">m1</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
                   <span class="n">m2</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">m3</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">amplitude</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="n">UNSET</span><span class="p">):</span>
-        <span class="sd">"""This method modifies the data for an existing ConnectorMoment object in the step where</span>
+        <span class="sd">&quot;&quot;&quot;This method modifies the data for an existing ConnectorMoment object in the step where</span>
 <span class="sd">        it is created.</span>
 <span class="sd">        </span>
 <span class="sd">        Parameters</span>
@@ -429,27 +430,27 @@
 <span class="sd">            applied. This argument is not valid when *region* is specified. When this argument is </span>
 <span class="sd">            specified, *fastenerName* must also be specified. The default value is an empty string. </span>
 <span class="sd">        m1</span>
-<span class="sd">            A Float or a Complex specifying the moment component in the connector's local </span>
+<span class="sd">            A Float or a Complex specifying the moment component in the connector&#39;s local </span>
 <span class="sd">            4-direction. </span>
 <span class="sd">        m2</span>
-<span class="sd">            A Float or a Complex specifying the moment component in the connector's local </span>
+<span class="sd">            A Float or a Complex specifying the moment component in the connector&#39;s local </span>
 <span class="sd">            5-direction. </span>
 <span class="sd">        m3</span>
-<span class="sd">            A Float or a Complex specifying the moment component in the connector's local </span>
+<span class="sd">            A Float or a Complex specifying the moment component in the connector&#39;s local </span>
 <span class="sd">            6-direction. </span>
 <span class="sd">        amplitude</span>
 <span class="sd">            A String or the SymbolicConstant UNSET specifying the name of the amplitude reference. </span>
 <span class="sd">            UNSET should be used if the load has no amplitude reference. The default value is UNSET. </span>
 <span class="sd">            You should provide the *amplitude* argument only if it is valid for the specified step. </span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span></div>
 
 <div class="viewcode-block" id="ConnectorMoment.setValuesInStep"><a class="viewcode-back" href="../../../reference/mdb/model/load.html#abaqus.Load.ConnectorMoment.ConnectorMoment.setValuesInStep">[docs]</a>    <span class="k">def</span> <span class="nf">setValuesInStep</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">stepName</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
                         <span class="n">m1</span><span class="p">:</span> <span class="n">typing</span><span class="o">.</span><span class="n">Union</span><span class="p">[</span><span class="n">SymbolicConstant</span><span class="p">,</span> <span class="nb">float</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
                         <span class="n">m2</span><span class="p">:</span> <span class="n">typing</span><span class="o">.</span><span class="n">Union</span><span class="p">[</span><span class="n">SymbolicConstant</span><span class="p">,</span> <span class="nb">float</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
                         <span class="n">m3</span><span class="p">:</span> <span class="n">typing</span><span class="o">.</span><span class="n">Union</span><span class="p">[</span><span class="n">SymbolicConstant</span><span class="p">,</span> <span class="nb">float</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
-                        <span class="n">amplitude</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">''</span><span class="p">):</span>
-        <span class="sd">"""This method modifies the propagating data for an existing ConnectorMoment object in the</span>
+                        <span class="n">amplitude</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;This method modifies the propagating data for an existing ConnectorMoment object in the</span>
 <span class="sd">        specified step.</span>
 <span class="sd">        </span>
 <span class="sd">        Parameters</span>
@@ -458,17 +459,17 @@
 <span class="sd">            A String specifying the name of the step in which the load is modified. </span>
 <span class="sd">        m1</span>
 <span class="sd">            A Float, a Complex, or a SymbolicConstant specifying the moment component in the </span>
-<span class="sd">            connector's local 4-direction. Possible values for the SymbolicConstant are UNCHANGED </span>
+<span class="sd">            connector&#39;s local 4-direction. Possible values for the SymbolicConstant are UNCHANGED </span>
 <span class="sd">            and FREED. UNCHANGED should be used if the load component is propagated from the </span>
 <span class="sd">            previous static analysis step. Use FREED to remove a previously defined load component. </span>
 <span class="sd">        m2</span>
 <span class="sd">            A Float, a Complex, or a SymbolicConstant specifying the moment component in the </span>
-<span class="sd">            connector's local 5-direction. Possible values for the SymbolicConstant are UNCHANGED </span>
+<span class="sd">            connector&#39;s local 5-direction. Possible values for the SymbolicConstant are UNCHANGED </span>
 <span class="sd">            and FREED. UNCHANGED should be used if the load component is propagated from the </span>
 <span class="sd">            previous static analysis step. Use FREED to remove a previously defined load component. </span>
 <span class="sd">        m3</span>
 <span class="sd">            A Float, a Complex, or a SymbolicConstant specifying the moment component in the </span>
-<span class="sd">            connector's local 6-direction. Possible values for the SymbolicConstant are UNCHANGED </span>
+<span class="sd">            connector&#39;s local 6-direction. Possible values for the SymbolicConstant are UNCHANGED </span>
 <span class="sd">            and FREED. UNCHANGED should be used if the load component is propagated from the </span>
 <span class="sd">            previous static analysis step. Use FREED to remove a previously defined load component. </span>
 <span class="sd">        amplitude</span>
@@ -477,7 +478,7 @@
 <span class="sd">            amplitude is propagated from the previous static analysis step. FREED should be used if </span>
 <span class="sd">            the load is changed to have no amplitude reference. You should provide the *amplitude* </span>
 <span class="sd">            argument only if it is valid for the specified step. </span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span></div></div>
 </pre></div>
         </article>

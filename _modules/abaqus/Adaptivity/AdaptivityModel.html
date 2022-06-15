@@ -5,10 +5,10 @@
     <meta name="color-scheme" content="light dark"><link rel="index" title="Index" href="../../../genindex.html" /><link rel="search" title="Search" href="../../../search.html" />
         <link rel="canonical" href="https://pyabaqus.haiiliin.com/_modules/abaqus/Adaptivity/AdaptivityModel.html" />
 
-    <meta name="generator" content="sphinx-4.5.0, furo 2022.04.07"/>
-        <title>abaqus.Adaptivity.AdaptivityModel - pyabaqus 1.0.16 documentation</title>
+    <meta name="generator" content="sphinx-4.5.0, furo 2022.06.04.1"/>
+        <title>abaqus.Adaptivity.AdaptivityModel - pyabaqus 1.0.18 documentation</title>
       <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/styles/furo.css?digest=68f4518137b9aefe99b631505a2064c3c42c9852" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/styles/furo.css?digest=40978830699223671f4072448e654b5958f38b89" />
     <link rel="stylesheet" type="text/css" href="../../../_static/styles/furo-extensions.css?digest=30d1aed668e5c3a91c3e3bf6a60b675221979f0e" />
     
     
@@ -123,7 +123,7 @@
       </label>
     </div>
     <div class="header-center">
-      <a href="../../../index.html"><div class="brand">pyabaqus 1.0.16 documentation</div></a>
+      <a href="../../../index.html"><div class="brand">pyabaqus 1.0.18 documentation</div></a>
     </div>
     <div class="header-right">
       <div class="theme-toggle-container theme-toggle-header">
@@ -146,7 +146,7 @@
       <div class="sidebar-sticky"><a class="sidebar-brand" href="../../../index.html">
   
   
-  <span class="sidebar-brand-text">pyabaqus 1.0.16 documentation</span>
+  <span class="sidebar-brand-text">pyabaqus 1.0.18 documentation</span>
   
 </a><form class="sidebar-search-container" method="get" action="../../../search.html" role="search">
   <input class="sidebar-search" placeholder=Search name="q" aria-label="Search">
@@ -286,7 +286,8 @@
           </svg>
           <span>Back to top</span>
         </a>
-        <div class="content-icon-container"><div class="theme-toggle-container theme-toggle-content">
+        <div class="content-icon-container">
+          <div class="theme-toggle-container theme-toggle-content">
             <button class="theme-toggle">
               <div class="visually-hidden">Toggle Light / Dark / Auto color theme</div>
               <svg class="theme-icon-when-auto"><use href="#svg-sun-half"></use></svg>
@@ -316,7 +317,7 @@
 
 
 <div class="viewcode-block" id="AdaptivityModel"><a class="viewcode-back" href="../../../user/mdb/model/adaptivity.html#abaqus.Adaptivity.AdaptivityModel.AdaptivityModel">[docs]</a><span class="k">class</span> <span class="nc">AdaptivityModel</span><span class="p">(</span><span class="n">ModelBase</span><span class="p">):</span>
-    <span class="sd">"""Abaqus creates a Model object named `Model-1` when a session is started.</span>
+    <span class="sd">&quot;&quot;&quot;Abaqus creates a Model object named `Model-1` when a session is started.</span>
 
 <span class="sd">    Notes</span>
 <span class="sd">    -----</span>
@@ -326,10 +327,10 @@
 
 <span class="sd">        mdb.models[name]</span>
 
-<span class="sd">    """</span>
+<span class="sd">    &quot;&quot;&quot;</span>
 
     <span class="k">def</span> <span class="nf">adaptiveRemesh</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">odb</span><span class="p">:</span> <span class="n">Odb</span><span class="p">):</span>
-        <span class="sd">"""This method remeshes the model using the active remesh rules in the model and the error</span>
+        <span class="sd">&quot;&quot;&quot;This method remeshes the model using the active remesh rules in the model and the error</span>
 <span class="sd">        indicator results from a previous analysis.</span>
 <span class="sd">        </span>
 <span class="sd">        Parameters</span>
@@ -340,12 +341,12 @@
 <span class="sd">        Returns</span>
 <span class="sd">        -------</span>
 <span class="sd">            An AdaptivityIteration object.</span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span>
 
-<div class="viewcode-block" id="AdaptivityModel.AdaptiveMeshConstraint"><a class="viewcode-back" href="../../../reference/mdb/model/adaptivity.html#abaqus.Adaptivity.AdaptivityModel.AdaptivityModel.AdaptiveMeshConstraint">[docs]</a>    <span class="k">def</span> <span class="nf">AdaptiveMeshConstraint</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">''</span><span class="p">,</span> <span class="n">category</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">region</span><span class="p">:</span> <span class="n">Region</span> <span class="o">=</span> <span class="n">Region</span><span class="p">(),</span>
+<div class="viewcode-block" id="AdaptivityModel.AdaptiveMeshConstraint"><a class="viewcode-back" href="../../../reference/mdb/model/adaptivity.html#abaqus.Adaptivity.AdaptivityModel.AdaptivityModel.AdaptiveMeshConstraint">[docs]</a>    <span class="k">def</span> <span class="nf">AdaptiveMeshConstraint</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">category</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">region</span><span class="p">:</span> <span class="n">Region</span> <span class="o">=</span> <span class="n">Region</span><span class="p">(),</span>
                                <span class="n">localCsys</span><span class="p">:</span> <span class="n">DatumCsys</span> <span class="o">=</span> <span class="kc">None</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">AdaptiveMeshConstraint</span><span class="p">:</span>
-        <span class="sd">"""The AdaptiveMeshConstraint object is the abstract base type for other Arbitrary</span>
+        <span class="sd">&quot;&quot;&quot;The AdaptiveMeshConstraint object is the abstract base type for other Arbitrary</span>
 <span class="sd">        Lagrangian Eularian (ALE) style AdaptiveMeshConstraint objects. The</span>
 <span class="sd">        AdaptiveMeshConstraint object has no explicit constructor. The methods and members of</span>
 <span class="sd">        the AdaptiveMeshConstraint object are common to all objects derived from the</span>
@@ -369,10 +370,10 @@
 <span class="sd">        region</span>
 <span class="sd">             A Region object specifying the region to which the adaptive mesh constraint is applied.</span>
 <span class="sd">        localCsys</span>
-<span class="sd">             None or a DatumCsys object specifying the local coordinate system of the adaptive mesh  constraint's</span>
+<span class="sd">             None or a DatumCsys object specifying the local coordinate system of the adaptive mesh  constraint&#39;s</span>
 <span class="sd">             degrees of freedom. If *localCsys*=None, the degrees of freedom are defined  in the global coordinate</span>
 <span class="sd">             system. The default value is None.</span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">adaptiveMeshConstraints</span><span class="p">[</span><span class="n">name</span><span class="p">]</span> <span class="o">=</span> <span class="n">adaptiveMeshConstraint</span> <span class="o">=</span> <span class="n">AdaptiveMeshConstraint</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">category</span><span class="p">,</span> <span class="n">region</span><span class="p">,</span>
                                                                                              <span class="n">localCsys</span><span class="p">)</span>
         <span class="k">return</span> <span class="n">adaptiveMeshConstraint</span></div>
@@ -387,7 +388,7 @@
                             <span class="n">equipotentialSmoothingWeight</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="n">meshConstraintAngle</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mi">60</span><span class="p">,</span>
                             <span class="n">originalConfigurationProjectionWeight</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span>
                             <span class="n">standardVolumetricSmoothingWeight</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mi">0</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">AdaptiveMeshControl</span><span class="p">:</span>
-        <span class="sd">"""This method creates an AdaptiveMeshControl object.</span>
+        <span class="sd">&quot;&quot;&quot;This method creates an AdaptiveMeshControl object.</span>
 
 <span class="sd">        Notes</span>
 <span class="sd">        -----</span>
@@ -449,7 +450,7 @@
 <span class="sd">        Returns</span>
 <span class="sd">        -------</span>
 <span class="sd">            An AdaptiveMeshControl object</span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">adaptiveMeshControls</span><span class="p">[</span><span class="n">name</span><span class="p">]</span> <span class="o">=</span> <span class="n">adaptiveMeshControl</span> <span class="o">=</span> <span class="n">AdaptiveMeshControl</span><span class="p">(</span>
             <span class="n">name</span><span class="p">,</span> <span class="n">remapping</span><span class="p">,</span> <span class="n">smoothingAlgorithm</span><span class="p">,</span> <span class="n">smoothingPriority</span><span class="p">,</span> <span class="n">initialFeatureAngle</span><span class="p">,</span> <span class="n">transitionFeatureAngle</span><span class="p">,</span>
             <span class="n">momentumAdvection</span><span class="p">,</span> <span class="n">meshingPredictor</span><span class="p">,</span> <span class="n">curvatureRefinement</span><span class="p">,</span> <span class="n">volumetricSmoothingWeight</span><span class="p">,</span>
@@ -466,7 +467,7 @@
                                            <span class="n">ur3</span><span class="p">:</span> <span class="n">typing</span><span class="o">.</span><span class="n">Union</span><span class="p">[</span><span class="n">SymbolicConstant</span><span class="p">,</span> <span class="nb">float</span><span class="p">]</span> <span class="o">=</span> <span class="n">UNSET</span><span class="p">,</span>
                                            <span class="n">amplitude</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="n">UNSET</span><span class="p">,</span> <span class="n">motionType</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="n">INDEPENDENT</span><span class="p">,</span>
                                            <span class="n">localCsys</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="kc">None</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">DisplacementAdaptiveMeshConstraint</span><span class="p">:</span>
-        <span class="sd">"""This method creates a DisplacementAdaptiveMeshConstraint object.</span>
+        <span class="sd">&quot;&quot;&quot;This method creates a DisplacementAdaptiveMeshConstraint object.</span>
 
 <span class="sd">        Notes</span>
 <span class="sd">        -----</span>
@@ -519,18 +520,18 @@
 <span class="sd">            INDEPENDENT.</span>
 <span class="sd">        localCsys</span>
 <span class="sd">            None or a DatumCsys object specifying the local coordinate system of the adaptive mesh</span>
-<span class="sd">            constraint's degrees of freedom. If *localCsys*=None, the degrees of freedom are defined</span>
+<span class="sd">            constraint&#39;s degrees of freedom. If *localCsys*=None, the degrees of freedom are defined</span>
 <span class="sd">            in the global coordinate system. The default value is None.</span>
 
 <span class="sd">        Returns</span>
 <span class="sd">        -------</span>
 <span class="sd">            A DisplacementAdaptiveMeshConstraint object</span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">adaptiveMeshConstraints</span><span class="p">[</span><span class="n">name</span><span class="p">]</span> <span class="o">=</span> <span class="n">adaptiveMeshConstraint</span> <span class="o">=</span> <span class="n">DisplacementAdaptiveMeshConstraint</span><span class="p">(</span>
             <span class="n">name</span><span class="p">,</span> <span class="n">createStepName</span><span class="p">,</span> <span class="n">region</span><span class="p">,</span> <span class="n">u1</span><span class="p">,</span> <span class="n">u2</span><span class="p">,</span> <span class="n">u3</span><span class="p">,</span> <span class="n">ur1</span><span class="p">,</span> <span class="n">ur2</span><span class="p">,</span> <span class="n">ur3</span><span class="p">,</span> <span class="n">amplitude</span><span class="p">,</span> <span class="n">motionType</span><span class="p">,</span> <span class="n">localCsys</span><span class="p">)</span>
         <span class="k">return</span> <span class="n">adaptiveMeshConstraint</span></div>
 
-<div class="viewcode-block" id="AdaptivityModel.RemeshingRule"><a class="viewcode-back" href="../../../reference/mdb/model/adaptivity.html#abaqus.Adaptivity.AdaptivityModel.AdaptivityModel.RemeshingRule">[docs]</a>    <span class="k">def</span> <span class="nf">RemeshingRule</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">stepName</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">variables</span><span class="p">:</span> <span class="nb">tuple</span><span class="p">,</span> <span class="n">description</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">''</span><span class="p">,</span>
+<div class="viewcode-block" id="AdaptivityModel.RemeshingRule"><a class="viewcode-back" href="../../../reference/mdb/model/adaptivity.html#abaqus.Adaptivity.AdaptivityModel.AdaptivityModel.RemeshingRule">[docs]</a>    <span class="k">def</span> <span class="nf">RemeshingRule</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">stepName</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">variables</span><span class="p">:</span> <span class="nb">tuple</span><span class="p">,</span> <span class="n">description</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span><span class="p">,</span>
                       <span class="n">region</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="n">MODEL</span><span class="p">,</span> <span class="n">sizingMethod</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="n">DEFAULT</span><span class="p">,</span>
                       <span class="n">errorTarget</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="n">maxSolutionErrorTarget</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span>
                       <span class="n">minSolutionErrorTarget</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="n">meshBias</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="n">minElementSize</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span>
@@ -539,7 +540,7 @@
                       <span class="n">coarseningFactor</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="n">DEFAULT_LIMIT</span><span class="p">,</span>
                       <span class="n">refinementFactor</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="n">DEFAULT_LIMIT</span><span class="p">,</span>
                       <span class="n">elementCountLimit</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="kc">None</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">RemeshingRule</span><span class="p">:</span>
-        <span class="sd">"""This method creates a RemeshingRule object.</span>
+        <span class="sd">&quot;&quot;&quot;This method creates a RemeshingRule object.</span>
 
 <span class="sd">        Notes</span>
 <span class="sd">        -----</span>
@@ -620,7 +621,7 @@
 <span class="sd">        Returns</span>
 <span class="sd">        -------</span>
 <span class="sd">            A RemeshingRule object</span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">remeshingRules</span><span class="p">[</span><span class="n">name</span><span class="p">]</span> <span class="o">=</span> <span class="n">remeshingRule</span> <span class="o">=</span> <span class="n">RemeshingRule</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">stepName</span><span class="p">,</span> <span class="n">variables</span><span class="p">,</span> <span class="n">description</span><span class="p">,</span> <span class="n">region</span><span class="p">,</span>
                                                                   <span class="n">sizingMethod</span><span class="p">,</span> <span class="n">errorTarget</span><span class="p">,</span> <span class="n">maxSolutionErrorTarget</span><span class="p">,</span>
                                                                   <span class="n">minSolutionErrorTarget</span><span class="p">,</span> <span class="n">meshBias</span><span class="p">,</span> <span class="n">minElementSize</span><span class="p">,</span>
@@ -638,7 +639,7 @@
                                        <span class="n">vr3</span><span class="p">:</span> <span class="n">typing</span><span class="o">.</span><span class="n">Union</span><span class="p">[</span><span class="n">SymbolicConstant</span><span class="p">,</span> <span class="nb">float</span><span class="p">]</span> <span class="o">=</span> <span class="n">UNSET</span><span class="p">,</span> <span class="n">amplitude</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="n">UNSET</span><span class="p">,</span>
                                        <span class="n">localCsys</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
                                        <span class="n">motionType</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="n">INDEPENDENT</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">VelocityAdaptiveMeshConstraint</span><span class="p">:</span>
-        <span class="sd">"""This method creates a VelocityAdaptiveMeshConstraint object.</span>
+        <span class="sd">&quot;&quot;&quot;This method creates a VelocityAdaptiveMeshConstraint object.</span>
 
 <span class="sd">        Notes</span>
 <span class="sd">        -----</span>
@@ -687,7 +688,7 @@
 <span class="sd">            for the specified step.</span>
 <span class="sd">        localCsys</span>
 <span class="sd">            None or a DatumCsys object specifying the local coordinate system of the adaptive mesh</span>
-<span class="sd">            constraint's degrees of freedom. If *localCsys*=None, the degrees of freedom are defined</span>
+<span class="sd">            constraint&#39;s degrees of freedom. If *localCsys*=None, the degrees of freedom are defined</span>
 <span class="sd">            in the global coordinate system. The default value is None.</span>
 <span class="sd">        motionType</span>
 <span class="sd">            A SymbolicConstant specifying the mesh motion in relation to the underlying material.</span>
@@ -697,7 +698,7 @@
 <span class="sd">        Returns</span>
 <span class="sd">        -------</span>
 <span class="sd">            A VelocityAdaptiveMeshConstraint object</span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">adaptiveMeshConstraints</span><span class="p">[</span><span class="n">name</span><span class="p">]</span> <span class="o">=</span> <span class="n">adaptiveMeshConstraint</span> <span class="o">=</span> <span class="n">VelocityAdaptiveMeshConstraint</span><span class="p">(</span>
             <span class="n">name</span><span class="p">,</span> <span class="n">createStepName</span><span class="p">,</span> <span class="n">region</span><span class="p">,</span> <span class="n">v1</span><span class="p">,</span> <span class="n">v2</span><span class="p">,</span> <span class="n">v3</span><span class="p">,</span> <span class="n">vr1</span><span class="p">,</span> <span class="n">vr2</span><span class="p">,</span> <span class="n">vr3</span><span class="p">,</span> <span class="n">amplitude</span><span class="p">,</span> <span class="n">localCsys</span><span class="p">,</span> <span class="n">motionType</span><span class="p">)</span>
         <span class="k">return</span> <span class="n">adaptiveMeshConstraint</span></div></div>

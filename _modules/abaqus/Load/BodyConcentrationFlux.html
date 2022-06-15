@@ -5,10 +5,10 @@
     <meta name="color-scheme" content="light dark"><link rel="index" title="Index" href="../../../genindex.html" /><link rel="search" title="Search" href="../../../search.html" />
         <link rel="canonical" href="https://pyabaqus.haiiliin.com/_modules/abaqus/Load/BodyConcentrationFlux.html" />
 
-    <meta name="generator" content="sphinx-4.5.0, furo 2022.04.07"/>
-        <title>abaqus.Load.BodyConcentrationFlux - pyabaqus 1.0.16 documentation</title>
+    <meta name="generator" content="sphinx-4.5.0, furo 2022.06.04.1"/>
+        <title>abaqus.Load.BodyConcentrationFlux - pyabaqus 1.0.18 documentation</title>
       <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/styles/furo.css?digest=68f4518137b9aefe99b631505a2064c3c42c9852" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/styles/furo.css?digest=40978830699223671f4072448e654b5958f38b89" />
     <link rel="stylesheet" type="text/css" href="../../../_static/styles/furo-extensions.css?digest=30d1aed668e5c3a91c3e3bf6a60b675221979f0e" />
     
     
@@ -123,7 +123,7 @@
       </label>
     </div>
     <div class="header-center">
-      <a href="../../../index.html"><div class="brand">pyabaqus 1.0.16 documentation</div></a>
+      <a href="../../../index.html"><div class="brand">pyabaqus 1.0.18 documentation</div></a>
     </div>
     <div class="header-right">
       <div class="theme-toggle-container theme-toggle-header">
@@ -146,7 +146,7 @@
       <div class="sidebar-sticky"><a class="sidebar-brand" href="../../../index.html">
   
   
-  <span class="sidebar-brand-text">pyabaqus 1.0.16 documentation</span>
+  <span class="sidebar-brand-text">pyabaqus 1.0.18 documentation</span>
   
 </a><form class="sidebar-search-container" method="get" action="../../../search.html" role="search">
   <input class="sidebar-search" placeholder=Search name="q" aria-label="Search">
@@ -286,7 +286,8 @@
           </svg>
           <span>Back to top</span>
         </a>
-        <div class="content-icon-container"><div class="theme-toggle-container theme-toggle-content">
+        <div class="content-icon-container">
+          <div class="theme-toggle-container theme-toggle-content">
             <button class="theme-toggle">
               <div class="visually-hidden">Toggle Light / Dark / Auto color theme</div>
               <svg class="theme-icon-when-auto"><use href="#svg-sun-half"></use></svg>
@@ -307,7 +308,7 @@
 
 
 <div class="viewcode-block" id="BodyConcentrationFlux"><a class="viewcode-back" href="../../../reference/mdb/model/load.html#abaqus.Load.BodyConcentrationFlux.BodyConcentrationFlux">[docs]</a><span class="k">class</span> <span class="nc">BodyConcentrationFlux</span><span class="p">(</span><span class="n">Load</span><span class="p">):</span>
-    <span class="sd">"""The BodyConcentrationFlux object defines body concentration flux from a region or into a</span>
+    <span class="sd">&quot;&quot;&quot;The BodyConcentrationFlux object defines body concentration flux from a region or into a</span>
 <span class="sd">    region. </span>
 <span class="sd">    The BodyConcentrationFlux object is derived from the Load object. </span>
 
@@ -334,10 +335,10 @@
 <span class="sd">        import load</span>
 <span class="sd">        mdb.models[name].loads[name]</span>
 
-<span class="sd">    """</span>
+<span class="sd">    &quot;&quot;&quot;</span>
 
     <span class="c1"># A String specifying the load repository key. </span>
-    <span class="n">name</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">''</span>
+    <span class="n">name</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span>
 
     <span class="c1"># A SymbolicConstant specifying how the body concentration flux is distributed spatially. </span>
     <span class="c1"># Possible values are UNIFORM, USER_DEFINED, and FIELD. The default value is UNIFORM. </span>
@@ -346,14 +347,14 @@
     <span class="c1"># A String specifying the name of the AnalyticalField object associated with this load. </span>
     <span class="c1"># The *field* argument applies only when *distributionType*=FIELD. The default value is an </span>
     <span class="c1"># empty string. </span>
-    <span class="n">field</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">''</span>
+    <span class="n">field</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span>
 
     <span class="c1"># A Region object specifying the region to which the load is applied. </span>
     <span class="n">region</span><span class="p">:</span> <span class="n">Region</span> <span class="o">=</span> <span class="n">Region</span><span class="p">()</span>
 
-    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">createStepName</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">region</span><span class="p">:</span> <span class="n">Region</span><span class="p">,</span> <span class="n">magnitude</span><span class="p">:</span> <span class="nb">float</span><span class="p">,</span> <span class="n">field</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">''</span><span class="p">,</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">createStepName</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">region</span><span class="p">:</span> <span class="n">Region</span><span class="p">,</span> <span class="n">magnitude</span><span class="p">:</span> <span class="nb">float</span><span class="p">,</span> <span class="n">field</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span><span class="p">,</span>
                  <span class="n">distributionType</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="n">UNIFORM</span><span class="p">,</span> <span class="n">amplitude</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="n">UNSET</span><span class="p">):</span>
-        <span class="sd">"""This method creates a BodyConcentrationFlux object.</span>
+        <span class="sd">&quot;&quot;&quot;This method creates a BodyConcentrationFlux object.</span>
 
 <span class="sd">        Notes</span>
 <span class="sd">        -----</span>
@@ -389,12 +390,12 @@
 <span class="sd">        Returns</span>
 <span class="sd">        -------</span>
 <span class="sd">            A BodyConcentrationFlux object.</span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">()</span>
         <span class="k">pass</span>
 
-<div class="viewcode-block" id="BodyConcentrationFlux.setValues"><a class="viewcode-back" href="../../../reference/mdb/model/load.html#abaqus.Load.BodyConcentrationFlux.BodyConcentrationFlux.setValues">[docs]</a>    <span class="k">def</span> <span class="nf">setValues</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">field</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">''</span><span class="p">,</span> <span class="n">distributionType</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="n">UNIFORM</span><span class="p">,</span> <span class="n">amplitude</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="n">UNSET</span><span class="p">):</span>
-        <span class="sd">"""This method modifies the data for an existing BodyConcentrationFlux object in the step</span>
+<div class="viewcode-block" id="BodyConcentrationFlux.setValues"><a class="viewcode-back" href="../../../reference/mdb/model/load.html#abaqus.Load.BodyConcentrationFlux.BodyConcentrationFlux.setValues">[docs]</a>    <span class="k">def</span> <span class="nf">setValues</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">field</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">distributionType</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="n">UNIFORM</span><span class="p">,</span> <span class="n">amplitude</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="n">UNSET</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;This method modifies the data for an existing BodyConcentrationFlux object in the step</span>
 <span class="sd">        where it is created.</span>
 <span class="sd">        </span>
 <span class="sd">        Parameters</span>
@@ -410,11 +411,11 @@
 <span class="sd">            A String or the SymbolicConstant UNSET specifying the name of the amplitude reference. </span>
 <span class="sd">            UNSET should be used if the load has no amplitude reference. The default value is UNSET. </span>
 <span class="sd">            You should provide the *amplitude* argument only if it is valid for the specified step. </span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span></div>
 
-<div class="viewcode-block" id="BodyConcentrationFlux.setValuesInStep"><a class="viewcode-back" href="../../../reference/mdb/model/load.html#abaqus.Load.BodyConcentrationFlux.BodyConcentrationFlux.setValuesInStep">[docs]</a>    <span class="k">def</span> <span class="nf">setValuesInStep</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">stepName</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">magnitude</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">amplitude</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">''</span><span class="p">):</span>
-        <span class="sd">"""This method modifies the propagating data for an existing BodyConcentrationFlux object</span>
+<div class="viewcode-block" id="BodyConcentrationFlux.setValuesInStep"><a class="viewcode-back" href="../../../reference/mdb/model/load.html#abaqus.Load.BodyConcentrationFlux.BodyConcentrationFlux.setValuesInStep">[docs]</a>    <span class="k">def</span> <span class="nf">setValuesInStep</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">stepName</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">magnitude</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">amplitude</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;This method modifies the propagating data for an existing BodyConcentrationFlux object</span>
 <span class="sd">        in the specified step.</span>
 <span class="sd">        </span>
 <span class="sd">        Parameters</span>
@@ -429,7 +430,7 @@
 <span class="sd">            amplitude is propagated from the previous analysis step. FREED should be used if the </span>
 <span class="sd">            load has no amplitude reference. You should provide the *amplitude* argument only if it </span>
 <span class="sd">            is valid for the specified step. </span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span></div></div>
 </pre></div>
         </article>

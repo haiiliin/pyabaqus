@@ -5,10 +5,10 @@
     <meta name="color-scheme" content="light dark"><link rel="index" title="Index" href="../../../genindex.html" /><link rel="search" title="Search" href="../../../search.html" />
         <link rel="canonical" href="https://pyabaqus.haiiliin.com/_modules/abaqus/Load/SurfaceTraction.html" />
 
-    <meta name="generator" content="sphinx-4.5.0, furo 2022.04.07"/>
-        <title>abaqus.Load.SurfaceTraction - pyabaqus 1.0.16 documentation</title>
+    <meta name="generator" content="sphinx-4.5.0, furo 2022.06.04.1"/>
+        <title>abaqus.Load.SurfaceTraction - pyabaqus 1.0.18 documentation</title>
       <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/styles/furo.css?digest=68f4518137b9aefe99b631505a2064c3c42c9852" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/styles/furo.css?digest=40978830699223671f4072448e654b5958f38b89" />
     <link rel="stylesheet" type="text/css" href="../../../_static/styles/furo-extensions.css?digest=30d1aed668e5c3a91c3e3bf6a60b675221979f0e" />
     
     
@@ -123,7 +123,7 @@
       </label>
     </div>
     <div class="header-center">
-      <a href="../../../index.html"><div class="brand">pyabaqus 1.0.16 documentation</div></a>
+      <a href="../../../index.html"><div class="brand">pyabaqus 1.0.18 documentation</div></a>
     </div>
     <div class="header-right">
       <div class="theme-toggle-container theme-toggle-header">
@@ -146,7 +146,7 @@
       <div class="sidebar-sticky"><a class="sidebar-brand" href="../../../index.html">
   
   
-  <span class="sidebar-brand-text">pyabaqus 1.0.16 documentation</span>
+  <span class="sidebar-brand-text">pyabaqus 1.0.18 documentation</span>
   
 </a><form class="sidebar-search-container" method="get" action="../../../search.html" role="search">
   <input class="sidebar-search" placeholder=Search name="q" aria-label="Search">
@@ -286,7 +286,8 @@
           </svg>
           <span>Back to top</span>
         </a>
-        <div class="content-icon-container"><div class="theme-toggle-container theme-toggle-content">
+        <div class="content-icon-container">
+          <div class="theme-toggle-container theme-toggle-content">
             <button class="theme-toggle">
               <div class="visually-hidden">Toggle Light / Dark / Auto color theme</div>
               <svg class="theme-icon-when-auto"><use href="#svg-sun-half"></use></svg>
@@ -309,7 +310,7 @@
 
 
 <div class="viewcode-block" id="SurfaceTraction"><a class="viewcode-back" href="../../../reference/mdb/model/load.html#abaqus.Load.SurfaceTraction.SurfaceTraction">[docs]</a><span class="k">class</span> <span class="nc">SurfaceTraction</span><span class="p">(</span><span class="n">Load</span><span class="p">):</span>
-    <span class="sd">"""The SurfaceTraction object defines surface traction on a region.</span>
+    <span class="sd">&quot;&quot;&quot;The SurfaceTraction object defines surface traction on a region.</span>
 <span class="sd">    The SurfaceTraction object is derived from the Load object. </span>
 
 <span class="sd">    Attributes</span>
@@ -345,9 +346,9 @@
 <span class="sd">    userCsys: str</span>
 <span class="sd">        A String specifying a CSYS defined by a user-subroutine. If **userCsys=None**, the degrees</span>
 <span class="sd">        of freedom are defined in the global coordinate system or by the **localCsys** parameter</span>
-<span class="sd">        if defined. The default value is "None".</span>
+<span class="sd">        if defined. The default value is &quot;None&quot;.</span>
 <span class="sd">    localCsys: int</span>
-<span class="sd">        None or a :py:class:`~abaqus.Datum.DatumCsys.DatumCsys` object specifying the local coordinate system of the load's degrees</span>
+<span class="sd">        None or a :py:class:`~abaqus.Datum.DatumCsys.DatumCsys` object specifying the local coordinate system of the load&#39;s degrees</span>
 <span class="sd">        of freedom. If **localCsys=None**, the degrees of freedom are defined in the global</span>
 <span class="sd">        coordinate system or by the **userCsys** parameter if defined. When this member is</span>
 <span class="sd">        queried, it returns an Int. The default value is None.</span>
@@ -368,10 +369,10 @@
 <span class="sd">        import load</span>
 <span class="sd">        mdb.models[name].loads[name]</span>
 
-<span class="sd">    """</span>
+<span class="sd">    &quot;&quot;&quot;</span>
 
     <span class="c1"># A String specifying the load repository key. </span>
-    <span class="n">name</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">''</span>
+    <span class="n">name</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span>
 
     <span class="c1"># A Float specifying an additional rotation of *directionVector* about an axis. The </span>
     <span class="c1"># default value is 0.0. </span>
@@ -404,14 +405,14 @@
     <span class="c1"># A String specifying the name of the AnalyticalField object associated with this load. </span>
     <span class="c1"># The *field* argument applies only when *distributionType*=FIELD. The default value is an </span>
     <span class="c1"># empty string. </span>
-    <span class="n">field</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">''</span>
+    <span class="n">field</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span>
 
     <span class="c1"># A String specifying a CSYS defined by a user-subroutine. If *userCsys*=None, the degrees </span>
     <span class="c1"># of freedom are defined in the global coordinate system or by the *localCsys* parameter </span>
-    <span class="c1"># if defined. The default value is "None". </span>
-    <span class="n">userCsys</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">''</span>
+    <span class="c1"># if defined. The default value is &quot;None&quot;. </span>
+    <span class="n">userCsys</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span>
 
-    <span class="c1"># None or a DatumCsys object specifying the local coordinate system of the load's degrees </span>
+    <span class="c1"># None or a DatumCsys object specifying the local coordinate system of the load&#39;s degrees </span>
     <span class="c1"># of freedom. If *localCsys*=None, the degrees of freedom are defined in the global </span>
     <span class="c1"># coordinate system or by the *userCsys* parameter if defined. When this member is </span>
     <span class="c1"># queried, it returns an Int. The default value is None. </span>
@@ -427,11 +428,11 @@
     <span class="n">region</span><span class="p">:</span> <span class="n">Region</span> <span class="o">=</span> <span class="n">Region</span><span class="p">()</span>
 
     <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">createStepName</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">region</span><span class="p">:</span> <span class="n">Region</span><span class="p">,</span> <span class="n">magnitude</span><span class="p">:</span> <span class="nb">float</span><span class="p">,</span>
-                 <span class="n">distributionType</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="n">UNIFORM</span><span class="p">,</span> <span class="n">field</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">''</span><span class="p">,</span> <span class="n">amplitude</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="n">UNSET</span><span class="p">,</span>
+                 <span class="n">distributionType</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="n">UNIFORM</span><span class="p">,</span> <span class="n">field</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">amplitude</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="n">UNSET</span><span class="p">,</span>
                  <span class="n">angle</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="n">axis</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="n">AXIS_1</span><span class="p">,</span> <span class="n">localCsys</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
-                 <span class="n">userCsys</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">''</span><span class="p">,</span> <span class="n">directionVector</span><span class="p">:</span> <span class="nb">tuple</span> <span class="o">=</span> <span class="p">(),</span> <span class="n">follower</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="n">ON</span><span class="p">,</span>
+                 <span class="n">userCsys</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">directionVector</span><span class="p">:</span> <span class="nb">tuple</span> <span class="o">=</span> <span class="p">(),</span> <span class="n">follower</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="n">ON</span><span class="p">,</span>
                  <span class="n">resultant</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="n">OFF</span><span class="p">,</span> <span class="n">traction</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="n">SHEAR</span><span class="p">):</span>
-        <span class="sd">"""This method creates a SurfaceTraction object.</span>
+        <span class="sd">&quot;&quot;&quot;This method creates a SurfaceTraction object.</span>
 
 <span class="sd">        Notes</span>
 <span class="sd">        -----</span>
@@ -471,14 +472,14 @@
 <span class="sd">            *directionVector*. Possible values are AXIS_1, AXIS_2, and AXIS_3. The default value is </span>
 <span class="sd">            AXIS_1. </span>
 <span class="sd">        localCsys</span>
-<span class="sd">            None or a DatumCsys object specifying the local coordinate system of the load's degrees </span>
+<span class="sd">            None or a DatumCsys object specifying the local coordinate system of the load&#39;s degrees </span>
 <span class="sd">            of freedom. If *localCsys*=None, the degrees of freedom are defined in the global </span>
 <span class="sd">            coordinate system or by the *userCsys* parameter if defined. When this member is </span>
 <span class="sd">            queried, it returns an Int. The default value is None. </span>
 <span class="sd">        userCsys</span>
 <span class="sd">            A String specifying a CSYS defined by a user-subroutine. If *userCsys*=None, the degrees </span>
 <span class="sd">            of freedom are defined in the global coordinate system or by the *localCsys* parameter </span>
-<span class="sd">            if defined. The default value is "None". </span>
+<span class="sd">            if defined. The default value is &quot;None&quot;. </span>
 <span class="sd">        directionVector</span>
 <span class="sd">            A VertexArray object of length 2 specifying the direction of the load. Instead of </span>
 <span class="sd">            through a ConstrainedSketchVertex, each point may be specified through a tuple of coordinates. If</span>
@@ -500,15 +501,15 @@
 <span class="sd">        Returns</span>
 <span class="sd">        -------</span>
 <span class="sd">            A SurfaceTraction object.</span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">()</span>
         <span class="k">pass</span>
 
-<div class="viewcode-block" id="SurfaceTraction.setValues"><a class="viewcode-back" href="../../../reference/mdb/model/load.html#abaqus.Load.SurfaceTraction.SurfaceTraction.setValues">[docs]</a>    <span class="k">def</span> <span class="nf">setValues</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">distributionType</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="n">UNIFORM</span><span class="p">,</span> <span class="n">field</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">''</span><span class="p">,</span> <span class="n">amplitude</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="n">UNSET</span><span class="p">,</span>
+<div class="viewcode-block" id="SurfaceTraction.setValues"><a class="viewcode-back" href="../../../reference/mdb/model/load.html#abaqus.Load.SurfaceTraction.SurfaceTraction.setValues">[docs]</a>    <span class="k">def</span> <span class="nf">setValues</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">distributionType</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="n">UNIFORM</span><span class="p">,</span> <span class="n">field</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">amplitude</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="n">UNSET</span><span class="p">,</span>
                   <span class="n">angle</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="n">axis</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="n">AXIS_1</span><span class="p">,</span> <span class="n">localCsys</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
-                  <span class="n">userCsys</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">''</span><span class="p">,</span> <span class="n">directionVector</span><span class="p">:</span> <span class="nb">tuple</span> <span class="o">=</span> <span class="p">(),</span> <span class="n">follower</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="n">ON</span><span class="p">,</span>
+                  <span class="n">userCsys</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">directionVector</span><span class="p">:</span> <span class="nb">tuple</span> <span class="o">=</span> <span class="p">(),</span> <span class="n">follower</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="n">ON</span><span class="p">,</span>
                   <span class="n">resultant</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="n">OFF</span><span class="p">,</span> <span class="n">traction</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="n">SHEAR</span><span class="p">):</span>
-        <span class="sd">"""This method modifies the data for an existing SurfaceTraction object in the step where</span>
+        <span class="sd">&quot;&quot;&quot;This method modifies the data for an existing SurfaceTraction object in the step where</span>
 <span class="sd">        it is created.</span>
 <span class="sd">        </span>
 <span class="sd">        Parameters</span>
@@ -532,14 +533,14 @@
 <span class="sd">            *directionVector*. Possible values are AXIS_1, AXIS_2, and AXIS_3. The default value is </span>
 <span class="sd">            AXIS_1. </span>
 <span class="sd">        localCsys</span>
-<span class="sd">            None or a DatumCsys object specifying the local coordinate system of the load's degrees </span>
+<span class="sd">            None or a DatumCsys object specifying the local coordinate system of the load&#39;s degrees </span>
 <span class="sd">            of freedom. If *localCsys*=None, the degrees of freedom are defined in the global </span>
 <span class="sd">            coordinate system or by the *userCsys* parameter if defined. When this member is </span>
 <span class="sd">            queried, it returns an Int. The default value is None. </span>
 <span class="sd">        userCsys</span>
 <span class="sd">            A String specifying a CSYS defined by a user-subroutine. If *userCsys*=None, the degrees </span>
 <span class="sd">            of freedom are defined in the global coordinate system or by the *localCsys* parameter </span>
-<span class="sd">            if defined. The default value is "None". </span>
+<span class="sd">            if defined. The default value is &quot;None&quot;. </span>
 <span class="sd">        directionVector</span>
 <span class="sd">            A VertexArray object of length 2 specifying the direction of the load. Instead of </span>
 <span class="sd">            through a ConstrainedSketchVertex, each point may be specified through a tuple of coordinates. If</span>
@@ -557,13 +558,13 @@
 <span class="sd">        traction</span>
 <span class="sd">            A SymbolicConstant specifying how to apply surface traction. Possible values are SHEAR </span>
 <span class="sd">            and GENERAL. The default value is SHEAR. </span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span></div>
 
 <div class="viewcode-block" id="SurfaceTraction.setValuesInStep"><a class="viewcode-back" href="../../../reference/mdb/model/load.html#abaqus.Load.SurfaceTraction.SurfaceTraction.setValuesInStep">[docs]</a>    <span class="k">def</span> <span class="nf">setValuesInStep</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">stepName</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
                         <span class="n">magnitude</span><span class="p">:</span> <span class="n">typing</span><span class="o">.</span><span class="n">Union</span><span class="p">[</span><span class="n">SymbolicConstant</span><span class="p">,</span> <span class="nb">float</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
-                        <span class="n">amplitude</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">''</span><span class="p">):</span>
-        <span class="sd">"""This method modifies the propagating data for an existing SurfaceTraction object in the</span>
+                        <span class="n">amplitude</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;This method modifies the propagating data for an existing SurfaceTraction object in the</span>
 <span class="sd">        specified step.</span>
 <span class="sd">        </span>
 <span class="sd">        Parameters</span>
@@ -579,7 +580,7 @@
 <span class="sd">            amplitude is propagated from the previous analysis step. FREED should be used if the </span>
 <span class="sd">            load has no amplitude reference. You should provide the *amplitude* argument only if it </span>
 <span class="sd">            is valid for the specified step. </span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span></div></div>
 </pre></div>
         </article>

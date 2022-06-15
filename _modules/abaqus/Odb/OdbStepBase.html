@@ -5,10 +5,10 @@
     <meta name="color-scheme" content="light dark"><link rel="index" title="Index" href="../../../genindex.html" /><link rel="search" title="Search" href="../../../search.html" />
         <link rel="canonical" href="https://pyabaqus.haiiliin.com/_modules/abaqus/Odb/OdbStepBase.html" />
 
-    <meta name="generator" content="sphinx-4.5.0, furo 2022.04.07"/>
-        <title>abaqus.Odb.OdbStepBase - pyabaqus 1.0.16 documentation</title>
+    <meta name="generator" content="sphinx-4.5.0, furo 2022.06.04.1"/>
+        <title>abaqus.Odb.OdbStepBase - pyabaqus 1.0.18 documentation</title>
       <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/styles/furo.css?digest=68f4518137b9aefe99b631505a2064c3c42c9852" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/styles/furo.css?digest=40978830699223671f4072448e654b5958f38b89" />
     <link rel="stylesheet" type="text/css" href="../../../_static/styles/furo-extensions.css?digest=30d1aed668e5c3a91c3e3bf6a60b675221979f0e" />
     
     
@@ -123,7 +123,7 @@
       </label>
     </div>
     <div class="header-center">
-      <a href="../../../index.html"><div class="brand">pyabaqus 1.0.16 documentation</div></a>
+      <a href="../../../index.html"><div class="brand">pyabaqus 1.0.18 documentation</div></a>
     </div>
     <div class="header-right">
       <div class="theme-toggle-container theme-toggle-header">
@@ -146,7 +146,7 @@
       <div class="sidebar-sticky"><a class="sidebar-brand" href="../../../index.html">
   
   
-  <span class="sidebar-brand-text">pyabaqus 1.0.16 documentation</span>
+  <span class="sidebar-brand-text">pyabaqus 1.0.18 documentation</span>
   
 </a><form class="sidebar-search-container" method="get" action="../../../search.html" role="search">
   <input class="sidebar-search" placeholder=Search name="q" aria-label="Search">
@@ -286,7 +286,8 @@
           </svg>
           <span>Back to top</span>
         </a>
-        <div class="content-icon-container"><div class="theme-toggle-container theme-toggle-content">
+        <div class="content-icon-container">
+          <div class="theme-toggle-container theme-toggle-content">
             <button class="theme-toggle">
               <div class="visually-hidden">Toggle Light / Dark / Auto color theme</div>
               <svg class="theme-icon-when-auto"><use href="#svg-sun-half"></use></svg>
@@ -312,7 +313,7 @@
 
 
 <div class="viewcode-block" id="OdbStepBase"><a class="viewcode-back" href="../../../reference/odb.html#abaqus.Odb.OdbStepBase.OdbStepBase">[docs]</a><span class="k">class</span> <span class="nc">OdbStepBase</span><span class="p">:</span>
-    <span class="sd">"""An output database contains the same steps of the model database that originated it.</span>
+    <span class="sd">&quot;&quot;&quot;An output database contains the same steps of the model database that originated it.</span>
 
 <span class="sd">    Attributes</span>
 <span class="sd">    ----------</span>
@@ -356,7 +357,7 @@
 <span class="sd">        import odbAccess</span>
 <span class="sd">        session.odbs[name].steps[name]</span>
 
-<span class="sd">    """</span>
+<span class="sd">    &quot;&quot;&quot;</span>
 
     <span class="c1"># An Int specifying the step number. </span>
     <span class="n">number</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="kc">None</span>
@@ -400,8 +401,8 @@
     <span class="n">acousticMassCenter</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="kc">None</span>
 
     <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">description</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">domain</span><span class="p">:</span> <span class="n">SymbolicConstant</span><span class="p">,</span> <span class="n">timePeriod</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span>
-                 <span class="n">previousStepName</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">''</span><span class="p">,</span> <span class="n">procedure</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">''</span><span class="p">,</span> <span class="n">totalTime</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="kc">None</span><span class="p">):</span>
-        <span class="sd">"""This method creates an OdbStep object.</span>
+                 <span class="n">previousStepName</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">procedure</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">totalTime</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="kc">None</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;This method creates an OdbStep object.</span>
 
 <span class="sd">        Notes</span>
 <span class="sd">        -----</span>
@@ -428,7 +429,7 @@
 <span class="sd">            A String specifying the preceding step. If *previousStepName* is the empty string, the </span>
 <span class="sd">            last step in the repository is used. If *previousStepName* is not the last step, this </span>
 <span class="sd">            will result in a change to the *previousStepName* member of the step that was in that </span>
-<span class="sd">            position. A special value 'Initial' refers to the internal initial model step and may be </span>
+<span class="sd">            position. A special value &#39;Initial&#39; refers to the internal initial model step and may be </span>
 <span class="sd">            used exclusively for inserting a new step at the first position before any other </span>
 <span class="sd">            existing steps. The default value is an empty string. </span>
 <span class="sd">        procedure</span>
@@ -493,12 +494,12 @@
 <span class="sd">        ------</span>
 <span class="sd">            - If *previousStepName* is invalid: </span>
 <span class="sd">              ValueError: previousStepName is invalid </span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span>
 
     <span class="nd">@typing</span><span class="o">.</span><span class="n">overload</span>
     <span class="k">def</span> <span class="nf">getFrame</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">frameValue</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">match</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="n">CLOSEST</span><span class="p">):</span>
-        <span class="sd">"""This method retrieves an OdbFrame object associated with a given frame value.</span>
+        <span class="sd">&quot;&quot;&quot;This method retrieves an OdbFrame object associated with a given frame value.</span>
 <span class="sd">        </span>
 <span class="sd">        Parameters</span>
 <span class="sd">        ----------</span>
@@ -521,12 +522,12 @@
 <span class="sd">        ------</span>
 <span class="sd">            - If the OdbFrame object is not found: </span>
 <span class="sd">              OdbError: Frame not found. </span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span>
 
     <span class="nd">@typing</span><span class="o">.</span><span class="n">overload</span>
     <span class="k">def</span> <span class="nf">getFrame</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">loadCase</span><span class="p">:</span> <span class="n">OdbLoadCase</span><span class="p">):</span>
-        <span class="sd">"""This method retrieves an OdbFrame object associated with a given load case.</span>
+        <span class="sd">&quot;&quot;&quot;This method retrieves an OdbFrame object associated with a given load case.</span>
 <span class="sd">        </span>
 <span class="sd">        Parameters</span>
 <span class="sd">        ----------</span>
@@ -541,12 +542,12 @@
 <span class="sd">        ------</span>
 <span class="sd">            - If the OdbFrame object is not found: </span>
 <span class="sd">              OdbError: Frame not found. </span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span>
 
     <span class="nd">@typing</span><span class="o">.</span><span class="n">overload</span>
     <span class="k">def</span> <span class="nf">getFrame</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">loadCase</span><span class="p">:</span> <span class="n">OdbLoadCase</span><span class="p">,</span> <span class="n">frameValue</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">match</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="n">CLOSEST</span><span class="p">):</span>
-        <span class="sd">"""This method retrieves an OdbFrame object associated with a given load case and frame</span>
+        <span class="sd">&quot;&quot;&quot;This method retrieves an OdbFrame object associated with a given load case and frame</span>
 <span class="sd">        value.</span>
 <span class="sd">        </span>
 <span class="sd">        Parameters</span>
@@ -572,14 +573,14 @@
 <span class="sd">        ------</span>
 <span class="sd">            - If the OdbFrame object is not found: </span>
 <span class="sd">              OdbError: Frame not found. </span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span>
 
     <span class="k">def</span> <span class="nf">getFrame</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
         <span class="k">pass</span>
 
-<div class="viewcode-block" id="OdbStepBase.getHistoryRegion"><a class="viewcode-back" href="../../../reference/odb.html#abaqus.Odb.OdbStepBase.OdbStepBase.getHistoryRegion">[docs]</a>    <span class="k">def</span> <span class="nf">getHistoryRegion</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">point</span><span class="p">:</span> <span class="n">HistoryPoint</span><span class="p">,</span> <span class="n">loadCase</span><span class="p">:</span> <span class="n">OdbLoadCase</span> <span class="o">=</span> <span class="n">OdbLoadCase</span><span class="p">(</span><span class="s1">'loadCase'</span><span class="p">)):</span>
-        <span class="sd">"""This method retrieves a HistoryRegion object associated with a HistoryPoint in the</span>
+<div class="viewcode-block" id="OdbStepBase.getHistoryRegion"><a class="viewcode-back" href="../../../reference/odb.html#abaqus.Odb.OdbStepBase.OdbStepBase.getHistoryRegion">[docs]</a>    <span class="k">def</span> <span class="nf">getHistoryRegion</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">point</span><span class="p">:</span> <span class="n">HistoryPoint</span><span class="p">,</span> <span class="n">loadCase</span><span class="p">:</span> <span class="n">OdbLoadCase</span> <span class="o">=</span> <span class="n">OdbLoadCase</span><span class="p">(</span><span class="s1">&#39;loadCase&#39;</span><span class="p">)):</span>
+        <span class="sd">&quot;&quot;&quot;This method retrieves a HistoryRegion object associated with a HistoryPoint in the</span>
 <span class="sd">        model.</span>
 <span class="sd">        </span>
 <span class="sd">        Parameters</span>
@@ -597,27 +598,27 @@
 <span class="sd">        ------</span>
 <span class="sd">            - If a HistoryRegion object is not found: </span>
 <span class="sd">              OdbError: HistoryRegion not found. </span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span></div>
 
 <div class="viewcode-block" id="OdbStepBase.setDefaultDeformedField"><a class="viewcode-back" href="../../../reference/odb.html#abaqus.Odb.OdbStepBase.OdbStepBase.setDefaultDeformedField">[docs]</a>    <span class="k">def</span> <span class="nf">setDefaultDeformedField</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">field</span><span class="p">:</span> <span class="n">FieldOutput</span><span class="p">):</span>
-        <span class="sd">"""This method sets the default deformed field variable in a step.</span>
+        <span class="sd">&quot;&quot;&quot;This method sets the default deformed field variable in a step.</span>
 <span class="sd">        </span>
 <span class="sd">        Parameters</span>
 <span class="sd">        ----------</span>
 <span class="sd">        field</span>
 <span class="sd">            A FieldOutput object specifying the default deformed field variable for visualization. </span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span></div>
 
 <div class="viewcode-block" id="OdbStepBase.setDefaultField"><a class="viewcode-back" href="../../../reference/odb.html#abaqus.Odb.OdbStepBase.OdbStepBase.setDefaultField">[docs]</a>    <span class="k">def</span> <span class="nf">setDefaultField</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">field</span><span class="p">:</span> <span class="n">FieldOutput</span><span class="p">):</span>
-        <span class="sd">"""This method sets the default field variable in a step.</span>
+        <span class="sd">&quot;&quot;&quot;This method sets the default field variable in a step.</span>
 <span class="sd">        </span>
 <span class="sd">        Parameters</span>
 <span class="sd">        ----------</span>
 <span class="sd">        field</span>
 <span class="sd">            A FieldOutput object specifying the default field variable for visualization. </span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span></div></div>
 </pre></div>
         </article>

@@ -5,10 +5,10 @@
     <meta name="color-scheme" content="light dark"><link rel="index" title="Index" href="../../../genindex.html" /><link rel="search" title="Search" href="../../../search.html" />
         <link rel="canonical" href="https://pyabaqus.haiiliin.com/_modules/abaqus/Session/JournalOptions.html" />
 
-    <meta name="generator" content="sphinx-4.5.0, furo 2022.04.07"/>
-        <title>abaqus.Session.JournalOptions - pyabaqus 1.0.16 documentation</title>
+    <meta name="generator" content="sphinx-4.5.0, furo 2022.06.04.1"/>
+        <title>abaqus.Session.JournalOptions - pyabaqus 1.0.18 documentation</title>
       <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/styles/furo.css?digest=68f4518137b9aefe99b631505a2064c3c42c9852" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/styles/furo.css?digest=40978830699223671f4072448e654b5958f38b89" />
     <link rel="stylesheet" type="text/css" href="../../../_static/styles/furo-extensions.css?digest=30d1aed668e5c3a91c3e3bf6a60b675221979f0e" />
     
     
@@ -123,7 +123,7 @@
       </label>
     </div>
     <div class="header-center">
-      <a href="../../../index.html"><div class="brand">pyabaqus 1.0.16 documentation</div></a>
+      <a href="../../../index.html"><div class="brand">pyabaqus 1.0.18 documentation</div></a>
     </div>
     <div class="header-right">
       <div class="theme-toggle-container theme-toggle-header">
@@ -146,7 +146,7 @@
       <div class="sidebar-sticky"><a class="sidebar-brand" href="../../../index.html">
   
   
-  <span class="sidebar-brand-text">pyabaqus 1.0.16 documentation</span>
+  <span class="sidebar-brand-text">pyabaqus 1.0.18 documentation</span>
   
 </a><form class="sidebar-search-container" method="get" action="../../../search.html" role="search">
   <input class="sidebar-search" placeholder=Search name="q" aria-label="Search">
@@ -286,7 +286,8 @@
           </svg>
           <span>Back to top</span>
         </a>
-        <div class="content-icon-container"><div class="theme-toggle-container theme-toggle-content">
+        <div class="content-icon-container">
+          <div class="theme-toggle-container theme-toggle-content">
             <button class="theme-toggle">
               <div class="visually-hidden">Toggle Light / Dark / Auto color theme</div>
               <svg class="theme-icon-when-auto"><use href="#svg-sun-half"></use></svg>
@@ -306,7 +307,7 @@
 
 
 <div class="viewcode-block" id="JournalOptions"><a class="viewcode-back" href="../../../reference/session.html#abaqus.Session.JournalOptions.JournalOptions">[docs]</a><span class="k">class</span> <span class="nc">JournalOptions</span><span class="p">:</span>
-    <span class="sd">"""A JournalOptions object specifies how to record selection of geometry in the journal and</span>
+    <span class="sd">&quot;&quot;&quot;A JournalOptions object specifies how to record selection of geometry in the journal and</span>
 <span class="sd">    replay files. *journalOptions* can also be used to set the numeric formatting options </span>
 <span class="sd">    for field report output, geometry commands output, and a default format for other </span>
 <span class="sd">    numeric output. The JournalOptions object has no constructor. Abaqus creates the </span>
@@ -325,7 +326,7 @@
 
 <span class="sd">        session.journalOptions</span>
 
-<span class="sd">    """</span>
+<span class="sd">    &quot;&quot;&quot;</span>
     <span class="c1"># Format of the number</span>
     <span class="n">numberFormat</span><span class="p">:</span> <span class="n">NumberFormat</span> <span class="o">=</span> <span class="n">NumberFormat</span><span class="p">()</span>
 
@@ -334,7 +335,7 @@
                   <span class="n">defaultFormat</span><span class="p">:</span> <span class="n">NumberFormat</span> <span class="o">=</span> <span class="n">NumberFormat</span><span class="p">(),</span>
                   <span class="n">fieldReportFormat</span><span class="p">:</span> <span class="n">NumberFormat</span> <span class="o">=</span> <span class="n">NumberFormat</span><span class="p">(),</span>
                   <span class="n">geometryFormat</span><span class="p">:</span> <span class="n">NumberFormat</span> <span class="o">=</span> <span class="n">NumberFormat</span><span class="p">()):</span>
-        <span class="sd">"""This method modifies the JournalOptions object.</span>
+        <span class="sd">&quot;&quot;&quot;This method modifies the JournalOptions object.</span>
 <span class="sd">        </span>
 <span class="sd">        Parameters</span>
 <span class="sd">        ----------</span>
@@ -355,12 +356,12 @@
 <span class="sd">            A NumberFormat object specifying the default format for numbers in geometry commands </span>
 <span class="sd">            output. The default values are the same as the default values for the NumberFormat </span>
 <span class="sd">            object. </span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span></div>
 
 <div class="viewcode-block" id="JournalOptions.NumberFormat"><a class="viewcode-back" href="../../../reference/session.html#abaqus.Session.JournalOptions.JournalOptions.NumberFormat">[docs]</a>    <span class="k">def</span> <span class="nf">NumberFormat</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">blankPad</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="n">ON</span><span class="p">,</span> <span class="nb">format</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="n">ENGINEERING</span><span class="p">,</span> <span class="n">numDigits</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">6</span><span class="p">,</span>
                      <span class="n">precision</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">0</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">NumberFormat</span><span class="p">:</span>
-        <span class="sd">"""This method creates a NumberFormat object.</span>
+        <span class="sd">&quot;&quot;&quot;This method creates a NumberFormat object.</span>
 
 <span class="sd">        Notes</span>
 <span class="sd">        -----</span>
@@ -392,7 +393,7 @@
 <span class="sd">        Returns</span>
 <span class="sd">        -------</span>
 <span class="sd">            A NumberFormat object.</span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">numberFormat</span> <span class="o">=</span> <span class="n">numberFormat</span> <span class="o">=</span> <span class="n">NumberFormat</span><span class="p">(</span><span class="n">blankPad</span><span class="p">,</span> <span class="nb">format</span><span class="p">,</span> <span class="n">numDigits</span><span class="p">,</span> <span class="n">precision</span><span class="p">)</span>
         <span class="k">return</span> <span class="n">numberFormat</span></div></div>
 </pre></div>

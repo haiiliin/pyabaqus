@@ -5,10 +5,10 @@
     <meta name="color-scheme" content="light dark"><link rel="index" title="Index" href="../../../genindex.html" /><link rel="search" title="Search" href="../../../search.html" />
         <link rel="canonical" href="https://pyabaqus.haiiliin.com/_modules/abaqus/Mesh/MeshNode.html" />
 
-    <meta name="generator" content="sphinx-4.5.0, furo 2022.04.07"/>
-        <title>abaqus.Mesh.MeshNode - pyabaqus 1.0.16 documentation</title>
+    <meta name="generator" content="sphinx-4.5.0, furo 2022.06.04.1"/>
+        <title>abaqus.Mesh.MeshNode - pyabaqus 1.0.18 documentation</title>
       <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/styles/furo.css?digest=68f4518137b9aefe99b631505a2064c3c42c9852" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/styles/furo.css?digest=40978830699223671f4072448e654b5958f38b89" />
     <link rel="stylesheet" type="text/css" href="../../../_static/styles/furo-extensions.css?digest=30d1aed668e5c3a91c3e3bf6a60b675221979f0e" />
     
     
@@ -123,7 +123,7 @@
       </label>
     </div>
     <div class="header-center">
-      <a href="../../../index.html"><div class="brand">pyabaqus 1.0.16 documentation</div></a>
+      <a href="../../../index.html"><div class="brand">pyabaqus 1.0.18 documentation</div></a>
     </div>
     <div class="header-right">
       <div class="theme-toggle-container theme-toggle-header">
@@ -146,7 +146,7 @@
       <div class="sidebar-sticky"><a class="sidebar-brand" href="../../../index.html">
   
   
-  <span class="sidebar-brand-text">pyabaqus 1.0.16 documentation</span>
+  <span class="sidebar-brand-text">pyabaqus 1.0.18 documentation</span>
   
 </a><form class="sidebar-search-container" method="get" action="../../../search.html" role="search">
   <input class="sidebar-search" placeholder=Search name="q" aria-label="Search">
@@ -286,7 +286,8 @@
           </svg>
           <span>Back to top</span>
         </a>
-        <div class="content-icon-container"><div class="theme-toggle-container theme-toggle-content">
+        <div class="content-icon-container">
+          <div class="theme-toggle-container theme-toggle-content">
             <button class="theme-toggle">
               <div class="visually-hidden">Toggle Light / Dark / Auto color theme</div>
               <svg class="theme-icon-when-auto"><use href="#svg-sun-half"></use></svg>
@@ -305,7 +306,7 @@
 
 
 <div class="viewcode-block" id="MeshNode"><a class="viewcode-back" href="../../../reference/mdb/model/mesh.html#abaqus.Mesh.MeshNode.MeshNode">[docs]</a><span class="k">class</span> <span class="nc">MeshNode</span><span class="p">:</span>
-    <span class="sd">"""The MeshNode object refers to a node of a native mesh or an orphan mesh. A MeshNode</span>
+    <span class="sd">&quot;&quot;&quot;The MeshNode object refers to a node of a native mesh or an orphan mesh. A MeshNode</span>
 <span class="sd">    object can be accessed via a part or part instance using an index that refers to the </span>
 <span class="sd">    internal numbering of the node repository. The index does not refer to the node label. </span>
 
@@ -351,19 +352,19 @@
 <span class="sd">        mdb.models[name].rootAssembly.sets[name].nodes[i]</span>
 <span class="sd">        mdb.models[name].rootAssembly.surfaces[name].nodes[i]</span>
 
-<span class="sd">    """</span>
+<span class="sd">    &quot;&quot;&quot;</span>
 
     <span class="c1"># An Int specifying the node label. </span>
     <span class="n">label</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="kc">None</span>
 
     <span class="c1"># A String specifying the name of the part instance that owns this node. </span>
-    <span class="n">instanceName</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">''</span>
+    <span class="n">instanceName</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span>
 
     <span class="c1"># A tuple of three Floats specifying the coordinates of the new node. </span>
     <span class="n">coordinates</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="kc">None</span>
 
     <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">coordinates</span><span class="p">:</span> <span class="nb">tuple</span><span class="p">,</span> <span class="n">localCsys</span><span class="p">:</span> <span class="n">DatumCsys</span> <span class="o">=</span> <span class="n">DatumCsys</span><span class="p">(),</span> <span class="n">label</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="kc">None</span><span class="p">):</span>
-        <span class="sd">"""This method creates a node on an orphan mesh part.</span>
+        <span class="sd">&quot;&quot;&quot;This method creates a node on an orphan mesh part.</span>
 
 <span class="sd">        Notes</span>
 <span class="sd">        -----</span>
@@ -387,41 +388,41 @@
 <span class="sd">        -------</span>
 <span class="sd">        node: MeshNode</span>
 <span class="sd">            A MeshNode object</span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span>
 
 <div class="viewcode-block" id="MeshNode.getElemEdges"><a class="viewcode-back" href="../../../reference/mdb/model/mesh.html#abaqus.Mesh.MeshNode.MeshNode.getElemEdges">[docs]</a>    <span class="k">def</span> <span class="nf">getElemEdges</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="sd">"""This method returns a tuple of element edge objects that share the node.</span>
+        <span class="sd">&quot;&quot;&quot;This method returns a tuple of element edge objects that share the node.</span>
 
 <span class="sd">        Returns</span>
 <span class="sd">        -------</span>
 <span class="sd">        edges: tuple[MeshEdge]</span>
 <span class="sd">            A tuple of MeshEdge objects</span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span></div>
 
 <div class="viewcode-block" id="MeshNode.getElemFaces"><a class="viewcode-back" href="../../../reference/mdb/model/mesh.html#abaqus.Mesh.MeshNode.MeshNode.getElemFaces">[docs]</a>    <span class="k">def</span> <span class="nf">getElemFaces</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="sd">"""This method returns a tuple of element face objects that share the node.</span>
+        <span class="sd">&quot;&quot;&quot;This method returns a tuple of element face objects that share the node.</span>
 
 <span class="sd">        Returns</span>
 <span class="sd">        -------</span>
 <span class="sd">        faces: tuple[MeshFace]</span>
 <span class="sd">            A tuple of MeshFace objects</span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span></div>
 
 <div class="viewcode-block" id="MeshNode.getElements"><a class="viewcode-back" href="../../../reference/mdb/model/mesh.html#abaqus.Mesh.MeshNode.MeshNode.getElements">[docs]</a>    <span class="k">def</span> <span class="nf">getElements</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="sd">"""This method returns a tuple of element objects that share the node.</span>
+        <span class="sd">&quot;&quot;&quot;This method returns a tuple of element objects that share the node.</span>
 
 <span class="sd">        Returns</span>
 <span class="sd">        -------</span>
 <span class="sd">        elements: tuple[MeshElement]</span>
 <span class="sd">            A tuple of MeshElement objects</span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span></div>
 
 <div class="viewcode-block" id="MeshNode.getNodesByFeatureEdge"><a class="viewcode-back" href="../../../reference/mdb/model/mesh.html#abaqus.Mesh.MeshNode.MeshNode.getNodesByFeatureEdge">[docs]</a>    <span class="k">def</span> <span class="nf">getNodesByFeatureEdge</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">angle</span><span class="p">:</span> <span class="nb">str</span><span class="p">):</span>
-        <span class="sd">"""This method returns an array of mesh node objects that are obtained by recursively</span>
+        <span class="sd">&quot;&quot;&quot;This method returns an array of mesh node objects that are obtained by recursively</span>
 <span class="sd">        finding adjacent nodes along a feature edge that are at an angle of less than or equal</span>
 <span class="sd">        to the specified face angle.</span>
 <span class="sd">        </span>
@@ -434,11 +435,11 @@
 <span class="sd">        -------</span>
 <span class="sd">        nodes: MeshNodeArray</span>
 <span class="sd">            A MeshNodeArray object, which is a sequence of MeshNode objects</span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span></div>
 
 <div class="viewcode-block" id="MeshNode.setValues"><a class="viewcode-back" href="../../../reference/mdb/model/mesh.html#abaqus.Mesh.MeshNode.MeshNode.setValues">[docs]</a>    <span class="k">def</span> <span class="nf">setValues</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">label</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="kc">None</span><span class="p">):</span>
-        <span class="sd">"""This method modifies the MeshNode object.</span>
+        <span class="sd">&quot;&quot;&quot;This method modifies the MeshNode object.</span>
 <span class="sd">        </span>
 <span class="sd">        Parameters</span>
 <span class="sd">        ----------</span>
@@ -446,7 +447,7 @@
 <span class="sd">            An Int specifying the node label. This member may only be edited if the node belongs to </span>
 <span class="sd">            an orphan mesh part. The specified label must be non-negative and must not be in use by </span>
 <span class="sd">            any other node of the same part. </span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span></div></div>
 </pre></div>
         </article>

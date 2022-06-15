@@ -5,10 +5,10 @@
     <meta name="color-scheme" content="light dark"><link rel="index" title="Index" href="../../../genindex.html" /><link rel="search" title="Search" href="../../../search.html" />
         <link rel="canonical" href="https://pyabaqus.haiiliin.com/_modules/abaqus/XY/QuantityType.html" />
 
-    <meta name="generator" content="sphinx-4.5.0, furo 2022.04.07"/>
-        <title>abaqus.XY.QuantityType - pyabaqus 1.0.16 documentation</title>
+    <meta name="generator" content="sphinx-4.5.0, furo 2022.06.04.1"/>
+        <title>abaqus.XY.QuantityType - pyabaqus 1.0.18 documentation</title>
       <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/styles/furo.css?digest=68f4518137b9aefe99b631505a2064c3c42c9852" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/styles/furo.css?digest=40978830699223671f4072448e654b5958f38b89" />
     <link rel="stylesheet" type="text/css" href="../../../_static/styles/furo-extensions.css?digest=30d1aed668e5c3a91c3e3bf6a60b675221979f0e" />
     
     
@@ -123,7 +123,7 @@
       </label>
     </div>
     <div class="header-center">
-      <a href="../../../index.html"><div class="brand">pyabaqus 1.0.16 documentation</div></a>
+      <a href="../../../index.html"><div class="brand">pyabaqus 1.0.18 documentation</div></a>
     </div>
     <div class="header-right">
       <div class="theme-toggle-container theme-toggle-header">
@@ -146,7 +146,7 @@
       <div class="sidebar-sticky"><a class="sidebar-brand" href="../../../index.html">
   
   
-  <span class="sidebar-brand-text">pyabaqus 1.0.16 documentation</span>
+  <span class="sidebar-brand-text">pyabaqus 1.0.18 documentation</span>
   
 </a><form class="sidebar-search-container" method="get" action="../../../search.html" role="search">
   <input class="sidebar-search" placeholder=Search name="q" aria-label="Search">
@@ -286,7 +286,8 @@
           </svg>
           <span>Back to top</span>
         </a>
-        <div class="content-icon-container"><div class="theme-toggle-container theme-toggle-content">
+        <div class="content-icon-container">
+          <div class="theme-toggle-container theme-toggle-content">
             <button class="theme-toggle">
               <div class="visually-hidden">Toggle Light / Dark / Auto color theme</div>
               <svg class="theme-icon-when-auto"><use href="#svg-sun-half"></use></svg>
@@ -305,7 +306,7 @@
 
 
 <div class="viewcode-block" id="QuantityType"><a class="viewcode-back" href="../../../reference/session/xy.html#abaqus.XY.QuantityType.QuantityType">[docs]</a><span class="k">class</span> <span class="nc">QuantityType</span><span class="p">:</span>
-    <span class="sd">"""The QuantityType object is used to store attributes defining the physical dimension and</span>
+    <span class="sd">&quot;&quot;&quot;The QuantityType object is used to store attributes defining the physical dimension and</span>
 <span class="sd">    label of the quantity type to be associated with an XYData or an AxisData object. </span>
 <span class="sd">    QuantityType objects are automatically created when creating XYData objects from the </span>
 <span class="sd">    odb. </span>
@@ -354,10 +355,10 @@
 <span class="sd">        session.xyPlots[name].curves[name].data.axis1QuantityType</span>
 <span class="sd">        session.xyPlots[name].curves[name].data.axis2QuantityType</span>
 
-<span class="sd">    """</span>
+<span class="sd">    &quot;&quot;&quot;</span>
 
-    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">label</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">''</span><span class="p">,</span> <span class="nb">type</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="kc">None</span><span class="p">):</span>
-        <span class="sd">"""This method creates a QuantityType object.</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">label</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="nb">type</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="kc">None</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;This method creates a QuantityType object.</span>
 
 <span class="sd">        Notes</span>
 <span class="sd">        -----</span>
@@ -382,37 +383,37 @@
 <span class="sd">            - ANGULAR_MOMENTUM. </span>
 <span class="sd">            - ARC_LENGTH. </span>
 <span class="sd">            - AREA. </span>
-<span class="sd">            - AREA_VELOCITY_SQUARED, specifying "Velocity squared per area". </span>
+<span class="sd">            - AREA_VELOCITY_SQUARED, specifying &quot;Velocity squared per area&quot;. </span>
 <span class="sd">            - BIMOMENT. </span>
 <span class="sd">            - CURVATURE. </span>
 <span class="sd">            - CORIOLIS_LOAD. </span>
 <span class="sd">            - DAMAGE. </span>
 <span class="sd">            - DAMAGE_CRITERION. </span>
 <span class="sd">            - DENSITY. </span>
-<span class="sd">            - DENSITY_ROTATIONAL_ACCELERATION, specifying "Density * Angular acceleration". </span>
+<span class="sd">            - DENSITY_ROTATIONAL_ACCELERATION, specifying &quot;Density * Angular acceleration&quot;. </span>
 <span class="sd">            - DISPLACEMENT. </span>
-<span class="sd">            - ECURRENT_AREA_TIME, specifying "Time integrated electric current per area". </span>
+<span class="sd">            - ECURRENT_AREA_TIME, specifying &quot;Time integrated electric current per area&quot;. </span>
 <span class="sd">            - ELECTRIC_CHARGE. </span>
 <span class="sd">            - ELECTRIC_CURRENT. </span>
-<span class="sd">            - ELECTRIC_CURRENT_AREA, specifying "Electric current per unit area". </span>
+<span class="sd">            - ELECTRIC_CURRENT_AREA, specifying &quot;Electric current per unit area&quot;. </span>
 <span class="sd">            - ELECTRIC_POTENTIAL. </span>
 <span class="sd">            - ENERGY. </span>
 <span class="sd">            - ENERGY_DENSITY. </span>
 <span class="sd">            - ENERGY_RELEASE_RATE. </span>
-<span class="sd">            - EPOTENTIAL_GRADIENT, specifying "Electric potential gradient". </span>
+<span class="sd">            - EPOTENTIAL_GRADIENT, specifying &quot;Electric potential gradient&quot;. </span>
 <span class="sd">            - FREQUENCY. </span>
 <span class="sd">            - FORCE. </span>
-<span class="sd">            - FORCE_VOLUME, specifying "Force per volume". </span>
+<span class="sd">            - FORCE_VOLUME, specifying &quot;Force per volume&quot;. </span>
 <span class="sd">            - HEAT_FLUX. </span>
-<span class="sd">            - HEAT_FLUX_AREA, specifying "Heat flux per area". </span>
+<span class="sd">            - HEAT_FLUX_AREA, specifying &quot;Heat flux per area&quot;. </span>
 <span class="sd">            - HEAT_FLUX_RATE. </span>
-<span class="sd">            - HEAT_FLUX_VOLUME, specifying "Heat flux per volume". </span>
+<span class="sd">            - HEAT_FLUX_VOLUME, specifying &quot;Heat flux per volume&quot;. </span>
 <span class="sd">            - LENGTH. </span>
 <span class="sd">            - LINEAR_PRESSURE. </span>
-<span class="sd">            - LUMIN, specifying "Luminous intensity". </span>
+<span class="sd">            - LUMIN, specifying &quot;Luminous intensity&quot;. </span>
 <span class="sd">            - MASS. </span>
-<span class="sd">            - MASS_FLOW_AREA, specifying "Mass flow per area". </span>
-<span class="sd">            - MASS_FLOW_AREA_RATE, specifying "Mass flow rate per area". </span>
+<span class="sd">            - MASS_FLOW_AREA, specifying &quot;Mass flow per area&quot;. </span>
+<span class="sd">            - MASS_FLOW_AREA_RATE, specifying &quot;Mass flow rate per area&quot;. </span>
 <span class="sd">            - MASS_FLOW_RATE. </span>
 <span class="sd">            - MODE_NUMBER. </span>
 <span class="sd">            - MOMENT. </span>
@@ -430,34 +431,34 @@
 <span class="sd">            - STRAIN. </span>
 <span class="sd">            - STRAIN_RATE. </span>
 <span class="sd">            - STRESS. </span>
-<span class="sd">            - STRESS_INTENS_FACTOR, specifying "Stress intensity factor". </span>
-<span class="sd">            - SUBSTANCE, specifying "Amount of substance". </span>
+<span class="sd">            - STRESS_INTENS_FACTOR, specifying &quot;Stress intensity factor&quot;. </span>
+<span class="sd">            - SUBSTANCE, specifying &quot;Amount of substance&quot;. </span>
 <span class="sd">            - TEMPERATURE. </span>
 <span class="sd">            - THICKNESS. </span>
 <span class="sd">            - TIME. </span>
 <span class="sd">            - TIME_INCREMENT. </span>
-<span class="sd">            - TIME_HEAT_FLUX, specifying "Time integrated heat flux". </span>
-<span class="sd">            - TIME_HEAT_FLUX_AREA, specifying "Time integrated heat flux per area". </span>
-<span class="sd">            - TIME_VOLUME, specifying "Time integrated volume". </span>
-<span class="sd">            - TIME_VOLUME_FLUX, specifying "Time integrated volume flux per area". </span>
+<span class="sd">            - TIME_HEAT_FLUX, specifying &quot;Time integrated heat flux&quot;. </span>
+<span class="sd">            - TIME_HEAT_FLUX_AREA, specifying &quot;Time integrated heat flux per area&quot;. </span>
+<span class="sd">            - TIME_VOLUME, specifying &quot;Time integrated volume&quot;. </span>
+<span class="sd">            - TIME_VOLUME_FLUX, specifying &quot;Time integrated volume flux per area&quot;. </span>
 <span class="sd">            - TWIST. </span>
 <span class="sd">            - VELOCITY. </span>
 <span class="sd">            - VELOCITY_SQUARED. </span>
 <span class="sd">            - VOLUME. </span>
 <span class="sd">            - VOLUME_FLUX. </span>
-<span class="sd">            - VOLUME_FLUX_AREA, specifying "Volume flux per area". </span>
+<span class="sd">            - VOLUME_FLUX_AREA, specifying &quot;Volume flux per area&quot;. </span>
 <span class="sd">            - VOLUME_FRACTION. </span>
 <span class="sd">            The default value is NONE </span>
 
 <span class="sd">        Returns</span>
 <span class="sd">        -------</span>
 <span class="sd">            A QuantityType object.</span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span>
 
 <div class="viewcode-block" id="QuantityType.setValues"><a class="viewcode-back" href="../../../reference/session/xy.html#abaqus.XY.QuantityType.QuantityType.setValues">[docs]</a>    <span class="k">def</span> <span class="nf">setValues</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="sd">"""This method modifies the QuantityType object.</span>
-<span class="sd">        """</span>
+        <span class="sd">&quot;&quot;&quot;This method modifies the QuantityType object.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span></div></div>
 </pre></div>
         </article>

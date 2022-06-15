@@ -5,10 +5,10 @@
     <meta name="color-scheme" content="light dark"><link rel="index" title="Index" href="../../../genindex.html" /><link rel="search" title="Search" href="../../../search.html" />
         <link rel="canonical" href="https://pyabaqus.haiiliin.com/_modules/abaqus/DisplayOptions/GraphicsOptions.html" />
 
-    <meta name="generator" content="sphinx-4.5.0, furo 2022.04.07"/>
-        <title>abaqus.DisplayOptions.GraphicsOptions - pyabaqus 1.0.16 documentation</title>
+    <meta name="generator" content="sphinx-4.5.0, furo 2022.06.04.1"/>
+        <title>abaqus.DisplayOptions.GraphicsOptions - pyabaqus 1.0.18 documentation</title>
       <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/styles/furo.css?digest=68f4518137b9aefe99b631505a2064c3c42c9852" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/styles/furo.css?digest=40978830699223671f4072448e654b5958f38b89" />
     <link rel="stylesheet" type="text/css" href="../../../_static/styles/furo-extensions.css?digest=30d1aed668e5c3a91c3e3bf6a60b675221979f0e" />
     
     
@@ -123,7 +123,7 @@
       </label>
     </div>
     <div class="header-center">
-      <a href="../../../index.html"><div class="brand">pyabaqus 1.0.16 documentation</div></a>
+      <a href="../../../index.html"><div class="brand">pyabaqus 1.0.18 documentation</div></a>
     </div>
     <div class="header-right">
       <div class="theme-toggle-container theme-toggle-header">
@@ -146,7 +146,7 @@
       <div class="sidebar-sticky"><a class="sidebar-brand" href="../../../index.html">
   
   
-  <span class="sidebar-brand-text">pyabaqus 1.0.16 documentation</span>
+  <span class="sidebar-brand-text">pyabaqus 1.0.18 documentation</span>
   
 </a><form class="sidebar-search-container" method="get" action="../../../search.html" role="search">
   <input class="sidebar-search" placeholder=Search name="q" aria-label="Search">
@@ -286,7 +286,8 @@
           </svg>
           <span>Back to top</span>
         </a>
-        <div class="content-icon-container"><div class="theme-toggle-container theme-toggle-content">
+        <div class="content-icon-container">
+          <div class="theme-toggle-container theme-toggle-content">
             <button class="theme-toggle">
               <div class="visually-hidden">Toggle Light / Dark / Auto color theme</div>
               <svg class="theme-icon-when-auto"><use href="#svg-sun-half"></use></svg>
@@ -305,7 +306,7 @@
 
 
 <div class="viewcode-block" id="GraphicsOptions"><a class="viewcode-back" href="../../../reference/session/display_options.html#abaqus.DisplayOptions.GraphicsOptions.GraphicsOptions">[docs]</a><span class="k">class</span> <span class="nc">GraphicsOptions</span><span class="p">:</span>
-    <span class="sd">"""The GraphicsOptions object stores settings that control how objects are rendered in all</span>
+    <span class="sd">&quot;&quot;&quot;The GraphicsOptions object stores settings that control how objects are rendered in all</span>
 <span class="sd">    viewports. GraphicsOptions objects are accessed in one of two ways: </span>
 <span class="sd">    - The default graphics options. These settings are used as defaults when you start a </span>
 <span class="sd">    session and by the Defaults button on the Graphics ConstrainedSketchOptions dialog box.</span>
@@ -489,8 +490,8 @@
 <span class="sd">        **translucencyMode** ≤≤ 6. The default value is 4.</span>
 <span class="sd">    contourRangeTexturePrecision: float</span>
 <span class="sd">        A Float specifying a tolerance used when computing the appropriate scale for</span>
-<span class="sd">        transforming result (contour) values to texture values. When set too low the 'out of</span>
-<span class="sd">        range' colors may be incorrectly shown for values near the range limits. The default</span>
+<span class="sd">        transforming result (contour) values to texture values. When set too low the &#39;out of</span>
+<span class="sd">        range&#39; colors may be incorrectly shown for values near the range limits. The default</span>
 <span class="sd">        value is 0.5×10–5.</span>
 <span class="sd">    options: str</span>
 <span class="sd">        None or a :py:class:`~abaqus.DisplayOptions.GraphicsOptions.GraphicsOptions` object specifying :py:class:`~.the` object from which values are to be</span>
@@ -532,7 +533,7 @@
 <span class="sd">        session.defaultGraphicsOptions</span>
 <span class="sd">        session.graphicsOptions</span>
 
-<span class="sd">    """</span>
+<span class="sd">    &quot;&quot;&quot;</span>
 
     <span class="c1"># A Boolean specifying whether a viewport background style of GRADIENT can be overridden </span>
     <span class="c1"># when displaying certain objects, such as sketches or XY plots. When overridden, the </span>
@@ -729,8 +730,8 @@
     <span class="n">translucencyMode</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">4</span>
 
     <span class="c1"># A Float specifying a tolerance used when computing the appropriate scale for </span>
-    <span class="c1"># transforming result (contour) values to texture values. When set too low the 'out of </span>
-    <span class="c1"># range' colors may be incorrectly shown for values near the range limits. The default </span>
+    <span class="c1"># transforming result (contour) values to texture values. When set too low the &#39;out of </span>
+    <span class="c1"># range&#39; colors may be incorrectly shown for values near the range limits. The default </span>
     <span class="c1"># value is 0.5×10–5. </span>
     <span class="n">contourRangeTexturePrecision</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mi">0</span>
 
@@ -761,12 +762,12 @@
     <span class="c1"># A String specifying one of the two background colors for all viewport windows. The </span>
     <span class="c1"># initial color is black. A list of valid color strings is in the *colors* map in the </span>
     <span class="c1"># Session object. </span>
-    <span class="n">backgroundColor</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">''</span>
+    <span class="n">backgroundColor</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span>
 
     <span class="c1"># A String specifying one of the two background colors for all viewport windows. This </span>
     <span class="c1"># color is used only if *backgroundStyle* =GRADIENT. The initial color is black. A list of </span>
     <span class="c1"># valid color strings is in the *colors* map in the Session object. </span>
-    <span class="n">backgroundBottomColor</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">''</span>
+    <span class="n">backgroundBottomColor</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span>
 
 <div class="viewcode-block" id="GraphicsOptions.setValues"><a class="viewcode-back" href="../../../reference/session/display_options.html#abaqus.DisplayOptions.GraphicsOptions.GraphicsOptions.setValues">[docs]</a>    <span class="k">def</span> <span class="nf">setValues</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">graphicsDriver</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">doubleBuffering</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="n">ON</span><span class="p">,</span>
                   <span class="n">displayLists</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="n">ON</span><span class="p">,</span> <span class="n">highlightMethodHint</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
@@ -778,12 +779,12 @@
                   <span class="n">directRendering</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="n">OFF</span><span class="p">,</span> <span class="n">hardwareAcceleration</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="n">ON</span><span class="p">,</span>
                   <span class="n">hardwareOverlay</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="n">OFF</span><span class="p">,</span> <span class="n">textureMapping</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="n">ON</span><span class="p">,</span>
                   <span class="n">printTextureMapping</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="n">ON</span><span class="p">,</span> <span class="n">backgroundStyle</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="n">SOLID</span><span class="p">,</span>
-                  <span class="n">backgroundColor</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">''</span><span class="p">,</span> <span class="n">backgroundBottomColor</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">''</span><span class="p">,</span>
+                  <span class="n">backgroundColor</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">backgroundBottomColor</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span><span class="p">,</span>
                   <span class="n">backgroundOverride</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="n">OFF</span><span class="p">,</span> <span class="n">backfaceCulling</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="n">ON</span><span class="p">,</span>
                   <span class="n">accelerateOffScreen</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="n">OFF</span><span class="p">,</span> <span class="n">backingStore</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="n">ON</span><span class="p">,</span>
                   <span class="n">shadersAvailable</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="n">OFF</span><span class="p">,</span> <span class="n">translucencyMode</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">4</span><span class="p">,</span> <span class="n">options</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
                   <span class="n">contourRangeTexturePrecision</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mi">0</span><span class="p">):</span>
-        <span class="sd">"""This method modifies the GraphicsOptions object.</span>
+        <span class="sd">&quot;&quot;&quot;This method modifies the GraphicsOptions object.</span>
 <span class="sd">        </span>
 <span class="sd">        Parameters</span>
 <span class="sd">        ----------</span>
@@ -981,14 +982,14 @@
 <span class="sd">            in the *options* member. The default value is None. </span>
 <span class="sd">        contourRangeTexturePrecision</span>
 <span class="sd">            A Float specifying a tolerance used when computing the appropriate scale for </span>
-<span class="sd">            transforming result (contour) values to texture values. When set too low the 'out of </span>
-<span class="sd">            range' colors may be incorrectly shown for values near the range limits. The default </span>
+<span class="sd">            transforming result (contour) values to texture values. When set too low the &#39;out of </span>
+<span class="sd">            range&#39; colors may be incorrectly shown for values near the range limits. The default </span>
 <span class="sd">            value is 0.5×10–5.</span>
 
 <span class="sd">        Raises</span>
 <span class="sd">        ------</span>
 <span class="sd">        RangeError</span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span></div></div>
 </pre></div>
         </article>

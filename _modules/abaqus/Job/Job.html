@@ -5,10 +5,10 @@
     <meta name="color-scheme" content="light dark"><link rel="index" title="Index" href="../../../genindex.html" /><link rel="search" title="Search" href="../../../search.html" />
         <link rel="canonical" href="https://pyabaqus.haiiliin.com/_modules/abaqus/Job/Job.html" />
 
-    <meta name="generator" content="sphinx-4.5.0, furo 2022.04.07"/>
-        <title>abaqus.Job.Job - pyabaqus 1.0.16 documentation</title>
+    <meta name="generator" content="sphinx-4.5.0, furo 2022.06.04.1"/>
+        <title>abaqus.Job.Job - pyabaqus 1.0.18 documentation</title>
       <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/styles/furo.css?digest=68f4518137b9aefe99b631505a2064c3c42c9852" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/styles/furo.css?digest=40978830699223671f4072448e654b5958f38b89" />
     <link rel="stylesheet" type="text/css" href="../../../_static/styles/furo-extensions.css?digest=30d1aed668e5c3a91c3e3bf6a60b675221979f0e" />
     
     
@@ -123,7 +123,7 @@
       </label>
     </div>
     <div class="header-center">
-      <a href="../../../index.html"><div class="brand">pyabaqus 1.0.16 documentation</div></a>
+      <a href="../../../index.html"><div class="brand">pyabaqus 1.0.18 documentation</div></a>
     </div>
     <div class="header-right">
       <div class="theme-toggle-container theme-toggle-header">
@@ -146,7 +146,7 @@
       <div class="sidebar-sticky"><a class="sidebar-brand" href="../../../index.html">
   
   
-  <span class="sidebar-brand-text">pyabaqus 1.0.16 documentation</span>
+  <span class="sidebar-brand-text">pyabaqus 1.0.18 documentation</span>
   
 </a><form class="sidebar-search-container" method="get" action="../../../search.html" role="search">
   <input class="sidebar-search" placeholder=Search name="q" aria-label="Search">
@@ -286,7 +286,8 @@
           </svg>
           <span>Back to top</span>
         </a>
-        <div class="content-icon-container"><div class="theme-toggle-container theme-toggle-content">
+        <div class="content-icon-container">
+          <div class="theme-toggle-container theme-toggle-content">
             <button class="theme-toggle">
               <div class="visually-hidden">Toggle Light / Dark / Auto color theme</div>
               <svg class="theme-icon-when-auto"><use href="#svg-sun-half"></use></svg>
@@ -306,7 +307,7 @@
 
 
 <div class="viewcode-block" id="Job"><a class="viewcode-back" href="../../../user/mdb/job.html#abaqus.Job.Job.Job">[docs]</a><span class="k">class</span> <span class="nc">Job</span><span class="p">:</span>
-    <span class="sd">"""The Job object is the abstract base type for other Job objects. The Job object has no</span>
+    <span class="sd">&quot;&quot;&quot;The Job object is the abstract base type for other Job objects. The Job object has no</span>
 <span class="sd">    explicit constructor. The methods and members of the Job object are common to all </span>
 <span class="sd">    objects derived from Job. </span>
 
@@ -389,7 +390,7 @@
 <span class="sd">        A String specifying the location of the scratch directory. The default value is an empty</span>
 <span class="sd">        string.</span>
 <span class="sd">    userSubroutine: str</span>
-<span class="sd">        A String specifying the file containing the user's subroutine definitions. The default</span>
+<span class="sd">        A String specifying the file containing the user&#39;s subroutine definitions. The default</span>
 <span class="sd">        value is an empty string.</span>
 <span class="sd">    messages: MessageArray</span>
 <span class="sd">        A :py:class:`~abaqus.Job.MessageArray.MessageArray` object specifying the messages received during an analysis.</span>
@@ -416,11 +417,11 @@
 <span class="sd">    - HEADING</span>
 <span class="sd">            - PREPRINT</span>
 
-<span class="sd">    """</span>
+<span class="sd">    &quot;&quot;&quot;</span>
 
     <span class="c1"># A String specifying the name of the new job. The name must be a valid Abaqus/CAE object </span>
     <span class="c1"># name. </span>
-    <span class="n">name</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">''</span>
+    <span class="n">name</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span>
 
     <span class="c1"># A SymbolicConstant specifying the type of job. Possible values are ANALYSIS, </span>
     <span class="c1"># SYNTAXCHECK, RECOVER, and RESTART. The default value is ANALYSIS.If the object has the </span>
@@ -501,22 +502,22 @@
     <span class="c1"># A String specifying the name of the queue to which to submit the job. The default value </span>
     <span class="c1"># is an empty string.Note:You can use the *queue* argument when creating a Job object on a </span>
     <span class="c1"># Windows workstation; however, remote queues are available only on Linux platforms. </span>
-    <span class="n">queue</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">''</span>
+    <span class="n">queue</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span>
 
     <span class="c1"># A String specifying the time at which to submit the job. If *queue* is empty, the string </span>
     <span class="c1"># syntax must be valid for the Linux `at` command. If *queue* is set, the syntax must be </span>
     <span class="c1"># valid according to the system administrator. The default value is an empty </span>
     <span class="c1"># string.Note:You can use the *atTime* argument when creating a Job object on a Windows </span>
     <span class="c1"># workstation; however, the `at` command is available only on Linux platforms. </span>
-    <span class="n">atTime</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">''</span>
+    <span class="n">atTime</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span>
 
     <span class="c1"># A String specifying the location of the scratch directory. The default value is an empty </span>
     <span class="c1"># string. </span>
-    <span class="n">scratch</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">''</span>
+    <span class="n">scratch</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span>
 
-    <span class="c1"># A String specifying the file containing the user's subroutine definitions. The default </span>
+    <span class="c1"># A String specifying the file containing the user&#39;s subroutine definitions. The default </span>
     <span class="c1"># value is an empty string. </span>
-    <span class="n">userSubroutine</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">''</span>
+    <span class="n">userSubroutine</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span>
 
     <span class="c1"># A MessageArray object specifying the messages received during an analysis. </span>
     <span class="n">messages</span><span class="p">:</span> <span class="n">MessageArray</span> <span class="o">=</span> <span class="n">MessageArray</span><span class="p">()</span>
@@ -531,13 +532,13 @@
     <span class="n">licenseType</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="n">DEFAULT</span>
 
 <div class="viewcode-block" id="Job.kill"><a class="viewcode-back" href="../../../reference/mdb/job.html#abaqus.Job.Job.Job.kill">[docs]</a>    <span class="k">def</span> <span class="nf">kill</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="sd">"""This method kills the analysis of a job.</span>
-<span class="sd">        """</span>
+        <span class="sd">&quot;&quot;&quot;This method kills the analysis of a job.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span></div>
 
 <div class="viewcode-block" id="Job.submit"><a class="viewcode-back" href="../../../reference/mdb/job.html#abaqus.Job.Job.Job.submit">[docs]</a>    <span class="k">def</span> <span class="nf">submit</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">consistencyChecking</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="n">ON</span><span class="p">,</span> <span class="n">datacheckJob</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="kc">False</span><span class="p">,</span>
                <span class="n">continueJob</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="kc">False</span><span class="p">):</span>
-        <span class="sd">"""This method submits a job for analysis.</span>
+        <span class="sd">&quot;&quot;&quot;This method submits a job for analysis.</span>
 <span class="sd">        </span>
 <span class="sd">        Parameters</span>
 <span class="sd">        ----------</span>
@@ -551,20 +552,20 @@
 <span class="sd">        continueJob</span>
 <span class="sd">            A Boolean specifying whether to run the job as a continuation analysis. The default </span>
 <span class="sd">            value is False. The datacheckJob and continueJob arguments cannot both be True. </span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span></div>
 
 <div class="viewcode-block" id="Job.waitForCompletion"><a class="viewcode-back" href="../../../reference/mdb/job.html#abaqus.Job.Job.Job.waitForCompletion">[docs]</a>    <span class="k">def</span> <span class="nf">waitForCompletion</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="sd">"""This method interrupts the execution of the script until the end of the analysis. If you</span>
+        <span class="sd">&quot;&quot;&quot;This method interrupts the execution of the script until the end of the analysis. If you</span>
 <span class="sd">        call the waitForCompletion method and the *status* member is neither SUBMITTED nor</span>
 <span class="sd">        RUNNING, Abaqus assumes the analysis has either completed or aborted and returns</span>
 <span class="sd">        immediately.</span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span></div>
 
 <div class="viewcode-block" id="Job.clearMessage"><a class="viewcode-back" href="../../../reference/mdb/job.html#abaqus.Job.Job.Job.clearMessage">[docs]</a>    <span class="k">def</span> <span class="nf">clearMessage</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="sd">"""This method clears *messages* and sets the *status* to NONE.</span>
-<span class="sd">        """</span>
+        <span class="sd">&quot;&quot;&quot;This method clears *messages* and sets the *status* to NONE.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span></div></div>
 </pre></div>
         </article>

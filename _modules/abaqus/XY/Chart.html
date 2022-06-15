@@ -5,10 +5,10 @@
     <meta name="color-scheme" content="light dark"><link rel="index" title="Index" href="../../../genindex.html" /><link rel="search" title="Search" href="../../../search.html" />
         <link rel="canonical" href="https://pyabaqus.haiiliin.com/_modules/abaqus/XY/Chart.html" />
 
-    <meta name="generator" content="sphinx-4.5.0, furo 2022.04.07"/>
-        <title>abaqus.XY.Chart - pyabaqus 1.0.16 documentation</title>
+    <meta name="generator" content="sphinx-4.5.0, furo 2022.06.04.1"/>
+        <title>abaqus.XY.Chart - pyabaqus 1.0.18 documentation</title>
       <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/styles/furo.css?digest=68f4518137b9aefe99b631505a2064c3c42c9852" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/styles/furo.css?digest=40978830699223671f4072448e654b5958f38b89" />
     <link rel="stylesheet" type="text/css" href="../../../_static/styles/furo-extensions.css?digest=30d1aed668e5c3a91c3e3bf6a60b675221979f0e" />
     
     
@@ -123,7 +123,7 @@
       </label>
     </div>
     <div class="header-center">
-      <a href="../../../index.html"><div class="brand">pyabaqus 1.0.16 documentation</div></a>
+      <a href="../../../index.html"><div class="brand">pyabaqus 1.0.18 documentation</div></a>
     </div>
     <div class="header-right">
       <div class="theme-toggle-container theme-toggle-header">
@@ -146,7 +146,7 @@
       <div class="sidebar-sticky"><a class="sidebar-brand" href="../../../index.html">
   
   
-  <span class="sidebar-brand-text">pyabaqus 1.0.16 documentation</span>
+  <span class="sidebar-brand-text">pyabaqus 1.0.18 documentation</span>
   
 </a><form class="sidebar-search-container" method="get" action="../../../search.html" role="search">
   <input class="sidebar-search" placeholder=Search name="q" aria-label="Search">
@@ -286,7 +286,8 @@
           </svg>
           <span>Back to top</span>
         </a>
-        <div class="content-icon-container"><div class="theme-toggle-container theme-toggle-content">
+        <div class="content-icon-container">
+          <div class="theme-toggle-container theme-toggle-content">
             <button class="theme-toggle">
               <div class="visually-hidden">Toggle Light / Dark / Auto color theme</div>
               <svg class="theme-icon-when-auto"><use href="#svg-sun-half"></use></svg>
@@ -313,7 +314,7 @@
 
 
 <div class="viewcode-block" id="Chart"><a class="viewcode-back" href="../../../reference/session/xy.html#abaqus.XY.Chart.Chart">[docs]</a><span class="k">class</span> <span class="nc">Chart</span><span class="p">:</span>
-    <span class="sd">"""The Chart object is used to display XYCurve objects. A Chart object is automatically</span>
+    <span class="sd">&quot;&quot;&quot;The Chart object is used to display XYCurve objects. A Chart object is automatically</span>
 <span class="sd">    created when creating an XYPlot object </span>
 
 <span class="sd">    Attributes</span>
@@ -374,10 +375,10 @@
 <span class="sd">        session.charts[name]</span>
 <span class="sd">        session.xyPlots[name].charts[name]</span>
 
-<span class="sd">    """</span>
+<span class="sd">    &quot;&quot;&quot;</span>
 
     <span class="c1"># A String specifying the name of the Chart object. </span>
-    <span class="n">name</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">''</span>
+    <span class="n">name</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span>
 
     <span class="c1"># A Boolean specifying whether to use the QuantityType to associate curves with axes. The </span>
     <span class="c1"># default value is ON. </span>
@@ -439,7 +440,7 @@
     <span class="n">transform</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="kc">None</span>
 
 <div class="viewcode-block" id="Chart.autoColor"><a class="viewcode-back" href="../../../reference/session/xy.html#abaqus.XY.Chart.Chart.autoColor">[docs]</a>    <span class="k">def</span> <span class="nf">autoColor</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">lines</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="n">OFF</span><span class="p">,</span> <span class="n">symbols</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="n">OFF</span><span class="p">):</span>
-        <span class="sd">"""This method distributes the colors on all curves displayed in the chart using the color</span>
+        <span class="sd">&quot;&quot;&quot;This method distributes the colors on all curves displayed in the chart using the color</span>
 <span class="sd">        palette defined by the xyColors object.</span>
 <span class="sd">        </span>
 <span class="sd">        Parameters</span>
@@ -448,21 +449,21 @@
 <span class="sd">            A Boolean defining whether color distribution affects curve lines. </span>
 <span class="sd">        symbols</span>
 <span class="sd">            A Boolean defining whether color distribution affects curve symbols. </span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span></div>
 
 <div class="viewcode-block" id="Chart.autoSymbol"><a class="viewcode-back" href="../../../reference/session/xy.html#abaqus.XY.Chart.Chart.autoSymbol">[docs]</a>    <span class="k">def</span> <span class="nf">autoSymbol</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="sd">"""This method distributes the symbols on all curves displayed in the chart.</span>
-<span class="sd">        """</span>
+        <span class="sd">&quot;&quot;&quot;This method distributes the symbols on all curves displayed in the chart.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span></div>
 
 <div class="viewcode-block" id="Chart.fitCurves"><a class="viewcode-back" href="../../../reference/session/xy.html#abaqus.XY.Chart.Chart.fitCurves">[docs]</a>    <span class="k">def</span> <span class="nf">fitCurves</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="sd">"""This method resets the transform of the chart. It cancels any zoom or pan action.</span>
-<span class="sd">        """</span>
+        <span class="sd">&quot;&quot;&quot;This method resets the transform of the chart. It cancels any zoom or pan action.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span></div>
 
 <div class="viewcode-block" id="Chart.getAxis1"><a class="viewcode-back" href="../../../reference/session/xy.html#abaqus.XY.Chart.Chart.getAxis1">[docs]</a>    <span class="k">def</span> <span class="nf">getAxis1</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">curve</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">quantityType</span><span class="p">:</span> <span class="nb">str</span><span class="p">):</span>
-        <span class="sd">"""This method returns the Axis object used for displaying the Axis1 of the XYCurve</span>
+        <span class="sd">&quot;&quot;&quot;This method returns the Axis object used for displaying the Axis1 of the XYCurve</span>
 <span class="sd">        specified by name or object or used for the given QuantityType object.</span>
 <span class="sd">        </span>
 <span class="sd">        Parameters</span>
@@ -484,11 +485,11 @@
 <span class="sd">              TypeError: Specify curve or quantityType; too many arguments; expected 1, got 2. </span>
 <span class="sd">            - If the given QuantityType is not used in the Chart. </span>
 <span class="sd">              ValueError: QuantityType not found </span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span></div>
 
 <div class="viewcode-block" id="Chart.getAxis2"><a class="viewcode-back" href="../../../reference/session/xy.html#abaqus.XY.Chart.Chart.getAxis2">[docs]</a>    <span class="k">def</span> <span class="nf">getAxis2</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">curve</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">quantityType</span><span class="p">:</span> <span class="nb">str</span><span class="p">):</span>
-        <span class="sd">"""This method returns the Axis object used for displaying the Axis2 of the XYCurve</span>
+        <span class="sd">&quot;&quot;&quot;This method returns the Axis object used for displaying the Axis2 of the XYCurve</span>
 <span class="sd">        specified by name or object or used for the given QuantityType object.</span>
 <span class="sd">        </span>
 <span class="sd">        Parameters</span>
@@ -510,45 +511,45 @@
 <span class="sd">              TypeError: Specify curve or quantityType; too many arguments; expected 1, got 2. </span>
 <span class="sd">            - If the given QuantityType is not used in the Chart. </span>
 <span class="sd">              ValueError: QuantityType not found </span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span></div>
 
 <div class="viewcode-block" id="Chart.moveAxisUp"><a class="viewcode-back" href="../../../reference/session/xy.html#abaqus.XY.Chart.Chart.moveAxisUp">[docs]</a>    <span class="k">def</span> <span class="nf">moveAxisUp</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">axis</span><span class="p">:</span> <span class="nb">str</span><span class="p">):</span>
-        <span class="sd">"""This method moves the relative position of the given Axis object up in the axis sequence</span>
+        <span class="sd">&quot;&quot;&quot;This method moves the relative position of the given Axis object up in the axis sequence</span>
 <span class="sd">        of the Chart.</span>
 <span class="sd">        </span>
 <span class="sd">        Parameters</span>
 <span class="sd">        ----------</span>
 <span class="sd">        axis</span>
 <span class="sd">            The Axis object to be moved. </span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span></div>
 
 <div class="viewcode-block" id="Chart.moveAxisDown"><a class="viewcode-back" href="../../../reference/session/xy.html#abaqus.XY.Chart.Chart.moveAxisDown">[docs]</a>    <span class="k">def</span> <span class="nf">moveAxisDown</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">axis</span><span class="p">:</span> <span class="nb">str</span><span class="p">):</span>
-        <span class="sd">"""This method moves the relative position of the given Axis object down in the axis</span>
+        <span class="sd">&quot;&quot;&quot;This method moves the relative position of the given Axis object down in the axis</span>
 <span class="sd">        sequence of the Chart.</span>
 <span class="sd">        </span>
 <span class="sd">        Parameters</span>
 <span class="sd">        ----------</span>
 <span class="sd">        axis</span>
 <span class="sd">            The Axis object to be moved. </span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span></div>
 
 <div class="viewcode-block" id="Chart.removeCurve"><a class="viewcode-back" href="../../../reference/session/xy.html#abaqus.XY.Chart.Chart.removeCurve">[docs]</a>    <span class="k">def</span> <span class="nf">removeCurve</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">curve</span><span class="p">:</span> <span class="nb">str</span><span class="p">):</span>
-        <span class="sd">"""This method removes the given XYCurve from the Chart.</span>
+        <span class="sd">&quot;&quot;&quot;This method removes the given XYCurve from the Chart.</span>
 <span class="sd">        </span>
 <span class="sd">        Parameters</span>
 <span class="sd">        ----------</span>
 <span class="sd">        curve</span>
 <span class="sd">            The XYCurve name or the XYCurve object or a sequence of XYCurve names or XYCurve objects </span>
 <span class="sd">            to be removed from the Chart. </span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span></div>
 
-<div class="viewcode-block" id="Chart.setValues"><a class="viewcode-back" href="../../../reference/session/xy.html#abaqus.XY.Chart.Chart.setValues">[docs]</a>    <span class="k">def</span> <span class="nf">setValues</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">chart</span><span class="p">:</span> <span class="s1">'Chart'</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">curvesToPlot</span><span class="p">:</span> <span class="nb">tuple</span><span class="p">[</span><span class="n">XYCurve</span><span class="p">]</span> <span class="o">=</span> <span class="p">(),</span> <span class="n">aspectRatio</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+<div class="viewcode-block" id="Chart.setValues"><a class="viewcode-back" href="../../../reference/session/xy.html#abaqus.XY.Chart.Chart.setValues">[docs]</a>    <span class="k">def</span> <span class="nf">setValues</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">chart</span><span class="p">:</span> <span class="s1">&#39;Chart&#39;</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">curvesToPlot</span><span class="p">:</span> <span class="nb">tuple</span><span class="p">[</span><span class="n">XYCurve</span><span class="p">]</span> <span class="o">=</span> <span class="p">(),</span> <span class="n">aspectRatio</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
                   <span class="n">transform</span><span class="p">:</span> <span class="nb">tuple</span> <span class="o">=</span> <span class="p">(),</span> <span class="n">view</span><span class="p">:</span> <span class="n">View</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">useQuantityType</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="n">ON</span><span class="p">):</span>
-        <span class="sd">"""This method modifies the Chart object.</span>
+        <span class="sd">&quot;&quot;&quot;This method modifies the Chart object.</span>
 <span class="sd">        </span>
 <span class="sd">        Parameters</span>
 <span class="sd">        ----------</span>
@@ -574,7 +575,7 @@
 <span class="sd">        Raises</span>
 <span class="sd">        ------</span>
 <span class="sd">        RangeError</span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span></div></div>
 </pre></div>
         </article>

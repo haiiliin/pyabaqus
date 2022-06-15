@@ -5,10 +5,10 @@
     <meta name="color-scheme" content="light dark"><link rel="index" title="Index" href="../../../genindex.html" /><link rel="search" title="Search" href="../../../search.html" />
         <link rel="canonical" href="https://pyabaqus.haiiliin.com/_modules/abaqus/XY/XYData.html" />
 
-    <meta name="generator" content="sphinx-4.5.0, furo 2022.04.07"/>
-        <title>abaqus.XY.XYData - pyabaqus 1.0.16 documentation</title>
+    <meta name="generator" content="sphinx-4.5.0, furo 2022.06.04.1"/>
+        <title>abaqus.XY.XYData - pyabaqus 1.0.18 documentation</title>
       <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/styles/furo.css?digest=68f4518137b9aefe99b631505a2064c3c42c9852" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/styles/furo.css?digest=40978830699223671f4072448e654b5958f38b89" />
     <link rel="stylesheet" type="text/css" href="../../../_static/styles/furo-extensions.css?digest=30d1aed668e5c3a91c3e3bf6a60b675221979f0e" />
     
     
@@ -123,7 +123,7 @@
       </label>
     </div>
     <div class="header-center">
-      <a href="../../../index.html"><div class="brand">pyabaqus 1.0.16 documentation</div></a>
+      <a href="../../../index.html"><div class="brand">pyabaqus 1.0.18 documentation</div></a>
     </div>
     <div class="header-right">
       <div class="theme-toggle-container theme-toggle-header">
@@ -146,7 +146,7 @@
       <div class="sidebar-sticky"><a class="sidebar-brand" href="../../../index.html">
   
   
-  <span class="sidebar-brand-text">pyabaqus 1.0.16 documentation</span>
+  <span class="sidebar-brand-text">pyabaqus 1.0.18 documentation</span>
   
 </a><form class="sidebar-search-container" method="get" action="../../../search.html" role="search">
   <input class="sidebar-search" placeholder=Search name="q" aria-label="Search">
@@ -286,7 +286,8 @@
           </svg>
           <span>Back to top</span>
         </a>
-        <div class="content-icon-container"><div class="theme-toggle-container theme-toggle-content">
+        <div class="content-icon-container">
+          <div class="theme-toggle-container theme-toggle-content">
             <button class="theme-toggle">
               <div class="visually-hidden">Toggle Light / Dark / Auto color theme</div>
               <svg class="theme-icon-when-auto"><use href="#svg-sun-half"></use></svg>
@@ -314,7 +315,7 @@
 
 
 <div class="viewcode-block" id="XYData"><a class="viewcode-back" href="../../../reference/session/xy.html#abaqus.XY.XYData.XYData">[docs]</a><span class="k">class</span> <span class="nc">XYData</span><span class="p">:</span>
-    <span class="sd">"""The XYData object is used to store values and attributes associated with XYData type</span>
+    <span class="sd">&quot;&quot;&quot;The XYData object is used to store values and attributes associated with XYData type</span>
 <span class="sd">    objects. </span>
 <span class="sd">    XYData objects can be created using the methods described below. The methods accessed </span>
 <span class="sd">    via the Session object cause the XYData object to be added to the session.xyData </span>
@@ -355,24 +356,24 @@
 <span class="sd">        session.xyPlots[name].charts[name].curves[name].data</span>
 <span class="sd">        session.xyPlots[name].curves[name].data</span>
 
-<span class="sd">    """</span>
+<span class="sd">    &quot;&quot;&quot;</span>
 
     <span class="c1"># A SymbolicConstant specifying the source type of the XYData object. Possible values are </span>
     <span class="c1"># FROM_ODB, FROM_KEYBOARD, FROM_ASCII_FILE, FROM_OPERATION, and FROM_USER_DEFINED. </span>
     <span class="n">sourceType</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="kc">None</span>
 
     <span class="c1"># A String specifying the source file name of the XYData object. </span>
-    <span class="n">fileName</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">''</span>
+    <span class="n">fileName</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span>
 
     <span class="c1"># A String specifying the complete description of the XYData object. </span>
-    <span class="n">description</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">''</span>
+    <span class="n">description</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span>
 
     <span class="nd">@typing</span><span class="o">.</span><span class="n">overload</span>
-    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">data</span><span class="p">:</span> <span class="nb">tuple</span><span class="p">,</span> <span class="n">name</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">''</span><span class="p">,</span> <span class="n">sourceDescription</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">''</span><span class="p">,</span> <span class="n">contentDescription</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">''</span><span class="p">,</span>
-                 <span class="n">positionDescription</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">''</span><span class="p">,</span> <span class="n">legendLabel</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">''</span><span class="p">,</span> <span class="n">xValuesLabel</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">''</span><span class="p">,</span>
-                 <span class="n">yValuesLabel</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">''</span><span class="p">,</span> <span class="n">axis1QuantityType</span><span class="p">:</span> <span class="n">QuantityType</span> <span class="o">=</span> <span class="n">QuantityType</span><span class="p">(),</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">data</span><span class="p">:</span> <span class="nb">tuple</span><span class="p">,</span> <span class="n">name</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">sourceDescription</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">contentDescription</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span><span class="p">,</span>
+                 <span class="n">positionDescription</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">legendLabel</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">xValuesLabel</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span><span class="p">,</span>
+                 <span class="n">yValuesLabel</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">axis1QuantityType</span><span class="p">:</span> <span class="n">QuantityType</span> <span class="o">=</span> <span class="n">QuantityType</span><span class="p">(),</span>
                  <span class="n">axis2QuantityType</span><span class="p">:</span> <span class="n">QuantityType</span> <span class="o">=</span> <span class="n">QuantityType</span><span class="p">()):</span>
-        <span class="sd">"""This method creates an XYData object from a sequence of *X–Y* data pairs.</span>
+        <span class="sd">&quot;&quot;&quot;This method creates an XYData object from a sequence of *X–Y* data pairs.</span>
 
 <span class="sd">        Notes</span>
 <span class="sd">        -----</span>
@@ -420,12 +421,12 @@
 <span class="sd">        Returns</span>
 <span class="sd">        -------</span>
 <span class="sd">            An XYData object.</span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span>
 
     <span class="nd">@typing</span><span class="o">.</span><span class="n">overload</span>
-    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">objectToCopy</span><span class="p">:</span> <span class="s1">'XYData'</span><span class="p">):</span>
-        <span class="sd">"""This method creates an XYData object by copying an existing XYData object.</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">objectToCopy</span><span class="p">:</span> <span class="s1">&#39;XYData&#39;</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;This method creates an XYData object by copying an existing XYData object.</span>
 
 <span class="sd">        Notes</span>
 <span class="sd">        -----</span>
@@ -444,19 +445,19 @@
 <span class="sd">        Returns</span>
 <span class="sd">        -------</span>
 <span class="sd">            An XYData object.</span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span>
 
     <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
         <span class="k">pass</span>
 
-<div class="viewcode-block" id="XYData.XYDataFromFile"><a class="viewcode-back" href="../../../reference/session/xy.html#abaqus.XY.XYData.XYData.XYDataFromFile">[docs]</a>    <span class="k">def</span> <span class="nf">XYDataFromFile</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">fileName</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">name</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">''</span><span class="p">,</span> <span class="n">sourceDescription</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">''</span><span class="p">,</span>
-                       <span class="n">contentDescription</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">''</span><span class="p">,</span> <span class="n">positionDescription</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">''</span><span class="p">,</span> <span class="n">legendLabel</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">''</span><span class="p">,</span>
-                       <span class="n">xValuesLabel</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">''</span><span class="p">,</span> <span class="n">yValuesLabel</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">''</span><span class="p">,</span>
+<div class="viewcode-block" id="XYData.XYDataFromFile"><a class="viewcode-back" href="../../../reference/session/xy.html#abaqus.XY.XYData.XYData.XYDataFromFile">[docs]</a>    <span class="k">def</span> <span class="nf">XYDataFromFile</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">fileName</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">name</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">sourceDescription</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span><span class="p">,</span>
+                       <span class="n">contentDescription</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">positionDescription</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">legendLabel</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span><span class="p">,</span>
+                       <span class="n">xValuesLabel</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">yValuesLabel</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span><span class="p">,</span>
                        <span class="n">axis1QuantityType</span><span class="p">:</span> <span class="n">QuantityType</span> <span class="o">=</span> <span class="n">QuantityType</span><span class="p">(),</span>
                        <span class="n">axis2QuantityType</span><span class="p">:</span> <span class="n">QuantityType</span> <span class="o">=</span> <span class="n">QuantityType</span><span class="p">(),</span> <span class="n">xField</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span> <span class="n">yField</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">2</span><span class="p">,</span>
                        <span class="n">skipFrequency</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="kc">None</span><span class="p">):</span>
-        <span class="sd">"""This method creates an XYData object from data in an ASCII file.</span>
+        <span class="sd">&quot;&quot;&quot;This method creates an XYData object from data in an ASCII file.</span>
 
 <span class="sd">        Notes</span>
 <span class="sd">        -----</span>
@@ -517,14 +518,14 @@
 <span class="sd">        ------</span>
 <span class="sd">        InvalidNameError</span>
 <span class="sd">        RangeError </span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span></div>
 
-<div class="viewcode-block" id="XYData.XYDataFromHistory"><a class="viewcode-back" href="../../../reference/session/xy.html#abaqus.XY.XYData.XYData.XYDataFromHistory">[docs]</a>    <span class="k">def</span> <span class="nf">XYDataFromHistory</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">odb</span><span class="p">:</span> <span class="n">Odb</span><span class="p">,</span> <span class="n">outputVariableName</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">steps</span><span class="p">:</span> <span class="nb">tuple</span><span class="p">,</span> <span class="n">name</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">''</span><span class="p">,</span>
-                          <span class="n">sourceDescription</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">''</span><span class="p">,</span> <span class="n">contentDescription</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">''</span><span class="p">,</span>
-                          <span class="n">positionDescription</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">''</span><span class="p">,</span> <span class="n">legendLabel</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">''</span><span class="p">,</span> <span class="n">skipFrequency</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+<div class="viewcode-block" id="XYData.XYDataFromHistory"><a class="viewcode-back" href="../../../reference/session/xy.html#abaqus.XY.XYData.XYData.XYDataFromHistory">[docs]</a>    <span class="k">def</span> <span class="nf">XYDataFromHistory</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">odb</span><span class="p">:</span> <span class="n">Odb</span><span class="p">,</span> <span class="n">outputVariableName</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">steps</span><span class="p">:</span> <span class="nb">tuple</span><span class="p">,</span> <span class="n">name</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span><span class="p">,</span>
+                          <span class="n">sourceDescription</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">contentDescription</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span><span class="p">,</span>
+                          <span class="n">positionDescription</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">legendLabel</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">skipFrequency</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
                           <span class="n">numericForm</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="n">REAL</span><span class="p">,</span> <span class="n">complexAngle</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="n">stepTuple</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="kc">None</span><span class="p">):</span>
-        <span class="sd">"""This method creates an XYData object by reading history data from an Odb object.</span>
+        <span class="sd">&quot;&quot;&quot;This method creates an XYData object by reading history data from an Odb object.</span>
 
 <span class="sd">        Notes</span>
 <span class="sd">        -----</span>
@@ -583,14 +584,14 @@
 <span class="sd">        ------</span>
 <span class="sd">        InvalidNameError</span>
 <span class="sd">        RangeError </span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span></div>
 
 <div class="viewcode-block" id="XYData.xyDataListFromField"><a class="viewcode-back" href="../../../reference/session/xy.html#abaqus.XY.XYData.XYData.xyDataListFromField">[docs]</a>    <span class="k">def</span> <span class="nf">xyDataListFromField</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">odb</span><span class="p">:</span> <span class="n">Odb</span><span class="p">,</span> <span class="n">outputPosition</span><span class="p">:</span> <span class="n">SymbolicConstant</span><span class="p">,</span> <span class="n">variable</span><span class="p">:</span> <span class="nb">tuple</span><span class="p">[</span><span class="nb">tuple</span><span class="p">],</span>
                             <span class="n">elementSets</span><span class="p">:</span> <span class="nb">tuple</span> <span class="o">=</span> <span class="p">(),</span> <span class="n">elementLabels</span><span class="p">:</span> <span class="nb">tuple</span> <span class="o">=</span> <span class="p">(),</span> <span class="n">nodeSets</span><span class="p">:</span> <span class="nb">tuple</span> <span class="o">=</span> <span class="p">(),</span>
                             <span class="n">nodeLabels</span><span class="p">:</span> <span class="nb">tuple</span> <span class="o">=</span> <span class="p">(),</span> <span class="n">numericForm</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="n">REAL</span><span class="p">,</span> <span class="n">complexAngle</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span>
-                            <span class="n">operator</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="kc">None</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">list</span><span class="p">[</span><span class="s1">'XYData'</span><span class="p">]:</span>
-        <span class="sd">"""This method creates a list of XYData objects by reading field data from an Odb object.</span>
+                            <span class="n">operator</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="kc">None</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">list</span><span class="p">[</span><span class="s1">&#39;XYData&#39;</span><span class="p">]:</span>
+        <span class="sd">&quot;&quot;&quot;This method creates a list of XYData objects by reading field data from an Odb object.</span>
 
 <span class="sd">        Notes</span>
 <span class="sd">        -----</span>
@@ -611,7 +612,7 @@
 <span class="sd">        variable</span>
 <span class="sd">            A tuple of tuples containing the descriptions of variables for which to extract data </span>
 <span class="sd">            from the field. Each tuple specifies the following:Variable label: A String specifying </span>
-<span class="sd">            the variable; for example, 'U'.Variable output position: A SymbolicConstant specifying </span>
+<span class="sd">            the variable; for example, &#39;U&#39;.Variable output position: A SymbolicConstant specifying </span>
 <span class="sd">            the output position. Possible values are ELEMENT_CENTROID, ELEMENT_FACE, ELEMENT_NODAL, </span>
 <span class="sd">            GENERAL_PARTICLE, INTEGRATION_POINT, NODAL, WHOLE_ELEMENT, WHOLE_MODEL, </span>
 <span class="sd">            WHOLE_PART_INSTANCE, and WHOLE_REGION.Refinement: A tuple specifying the refinement. If </span>
@@ -620,12 +621,12 @@
 <span class="sd">            in the tuple) is included. The refinement tuple contains the following:Type: A </span>
 <span class="sd">            SymbolicConstant specifying the type of refinement. Possible values are INVARIANT and </span>
 <span class="sd">            COMPONENT.Label: A String specifying the invariant or the component; for example, </span>
-<span class="sd">            'Mises' or 'S22'.Location: An optional Dictionary specifying the location. The </span>
+<span class="sd">            &#39;Mises&#39; or &#39;S22&#39;.Location: An optional Dictionary specifying the location. The </span>
 <span class="sd">            dictionary contains pairs of the following:A String specifying the category selection </span>
 <span class="sd">            label.A String specifying the section point label.For example,</span>
-<span class="sd">            variable=('S',INTEGRATION_POINT, ((COMPONENT, 'S22' ), ), )</span>
-<span class="sd">            variable=(('S',INTEGRATION_POINT, ((COMPONENT, 'S11' ), ), ), ('U',NODAL,((COMPONENT, 'U1'),)),)</span>
-<span class="sd">            variable=(('S', INTEGRATION_POINT, ((INVARIANT, 'Mises' ), ),{'shell &lt; STEEL &gt; &lt; 3 section points &gt;':'SNEG, (fraction = -1.0)', }), )</span>
+<span class="sd">            variable=(&#39;S&#39;,INTEGRATION_POINT, ((COMPONENT, &#39;S22&#39; ), ), )</span>
+<span class="sd">            variable=((&#39;S&#39;,INTEGRATION_POINT, ((COMPONENT, &#39;S11&#39; ), ), ), (&#39;U&#39;,NODAL,((COMPONENT, &#39;U1&#39;),)),)</span>
+<span class="sd">            variable=((&#39;S&#39;, INTEGRATION_POINT, ((INVARIANT, &#39;Mises&#39; ), ),{&#39;shell &lt; STEEL &gt; &lt; 3 section points &gt;&#39;:&#39;SNEG, (fraction = -1.0)&#39;, }), )</span>
 <span class="sd">                                          ` </span>
 <span class="sd">        elementSets</span>
 <span class="sd">            A sequence of Strings specifying element sets or a String specifying a single element </span>
@@ -634,20 +635,20 @@
 <span class="sd">            A sequence of expressions specifying element labels per part instance in the model. Each </span>
 <span class="sd">            part instance element expression is a sequence of a String specifying the part instance </span>
 <span class="sd">            name and a sequence of element expressions; for example, </span>
-<span class="sd">            `(('partInstance1',(1,'7','3:15;3'),), ('partInstance2','8'),))`. The element </span>
+<span class="sd">            `((&#39;partInstance1&#39;,(1,&#39;7&#39;,&#39;3:15;3&#39;),), (&#39;partInstance2&#39;,&#39;8&#39;),))`. The element </span>
 <span class="sd">            expressions can be any of the following:An Int specifying a single element label; for </span>
-<span class="sd">            example, `1`.A String specifying a single element label; for example, `'7'`.A String </span>
-<span class="sd">            specifying a sequence of element labels; for example, `'3:5'` and `'3:15:3'`. </span>
+<span class="sd">            example, `1`.A String specifying a single element label; for example, `&#39;7&#39;`.A String </span>
+<span class="sd">            specifying a sequence of element labels; for example, `&#39;3:5&#39;` and `&#39;3:15:3&#39;`. </span>
 <span class="sd">        nodeSets</span>
 <span class="sd">            A sequence of Strings specifying node sets or a String specifying a single node set. </span>
 <span class="sd">        nodeLabels</span>
 <span class="sd">            A sequence of expressions specifying node labels per part instance in the model. Each </span>
 <span class="sd">            part instance node expression is a sequence of a String specifying the part instance </span>
 <span class="sd">            name and a sequence of node expressions; for example, </span>
-<span class="sd">            `(('partInstance1',(1,'7','3:15;3'),), ('partInstance2','8'),))`. The node expressions </span>
+<span class="sd">            `((&#39;partInstance1&#39;,(1,&#39;7&#39;,&#39;3:15;3&#39;),), (&#39;partInstance2&#39;,&#39;8&#39;),))`. The node expressions </span>
 <span class="sd">            can be any of the following:An Int specifying a single node label; for example, `1`.A </span>
-<span class="sd">            String specifying a single node label; for example, `'7'`.A String specifying a sequence </span>
-<span class="sd">            of node labels; for example, `'3:5'` and `'3:15:3'`. </span>
+<span class="sd">            String specifying a single node label; for example, `&#39;7&#39;`.A String specifying a sequence </span>
+<span class="sd">            of node labels; for example, `&#39;3:5&#39;` and `&#39;3:15:3&#39;`. </span>
 <span class="sd">        numericForm</span>
 <span class="sd">            A SymbolicConstant specifying the numeric form in which to display results that contain </span>
 <span class="sd">            complex numbers. Possible values are COMPLEX_MAGNITUDE, COMPLEX_PHASE, REAL, IMAGINARY, </span>
@@ -673,13 +674,13 @@
 <span class="sd">        ------</span>
 <span class="sd">        InvalidNameError</span>
 <span class="sd">        RangeError </span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span></div>
 
 <div class="viewcode-block" id="XYData.XYDataFromFreeBody"><a class="viewcode-back" href="../../../reference/session/xy.html#abaqus.XY.XYData.XYData.XYDataFromFreeBody">[docs]</a>    <span class="k">def</span> <span class="nf">XYDataFromFreeBody</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">odb</span><span class="p">:</span> <span class="n">Odb</span><span class="p">,</span> <span class="n">force</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="n">ON</span><span class="p">,</span> <span class="n">moment</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="n">OFF</span><span class="p">,</span> <span class="n">heatFlowRate</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="n">OFF</span><span class="p">,</span>
                            <span class="n">resultant</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="n">ON</span><span class="p">,</span> <span class="n">comp1</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="n">OFF</span><span class="p">,</span> <span class="n">comp2</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="n">OFF</span><span class="p">,</span>
                            <span class="n">comp3</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="n">OFF</span><span class="p">):</span>
-        <span class="sd">"""This method creates a list of XYData objects by computing free body data from an Odb</span>
+        <span class="sd">&quot;&quot;&quot;This method creates a list of XYData objects by computing free body data from an Odb</span>
 <span class="sd">        object.</span>
 
 <span class="sd">        Notes</span>
@@ -723,13 +724,13 @@
 <span class="sd">        ------</span>
 <span class="sd">        InvalidNameError</span>
 <span class="sd">        RangeError </span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span></div>
 
 <div class="viewcode-block" id="XYData.XYDataFromShellThickness"><a class="viewcode-back" href="../../../reference/session/xy.html#abaqus.XY.XYData.XYData.XYDataFromShellThickness">[docs]</a>    <span class="k">def</span> <span class="nf">XYDataFromShellThickness</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">odb</span><span class="p">:</span> <span class="n">Odb</span><span class="p">,</span> <span class="n">outputPosition</span><span class="p">:</span> <span class="n">SymbolicConstant</span><span class="p">,</span> <span class="n">variable</span><span class="p">:</span> <span class="n">SymbolicConstant</span><span class="p">,</span>
                                  <span class="n">elementSets</span><span class="p">:</span> <span class="nb">tuple</span> <span class="o">=</span> <span class="p">(),</span> <span class="n">elementLabels</span><span class="p">:</span> <span class="nb">tuple</span> <span class="o">=</span> <span class="p">(),</span> <span class="n">nodeSets</span><span class="p">:</span> <span class="nb">tuple</span> <span class="o">=</span> <span class="p">(),</span>
                                  <span class="n">nodeLabels</span><span class="p">:</span> <span class="nb">tuple</span> <span class="o">=</span> <span class="p">(),</span> <span class="n">numericForm</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="n">REAL</span><span class="p">,</span> <span class="n">complexAngle</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mi">0</span><span class="p">):</span>
-        <span class="sd">"""This method creates a list of XYData objects by reading through the thickness field data</span>
+        <span class="sd">&quot;&quot;&quot;This method creates a list of XYData objects by reading through the thickness field data</span>
 <span class="sd">        from an Odb object.</span>
 
 <span class="sd">        Notes</span>
@@ -751,7 +752,7 @@
 <span class="sd">        variable</span>
 <span class="sd">            A tuple of tuples containing the descriptions of variables for which to extract data </span>
 <span class="sd">            from the field. Each tuple specifies the following:Variable label: A String specifying </span>
-<span class="sd">            the variable; for example, 'U'.Variable output position: A SymbolicConstant specifying </span>
+<span class="sd">            the variable; for example, &#39;U&#39;.Variable output position: A SymbolicConstant specifying </span>
 <span class="sd">            the output position. Possible values are ELEMENT_CENTROID, ELEMENT_FACE, ELEMENT_NODAL, </span>
 <span class="sd">            GENERAL_PARTICLE, INTEGRATION_POINT, NODAL, WHOLE_ELEMENT, WHOLE_MODEL, </span>
 <span class="sd">            WHOLE_PART_INSTANCE, and WHOLE_REGION.Refinement: A tuple specifying the refinement. If </span>
@@ -760,13 +761,13 @@
 <span class="sd">            in the tuple) is included. The refinement tuple contains the following:Type: A </span>
 <span class="sd">            SymbolicConstant specifying the type of refinement. Possible values are INVARIANT and </span>
 <span class="sd">            COMPONENT.Label: A String specifying the invariant or the component; for example, </span>
-<span class="sd">            'Mises' or 'S22'.Location: An optional Dictionary specifying the location. The </span>
+<span class="sd">            &#39;Mises&#39; or &#39;S22&#39;.Location: An optional Dictionary specifying the location. The </span>
 <span class="sd">            dictionary contains pairs of the following:A String specifying the category selection </span>
 <span class="sd">            label.A String specifying the section point label.For example,`variable= </span>
-<span class="sd">            ('S',INTEGRATION_POINT, ( (COMPONENT, 'S22' ), ), ) variable= (('S',INTEGRATION_POINT, </span>
-<span class="sd">            ((COMPONENT, 'S11' ), ), ),            ('U',NODAL,((COMPONENT, 'U1'),)),) variable= </span>
-<span class="sd">            (('S', INTEGRATION_POINT, ((INVARIANT, 'Mises' ), ),            {'shell &lt; STEEL &gt; &lt; 3 </span>
-<span class="sd">            section points &gt;':'SNEG,                                    (fraction = -1.0)', }), )` </span>
+<span class="sd">            (&#39;S&#39;,INTEGRATION_POINT, ( (COMPONENT, &#39;S22&#39; ), ), ) variable= ((&#39;S&#39;,INTEGRATION_POINT, </span>
+<span class="sd">            ((COMPONENT, &#39;S11&#39; ), ), ),            (&#39;U&#39;,NODAL,((COMPONENT, &#39;U1&#39;),)),) variable= </span>
+<span class="sd">            ((&#39;S&#39;, INTEGRATION_POINT, ((INVARIANT, &#39;Mises&#39; ), ),            {&#39;shell &lt; STEEL &gt; &lt; 3 </span>
+<span class="sd">            section points &gt;&#39;:&#39;SNEG,                                    (fraction = -1.0)&#39;, }), )` </span>
 <span class="sd">        elementSets</span>
 <span class="sd">            A sequence of Strings specifying element sets or a String specifying a single element </span>
 <span class="sd">            set. </span>
@@ -774,20 +775,20 @@
 <span class="sd">            A sequence of expressions specifying element labels per part instance in the model. Each </span>
 <span class="sd">            part instance element expression is a sequence of a String specifying the part instance </span>
 <span class="sd">            name and a sequence of element expressions; for example, </span>
-<span class="sd">            `(('partInstance1',(1,'7','3:15;3'),), ('partInstance2','8'),))`. The element </span>
+<span class="sd">            `((&#39;partInstance1&#39;,(1,&#39;7&#39;,&#39;3:15;3&#39;),), (&#39;partInstance2&#39;,&#39;8&#39;),))`. The element </span>
 <span class="sd">            expressions can be any of the following:An Int specifying a single element label; for </span>
-<span class="sd">            example, `1`.A String specifying a single element label; for example, `'7'`.A String </span>
-<span class="sd">            specifying a sequence of element labels; for example, `'3:5'` and `'3:15:3'`. </span>
+<span class="sd">            example, `1`.A String specifying a single element label; for example, `&#39;7&#39;`.A String </span>
+<span class="sd">            specifying a sequence of element labels; for example, `&#39;3:5&#39;` and `&#39;3:15:3&#39;`. </span>
 <span class="sd">        nodeSets</span>
 <span class="sd">            A sequence of Strings specifying node sets or a String specifying a single node set. </span>
 <span class="sd">        nodeLabels</span>
 <span class="sd">            A sequence of expressions specifying node labels per part instance in the model. Each </span>
 <span class="sd">            part instance node expression is a sequence of a String specifying the part instance </span>
 <span class="sd">            name and a sequence of node expressions; for example, </span>
-<span class="sd">            `(('partInstance1',(1,'7','3:15;3'),), ('partInstance2','8'),))`. The node expressions </span>
+<span class="sd">            `((&#39;partInstance1&#39;,(1,&#39;7&#39;,&#39;3:15;3&#39;),), (&#39;partInstance2&#39;,&#39;8&#39;),))`. The node expressions </span>
 <span class="sd">            can be any of the following:An Int specifying a single node label; for example, `1`.A </span>
-<span class="sd">            String specifying a single node label; for example, `'7'`.A String specifying a sequence </span>
-<span class="sd">            of node labels; for example, `'3:5'` and `'3:15:3'`. </span>
+<span class="sd">            String specifying a single node label; for example, `&#39;7&#39;`.A String specifying a sequence </span>
+<span class="sd">            of node labels; for example, `&#39;3:5&#39;` and `&#39;3:15:3&#39;`. </span>
 <span class="sd">        numericForm</span>
 <span class="sd">            A SymbolicConstant specifying the numeric form in which to display results that contain </span>
 <span class="sd">            complex numbers. Possible values are COMPLEX_MAGNITUDE, COMPLEX_PHASE, REAL, IMAGINARY, </span>
@@ -804,17 +805,17 @@
 <span class="sd">        ------</span>
 <span class="sd">        InvalidNameError</span>
 <span class="sd">        RangeError </span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span></div>
 
 <div class="viewcode-block" id="XYData.XYDataFromPath"><a class="viewcode-back" href="../../../reference/session/xy.html#abaqus.XY.XYData.XYData.XYDataFromPath">[docs]</a>    <span class="k">def</span> <span class="nf">XYDataFromPath</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">path</span><span class="p">:</span> <span class="n">Path</span><span class="p">,</span> <span class="n">name</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">includeIntersections</span><span class="p">:</span> <span class="n">Boolean</span><span class="p">,</span> <span class="n">shape</span><span class="p">:</span> <span class="n">SymbolicConstant</span><span class="p">,</span>
                        <span class="n">pathStyle</span><span class="p">:</span> <span class="n">SymbolicConstant</span><span class="p">,</span> <span class="n">numIntervals</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">labelType</span><span class="p">:</span> <span class="n">SymbolicConstant</span><span class="p">,</span>
-                       <span class="n">viewport</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">''</span><span class="p">,</span> <span class="n">removeDuplicateXYPairs</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="kc">True</span><span class="p">,</span>
+                       <span class="n">viewport</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">removeDuplicateXYPairs</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="kc">True</span><span class="p">,</span>
                        <span class="n">includeAllElements</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="kc">False</span><span class="p">,</span> <span class="n">step</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">frame</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
                        <span class="n">variable</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">deformedMag</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
                        <span class="n">numericForm</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="n">REAL</span><span class="p">,</span> <span class="n">complexAngle</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span>
                        <span class="n">projectOntoMesh</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="kc">False</span><span class="p">,</span> <span class="n">projectionTolerance</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mi">0</span><span class="p">):</span>
-        <span class="sd">"""This method creates an XYData object from path information.</span>
+        <span class="sd">&quot;&quot;&quot;This method creates an XYData object from path information.</span>
 
 <span class="sd">        Notes</span>
 <span class="sd">        -----</span>
@@ -830,8 +831,8 @@
 <span class="sd">        path</span>
 <span class="sd">            A Path object to use in *X–Y* data generation. </span>
 <span class="sd">        name</span>
-<span class="sd">            A String specifying the repository key:for *session* 'name' is required argument and for </span>
-<span class="sd">            *xyPlot* 'name' is optional argument. </span>
+<span class="sd">            A String specifying the repository key:for *session* &#39;name&#39; is required argument and for </span>
+<span class="sd">            *xyPlot* &#39;name&#39; is optional argument. </span>
 <span class="sd">        includeIntersections</span>
 <span class="sd">            A Boolean specifying whether to include *X–Y* data for the intersections between the </span>
 <span class="sd">            path and element faces or edges. The default value is False. </span>
@@ -865,7 +866,7 @@
 <span class="sd">        variable</span>
 <span class="sd">            A tuple of tuples containing the descriptions of variables for which to extract data </span>
 <span class="sd">            along the path. The default value is the current variable. Each tuple specifies the </span>
-<span class="sd">            following:Variable label: A String specifying the variable; for example, 'U'.Variable </span>
+<span class="sd">            following:Variable label: A String specifying the variable; for example, &#39;U&#39;.Variable </span>
 <span class="sd">            output position: A SymbolicConstant specifying the output position. Possible values are </span>
 <span class="sd">            ELEMENT_CENTROID, ELEMENT_FACE, ELEMENT_NODAL, GENERAL_PARTICLE, INTEGRATION_POINT, </span>
 <span class="sd">            NODAL, WHOLE_ELEMENT, WHOLE_MODEL, WHOLE_PART_INSTANCE, and WHOLE_REGION.Refinement: A </span>
@@ -874,14 +875,14 @@
 <span class="sd">            location dictionary (the following element in the tuple) is included. The refinement </span>
 <span class="sd">            tuple contains the following:Type: A SymbolicConstant specifying the type of refinement. </span>
 <span class="sd">            Possible values are INVARIANT and COMPONENT.Label: A String specifying the invariant or </span>
-<span class="sd">            the component; for example, 'Mises' or 'S22'.Location: An optional Dictionary specifying </span>
+<span class="sd">            the component; for example, &#39;Mises&#39; or &#39;S22&#39;.Location: An optional Dictionary specifying </span>
 <span class="sd">            the location. The dictionary contains pairs of the following:A String specifying the </span>
 <span class="sd">            category selection label.A String specifying the section point label.For </span>
-<span class="sd">            example,`variable= ('S',INTEGRATION_POINT, ( (COMPONENT, 'S22' ), ), ) variable= </span>
-<span class="sd">            (('S',INTEGRATION_POINT, ((COMPONENT, 'S11' ), ), ),            ('U',NODAL,((COMPONENT, </span>
-<span class="sd">            'U1'),)),) variable= (('S', INTEGRATION_POINT, ((INVARIANT, 'Mises' ), ),            </span>
-<span class="sd">            {'shell &lt; STEEL &gt; &lt; 3 section points &gt;':'SNEG,                                    </span>
-<span class="sd">            (fraction = -1.0)', }), )` </span>
+<span class="sd">            example,`variable= (&#39;S&#39;,INTEGRATION_POINT, ( (COMPONENT, &#39;S22&#39; ), ), ) variable= </span>
+<span class="sd">            ((&#39;S&#39;,INTEGRATION_POINT, ((COMPONENT, &#39;S11&#39; ), ), ),            (&#39;U&#39;,NODAL,((COMPONENT, </span>
+<span class="sd">            &#39;U1&#39;),)),) variable= ((&#39;S&#39;, INTEGRATION_POINT, ((INVARIANT, &#39;Mises&#39; ), ),            </span>
+<span class="sd">            {&#39;shell &lt; STEEL &gt; &lt; 3 section points &gt;&#39;:&#39;SNEG,                                    </span>
+<span class="sd">            (fraction = -1.0)&#39;, }), )` </span>
 <span class="sd">        deformedMag</span>
 <span class="sd">            A tuple of three Floats specifying the deformation magnitude in the *X-*, *Y-*, and </span>
 <span class="sd">            *Z-*planes. The default value is (1, 1, 1). </span>
@@ -927,20 +928,20 @@
 <span class="sd">            - If *deformedMag* does not contain three Floats: </span>
 <span class="sd">              ErrorDeformedMagTupleInPathExtract: Deformed magnification tuple must contain X, Y and </span>
 <span class="sd">            Z values. </span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span></div>
 
 <div class="viewcode-block" id="XYData.save"><a class="viewcode-back" href="../../../reference/session/xy.html#abaqus.XY.XYData.XYData.save">[docs]</a>    <span class="k">def</span> <span class="nf">save</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="sd">"""This method saves a temporary XYData. The name of the XYData is changed to "XYData-#".</span>
+        <span class="sd">&quot;&quot;&quot;This method saves a temporary XYData. The name of the XYData is changed to &quot;XYData-#&quot;.</span>
 <span class="sd">        If the XYData is already saved, nothing is done.</span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span></div>
 
-<div class="viewcode-block" id="XYData.setValues"><a class="viewcode-back" href="../../../reference/session/xy.html#abaqus.XY.XYData.XYData.setValues">[docs]</a>    <span class="k">def</span> <span class="nf">setValues</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">sourceDescription</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">''</span><span class="p">,</span> <span class="n">contentDescription</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">''</span><span class="p">,</span>
-                  <span class="n">positionDescription</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">''</span><span class="p">,</span> <span class="n">legendLabel</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">''</span><span class="p">,</span> <span class="n">xValuesLabel</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">''</span><span class="p">,</span>
-                  <span class="n">yValuesLabel</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">''</span><span class="p">,</span> <span class="n">axis1QuantityType</span><span class="p">:</span> <span class="n">QuantityType</span> <span class="o">=</span> <span class="n">QuantityType</span><span class="p">(),</span>
+<div class="viewcode-block" id="XYData.setValues"><a class="viewcode-back" href="../../../reference/session/xy.html#abaqus.XY.XYData.XYData.setValues">[docs]</a>    <span class="k">def</span> <span class="nf">setValues</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">sourceDescription</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">contentDescription</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span><span class="p">,</span>
+                  <span class="n">positionDescription</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">legendLabel</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">xValuesLabel</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span><span class="p">,</span>
+                  <span class="n">yValuesLabel</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">axis1QuantityType</span><span class="p">:</span> <span class="n">QuantityType</span> <span class="o">=</span> <span class="n">QuantityType</span><span class="p">(),</span>
                   <span class="n">axis2QuantityType</span><span class="p">:</span> <span class="n">QuantityType</span> <span class="o">=</span> <span class="n">QuantityType</span><span class="p">()):</span>
-        <span class="sd">"""This method modifies the XYData object.</span>
+        <span class="sd">&quot;&quot;&quot;This method modifies the XYData object.</span>
 <span class="sd">        </span>
 <span class="sd">        Parameters</span>
 <span class="sd">        ----------</span>
@@ -968,7 +969,7 @@
 <span class="sd">        axis2QuantityType</span>
 <span class="sd">            A QuantityType object specifying the QuantityType object associated to the Y -axis2- </span>
 <span class="sd">            values. </span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span></div></div>
 </pre></div>
         </article>

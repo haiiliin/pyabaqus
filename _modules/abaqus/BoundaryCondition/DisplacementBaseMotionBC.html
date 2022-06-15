@@ -5,10 +5,10 @@
     <meta name="color-scheme" content="light dark"><link rel="index" title="Index" href="../../../genindex.html" /><link rel="search" title="Search" href="../../../search.html" />
         <link rel="canonical" href="https://pyabaqus.haiiliin.com/_modules/abaqus/BoundaryCondition/DisplacementBaseMotionBC.html" />
 
-    <meta name="generator" content="sphinx-4.5.0, furo 2022.04.07"/>
-        <title>abaqus.BoundaryCondition.DisplacementBaseMotionBC - pyabaqus 1.0.16 documentation</title>
+    <meta name="generator" content="sphinx-4.5.0, furo 2022.06.04.1"/>
+        <title>abaqus.BoundaryCondition.DisplacementBaseMotionBC - pyabaqus 1.0.18 documentation</title>
       <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/styles/furo.css?digest=68f4518137b9aefe99b631505a2064c3c42c9852" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/styles/furo.css?digest=40978830699223671f4072448e654b5958f38b89" />
     <link rel="stylesheet" type="text/css" href="../../../_static/styles/furo-extensions.css?digest=30d1aed668e5c3a91c3e3bf6a60b675221979f0e" />
     
     
@@ -123,7 +123,7 @@
       </label>
     </div>
     <div class="header-center">
-      <a href="../../../index.html"><div class="brand">pyabaqus 1.0.16 documentation</div></a>
+      <a href="../../../index.html"><div class="brand">pyabaqus 1.0.18 documentation</div></a>
     </div>
     <div class="header-right">
       <div class="theme-toggle-container theme-toggle-header">
@@ -146,7 +146,7 @@
       <div class="sidebar-sticky"><a class="sidebar-brand" href="../../../index.html">
   
   
-  <span class="sidebar-brand-text">pyabaqus 1.0.16 documentation</span>
+  <span class="sidebar-brand-text">pyabaqus 1.0.18 documentation</span>
   
 </a><form class="sidebar-search-container" method="get" action="../../../search.html" role="search">
   <input class="sidebar-search" placeholder=Search name="q" aria-label="Search">
@@ -286,7 +286,8 @@
           </svg>
           <span>Back to top</span>
         </a>
-        <div class="content-icon-container"><div class="theme-toggle-container theme-toggle-content">
+        <div class="content-icon-container">
+          <div class="theme-toggle-container theme-toggle-content">
             <button class="theme-toggle">
               <div class="visually-hidden">Toggle Light / Dark / Auto color theme</div>
               <svg class="theme-icon-when-auto"><use href="#svg-sun-half"></use></svg>
@@ -308,7 +309,7 @@
 
 
 <div class="viewcode-block" id="DisplacementBaseMotionBC"><a class="viewcode-back" href="../../../reference/mdb/model/bc.html#abaqus.BoundaryCondition.DisplacementBaseMotionBC.DisplacementBaseMotionBC">[docs]</a><span class="k">class</span> <span class="nc">DisplacementBaseMotionBC</span><span class="p">(</span><span class="n">BoundaryCondition</span><span class="p">):</span>
-    <span class="sd">"""The DisplacementBaseMotionBC object stores the data for a displacement base motion</span>
+    <span class="sd">&quot;&quot;&quot;The DisplacementBaseMotionBC object stores the data for a displacement base motion</span>
 <span class="sd">    boundary condition. </span>
 <span class="sd">    The DisplacementBaseMotionBC object is derived from the BoundaryCondition object. </span>
 
@@ -336,7 +337,7 @@
 <span class="sd">        A :py:class:`~abaqus.Region.Region.Region` object specifying the region to which the boundary condition is applied.</span>
 <span class="sd">    localCsys: str</span>
 <span class="sd">        None or a :py:class:`~abaqus.Datum.DatumCsys.DatumCsys` object specifying the local coordinate system of the boundary</span>
-<span class="sd">        condition's degrees of freedom. If **localCsys=None**, the degrees of freedom are defined</span>
+<span class="sd">        condition&#39;s degrees of freedom. If **localCsys=None**, the degrees of freedom are defined</span>
 <span class="sd">        in the global coordinate system. The default value is None.</span>
 
 <span class="sd">    Notes</span>
@@ -348,10 +349,10 @@
 <span class="sd">        import load</span>
 <span class="sd">        mdb.models[name].boundaryConditions[name]</span>
 
-<span class="sd">    """</span>
+<span class="sd">    &quot;&quot;&quot;</span>
 
     <span class="c1"># A String specifying the boundary condition repository key. </span>
-    <span class="n">name</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">''</span>
+    <span class="n">name</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span>
 
     <span class="c1"># A Float specifying the scale factor for the amplitude curve. The default value is 1.0. </span>
     <span class="n">amplitudeScaleFactor</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mi">1</span>
@@ -369,7 +370,7 @@
 
     <span class="c1"># A String specifying the name of the SecondaryBaseBC object associated with this boundary </span>
     <span class="c1"># condition. The default value is an empty string. </span>
-    <span class="n">secondaryBase</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">''</span>
+    <span class="n">secondaryBase</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span>
 
     <span class="c1"># A SymbolicConstant specifying the category of the boundary condition. Possible values </span>
     <span class="c1"># are MECHANICAL and THERMAL. </span>
@@ -379,14 +380,14 @@
     <span class="n">region</span><span class="p">:</span> <span class="n">Region</span> <span class="o">=</span> <span class="n">Region</span><span class="p">()</span>
 
     <span class="c1"># None or a DatumCsys object specifying the local coordinate system of the boundary </span>
-    <span class="c1"># condition's degrees of freedom. If *localCsys*=None, the degrees of freedom are defined </span>
+    <span class="c1"># condition&#39;s degrees of freedom. If *localCsys*=None, the degrees of freedom are defined </span>
     <span class="c1"># in the global coordinate system. The default value is None. </span>
     <span class="n">localCsys</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="kc">None</span>
 
     <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">createStepName</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">dof</span><span class="p">:</span> <span class="n">SymbolicConstant</span><span class="p">,</span> <span class="n">amplitudeScaleFactor</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span>
                  <span class="n">centerOfRotation</span><span class="p">:</span> <span class="nb">tuple</span> <span class="o">=</span> <span class="p">(),</span> <span class="n">correlation</span><span class="p">:</span> <span class="n">CorrelationArray</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
-                 <span class="n">secondaryBase</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">''</span><span class="p">,</span> <span class="n">useComplex</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="n">OFF</span><span class="p">,</span> <span class="n">amplitude</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="n">UNSET</span><span class="p">):</span>
-        <span class="sd">"""This method creates a DisplacementBaseMotionBC object.</span>
+                 <span class="n">secondaryBase</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">useComplex</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="n">OFF</span><span class="p">,</span> <span class="n">amplitude</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="n">UNSET</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;This method creates a DisplacementBaseMotionBC object.</span>
 
 <span class="sd">        Notes</span>
 <span class="sd">        -----</span>
@@ -427,14 +428,14 @@
 <span class="sd">        Returns</span>
 <span class="sd">        -------</span>
 <span class="sd">            A DisplacementBaseMotionBC object.</span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">()</span>
         <span class="k">pass</span>
 
 <div class="viewcode-block" id="DisplacementBaseMotionBC.setValues"><a class="viewcode-back" href="../../../reference/mdb/model/bc.html#abaqus.BoundaryCondition.DisplacementBaseMotionBC.DisplacementBaseMotionBC.setValues">[docs]</a>    <span class="k">def</span> <span class="nf">setValues</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">amplitudeScaleFactor</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span> <span class="n">centerOfRotation</span><span class="p">:</span> <span class="nb">tuple</span> <span class="o">=</span> <span class="p">(),</span>
-                  <span class="n">correlation</span><span class="p">:</span> <span class="n">CorrelationArray</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">secondaryBase</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">''</span><span class="p">,</span>
+                  <span class="n">correlation</span><span class="p">:</span> <span class="n">CorrelationArray</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">secondaryBase</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span><span class="p">,</span>
                   <span class="n">useComplex</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="n">OFF</span><span class="p">,</span> <span class="n">amplitude</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="n">UNSET</span><span class="p">):</span>
-        <span class="sd">"""This method modifies the data for an existing DisplacementBaseMotionBC object in the</span>
+        <span class="sd">&quot;&quot;&quot;This method modifies the data for an existing DisplacementBaseMotionBC object in the</span>
 <span class="sd">        step where it is created.</span>
 <span class="sd">        </span>
 <span class="sd">        Parameters</span>
@@ -457,11 +458,11 @@
 <span class="sd">            UNSET should be used if the boundary condition has no amplitude reference. The default </span>
 <span class="sd">            value is UNSET. You should provide the *amplitude* argument only if it is valid for the </span>
 <span class="sd">            specified step. </span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span></div>
 
-<div class="viewcode-block" id="DisplacementBaseMotionBC.setValuesInStep"><a class="viewcode-back" href="../../../reference/mdb/model/bc.html#abaqus.BoundaryCondition.DisplacementBaseMotionBC.DisplacementBaseMotionBC.setValuesInStep">[docs]</a>    <span class="k">def</span> <span class="nf">setValuesInStep</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">stepName</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">amplitude</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">''</span><span class="p">):</span>
-        <span class="sd">"""This method modifies the propagating data for an existing DisplacementBaseMotionBC</span>
+<div class="viewcode-block" id="DisplacementBaseMotionBC.setValuesInStep"><a class="viewcode-back" href="../../../reference/mdb/model/bc.html#abaqus.BoundaryCondition.DisplacementBaseMotionBC.DisplacementBaseMotionBC.setValuesInStep">[docs]</a>    <span class="k">def</span> <span class="nf">setValuesInStep</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">stepName</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">amplitude</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;This method modifies the propagating data for an existing DisplacementBaseMotionBC</span>
 <span class="sd">        object in the specified step.</span>
 <span class="sd">        </span>
 <span class="sd">        Parameters</span>
@@ -474,7 +475,7 @@
 <span class="sd">            amplitude is propagated from the previous analysis step. FREED should be used if the </span>
 <span class="sd">            boundary condition is changed to have no amplitude reference. You should provide the </span>
 <span class="sd">            *amplitude* argument only if it is valid for the specified step. </span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span></div></div>
 </pre></div>
         </article>

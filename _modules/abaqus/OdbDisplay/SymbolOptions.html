@@ -5,10 +5,10 @@
     <meta name="color-scheme" content="light dark"><link rel="index" title="Index" href="../../../genindex.html" /><link rel="search" title="Search" href="../../../search.html" />
         <link rel="canonical" href="https://pyabaqus.haiiliin.com/_modules/abaqus/OdbDisplay/SymbolOptions.html" />
 
-    <meta name="generator" content="sphinx-4.5.0, furo 2022.04.07"/>
-        <title>abaqus.OdbDisplay.SymbolOptions - pyabaqus 1.0.16 documentation</title>
+    <meta name="generator" content="sphinx-4.5.0, furo 2022.06.04.1"/>
+        <title>abaqus.OdbDisplay.SymbolOptions - pyabaqus 1.0.18 documentation</title>
       <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/styles/furo.css?digest=68f4518137b9aefe99b631505a2064c3c42c9852" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/styles/furo.css?digest=40978830699223671f4072448e654b5958f38b89" />
     <link rel="stylesheet" type="text/css" href="../../../_static/styles/furo-extensions.css?digest=30d1aed668e5c3a91c3e3bf6a60b675221979f0e" />
     
     
@@ -123,7 +123,7 @@
       </label>
     </div>
     <div class="header-center">
-      <a href="../../../index.html"><div class="brand">pyabaqus 1.0.16 documentation</div></a>
+      <a href="../../../index.html"><div class="brand">pyabaqus 1.0.18 documentation</div></a>
     </div>
     <div class="header-right">
       <div class="theme-toggle-container theme-toggle-header">
@@ -146,7 +146,7 @@
       <div class="sidebar-sticky"><a class="sidebar-brand" href="../../../index.html">
   
   
-  <span class="sidebar-brand-text">pyabaqus 1.0.16 documentation</span>
+  <span class="sidebar-brand-text">pyabaqus 1.0.18 documentation</span>
   
 </a><form class="sidebar-search-container" method="get" action="../../../search.html" role="search">
   <input class="sidebar-search" placeholder=Search name="q" aria-label="Search">
@@ -286,7 +286,8 @@
           </svg>
           <span>Back to top</span>
         </a>
-        <div class="content-icon-container"><div class="theme-toggle-container theme-toggle-content">
+        <div class="content-icon-container">
+          <div class="theme-toggle-container theme-toggle-content">
             <button class="theme-toggle">
               <div class="visually-hidden">Toggle Light / Dark / Auto color theme</div>
               <svg class="theme-icon-when-auto"><use href="#svg-sun-half"></use></svg>
@@ -308,7 +309,7 @@
 
 
 <div class="viewcode-block" id="SymbolOptions"><a class="viewcode-back" href="../../../reference/session/odb_display.html#abaqus.OdbDisplay.SymbolOptions.SymbolOptions">[docs]</a><span class="k">class</span> <span class="nc">SymbolOptions</span><span class="p">(</span><span class="n">DGSymbolOptions</span><span class="p">):</span>
-    <span class="sd">"""The SymbolOptions object stores values and attributes associated with a symbol plot. The</span>
+    <span class="sd">&quot;&quot;&quot;The SymbolOptions object stores values and attributes associated with a symbol plot. The</span>
 <span class="sd">    SymbolOptions object has no constructor command. Abaqus creates a </span>
 <span class="sd">    *defaultOdbDisplay.symbolOptions* member when you import the Visualization module. </span>
 <span class="sd">    Abaqus creates a *symbolOptions* member when it creates the OdbDisplay object, using the </span>
@@ -415,31 +416,31 @@
 <span class="sd">    numDigitsV: int</span>
 <span class="sd">        An Int specifying the number of digits in the vector label. The default value is 2.</span>
 <span class="sd">    vectorColor: str</span>
-<span class="sd">        A String specifying the vector color. The default value is "Red".</span>
+<span class="sd">        A String specifying the vector color. The default value is &quot;Red&quot;.</span>
 <span class="sd">    vectorColorSpectrum: str</span>
-<span class="sd">        A String specifying the vector color spectrum name. The default value is "Rainbow".</span>
+<span class="sd">        A String specifying the vector color spectrum name. The default value is &quot;Rainbow&quot;.</span>
 <span class="sd">    tensorColorSpectrum: str</span>
-<span class="sd">        A String specifying the tensor color spectrum name. The default value is "Rainbow".</span>
+<span class="sd">        A String specifying the tensor color spectrum name. The default value is &quot;Rainbow&quot;.</span>
 <span class="sd">    textColorT: str</span>
-<span class="sd">        A String specifying the text color for tensor. The default value is "Yellow".</span>
+<span class="sd">        A String specifying the text color for tensor. The default value is &quot;Yellow&quot;.</span>
 <span class="sd">    textColorV: str</span>
-<span class="sd">        A String specifying the text color for vector. The default value is "Yellow".</span>
+<span class="sd">        A String specifying the text color for vector. The default value is &quot;Yellow&quot;.</span>
 <span class="sd">    textFontT: str</span>
-<span class="sd">        A String specifying the text font for tensor. The default value is "verdana".</span>
+<span class="sd">        A String specifying the text font for tensor. The default value is &quot;verdana&quot;.</span>
 <span class="sd">    textFontV: str</span>
-<span class="sd">        A String specifying the text font for vector. The default value is "verdana".</span>
+<span class="sd">        A String specifying the text font for vector. The default value is &quot;verdana&quot;.</span>
 <span class="sd">    tensorMaxPrinColor: str</span>
 <span class="sd">        A String specifying the color of the maximum principal tensor symbols. The default value</span>
-<span class="sd">        is "Red".</span>
+<span class="sd">        is &quot;Red&quot;.</span>
 <span class="sd">    tensorMinPrinColor: str</span>
 <span class="sd">        A String specifying the color of the minimum principal tensor symbols. The default value</span>
-<span class="sd">        is "Cyan".</span>
+<span class="sd">        is &quot;Cyan&quot;.</span>
 <span class="sd">    tensorMidPrinColor: str</span>
 <span class="sd">        A String specifying the color of the intermediate principal tensor symbols. The default</span>
-<span class="sd">        value is "Yellow".</span>
+<span class="sd">        value is &quot;Yellow&quot;.</span>
 <span class="sd">    tensorSelectedPrinColor: str</span>
 <span class="sd">        A String specifying the color of the selected principal tensor symbols. The default</span>
-<span class="sd">        value is "Red".</span>
+<span class="sd">        value is &quot;Red&quot;.</span>
 
 <span class="sd">    Notes</span>
 <span class="sd">    -----</span>
@@ -458,7 +459,7 @@
 <span class="sd">        session.viewports[name].odbDisplay.symbolOptions</span>
 <span class="sd">        session.viewports[name].partDisplay.displayGroupInstances[name].odbDisplayOptions.symbolOptions</span>
 
-<span class="sd">    """</span>
+<span class="sd">    &quot;&quot;&quot;</span>
 
     <span class="c1"># A SymbolicConstant specifying the vector quantity to display. Possible values are </span>
     <span class="c1"># RESULTANT and VECTOR_COMPONENT. The default value is RESULTANT. </span>
@@ -583,60 +584,60 @@
     <span class="c1"># An Int specifying the number of digits in the vector label. The default value is 2. </span>
     <span class="n">numDigitsV</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">2</span>
 
-    <span class="c1"># A String specifying the vector color. The default value is "Red". </span>
-    <span class="n">vectorColor</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">''</span>
+    <span class="c1"># A String specifying the vector color. The default value is &quot;Red&quot;. </span>
+    <span class="n">vectorColor</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span>
 
-    <span class="c1"># A String specifying the vector color spectrum name. The default value is "Rainbow". </span>
-    <span class="n">vectorColorSpectrum</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">''</span>
+    <span class="c1"># A String specifying the vector color spectrum name. The default value is &quot;Rainbow&quot;. </span>
+    <span class="n">vectorColorSpectrum</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span>
 
-    <span class="c1"># A String specifying the tensor color spectrum name. The default value is "Rainbow". </span>
-    <span class="n">tensorColorSpectrum</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">''</span>
+    <span class="c1"># A String specifying the tensor color spectrum name. The default value is &quot;Rainbow&quot;. </span>
+    <span class="n">tensorColorSpectrum</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span>
 
-    <span class="c1"># A String specifying the text color for tensor. The default value is "Yellow". </span>
-    <span class="n">textColorT</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">''</span>
+    <span class="c1"># A String specifying the text color for tensor. The default value is &quot;Yellow&quot;. </span>
+    <span class="n">textColorT</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span>
 
-    <span class="c1"># A String specifying the text color for vector. The default value is "Yellow". </span>
-    <span class="n">textColorV</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">''</span>
+    <span class="c1"># A String specifying the text color for vector. The default value is &quot;Yellow&quot;. </span>
+    <span class="n">textColorV</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span>
 
-    <span class="c1"># A String specifying the text font for tensor. The default value is "verdana". </span>
-    <span class="n">textFontT</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">''</span>
+    <span class="c1"># A String specifying the text font for tensor. The default value is &quot;verdana&quot;. </span>
+    <span class="n">textFontT</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span>
 
-    <span class="c1"># A String specifying the text font for vector. The default value is "verdana". </span>
-    <span class="n">textFontV</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">''</span>
+    <span class="c1"># A String specifying the text font for vector. The default value is &quot;verdana&quot;. </span>
+    <span class="n">textFontV</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span>
 
     <span class="c1"># A String specifying the color of the maximum principal tensor symbols. The default value </span>
-    <span class="c1"># is "Red". </span>
-    <span class="n">tensorMaxPrinColor</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">''</span>
+    <span class="c1"># is &quot;Red&quot;. </span>
+    <span class="n">tensorMaxPrinColor</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span>
 
     <span class="c1"># A String specifying the color of the minimum principal tensor symbols. The default value </span>
-    <span class="c1"># is "Cyan". </span>
-    <span class="n">tensorMinPrinColor</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">''</span>
+    <span class="c1"># is &quot;Cyan&quot;. </span>
+    <span class="n">tensorMinPrinColor</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span>
 
     <span class="c1"># A String specifying the color of the intermediate principal tensor symbols. The default </span>
-    <span class="c1"># value is "Yellow". </span>
-    <span class="n">tensorMidPrinColor</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">''</span>
+    <span class="c1"># value is &quot;Yellow&quot;. </span>
+    <span class="n">tensorMidPrinColor</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span>
 
     <span class="c1"># A String specifying the color of the selected principal tensor symbols. The default </span>
-    <span class="c1"># value is "Red". </span>
-    <span class="n">tensorSelectedPrinColor</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">''</span>
+    <span class="c1"># value is &quot;Red&quot;. </span>
+    <span class="n">tensorSelectedPrinColor</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span>
 
-<div class="viewcode-block" id="SymbolOptions.setValues"><a class="viewcode-back" href="../../../reference/session/odb_display.html#abaqus.OdbDisplay.SymbolOptions.SymbolOptions.setValues">[docs]</a>    <span class="k">def</span> <span class="nf">setValues</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">options</span><span class="p">:</span> <span class="s1">'SymbolOptions'</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">vectorQuantity</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="n">RESULTANT</span><span class="p">,</span>
+<div class="viewcode-block" id="SymbolOptions.setValues"><a class="viewcode-back" href="../../../reference/session/odb_display.html#abaqus.OdbDisplay.SymbolOptions.SymbolOptions.setValues">[docs]</a>    <span class="k">def</span> <span class="nf">setValues</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">options</span><span class="p">:</span> <span class="s1">&#39;SymbolOptions&#39;</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">vectorQuantity</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="n">RESULTANT</span><span class="p">,</span>
                   <span class="n">vectorLineThickness</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="n">VERY_THIN</span><span class="p">,</span>
-                  <span class="n">vectorArrowheadStyle</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="n">WIRE</span><span class="p">,</span> <span class="n">vectorColor</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">''</span><span class="p">,</span>
-                  <span class="n">vectorColorMethod</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="n">SPECTRUM</span><span class="p">,</span> <span class="n">vectorColorSpectrum</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">''</span><span class="p">,</span>
+                  <span class="n">vectorArrowheadStyle</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="n">WIRE</span><span class="p">,</span> <span class="n">vectorColor</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span><span class="p">,</span>
+                  <span class="n">vectorColorMethod</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="n">SPECTRUM</span><span class="p">,</span> <span class="n">vectorColorSpectrum</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span><span class="p">,</span>
                   <span class="n">vectorIntervalNumber</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">12</span><span class="p">,</span> <span class="n">symbolDensity</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span>
                   <span class="n">constantLengthArrows</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="n">OFF</span><span class="p">,</span> <span class="n">tensorColorMethod</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="n">SPECTRUM</span><span class="p">,</span>
-                  <span class="n">tensorColorSpectrum</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">''</span><span class="p">,</span> <span class="n">tensorIntervalNumber</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">12</span><span class="p">,</span>
+                  <span class="n">tensorColorSpectrum</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">tensorIntervalNumber</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">12</span><span class="p">,</span>
                   <span class="n">vectorMaxValueAutoCompute</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="n">ON</span><span class="p">,</span> <span class="n">vectorMaxValue</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
                   <span class="n">vectorMinValueAutoCompute</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="n">ON</span><span class="p">,</span> <span class="n">vectorMinValue</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
                   <span class="n">tensorQuantity</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="n">ALL_PRINCIPAL_COMPONENTS</span><span class="p">,</span> <span class="n">arrowSymbolSize</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">6</span><span class="p">,</span>
-                  <span class="n">tensorMaxPrinColor</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">''</span><span class="p">,</span> <span class="n">tensorMinPrinColor</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">''</span><span class="p">,</span>
-                  <span class="n">tensorMidPrinColor</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">''</span><span class="p">,</span> <span class="n">tensorSelectedPrinColor</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">''</span><span class="p">,</span>
+                  <span class="n">tensorMaxPrinColor</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">tensorMinPrinColor</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span><span class="p">,</span>
+                  <span class="n">tensorMidPrinColor</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">tensorSelectedPrinColor</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span><span class="p">,</span>
                   <span class="n">tensorLineThickness</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="n">VERY_THIN</span><span class="p">,</span>
                   <span class="n">tensorArrowheadStyle</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="n">WIRE</span><span class="p">,</span> <span class="n">tensorMaxValueAutoCompute</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="n">ON</span><span class="p">,</span>
                   <span class="n">tensorMaxValue</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">tensorMinValueAutoCompute</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="n">ON</span><span class="p">,</span>
                   <span class="n">tensorMinValue</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="kc">None</span><span class="p">):</span>
-        <span class="sd">"""This method modifies the SymbolOptions object.</span>
+        <span class="sd">&quot;&quot;&quot;This method modifies the SymbolOptions object.</span>
 <span class="sd">        </span>
 <span class="sd">        Parameters</span>
 <span class="sd">        ----------</span>
@@ -654,12 +655,12 @@
 <span class="sd">            A SymbolicConstant specifying the vector arrowhead style. Possible values are NONE, </span>
 <span class="sd">            FILLED, and WIRE. The default value is WIRE. </span>
 <span class="sd">        vectorColor</span>
-<span class="sd">            A String specifying the vector color. The default value is "Red". </span>
+<span class="sd">            A String specifying the vector color. The default value is &quot;Red&quot;. </span>
 <span class="sd">        vectorColorMethod</span>
 <span class="sd">            A SymbolicConstant specifying the vector color method. Possible values are UNIFORM and </span>
 <span class="sd">            SPECTRUM. The default value is SPECTRUM. </span>
 <span class="sd">        vectorColorSpectrum</span>
-<span class="sd">            A String specifying the vector color spectrum name. The default value is "Rainbow". </span>
+<span class="sd">            A String specifying the vector color spectrum name. The default value is &quot;Rainbow&quot;. </span>
 <span class="sd">        vectorIntervalNumber</span>
 <span class="sd">            An Int specifying the number of color intervals for vector symbols. The default value is </span>
 <span class="sd">            12. </span>
@@ -672,7 +673,7 @@
 <span class="sd">            A SymbolicConstant specifying the tensor color method. Possible values are UNIFORM and </span>
 <span class="sd">            SPECTRUM. The default value is SPECTRUM. </span>
 <span class="sd">        tensorColorSpectrum</span>
-<span class="sd">            A String specifying the tensor color spectrum name. The default value is "Rainbow". </span>
+<span class="sd">            A String specifying the tensor color spectrum name. The default value is &quot;Rainbow&quot;. </span>
 <span class="sd">        tensorIntervalNumber</span>
 <span class="sd">            An Int specifying the number of color intervals for tensor symbols. The default value is </span>
 <span class="sd">            12. </span>
@@ -696,16 +697,16 @@
 <span class="sd">            An Int specifying the length of vector and tensor symbols. The default value is 6. </span>
 <span class="sd">        tensorMaxPrinColor</span>
 <span class="sd">            A String specifying the color of the maximum principal tensor symbols. The default value </span>
-<span class="sd">            is "Red". </span>
+<span class="sd">            is &quot;Red&quot;. </span>
 <span class="sd">        tensorMinPrinColor</span>
 <span class="sd">            A String specifying the color of the minimum principal tensor symbols. The default value </span>
-<span class="sd">            is "Cyan". </span>
+<span class="sd">            is &quot;Cyan&quot;. </span>
 <span class="sd">        tensorMidPrinColor</span>
 <span class="sd">            A String specifying the color of the intermediate principal tensor symbols. The default </span>
-<span class="sd">            value is "Yellow". </span>
+<span class="sd">            value is &quot;Yellow&quot;. </span>
 <span class="sd">        tensorSelectedPrinColor</span>
 <span class="sd">            A String specifying the color of the selected principal tensor symbols. The default </span>
-<span class="sd">            value is "Red". </span>
+<span class="sd">            value is &quot;Red&quot;. </span>
 <span class="sd">        tensorLineThickness</span>
 <span class="sd">            A SymbolicConstant specifying the line thickness of the tensor symbols. Possible values </span>
 <span class="sd">            are VERY_THIN, THIN, MEDIUM, and THICK. The default value is VERY_THIN. </span>
@@ -728,7 +729,7 @@
 <span class="sd">        Raises</span>
 <span class="sd">        ------</span>
 <span class="sd">        RangeError</span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span></div></div>
 </pre></div>
         </article>

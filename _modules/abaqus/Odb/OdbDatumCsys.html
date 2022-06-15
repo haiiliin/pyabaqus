@@ -5,10 +5,10 @@
     <meta name="color-scheme" content="light dark"><link rel="index" title="Index" href="../../../genindex.html" /><link rel="search" title="Search" href="../../../search.html" />
         <link rel="canonical" href="https://pyabaqus.haiiliin.com/_modules/abaqus/Odb/OdbDatumCsys.html" />
 
-    <meta name="generator" content="sphinx-4.5.0, furo 2022.04.07"/>
-        <title>abaqus.Odb.OdbDatumCsys - pyabaqus 1.0.16 documentation</title>
+    <meta name="generator" content="sphinx-4.5.0, furo 2022.06.04.1"/>
+        <title>abaqus.Odb.OdbDatumCsys - pyabaqus 1.0.18 documentation</title>
       <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/styles/furo.css?digest=68f4518137b9aefe99b631505a2064c3c42c9852" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/styles/furo.css?digest=40978830699223671f4072448e654b5958f38b89" />
     <link rel="stylesheet" type="text/css" href="../../../_static/styles/furo-extensions.css?digest=30d1aed668e5c3a91c3e3bf6a60b675221979f0e" />
     
     
@@ -123,7 +123,7 @@
       </label>
     </div>
     <div class="header-center">
-      <a href="../../../index.html"><div class="brand">pyabaqus 1.0.16 documentation</div></a>
+      <a href="../../../index.html"><div class="brand">pyabaqus 1.0.18 documentation</div></a>
     </div>
     <div class="header-right">
       <div class="theme-toggle-container theme-toggle-header">
@@ -146,7 +146,7 @@
       <div class="sidebar-sticky"><a class="sidebar-brand" href="../../../index.html">
   
   
-  <span class="sidebar-brand-text">pyabaqus 1.0.16 documentation</span>
+  <span class="sidebar-brand-text">pyabaqus 1.0.18 documentation</span>
   
 </a><form class="sidebar-search-container" method="get" action="../../../search.html" role="search">
   <input class="sidebar-search" placeholder=Search name="q" aria-label="Search">
@@ -286,7 +286,8 @@
           </svg>
           <span>Back to top</span>
         </a>
-        <div class="content-icon-container"><div class="theme-toggle-container theme-toggle-content">
+        <div class="content-icon-container">
+          <div class="theme-toggle-container theme-toggle-content">
             <button class="theme-toggle">
               <div class="visually-hidden">Toggle Light / Dark / Auto color theme</div>
               <svg class="theme-icon-when-auto"><use href="#svg-sun-half"></use></svg>
@@ -306,7 +307,7 @@
 
 
 <div class="viewcode-block" id="OdbDatumCsys"><a class="viewcode-back" href="../../../reference/odb.html#abaqus.Odb.OdbDatumCsys.OdbDatumCsys">[docs]</a><span class="k">class</span> <span class="nc">OdbDatumCsys</span><span class="p">:</span>
-    <span class="sd">"""The OdbDatumCsys object contains a coordinate system that can be stored in an output</span>
+    <span class="sd">&quot;&quot;&quot;The OdbDatumCsys object contains a coordinate system that can be stored in an output</span>
 <span class="sd">    database. You can create the datum coordinate system in the Visualization module during </span>
 <span class="sd">    an Abaqus/CAE session and save the datum coordinate system to the output database before </span>
 <span class="sd">    you exit Abaqus/CAE. Alternatively, the analysis code can write the datum coordinate </span>
@@ -338,10 +339,10 @@
 <span class="sd">        import odbAccess</span>
 <span class="sd">        session.odbs[name].rootAssembly.datumCsyses[name]</span>
 
-<span class="sd">    """</span>
+<span class="sd">    &quot;&quot;&quot;</span>
 
     <span class="c1"># A String specifying the repository key. </span>
-    <span class="n">name</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">''</span>
+    <span class="n">name</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span>
 
     <span class="c1"># A SymbolicConstant specifying the type of coordinate system. Possible values are </span>
     <span class="c1"># CARTESIAN, CYLINDRICAL, and SPHERICAL. </span>
@@ -362,7 +363,7 @@
 
 <div class="viewcode-block" id="OdbDatumCsys.DatumCsysByThreePoints"><a class="viewcode-back" href="../../../reference/odb.html#abaqus.Odb.OdbDatumCsys.OdbDatumCsys.DatumCsysByThreePoints">[docs]</a>    <span class="k">def</span> <span class="nf">DatumCsysByThreePoints</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">coordSysType</span><span class="p">:</span> <span class="n">SymbolicConstant</span><span class="p">,</span> <span class="n">origin</span><span class="p">:</span> <span class="nb">tuple</span><span class="p">,</span> <span class="n">point1</span><span class="p">:</span> <span class="nb">tuple</span><span class="p">,</span>
                                <span class="n">point2</span><span class="p">:</span> <span class="nb">tuple</span><span class="p">):</span>
-        <span class="sd">"""This method creates an OdbDatumCsys object using three points. A datum coordinate system</span>
+        <span class="sd">&quot;&quot;&quot;This method creates an OdbDatumCsys object using three points. A datum coordinate system</span>
 <span class="sd">        created with this method results in a fixed system.</span>
 
 <span class="sd">        Notes</span>
@@ -391,12 +392,12 @@
 <span class="sd">        Returns</span>
 <span class="sd">        -------</span>
 <span class="sd">            An OdbDatumCsys object.</span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span></div>
 
 <div class="viewcode-block" id="OdbDatumCsys.DatumCsysByThreeNodes"><a class="viewcode-back" href="../../../reference/odb.html#abaqus.Odb.OdbDatumCsys.OdbDatumCsys.DatumCsysByThreeNodes">[docs]</a>    <span class="k">def</span> <span class="nf">DatumCsysByThreeNodes</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">coordSysType</span><span class="p">:</span> <span class="n">SymbolicConstant</span><span class="p">,</span> <span class="n">origin</span><span class="p">:</span> <span class="n">OdbMeshNode</span><span class="p">,</span> <span class="n">point1</span><span class="p">:</span> <span class="n">OdbMeshNode</span><span class="p">,</span>
                               <span class="n">point2</span><span class="p">:</span> <span class="n">OdbMeshNode</span><span class="p">):</span>
-        <span class="sd">"""This method creates an OdbDatumCsys object using the coordinates of three OdbMeshNode</span>
+        <span class="sd">&quot;&quot;&quot;This method creates an OdbDatumCsys object using the coordinates of three OdbMeshNode</span>
 <span class="sd">        objects. A datum coordinate system created with this method results in a system that</span>
 <span class="sd">        follows the position of the three nodes. Results, such as those for displacement, are</span>
 <span class="sd">        resolved into the orientation of the datum coordinate system without regard to the</span>
@@ -428,13 +429,13 @@
 <span class="sd">        Returns</span>
 <span class="sd">        -------</span>
 <span class="sd">            An OdbDatumCsys object.</span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span></div>
 
 <div class="viewcode-block" id="OdbDatumCsys.DatumCsysByThreeCircNodes"><a class="viewcode-back" href="../../../reference/odb.html#abaqus.Odb.OdbDatumCsys.OdbDatumCsys.DatumCsysByThreeCircNodes">[docs]</a>    <span class="k">def</span> <span class="nf">DatumCsysByThreeCircNodes</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">coordSysType</span><span class="p">:</span> <span class="n">SymbolicConstant</span><span class="p">,</span> <span class="n">node1Arc</span><span class="p">:</span> <span class="n">OdbMeshNode</span><span class="p">,</span>
                                   <span class="n">node2Arc</span><span class="p">:</span> <span class="n">OdbMeshNode</span><span class="p">,</span>
                                   <span class="n">node3Arc</span><span class="p">:</span> <span class="n">OdbMeshNode</span><span class="p">):</span>
-        <span class="sd">"""This method is convenient to use where there are no nodes along the axis of a hollow</span>
+        <span class="sd">&quot;&quot;&quot;This method is convenient to use where there are no nodes along the axis of a hollow</span>
 <span class="sd">        cylinder or at the center of a hollow sphere. The three nodes that you provide as</span>
 <span class="sd">        arguments determine a circle in space. The center of the circle is the origin of the</span>
 <span class="sd">        datum coordinate system. The normal to the circle is parallel to the zz-axis of a</span>
@@ -466,11 +467,11 @@
 <span class="sd">        Returns</span>
 <span class="sd">        -------</span>
 <span class="sd">            An OdbDatumCsys object.</span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span></div>
 
 <div class="viewcode-block" id="OdbDatumCsys.DatumCsysBy6dofNode"><a class="viewcode-back" href="../../../reference/odb.html#abaqus.Odb.OdbDatumCsys.OdbDatumCsys.DatumCsysBy6dofNode">[docs]</a>    <span class="k">def</span> <span class="nf">DatumCsysBy6dofNode</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">coordSysType</span><span class="p">:</span> <span class="n">SymbolicConstant</span><span class="p">,</span> <span class="n">origin</span><span class="p">:</span> <span class="n">OdbMeshNode</span><span class="p">):</span>
-        <span class="sd">"""A datum coordinate system created with this method results in a system that follows the</span>
+        <span class="sd">&quot;&quot;&quot;A datum coordinate system created with this method results in a system that follows the</span>
 <span class="sd">        position of a node. The node location defines the origin of the datum coordinate system.</span>
 <span class="sd">        The rotational displacement (UR1, UR2, UR3) of the node defines the orientation of the</span>
 <span class="sd">        coordinate system axes. Results, such as those for displacement, are resolved into the</span>
@@ -498,11 +499,11 @@
 <span class="sd">        Returns</span>
 <span class="sd">        -------</span>
 <span class="sd">            An OdbDatumCsys object.</span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span></div>
 
-<div class="viewcode-block" id="OdbDatumCsys.DatumCsys"><a class="viewcode-back" href="../../../reference/odb.html#abaqus.Odb.OdbDatumCsys.OdbDatumCsys.DatumCsys">[docs]</a>    <span class="k">def</span> <span class="nf">DatumCsys</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">datumCsys</span><span class="p">:</span> <span class="s1">'OdbDatumCsys'</span><span class="p">):</span>
-        <span class="sd">"""This method copies oneOdbDatumCsys object to a new OdbDatumCsys object.</span>
+<div class="viewcode-block" id="OdbDatumCsys.DatumCsys"><a class="viewcode-back" href="../../../reference/odb.html#abaqus.Odb.OdbDatumCsys.OdbDatumCsys.DatumCsys">[docs]</a>    <span class="k">def</span> <span class="nf">DatumCsys</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">datumCsys</span><span class="p">:</span> <span class="s1">&#39;OdbDatumCsys&#39;</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;This method copies oneOdbDatumCsys object to a new OdbDatumCsys object.</span>
 
 <span class="sd">        Notes</span>
 <span class="sd">        -----</span>
@@ -522,7 +523,7 @@
 <span class="sd">        Returns</span>
 <span class="sd">        -------</span>
 <span class="sd">            An OdbDatumCsys object.</span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span></div></div>
 </pre></div>
         </article>

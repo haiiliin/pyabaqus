@@ -5,10 +5,10 @@
     <meta name="color-scheme" content="light dark"><link rel="index" title="Index" href="../../../genindex.html" /><link rel="search" title="Search" href="../../../search.html" />
         <link rel="canonical" href="https://pyabaqus.haiiliin.com/_modules/abaqus/XY/XYSession.html" />
 
-    <meta name="generator" content="sphinx-4.5.0, furo 2022.04.07"/>
-        <title>abaqus.XY.XYSession - pyabaqus 1.0.16 documentation</title>
+    <meta name="generator" content="sphinx-4.5.0, furo 2022.06.04.1"/>
+        <title>abaqus.XY.XYSession - pyabaqus 1.0.18 documentation</title>
       <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/styles/furo.css?digest=68f4518137b9aefe99b631505a2064c3c42c9852" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/styles/furo.css?digest=40978830699223671f4072448e654b5958f38b89" />
     <link rel="stylesheet" type="text/css" href="../../../_static/styles/furo-extensions.css?digest=30d1aed668e5c3a91c3e3bf6a60b675221979f0e" />
     
     
@@ -123,7 +123,7 @@
       </label>
     </div>
     <div class="header-center">
-      <a href="../../../index.html"><div class="brand">pyabaqus 1.0.16 documentation</div></a>
+      <a href="../../../index.html"><div class="brand">pyabaqus 1.0.18 documentation</div></a>
     </div>
     <div class="header-right">
       <div class="theme-toggle-container theme-toggle-header">
@@ -146,7 +146,7 @@
       <div class="sidebar-sticky"><a class="sidebar-brand" href="../../../index.html">
   
   
-  <span class="sidebar-brand-text">pyabaqus 1.0.16 documentation</span>
+  <span class="sidebar-brand-text">pyabaqus 1.0.18 documentation</span>
   
 </a><form class="sidebar-search-container" method="get" action="../../../search.html" role="search">
   <input class="sidebar-search" placeholder=Search name="q" aria-label="Search">
@@ -286,7 +286,8 @@
           </svg>
           <span>Back to top</span>
         </a>
-        <div class="content-icon-container"><div class="theme-toggle-container theme-toggle-content">
+        <div class="content-icon-container">
+          <div class="theme-toggle-container theme-toggle-content">
             <button class="theme-toggle">
               <div class="visually-hidden">Toggle Light / Dark / Auto color theme</div>
               <svg class="theme-icon-when-auto"><use href="#svg-sun-half"></use></svg>
@@ -322,8 +323,8 @@
 <div class="viewcode-block" id="XYSession"><a class="viewcode-back" href="../../../reference/session/xy.html#abaqus.XY.XYSession.XYSession">[docs]</a><span class="k">class</span> <span class="nc">XYSession</span><span class="p">(</span><span class="n">XYSessionBase</span><span class="p">):</span>
 
 <div class="viewcode-block" id="XYSession.AreaStyle"><a class="viewcode-back" href="../../../reference/session/xy.html#abaqus.XY.XYSession.XYSession.AreaStyle">[docs]</a>    <span class="nd">@staticmethod</span>
-    <span class="k">def</span> <span class="nf">AreaStyle</span><span class="p">(</span><span class="n">color</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">''</span><span class="p">,</span> <span class="n">fill</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="n">ON</span><span class="p">,</span> <span class="n">style</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="n">SOLID</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">AreaStyle</span><span class="p">:</span>
-        <span class="sd">"""This method creates an AreaStyle.</span>
+    <span class="k">def</span> <span class="nf">AreaStyle</span><span class="p">(</span><span class="n">color</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">fill</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="n">ON</span><span class="p">,</span> <span class="n">style</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="n">SOLID</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">AreaStyle</span><span class="p">:</span>
+        <span class="sd">&quot;&quot;&quot;This method creates an AreaStyle.</span>
 
 <span class="sd">        Notes</span>
 <span class="sd">        -----</span>
@@ -338,7 +339,7 @@
 <span class="sd">        ----------</span>
 <span class="sd">        color</span>
 <span class="sd">            A String specifying the color to be used when filling an area with this AreaStyle</span>
-<span class="sd">            object. The default value is "White".</span>
+<span class="sd">            object. The default value is &quot;White&quot;.</span>
 <span class="sd">        fill</span>
 <span class="sd">            A Boolean specifying whether to fill the area when using this AreaStyle. The default</span>
 <span class="sd">            value is ON.</span>
@@ -353,14 +354,14 @@
 <span class="sd">        Raises</span>
 <span class="sd">        ------</span>
 <span class="sd">            ColorError</span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="n">areaStyle</span> <span class="o">=</span> <span class="n">AreaStyle</span><span class="p">(</span><span class="n">color</span><span class="p">,</span> <span class="n">fill</span><span class="p">,</span> <span class="n">style</span><span class="p">)</span>
         <span class="k">return</span> <span class="n">areaStyle</span></div>
 
 <div class="viewcode-block" id="XYSession.LineStyle"><a class="viewcode-back" href="../../../reference/session/xy.html#abaqus.XY.XYSession.XYSession.LineStyle">[docs]</a>    <span class="nd">@staticmethod</span>
-    <span class="k">def</span> <span class="nf">LineStyle</span><span class="p">(</span><span class="n">color</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">''</span><span class="p">,</span> <span class="n">show</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="n">ON</span><span class="p">,</span> <span class="n">style</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="n">SOLID</span><span class="p">,</span>
+    <span class="k">def</span> <span class="nf">LineStyle</span><span class="p">(</span><span class="n">color</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">show</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="n">ON</span><span class="p">,</span> <span class="n">style</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="n">SOLID</span><span class="p">,</span>
                   <span class="n">thickness</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mi">0</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">LineStyle</span><span class="p">:</span>
-        <span class="sd">"""This method creates a LineStyle.</span>
+        <span class="sd">&quot;&quot;&quot;This method creates a LineStyle.</span>
 
 <span class="sd">        Notes</span>
 <span class="sd">        -----</span>
@@ -375,7 +376,7 @@
 <span class="sd">        ----------</span>
 <span class="sd">        color</span>
 <span class="sd">            A String specifying the color to be used when drawing a line with this LineStyle object.</span>
-<span class="sd">            The default value is "White".</span>
+<span class="sd">            The default value is &quot;White&quot;.</span>
 <span class="sd">        show</span>
 <span class="sd">            A Boolean specifying whether to draw the line when using this LineStyle. The default</span>
 <span class="sd">            value is ON.</span>
@@ -394,13 +395,13 @@
 <span class="sd">        Raises</span>
 <span class="sd">        ------</span>
 <span class="sd">            ColorError</span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="n">lineStyle</span> <span class="o">=</span> <span class="n">LineStyle</span><span class="p">(</span><span class="n">color</span><span class="p">,</span> <span class="n">show</span><span class="p">,</span> <span class="n">style</span><span class="p">,</span> <span class="n">thickness</span><span class="p">)</span>
         <span class="k">return</span> <span class="n">lineStyle</span></div>
 
 <div class="viewcode-block" id="XYSession.QuantityType"><a class="viewcode-back" href="../../../reference/session/xy.html#abaqus.XY.XYSession.XYSession.QuantityType">[docs]</a>    <span class="nd">@staticmethod</span>
-    <span class="k">def</span> <span class="nf">QuantityType</span><span class="p">(</span><span class="n">label</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">''</span><span class="p">,</span> <span class="nb">type</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="kc">None</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">QuantityType</span><span class="p">:</span>
-        <span class="sd">"""This method creates a QuantityType object.</span>
+    <span class="k">def</span> <span class="nf">QuantityType</span><span class="p">(</span><span class="n">label</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="nb">type</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="kc">None</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">QuantityType</span><span class="p">:</span>
+        <span class="sd">&quot;&quot;&quot;This method creates a QuantityType object.</span>
 
 <span class="sd">        Notes</span>
 <span class="sd">        -----</span>
@@ -424,37 +425,37 @@
 <span class="sd">            - ANGULAR_MOMENTUM.</span>
 <span class="sd">            - ARC_LENGTH.</span>
 <span class="sd">            - AREA.</span>
-<span class="sd">            - AREA_VELOCITY_SQUARED, specifying "Velocity squared per area".</span>
+<span class="sd">            - AREA_VELOCITY_SQUARED, specifying &quot;Velocity squared per area&quot;.</span>
 <span class="sd">            - BIMOMENT.</span>
 <span class="sd">            - CURVATURE.</span>
 <span class="sd">            - CORIOLIS_LOAD.</span>
 <span class="sd">            - DAMAGE.</span>
 <span class="sd">            - DAMAGE_CRITERION.</span>
 <span class="sd">            - DENSITY.</span>
-<span class="sd">            - DENSITY_ROTATIONAL_ACCELERATION, specifying "Density * Angular acceleration".</span>
+<span class="sd">            - DENSITY_ROTATIONAL_ACCELERATION, specifying &quot;Density * Angular acceleration&quot;.</span>
 <span class="sd">            - DISPLACEMENT.</span>
-<span class="sd">            - ECURRENT_AREA_TIME, specifying "Time integrated electric current per area".</span>
+<span class="sd">            - ECURRENT_AREA_TIME, specifying &quot;Time integrated electric current per area&quot;.</span>
 <span class="sd">            - ELECTRIC_CHARGE.</span>
 <span class="sd">            - ELECTRIC_CURRENT.</span>
-<span class="sd">            - ELECTRIC_CURRENT_AREA, specifying "Electric current per unit area".</span>
+<span class="sd">            - ELECTRIC_CURRENT_AREA, specifying &quot;Electric current per unit area&quot;.</span>
 <span class="sd">            - ELECTRIC_POTENTIAL.</span>
 <span class="sd">            - ENERGY.</span>
 <span class="sd">            - ENERGY_DENSITY.</span>
 <span class="sd">            - ENERGY_RELEASE_RATE.</span>
-<span class="sd">            - EPOTENTIAL_GRADIENT, specifying "Electric potential gradient".</span>
+<span class="sd">            - EPOTENTIAL_GRADIENT, specifying &quot;Electric potential gradient&quot;.</span>
 <span class="sd">            - FREQUENCY.</span>
 <span class="sd">            - FORCE.</span>
-<span class="sd">            - FORCE_VOLUME, specifying "Force per volume".</span>
+<span class="sd">            - FORCE_VOLUME, specifying &quot;Force per volume&quot;.</span>
 <span class="sd">            - HEAT_FLUX.</span>
-<span class="sd">            - HEAT_FLUX_AREA, specifying "Heat flux per area".</span>
+<span class="sd">            - HEAT_FLUX_AREA, specifying &quot;Heat flux per area&quot;.</span>
 <span class="sd">            - HEAT_FLUX_RATE.</span>
-<span class="sd">            - HEAT_FLUX_VOLUME, specifying "Heat flux per volume".</span>
+<span class="sd">            - HEAT_FLUX_VOLUME, specifying &quot;Heat flux per volume&quot;.</span>
 <span class="sd">            - LENGTH.</span>
 <span class="sd">            - LINEAR_PRESSURE.</span>
-<span class="sd">            - LUMIN, specifying "Luminous intensity".</span>
+<span class="sd">            - LUMIN, specifying &quot;Luminous intensity&quot;.</span>
 <span class="sd">            - MASS.</span>
-<span class="sd">            - MASS_FLOW_AREA, specifying "Mass flow per area".</span>
-<span class="sd">            - MASS_FLOW_AREA_RATE, specifying "Mass flow rate per area".</span>
+<span class="sd">            - MASS_FLOW_AREA, specifying &quot;Mass flow per area&quot;.</span>
+<span class="sd">            - MASS_FLOW_AREA_RATE, specifying &quot;Mass flow rate per area&quot;.</span>
 <span class="sd">            - MASS_FLOW_RATE.</span>
 <span class="sd">            - MODE_NUMBER.</span>
 <span class="sd">            - MOMENT.</span>
@@ -472,36 +473,36 @@
 <span class="sd">            - STRAIN.</span>
 <span class="sd">            - STRAIN_RATE.</span>
 <span class="sd">            - STRESS.</span>
-<span class="sd">            - STRESS_INTENS_FACTOR, specifying "Stress intensity factor".</span>
-<span class="sd">            - SUBSTANCE, specifying "Amount of substance".</span>
+<span class="sd">            - STRESS_INTENS_FACTOR, specifying &quot;Stress intensity factor&quot;.</span>
+<span class="sd">            - SUBSTANCE, specifying &quot;Amount of substance&quot;.</span>
 <span class="sd">            - TEMPERATURE.</span>
 <span class="sd">            - THICKNESS.</span>
 <span class="sd">            - TIME.</span>
 <span class="sd">            - TIME_INCREMENT.</span>
-<span class="sd">            - TIME_HEAT_FLUX, specifying "Time integrated heat flux".</span>
-<span class="sd">            - TIME_HEAT_FLUX_AREA, specifying "Time integrated heat flux per area".</span>
-<span class="sd">            - TIME_VOLUME, specifying "Time integrated volume".</span>
-<span class="sd">            - TIME_VOLUME_FLUX, specifying "Time integrated volume flux per area".</span>
+<span class="sd">            - TIME_HEAT_FLUX, specifying &quot;Time integrated heat flux&quot;.</span>
+<span class="sd">            - TIME_HEAT_FLUX_AREA, specifying &quot;Time integrated heat flux per area&quot;.</span>
+<span class="sd">            - TIME_VOLUME, specifying &quot;Time integrated volume&quot;.</span>
+<span class="sd">            - TIME_VOLUME_FLUX, specifying &quot;Time integrated volume flux per area&quot;.</span>
 <span class="sd">            - TWIST.</span>
 <span class="sd">            - VELOCITY.</span>
 <span class="sd">            - VELOCITY_SQUARED.</span>
 <span class="sd">            - VOLUME.</span>
 <span class="sd">            - VOLUME_FLUX.</span>
-<span class="sd">            - VOLUME_FLUX_AREA, specifying "Volume flux per area".</span>
+<span class="sd">            - VOLUME_FLUX_AREA, specifying &quot;Volume flux per area&quot;.</span>
 <span class="sd">            - VOLUME_FRACTION.</span>
 <span class="sd">            The default value is NONE</span>
 
 <span class="sd">        Returns</span>
 <span class="sd">        -------</span>
 <span class="sd">            A QuantityType object.</span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="n">quantityType</span> <span class="o">=</span> <span class="n">QuantityType</span><span class="p">(</span><span class="n">label</span><span class="p">,</span> <span class="nb">type</span><span class="p">)</span>
         <span class="k">return</span> <span class="n">quantityType</span></div>
 
 <div class="viewcode-block" id="XYSession.SymbolStyle"><a class="viewcode-back" href="../../../reference/session/xy.html#abaqus.XY.XYSession.XYSession.SymbolStyle">[docs]</a>    <span class="nd">@staticmethod</span>
-    <span class="k">def</span> <span class="nf">SymbolStyle</span><span class="p">(</span><span class="n">color</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">''</span><span class="p">,</span> <span class="n">show</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="n">ON</span><span class="p">,</span> <span class="n">marker</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="n">FILLED_CIRCLE</span><span class="p">,</span>
+    <span class="k">def</span> <span class="nf">SymbolStyle</span><span class="p">(</span><span class="n">color</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">show</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="n">ON</span><span class="p">,</span> <span class="n">marker</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="n">FILLED_CIRCLE</span><span class="p">,</span>
                     <span class="n">size</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mi">2</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">SymbolStyle</span><span class="p">:</span>
-        <span class="sd">"""This method creates a SymbolStyle object.</span>
+        <span class="sd">&quot;&quot;&quot;This method creates a SymbolStyle object.</span>
 
 <span class="sd">        Notes</span>
 <span class="sd">        -----</span>
@@ -516,7 +517,7 @@
 <span class="sd">        ----------</span>
 <span class="sd">        color</span>
 <span class="sd">            A String specifying the color to be used when drawing a marker with this SymbolStyle</span>
-<span class="sd">            object. The default value is "White".</span>
+<span class="sd">            object. The default value is &quot;White&quot;.</span>
 <span class="sd">        show</span>
 <span class="sd">            A Boolean specifying whether to draw the marker when using this SymbolStyle object. The</span>
 <span class="sd">            default value is ON.</span>
@@ -546,13 +547,13 @@
 <span class="sd">        Raises</span>
 <span class="sd">        ------</span>
 <span class="sd">            ColorError</span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="n">symbolStyle</span> <span class="o">=</span> <span class="n">SymbolStyle</span><span class="p">(</span><span class="n">color</span><span class="p">,</span> <span class="n">show</span><span class="p">,</span> <span class="n">marker</span><span class="p">,</span> <span class="n">size</span><span class="p">)</span>
         <span class="k">return</span> <span class="n">symbolStyle</span></div>
 
 <div class="viewcode-block" id="XYSession.TextStyle"><a class="viewcode-back" href="../../../reference/session/xy.html#abaqus.XY.XYSession.XYSession.TextStyle">[docs]</a>    <span class="nd">@staticmethod</span>
-    <span class="k">def</span> <span class="nf">TextStyle</span><span class="p">(</span><span class="n">color</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">''</span><span class="p">,</span> <span class="n">show</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="n">ON</span><span class="p">,</span> <span class="n">font</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">''</span><span class="p">,</span> <span class="n">rotationAngle</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mi">0</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">TextStyle</span><span class="p">:</span>
-        <span class="sd">"""This method creates a TextStyle.</span>
+    <span class="k">def</span> <span class="nf">TextStyle</span><span class="p">(</span><span class="n">color</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">show</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="n">ON</span><span class="p">,</span> <span class="n">font</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">rotationAngle</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mi">0</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">TextStyle</span><span class="p">:</span>
+        <span class="sd">&quot;&quot;&quot;This method creates a TextStyle.</span>
 
 <span class="sd">        Notes</span>
 <span class="sd">        -----</span>
@@ -567,13 +568,13 @@
 <span class="sd">        ----------</span>
 <span class="sd">        color</span>
 <span class="sd">            A String specifying the color to be used when drawing text with this TextStyle object.</span>
-<span class="sd">            The default value is "White".</span>
+<span class="sd">            The default value is &quot;White&quot;.</span>
 <span class="sd">        show</span>
 <span class="sd">            A Boolean specifying whether to draw the text when using this TextStyle object. The</span>
 <span class="sd">            default value is ON.</span>
 <span class="sd">        font</span>
 <span class="sd">            A String specifying the name of the font to be used when drawing text with this</span>
-<span class="sd">            TextStyle object. The default value is "-*-verdana-medium-r-normal-*-*-120-*-*-p-*-*-*".</span>
+<span class="sd">            TextStyle object. The default value is &quot;-*-verdana-medium-r-normal-*-*-120-*-*-p-*-*-*&quot;.</span>
 <span class="sd">        rotationAngle</span>
 <span class="sd">            A Float specifying the angle in degrees used for displaying the text. The default value</span>
 <span class="sd">            is 0.0.</span>
@@ -585,17 +586,17 @@
 <span class="sd">        Raises</span>
 <span class="sd">        ------</span>
 <span class="sd">            ColorError</span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="n">textStyle</span> <span class="o">=</span> <span class="n">TextStyle</span><span class="p">(</span><span class="n">color</span><span class="p">,</span> <span class="n">show</span><span class="p">,</span> <span class="n">font</span><span class="p">,</span> <span class="n">rotationAngle</span><span class="p">)</span>
         <span class="k">return</span> <span class="n">textStyle</span></div>
 
     <span class="nd">@staticmethod</span>
     <span class="nd">@typing</span><span class="o">.</span><span class="n">overload</span>
-    <span class="k">def</span> <span class="nf">XYData</span><span class="p">(</span><span class="n">data</span><span class="p">:</span> <span class="nb">tuple</span><span class="p">,</span> <span class="n">name</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">''</span><span class="p">,</span> <span class="n">sourceDescription</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">''</span><span class="p">,</span> <span class="n">contentDescription</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">''</span><span class="p">,</span>
-               <span class="n">positionDescription</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">''</span><span class="p">,</span> <span class="n">legendLabel</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">''</span><span class="p">,</span> <span class="n">xValuesLabel</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">''</span><span class="p">,</span>
-               <span class="n">yValuesLabel</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">''</span><span class="p">,</span> <span class="n">axis1QuantityType</span><span class="p">:</span> <span class="n">QuantityType</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+    <span class="k">def</span> <span class="nf">XYData</span><span class="p">(</span><span class="n">data</span><span class="p">:</span> <span class="nb">tuple</span><span class="p">,</span> <span class="n">name</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">sourceDescription</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">contentDescription</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span><span class="p">,</span>
+               <span class="n">positionDescription</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">legendLabel</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">xValuesLabel</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span><span class="p">,</span>
+               <span class="n">yValuesLabel</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">axis1QuantityType</span><span class="p">:</span> <span class="n">QuantityType</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
                <span class="n">axis2QuantityType</span><span class="p">:</span> <span class="n">QuantityType</span> <span class="o">=</span> <span class="kc">None</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">XYData</span><span class="p">:</span>
-        <span class="sd">"""This method creates an XYData object from a sequence of *X–Y* data pairs.</span>
+        <span class="sd">&quot;&quot;&quot;This method creates an XYData object from a sequence of *X–Y* data pairs.</span>
 
 <span class="sd">        Notes</span>
 <span class="sd">        -----</span>
@@ -643,13 +644,13 @@
 <span class="sd">        Returns</span>
 <span class="sd">        -------</span>
 <span class="sd">            An XYData object.</span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span>
 
     <span class="nd">@staticmethod</span>
     <span class="nd">@typing</span><span class="o">.</span><span class="n">overload</span>
     <span class="k">def</span> <span class="nf">XYData</span><span class="p">(</span><span class="n">objectToCopy</span><span class="p">:</span> <span class="n">XYData</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">XYData</span><span class="p">:</span>
-        <span class="sd">"""This method creates an XYData object by copying an existing XYData object.</span>
+        <span class="sd">&quot;&quot;&quot;This method creates an XYData object by copying an existing XYData object.</span>
 
 <span class="sd">        Notes</span>
 <span class="sd">        -----</span>
@@ -669,19 +670,19 @@
 <span class="sd">        Returns</span>
 <span class="sd">        -------</span>
 <span class="sd">            An XYData object.</span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span>
 
     <span class="nd">@staticmethod</span>
     <span class="k">def</span> <span class="nf">XYData</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">XYData</span><span class="p">:</span>
         <span class="k">return</span> <span class="n">XYData</span><span class="p">(())</span>
 
-<div class="viewcode-block" id="XYSession.XYDataFromFile"><a class="viewcode-back" href="../../../reference/session/xy.html#abaqus.XY.XYSession.XYSession.XYDataFromFile">[docs]</a>    <span class="k">def</span> <span class="nf">XYDataFromFile</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">fileName</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">name</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">''</span><span class="p">,</span> <span class="n">sourceDescription</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">''</span><span class="p">,</span> <span class="n">contentDescription</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">''</span><span class="p">,</span>
-                       <span class="n">positionDescription</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">''</span><span class="p">,</span> <span class="n">legendLabel</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">''</span><span class="p">,</span> <span class="n">xValuesLabel</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">''</span><span class="p">,</span>
-                       <span class="n">yValuesLabel</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">''</span><span class="p">,</span> <span class="n">axis1QuantityType</span><span class="p">:</span> <span class="n">QuantityType</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+<div class="viewcode-block" id="XYSession.XYDataFromFile"><a class="viewcode-back" href="../../../reference/session/xy.html#abaqus.XY.XYSession.XYSession.XYDataFromFile">[docs]</a>    <span class="k">def</span> <span class="nf">XYDataFromFile</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">fileName</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">name</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">sourceDescription</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">contentDescription</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span><span class="p">,</span>
+                       <span class="n">positionDescription</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">legendLabel</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">xValuesLabel</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span><span class="p">,</span>
+                       <span class="n">yValuesLabel</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">axis1QuantityType</span><span class="p">:</span> <span class="n">QuantityType</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
                        <span class="n">axis2QuantityType</span><span class="p">:</span> <span class="n">QuantityType</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">xField</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span> <span class="n">yField</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">2</span><span class="p">,</span>
                        <span class="n">skipFrequency</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="kc">None</span><span class="p">):</span>
-        <span class="sd">"""This method creates an XYData object from data in an ASCII file.</span>
+        <span class="sd">&quot;&quot;&quot;This method creates an XYData object from data in an ASCII file.</span>
 
 <span class="sd">        Notes</span>
 <span class="sd">        -----</span>
@@ -737,15 +738,15 @@
 <span class="sd">        Returns</span>
 <span class="sd">        -------</span>
 <span class="sd">            An XYData object</span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">xyDataObjects</span><span class="p">[</span><span class="n">name</span><span class="p">]</span> <span class="o">=</span> <span class="n">xyData</span> <span class="o">=</span> <span class="n">XYData</span><span class="p">(())</span>
         <span class="k">return</span> <span class="n">xyData</span></div>
 
-<div class="viewcode-block" id="XYSession.XYDataFromHistory"><a class="viewcode-back" href="../../../reference/session/xy.html#abaqus.XY.XYSession.XYSession.XYDataFromHistory">[docs]</a>    <span class="k">def</span> <span class="nf">XYDataFromHistory</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">odb</span><span class="p">:</span> <span class="n">Odb</span><span class="p">,</span> <span class="n">outputVariableName</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">steps</span><span class="p">:</span> <span class="nb">tuple</span><span class="p">,</span> <span class="n">name</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">''</span><span class="p">,</span>
-                          <span class="n">sourceDescription</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">''</span><span class="p">,</span> <span class="n">contentDescription</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">''</span><span class="p">,</span>
-                          <span class="n">positionDescription</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">''</span><span class="p">,</span> <span class="n">legendLabel</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">''</span><span class="p">,</span> <span class="n">skipFrequency</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+<div class="viewcode-block" id="XYSession.XYDataFromHistory"><a class="viewcode-back" href="../../../reference/session/xy.html#abaqus.XY.XYSession.XYSession.XYDataFromHistory">[docs]</a>    <span class="k">def</span> <span class="nf">XYDataFromHistory</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">odb</span><span class="p">:</span> <span class="n">Odb</span><span class="p">,</span> <span class="n">outputVariableName</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">steps</span><span class="p">:</span> <span class="nb">tuple</span><span class="p">,</span> <span class="n">name</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span><span class="p">,</span>
+                          <span class="n">sourceDescription</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">contentDescription</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span><span class="p">,</span>
+                          <span class="n">positionDescription</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">legendLabel</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">skipFrequency</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
                           <span class="n">numericForm</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="n">REAL</span><span class="p">,</span> <span class="n">complexAngle</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="n">stepTuple</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="kc">None</span><span class="p">):</span>
-        <span class="sd">"""This method creates an XYData object by reading history data from an Odb object.</span>
+        <span class="sd">&quot;&quot;&quot;This method creates an XYData object by reading history data from an Odb object.</span>
 
 <span class="sd">        Notes</span>
 <span class="sd">        -----</span>
@@ -799,7 +800,7 @@
 <span class="sd">        Returns</span>
 <span class="sd">        -------</span>
 <span class="sd">            An XYData object</span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">xyDataObjects</span><span class="p">[</span><span class="n">name</span><span class="p">]</span> <span class="o">=</span> <span class="n">xyData</span> <span class="o">=</span> <span class="n">XYData</span><span class="p">(())</span>
         <span class="k">return</span> <span class="n">xyData</span></div>
 
@@ -807,8 +808,8 @@
                             <span class="n">variable</span><span class="p">:</span> <span class="nb">tuple</span><span class="p">[</span><span class="nb">tuple</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">SymbolicConstant</span><span class="p">,</span> <span class="nb">tuple</span><span class="p">[</span><span class="n">SymbolicConstant</span><span class="p">,</span> <span class="nb">str</span><span class="p">]]],</span>
                             <span class="n">elementSets</span><span class="p">:</span> <span class="nb">tuple</span> <span class="o">=</span> <span class="p">(),</span> <span class="n">elementLabels</span><span class="p">:</span> <span class="nb">tuple</span> <span class="o">=</span> <span class="p">(),</span> <span class="n">nodeSets</span><span class="p">:</span> <span class="nb">tuple</span> <span class="o">=</span> <span class="p">(),</span>
                             <span class="n">nodeLabels</span><span class="p">:</span> <span class="nb">tuple</span> <span class="o">=</span> <span class="p">(),</span> <span class="n">numericForm</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="n">REAL</span><span class="p">,</span> <span class="n">complexAngle</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span>
-                            <span class="n">operator</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="kc">None</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">list</span><span class="p">[</span><span class="s1">'XYData'</span><span class="p">]:</span>
-        <span class="sd">"""This method creates a list of XYData objects by reading field data from an Odb object.</span>
+                            <span class="n">operator</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="kc">None</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">list</span><span class="p">[</span><span class="s1">&#39;XYData&#39;</span><span class="p">]:</span>
+        <span class="sd">&quot;&quot;&quot;This method creates a list of XYData objects by reading field data from an Odb object.</span>
 
 <span class="sd">        Notes</span>
 <span class="sd">        -----</span>
@@ -829,7 +830,7 @@
 <span class="sd">        variable</span>
 <span class="sd">            A tuple of tuples containing the descriptions of variables for which to extract data</span>
 <span class="sd">            from the field. Each tuple specifies the following:Variable label: A String specifying</span>
-<span class="sd">            the variable; for example, 'U'.Variable output position: A SymbolicConstant specifying</span>
+<span class="sd">            the variable; for example, &#39;U&#39;.Variable output position: A SymbolicConstant specifying</span>
 <span class="sd">            the output position. Possible values are ELEMENT_CENTROID, ELEMENT_FACE, ELEMENT_NODAL,</span>
 <span class="sd">            GENERAL_PARTICLE, INTEGRATION_POINT, NODAL, WHOLE_ELEMENT, WHOLE_MODEL,</span>
 <span class="sd">            WHOLE_PART_INSTANCE, and WHOLE_REGION.Refinement: A tuple specifying the refinement. If</span>
@@ -838,12 +839,12 @@
 <span class="sd">            in the tuple) is included. The refinement tuple contains the following:Type: A</span>
 <span class="sd">            SymbolicConstant specifying the type of refinement. Possible values are INVARIANT and</span>
 <span class="sd">            COMPONENT.Label: A String specifying the invariant or the component; for example,</span>
-<span class="sd">            'Mises' or 'S22'.Location: An optional Dictionary specifying the location. The</span>
+<span class="sd">            &#39;Mises&#39; or &#39;S22&#39;.Location: An optional Dictionary specifying the location. The</span>
 <span class="sd">            dictionary contains pairs of the following:A String specifying the category selection</span>
 <span class="sd">            label.A String specifying the section point label.For example,</span>
-<span class="sd">            variable=('S',INTEGRATION_POINT, ((COMPONENT, 'S22' ), ), )</span>
-<span class="sd">            variable=(('S',INTEGRATION_POINT, ((COMPONENT, 'S11' ), ), ), ('U',NODAL,((COMPONENT, 'U1'),)),)</span>
-<span class="sd">            variable=(('S', INTEGRATION_POINT, ((INVARIANT, 'Mises' ), ),{'shell &lt; STEEL &gt; &lt; 3 section points &gt;':'SNEG, (fraction = -1.0)', }), )                                   (fraction = -1.0)', }), )</span>
+<span class="sd">            variable=(&#39;S&#39;,INTEGRATION_POINT, ((COMPONENT, &#39;S22&#39; ), ), )</span>
+<span class="sd">            variable=((&#39;S&#39;,INTEGRATION_POINT, ((COMPONENT, &#39;S11&#39; ), ), ), (&#39;U&#39;,NODAL,((COMPONENT, &#39;U1&#39;),)),)</span>
+<span class="sd">            variable=((&#39;S&#39;, INTEGRATION_POINT, ((INVARIANT, &#39;Mises&#39; ), ),{&#39;shell &lt; STEEL &gt; &lt; 3 section points &gt;&#39;:&#39;SNEG, (fraction = -1.0)&#39;, }), )                                   (fraction = -1.0)&#39;, }), )</span>
 <span class="sd">                                          `</span>
 <span class="sd">        elementSets</span>
 <span class="sd">            A sequence of Strings specifying element sets or a String specifying a single element</span>
@@ -852,20 +853,20 @@
 <span class="sd">            A sequence of expressions specifying element labels per part instance in the model. Each</span>
 <span class="sd">            part instance element expression is a sequence of a String specifying the part instance</span>
 <span class="sd">            name and a sequence of element expressions; for example,</span>
-<span class="sd">            `(('partInstance1',(1,'7','3:15;3'),), ('partInstance2','8'),))`. The element</span>
+<span class="sd">            `((&#39;partInstance1&#39;,(1,&#39;7&#39;,&#39;3:15;3&#39;),), (&#39;partInstance2&#39;,&#39;8&#39;),))`. The element</span>
 <span class="sd">            expressions can be any of the following:An Int specifying a single element label; for</span>
-<span class="sd">            example, `1`.A String specifying a single element label; for example, `'7'`.A String</span>
-<span class="sd">            specifying a sequence of element labels; for example, `'3:5'` and `'3:15:3'`.</span>
+<span class="sd">            example, `1`.A String specifying a single element label; for example, `&#39;7&#39;`.A String</span>
+<span class="sd">            specifying a sequence of element labels; for example, `&#39;3:5&#39;` and `&#39;3:15:3&#39;`.</span>
 <span class="sd">        nodeSets</span>
 <span class="sd">            A sequence of Strings specifying node sets or a String specifying a single node set.</span>
 <span class="sd">        nodeLabels</span>
 <span class="sd">            A sequence of expressions specifying node labels per part instance in the model. Each</span>
 <span class="sd">            part instance node expression is a sequence of a String specifying the part instance</span>
 <span class="sd">            name and a sequence of node expressions; for example,</span>
-<span class="sd">            `(('partInstance1',(1,'7','3:15;3'),), ('partInstance2','8'),))`. The node expressions</span>
+<span class="sd">            `((&#39;partInstance1&#39;,(1,&#39;7&#39;,&#39;3:15;3&#39;),), (&#39;partInstance2&#39;,&#39;8&#39;),))`. The node expressions</span>
 <span class="sd">            can be any of the following:An Int specifying a single node label; for example, `1`.A</span>
-<span class="sd">            String specifying a single node label; for example, `'7'`.A String specifying a sequence</span>
-<span class="sd">            of node labels; for example, `'3:5'` and `'3:15:3'`.</span>
+<span class="sd">            String specifying a single node label; for example, `&#39;7&#39;`.A String specifying a sequence</span>
+<span class="sd">            of node labels; for example, `&#39;3:5&#39;` and `&#39;3:15:3&#39;`.</span>
 <span class="sd">        numericForm</span>
 <span class="sd">            A SymbolicConstant specifying the numeric form in which to display results that contain</span>
 <span class="sd">            complex numbers. Possible values are COMPLEX_MAGNITUDE, COMPLEX_PHASE, REAL, IMAGINARY,</span>
@@ -886,14 +887,14 @@
 <span class="sd">        Returns</span>
 <span class="sd">        -------</span>
 <span class="sd">            A list of XYData objects</span>
-<span class="sd">        """</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">xyDataObjects</span><span class="p">[</span><span class="s1">'name'</span><span class="p">]</span> <span class="o">=</span> <span class="n">xyData</span> <span class="o">=</span> <span class="n">XYData</span><span class="p">(())</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">xyDataObjects</span><span class="p">[</span><span class="s1">&#39;name&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">xyData</span> <span class="o">=</span> <span class="n">XYData</span><span class="p">(())</span>
         <span class="k">return</span> <span class="p">[</span><span class="n">xyData</span><span class="p">]</span></div>
 
 <div class="viewcode-block" id="XYSession.XYDataFromFreeBody"><a class="viewcode-back" href="../../../reference/session/xy.html#abaqus.XY.XYSession.XYSession.XYDataFromFreeBody">[docs]</a>    <span class="k">def</span> <span class="nf">XYDataFromFreeBody</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">odb</span><span class="p">:</span> <span class="n">Odb</span><span class="p">,</span> <span class="n">force</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="n">ON</span><span class="p">,</span> <span class="n">moment</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="n">OFF</span><span class="p">,</span> <span class="n">heatFlowRate</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="n">OFF</span><span class="p">,</span>
                            <span class="n">resultant</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="n">ON</span><span class="p">,</span> <span class="n">comp1</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="n">OFF</span><span class="p">,</span> <span class="n">comp2</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="n">OFF</span><span class="p">,</span>
                            <span class="n">comp3</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="n">OFF</span><span class="p">):</span>
-        <span class="sd">"""This method creates a list of XYData objects by computing free body data from an Odb</span>
+        <span class="sd">&quot;&quot;&quot;This method creates a list of XYData objects by computing free body data from an Odb</span>
 <span class="sd">        object.</span>
 
 <span class="sd">        Notes</span>
@@ -932,18 +933,18 @@
 <span class="sd">        Returns</span>
 <span class="sd">        -------</span>
 <span class="sd">            A list of XYData objects</span>
-<span class="sd">        """</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">xyDataObjects</span><span class="p">[</span><span class="s1">'name'</span><span class="p">]</span> <span class="o">=</span> <span class="n">xyData</span> <span class="o">=</span> <span class="n">XYData</span><span class="p">(())</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">xyDataObjects</span><span class="p">[</span><span class="s1">&#39;name&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">xyData</span> <span class="o">=</span> <span class="n">XYData</span><span class="p">(())</span>
         <span class="k">return</span> <span class="p">[</span><span class="n">xyData</span><span class="p">]</span></div>
 
 <div class="viewcode-block" id="XYSession.XYDataFromPath"><a class="viewcode-back" href="../../../reference/session/xy.html#abaqus.XY.XYSession.XYSession.XYDataFromPath">[docs]</a>    <span class="k">def</span> <span class="nf">XYDataFromPath</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">path</span><span class="p">:</span> <span class="n">Path</span><span class="p">,</span> <span class="n">name</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">includeIntersections</span><span class="p">:</span> <span class="n">Boolean</span><span class="p">,</span> <span class="n">shape</span><span class="p">:</span> <span class="n">SymbolicConstant</span><span class="p">,</span>
                        <span class="n">pathStyle</span><span class="p">:</span> <span class="n">SymbolicConstant</span><span class="p">,</span> <span class="n">numIntervals</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">labelType</span><span class="p">:</span> <span class="n">SymbolicConstant</span><span class="p">,</span>
-                       <span class="n">viewport</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">''</span><span class="p">,</span> <span class="n">removeDuplicateXYPairs</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="kc">True</span><span class="p">,</span>
+                       <span class="n">viewport</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">removeDuplicateXYPairs</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="kc">True</span><span class="p">,</span>
                        <span class="n">includeAllElements</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="kc">False</span><span class="p">,</span> <span class="n">step</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">frame</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
                        <span class="n">variable</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">deformedMag</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
                        <span class="n">numericForm</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="n">REAL</span><span class="p">,</span> <span class="n">complexAngle</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span>
                        <span class="n">projectOntoMesh</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="kc">False</span><span class="p">,</span> <span class="n">projectionTolerance</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mi">0</span><span class="p">):</span>
-        <span class="sd">"""This method creates an XYData object from path information.</span>
+        <span class="sd">&quot;&quot;&quot;This method creates an XYData object from path information.</span>
 
 <span class="sd">        Notes</span>
 <span class="sd">        -----</span>
@@ -959,8 +960,8 @@
 <span class="sd">        path</span>
 <span class="sd">            A Path object to use in *X–Y* data generation.</span>
 <span class="sd">        name</span>
-<span class="sd">            A String specifying the repository key:for *session* 'name' is required argument and for</span>
-<span class="sd">            *xyPlot* 'name' is optional argument.</span>
+<span class="sd">            A String specifying the repository key:for *session* &#39;name&#39; is required argument and for</span>
+<span class="sd">            *xyPlot* &#39;name&#39; is optional argument.</span>
 <span class="sd">        includeIntersections</span>
 <span class="sd">            A Boolean specifying whether to include *X–Y* data for the intersections between the</span>
 <span class="sd">            path and element faces or edges. The default value is False.</span>
@@ -994,7 +995,7 @@
 <span class="sd">        variable</span>
 <span class="sd">            A tuple of tuples containing the descriptions of variables for which to extract data</span>
 <span class="sd">            along the path. The default value is the current variable. Each tuple specifies the</span>
-<span class="sd">            following:Variable label: A String specifying the variable; for example, 'U'.Variable</span>
+<span class="sd">            following:Variable label: A String specifying the variable; for example, &#39;U&#39;.Variable</span>
 <span class="sd">            output position: A SymbolicConstant specifying the output position. Possible values are</span>
 <span class="sd">            ELEMENT_CENTROID, ELEMENT_FACE, ELEMENT_NODAL, GENERAL_PARTICLE, INTEGRATION_POINT,</span>
 <span class="sd">            NODAL, WHOLE_ELEMENT, WHOLE_MODEL, WHOLE_PART_INSTANCE, and WHOLE_REGION.Refinement: A</span>
@@ -1003,14 +1004,14 @@
 <span class="sd">            location dictionary (the following element in the tuple) is included. The refinement</span>
 <span class="sd">            tuple contains the following:Type: A SymbolicConstant specifying the type of refinement.</span>
 <span class="sd">            Possible values are INVARIANT and COMPONENT.Label: A String specifying the invariant or</span>
-<span class="sd">            the component; for example, 'Mises' or 'S22'.Location: An optional Dictionary specifying</span>
+<span class="sd">            the component; for example, &#39;Mises&#39; or &#39;S22&#39;.Location: An optional Dictionary specifying</span>
 <span class="sd">            the location. The dictionary contains pairs of the following:A String specifying the</span>
 <span class="sd">            category selection label.A String specifying the section point label.For</span>
-<span class="sd">            example,`variable= ('S',INTEGRATION_POINT, ( (COMPONENT, 'S22' ), ), ) variable=</span>
-<span class="sd">            (('S',INTEGRATION_POINT, ((COMPONENT, 'S11' ), ), ),            ('U',NODAL,((COMPONENT,</span>
-<span class="sd">            'U1'),)),) variable= (('S', INTEGRATION_POINT, ((INVARIANT, 'Mises' ), ),</span>
-<span class="sd">            {'shell &lt; STEEL &gt; &lt; 3 section points &gt;':'SNEG,</span>
-<span class="sd">            (fraction = -1.0)', }), )`</span>
+<span class="sd">            example,`variable= (&#39;S&#39;,INTEGRATION_POINT, ( (COMPONENT, &#39;S22&#39; ), ), ) variable=</span>
+<span class="sd">            ((&#39;S&#39;,INTEGRATION_POINT, ((COMPONENT, &#39;S11&#39; ), ), ),            (&#39;U&#39;,NODAL,((COMPONENT,</span>
+<span class="sd">            &#39;U1&#39;),)),) variable= ((&#39;S&#39;, INTEGRATION_POINT, ((INVARIANT, &#39;Mises&#39; ), ),</span>
+<span class="sd">            {&#39;shell &lt; STEEL &gt; &lt; 3 section points &gt;&#39;:&#39;SNEG,</span>
+<span class="sd">            (fraction = -1.0)&#39;, }), )`</span>
 <span class="sd">        deformedMag</span>
 <span class="sd">            A tuple of three Floats specifying the deformation magnitude in the *X-*, *Y-*, and</span>
 <span class="sd">            *Z-*planes. The default value is (1, 1, 1).</span>
@@ -1056,7 +1057,7 @@
 <span class="sd">            - If *deformedMag* does not contain three Floats:</span>
 <span class="sd">              ErrorDeformedMagTupleInPathExtract: Deformed magnification tuple must contain X, Y and</span>
 <span class="sd">            Z values.</span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">xyDataObjects</span><span class="p">[</span><span class="n">name</span><span class="p">]</span> <span class="o">=</span> <span class="n">xyData</span> <span class="o">=</span> <span class="n">XYData</span><span class="p">(())</span>
         <span class="k">return</span> <span class="n">xyData</span></div></div>
 </pre></div>

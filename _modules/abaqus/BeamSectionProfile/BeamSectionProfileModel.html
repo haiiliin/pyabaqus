@@ -5,10 +5,10 @@
     <meta name="color-scheme" content="light dark"><link rel="index" title="Index" href="../../../genindex.html" /><link rel="search" title="Search" href="../../../search.html" />
         <link rel="canonical" href="https://pyabaqus.haiiliin.com/_modules/abaqus/BeamSectionProfile/BeamSectionProfileModel.html" />
 
-    <meta name="generator" content="sphinx-4.5.0, furo 2022.04.07"/>
-        <title>abaqus.BeamSectionProfile.BeamSectionProfileModel - pyabaqus 1.0.16 documentation</title>
+    <meta name="generator" content="sphinx-4.5.0, furo 2022.06.04.1"/>
+        <title>abaqus.BeamSectionProfile.BeamSectionProfileModel - pyabaqus 1.0.18 documentation</title>
       <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/styles/furo.css?digest=68f4518137b9aefe99b631505a2064c3c42c9852" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/styles/furo.css?digest=40978830699223671f4072448e654b5958f38b89" />
     <link rel="stylesheet" type="text/css" href="../../../_static/styles/furo-extensions.css?digest=30d1aed668e5c3a91c3e3bf6a60b675221979f0e" />
     
     
@@ -123,7 +123,7 @@
       </label>
     </div>
     <div class="header-center">
-      <a href="../../../index.html"><div class="brand">pyabaqus 1.0.16 documentation</div></a>
+      <a href="../../../index.html"><div class="brand">pyabaqus 1.0.18 documentation</div></a>
     </div>
     <div class="header-right">
       <div class="theme-toggle-container theme-toggle-header">
@@ -146,7 +146,7 @@
       <div class="sidebar-sticky"><a class="sidebar-brand" href="../../../index.html">
   
   
-  <span class="sidebar-brand-text">pyabaqus 1.0.16 documentation</span>
+  <span class="sidebar-brand-text">pyabaqus 1.0.18 documentation</span>
   
 </a><form class="sidebar-search-container" method="get" action="../../../search.html" role="search">
   <input class="sidebar-search" placeholder=Search name="q" aria-label="Search">
@@ -286,7 +286,8 @@
           </svg>
           <span>Back to top</span>
         </a>
-        <div class="content-icon-container"><div class="theme-toggle-container theme-toggle-content">
+        <div class="content-icon-container">
+          <div class="theme-toggle-container theme-toggle-content">
             <button class="theme-toggle">
               <div class="visually-hidden">Toggle Light / Dark / Auto color theme</div>
               <svg class="theme-icon-when-auto"><use href="#svg-sun-half"></use></svg>
@@ -318,7 +319,7 @@
 
 
 <div class="viewcode-block" id="BeamSectionProfileModel"><a class="viewcode-back" href="../../../user/mdb/model/profile.html#abaqus.BeamSectionProfile.BeamSectionProfileModel.BeamSectionProfileModel">[docs]</a><span class="k">class</span> <span class="nc">BeamSectionProfileModel</span><span class="p">(</span><span class="n">ModelBase</span><span class="p">):</span>
-    <span class="sd">"""Abaqus creates a Model object named `Model-1` when a session is started.</span>
+    <span class="sd">&quot;&quot;&quot;Abaqus creates a Model object named `Model-1` when a session is started.</span>
 
 <span class="sd">    Notes</span>
 <span class="sd">    -----</span>
@@ -328,10 +329,10 @@
 
 <span class="sd">        mdb.models[name]</span>
 
-<span class="sd">    """</span>
+<span class="sd">    &quot;&quot;&quot;</span>
 
 <div class="viewcode-block" id="BeamSectionProfileModel.beamProfilesFromOdb"><a class="viewcode-back" href="../../../reference/mdb/model/profile.html#abaqus.BeamSectionProfile.BeamSectionProfileModel.BeamSectionProfileModel.beamProfilesFromOdb">[docs]</a>    <span class="k">def</span> <span class="nf">beamProfilesFromOdb</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">fileName</span><span class="p">:</span> <span class="nb">str</span><span class="p">):</span>
-        <span class="sd">"""This method creates Profile objects by reading an output database. The new profiles are</span>
+        <span class="sd">&quot;&quot;&quot;This method creates Profile objects by reading an output database. The new profiles are</span>
 <span class="sd">        placed in the profiles repository.</span>
 
 <span class="sd">        Notes</span>
@@ -353,13 +354,13 @@
 <span class="sd">        -------</span>
 <span class="sd">            A list of Profile objects..</span>
 <span class="sd">            !img</span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="n">profiles</span><span class="p">:</span> <span class="nb">dict</span><span class="p">[</span><span class="n">Profile</span><span class="p">]</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">[</span><span class="n">Profile</span><span class="p">]()</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">profiles</span><span class="o">.</span><span class="n">update</span><span class="p">(</span><span class="n">profiles</span><span class="p">)</span>
         <span class="k">return</span> <span class="n">profiles</span></div>
 
 <div class="viewcode-block" id="BeamSectionProfileModel.ArbitraryProfile"><a class="viewcode-back" href="../../../reference/mdb/model/profile.html#abaqus.BeamSectionProfile.BeamSectionProfileModel.BeamSectionProfileModel.ArbitraryProfile">[docs]</a>    <span class="k">def</span> <span class="nf">ArbitraryProfile</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">table</span><span class="p">:</span> <span class="nb">tuple</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">ArbitraryProfile</span><span class="p">:</span>
-        <span class="sd">"""This method creates a ArbitraryProfile object.</span>
+        <span class="sd">&quot;&quot;&quot;This method creates a ArbitraryProfile object.</span>
 
 <span class="sd">        Notes</span>
 <span class="sd">        -----</span>
@@ -385,13 +386,13 @@
 <span class="sd">        ------</span>
 <span class="sd">            RangeError.</span>
 <span class="sd">            !img</span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">profiles</span><span class="p">[</span><span class="n">name</span><span class="p">]</span> <span class="o">=</span> <span class="n">arbitraryProfile</span> <span class="o">=</span> <span class="n">ArbitraryProfile</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">table</span><span class="p">)</span>
         <span class="k">return</span> <span class="n">arbitraryProfile</span></div>
 
 <div class="viewcode-block" id="BeamSectionProfileModel.BoxProfile"><a class="viewcode-back" href="../../../reference/mdb/model/profile.html#abaqus.BeamSectionProfile.BeamSectionProfileModel.BeamSectionProfileModel.BoxProfile">[docs]</a>    <span class="k">def</span> <span class="nf">BoxProfile</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">a</span><span class="p">:</span> <span class="nb">float</span><span class="p">,</span> <span class="n">b</span><span class="p">:</span> <span class="nb">float</span><span class="p">,</span> <span class="n">uniformThickness</span><span class="p">:</span> <span class="n">Boolean</span><span class="p">,</span> <span class="n">t1</span><span class="p">:</span> <span class="nb">float</span><span class="p">,</span> <span class="n">t2</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span>
                    <span class="n">t3</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="n">t4</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mi">0</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">BoxProfile</span><span class="p">:</span>
-        <span class="sd">"""This method creates a BoxProfile object.</span>
+        <span class="sd">&quot;&quot;&quot;This method creates a BoxProfile object.</span>
 
 <span class="sd">        Notes</span>
 <span class="sd">        -----</span>
@@ -435,12 +436,12 @@
 <span class="sd">        ------</span>
 <span class="sd">            RangeError.</span>
 <span class="sd">            !img</span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">profiles</span><span class="p">[</span><span class="n">name</span><span class="p">]</span> <span class="o">=</span> <span class="n">boxProfile</span> <span class="o">=</span> <span class="n">BoxProfile</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">uniformThickness</span><span class="p">,</span> <span class="n">t1</span><span class="p">,</span> <span class="n">t2</span><span class="p">,</span> <span class="n">t3</span><span class="p">,</span> <span class="n">t4</span><span class="p">)</span>
         <span class="k">return</span> <span class="n">boxProfile</span></div>
 
 <div class="viewcode-block" id="BeamSectionProfileModel.CircularProfile"><a class="viewcode-back" href="../../../reference/mdb/model/profile.html#abaqus.BeamSectionProfile.BeamSectionProfileModel.BeamSectionProfileModel.CircularProfile">[docs]</a>    <span class="k">def</span> <span class="nf">CircularProfile</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">r</span><span class="p">:</span> <span class="nb">float</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">CircularProfile</span><span class="p">:</span>
-        <span class="sd">"""This method creates a CircularProfile object.</span>
+        <span class="sd">&quot;&quot;&quot;This method creates a CircularProfile object.</span>
 
 <span class="sd">        Notes</span>
 <span class="sd">        -----</span>
@@ -468,13 +469,13 @@
 <span class="sd">        ------</span>
 <span class="sd">            RangeError.</span>
 <span class="sd">            !img</span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">profiles</span><span class="p">[</span><span class="n">name</span><span class="p">]</span> <span class="o">=</span> <span class="n">circularProfile</span> <span class="o">=</span> <span class="n">CircularProfile</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">r</span><span class="p">)</span>
         <span class="k">return</span> <span class="n">circularProfile</span></div>
 
 <div class="viewcode-block" id="BeamSectionProfileModel.GeneralizedProfile"><a class="viewcode-back" href="../../../reference/mdb/model/profile.html#abaqus.BeamSectionProfile.BeamSectionProfileModel.BeamSectionProfileModel.GeneralizedProfile">[docs]</a>    <span class="k">def</span> <span class="nf">GeneralizedProfile</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">area</span><span class="p">:</span> <span class="nb">float</span><span class="p">,</span> <span class="n">i11</span><span class="p">:</span> <span class="nb">float</span><span class="p">,</span> <span class="n">i12</span><span class="p">:</span> <span class="nb">float</span><span class="p">,</span> <span class="n">i22</span><span class="p">:</span> <span class="nb">float</span><span class="p">,</span> <span class="n">j</span><span class="p">:</span> <span class="nb">float</span><span class="p">,</span> <span class="n">gammaO</span><span class="p">:</span> <span class="nb">float</span><span class="p">,</span>
                            <span class="n">gammaW</span><span class="p">:</span> <span class="nb">float</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">GeneralizedProfile</span><span class="p">:</span>
-        <span class="sd">"""This method creates a GeneralizedProfile object.</span>
+        <span class="sd">&quot;&quot;&quot;This method creates a GeneralizedProfile object.</span>
 
 <span class="sd">        Notes</span>
 <span class="sd">        -----</span>
@@ -512,12 +513,12 @@
 <span class="sd">        ------</span>
 <span class="sd">            RangeError.</span>
 <span class="sd">            !img</span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">profiles</span><span class="p">[</span><span class="n">name</span><span class="p">]</span> <span class="o">=</span> <span class="n">generalizedProfile</span> <span class="o">=</span> <span class="n">GeneralizedProfile</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">area</span><span class="p">,</span> <span class="n">i11</span><span class="p">,</span> <span class="n">i12</span><span class="p">,</span> <span class="n">i22</span><span class="p">,</span> <span class="n">j</span><span class="p">,</span> <span class="n">gammaO</span><span class="p">,</span> <span class="n">gammaW</span><span class="p">)</span>
         <span class="k">return</span> <span class="n">generalizedProfile</span></div>
 
 <div class="viewcode-block" id="BeamSectionProfileModel.HexagonalProfile"><a class="viewcode-back" href="../../../reference/mdb/model/profile.html#abaqus.BeamSectionProfile.BeamSectionProfileModel.BeamSectionProfileModel.HexagonalProfile">[docs]</a>    <span class="k">def</span> <span class="nf">HexagonalProfile</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">r</span><span class="p">:</span> <span class="nb">float</span><span class="p">,</span> <span class="n">t</span><span class="p">:</span> <span class="nb">float</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">HexagonalProfile</span><span class="p">:</span>
-        <span class="sd">"""This method creates a HexagonalProfile object.</span>
+        <span class="sd">&quot;&quot;&quot;This method creates a HexagonalProfile object.</span>
 
 <span class="sd">        Notes</span>
 <span class="sd">        -----</span>
@@ -548,13 +549,13 @@
 <span class="sd">        ------</span>
 <span class="sd">            RangeError.</span>
 <span class="sd">            !img</span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">profiles</span><span class="p">[</span><span class="n">name</span><span class="p">]</span> <span class="o">=</span> <span class="n">hexagonalProfile</span> <span class="o">=</span> <span class="n">HexagonalProfile</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">r</span><span class="p">,</span> <span class="n">t</span><span class="p">)</span>
         <span class="k">return</span> <span class="n">hexagonalProfile</span></div>
 
 <div class="viewcode-block" id="BeamSectionProfileModel.IProfile"><a class="viewcode-back" href="../../../reference/mdb/model/profile.html#abaqus.BeamSectionProfile.BeamSectionProfileModel.BeamSectionProfileModel.IProfile">[docs]</a>    <span class="k">def</span> <span class="nf">IProfile</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">l</span><span class="p">:</span> <span class="nb">float</span><span class="p">,</span> <span class="n">h</span><span class="p">:</span> <span class="nb">float</span><span class="p">,</span> <span class="n">b1</span><span class="p">:</span> <span class="nb">float</span><span class="p">,</span> <span class="n">b2</span><span class="p">:</span> <span class="nb">float</span><span class="p">,</span> <span class="n">t1</span><span class="p">:</span> <span class="nb">float</span><span class="p">,</span> <span class="n">t2</span><span class="p">:</span> <span class="nb">float</span><span class="p">,</span>
                  <span class="n">t3</span><span class="p">:</span> <span class="nb">float</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">IProfile</span><span class="p">:</span>
-        <span class="sd">"""This method creates an IProfile object.</span>
+        <span class="sd">&quot;&quot;&quot;This method creates an IProfile object.</span>
 
 <span class="sd">        Notes</span>
 <span class="sd">        -----</span>
@@ -594,12 +595,12 @@
 <span class="sd">        ------</span>
 <span class="sd">            RangeError.</span>
 <span class="sd">            !img</span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">profiles</span><span class="p">[</span><span class="n">name</span><span class="p">]</span> <span class="o">=</span> <span class="n">iProfile</span> <span class="o">=</span> <span class="n">IProfile</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">l</span><span class="p">,</span> <span class="n">h</span><span class="p">,</span> <span class="n">b1</span><span class="p">,</span> <span class="n">b2</span><span class="p">,</span> <span class="n">t1</span><span class="p">,</span> <span class="n">t2</span><span class="p">,</span> <span class="n">t3</span><span class="p">)</span>
         <span class="k">return</span> <span class="n">iProfile</span></div>
 
 <div class="viewcode-block" id="BeamSectionProfileModel.LProfile"><a class="viewcode-back" href="../../../reference/mdb/model/profile.html#abaqus.BeamSectionProfile.BeamSectionProfileModel.BeamSectionProfileModel.LProfile">[docs]</a>    <span class="k">def</span> <span class="nf">LProfile</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">a</span><span class="p">:</span> <span class="nb">float</span><span class="p">,</span> <span class="n">b</span><span class="p">:</span> <span class="nb">float</span><span class="p">,</span> <span class="n">t1</span><span class="p">:</span> <span class="nb">float</span><span class="p">,</span> <span class="n">t2</span><span class="p">:</span> <span class="nb">float</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">LProfile</span><span class="p">:</span>
-        <span class="sd">"""This method creates a LProfile object.</span>
+        <span class="sd">&quot;&quot;&quot;This method creates a LProfile object.</span>
 
 <span class="sd">        Notes</span>
 <span class="sd">        -----</span>
@@ -635,12 +636,12 @@
 <span class="sd">        ------</span>
 <span class="sd">            RangeError.</span>
 <span class="sd">            !img</span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">profiles</span><span class="p">[</span><span class="n">name</span><span class="p">]</span> <span class="o">=</span> <span class="n">lProfile</span> <span class="o">=</span> <span class="n">LProfile</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">t1</span><span class="p">,</span> <span class="n">t2</span><span class="p">)</span>
         <span class="k">return</span> <span class="n">lProfile</span></div>
 
 <div class="viewcode-block" id="BeamSectionProfileModel.PipeProfile"><a class="viewcode-back" href="../../../reference/mdb/model/profile.html#abaqus.BeamSectionProfile.BeamSectionProfileModel.BeamSectionProfileModel.PipeProfile">[docs]</a>    <span class="k">def</span> <span class="nf">PipeProfile</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">r</span><span class="p">:</span> <span class="nb">float</span><span class="p">,</span> <span class="n">t</span><span class="p">:</span> <span class="nb">float</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">PipeProfile</span><span class="p">:</span>
-        <span class="sd">"""This method creates a PipeProfile object.</span>
+        <span class="sd">&quot;&quot;&quot;This method creates a PipeProfile object.</span>
 
 <span class="sd">        Notes</span>
 <span class="sd">        -----</span>
@@ -670,12 +671,12 @@
 <span class="sd">        ------</span>
 <span class="sd">            RangeError.</span>
 <span class="sd">            !img</span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">profiles</span><span class="p">[</span><span class="n">name</span><span class="p">]</span> <span class="o">=</span> <span class="n">pipeProfile</span> <span class="o">=</span> <span class="n">PipeProfile</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">r</span><span class="p">,</span> <span class="n">t</span><span class="p">)</span>
         <span class="k">return</span> <span class="n">pipeProfile</span></div>
 
 <div class="viewcode-block" id="BeamSectionProfileModel.RectangularProfile"><a class="viewcode-back" href="../../../reference/mdb/model/profile.html#abaqus.BeamSectionProfile.BeamSectionProfileModel.BeamSectionProfileModel.RectangularProfile">[docs]</a>    <span class="k">def</span> <span class="nf">RectangularProfile</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">a</span><span class="p">:</span> <span class="nb">float</span><span class="p">,</span> <span class="n">b</span><span class="p">:</span> <span class="nb">float</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">RectangularProfile</span><span class="p">:</span>
-        <span class="sd">"""This method creates a RectangularProfile object.</span>
+        <span class="sd">&quot;&quot;&quot;This method creates a RectangularProfile object.</span>
 
 <span class="sd">        Notes</span>
 <span class="sd">        -----</span>
@@ -705,12 +706,12 @@
 <span class="sd">        ------</span>
 <span class="sd">            RangeError.</span>
 <span class="sd">            !img</span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">profiles</span><span class="p">[</span><span class="n">name</span><span class="p">]</span> <span class="o">=</span> <span class="n">rectangularProfile</span> <span class="o">=</span> <span class="n">RectangularProfile</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">)</span>
         <span class="k">return</span> <span class="n">rectangularProfile</span></div>
 
 <div class="viewcode-block" id="BeamSectionProfileModel.TProfile"><a class="viewcode-back" href="../../../reference/mdb/model/profile.html#abaqus.BeamSectionProfile.BeamSectionProfileModel.BeamSectionProfileModel.TProfile">[docs]</a>    <span class="k">def</span> <span class="nf">TProfile</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">b</span><span class="p">:</span> <span class="nb">float</span><span class="p">,</span> <span class="n">h</span><span class="p">:</span> <span class="nb">float</span><span class="p">,</span> <span class="n">l</span><span class="p">:</span> <span class="nb">float</span><span class="p">,</span> <span class="n">tf</span><span class="p">:</span> <span class="nb">float</span><span class="p">,</span> <span class="n">tw</span><span class="p">:</span> <span class="nb">float</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">TProfile</span><span class="p">:</span>
-        <span class="sd">"""This method creates a TProfile object.</span>
+        <span class="sd">&quot;&quot;&quot;This method creates a TProfile object.</span>
 
 <span class="sd">        Notes</span>
 <span class="sd">        -----</span>
@@ -749,12 +750,12 @@
 <span class="sd">        ------</span>
 <span class="sd">            RangeError.</span>
 <span class="sd">            !img</span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">profiles</span><span class="p">[</span><span class="n">name</span><span class="p">]</span> <span class="o">=</span> <span class="n">tProfile</span> <span class="o">=</span> <span class="n">TProfile</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">h</span><span class="p">,</span> <span class="n">l</span><span class="p">,</span> <span class="n">tf</span><span class="p">,</span> <span class="n">tw</span><span class="p">)</span>
         <span class="k">return</span> <span class="n">tProfile</span></div>
 
 <div class="viewcode-block" id="BeamSectionProfileModel.TrapezoidalProfile"><a class="viewcode-back" href="../../../reference/mdb/model/profile.html#abaqus.BeamSectionProfile.BeamSectionProfileModel.BeamSectionProfileModel.TrapezoidalProfile">[docs]</a>    <span class="k">def</span> <span class="nf">TrapezoidalProfile</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">a</span><span class="p">:</span> <span class="nb">float</span><span class="p">,</span> <span class="n">b</span><span class="p">:</span> <span class="nb">float</span><span class="p">,</span> <span class="n">c</span><span class="p">:</span> <span class="nb">float</span><span class="p">,</span> <span class="n">d</span><span class="p">:</span> <span class="nb">float</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">TrapezoidalProfile</span><span class="p">:</span>
-        <span class="sd">"""This method creates a TrapezoidalProfile object.</span>
+        <span class="sd">&quot;&quot;&quot;This method creates a TrapezoidalProfile object.</span>
 
 <span class="sd">        Notes</span>
 <span class="sd">        -----</span>
@@ -788,7 +789,7 @@
 <span class="sd">        ------</span>
 <span class="sd">            RangeError.</span>
 <span class="sd">            !img</span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">profiles</span><span class="p">[</span><span class="n">name</span><span class="p">]</span> <span class="o">=</span> <span class="n">trapezoidalProfile</span> <span class="o">=</span> <span class="n">TrapezoidalProfile</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">c</span><span class="p">,</span> <span class="n">d</span><span class="p">)</span>
         <span class="k">return</span> <span class="n">trapezoidalProfile</span></div></div>
 </pre></div>

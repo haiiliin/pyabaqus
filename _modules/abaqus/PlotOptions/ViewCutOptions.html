@@ -5,10 +5,10 @@
     <meta name="color-scheme" content="light dark"><link rel="index" title="Index" href="../../../genindex.html" /><link rel="search" title="Search" href="../../../search.html" />
         <link rel="canonical" href="https://pyabaqus.haiiliin.com/_modules/abaqus/PlotOptions/ViewCutOptions.html" />
 
-    <meta name="generator" content="sphinx-4.5.0, furo 2022.04.07"/>
-        <title>abaqus.PlotOptions.ViewCutOptions - pyabaqus 1.0.16 documentation</title>
+    <meta name="generator" content="sphinx-4.5.0, furo 2022.06.04.1"/>
+        <title>abaqus.PlotOptions.ViewCutOptions - pyabaqus 1.0.18 documentation</title>
       <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/styles/furo.css?digest=68f4518137b9aefe99b631505a2064c3c42c9852" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/styles/furo.css?digest=40978830699223671f4072448e654b5958f38b89" />
     <link rel="stylesheet" type="text/css" href="../../../_static/styles/furo-extensions.css?digest=30d1aed668e5c3a91c3e3bf6a60b675221979f0e" />
     
     
@@ -123,7 +123,7 @@
       </label>
     </div>
     <div class="header-center">
-      <a href="../../../index.html"><div class="brand">pyabaqus 1.0.16 documentation</div></a>
+      <a href="../../../index.html"><div class="brand">pyabaqus 1.0.18 documentation</div></a>
     </div>
     <div class="header-right">
       <div class="theme-toggle-container theme-toggle-header">
@@ -146,7 +146,7 @@
       <div class="sidebar-sticky"><a class="sidebar-brand" href="../../../index.html">
   
   
-  <span class="sidebar-brand-text">pyabaqus 1.0.16 documentation</span>
+  <span class="sidebar-brand-text">pyabaqus 1.0.18 documentation</span>
   
 </a><form class="sidebar-search-container" method="get" action="../../../search.html" role="search">
   <input class="sidebar-search" placeholder=Search name="q" aria-label="Search">
@@ -286,7 +286,8 @@
           </svg>
           <span>Back to top</span>
         </a>
-        <div class="content-icon-container"><div class="theme-toggle-container theme-toggle-content">
+        <div class="content-icon-container">
+          <div class="theme-toggle-container theme-toggle-content">
             <button class="theme-toggle">
               <div class="visually-hidden">Toggle Light / Dark / Auto color theme</div>
               <svg class="theme-icon-when-auto"><use href="#svg-sun-half"></use></svg>
@@ -305,7 +306,7 @@
 
 
 <div class="viewcode-block" id="ViewCutOptions"><a class="viewcode-back" href="../../../reference/session/plot_options.html#abaqus.PlotOptions.ViewCutOptions.ViewCutOptions">[docs]</a><span class="k">class</span> <span class="nc">ViewCutOptions</span><span class="p">:</span>
-    <span class="sd">"""The ViewCutOptions object stores values and attributes associated with a view cut plot.</span>
+    <span class="sd">&quot;&quot;&quot;The ViewCutOptions object stores values and attributes associated with a view cut plot.</span>
 <span class="sd">    The ViewCutOptions object has no constructor command. Abaqus creates a </span>
 <span class="sd">    *defaultOdbDisplay.viewCutOptions* member when you import the Visualization module. </span>
 <span class="sd">    Abaqus creates an *viewCutOptions* member when it creates the OdbDisplay object, using </span>
@@ -368,7 +369,7 @@
 <span class="sd">        applicable on the model above the cut. The default value is None.</span>
 <span class="sd">    csysName: SymbolicConstant</span>
 <span class="sd">        The SymbolicConstant GLOBAL or a String specifying the coordinate system name for the</span>
-<span class="sd">        free body cut's component resolution. The default value is GLOBAL.</span>
+<span class="sd">        free body cut&#39;s component resolution. The default value is GLOBAL.</span>
 <span class="sd">    pathName: str</span>
 <span class="sd">        A String specifying the name of the path along which slicing occurs. The default value</span>
 <span class="sd">        is an empty string.</span>
@@ -390,7 +391,7 @@
 <span class="sd">        session.viewports[name].layers[name].odbDisplay.viewCutOptions</span>
 <span class="sd">        session.viewports[name].odbDisplay.viewCutOptions</span>
 
-<span class="sd">    """</span>
+<span class="sd">    &quot;&quot;&quot;</span>
 
     <span class="c1"># A Boolean specifying whether to use the options defined for displaying the model below </span>
     <span class="c1"># the cut. The default value is OFF. </span>
@@ -457,12 +458,12 @@
     <span class="n">aboveOptions</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="kc">None</span>
 
     <span class="c1"># The SymbolicConstant GLOBAL or a String specifying the coordinate system name for the </span>
-    <span class="c1"># free body cut's component resolution. The default value is GLOBAL. </span>
+    <span class="c1"># free body cut&#39;s component resolution. The default value is GLOBAL. </span>
     <span class="n">csysName</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="n">GLOBAL</span>
 
     <span class="c1"># A String specifying the name of the path along which slicing occurs. The default value </span>
     <span class="c1"># is an empty string. </span>
-    <span class="n">pathName</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">''</span>
+    <span class="n">pathName</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span>
 
     <span class="c1"># A tuple of three Floats specifying the summation point for the free body cut. The </span>
     <span class="c1"># default value is (0, 0, 0). </span>
@@ -472,7 +473,7 @@
     <span class="c1"># default value is (0, 1, 0). </span>
     <span class="n">yAxis</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="kc">None</span>
 
-<div class="viewcode-block" id="ViewCutOptions.setValues"><a class="viewcode-back" href="../../../reference/session/plot_options.html#abaqus.PlotOptions.ViewCutOptions.ViewCutOptions.setValues">[docs]</a>    <span class="k">def</span> <span class="nf">setValues</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">options</span><span class="p">:</span> <span class="s1">'ViewCutOptions'</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">belowOptions</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+<div class="viewcode-block" id="ViewCutOptions.setValues"><a class="viewcode-back" href="../../../reference/session/plot_options.html#abaqus.PlotOptions.ViewCutOptions.ViewCutOptions.setValues">[docs]</a>    <span class="k">def</span> <span class="nf">setValues</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">options</span><span class="p">:</span> <span class="s1">&#39;ViewCutOptions&#39;</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">belowOptions</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
                   <span class="n">useBelowOptions</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="n">OFF</span><span class="p">,</span> <span class="n">onOptions</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">useOnOptions</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="n">OFF</span><span class="p">,</span>
                   <span class="n">aboveOptions</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">useAboveOptions</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="n">OFF</span><span class="p">,</span>
                   <span class="n">freeBodyCutThru</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="n">CURRENT_DISPLAY_GROUP</span><span class="p">,</span>
@@ -481,9 +482,9 @@
                   <span class="n">freeBodySumOnPath</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="n">ON</span><span class="p">,</span> <span class="n">cutFreeBodyMin</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="n">cutFreeBodyMax</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span>
                   <span class="n">showHeatFlowRate</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="n">ON</span><span class="p">,</span> <span class="n">summationLoc</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="n">CENTROID</span><span class="p">,</span>
                   <span class="n">componentResolution</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="n">NORMAL_TANGENTIAL</span><span class="p">,</span>
-                  <span class="n">csysName</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="n">GLOBAL</span><span class="p">,</span> <span class="n">pathName</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">''</span><span class="p">,</span> <span class="n">summationPoint</span><span class="p">:</span> <span class="nb">tuple</span> <span class="o">=</span> <span class="p">(),</span>
+                  <span class="n">csysName</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="n">GLOBAL</span><span class="p">,</span> <span class="n">pathName</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">summationPoint</span><span class="p">:</span> <span class="nb">tuple</span> <span class="o">=</span> <span class="p">(),</span>
                   <span class="n">yAxis</span><span class="p">:</span> <span class="nb">tuple</span> <span class="o">=</span> <span class="p">()):</span>
-        <span class="sd">"""This method modifies the ViewCutOptions object.</span>
+        <span class="sd">&quot;&quot;&quot;This method modifies the ViewCutOptions object.</span>
 <span class="sd">        </span>
 <span class="sd">        Parameters</span>
 <span class="sd">        ----------</span>
@@ -540,7 +541,7 @@
 <span class="sd">            Possible values are NORMAL_TANGENTIAL and CSYS. The default value is NORMAL_TANGENTIAL. </span>
 <span class="sd">        csysName</span>
 <span class="sd">            The SymbolicConstant GLOBAL or a String specifying the coordinate system name for the </span>
-<span class="sd">            free body cut's component resolution. The default value is GLOBAL. </span>
+<span class="sd">            free body cut&#39;s component resolution. The default value is GLOBAL. </span>
 <span class="sd">        pathName</span>
 <span class="sd">            A String specifying the name of the path along which slicing occurs. The default value </span>
 <span class="sd">            is an empty string. </span>
@@ -554,7 +555,7 @@
 <span class="sd">        Raises</span>
 <span class="sd">        ------</span>
 <span class="sd">        RangeError</span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span></div></div>
 </pre></div>
         </article>

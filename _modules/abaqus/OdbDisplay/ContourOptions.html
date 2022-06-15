@@ -5,10 +5,10 @@
     <meta name="color-scheme" content="light dark"><link rel="index" title="Index" href="../../../genindex.html" /><link rel="search" title="Search" href="../../../search.html" />
         <link rel="canonical" href="https://pyabaqus.haiiliin.com/_modules/abaqus/OdbDisplay/ContourOptions.html" />
 
-    <meta name="generator" content="sphinx-4.5.0, furo 2022.04.07"/>
-        <title>abaqus.OdbDisplay.ContourOptions - pyabaqus 1.0.16 documentation</title>
+    <meta name="generator" content="sphinx-4.5.0, furo 2022.06.04.1"/>
+        <title>abaqus.OdbDisplay.ContourOptions - pyabaqus 1.0.18 documentation</title>
       <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/styles/furo.css?digest=68f4518137b9aefe99b631505a2064c3c42c9852" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/styles/furo.css?digest=40978830699223671f4072448e654b5958f38b89" />
     <link rel="stylesheet" type="text/css" href="../../../_static/styles/furo-extensions.css?digest=30d1aed668e5c3a91c3e3bf6a60b675221979f0e" />
     
     
@@ -123,7 +123,7 @@
       </label>
     </div>
     <div class="header-center">
-      <a href="../../../index.html"><div class="brand">pyabaqus 1.0.16 documentation</div></a>
+      <a href="../../../index.html"><div class="brand">pyabaqus 1.0.18 documentation</div></a>
     </div>
     <div class="header-right">
       <div class="theme-toggle-container theme-toggle-header">
@@ -146,7 +146,7 @@
       <div class="sidebar-sticky"><a class="sidebar-brand" href="../../../index.html">
   
   
-  <span class="sidebar-brand-text">pyabaqus 1.0.16 documentation</span>
+  <span class="sidebar-brand-text">pyabaqus 1.0.18 documentation</span>
   
 </a><form class="sidebar-search-container" method="get" action="../../../search.html" role="search">
   <input class="sidebar-search" placeholder=Search name="q" aria-label="Search">
@@ -286,7 +286,8 @@
           </svg>
           <span>Back to top</span>
         </a>
-        <div class="content-icon-container"><div class="theme-toggle-container theme-toggle-content">
+        <div class="content-icon-container">
+          <div class="theme-toggle-container theme-toggle-content">
             <button class="theme-toggle">
               <div class="visually-hidden">Toggle Light / Dark / Auto color theme</div>
               <svg class="theme-icon-when-auto"><use href="#svg-sun-half"></use></svg>
@@ -306,7 +307,7 @@
 
 
 <div class="viewcode-block" id="ContourOptions"><a class="viewcode-back" href="../../../reference/session/odb_display.html#abaqus.OdbDisplay.ContourOptions.ContourOptions">[docs]</a><span class="k">class</span> <span class="nc">ContourOptions</span><span class="p">(</span><span class="n">DGContourOptions</span><span class="p">):</span>
-    <span class="sd">"""The ContourOptions object stores values and attributes associated with a contour plot.</span>
+    <span class="sd">&quot;&quot;&quot;The ContourOptions object stores values and attributes associated with a contour plot.</span>
 <span class="sd">    The ContourOptions object has no constructor command. Abaqus creates a </span>
 <span class="sd">    *defaultOdbDisplay.contourOptions* member when you import the Visualization module. </span>
 <span class="sd">    Abaqus creates a *contourOptions* member when it creates the OdbDisplay object, using </span>
@@ -371,13 +372,13 @@
 <span class="sd">        the output data to be contoured. This value is read-only.</span>
 <span class="sd">    outsideLimitsAboveColor: str</span>
 <span class="sd">        A String specifying the color to be used for values that exceed the limits of the plot</span>
-<span class="sd">        when **outsideLimitsMode=SPECIFY**. The default value is "Grey80".</span>
+<span class="sd">        when **outsideLimitsMode=SPECIFY**. The default value is &quot;Grey80&quot;.</span>
 <span class="sd">    outsideLimitsBelowColor: str</span>
 <span class="sd">        A String specifying the color to be used for values that exceed the limits of the plot</span>
-<span class="sd">        when **outsideLimitsMode=SPECIFY**. The default value is "Grey20".</span>
+<span class="sd">        when **outsideLimitsMode=SPECIFY**. The default value is &quot;Grey20&quot;.</span>
 <span class="sd">    spectrum: str</span>
 <span class="sd">        A String specifying the name of the color spectrum to be used in the contour plot. The</span>
-<span class="sd">        default value is "Rainbow".</span>
+<span class="sd">        default value is &quot;Rainbow&quot;.</span>
 <span class="sd">    reversedContourLegendRange: Boolean</span>
 <span class="sd">        A Boolean specifying whether the contour legend should show the lowest value at the top</span>
 <span class="sd">        and the highest value at the bottom (**reversedContourLegendRange=ON**) or vice versa. The</span>
@@ -426,16 +427,16 @@
 <span class="sd">        are N1 and N2. The default value is N2.</span>
 <span class="sd">    edgeColorLine: str</span>
 <span class="sd">        A String specifying the edge color to be used when **contourType=LINE**. The default value</span>
-<span class="sd">        is "White".</span>
+<span class="sd">        is &quot;White&quot;.</span>
 <span class="sd">    edgeColorBandedQuilt: str</span>
 <span class="sd">        A String specifying the edge color to be used when **contourType=BANDED** or QUILT. The</span>
-<span class="sd">        default value is "Black".</span>
+<span class="sd">        default value is &quot;Black&quot;.</span>
 <span class="sd">    contourEdgeColor: str</span>
 <span class="sd">        A String specifying the color to be used to plot the contour edges when</span>
-<span class="sd">        **contourType=BANDED** or ISOSURFACE. The default value is "Grey60".</span>
+<span class="sd">        **contourType=BANDED** or ISOSURFACE. The default value is &quot;Grey60&quot;.</span>
 <span class="sd">    tickmarkCurveColor: str</span>
 <span class="sd">        A String specifying the color to be used to plot the tick mark curve. The default value</span>
-<span class="sd">        is "Cyan".</span>
+<span class="sd">        is &quot;Cyan&quot;.</span>
 <span class="sd">    intervalLineAttributes: SymbolicConstant</span>
 <span class="sd">        A tuple of tuples of SymbolicConstants specifying the line style and line thickness for</span>
 <span class="sd">        each interval in the plot when **contourType=LINE**. The size of the outer sequence must</span>
@@ -465,7 +466,7 @@
 <span class="sd">        session.viewports[name].odbDisplay.displayGroupInstances[name].odbDisplayOptions.contourOptions</span>
 <span class="sd">        session.viewports[name].partDisplay.displayGroupInstances[name].odbDisplayOptions.contourOptions</span>
 
-<span class="sd">    """</span>
+<span class="sd">    &quot;&quot;&quot;</span>
 
     <span class="c1"># A SymbolicConstant specifying the contour type. Possible values are LINE, BANDED, QUILT, </span>
     <span class="c1"># and ISOSURFACE. The default value is BANDED. </span>
@@ -530,16 +531,16 @@
     <span class="n">autoMinValue</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="kc">None</span>
 
     <span class="c1"># A String specifying the color to be used for values that exceed the limits of the plot </span>
-    <span class="c1"># when *outsideLimitsMode*=SPECIFY. The default value is "Grey80". </span>
-    <span class="n">outsideLimitsAboveColor</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">''</span>
+    <span class="c1"># when *outsideLimitsMode*=SPECIFY. The default value is &quot;Grey80&quot;. </span>
+    <span class="n">outsideLimitsAboveColor</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span>
 
     <span class="c1"># A String specifying the color to be used for values that exceed the limits of the plot </span>
-    <span class="c1"># when *outsideLimitsMode*=SPECIFY. The default value is "Grey20". </span>
-    <span class="n">outsideLimitsBelowColor</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">''</span>
+    <span class="c1"># when *outsideLimitsMode*=SPECIFY. The default value is &quot;Grey20&quot;. </span>
+    <span class="n">outsideLimitsBelowColor</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span>
 
     <span class="c1"># A String specifying the name of the color spectrum to be used in the contour plot. The </span>
-    <span class="c1"># default value is "Rainbow". </span>
-    <span class="n">spectrum</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">''</span>
+    <span class="c1"># default value is &quot;Rainbow&quot;. </span>
+    <span class="n">spectrum</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span>
 
     <span class="c1"># A Boolean specifying whether the contour legend should show the lowest value at the top </span>
     <span class="c1"># and the highest value at the bottom (*reversedContourLegendRange*=ON) or vice versa. The </span>
@@ -602,20 +603,20 @@
     <span class="n">tickmarkOrientation</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="n">N2</span>
 
     <span class="c1"># A String specifying the edge color to be used when *contourType*=LINE. The default value </span>
-    <span class="c1"># is "White". </span>
-    <span class="n">edgeColorLine</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">''</span>
+    <span class="c1"># is &quot;White&quot;. </span>
+    <span class="n">edgeColorLine</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span>
 
     <span class="c1"># A String specifying the edge color to be used when *contourType*=BANDED or QUILT. The </span>
-    <span class="c1"># default value is "Black". </span>
-    <span class="n">edgeColorBandedQuilt</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">''</span>
+    <span class="c1"># default value is &quot;Black&quot;. </span>
+    <span class="n">edgeColorBandedQuilt</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span>
 
     <span class="c1"># A String specifying the color to be used to plot the contour edges when </span>
-    <span class="c1"># *contourType*=BANDED or ISOSURFACE. The default value is "Grey60". </span>
-    <span class="n">contourEdgeColor</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">''</span>
+    <span class="c1"># *contourType*=BANDED or ISOSURFACE. The default value is &quot;Grey60&quot;. </span>
+    <span class="n">contourEdgeColor</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span>
 
     <span class="c1"># A String specifying the color to be used to plot the tick mark curve. The default value </span>
-    <span class="c1"># is "Cyan". </span>
-    <span class="n">tickmarkCurveColor</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">''</span>
+    <span class="c1"># is &quot;Cyan&quot;. </span>
+    <span class="n">tickmarkCurveColor</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span>
 
     <span class="c1"># A tuple of tuples of SymbolicConstants specifying the line style and line thickness for </span>
     <span class="c1"># each interval in the plot when *contourType*=LINE. The size of the outer sequence must </span>
@@ -630,24 +631,24 @@
     <span class="c1"># spectrum when *legendHideOutsideLimits*=ON.The default value is OFF. </span>
     <span class="n">legendHideOutsideLimits</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="n">OFF</span>
 
-<div class="viewcode-block" id="ContourOptions.setValues"><a class="viewcode-back" href="../../../reference/session/odb_display.html#abaqus.OdbDisplay.ContourOptions.ContourOptions.setValues">[docs]</a>    <span class="k">def</span> <span class="nf">setValues</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">options</span><span class="p">:</span> <span class="s1">'ContourOptions'</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">contourType</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="n">BANDED</span><span class="p">,</span>
+<div class="viewcode-block" id="ContourOptions.setValues"><a class="viewcode-back" href="../../../reference/session/odb_display.html#abaqus.OdbDisplay.ContourOptions.ContourOptions.setValues">[docs]</a>    <span class="k">def</span> <span class="nf">setValues</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">options</span><span class="p">:</span> <span class="s1">&#39;ContourOptions&#39;</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">contourType</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="n">BANDED</span><span class="p">,</span>
                   <span class="n">contourMethod</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="n">TEXTURE_MAPPED</span><span class="p">,</span> <span class="n">tickmarkPlots</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="n">OFF</span><span class="p">,</span>
                   <span class="n">contourStyle</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="n">UNIFORM</span><span class="p">,</span> <span class="n">numIntervals</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">12</span><span class="p">,</span>
                   <span class="n">intervalType</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="n">UNIFORM</span><span class="p">,</span> <span class="n">intervalValues</span><span class="p">:</span> <span class="nb">tuple</span> <span class="o">=</span> <span class="p">(),</span>
                   <span class="n">maxAutoCompute</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="n">ON</span><span class="p">,</span> <span class="n">maxValue</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">minAutoCompute</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="n">ON</span><span class="p">,</span>
                   <span class="n">minValue</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">animationAutoLimits</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="n">ALL_FRAMES</span><span class="p">,</span>
-                  <span class="n">edgeColorLine</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">''</span><span class="p">,</span> <span class="n">edgeColorBandedQuilt</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">''</span><span class="p">,</span> <span class="n">spectrum</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">''</span><span class="p">,</span>
+                  <span class="n">edgeColorLine</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">edgeColorBandedQuilt</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">spectrum</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span><span class="p">,</span>
                   <span class="n">reversedContourLegendRange</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="n">OFF</span><span class="p">,</span> <span class="n">outsideLimitsMode</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
-                  <span class="n">outsideLimitsAboveColor</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">''</span><span class="p">,</span> <span class="n">outsideLimitsBelowColor</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">''</span><span class="p">,</span>
+                  <span class="n">outsideLimitsAboveColor</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">outsideLimitsBelowColor</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span><span class="p">,</span>
                   <span class="n">intervalLineAttributes</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">contourEdges</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="n">OFF</span><span class="p">,</span>
-                  <span class="n">contourEdgeColor</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">''</span><span class="p">,</span> <span class="n">contourEdgeStyle</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="n">SOLID</span><span class="p">,</span>
+                  <span class="n">contourEdgeColor</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">contourEdgeStyle</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="n">SOLID</span><span class="p">,</span>
                   <span class="n">contourEdgeThickness</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="n">VERY_THIN</span><span class="p">,</span>
                   <span class="n">tickmarkAxisLength</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="n">MEDIUM</span><span class="p">,</span> <span class="n">tickmarkBaseValue</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span>
-                  <span class="n">tickmarkOrientation</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="n">N2</span><span class="p">,</span> <span class="n">tickmarkCurveColor</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">''</span><span class="p">,</span>
+                  <span class="n">tickmarkOrientation</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="n">N2</span><span class="p">,</span> <span class="n">tickmarkCurveColor</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span><span class="p">,</span>
                   <span class="n">averagedOrientationDisplay</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="n">OFF</span><span class="p">,</span> <span class="n">extrapolatedAveraging</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="n">OFF</span><span class="p">,</span>
                   <span class="n">showMaxLocation</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="n">OFF</span><span class="p">,</span> <span class="n">showMinLocation</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="n">OFF</span><span class="p">,</span>
                   <span class="n">legendHideOutsideLimits</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="n">OFF</span><span class="p">):</span>
-        <span class="sd">"""This method modifies the ContourOptions object.</span>
+        <span class="sd">&quot;&quot;&quot;This method modifies the ContourOptions object.</span>
 <span class="sd">        </span>
 <span class="sd">        Parameters</span>
 <span class="sd">        ----------</span>
@@ -696,13 +697,13 @@
 <span class="sd">            default value is ALL_FRAMES. </span>
 <span class="sd">        edgeColorLine</span>
 <span class="sd">            A String specifying the edge color to be used when *contourType*=LINE. The default value </span>
-<span class="sd">            is "White". </span>
+<span class="sd">            is &quot;White&quot;. </span>
 <span class="sd">        edgeColorBandedQuilt</span>
 <span class="sd">            A String specifying the edge color to be used when *contourType*=BANDED or QUILT. The </span>
-<span class="sd">            default value is "Black". </span>
+<span class="sd">            default value is &quot;Black&quot;. </span>
 <span class="sd">        spectrum</span>
 <span class="sd">            A String specifying the name of the color spectrum to be used in the contour plot. The </span>
-<span class="sd">            default value is "Rainbow". </span>
+<span class="sd">            default value is &quot;Rainbow&quot;. </span>
 <span class="sd">        reversedContourLegendRange</span>
 <span class="sd">            A Boolean specifying whether the contour legend should show the lowest value at the top </span>
 <span class="sd">            and the highest value at the bottom (*reversedContourLegendRange*=ON) or vice versa. The </span>
@@ -715,10 +716,10 @@
 <span class="sd">            and *outsideLimitsBelowColor* are used for values that exceed the limits of the plot. </span>
 <span class="sd">        outsideLimitsAboveColor</span>
 <span class="sd">            A String specifying the color to be used for values that exceed the limits of the plot </span>
-<span class="sd">            when *outsideLimitsMode*=SPECIFY. The default value is "Grey80". </span>
+<span class="sd">            when *outsideLimitsMode*=SPECIFY. The default value is &quot;Grey80&quot;. </span>
 <span class="sd">        outsideLimitsBelowColor</span>
 <span class="sd">            A String specifying the color to be used for values that exceed the limits of the plot </span>
-<span class="sd">            when *outsideLimitsMode*=SPECIFY. The default value is "Grey20". </span>
+<span class="sd">            when *outsideLimitsMode*=SPECIFY. The default value is &quot;Grey20&quot;. </span>
 <span class="sd">        intervalLineAttributes</span>
 <span class="sd">            A sequence of sequences of SymbolicConstants specifying the line style and line </span>
 <span class="sd">            thickness for each interval in the plot when *contourType*=LINE. The size of the outer </span>
@@ -731,7 +732,7 @@
 <span class="sd">            *contourType*=BANDED or ISOSURFACE. The default value is OFF. </span>
 <span class="sd">        contourEdgeColor</span>
 <span class="sd">            A String specifying the color to be used to plot the contour edges when </span>
-<span class="sd">            *contourType*=BANDED or ISOSURFACE. The default value is "Grey60". </span>
+<span class="sd">            *contourType*=BANDED or ISOSURFACE. The default value is &quot;Grey60&quot;. </span>
 <span class="sd">        contourEdgeStyle</span>
 <span class="sd">            A SymbolicConstant specifying the edge line style to be used to plot the contour edges </span>
 <span class="sd">            when *contourType*=BANDED or ISOSURFACE. Possible values are SOLID, DASHED, DOTTED, and </span>
@@ -752,7 +753,7 @@
 <span class="sd">            are N1 and N2. The default value is N2. </span>
 <span class="sd">        tickmarkCurveColor</span>
 <span class="sd">            A String specifying the color to be used to plot the tick mark curve. The default value </span>
-<span class="sd">            is "Cyan". </span>
+<span class="sd">            is &quot;Cyan&quot;. </span>
 <span class="sd">        averagedOrientationDisplay</span>
 <span class="sd">            A Boolean specifying the display of the nodal averaged coordinate systems used when </span>
 <span class="sd">            averaging element vector or tensor data. The default value is OFF. </span>
@@ -772,7 +773,7 @@
 <span class="sd">        Raises</span>
 <span class="sd">        ------</span>
 <span class="sd">        RangeError</span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span></div></div>
 </pre></div>
         </article>

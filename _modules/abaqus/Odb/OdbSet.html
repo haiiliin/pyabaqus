@@ -5,10 +5,10 @@
     <meta name="color-scheme" content="light dark"><link rel="index" title="Index" href="../../../genindex.html" /><link rel="search" title="Search" href="../../../search.html" />
         <link rel="canonical" href="https://pyabaqus.haiiliin.com/_modules/abaqus/Odb/OdbSet.html" />
 
-    <meta name="generator" content="sphinx-4.5.0, furo 2022.04.07"/>
-        <title>abaqus.Odb.OdbSet - pyabaqus 1.0.16 documentation</title>
+    <meta name="generator" content="sphinx-4.5.0, furo 2022.06.04.1"/>
+        <title>abaqus.Odb.OdbSet - pyabaqus 1.0.18 documentation</title>
       <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/styles/furo.css?digest=68f4518137b9aefe99b631505a2064c3c42c9852" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/styles/furo.css?digest=40978830699223671f4072448e654b5958f38b89" />
     <link rel="stylesheet" type="text/css" href="../../../_static/styles/furo-extensions.css?digest=30d1aed668e5c3a91c3e3bf6a60b675221979f0e" />
     
     
@@ -123,7 +123,7 @@
       </label>
     </div>
     <div class="header-center">
-      <a href="../../../index.html"><div class="brand">pyabaqus 1.0.16 documentation</div></a>
+      <a href="../../../index.html"><div class="brand">pyabaqus 1.0.18 documentation</div></a>
     </div>
     <div class="header-right">
       <div class="theme-toggle-container theme-toggle-header">
@@ -146,7 +146,7 @@
       <div class="sidebar-sticky"><a class="sidebar-brand" href="../../../index.html">
   
   
-  <span class="sidebar-brand-text">pyabaqus 1.0.16 documentation</span>
+  <span class="sidebar-brand-text">pyabaqus 1.0.18 documentation</span>
   
 </a><form class="sidebar-search-container" method="get" action="../../../search.html" role="search">
   <input class="sidebar-search" placeholder=Search name="q" aria-label="Search">
@@ -286,7 +286,8 @@
           </svg>
           <span>Back to top</span>
         </a>
-        <div class="content-icon-container"><div class="theme-toggle-container theme-toggle-content">
+        <div class="content-icon-container">
+          <div class="theme-toggle-container theme-toggle-content">
             <button class="theme-toggle">
               <div class="visually-hidden">Toggle Light / Dark / Auto color theme</div>
               <svg class="theme-icon-when-auto"><use href="#svg-sun-half"></use></svg>
@@ -309,7 +310,7 @@
 
 
 <div class="viewcode-block" id="OdbSet"><a class="viewcode-back" href="../../../reference/odb.html#abaqus.Odb.OdbSet.OdbSet">[docs]</a><span class="k">class</span> <span class="nc">OdbSet</span><span class="p">:</span>
-    <span class="sd">"""The set objects are used to identify regions of a model.</span>
+    <span class="sd">&quot;&quot;&quot;The set objects are used to identify regions of a model.</span>
 
 <span class="sd">    Attributes</span>
 <span class="sd">    ----------</span>
@@ -352,10 +353,10 @@
 <span class="sd">        session.odbs[name].steps[name].frames[i].fieldOutputs[name].values[i].instance.nodeSets[name]</span>
 <span class="sd">        session.odbs[name].steps[name].frames[i].fieldOutputs[name].values[i].instance.surfaces[name]</span>
 
-<span class="sd">    """</span>
+<span class="sd">    &quot;&quot;&quot;</span>
 
     <span class="c1"># A String specifying the name of the set and the repository key. </span>
-    <span class="n">name</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">''</span>
+    <span class="n">name</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span>
 
     <span class="c1"># A tuple of Strings specifying the namespaces for the nodes, elements, and faces; None if </span>
     <span class="c1"># the set is on a Part or an OdbInstance object. </span>
@@ -374,13 +375,13 @@
     <span class="n">faces</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="kc">None</span>
 
     <span class="c1"># A repository of an OdbInstance object. </span>
-    <span class="n">instances</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">''</span>
+    <span class="n">instances</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span>
 
     <span class="c1"># A Boolean specifying whether the set is internal. </span>
     <span class="n">isInternal</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="n">OFF</span>
 
     <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">nodes</span><span class="p">:</span> <span class="nb">tuple</span><span class="p">[</span><span class="n">OdbMeshNode</span><span class="p">]):</span>
-        <span class="sd">"""This method creates a node set from an array of OdbMeshNode objects (for part</span>
+        <span class="sd">&quot;&quot;&quot;This method creates a node set from an array of OdbMeshNode objects (for part</span>
 <span class="sd">        instance-level sets) or from a sequence of arrays of OdbMeshNode objects (for</span>
 <span class="sd">        assembly-level sets).</span>
 
@@ -405,11 +406,11 @@
 <span class="sd">        Returns</span>
 <span class="sd">        -------</span>
 <span class="sd">            An OdbSet object.</span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span>
 
 <div class="viewcode-block" id="OdbSet.NodeSetFromNodeLabels"><a class="viewcode-back" href="../../../reference/odb.html#abaqus.Odb.OdbSet.OdbSet.NodeSetFromNodeLabels">[docs]</a>    <span class="k">def</span> <span class="nf">NodeSetFromNodeLabels</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">nodeLabels</span><span class="p">:</span> <span class="nb">tuple</span><span class="p">):</span>
-        <span class="sd">"""This method creates a node set from a sequence of node labels.</span>
+        <span class="sd">&quot;&quot;&quot;This method creates a node set from a sequence of node labels.</span>
 
 <span class="sd">        Notes</span>
 <span class="sd">        -----</span>
@@ -427,17 +428,17 @@
 <span class="sd">            A String specifying the name of the set and the repository key. </span>
 <span class="sd">        nodeLabels</span>
 <span class="sd">            A sequence of node labels. A node label is a sequence of Int node identifiers. For </span>
-<span class="sd">            example, for a part:`nodeLabels=(2,3,5,7)`For an assembly:`nodeLabels=(('Instance-1', </span>
-<span class="sd">            (2,3,5,7)), ('Instance-2', (1,2,3)))` </span>
+<span class="sd">            example, for a part:`nodeLabels=(2,3,5,7)`For an assembly:`nodeLabels=((&#39;Instance-1&#39;, </span>
+<span class="sd">            (2,3,5,7)), (&#39;Instance-2&#39;, (1,2,3)))` </span>
 
 <span class="sd">        Returns</span>
 <span class="sd">        -------</span>
 <span class="sd">            An OdbSet object.</span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span></div>
 
 <div class="viewcode-block" id="OdbSet.ElementSet"><a class="viewcode-back" href="../../../reference/odb.html#abaqus.Odb.OdbSet.OdbSet.ElementSet">[docs]</a>    <span class="k">def</span> <span class="nf">ElementSet</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">elements</span><span class="p">:</span> <span class="nb">tuple</span><span class="p">[</span><span class="n">OdbMeshElement</span><span class="p">]):</span>
-        <span class="sd">"""This method creates an element set from an array of OdbMeshElement objects (for part</span>
+        <span class="sd">&quot;&quot;&quot;This method creates an element set from an array of OdbMeshElement objects (for part</span>
 <span class="sd">        instance-level sets) or from a sequence of arrays of OdbMeshElement objects (for</span>
 <span class="sd">        assembly-level sets).</span>
 
@@ -463,11 +464,11 @@
 <span class="sd">        Returns</span>
 <span class="sd">        -------</span>
 <span class="sd">            An OdbSet object.</span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span></div>
 
 <div class="viewcode-block" id="OdbSet.ElementSetFromElementLabels"><a class="viewcode-back" href="../../../reference/odb.html#abaqus.Odb.OdbSet.OdbSet.ElementSetFromElementLabels">[docs]</a>    <span class="k">def</span> <span class="nf">ElementSetFromElementLabels</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">elementLabels</span><span class="p">:</span> <span class="nb">tuple</span><span class="p">):</span>
-        <span class="sd">"""This method creates an element set from a sequence of element labels.</span>
+        <span class="sd">&quot;&quot;&quot;This method creates an element set from a sequence of element labels.</span>
 
 <span class="sd">        Notes</span>
 <span class="sd">        -----</span>
@@ -486,16 +487,16 @@
 <span class="sd">        elementLabels</span>
 <span class="sd">            A sequence of element labels. An element label is a sequence of Int element identifiers. </span>
 <span class="sd">            For example, for a part:`elementLabels=(2,3,5,7)`For an </span>
-<span class="sd">            assembly:`elementLabels=(('Instance-1', (2,3,5,7)), ('Instance-2', (1,2,3)))` </span>
+<span class="sd">            assembly:`elementLabels=((&#39;Instance-1&#39;, (2,3,5,7)), (&#39;Instance-2&#39;, (1,2,3)))` </span>
 
 <span class="sd">        Returns</span>
 <span class="sd">        -------</span>
 <span class="sd">            An OdbSet object.</span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span></div>
 
 <div class="viewcode-block" id="OdbSet.MeshSurface"><a class="viewcode-back" href="../../../reference/odb.html#abaqus.Odb.OdbSet.OdbSet.MeshSurface">[docs]</a>    <span class="k">def</span> <span class="nf">MeshSurface</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">meshSurfaces</span><span class="p">:</span> <span class="nb">tuple</span><span class="p">):</span>
-        <span class="sd">"""This method creates a surface from the element and side identifiers for the assembly.</span>
+        <span class="sd">&quot;&quot;&quot;This method creates a surface from the element and side identifiers for the assembly.</span>
 
 <span class="sd">        Notes</span>
 <span class="sd">        -----</span>
@@ -525,7 +526,7 @@
 <span class="sd">            ``` </span>
 <span class="sd">            side1Elements=instance1.elements[217:218] </span>
 <span class="sd">            side2Elements=instance2.elements[100:105] </span>
-<span class="sd">            assembly.MeshSurface(name='Surf-1'</span>
+<span class="sd">            assembly.MeshSurface(name=&#39;Surf-1&#39;</span>
 <span class="sd">            meshSurfaces=((side1Elems,SIDE1)</span>
 <span class="sd">            (side2Elems,SIDE2))) </span>
 <span class="sd">            ``` </span>
@@ -533,11 +534,11 @@
 <span class="sd">        Returns</span>
 <span class="sd">        -------</span>
 <span class="sd">            An OdbSet object.</span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span></div>
 
 <div class="viewcode-block" id="OdbSet.MeshSurfaceFromElsets"><a class="viewcode-back" href="../../../reference/odb.html#abaqus.Odb.OdbSet.OdbSet.MeshSurfaceFromElsets">[docs]</a>    <span class="k">def</span> <span class="nf">MeshSurfaceFromElsets</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">elementSetSeq</span><span class="p">:</span> <span class="nb">tuple</span><span class="p">):</span>
-        <span class="sd">"""This method creates a mesh surface from a sequence of element sets.</span>
+        <span class="sd">&quot;&quot;&quot;This method creates a mesh surface from a sequence of element sets.</span>
 
 <span class="sd">        Notes</span>
 <span class="sd">        -----</span>
@@ -556,17 +557,17 @@
 <span class="sd">        elementSetSeq</span>
 <span class="sd">            A sequence of element sets. For </span>
 <span class="sd">            example,`elementSetSeq=((elset1,SIDE1),(elset2,SIDE2))`where </span>
-<span class="sd">            `elset1=session.odbs[name].rootAssembly.elementSets['Clutch'] `and `SIDE1` and `SIDE2` </span>
+<span class="sd">            `elset1=session.odbs[name].rootAssembly.elementSets[&#39;Clutch&#39;] `and `SIDE1` and `SIDE2` </span>
 <span class="sd">            indicate the side of the element set. </span>
 
 <span class="sd">        Returns</span>
 <span class="sd">        -------</span>
 <span class="sd">            An OdbSet object.</span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span></div>
 
 <div class="viewcode-block" id="OdbSet.MeshSurfaceFromLabels"><a class="viewcode-back" href="../../../reference/odb.html#abaqus.Odb.OdbSet.OdbSet.MeshSurfaceFromLabels">[docs]</a>    <span class="k">def</span> <span class="nf">MeshSurfaceFromLabels</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">surfaceLabels</span><span class="p">:</span> <span class="nb">tuple</span><span class="p">):</span>
-        <span class="sd">"""This method creates a mesh surface from a sequence of surface labels.</span>
+        <span class="sd">&quot;&quot;&quot;This method creates a mesh surface from a sequence of surface labels.</span>
 
 <span class="sd">        Notes</span>
 <span class="sd">        -----</span>
@@ -583,14 +584,14 @@
 <span class="sd">        name</span>
 <span class="sd">            A String specifying the name of the set and the repository key. </span>
 <span class="sd">        surfaceLabels</span>
-<span class="sd">            A sequence of surface labels. For example,`surfaceLabels=(('Instance-1', ((10, FACE1), </span>
-<span class="sd">            (11, FACE2))),  ('Instance-2', ((10, FACE3), (12, FACE4))))`where `10` is an element </span>
+<span class="sd">            A sequence of surface labels. For example,`surfaceLabels=((&#39;Instance-1&#39;, ((10, FACE1), </span>
+<span class="sd">            (11, FACE2))),  (&#39;Instance-2&#39;, ((10, FACE3), (12, FACE4))))`where `10` is an element </span>
 <span class="sd">            number and `FACE1` indicates the side of the element. </span>
 
 <span class="sd">        Returns</span>
 <span class="sd">        -------</span>
 <span class="sd">            An OdbSet object.</span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span></div></div>
 </pre></div>
         </article>

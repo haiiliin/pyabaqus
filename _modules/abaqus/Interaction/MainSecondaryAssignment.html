@@ -5,10 +5,10 @@
     <meta name="color-scheme" content="light dark"><link rel="index" title="Index" href="../../../genindex.html" /><link rel="search" title="Search" href="../../../search.html" />
         <link rel="canonical" href="https://pyabaqus.haiiliin.com/_modules/abaqus/Interaction/MainSecondaryAssignment.html" />
 
-    <meta name="generator" content="sphinx-4.5.0, furo 2022.04.07"/>
-        <title>abaqus.Interaction.MainSecondaryAssignment - pyabaqus 1.0.16 documentation</title>
+    <meta name="generator" content="sphinx-4.5.0, furo 2022.06.04.1"/>
+        <title>abaqus.Interaction.MainSecondaryAssignment - pyabaqus 1.0.18 documentation</title>
       <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/styles/furo.css?digest=68f4518137b9aefe99b631505a2064c3c42c9852" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/styles/furo.css?digest=40978830699223671f4072448e654b5958f38b89" />
     <link rel="stylesheet" type="text/css" href="../../../_static/styles/furo-extensions.css?digest=30d1aed668e5c3a91c3e3bf6a60b675221979f0e" />
     
     
@@ -123,7 +123,7 @@
       </label>
     </div>
     <div class="header-center">
-      <a href="../../../index.html"><div class="brand">pyabaqus 1.0.16 documentation</div></a>
+      <a href="../../../index.html"><div class="brand">pyabaqus 1.0.18 documentation</div></a>
     </div>
     <div class="header-right">
       <div class="theme-toggle-container theme-toggle-header">
@@ -146,7 +146,7 @@
       <div class="sidebar-sticky"><a class="sidebar-brand" href="../../../index.html">
   
   
-  <span class="sidebar-brand-text">pyabaqus 1.0.16 documentation</span>
+  <span class="sidebar-brand-text">pyabaqus 1.0.18 documentation</span>
   
 </a><form class="sidebar-search-container" method="get" action="../../../search.html" role="search">
   <input class="sidebar-search" placeholder=Search name="q" aria-label="Search">
@@ -286,7 +286,8 @@
           </svg>
           <span>Back to top</span>
         </a>
-        <div class="content-icon-container"><div class="theme-toggle-container theme-toggle-content">
+        <div class="content-icon-container">
+          <div class="theme-toggle-container theme-toggle-content">
             <button class="theme-toggle">
               <div class="visually-hidden">Toggle Light / Dark / Auto color theme</div>
               <svg class="theme-icon-when-auto"><use href="#svg-sun-half"></use></svg>
@@ -305,7 +306,7 @@
 
 
 <div class="viewcode-block" id="MainSecondaryAssignment"><a class="viewcode-back" href="../../../reference/mdb/model/interaction.html#abaqus.Interaction.MainSecondaryAssignment.MainSecondaryAssignment">[docs]</a><span class="k">class</span> <span class="nc">MainSecondaryAssignment</span><span class="p">:</span>
-    <span class="sd">"""The MainSecondaryAssignment object stores the main-secondary assignment definition for</span>
+    <span class="sd">&quot;&quot;&quot;The MainSecondaryAssignment object stores the main-secondary assignment definition for</span>
 <span class="sd">    surfaces in ContactExp and ContactStd objects. The MainSecondaryAssignment object has no </span>
 <span class="sd">    constructor or members. </span>
 
@@ -322,10 +323,10 @@
 
 <span class="sd">    - CONTACT FORMULATION</span>
 
-<span class="sd">    """</span>
+<span class="sd">    &quot;&quot;&quot;</span>
 
 <div class="viewcode-block" id="MainSecondaryAssignment.changeValuesInStep"><a class="viewcode-back" href="../../../reference/mdb/model/interaction.html#abaqus.Interaction.MainSecondaryAssignment.MainSecondaryAssignment.changeValuesInStep">[docs]</a>    <span class="k">def</span> <span class="nf">changeValuesInStep</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">stepName</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">index</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">value</span><span class="p">:</span> <span class="n">SymbolicConstant</span><span class="p">):</span>
-        <span class="sd">"""This method allows modification of main-secondary assignments already defined on surface</span>
+        <span class="sd">&quot;&quot;&quot;This method allows modification of main-secondary assignments already defined on surface</span>
 <span class="sd">        pairs in a given step.</span>
 <span class="sd">        </span>
 <span class="sd">        Parameters</span>
@@ -340,11 +341,11 @@
 <span class="sd">            A SymbolicConstant specifying the value of the main-secondary role to be assigned to the </span>
 <span class="sd">            surface whose index is referenced. Possible values are MAIN, SECONDARY, and BALANCED. </span>
 <span class="sd">            The SymbolicConstant BALANCED can be specified only in an Abaqus/Standard analysis. </span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span></div>
 
 <div class="viewcode-block" id="MainSecondaryAssignment.appendInStep"><a class="viewcode-back" href="../../../reference/mdb/model/interaction.html#abaqus.Interaction.MainSecondaryAssignment.MainSecondaryAssignment.appendInStep">[docs]</a>    <span class="k">def</span> <span class="nf">appendInStep</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">stepName</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">assignments</span><span class="p">:</span> <span class="n">SymbolicConstant</span><span class="p">):</span>
-        <span class="sd">"""This method allows addition of main-secondary assignments to new surface pairs in a</span>
+        <span class="sd">&quot;&quot;&quot;This method allows addition of main-secondary assignments to new surface pairs in a</span>
 <span class="sd">        given step.</span>
 <span class="sd">        </span>
 <span class="sd">        Parameters</span>
@@ -361,17 +362,17 @@
 <span class="sd">            first surface. Possible values of the SymbolicConstant are MAIN, SECONDARY, and </span>
 <span class="sd">            BALANCED. The SymbolicConstant BALANCED can be specified only in an Abaqus/Standard </span>
 <span class="sd">            analysis. </span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span></div>
 
 <div class="viewcode-block" id="MainSecondaryAssignment.delete"><a class="viewcode-back" href="../../../reference/mdb/model/interaction.html#abaqus.Interaction.MainSecondaryAssignment.MainSecondaryAssignment.delete">[docs]</a>    <span class="k">def</span> <span class="nf">delete</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">indices</span><span class="p">:</span> <span class="nb">tuple</span><span class="p">):</span>
-        <span class="sd">"""The delete method allows you to delete existing main-secondary assignments.</span>
+        <span class="sd">&quot;&quot;&quot;The delete method allows you to delete existing main-secondary assignments.</span>
 <span class="sd">        </span>
 <span class="sd">        Parameters</span>
 <span class="sd">        ----------</span>
 <span class="sd">        indices</span>
 <span class="sd">            A sequence of Ints specifying the index of each main-secondary assignment to delete. </span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span></div></div>
 </pre></div>
         </article>

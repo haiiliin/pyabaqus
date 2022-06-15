@@ -5,10 +5,10 @@
     <meta name="color-scheme" content="light dark"><link rel="index" title="Index" href="../../../genindex.html" /><link rel="search" title="Search" href="../../../search.html" />
         <link rel="canonical" href="https://pyabaqus.haiiliin.com/_modules/abaqus/BoundaryCondition/ConnDisplacementBC.html" />
 
-    <meta name="generator" content="sphinx-4.5.0, furo 2022.04.07"/>
-        <title>abaqus.BoundaryCondition.ConnDisplacementBC - pyabaqus 1.0.16 documentation</title>
+    <meta name="generator" content="sphinx-4.5.0, furo 2022.06.04.1"/>
+        <title>abaqus.BoundaryCondition.ConnDisplacementBC - pyabaqus 1.0.18 documentation</title>
       <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/styles/furo.css?digest=68f4518137b9aefe99b631505a2064c3c42c9852" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/styles/furo.css?digest=40978830699223671f4072448e654b5958f38b89" />
     <link rel="stylesheet" type="text/css" href="../../../_static/styles/furo-extensions.css?digest=30d1aed668e5c3a91c3e3bf6a60b675221979f0e" />
     
     
@@ -123,7 +123,7 @@
       </label>
     </div>
     <div class="header-center">
-      <a href="../../../index.html"><div class="brand">pyabaqus 1.0.16 documentation</div></a>
+      <a href="../../../index.html"><div class="brand">pyabaqus 1.0.18 documentation</div></a>
     </div>
     <div class="header-right">
       <div class="theme-toggle-container theme-toggle-header">
@@ -146,7 +146,7 @@
       <div class="sidebar-sticky"><a class="sidebar-brand" href="../../../index.html">
   
   
-  <span class="sidebar-brand-text">pyabaqus 1.0.16 documentation</span>
+  <span class="sidebar-brand-text">pyabaqus 1.0.18 documentation</span>
   
 </a><form class="sidebar-search-container" method="get" action="../../../search.html" role="search">
   <input class="sidebar-search" placeholder=Search name="q" aria-label="Search">
@@ -286,7 +286,8 @@
           </svg>
           <span>Back to top</span>
         </a>
-        <div class="content-icon-container"><div class="theme-toggle-container theme-toggle-content">
+        <div class="content-icon-container">
+          <div class="theme-toggle-container theme-toggle-content">
             <button class="theme-toggle">
               <div class="visually-hidden">Toggle Light / Dark / Auto color theme</div>
               <svg class="theme-icon-when-auto"><use href="#svg-sun-half"></use></svg>
@@ -309,7 +310,7 @@
 
 
 <div class="viewcode-block" id="ConnDisplacementBC"><a class="viewcode-back" href="../../../reference/mdb/model/bc.html#abaqus.BoundaryCondition.ConnDisplacementBC.ConnDisplacementBC">[docs]</a><span class="k">class</span> <span class="nc">ConnDisplacementBC</span><span class="p">(</span><span class="n">BoundaryCondition</span><span class="p">):</span>
-    <span class="sd">"""The ConnDisplacementBC object stores the data for a connector displacement/rotation</span>
+    <span class="sd">&quot;&quot;&quot;The ConnDisplacementBC object stores the data for a connector displacement/rotation</span>
 <span class="sd">    boundary condition. </span>
 <span class="sd">    The ConnDisplacementBC object is derived from the BoundaryCondition object. </span>
 
@@ -344,7 +345,7 @@
 <span class="sd">        A :py:class:`~abaqus.Region.Region.Region` object specifying the region to which the boundary condition is applied.</span>
 <span class="sd">    localCsys: str</span>
 <span class="sd">        None or a :py:class:`~abaqus.Datum.DatumCsys.DatumCsys` object specifying the local coordinate system of the boundary</span>
-<span class="sd">        condition's degrees of freedom. If **localCsys=None**, the degrees of freedom are defined</span>
+<span class="sd">        condition&#39;s degrees of freedom. If **localCsys=None**, the degrees of freedom are defined</span>
 <span class="sd">        in the global coordinate system. The default value is None.</span>
 
 <span class="sd">    Notes</span>
@@ -356,10 +357,10 @@
 <span class="sd">        import load</span>
 <span class="sd">        mdb.models[name].boundaryConditions[name]</span>
 
-<span class="sd">    """</span>
+<span class="sd">    &quot;&quot;&quot;</span>
 
     <span class="c1"># A String specifying the boundary condition repository key. </span>
-    <span class="n">name</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">''</span>
+    <span class="n">name</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span>
 
     <span class="c1"># A Boolean specifying whether the boundary condition should remain fixed at the current </span>
     <span class="c1"># values at the start of the step. The default value is OFF. </span>
@@ -378,13 +379,13 @@
     <span class="c1"># will be applied. This argument is not valid when *region* is specified. When this </span>
     <span class="c1"># argument is specified, *fastenerSetName* must also be specified. The default value is an </span>
     <span class="c1"># empty string. </span>
-    <span class="n">fastenerName</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">''</span>
+    <span class="n">fastenerName</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span>
 
     <span class="c1"># A String specifying the assembled fastener template model set to which the boundary </span>
     <span class="c1"># condition will be applied. This argument is not valid when *region* is specified. When </span>
     <span class="c1"># this argument is specified, *fastenerName* must also be specified. The default value is </span>
     <span class="c1"># an empty string. </span>
-    <span class="n">fastenerSetName</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">''</span>
+    <span class="n">fastenerSetName</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span>
 
     <span class="c1"># A SymbolicConstant specifying the category of the boundary condition. Possible values </span>
     <span class="c1"># are MECHANICAL and THERMAL. </span>
@@ -394,12 +395,12 @@
     <span class="n">region</span><span class="p">:</span> <span class="n">Region</span> <span class="o">=</span> <span class="n">Region</span><span class="p">()</span>
 
     <span class="c1"># None or a DatumCsys object specifying the local coordinate system of the boundary </span>
-    <span class="c1"># condition's degrees of freedom. If *localCsys*=None, the degrees of freedom are defined </span>
+    <span class="c1"># condition&#39;s degrees of freedom. If *localCsys*=None, the degrees of freedom are defined </span>
     <span class="c1"># in the global coordinate system. The default value is None. </span>
     <span class="n">localCsys</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="kc">None</span>
 
-    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">createStepName</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">region</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">''</span><span class="p">,</span> <span class="n">fastenerName</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">''</span><span class="p">,</span>
-                 <span class="n">fastenerSetName</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">''</span><span class="p">,</span> <span class="n">u1</span><span class="p">:</span> <span class="n">typing</span><span class="o">.</span><span class="n">Union</span><span class="p">[</span><span class="n">SymbolicConstant</span><span class="p">,</span> <span class="nb">float</span><span class="p">]</span> <span class="o">=</span> <span class="n">UNSET</span><span class="p">,</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">createStepName</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">region</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">fastenerName</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span><span class="p">,</span>
+                 <span class="n">fastenerSetName</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">u1</span><span class="p">:</span> <span class="n">typing</span><span class="o">.</span><span class="n">Union</span><span class="p">[</span><span class="n">SymbolicConstant</span><span class="p">,</span> <span class="nb">float</span><span class="p">]</span> <span class="o">=</span> <span class="n">UNSET</span><span class="p">,</span>
                  <span class="n">u2</span><span class="p">:</span> <span class="n">typing</span><span class="o">.</span><span class="n">Union</span><span class="p">[</span><span class="n">SymbolicConstant</span><span class="p">,</span> <span class="nb">float</span><span class="p">]</span> <span class="o">=</span> <span class="n">UNSET</span><span class="p">,</span>
                  <span class="n">u3</span><span class="p">:</span> <span class="n">typing</span><span class="o">.</span><span class="n">Union</span><span class="p">[</span><span class="n">SymbolicConstant</span><span class="p">,</span> <span class="nb">float</span><span class="p">]</span> <span class="o">=</span> <span class="n">UNSET</span><span class="p">,</span>
                  <span class="n">ur1</span><span class="p">:</span> <span class="n">typing</span><span class="o">.</span><span class="n">Union</span><span class="p">[</span><span class="n">SymbolicConstant</span><span class="p">,</span> <span class="nb">float</span><span class="p">]</span> <span class="o">=</span> <span class="n">UNSET</span><span class="p">,</span>
@@ -407,7 +408,7 @@
                  <span class="n">ur3</span><span class="p">:</span> <span class="n">typing</span><span class="o">.</span><span class="n">Union</span><span class="p">[</span><span class="n">SymbolicConstant</span><span class="p">,</span> <span class="nb">float</span><span class="p">]</span> <span class="o">=</span> <span class="n">UNSET</span><span class="p">,</span> <span class="n">fixed</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="n">OFF</span><span class="p">,</span>
                  <span class="n">amplitude</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="n">UNSET</span><span class="p">,</span> <span class="n">distributionType</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="n">UNIFORM</span><span class="p">,</span>
                  <span class="n">buckleCase</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="n">NOT_APPLICABLE</span><span class="p">):</span>
-        <span class="sd">"""This method creates a ConnDisplacementBC object on a wire region. Alternatively, the</span>
+        <span class="sd">&quot;&quot;&quot;This method creates a ConnDisplacementBC object on a wire region. Alternatively, the</span>
 <span class="sd">        boundary condition may also be applied to a wire set referenced from an assembled</span>
 <span class="sd">        fastener template model.</span>
 
@@ -440,28 +441,28 @@
 <span class="sd">            an empty string. </span>
 <span class="sd">        u1</span>
 <span class="sd">            A Float, a Complex, or a SymbolicConstant specifying the displacement component in the </span>
-<span class="sd">            connector's local 1-direction. Possible values for the SymbolicConstant are UNSET and </span>
+<span class="sd">            connector&#39;s local 1-direction. Possible values for the SymbolicConstant are UNSET and </span>
 <span class="sd">            SET. The default value is UNSET.Note:Although *u1*, *u2*, *u3*, *ur1*, *ur2*, and *ur3* </span>
 <span class="sd">            are optional arguments, at least one of them must be specified. </span>
 <span class="sd">        u2</span>
 <span class="sd">            A Float, a Complex, or a SymbolicConstant specifying the displacement component in the </span>
-<span class="sd">            connector's local 2-direction. Possible values for the SymbolicConstant are UNSET and </span>
+<span class="sd">            connector&#39;s local 2-direction. Possible values for the SymbolicConstant are UNSET and </span>
 <span class="sd">            SET. The default value is UNSET. </span>
 <span class="sd">        u3</span>
 <span class="sd">            A Float, a Complex, or a SymbolicConstant specifying the displacement component in the </span>
-<span class="sd">            connector's local 3-direction. Possible values for the SymbolicConstant are UNSET and </span>
+<span class="sd">            connector&#39;s local 3-direction. Possible values for the SymbolicConstant are UNSET and </span>
 <span class="sd">            SET. The default value is UNSET. </span>
 <span class="sd">        ur1</span>
 <span class="sd">            A Float, a Complex, or a SymbolicConstant specifying the rotational component in the </span>
-<span class="sd">            connector's local 4-direction. Possible values for the SymbolicConstant are UNSET and </span>
+<span class="sd">            connector&#39;s local 4-direction. Possible values for the SymbolicConstant are UNSET and </span>
 <span class="sd">            SET. The default value is UNSET. </span>
 <span class="sd">        ur2</span>
 <span class="sd">            A Float, a Complex, or a SymbolicConstant specifying the rotational component in the </span>
-<span class="sd">            connector's local 5-direction. Possible values for the SymbolicConstant are UNSET and </span>
+<span class="sd">            connector&#39;s local 5-direction. Possible values for the SymbolicConstant are UNSET and </span>
 <span class="sd">            SET. The default value is UNSET. </span>
 <span class="sd">        ur3</span>
 <span class="sd">            A Float, a Complex, or a SymbolicConstant specifying the rotational component in the </span>
-<span class="sd">            connector's local 6-direction. Possible values for the SymbolicConstant are UNSET and </span>
+<span class="sd">            connector&#39;s local 6-direction. Possible values for the SymbolicConstant are UNSET and </span>
 <span class="sd">            SET. The default value is UNSET. </span>
 <span class="sd">        fixed</span>
 <span class="sd">            A Boolean specifying whether the boundary condition should remain fixed at the current </span>
@@ -482,11 +483,11 @@
 <span class="sd">        Returns</span>
 <span class="sd">        -------</span>
 <span class="sd">            A ConnDisplacementBC object.</span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">()</span>
         <span class="k">pass</span>
 
-<div class="viewcode-block" id="ConnDisplacementBC.setValues"><a class="viewcode-back" href="../../../reference/mdb/model/bc.html#abaqus.BoundaryCondition.ConnDisplacementBC.ConnDisplacementBC.setValues">[docs]</a>    <span class="k">def</span> <span class="nf">setValues</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">region</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">''</span><span class="p">,</span> <span class="n">fastenerName</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">''</span><span class="p">,</span> <span class="n">fastenerSetName</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">''</span><span class="p">,</span>
+<div class="viewcode-block" id="ConnDisplacementBC.setValues"><a class="viewcode-back" href="../../../reference/mdb/model/bc.html#abaqus.BoundaryCondition.ConnDisplacementBC.ConnDisplacementBC.setValues">[docs]</a>    <span class="k">def</span> <span class="nf">setValues</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">region</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">fastenerName</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">fastenerSetName</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span><span class="p">,</span>
                   <span class="n">u1</span><span class="p">:</span> <span class="n">typing</span><span class="o">.</span><span class="n">Union</span><span class="p">[</span><span class="n">SymbolicConstant</span><span class="p">,</span> <span class="nb">float</span><span class="p">]</span> <span class="o">=</span> <span class="n">UNSET</span><span class="p">,</span>
                   <span class="n">u2</span><span class="p">:</span> <span class="n">typing</span><span class="o">.</span><span class="n">Union</span><span class="p">[</span><span class="n">SymbolicConstant</span><span class="p">,</span> <span class="nb">float</span><span class="p">]</span> <span class="o">=</span> <span class="n">UNSET</span><span class="p">,</span>
                   <span class="n">u3</span><span class="p">:</span> <span class="n">typing</span><span class="o">.</span><span class="n">Union</span><span class="p">[</span><span class="n">SymbolicConstant</span><span class="p">,</span> <span class="nb">float</span><span class="p">]</span> <span class="o">=</span> <span class="n">UNSET</span><span class="p">,</span>
@@ -495,7 +496,7 @@
                   <span class="n">ur3</span><span class="p">:</span> <span class="n">typing</span><span class="o">.</span><span class="n">Union</span><span class="p">[</span><span class="n">SymbolicConstant</span><span class="p">,</span> <span class="nb">float</span><span class="p">]</span> <span class="o">=</span> <span class="n">UNSET</span><span class="p">,</span> <span class="n">fixed</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="n">OFF</span><span class="p">,</span>
                   <span class="n">amplitude</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="n">UNSET</span><span class="p">,</span> <span class="n">distributionType</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="n">UNIFORM</span><span class="p">,</span>
                   <span class="n">buckleCase</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="n">NOT_APPLICABLE</span><span class="p">):</span>
-        <span class="sd">"""This method modifies the data for an existing ConnDisplacementBC object in the step</span>
+        <span class="sd">&quot;&quot;&quot;This method modifies the data for an existing ConnDisplacementBC object in the step</span>
 <span class="sd">        where it is created.</span>
 <span class="sd">        </span>
 <span class="sd">        Parameters</span>
@@ -515,28 +516,28 @@
 <span class="sd">            an empty string. </span>
 <span class="sd">        u1</span>
 <span class="sd">            A Float, a Complex, or a SymbolicConstant specifying the displacement component in the </span>
-<span class="sd">            connector's local 1-direction. Possible values for the SymbolicConstant are UNSET and </span>
+<span class="sd">            connector&#39;s local 1-direction. Possible values for the SymbolicConstant are UNSET and </span>
 <span class="sd">            SET. The default value is UNSET.Note:Although *u1*, *u2*, *u3*, *ur1*, *ur2*, and *ur3* </span>
 <span class="sd">            are optional arguments, at least one of them must be specified. </span>
 <span class="sd">        u2</span>
 <span class="sd">            A Float, a Complex, or a SymbolicConstant specifying the displacement component in the </span>
-<span class="sd">            connector's local 2-direction. Possible values for the SymbolicConstant are UNSET and </span>
+<span class="sd">            connector&#39;s local 2-direction. Possible values for the SymbolicConstant are UNSET and </span>
 <span class="sd">            SET. The default value is UNSET. </span>
 <span class="sd">        u3</span>
 <span class="sd">            A Float, a Complex, or a SymbolicConstant specifying the displacement component in the </span>
-<span class="sd">            connector's local 3-direction. Possible values for the SymbolicConstant are UNSET and </span>
+<span class="sd">            connector&#39;s local 3-direction. Possible values for the SymbolicConstant are UNSET and </span>
 <span class="sd">            SET. The default value is UNSET. </span>
 <span class="sd">        ur1</span>
 <span class="sd">            A Float, a Complex, or a SymbolicConstant specifying the rotational component in the </span>
-<span class="sd">            connector's local 4-direction. Possible values for the SymbolicConstant are UNSET and </span>
+<span class="sd">            connector&#39;s local 4-direction. Possible values for the SymbolicConstant are UNSET and </span>
 <span class="sd">            SET. The default value is UNSET. </span>
 <span class="sd">        ur2</span>
 <span class="sd">            A Float, a Complex, or a SymbolicConstant specifying the rotational component in the </span>
-<span class="sd">            connector's local 5-direction. Possible values for the SymbolicConstant are UNSET and </span>
+<span class="sd">            connector&#39;s local 5-direction. Possible values for the SymbolicConstant are UNSET and </span>
 <span class="sd">            SET. The default value is UNSET. </span>
 <span class="sd">        ur3</span>
 <span class="sd">            A Float, a Complex, or a SymbolicConstant specifying the rotational component in the </span>
-<span class="sd">            connector's local 6-direction. Possible values for the SymbolicConstant are UNSET and </span>
+<span class="sd">            connector&#39;s local 6-direction. Possible values for the SymbolicConstant are UNSET and </span>
 <span class="sd">            SET. The default value is UNSET. </span>
 <span class="sd">        fixed</span>
 <span class="sd">            A Boolean specifying whether the boundary condition should remain fixed at the current </span>
@@ -553,7 +554,7 @@
 <span class="sd">            A SymbolicConstant specifying how the boundary condition is defined in a BUCKLE </span>
 <span class="sd">            analysis. Possible values are NOT_APPLICABLE, STRESS_PERTURBATION, BUCKLING_MODES, and </span>
 <span class="sd">            PERTURBATION_AND_BUCKLING. The default value is NOT_APPLICABLE. </span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span></div>
 
 <div class="viewcode-block" id="ConnDisplacementBC.setValuesInStep"><a class="viewcode-back" href="../../../reference/mdb/model/bc.html#abaqus.BoundaryCondition.ConnDisplacementBC.ConnDisplacementBC.setValuesInStep">[docs]</a>    <span class="k">def</span> <span class="nf">setValuesInStep</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">stepName</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
@@ -563,8 +564,8 @@
                         <span class="n">ur1</span><span class="p">:</span> <span class="n">typing</span><span class="o">.</span><span class="n">Union</span><span class="p">[</span><span class="n">SymbolicConstant</span><span class="p">,</span> <span class="nb">float</span><span class="p">]</span> <span class="o">=</span> <span class="n">SET</span><span class="p">,</span>
                         <span class="n">ur2</span><span class="p">:</span> <span class="n">typing</span><span class="o">.</span><span class="n">Union</span><span class="p">[</span><span class="n">SymbolicConstant</span><span class="p">,</span> <span class="nb">float</span><span class="p">]</span> <span class="o">=</span> <span class="n">SET</span><span class="p">,</span>
                         <span class="n">ur3</span><span class="p">:</span> <span class="n">typing</span><span class="o">.</span><span class="n">Union</span><span class="p">[</span><span class="n">SymbolicConstant</span><span class="p">,</span> <span class="nb">float</span><span class="p">]</span> <span class="o">=</span> <span class="n">SET</span><span class="p">,</span>
-                        <span class="n">amplitude</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">''</span><span class="p">,</span> <span class="n">buckleCase</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="n">NOT_APPLICABLE</span><span class="p">):</span>
-        <span class="sd">"""This method modifies the propagating data for an existing ConnDisplacementBC object in</span>
+                        <span class="n">amplitude</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">buckleCase</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="n">NOT_APPLICABLE</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;This method modifies the propagating data for an existing ConnDisplacementBC object in</span>
 <span class="sd">        the specified step.</span>
 <span class="sd">        </span>
 <span class="sd">        Parameters</span>
@@ -573,27 +574,27 @@
 <span class="sd">            A String specifying the name of the step in which the boundary condition is modified. </span>
 <span class="sd">        u1</span>
 <span class="sd">            A Float, a Complex, or a SymbolicConstant specifying the displacement component in the </span>
-<span class="sd">            connector's local 1-direction. Possible values for the SymbolicConstant are SET, </span>
+<span class="sd">            connector&#39;s local 1-direction. Possible values for the SymbolicConstant are SET, </span>
 <span class="sd">            UNCHANGED, and FREED. </span>
 <span class="sd">        u2</span>
 <span class="sd">            A Float, a Complex, or a SymbolicConstant specifying the displacement component in the </span>
-<span class="sd">            connector's local 2-direction. Possible values for the SymbolicConstant are SET, </span>
+<span class="sd">            connector&#39;s local 2-direction. Possible values for the SymbolicConstant are SET, </span>
 <span class="sd">            UNCHANGED, and FREED. </span>
 <span class="sd">        u3</span>
 <span class="sd">            A Float, a Complex, or a SymbolicConstant specifying the displacement component in the </span>
-<span class="sd">            connector's local 3-direction. Possible values for the SymbolicConstant are SET, </span>
+<span class="sd">            connector&#39;s local 3-direction. Possible values for the SymbolicConstant are SET, </span>
 <span class="sd">            UNCHANGED, and FREED. </span>
 <span class="sd">        ur1</span>
 <span class="sd">            A Float, a Complex, or a SymbolicConstant specifying the rotational component in the </span>
-<span class="sd">            connector's local 4-direction. Possible values for the SymbolicConstant are SET, </span>
+<span class="sd">            connector&#39;s local 4-direction. Possible values for the SymbolicConstant are SET, </span>
 <span class="sd">            UNCHANGED, and FREED. </span>
 <span class="sd">        ur2</span>
 <span class="sd">            A Float, a Complex, or a SymbolicConstant specifying the rotational component in the </span>
-<span class="sd">            connector's local 5-direction. Possible values for the SymbolicConstant are SET, </span>
+<span class="sd">            connector&#39;s local 5-direction. Possible values for the SymbolicConstant are SET, </span>
 <span class="sd">            UNCHANGED, and FREED. </span>
 <span class="sd">        ur3</span>
 <span class="sd">            A Float, a Complex, or a SymbolicConstant specifying the rotational component in the </span>
-<span class="sd">            connector's local 6-direction. Possible values for the SymbolicConstant are SET, </span>
+<span class="sd">            connector&#39;s local 6-direction. Possible values for the SymbolicConstant are SET, </span>
 <span class="sd">            UNCHANGED, and FREED. </span>
 <span class="sd">        amplitude</span>
 <span class="sd">            A String or a SymbolicConstant specifying the name of the amplitude reference. Possible </span>
@@ -605,7 +606,7 @@
 <span class="sd">            A SymbolicConstant specifying how the boundary condition is defined in a BUCKLE </span>
 <span class="sd">            analysis. Possible values are NOT_APPLICABLE, STRESS_PERTURBATION, BUCKLING_MODES, and </span>
 <span class="sd">            PERTURBATION_AND_BUCKLING. The default value is NOT_APPLICABLE. </span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span></div></div>
 </pre></div>
         </article>

@@ -5,10 +5,10 @@
     <meta name="color-scheme" content="light dark"><link rel="index" title="Index" href="../../../genindex.html" /><link rel="search" title="Search" href="../../../search.html" />
         <link rel="canonical" href="https://pyabaqus.haiiliin.com/_modules/abaqus/Load/Load.html" />
 
-    <meta name="generator" content="sphinx-4.5.0, furo 2022.04.07"/>
-        <title>abaqus.Load.Load - pyabaqus 1.0.16 documentation</title>
+    <meta name="generator" content="sphinx-4.5.0, furo 2022.06.04.1"/>
+        <title>abaqus.Load.Load - pyabaqus 1.0.18 documentation</title>
       <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/styles/furo.css?digest=68f4518137b9aefe99b631505a2064c3c42c9852" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/styles/furo.css?digest=40978830699223671f4072448e654b5958f38b89" />
     <link rel="stylesheet" type="text/css" href="../../../_static/styles/furo-extensions.css?digest=30d1aed668e5c3a91c3e3bf6a60b675221979f0e" />
     
     
@@ -123,7 +123,7 @@
       </label>
     </div>
     <div class="header-center">
-      <a href="../../../index.html"><div class="brand">pyabaqus 1.0.16 documentation</div></a>
+      <a href="../../../index.html"><div class="brand">pyabaqus 1.0.18 documentation</div></a>
     </div>
     <div class="header-right">
       <div class="theme-toggle-container theme-toggle-header">
@@ -146,7 +146,7 @@
       <div class="sidebar-sticky"><a class="sidebar-brand" href="../../../index.html">
   
   
-  <span class="sidebar-brand-text">pyabaqus 1.0.16 documentation</span>
+  <span class="sidebar-brand-text">pyabaqus 1.0.18 documentation</span>
   
 </a><form class="sidebar-search-container" method="get" action="../../../search.html" role="search">
   <input class="sidebar-search" placeholder=Search name="q" aria-label="Search">
@@ -286,7 +286,8 @@
           </svg>
           <span>Back to top</span>
         </a>
-        <div class="content-icon-container"><div class="theme-toggle-container theme-toggle-content">
+        <div class="content-icon-container">
+          <div class="theme-toggle-container theme-toggle-content">
             <button class="theme-toggle">
               <div class="visually-hidden">Toggle Light / Dark / Auto color theme</div>
               <svg class="theme-icon-when-auto"><use href="#svg-sun-half"></use></svg>
@@ -305,7 +306,7 @@
 
 
 <div class="viewcode-block" id="Load"><a class="viewcode-back" href="../../../reference/mdb/model/load.html#abaqus.Load.Load.Load">[docs]</a><span class="k">class</span> <span class="nc">Load</span><span class="p">:</span>
-    <span class="sd">"""The Load object is the abstract base type for other Load objects. The Load object has no</span>
+    <span class="sd">&quot;&quot;&quot;The Load object is the abstract base type for other Load objects. The Load object has no</span>
 <span class="sd">    explicit constructor. The methods and members of the Load object are common to all </span>
 <span class="sd">    objects derived from Load. </span>
 
@@ -325,26 +326,26 @@
 <span class="sd">        import load</span>
 <span class="sd">        mdb.models[name].loads[name]</span>
 
-<span class="sd">    """</span>
+<span class="sd">    &quot;&quot;&quot;</span>
 
     <span class="c1"># A String specifying the load repository key. </span>
-    <span class="n">name</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">''</span>
+    <span class="n">name</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span>
 
     <span class="c1"># A Region object specifying the region to which the load is applied. </span>
     <span class="n">region</span><span class="p">:</span> <span class="n">Region</span> <span class="o">=</span> <span class="n">Region</span><span class="p">()</span>
 
 <div class="viewcode-block" id="Load.deactivate"><a class="viewcode-back" href="../../../reference/mdb/model/load.html#abaqus.Load.Load.Load.deactivate">[docs]</a>    <span class="k">def</span> <span class="nf">deactivate</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">stepName</span><span class="p">:</span> <span class="nb">str</span><span class="p">):</span>
-        <span class="sd">"""This method deactivates the load in the specified step and all its subsequent steps.</span>
+        <span class="sd">&quot;&quot;&quot;This method deactivates the load in the specified step and all its subsequent steps.</span>
 <span class="sd">        </span>
 <span class="sd">        Parameters</span>
 <span class="sd">        ----------</span>
 <span class="sd">        stepName</span>
 <span class="sd">            A String specifying the name of the step in which the load is deactivated.</span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span></div>
 
 <div class="viewcode-block" id="Load.move"><a class="viewcode-back" href="../../../reference/mdb/model/load.html#abaqus.Load.Load.Load.move">[docs]</a>    <span class="k">def</span> <span class="nf">move</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">fromStepName</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">toStepName</span><span class="p">:</span> <span class="nb">str</span><span class="p">):</span>
-        <span class="sd">"""This method moves the load state object from one step to a different step.</span>
+        <span class="sd">&quot;&quot;&quot;This method moves the load state object from one step to a different step.</span>
 <span class="sd">        </span>
 <span class="sd">        Parameters</span>
 <span class="sd">        ----------</span>
@@ -352,38 +353,38 @@
 <span class="sd">            A String specifying the name of the step from which the load state is moved. </span>
 <span class="sd">        toStepName</span>
 <span class="sd">            A String specifying the name of the step to which the load state is moved.</span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span></div>
 
 <div class="viewcode-block" id="Load.reset"><a class="viewcode-back" href="../../../reference/mdb/model/load.html#abaqus.Load.Load.Load.reset">[docs]</a>    <span class="k">def</span> <span class="nf">reset</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">stepName</span><span class="p">:</span> <span class="nb">str</span><span class="p">):</span>
-        <span class="sd">"""This method resets the load state of the specified step to the state of the previous</span>
+        <span class="sd">&quot;&quot;&quot;This method resets the load state of the specified step to the state of the previous</span>
 <span class="sd">        general analysis step.</span>
 <span class="sd">        </span>
 <span class="sd">        Parameters</span>
 <span class="sd">        ----------</span>
 <span class="sd">        stepName</span>
 <span class="sd">            A String specifying the name of the step in which the load state is reset.</span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span></div>
 
 <div class="viewcode-block" id="Load.resume"><a class="viewcode-back" href="../../../reference/mdb/model/load.html#abaqus.Load.Load.Load.resume">[docs]</a>    <span class="k">def</span> <span class="nf">resume</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="sd">"""This method resumes the load that was previously suppressed.</span>
-<span class="sd">        """</span>
+        <span class="sd">&quot;&quot;&quot;This method resumes the load that was previously suppressed.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span></div>
 
 <div class="viewcode-block" id="Load.suppress"><a class="viewcode-back" href="../../../reference/mdb/model/load.html#abaqus.Load.Load.Load.suppress">[docs]</a>    <span class="k">def</span> <span class="nf">suppress</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="sd">"""This method suppresses the load.</span>
-<span class="sd">        """</span>
+        <span class="sd">&quot;&quot;&quot;This method suppresses the load.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span></div>
 
 <div class="viewcode-block" id="Load.delete"><a class="viewcode-back" href="../../../reference/mdb/model/load.html#abaqus.Load.Load.Load.delete">[docs]</a>    <span class="k">def</span> <span class="nf">delete</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">indices</span><span class="p">:</span> <span class="nb">tuple</span><span class="p">):</span>
-        <span class="sd">"""This method allows you to delete existing loads.</span>
+        <span class="sd">&quot;&quot;&quot;This method allows you to delete existing loads.</span>
 <span class="sd">        </span>
 <span class="sd">        Parameters</span>
 <span class="sd">        ----------</span>
 <span class="sd">        indices</span>
 <span class="sd">            A sequence of Ints specifying the index of each load to delete. </span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span></div></div>
 </pre></div>
         </article>

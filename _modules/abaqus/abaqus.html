@@ -5,10 +5,10 @@
     <meta name="color-scheme" content="light dark"><link rel="index" title="Index" href="../../genindex.html" /><link rel="search" title="Search" href="../../search.html" />
         <link rel="canonical" href="https://pyabaqus.haiiliin.com/_modules/abaqus/abaqus.html" />
 
-    <meta name="generator" content="sphinx-4.5.0, furo 2022.04.07"/>
-        <title>abaqus.abaqus - pyabaqus 1.0.16 documentation</title>
+    <meta name="generator" content="sphinx-4.5.0, furo 2022.06.04.1"/>
+        <title>abaqus.abaqus - pyabaqus 1.0.18 documentation</title>
       <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/styles/furo.css?digest=68f4518137b9aefe99b631505a2064c3c42c9852" />
+    <link rel="stylesheet" type="text/css" href="../../_static/styles/furo.css?digest=40978830699223671f4072448e654b5958f38b89" />
     <link rel="stylesheet" type="text/css" href="../../_static/styles/furo-extensions.css?digest=30d1aed668e5c3a91c3e3bf6a60b675221979f0e" />
     
     
@@ -123,7 +123,7 @@
       </label>
     </div>
     <div class="header-center">
-      <a href="../../index.html"><div class="brand">pyabaqus 1.0.16 documentation</div></a>
+      <a href="../../index.html"><div class="brand">pyabaqus 1.0.18 documentation</div></a>
     </div>
     <div class="header-right">
       <div class="theme-toggle-container theme-toggle-header">
@@ -146,7 +146,7 @@
       <div class="sidebar-sticky"><a class="sidebar-brand" href="../../index.html">
   
   
-  <span class="sidebar-brand-text">pyabaqus 1.0.16 documentation</span>
+  <span class="sidebar-brand-text">pyabaqus 1.0.18 documentation</span>
   
 </a><form class="sidebar-search-container" method="get" action="../../search.html" role="search">
   <input class="sidebar-search" placeholder=Search name="q" aria-label="Search">
@@ -286,7 +286,8 @@
           </svg>
           <span>Back to top</span>
         </a>
-        <div class="content-icon-container"><div class="theme-toggle-container theme-toggle-content">
+        <div class="content-icon-container">
+          <div class="theme-toggle-container theme-toggle-content">
             <button class="theme-toggle">
               <div class="visually-hidden">Toggle Light / Dark / Auto color theme</div>
               <svg class="theme-icon-when-auto"><use href="#svg-sun-half"></use></svg>
@@ -311,32 +312,32 @@
 
 <span class="k">class</span> <span class="nc">Mdb</span><span class="p">(</span><span class="n">AbaqusMdb</span><span class="p">):</span>
 
-    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">pathName</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">''</span><span class="p">):</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">pathName</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span><span class="p">):</span>
         <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="n">pathName</span><span class="p">)</span>
 
     <span class="k">def</span> <span class="nf">save</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="n">save</span><span class="p">()</span>
 
     <span class="k">def</span> <span class="nf">saveAs</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">pathName</span><span class="p">:</span> <span class="nb">str</span><span class="p">):</span>
-        <span class="n">abaqus</span> <span class="o">=</span> <span class="s1">'abaqus'</span>
-        <span class="k">if</span> <span class="s1">'ABAQUS_BAT_PATH'</span> <span class="ow">in</span> <span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="o">.</span><span class="n">keys</span><span class="p">():</span>
-            <span class="n">abaqus</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="p">[</span><span class="s1">'ABAQUS_BAT_PATH'</span><span class="p">]</span>
+        <span class="n">abaqus</span> <span class="o">=</span> <span class="s1">&#39;abaqus&#39;</span>
+        <span class="k">if</span> <span class="s1">&#39;ABAQUS_BAT_PATH&#39;</span> <span class="ow">in</span> <span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="o">.</span><span class="n">keys</span><span class="p">():</span>
+            <span class="n">abaqus</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="p">[</span><span class="s1">&#39;ABAQUS_BAT_PATH&#39;</span><span class="p">]</span>
 
         <span class="n">filePath</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">abspath</span><span class="p">(</span><span class="n">sys</span><span class="o">.</span><span class="n">argv</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
         <span class="n">fileDir</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">dirname</span><span class="p">(</span><span class="n">filePath</span><span class="p">)</span>
         <span class="n">fileName</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">basename</span><span class="p">(</span><span class="n">filePath</span><span class="p">)</span>
 
-        <span class="n">os</span><span class="o">.</span><span class="n">system</span><span class="p">(</span><span class="sa">f</span><span class="s1">'cd </span><span class="si">{</span><span class="n">fileDir</span><span class="si">}</span><span class="s1">'</span><span class="p">)</span>
+        <span class="n">os</span><span class="o">.</span><span class="n">system</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;cd </span><span class="si">{</span><span class="n">fileDir</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
         <span class="k">try</span><span class="p">:</span>  <span class="c1"># If it is a jupyter notebook</span>
             <span class="kn">import</span> <span class="nn">ipynbname</span>
             <span class="n">fileName</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">basename</span><span class="p">(</span><span class="n">ipynbname</span><span class="o">.</span><span class="n">path</span><span class="p">())</span>
             <span class="n">fileDir</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">dirname</span><span class="p">(</span><span class="n">ipynbname</span><span class="o">.</span><span class="n">path</span><span class="p">())</span>
-            <span class="n">os</span><span class="o">.</span><span class="n">system</span><span class="p">(</span><span class="sa">f</span><span class="s1">'cd </span><span class="si">{</span><span class="n">fileDir</span><span class="si">}</span><span class="s1">'</span><span class="p">)</span>
-            <span class="n">os</span><span class="o">.</span><span class="n">system</span><span class="p">(</span><span class="sa">f</span><span class="s1">'jupyter nbconvert --to python </span><span class="si">{</span><span class="n">fileName</span><span class="si">}</span><span class="s1">'</span><span class="p">)</span>
-            <span class="n">fileName</span> <span class="o">=</span> <span class="n">fileName</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">'.ipynb'</span><span class="p">,</span> <span class="s1">'.py'</span><span class="p">)</span>
+            <span class="n">os</span><span class="o">.</span><span class="n">system</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;cd </span><span class="si">{</span><span class="n">fileDir</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+            <span class="n">os</span><span class="o">.</span><span class="n">system</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;jupyter nbconvert --to python </span><span class="si">{</span><span class="n">fileName</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+            <span class="n">fileName</span> <span class="o">=</span> <span class="n">fileName</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">&#39;.ipynb&#39;</span><span class="p">,</span> <span class="s1">&#39;.py&#39;</span><span class="p">)</span>
         <span class="k">except</span><span class="p">:</span>
             <span class="k">pass</span>
-        <span class="n">os</span><span class="o">.</span><span class="n">system</span><span class="p">(</span><span class="sa">f</span><span class="s1">'</span><span class="si">{</span><span class="n">abaqus</span><span class="si">}</span><span class="s1"> cae -noGUI </span><span class="si">{</span><span class="n">fileName</span><span class="si">}</span><span class="s1">'</span><span class="p">)</span>
+        <span class="n">os</span><span class="o">.</span><span class="n">system</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">abaqus</span><span class="si">}</span><span class="s1"> cae -noGUI </span><span class="si">{</span><span class="n">fileName</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
 
 
 <span class="k">class</span> <span class="nc">Session</span><span class="p">(</span><span class="n">AbaqusSession</span><span class="p">):</span>
@@ -344,24 +345,24 @@
     <span class="k">def</span> <span class="nf">openOdb</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Odb</span><span class="p">:</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">odbs</span><span class="p">[</span><span class="n">name</span><span class="p">]</span> <span class="o">=</span> <span class="n">odb</span> <span class="o">=</span> <span class="n">Odb</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
 
-        <span class="n">abaqus</span> <span class="o">=</span> <span class="s1">'abaqus'</span>
-        <span class="k">if</span> <span class="s1">'ABAQUS_BAT_PATH'</span> <span class="ow">in</span> <span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="o">.</span><span class="n">keys</span><span class="p">():</span>
-            <span class="n">abaqus</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="p">[</span><span class="s1">'ABAQUS_BAT_PATH'</span><span class="p">]</span>
+        <span class="n">abaqus</span> <span class="o">=</span> <span class="s1">&#39;abaqus&#39;</span>
+        <span class="k">if</span> <span class="s1">&#39;ABAQUS_BAT_PATH&#39;</span> <span class="ow">in</span> <span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="o">.</span><span class="n">keys</span><span class="p">():</span>
+            <span class="n">abaqus</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="p">[</span><span class="s1">&#39;ABAQUS_BAT_PATH&#39;</span><span class="p">]</span>
 
         <span class="n">filePath</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">abspath</span><span class="p">(</span><span class="n">sys</span><span class="o">.</span><span class="n">argv</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
         <span class="n">fileDir</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">dirname</span><span class="p">(</span><span class="n">filePath</span><span class="p">)</span>
         <span class="n">fileName</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">basename</span><span class="p">(</span><span class="n">filePath</span><span class="p">)</span>
         <span class="n">odbName</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">basename</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">abspath</span><span class="p">(</span><span class="n">name</span><span class="p">))</span>
 
-        <span class="n">os</span><span class="o">.</span><span class="n">system</span><span class="p">(</span><span class="sa">f</span><span class="s1">'cd </span><span class="si">{</span><span class="n">fileDir</span><span class="si">}</span><span class="s1">'</span><span class="p">)</span>
+        <span class="n">os</span><span class="o">.</span><span class="n">system</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;cd </span><span class="si">{</span><span class="n">fileDir</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
         <span class="k">try</span><span class="p">:</span>  <span class="c1"># If it is a jupyter notebook</span>
             <span class="kn">import</span> <span class="nn">ipynbname</span>
             <span class="n">fileName</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">basename</span><span class="p">(</span><span class="n">ipynbname</span><span class="o">.</span><span class="n">path</span><span class="p">())</span>
-            <span class="n">os</span><span class="o">.</span><span class="n">system</span><span class="p">(</span><span class="sa">f</span><span class="s1">'jupyter nbconvert --to python </span><span class="si">{</span><span class="n">fileName</span><span class="si">}</span><span class="s1">'</span><span class="p">)</span>
-            <span class="n">fileName</span> <span class="o">=</span> <span class="n">fileName</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">'.ipynb'</span><span class="p">,</span> <span class="s1">'.py'</span><span class="p">)</span>
+            <span class="n">os</span><span class="o">.</span><span class="n">system</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;jupyter nbconvert --to python </span><span class="si">{</span><span class="n">fileName</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+            <span class="n">fileName</span> <span class="o">=</span> <span class="n">fileName</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">&#39;.ipynb&#39;</span><span class="p">,</span> <span class="s1">&#39;.py&#39;</span><span class="p">)</span>
         <span class="k">except</span><span class="p">:</span>
             <span class="k">pass</span>
-        <span class="n">os</span><span class="o">.</span><span class="n">system</span><span class="p">(</span><span class="sa">f</span><span class="s1">'</span><span class="si">{</span><span class="n">abaqus</span><span class="si">}</span><span class="s1"> cae database=</span><span class="si">{</span><span class="n">odbName</span><span class="si">}</span><span class="s1"> script=</span><span class="si">{</span><span class="n">fileName</span><span class="si">}</span><span class="s1">'</span><span class="p">)</span>
+        <span class="n">os</span><span class="o">.</span><span class="n">system</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">abaqus</span><span class="si">}</span><span class="s1"> cae database=</span><span class="si">{</span><span class="n">odbName</span><span class="si">}</span><span class="s1"> script=</span><span class="si">{</span><span class="n">fileName</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
 
         <span class="bp">self</span><span class="o">.</span><span class="n">exit</span><span class="p">()</span>
         <span class="k">return</span> <span class="n">odb</span>
@@ -372,22 +373,22 @@
 
 
 <div class="viewcode-block" id="runPythonScript"><a class="viewcode-back" href="../../tutorials.html#abaqus.runPythonScript">[docs]</a><span class="k">def</span> <span class="nf">runPythonScript</span><span class="p">(</span><span class="n">scriptPath</span><span class="p">:</span> <span class="nb">str</span><span class="p">):</span>
-    <span class="sd">"""Run python script</span>
+    <span class="sd">&quot;&quot;&quot;Run python script</span>
 
 <span class="sd">    Parameters</span>
 <span class="sd">    ----------</span>
 <span class="sd">    scriptPath: str</span>
 <span class="sd">        File path of the python script</span>
-<span class="sd">    """</span>
-    <span class="n">abaqus</span> <span class="o">=</span> <span class="s1">'abaqus'</span>
-    <span class="k">if</span> <span class="s1">'ABAQUS_BAT_PATH'</span> <span class="ow">in</span> <span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="o">.</span><span class="n">keys</span><span class="p">():</span>
-        <span class="n">abaqus</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="p">[</span><span class="s1">'ABAQUS_BAT_PATH'</span><span class="p">]</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">abaqus</span> <span class="o">=</span> <span class="s1">&#39;abaqus&#39;</span>
+    <span class="k">if</span> <span class="s1">&#39;ABAQUS_BAT_PATH&#39;</span> <span class="ow">in</span> <span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="o">.</span><span class="n">keys</span><span class="p">():</span>
+        <span class="n">abaqus</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="p">[</span><span class="s1">&#39;ABAQUS_BAT_PATH&#39;</span><span class="p">]</span>
     <span class="n">os</span><span class="o">.</span><span class="n">chdir</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">dirname</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">abspath</span><span class="p">(</span><span class="n">scriptPath</span><span class="p">)))</span>
-    <span class="n">os</span><span class="o">.</span><span class="n">system</span><span class="p">(</span><span class="s1">'</span><span class="si">{}</span><span class="s1"> cae noGUI=</span><span class="si">{}</span><span class="s1">'</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">abaqus</span><span class="p">,</span> <span class="n">scriptPath</span><span class="p">))</span></div>
+    <span class="n">os</span><span class="o">.</span><span class="n">system</span><span class="p">(</span><span class="s1">&#39;</span><span class="si">{}</span><span class="s1"> cae noGUI=</span><span class="si">{}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">abaqus</span><span class="p">,</span> <span class="n">scriptPath</span><span class="p">))</span></div>
 
 
 <div class="viewcode-block" id="extractOutputData"><a class="viewcode-back" href="../../tutorials.html#abaqus.extractOutputData">[docs]</a><span class="k">def</span> <span class="nf">extractOutputData</span><span class="p">(</span><span class="n">odb</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">script</span><span class="p">:</span> <span class="nb">str</span><span class="p">):</span>
-    <span class="sd">"""Extract output data using python script</span>
+    <span class="sd">&quot;&quot;&quot;Extract output data using python script</span>
 
 <span class="sd">    Parameters</span>
 <span class="sd">    ----------</span>
@@ -395,15 +396,15 @@
 <span class="sd">        File path of the output database</span>
 <span class="sd">    script: str</span>
 <span class="sd">        File path of the script</span>
-<span class="sd">    """</span>
-    <span class="n">abaqus</span> <span class="o">=</span> <span class="s1">'abaqus'</span>
-    <span class="k">if</span> <span class="s1">'ABAQUS_BAT_PATH'</span> <span class="ow">in</span> <span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="o">.</span><span class="n">keys</span><span class="p">():</span>
-        <span class="n">abaqus</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="p">[</span><span class="s1">'ABAQUS_BAT_PATH'</span><span class="p">]</span>
-    <span class="n">os</span><span class="o">.</span><span class="n">system</span><span class="p">(</span><span class="s1">'</span><span class="si">{}</span><span class="s1"> cae database=</span><span class="si">{}</span><span class="s1"> script=</span><span class="si">{}</span><span class="s1">'</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">abaqus</span><span class="p">,</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">abspath</span><span class="p">(</span><span class="n">odb</span><span class="p">),</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">abspath</span><span class="p">(</span><span class="n">script</span><span class="p">)))</span></div>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">abaqus</span> <span class="o">=</span> <span class="s1">&#39;abaqus&#39;</span>
+    <span class="k">if</span> <span class="s1">&#39;ABAQUS_BAT_PATH&#39;</span> <span class="ow">in</span> <span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="o">.</span><span class="n">keys</span><span class="p">():</span>
+        <span class="n">abaqus</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="p">[</span><span class="s1">&#39;ABAQUS_BAT_PATH&#39;</span><span class="p">]</span>
+    <span class="n">os</span><span class="o">.</span><span class="n">system</span><span class="p">(</span><span class="s1">&#39;</span><span class="si">{}</span><span class="s1"> cae database=</span><span class="si">{}</span><span class="s1"> script=</span><span class="si">{}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">abaqus</span><span class="p">,</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">abspath</span><span class="p">(</span><span class="n">odb</span><span class="p">),</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">abspath</span><span class="p">(</span><span class="n">script</span><span class="p">)))</span></div>
 
 
-<div class="viewcode-block" id="submitJobByInputFile"><a class="viewcode-back" href="../../tutorials.html#abaqus.submitJobByInputFile">[docs]</a><span class="k">def</span> <span class="nf">submitJobByInputFile</span><span class="p">(</span><span class="n">inputFile</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">userSubroutine</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">options</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">'int'</span><span class="p">,</span> <span class="n">showStatus</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">True</span><span class="p">):</span>
-    <span class="sd">"""Submit job by input file, can not execute in Python environment of Abaqus</span>
+<div class="viewcode-block" id="submitJobByInputFile"><a class="viewcode-back" href="../../tutorials.html#abaqus.submitJobByInputFile">[docs]</a><span class="k">def</span> <span class="nf">submitJobByInputFile</span><span class="p">(</span><span class="n">inputFile</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">userSubroutine</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">options</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;int&#39;</span><span class="p">,</span> <span class="n">showStatus</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">True</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Submit job by input file, can not execute in Python environment of Abaqus</span>
 
 <span class="sd">    Parameters</span>
 <span class="sd">    ----------</span>
@@ -416,22 +417,22 @@
 <span class="sd">        whole</span>
 <span class="sd">    options: str</span>
 <span class="sd">        Command options for abaqus command, see `here &lt;https://help.3ds.com/2022/english/dssimulia_established/SIMACAEEXCRefMap/simaexc-c-analysisproc.htm?contextscope=all&amp;id=b034a4baa38a4e9496fce622201c4e30</span>
-<span class="sd">        or https://abaqus-docs.mit.edu/2017/English/SIMACAEEXCRefMap/simaexc-c-analysisproc.htm&gt;`_ for details, job or input options shouldn't be included, i.e. `int double'.</span>
+<span class="sd">        or https://abaqus-docs.mit.edu/2017/English/SIMACAEEXCRefMap/simaexc-c-analysisproc.htm&gt;`_ for details, job or input options shouldn&#39;t be included, i.e. `int double&#39;.</span>
 <span class="sd">    showStatus: bool</span>
 <span class="sd">        Show status or not when the calculation starts.</span>
-<span class="sd">    """</span>
-    <span class="n">abaqus</span> <span class="o">=</span> <span class="s1">'abaqus'</span>
-    <span class="k">if</span> <span class="s1">'ABAQUS_BAT_PATH'</span> <span class="ow">in</span> <span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="o">.</span><span class="n">keys</span><span class="p">():</span>
-        <span class="n">abaqus</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="p">[</span><span class="s1">'ABAQUS_BAT_PATH'</span><span class="p">]</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">abaqus</span> <span class="o">=</span> <span class="s1">&#39;abaqus&#39;</span>
+    <span class="k">if</span> <span class="s1">&#39;ABAQUS_BAT_PATH&#39;</span> <span class="ow">in</span> <span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="o">.</span><span class="n">keys</span><span class="p">():</span>
+        <span class="n">abaqus</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="p">[</span><span class="s1">&#39;ABAQUS_BAT_PATH&#39;</span><span class="p">]</span>
     <span class="n">absInputFilePath</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">abspath</span><span class="p">(</span><span class="n">inputFile</span><span class="p">)</span>
     <span class="n">workDirectory</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">dirname</span><span class="p">(</span><span class="n">absInputFilePath</span><span class="p">)</span>
-    <span class="n">jobName</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">basename</span><span class="p">(</span><span class="n">absInputFilePath</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">'.inp'</span><span class="p">,</span> <span class="s1">''</span><span class="p">))</span>
+    <span class="n">jobName</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">basename</span><span class="p">(</span><span class="n">absInputFilePath</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">&#39;.inp&#39;</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">))</span>
 
     <span class="k">if</span> <span class="n">userSubroutine</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
-        <span class="n">commandLine</span> <span class="o">=</span> <span class="s2">"</span><span class="si">{}</span><span class="s2"> job=</span><span class="si">{}</span><span class="s2"> user=</span><span class="si">{}</span><span class="s2"> </span><span class="si">{}</span><span class="s2">"</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">abaqus</span><span class="p">,</span> <span class="n">jobName</span><span class="p">,</span> <span class="n">userSubroutine</span><span class="p">,</span> <span class="n">options</span><span class="p">)</span>
+        <span class="n">commandLine</span> <span class="o">=</span> <span class="s2">&quot;</span><span class="si">{}</span><span class="s2"> job=</span><span class="si">{}</span><span class="s2"> user=</span><span class="si">{}</span><span class="s2"> </span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">abaqus</span><span class="p">,</span> <span class="n">jobName</span><span class="p">,</span> <span class="n">userSubroutine</span><span class="p">,</span> <span class="n">options</span><span class="p">)</span>
     <span class="k">else</span><span class="p">:</span>
-        <span class="n">commandLine</span> <span class="o">=</span> <span class="s2">"</span><span class="si">{}</span><span class="s2"> job=</span><span class="si">{}</span><span class="s2"> </span><span class="si">{}</span><span class="s2">"</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">abaqus</span><span class="p">,</span> <span class="n">jobName</span><span class="p">,</span> <span class="n">options</span><span class="p">)</span>
-    <span class="n">os</span><span class="o">.</span><span class="n">system</span><span class="p">(</span><span class="s1">'cd </span><span class="si">{}</span><span class="s1">'</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">workDirectory</span><span class="p">))</span>
+        <span class="n">commandLine</span> <span class="o">=</span> <span class="s2">&quot;</span><span class="si">{}</span><span class="s2"> job=</span><span class="si">{}</span><span class="s2"> </span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">abaqus</span><span class="p">,</span> <span class="n">jobName</span><span class="p">,</span> <span class="n">options</span><span class="p">)</span>
+    <span class="n">os</span><span class="o">.</span><span class="n">system</span><span class="p">(</span><span class="s1">&#39;cd </span><span class="si">{}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">workDirectory</span><span class="p">))</span>
     <span class="n">os</span><span class="o">.</span><span class="n">system</span><span class="p">(</span><span class="n">commandLine</span><span class="p">)</span></div>
 </pre></div>
         </article>

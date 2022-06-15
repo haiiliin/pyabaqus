@@ -5,10 +5,10 @@
     <meta name="color-scheme" content="light dark"><link rel="index" title="Index" href="../../../genindex.html" /><link rel="search" title="Search" href="../../../search.html" />
         <link rel="canonical" href="https://pyabaqus.haiiliin.com/_modules/abaqus/Animation/AnimationOptions.html" />
 
-    <meta name="generator" content="sphinx-4.5.0, furo 2022.04.07"/>
-        <title>abaqus.Animation.AnimationOptions - pyabaqus 1.0.16 documentation</title>
+    <meta name="generator" content="sphinx-4.5.0, furo 2022.06.04.1"/>
+        <title>abaqus.Animation.AnimationOptions - pyabaqus 1.0.18 documentation</title>
       <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/styles/furo.css?digest=68f4518137b9aefe99b631505a2064c3c42c9852" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/styles/furo.css?digest=40978830699223671f4072448e654b5958f38b89" />
     <link rel="stylesheet" type="text/css" href="../../../_static/styles/furo-extensions.css?digest=30d1aed668e5c3a91c3e3bf6a60b675221979f0e" />
     
     
@@ -123,7 +123,7 @@
       </label>
     </div>
     <div class="header-center">
-      <a href="../../../index.html"><div class="brand">pyabaqus 1.0.16 documentation</div></a>
+      <a href="../../../index.html"><div class="brand">pyabaqus 1.0.18 documentation</div></a>
     </div>
     <div class="header-right">
       <div class="theme-toggle-container theme-toggle-header">
@@ -146,7 +146,7 @@
       <div class="sidebar-sticky"><a class="sidebar-brand" href="../../../index.html">
   
   
-  <span class="sidebar-brand-text">pyabaqus 1.0.16 documentation</span>
+  <span class="sidebar-brand-text">pyabaqus 1.0.18 documentation</span>
   
 </a><form class="sidebar-search-container" method="get" action="../../../search.html" role="search">
   <input class="sidebar-search" placeholder=Search name="q" aria-label="Search">
@@ -286,7 +286,8 @@
           </svg>
           <span>Back to top</span>
         </a>
-        <div class="content-icon-container"><div class="theme-toggle-container theme-toggle-content">
+        <div class="content-icon-container">
+          <div class="theme-toggle-container theme-toggle-content">
             <button class="theme-toggle">
               <div class="visually-hidden">Toggle Light / Dark / Auto color theme</div>
               <svg class="theme-icon-when-auto"><use href="#svg-sun-half"></use></svg>
@@ -305,7 +306,7 @@
 
 
 <div class="viewcode-block" id="AnimationOptions"><a class="viewcode-back" href="../../../reference/session/animation.html#abaqus.Animation.AnimationOptions.AnimationOptions">[docs]</a><span class="k">class</span> <span class="nc">AnimationOptions</span><span class="p">:</span>
-    <span class="sd">"""The AnimationOptions object is used to store values and attributes associated with an</span>
+    <span class="sd">&quot;&quot;&quot;The AnimationOptions object is used to store values and attributes associated with an</span>
 <span class="sd">    AnimationController object. </span>
 <span class="sd">    The AnimationOptions object has no constructor command. Abaqus creates the </span>
 <span class="sd">    *animationOptions* member when it creates the AnimationController object. </span>
@@ -321,11 +322,11 @@
 <span class="sd">    frameCounter: Boolean</span>
 <span class="sd">        A Boolean specifying whether to show the frame counter. The default value is ON.</span>
 <span class="sd">    relativeScaling: SymbolicConstant</span>
-<span class="sd">        A SymbolicConstant specifying the relative scaling when the :py:class:`~abaqus.Animation.AnimationController.AnimationController` object's</span>
+<span class="sd">        A SymbolicConstant specifying the relative scaling when the :py:class:`~abaqus.Animation.AnimationController.AnimationController` object&#39;s</span>
 <span class="sd">        **animationType=SCALE_FACTOR** or HARMONIC. Possible values are FULL_CYCLE and HALF_CYCLE.</span>
 <span class="sd">        The default value is HALF_CYCLE.</span>
 <span class="sd">    numScaleFactorFrames: int</span>
-<span class="sd">        An Int specifying the number of frames to be used when the :py:class:`~abaqus.Animation.AnimationController.AnimationController` object's</span>
+<span class="sd">        An Int specifying the number of frames to be used when the :py:class:`~abaqus.Animation.AnimationController.AnimationController` object&#39;s</span>
 <span class="sd">        **animationType=SCALE_FACTOR** or HARMONIC. The default value is 7.</span>
 <span class="sd">    timeHistoryMode: SymbolicConstant</span>
 <span class="sd">        A SymbolicConstant specifying whether the time history animation is time based or frame</span>
@@ -387,11 +388,11 @@
 <span class="sd">        MEDIUM, and LARGE. The default value is MEDIUM.</span>
 <span class="sd">    xyLineColor: str</span>
 <span class="sd">        A String specifying the color used to plot the *X–Y* time tracker line when</span>
-<span class="sd">        **xyUseHighlightMethod** = False. The default value is "Yellow".</span>
+<span class="sd">        **xyUseHighlightMethod** = False. The default value is &quot;Yellow&quot;.</span>
 <span class="sd">    xySymbolColor: str</span>
 <span class="sd">        A String specifying the color used to plot *X–Y* time tracker symbols when</span>
-<span class="sd">        **xyUseHighlightMethod** = False. When setting the color to 'Default' the system will take</span>
-<span class="sd">        the color associated to each curve. The default value is "Default".</span>
+<span class="sd">        **xyUseHighlightMethod** = False. When setting the color to &#39;Default&#39; the system will take</span>
+<span class="sd">        the color associated to each curve. The default value is &quot;Default&quot;.</span>
 
 <span class="sd">    Notes</span>
 <span class="sd">    -----</span>
@@ -402,7 +403,7 @@
 <span class="sd">        import animation</span>
 <span class="sd">        session.animationOptions</span>
 
-<span class="sd">    """</span>
+<span class="sd">    &quot;&quot;&quot;</span>
 
     <span class="c1"># A SymbolicConstant specifying the animation mode. Possible values are PLAY_ONCE, LOOP, </span>
     <span class="c1"># LOOP_BACKWARD, and SWING. The default value is LOOP. </span>
@@ -415,12 +416,12 @@
     <span class="c1"># A Boolean specifying whether to show the frame counter. The default value is ON. </span>
     <span class="n">frameCounter</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="n">ON</span>
 
-    <span class="c1"># A SymbolicConstant specifying the relative scaling when the AnimationController object's </span>
+    <span class="c1"># A SymbolicConstant specifying the relative scaling when the AnimationController object&#39;s </span>
     <span class="c1"># *animationType*=SCALE_FACTOR or HARMONIC. Possible values are FULL_CYCLE and HALF_CYCLE. </span>
     <span class="c1"># The default value is HALF_CYCLE. </span>
     <span class="n">relativeScaling</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="n">HALF_CYCLE</span>
 
-    <span class="c1"># An Int specifying the number of frames to be used when the AnimationController object's </span>
+    <span class="c1"># An Int specifying the number of frames to be used when the AnimationController object&#39;s </span>
     <span class="c1"># *animationType*=SCALE_FACTOR or HARMONIC. The default value is 7. </span>
     <span class="n">numScaleFactorFrames</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">7</span>
 
@@ -498,13 +499,13 @@
     <span class="n">xySymbolSize</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="n">MEDIUM</span>
 
     <span class="c1"># A String specifying the color used to plot the *X–Y* time tracker line when </span>
-    <span class="c1"># *xyUseHighlightMethod* = False. The default value is "Yellow". </span>
-    <span class="n">xyLineColor</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">''</span>
+    <span class="c1"># *xyUseHighlightMethod* = False. The default value is &quot;Yellow&quot;. </span>
+    <span class="n">xyLineColor</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span>
 
     <span class="c1"># A String specifying the color used to plot *X–Y* time tracker symbols when </span>
-    <span class="c1"># *xyUseHighlightMethod* = False. When setting the color to 'Default' the system will take </span>
-    <span class="c1"># the color associated to each curve. The default value is "Default". </span>
-    <span class="n">xySymbolColor</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">''</span>
+    <span class="c1"># *xyUseHighlightMethod* = False. When setting the color to &#39;Default&#39; the system will take </span>
+    <span class="c1"># the color associated to each curve. The default value is &quot;Default&quot;. </span>
+    <span class="n">xySymbolColor</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span>
 
 <div class="viewcode-block" id="AnimationOptions.setValues"><a class="viewcode-back" href="../../../reference/session/animation.html#abaqus.Animation.AnimationOptions.AnimationOptions.setValues">[docs]</a>    <span class="k">def</span> <span class="nf">setValues</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">mode</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="n">LOOP</span><span class="p">,</span> <span class="n">frameRate</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">50</span><span class="p">,</span> <span class="n">frameCounter</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="n">ON</span><span class="p">,</span>
                   <span class="n">relativeScaling</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="n">HALF_CYCLE</span><span class="p">,</span> <span class="n">numScaleFactorFrames</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">7</span><span class="p">,</span>
@@ -513,10 +514,10 @@
                   <span class="n">minTimeAutoCompute</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="n">ON</span><span class="p">,</span> <span class="n">timeIncrement</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
                   <span class="n">xyUseHighlightMethod</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="n">ON</span><span class="p">,</span> <span class="n">xyShowLine</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="n">ON</span><span class="p">,</span>
                   <span class="n">xyLineStyle</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="n">SOLID</span><span class="p">,</span> <span class="n">xyLineThickness</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="n">MEDIUM</span><span class="p">,</span>
-                  <span class="n">xyLineColor</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">''</span><span class="p">,</span> <span class="n">xyShowSymbol</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="n">ON</span><span class="p">,</span>
+                  <span class="n">xyLineColor</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">xyShowSymbol</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="n">ON</span><span class="p">,</span>
                   <span class="n">xySymbolMarker</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="n">DEFAULT</span><span class="p">,</span> <span class="n">xySymbolSize</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="n">MEDIUM</span><span class="p">,</span>
-                  <span class="n">xySymbolColor</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">''</span><span class="p">):</span>
-        <span class="sd">"""This method modifies the AnimationOptions object.</span>
+                  <span class="n">xySymbolColor</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;This method modifies the AnimationOptions object.</span>
 <span class="sd">        </span>
 <span class="sd">        Parameters</span>
 <span class="sd">        ----------</span>
@@ -529,11 +530,11 @@
 <span class="sd">        frameCounter</span>
 <span class="sd">            A Boolean specifying whether to show the frame counter. The default value is ON. </span>
 <span class="sd">        relativeScaling</span>
-<span class="sd">            A SymbolicConstant specifying the relative scaling when the AnimationController object's </span>
+<span class="sd">            A SymbolicConstant specifying the relative scaling when the AnimationController object&#39;s </span>
 <span class="sd">            *animationType*=SCALE_FACTOR or HARMONIC. Possible values are FULL_CYCLE and HALF_CYCLE. </span>
 <span class="sd">            The default value is HALF_CYCLE. </span>
 <span class="sd">        numScaleFactorFrames</span>
-<span class="sd">            An Int specifying the number of frames to be used when the AnimationController object's </span>
+<span class="sd">            An Int specifying the number of frames to be used when the AnimationController object&#39;s </span>
 <span class="sd">            *animationType*=SCALE_FACTOR or HARMONIC. The default value is 7. </span>
 <span class="sd">        timeHistoryMode</span>
 <span class="sd">            A SymbolicConstant specifying whether the time history animation is time based or frame </span>
@@ -566,7 +567,7 @@
 <span class="sd">            VERY_THIN, THIN, MEDIUM, and THICK. The default value is MEDIUM. </span>
 <span class="sd">        xyLineColor</span>
 <span class="sd">            A String specifying the color used to plot the *X–Y* time tracker line when </span>
-<span class="sd">            *xyUseHighlightMethod* = False. The default value is "Yellow". </span>
+<span class="sd">            *xyUseHighlightMethod* = False. The default value is &quot;Yellow&quot;. </span>
 <span class="sd">        xyShowSymbol</span>
 <span class="sd">            A Boolean specifying whether to show the time tracker symbols. The default value is ON. </span>
 <span class="sd">        xySymbolMarker</span>
@@ -591,9 +592,9 @@
 <span class="sd">            MEDIUM, and LARGE. The default value is MEDIUM. </span>
 <span class="sd">        xySymbolColor</span>
 <span class="sd">            A String specifying the color used to plot *X–Y* time tracker symbols when </span>
-<span class="sd">            *xyUseHighlightMethod* = False. When setting the color to 'Default' the system will take </span>
-<span class="sd">            the color associated to each curve. The default value is "Default". </span>
-<span class="sd">        """</span>
+<span class="sd">            *xyUseHighlightMethod* = False. When setting the color to &#39;Default&#39; the system will take </span>
+<span class="sd">            the color associated to each curve. The default value is &quot;Default&quot;. </span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span></div></div>
 </pre></div>
         </article>
