@@ -11,6 +11,7 @@ from ..BasicGeometry.Face import Face
 from ..BasicGeometry.ReferencePoint import ReferencePoint
 from ..BasicGeometry.VertexArray import VertexArray
 from ..Datum.Datum import Datum
+from ..Datum.DatumCsys import DatumCsys
 from ..EngineeringFeature.EngineeringFeature import EngineeringFeature
 from ..Mesh.MeshElement import MeshElement
 from ..Mesh.MeshElementArray import MeshElementArray
@@ -510,7 +511,7 @@ class AssemblyBase(Feature):
         """
         pass
 
-    def getDistance(self, entity1: str, entity2: str, printResults: Boolean = OFF):
+    def getDistance(self, entity1: str, entity2: str, printResults: Boolean = OFF, csys: DatumCsys = DatumCsys()):
         """Depending on the arguments provided, this method returns one of the following:
             - The distance between two points.
             - The minimum distance between a point and an edge.
@@ -525,7 +526,10 @@ class AssemblyBase(Feature):
             A ConstrainedSketchVertex, Datum point, MeshNode, or Edge specifying the second entity to which to
             measure. 
         printResults
-            A Boolean that determines whether a verbose output is to be printed. The default is True 
+            A Boolean that determines whether a verbose output is to be printed. The default is True
+        csys
+            A DatumCsys object specifying the desired coordinate system of the returned coordinates. By default,
+            coordinates are given in the global coordinate system.
 
         Returns
         -------
