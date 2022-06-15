@@ -15,7 +15,7 @@ Python script, even without opening the Abaqus/CAE.
 - PyPI: [pypi.org/project/pyabaqus](https://pypi.org/project/pyabaqus/)
 - Anaconda: [anaconda.org/haiiliin/pyabaqus](https://anaconda.org/haiiliin/pyabaqus)
 - Read the Docs: [readthedocs.org/projects/pyabaqus](https://readthedocs.org/projects/pyabaqus/)
-- Documentation: [pyabaqus.readthedocs.io](https://pyabaqus.readthedocs.io/en/latest/)
+- Documentation: [pyabaqus.haiiliin.com](https://pyabaqus.haiiliin.com/en/latest/)
 
 ## Pull Requests are Welcome
 
