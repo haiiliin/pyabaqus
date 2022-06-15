@@ -1,5 +1,15 @@
 # pyabaqus
+
 [![Documentation Status](https://readthedocs.org/projects/pyabaqus/badge/?version=latest)](https://pyabaqus.haiiliin.com/en/latest/?badge=latest)
+![Maintainer](https://img.shields.io/badge/maintainer-haiiliin-blue)
+[![PyPI license](https://img.shields.io/pypi/l/ansicolortags.svg)](https://pypi.python.org/pypi/ansicolortags/)
+[![PyPI pyversions](https://img.shields.io/pypi/pyversions/pyabaqus.svg)](https://pypi.python.org/pypi/pyabaqus/)
+[![made-with-sphinx-doc](https://img.shields.io/badge/Made%20with-Sphinx-1f425f.svg)](https://www.sphinx-doc.org/)
+[![PyPi version](https://badgen.net/pypi/v/pyabaqus/)](https://pypi.com/project/pyabaqus)
+[![GitHub release](https://img.shields.io/github/release/haiiliin/pyabaqus.svg)](https://GitHub.com/haiiliin/pyabaqus/releases/)
+[![PyPI download month](https://img.shields.io/pypi/dm/ansicolortags.svg)](https://pypi.python.org/pypi/pyabaqus/)
+[![PyPI download week](https://img.shields.io/pypi/dw/ansicolortags.svg)](https://pypi.python.org/pypi/ansicolortags/)
+[![PyPI download day](https://img.shields.io/pypi/dd/ansicolortags.svg)](https://pypi.python.org/pypi/ansicolortags/)
 
 Type hints for Abaqus/Python scripting
 
