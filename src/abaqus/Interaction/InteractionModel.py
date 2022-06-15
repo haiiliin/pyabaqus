@@ -754,12 +754,7 @@ class InteractionModel(InteractionContactControlModel,
                    surfaceOffsetAssignments: SurfaceOffsetAssignment = SurfaceOffsetAssignment(),
                    surfaceFeatureAssignments: SurfaceFeatureAssignment = SurfaceFeatureAssignment(),
                    smoothingAssignments: SmoothingAssignment = SmoothingAssignment(),
-<<<<<<< Updated upstream
-                   mainSecondaryAssignments: MainSecondaryAssignment = MainSecondaryAssignment(),
-                   polarityAssignments: PolarityAssignments = PolarityAssignments()):
-=======
                    mainSecondaryAssignments: MainSecondaryAssignment = MainSecondaryAssignment()):
->>>>>>> Stashed changes
         """This method creates a ContactExp object.
 
         Notes
@@ -814,11 +809,7 @@ class InteractionModel(InteractionContactControlModel,
                                                            includedPairs, excludedPairs, contactPropertyAssignments,
                                                            surfaceThicknessAssignments, surfaceOffsetAssignments,
                                                            surfaceFeatureAssignments, smoothingAssignments,
-<<<<<<< Updated upstream
-                                                           mainSecondaryAssignments, polarityAssignments)
-=======
                                                            mainSecondaryAssignments)
->>>>>>> Stashed changes
         return interaction
 
     def ContactProperty(self, name: str) -> ContactProperty:
