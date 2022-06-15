@@ -1301,8 +1301,7 @@ class BoundaryConditionModel(ModelBase):
         self.boundaryConditions[name] = boundaryCondition = SubmodelBC(name, createStepName, region, dof, globalStep,
                                                                        timeScale, shellThickness, globalDrivingRegion,
                                                                        absoluteExteriorTolerance, exteriorTolerance,
-                                                                       localCsys, globalIncrement, centerZoneSize,
-                                                                       intersectionOnly)
+                                                                       localCsys, globalIncrement, centerZoneSize)
         self.steps[createStepName].boundaryConditionStates[name] = SubmodelBCState()
         return boundaryCondition
 

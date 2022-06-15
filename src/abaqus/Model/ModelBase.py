@@ -32,9 +32,6 @@ from ..StepOutput.FieldOutputRequest import FieldOutputRequest
 from ..StepOutput.HistoryOutputRequest import HistoryOutputRequest
 from ..StepOutput.IntegratedOutputSection import IntegratedOutputSection
 from ..StepOutput.TimePoint import TimePoint
-from ..TableCollection.EventSeriesData import EventSeriesData
-from ..TableCollection.EventSeriesType import EventSeriesType
-from ..TableCollection.TableCollection import TableCollection
 
 
 class ModelBase:
@@ -153,12 +150,6 @@ class ModelBase:
         A repository of :py:class:`~abaqus.StepOutput.HistoryOutputRequest.HistoryOutputRequest` objects.
     optimizationTasks: dict[str, OptimizationTask]
         A repository of :py:class:`~abaqus.Optimization.OptimizationTask.OptimizationTask` objects.
-    tableCollections: dict[str, TableCollection]
-        A repository of :py:class:`~abaqus.TableCollection.TableCollection.TableCollection` objects.
-    eventSeriesTypes: dict[str, EventSeriesType]
-        A repository of :py:class:`~abaqus.TableCollection.EventSeriesType.EventSeriesType` objects.
-    eventSeriesDatas: dict[str, EventSeriesData]
-        A repository of :py:class:`~abaqus.TableCollection.EventSeriesData.EventSeriesData` objects.
 
     Notes
     -----
@@ -334,15 +325,6 @@ class ModelBase:
 
     # A repository of OptimizationTask objects. 
     optimizationTasks: dict[str, OptimizationTask] = dict[str, OptimizationTask]()
-
-    # A repository of TableCollection objects. 
-    tableCollections: dict[str, TableCollection] = dict[str, TableCollection]()
-
-    # A repository of EventSeriesType objects. 
-    eventSeriesTypes: dict[str, EventSeriesType] = dict[str, EventSeriesType]()
-
-    # A repository of EventSeriesData objects. 
-    eventSeriesDatas: dict[str, EventSeriesData] = dict[str, EventSeriesData]()
 
     def __init__(self, name: str, description: str = '', stefanBoltzmann: float = None,
                  absoluteZero: float = None, waveFormulation: SymbolicConstant = NOT_SET,

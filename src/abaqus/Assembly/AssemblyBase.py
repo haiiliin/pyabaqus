@@ -953,13 +953,16 @@ class AssemblyBase(Feature):
         """
         pass
 
-    def smoothNodes(self, nodes: tuple[MeshNode]):
+    def smoothNodes(self, nodes: tuple[MeshNode] = (), coordinates: tuple[MeshNode] = ()):
         """This method smooths the given nodes of a native mesh, moving them locally to a more
         optimal location that improves the quality of the mesh
         
         Parameters
         ----------
         nodes
-            A sequence of MeshNode objects or a Set object containing nodes. 
+            A sequence of MeshNode objects or a Set object containing nodes. Nodes that are not
+            part of native mesh only will be smoothed
+        coordinates
+            A sequence of MeshNode objects or a Set object containing nodes.
         """
         pass

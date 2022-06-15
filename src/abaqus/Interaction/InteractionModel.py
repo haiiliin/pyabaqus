@@ -4,7 +4,6 @@ from abaqusConstants import *
 from .InteractionContactControlModel import InteractionContactControlModel
 from .InteractionContactInitializationModel import InteractionContactInitializationModel
 from .InteractionPropertyModel import InteractionPropertyModel
-from .PolarityAssignments import PolarityAssignments
 from ..BasicGeometry.ModelDot import ModelDot
 from ..Datum.DatumAxis import DatumAxis
 from ..Interaction.AcousticImpedance import AcousticImpedance
@@ -22,7 +21,6 @@ from ..Interaction.ContactStd import ContactStd
 from ..Interaction.CyclicSymmetry import CyclicSymmetry
 from ..Interaction.ElasticFoundation import ElasticFoundation
 from ..Interaction.ExpContactControl import ExpContactControl
-from ..Interaction.ExpInitialization import ExpInitialization
 from ..Interaction.FilmCondition import FilmCondition
 from ..Interaction.FilmConditionProp import FilmConditionProp
 from ..Interaction.FluidCavity import FluidCavity
@@ -756,8 +754,12 @@ class InteractionModel(InteractionContactControlModel,
                    surfaceOffsetAssignments: SurfaceOffsetAssignment = SurfaceOffsetAssignment(),
                    surfaceFeatureAssignments: SurfaceFeatureAssignment = SurfaceFeatureAssignment(),
                    smoothingAssignments: SmoothingAssignment = SmoothingAssignment(),
+<<<<<<< Updated upstream
                    mainSecondaryAssignments: MainSecondaryAssignment = MainSecondaryAssignment(),
                    polarityAssignments: PolarityAssignments = PolarityAssignments()):
+=======
+                   mainSecondaryAssignments: MainSecondaryAssignment = MainSecondaryAssignment()):
+>>>>>>> Stashed changes
         """This method creates a ContactExp object.
 
         Notes
@@ -803,8 +805,6 @@ class InteractionModel(InteractionContactControlModel,
         mainSecondaryAssignments
             A MainSecondaryAssignment object specifying the main-secondary assignments in the
             contact domain.
-        polarityAssignments
-            A PolarityAssignments object specifying the polarity assignments in the contact domain.
 
         Returns
         -------
@@ -814,7 +814,11 @@ class InteractionModel(InteractionContactControlModel,
                                                            includedPairs, excludedPairs, contactPropertyAssignments,
                                                            surfaceThicknessAssignments, surfaceOffsetAssignments,
                                                            surfaceFeatureAssignments, smoothingAssignments,
+<<<<<<< Updated upstream
                                                            mainSecondaryAssignments, polarityAssignments)
+=======
+                                                           mainSecondaryAssignments)
+>>>>>>> Stashed changes
         return interaction
 
     def ContactProperty(self, name: str) -> ContactProperty:
@@ -1077,72 +1081,6 @@ class InteractionModel(InteractionContactControlModel,
         """
         self.interactions[name] = interaction = ExpContactControl(name, globTrkChoice, globTrkInc, fastLocalTrk,
                                                                   scalePenalty, warpCheckPeriod, warpCutoff)
-        return interaction
-
-    def ExpInitialization(self, name: str, overclosureType: SymbolicConstant = ADJUST,
-                          interferenceDistance: float = None, clearanceDistance: float = None,
-                          openingTolerance: float = None, overclosureTolerance: float = None,
-                          adjustNodalCoords: Boolean = True, secondaryNodesetName: str = None,
-                          stepFraction: float = 1) -> ExpInitialization:
-        """This method creates an ExpInitialization object.
-
-        Notes
-        -----
-            This function can be accessed by:
-            
-            .. code-block:: python
-            
-                mdb.models[name].ExpInitialization
-        
-        Parameters
-        ----------
-        name
-            A String specifying the contact initialization repository key.
-        overclosureType
-            A SymbolicConstant specifying the type of overclosure to be defined. Possible values are
-            ADJUST, INTERFERENCE, and CLEARANCE. The default value is ADJUST.
-        interferenceDistance
-            None or a Float specifying the interference distance. This argument is valid only when
-            *overclosureType*=INTERFERENCE. The default value is None.
-        clearanceDistance
-            None or a Float specifying the initial clearance distance. This argument is valid only
-            when *overclosureType*=CLEARANCE and must be specified in that case. The default value
-            is None.
-        openingTolerance
-            None or a Float specifying the distance tolerance within which initial openings will
-            undergo strain-free adjustments. This argument is not valid when
-            *overclosureType*=INTERFERENCE unless a value has been specified for
-            *interferenceDistance*. The default value is None.
-        overclosureTolerance
-            None or a Float specifying the distance tolerance within which initial overclosures will
-            undergo strain-free adjustments. The default value is None.
-        adjustNodalCoords
-            A Boolean specifying whether to resolve clearances/overclosures by adjusting the nodal
-            coordinates without creating strain in the model. *adjustNodalCoords*=True can be used
-            only for clearances/overclosures defined in the first step of an analysis. The default
-            value is True.
-        secondaryNodesetName
-            A String specifying the name of the node set containing the secondary nodes to be
-            included in the initial clearance specification. This argument is not valid when
-            *overclosureType*=INTERFERENCE and if *openingTolerance* or *overclosureTolerance* is
-            specified. The default value is None.
-        stepFraction
-            A Float specifying the fraction of the step time (between 0.0 and 1.0) in which the
-            interference fit has to be solved. The default value is 1.0. This argument is valid only
-            when *overclosureType*=INTERFERENCE.
-
-        Returns
-        -------
-            An ExpInitialization object.
-
-        Raises
-        ------
-            RangeError.
-        """
-        self.interactions[name] = interaction = ExpInitialization(name, overclosureType, interferenceDistance,
-                                                                  clearanceDistance, openingTolerance,
-                                                                  overclosureTolerance, adjustNodalCoords,
-                                                                  secondaryNodesetName, stepFraction)
         return interaction
 
     def FilmCondition(self, name: str, createStepName: str, surface: Region, definition: SymbolicConstant,

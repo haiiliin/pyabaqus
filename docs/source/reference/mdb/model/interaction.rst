@@ -212,12 +212,6 @@ ExpContactControl
 .. autoclass:: abaqus.Interaction.ExpContactControl.ExpContactControl
     :members:
 
-ExpInitialization
-~~~~~~~~~~~~~~~~~
-
-.. autoclass:: abaqus.Interaction.ExpInitialization.ExpInitialization
-    :members:
-
 FilmCondition
 ~~~~~~~~~~~~~
 
@@ -350,11 +344,6 @@ NormalBehavior
 .. autoclass:: abaqus.Interaction.NormalBehavior.NormalBehavior
     :members:
 
-PolarityAssignments
-~~~~~~~~~~~~~~~~~~~
-
-.. autoclass:: abaqus.Interaction.PolarityAssignments.PolarityAssignments
-    :members:
 
 PressurePenetration
 ~~~~~~~~~~~~~~~~~~~

@@ -9,12 +9,6 @@ Animation commands are used to create and control object-based and image-based a
 Object features
 ---------------
 
-AnimationController
-~~~~~~~~~~~~~~~~~~~
-
-.. autoclass:: abaqus.Animation.AnimationController.AnimationController
-    :members:
-
 AnimationOptions
 ~~~~~~~~~~~~~~~~
 

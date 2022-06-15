@@ -6,10 +6,9 @@ from ..Mesh.MeshAssembly import MeshAssembly
 from ..Property.PropertyAssembly import PropertyAssembly
 from ..Region.RegionAssembly import RegionAssembly
 from ..Region.Set import Set
-from ..TableCollection.TableCollectionAssembly import TableCollectionAssembly
 
 
-class Assembly(MeshEditAssembly, MeshAssembly, PropertyAssembly, RegionAssembly, TableCollectionAssembly):
+class Assembly(MeshEditAssembly, MeshAssembly, PropertyAssembly, RegionAssembly):
     """An Assembly object is a container for instances of parts. The Assembly object has no
     constructor command. Abaqus creates the *rootAssembly* member when a Model object is 
     created. 

@@ -279,38 +279,3 @@ class AcisMdb(MdbBase):
               Texterror: Failed to read VDA file.
         """
         return AcisFile()
-
-    @staticmethod
-    def openSolidworks(fileName: str, topology: SymbolicConstant = SOLID):
-        """This method creates an AcisFile object from a file containing Solidworks format
-        geometry. This object is subsequently used by the PartFromGeometryFile method.
-
-        Notes
-        -----
-            This function can be accessed by:
-            
-            .. code-block:: python
-            
-                openSolidworks
-        
-        Parameters
-        ----------
-        fileName
-            A String specifying the path to the Solidworks file to open.
-        topology
-            A SymbolicConstant specifying the topology of the data to be read from the file and of
-            the part to be created. Possible values are SOLID, SHELL, and WIRE. If *topology*=SOLID,
-            Abaqus/CAE attempts to attach cells to create a solid entity. If *topology*=SHELL,
-            Abaqus/CAE builds the body as a shell entity, not as a solid entity. The default value
-            is SOLID.
-
-        Returns
-        -------
-            An AcisFile object.
-
-        Raises
-        ------
-            - The data in the Solidworks file are corrupted.
-              Texterror: Failed to read Solidworks file.
-        """
-        return AcisFile()

@@ -6,7 +6,6 @@ from .Displayable import Displayable
 from .ImageOptions import ImageOptions
 from .Layer import Layer
 from .MovieOptions import MovieOptions
-from ..Animation.AnimationController import AnimationController
 from ..Annotation.AnnotationsToPlotArray import AnnotationsToPlotArray
 from ..DisplayGroup.Leaf import Leaf
 from ..DisplayOptions.AssemblyDisplayOptions import AssemblyDisplayOptions
@@ -204,8 +203,6 @@ class ViewportBase:
         An :py:class:`~abaqus.Canvas.ImageOptions.ImageOptions` object.
     movieOptions: MovieOptions
         A :py:class:`~abaqus.Canvas.MovieOptions.MovieOptions` object.
-    animationController: AnimationController
-        An :py:class:`~abaqus.Animation.AnimationController.AnimationController` object.
     drawings: tuple
         A tuple of Strings specifying keys to the session.drawings repository. The default value
         is an empty sequence.
@@ -427,9 +424,6 @@ class ViewportBase:
 
     # A MovieOptions object. 
     movieOptions: MovieOptions = MovieOptions()
-
-    # An AnimationController object. 
-    animationController: AnimationController = AnimationController()
 
     # A tuple of Strings specifying keys to the session.drawings repository. The default value 
     # is an empty sequence. 

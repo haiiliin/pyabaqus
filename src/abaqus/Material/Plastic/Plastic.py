@@ -5,7 +5,6 @@ from .Metal.Cyclic.CyclicHardening import CyclicHardening
 from .Metal.ORNL.Ornl import Ornl
 from .Metal.RateDependent.RateDependent import RateDependent
 from .Potential import Potential
-from .TensileFailure import TensileFailure
 
 
 class Plastic:
@@ -88,9 +87,6 @@ class Plastic:
 
     # An AnnealTemperature object. 
     annealTemperature: AnnealTemperature = AnnealTemperature(((),))
-
-    # A TensileFailure object. 
-    tensileFailure: TensileFailure = TensileFailure()
 
     def __init__(self, table: tuple, hardening: SymbolicConstant = ISOTROPIC, rate: Boolean = OFF,
                  dataType: SymbolicConstant = HALF_CYCLE, strainRangeDependency: Boolean = OFF,

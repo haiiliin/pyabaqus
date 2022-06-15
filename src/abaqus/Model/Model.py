@@ -16,13 +16,11 @@ from ..Section.SectionModel import SectionModel
 from ..Sketcher.SketchModel import SketchModel
 from ..Step.StepModel import StepModel
 from ..StepOutput.OutputModel import OutputModel
-from ..TableCollection.TableCollectionModel import TableCollectionModel
 
 
 class Model(AdaptivityModel, AmplitudeModel, AssemblyModel, BoundaryConditionModel, CalibrationModel, ConstraintModel,
             FilterModel, InteractionModel, LoadModel, MaterialModel, OptimizationTaskModel, PartModel,
-            PredefinedFieldModel, BeamSectionProfileModel, OutputModel, SectionModel, SketchModel, StepModel,
-            TableCollectionModel):
+            PredefinedFieldModel, BeamSectionProfileModel, OutputModel, SectionModel, SketchModel, StepModel):
     """Abaqus creates a Model object named `Model-1` when a session is started.
 
     Attributes
@@ -138,12 +136,6 @@ class Model(AdaptivityModel, AmplitudeModel, AssemblyModel, BoundaryConditionMod
         A repository of :py:class:`~abaqus.StepOutput.HistoryOutputRequest.HistoryOutputRequest` objects.
     optimizationTasks: dict[str, OptimizationTask]
         A repository of :py:class:`~abaqus.Optimization.OptimizationTask.OptimizationTask` objects.
-    tableCollections: dict[str, TableCollection]
-        A repository of :py:class:`~abaqus.TableCollection.TableCollection.TableCollection` objects.
-    eventSeriesTypes: dict[str, EventSeriesType]
-        A repository of :py:class:`~abaqus.TableCollection.EventSeriesType.EventSeriesType` objects.
-    eventSeriesDatas: dict[str, EventSeriesData]
-        A repository of :py:class:`~abaqus.TableCollection.EventSeriesData.EventSeriesData` objects.
 
     Notes
     -----

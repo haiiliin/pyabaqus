@@ -744,11 +744,6 @@ Swelling
 
 .. autoclass:: abaqus.Material.Plastic.Swelling.Swelling.Swelling
 
-TensileFailure
-**************
-
-.. autoclass:: abaqus.Material.Plastic.TensileFailure.TensileFailure
-
 ProgressiveDamageFailure
 ~~~~~~~~~~~~~~~~~~~~~~~~
 

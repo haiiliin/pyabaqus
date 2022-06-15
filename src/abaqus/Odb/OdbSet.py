@@ -24,10 +24,6 @@ class OdbSet:
     faces: SymbolicConstant
         A tuple of SymbolicConstants specifying the element face. If a set spans more than one
         part instance, this member is a sequence of sequences for each part instance.
-    instances: str
-        A repository of an :py:class:`~abaqus.Odb.OdbInstance.OdbInstance` object.
-    isInternal: Boolean
-        A Boolean specifying whether the set is internal.
 
     Notes
     -----
@@ -69,12 +65,6 @@ class OdbSet:
     # A tuple of SymbolicConstants specifying the element face. If a set spans more than one 
     # part instance, this member is a sequence of sequences for each part instance. 
     faces: SymbolicConstant = None
-
-    # A repository of an OdbInstance object. 
-    instances: str = ''
-
-    # A Boolean specifying whether the set is internal. 
-    isInternal: Boolean = OFF
 
     def __init__(self, name: str, nodes: tuple[OdbMeshNode]):
         """This method creates a node set from an array of OdbMeshNode objects (for part

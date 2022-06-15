@@ -16,12 +16,6 @@ Creat table collections for Model
 .. autoclass:: abaqus.TableCollection.TableCollectionModel.TableCollectionModel
     :members:
 
-Creat table collections for Step
-------------------------------------
-
-.. autoclass:: abaqus.TableCollection.TableCollectionStep.TableCollectionStep
-    :members:
-
 Object features
 ---------------
 

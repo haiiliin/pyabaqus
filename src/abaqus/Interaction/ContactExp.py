@@ -4,7 +4,6 @@ from abaqusConstants import *
 from .ContactPropertyAssignment import ContactPropertyAssignment
 from .Interaction import Interaction
 from .MainSecondaryAssignment import MainSecondaryAssignment
-from .PolarityAssignments import PolarityAssignments
 from .RegionPairs import RegionPairs
 from .SmoothingAssignment import SmoothingAssignment
 from .SurfaceFeatureAssignment import SurfaceFeatureAssignment
@@ -46,8 +45,6 @@ class ContactExp(Interaction):
     mainSecondaryAssignments: MainSecondaryAssignment
         A :py:class:`~abaqus.Interaction.MainSecondaryAssignment.MainSecondaryAssignment` object specifying the main-secondary assignments in the
         contact domain.
-    polarityAssignments: PolarityAssignments
-        A :py:class:`~abaqus.Interaction.PolarityAssignments.PolarityAssignments` object specifying the polarity assignments in the contact domain.
 
     Notes
     -----
@@ -101,9 +98,6 @@ class ContactExp(Interaction):
     # contact domain. 
     mainSecondaryAssignments: MainSecondaryAssignment = MainSecondaryAssignment()
 
-    # A PolarityAssignments object specifying the polarity assignments in the contact domain. 
-    polarityAssignments: PolarityAssignments = PolarityAssignments()
-
     @typing.overload
     def __init__(self, name: str, createStepName: str, useAllstar: Boolean = OFF,
                  globalSmoothing: Boolean = ON, includedPairs: RegionPairs = RegionPairs(),
@@ -113,8 +107,12 @@ class ContactExp(Interaction):
                  surfaceOffsetAssignments: SurfaceOffsetAssignment = SurfaceOffsetAssignment(),
                  surfaceFeatureAssignments: SurfaceFeatureAssignment = SurfaceFeatureAssignment(),
                  smoothingAssignments: SmoothingAssignment = SmoothingAssignment(),
+<<<<<<< Updated upstream
                  mainSecondaryAssignments: MainSecondaryAssignment = MainSecondaryAssignment(),
                  polarityAssignments: PolarityAssignments = PolarityAssignments()):
+=======
+                 mainSecondaryAssignments: MainSecondaryAssignment = MainSecondaryAssignment()):
+>>>>>>> Stashed changes
         """This method creates a ContactExp object.
 
         Notes
@@ -159,9 +157,7 @@ class ContactExp(Interaction):
             domain.
         mainSecondaryAssignments
             A MainSecondaryAssignment object specifying the main-secondary assignments in the 
-            contact domain. 
-        polarityAssignments
-            A PolarityAssignments object specifying the polarity assignments in the contact domain. 
+            contact domain.
 
         Returns
         -------
@@ -179,8 +175,7 @@ class ContactExp(Interaction):
                  surfaceOffsetAssignments: typing.Union[SymbolicConstant, float] = GLOBAL,
                  surfaceFeatureAssignments: typing.Union[SymbolicConstant, float] = PERIMETER,
                  smoothingAssignments: SymbolicConstant = None,
-                 mainSecondaryAssignments: SymbolicConstant = None,
-                 polarityAssignments: SymbolicConstant = None):
+                 mainSecondaryAssignments: SymbolicConstant = None):
         """This method creates a ContactExp object.
 
         Notes
@@ -259,15 +254,7 @@ class ContactExp(Interaction):
             - A region object specifying the second surface in the main-secondary assignment 
             definition. 
             - A SymbolicConstant specifying the status of the first surface. Possible values are 
-            MAIN and SECONDARY. 
-        polarityAssignments
-            A sequence of tuples specifying polarity assignments in the contact domain. Each tuple 
-            contains three entries: 
-            - A region object or the SymbolicConstant GLOBAL specifying the first surface that 
-            defines the polarity assignment. 
-            - A region object specifying the second surface in the polarity assignment definition. 
-            - A SymbolicConstant specifying the polarity of the second surface. Possible values are 
-            SPOS, SNEG, and TWO_SIDED. 
+            MAIN and SECONDARY.
 
         Returns
         -------
