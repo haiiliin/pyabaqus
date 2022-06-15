@@ -95,6 +95,10 @@ class OdbMeshRegionData:
         database file if it is located in another directory.
     variableLabel: str
         A String specifying the field output variable.
+    transformationType : SymbolicConstant
+        A SymbolicConstant specifying the type of the transformation to apply to the output.
+        Possible values are DEFAULT, NODAL, ANGULAR, and LAYUP_ORIENTATION.
+        The default is Default(Respect element orientations but supress nodal transformations)
     displayOutputPosition: SymbolicConstant
         A SymbolicConstant specifying the position where the output is displayed in the
         viewport. Possible values
@@ -218,6 +222,11 @@ class OdbMeshRegionData:
     # A String specifying the field output variable. 
     variableLabel: str = ''
 
+    # A SymbolicConstant specifying the type of the transformation to apply to the output.
+    # Possible values are DEFAULT, NODAL, ANGULAR, and LAYUP_ORIENTATION.
+    # The default is Default(Respect element orientations but supress nodal transformations)
+    transformationType: SymbolicConstant = DEFAULT
+
     # A SymbolicConstant specifying the position where the output is displayed in the 
     # viewport. Possible values 
     # are:UNDEFINED_POSITIONNODALINTEGRATION_POINTELEMENT_FACEELEMENT_NODALELEMENT_CENTROIDWHOLE_ELEMENTWHOLE_REGIONWHOLE_PART_INSTANCEWHOLE_MODELGENERAL_PARTICLEThe 
@@ -232,7 +241,8 @@ class OdbMeshRegionData:
                  includeFeatureBoundaries: str = ON, featureAngle: float = 20,
                  averageOnlyDisplayed: str = OFF, averagingThreshold: float = 75,
                  computeOrder: SymbolicConstant = EXTRAPOLATE_COMPUTE_AVERAGE,
-                 numericForm: SymbolicConstant = REAL, complexAngle: float = 0, sectionPoint: str = '',
+                 numericForm: SymbolicConstant = REAL, complexAngle: float = 0,
+                 transformationType: SymbolicConstant = DEFAULT, sectionPoint: str = '',
                  refinementType: SymbolicConstant = None, refinementLabel: str = '',
                  displayOutputPosition: SymbolicConstant = None):
         """This method creates an OdbMeshRegionData object.
@@ -336,7 +346,10 @@ class OdbMeshRegionData:
         complexAngle
             ​	A Float specifying the angle (in degrees) at which to display results that contain 
             complex numbers when *numericForm=COMPLEX_MAG_AT_ANGLE*=COMPLEX_MAG_AT_ANGLE. The 
-            default value is 0.0. 
+            default value is 0.0.
+        transformationType
+            A SymbolicConstant specifying the type of the transformation to apply to the output.
+            Possible values are DEFAULT, NODAL, ANGULAR, and LAYUP_ORIENTATION. The default is DEFAULT.
         sectionPoint
             ​	A Dictionary with String keys and String values. Each key specifies a region in the 
             model; the corresponding value specifies a section point within that region. For 

@@ -53,8 +53,6 @@ class GeostaticStep(AnalysisStep):
     timeIncrementationMethod: SymbolicConstant
         A SymbolicConstant specifying the time incrementation method to be used. Possible values
         are FIXED and AUTOMATIC. The default value is AUTOMATIC.
-    maxNumInc: int
-        An Int specifying the maximum number of increments in a step. The default value is 100.
     initialInc: float
         A Float specifying the initial time increment. The default value is the total time
         period for the step.Note:This parameter is ignored unless
@@ -193,10 +191,6 @@ class GeostaticStep(AnalysisStep):
     # A SymbolicConstant specifying the time incrementation method to be used. Possible values 
     # are FIXED and AUTOMATIC. The default value is AUTOMATIC. 
     timeIncrementationMethod: SymbolicConstant = AUTOMATIC
-
-    # An Int specifying the maximum number of increments in a step. The default value is 100. 
-    maxNumInc: int = 100
-
     # A Float specifying the initial time increment. The default value is the total time 
     # period for the step.Note:This parameter is ignored unless 
     # *timeIncrementationMethod*=AUTOMATIC. 
@@ -309,7 +303,7 @@ class GeostaticStep(AnalysisStep):
                  matrixStorage: SymbolicConstant = SOLVER_DEFAULT, maintainAttributes: Boolean = False,
                  solutionTechnique: SymbolicConstant = FULL_NEWTON, reformKernel: int = 8,
                  convertSDI: SymbolicConstant = PROPAGATED, utol: float = None, timePeriod: float = 1,
-                 timeIncrementationMethod: SymbolicConstant = AUTOMATIC, maxNumInc: int = 100,
+                 timeIncrementationMethod: SymbolicConstant = AUTOMATIC,
                  initialInc: float = None, minInc: float = None, maxInc: float = None):
         """This method creates a GeostaticStep object.
 
@@ -360,9 +354,7 @@ class GeostaticStep(AnalysisStep):
             is ignored unless *timeIncrementationMethod*=AUTOMATIC. 
         timeIncrementationMethod
             A SymbolicConstant specifying the time incrementation method to be used. Possible values 
-            are FIXED and AUTOMATIC. The default value is AUTOMATIC. 
-        maxNumInc
-            An Int specifying the maximum number of increments in a step. The default value is 100. 
+            are FIXED and AUTOMATIC. The default value is AUTOMATIC.
         initialInc
             A Float specifying the initial time increment. The default value is the total time 
             period for the step.Note:This parameter is ignored unless 
@@ -391,7 +383,7 @@ class GeostaticStep(AnalysisStep):
                   matrixStorage: SymbolicConstant = SOLVER_DEFAULT,
                   solutionTechnique: SymbolicConstant = FULL_NEWTON, reformKernel: int = 8,
                   convertSDI: SymbolicConstant = PROPAGATED, utol: float = None, timePeriod: float = 1,
-                  timeIncrementationMethod: SymbolicConstant = AUTOMATIC, maxNumInc: int = 100,
+                  timeIncrementationMethod: SymbolicConstant = AUTOMATIC,
                   initialInc: float = None, minInc: float = None, maxInc: float = None):
         """This method modifies the GeostaticStep object.
         
@@ -426,9 +418,7 @@ class GeostaticStep(AnalysisStep):
             is ignored unless *timeIncrementationMethod*=AUTOMATIC. 
         timeIncrementationMethod
             A SymbolicConstant specifying the time incrementation method to be used. Possible values 
-            are FIXED and AUTOMATIC. The default value is AUTOMATIC. 
-        maxNumInc
-            An Int specifying the maximum number of increments in a step. The default value is 100. 
+            are FIXED and AUTOMATIC. The default value is AUTOMATIC.
         initialInc
             A Float specifying the initial time increment. The default value is the total time 
             period for the step.Note:This parameter is ignored unless 

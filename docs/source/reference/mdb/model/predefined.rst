@@ -74,12 +74,6 @@ MaterialAssignment
 .. autoclass:: abaqus.PredefinedField.MaterialAssignment.MaterialAssignment
     :members:
 
-Stress
-~~~~~~
-
-.. autoclass:: abaqus.PredefinedField.Stress.Stress
-    :members:
-
 Temperature
 ~~~~~~~~~~~
 

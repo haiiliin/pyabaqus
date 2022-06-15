@@ -3,7 +3,6 @@ from .FluidCavityPressure import FluidCavityPressure
 from .InitialState import InitialState
 from .KinematicHardening import KinematicHardening
 from .MaterialAssignment import MaterialAssignment
-from .Stress import Stress
 from .Temperature import Temperature
 from .Velocity import Velocity
 from ..Assembly.PartInstanceArray import PartInstanceArray
@@ -12,7 +11,7 @@ from ..Region.Region import Region
 
 
 class PredefinedFieldModel(ModelBase, FluidCavityPressure, InitialState, KinematicHardening, MaterialAssignment,
-                           Stress, Temperature, Velocity):
+                           Temperature, Velocity):
     """Abaqus creates a Model object named `Model-1` when a session is started.
 
     Notes
@@ -191,50 +190,6 @@ class PredefinedFieldModel(ModelBase, FluidCavityPressure, InitialState, Kinemat
         """
         self.predefinedFields[name] = predefinedField = MaterialAssignment(name, instanceList, useFields,
                                                                            assignmentList, fieldList, colorList)
-        return predefinedField
-
-    def Stress(self, name: str, region: Region, distributionType: SymbolicConstant = UNIFORM,
-               sigma11: float = None, sigma22: float = None, sigma33: float = None,
-               sigma12: float = None, sigma13: float = None, sigma23: float = None) -> Stress:
-        """This method creates a Stress predefined field object.
-
-        Notes
-        -----
-            This function can be accessed by:
-            
-            .. code-block:: python
-            
-                mdb.models[name].Stress
-        
-        Parameters
-        ----------
-        name
-            A String specifying the repository key.
-        region
-            A Region object specifying the region to which the predefined field is applied. Region
-            is ignored if the predefined field has *distributionType*=FROM_FILE.
-        distributionType
-            A SymbolicConstant specifying whether the load is uniform. Possible values are UNIFORM
-            and FROM_FILE. The default value is UNIFORM.
-        sigma11
-            A Float specifying the first principal component of the stress.
-        sigma22
-            A Float specifying the second principal component of the stress.
-        sigma33
-            A Float specifying the third principal component of the stress.
-        sigma12
-            A Float specifying the first shear component of the stress.
-        sigma13
-            A Float specifying the second shear component of the stress.
-        sigma23
-            A Float specifying the third shear component of the stress.
-
-        Returns
-        -------
-            A Stress object.
-        """
-        self.predefinedFields[name] = predefinedField = Stress(name, region, distributionType, sigma11, sigma22,
-                                                               sigma33, sigma12, sigma13, sigma23)
         return predefinedField
 
     def Temperature(self, name: str, createStepName: str, region: Region,

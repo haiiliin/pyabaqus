@@ -25,8 +25,9 @@ class SectionLayer:
 
     def __init__(self, thickness: float, material: str, orientAngle: float = 0, numIntPts: int = 3,
                  axis: SymbolicConstant = AXIS_3, angle: float = 0,
-                 additionalRotationType: SymbolicConstant = ROTATION_NONE, plyName: str = '',
-                 orientation: SymbolicConstant = None, additionalRotationField: str = ''):
+                 additionalRotationType: SymbolicConstant = ROTATION_NONE,
+                 thicknessType: SymbolicConstant = THICKNESS_MAGNITUDE, plyName: str = '',
+                 orientation: SymbolicConstant = None, additionalRotationField: str = '', thicknessField: str = ''):
         """This method creates a SectionLayer object.
 
         Notes
@@ -64,7 +65,10 @@ class SectionLayer:
         additionalRotationType
             A SymbolicConstant specifying the method used to describe the additional rotation when a 
             valid orientation is specified. Possible values are ROTATION_NONE, ROTATION_ANGLE, and 
-            ROTATION_FIELD. The default value is ROTATION_NONE. 
+            ROTATION_FIELD. The default value is ROTATION_NONE.
+        thicknessType: SymbolicConstant
+            A SymbolicConstant specifying the method used to describe the thickness. Possible values
+            are THICKNESS_MAGNITUDE and THICKNESS_DISCRETE_FIELD. The default value is THICKNESS_MAGNITUDE.
         plyName
             A String specifying the ply identifier for this section layer. The default value is "". 
         orientation
@@ -74,7 +78,9 @@ class SectionLayer:
             default value is None. 
         additionalRotationField
             A String specifying the name of the field specifying the additional rotation. The 
-            default value is "". 
+            default value is "".
+        thicknessField
+            A String specifying the name of the field specifying the thickness The default value is "".
 
         Returns
         -------

@@ -5,7 +5,7 @@ from ..ConstrainedSketchVertex.ConstrainedSketchVertex import ConstrainedSketchV
 
 class DistanceDimension(ConstrainedSketchDimension):
 
-    def __init__(self, entity1: ConstrainedSketchVertex, entity2: ConstrainedSketchVertex,
+    def __init__(self, entity1: ConstrainedSketchVertex, vertex2: ConstrainedSketchVertex,
                  textPoint: tuple[float], value: float = None, reference: Boolean = OFF):
         """This method constructs a ConstrainedSketchDimension object between two
         ConstrainedSketchGeometry, or aConstrainedSketchVertex and ConstrainedSketchGeometry
@@ -23,8 +23,8 @@ class DistanceDimension(ConstrainedSketchDimension):
         ----------
         entity1
             A ConstrainedSketchVertex object or ConstrainedSketchGeometry object. 
-        entity2
-            A ConstrainedSketchVertex object or ConstrainedSketchGeometry object. 
+        vertex2
+            A ConstrainedSketchVertex object or ConstrainedSketchGeometry object.
         textPoint
             A pair of Floats specifying the location of the dimension text. 
         value
