@@ -46,6 +46,23 @@ contributions, please feel free to create your pull requests.
   for tests using Jupyter Notebooks to build the Abaqus model.
 
 ## Installation
+
+`pyabaqus` is using type hints features that require Python 3.9 or a later version, 
+please upgrade it to Python 3.9 or a later version if you are using an earlier version.
+
+`pyabaqus` is uploaded to [PyPI](https://pypi.org/project/pyabaqus), you can simply install 
+it using pip:
+```shell
+pip install pyabaqus
+```
+
+`pyabaqus` is also uploaded to [anaconda](https://anaconda.org/haiiliin/pyabaqus), you can use 
+`conda` to install it:
+```shell
+conda install -c haiiliin pyabaqus
+```
+
+## Optional Requirements
  
 In order to use the **Jupyter Notebook** feature, you have to install the following packages:
 ```shell
@@ -63,21 +80,6 @@ conda install jupyter notebook
 Try the following command to make sure the `jupyter` command is available. 
 ```shell
 jupyter --version
-```
-
-`pyabaqus` is using type hints features that require Python 3.9 or a later version, 
-please upgrade it to Python 3.9 or a later version if you are using an earlier version.
-
-`pyabaqus` is uploaded to [PyPI](https://pypi.org/project/pyabaqus), you can simply install 
-it using pip:
-```shell
-pip install pyabaqus
-```
-
-`pyabaqus` is also uploaded to [anaconda](https://anaconda.org/haiiliin/pyabaqus), you can use 
-`conda` to install it:
-```shell
-conda install -c haiiliin pyabaqus
 ```
 
 You may install the latest development version by cloning the 
