@@ -8,21 +8,8 @@ A PredefinedField object stores the non-propagating data of a predefined field a
 Create predefined fields
 ------------------------
 
-.. automethod:: abaqus.PredefinedField.PredefinedFieldModel.PredefinedFieldModel.Field
-
-.. automethod:: abaqus.PredefinedField.PredefinedFieldModel.PredefinedFieldModel.FluidCavityPressure
-
-.. automethod:: abaqus.PredefinedField.PredefinedFieldModel.PredefinedFieldModel.InitialState
-
-.. automethod:: abaqus.PredefinedField.PredefinedFieldModel.PredefinedFieldModel.KinematicHardening
-
-.. automethod:: abaqus.PredefinedField.PredefinedFieldModel.PredefinedFieldModel.MaterialAssignment
-
-.. automethod:: abaqus.PredefinedField.PredefinedFieldModel.PredefinedFieldModel.Stress
-
-.. automethod:: abaqus.PredefinedField.PredefinedFieldModel.PredefinedFieldModel.Temperature
-
-.. automethod:: abaqus.PredefinedField.PredefinedFieldModel.PredefinedFieldModel.Velocity
+.. autoclass:: abaqus.PredefinedField.PredefinedFieldModel.PredefinedFieldModel
+    :members:
 
 Object features
 ---------------

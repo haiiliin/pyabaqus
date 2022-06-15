@@ -10,36 +10,6 @@ Create parts
 .. autoclass:: abaqus.Part.PartModel.PartModel
     :noindex:
 
-.. autosummary::
+.. autoclass:: abaqus.Part.PartBase.PartBase
     :noindex:
-    :doctree: From other files
-    
-    .. automethod:: abaqus.Part.PartBase.PartBase.PartFromBooleanCut
-
-    .. automethod:: abaqus.Part.PartBase.PartBase.PartFromBooleanMerge
-
-    .. automethod:: abaqus.Part.PartBase.PartBase.PartFromExtrude2DMesh
-
-    .. automethod:: abaqus.Part.PartBase.PartBase.PartFromGeometryFile
-
-    .. automethod:: abaqus.Part.PartBase.PartBase.PartFromInstanceMesh
-
-    .. automethod:: abaqus.Part.PartBase.PartBase.PartFromGeometryFile
-
-    .. automethod:: abaqus.Part.PartBase.PartBase.PartFromMesh
-
-    .. automethod:: abaqus.Part.PartBase.PartBase.PartFromMeshMirror
-
-    .. automethod:: abaqus.Part.PartBase.PartBase.PartFromNodesAndElements
-
-    .. automethod:: abaqus.Part.PartBase.PartBase.PartFromOdb
-
-    .. automethod:: abaqus.Part.PartBase.PartBase.PartFromSection3DMeshByPlane
-
-    .. automethod:: abaqus.Part.PartBase.PartBase.PartFromSubstructure
-
-    .. automethod:: abaqus.Part.PartBase.PartBase.Part2DGeomFrom2DMesh
-
-    .. automethod:: abaqus.Part.PartBase.PartBase.PartFromSubstructure
-
-    .. automethod:: abaqus.Part.PartBase.PartBase.PartFromSubstructure
+    :members: PartFromBooleanCut, PartFromBooleanMerge, PartFromExtrude2DMesh, PartFromGeometryFile, PartFromInstanceMesh, PartFromMesh, PartFromMeshMirror, PartFromNodesAndElements, PartFromOdb, PartFromSection3DMeshByPlane, PartFromSubstructure, Part2DGeomFrom2DMesh, PartFromSubstructure

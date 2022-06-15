@@ -8,27 +8,15 @@ The Adaptivity commands are used to define objects, perform analyses, and calcul
 Create adaptivity mesh control features
 ---------------------------------------
 
-.. automethod:: abaqus.Adaptivity.AdaptivityModel.AdaptivityModel.AdaptiveMeshConstraint
-
-.. automethod:: abaqus.Adaptivity.AdaptivityModel.AdaptivityModel.AdaptiveMeshControl
-
-.. automethod:: abaqus.Adaptivity.AdaptivityModel.AdaptivityModel.DisplacementAdaptiveMeshConstraint
-
-.. automethod:: abaqus.Adaptivity.AdaptivityModel.AdaptivityModel.RemeshingRule
-
-.. automethod:: abaqus.Adaptivity.AdaptivityModel.AdaptivityModel.VelocityAdaptiveMeshConstraint
+.. autoclass:: abaqus.Adaptivity.AdaptivityModel.AdaptivityModel
+    :members:
 
 
 Create adaptivity mesh state features
 -------------------------------------
 
-.. automethod:: abaqus.Adaptivity.AdaptivityStep.AdaptivityStep.AdaptiveMeshConstraintState
-
-.. automethod:: abaqus.Adaptivity.AdaptivityStep.AdaptivityStep.DisplacementAdaptiveMeshConstraintState
-
-.. automethod:: abaqus.Adaptivity.AdaptivityStep.AdaptivityStep.VelocityAdaptiveMeshConstraintState
-
-.. automethod:: abaqus.Adaptivity.AdaptivityStep.AdaptivityStep.AdaptiveMeshDomain
+.. autoclass:: abaqus.Adaptivity.AdaptivityStep.AdaptivityStep
+    :members:
 
 
 Create features for AdaptivityIteration

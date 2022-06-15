@@ -7,5 +7,5 @@ Features in Abaqus/CAE include Parts, Datums, Partitions, and Assembly operation
 Create instances
 ----------------
 
-.. automethod:: abaqus.Assembly.AssemblyModel.AssemblyModel.Instance
+.. autoclass:: abaqus.Assembly.AssemblyModel.AssemblyModel
     :noindex:

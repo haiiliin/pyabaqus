@@ -8,7 +8,8 @@ The calibration commands are used for material calibration.
 Create material calibrations
 ----------------------------
 
-.. automethod:: abaqus.Calibration.CalibrationModel.CalibrationModel.Calibration
+.. autoclass:: abaqus.Calibration.CalibrationModel.CalibrationModel
+    :members:
 
 
 Object features

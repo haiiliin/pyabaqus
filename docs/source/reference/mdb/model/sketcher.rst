@@ -8,7 +8,8 @@ Sketcher commands are used to define the entities, such as the geometry, constra
 Create constrained sketches
 ---------------------------
 
-.. automethod:: abaqus.Sketcher.SketchModel.SketchModel.ConstrainedSketch
+.. autoclass:: abaqus.Sketcher.SketchModel.SketchModel
+    :members:
 
 
 Object features

@@ -8,23 +8,8 @@ The Constraint commands define constraints between regions of the model.
 Create constraints
 ------------------
 
-.. automethod:: abaqus.Constraint.ConstraintModel.ConstraintModel.AdjustPoints
-
-.. automethod:: abaqus.Constraint.ConstraintModel.ConstraintModel.Coupling
-
-.. automethod:: abaqus.Constraint.ConstraintModel.ConstraintModel.DisplayBody
-
-.. automethod:: abaqus.Constraint.ConstraintModel.ConstraintModel.EmbeddedRegion
-
-.. automethod:: abaqus.Constraint.ConstraintModel.ConstraintModel.Equation
-
-.. automethod:: abaqus.Constraint.ConstraintModel.ConstraintModel.MultipointConstraint
-
-.. automethod:: abaqus.Constraint.ConstraintModel.ConstraintModel.RigidBody
-
-.. automethod:: abaqus.Constraint.ConstraintModel.ConstraintModel.ShellSolidCoupling
-
-.. automethod:: abaqus.Constraint.ConstraintModel.ConstraintModel.Tie
+.. autoclass:: abaqus.Constraint.ConstraintModel.ConstraintModel
+    :members:
 
 
 Object features
