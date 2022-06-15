@@ -1,6 +1,6 @@
 package:
   name: pyabaqus
-  version: 1.0.16
+  version: 1.0.18
 
 build:
   script: python setup.py install --single-version-externally-managed --record=record.txt
@@ -8,7 +8,7 @@ build:
 
 source:
   git_url: https://github.com/haiiliin/pyabaqus.git
-  git_rev: "V1.0.16"
+  git_rev: "V1.0.18"
 
 requirements:
   build:
