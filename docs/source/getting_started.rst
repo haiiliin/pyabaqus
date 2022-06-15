@@ -128,9 +128,9 @@ the local directory:
 
 .. code-block:: sh
 
+    pip install ipyparams
     git clone https://github.com/Haiiliin/pyabaqus.git
     cd pyabaqus
-    pip install ipyparams
     python setup.py install
 
 

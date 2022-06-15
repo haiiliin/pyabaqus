@@ -23,7 +23,7 @@ copyright = '2022, WANG Hailin'
 author = 'WANG Hailin'
 
 # The full version, including alpha/beta/rc tags
-release = '1.0.19'
+release = '1.1'
 
 
 # -- General configuration ---------------------------------------------------
@@ -34,20 +34,15 @@ release = '1.0.19'
 extensions = [
     'sphinx_toolbox.more_autodoc.overloads',
     'sphinx.ext.autodoc',
-    'sphinx.ext.autosummary',
     'numpydoc',
     'sphinx.ext.mathjax',
     'sphinx.ext.viewcode',
     'sphinx.ext.githubpages', 
 ]
 
-autosummary_generate = True  # Turn on sphinx.ext.autosummary
 numpydoc_show_class_members = True
 numpydoc_show_inherited_class_members = False
 numpydoc_xref_param_type = True
-
-autoclass_content = 'both'
-
 add_module_names = False
 
 # True to convert the type definitions in the docstrings as references. Defaults to False.
