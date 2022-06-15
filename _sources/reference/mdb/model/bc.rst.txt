@@ -8,51 +8,8 @@ A specific type of boundary condition object and a specific type of boundary con
 Create boundary conditions
 --------------------------
 
-.. automethod:: abaqus.BoundaryCondition.BoundaryConditionModel.BoundaryConditionModel.AccelerationBaseMotionBC
-
-.. automethod:: abaqus.BoundaryCondition.BoundaryConditionModel.BoundaryConditionModel.AccelerationBC
-
-.. automethod:: abaqus.BoundaryCondition.BoundaryConditionModel.BoundaryConditionModel.AcousticPressureBC
-
-.. automethod:: abaqus.BoundaryCondition.BoundaryConditionModel.BoundaryConditionModel.Calibration
-
-.. automethod:: abaqus.BoundaryCondition.BoundaryConditionModel.BoundaryConditionModel.ConcentrationBC
-
-.. automethod:: abaqus.BoundaryCondition.BoundaryConditionModel.BoundaryConditionModel.ConnAccelerationBC
-
-.. automethod:: abaqus.BoundaryCondition.BoundaryConditionModel.BoundaryConditionModel.ConnDisplacementBC
-
-.. automethod:: abaqus.BoundaryCondition.BoundaryConditionModel.BoundaryConditionModel.ConnVelocityBC
-
-.. automethod:: abaqus.BoundaryCondition.BoundaryConditionModel.BoundaryConditionModel.DisplacementBaseMotionBC
-
-.. automethod:: abaqus.BoundaryCondition.BoundaryConditionModel.BoundaryConditionModel.DisplacementBC
-
-.. automethod:: abaqus.BoundaryCondition.BoundaryConditionModel.BoundaryConditionModel.ElectricPotentialBC
-
-.. automethod:: abaqus.BoundaryCondition.BoundaryConditionModel.BoundaryConditionModel.EulerianBC
-
-.. automethod:: abaqus.BoundaryCondition.BoundaryConditionModel.BoundaryConditionModel.EulerianMotionBC
-
-.. automethod:: abaqus.BoundaryCondition.BoundaryConditionModel.BoundaryConditionModel.FluidCavityPressureBC
-
-.. automethod:: abaqus.BoundaryCondition.BoundaryConditionModel.BoundaryConditionModel.MagneticVectorPotentialBC
-
-.. automethod:: abaqus.BoundaryCondition.BoundaryConditionModel.BoundaryConditionModel.MaterialFlowBC
-
-.. automethod:: abaqus.BoundaryCondition.BoundaryConditionModel.BoundaryConditionModel.PorePressureBC
-
-.. automethod:: abaqus.BoundaryCondition.BoundaryConditionModel.BoundaryConditionModel.RetainedNodalDofsBC
-
-.. automethod:: abaqus.BoundaryCondition.BoundaryConditionModel.BoundaryConditionModel.SecondaryBaseBC
-
-.. automethod:: abaqus.BoundaryCondition.BoundaryConditionModel.BoundaryConditionModel.SubmodelBC
-
-.. automethod:: abaqus.BoundaryCondition.BoundaryConditionModel.BoundaryConditionModel.TemperatureBC
-
-.. automethod:: abaqus.BoundaryCondition.BoundaryConditionModel.BoundaryConditionModel.VelocityBaseMotionBC
-
-.. automethod:: abaqus.BoundaryCondition.BoundaryConditionModel.BoundaryConditionModel.VelocityBC
+.. autoclass:: abaqus.BoundaryCondition.BoundaryConditionModel.BoundaryConditionModel
+    :members:
 
 
 Object features

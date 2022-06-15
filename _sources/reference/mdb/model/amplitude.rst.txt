@@ -10,49 +10,15 @@ Create amplitudes
 In Mdb
 ~~~~~~
 
-.. automethod:: abaqus.Amplitude.AmplitudeModel.AmplitudeModel.ActuatorAmplitude
-
-.. automethod:: abaqus.Amplitude.AmplitudeModel.AmplitudeModel.DecayAmplitude
-
-.. automethod:: abaqus.Amplitude.AmplitudeModel.AmplitudeModel.EquallySpacedAmplitude
-
-.. automethod:: abaqus.Amplitude.AmplitudeModel.AmplitudeModel.ModulatedAmplitude
-
-.. automethod:: abaqus.Amplitude.AmplitudeModel.AmplitudeModel.PeriodicAmplitude
-
-.. automethod:: abaqus.Amplitude.AmplitudeModel.AmplitudeModel.PsdDefinition
-
-.. automethod:: abaqus.Amplitude.AmplitudeModel.AmplitudeModel.SmoothStepAmplitude
-
-.. automethod:: abaqus.Amplitude.AmplitudeModel.AmplitudeModel.SolutionDependentAmplitude
-
-.. automethod:: abaqus.Amplitude.AmplitudeModel.AmplitudeModel.SpectrumAmplitude
-
-.. automethod:: abaqus.Amplitude.AmplitudeModel.AmplitudeModel.TabularAmplitude
+.. autoclass:: abaqus.Amplitude.AmplitudeModel.AmplitudeModel
+    :members:
 
 
 In Odb
 ~~~~~~
 
-.. automethod:: abaqus.Amplitude.AmplitudeOdb.AmplitudeOdb.ActuatorAmplitude
-
-.. automethod:: abaqus.Amplitude.AmplitudeOdb.AmplitudeOdb.DecayAmplitude
-
-.. automethod:: abaqus.Amplitude.AmplitudeOdb.AmplitudeOdb.EquallySpacedAmplitude
-
-.. automethod:: abaqus.Amplitude.AmplitudeOdb.AmplitudeOdb.ModulatedAmplitude
-
-.. automethod:: abaqus.Amplitude.AmplitudeOdb.AmplitudeOdb.PeriodicAmplitude
-
-.. automethod:: abaqus.Amplitude.AmplitudeOdb.AmplitudeOdb.PsdDefinition
-
-.. automethod:: abaqus.Amplitude.AmplitudeOdb.AmplitudeOdb.SmoothStepAmplitude
-
-.. automethod:: abaqus.Amplitude.AmplitudeOdb.AmplitudeOdb.SolutionDependentAmplitude
-
-.. automethod:: abaqus.Amplitude.AmplitudeOdb.AmplitudeOdb.SpectrumAmplitude
-
-.. automethod:: abaqus.Amplitude.AmplitudeOdb.AmplitudeOdb.TabularAmplitude
+.. autoclass:: abaqus.Amplitude.AmplitudeOdb.AmplitudeOdb
+    :members:
 
 
 Object features

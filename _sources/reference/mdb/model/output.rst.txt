@@ -8,13 +8,14 @@ Step output commands are used for configuring output requests, integrated output
 Create output requests for Model
 --------------------------------
 
-.. automethod:: abaqus.StepOutput.OutputModel.OutputModel.FieldOutputRequest
+.. autoclass:: abaqus.StepOutput.OutputModel.OutputModel
+    :members:
 
-.. automethod:: abaqus.StepOutput.OutputModel.OutputModel.HistoryOutputRequest
+Create DiagnosticPrint, Monitor and Restart information for Step
+---------------------------------------------------------
 
-.. automethod:: abaqus.StepOutput.OutputModel.OutputModel.IntegratedOutputSection
-
-.. automethod:: abaqus.StepOutput.OutputModel.OutputModel.TimePoint
+.. autoclass:: abaqus.StepOutput.OutputStep.OutputStep
+    :members:
 
 Object features
 ---------------

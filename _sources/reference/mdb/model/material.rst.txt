@@ -10,124 +10,21 @@ Create materials
 In Mdb
 ~~~~~~
 
-.. automethod:: abaqus.Material.MaterialModel.MaterialModel.Material
+.. autoclass:: abaqus.Material.MaterialModel.MaterialModel
+    :members:
 
 In Odb
 ~~~~~~
 
-.. automethod:: abaqus.Material.MaterialOdb.MaterialOdb.Material
+.. autoclass:: abaqus.Material.MaterialOdb.MaterialOdb
+    :members:
 
 
 Assign properties to the material
 ---------------------------------
 
-.. automethod:: abaqus.Material.Material.Material.AcousticMedium
-
-.. automethod:: abaqus.Material.Material.Material.BrittleCracking
-
-.. automethod:: abaqus.Material.Material.Material.CapPlasticity
-
-.. automethod:: abaqus.Material.Material.Material.CastIronPlasticity
-
-.. automethod:: abaqus.Material.Material.Material.ClayPlasticity
-
-.. automethod:: abaqus.Material.Material.Material.Concrete
-
-.. automethod:: abaqus.Material.Material.Material.ConcreteDamagedPlasticity
-
-.. automethod:: abaqus.Material.Material.Material.Conductivity
-
-.. automethod:: abaqus.Material.Material.Material.Creep
-
-.. automethod:: abaqus.Material.Material.Material.CrushableFoam
-
-.. automethod:: abaqus.Material.Material.Material.Damping
-
-.. automethod:: abaqus.Material.Material.Material.DeformationPlasticity
-
-.. automethod:: abaqus.Material.Material.Material.Density
-
-.. automethod:: abaqus.Material.Material.Material.Depvar
-
-.. automethod:: abaqus.Material.Material.Material.Dielectric
-
-.. automethod:: abaqus.Material.Material.Material.Diffusivity
-
-.. automethod:: abaqus.Material.Material.Material.DruckerPrager
-
-.. automethod:: abaqus.Material.Material.Material.Elastic
-
-.. automethod:: abaqus.Material.Material.Material.ElectricalConductivity
-
-.. automethod:: abaqus.Material.Material.Material.Eos
-
-.. automethod:: abaqus.Material.Material.Material.Expansion
-
-.. automethod:: abaqus.Material.Material.Material.FluidLeakoff
-
-.. automethod:: abaqus.Material.Material.Material.GapFlow
-
-.. automethod:: abaqus.Material.Material.Material.GasketMembraneElastic
-
-.. automethod:: abaqus.Material.Material.Material.GasketThicknessBehavior
-
-.. automethod:: abaqus.Material.Material.Material.GasketTransverseShearElastic
-
-.. automethod:: abaqus.Material.Material.Material.Gel
-
-.. automethod:: abaqus.Material.Material.Material.Hyperelastic
-
-.. automethod:: abaqus.Material.Material.Material.Hyperfoam
-
-.. automethod:: abaqus.Material.Material.Material.Hypoelastic
-
-.. automethod:: abaqus.Material.Material.Material.InelasticHeatFraction
-
-.. automethod:: abaqus.Material.Material.Material.JouleHeatFraction
-
-.. automethod:: abaqus.Material.Material.Material.LatentHeat
-
-.. automethod:: abaqus.Material.Material.Material.LowDensityFoam
-
-.. automethod:: abaqus.Material.Material.Material.MagneticPermeability
-
-.. automethod:: abaqus.Material.Material.Material.MohrCoulombPlasticity
-
-.. automethod:: abaqus.Material.Material.Material.MoistureSwelling
-
-.. automethod:: abaqus.Material.Material.Material.Permeability
-
-.. automethod:: abaqus.Material.Material.Material.Piezoelectric
-
-.. automethod:: abaqus.Material.Material.Material.Plastic
-
-.. automethod:: abaqus.Material.Material.Material.PorousBulkModuli
-
-.. automethod:: abaqus.Material.Material.Material.PorousElastic
-
-.. automethod:: abaqus.Material.Material.Material.PorousMetalPlasticity
-
-.. automethod:: abaqus.Material.Material.Material.Regularization
-
-.. automethod:: abaqus.Material.Material.Material.Solubility
-
-.. automethod:: abaqus.Material.Material.Material.Sorption
-
-.. automethod:: abaqus.Material.Material.Material.SpecificHeat
-
-.. automethod:: abaqus.Material.Material.Material.Swelling
-
-.. automethod:: abaqus.Material.Material.Material.UserMaterial
-
-.. automethod:: abaqus.Material.Material.Material.UserOutputVariables
-
-.. automethod:: abaqus.Material.Material.Material.Viscoelastic
-
-.. automethod:: abaqus.Material.Material.Material.Viscosity
-
-.. automethod:: abaqus.Material.Material.Material.Viscous
-
-.. automethod:: abaqus.Material.Material.Material.materialsFromOdb
+.. autoclass:: abaqus.Material.Material.Material
+    :members:
 
 
 Object features

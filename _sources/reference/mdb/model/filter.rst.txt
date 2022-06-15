@@ -10,24 +10,14 @@ Create filters
 In Mdb
 ~~~~~~
 
-.. automethod:: abaqus.Filter.FilterModel.FilterModel.ButterworthFilter
-
-.. automethod:: abaqus.Filter.FilterModel.FilterModel.Chebyshev1Filter
-
-.. automethod:: abaqus.Filter.FilterModel.FilterModel.Chebyshev2Filter
-
-.. automethod:: abaqus.Filter.FilterModel.FilterModel.OperatorFilter
+.. autoclass:: abaqus.Filter.FilterModel.FilterModel
+    :members:
 
 In Odb
 ~~~~~~
 
-.. automethod:: abaqus.Filter.FilterOdb.FilterOdb.ButterworthFilter
-
-.. automethod:: abaqus.Filter.FilterOdb.FilterOdb.Chebyshev1Filter
-
-.. automethod:: abaqus.Filter.FilterOdb.FilterOdb.Chebyshev2Filter
-
-.. automethod:: abaqus.Filter.FilterOdb.FilterOdb.OperatorFilter
+.. autoclass:: abaqus.Filter.FilterOdb.FilterOdb
+    :members:
 
 
 Object features

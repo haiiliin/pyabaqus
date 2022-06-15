@@ -15,75 +15,8 @@ The Load object is the abstract base type for other Load objects. The Load objec
 Create loads
 ~~~~~~~~~~~~
 
-.. automethod:: abaqus.Load.LoadModel.LoadModel.BodyCharge
-
-.. automethod:: abaqus.Load.LoadModel.LoadModel.BodyConcentrationFlux
-
-.. automethod:: abaqus.Load.LoadModel.LoadModel.BodyCurrent
-
-.. automethod:: abaqus.Load.LoadModel.LoadModel.BodyCurrentDensity
-
-.. automethod:: abaqus.Load.LoadModel.LoadModel.BodyForce
-
-.. automethod:: abaqus.Load.LoadModel.LoadModel.BodyHeatFlux
-
-.. automethod:: abaqus.Load.LoadModel.LoadModel.BoltLoad
-
-.. automethod:: abaqus.Load.LoadModel.LoadModel.ConcCharge
-
-.. automethod:: abaqus.Load.LoadModel.LoadModel.ConcConcFlux
-
-.. automethod:: abaqus.Load.LoadModel.LoadModel.ConcCurrent
-
-.. automethod:: abaqus.Load.LoadModel.LoadModel.ConcPoreFluid
-
-.. automethod:: abaqus.Load.LoadModel.LoadModel.ConcentratedForce
-
-.. automethod:: abaqus.Load.LoadModel.LoadModel.ConcentratedHeatFlux
-
-.. automethod:: abaqus.Load.LoadModel.LoadModel.ConnectorForce
-
-.. automethod:: abaqus.Load.LoadModel.LoadModel.ConnectorMoment
-
-.. automethod:: abaqus.Load.LoadModel.LoadModel.CoriolisForce
-
-.. automethod:: abaqus.Load.LoadModel.LoadModel.Gravity
-
-.. automethod:: abaqus.Load.LoadModel.LoadModel.InertiaRelief
-
-.. automethod:: abaqus.Load.LoadModel.LoadModel.InwardVolAccel
-
-.. automethod:: abaqus.Load.LoadModel.LoadModel.LineLoad
-
-.. automethod:: abaqus.Load.LoadModel.LoadModel.Moment
-
-.. automethod:: abaqus.Load.LoadModel.LoadModel.PEGLoad
-
-.. automethod:: abaqus.Load.LoadModel.LoadModel.PipePressure
-
-.. automethod:: abaqus.Load.LoadModel.LoadModel.Pressure
-
-.. automethod:: abaqus.Load.LoadModel.LoadModel.RotationalBodyForce
-
-.. automethod:: abaqus.Load.LoadModel.LoadModel.ShellEdgeLoad
-
-.. automethod:: abaqus.Load.LoadModel.LoadModel.SubmodelSB
-
-.. automethod:: abaqus.Load.LoadModel.LoadModel.SubstructureLoad
-
-.. automethod:: abaqus.Load.LoadModel.LoadModel.SurfaceCharge
-
-.. automethod:: abaqus.Load.LoadModel.LoadModel.SurfaceConcentrationFlux
-
-.. automethod:: abaqus.Load.LoadModel.LoadModel.SurfaceCurrent
-
-.. automethod:: abaqus.Load.LoadModel.LoadModel.SurfaceCurrentDensity
-
-.. automethod:: abaqus.Load.LoadModel.LoadModel.SurfaceHeatFlux
-
-.. automethod:: abaqus.Load.LoadModel.LoadModel.SurfacePoreFluid
-
-.. automethod:: abaqus.Load.LoadModel.LoadModel.SurfaceTraction
+.. autoclass:: abaqus.Load.LoadModel.LoadModel
+    :members:
 
 
 Object features of loads

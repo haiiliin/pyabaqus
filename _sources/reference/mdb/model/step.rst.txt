@@ -14,67 +14,8 @@ The Step commands described in this chapter are used to create and configure ana
 Create steps
 ------------
 
-.. automethod:: abaqus.Step.StepModel.StepModel.AnnealStep
-
-.. automethod:: abaqus.Step.StepModel.StepModel.BuckleStep
-
-.. automethod:: abaqus.Step.StepModel.StepModel.ComplexFrequencyStep
-
-.. automethod:: abaqus.Step.StepModel.StepModel.CoupledTempDisplacementStep
-
-.. automethod:: abaqus.Step.StepModel.StepModel.CoupledThermalElectricStep
-
-.. automethod:: abaqus.Step.StepModel.StepModel.CoupledThermalElectricalStructuralStep
-
-.. automethod:: abaqus.Step.StepModel.StepModel.DirectCyclicStep
-
-.. automethod:: abaqus.Step.StepModel.StepModel.EmagTimeHarmonicStep
-
-.. automethod:: abaqus.Step.StepModel.StepModel.ExplicitDynamicsStep
-
-.. automethod:: abaqus.Step.StepModel.StepModel.FrequencyStep
-
-.. automethod:: abaqus.Step.StepModel.StepModel.GeostaticStep
-
-.. automethod:: abaqus.Step.StepModel.StepModel.HeatTransferStep
-
-.. automethod:: abaqus.Step.StepModel.StepModel.ImplicitDynamicsStep
-
-.. automethod:: abaqus.Step.StepModel.StepModel.MassDiffusionStep
-
-.. automethod:: abaqus.Step.StepModel.StepModel.ModalDynamicsStep
-
-.. automethod:: abaqus.Step.StepModel.StepModel.ModelFromInputFile
-
-.. automethod:: abaqus.Step.StepModel.StepModel.ModelFromNastranFile
-
-.. automethod:: abaqus.Step.StepModel.StepModel.ModelFromOdbFile
-
-.. automethod:: abaqus.Step.StepModel.StepModel.RandomResponseStep
-
-.. automethod:: abaqus.Step.StepModel.StepModel.ResponseSpectrumStep
-
-.. automethod:: abaqus.Step.StepModel.StepModel.SoilsStep
-
-.. automethod:: abaqus.Step.StepModel.StepModel.StaticLinearPerturbationStep
-
-.. automethod:: abaqus.Step.StepModel.StepModel.StaticRiksStep
-
-.. automethod:: abaqus.Step.StepModel.StepModel.StaticStep
-
-.. automethod:: abaqus.Step.StepModel.StepModel.SteadyStateDirectStep
-
-.. automethod:: abaqus.Step.StepModel.StepModel.SteadyStateModalStep
-
-.. automethod:: abaqus.Step.StepModel.StepModel.SteadyStateSubspaceStep
-
-.. automethod:: abaqus.Step.StepModel.StepModel.SubspaceDynamicsStep
-
-.. automethod:: abaqus.Step.StepModel.StepModel.SubstructureGenerateStep
-
-.. automethod:: abaqus.Step.StepModel.StepModel.TempDisplacementDynamicsStep
-
-.. automethod:: abaqus.Step.StepModel.StepModel.ViscoStep
+.. autoclass:: abaqus.Step.StepModel.StepModel
+    :members:
 
 Object features
 ---------------

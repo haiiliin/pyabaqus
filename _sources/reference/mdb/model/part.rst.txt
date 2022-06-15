@@ -8,37 +8,11 @@ Features in Abaqus/CAE include Parts, Datums, Partitions, and Assembly operation
 Create parts
 ------------
 
-.. automethod:: abaqus.Part.PartModel.PartModel.Part
-    
-.. automethod:: abaqus.Part.PartBase.PartBase.PartFromBooleanCut
+.. autoclass:: abaqus.Part.PartModel.PartModel
+    :members:
 
-.. automethod:: abaqus.Part.PartBase.PartBase.PartFromBooleanMerge
-
-.. automethod:: abaqus.Part.PartBase.PartBase.PartFromExtrude2DMesh
-
-.. automethod:: abaqus.Part.PartBase.PartBase.PartFromGeometryFile
-
-.. automethod:: abaqus.Part.PartBase.PartBase.PartFromInstanceMesh
-
-.. automethod:: abaqus.Part.PartBase.PartBase.PartFromGeometryFile
-
-.. automethod:: abaqus.Part.PartBase.PartBase.PartFromMesh
-
-.. automethod:: abaqus.Part.PartBase.PartBase.PartFromMeshMirror
-
-.. automethod:: abaqus.Part.PartBase.PartBase.PartFromNodesAndElements
-
-.. automethod:: abaqus.Part.PartBase.PartBase.PartFromOdb
-
-.. automethod:: abaqus.Part.PartBase.PartBase.PartFromSection3DMeshByPlane
-
-.. automethod:: abaqus.Part.PartBase.PartBase.PartFromSubstructure
-
-.. automethod:: abaqus.Part.PartBase.PartBase.Part2DGeomFrom2DMesh
-
-.. automethod:: abaqus.Part.PartBase.PartBase.PartFromSubstructure
-
-.. automethod:: abaqus.Part.PartBase.PartBase.PartFromSubstructure
+.. autoclass:: abaqus.Part.PartBase.PartBase
+    :members: 
 
 Object features
 ---------------
