@@ -41,7 +41,6 @@ from ..Interaction.RadiationToAmbient import RadiationToAmbient
 from ..Interaction.RegionPairs import RegionPairs
 from ..Interaction.SelfContactExp import SelfContactExp
 from ..Interaction.SelfContactStd import SelfContactStd
-from ..Interaction.SlidingFormulationAssignment import SlidingFormulationAssignment
 from ..Interaction.SlidingTransitionAssignment import SlidingTransitionAssignment
 from ..Interaction.SmoothingAssignment import SmoothingAssignment
 from ..Interaction.StabilizationAssignment import StabilizationAssignment
@@ -49,15 +48,11 @@ from ..Interaction.StdContactControl import StdContactControl
 from ..Interaction.StdInitialization import StdInitialization
 from ..Interaction.StdStabilization import StdStabilization
 from ..Interaction.StdXplCosimulation import StdXplCosimulation
-from ..Interaction.SurfaceBeamSmoothingAssignment import SurfaceBeamSmoothingAssignment
-from ..Interaction.SurfaceCrushTriggerAssignment import SurfaceCrushTriggerAssignment
 from ..Interaction.SurfaceFeatureAssignment import SurfaceFeatureAssignment
-from ..Interaction.SurfaceFrictionAssignment import SurfaceFrictionAssignment
 from ..Interaction.SurfaceOffsetAssignment import SurfaceOffsetAssignment
 from ..Interaction.SurfaceThicknessAssignment import SurfaceThicknessAssignment
 from ..Interaction.SurfaceToSurfaceContactExp import SurfaceToSurfaceContactExp
 from ..Interaction.SurfaceToSurfaceContactStd import SurfaceToSurfaceContactStd
-from ..Interaction.SurfaceVertexCriteriaAssignment import SurfaceVertexCriteriaAssignment
 from ..Interaction.XFEMCrackGrowth import XFEMCrackGrowth
 from ..Region.Region import Region
 from ..Region.RegionArray import RegionArray
@@ -761,20 +756,18 @@ class InteractionModel(InteractionContactControlModel,
                    surfaceOffsetAssignments: SurfaceOffsetAssignment = SurfaceOffsetAssignment(),
                    surfaceFeatureAssignments: SurfaceFeatureAssignment = SurfaceFeatureAssignment(),
                    smoothingAssignments: SmoothingAssignment = SmoothingAssignment(),
-                   surfaceCrushTriggerAssignments: SurfaceCrushTriggerAssignment = SurfaceCrushTriggerAssignment(),
-                   surfaceFrictionAssignments: SurfaceFrictionAssignment = SurfaceFrictionAssignment(),
                    mainSecondaryAssignments: MainSecondaryAssignment = MainSecondaryAssignment(),
-                   polarityAssignments: PolarityAssignments = PolarityAssignments()) -> ContactExp:
+                   polarityAssignments: PolarityAssignments = PolarityAssignments()):
         """This method creates a ContactExp object.
 
         Notes
         -----
             This function can be accessed by:
-            
+
             .. code-block:: python
-            
+
                 mdb.models[name].ContactExp
-        
+
         Parameters
         ----------
         name
@@ -807,12 +800,6 @@ class InteractionModel(InteractionContactControlModel,
         smoothingAssignments
             A SmoothingAssignment object specifying the surface smoothing assignments in the contact
             domain.
-        surfaceCrushTriggerAssignments
-            A SurfaceCrushTriggerAssignment object specifying the surface crush trigger assignments
-            in the contact domain.
-        surfaceFrictionAssignments
-            A SurfaceFrictionAssignment object specifying the surface friction assignments in the
-            contact domain.
         mainSecondaryAssignments
             A MainSecondaryAssignment object specifying the main-secondary assignments in the
             contact domain.
@@ -827,7 +814,6 @@ class InteractionModel(InteractionContactControlModel,
                                                            includedPairs, excludedPairs, contactPropertyAssignments,
                                                            surfaceThicknessAssignments, surfaceOffsetAssignments,
                                                            surfaceFeatureAssignments, smoothingAssignments,
-                                                           surfaceCrushTriggerAssignments, surfaceFrictionAssignments,
                                                            mainSecondaryAssignments, polarityAssignments)
         return interaction
 
@@ -863,14 +849,11 @@ class InteractionModel(InteractionContactControlModel,
                    surfaceThicknessAssignments: SurfaceThicknessAssignment = SurfaceThicknessAssignment(),
                    surfaceOffsetAssignments: SurfaceOffsetAssignment = SurfaceOffsetAssignment(),
                    surfaceFeatureAssignments: SurfaceFeatureAssignment = SurfaceFeatureAssignment(),
-                   surfaceBeamSmoothingAssignments: SurfaceBeamSmoothingAssignment = SurfaceBeamSmoothingAssignment(),
-                   surfaceVertexCriteriaAssignments: SurfaceVertexCriteriaAssignment = SurfaceVertexCriteriaAssignment(),
                    mainSecondaryAssignments: MainSecondaryAssignment = MainSecondaryAssignment(),
                    initializationAssignments: InitializationAssignment = InitializationAssignment(),
                    stabilizationAssignments: StabilizationAssignment = StabilizationAssignment(),
                    smoothingAssignments: SmoothingAssignment = SmoothingAssignment(),
-                   slidingTransitionAssignments: SlidingTransitionAssignment = SlidingTransitionAssignment(),
-                   slidingFormulationAssignments: SlidingFormulationAssignment = SlidingFormulationAssignment()) -> ContactStd:
+                   slidingTransitionAssignments: SlidingTransitionAssignment = SlidingTransitionAssignment()) -> ContactStd:
         """This method creates a ContactStd object.
 
         Notes
@@ -909,12 +892,6 @@ class InteractionModel(InteractionContactControlModel,
         surfaceFeatureAssignments
             A SurfaceFeatureAssignment object specifying the surface feature angle assignments in
             the contact domain.
-        surfaceBeamSmoothingAssignments
-            A SurfaceBeamSmoothingAssignment object specifying the surface beam smoothing
-            assignments in the contact domain.
-        surfaceVertexCriteriaAssignments
-            A SurfaceVertexCriteriaAssignment object specifying the surface vertex criteria
-            assignments in the contact domain.
         mainSecondaryAssignments
             A MainSecondaryAssignment object specifying the main-secondary assignments in the
             contact domain.
@@ -930,9 +907,6 @@ class InteractionModel(InteractionContactControlModel,
         slidingTransitionAssignments
             A SlidingTransitionAssignments object specifying the sliding transition assignments in
             the contact domain.
-        slidingFormulationAssignments
-            A SlidingFormulationAssignment object specifying the sliding formulation assignments in
-            the contact domain.
 
         Returns
         -------
@@ -941,11 +915,9 @@ class InteractionModel(InteractionContactControlModel,
         self.interactions[name] = interaction = ContactStd(name, createStepName, useAllstar, globalSmoothing,
                                                            includedPairs, excludedPairs, contactPropertyAssignments,
                                                            surfaceThicknessAssignments, surfaceOffsetAssignments,
-                                                           surfaceFeatureAssignments, surfaceBeamSmoothingAssignments,
-                                                           surfaceVertexCriteriaAssignments, mainSecondaryAssignments,
+                                                           surfaceFeatureAssignments, mainSecondaryAssignments,
                                                            initializationAssignments, stabilizationAssignments,
-                                                           smoothingAssignments, slidingTransitionAssignments,
-                                                           slidingFormulationAssignments)
+                                                           smoothingAssignments, slidingTransitionAssignments)
         return interaction
 
     def CyclicSymmetry(self, name: str, createStepName: str, main: Region, secondary: Region, repetitiveSectors: int,

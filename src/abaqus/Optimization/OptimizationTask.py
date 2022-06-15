@@ -755,7 +755,7 @@ class OptimizationTask(OptimizationTaskBase):
         return geometricRestriction
 
     def ShapePlanarSymmetry(self, name: str, clientDirection: tuple, region: Region,
-                            allowNonSymmetricMesh: Boolean = TRUE, csys: int = None,
+                            csys: int = None,
                             mainPointDetermination: SymbolicConstant = MAXIMUM,
                             presumeFeasibleRegionAtStart: Boolean = ON, tolerance1: float = 0,
                             tolerance2: float = 0, tolerance3: float = 0) -> ShapePlanarSymmetry:
@@ -781,9 +781,6 @@ class OptimizationTask(OptimizationTaskBase):
             A Region object specifying the region to which the geometric restriction is applied.
             When used with a TopologyTask, there is no default value. When used with a ShapeTask,
             the default value is MODEL.
-        allowNonSymmetricMesh
-            A Boolean specifying whether to allow a nonsymmetric mesh for this geometric
-            restriction. The default value is TRUE.
         csys
             None or a DatumCsys object specifying the local coordinate system. If *csys*=None, the
             global coordinate system is used. When this member is queried, it returns an Int. The
@@ -809,7 +806,7 @@ class OptimizationTask(OptimizationTaskBase):
             A ShapePlanarSymmetry object.
         """
         self.geometricRestrictions[name] = geometricRestriction = ShapePlanarSymmetry(name, clientDirection, region,
-                                                                                      allowNonSymmetricMesh, csys,
+                                                                                      csys,
                                                                                       mainPointDetermination,
                                                                                       presumeFeasibleRegionAtStart,
                                                                                       tolerance1, tolerance2,
@@ -869,7 +866,7 @@ class OptimizationTask(OptimizationTaskBase):
         return geometricRestriction
 
     def ShapeRotationalSymmetry(self, name: str, clientDirection: tuple, region: Region,
-                                allowNonSymmetricMesh: Boolean = TRUE, angle: float = 0, csys: int = None,
+                                angle: float = 0, csys: int = None,
                                 mainPoint: str = None, mainPointDetermination: SymbolicConstant = MAXIMUM,
                                 presumeFeasibleRegionAtStart: Boolean = ON, startPoint: float = None,
                                 tolerance1: float = 0, tolerance2: float = 0,
@@ -896,9 +893,6 @@ class OptimizationTask(OptimizationTaskBase):
             A Region object specifying the region to which the geometric restriction is applied.
             When used with a TopologyTask, there is no default value. When used with a ShapeTask,
             the default value is MODEL.
-        allowNonSymmetricMesh
-            A Boolean specifying whether to allow a nonsymmetric mesh for this geometric
-            restriction. The default value is TRUE.
         angle
             A Float specifying the segment size of the repeating pattern in degrees. If the *angle*
             value is 0, no repeating pattern is created. The default value is 0.0.
@@ -933,7 +927,7 @@ class OptimizationTask(OptimizationTaskBase):
             A ShapeRotationalSymmetry object.
         """
         self.geometricRestrictions[name] = geometricRestriction = ShapeRotationalSymmetry(name, clientDirection, region,
-                                                                                          allowNonSymmetricMesh, angle,
+                                                                                          angle,
                                                                                           csys, mainPoint,
                                                                                           mainPointDetermination,
                                                                                           presumeFeasibleRegionAtStart,

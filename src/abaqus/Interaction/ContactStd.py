@@ -6,15 +6,12 @@ from .InitializationAssignment import InitializationAssignment
 from .Interaction import Interaction
 from .MainSecondaryAssignment import MainSecondaryAssignment
 from .RegionPairs import RegionPairs
-from .SlidingFormulationAssignment import SlidingFormulationAssignment
 from .SlidingTransitionAssignment import SlidingTransitionAssignment
 from .SmoothingAssignment import SmoothingAssignment
 from .StabilizationAssignment import StabilizationAssignment
-from .SurfaceBeamSmoothingAssignment import SurfaceBeamSmoothingAssignment
 from .SurfaceFeatureAssignment import SurfaceFeatureAssignment
 from .SurfaceOffsetAssignment import SurfaceOffsetAssignment
 from .SurfaceThicknessAssignment import SurfaceThicknessAssignment
-from .SurfaceVertexCriteriaAssignment import SurfaceVertexCriteriaAssignment
 
 
 class ContactStd(Interaction):
@@ -145,14 +142,11 @@ class ContactStd(Interaction):
                  surfaceThicknessAssignments: SurfaceThicknessAssignment = SurfaceThicknessAssignment(),
                  surfaceOffsetAssignments: SurfaceOffsetAssignment = SurfaceOffsetAssignment(),
                  surfaceFeatureAssignments: SurfaceFeatureAssignment = SurfaceFeatureAssignment(),
-                 surfaceBeamSmoothingAssignments: SurfaceBeamSmoothingAssignment = SurfaceBeamSmoothingAssignment(),
-                 surfaceVertexCriteriaAssignments: SurfaceVertexCriteriaAssignment = SurfaceVertexCriteriaAssignment(),
                  mainSecondaryAssignments: MainSecondaryAssignment = MainSecondaryAssignment(),
                  initializationAssignments: InitializationAssignment = InitializationAssignment(),
                  stabilizationAssignments: StabilizationAssignment = StabilizationAssignment(),
                  smoothingAssignments: SmoothingAssignment = SmoothingAssignment(),
-                 slidingTransitionAssignments: SlidingTransitionAssignment = SlidingTransitionAssignment(),
-                 slidingFormulationAssignments: SlidingFormulationAssignment = SlidingFormulationAssignment()):
+                 slidingTransitionAssignments: SlidingTransitionAssignment = SlidingTransitionAssignment()):
         """This method creates a ContactStd object.
 
         Notes
@@ -190,13 +184,7 @@ class ContactStd(Interaction):
             the contact domain. 
         surfaceFeatureAssignments
             A SurfaceFeatureAssignment object specifying the surface feature angle assignments in 
-            the contact domain. 
-        surfaceBeamSmoothingAssignments
-            A SurfaceBeamSmoothingAssignment object specifying the surface beam smoothing 
-            assignments in the contact domain. 
-        surfaceVertexCriteriaAssignments
-            A SurfaceVertexCriteriaAssignment object specifying the surface vertex criteria 
-            assignments in the contact domain. 
+            the contact domain.
         mainSecondaryAssignments
             A MainSecondaryAssignment object specifying the main-secondary assignments in the 
             contact domain. 
@@ -211,10 +199,7 @@ class ContactStd(Interaction):
             domain. 
         slidingTransitionAssignments
             A SlidingTransitionAssignments object specifying the sliding transition assignments in 
-            the contact domain. 
-        slidingFormulationAssignments
-            A SlidingFormulationAssignment object specifying the sliding formulation assignments in 
-            the contact domain. 
+            the contact domain.
 
         Returns
         -------
@@ -225,9 +210,7 @@ class ContactStd(Interaction):
 
     @typing.overload
     def __init__(self, name: str, createStepName: str, globalSmoothing: Boolean = ON,
-                 surfaceBeamSmoothingAssignments: tuple = (),
-                 surfaceVertexCriteriaAssignments: typing.Union[SymbolicConstant, float] = GLOBAL,
-                 slidingFormulationAssignments: SymbolicConstant = None, useAllstar: Boolean = OFF,
+                 useAllstar: Boolean = OFF,
                  includedPairs: SymbolicConstant = None, excludedPairs: SymbolicConstant = None,
                  contactPropertyAssignments: SymbolicConstant = None,
                  surfaceFeatureAssignments: typing.Union[SymbolicConstant, float] = GLOBAL,
@@ -256,26 +239,7 @@ class ContactStd(Interaction):
             A String specifying the name of the step in which this contact interaction is created. 
         globalSmoothing
             A Boolean specifying whether surface smoothing (geometric correction) is automatically 
-            applied to all eligible surfaces. The default value is ON. 
-        surfaceBeamSmoothingAssignments
-            A sequence of tuples specifying the surface beam smoothing assignments. Each tuple 
-            contains two entries: 
-            - A region object specifying the surface to which the smoothing is assigned. 
-            - A Float specifying the surface smoothing value to be used for the surface. 
-        surfaceVertexCriteriaAssignments
-            A sequence of tuples specifying the surface vertex criteria assignments. Each tuple 
-            contains two entries: 
-            - A region or a material object or the SymbolicConstant GLOBAL specifying the surface to 
-            which the vertex criteria is assigned. 
-            - A Float or a SymbolicConstant specifying the vertex criteria value to be used for the 
-            surface. Possible values of the SymbolicConstant are ALL_VERTICES or NO_VERTICES. 
-        slidingFormulationAssignments
-            A sequence of tuples specifying the sliding formulation assignments. Each tuple contains 
-            two entries: 
-            - A region object or the SymbolicConstant GLOBAL specifying the surface to which the 
-            sliding formulation attribute is assigned. 
-            - A SymbolicConstant specifying the overriding the smoothness value to be used for the 
-            first surface. Possible values of the SymbolicConstant are NONE and SMALL_SLIDING. 
+            applied to all eligible surfaces. The default value is ON.
         useAllstar
             A Boolean specifying whether the contacting surface pairs consist of all exterior faces 
             in the model. 

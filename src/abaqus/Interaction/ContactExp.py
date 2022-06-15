@@ -7,9 +7,7 @@ from .MainSecondaryAssignment import MainSecondaryAssignment
 from .PolarityAssignments import PolarityAssignments
 from .RegionPairs import RegionPairs
 from .SmoothingAssignment import SmoothingAssignment
-from .SurfaceCrushTriggerAssignment import SurfaceCrushTriggerAssignment
 from .SurfaceFeatureAssignment import SurfaceFeatureAssignment
-from .SurfaceFrictionAssignment import SurfaceFrictionAssignment
 from .SurfaceOffsetAssignment import SurfaceOffsetAssignment
 from .SurfaceThicknessAssignment import SurfaceThicknessAssignment
 
@@ -115,8 +113,6 @@ class ContactExp(Interaction):
                  surfaceOffsetAssignments: SurfaceOffsetAssignment = SurfaceOffsetAssignment(),
                  surfaceFeatureAssignments: SurfaceFeatureAssignment = SurfaceFeatureAssignment(),
                  smoothingAssignments: SmoothingAssignment = SmoothingAssignment(),
-                 surfaceCrushTriggerAssignments: SurfaceCrushTriggerAssignment = SurfaceCrushTriggerAssignment(),
-                 surfaceFrictionAssignments: SurfaceFrictionAssignment = SurfaceFrictionAssignment(),
                  mainSecondaryAssignments: MainSecondaryAssignment = MainSecondaryAssignment(),
                  polarityAssignments: PolarityAssignments = PolarityAssignments()):
         """This method creates a ContactExp object.
@@ -160,13 +156,7 @@ class ContactExp(Interaction):
             the contact domain. 
         smoothingAssignments
             A SmoothingAssignment object specifying the surface smoothing assignments in the contact 
-            domain. 
-        surfaceCrushTriggerAssignments
-            A SurfaceCrushTriggerAssignment object specifying the surface crush trigger assignments 
-            in the contact domain. 
-        surfaceFrictionAssignments
-            A SurfaceFrictionAssignment object specifying the surface friction assignments in the 
-            contact domain. 
+            domain.
         mainSecondaryAssignments
             A MainSecondaryAssignment object specifying the main-secondary assignments in the 
             contact domain. 
@@ -182,8 +172,6 @@ class ContactExp(Interaction):
 
     @typing.overload
     def __init__(self, name: str, createStepName: str, globalSmoothing: Boolean = ON,
-                 surfaceCrushTriggerAssignments: typing.Union[SymbolicConstant, float] = TRIGGER,
-                 surfaceFrictionAssignments: typing.Union[SymbolicConstant, float] = GLOBAL,
                  useAllstar: Boolean = OFF, includedPairs: SymbolicConstant = None,
                  excludedPairs: SymbolicConstant = None,
                  contactPropertyAssignments: SymbolicConstant = None,
@@ -211,24 +199,7 @@ class ContactExp(Interaction):
             A String specifying the name of the step in which this contact interaction is created. 
         globalSmoothing
             A Boolean specifying whether surface smoothing (geometric correction) is automatically 
-            applied to all eligible surfaces. The default value is ON. 
-        surfaceCrushTriggerAssignments
-            A sequence of tuples specifying the surface crush trigger assignments. Each tuple 
-            contains four entries: 
-            - A region or a material object or the SymbolicConstant GLOBAL specifying the surface to 
-            which the feature angle is assigned. 
-            - A SymbolicConstant specifying the trigger option to be used for the surface. Possible 
-            values of the SymbolicConstant are TRIGGER, NO_TRIGGER, or NO_CRUSH. 
-            - A Float specifying the crush stress value to be used for the surface. 
-            - A Float specifying the crush initiation angle value to be used for the surface. 
-            - A Float specifying the crush continuation angle value to be used for the surface. 
-        surfaceFrictionAssignments
-            A sequence of tuples specifying the surface friction assignments. Each tuple contains 
-            two entries: 
-            - A region or a material object or the SymbolicConstant GLOBAL specifying the surface to 
-            which the friction coefficient is assigned. 
-            - A Float specifying the overriding friction coefficient to be used in the contact 
-            definition. 
+            applied to all eligible surfaces. The default value is ON.
         useAllstar
             A Boolean specifying whether the contacting surface pair consists of all exterior faces, 
             shell edges, beam segments, analytical rigid surfaces, and, when applicable, Eulerian 

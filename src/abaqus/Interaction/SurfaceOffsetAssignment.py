@@ -55,8 +55,8 @@ class SurfaceOffsetAssignment:
         assignments
             A sequence of tuples specifying the surface offset fraction assignments. Each tuple 
             contains two entries: 
-            - A region or a material object or the SymbolicConstant GLOBAL specifying the surface to 
-            which the offset fraction is assigned. 
+            - A region object or the SymbolicConstant GLOBAL specifying the surface to which the
+            offset fraction is assigned.
             - A Float or a SymbolicConstant specifying the surface offset fraction value to be used 
             for the surface. Possible values of the SymbolicConstant are ORIGINAL, SPOS, and SNEG. 
         """

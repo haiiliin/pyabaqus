@@ -416,12 +416,6 @@ SelfContactStdState
 .. autoclass:: abaqus.Interaction.SelfContactStdState.SelfContactStdState
     :members:
 
-SlidingFormulationAssignment
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-.. autoclass:: abaqus.Interaction.SlidingFormulationAssignment.SlidingFormulationAssignment
-    :members:
-
 SlidingTransitionAssignment
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -470,17 +464,6 @@ StdXplCosimulationState
 .. autoclass:: abaqus.Interaction.StdXplCosimulationState.StdXplCosimulationState
     :members:
 
-SurfaceBeamSmoothingAssignment
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-.. autoclass:: abaqus.Interaction.SurfaceBeamSmoothingAssignment.SurfaceBeamSmoothingAssignment
-    :members:
-
-SurfaceCrushTriggerAssignment
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-.. autoclass:: abaqus.Interaction.SurfaceCrushTriggerAssignment.SurfaceCrushTriggerAssignment
-    :members:
 
 SurfaceFeatureAssignment
 ~~~~~~~~~~~~~~~~~~~~~~~~
@@ -488,11 +471,6 @@ SurfaceFeatureAssignment
 .. autoclass:: abaqus.Interaction.SurfaceFeatureAssignment.SurfaceFeatureAssignment
     :members:
 
-SurfaceFrictionAssignment
-~~~~~~~~~~~~~~~~~~~~~~~~~
-
-.. autoclass:: abaqus.Interaction.SurfaceFrictionAssignment.SurfaceFrictionAssignment
-    :members:
 
 SurfaceOffsetAssignment
 ~~~~~~~~~~~~~~~~~~~~~~~
@@ -530,11 +508,6 @@ SurfaceToSurfaceStdState
 .. autoclass:: abaqus.Interaction.SurfaceToSurfaceStdState.SurfaceToSurfaceStdState
     :members:
 
-SurfaceVertexCriteriaAssignment
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-.. autoclass:: abaqus.Interaction.SurfaceVertexCriteriaAssignment.SurfaceVertexCriteriaAssignment
-    :members:
 
 ThermalConductance
 ~~~~~~~~~~~~~~~~~~

@@ -84,8 +84,7 @@ class SubmodelBC(BoundaryCondition):
     def __init__(self, name: str, createStepName: str, region: Region, dof: tuple, globalStep: str,
                  timeScale: Boolean, shellThickness: float, globalDrivingRegion: str = '',
                  absoluteExteriorTolerance: float = None, exteriorTolerance: float = 0,
-                 localCsys: str = None, globalIncrement: int = 0, centerZoneSize: float = None,
-                 intersectionOnly: Boolean = OFF):
+                 localCsys: str = None, globalIncrement: int = 0, centerZoneSize: float = None):
         """This method creates a SubmodelBC object.
 
         Notes
@@ -141,11 +140,7 @@ class SubmodelBC(BoundaryCondition):
             applicable only for linear perturbation steps. The default value is 0. 
         centerZoneSize
             A Float specifying the thickness of the center zone size around the shell midsurface. 
-            The default value is None. 
-        intersectionOnly
-            A Boolean specifying whether to ignore driven nodes that lie outside the region of 
-            elements of the global model after accounting for the exterior search tolerance. The 
-            default value is OFF. 
+            The default value is None.
 
         Returns
         -------
@@ -156,7 +151,7 @@ class SubmodelBC(BoundaryCondition):
 
     def setValues(self, globalDrivingRegion: str = '', absoluteExteriorTolerance: float = None,
                   exteriorTolerance: float = 0, localCsys: str = None, globalIncrement: int = 0,
-                  centerZoneSize: float = None, intersectionOnly: Boolean = OFF):
+                  centerZoneSize: float = None):
         """This method modifies the data for an existing SubmodelBC object in the step where it is
         created.
         
@@ -184,11 +179,7 @@ class SubmodelBC(BoundaryCondition):
             applicable only for linear perturbation steps. The default value is 0. 
         centerZoneSize
             A Float specifying the thickness of the center zone size around the shell midsurface. 
-            The default value is None. 
-        intersectionOnly
-            A Boolean specifying whether to ignore driven nodes that lie outside the region of 
-            elements of the global model after accounting for the exterior search tolerance. The 
-            default value is OFF. 
+            The default value is None.
         """
         pass
 
