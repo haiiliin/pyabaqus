@@ -62,6 +62,20 @@ pip install pyabaqus
 conda install -c haiiliin pyabaqus
 ```
 
+## Bindings to Abaqus Version
+
+The main version of pyabaqus, is consistent with the Abaqus version. For example, pyabaqus 2021 and 2021.1 are both 
+corresponding to Abaqus 2021, the later version fixes some wrong docstrings (especially the format). 
+The latest sub-versions of pyabaqus corresponding to Abaqus are:
+
+- [pyabaqus 2022](https://github.com/haiiliin/pyabaqus/releases/tag/2022) (Corresponding to Abaqus 2022)
+- [pyabaqus 2021.1](https://github.com/haiiliin/pyabaqus/releases/tag/2021.1) (Corresponding to Abaqus 2021)
+- [pyabaqus 2020](https://github.com/haiiliin/pyabaqus/releases/tag/2020) (Corresponding to Abaqus 2020)
+- [pyabaqus 2019.1](https://github.com/haiiliin/pyabaqus/releases/tag/2019.1) (Corresponding to Abaqus 2019)
+- [pyabaqus 2018](https://github.com/haiiliin/pyabaqus/releases/tag/2018) (Corresponding to Abaqus 2018)
+- [pyabaqus 2017](https://github.com/haiiliin/pyabaqus/releases/tag/2017) (Corresponding to Abaqus 2017)
+- [pyabaqus 2016](https://github.com/haiiliin/pyabaqus/releases/tag/2016) (Corresponding to Abaqus 2016)
+
 ## Optional Installations
  
 In order to use the **Jupyter Notebook** feature, you have to install the following packages:
