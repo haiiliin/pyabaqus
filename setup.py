@@ -5,7 +5,7 @@ with open("README.md", "r", encoding="utf-8") as fh:
 
 setuptools.setup(
     name="pyabaqus",
-    version="2021.1",
+    version="2022",
     author="WANG Hailin",
     author_email="hailin.wang@connect.polyu.hk",
     description="Type hints for Abaqus/Python scripting",
