@@ -5,7 +5,7 @@
     <meta name="color-scheme" content="light dark"><link rel="index" title="Index" href="../../../genindex.html" /><link rel="search" title="Search" href="../../../search.html" />
 
     <meta name="generator" content="sphinx-4.5.0, furo 2022.06.04.1"/>
-        <title>abaqus.Constraint.Coupling - PYABAQUS 2021 documentation</title>
+        <title>abaqus.Constraint.Coupling - PYABAQUS 2022 documentation</title>
       <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/styles/furo.css?digest=40978830699223671f4072448e654b5958f38b89" />
     <link rel="stylesheet" type="text/css" href="../../../_static/styles/furo-extensions.css?digest=30d1aed668e5c3a91c3e3bf6a60b675221979f0e" />
@@ -122,7 +122,7 @@
       </label>
     </div>
     <div class="header-center">
-      <a href="../../../index.html"><div class="brand">PYABAQUS 2021 documentation</div></a>
+      <a href="../../../index.html"><div class="brand">PYABAQUS 2022 documentation</div></a>
     </div>
     <div class="header-right">
       <div class="theme-toggle-container theme-toggle-header">
@@ -145,7 +145,7 @@
       <div class="sidebar-sticky"><a class="sidebar-brand" href="../../../index.html">
   
   
-  <span class="sidebar-brand-text">PYABAQUS 2021 documentation</span>
+  <span class="sidebar-brand-text">PYABAQUS 2022 documentation</span>
   
 </a><form class="sidebar-search-container" method="get" action="../../../search.html" role="search">
   <input class="sidebar-search" placeholder=Search name="q" aria-label="Search">
@@ -342,7 +342,7 @@
                  <span class="n">influenceRadius</span><span class="p">:</span> <span class="n">typing</span><span class="o">.</span><span class="n">Union</span><span class="p">[</span><span class="n">SymbolicConstant</span><span class="p">,</span> <span class="nb">float</span><span class="p">],</span> <span class="n">couplingType</span><span class="p">:</span> <span class="n">SymbolicConstant</span><span class="p">,</span>
                  <span class="n">adjust</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="n">OFF</span><span class="p">,</span> <span class="n">localCsys</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">u1</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="n">ON</span><span class="p">,</span> <span class="n">u2</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="n">ON</span><span class="p">,</span>
                  <span class="n">u3</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="n">ON</span><span class="p">,</span> <span class="n">ur1</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="n">ON</span><span class="p">,</span> <span class="n">ur2</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="n">ON</span><span class="p">,</span> <span class="n">ur3</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="n">ON</span><span class="p">,</span>
-                 <span class="n">weightingMethod</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="n">UNIFORM</span><span class="p">):</span>
+                 <span class="n">weightingMethod</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="n">UNIFORM</span><span class="p">,</span> <span class="n">alpha</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mf">0.0</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;This method creates a Coupling object.</span>
 
 <span class="sd">        Notes</span>
@@ -402,7 +402,11 @@
 <span class="sd">            A SymbolicConstant specifying an optional weighting method used for calculating the </span>
 <span class="sd">            distributing weight factors. Possible values are UNIFORM, LINEAR, QUADRATIC, and CUBIC. </span>
 <span class="sd">            The default value is UNIFORM.The *weightingMethod* argument applies only when </span>
-<span class="sd">            *couplingType*=DISTRIBUTING. </span>
+<span class="sd">            *couplingType*=DISTRIBUTING.</span>
+<span class="sd">        alpha</span>
+<span class="sd">            A Float specifying the value of the thermal expansion coefficient. The default value is 0.0.</span>
+<span class="sd">            The alpha argument applies only when couplingType=KINEMATIC.</span>
+
 
 <span class="sd">        Returns</span>
 <span class="sd">        -------</span>
@@ -413,7 +417,7 @@
 
 <div class="viewcode-block" id="Coupling.setValues"><a class="viewcode-back" href="../../../reference/mdb/model/constraint.html#abaqus.Constraint.Coupling.Coupling.setValues">[docs]</a>    <span class="k">def</span> <span class="nf">setValues</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">adjust</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="n">OFF</span><span class="p">,</span> <span class="n">localCsys</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">u1</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="n">ON</span><span class="p">,</span> <span class="n">u2</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="n">ON</span><span class="p">,</span>
                   <span class="n">u3</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="n">ON</span><span class="p">,</span> <span class="n">ur1</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="n">ON</span><span class="p">,</span> <span class="n">ur2</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="n">ON</span><span class="p">,</span> <span class="n">ur3</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">=</span> <span class="n">ON</span><span class="p">,</span>
-                  <span class="n">weightingMethod</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="n">UNIFORM</span><span class="p">):</span>
+                  <span class="n">weightingMethod</span><span class="p">:</span> <span class="n">SymbolicConstant</span> <span class="o">=</span> <span class="n">UNIFORM</span><span class="p">,</span> <span class="n">alpha</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mf">0.0</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;This method modifies the Coupling object.</span>
 <span class="sd">        </span>
 <span class="sd">        Parameters</span>
@@ -454,7 +458,10 @@
 <span class="sd">            A SymbolicConstant specifying an optional weighting method used for calculating the </span>
 <span class="sd">            distributing weight factors. Possible values are UNIFORM, LINEAR, QUADRATIC, and CUBIC. </span>
 <span class="sd">            The default value is UNIFORM.The *weightingMethod* argument applies only when </span>
-<span class="sd">            *couplingType*=DISTRIBUTING. </span>
+<span class="sd">            *couplingType*=DISTRIBUTING.</span>
+<span class="sd">        alpha</span>
+<span class="sd">            A Float specifying the value of the thermal expansion coefficient. The default value is 0.0.</span>
+<span class="sd">            The alpha argument applies only when couplingType=KINEMATIC.</span>
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span></div></div>
 </pre></div>

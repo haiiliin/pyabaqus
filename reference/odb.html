@@ -6,7 +6,7 @@
 <link rel="index" title="Index" href="../genindex.html" /><link rel="search" title="Search" href="../search.html" /><link rel="next" title="Abaqus Session" href="session.html" /><link rel="prev" title="Edit Mesh" href="mdb/edit_mesh.html" />
 
     <meta name="generator" content="sphinx-4.5.0, furo 2022.06.04.1"/>
-        <title>Abaqus Output Database - PYABAQUS 2021 documentation</title>
+        <title>Abaqus Output Database - PYABAQUS 2022 documentation</title>
       <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="../_static/styles/furo.css?digest=40978830699223671f4072448e654b5958f38b89" />
     <link rel="stylesheet" type="text/css" href="../_static/styles/furo-extensions.css?digest=30d1aed668e5c3a91c3e3bf6a60b675221979f0e" />
@@ -123,7 +123,7 @@
       </label>
     </div>
     <div class="header-center">
-      <a href="../index.html"><div class="brand">PYABAQUS 2021 documentation</div></a>
+      <a href="../index.html"><div class="brand">PYABAQUS 2022 documentation</div></a>
     </div>
     <div class="header-right">
       <div class="theme-toggle-container theme-toggle-header">
@@ -146,7 +146,7 @@
       <div class="sidebar-sticky"><a class="sidebar-brand" href="../index.html">
   
   
-  <span class="sidebar-brand-text">PYABAQUS 2021 documentation</span>
+  <span class="sidebar-brand-text">PYABAQUS 2022 documentation</span>
   
 </a><form class="sidebar-search-container" method="get" action="../search.html" role="search">
   <input class="sidebar-search" placeholder=Search name="q" aria-label="Search">
@@ -3206,6 +3206,12 @@ system.</p>
 <tr class="row-odd"><td><p><a class="reference internal" href="#abaqus.Odb.OdbDatumCsys.OdbDatumCsys.DatumCsysByThreePoints" title="abaqus.Odb.OdbDatumCsys.OdbDatumCsys.DatumCsysByThreePoints"><code class="xref py py-obj docutils literal notranslate"><span class="pre">DatumCsysByThreePoints</span></code></a>(name, coordSysType, ...)</p></td>
 <td><p>This method creates an OdbDatumCsys object using three points.</p></td>
 </tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#abaqus.Odb.OdbDatumCsys.OdbDatumCsys.globalToLocal" title="abaqus.Odb.OdbDatumCsys.OdbDatumCsys.globalToLocal"><code class="xref py py-obj docutils literal notranslate"><span class="pre">globalToLocal</span></code></a>(coordinates)</p></td>
+<td><p>This method transforms specified coordinates in the global coordinate system into this local coordinate system.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#abaqus.Odb.OdbDatumCsys.OdbDatumCsys.localToGlobal" title="abaqus.Odb.OdbDatumCsys.OdbDatumCsys.localToGlobal"><code class="xref py py-obj docutils literal notranslate"><span class="pre">localToGlobal</span></code></a>(coordinates)</p></td>
+<td><p>This method transforms specified coordinates in this local coordinate system into the global coordinate system.</p></td>
+</tr>
 </tbody>
 </table>
 </div>
@@ -3378,6 +3384,47 @@ system.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">session</span><span class="o">.</span><span class="n">odbs</span><span class="p">[</span><span class="n">name</span><span class="p">]</span><span class="o">.</span><span class="n">rootAssembly</span><span class="o">.</span><span class="n">DatumCsysByThreePoints</span>
 </pre></div>
 </div>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="abaqus.Odb.OdbDatumCsys.OdbDatumCsys.globalToLocal">
+<span class="sig-name descname"><span class="pre">globalToLocal</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">coordinates</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">tuple</span><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">float</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">tuple</span><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">float</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></span></span><a class="reference internal" href="../_modules/abaqus/Odb/OdbDatumCsys.html#OdbDatumCsys.globalToLocal"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#abaqus.Odb.OdbDatumCsys.OdbDatumCsys.globalToLocal" title="Permalink to this definition">#</a></dt>
+<dd><p>This method transforms specified coordinates in the global coordinate system into this
+local coordinate system.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>coordinates</strong></dt><dd><p>A tuple of three Floats representing the coordinates in the global coordinate system.</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><dl class="simple">
+<dt><code class="xref py py-class docutils literal notranslate"><span class="pre">python:tuple</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">python:float</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">python:float</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">python:float</span></code>]</dt><dd><p>A tuple of three Floats representing the coordinates in this local coordinate system.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="abaqus.Odb.OdbDatumCsys.OdbDatumCsys.localToGlobal">
+<span class="sig-name descname"><span class="pre">localToGlobal</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">coordinates</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">tuple</span><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">float</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">tuple</span><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">float</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></span></span><a class="reference internal" href="../_modules/abaqus/Odb/OdbDatumCsys.html#OdbDatumCsys.localToGlobal"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#abaqus.Odb.OdbDatumCsys.OdbDatumCsys.localToGlobal" title="Permalink to this definition">#</a></dt>
+<dd><p>This method transforms specified coordinates in this local coordinate system into the global coordinate system.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>coordinates</strong></dt><dd><p>A tuple of three Floats representing the coordinates in the local coordinate system.</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><dl class="simple">
+<dt><code class="xref py py-class docutils literal notranslate"><span class="pre">python:tuple</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">python:float</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">python:float</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">python:float</span></code>]</dt><dd><p>A tuple of three Floats representing the coordinates in this global coordinate system.</p>
+</dd>
+</dl>
+</dd>
+</dl>
 </dd></dl>
 
 </dd></dl>

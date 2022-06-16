@@ -5,7 +5,7 @@
     <meta name="color-scheme" content="light dark"><link rel="index" title="Index" href="../../../genindex.html" /><link rel="search" title="Search" href="../../../search.html" />
 
     <meta name="generator" content="sphinx-4.5.0, furo 2022.06.04.1"/>
-        <title>abaqus.Datum.DatumCsys - PYABAQUS 2021 documentation</title>
+        <title>abaqus.Datum.DatumCsys - PYABAQUS 2022 documentation</title>
       <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/styles/furo.css?digest=40978830699223671f4072448e654b5958f38b89" />
     <link rel="stylesheet" type="text/css" href="../../../_static/styles/furo-extensions.css?digest=30d1aed668e5c3a91c3e3bf6a60b675221979f0e" />
@@ -122,7 +122,7 @@
       </label>
     </div>
     <div class="header-center">
-      <a href="../../../index.html"><div class="brand">PYABAQUS 2021 documentation</div></a>
+      <a href="../../../index.html"><div class="brand">PYABAQUS 2022 documentation</div></a>
     </div>
     <div class="header-right">
       <div class="theme-toggle-container theme-toggle-header">
@@ -145,7 +145,7 @@
       <div class="sidebar-sticky"><a class="sidebar-brand" href="../../../index.html">
   
   
-  <span class="sidebar-brand-text">PYABAQUS 2021 documentation</span>
+  <span class="sidebar-brand-text">PYABAQUS 2022 documentation</span>
   
 </a><form class="sidebar-search-container" method="get" action="../../../search.html" role="search">
   <input class="sidebar-search" placeholder=Search name="q" aria-label="Search">
@@ -361,7 +361,38 @@
     <span class="n">axis2</span><span class="p">:</span> <span class="n">DatumAxis</span> <span class="o">=</span> <span class="n">DatumAxis</span><span class="p">()</span>
 
     <span class="c1"># A DatumAxis object specifying the 3-direction of the coordinate system. </span>
-    <span class="n">axis3</span><span class="p">:</span> <span class="n">DatumAxis</span> <span class="o">=</span> <span class="n">DatumAxis</span><span class="p">()</span></div>
+    <span class="n">axis3</span><span class="p">:</span> <span class="n">DatumAxis</span> <span class="o">=</span> <span class="n">DatumAxis</span><span class="p">()</span>
+
+<div class="viewcode-block" id="DatumCsys.globalToLocal"><a class="viewcode-back" href="../../../reference/mdb/model/part_assembly/datum.html#abaqus.Datum.DatumCsys.DatumCsys.globalToLocal">[docs]</a>    <span class="k">def</span> <span class="nf">globalToLocal</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">coordinates</span><span class="p">:</span> <span class="nb">tuple</span><span class="p">[</span><span class="nb">float</span><span class="p">,</span> <span class="nb">float</span><span class="p">,</span> <span class="nb">float</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="nb">tuple</span><span class="p">[</span><span class="nb">float</span><span class="p">,</span> <span class="nb">float</span><span class="p">,</span> <span class="nb">float</span><span class="p">]:</span>
+        <span class="sd">&quot;&quot;&quot;This method transforms specified coordinates in the global coordinate system into this</span>
+<span class="sd">        local coordinate system.</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        coordinates</span>
+<span class="sd">            A tuple of three Floats representing the coordinates in the global coordinate system.</span>
+
+<span class="sd">        Returns</span>
+<span class="sd">        -------</span>
+<span class="sd">        tuple[float, float, float]</span>
+<span class="sd">            A tuple of three Floats representing the coordinates in this local coordinate system.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">pass</span></div>
+
+<div class="viewcode-block" id="DatumCsys.localToGlobal"><a class="viewcode-back" href="../../../reference/mdb/model/part_assembly/datum.html#abaqus.Datum.DatumCsys.DatumCsys.localToGlobal">[docs]</a>    <span class="k">def</span> <span class="nf">localToGlobal</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">coordinates</span><span class="p">:</span> <span class="nb">tuple</span><span class="p">[</span><span class="nb">float</span><span class="p">,</span> <span class="nb">float</span><span class="p">,</span> <span class="nb">float</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="nb">tuple</span><span class="p">[</span><span class="nb">float</span><span class="p">,</span> <span class="nb">float</span><span class="p">,</span> <span class="nb">float</span><span class="p">]:</span>
+        <span class="sd">&quot;&quot;&quot;This method transforms specified coordinates in this local coordinate system into the global coordinate system.</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        coordinates</span>
+<span class="sd">            A tuple of three Floats representing the coordinates in the local coordinate system.</span>
+
+<span class="sd">        Returns</span>
+<span class="sd">        -------</span>
+<span class="sd">        tuple[float, float, float]</span>
+<span class="sd">            A tuple of three Floats representing the coordinates in this global coordinate system.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">pass</span></div></div>
 </pre></div>
         </article>
       </div>
