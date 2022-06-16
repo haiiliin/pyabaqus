@@ -134,6 +134,7 @@ class Hyperelastic:
             - VAN_DER_WAALS
             - YEOH
             - UNKNOWN
+            - VALANIS_LANDEL
             
             The default value is UNKNOWN. 
         moduliTimeScale

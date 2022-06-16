@@ -94,7 +94,8 @@ class Plastic:
 
     def __init__(self, table: tuple, hardening: SymbolicConstant = ISOTROPIC, rate: Boolean = OFF,
                  dataType: SymbolicConstant = HALF_CYCLE, strainRangeDependency: Boolean = OFF,
-                 numBackstresses: int = 1, temperatureDependency: Boolean = OFF, dependencies: int = 0):
+                 numBackstresses: int = 1, temperatureDependency: Boolean = OFF, dependencies: int = 0,
+                 extrapolation: SymbolicConstant = CONSTANT):
         """This method creates a Plastic object.
 
         Notes
@@ -128,7 +129,11 @@ class Plastic:
         temperatureDependency
             A Boolean specifying whether the data depend on temperature. The default value is OFF. 
         dependencies
-            An Int specifying the number of field variable dependencies. The default value is 0. 
+            An Int specifying the number of field variable dependencies. The default value is 0.
+        extrapolation
+            A SymbolicConstant specifying the extrapolation method for the yield stress with respect
+            to the equivalent plastic strain. This argument is valid only if hardening=ISOTROPIC.
+            Possible values are CONSTANT and LINEAR . The default value is CONSTANT.
 
         Returns
         -------

@@ -44,6 +44,7 @@ from .Plastic.Concrete.Concrete import Concrete
 from .Plastic.Concrete.ConcreteDamagedPlasticity import ConcreteDamagedPlasticity
 from .Plastic.Creep.Creep import Creep
 from .Plastic.CriticalStateClay.ClayPlasticity import ClayPlasticity
+from .Plastic.CrushStress.CrushStress import CrushStress
 from .Plastic.CrushableFoam.CrushableFoam import CrushableFoam
 from .Plastic.DruckerPrager.Extended.DruckerPrager import DruckerPrager
 from .Plastic.DruckerPrager.ModifiedCap.CapPlasticity import CapPlasticity
@@ -260,6 +261,9 @@ class MaterialBase:
 
     # A CrushableFoam object. 
     crushableFoam: CrushableFoam = CrushableFoam(((),))
+
+    # A CrushStress object
+    crushStress: CrushStress = CrushStress(((), ))
 
     # A DamageInitiation object. 
     ductileDamageInitiation: DamageInitiation = DamageInitiation()
