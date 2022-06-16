@@ -39,7 +39,7 @@ class Coupling(Constraint):
                  influenceRadius: typing.Union[SymbolicConstant, float], couplingType: SymbolicConstant,
                  adjust: Boolean = OFF, localCsys: str = None, u1: Boolean = ON, u2: Boolean = ON,
                  u3: Boolean = ON, ur1: Boolean = ON, ur2: Boolean = ON, ur3: Boolean = ON,
-                 weightingMethod: SymbolicConstant = UNIFORM):
+                 weightingMethod: SymbolicConstant = UNIFORM, alpha: float = 0.0):
         """This method creates a Coupling object.
 
         Notes
@@ -99,7 +99,11 @@ class Coupling(Constraint):
             A SymbolicConstant specifying an optional weighting method used for calculating the 
             distributing weight factors. Possible values are UNIFORM, LINEAR, QUADRATIC, and CUBIC. 
             The default value is UNIFORM.The *weightingMethod* argument applies only when 
-            *couplingType*=DISTRIBUTING. 
+            *couplingType*=DISTRIBUTING.
+        alpha
+            A Float specifying the value of the thermal expansion coefficient. The default value is 0.0.
+            The alpha argument applies only when couplingType=KINEMATIC.
+
 
         Returns
         -------
@@ -110,7 +114,7 @@ class Coupling(Constraint):
 
     def setValues(self, adjust: Boolean = OFF, localCsys: str = None, u1: Boolean = ON, u2: Boolean = ON,
                   u3: Boolean = ON, ur1: Boolean = ON, ur2: Boolean = ON, ur3: Boolean = ON,
-                  weightingMethod: SymbolicConstant = UNIFORM):
+                  weightingMethod: SymbolicConstant = UNIFORM, alpha: float = 0.0):
         """This method modifies the Coupling object.
         
         Parameters
@@ -151,6 +155,9 @@ class Coupling(Constraint):
             A SymbolicConstant specifying an optional weighting method used for calculating the 
             distributing weight factors. Possible values are UNIFORM, LINEAR, QUADRATIC, and CUBIC. 
             The default value is UNIFORM.The *weightingMethod* argument applies only when 
-            *couplingType*=DISTRIBUTING. 
+            *couplingType*=DISTRIBUTING.
+        alpha
+            A Float specifying the value of the thermal expansion coefficient. The default value is 0.0.
+            The alpha argument applies only when couplingType=KINEMATIC.
         """
         pass
