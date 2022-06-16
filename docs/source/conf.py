@@ -40,6 +40,10 @@ extensions = [
     'sphinx.ext.githubpages', 
 ]
 
+# Show short type hints for user-defined classes and defaults for parameters
+python_use_unqualified_type_names = True
+autodoc_typehints_format = 'short'
+
 numpydoc_show_class_members = True
 numpydoc_show_inherited_class_members = False
 numpydoc_xref_param_type = True
