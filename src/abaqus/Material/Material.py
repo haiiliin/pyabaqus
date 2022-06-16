@@ -46,6 +46,7 @@ from .Plastic.Concrete.ConcreteDamagedPlasticity import ConcreteDamagedPlasticit
 from .Plastic.Creep.Creep import Creep
 from .Plastic.CriticalStateClay.ClayPlasticity import ClayPlasticity
 from .Plastic.CrushableFoam.CrushableFoam import CrushableFoam
+from .Plastic.CrushStress.CrushStress import CrushStress
 from .Plastic.DruckerPrager.Extended.DruckerPrager import DruckerPrager
 from .Plastic.DruckerPrager.ModifiedCap.CapPlasticity import CapPlasticity
 from .Plastic.Metal.CastIron.CastIronPlasticity import CastIronPlasticity
@@ -90,6 +91,8 @@ class Material(MaterialBase):
         A :py:class:`~abaqus.Material.Plastic.Creep.Creep.Creep` object.
     crushableFoam: CrushableFoam
         A :py:class:`~abaqus.Material.Plastic.CrushableFoam.CrushableFoam.CrushableFoam` object.
+    crushStress: CrushStress
+        A :py:class:`~abaqus.Material.Plastic.CrushStress.CrushStress.CrushStress` object.
     ductileDamageInitiation: DamageInitiation
         A :py:class:`~abaqus.Material.ProgressiveDamageFailure.DamageInitiation.DamageInitiation` object.
     fldDamageInitiation: DamageInitiation
@@ -663,13 +666,36 @@ class Material(MaterialBase):
         )
         return self.crushableFoam
 
-    def Damping(
-        self,
-        alpha: float = 0,
-        beta: float = 0,
-        composite: float = 0,
-        structural: float = 0,
-    ) -> Damping:
+    def CrushStress(self, crushStressTable: tuple[tuple[float, ...]], temperatureDependency: Boolean = OFF,
+                 dependencies: int = 0):
+        """This method creates a CrushStress object.
+
+        Notes
+        -----
+            This function can be accessed by:
+
+            .. code-block:: python
+
+                mdb.models[name].materials[name].CrushStress
+                session.odbs[name].materials[name].CrushStress
+
+        Parameters
+        ----------
+        crushStressTable
+            A sequence of sequences of Floats specifying the items described below.
+        temperatureDependency
+            A Boolean specifying whether the data depend on temperature. The default value is OFF.
+        dependencies
+            An Int specifying the number of field variable dependencies. The default value is 0.
+
+        Returns
+        -------
+            A CrushStress object.
+        """
+        self.crushStress = CrushStress(crushStressTable, temperatureDependency, dependencies)
+        return self.crushStress
+
+    def Damping(self, alpha: float = 0, beta: float = 0, composite: float = 0, structural: float = 0) -> Damping:
         """This method creates a Damping object.
 
         Notes

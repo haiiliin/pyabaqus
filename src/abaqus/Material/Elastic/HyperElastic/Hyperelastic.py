@@ -145,8 +145,9 @@ class Hyperelastic:
             - VAN_DER_WAALS
             - YEOH
             - UNKNOWN
-
-            The default value is UNKNOWN.
+            - VALANIS_LANDEL
+            
+            The default value is UNKNOWN. 
         moduliTimeScale
             A SymbolicConstant specifying the nature of the time response. Possible values are
             INSTANTANEOUS and LONG_TERM. The default value is LONG_TERM.
