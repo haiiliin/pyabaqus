@@ -74,7 +74,7 @@ class SelfContactStd(Interaction):
             A Boolean specifying whether shell/membrane element thickness is considered. The default 
             value is ON.This argument in valid only when *enforcement*=SURFACE_TO_SURFACE. 
         smooth
-            A Float specifying the degree of smoothing used for deformable or rigid main surfaces 
+            A Float specifying the degree of smoothing used for deformable or rigid master surfaces
             involved when *enforcement*=NODE_TO_SURFACE. The value given must lie between 0.0 and 
             0.5. The default value is 0.2. 
         contactControls
@@ -103,7 +103,7 @@ class SelfContactStd(Interaction):
             A Boolean specifying whether shell/membrane element thickness is considered. The default 
             value is ON.This argument in valid only when *enforcement*=SURFACE_TO_SURFACE. 
         smooth
-            A Float specifying the degree of smoothing used for deformable or rigid main surfaces 
+            A Float specifying the degree of smoothing used for deformable or rigid master surfaces
             involved when *enforcement*=NODE_TO_SURFACE. The value given must lie between 0.0 and 
             0.5. The default value is 0.2. 
         contactControls

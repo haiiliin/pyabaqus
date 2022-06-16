@@ -53,8 +53,8 @@ class MeshPart(PartBase):
             A Cell, a Face, an Edge, or a ConstrainedSketchVertex object specifying geometric entity to be associated
             with one or more mesh entities.If the geometric entity is a Cell object then the 
             argument *elements* must be specified.If the geometric entity is a Face object then the 
-            argument *elemFaces* must be specified.If the geometric entity is an Edge object then 
-            the argument *elemEdges* must be specified.If the geometric entity is a ConstrainedSketchVertex object
+            argument *faces* must be specified.If the geometric entity is an Edge object then
+            the argument *edges* must be specified.If the geometric entity is a ConstrainedSketchVertex object
             then the argument *node* must be specified. 
         elements
             A sequence of MeshElement objects specifying the elements to be associated with the 

@@ -149,8 +149,7 @@ class JobMdb(MdbBase):
                          explicitPrecision: SymbolicConstant = SINGLE,
                          nodalOutputPrecision: SymbolicConstant = SINGLE,
                          parallelizationMethodExplicit: SymbolicConstant = DOMAIN, numDomains: int = 1,
-                         activateLoadBalancing: Boolean = OFF, multiprocessingMode: SymbolicConstant = DEFAULT,
-                         licenseType: SymbolicConstant = DEFAULT) -> JobFromInputFile:
+                         activateLoadBalancing: Boolean = OFF, multiprocessingMode: SymbolicConstant = DEFAULT) -> JobFromInputFile:
         """This method creates an analysis job using an input file for the model definition.
 
         Notes
@@ -229,18 +228,13 @@ class JobMdb(MdbBase):
         multiprocessingMode
             A SymbolicConstant specifying whether an analysis is decomposed into threads or into
             multiple processes that communicate through a message
-        licenseType
-            A SymbolicConstant specifying the type of license type being used in the case of the
-            DSLS SimUnit license model. Possible values are DEFAULT, TOKEN, and CREDIT. The default
-            value is DEFAULT.If the license model is not the DSLS SimUnit, the licenseType is not
-            available.
         """
 
         self.jobs[name] = jobFromInputFile = JobFromInputFile(name, inputFileName, type, queue, waitHours, waitMinutes,
                                                               atTime, scratch, userSubroutine, numCpus, memory,
                                                               memoryUnits, explicitPrecision, nodalOutputPrecision,
                                                               parallelizationMethodExplicit, numDomains,
-                                                              activateLoadBalancing, multiprocessingMode, licenseType)
+                                                              activateLoadBalancing, multiprocessingMode)
         return jobFromInputFile
 
     def OptimizationProcess(self, name: str, model: str, task: str, prototypeJob: str, description: str = '',

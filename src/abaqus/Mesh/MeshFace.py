@@ -18,12 +18,12 @@ class MeshFace:
         
         import part
         mdb.models[name].parts[name].elementFaces[i]
-        mdb.models[name].parts[name].elemFaces[i]
+        mdb.models[name].parts[name].faces[i]
         import assembly
         mdb.models[name].rootAssembly.allInstances[name].elementFaces[i]
-        mdb.models[name].rootAssembly.allInstances[name].elemFaces[i]
+        mdb.models[name].rootAssembly.allInstances[name].faces[i]
         mdb.models[name].rootAssembly.instances[name].elementFaces[i]
-        mdb.models[name].rootAssembly.instances[name].elemFaces[i]
+        mdb.models[name].rootAssembly.instances[name].faces[i]
 
     """
 

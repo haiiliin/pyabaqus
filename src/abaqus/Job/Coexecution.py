@@ -15,8 +15,8 @@ class Coexecution:
         A SymbolicConstant specifying the type of analysis to execute for the co-execution.
         Possible values are ANALYSIS, SYNTAXCHECK, RECOVER, and RESTART. The default value is
         ANALYSIS.
-    mainAnalysisProduct: SymbolicConstant
-        A SymbolicConstant specifying the analysis product type of the main model for the
+    masterAnalysisProduct: SymbolicConstant
+        A SymbolicConstant specifying the analysis product type of the master model for the
         co-execution. The default value is ABAQUS.
     waitHours: int
         An Int specifying the number of hours to wait before submitting the co-execution. This
@@ -45,18 +45,13 @@ class Coexecution:
         platforms.
     jobs: dict[str, Job]
         A repository of :py:class:`~abaqus.Job.Job.Job` objects specifying the jobs that comprise this co-execution.
-    secondaryModels: tuple
-        A tuple of Strings specifying the names of the secondary models for the co-execution.
-    secondaryAnalysisProducts: SymbolicConstant
-        A tuple of SymbolicConstants specifying the analysis product types of the secondary
+    slaveModels: tuple
+        A tuple of Strings specifying the names of the slave models for the co-execution.
+    slaveAnalysisProducts: SymbolicConstant
+        A tuple of SymbolicConstants specifying the analysis product types of the slave
         models for the co-execution. The default value is an empty sequence.
-    mainModel: str
-        A String specifying the name of the main model for the co-execution.
-    licenseType: SymbolicConstant
-        A SymbolicConstant specifying the type of license type being used in case of DSLS
-        SimUnit license model. Possible values are DEFAULT, TOKEN, and CREDIT. The default value
-        is DEFAULT.If the license model is not DSLS SimUnit then the licenseType is not
-        available.
+    masterModel: str
+        A String specifying the name of the master model for the co-execution.
 
     Notes
     -----
@@ -83,9 +78,9 @@ class Coexecution:
     # ANALYSIS. 
     type: SymbolicConstant = ANALYSIS
 
-    # A SymbolicConstant specifying the analysis product type of the main model for the 
+    # A SymbolicConstant specifying the analysis product type of the master model for the
     # co-execution. The default value is ABAQUS. 
-    mainAnalysisProduct: SymbolicConstant = ABAQUS
+    masterAnalysisProduct: SymbolicConstant = ABAQUS
 
     # An Int specifying the number of hours to wait before submitting the co-execution. This 
     # argument is ignored if *queue* is set. The default value is 0.This argument works in 
@@ -120,21 +115,15 @@ class Coexecution:
     # A repository of Job objects specifying the jobs that comprise this co-execution. 
     jobs: dict[str, Job] = dict[str, Job]()
 
-    # A tuple of Strings specifying the names of the secondary models for the co-execution. 
-    secondaryModels: tuple = ()
+    # A tuple of Strings specifying the names of the slave models for the co-execution.
+    slaveModels: tuple = ()
 
-    # A tuple of SymbolicConstants specifying the analysis product types of the secondary 
+    # A tuple of SymbolicConstants specifying the analysis product types of the slave
     # models for the co-execution. The default value is an empty sequence. 
-    secondaryAnalysisProducts: SymbolicConstant = None
+    slaveAnalysisProducts: SymbolicConstant = None
 
-    # A String specifying the name of the main model for the co-execution. 
-    mainModel: str = ''
-
-    # A SymbolicConstant specifying the type of license type being used in case of DSLS 
-    # SimUnit license model. Possible values are DEFAULT, TOKEN, and CREDIT. The default value 
-    # is DEFAULT.If the license model is not DSLS SimUnit then the licenseType is not 
-    # available. 
-    licenseType: SymbolicConstant = DEFAULT
+    # A String specifying the name of the master model for the co-execution.
+    masterModel: str = ''
 
     def kill(self):
         """This method kills the analysis of a co-execution.

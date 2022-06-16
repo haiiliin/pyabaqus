@@ -31,7 +31,7 @@ class OptimizationTaskModel(ModelBase):
                  modeTrackingRegion: SymbolicConstant = MODEL, nodalMoveLimit: float = 0,
                  nodeSmooth: SymbolicConstant = DEFAULT,
                  nodeUpdateStrategy: SymbolicConstant = CONSERVATIVE, numTrackedModes: int = 5,
-                 updateShapeBasisVectors: SymbolicConstant = EVERY_CYCLE, groupOperator: Boolean = OFF) -> BeadTask:
+                 updateShapeBasisVectors: SymbolicConstant = EVERY_CYCLE) -> BeadTask:
         """This method creates a BeadTask object.
 
         Notes
@@ -107,10 +107,6 @@ class OptimizationTaskModel(ModelBase):
             A SymbolicConstant specifying whether to update shape basis vectors in the first design
             cycle or every design cycle. Possible values are EVERY_CYCLE and FIRST_CYCLE. The
             default value is EVERY_CYCLE.
-        groupOperator
-            A Boolean specifying whether the group in the design response will be evaluated using
-            the existing algorithm or a new algorithm based on Abaqus sensitivities. The default
-            value of False means that the existing algorithm will be used.
 
         Returns
         -------
@@ -123,8 +119,7 @@ class OptimizationTaskModel(ModelBase):
                                                                    flipNormalDir, frozenBoundaryConditionRegion,
                                                                    isSensCalcOnlyOnDesignNodes, modeTrackingRegion,
                                                                    nodalMoveLimit, nodeSmooth, nodeUpdateStrategy,
-                                                                   numTrackedModes, updateShapeBasisVectors,
-                                                                   groupOperator)
+                                                                   numTrackedModes, updateShapeBasisVectors)
         return optimizationTask
 
     def ShapeTask(self, name: str, abaqusSensitivities: Boolean = True,
@@ -153,7 +148,7 @@ class OptimizationTaskModel(ModelBase):
                   smoothingRegion: str = None, targetMeshQuality: SymbolicConstant = LOW,
                   tetAspectRatio: float = 100, tetMaxAspect: float = 8, tetMinAspect: float = 0,
                   tetSkew: float = 100, triMaxAngle: float = 140, triMinAngle: float = 20,
-                  updateShapeBasisVectors: SymbolicConstant = EVERY_CYCLE, groupOperator: Boolean = OFF) -> ShapeTask:
+                  updateShapeBasisVectors: SymbolicConstant = EVERY_CYCLE) -> ShapeTask:
         """This method creates a ShapeTask object.
 
         Notes
@@ -313,10 +308,6 @@ class OptimizationTaskModel(ModelBase):
             A SymbolicConstant specifying whether to update shape basis vectors in the first design
             cycle or every design cycle. Possible values are EVERY_CYCLE and FIRST_CYCLE. The
             default value is EVERY_CYCLE.
-        groupOperator
-            A Boolean specifying whether the group in the design response will be evaluated using
-            the existing algorithm or a new algorithm based on Abaqus sensitivities. The default
-            value of False means that the existing algorithm will be used.
 
         Returns
         -------
@@ -343,7 +334,7 @@ class OptimizationTaskModel(ModelBase):
                                                                     shrinkScaleFactor, smoothingRegion,
                                                                     targetMeshQuality, tetAspectRatio, tetMaxAspect,
                                                                     tetMinAspect, tetSkew, triMaxAngle, triMinAngle,
-                                                                    updateShapeBasisVectors, groupOperator)
+                                                                    updateShapeBasisVectors)
         return optimizationTask
 
     def SizingTask(self, name: str, abaqusSensitivities: Boolean = True,
@@ -352,7 +343,7 @@ class OptimizationTaskModel(ModelBase):
                    modeTrackingRegion: str = MODEL, numFulfilledStopCriteria: int = 2,
                    numTrackedModes: int = 5, objectiveFunctionDeltaStopCriteria: float = 0,
                    stopCriteriaDesignCycle: int = 4, thicknessMoveLimit: float = 0,
-                   thicknessUpdateStrategy: SymbolicConstant = NORMAL, groupOperator: Boolean = OFF) -> SizingTask:
+                   thicknessUpdateStrategy: SymbolicConstant = NORMAL) -> SizingTask:
         """This method creates a SizingTask object.
 
         Notes
@@ -399,10 +390,6 @@ class OptimizationTaskModel(ModelBase):
             A SymbolicConstant specifying the strategy for how the thickness is updated in the
             method of moving asymptotes. Possible values are NORMAL, CONSERVATIVE, and AGGRESSIVE.
             The default value is NORMAL.
-        groupOperator
-            A Boolean specifying whether the group in the design response will be evaluated using
-            the existing algorithm or a new algorithm based on Abaqus sensitivities. The default
-            value of False means that the existing algorithm will be used.
 
         Returns
         -------
@@ -415,7 +402,7 @@ class OptimizationTaskModel(ModelBase):
                                                                      numTrackedModes,
                                                                      objectiveFunctionDeltaStopCriteria,
                                                                      stopCriteriaDesignCycle, thicknessMoveLimit,
-                                                                     thicknessUpdateStrategy, groupOperator)
+                                                                     thicknessUpdateStrategy)
         return optimizationTask
 
     def TopologyTask(self, name: str, abaqusSensitivities: Boolean = True,
@@ -436,8 +423,7 @@ class OptimizationTaskModel(ModelBase):
                      stepSize: SymbolicConstant = MEDIUM,
                      stiffnessMassDamping: typing.Union[SymbolicConstant, float] = AVERAGE_EDGE_LENGTH,
                      stopCriteriaDesignCycle: int = 4, structuralMassDamping: float = None,
-                     viscousMassDamping: float = None, viscousStiffnessDamping: float = None,
-                     groupOperator: Boolean = OFF) -> TopologyTask:
+                     viscousMassDamping: float = None, viscousStiffnessDamping: float = None) -> TopologyTask:
         """This method creates a TopologyTask object.
 
         Notes
@@ -558,10 +544,6 @@ class OptimizationTaskModel(ModelBase):
         viscousStiffnessDamping
             None or a Float specifying the viscous stiffness damping for the task region. The
             default value is None.
-        groupOperator
-            A Boolean specifying whether the group in the design response will be evaluated using
-            the existing algorithm or a new algorithm based on Abaqus sensitivities. The default
-            value of False means that the existing algorithm will be used.
 
         Returns
         -------
@@ -583,6 +565,5 @@ class OptimizationTaskModel(ModelBase):
                                                                        softDeletionRegion, softDeletionThreshold,
                                                                        stepSize, stiffnessMassDamping,
                                                                        stopCriteriaDesignCycle, structuralMassDamping,
-                                                                       viscousMassDamping, viscousStiffnessDamping,
-                                                                       groupOperator)
+                                                                       viscousMassDamping, viscousStiffnessDamping)
         return optimizationTask

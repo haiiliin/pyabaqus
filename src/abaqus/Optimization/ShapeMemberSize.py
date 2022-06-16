@@ -19,8 +19,7 @@ class ShapeMemberSize(GeometricRestriction):
     """
 
     def __init__(self, name: str, region: Region, maxThickness: float = 0, minThickness: float = 0,
-                 sizeRestriction: SymbolicConstant = MINIMUM, assignNodeGroupRegion: str = OFF,
-                 nodeGroupRegion: str = ''):
+                 sizeRestriction: SymbolicConstant = MINIMUM):
         """This method creates a ShapeMemberSize object.
 
         Notes
@@ -45,11 +44,7 @@ class ShapeMemberSize(GeometricRestriction):
             A Float specifying the minimum thickness. The default value is 0.0. 
         sizeRestriction
             A SymbolicConstant specifying whether to restrict the minimum or maximum thickness. 
-            Possible values are MAXIMUM and MINIMUM. The default value is MINIMUM. 
-        assignNodeGroupRegion
-            A bool specifying whether to use the node group region. The default value is OFF. 
-        nodeGroupRegion
-            A Node Region object specifying the check node group. 
+            Possible values are MAXIMUM and MINIMUM. The default value is MINIMUM.
 
         Returns
         -------
@@ -59,8 +54,7 @@ class ShapeMemberSize(GeometricRestriction):
         pass
 
     def setValues(self, maxThickness: float = 0, minThickness: float = 0,
-                  sizeRestriction: SymbolicConstant = MINIMUM, assignNodeGroupRegion: str = OFF,
-                  nodeGroupRegion: str = ''):
+                  sizeRestriction: SymbolicConstant = MINIMUM):
         """This method modifies the ShapeMemberSize object.
         
         Parameters
@@ -71,10 +65,6 @@ class ShapeMemberSize(GeometricRestriction):
             A Float specifying the minimum thickness. The default value is 0.0. 
         sizeRestriction
             A SymbolicConstant specifying whether to restrict the minimum or maximum thickness. 
-            Possible values are MAXIMUM and MINIMUM. The default value is MINIMUM. 
-        assignNodeGroupRegion
-            A bool specifying whether to use the node group region. The default value is OFF. 
-        nodeGroupRegion
-            A Node Region object specifying the check node group. 
+            Possible values are MAXIMUM and MINIMUM. The default value is MINIMUM.
         """
         pass

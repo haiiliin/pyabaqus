@@ -22,7 +22,7 @@ class SurfaceToSurfaceContactExp(Interaction):
 
     """
 
-    def __init__(self, name: str, createStepName: str, main: Region, secondary: Region,
+    def __init__(self, name: str, createStepName: str, master: Region, slave: Region,
                  sliding: SymbolicConstant, interactionProperty: str,
                  mechanicalConstraint: SymbolicConstant = KINEMATIC,
                  weightingFactorType: SymbolicConstant = DEFAULT, weightingFactor: float = 0,
@@ -50,10 +50,10 @@ class SurfaceToSurfaceContactExp(Interaction):
         createStepName
             A String specifying the name of the step in which the SurfaceToSurfaceContactExp object 
             is created. 
-        main
-            A Region object specifying the main surface. 
-        secondary
-            A Region object specifying the secondary surface. 
+        master
+            A Region object specifying the master surface.
+        slave
+            A Region object specifying the slave surface.
         sliding
             A SymbolicConstant specifying the contact formulation. Possible values are FINITE and 
             SMALL. 
@@ -105,7 +105,7 @@ class SurfaceToSurfaceContactExp(Interaction):
         pass
 
     def swapSurfaces(self):
-        """This method switches the main and secondary surfaces of a surface-to-surface contact
+        """This method switches the master and slave surfaces of a surface-to-surface contact
         pair. This command is valid only during the step in which the interaction is created.
         """
         pass

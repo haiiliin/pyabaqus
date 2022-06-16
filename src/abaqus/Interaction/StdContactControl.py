@@ -90,7 +90,7 @@ class StdContactControl(ContactControl):
             value is 0.0.The *perrmx* argument must be specified in conjunction with the *maxchp* 
             argument. 
         uerrmx
-            A Float specifying the maximum overclosure distance allowed at a secondary node that is 
+            A Float specifying the maximum overclosure distance allowed at a slave node that is
             considered to be open. The default value is 0.0.The *uerrmx* argument must be specified 
             in conjunction with the *maxchp* argument. 
         stabilizeChoice
@@ -193,7 +193,7 @@ class StdContactControl(ContactControl):
             value is 0.0.The *perrmx* argument must be specified in conjunction with the *maxchp* 
             argument. 
         uerrmx
-            A Float specifying the maximum overclosure distance allowed at a secondary node that is 
+            A Float specifying the maximum overclosure distance allowed at a slave node that is
             considered to be open. The default value is 0.0.The *uerrmx* argument must be specified 
             in conjunction with the *maxchp* argument. 
         stabilizeChoice

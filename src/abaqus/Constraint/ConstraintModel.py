@@ -380,11 +380,10 @@ class ConstraintModel(ModelBase):
                                                                  influenceDistance)
         return constraint
 
-    def Tie(self, name: str, main: Region, secondary: Region, adjust: Boolean = ON,
+    def Tie(self, name: str, master: Region, slave: Region, adjust: Boolean = ON,
             positionToleranceMethod: SymbolicConstant = COMPUTED, positionTolerance: float = 0,
-            tieRotations: Boolean = ON, constraintRatioMethod: SymbolicConstant = DEFAULT,
-            constraintRatio: float = 0, constraintEnforcement: SymbolicConstant = SOLVER_DEFAULT,
-            thickness: Boolean = ON) -> Tie:
+            tieRotations: Boolean = ON, constraintRatioMethod: SymbolicConstant = DEFAULT, constraintRatio: float = 0,
+            constraintEnforcement: SymbolicConstant = SOLVER_DEFAULT, thickness: Boolean = ON) -> Tie:
         """This method creates a Tie object.
 
         Notes
@@ -399,13 +398,13 @@ class ConstraintModel(ModelBase):
         ----------
         name
             A String specifying the constraint repository key.
-        main
-            A Region object specifying the name of the main surface.
-        secondary
-            A Region object specifying the name of the secondary surface.
+        master
+            A Region object specifying the name of the master surface.
+        slave
+            A Region object specifying the name of the slave surface.
         adjust
-            A Boolean specifying whether initial positions of tied secondary nodes are adjusted to
-            lie on the main surface. The default value is ON.
+            A Boolean specifying whether initial positions of tied slave nodes are adjusted to
+            lie on the master surface. The default value is ON.
         positionToleranceMethod
             A SymbolicConstant specifying the method used to determine the position tolerance.
             Possible values are COMPUTED and SPECIFIED. The default value is COMPUTED.
@@ -419,8 +418,8 @@ class ConstraintModel(ModelBase):
             A SymbolicConstant specifying the method used to determine the constraint ratio.
             Possible values are DEFAULT and SPECIFIED. The default value is DEFAULT.
         constraintRatio
-            A Float specifying the fractional distance between the main reference surface and the
-            secondary node at which the translational constraint should act. The *constraintRatio*
+            A Float specifying the fractional distance between the master reference surface and the
+            slave node at which the translational constraint should act. The *constraintRatio*
             argument applies only when *constraintRatioMethod*=SPECIFIED. The default value is 0.0.
         constraintEnforcement
             A SymbolicConstant specifying the discretization method. Possible values are
@@ -434,7 +433,7 @@ class ConstraintModel(ModelBase):
         -------
             A Tie object.
         """
-        self.constraints[name] = constraint = Tie(name, main, secondary, adjust, positionToleranceMethod,
+        self.constraints[name] = constraint = Tie(name, master, slave, adjust, positionToleranceMethod,
                                                   positionTolerance, tieRotations, constraintRatioMethod,
                                                   constraintRatio, constraintEnforcement, thickness)
         return constraint

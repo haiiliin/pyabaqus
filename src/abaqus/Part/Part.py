@@ -43,7 +43,7 @@ class Part(MeshEditPart, MeshPart, PropertyPart, RegionPart):
         A repository of :py:class:`~abaqus.Datum.Datum.Datum` objects specifying all the datums in the part.
     elements: MeshElementArray
         A :py:class:`~abaqus.Mesh.MeshElementArray.MeshElementArray` object specifying all the elements in the part.
-    elemFaces: dict[str, MeshFace]
+    faces: dict[str, MeshFace]
         A repository of :py:class:`~abaqus.Mesh.MeshFace.MeshFace` objects specifying all the element faces in the part. For a
         given element and a given face index within that element, the corresponding :py:class:`~abaqus.Mesh.MeshFace.MeshFace`
         object can be retrieved from the repository by using the key calculated as (i*8 + j),
@@ -82,7 +82,7 @@ class Part(MeshEditPart, MeshPart, PropertyPart, RegionPart):
         A :py:class:`~abaqus.Property.MaterialOrientationArray.MaterialOrientationArray` object.
     compositeLayups: dict[str, CompositeLayup]
         A repository of :py:class:`~abaqus.Property.CompositeLayup.CompositeLayup` objects.
-    elemEdges: dict[str, MeshEdge]
+    edges: dict[str, MeshEdge]
         A repository of :py:class:`~abaqus.Mesh.:py:class:`~abaqus.Mesh.MeshEdge.MeshEdge`.:py:class:`~abaqus.Mesh.MeshEdge.MeshEdge`` objects specifying all the element edges in the part. For a
         given element and a given edge index on a given face within that element, the
         corresponding :py:class:`~abaqus.Mesh.:py:class:`~abaqus.Mesh.MeshEdge.MeshEdge`.:py:class:`~abaqus.Mesh.MeshEdge.MeshEdge`` object can be retrieved from the repository by using the key

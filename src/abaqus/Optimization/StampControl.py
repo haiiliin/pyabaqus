@@ -18,11 +18,10 @@ class StampControl(GeometricRestriction):
 
     """
 
-    def __init__(self, name: str, clientDirection: tuple, region: Region, csys: int = None,
-                 drawAngle: float = 0, mainPoint: str = None,
-                 mainPointDetermination: SymbolicConstant = MAXIMUM,
-                 presumeFeasibleRegionAtStart: Boolean = ON, tolerance1: float = 0,
-                 tolerance2: float = 0, tolerance3: float = 0, undercutTolerance: float = 0):
+    def __init__(self, name: str, clientDirection: tuple, region: Region, csys: int = None, drawAngle: float = 0,
+                 masterPoint: str = None, masterPointDetermination: SymbolicConstant = MAXIMUM,
+                 presumeFeasibleRegionAtStart: Boolean = ON, tolerance1: float = 0, tolerance2: float = 0,
+                 tolerance3: float = 0, undercutTolerance: float = 0):
         """This method creates a StampControl object.
 
         Notes
@@ -50,10 +49,10 @@ class StampControl(GeometricRestriction):
             default value is None. 
         drawAngle
             A Float specifying the draw angle. The default value is 0.0. 
-        mainPoint
-            None or a Region object specifying the main point used when *mainPointDetermination* is 
+        masterPoint
+            None or a Region object specifying the master point used when *masterPointDetermination* is
             SPECIFY. The default value is None. 
-        mainPointDetermination
+        masterPointDetermination
             A SymbolicConstant specifying the rule for assigning point priority. Possible values are 
             MAXIMUM, MINIMUM, and SPECIFY. The default value is MAXIMUM. 
         presumeFeasibleRegionAtStart
@@ -78,10 +77,9 @@ class StampControl(GeometricRestriction):
         super().__init__()
         pass
 
-    def setValues(self, csys: int = None, drawAngle: float = 0, mainPoint: str = None,
-                  mainPointDetermination: SymbolicConstant = MAXIMUM,
-                  presumeFeasibleRegionAtStart: Boolean = ON, tolerance1: float = 0,
-                  tolerance2: float = 0, tolerance3: float = 0, undercutTolerance: float = 0):
+    def setValues(self, csys: int = None, drawAngle: float = 0, masterPoint: str = None,
+                  masterPointDetermination: SymbolicConstant = MAXIMUM, presumeFeasibleRegionAtStart: Boolean = ON,
+                  tolerance1: float = 0, tolerance2: float = 0, tolerance3: float = 0, undercutTolerance: float = 0):
         """This method modifies the StampControl object.
         
         Parameters
@@ -92,10 +90,10 @@ class StampControl(GeometricRestriction):
             default value is None. 
         drawAngle
             A Float specifying the draw angle. The default value is 0.0. 
-        mainPoint
-            None or a Region object specifying the main point used when *mainPointDetermination* is 
+        masterPoint
+            None or a Region object specifying the master point used when *masterPointDetermination* is
             SPECIFY. The default value is None. 
-        mainPointDetermination
+        masterPointDetermination
             A SymbolicConstant specifying the rule for assigning point priority. Possible values are 
             MAXIMUM, MINIMUM, and SPECIFY. The default value is MAXIMUM. 
         presumeFeasibleRegionAtStart

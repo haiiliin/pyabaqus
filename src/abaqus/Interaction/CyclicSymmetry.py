@@ -27,11 +27,10 @@ class CyclicSymmetry(Interaction):
 
     """
 
-    def __init__(self, name: str, createStepName: str, main: Region, secondary: Region, repetitiveSectors: int,
-                 axisPoint1: Region, axisPoint2: Region,
-                 extractedNodalDiameter: SymbolicConstant = ALL_NODAL_DIAMETER,
-                 lowestNodalDiameter: int = 0, highestNodalDiameter: int = 0,
-                 excitationNodalDiameter: int = 0, adjustTie: Boolean = ON, positionTolerance: float = 0,
+    def __init__(self, name: str, createStepName: str, master: Region, slave: Region, repetitiveSectors: int,
+                 axisPoint1: Region, axisPoint2: Region, extractedNodalDiameter: SymbolicConstant = ALL_NODAL_DIAMETER,
+                 lowestNodalDiameter: int = 0, highestNodalDiameter: int = 0, excitationNodalDiameter: int = 0,
+                 adjustTie: Boolean = ON, positionTolerance: float = 0,
                  positionToleranceMethod: SymbolicConstant = COMPUTED_TOLERANCE):
         """This method creates a CyclicSymmetry object.
 
@@ -50,10 +49,10 @@ class CyclicSymmetry(Interaction):
         createStepName
             A String specifying the name of the step in which the cyclic symmetry interaction should 
             be created. 
-        main
-            A Region object specifying the main surface. 
-        secondary
-            A Region object specifying the secondary surface. 
+        master
+            A Region object specifying the master surface.
+        slave
+            A Region object specifying the slave surface.
         repetitiveSectors
             An Int specifying the total number of sectors in the cyclic symmetric model. 
         axisPoint1
@@ -84,8 +83,8 @@ class CyclicSymmetry(Interaction):
             equal to the highest nodal diameter (specified in the *highestNodalDiameter* parameter). 
             The default value is 0. 
         adjustTie
-            A Boolean specifying whether or not to adjust the secondary surface of the cyclic 
-            symmetry to tie it to the main surface. The default value is ON. 
+            A Boolean specifying whether or not to adjust the slave surface of the cyclic
+            symmetry to tie it to the master surface. The default value is ON.
         positionTolerance
             A Float specifying the position tolerance. The*positionTolerance* argument applies only 
             when *positionToleranceMethod*=SPECIFY_TOLERANCE. The default value is 0.0. 
@@ -102,7 +101,7 @@ class CyclicSymmetry(Interaction):
         pass
 
     def swapSurfaces(self):
-        """This method switches the main and secondary surfaces of a cyclic symmetry interaction.
+        """This method switches the master and slave surfaces of a cyclic symmetry interaction.
         This command is valid only during the step in which the interaction is created.
         """
         pass
@@ -135,8 +134,8 @@ class CyclicSymmetry(Interaction):
             equal to the highest nodal diameter (specified in the *highestNodalDiameter* parameter). 
             The default value is 0. 
         adjustTie
-            A Boolean specifying whether or not to adjust the secondary surface of the cyclic 
-            symmetry to tie it to the main surface. The default value is ON. 
+            A Boolean specifying whether or not to adjust the slave surface of the cyclic
+            symmetry to tie it to the master surface. The default value is ON.
         positionTolerance
             A Float specifying the position tolerance. The*positionTolerance* argument applies only 
             when *positionToleranceMethod*=SPECIFY_TOLERANCE. The default value is 0.0. 

@@ -34,7 +34,7 @@ from ..Interaction.FluidInflatorProperty import FluidInflatorProperty
 from ..Interaction.IncidentWave import IncidentWave
 from ..Interaction.IncidentWaveProperty import IncidentWaveProperty
 from ..Interaction.InitializationAssignment import InitializationAssignment
-from ..Interaction.MainSecondaryAssignment import MainSecondaryAssignment
+from ..Interaction.MasterSlaveAssignment import MasterSlaveAssignment
 from ..Interaction.ModelChange import ModelChange
 from ..Interaction.PressurePenetration import PressurePenetration
 from ..Interaction.RadiationToAmbient import RadiationToAmbient
@@ -80,11 +80,10 @@ class InteractionModel(InteractionContactControlModel,
 
     def contactDetection(self, name: str = '', createStepName: str = '', searchDomain: SymbolicConstant = MODEL,
                          defaultType: SymbolicConstant = CONTACT, interactionProperty: str = '',
-                         separationTolerance: float = None, extendByAngle: float = 20,
-                         mergeWithinAngle: float = 20, searchSingleInstances: Boolean = OFF,
-                         nameEachSurfaceFound: Boolean = ON, createUnionOfMainSurfaces: Boolean = OFF,
-                         createUnionOfSecondarySurfaces: Boolean = OFF,
-                         createUnionOfMainSecondarySurfaces: Boolean = OFF, includePlanar: Boolean = ON,
+                         separationTolerance: float = None, extendByAngle: float = 20, mergeWithinAngle: float = 20,
+                         searchSingleInstances: Boolean = OFF, nameEachSurfaceFound: Boolean = ON,
+                         createUnionOfMasterSurfaces: Boolean = OFF, createUnionOfSlaveSurfaces: Boolean = OFF,
+                         createUnionOfMasterSlaveSurfaces: Boolean = OFF, includePlanar: Boolean = ON,
                          includeCylindricalSphericalToric: Boolean = ON, includeSplineBased: Boolean = ON,
                          includeMeshSolid: Boolean = ON, includeMeshShell: Boolean = ON,
                          includeMeshMembrane: Boolean = OFF, includeOverclosed: Boolean = ON,
@@ -131,15 +130,15 @@ class InteractionModel(InteractionContactControlModel,
         nameEachSurfaceFound
             A Boolean specifying whether to assign a name to each surface found. The default value
             is ON.
-        createUnionOfMainSurfaces
-            A Boolean specifying whether to create a surface that is the union of all main surfaces
+        createUnionOfMasterSurfaces
+            A Boolean specifying whether to create a surface that is the union of all master surfaces
             found. The default value is OFF.
-        createUnionOfSecondarySurfaces
-            A Boolean specifying whether to create a surface that is the union of all secondary
+        createUnionOfSlaveSurfaces
+            A Boolean specifying whether to create a surface that is the union of all slave
             surfaces found. The default value is OFF.
-        createUnionOfMainSecondarySurfaces
-            A Boolean specifying whether to create a surface that is the union of all main and
-            secondary surfaces found. The default value is OFF.
+        createUnionOfMasterSlaveSurfaces
+            A Boolean specifying whether to create a surface that is the union of all master and
+            slave surfaces found. The default value is OFF.
         includePlanar
             A Boolean specifying whether to include planar geometry. The default value is ON.
         includeCylindricalSphericalToric
@@ -185,9 +184,9 @@ class InteractionModel(InteractionContactControlModel,
         -------
             Tuple of tuples, where each tuple holds information, to be used in contact creation as
             follows:
-            A string specifying the name of the main surface used in contact.
-            A string specifying the name of the secondary surface used in contact.
-            A float specifying the separation distance between the main surface and the secondary
+            A string specifying the name of the master surface used in contact.
+            A string specifying the name of the slave surface used in contact.
+            A float specifying the separation distance between the master surface and the slave
             surface.
             A boolean specifying whether or not contact surfaces are overclosed..
         """
@@ -763,7 +762,7 @@ class InteractionModel(InteractionContactControlModel,
                    smoothingAssignments: SmoothingAssignment = SmoothingAssignment(),
                    surfaceCrushTriggerAssignments: SurfaceCrushTriggerAssignment = SurfaceCrushTriggerAssignment(),
                    surfaceFrictionAssignments: SurfaceFrictionAssignment = SurfaceFrictionAssignment(),
-                   mainSecondaryAssignments: MainSecondaryAssignment = MainSecondaryAssignment(),
+                   masterSlaveAssignments: MasterSlaveAssignment = MasterSlaveAssignment(),
                    polarityAssignments: PolarityAssignments = PolarityAssignments()) -> ContactExp:
         """This method creates a ContactExp object.
 
@@ -813,8 +812,8 @@ class InteractionModel(InteractionContactControlModel,
         surfaceFrictionAssignments
             A SurfaceFrictionAssignment object specifying the surface friction assignments in the
             contact domain.
-        mainSecondaryAssignments
-            A MainSecondaryAssignment object specifying the main-secondary assignments in the
+        masterSlaveAssignments
+            A MasterSlaveAssignment object specifying the master-slave assignments in the
             contact domain.
         polarityAssignments
             A PolarityAssignments object specifying the polarity assignments in the contact domain.
@@ -828,7 +827,7 @@ class InteractionModel(InteractionContactControlModel,
                                                            surfaceThicknessAssignments, surfaceOffsetAssignments,
                                                            surfaceFeatureAssignments, smoothingAssignments,
                                                            surfaceCrushTriggerAssignments, surfaceFrictionAssignments,
-                                                           mainSecondaryAssignments, polarityAssignments)
+                                                           masterSlaveAssignments, polarityAssignments)
         return interaction
 
     def ContactProperty(self, name: str) -> ContactProperty:
@@ -865,7 +864,7 @@ class InteractionModel(InteractionContactControlModel,
                    surfaceFeatureAssignments: SurfaceFeatureAssignment = SurfaceFeatureAssignment(),
                    surfaceBeamSmoothingAssignments: SurfaceBeamSmoothingAssignment = SurfaceBeamSmoothingAssignment(),
                    surfaceVertexCriteriaAssignments: SurfaceVertexCriteriaAssignment = SurfaceVertexCriteriaAssignment(),
-                   mainSecondaryAssignments: MainSecondaryAssignment = MainSecondaryAssignment(),
+                   masterSlaveAssignments: MasterSlaveAssignment = MasterSlaveAssignment(),
                    initializationAssignments: InitializationAssignment = InitializationAssignment(),
                    stabilizationAssignments: StabilizationAssignment = StabilizationAssignment(),
                    smoothingAssignments: SmoothingAssignment = SmoothingAssignment(),
@@ -915,8 +914,8 @@ class InteractionModel(InteractionContactControlModel,
         surfaceVertexCriteriaAssignments
             A SurfaceVertexCriteriaAssignment object specifying the surface vertex criteria
             assignments in the contact domain.
-        mainSecondaryAssignments
-            A MainSecondaryAssignment object specifying the main-secondary assignments in the
+        masterSlaveAssignments
+            A MasterSlaveAssignment object specifying the master-slave assignments in the
             contact domain.
         initializationAssignments
             An InitializationAssignment object specifying the contact initialization assignments in
@@ -942,18 +941,17 @@ class InteractionModel(InteractionContactControlModel,
                                                            includedPairs, excludedPairs, contactPropertyAssignments,
                                                            surfaceThicknessAssignments, surfaceOffsetAssignments,
                                                            surfaceFeatureAssignments, surfaceBeamSmoothingAssignments,
-                                                           surfaceVertexCriteriaAssignments, mainSecondaryAssignments,
+                                                           surfaceVertexCriteriaAssignments, masterSlaveAssignments,
                                                            initializationAssignments, stabilizationAssignments,
                                                            smoothingAssignments, slidingTransitionAssignments,
                                                            slidingFormulationAssignments)
         return interaction
 
-    def CyclicSymmetry(self, name: str, createStepName: str, main: Region, secondary: Region, repetitiveSectors: int,
+    def CyclicSymmetry(self, name: str, createStepName: str, master: Region, slave: Region, repetitiveSectors: int,
                        axisPoint1: Region, axisPoint2: Region,
-                       extractedNodalDiameter: SymbolicConstant = ALL_NODAL_DIAMETER,
-                       lowestNodalDiameter: int = 0, highestNodalDiameter: int = 0,
-                       excitationNodalDiameter: int = 0, adjustTie: Boolean = ON, positionTolerance: float = 0,
-                       positionToleranceMethod: SymbolicConstant = COMPUTED_TOLERANCE) -> CyclicSymmetry:
+                       extractedNodalDiameter: SymbolicConstant = ALL_NODAL_DIAMETER, lowestNodalDiameter: int = 0,
+                       highestNodalDiameter: int = 0, excitationNodalDiameter: int = 0, adjustTie: Boolean = ON,
+                       positionTolerance: float = 0, positionToleranceMethod: SymbolicConstant = COMPUTED_TOLERANCE) -> CyclicSymmetry:
         """This method creates a CyclicSymmetry object.
 
         Notes
@@ -971,10 +969,10 @@ class InteractionModel(InteractionContactControlModel,
         createStepName
             A String specifying the name of the step in which the cyclic symmetry interaction should
             be created.
-        main
-            A Region object specifying the main surface.
-        secondary
-            A Region object specifying the secondary surface.
+        master
+            A Region object specifying the master surface.
+        slave
+            A Region object specifying the slave surface.
         repetitiveSectors
             An Int specifying the total number of sectors in the cyclic symmetric model.
         axisPoint1
@@ -1005,8 +1003,8 @@ class InteractionModel(InteractionContactControlModel,
             equal to the highest nodal diameter (specified in the *highestNodalDiameter* parameter).
             The default value is 0.
         adjustTie
-            A Boolean specifying whether or not to adjust the secondary surface of the cyclic
-            symmetry to tie it to the main surface. The default value is ON.
+            A Boolean specifying whether or not to adjust the slave surface of the cyclic
+            symmetry to tie it to the master surface. The default value is ON.
         positionTolerance
             A Float specifying the position tolerance. The*positionTolerance* argument applies only
             when *positionToleranceMethod*=SPECIFY_TOLERANCE. The default value is 0.0.
@@ -1019,7 +1017,7 @@ class InteractionModel(InteractionContactControlModel,
         -------
             A CyclicSymmetry object.
         """
-        self.interactions[name] = interaction = CyclicSymmetry(name, createStepName, main, secondary, repetitiveSectors,
+        self.interactions[name] = interaction = CyclicSymmetry(name, createStepName, master, slave, repetitiveSectors,
                                                                axisPoint1, axisPoint2, extractedNodalDiameter,
                                                                lowestNodalDiameter, highestNodalDiameter,
                                                                excitationNodalDiameter, adjustTie, positionTolerance,
@@ -1090,7 +1088,7 @@ class InteractionModel(InteractionContactControlModel,
             value is 1.0.
         warpCheckPeriod
             An Int specifying the number of increments between checks for highly warped facets on
-            main surfaces. The default value is 20.
+            msater surfaces. The default value is 20.
         warpCutoff
             A Float specifying the out-of-plane warping angle (in degrees), at which a facet will be
             considered to be highly warped. The default value is 20.0.
@@ -1110,7 +1108,7 @@ class InteractionModel(InteractionContactControlModel,
     def ExpInitialization(self, name: str, overclosureType: SymbolicConstant = ADJUST,
                           interferenceDistance: float = None, clearanceDistance: float = None,
                           openingTolerance: float = None, overclosureTolerance: float = None,
-                          adjustNodalCoords: Boolean = True, secondaryNodesetName: str = None,
+                          adjustNodalCoords: Boolean = True, slaveNodesetName: str = None,
                           stepFraction: float = 1) -> ExpInitialization:
         """This method creates an ExpInitialization object.
 
@@ -1149,8 +1147,8 @@ class InteractionModel(InteractionContactControlModel,
             coordinates without creating strain in the model. *adjustNodalCoords*=True can be used
             only for clearances/overclosures defined in the first step of an analysis. The default
             value is True.
-        secondaryNodesetName
-            A String specifying the name of the node set containing the secondary nodes to be
+        slaveNodesetName
+            A String specifying the name of the node set containing the slave nodes to be
             included in the initial clearance specification. This argument is not valid when
             *overclosureType*=INTERFERENCE and if *openingTolerance* or *overclosureTolerance* is
             specified. The default value is None.
@@ -1170,7 +1168,7 @@ class InteractionModel(InteractionContactControlModel,
         self.interactions[name] = interaction = ExpInitialization(name, overclosureType, interferenceDistance,
                                                                   clearanceDistance, openingTolerance,
                                                                   overclosureTolerance, adjustNodalCoords,
-                                                                  secondaryNodesetName, stepFraction)
+                                                                  slaveNodesetName, stepFraction)
         return interaction
 
     def FilmCondition(self, name: str, createStepName: str, surface: Region, definition: SymbolicConstant,
@@ -1974,10 +1972,10 @@ class InteractionModel(InteractionContactControlModel,
         contactInteraction
             A String specifying the name of the Surface-to-surface contact (Standard) interaction.
         mainPoints
-            A RegionArray object specifying the points on the main surface that are exposed to the
+            A RegionArray object specifying the points on the master surface that are exposed to the
             fluid.
         secondaryPoints
-            A RegionArray object specifying the points on the secondary surface that are exposed to
+            A RegionArray object specifying the points on the slave surface that are exposed to
             the fluid.
         penetrationPressure
             A tuple of Floats specifying the fluid pressure magnitude. For steady state dynamic
@@ -2129,7 +2127,7 @@ class InteractionModel(InteractionContactControlModel,
             A Boolean specifying whether shell/membrane element thickness is considered. The default
             value is ON.This argument in valid only when *enforcement*=SURFACE_TO_SURFACE.
         smooth
-            A Float specifying the degree of smoothing used for deformable or rigid main surfaces
+            A Float specifying the degree of smoothing used for deformable or rigid master surfaces
             involved when *enforcement*=NODE_TO_SURFACE. The value given must lie between 0.0 and
             0.5. The default value is 0.2.
         contactControls
@@ -2213,7 +2211,7 @@ class InteractionModel(InteractionContactControlModel,
             value is 0.0.The *perrmx* argument must be specified in conjunction with the *maxchp*
             argument.
         uerrmx
-            A Float specifying the maximum overclosure distance allowed at a secondary node that is
+            A Float specifying the maximum overclosure distance allowed at a slave node that is
             considered to be open. The default value is 0.0.The *uerrmx* argument must be specified
             in conjunction with the *maxchp* argument.
         stabilizeChoice
@@ -2407,7 +2405,7 @@ class InteractionModel(InteractionContactControlModel,
                                                                    stepSize, stepSizeDefinition)
         return interaction
 
-    def SurfaceToSurfaceContactExp(self, name: str, createStepName: str, main: Region, secondary: Region,
+    def SurfaceToSurfaceContactExp(self, name: str, createStepName: str, master: Region, slave: Region,
                                    sliding: SymbolicConstant, interactionProperty: str,
                                    mechanicalConstraint: SymbolicConstant = KINEMATIC,
                                    weightingFactorType: SymbolicConstant = DEFAULT, weightingFactor: float = 0,
@@ -2435,10 +2433,10 @@ class InteractionModel(InteractionContactControlModel,
         createStepName
             A String specifying the name of the step in which the SurfaceToSurfaceContactExp object
             is created.
-        main
-            A Region object specifying the main surface.
-        secondary
-            A Region object specifying the secondary surface.
+        master
+            A Region object specifying the master surface.
+        slave
+            A Region object specifying the slave surface.
         sliding
             A SymbolicConstant specifying the contact formulation. Possible values are FINITE and
             SMALL.
@@ -2486,7 +2484,7 @@ class InteractionModel(InteractionContactControlModel,
         -------
             A SurfaceToSurfaceContactExp object.
         """
-        self.interactions[name] = interaction = SurfaceToSurfaceContactExp(name, createStepName, main, secondary,
+        self.interactions[name] = interaction = SurfaceToSurfaceContactExp(name, createStepName, master, slave,
                                                                            sliding, interactionProperty,
                                                                            mechanicalConstraint, weightingFactorType,
                                                                            weightingFactor, contactControls,
@@ -2530,9 +2528,9 @@ class InteractionModel(InteractionContactControlModel,
             A String specifying the name of the step in which the SurfaceToSurfaceContactStd object
             is created.
         master
-            A Region object specifying the main surface.
+            A Region object specifying the master surface.
         salve
-            A Region object specifying the secondary surface.
+            A Region object specifying the slave surface.
         sliding
             A SymbolicConstant specifying the contact formulation. Possible values are FINITE and
             SMALL.
@@ -2564,15 +2562,15 @@ class InteractionModel(InteractionContactControlModel,
             interference is applied immediately at the beginning of the step and ramped down to zero
             linearly over the step.
         smooth
-            A Float specifying the degree of smoothing used for deformable or rigid main surfaces
+            A Float specifying the degree of smoothing used for deformable or rigid master surfaces
             involved when *enforcement*=NODE_TO_SURFACE. The value given must lie between 0.0 and
             0.5. The default value is 0.2.
         hcrit
-            A Float specifying the distance by which a secondary node must penetrate the main
+            A Float specifying the distance by which a slave node must penetrate the master
             surface before Abaqus/Standard abandons the current increment and tries again with a
             smaller increment. The default value is 0.0.
         extensionZone
-            A Float specifying a fraction of the end segment or facet edge length by which the main
+            A Float specifying a fraction of the end segment or facet edge length by which the master
             surface is to be extended to avoid numerical round-off errors associated with contact
             modeling. The value given must lie between 0.0 and 0.2. The default value is 0.1.
         adjustMethod
@@ -2624,13 +2622,13 @@ class InteractionModel(InteractionContactControlModel,
             SurfaceToSurfaceContactStd interactions. Possible values are AUTOMATIC and NONE. The
             default value is NONE.
         bondingSet
-            A Region object specifying the secondary node sub-set for bonding, used only when the
+            A Region object specifying the slave node sub-set for bonding, used only when the
             contact property CohesiveBehavior option specifies use.
         handedness
             A SymbolicConstant specifying the bolt handedness formulation. Possible values are RIGHT
             and LEFT. The default value is RIGHT.
         normalAdjustment
-            A SymbolicConstant specifying the bolt normal adjustment formulation for all secondary
+            A SymbolicConstant specifying the bolt normal adjustment formulation for all slave
             nodes. Possible values are UNIFORM AXIAL COMPONENT and LOCATION DEPENDENT. The default
             value is UNIFORM AXIAL COMPONENT.
 

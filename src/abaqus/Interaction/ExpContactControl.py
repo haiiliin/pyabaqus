@@ -56,7 +56,7 @@ class ExpContactControl(ContactControl):
             value is 1.0. 
         warpCheckPeriod
             An Int specifying the number of increments between checks for highly warped facets on 
-            main surfaces. The default value is 20. 
+            master surfaces. The default value is 20.
         warpCutoff
             A Float specifying the out-of-plane warping angle (in degrees), at which a facet will be 
             considered to be highly warped. The default value is 20.0. 
@@ -96,7 +96,7 @@ class ExpContactControl(ContactControl):
             value is 1.0. 
         warpCheckPeriod
             An Int specifying the number of increments between checks for highly warped facets on 
-            main surfaces. The default value is 20. 
+            master surfaces. The default value is 20.
         warpCutoff
             A Float specifying the out-of-plane warping angle (in degrees), at which a facet will be 
             considered to be highly warped. The default value is 20.0.

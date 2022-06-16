@@ -13,12 +13,12 @@ class MeshEdge:
     .. code-block:: python
         
         import part
-        mdb.models[name].parts[name].elemEdges[i]
+        mdb.models[name].parts[name].edges[i]
         mdb.models[name].parts[name].elementEdges[i]
         import assembly
-        mdb.models[name].rootAssembly.allInstances[name].elemEdges[i]
+        mdb.models[name].rootAssembly.allInstances[name].edges[i]
         mdb.models[name].rootAssembly.allInstances[name].elementEdges[i]
-        mdb.models[name].rootAssembly.instances[name].elemEdges[i]
+        mdb.models[name].rootAssembly.instances[name].edges[i]
         mdb.models[name].rootAssembly.instances[name].elementEdges[i]
 
     """

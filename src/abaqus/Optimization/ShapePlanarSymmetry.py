@@ -53,7 +53,7 @@ class ShapePlanarSymmetry(GeometricRestriction):
             global coordinate system is used. When this member is queried, it returns an Int. The 
             default value is None. 
         mainPointDetermination
-            A SymbolicConstant specifying the rule for determining the main node. Possible values 
+            A SymbolicConstant specifying the rule for determining the master node. Possible values
             are MAXIMUM and MINIMUM. The default value is MAXIMUM. 
         presumeFeasibleRegionAtStart
             A Boolean specifying whether to ignore the geometric restriction in the first design 
@@ -91,7 +91,7 @@ class ShapePlanarSymmetry(GeometricRestriction):
             global coordinate system is used. When this member is queried, it returns an Int. The 
             default value is None. 
         mainPointDetermination
-            A SymbolicConstant specifying the rule for determining the main node. Possible values 
+            A SymbolicConstant specifying the rule for determining the master node. Possible values
             are MAXIMUM and MINIMUM. The default value is MAXIMUM. 
         presumeFeasibleRegionAtStart
             A Boolean specifying whether to ignore the geometric restriction in the first design 

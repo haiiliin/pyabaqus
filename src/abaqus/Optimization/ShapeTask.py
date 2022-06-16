@@ -76,7 +76,7 @@ class ShapeTask(OptimizationTask):
                  smoothingRegion: str = None, targetMeshQuality: SymbolicConstant = LOW,
                  tetAspectRatio: float = 100, tetMaxAspect: float = 8, tetMinAspect: float = 0,
                  tetSkew: float = 100, triMaxAngle: float = 140, triMinAngle: float = 20,
-                 updateShapeBasisVectors: SymbolicConstant = EVERY_CYCLE, groupOperator: Boolean = OFF):
+                 updateShapeBasisVectors: SymbolicConstant = EVERY_CYCLE):
         """This method creates a ShapeTask object.
 
         Notes
@@ -235,11 +235,7 @@ class ShapeTask(OptimizationTask):
         updateShapeBasisVectors
             A SymbolicConstant specifying whether to update shape basis vectors in the first design 
             cycle or every design cycle. Possible values are EVERY_CYCLE and FIRST_CYCLE. The 
-            default value is EVERY_CYCLE. 
-        groupOperator
-            A Boolean specifying whether the group in the design response will be evaluated using 
-            the existing algorithm or a new algorithm based on Abaqus sensitivities. The default 
-            value of False means that the existing algorithm will be used. 
+            default value is EVERY_CYCLE.
 
         Returns
         -------
@@ -274,7 +270,7 @@ class ShapeTask(OptimizationTask):
                   smoothingRegion: str = None, targetMeshQuality: SymbolicConstant = LOW,
                   tetAspectRatio: float = 100, tetMaxAspect: float = 8, tetMinAspect: float = 0,
                   tetSkew: float = 100, triMaxAngle: float = 140, triMinAngle: float = 20,
-                  updateShapeBasisVectors: SymbolicConstant = EVERY_CYCLE, groupOperator: Boolean = OFF):
+                  updateShapeBasisVectors: SymbolicConstant = EVERY_CYCLE):
         """This method modifies the ShapeTask object.
         
         Parameters
@@ -423,10 +419,6 @@ class ShapeTask(OptimizationTask):
         updateShapeBasisVectors
             A SymbolicConstant specifying whether to update shape basis vectors in the first design 
             cycle or every design cycle. Possible values are EVERY_CYCLE and FIRST_CYCLE. The 
-            default value is EVERY_CYCLE. 
-        groupOperator
-            A Boolean specifying whether the group in the design response will be evaluated using 
-            the existing algorithm or a new algorithm based on Abaqus sensitivities. The default 
-            value of False means that the existing algorithm will be used. 
+            default value is EVERY_CYCLE.
         """
         pass

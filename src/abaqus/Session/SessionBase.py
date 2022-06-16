@@ -601,7 +601,8 @@ class SessionBase:
         """
         pass
 
-    def printToPrinter(self, printCommand: str = '', numCopies: int = 1, canvasObjects: tuple[Canvas] = ()):
+    def printToPrinter(self, printCommand: str = '', numCopies: int = 1, canvasObjects: tuple[Canvas] = (),
+                       compression: Boolean = False):
         """This method prints canvas objects to a Windows printer or to a PostScript printer. The
         attributes used for printing to a Windows printer are stored in the PrintOptions object
         and the PageSetupOptions object; the attributes used for printing to a PostScript
@@ -626,6 +627,11 @@ class SessionBase:
         canvasObjects
             A sequence of canvas objects (viewports, text strings, or arrows) to print. The default 
             is to print all canvas objects.
+        compression
+            A Boolean specifying the format for an SVG file. It is valid to use this argument only 
+            when format is SVG. Possible values are False (Uncompressed) and True (Compressed).
+            A Boolean specifying the format for an SVG file. It is only valid to use this argument 
+            when format is SVG. Possible values are False (Uncompressed) and True (Compressed).
 
         Raises
         ------

@@ -17,11 +17,11 @@ class PressurePenetration(Interaction):
         created.
     contactInteraction: str
         A String specifying the name of the Surface-to-surface contact (Standard) interaction.
-    mainPoints: RegionArray
-        A :py:class:`~abaqus.Region.RegionArray.RegionArray` object specifying the points on the main surface that are exposed to the
+    masterPoints: RegionArray
+        A :py:class:`~abaqus.Region.RegionArray.RegionArray` object specifying the points on the master surface that are exposed to the
         fluid.
-    secondaryPoints: RegionArray
-        A :py:class:`~abaqus.Region.RegionArray.RegionArray` object specifying the points on the secondary surface that are exposed to
+    slavePoints: RegionArray
+        A :py:class:`~abaqus.Region.RegionArray.RegionArray` object specifying the points on the slave surface that are exposed to
         the fluid.
 
     Notes
@@ -49,16 +49,16 @@ class PressurePenetration(Interaction):
     # A String specifying the name of the Surface-to-surface contact (Standard) interaction. 
     contactInteraction: str = ''
 
-    # A RegionArray object specifying the points on the main surface that are exposed to the 
+    # A RegionArray object specifying the points on the master surface that are exposed to the
     # fluid. 
-    mainPoints: RegionArray = RegionArray()
+    masterPoints: RegionArray = RegionArray()
 
-    # A RegionArray object specifying the points on the secondary surface that are exposed to 
+    # A RegionArray object specifying the points on the slave surface that are exposed to
     # the fluid. 
-    secondaryPoints: RegionArray = RegionArray()
+    slavePoints: RegionArray = RegionArray()
 
-    def __init__(self, name: str, createStepName: str, contactInteraction: str, mainPoints: RegionArray,
-                 secondaryPoints: RegionArray, penetrationPressure: float, criticalPressure: float,
+    def __init__(self, name: str, createStepName: str, contactInteraction: str, masterPoints: RegionArray,
+                 slavePoints: RegionArray, penetrationPressure: float, criticalPressure: float,
                  amplitude: str = UNSET, penetrationTime: float = 0):
         """This method creates a PressurePenetration object.
 
@@ -79,11 +79,11 @@ class PressurePenetration(Interaction):
             created. 
         contactInteraction
             A String specifying the name of the Surface-to-surface contact (Standard) interaction. 
-        mainPoints
-            A RegionArray object specifying the points on the main surface that are exposed to the 
+        masterPoints
+            A RegionArray object specifying the points on the master surface that are exposed to the
             fluid. 
-        secondaryPoints
-            A RegionArray object specifying the points on the secondary surface that are exposed to 
+        slavePoints
+            A RegionArray object specifying the points on the slave surface that are exposed to
             the fluid. 
         penetrationPressure
             A tuple of Floats specifying the fluid pressure magnitude. For steady state dynamic 

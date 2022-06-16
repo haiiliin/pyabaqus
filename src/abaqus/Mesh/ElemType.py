@@ -16,18 +16,16 @@ class ElemType:
     """
 
     def __init__(self, elemCode: SymbolicConstant, elemLibrary: SymbolicConstant = STANDARD,
-                 hourglassStiffness: float = 0, bendingHourglass: float = 0,
-                 drillingHourglass: float = 0, kinematicSplit: SymbolicConstant = AVERAGE_STRAIN,
-                 distortionControl: Boolean = OFF, lengthRatio: float = ON,
-                 secondOrderAccuracy: Boolean = OFF, hourglassControl: SymbolicConstant = ENHANCED,
-                 weightFactor: float = 0, displacementHourglass: float = 1,
-                 rotationalHourglass: float = 1, outOfPlaneDisplacementHourglass: float = 1,
-                 elemDeletion: SymbolicConstant = DEFAULT,
+                 hourglassStiffness: float = 0, bendingHourglass: float = 0, drillingHourglass: float = 0,
+                 kinematicSplit: SymbolicConstant = AVERAGE_STRAIN, distortionControl: Boolean = OFF,
+                 lengthRatio: float = ON, secondOrderAccuracy: Boolean = OFF,
+                 hourglassControl: SymbolicConstant = ENHANCED, weightFactor: float = 0,
+                 displacementHourglass: float = 1, rotationalHourglass: float = 1,
+                 outOfPlaneDisplacementHourglass: float = 1, elemDeletion: SymbolicConstant = DEFAULT,
                  particleConversion: SymbolicConstant = DEFAULT, particleConversionThreshold: float = 0,
                  particleConversionPPD: int = 1, particleConversionKernel: SymbolicConstant = CUBIC,
                  maxDegradation: float = None, viscosity: float = 0, linearBulkViscosity: float = 1,
-                 quadraticBulkViscosity: float = 1, numFourierModes: int = 1, nodeOffset: int = None,
-                 linearKinematicCtrl: float = None, initialGapOpening: float = None):
+                 quadraticBulkViscosity: float = 1, numFourierModes: int = 1, nodeOffset: int = None):
         """This method creates an ElemType object.
 
         Notes
@@ -144,12 +142,6 @@ class ElemType:
             An Int specifying the positive offset number for specifying the additional nodes needed 
             in the connectivity.This argument is applicable only for axisymmetric elements with 
             nonlinear asymmetric deformation. 
-        linearKinematicCtrl
-            A Float specifying the linear kinematic conversion value.This argument is applicable 
-            only to some Abaqus/Explicit elements. 
-        initialGapOpening
-            A Float specifying the initial gap opening.This parameter is applicable only to some 
-            Abaqus/Standard elements. 
 
         Returns
         -------

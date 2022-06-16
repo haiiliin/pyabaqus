@@ -465,9 +465,9 @@ class ContactProperty(InteractionProperty):
         ----------
         repeatedContacts
             A Boolean specifying whether to enforce cohesive behavior for recurrent contacts at
-            nodes on the secondary surface subsequent to ultimate failure. The default value is OFF.
+            nodes on the slave surface subsequent to ultimate failure. The default value is OFF.
         eligibility
-            A SymbolicConstant specifying the eligible secondary nodes. Possible values are
+            A SymbolicConstant specifying the eligible slave nodes. Possible values are
             ALL_NODES, INITIAL_NODES, and SPECIFIED. The default value is ALL_NODES.
         defaultPenalties
             A Boolean specifying whether to use the default contact penalties. The default value is
@@ -555,7 +555,7 @@ class ContactProperty(InteractionProperty):
                                                      dependenciesP, pressureDepTable)
         return self.thermalConductance
 
-    def HeatGeneration(self, conversionFraction: float = 1, secondaryFraction: float = 0):
+    def HeatGeneration(self, conversionFraction: float = 1, slaveFraction: float = 0):
         """This method creates a GapHeatGeneration object.
 
         Notes
@@ -571,18 +571,18 @@ class ContactProperty(InteractionProperty):
         conversionFraction
             A Float specifying the fraction of dissipated energy caused by friction or electric
             currents that is converted to heat. The default value is 1.0.
-        secondaryFraction
-            A Float specifying the fraction of converted heat distributed to the secondary surface.
+        slaveFraction
+            A Float specifying the fraction of converted heat distributed to the slave surface.
             The default value is 0.5.
 
         Returns
         -------
             A GapHeatGeneration object.
         """
-        self.heatGeneration = GapHeatGeneration(conversionFraction, secondaryFraction)
+        self.heatGeneration = GapHeatGeneration(conversionFraction, slaveFraction)
         return self.heatGeneration
 
-    def Radiation(self, mainEmissivity: float, secondaryEmissivity: float, table: tuple):
+    def Radiation(self, masterEmissivity: float, slaveEmissivity: float, table: tuple):
         """This method creates a Radiation object.
 
         Notes
@@ -595,10 +595,10 @@ class ContactProperty(InteractionProperty):
         
         Parameters
         ----------
-        mainEmissivity
-            A Float specifying the emissivity of the main surface.
-        secondaryEmissivity
-            A Float specifying the emissivity of the secondary surface.
+        masterEmissivity
+            A Float specifying the emissivity of the master surface.
+        slaveEmissivity
+            A Float specifying the emissivity of the slave surface.
         table
             A sequence of sequences of Floats specifying the following:Effective viewfactor, FF.Gap
             clearance, dd.
@@ -607,7 +607,7 @@ class ContactProperty(InteractionProperty):
         -------
             A Radiation object.
         """
-        self.radiation = Radiation(mainEmissivity, secondaryEmissivity, table)
+        self.radiation = Radiation(masterEmissivity, slaveEmissivity, table)
         return self.radiation
 
     def GeometricProperties(self, contactArea: float = 1, padThickness: float = None, trackingThickness: float = None,

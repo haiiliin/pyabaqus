@@ -30,7 +30,7 @@ class FieldReportOptions:
     def setValues(self, numColumns: int = 80, numberFormat: NumberFormat = NumberFormat(),
                   printXYData: Boolean = ON, printTotal: Boolean = ON, printMinMax: Boolean = ON,
                   pageWidth: SymbolicConstant = NO_LIMIT, columnLayout: SymbolicConstant = SINGLE_TABLE,
-                  sort: SymbolicConstant = ASCENDING, printLocalCSYS: Boolean = OFF):
+                  sort: SymbolicConstant = ASCENDING):
         """This method modifies the FieldReportOptions object.
         
         Parameters
@@ -59,10 +59,7 @@ class FieldReportOptions:
         sort
             A SymbolicConstant specifying the order in which values are to be sorted within a 
             tabular report. Possible values are ASCENDING and DESCENDING. The default value is 
-            ASCENDING. 
-        printLocalCSYS
-            A Boolean specifying whether to include the local coordinate system values in the 
-            tabular report. The default value is OFF. 
+            ASCENDING.
 
         Returns
         -------

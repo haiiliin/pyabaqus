@@ -56,7 +56,7 @@ class SizingTask(OptimizationTask):
                  modeTrackingRegion: str = MODEL, numFulfilledStopCriteria: int = 2,
                  numTrackedModes: int = 5, objectiveFunctionDeltaStopCriteria: float = 0,
                  stopCriteriaDesignCycle: int = 4, thicknessMoveLimit: float = 0,
-                 thicknessUpdateStrategy: SymbolicConstant = NORMAL, groupOperator: Boolean = OFF):
+                 thicknessUpdateStrategy: SymbolicConstant = NORMAL):
         """This method creates a SizingTask object.
 
         Notes
@@ -102,11 +102,7 @@ class SizingTask(OptimizationTask):
         thicknessUpdateStrategy
             A SymbolicConstant specifying the strategy for how the thickness is updated in the 
             method of moving asymptotes. Possible values are NORMAL, CONSERVATIVE, and AGGRESSIVE. 
-            The default value is NORMAL. 
-        groupOperator
-            A Boolean specifying whether the group in the design response will be evaluated using 
-            the existing algorithm or a new algorithm based on Abaqus sensitivities. The default 
-            value of False means that the existing algorithm will be used. 
+            The default value is NORMAL.
 
         Returns
         -------
@@ -120,7 +116,7 @@ class SizingTask(OptimizationTask):
                   modeTrackingRegion: str = MODEL, numFulfilledStopCriteria: int = 2,
                   numTrackedModes: int = 5, objectiveFunctionDeltaStopCriteria: float = 0,
                   stopCriteriaDesignCycle: int = 4, thicknessMoveLimit: float = 0,
-                  thicknessUpdateStrategy: SymbolicConstant = NORMAL, groupOperator: Boolean = OFF):
+                  thicknessUpdateStrategy: SymbolicConstant = NORMAL):
         """This method modifies the SizingTask object.
         
         Parameters
@@ -156,10 +152,6 @@ class SizingTask(OptimizationTask):
         thicknessUpdateStrategy
             A SymbolicConstant specifying the strategy for how the thickness is updated in the 
             method of moving asymptotes. Possible values are NORMAL, CONSERVATIVE, and AGGRESSIVE. 
-            The default value is NORMAL. 
-        groupOperator
-            A Boolean specifying whether the group in the design response will be evaluated using 
-            the existing algorithm or a new algorithm based on Abaqus sensitivities. The default 
-            value of False means that the existing algorithm will be used. 
+            The default value is NORMAL.
         """
         pass

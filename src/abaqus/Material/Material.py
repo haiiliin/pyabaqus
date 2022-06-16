@@ -976,18 +976,6 @@ class Material(MaterialBase):
             - Value of the first field variable, if the data depend on field variables.
             - Value of the second field variable.
             - Etc.
-        - If **type**=BILAMINA, the table data specify the following:
-            - E1+.
-            - E2+.
-            - v12+.
-            - G12.
-            - E1-.
-            - E2-.
-            - v112-.
-            - Temperature, if the data depend on temperature.
-            - Value of the first field variable, if the data depend on field variables.
-            - Value of the second field variable.
-            - Etc.
         - If **type**=SHORT_FIBER, there is no table data.
         
         Parameters

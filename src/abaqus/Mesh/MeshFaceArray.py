@@ -18,7 +18,7 @@ class MeshFaceArray(list[MeshFace]):
 
     """
 
-    def __init__(self, elemFaces: list[MeshFace]):
+    def __init__(self, faces: list[MeshFace]):
         """This method creates a MeshFaceArray object.
 
         Notes
@@ -31,7 +31,7 @@ class MeshFaceArray(list[MeshFace]):
         
         Parameters
         ----------
-        elemFaces
+        faces
             A list of MeshFace objects. 
 
         Returns

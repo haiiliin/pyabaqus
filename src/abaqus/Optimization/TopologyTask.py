@@ -70,8 +70,7 @@ class TopologyTask(OptimizationTask):
                  stepSize: SymbolicConstant = MEDIUM,
                  stiffnessMassDamping: typing.Union[SymbolicConstant, float] = AVERAGE_EDGE_LENGTH,
                  stopCriteriaDesignCycle: int = 4, structuralMassDamping: float = None,
-                 viscousMassDamping: float = None, viscousStiffnessDamping: float = None,
-                 groupOperator: Boolean = OFF):
+                 viscousMassDamping: float = None, viscousStiffnessDamping: float = None):
         """This method creates a TopologyTask object.
 
         Notes
@@ -191,11 +190,7 @@ class TopologyTask(OptimizationTask):
             value is None. 
         viscousStiffnessDamping
             None or a Float specifying the viscous stiffness damping for the task region. The 
-            default value is None. 
-        groupOperator
-            A Boolean specifying whether the group in the design response will be evaluated using 
-            the existing algorithm or a new algorithm based on Abaqus sensitivities. The default 
-            value of False means that the existing algorithm will be used. 
+            default value is None.
 
         Returns
         -------
@@ -221,8 +216,7 @@ class TopologyTask(OptimizationTask):
                   stepSize: SymbolicConstant = MEDIUM,
                   stiffnessMassDamping: typing.Union[SymbolicConstant, float] = AVERAGE_EDGE_LENGTH,
                   stopCriteriaDesignCycle: int = 4, structuralMassDamping: float = None,
-                  viscousMassDamping: float = None, viscousStiffnessDamping: float = None,
-                  groupOperator: Boolean = OFF):
+                  viscousMassDamping: float = None, viscousStiffnessDamping: float = None):
         """This method modifies the TopologyTask object.
         
         Parameters
@@ -332,10 +326,6 @@ class TopologyTask(OptimizationTask):
             value is None. 
         viscousStiffnessDamping
             None or a Float specifying the viscous stiffness damping for the task region. The 
-            default value is None. 
-        groupOperator
-            A Boolean specifying whether the group in the design response will be evaluated using 
-            the existing algorithm or a new algorithm based on Abaqus sensitivities. The default 
-            value of False means that the existing algorithm will be used. 
+            default value is None.
         """
         pass
