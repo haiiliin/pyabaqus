@@ -16,7 +16,8 @@
 
 
 # -- Project information -----------------------------------------------------
-
+import inspect
+import sys
 
 project = 'PYABAQUS'
 copyright = '2022, WANG Hailin'
@@ -36,9 +37,56 @@ extensions = [
     'sphinx.ext.autodoc',
     'numpydoc',
     'sphinx.ext.mathjax',
-    'sphinx.ext.viewcode',
-    'sphinx.ext.githubpages', 
+    'sphinx.ext.linkcode',
+    'sphinx.ext.githubpages',
 ]
+
+
+# linkcode source
+def linkcode_resolve(domain: str, info: dict):
+    """Resolve linkcode source
+
+    Parameters
+    ----------
+    domain : str
+        specifies the language domain the object is in
+    info : dict
+        a dictionary with the following keys guaranteed to be present (dependent on the domain)
+        - py: module (name of the module), fullname (name of the object)
+        - c: names (list of names for the object)
+        - cpp: names (list of names for the object)
+        - javascript: object (name of the object), fullname (name of the item)
+
+    Returns
+    -------
+    source url of the object
+    """
+    if domain != 'py':
+        return None
+
+    modname = info['module']
+    fullname = info['fullname']
+
+    filename = modname.replace('.', '/')
+    baseurl = f'https://github.com/haiiliin/pyabaqus/blob/V{release}/src/{filename}.py'
+
+    submod = sys.modules.get(modname)
+    if submod is None:
+        return baseurl
+
+    obj = submod
+    for part in fullname.split('.'):
+        try:
+            obj = getattr(obj, part)
+        except Exception:
+            return baseurl
+    try:
+        source, lineno = inspect.getsourcelines(obj)
+    except Exception:
+        return baseurl
+
+    return baseurl + f'#L{lineno}-L{lineno + len(source) - 1}'
+
 
 # Show short type hints for user-defined classes and defaults for parameters
 python_use_unqualified_type_names = True
