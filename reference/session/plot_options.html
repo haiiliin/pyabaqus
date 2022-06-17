@@ -1331,24 +1331,22 @@ value is “Red”.</p>
 <h3>DGSuperimposeOptions<a class="headerlink" href="#dgsuperimposeoptions" title="Permalink to this headline">#</a></h3>
 <dl class="py class">
 <dt class="sig sig-object py" id="abaqus.PlotOptions.DGSuperimposeOptions.DGSuperimposeOptions">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">DGSuperimposeOptions</span></span><a class="reference external" href="https://github.com/haiiliin/pyabaqus/blob/V2022/src/abaqus/PlotOptions/DGSuperimposeOptions.py#L4-L273"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#abaqus.PlotOptions.DGSuperimposeOptions.DGSuperimposeOptions" title="Permalink to this definition">#</a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">DGSuperimposeOptions</span></span><a class="reference external" href="https://github.com/haiiliin/pyabaqus/blob/V2022/src/abaqus/PlotOptions/DGSuperimposeOptions.py#L4-L274"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#abaqus.PlotOptions.DGSuperimposeOptions.DGSuperimposeOptions" title="Permalink to this definition">#</a></dt>
 <dd><p>The DGSuperimposeOptions object stores values and attributes associated with the
-undeformed shape when the display contains both the deformed shape and the undeformed 
-shape. The DGSuperimposeOptions object has no constructor command. Abaqus creates an 
-<em>odbDisplayOptions.superimposeOptions</em> member when a display group instance is created, 
-using values from <em>odbDisplay.superimposeOptions</em>.Access 
-session.viewports[name].assemblyDisplay.displayGroupInstances[name]
-.odbDisplayOptions.superimposeOptions 
-session.viewports[name].layers[name].assemblyDisplay
-.displayGroupInstances[name].odbDisplayOptions.superimposeOptions 
-session.viewports[name].layers[name].odbDisplay
-.displayGroupInstances[name].odbDisplayOptions.superimposeOptions 
-session.viewports[name].layers[name].partDisplay
-.displayGroupInstances[name].odbDisplayOptions.superimposeOptions 
-session.viewports[name].odbDisplay.displayGroupInstances[name]
-.odbDisplayOptions.superimposeOptions 
-session.viewports[name].partDisplay.displayGroupInstances[name]
-.odbDisplayOptions.superimposeOptions</p>
+undeformed shape when the display contains both the deformed shape and the undeformed
+shape. The DGSuperimposeOptions object has no constructor command. Abaqus creates an
+<em>odbDisplayOptions.superimposeOptions</em> member when a display group instance is created,
+using values from <em>odbDisplay.superimposeOptions</em>.</p>
+<p class="rubric">Notes</p>
+<p>This object can be accessed by:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">session</span><span class="o">.</span><span class="n">viewports</span><span class="p">[</span><span class="n">name</span><span class="p">]</span><span class="o">.</span><span class="n">assemblyDisplay</span><span class="o">.</span><span class="n">displayGroupInstances</span><span class="p">[</span><span class="n">name</span><span class="p">]</span><span class="o">.</span><span class="n">odbDisplayOptions</span><span class="o">.</span><span class="n">superimposeOptions</span>
+<span class="n">session</span><span class="o">.</span><span class="n">viewports</span><span class="p">[</span><span class="n">name</span><span class="p">]</span><span class="o">.</span><span class="n">layers</span><span class="p">[</span><span class="n">name</span><span class="p">]</span><span class="o">.</span><span class="n">assemblyDisplay</span> <span class="o">.</span><span class="n">displayGroupInstances</span><span class="p">[</span><span class="n">name</span><span class="p">]</span><span class="o">.</span><span class="n">odbDisplayOptions</span><span class="o">.</span><span class="n">superimposeOptions</span>
+<span class="n">session</span><span class="o">.</span><span class="n">viewports</span><span class="p">[</span><span class="n">name</span><span class="p">]</span><span class="o">.</span><span class="n">layers</span><span class="p">[</span><span class="n">name</span><span class="p">]</span><span class="o">.</span><span class="n">odbDisplay</span><span class="o">.</span><span class="n">displayGroupInstances</span><span class="p">[</span><span class="n">name</span><span class="p">]</span><span class="o">.</span><span class="n">odbDisplayOptions</span><span class="o">.</span><span class="n">superimposeOptions</span>
+<span class="n">session</span><span class="o">.</span><span class="n">viewports</span><span class="p">[</span><span class="n">name</span><span class="p">]</span><span class="o">.</span><span class="n">layers</span><span class="p">[</span><span class="n">name</span><span class="p">]</span><span class="o">.</span><span class="n">partDisplay</span><span class="o">.</span><span class="n">displayGroupInstances</span><span class="p">[</span><span class="n">name</span><span class="p">]</span><span class="o">.</span><span class="n">odbDisplayOptions</span><span class="o">.</span><span class="n">superimposeOptions</span>
+<span class="n">session</span><span class="o">.</span><span class="n">viewports</span><span class="p">[</span><span class="n">name</span><span class="p">]</span><span class="o">.</span><span class="n">odbDisplay</span><span class="o">.</span><span class="n">displayGroupInstances</span><span class="p">[</span><span class="n">name</span><span class="p">]</span><span class="o">.</span><span class="n">odbDisplayOptions</span><span class="o">.</span><span class="n">superimposeOptions</span>
+<span class="n">session</span><span class="o">.</span><span class="n">viewports</span><span class="p">[</span><span class="n">name</span><span class="p">]</span><span class="o">.</span><span class="n">partDisplay</span><span class="o">.</span><span class="n">displayGroupInstances</span><span class="p">[</span><span class="n">name</span><span class="p">]</span><span class="o">.</span><span class="n">odbDisplayOptions</span><span class="o">.</span><span class="n">superimposeOptions</span>
+</pre></div>
+</div>
 <dl class="field-list">
 <dt class="field-odd">Attributes</dt>
 <dd class="field-odd"><dl>
