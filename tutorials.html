@@ -389,7 +389,7 @@ easier, and that is what <cite>pyabaqus</cite> does.</p>
 <div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="n">material</span> <span class="o">=</span> <span class="n">model</span><span class="o">.</span><span class="n">Material</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s1">&#39;material&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
-<p>Then we assign some properties to the Material object, i.e., <a class="reference internal" href="reference/mdb/model/material.html#id124" title="abaqus.Material.Material.Material.Elastic"><code class="xref py py-meth docutils literal notranslate"><span class="pre">Elastic()</span></code></a> and <a class="reference internal" href="reference/mdb/model/material.html#id113" title="abaqus.Material.Material.Material.Density"><code class="xref py py-meth docutils literal notranslate"><span class="pre">Density()</span></code></a>:</p>
+<p>Then we assign some properties to the Material object, i.e., <a class="reference internal" href="reference/mdb/model/material.html#id122" title="abaqus.Material.Material.Material.Elastic"><code class="xref py py-meth docutils literal notranslate"><span class="pre">Elastic()</span></code></a> and <a class="reference internal" href="reference/mdb/model/material.html#id111" title="abaqus.Material.Material.Material.Density"><code class="xref py py-meth docutils literal notranslate"><span class="pre">Density()</span></code></a>:</p>
 <div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="n">material</span><span class="o">.</span><span class="n">Elastic</span><span class="p">(</span><span class="n">table</span><span class="o">=</span><span class="p">((</span><span class="mi">1000</span><span class="p">,</span> <span class="mf">0.2</span><span class="p">),</span> <span class="p">))</span>
 <span class="n">material</span><span class="o">.</span><span class="n">Density</span><span class="p">(</span><span class="n">table</span><span class="o">=</span><span class="p">((</span><span class="mi">2500</span><span class="p">,</span> <span class="p">),</span> <span class="p">))</span>
 </pre></div>
@@ -452,7 +452,7 @@ easier, and that is what <cite>pyabaqus</cite> does.</p>
 </section>
 <section id="create-jobs">
 <h3>Create jobs<a class="headerlink" href="#create-jobs" title="Permalink to this headline">#</a></h3>
-<p>We can use <a class="reference internal" href="reference/mdb.html#abaqus.Job.JobMdb.JobMdb.Job" title="abaqus.Job.JobMdb.JobMdb.Job"><code class="xref py py-meth docutils literal notranslate"><span class="pre">Job()</span></code></a> to create a job:</p>
+<p>We can use <code class="xref py py-meth docutils literal notranslate"><span class="pre">Job()</span></code> to create a job:</p>
 <div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="n">job</span> <span class="o">=</span> <span class="n">mdb</span><span class="o">.</span><span class="n">Job</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s1">&#39;Job-1&#39;</span><span class="p">,</span> <span class="n">model</span><span class="o">=</span><span class="s1">&#39;Model-1&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
@@ -591,7 +591,7 @@ easier, and that is what <cite>pyabaqus</cite> does.</p>
 </section>
 <section id="extract-the-data">
 <h3>Extract the data<a class="headerlink" href="#extract-the-data" title="Permalink to this headline">#</a></h3>
-<p>We can use the <a class="reference internal" href="reference/session/xy.html#abaqus.XY.XYSession.XYSession.xyDataListFromField" title="abaqus.XY.XYSession.XYSession.xyDataListFromField"><code class="xref py py-meth docutils literal notranslate"><span class="pre">xyDataListFromField()</span></code></a> to extract the output data:</p>
+<p>We can use the <code class="xref py py-meth docutils literal notranslate"><span class="pre">xyDataListFromField()</span></code> to extract the output data:</p>
 <div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="n">dataList</span> <span class="o">=</span> <span class="n">session</span><span class="o">.</span><span class="n">xyDataListFromField</span><span class="p">(</span><span class="n">odb</span><span class="o">=</span><span class="n">odb</span><span class="p">,</span> <span class="n">outputPosition</span><span class="o">=</span><span class="n">NODAL</span><span class="p">,</span>
                                        <span class="n">variable</span><span class="o">=</span><span class="p">((</span><span class="s1">&#39;U&#39;</span><span class="p">,</span> <span class="n">NODAL</span><span class="p">,</span> <span class="p">((</span><span class="n">COMPONENT</span><span class="p">,</span> <span class="s1">&#39;U3&#39;</span><span class="p">),)),),</span>
                                        <span class="n">nodeSets</span><span class="o">=</span><span class="p">(</span><span class="s1">&#39;INSTANCE.SET-TOP&#39;</span><span class="p">,</span> <span class="p">))</span>

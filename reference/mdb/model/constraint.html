@@ -706,12 +706,12 @@ when <a href="#id29"><span class="problematic" id="id30">*</span></a>influenceDi
 <dd class="field-odd"><dl class="simple">
 <dt><strong>name</strong></dt><dd><p>A String specifying the constraint repository key.</p>
 </dd>
-<dt><strong>main</strong></dt><dd><p>A Region object specifying the name of the main surface.</p>
+<dt><strong>master</strong></dt><dd><p>A Region object specifying the name of the master surface.</p>
 </dd>
-<dt><strong>secondary</strong></dt><dd><p>A Region object specifying the name of the secondary surface.</p>
+<dt><strong>slave</strong></dt><dd><p>A Region object specifying the name of the slave surface.</p>
 </dd>
-<dt><strong>adjust</strong></dt><dd><p>A Boolean specifying whether initial positions of tied secondary nodes are adjusted to
-lie on the main surface. The default value is ON.</p>
+<dt><strong>adjust</strong></dt><dd><p>A Boolean specifying whether initial positions of tied slave nodes are adjusted to
+lie on the master surface. The default value is ON.</p>
 </dd>
 <dt><strong>positionToleranceMethod</strong></dt><dd><p>A SymbolicConstant specifying the method used to determine the position tolerance.
 Possible values are COMPUTED and SPECIFIED. The default value is COMPUTED.</p>
@@ -725,8 +725,8 @@ value is ON.</p>
 <dt><strong>constraintRatioMethod</strong></dt><dd><p>A SymbolicConstant specifying the method used to determine the constraint ratio.
 Possible values are DEFAULT and SPECIFIED. The default value is DEFAULT.</p>
 </dd>
-<dt><strong>constraintRatio</strong></dt><dd><p>A Float specifying the fractional distance between the main reference surface and the
-secondary node at which the translational constraint should act. The <em>constraintRatio</em>
+<dt><strong>constraintRatio</strong></dt><dd><p>A Float specifying the fractional distance between the master reference surface and the
+slave node at which the translational constraint should act. The <em>constraintRatio</em>
 argument applies only when <a href="#id33"><span class="problematic" id="id34">*</span></a>constraintRatioMethod*=SPECIFIED. The default value is 0.0.</p>
 </dd>
 <dt><strong>constraintEnforcement</strong></dt><dd><p>A SymbolicConstant specifying the discretization method. Possible values are
@@ -1414,7 +1414,7 @@ OFF.</p>
 <td><p>This method modifies the Tie object.</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="#abaqus.Constraint.Tie.Tie.swapSurfaces" title="abaqus.Constraint.Tie.Tie.swapSurfaces"><code class="xref py py-obj docutils literal notranslate"><span class="pre">swapSurfaces</span></code></a>()</p></td>
-<td><p>This method switches the main and secondary surfaces of a tied constraint.</p></td>
+<td><p>This method switches the master and slave surfaces of a tied constraint.</p></td>
 </tr>
 </tbody>
 </table>
@@ -1460,7 +1460,7 @@ ON.</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="abaqus.Constraint.Tie.Tie.swapSurfaces">
 <span class="sig-name descname"><span class="pre">swapSurfaces</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference external" href="https://github.com/haiiliin/pyabaqus/blob/V2022/src/abaqus/Constraint/Tie.py#L102-L106"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#abaqus.Constraint.Tie.Tie.swapSurfaces" title="Permalink to this definition">#</a></dt>
-<dd><p>This method switches the main and secondary surfaces of a tied constraint. This command
+<dd><p>This method switches the master and slave surfaces of a tied constraint. This command
 is valid only during the step in which the interaction is created.</p>
 </dd></dl>
 
