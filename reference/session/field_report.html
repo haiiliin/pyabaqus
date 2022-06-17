@@ -306,20 +306,369 @@
 <p>Field report commands are used to write a field output report and free body computational results to an ASCII file.</p>
 <section id="create-field-reports-in-session">
 <h2>Create field reports in Session<a class="headerlink" href="#create-field-reports-in-session" title="Permalink to this headline">#</a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="abaqus.FieldReport.FieldReportSession.FieldReportSession">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">FieldReportSession</span></span><a class="reference external" href="https://github.com/haiiliin/pyabaqus/blob/V2022/src/abaqus/FieldReport/FieldReportSession.py#L7-L140"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#abaqus.FieldReport.FieldReportSession.FieldReportSession" title="Permalink to this definition">#</a></dt>
+<dd><p class="rubric">Methods</p>
+<div class="table-wrapper autosummary longtable docutils container">
+<table class="autosummary longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#abaqus.FieldReport.FieldReportSession.FieldReportSession.writeFieldRepor" title="abaqus.FieldReport.FieldReportSession.FieldReportSession.writeFieldRepor"><code class="xref py py-obj docutils literal notranslate"><span class="pre">writeFieldRepor</span></code></a>(filename, append, sortItem, ...)</p></td>
+<td><p>This method writes a FieldOutput object to a user-defined ASCII file.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#abaqus.FieldReport.FieldReportSession.FieldReportSession.writeFreeBodyRepor" title="abaqus.FieldReport.FieldReportSession.FieldReportSession.writeFreeBodyRepor"><code class="xref py py-obj docutils literal notranslate"><span class="pre">writeFreeBodyRepor</span></code></a>(fileName, append[, step, ...])</p></td>
+<td><p>This method writes a FreeBody object to a user-defined ASCII file.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<dl class="py method">
+<dt class="sig sig-object py" id="abaqus.FieldReport.FieldReportSession.FieldReportSession.writeFieldRepor">
+<span class="sig-name descname"><span class="pre">writeFieldRepor</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">filename</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">append</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">BooleanType</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sortItem</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">odb</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="../odb.html#abaqus.Odb.Odb.Odb" title="abaqus.Odb.Odb.Odb"><span class="pre">Odb</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">step</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">frame</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">outputPosition</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">SymbolicConstantType</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">displayGroup</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="display.html#abaqus.DisplayGroup.DisplayGroup.DisplayGroup" title="abaqus.DisplayGroup.DisplayGroup.DisplayGroup"><span class="pre">DisplayGroup</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">variable</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">SymbolicConstantType</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">numericForm</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">SymbolicConstantType</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">complexAngle</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">stepFrame</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">SymbolicConstantType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'SPECIFY'</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/haiiliin/pyabaqus/blob/V2022/src/abaqus/FieldReport/FieldReportSession.py#L8-L93"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#abaqus.FieldReport.FieldReportSession.FieldReportSession.writeFieldRepor" title="Permalink to this definition">#</a></dt>
+<dd><p>This method writes a FieldOutput object to a user-defined ASCII file.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>filename</strong></dt><dd><p>A String specifying the name of the file to which field output will be written.</p>
+</dd>
+<dt><strong>append</strong></dt><dd><p>A Boolean specifying whether to append the field output to an existing file. The default
+value is ON.</p>
+</dd>
+<dt><strong>sortItem</strong></dt><dd><p>A String specifying the item by which to sort the tabular values.</p>
+</dd>
+<dt><strong>odb</strong></dt><dd><p>An Odb object from which to obtain field output values.</p>
+</dd>
+<dt><strong>step</strong></dt><dd><p>An Int (or stepIndex) specifying the step from which to obtain field output values.
+Possible values are 0 ≤≤ <em>step</em> ≤≤ (<em>numSteps</em> − 1).</p>
+</dd>
+<dt><strong>frame</strong></dt><dd><p>An Int (or frameIndex) specifying the frame from which to obtain field output values.
+Possible values are 0 ≤≤ <em>frame</em> ≤≤ (<em>numFramesInStep</em> − 1).</p>
+</dd>
+<dt><strong>outputPosition</strong></dt><dd><p>A SymbolicConstant specifying the position from which to obtain data. Possible values
+are NODAL, INTEGRATION_POINT, ELEMENT_FACE, ELEMENT_NODAL, ELEMENT_CENTROID,
+WHOLE_ELEMENT, WHOLE_REGION, WHOLE_PART_INSTANCE, WHOLE_MODEL, and GENERAL_PARTICLE.</p>
+</dd>
+<dt><strong>displayGroup</strong></dt><dd><p>A DisplayGroup object specifying the subset of the model for which to obtain data.</p>
+</dd>
+<dt><strong>variable</strong></dt><dd><p>A sequence of variable description sequences specifying one or more field output
+variables for which to obtain data. Each variable description sequence contains the
+following elements:
+- <em>element0</em>: A String specifying the name of the variable.
+- <em>element1</em>: A SymbolicConstant specifying the output position at which to report data.
+Possible values are ELEMENT_CENTROID, ELEMENT_FACE, ELEMENT_NODAL, GENERAL_PARTICLE,
+INTEGRATION_POINT, NODAL, WHOLE_ELEMENT, WHOLE_MODEL, WHOLE_PART_INSTANCE, and
+WHOLE_REGION.
+- <em>element2</em>: A Sequence of tuples each consisting of a SymbolicConstant specifying the
+refinement (COMPONENT or INVARIANT), followed by a String specifying the name of a
+component or invariant for which to obtain values.
+If this element is omitted, data are written for all components and invariants (if
+applicable). This element is required if <em>element3</em> (the following element in the tuple)
+is included.
+- <em>element3 (if applicable)</em>: A Dictionary with a String key and a String value
+specifying a single section point at which to report data. The key specifies a region in
+the model; the corresponding value specifies a section point within that region. For
+example:
+<code class="docutils literal notranslate"><span class="pre">`</span>
+<span class="pre">{'shell</span> <span class="pre">&lt;</span> <span class="pre">MAT</span> <span class="pre">&gt;</span> <span class="pre">&lt;</span> <span class="pre">7</span> <span class="pre">section</span> <span class="pre">points</span> <span class="pre">&gt;':'SPOS</span>
+<span class="pre">(fraction</span> <span class="pre">=</span> <span class="pre">1.0)'}</span>
+<span class="pre">`</span></code>
+If this element is omitted, data are written for all section points (if applicable).
+If this element is omitted, data are written for all section points (if applicable).</p>
+</dd>
+<dt><strong>numericForm</strong></dt><dd><p>A SymbolicConstant specifying the numeric form in which to display results that contain
+complex numbers. Possible values are COMPLEX_MAGNITUDE, COMPLEX_PHASE, REAL, IMAGINARY,
+and COMPLEX_MAG_AT_ANGLE. The initial value is COMPLEX_MAGNITUDE.</p>
+</dd>
+<dt><strong>complexAngle</strong></dt><dd><p>A Float specifying the angle (in degrees) at which to display results that contain
+complex numbers when <a href="#id1"><span class="problematic" id="id2">*</span></a>numericForm*=COMPLEX_MAG_AT_ANGLE. The initial value is 0.</p>
+</dd>
+<dt><strong>stepFrame</strong></dt><dd><p>A SymbolicConstant indicating whether to obtain the values from the specified frame or
+from all active frames. Possible values are SPECIFY and ALL. The default value is
+SPECIFY.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+<p class="rubric">Notes</p>
+<p>This function can be accessed by:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">session</span><span class="o">.</span><span class="n">writeFieldReport</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="abaqus.FieldReport.FieldReportSession.FieldReportSession.writeFreeBodyRepor">
+<span class="sig-name descname"><span class="pre">writeFreeBodyRepor</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">fileName</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">append</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">BooleanType</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">step</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">frame</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">stepFrame</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">SymbolicConstantType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'SPECIFY'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">odb</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="../odb.html#abaqus.Odb.Odb.Odb" title="abaqus.Odb.Odb.Odb"><span class="pre">Odb</span></a><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/haiiliin/pyabaqus/blob/V2022/src/abaqus/FieldReport/FieldReportSession.py#L95-L140"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#abaqus.FieldReport.FieldReportSession.FieldReportSession.writeFreeBodyRepor" title="Permalink to this definition">#</a></dt>
+<dd><p>This method writes a FreeBody object to a user-defined ASCII file.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>fileName</strong></dt><dd><p>A String specifying the name of the file to which the free body output will be written.</p>
+</dd>
+<dt><strong>append</strong></dt><dd><p>A Boolean specifying whether to append the free body output to an existing file. The
+default value is ON.</p>
+</dd>
+<dt><strong>step</strong></dt><dd><p>An Int identifying the step from which to obtain values. The default value is the
+current step.</p>
+</dd>
+<dt><strong>frame</strong></dt><dd><p>An Int identifying the frame from which to obtain values. The default value is the
+current frame.</p>
+</dd>
+<dt><strong>stepFrame</strong></dt><dd><p>A SymbolicConstant indicating whether to obtain the values from the specified frame or
+from all active frames. Possible values are SPECIFY and ALL. The default value is
+SPECIFY.</p>
+</dd>
+<dt><strong>odb</strong></dt><dd><p>An Odb object specifying the output database from which data will be read.</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"></dd>
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"></dd>
+</dl>
+<p class="rubric">Notes</p>
+<p>This function can be accessed by:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">session</span><span class="o">.</span><span class="n">writeFreeBodyReport</span>
+</pre></div>
+</div>
+</dd></dl>
+
+</dd></dl>
+
 </section>
 <section id="object-features">
 <h2>Object features<a class="headerlink" href="#object-features" title="Permalink to this headline">#</a></h2>
 <section id="fieldreportoptions">
 <h3>FieldReportOptions<a class="headerlink" href="#fieldreportoptions" title="Permalink to this headline">#</a></h3>
+<dl class="py class">
+<dt class="sig sig-object py" id="abaqus.FieldReport.FieldReportOptions.FieldReportOptions">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">FieldReportOptions</span></span><a class="reference external" href="https://github.com/haiiliin/pyabaqus/blob/V2022/src/abaqus/FieldReport/FieldReportOptions.py#L5-L125"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#abaqus.FieldReport.FieldReportOptions.FieldReportOptions" title="Permalink to this definition">#</a></dt>
+<dd><p>The FieldReportOptions object stores settings used by the writeFieldReport method when
+you write a FieldOutput object to an ASCII file. The FieldReportOptions object has no
+constructor. Abaqus creates the <em>fieldReportOptions</em> member when you import the
+Visualization module.</p>
+<p class="rubric">Notes</p>
+<p>This object can be accessed by:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">visualization</span>
+<span class="n">session</span><span class="o">.</span><span class="n">defaultFieldReportOptions</span>
+<span class="n">session</span><span class="o">.</span><span class="n">fieldReportOptions</span>
+</pre></div>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Attributes</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>numberFormat: NumberFormat</strong></dt><dd><p>Format of the number</p>
+</dd>
+</dl>
+</dd>
+</dl>
+<p class="rubric">Methods</p>
+<div class="table-wrapper autosummary longtable docutils container">
+<table class="autosummary longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#abaqus.FieldReport.FieldReportOptions.FieldReportOptions.NumberFormat" title="abaqus.FieldReport.FieldReportOptions.FieldReportOptions.NumberFormat"><code class="xref py py-obj docutils literal notranslate"><span class="pre">NumberFormat</span></code></a>([blankPad, format, numDigits, ...])</p></td>
+<td><p>This method creates a NumberFormat object.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#abaqus.FieldReport.FieldReportOptions.FieldReportOptions.setValues" title="abaqus.FieldReport.FieldReportOptions.FieldReportOptions.setValues"><code class="xref py py-obj docutils literal notranslate"><span class="pre">setValues</span></code></a>([numColumns, numberFormat, ...])</p></td>
+<td><p>This method modifies the FieldReportOptions object.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<dl class="py method">
+<dt class="sig sig-object py" id="abaqus.FieldReport.FieldReportOptions.FieldReportOptions.NumberFormat">
+<span class="sig-name descname"><span class="pre">NumberFormat</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">blankPad</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">BooleanType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">format</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">SymbolicConstantType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'ENGINEERING'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">numDigits</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">6</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">precision</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="../session.html#abaqus.Session.NumberFormat.NumberFormat" title="abaqus.Session.NumberFormat.NumberFormat"><span class="pre">NumberFormat</span></a></span></span><a class="reference external" href="https://github.com/haiiliin/pyabaqus/blob/V2022/src/abaqus/FieldReport/FieldReportOptions.py#L82-L125"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#abaqus.FieldReport.FieldReportOptions.FieldReportOptions.NumberFormat" title="Permalink to this definition">#</a></dt>
+<dd><p>This method creates a NumberFormat object.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>blankPad</strong></dt><dd><p>A Boolean specifying whether the printed digits should be padded with blank characters
+to ensure equal sized fields. The <em>blankPad</em> argument is useful when your printed output
+includes columns. The default value is ON.</p>
+</dd>
+<dt><strong>format</strong></dt><dd><p>A SymbolicConstant specifying the formatting type. Possible values are ENGINEERING,
+SCIENTIFIC, and AUTOMATIC. The default value is ENGINEERING.</p>
+</dd>
+<dt><strong>numDigits</strong></dt><dd><p>An Int specifying the number of digits to be displayed in the result. <em>numDigits</em> &gt;0&gt;0.
+The default value is 6.</p>
+</dd>
+<dt><strong>precision</strong></dt><dd><p>An Int specifying the number of decimal places to which the number is to be truncated
+for display. <em>precision</em> ≤0≤0. If <em>precision</em> =0, no truncation is applied. The default
+value is 0.</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><dl class="simple">
+<dt><code class="xref py py-obj docutils literal notranslate"><span class="pre">A</span></code> <a class="reference internal" href="#abaqus.FieldReport.FieldReportOptions.FieldReportOptions.NumberFormat" title="abaqus.FieldReport.FieldReportOptions.FieldReportOptions.NumberFormat"><code class="xref py py-obj docutils literal notranslate"><span class="pre">NumberFormat</span></code></a> object.</dt><dd></dd>
+</dl>
+</dd>
+</dl>
+<p class="rubric">Notes</p>
+<p>This function can be accessed by:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">session</span><span class="o">.</span><span class="n">defaultFieldReportOptions</span><span class="o">.</span><span class="n">NumberFormat</span>
+<span class="n">session</span><span class="o">.</span><span class="n">fieldReportOptions</span><span class="o">.</span><span class="n">NumberFormat</span>
+<span class="n">session</span><span class="o">.</span><span class="n">journalOptions</span><span class="o">.</span><span class="n">NumberFormat</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="abaqus.FieldReport.FieldReportOptions.FieldReportOptions.setValues">
+<span class="sig-name descname"><span class="pre">setValues</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">numColumns:</span> <span class="pre">int</span> <span class="pre">=</span> <span class="pre">80</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">numberFormat:</span> <span class="pre">~abaqus.Session.NumberFormat.NumberFormat</span> <span class="pre">=</span> <span class="pre">&lt;abaqus.Session.NumberFormat.NumberFormat</span> <span class="pre">object&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">printXYData:</span> <span class="pre">~abaqusConstants.BooleanType</span> <span class="pre">=</span> <span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">printTotal:</span> <span class="pre">~abaqusConstants.BooleanType</span> <span class="pre">=</span> <span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">printMinMax:</span> <span class="pre">~abaqusConstants.BooleanType</span> <span class="pre">=</span> <span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pageWidth:</span> <span class="pre">~abaqusConstants.SymbolicConstantType</span> <span class="pre">=</span> <span class="pre">'NO_LIMIT'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">columnLayout:</span> <span class="pre">~abaqusConstants.SymbolicConstantType</span> <span class="pre">=</span> <span class="pre">'SINGLE_TABLE'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sort:</span> <span class="pre">~abaqusConstants.SymbolicConstantType</span> <span class="pre">=</span> <span class="pre">'ASCENDING'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">printLocalCSYS:</span> <span class="pre">~abaqusConstants.BooleanType</span> <span class="pre">=</span> <span class="pre">0</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/haiiliin/pyabaqus/blob/V2022/src/abaqus/FieldReport/FieldReportOptions.py#L31-L80"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#abaqus.FieldReport.FieldReportOptions.FieldReportOptions.setValues" title="Permalink to this definition">#</a></dt>
+<dd><p>This method modifies the FieldReportOptions object.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>numColumns</strong></dt><dd><p>An Int specifying the number of columns to display for the tabular report. The default
+value is 80.</p>
+</dd>
+<dt><strong>numberFormat</strong></dt><dd><p>A NumberFormat object specifying the format type, number of digits and precision used to
+print the numeric output.</p>
+</dd>
+<dt><strong>printXYData</strong></dt><dd><p>A Boolean specifying whether to include <em>X–Y</em> data values in the tabular report. The
+default value is ON.</p>
+</dd>
+<dt><strong>printTotal</strong></dt><dd><p>A Boolean specifying whether to include column totals in the tabular report. The default
+value is ON.</p>
+</dd>
+<dt><strong>printMinMax</strong></dt><dd><p>A Boolean specifying whether to include column summary minimum and maximum values in the
+tabular report. The default value is ON.</p>
+</dd>
+<dt><strong>pageWidth</strong></dt><dd><p>A SymbolicConstant specifying how the width of the tabular report is to be determined.
+Possible values are NO_LIMIT and SPECIFY. The default value is NO_LIMIT.</p>
+</dd>
+<dt><strong>columnLayout</strong></dt><dd><p>A SymbolicConstant specifying how values are to be presented in the tabular report.
+Possible values are SINGLE_TABLE and SEPARATE_TABLES. The default value is SINGLE_TABLE.</p>
+</dd>
+<dt><strong>sort</strong></dt><dd><p>A SymbolicConstant specifying the order in which values are to be sorted within a
+tabular report. Possible values are ASCENDING and DESCENDING. The default value is
+ASCENDING.</p>
+</dd>
+<dt><strong>printLocalCSYS</strong></dt><dd><p>A Boolean specifying whether to include the local coordinate system values in the
+tabular report. The default value is OFF.</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><dl class="simple">
+<dt><code class="xref py py-obj docutils literal notranslate"><span class="pre">A</span></code> <a class="reference internal" href="#abaqus.FieldReport.FieldReportOptions.FieldReportOptions" title="abaqus.FieldReport.FieldReportOptions.FieldReportOptions"><code class="xref py py-obj docutils literal notranslate"><span class="pre">FieldReportOptions</span></code></a> object.</dt><dd></dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
 </section>
 <section id="freebodyreportoptions">
 <h3>FreeBodyReportOptions<a class="headerlink" href="#freebodyreportoptions" title="Permalink to this headline">#</a></h3>
+<dl class="py class">
+<dt class="sig sig-object py" id="abaqus.FieldReport.FreeBodyReportOptions.FreeBodyReportOptions">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">FreeBodyReportOptions</span></span><a class="reference external" href="https://github.com/haiiliin/pyabaqus/blob/V2022/src/abaqus/FieldReport/FreeBodyReportOptions.py#L4-L55"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#abaqus.FieldReport.FreeBodyReportOptions.FreeBodyReportOptions" title="Permalink to this definition">#</a></dt>
+<dd><p>The FreeBodyReportOptions object stores settings used by the writeFreeBodyReport method
+when you write free body computational results to an ASCII file. The
+FreeBodyReportOptions object has no constructor. Abaqus creates the
+<em>freeBodyReportOptions</em> member when you import the Visualization module.</p>
+<p class="rubric">Notes</p>
+<p>This object can be accessed by:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">visualization</span>
+<span class="n">session</span><span class="o">.</span><span class="n">defaultFreeBodyReportOptions</span>
+<span class="n">session</span><span class="o">.</span><span class="n">freeBodyReportOptions</span>
+</pre></div>
+</div>
+<p class="rubric">Methods</p>
+<div class="table-wrapper autosummary longtable docutils container">
+<table class="autosummary longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#abaqus.FieldReport.FreeBodyReportOptions.FreeBodyReportOptions.setValues" title="abaqus.FieldReport.FreeBodyReportOptions.FreeBodyReportOptions.setValues"><code class="xref py py-obj docutils literal notranslate"><span class="pre">setValues</span></code></a>([numDigits, forceThreshold, ...])</p></td>
+<td><p>This method modifies the FreeBodyReportOptions object.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<dl class="py method">
+<dt class="sig sig-object py" id="abaqus.FieldReport.FreeBodyReportOptions.FreeBodyReportOptions.setValues">
+<span class="sig-name descname"><span class="pre">setValues</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">numDigits</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">3</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">forceThreshold</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">momentThreshold</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">numberFormat</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">SymbolicConstantType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'SCIENTIFIC'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">reportFormat</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">SymbolicConstantType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'NORMAL_ANNOTATED'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">csysType</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">SymbolicConstantType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'GLOBAL'</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/haiiliin/pyabaqus/blob/V2022/src/abaqus/FieldReport/FreeBodyReportOptions.py#L22-L55"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#abaqus.FieldReport.FreeBodyReportOptions.FreeBodyReportOptions.setValues" title="Permalink to this definition">#</a></dt>
+<dd><p>This method modifies the FreeBodyReportOptions object.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>numDigits</strong></dt><dd><p>An Int specifying the number of decimal places. The default value is 3.</p>
+</dd>
+<dt><strong>forceThreshold</strong></dt><dd><p>A Float specifying the threshold value for force. The default value is 10–6.</p>
+</dd>
+<dt><strong>momentThreshold</strong></dt><dd><p>A Float specifying the threshold value for moment. The default value is 10–6.</p>
+</dd>
+<dt><strong>numberFormat</strong></dt><dd><p>A SymbolicConstant specifying the number format. Possible values are SCIENTIFIC, FIXED,
+and ENGINEERING. The default value is SCIENTIFIC.</p>
+</dd>
+<dt><strong>reportFormat</strong></dt><dd><p>A SymbolicConstant specifying the report format. Possible values are NORMAL_ANNOTATED
+and COMMA_SEPARATED_VALUES. The default value is NORMAL_ANNOTATED.</p>
+</dd>
+<dt><strong>csysType</strong></dt><dd><p>A SymbolicConstant specifying the coordinate system type. Possible values are GLOBAL and
+LOCAL. The default value is GLOBAL.</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><dl class="simple">
+<dt><code class="xref py py-obj docutils literal notranslate"><span class="pre">A</span></code> <a class="reference internal" href="#abaqus.FieldReport.FreeBodyReportOptions.FreeBodyReportOptions" title="abaqus.FieldReport.FreeBodyReportOptions.FreeBodyReportOptions"><code class="xref py py-obj docutils literal notranslate"><span class="pre">FreeBodyReportOptions</span></code></a> object.</dt><dd></dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
 </section>
 <section id="odbfieldvarlist">
 <h3>OdbFieldVarList<a class="headerlink" href="#odbfieldvarlist" title="Permalink to this headline">#</a></h3>
+<dl class="py class">
+<dt class="sig sig-object py" id="abaqus.FieldReport.OdbFieldVarList.OdbFieldVarList">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">OdbFieldVarList</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">iterable</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">()</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">/</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/haiiliin/pyabaqus/blob/V2022/src/abaqus/FieldReport/OdbFieldVarList.py#L1-L18"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#abaqus.FieldReport.OdbFieldVarList.OdbFieldVarList" title="Permalink to this definition">#</a></dt>
+<dd><p>The read-only OdbFieldVarList object is a sequence listing all variables available for
+the current step and frame. Each item in the sequence is itself a sequence fully
+describing the given variable.</p>
+<p class="rubric">Notes</p>
+<p>This object can be accessed by:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">visualization</span>
+<span class="n">session</span><span class="o">.</span><span class="n">viewports</span><span class="p">[</span><span class="n">name</span><span class="p">]</span><span class="o">.</span><span class="n">layers</span><span class="p">[</span><span class="n">name</span><span class="p">]</span><span class="o">.</span><span class="n">odbDisplay</span><span class="o">.</span><span class="n">fieldVariables</span>
+<span class="n">session</span><span class="o">.</span><span class="n">viewports</span><span class="p">[</span><span class="n">name</span><span class="p">]</span><span class="o">.</span><span class="n">odbDisplay</span><span class="o">.</span><span class="n">fieldVariables</span>
+</pre></div>
+</div>
+</dd></dl>
+
 </section>
 <section id="odbmodelfieldvarlist">
 <h3>OdbModelFieldVarList<a class="headerlink" href="#odbmodelfieldvarlist" title="Permalink to this headline">#</a></h3>
+<dl class="py class">
+<dt class="sig sig-object py" id="abaqus.FieldReport.OdbModelFieldVarList.OdbModelFieldVarList">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">OdbModelFieldVarList</span></span><a class="reference external" href="https://github.com/haiiliin/pyabaqus/blob/V2022/src/abaqus/FieldReport/OdbModelFieldVarList.py#L1-L17"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#abaqus.FieldReport.OdbModelFieldVarList.OdbModelFieldVarList" title="Permalink to this definition">#</a></dt>
+<dd><p>The read-only OdbModelFieldVarList object lists all variables available for the model in
+the current OdbDisplay object.</p>
+<p class="rubric">Notes</p>
+<p>This object can be accessed by:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">visualization</span>
+<span class="n">session</span><span class="o">.</span><span class="n">viewports</span><span class="p">[</span><span class="n">name</span><span class="p">]</span><span class="o">.</span><span class="n">layers</span><span class="p">[</span><span class="n">name</span><span class="p">]</span><span class="o">.</span><span class="n">odbDisplay</span><span class="o">.</span><span class="n">modelVariableList</span>
+<span class="n">session</span><span class="o">.</span><span class="n">viewports</span><span class="p">[</span><span class="n">name</span><span class="p">]</span><span class="o">.</span><span class="n">odbDisplay</span><span class="o">.</span><span class="n">modelVariableList</span>
+</pre></div>
+</div>
+</dd></dl>
+
 </section>
 <section id="writefieldreport">
 <h3>writeFieldReport<a class="headerlink" href="#writefieldreport" title="Permalink to this headline">#</a></h3>

@@ -309,6 +309,70 @@
 </section>
 <section id="create-queues-in-session">
 <h2>Create queues in Session<a class="headerlink" href="#create-queues-in-session" title="Permalink to this headline">#</a></h2>
+<dl class="py method">
+<dt class="sig sig-object py" id="abaqus.Job.JobSession.JobSession.Queue">
+<span class="sig-prename descclassname"><span class="pre">JobSession.</span></span><span class="sig-name descname"><span class="pre">Queue</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">queueName</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">hostName</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fileCopy</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">BooleanType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">directory</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">driver</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">remotePlatform</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">SymbolicConstantType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'Linux'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">filesToCopy</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'ALL'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">deleteAfterCopy</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">BooleanType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">description</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">''</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#abaqus.Job.Queue.Queue" title="abaqus.Job.Queue.Queue"><span class="pre">Queue</span></a></span></span><a class="reference external" href="https://github.com/haiiliin/pyabaqus/blob/V2022/src/abaqus/Job/JobSession.py#L7-L84"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#abaqus.Job.JobSession.JobSession.Queue" title="Permalink to this definition">#</a></dt>
+<dd><p>This method creates a Queue object.
+Note:Remote queues are available only on Linux platforms.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>name</strong></dt><dd><p>A String specifying the name of the new Queue object.</p>
+</dd>
+<dt><strong>queueName</strong></dt><dd><p>A String specifying the name of the remote analysis queue.</p>
+</dd>
+<dt><strong>hostName</strong></dt><dd><p>A String specifying the name of the remote host. The default value is an empty string.</p>
+</dd>
+<dt><strong>fileCopy</strong></dt><dd><p>A Boolean specifying if the results files are to be copied from the remote machine to
+the local machine. The default value is ON.</p>
+</dd>
+<dt><strong>directory</strong></dt><dd><p>A String specifying the remote location for the execution of the simulation. The default
+value is an empty string.</p>
+</dd>
+<dt><strong>driver</strong></dt><dd><p>A String specifying the designation of the remote driver. The default value is “abaqus”.</p>
+</dd>
+<dt><strong>remotePlatform</strong></dt><dd><p>A SymbolicConstant specifying the type of operating system on the remote machine. The
+default value is Linux.</p>
+</dd>
+<dt><strong>filesToCopy</strong></dt><dd><p>A list of Strings specifying the files to be copied from the remote location to the
+local machine, or ALL. Strings specified in a list are the extensions of the job files
+that will be copied, such as (‘log’, ‘dat’, ‘msg’, ‘sta’, ‘odb’). The default value is
+ALL.</p>
+</dd>
+<dt><strong>deleteAfterCopy</strong></dt><dd><p>A Boolean specifying whether remote files are to be deleted after they are copied to the
+local machine. The default value is OFF.</p>
+</dd>
+<dt><strong>description</strong></dt><dd><p>A String specifying a description of the queue. The default value is an empty string.</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><dl class="simple">
+<dt><code class="xref py py-obj docutils literal notranslate"><span class="pre">A</span></code> <a class="reference internal" href="#abaqus.Job.JobSession.JobSession.Queue" title="abaqus.Job.JobSession.JobSession.Queue"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Queue</span></code></a> object.</dt><dd></dd>
+</dl>
+</dd>
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><ul class="simple">
+<li><dl class="simple">
+<dt><code class="xref py py-obj docutils literal notranslate"><span class="pre">If</span></code> <em>fileCopy*=ON :obj:`and` *hostName</em> <code class="xref py py-obj docutils literal notranslate"><span class="pre">is</span></code> empty:</dt><dd><p>Remote queue host name is not set.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><code class="xref py py-obj docutils literal notranslate"><span class="pre">If</span></code> <em>fileCopy*=ON :obj:`and` *directory</em> <code class="xref py py-obj docutils literal notranslate"><span class="pre">is</span></code> empty:</dt><dd><p>Directory in which to run the job on the remote computer is not set.</p>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+<p class="rubric">Notes</p>
+<p>This function can be accessed by:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">session</span><span class="o">.</span><span class="n">Queue</span>
+</pre></div>
+</div>
+</dd></dl>
+
 </section>
 <section id="features-of-the-job">
 <h2>Features of the job<a class="headerlink" href="#features-of-the-job" title="Permalink to this headline">#</a></h2>
@@ -895,7 +959,7 @@ OFF.</p>
 </dd>
 <dt><strong>historyPrint: Boolean</strong></dt><dd><p>A Boolean specifying whether history data are printed. The default value is OFF.</p>
 </dd>
-<dt><strong>model: str</strong></dt><dd><p>A String specifying the name of the model to be analyzed or a <code class="xref py py-class docutils literal notranslate"><span class="pre">Model</span></code> object specifying
+<dt><strong>model: str</strong></dt><dd><p>A String specifying the name of the model to be analyzed or a <a class="reference internal" href="model.html#abaqus.Model.Model.Model" title="abaqus.Model.Model.Model"><code class="xref py py-class docutils literal notranslate"><span class="pre">Model</span></code></a> object specifying
 the model to be analyzed.</p>
 </dd>
 <dt><strong>description: str</strong></dt><dd><p>A String specifying a description of the job.</p>

@@ -6693,6 +6693,54 @@ behavior of elastomers.</p>
 <h4>SuperElastic<a class="headerlink" href="#superelastic" title="Permalink to this headline">#</a></h4>
 <section id="superelasticity">
 <h5>SuperElasticity<a class="headerlink" href="#superelasticity" title="Permalink to this headline">#</a></h5>
+<dl class="py class">
+<dt class="sig sig-object py" id="abaqus.Material.Elastic.SuperElastic.SuperElasticity.SuperElasticity">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">SuperElasticity</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">table</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">tuple</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">nonassociated</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/haiiliin/pyabaqus/blob/V2022/src/abaqus/Material/Elastic/SuperElastic/SuperElasticity.py#L7-L88"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#abaqus.Material.Elastic.SuperElastic.SuperElasticity.SuperElasticity" title="Permalink to this definition">#</a></dt>
+<dd><p>The SuperElasticity object specifies a superelastic material model.</p>
+<p class="rubric">Notes</p>
+<p>This object can be accessed by:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">material</span>
+<span class="n">mdb</span><span class="o">.</span><span class="n">models</span><span class="p">[</span><span class="n">name</span><span class="p">]</span><span class="o">.</span><span class="n">materials</span><span class="p">[</span><span class="n">name</span><span class="p">]</span><span class="o">.</span><span class="n">superElasticity</span>
+<span class="kn">import</span> <span class="nn">odbMaterial</span>
+<span class="n">session</span><span class="o">.</span><span class="n">odbs</span><span class="p">[</span><span class="n">name</span><span class="p">]</span><span class="o">.</span><span class="n">materials</span><span class="p">[</span><span class="n">name</span><span class="p">]</span><span class="o">.</span><span class="n">superElasticity</span>
+</pre></div>
+</div>
+<dl class="simple">
+<dt>The table data for this object are:</dt><dd><ul class="simple">
+<li><p>Young’s Modulus (Martensite).</p></li>
+<li><p>Poisson’s Ratio (Martensite).</p></li>
+<li><p>Transformation Strain.</p></li>
+<li><p>Start of Transformation (Loading).</p></li>
+<li><p>End of Transformation (Loading).</p></li>
+<li><p>Start of Transformation (Unloading).</p></li>
+<li><p>End of Transformation (Unloading).</p></li>
+<li><p>Start of Transformation in Compression (Loading).</p></li>
+<li><p>Reference Temperature.</p></li>
+<li><p>Loading.</p></li>
+<li><p>Unloading.</p></li>
+</ul>
+</dd>
+</dl>
+<p>The corresponding analysis keywords are:</p>
+<ul class="simple">
+<li><p>SUPERELASTIC</p></li>
+</ul>
+<p class="rubric">Methods</p>
+<div class="table-wrapper autosummary longtable docutils container">
+<table class="autosummary longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">setValues</span></code>()</p></td>
+<td><p>This method modifies the SuperElasticity object.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</dd></dl>
+
 </section>
 </section>
 </section>

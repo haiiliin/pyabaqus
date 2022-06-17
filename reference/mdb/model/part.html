@@ -11278,6 +11278,377 @@ Version 12.0. The default value is the current version of ACIS.</p>
 </section>
 <section id="acismdb">
 <h3>AcisMdb<a class="headerlink" href="#acismdb" title="Permalink to this headline">#</a></h3>
+<dl class="py class">
+<dt class="sig sig-object py" id="abaqus.Part.AcisMdb.AcisMdb">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">AcisMdb</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">pathName</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">''</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/haiiliin/pyabaqus/blob/V2022/src/abaqus/Part/AcisMdb.py#L6-L329"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#abaqus.Part.AcisMdb.AcisMdb" title="Permalink to this definition">#</a></dt>
+<dd><p>The Mdb object is the high-level Abaqus model database. A model database stores models
+and analysis controls.</p>
+<p class="rubric">Notes</p>
+<p>This object can be accessed by:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">mdb</span>
+</pre></div>
+</div>
+<p class="rubric">Methods</p>
+<div class="table-wrapper autosummary longtable docutils container">
+<table class="autosummary longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#abaqus.Part.AcisMdb.AcisMdb.openAcis" title="abaqus.Part.AcisMdb.AcisMdb.openAcis"><code class="xref py py-obj docutils literal notranslate"><span class="pre">openAcis</span></code></a>(fileName[, scaleFromFile])</p></td>
+<td><p>This method creates an AcisFile object from a file containing ACIS-format geometry.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#abaqus.Part.AcisMdb.AcisMdb.openCatia" title="abaqus.Part.AcisMdb.AcisMdb.openCatia"><code class="xref py py-obj docutils literal notranslate"><span class="pre">openCatia</span></code></a>(fileName[, topology, ...])</p></td>
+<td><p>This method creates an AcisFile object from a file containing V5-format geometry.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#abaqus.Part.AcisMdb.AcisMdb.openEnf" title="abaqus.Part.AcisMdb.AcisMdb.openEnf"><code class="xref py py-obj docutils literal notranslate"><span class="pre">openEnf</span></code></a>(fileName, fileType[, topology, ...])</p></td>
+<td><p>This method creates an AcisFile object from a file containing Elysium Neutral File-format geometry that was created by CATIA V5, I-DEAS, or Pro/ENGINEER.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#abaqus.Part.AcisMdb.AcisMdb.openIges" title="abaqus.Part.AcisMdb.AcisMdb.openIges"><code class="xref py py-obj docutils literal notranslate"><span class="pre">openIges</span></code></a>(fileName[, trimCurve, ...])</p></td>
+<td><p>This method creates an AcisFile object from a file containing IGES-format geometry.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#abaqus.Part.AcisMdb.AcisMdb.openParasolid" title="abaqus.Part.AcisMdb.AcisMdb.openParasolid"><code class="xref py py-obj docutils literal notranslate"><span class="pre">openParasolid</span></code></a>(fileName[, topology])</p></td>
+<td><p>This method creates an AcisFile object from a file containing Parasolid-format geometry.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#abaqus.Part.AcisMdb.AcisMdb.openSolidworks" title="abaqus.Part.AcisMdb.AcisMdb.openSolidworks"><code class="xref py py-obj docutils literal notranslate"><span class="pre">openSolidworks</span></code></a>(fileName[, topology])</p></td>
+<td><p>This method creates an AcisFile object from a file containing Solidworks format geometry.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#abaqus.Part.AcisMdb.AcisMdb.openStep" title="abaqus.Part.AcisMdb.AcisMdb.openStep"><code class="xref py py-obj docutils literal notranslate"><span class="pre">openStep</span></code></a>(fileName[, scale])</p></td>
+<td><p>This method creates an AcisFile object from a file containing STEP-format geometry.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#abaqus.Part.AcisMdb.AcisMdb.openVda" title="abaqus.Part.AcisMdb.AcisMdb.openVda"><code class="xref py py-obj docutils literal notranslate"><span class="pre">openVda</span></code></a>(fileName)</p></td>
+<td><p>This method creates an AcisFile object from a file containing VDA-FS-format geometry.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<dl class="py method">
+<dt class="sig sig-object py" id="abaqus.Part.AcisMdb.AcisMdb.openAcis">
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">openAcis</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">fileName</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">scaleFromFile</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">BooleanType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/haiiliin/pyabaqus/blob/V2022/src/abaqus/Part/AcisMdb.py#L20-L52"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#abaqus.Part.AcisMdb.AcisMdb.openAcis" title="Permalink to this definition">#</a></dt>
+<dd><p>This method creates an AcisFile object from a file containing ACIS-format geometry. This
+object is subsequently used by the PartFromGeometryFile method.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>fileName</strong></dt><dd><p>A String specifying the path to the ACIS file to open.</p>
+</dd>
+<dt><strong>scaleFromFile</strong></dt><dd><p>A Boolean specifying whether to scale, rotate, and translate the part using the
+transform read from the ACIS file. The default value is OFF.</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><dl class="simple">
+<dt><code class="xref py py-obj docutils literal notranslate"><span class="pre">An</span></code> <code class="xref py py-obj docutils literal notranslate"><span class="pre">AcisFile</span></code> object.</dt><dd></dd>
+</dl>
+</dd>
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><ul class="simple">
+<li><dl class="simple">
+<dt><code class="xref py py-obj docutils literal notranslate"><span class="pre">File</span></code> <code class="xref py py-obj docutils literal notranslate"><span class="pre">is</span></code> <code class="xref py py-obj docutils literal notranslate"><span class="pre">from</span></code> <code class="xref py py-obj docutils literal notranslate"><span class="pre">a</span></code> <code class="xref py py-obj docutils literal notranslate"><span class="pre">newer</span></code> <code class="xref py py-obj docutils literal notranslate"><span class="pre">version</span></code> <code class="xref py py-obj docutils literal notranslate"><span class="pre">of</span></code> <code class="xref py py-obj docutils literal notranslate"><span class="pre">ACIS</span></code> <code class="xref py py-obj docutils literal notranslate"><span class="pre">than</span></code> <code class="xref py py-obj docutils literal notranslate"><span class="pre">the</span></code> <code class="xref py py-obj docutils literal notranslate"><span class="pre">CAE</span></code> kernel.</dt><dd><p>Texterror: ACIS File version exceeds Kernel.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><code class="xref py py-obj docutils literal notranslate"><span class="pre">The</span></code> <code class="xref py py-obj docutils literal notranslate"><span class="pre">data</span></code> <code class="xref py py-obj docutils literal notranslate"><span class="pre">in</span></code> <code class="xref py py-obj docutils literal notranslate"><span class="pre">the</span></code> <code class="xref py py-obj docutils literal notranslate"><span class="pre">ACIS</span></code> <code class="xref py py-obj docutils literal notranslate"><span class="pre">file</span></code> <code class="xref py py-obj docutils literal notranslate"><span class="pre">are</span></code> corrupted.</dt><dd><p>Texterror: Failed to read ACIS file.</p>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+<p class="rubric">Notes</p>
+<p>This function can be accessed by:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">mdb</span><span class="o">.</span><span class="n">openAcis</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="abaqus.Part.AcisMdb.AcisMdb.openCatia">
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">openCatia</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">fileName</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">topology</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">SymbolicConstantType</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">convertUnits</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">SymbolicConstantType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">combineBodies</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">BooleanType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/haiiliin/pyabaqus/blob/V2022/src/abaqus/Part/AcisMdb.py#L54-L94"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#abaqus.Part.AcisMdb.AcisMdb.openCatia" title="Permalink to this definition">#</a></dt>
+<dd><p>This method creates an AcisFile object from a file containing V5-format geometry. This
+object is subsequently used by the PartFromGeometryFile method.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>fileName</strong></dt><dd><p>A String specifying the path to the CATIA file to open.</p>
+</dd>
+<dt><strong>topology</strong></dt><dd><p>A SymbolicConstant specifying the topology of the data to be read from the file and of
+the part to be created. Possible values are SOLID , SHELL, and WIRE. If
+<a href="#id214"><span class="problematic" id="id215">*</span></a>topology*=SOLID, Abaqus/CAE attempts to attach cells to create a solid. If
+<a href="#id216"><span class="problematic" id="id217">*</span></a>topology*=SHELL, Abaqus/CAE builds the body as a shell entity and not as a solid
+entity. The default value is SOLID .</p>
+</dd>
+<dt><strong>convertUnits</strong></dt><dd><p>A SymbolicConstant specifying whether the original units should be retained. Possible
+values are ON and OFF. The default value is OFF.</p>
+</dd>
+<dt><strong>combineBodies</strong></dt><dd><p>A Boolean specifying whether to combine the bodies in the CATPart file. If the bodies to
+be combined touch or overlap, invalid entities would result. For CATProduct files, this
+option will be ignored.</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><dl class="simple">
+<dt><code class="xref py py-obj docutils literal notranslate"><span class="pre">An</span></code> <code class="xref py py-obj docutils literal notranslate"><span class="pre">AcisFile</span></code> object.</dt><dd></dd>
+</dl>
+</dd>
+</dl>
+<p class="rubric">Notes</p>
+<p>This function can be accessed by:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">mdb</span><span class="o">.</span><span class="n">openCatia</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="abaqus.Part.AcisMdb.AcisMdb.openEnf">
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">openEnf</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">fileName</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fileType</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">topology</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">SymbolicConstantType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'SOLID'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">convertUnits</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">BooleanType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/haiiliin/pyabaqus/blob/V2022/src/abaqus/Part/AcisMdb.py#L96-L138"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#abaqus.Part.AcisMdb.AcisMdb.openEnf" title="Permalink to this definition">#</a></dt>
+<dd><p>This method creates an AcisFile object from a file containing Elysium Neutral
+File-format geometry that was created by CATIA V5, I-DEAS, or Pro/ENGINEER. This object
+is subsequently used by the PartFromGeometryFile method.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>fileName</strong></dt><dd><p>A String specifying the path to the Elysium Neutral File that was created by I-DEAS,
+Pro/ENGINEER, or CATIA V5.</p>
+</dd>
+<dt><strong>fileType</strong></dt><dd><p>A String specifying the type of CAD system that created the file. Possible values are
+“ideas”, “proe”, or “catiav5” or a combination similar to “proe/ideas/catiav5” if the
+type is unknown.</p>
+</dd>
+<dt><strong>topology</strong></dt><dd><p>A SymbolicConstant specifying the topology of the data to be read from the file and of
+the part to be created. Possible values are SOLID , SHELL, and WIRE. If
+<a href="#id218"><span class="problematic" id="id219">*</span></a>topology*=SOLID, Abaqus/CAE attempts to attach cells to create a solid. If
+<a href="#id220"><span class="problematic" id="id221">*</span></a>topology*=SHELL, Abaqus/CAE builds the body as a shell entity and not as a solid
+entity. The default value is SOLID.</p>
+</dd>
+<dt><strong>convertUnits</strong></dt><dd><p>A Boolean specifying if the dimensions of the part should be converted to millimeters.
+The default value is OFF.</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><dl class="simple">
+<dt><code class="xref py py-obj docutils literal notranslate"><span class="pre">An</span></code> <code class="xref py py-obj docutils literal notranslate"><span class="pre">AcisFile</span></code> object.</dt><dd></dd>
+</dl>
+</dd>
+</dl>
+<p class="rubric">Notes</p>
+<p>This function can be accessed by:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">mdb</span><span class="o">.</span><span class="n">openEnf</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="abaqus.Part.AcisMdb.AcisMdb.openIges">
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">openIges</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">fileName</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">trimCurve</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">SymbolicConstantType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'DEFAULT'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">scaleFromFile</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">SymbolicConstantType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">msbo</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">BooleanType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">includedLayers</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">tuple</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">()</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">topology</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">SymbolicConstantType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'SOLID'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">uniteWires</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">SymbolicConstantType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">1</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/haiiliin/pyabaqus/blob/V2022/src/abaqus/Part/AcisMdb.py#L140-L203"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#abaqus.Part.AcisMdb.AcisMdb.openIges" title="Permalink to this definition">#</a></dt>
+<dd><p>This method creates an AcisFile object from a file containing IGES-format geometry. This
+object is subsequently used by the PartFromGeometryFile method.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>fileName</strong></dt><dd><p>A String specifying the path to the IGES file to open.</p>
+</dd>
+<dt><strong>trimCurve</strong></dt><dd><p>A SymbolicConstant specifying the method used to define the trim curves that bound
+parametric surfaces. Possible values are:DEFAULT, use either of the following as
+specified by the contents of the IGES file.PARAMETRIC_DATA, use the parameter space of
+the surface being trimmed.THREED_DATA, use real space—the coordinate system of the part
+along with an indication that the trim curve lies on the parametric surface.The default
+value is DEFAULT.</p>
+</dd>
+<dt><strong>scaleFromFile</strong></dt><dd><p>A SymbolicConstant specifying whether the imported geometry needs to be scaled using the
+units information available in the IGES file. Possible values are ON and OFF. The
+default value is OFF. When the argument is set to ON, the geometry is scaled to
+millimeters with respect to the unit system specified in the IGES file.</p>
+</dd>
+<dt><strong>msbo</strong></dt><dd><p>A Boolean specifying if the IGES file contains MSBO (Manifold Solid B-Rep Object)
+entities. The default value is False.</p>
+</dd>
+<dt><strong>includedLayers</strong></dt><dd><p>A sequence of Ints specifying the levels or layers of entities that will be translated
+from the IGES file to build the part. The default is to include all the layers.</p>
+</dd>
+<dt><strong>topology</strong></dt><dd><p>A SymbolicConstant specifying the topology of the data to be read from the file and of
+the part to be created. Possible values are SOLID , SHELL, and WIRE. If
+<a href="#id222"><span class="problematic" id="id223">*</span></a>topology*=SOLID, Abaqus/CAE attempts to attach cells to create a solid. If
+<a href="#id224"><span class="problematic" id="id225">*</span></a>topology*=SHELL, Abaqus/CAE builds the body as a shell entity and not as a solid
+entity. The default value is SOLID.</p>
+</dd>
+<dt><strong>uniteWires</strong></dt><dd><p>A SymbolicConstant specifying whether the imported wires need to be united or not.
+Possible values are ON and OFF. The default value is ON. When importing a sketch, this
+value is set to OFF.</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><dl class="simple">
+<dt><code class="xref py py-obj docutils literal notranslate"><span class="pre">An</span></code> <code class="xref py py-obj docutils literal notranslate"><span class="pre">AcisFile</span></code> object.</dt><dd></dd>
+</dl>
+</dd>
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><ul class="simple">
+<li><dl class="simple">
+<dt><code class="xref py py-obj docutils literal notranslate"><span class="pre">The</span></code> <code class="xref py py-obj docutils literal notranslate"><span class="pre">data</span></code> <code class="xref py py-obj docutils literal notranslate"><span class="pre">in</span></code> <code class="xref py py-obj docutils literal notranslate"><span class="pre">the</span></code> <code class="xref py py-obj docutils literal notranslate"><span class="pre">IGES</span></code> <code class="xref py py-obj docutils literal notranslate"><span class="pre">file</span></code> <code class="xref py py-obj docutils literal notranslate"><span class="pre">are</span></code> corrupted.</dt><dd><p>Texterror: Failed to read IGES file.</p>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+<p class="rubric">Notes</p>
+<p>This function can be accessed by:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">mdb</span><span class="o">.</span><span class="n">openIges</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="abaqus.Part.AcisMdb.AcisMdb.openParasolid">
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">openParasolid</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">fileName</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">topology</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">SymbolicConstantType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'SOLID'</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/haiiliin/pyabaqus/blob/V2022/src/abaqus/Part/AcisMdb.py#L205-L233"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#abaqus.Part.AcisMdb.AcisMdb.openParasolid" title="Permalink to this definition">#</a></dt>
+<dd><p>This method creates an AcisFile object from a file containing Parasolid-format geometry.
+This object is subsequently used by the PartFromGeometryFile method.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>fileName</strong></dt><dd><p>A String specifying the path to the Parasolid file to open.</p>
+</dd>
+<dt><strong>topology</strong></dt><dd><p>A SymbolicConstant specifying the topology of the data to be read from the file and of
+the part to be created. Possible values are SOLID , SHELL, and WIRE. If
+<a href="#id226"><span class="problematic" id="id227">*</span></a>topology*=SOLID, Abaqus/CAE attempts to attach cells to create a solid. If
+<a href="#id228"><span class="problematic" id="id229">*</span></a>topology*=SHELL, Abaqus/CAE builds the body as a shell entity and not as a solid
+entity. The default value is SOLID.</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><dl class="simple">
+<dt><code class="xref py py-obj docutils literal notranslate"><span class="pre">An</span></code> <code class="xref py py-obj docutils literal notranslate"><span class="pre">AcisFile</span></code> object.</dt><dd></dd>
+</dl>
+</dd>
+</dl>
+<p class="rubric">Notes</p>
+<p>This function can be accessed by:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">mdb</span><span class="o">.</span><span class="n">openParasolid</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="abaqus.Part.AcisMdb.AcisMdb.openSolidworks">
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">openSolidworks</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">fileName</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">topology</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">SymbolicConstantType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'SOLID'</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/haiiliin/pyabaqus/blob/V2022/src/abaqus/Part/AcisMdb.py#L296-L329"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#abaqus.Part.AcisMdb.AcisMdb.openSolidworks" title="Permalink to this definition">#</a></dt>
+<dd><p>This method creates an AcisFile object from a file containing Solidworks format
+geometry. This object is subsequently used by the PartFromGeometryFile method.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>fileName</strong></dt><dd><p>A String specifying the path to the Solidworks file to open.</p>
+</dd>
+<dt><strong>topology</strong></dt><dd><p>A SymbolicConstant specifying the topology of the data to be read from the file and of
+the part to be created. Possible values are SOLID, SHELL, and WIRE. If <a href="#id230"><span class="problematic" id="id231">*</span></a>topology*=SOLID,
+Abaqus/CAE attempts to attach cells to create a solid entity. If <a href="#id232"><span class="problematic" id="id233">*</span></a>topology*=SHELL,
+Abaqus/CAE builds the body as a shell entity, not as a solid entity. The default value
+is SOLID.</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><dl class="simple">
+<dt><code class="xref py py-obj docutils literal notranslate"><span class="pre">An</span></code> <code class="xref py py-obj docutils literal notranslate"><span class="pre">AcisFile</span></code> object.</dt><dd></dd>
+</dl>
+</dd>
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><ul class="simple">
+<li><dl class="simple">
+<dt><code class="xref py py-obj docutils literal notranslate"><span class="pre">The</span></code> <code class="xref py py-obj docutils literal notranslate"><span class="pre">data</span></code> <code class="xref py py-obj docutils literal notranslate"><span class="pre">in</span></code> <code class="xref py py-obj docutils literal notranslate"><span class="pre">the</span></code> <code class="xref py py-obj docutils literal notranslate"><span class="pre">Solidworks</span></code> <code class="xref py py-obj docutils literal notranslate"><span class="pre">file</span></code> <code class="xref py py-obj docutils literal notranslate"><span class="pre">are</span></code> corrupted.</dt><dd><p>Texterror: Failed to read Solidworks file.</p>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+<p class="rubric">Notes</p>
+<p>This function can be accessed by:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">openSolidworks</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="abaqus.Part.AcisMdb.AcisMdb.openStep">
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">openStep</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">fileName</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">scale</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">1</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/haiiliin/pyabaqus/blob/V2022/src/abaqus/Part/AcisMdb.py#L235-L265"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#abaqus.Part.AcisMdb.AcisMdb.openStep" title="Permalink to this definition">#</a></dt>
+<dd><p>This method creates an AcisFile object from a file containing STEP-format geometry. This
+object is subsequently used by the PartFromGeometryFile method.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>fileName</strong></dt><dd><p>A String specifying the path to the STEP file to open.</p>
+</dd>
+<dt><strong>scale</strong></dt><dd><p>A Float specifying the scaling factor to apply to the imported geometric entities. The
+default value is 1.0.</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><dl class="simple">
+<dt><code class="xref py py-obj docutils literal notranslate"><span class="pre">An</span></code> <code class="xref py py-obj docutils literal notranslate"><span class="pre">AcisFile</span></code> object.</dt><dd></dd>
+</dl>
+</dd>
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><ul class="simple">
+<li><dl class="simple">
+<dt><code class="xref py py-obj docutils literal notranslate"><span class="pre">The</span></code> <code class="xref py py-obj docutils literal notranslate"><span class="pre">data</span></code> <code class="xref py py-obj docutils literal notranslate"><span class="pre">in</span></code> <code class="xref py py-obj docutils literal notranslate"><span class="pre">the</span></code> <code class="xref py py-obj docutils literal notranslate"><span class="pre">STEP</span></code> <code class="xref py py-obj docutils literal notranslate"><span class="pre">file</span></code> <code class="xref py py-obj docutils literal notranslate"><span class="pre">are</span></code> corrupted.</dt><dd><p>Texterror: Failed to read STEP file.</p>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+<p class="rubric">Notes</p>
+<p>This function can be accessed by:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">mdb</span><span class="o">.</span><span class="n">openStep</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="abaqus.Part.AcisMdb.AcisMdb.openVda">
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">openVda</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">fileName</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/haiiliin/pyabaqus/blob/V2022/src/abaqus/Part/AcisMdb.py#L267-L294"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#abaqus.Part.AcisMdb.AcisMdb.openVda" title="Permalink to this definition">#</a></dt>
+<dd><p>This method creates an AcisFile object from a file containing VDA-FS-format geometry.
+This object is subsequently used by the PartFromGeometryFile method.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>fileName</strong></dt><dd><p>A String specifying the path to the VDA-FS file to open.</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><dl class="simple">
+<dt><code class="xref py py-obj docutils literal notranslate"><span class="pre">An</span></code> <code class="xref py py-obj docutils literal notranslate"><span class="pre">AcisFile</span></code> object.</dt><dd></dd>
+</dl>
+</dd>
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><ul class="simple">
+<li><dl class="simple">
+<dt><code class="xref py py-obj docutils literal notranslate"><span class="pre">The</span></code> <code class="xref py py-obj docutils literal notranslate"><span class="pre">data</span></code> <code class="xref py py-obj docutils literal notranslate"><span class="pre">in</span></code> <code class="xref py py-obj docutils literal notranslate"><span class="pre">the</span></code> VDA-FS <code class="xref py py-obj docutils literal notranslate"><span class="pre">file</span></code> <code class="xref py py-obj docutils literal notranslate"><span class="pre">are</span></code> corrupted.</dt><dd><p>Texterror: Failed to read VDA file.</p>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+<p class="rubric">Notes</p>
+<p>This function can be accessed by:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">mdb</span><span class="o">.</span><span class="n">openVda</span>
+</pre></div>
+</div>
+</dd></dl>
+
+</dd></dl>
+
 </section>
 <section id="feature">
 <h3>Feature<a class="headerlink" href="#feature" title="Permalink to this headline">#</a></h3>
@@ -11729,12 +12100,12 @@ full revolution about the axis of revolution. Possible values are 0 ≤≤ <em>p
 The default value, 0, implies a normal revolve.</p>
 </dd>
 <dt><strong>flipRevolveDirection</strong></dt><dd><p>A Boolean specifying whether to override the direction of feature creation. If
-<a href="#id214"><span class="problematic" id="id215">*</span></a>flipRevolveDirection*=OFF, the default direction of revolution is used. If
-<a href="#id216"><span class="problematic" id="id217">*</span></a>flipRevolveDirection*=ON, the revolve direction is reversed. The default value is OFF.</p>
+<a href="#id234"><span class="problematic" id="id235">*</span></a>flipRevolveDirection*=OFF, the default direction of revolution is used. If
+<a href="#id236"><span class="problematic" id="id237">*</span></a>flipRevolveDirection*=ON, the revolve direction is reversed. The default value is OFF.</p>
 </dd>
 <dt><strong>flipPitchDirection</strong></dt><dd><p>A Boolean specifying whether to override the direction of translation. If
-<a href="#id218"><span class="problematic" id="id219">*</span></a>flipPitchDirection*=OFF, the direction of translation is given by the direction of the
-revolve axis. If <a href="#id220"><span class="problematic" id="id221">*</span></a>flipPitchDirection*=ON, the translation direction is reversed. The
+<a href="#id238"><span class="problematic" id="id239">*</span></a>flipPitchDirection*=OFF, the direction of translation is given by the direction of the
+revolve axis. If <a href="#id240"><span class="problematic" id="id241">*</span></a>flipPitchDirection*=ON, the translation direction is reversed. The
 default value is OFF.</p>
 </dd>
 <dt><strong>moveSketchNormalToPath</strong></dt><dd><p>A Boolean specifying whether to rotate the sketch so that it is normal to the path of
@@ -11852,12 +12223,12 @@ full revolution about the axis of revolution. Possible values are 0 ≤≤ <em>p
 The default value, 0, implies a normal revolve.</p>
 </dd>
 <dt><strong>flipRevolveDirection</strong></dt><dd><p>A Boolean specifying whether to override the direction of feature creation. If
-<a href="#id222"><span class="problematic" id="id223">*</span></a>flipRevolveDirection*=OFF, the default direction of revolution is used. If
-<a href="#id224"><span class="problematic" id="id225">*</span></a>flipRevolveDirection*=ON, the revolve direction is reversed. The default value is OFF.</p>
+<a href="#id242"><span class="problematic" id="id243">*</span></a>flipRevolveDirection*=OFF, the default direction of revolution is used. If
+<a href="#id244"><span class="problematic" id="id245">*</span></a>flipRevolveDirection*=ON, the revolve direction is reversed. The default value is OFF.</p>
 </dd>
 <dt><strong>flipPitchDirection</strong></dt><dd><p>A Boolean specifying whether to override the direction of translation. If
-<a href="#id226"><span class="problematic" id="id227">*</span></a>flipPitchDirection*=OFF, the direction of translation is given by the direction of the
-revolve axis. If <a href="#id228"><span class="problematic" id="id229">*</span></a>flipPitchDirection*=ON, the translation direction is reversed. The
+<a href="#id246"><span class="problematic" id="id247">*</span></a>flipPitchDirection*=OFF, the direction of translation is given by the direction of the
+revolve axis. If <a href="#id248"><span class="problematic" id="id249">*</span></a>flipPitchDirection*=ON, the translation direction is reversed. The
 default value is OFF.</p>
 </dd>
 <dt><strong>moveSketchNormalToPath</strong></dt><dd><p>A Boolean specifying whether to rotate the sketch so that it is normal to the path of
@@ -11965,7 +12336,7 @@ between the two sides.SPECIFY_PATH: The blend connects the two sides along a spe
 path.</p>
 </dd>
 <dt><strong>path</strong></dt><dd><p>An Edge object that connects <em>side1</em> to <em>side2</em> and specifies the path for creating the
-blend. This argument is required if <a href="#id230"><span class="problematic" id="id231">*</span></a>method*=SPECIFY_PATH; otherwise, it is ignored.</p>
+blend. This argument is required if <a href="#id250"><span class="problematic" id="id251">*</span></a>method*=SPECIFY_PATH; otherwise, it is ignored.</p>
 </dd>
 </dl>
 </dd>
@@ -12304,12 +12675,12 @@ full revolution about the axis of revolution. Possible values are 0 ≤≤ <em>p
 The default value, 0, implies a normal revolve.</p>
 </dd>
 <dt><strong>flipRevolveDirection</strong></dt><dd><p>A Boolean specifying whether to override the direction of feature creation. If
-<a href="#id232"><span class="problematic" id="id233">*</span></a>flipRevolveDirection*=OFF, the default direction of revolution is used. If
-<a href="#id234"><span class="problematic" id="id235">*</span></a>flipRevolveDirection*=ON, the revolve direction is reversed. The default value is OFF.</p>
+<a href="#id252"><span class="problematic" id="id253">*</span></a>flipRevolveDirection*=OFF, the default direction of revolution is used. If
+<a href="#id254"><span class="problematic" id="id255">*</span></a>flipRevolveDirection*=ON, the revolve direction is reversed. The default value is OFF.</p>
 </dd>
 <dt><strong>flipPitchDirection</strong></dt><dd><p>A Boolean specifying whether to override the direction of translation. If
-<a href="#id236"><span class="problematic" id="id237">*</span></a>flipPitchDirection*=OFF, the direction of translation is given by the direction of the
-revolve axis. If <a href="#id238"><span class="problematic" id="id239">*</span></a>flipPitchDirection*=ON, the translation direction is reversed. The
+<a href="#id256"><span class="problematic" id="id257">*</span></a>flipPitchDirection*=OFF, the direction of translation is given by the direction of the
+revolve axis. If <a href="#id258"><span class="problematic" id="id259">*</span></a>flipPitchDirection*=ON, the translation direction is reversed. The
 default value is OFF.</p>
 </dd>
 <dt><strong>moveSketchNormalToPath</strong></dt><dd><p>A Boolean specifying whether to rotate the sketch so that it is normal to the path of
@@ -12388,13 +12759,13 @@ normal extrude. Possible values are –105 ≤≤ <em>pitch</em> ≤≤ 105. The
 and <em>pitch</em> are mutually exclusive.</p>
 </dd>
 <dt><strong>profileNormal</strong></dt><dd><p>A Boolean specifying whether to keep the profile normal same as original or varying
-through out the sweep path. When <a href="#id240"><span class="problematic" id="id241">*</span></a>profileNormal*=OFF, the profile normal will vary
-through out the sweep path. When <a href="#id242"><span class="problematic" id="id243">*</span></a>profileNormal*=ON, the profile normal will be same as
+through out the sweep path. When <a href="#id260"><span class="problematic" id="id261">*</span></a>profileNormal*=OFF, the profile normal will vary
+through out the sweep path. When <a href="#id262"><span class="problematic" id="id263">*</span></a>profileNormal*=ON, the profile normal will be same as
 original through out the sweep path. The default value is OFF.</p>
 </dd>
 <dt><strong>flipSweepDirection</strong></dt><dd><p>A Boolean specifying whether to flip the direction in which sweep operation will be
-performed. When <a href="#id244"><span class="problematic" id="id245">*</span></a>flipSweepDirection*=OFF, sweep operation will be performed in the
-direction of path direction. When <a href="#id246"><span class="problematic" id="id247">*</span></a>flipSweepDirection*=ON, sweep operation will be
+performed. When <a href="#id264"><span class="problematic" id="id265">*</span></a>flipSweepDirection*=OFF, sweep operation will be performed in the
+direction of path direction. When <a href="#id266"><span class="problematic" id="id267">*</span></a>flipSweepDirection*=ON, sweep operation will be
 performed in the direction opposite to the path direction. The default value is OFF.</p>
 </dd>
 </dl>
@@ -13279,12 +13650,12 @@ full revolution about the axis of revolution. Possible values are 0 ≤≤ <em>p
 The default value, 0, implies a normal revolve.</p>
 </dd>
 <dt><strong>flipRevolveDirection</strong></dt><dd><p>A Boolean specifying whether to override the direction of feature creation. If
-<a href="#id248"><span class="problematic" id="id249">*</span></a>flipRevolveDirection*=OFF, the default direction of revolution is used. If
-<a href="#id250"><span class="problematic" id="id251">*</span></a>flipRevolveDirection*=ON, the revolve direction is reversed. The default value is OFF.</p>
+<a href="#id268"><span class="problematic" id="id269">*</span></a>flipRevolveDirection*=OFF, the default direction of revolution is used. If
+<a href="#id270"><span class="problematic" id="id271">*</span></a>flipRevolveDirection*=ON, the revolve direction is reversed. The default value is OFF.</p>
 </dd>
 <dt><strong>flipPitchDirection</strong></dt><dd><p>A Boolean specifying whether to override the direction of translation. If
-<a href="#id252"><span class="problematic" id="id253">*</span></a>flipPitchDirection*=OFF, the direction of translation is given by the direction of the
-revolve axis. If <a href="#id254"><span class="problematic" id="id255">*</span></a>flipPitchDirection*=ON, the translation direction is reversed. The
+<a href="#id272"><span class="problematic" id="id273">*</span></a>flipPitchDirection*=OFF, the direction of translation is given by the direction of the
+revolve axis. If <a href="#id274"><span class="problematic" id="id275">*</span></a>flipPitchDirection*=ON, the translation direction is reversed. The
 default value is OFF.</p>
 </dd>
 <dt><strong>moveSketchNormalToPath</strong></dt><dd><p>A Boolean specifying whether to rotate the sketch so that it is normal to the path of
@@ -13366,13 +13737,13 @@ normal extrude. Possible values are –105 ≤≤ <em>pitch</em> ≤≤ 105. The
 and <em>pitch</em> are mutually exclusive.</p>
 </dd>
 <dt><strong>profileNormal</strong></dt><dd><p>A Boolean specifying whether to keep the profile normal same as original or varying
-through out the sweep path. When <a href="#id256"><span class="problematic" id="id257">*</span></a>profileNormal*=OFF, the profile normal will vary
-through out the sweep path. When <a href="#id258"><span class="problematic" id="id259">*</span></a>profileNormal*=ON, the profile normal will be same as
+through out the sweep path. When <a href="#id276"><span class="problematic" id="id277">*</span></a>profileNormal*=OFF, the profile normal will vary
+through out the sweep path. When <a href="#id278"><span class="problematic" id="id279">*</span></a>profileNormal*=ON, the profile normal will be same as
 original through out the sweep path. The default value is OFF.</p>
 </dd>
 <dt><strong>flipSweepDirection</strong></dt><dd><p>A Boolean specifying whether to flip the direction in which sweep operation will be
-performed. When <a href="#id260"><span class="problematic" id="id261">*</span></a>flipSweepDirection*=OFF, sweep operation will be performed in the
-direction of path direction. When <a href="#id262"><span class="problematic" id="id263">*</span></a>flipSweepDirection*=ON, sweep operation will be
+performed. When <a href="#id280"><span class="problematic" id="id281">*</span></a>flipSweepDirection*=OFF, sweep operation will be performed in the
+direction of path direction. When <a href="#id282"><span class="problematic" id="id283">*</span></a>flipSweepDirection*=ON, sweep operation will be
 performed in the direction opposite to the path direction. The default value is OFF.</p>
 </dd>
 <dt><strong>keepInternalBoundaries</strong></dt><dd><p>A Boolean specifying whether internal boundaries will be retained. The default value is
@@ -13568,12 +13939,12 @@ full revolution about the axis of revolution. Possible values are 0 ≤≤ <em>p
 The default value, 0, implies a normal revolve.</p>
 </dd>
 <dt><strong>flipRevolveDirection</strong></dt><dd><p>A Boolean specifying whether to override the direction of feature creation. If
-<a href="#id264"><span class="problematic" id="id265">*</span></a>flipRevolveDirection*=OFF, the default direction of revolution is used. If
-<a href="#id266"><span class="problematic" id="id267">*</span></a>flipRevolveDirection*=ON, the revolve direction is reversed. The default value is OFF.</p>
+<a href="#id284"><span class="problematic" id="id285">*</span></a>flipRevolveDirection*=OFF, the default direction of revolution is used. If
+<a href="#id286"><span class="problematic" id="id287">*</span></a>flipRevolveDirection*=ON, the revolve direction is reversed. The default value is OFF.</p>
 </dd>
 <dt><strong>flipPitchDirection</strong></dt><dd><p>A Boolean specifying whether to override the direction of translation. If
-<a href="#id268"><span class="problematic" id="id269">*</span></a>flipPitchDirection*=OFF, the direction of translation is given by the direction of the
-revolve axis. If <a href="#id270"><span class="problematic" id="id271">*</span></a>flipPitchDirection*=ON, the translation direction is reversed. The
+<a href="#id288"><span class="problematic" id="id289">*</span></a>flipPitchDirection*=OFF, the direction of translation is given by the direction of the
+revolve axis. If <a href="#id290"><span class="problematic" id="id291">*</span></a>flipPitchDirection*=ON, the translation direction is reversed. The
 default value is OFF.</p>
 </dd>
 <dt><strong>moveSketchNormalToPath</strong></dt><dd><p>A Boolean specifying whether to rotate the sketch so that it is normal to the path of
@@ -13655,13 +14026,13 @@ normal extrude. Possible values are –105 ≤≤ <em>pitch</em> ≤≤ 105. The
 and <em>pitch</em> are mutually exclusive.</p>
 </dd>
 <dt><strong>profileNormal</strong></dt><dd><p>A Boolean specifying whether to keep the profile normal same as original or varying
-through out the sweep path. When <a href="#id272"><span class="problematic" id="id273">*</span></a>profileNormal*=OFF, the profile normal will vary
-through out the sweep path. When <a href="#id274"><span class="problematic" id="id275">*</span></a>profileNormal*=ON, the profile normal will be same as
+through out the sweep path. When <a href="#id292"><span class="problematic" id="id293">*</span></a>profileNormal*=OFF, the profile normal will vary
+through out the sweep path. When <a href="#id294"><span class="problematic" id="id295">*</span></a>profileNormal*=ON, the profile normal will be same as
 original through out the sweep path. The default value is OFF.</p>
 </dd>
 <dt><strong>flipSweepDirection</strong></dt><dd><p>A Boolean specifying whether to flip the direction in which sweep operation will be
-performed. When <a href="#id276"><span class="problematic" id="id277">*</span></a>flipSweepDirection*=OFF, sweep operation will be performed in the
-direction of path direction. When <a href="#id278"><span class="problematic" id="id279">*</span></a>flipSweepDirection*=ON, sweep operation will be
+performed. When <a href="#id296"><span class="problematic" id="id297">*</span></a>flipSweepDirection*=OFF, sweep operation will be performed in the
+direction of path direction. When <a href="#id298"><span class="problematic" id="id299">*</span></a>flipSweepDirection*=ON, sweep operation will be
 performed in the direction opposite to the path direction. The default value is OFF.</p>
 </dd>
 <dt><strong>keepInternalBoundaries</strong></dt><dd><p>A Boolean specifying whether internal boundaries will be retained. The default value is
@@ -13800,7 +14171,7 @@ spline wire with existing geometry. It creates the wire separately. The default 
 IMPRINT.</p>
 </dd>
 <dt><strong>meshable</strong></dt><dd><p>A Boolean specifying whether the wire should be available for selection in meshing
-operations. If <a href="#id280"><span class="problematic" id="id281">*</span></a>meshable*=OFF, the wire can be used for connector section assignment.
+operations. If <a href="#id300"><span class="problematic" id="id301">*</span></a>meshable*=OFF, the wire can be used for connector section assignment.
 The default value is ON.</p>
 </dd>
 </dl>
@@ -13840,9 +14211,9 @@ imprints the spline wire with existing geometry. It creates the wire separately.
 default value is IMPRINT.</p>
 </dd>
 <dt><strong>smoothClosedSpline</strong></dt><dd><p>A Boolean specifying the behavior of Abaqus when the points defining a spline wire form
-a closed loop (the start and end points are the same). If <a href="#id282"><span class="problematic" id="id283">*</span></a>smoothClosedSpline*=ON,
+a closed loop (the start and end points are the same). If <a href="#id302"><span class="problematic" id="id303">*</span></a>smoothClosedSpline*=ON,
 Abaqus creates a smooth spline wire where the tangencies at the end point meet smoothly.
-If <a href="#id284"><span class="problematic" id="id285">*</span></a>smoothClosedSpline*=OFF, Abaqus does not automatically create a smooth end
+If <a href="#id304"><span class="problematic" id="id305">*</span></a>smoothClosedSpline*=OFF, Abaqus does not automatically create a smooth end
 condition. The default value in OFF.</p>
 </dd>
 </dl>
