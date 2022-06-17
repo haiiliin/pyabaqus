@@ -68,7 +68,7 @@ def linkcode_resolve(domain: str, info: dict):
     fullname = info['fullname']
 
     filename = modname.replace('.', '/')
-    baseurl = f'https://github.com/haiiliin/pyabaqus/blob/V{release}/src/{filename}.py'
+    baseurl = f'https://github.com/haiiliin/pyabaqus/blob/V{release.split(".")[0]}/src/{filename}.py'
 
     submod = sys.modules.get(modname)
     if submod is None:
