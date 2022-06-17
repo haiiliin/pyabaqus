@@ -265,9 +265,9 @@ class MaterialBase:
     crushableFoam: CrushableFoam = CrushableFoam(((),))
 
     # A CrushStress object
-    crushStress: CrushStress = CrushStress(((), ))
+    crushStress: CrushStress = CrushStress(((),))
 
-    # A DamageInitiation object. 
+    # A DamageInitiation object.
     ductileDamageInitiation: DamageInitiation = DamageInitiation()
 
     # A DamageInitiation object.

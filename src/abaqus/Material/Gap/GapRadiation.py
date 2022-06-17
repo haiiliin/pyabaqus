@@ -44,9 +44,9 @@ class GapRadiation:
         Parameters
         ----------
         mainSurfaceEmissivity
-            A Float specifying the Emissivity of master surface.ϵA
+            A Float specifying the Emissivity of main surface.ϵA
         secondarySurfaceEmissivity
-            A Float specifying the Emissivity of the slave surfaceϵB.
+            A Float specifying the Emissivity of the secondary surfaceϵB.
         table
             A sequence of sequences of Floats specifying the items described below.
 

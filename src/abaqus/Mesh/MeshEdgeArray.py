@@ -31,7 +31,7 @@ class MeshEdgeArray(list[MeshEdge]):
 
         Parameters
         ----------
-        edges
+        elemEdges
             A list of MeshEdge objects.
 
         Returns

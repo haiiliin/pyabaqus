@@ -36,22 +36,22 @@ class Coupling(Constraint):
     suppressed: Boolean = OFF
 
     def __init__(
-        self, 
-        name: str, 
-        surface: Region, 
-        controlPoint: Region, 
-        influenceRadius: typing.Union[SymbolicConstant, float], 
-        couplingType: SymbolicConstant, 
-        adjust: Boolean = OFF, 
-        localCsys: str = None, 
-        u1: Boolean = ON, 
-        u2: Boolean = ON, 
-        u3: Boolean = ON, 
-        ur1: Boolean = ON, 
-        ur2: Boolean = ON, 
-        ur3: Boolean = ON, 
-        weightingMethod: SymbolicConstant = UNIFORM, 
-        alpha: float = 0.0
+        self,
+        name: str,
+        surface: Region,
+        controlPoint: Region,
+        influenceRadius: typing.Union[SymbolicConstant, float],
+        couplingType: SymbolicConstant,
+        adjust: Boolean = OFF,
+        localCsys: str = None,
+        u1: Boolean = ON,
+        u2: Boolean = ON,
+        u3: Boolean = ON,
+        ur1: Boolean = ON,
+        ur2: Boolean = ON,
+        ur3: Boolean = ON,
+        weightingMethod: SymbolicConstant = UNIFORM,
+        alpha: float = 0.0,
     ):
         """This method creates a Coupling object.
 
@@ -109,9 +109,9 @@ class Coupling(Constraint):
             constrained to the reference node for a kinematic coupling constraint. The default value
             is ON.The *ur3* argument applies only when *couplingType*=KINEMATIC.
         weightingMethod
-            A SymbolicConstant specifying an optional weighting method used for calculating the 
-            distributing weight factors. Possible values are UNIFORM, LINEAR, QUADRATIC, and CUBIC. 
-            The default value is UNIFORM.The *weightingMethod* argument applies only when 
+            A SymbolicConstant specifying an optional weighting method used for calculating the
+            distributing weight factors. Possible values are UNIFORM, LINEAR, QUADRATIC, and CUBIC.
+            The default value is UNIFORM.The *weightingMethod* argument applies only when
             *couplingType*=DISTRIBUTING.
         alpha
             A Float specifying the value of the thermal expansion coefficient. The default value is 0.0.
@@ -126,17 +126,17 @@ class Coupling(Constraint):
         pass
 
     def setValues(
-        self, 
-        adjust: Boolean = OFF, 
-        localCsys: str = None, 
-        u1: Boolean = ON, 
-        u2: Boolean = ON, 
-        u3: Boolean = ON, 
-        ur1: Boolean = ON, 
-        ur2: Boolean = ON, 
-        ur3: Boolean = ON, 
-        weightingMethod: SymbolicConstant = UNIFORM, 
-        alpha: float = 0.0
+        self,
+        adjust: Boolean = OFF,
+        localCsys: str = None,
+        u1: Boolean = ON,
+        u2: Boolean = ON,
+        u3: Boolean = ON,
+        ur1: Boolean = ON,
+        ur2: Boolean = ON,
+        ur3: Boolean = ON,
+        weightingMethod: SymbolicConstant = UNIFORM,
+        alpha: float = 0.0,
     ):
         """This method modifies the Coupling object.
 
@@ -175,9 +175,9 @@ class Coupling(Constraint):
             constrained to the reference node for a kinematic coupling constraint. The default value
             is ON.The *ur3* argument applies only when *couplingType*=KINEMATIC.
         weightingMethod
-            A SymbolicConstant specifying an optional weighting method used for calculating the 
-            distributing weight factors. Possible values are UNIFORM, LINEAR, QUADRATIC, and CUBIC. 
-            The default value is UNIFORM.The *weightingMethod* argument applies only when 
+            A SymbolicConstant specifying an optional weighting method used for calculating the
+            distributing weight factors. Possible values are UNIFORM, LINEAR, QUADRATIC, and CUBIC.
+            The default value is UNIFORM.The *weightingMethod* argument applies only when
             *couplingType*=DISTRIBUTING.
         alpha
             A Float specifying the value of the thermal expansion coefficient. The default value is 0.0.

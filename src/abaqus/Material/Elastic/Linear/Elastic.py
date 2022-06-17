@@ -156,6 +156,7 @@ class Elastic:
             - COUPLED_TRACTION
             - SHORT_FIBER
             - SHEAR
+            - BILAMINA
             The default value is ISOTROPIC.
         noCompression
             A Boolean specifying whether compressive stress is allowed. The default value is OFF.

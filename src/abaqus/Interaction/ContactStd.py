@@ -108,9 +108,9 @@ class ContactStd(Interaction):
     # the contact domain.
     surfaceOffsetAssignments: SurfaceOffsetAssignment = SurfaceOffsetAssignment()
 
-    # A MasterSlaveAssignment object specifying the master-slave assignments in the
+    # A MainSecondaryAssignment object specifying the main-secondary assignments in the
     # contact domain.
-    masterSlaveAssignments: MasterSlaveAssignment = MasterSlaveAssignment()
+    mainSecondaryAssignments: MainSecondaryAssignment = MainSecondaryAssignment()
 
     # An InitializationAssignment object specifying the contact initialization assignments in
     # the contact domain.
@@ -156,7 +156,7 @@ class ContactStd(Interaction):
         surfaceFeatureAssignments: SurfaceFeatureAssignment = SurfaceFeatureAssignment(),
         surfaceBeamSmoothingAssignments: SurfaceBeamSmoothingAssignment = SurfaceBeamSmoothingAssignment(),
         surfaceVertexCriteriaAssignments: SurfaceVertexCriteriaAssignment = SurfaceVertexCriteriaAssignment(),
-        masterSlaveAssignments: MasterSlaveAssignment = MasterSlaveAssignment(),
+        mainSecondaryAssignments: MainSecondaryAssignment = MainSecondaryAssignment(),
         initializationAssignments: InitializationAssignment = InitializationAssignment(),
         stabilizationAssignments: StabilizationAssignment = StabilizationAssignment(),
         smoothingAssignments: SmoothingAssignment = SmoothingAssignment(),
@@ -207,8 +207,8 @@ class ContactStd(Interaction):
         surfaceVertexCriteriaAssignments
             A SurfaceVertexCriteriaAssignment object specifying the surface vertex criteria
             assignments in the contact domain.
-        masterSlaveAssignments
-            A MasterSlaveAssignment object specifying the master-slave assignments in the
+        mainSecondaryAssignments
+            A MainSecondaryAssignment object specifying the main-secondary assignments in the
             contact domain.
         initializationAssignments
             An InitializationAssignment object specifying the contact initialization assignments in
@@ -251,7 +251,7 @@ class ContactStd(Interaction):
         surfaceFeatureAssignments: typing.Union[SymbolicConstant, float] = GLOBAL,
         surfaceThicknessAssignments: typing.Union[SymbolicConstant, float] = GLOBAL,
         surfaceOffsetAssignments: typing.Union[SymbolicConstant, float] = GLOBAL,
-        masterSlaveAssignments: SymbolicConstant = None,
+        mainSecondaryAssignments: SymbolicConstant = None,
         initializationAssignments: SymbolicConstant = None,
         stabilizationAssignments: SymbolicConstant = None,
         smoothingAssignments: SymbolicConstant = None,
@@ -338,12 +338,12 @@ class ContactStd(Interaction):
             surface offset fraction is assigned.
             - A Float or a SymbolicConstant specifying the offset fraction value to be used in the
             contact definition. Possible values of the SymbolicConstant are ORIGINAL, SPOS, or SNEG.
-        masterSlaveAssignments
-            A sequence of tuples specifying master-slave assignments in the contact domain. Each
+        mainSecondaryAssignments
+            A sequence of tuples specifying main-secondary assignments in the contact domain. Each
             tuple contains three entries:
             - A region object or the SymbolicConstant GLOBAL specifying the first surface that
-            defines the master-slave assignment.
-            - A region object specifying the second surface in the master-slave assignment
+            defines the main-secondary assignment.
+            - A region object specifying the second surface in the main-secondary assignment
             definition.
             - A SymbolicConstant specifying the status of the first surface. Possible values are
             MAIN, SECONDARY, and BALANCED.

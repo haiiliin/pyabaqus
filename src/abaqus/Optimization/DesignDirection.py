@@ -23,8 +23,8 @@ class DesignDirection(GeometricRestriction):
         name: str,
         region: Region,
         csys: int = None,
-        masterPoint: str = None,
-        masterPointDetermination: SymbolicConstant = MAXIMUM,
+        mainPoint: str = None,
+        mainPointDetermination: SymbolicConstant = MAXIMUM,
         movementRestriction: SymbolicConstant = VECTOR,
         presumeFeasibleRegionAtStart: Boolean = ON,
         u1: Boolean = ON,
@@ -53,10 +53,10 @@ class DesignDirection(GeometricRestriction):
             None or a DatumCsys object specifying the local coordinate system. If *csys*=None, the
             global coordinate system is used. When this member is queried, it returns an Int. The
             default value is None.
-        masterPoint
-            None or a Region object specifying the master point used when *masterPointDetermination* is
+        mainPoint
+            None or a Region object specifying the main point used when *mainPointDetermination* is
             SPECIFY. The default value is None.
-        masterPointDetermination
+        mainPointDetermination
             A SymbolicConstant specifying the rule for assigning point priority. Possible values are
             MAXIMUM, MINIMUM, and SPECIFY. The default value is MAXIMUM.
         movementRestriction
@@ -107,15 +107,15 @@ class DesignDirection(GeometricRestriction):
             global coordinate system is used. When this member is queried, it returns an Int. The
             default value is None.
         mainPoint
-            None or a Region object specifying the master point used when *masterPointDetermination* is
+            None or a Region object specifying the main point used when *mainPointDetermination* is
             SPECIFY. The default value is None.
         mainPointDetermination
             A SymbolicConstant specifying the rule for assigning point priority. Possible values are
             MAXIMUM, MINIMUM, and SPECIFY. The default value is MAXIMUM.
         movementRestriction
             A SymbolicConstant specifying whether movement in the region should follow only the
-            direction of the *masterPoint*, only the magnitude, or both the magnitude of the
-            *masterPoint* and the directions specified by *u1*, *u2* and *u3*. Possible values are
+            direction of the *mainPoint*, only the magnitude, or both the magnitude of the
+            *mainPoint* and the directions specified by *u1*, *u2* and *u3*. Possible values are
             DIRECTION, MAGNITUDE, and VECTOR. The default value is VECTOR.
         presumeFeasibleRegionAtStart
             A Boolean specifying whether to ignore the geometric restriction in the first design

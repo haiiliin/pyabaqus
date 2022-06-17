@@ -60,7 +60,9 @@ class DatumCsys(Datum):
     # A DatumAxis object specifying the 3-direction of the coordinate system.
     axis3: DatumAxis = DatumAxis()
 
-    def globalToLocal(self, coordinates: tuple[float, float, float]) -> tuple[float, float, float]:
+    def globalToLocal(
+        self, coordinates: tuple[float, float, float]
+    ) -> tuple[float, float, float]:
         """This method transforms specified coordinates in the global coordinate system into this
         local coordinate system.
 
@@ -76,7 +78,9 @@ class DatumCsys(Datum):
         """
         pass
 
-    def localToGlobal(self, coordinates: tuple[float, float, float]) -> tuple[float, float, float]:
+    def localToGlobal(
+        self, coordinates: tuple[float, float, float]
+    ) -> tuple[float, float, float]:
         """This method transforms specified coordinates in this local coordinate system into the global coordinate system.
 
         Parameters

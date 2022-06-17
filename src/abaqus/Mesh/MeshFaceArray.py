@@ -31,7 +31,7 @@ class MeshFaceArray(list[MeshFace]):
 
         Parameters
         ----------
-        faces
+        elemFaces
             A list of MeshFace objects.
 
         Returns

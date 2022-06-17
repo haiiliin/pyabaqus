@@ -677,7 +677,9 @@ class ContactProperty(InteractionProperty):
         )
         return self.thermalConductance
 
-    def HeatGeneration(self, conversionFraction: float = 1, slaveFraction: float = 0):
+    def HeatGeneration(
+        self, conversionFraction: float = 1, secondaryFraction: float = 0
+    ):
         """This method creates a GapHeatGeneration object.
 
         Notes
@@ -704,7 +706,9 @@ class ContactProperty(InteractionProperty):
         self.heatGeneration = GapHeatGeneration(conversionFraction, slaveFraction)
         return self.heatGeneration
 
-    def Radiation(self, masterEmissivity: float, slaveEmissivity: float, table: tuple):
+    def Radiation(
+        self, mainEmissivity: float, secondaryEmissivity: float, table: tuple
+    ):
         """This method creates a Radiation object.
 
         Notes

@@ -204,6 +204,7 @@ class JobMdb(MdbBase):
         numDomains: int = 1,
         activateLoadBalancing: Boolean = OFF,
         multiprocessingMode: SymbolicConstant = DEFAULT,
+        licenseType: SymbolicConstant = DEFAULT,
     ) -> JobFromInputFile:
         """This method creates an analysis job using an input file for the model definition.
 
@@ -304,6 +305,7 @@ class JobMdb(MdbBase):
             numDomains,
             activateLoadBalancing,
             multiprocessingMode,
+            licenseType,
         )
         return jobFromInputFile
 

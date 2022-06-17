@@ -463,8 +463,8 @@ class ConstraintModel(ModelBase):
     def Tie(
         self,
         name: str,
-        master: Region,
-        slave: Region,
+        main: Region,
+        secondary: Region,
         adjust: Boolean = ON,
         positionToleranceMethod: SymbolicConstant = COMPUTED,
         positionTolerance: float = 0,
@@ -525,8 +525,8 @@ class ConstraintModel(ModelBase):
         """
         self.constraints[name] = constraint = Tie(
             name,
-            master,
-            slave,
+            main,
+            secondary,
             adjust,
             positionToleranceMethod,
             positionTolerance,

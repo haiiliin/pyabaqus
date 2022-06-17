@@ -623,7 +623,6 @@ class SessionBase:
         printCommand: str = "",
         numCopies: int = 1,
         canvasObjects: tuple[Canvas] = (),
-        compression: Boolean = False,
     ):
         """This method prints canvas objects to a Windows printer or to a PostScript printer. The
         attributes used for printing to a Windows printer are stored in the PrintOptions object

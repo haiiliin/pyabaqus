@@ -266,6 +266,7 @@ class ModelJob(Job):
         numDomains: int = 1,
         activateLoadBalancing: Boolean = OFF,
         multiprocessingMode: SymbolicConstant = DEFAULT,
+        licenseType: SymbolicConstant = DEFAULT,
         *args,
         **kwargs
     ):

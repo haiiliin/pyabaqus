@@ -23,7 +23,7 @@ class ShapePointSymmetry(GeometricRestriction):
         name: str,
         region: Region,
         csys: int = None,
-        masterPointDetermination: SymbolicConstant = MAXIMUM,
+        mainPointDetermination: SymbolicConstant = MAXIMUM,
         presumeFeasibleRegionAtStart: Boolean = ON,
         tolerance1: float = 0,
         tolerance2: float = 0,
@@ -51,8 +51,8 @@ class ShapePointSymmetry(GeometricRestriction):
             None or a DatumCsys object specifying the symmetry point represented as the origin of a
             local coordinate system. If *csys*=None, the global coordinate system is used. When this
             member is queried, it returns an Int. The default value is None.
-        masterPointDetermination
-            A SymbolicConstant specifying the rule for determining the master node. Possible values
+        mainPointDetermination
+            A SymbolicConstant specifying the rule for determining the main node. Possible values
             are MAXIMUM and MINIMUM. The default value is MAXIMUM.
         presumeFeasibleRegionAtStart
             A Boolean specifying whether to ignore the geometric restriction in the first design
@@ -92,7 +92,7 @@ class ShapePointSymmetry(GeometricRestriction):
             local coordinate system. If *csys*=None, the global coordinate system is used. When this
             member is queried, it returns an Int. The default value is None.
         mainPointDetermination
-            A SymbolicConstant specifying the rule for determining the master node. Possible values
+            A SymbolicConstant specifying the rule for determining the main node. Possible values
             are MAXIMUM and MINIMUM. The default value is MAXIMUM.
         presumeFeasibleRegionAtStart
             A Boolean specifying whether to ignore the geometric restriction in the first design

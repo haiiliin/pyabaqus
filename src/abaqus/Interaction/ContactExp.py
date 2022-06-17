@@ -101,9 +101,9 @@ class ContactExp(Interaction):
     # domain.
     smoothingAssignments: SmoothingAssignment = SmoothingAssignment()
 
-    # A MasterSlaveAssignment object specifying the master-slave assignments in the
+    # A MainSecondaryAssignment object specifying the main-secondary assignments in the
     # contact domain.
-    masterSlaveAssignments: MasterSlaveAssignment = MasterSlaveAssignment()
+    mainSecondaryAssignments: MainSecondaryAssignment = MainSecondaryAssignment()
 
     # A PolarityAssignments object specifying the polarity assignments in the contact domain.
     polarityAssignments: PolarityAssignments = PolarityAssignments()
@@ -124,7 +124,7 @@ class ContactExp(Interaction):
         smoothingAssignments: SmoothingAssignment = SmoothingAssignment(),
         surfaceCrushTriggerAssignments: SurfaceCrushTriggerAssignment = SurfaceCrushTriggerAssignment(),
         surfaceFrictionAssignments: SurfaceFrictionAssignment = SurfaceFrictionAssignment(),
-        masterSlaveAssignments: MasterSlaveAssignment = MasterSlaveAssignment(),
+        mainSecondaryAssignments: MainSecondaryAssignment = MainSecondaryAssignment(),
         polarityAssignments: PolarityAssignments = PolarityAssignments(),
     ):
         """This method creates a ContactExp object.
@@ -175,8 +175,8 @@ class ContactExp(Interaction):
         surfaceFrictionAssignments
             A SurfaceFrictionAssignment object specifying the surface friction assignments in the
             contact domain.
-        masterSlaveAssignments
-            A MasterSlaveAssignment object specifying the master-slave assignments in the
+        mainSecondaryAssignments
+            A MainSecondaryAssignment object specifying the main-secondary assignments in the
             contact domain.
         polarityAssignments
             A PolarityAssignments object specifying the polarity assignments in the contact domain.
@@ -204,7 +204,7 @@ class ContactExp(Interaction):
         surfaceOffsetAssignments: typing.Union[SymbolicConstant, float] = GLOBAL,
         surfaceFeatureAssignments: typing.Union[SymbolicConstant, float] = PERIMETER,
         smoothingAssignments: SymbolicConstant = None,
-        masterSlaveAssignments: SymbolicConstant = None,
+        mainSecondaryAssignments: SymbolicConstant = None,
         polarityAssignments: SymbolicConstant = None,
     ):
         """This method creates a ContactExp object.
@@ -294,12 +294,12 @@ class ContactExp(Interaction):
             - A SymbolicConstant specifying the smoothing option to be used in the contact
             definition. Possible values of the SymbolicConstant are NONE, REVOLUTION, SPHERICAL, or
             TOROIDAL.
-        masterSlaveAssignments
-            A sequence of tuples specifying pure master-slave assignments in the contact domain.
+        mainSecondaryAssignments
+            A sequence of tuples specifying pure main-secondary assignments in the contact domain.
             Each tuple contains three entries:
             - A region object or the SymbolicConstant GLOBAL specifying the first surface that
-            defines the master-slave assignment.
-            - A region object specifying the second surface in the master-slave assignment
+            defines the main-secondary assignment.
+            - A region object specifying the second surface in the main-secondary assignment
             definition.
             - A SymbolicConstant specifying the status of the first surface. Possible values are
             MAIN and SECONDARY.

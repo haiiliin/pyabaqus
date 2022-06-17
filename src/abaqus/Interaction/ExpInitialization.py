@@ -31,7 +31,7 @@ class ExpInitialization(ContactInitialization):
         openingTolerance: float = None,
         overclosureTolerance: float = None,
         adjustNodalCoords: Boolean = True,
-        slaveNodesetName: str = None,
+        secondaryNodesetName: str = None,
         stepFraction: float = 1,
     ):
         """This method creates an ExpInitialization object.
@@ -71,8 +71,8 @@ class ExpInitialization(ContactInitialization):
             coordinates without creating strain in the model. *adjustNodalCoords*=True can be used
             only for clearances/overclosures defined in the first step of an analysis. The default
             value is True.
-        slaveNodesetName
-            A String specifying the name of the node set containing the slave nodes to be
+        secondaryNodesetName
+            A String specifying the name of the node set containing the secondary nodes to be
             included in the initial clearance specification. This argument is not valid when
             *overclosureType*=INTERFERENCE and if *openingTolerance* or *overclosureTolerance* is
             specified. The default value is None.
@@ -131,7 +131,7 @@ class ExpInitialization(ContactInitialization):
             only for clearances/overclosures defined in the first step of an analysis. The default
             value is True.
         secondaryNodesetName
-            A String specifying the name of the node set containing the slave nodes to be
+            A String specifying the name of the node set containing the secondary nodes to be
             included in the initial clearance specification. This argument is not valid when
             *overclosureType*=INTERFERENCE and if *openingTolerance* or *overclosureTolerance* is
             specified. The default value is None.

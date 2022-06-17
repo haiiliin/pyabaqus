@@ -14,7 +14,7 @@ class InteractionContactInitializationModel(ModelBase):
         openingTolerance: float = None,
         overclosureTolerance: float = None,
         adjustNodalCoords: Boolean = True,
-        slaveNodesetName: str = None,
+        secondaryNodesetName: str = None,
         stepFraction: float = 1,
     ) -> ExpInitialization:
         """This method creates an ExpInitialization object.
@@ -80,7 +80,7 @@ class InteractionContactInitializationModel(ModelBase):
             openingTolerance,
             overclosureTolerance,
             adjustNodalCoords,
-            slaveNodesetName,
+            secondaryNodesetName,
             stepFraction,
         )
         return contactInitialization

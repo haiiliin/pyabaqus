@@ -26,7 +26,7 @@ class ShapeDemoldControl(GeometricRestriction):
         collisionCheckRegion: SymbolicConstant = DEMOLD_REGION,
         csys: int = None,
         drawAngle: float = 0,
-        masterPointDetermination: SymbolicConstant = MAXIMUM,
+        mainPointDetermination: SymbolicConstant = MAXIMUM,
         presumeFeasibleRegionAtStart: Boolean = ON,
         tolerance1: float = 0,
         tolerance2: float = 0,
@@ -65,7 +65,7 @@ class ShapeDemoldControl(GeometricRestriction):
             value is None.
         drawAngle
             A Float specifying the draw angle. The default value is 0.0.
-        masterPointDetermination
+        mainPointDetermination
             A SymbolicConstant specifying the rule for assigning point priority. Possible values are
             MAXIMUM and MINIMUM. The default value is MAXIMUM.
         presumeFeasibleRegionAtStart

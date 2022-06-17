@@ -44,6 +44,7 @@ class OptimizationTaskModel(ModelBase):
         nodeUpdateStrategy: SymbolicConstant = CONSERVATIVE,
         numTrackedModes: int = 5,
         updateShapeBasisVectors: SymbolicConstant = EVERY_CYCLE,
+        groupOperator: Boolean = OFF,
     ) -> BeadTask:
         """This method creates a BeadTask object.
 
@@ -147,6 +148,7 @@ class OptimizationTaskModel(ModelBase):
             nodeUpdateStrategy,
             numTrackedModes,
             updateShapeBasisVectors,
+            groupOperator,
         )
         return optimizationTask
 
@@ -197,6 +199,7 @@ class OptimizationTaskModel(ModelBase):
         triMaxAngle: float = 140,
         triMinAngle: float = 20,
         updateShapeBasisVectors: SymbolicConstant = EVERY_CYCLE,
+        groupOperator: Boolean = OFF,
     ) -> ShapeTask:
         """This method creates a ShapeTask object.
 
@@ -408,6 +411,7 @@ class OptimizationTaskModel(ModelBase):
             triMaxAngle,
             triMinAngle,
             updateShapeBasisVectors,
+            groupOperator,
         )
         return optimizationTask
 
@@ -425,6 +429,7 @@ class OptimizationTaskModel(ModelBase):
         stopCriteriaDesignCycle: int = 4,
         thicknessMoveLimit: float = 0,
         thicknessUpdateStrategy: SymbolicConstant = NORMAL,
+        groupOperator: Boolean = OFF,
     ) -> SizingTask:
         """This method creates a SizingTask object.
 
@@ -490,6 +495,7 @@ class OptimizationTaskModel(ModelBase):
             stopCriteriaDesignCycle,
             thicknessMoveLimit,
             thicknessUpdateStrategy,
+            groupOperator,
         )
         return optimizationTask
 
@@ -530,6 +536,7 @@ class OptimizationTaskModel(ModelBase):
         structuralMassDamping: float = None,
         viscousMassDamping: float = None,
         viscousStiffnessDamping: float = None,
+        groupOperator: Boolean = OFF,
     ) -> TopologyTask:
         """This method creates a TopologyTask object.
 
@@ -690,5 +697,6 @@ class OptimizationTaskModel(ModelBase):
             structuralMassDamping,
             viscousMassDamping,
             viscousStiffnessDamping,
+            groupOperator,
         )
         return optimizationTask

@@ -103,9 +103,9 @@ class SurfaceToSurfaceContactStd(Interaction):
             A String specifying the name of the step in which the SurfaceToSurfaceContactStd object
             is created.
         master
-            A Region object specifying the master surface.
+            A Region object specifying the main surface.
         slave
-            A Region object specifying the slave surface.
+            A Region object specifying the secondary surface.
         sliding
             A SymbolicConstant specifying the contact formulation. Possible values are FINITE and
             SMALL.
@@ -138,15 +138,15 @@ class SurfaceToSurfaceContactStd(Interaction):
             interference is applied immediately at the beginning of the step and ramped down to zero
             linearly over the step.
         smooth
-            A Float specifying the degree of smoothing used for deformable or rigid master surfaces
+            A Float specifying the degree of smoothing used for deformable or rigid main surfaces
             involved when *enforcement*=NODE_TO_SURFACE. The value given must lie between 0.0 and
             0.5. The default value is 0.2.
         hcrit
-            A Float specifying the distance by which a slave node must penetrate the master
+            A Float specifying the distance by which a secondary node must penetrate the main
             surface before Abaqus/Standard abandons the current increment and tries again with a
             smaller increment. The default value is 0.0.
         extensionZone
-            A Float specifying a fraction of the end segment or facet edge length by which the master
+            A Float specifying a fraction of the end segment or facet edge length by which the main
             surface is to be extended to avoid numerical round-off errors associated with contact
             modeling. The value given must lie between 0.0 and 0.2. The default value is 0.1.
         adjustMethod
@@ -198,13 +198,13 @@ class SurfaceToSurfaceContactStd(Interaction):
             SurfaceToSurfaceContactStd interactions. Possible values are AUTOMATIC and NONE. The
             default value is NONE.
         bondingSet
-            A Region object specifying the slave node sub-set for bonding, used only when the
+            A Region object specifying the secondary node sub-set for bonding, used only when the
             contact property CohesiveBehavior option specifies use.
         handedness
             A SymbolicConstant specifying the bolt handedness formulation. Possible values are RIGHT
             and LEFT. The default value is RIGHT.
         normalAdjustment
-            A SymbolicConstant specifying the bolt normal adjustment formulation for all slave
+            A SymbolicConstant specifying the bolt normal adjustment formulation for all secondary
             nodes. Possible values are UNIFORM AXIAL COMPONENT and LOCATION DEPENDENT. The default
             value is UNIFORM AXIAL COMPONENT.
 
@@ -282,15 +282,15 @@ class SurfaceToSurfaceContactStd(Interaction):
             interference is applied immediately at the beginning of the step and ramped down to zero
             linearly over the step.
         smooth
-            A Float specifying the degree of smoothing used for deformable or rigid master surfaces
+            A Float specifying the degree of smoothing used for deformable or rigid main surfaces
             involved when *enforcement*=NODE_TO_SURFACE. The value given must lie between 0.0 and
             0.5. The default value is 0.2.
         hcrit
-            A Float specifying the distance by which a slave node must penetrate the master
+            A Float specifying the distance by which a secondary node must penetrate the main
             surface before Abaqus/Standard abandons the current increment and tries again with a
             smaller increment. The default value is 0.0.
         extensionZone
-            A Float specifying a fraction of the end segment or facet edge length by which the master
+            A Float specifying a fraction of the end segment or facet edge length by which the main
             surface is to be extended to avoid numerical round-off errors associated with contact
             modeling. The value given must lie between 0.0 and 0.2. The default value is 0.1.
         adjustMethod
@@ -342,13 +342,13 @@ class SurfaceToSurfaceContactStd(Interaction):
             SurfaceToSurfaceContactStd interactions. Possible values are AUTOMATIC and NONE. The
             default value is NONE.
         bondingSet
-            A Region object specifying the slave node sub-set for bonding, used only when the
+            A Region object specifying the secondary node sub-set for bonding, used only when the
             contact property CohesiveBehavior option specifies use.
         handedness
             A SymbolicConstant specifying the bolt handedness formulation. Possible values are RIGHT
             and LEFT. The default value is RIGHT.
         normalAdjustment
-            A SymbolicConstant specifying the bolt normal adjustment formulation for all slave
+            A SymbolicConstant specifying the bolt normal adjustment formulation for all secondary
             nodes. Possible values are UNIFORM AXIAL COMPONENT and LOCATION DEPENDENT. The default
             value is UNIFORM AXIAL COMPONENT.
         """

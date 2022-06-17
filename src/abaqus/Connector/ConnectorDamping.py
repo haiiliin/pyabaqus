@@ -76,6 +76,7 @@ class ConnectorDamping(ConnectorBehaviorOption):
 
     def __init__(
         self,
+        type: SymbolicConstant = VISCOUS,
         behavior: SymbolicConstant = LINEAR,
         coupling: SymbolicConstant = UNCOUPLED,
         dependencies: int = 0,

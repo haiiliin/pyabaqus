@@ -49,10 +49,16 @@ class CrushStress:
     dependencies: int = 0
 
     # A :py:class:`~abaqus.Material.Plastic.CrushStress.CrushStressVelocityFactor.CrushStressVelocityFactor` object.
-    crushStressVelocityFactor: CrushStressVelocityFactor = CrushStressVelocityFactor(((),))
+    crushStressVelocityFactor: CrushStressVelocityFactor = CrushStressVelocityFactor(
+        ((),)
+    )
 
-    def __init__(self, crushStressTable: tuple[tuple[float, ...]], temperatureDependency: Boolean = OFF,
-                 dependencies: int = 0):
+    def __init__(
+        self,
+        crushStressTable: tuple[tuple[float, ...]],
+        temperatureDependency: Boolean = OFF,
+        dependencies: int = 0,
+    ):
         """This method creates a CrushStress object.
 
         Notes
@@ -77,8 +83,12 @@ class CrushStress:
         self.temperatureDependency = temperatureDependency
         self.dependencies = dependencies
 
-    def setValues(self, crushStressTable: tuple[tuple[float, ...]] = ((), ), temperatureDependency: Boolean = OFF,
-                  dependencies: int = 0):
+    def setValues(
+        self,
+        crushStressTable: tuple[tuple[float, ...]] = ((),),
+        temperatureDependency: Boolean = OFF,
+        dependencies: int = 0,
+    ):
         """This method creates a CrushStress object.
 
         Notes

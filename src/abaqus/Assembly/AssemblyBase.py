@@ -528,7 +528,13 @@ class AssemblyBase(Feature):
         """
         pass
 
-    def getDistance(self, entity1: str, entity2: str, printResults: Boolean = OFF, csys: DatumCsys = DatumCsys()):
+    def getDistance(
+        self,
+        entity1: str,
+        entity2: str,
+        printResults: Boolean = OFF,
+        csys: DatumCsys = DatumCsys(),
+    ):
         """Depending on the arguments provided, this method returns one of the following:
             - The distance between two points.
             - The minimum distance between a point and an edge.

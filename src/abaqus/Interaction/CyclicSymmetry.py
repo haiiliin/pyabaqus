@@ -31,8 +31,8 @@ class CyclicSymmetry(Interaction):
         self,
         name: str,
         createStepName: str,
-        master: Region,
-        slave: Region,
+        main: Region,
+        secondary: Region,
         repetitiveSectors: int,
         axisPoint1: Region,
         axisPoint2: Region,
@@ -61,10 +61,10 @@ class CyclicSymmetry(Interaction):
         createStepName
             A String specifying the name of the step in which the cyclic symmetry interaction should
             be created.
-        master
-            A Region object specifying the master surface.
-        slave
-            A Region object specifying the slave surface.
+        main
+            A Region object specifying the main surface.
+        secondary
+            A Region object specifying the secondary surface.
         repetitiveSectors
             An Int specifying the total number of sectors in the cyclic symmetric model.
         axisPoint1
@@ -95,8 +95,8 @@ class CyclicSymmetry(Interaction):
             equal to the highest nodal diameter (specified in the *highestNodalDiameter* parameter).
             The default value is 0.
         adjustTie
-            A Boolean specifying whether or not to adjust the slave surface of the cyclic
-            symmetry to tie it to the master surface. The default value is ON.
+            A Boolean specifying whether or not to adjust the secondary surface of the cyclic
+            symmetry to tie it to the main surface. The default value is ON.
         positionTolerance
             A Float specifying the position tolerance. The*positionTolerance* argument applies only
             when *positionToleranceMethod*=SPECIFY_TOLERANCE. The default value is 0.0.
@@ -152,8 +152,8 @@ class CyclicSymmetry(Interaction):
             equal to the highest nodal diameter (specified in the *highestNodalDiameter* parameter).
             The default value is 0.
         adjustTie
-            A Boolean specifying whether or not to adjust the slave surface of the cyclic
-            symmetry to tie it to the master surface. The default value is ON.
+            A Boolean specifying whether or not to adjust the secondary surface of the cyclic
+            symmetry to tie it to the main surface. The default value is ON.
         positionTolerance
             A Float specifying the position tolerance. The*positionTolerance* argument applies only
             when *positionToleranceMethod*=SPECIFY_TOLERANCE. The default value is 0.0.

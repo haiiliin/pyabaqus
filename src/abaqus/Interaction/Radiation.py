@@ -29,10 +29,10 @@ class Radiation:
 
         Parameters
         ----------
-        masterEmissivity
-            A Float specifying the emissivity of the master surface.
-        slaveEmissivity
-            A Float specifying the emissivity of the slave surface.
+        mainEmissivity
+            A Float specifying the emissivity of the main surface.
+        secondaryEmissivity
+            A Float specifying the emissivity of the secondary surface.
         table
             A sequence of sequences of Floats specifying the following:Effective viewfactor, FF.Gap
             clearance, dd.

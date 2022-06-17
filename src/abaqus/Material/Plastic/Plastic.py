@@ -93,16 +93,17 @@ class Plastic:
     tensileFailure: TensileFailure = TensileFailure()
 
     def __init__(
-        self, 
-        table: tuple, 
-        hardening: SymbolicConstant = ISOTROPIC, 
-        rate: Boolean = OFF, 
-        dataType: SymbolicConstant = HALF_CYCLE, 
-        strainRangeDependency: Boolean = OFF, 
-        numBackstresses: int = 1, 
-        temperatureDependency: Boolean = OFF, 
-        dependencies: int = 0, 
-        extrapolation: SymbolicConstant = CONSTANT):
+        self,
+        table: tuple,
+        hardening: SymbolicConstant = ISOTROPIC,
+        rate: Boolean = OFF,
+        dataType: SymbolicConstant = HALF_CYCLE,
+        strainRangeDependency: Boolean = OFF,
+        numBackstresses: int = 1,
+        temperatureDependency: Boolean = OFF,
+        dependencies: int = 0,
+        extrapolation: SymbolicConstant = CONSTANT,
+    ):
         """This method creates a Plastic object.
 
         Notes

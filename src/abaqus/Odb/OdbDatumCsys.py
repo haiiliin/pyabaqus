@@ -241,7 +241,9 @@ class OdbDatumCsys:
         """
         pass
 
-    def globalToLocal(self, coordinates: tuple[float, float, float]) -> tuple[float, float, float]:
+    def globalToLocal(
+        self, coordinates: tuple[float, float, float]
+    ) -> tuple[float, float, float]:
         """This method transforms specified coordinates in the global coordinate system into this
         local coordinate system.
 
@@ -257,7 +259,9 @@ class OdbDatumCsys:
         """
         pass
 
-    def localToGlobal(self, coordinates: tuple[float, float, float]) -> tuple[float, float, float]:
+    def localToGlobal(
+        self, coordinates: tuple[float, float, float]
+    ) -> tuple[float, float, float]:
         """This method transforms specified coordinates in this local coordinate system into the global coordinate system.
 
         Parameters

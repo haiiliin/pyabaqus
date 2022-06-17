@@ -666,8 +666,12 @@ class Material(MaterialBase):
         )
         return self.crushableFoam
 
-    def CrushStress(self, crushStressTable: tuple[tuple[float, ...]], temperatureDependency: Boolean = OFF,
-                 dependencies: int = 0):
+    def CrushStress(
+        self,
+        crushStressTable: tuple[tuple[float, ...]],
+        temperatureDependency: Boolean = OFF,
+        dependencies: int = 0,
+    ):
         """This method creates a CrushStress object.
 
         Notes
@@ -692,10 +696,18 @@ class Material(MaterialBase):
         -------
             A CrushStress object.
         """
-        self.crushStress = CrushStress(crushStressTable, temperatureDependency, dependencies)
+        self.crushStress = CrushStress(
+            crushStressTable, temperatureDependency, dependencies
+        )
         return self.crushStress
 
-    def Damping(self, alpha: float = 0, beta: float = 0, composite: float = 0, structural: float = 0) -> Damping:
+    def Damping(
+        self,
+        alpha: float = 0,
+        beta: float = 0,
+        composite: float = 0,
+        structural: float = 0,
+    ) -> Damping:
         """This method creates a Damping object.
 
         Notes

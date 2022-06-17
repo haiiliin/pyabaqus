@@ -42,18 +42,18 @@ class InitializationAssignment:
     def appendInStep(self, stepName: str, assignments: SymbolicConstant):
         """This method allows addition of contact initialization assignments to new domain pairs in
         a given step.
-        
+
         Parameters
         ----------
         stepName
-            A String specifying the name of the step in which new contact initialization assignments 
-            are to be defined. 
+            A String specifying the name of the step in which new contact initialization assignments
+            are to be defined.
         assignments
-            A sequence of tuples specifying the initializations assigned to each surface pair. Each 
-            tuple contains four entries (fourth entry is for Abaqus/Explicit and is optional): 
-            - A region object or the SymbolicConstant GLOBAL (for Abaqus/Standard only). 
-            - A region object or the SymbolicConstant SELF (for Abaqus/Standard only). 
-            - A String specifying a StdInitialization or ExpInitializationobject associated with this pair of regions. 
+            A sequence of tuples specifying the initializations assigned to each surface pair. Each
+            tuple contains four entries (fourth entry is for Abaqus/Explicit and is optional):
+            - A region object or the SymbolicConstant GLOBAL (for Abaqus/Standard only).
+            - A region object or the SymbolicConstant SELF (for Abaqus/Standard only).
+            - A String specifying a StdInitialization or ExpInitializationobject associated with this pair of regions.
             - A String specifying a secondary surface type. This entry is applicable only if the ExpInitialization
             object is defined with *overclosureType*=CLEARANCE and *adjustNodalCoords*=True.
         """
