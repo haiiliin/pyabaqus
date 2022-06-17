@@ -471,7 +471,7 @@ cell.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><dl class="simple">
-<dt><strong>printResults</strong></dt><dd><p>A Boolean that determines whether a verbose output is to be printed. The default is 
+<dt><strong>printResults</strong></dt><dd><p>A Boolean that determines whether a verbose output is to be printed. The default is
 True.</p>
 </dd>
 </dl>
@@ -504,7 +504,7 @@ True.</p>
 <h3>CellArray<a class="headerlink" href="#cellarray" title="Permalink to this headline">#</a></h3>
 <dl class="py class">
 <dt class="sig sig-object py" id="abaqus.BasicGeometry.CellArray.CellArray">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">CellArray</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">cells</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#abaqus.BasicGeometry.Cell.Cell" title="abaqus.BasicGeometry.Cell.Cell"><span class="pre">Cell</span></a><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/haiiliin/pyabaqus/blob/V2022/src/abaqus/BasicGeometry/CellArray.py#L5-L213"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#abaqus.BasicGeometry.CellArray.CellArray" title="Permalink to this definition">#</a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">CellArray</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">cells</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#abaqus.BasicGeometry.Cell.Cell" title="abaqus.BasicGeometry.Cell.Cell"><span class="pre">Cell</span></a><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/haiiliin/pyabaqus/blob/V2022/src/abaqus/BasicGeometry/CellArray.py#L5-L220"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#abaqus.BasicGeometry.CellArray.CellArray" title="Permalink to this definition">#</a></dt>
 <dd><p>The CellArray is a sequence of Cell objects.</p>
 <p class="rubric">Notes</p>
 <p>This object can be accessed by:</p>
@@ -576,19 +576,19 @@ subset.</p>
 <dl class="field-list">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><dl>
-<dt><strong>coordinates</strong></dt><dd><p>A sequence of Floats specifying the <em>X</em>-, <em>Y</em>-, and <em>Z</em>-coordinates of the object to 
-find.findAt returns either a Cell object or a sequence of Cell objects based on the type 
-of input. If <em>coordinates</em> is a sequence of Floats, findAt returns the Cell object at 
-that point. If <em>coordinates</em> is a sequence of sequence of Floats, findAt returns a 
-sequence of Cell objects at the given locations. The sequence of sequence of Floats must 
-be a sequence of sequence of point and normal data, not a sequence of point data. For 
-example,`cells1 = myCrackedBlockInstance.cells.findAt(                            ((5.5, 
+<dt><strong>coordinates</strong></dt><dd><p>A sequence of Floats specifying the <em>X</em>-, <em>Y</em>-, and <em>Z</em>-coordinates of the object to
+find.findAt returns either a Cell object or a sequence of Cell objects based on the type
+of input. If <em>coordinates</em> is a sequence of Floats, findAt returns the Cell object at
+that point. If <em>coordinates</em> is a sequence of sequence of Floats, findAt returns a
+sequence of Cell objects at the given locations. The sequence of sequence of Floats must
+be a sequence of sequence of point and normal data, not a sequence of point data. For
+example,`cells1 = myCrackedBlockInstance.cells.findAt(                            ((5.5,
 -8.3, 294.2),),                            ((12.1, -8.3, 287.8),),</p>
 <blockquote>
 <div><p>((14.4, -10.4, 285.5),),)`</p>
 </div></blockquote>
 </dd>
-<dt><strong>printWarning</strong></dt><dd><p>A Boolean specifying whether a message is to be printed to the CLI if no entity is found 
+<dt><strong>printWarning</strong></dt><dd><p>A Boolean specifying whether a message is to be printed to the CLI if no entity is found
 at the specified location. The default value is True.</p>
 </dd>
 </dl>
@@ -603,7 +603,7 @@ at the specified location. The default value is True.</p>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="abaqus.BasicGeometry.CellArray.CellArray.getBoundingBox">
-<span class="sig-name descname"><span class="pre">getBoundingBox</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference external" href="https://github.com/haiiliin/pyabaqus/blob/V2022/src/abaqus/BasicGeometry/CellArray.py#L200-L213"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#abaqus.BasicGeometry.CellArray.CellArray.getBoundingBox" title="Permalink to this definition">#</a></dt>
+<span class="sig-name descname"><span class="pre">getBoundingBox</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference external" href="https://github.com/haiiliin/pyabaqus/blob/V2022/src/abaqus/BasicGeometry/CellArray.py#L207-L220"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#abaqus.BasicGeometry.CellArray.CellArray.getBoundingBox" title="Permalink to this definition">#</a></dt>
 <dd><p>This method returns a dictionary of two tuples representing minimum and maximum boundary
 values of the bounding box of the minimum size containing the cell sequence.</p>
 <dl class="field-list simple">
@@ -621,7 +621,7 @@ values of the bounding box of the minimum size containing the cell sequence.</p>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="abaqus.BasicGeometry.CellArray.CellArray.getByBoundingBox">
-<span class="sig-name descname"><span class="pre">getByBoundingBox</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">xMin</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">yMin</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">zMin</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">xMax</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">yMax</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">zMax</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">''</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/haiiliin/pyabaqus/blob/V2022/src/abaqus/BasicGeometry/CellArray.py#L134-L158"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#abaqus.BasicGeometry.CellArray.CellArray.getByBoundingBox" title="Permalink to this definition">#</a></dt>
+<span class="sig-name descname"><span class="pre">getByBoundingBox</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">xMin</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">yMin</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">zMin</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">xMax</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">yMax</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">zMax</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">''</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/haiiliin/pyabaqus/blob/V2022/src/abaqus/BasicGeometry/CellArray.py#L134-L165"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#abaqus.BasicGeometry.CellArray.CellArray.getByBoundingBox" title="Permalink to this definition">#</a></dt>
 <dd><p>This method returns an array of cell objects that lie within the specified bounding box.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -650,16 +650,16 @@ values of the bounding box of the minimum size containing the cell sequence.</p>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="abaqus.BasicGeometry.CellArray.CellArray.getByBoundingCylinder">
-<span class="sig-name descname"><span class="pre">getByBoundingCylinder</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">center1</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">tuple</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">center2</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">tuple</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">radius</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/haiiliin/pyabaqus/blob/V2022/src/abaqus/BasicGeometry/CellArray.py#L160-L180"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#abaqus.BasicGeometry.CellArray.CellArray.getByBoundingCylinder" title="Permalink to this definition">#</a></dt>
+<span class="sig-name descname"><span class="pre">getByBoundingCylinder</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">center1</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">tuple</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">center2</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">tuple</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">radius</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/haiiliin/pyabaqus/blob/V2022/src/abaqus/BasicGeometry/CellArray.py#L167-L187"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#abaqus.BasicGeometry.CellArray.CellArray.getByBoundingCylinder" title="Permalink to this definition">#</a></dt>
 <dd><p>This method returns an array of cell objects that lie within the specified bounding
 cylinder.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><dl class="simple">
-<dt><strong>center1</strong></dt><dd><p>A tuple of the <em>X</em>-, <em>Y</em>-, and <em>Z</em>-coordinates of the center of the first end of the 
+<dt><strong>center1</strong></dt><dd><p>A tuple of the <em>X</em>-, <em>Y</em>-, and <em>Z</em>-coordinates of the center of the first end of the
 cylinder.</p>
 </dd>
-<dt><strong>center2</strong></dt><dd><p>A tuple of the <em>X</em>-, <em>Y</em>-, and <em>Z</em>-coordinates of the center of the second end of the 
+<dt><strong>center2</strong></dt><dd><p>A tuple of the <em>X</em>-, <em>Y</em>-, and <em>Z</em>-coordinates of the center of the second end of the
 cylinder.</p>
 </dd>
 <dt><strong>radius</strong></dt><dd><p>A float specifying the radius of the cylinder.</p>
@@ -676,7 +676,7 @@ cylinder.</p>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="abaqus.BasicGeometry.CellArray.CellArray.getByBoundingSphere">
-<span class="sig-name descname"><span class="pre">getByBoundingSphere</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">center</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">tuple</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">radius</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/haiiliin/pyabaqus/blob/V2022/src/abaqus/BasicGeometry/CellArray.py#L182-L198"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#abaqus.BasicGeometry.CellArray.CellArray.getByBoundingSphere" title="Permalink to this definition">#</a></dt>
+<span class="sig-name descname"><span class="pre">getByBoundingSphere</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">center</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">tuple</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">radius</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/haiiliin/pyabaqus/blob/V2022/src/abaqus/BasicGeometry/CellArray.py#L189-L205"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#abaqus.BasicGeometry.CellArray.CellArray.getByBoundingSphere" title="Permalink to this definition">#</a></dt>
 <dd><p>This method returns an array of cell objects that lie within the specified bounding
 sphere.</p>
 <dl class="field-list simple">
@@ -872,11 +872,11 @@ applicable).</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><dl class="simple">
-<dt><strong>parameter</strong></dt><dd><p>A Float specifying the normalized parameter location on the edge where the curvature is 
+<dt><strong>parameter</strong></dt><dd><p>A Float specifying the normalized parameter location on the edge where the curvature is
 to be computed. This argument is mutually exclusive with the argument <em>point</em>.</p>
 </dd>
-<dt><strong>point</strong></dt><dd><p>A tuple of <em>X</em>-, <em>Y</em>-, and <em>Z</em>-coordinates of a point at which the curvature is to be 
-computed. If <em>point</em> does not lie on the edge an attempt is made to project it onto the 
+<dt><strong>point</strong></dt><dd><p>A tuple of <em>X</em>-, <em>Y</em>-, and <em>Z</em>-coordinates of a point at which the curvature is to be
+computed. If <em>point</em> does not lie on the edge an attempt is made to project it onto the
 edge and use the projected point.</p>
 </dd>
 </dl>
@@ -1031,7 +1031,7 @@ direction by the use of the flipTangent method on a Part object.</p>
 <h3>EdgeArray<a class="headerlink" href="#edgearray" title="Permalink to this headline">#</a></h3>
 <dl class="py class">
 <dt class="sig sig-object py" id="abaqus.BasicGeometry.EdgeArray.EdgeArray">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">EdgeArray</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">edges</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#abaqus.BasicGeometry.Edge.Edge" title="abaqus.BasicGeometry.Edge.Edge"><span class="pre">Edge</span></a><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/haiiliin/pyabaqus/blob/V2022/src/abaqus/BasicGeometry/EdgeArray.py#L5-L242"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#abaqus.BasicGeometry.EdgeArray.EdgeArray" title="Permalink to this definition">#</a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">EdgeArray</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">edges</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#abaqus.BasicGeometry.Edge.Edge" title="abaqus.BasicGeometry.Edge.Edge"><span class="pre">Edge</span></a><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/haiiliin/pyabaqus/blob/V2022/src/abaqus/BasicGeometry/EdgeArray.py#L5-L249"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#abaqus.BasicGeometry.EdgeArray.EdgeArray" title="Permalink to this definition">#</a></dt>
 <dd><p>The EdgeArray is a sequence of Edge objects. If the part is modified, then EdgeArray
 must be updated for that part.</p>
 <p class="rubric">Notes</p>
@@ -1116,15 +1116,15 @@ subset.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><dl class="simple">
-<dt><strong>coordinates</strong></dt><dd><p>A sequence of Floats specifying the <em>X</em>-, <em>Y</em>-, and <em>Z</em>-coordinates of the object to 
-find.findAt returns either an Edge object or a sequence of Edge objects based on the 
-type of input.If <em>coordinates</em> is a sequence of Floats, findAt returns the Edge object 
-at that point.If you omit the <em>coordinates</em> keyword argument, findAt accepts as 
-arguments a sequence of sequence of floats in the following format:<cite>edges = 
-e.findAt(((20.19686, -169.513997, 27.798593), ),                 ((19.657627, 
+<dt><strong>coordinates</strong></dt><dd><p>A sequence of Floats specifying the <em>X</em>-, <em>Y</em>-, and <em>Z</em>-coordinates of the object to
+find.findAt returns either an Edge object or a sequence of Edge objects based on the
+type of input.If <em>coordinates</em> is a sequence of Floats, findAt returns the Edge object
+at that point.If you omit the <em>coordinates</em> keyword argument, findAt accepts as
+arguments a sequence of sequence of floats in the following format:<cite>edges =
+e.findAt(((20.19686, -169.513997, 27.798593), ),                 ((19.657627,
 -167.295749, 27.056402), ),                 ((18.274129, -157.144741, 25.15218), ))</cite></p>
 </dd>
-<dt><strong>printWarning</strong></dt><dd><p>A Boolean specifying whether a message is to be printed to the CLI if no entity is found 
+<dt><strong>printWarning</strong></dt><dd><p>A Boolean specifying whether a message is to be printed to the CLI if no entity is found
 at the specified location. The default value is True.</p>
 </dd>
 </dl>
@@ -1139,7 +1139,7 @@ at the specified location. The default value is True.</p>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="abaqus.BasicGeometry.EdgeArray.EdgeArray.getBoundingBox">
-<span class="sig-name descname"><span class="pre">getBoundingBox</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference external" href="https://github.com/haiiliin/pyabaqus/blob/V2022/src/abaqus/BasicGeometry/EdgeArray.py#L229-L242"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#abaqus.BasicGeometry.EdgeArray.EdgeArray.getBoundingBox" title="Permalink to this definition">#</a></dt>
+<span class="sig-name descname"><span class="pre">getBoundingBox</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference external" href="https://github.com/haiiliin/pyabaqus/blob/V2022/src/abaqus/BasicGeometry/EdgeArray.py#L236-L249"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#abaqus.BasicGeometry.EdgeArray.EdgeArray.getBoundingBox" title="Permalink to this definition">#</a></dt>
 <dd><p>This method returns a dictionary of two tuples representing minimum and maximum boundary
 values of the bounding box of the minimum size containing the edge sequence.</p>
 <dl class="field-list simple">
@@ -1157,7 +1157,7 @@ values of the bounding box of the minimum size containing the edge sequence.</p>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="abaqus.BasicGeometry.EdgeArray.EdgeArray.getByBoundingBox">
-<span class="sig-name descname"><span class="pre">getByBoundingBox</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">xMin</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">yMin</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">zMin</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">xMax</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">yMax</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">zMax</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">''</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/haiiliin/pyabaqus/blob/V2022/src/abaqus/BasicGeometry/EdgeArray.py#L163-L187"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#abaqus.BasicGeometry.EdgeArray.EdgeArray.getByBoundingBox" title="Permalink to this definition">#</a></dt>
+<span class="sig-name descname"><span class="pre">getByBoundingBox</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">xMin</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">yMin</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">zMin</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">xMax</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">yMax</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">zMax</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">''</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/haiiliin/pyabaqus/blob/V2022/src/abaqus/BasicGeometry/EdgeArray.py#L163-L194"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#abaqus.BasicGeometry.EdgeArray.EdgeArray.getByBoundingBox" title="Permalink to this definition">#</a></dt>
 <dd><p>This method returns an array of edge objects that lie within the specified bounding box.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -1186,16 +1186,16 @@ values of the bounding box of the minimum size containing the edge sequence.</p>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="abaqus.BasicGeometry.EdgeArray.EdgeArray.getByBoundingCylinder">
-<span class="sig-name descname"><span class="pre">getByBoundingCylinder</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">center1</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">tuple</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">center2</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">tuple</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">radius</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/haiiliin/pyabaqus/blob/V2022/src/abaqus/BasicGeometry/EdgeArray.py#L189-L209"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#abaqus.BasicGeometry.EdgeArray.EdgeArray.getByBoundingCylinder" title="Permalink to this definition">#</a></dt>
+<span class="sig-name descname"><span class="pre">getByBoundingCylinder</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">center1</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">tuple</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">center2</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">tuple</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">radius</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/haiiliin/pyabaqus/blob/V2022/src/abaqus/BasicGeometry/EdgeArray.py#L196-L216"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#abaqus.BasicGeometry.EdgeArray.EdgeArray.getByBoundingCylinder" title="Permalink to this definition">#</a></dt>
 <dd><p>This method returns an array of edge objects that lie within the specified bounding
 cylinder.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><dl class="simple">
-<dt><strong>center1</strong></dt><dd><p>A tuple of the <em>X</em>-, <em>Y</em>-, and <em>Z</em>-coordinates of the center of the first end of the 
+<dt><strong>center1</strong></dt><dd><p>A tuple of the <em>X</em>-, <em>Y</em>-, and <em>Z</em>-coordinates of the center of the first end of the
 cylinder.</p>
 </dd>
-<dt><strong>center2</strong></dt><dd><p>A tuple of the <em>X</em>-, <em>Y</em>-, and <em>Z</em>-coordinates of the center of the second end of the 
+<dt><strong>center2</strong></dt><dd><p>A tuple of the <em>X</em>-, <em>Y</em>-, and <em>Z</em>-coordinates of the center of the second end of the
 cylinder.</p>
 </dd>
 <dt><strong>radius</strong></dt><dd><p>A float specifying the radius of the cylinder.</p>
@@ -1212,7 +1212,7 @@ cylinder.</p>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="abaqus.BasicGeometry.EdgeArray.EdgeArray.getByBoundingSphere">
-<span class="sig-name descname"><span class="pre">getByBoundingSphere</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">center</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">tuple</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">radius</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/haiiliin/pyabaqus/blob/V2022/src/abaqus/BasicGeometry/EdgeArray.py#L211-L227"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#abaqus.BasicGeometry.EdgeArray.EdgeArray.getByBoundingSphere" title="Permalink to this definition">#</a></dt>
+<span class="sig-name descname"><span class="pre">getByBoundingSphere</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">center</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">tuple</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">radius</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/haiiliin/pyabaqus/blob/V2022/src/abaqus/BasicGeometry/EdgeArray.py#L218-L234"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#abaqus.BasicGeometry.EdgeArray.EdgeArray.getByBoundingSphere" title="Permalink to this definition">#</a></dt>
 <dd><p>This method returns an array of edge objects that lie within the specified bounding
 sphere.</p>
 <dl class="field-list simple">
@@ -1240,15 +1240,15 @@ points, where the given points need not lie on the edges in the EdgeArray.</p>
 <dl class="field-list">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><dl>
-<dt><strong>coordinates</strong></dt><dd><p>A sequence of a sequence of floats, where each sequence of floats describes the <em>X</em>-, 
-<em>Y</em>-, and <em>Z</em>-coordinates of a 
-point.`r=e.getClosest(coordinates=((20.0,20.0,10.0),(-1.0, -15.0, 15),))``r.keys()``[0, 
+<dt><strong>coordinates</strong></dt><dd><p>A sequence of a sequence of floats, where each sequence of floats describes the <em>X</em>-,
+<em>Y</em>-, and <em>Z</em>-coordinates of a
+point.`r=e.getClosest(coordinates=((20.0,20.0,10.0),(-1.0, -15.0, 15),))``r.keys()``[0,
 1]``r[0]``(mdb.models[‘Model-1’].parts[‘Part-1’].edges[3],</p>
 <blockquote>
 <div><p>(15.7090625762939, 20.0, 10.0))`</p>
 </div></blockquote>
 </dd>
-<dt><strong>searchTolerance</strong></dt><dd><p>A double specifying the distance within which the closest object must lie. The default 
+<dt><strong>searchTolerance</strong></dt><dd><p>A double specifying the distance within which the closest object must lie. The default
 value is half of the parent part/instance size.</p>
 </dd>
 </dl>
@@ -1486,15 +1486,15 @@ face belongs.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><dl class="simple">
-<dt><strong>point</strong></dt><dd><p>A tuple specifying the <em>X</em>-, <em>Y</em>-, and <em>Z</em> coordinates of the point where the curvature 
-is desired. If the <em>point</em> does not lie on the face it will be projected onto the face. 
+<dt><strong>point</strong></dt><dd><p>A tuple specifying the <em>X</em>-, <em>Y</em>-, and <em>Z</em> coordinates of the point where the curvature
+is desired. If the <em>point</em> does not lie on the face it will be projected onto the face.
 This argument and <em>uParam</em> and <em>vParam</em> are mutually exclusive.</p>
 </dd>
-<dt><strong>uParam</strong></dt><dd><p>A Float specifying the normalized <em>U</em> parameter value at which the curvature is to be 
-computed. This value must lie between (0,1). <em>vParam</em> must also be specified. This 
+<dt><strong>uParam</strong></dt><dd><p>A Float specifying the normalized <em>U</em> parameter value at which the curvature is to be
+computed. This value must lie between (0,1). <em>vParam</em> must also be specified. This
 argument is mutually exclusive with <em>point</em>.</p>
 </dd>
-<dt><strong>vParam</strong></dt><dd><p>A Float specifying the normalized <em>V</em> parameter value at which the curvature is to be 
+<dt><strong>vParam</strong></dt><dd><p>A Float specifying the normalized <em>V</em> parameter value at which the curvature is to be
 computed. This value must lie between (0,1).</p>
 </dd>
 </dl>
@@ -1532,8 +1532,8 @@ element label and the side of the element that lies on the geometric face.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><dl class="simple">
-<dt><strong>faceSide</strong></dt><dd><p>A symbolic constant specifying the side of the geometric face of a solid from which the 
-element faces should be retrieved. Possible values are <em>SIDE1</em>, <em>SIDE2</em>, and 
+<dt><strong>faceSide</strong></dt><dd><p>A symbolic constant specifying the side of the geometric face of a solid from which the
+element faces should be retrieved. Possible values are <em>SIDE1</em>, <em>SIDE2</em>, and
 <em>BOTH_SIDES</em>. The default value is <em>BOTH_SIDES</em>. For shell faces this option is ignored.</p>
 </dd>
 </dl>
@@ -1601,10 +1601,10 @@ label of the node that lies on the geometric face.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><dl class="simple">
-<dt><strong>faceSide</strong></dt><dd><p>A symbolic constant specifying the side of the geometric face of a solid from which the 
-nodes should be retrieved. Possible values are xo*SIDE1*, <em>SIDE2</em>, and <em>BOTH_SIDES</em>. The 
-default value is <em>BOTH_SIDES</em>. For shell faces and for faces with compatible meshes on 
-either sides this option is ignored. Otherwise, the nodes on the specified side(s) of 
+<dt><strong>faceSide</strong></dt><dd><p>A symbolic constant specifying the side of the geometric face of a solid from which the
+nodes should be retrieved. Possible values are xo*SIDE1*, <em>SIDE2</em>, and <em>BOTH_SIDES</em>. The
+default value is <em>BOTH_SIDES</em>. For shell faces and for faces with compatible meshes on
+either sides this option is ignored. Otherwise, the nodes on the specified side(s) of
 the face are output.</p>
 </dd>
 </dl>
@@ -1626,8 +1626,8 @@ optional <em>point</em> argument.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><dl class="simple">
-<dt><strong>point</strong></dt><dd><p>A tuple specifying the <em>X</em>-, <em>Y</em>-, and <em>Z</em> coordinates of the point where the normal to 
-the face is desired. If the <em>point</em> does not lie on the face it will be projected onto 
+<dt><strong>point</strong></dt><dd><p>A tuple specifying the <em>X</em>-, <em>Y</em>-, and <em>Z</em> coordinates of the point where the normal to
+the face is desired. If the <em>point</em> does not lie on the face it will be projected onto
 the face.</p>
 </dd>
 </dl>
@@ -1700,7 +1700,7 @@ direction by the use of the flipNormal method on a Part object.</p>
 <h3>FaceArray<a class="headerlink" href="#facearray" title="Permalink to this headline">#</a></h3>
 <dl class="py class">
 <dt class="sig sig-object py" id="abaqus.BasicGeometry.FaceArray.FaceArray">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">FaceArray</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">faces</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#abaqus.BasicGeometry.Face.Face" title="abaqus.BasicGeometry.Face.Face"><span class="pre">Face</span></a><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/haiiliin/pyabaqus/blob/V2022/src/abaqus/BasicGeometry/FaceArray.py#L5-L255"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#abaqus.BasicGeometry.FaceArray.FaceArray" title="Permalink to this definition">#</a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">FaceArray</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">faces</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#abaqus.BasicGeometry.Face.Face" title="abaqus.BasicGeometry.Face.Face"><span class="pre">Face</span></a><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/haiiliin/pyabaqus/blob/V2022/src/abaqus/BasicGeometry/FaceArray.py#L5-L264"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#abaqus.BasicGeometry.FaceArray.FaceArray" title="Permalink to this definition">#</a></dt>
 <dd><p>The FaceArray is a sequence of Face objects. If the part is modified, then FaceArray
 must be updated for that part.</p>
 <p class="rubric">Notes</p>
@@ -1770,7 +1770,7 @@ must be updated for that part.</p>
 </div>
 <dl class="py method">
 <dt class="sig sig-object py" id="abaqus.BasicGeometry.FaceArray.FaceArray.findAt">
-<span class="sig-name descname"><span class="pre">findAt</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">coordinates</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">tuple</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">normal</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">tuple</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">()</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">printWarning</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">BooleanType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/haiiliin/pyabaqus/blob/V2022/src/abaqus/BasicGeometry/FaceArray.py#L64-L101"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#abaqus.BasicGeometry.FaceArray.FaceArray.findAt" title="Permalink to this definition">#</a></dt>
+<span class="sig-name descname"><span class="pre">findAt</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">coordinates</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">tuple</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">normal</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">tuple</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">()</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">printWarning</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">BooleanType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/haiiliin/pyabaqus/blob/V2022/src/abaqus/BasicGeometry/FaceArray.py#L64-L103"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#abaqus.BasicGeometry.FaceArray.FaceArray.findAt" title="Permalink to this definition">#</a></dt>
 <dd><p>This method returns the object or objects in the FaceArray located at the given
 coordinates.
 findAt initially uses the ACIS tolerance of 1E-6. As a result, findAt returns any face
@@ -1786,19 +1786,19 @@ subset.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><dl class="simple">
-<dt><strong>coordinates</strong></dt><dd><p>A sequence of Floats specifying the <em>X</em>-, <em>Y</em>-, and <em>Z</em>-coordinates of the object to 
-find.findAt returns either a Face object or a sequence of Face objects based on the type 
-of input.If <em>coordinates</em> is a sequence of Floats, findAt returns the Face object at 
-that point.If you omit the <em>coordinates</em> keyword argument, findAt accepts as arguments a 
-sequence of pairs of sequences describing each face’s coordinate and normal, and findAt 
-returns a sequence of Face objects at the given locations. If you omit the <em>coordinates</em> 
+<dt><strong>coordinates</strong></dt><dd><p>A sequence of Floats specifying the <em>X</em>-, <em>Y</em>-, and <em>Z</em>-coordinates of the object to
+find.findAt returns either a Face object or a sequence of Face objects based on the type
+of input.If <em>coordinates</em> is a sequence of Floats, findAt returns the Face object at
+that point.If you omit the <em>coordinates</em> keyword argument, findAt accepts as arguments a
+sequence of pairs of sequences describing each face’s coordinate and normal, and findAt
+returns a sequence of Face objects at the given locations. If you omit the <em>coordinates</em>
 keyword argument, you must also omit the <em>normal</em> argument.
 <cite>faces = f.findAt(((-16.438578, -41.835673, -24.19804), ), ((25.210364, -35.689868, 1.860314), ), ((26.727683, -38.207055, 4.164759), ))</cite></p>
 </dd>
-<dt><strong>normal</strong></dt><dd><p>A sequence of Floats specifying the <em>X</em>-, <em>Y</em>-, and <em>Z</em>-components of a vector 
+<dt><strong>normal</strong></dt><dd><p>A sequence of Floats specifying the <em>X</em>-, <em>Y</em>-, and <em>Z</em>-components of a vector
 indicating the face normal.</p>
 </dd>
-<dt><strong>printWarning</strong></dt><dd><p>A Boolean specifying whether a message is to be printed to the CLI if no entity is found 
+<dt><strong>printWarning</strong></dt><dd><p>A Boolean specifying whether a message is to be printed to the CLI if no entity is found
 at the specified location. The default value is True.</p>
 </dd>
 </dl>
@@ -1813,7 +1813,7 @@ at the specified location. The default value is True.</p>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="abaqus.BasicGeometry.FaceArray.FaceArray.getBoundingBox">
-<span class="sig-name descname"><span class="pre">getBoundingBox</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference external" href="https://github.com/haiiliin/pyabaqus/blob/V2022/src/abaqus/BasicGeometry/FaceArray.py#L208-L221"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#abaqus.BasicGeometry.FaceArray.FaceArray.getBoundingBox" title="Permalink to this definition">#</a></dt>
+<span class="sig-name descname"><span class="pre">getBoundingBox</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference external" href="https://github.com/haiiliin/pyabaqus/blob/V2022/src/abaqus/BasicGeometry/FaceArray.py#L217-L230"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#abaqus.BasicGeometry.FaceArray.FaceArray.getBoundingBox" title="Permalink to this definition">#</a></dt>
 <dd><p>This method returns a dictionary of two tuples representing minimum and maximum boundary
 values of the bounding box of the minimum size containing the face sequence.</p>
 <dl class="field-list simple">
@@ -1831,7 +1831,7 @@ values of the bounding box of the minimum size containing the face sequence.</p>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="abaqus.BasicGeometry.FaceArray.FaceArray.getByBoundingBox">
-<span class="sig-name descname"><span class="pre">getByBoundingBox</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">xMin</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">yMin</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">zMin</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">xMax</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">yMax</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">zMax</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">''</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/haiiliin/pyabaqus/blob/V2022/src/abaqus/BasicGeometry/FaceArray.py#L142-L166"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#abaqus.BasicGeometry.FaceArray.FaceArray.getByBoundingBox" title="Permalink to this definition">#</a></dt>
+<span class="sig-name descname"><span class="pre">getByBoundingBox</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">xMin</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">yMin</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">zMin</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">xMax</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">yMax</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">zMax</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">''</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/haiiliin/pyabaqus/blob/V2022/src/abaqus/BasicGeometry/FaceArray.py#L144-L175"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#abaqus.BasicGeometry.FaceArray.FaceArray.getByBoundingBox" title="Permalink to this definition">#</a></dt>
 <dd><p>This method returns an array of face objects that lie within the specified bounding box.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -1860,16 +1860,16 @@ values of the bounding box of the minimum size containing the face sequence.</p>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="abaqus.BasicGeometry.FaceArray.FaceArray.getByBoundingCylinder">
-<span class="sig-name descname"><span class="pre">getByBoundingCylinder</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">center1</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">tuple</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">center2</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">tuple</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">radius</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/haiiliin/pyabaqus/blob/V2022/src/abaqus/BasicGeometry/FaceArray.py#L168-L188"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#abaqus.BasicGeometry.FaceArray.FaceArray.getByBoundingCylinder" title="Permalink to this definition">#</a></dt>
+<span class="sig-name descname"><span class="pre">getByBoundingCylinder</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">center1</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">tuple</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">center2</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">tuple</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">radius</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/haiiliin/pyabaqus/blob/V2022/src/abaqus/BasicGeometry/FaceArray.py#L177-L197"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#abaqus.BasicGeometry.FaceArray.FaceArray.getByBoundingCylinder" title="Permalink to this definition">#</a></dt>
 <dd><p>This method returns an array of face objects that lie within the specified bounding
 cylinder.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><dl class="simple">
-<dt><strong>center1</strong></dt><dd><p>A tuple of the <em>X</em>-, <em>Y</em>-, and <em>Z</em>-coordinates of the center of the first end of the 
+<dt><strong>center1</strong></dt><dd><p>A tuple of the <em>X</em>-, <em>Y</em>-, and <em>Z</em>-coordinates of the center of the first end of the
 cylinder.</p>
 </dd>
-<dt><strong>center2</strong></dt><dd><p>A tuple of the <em>X</em>-, <em>Y</em>-, and <em>Z</em>-coordinates of the center of the second end of the 
+<dt><strong>center2</strong></dt><dd><p>A tuple of the <em>X</em>-, <em>Y</em>-, and <em>Z</em>-coordinates of the center of the second end of the
 cylinder.</p>
 </dd>
 <dt><strong>radius</strong></dt><dd><p>A float specifying the radius of the cylinder.</p>
@@ -1886,7 +1886,7 @@ cylinder.</p>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="abaqus.BasicGeometry.FaceArray.FaceArray.getByBoundingSphere">
-<span class="sig-name descname"><span class="pre">getByBoundingSphere</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">center</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">tuple</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">radius</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/haiiliin/pyabaqus/blob/V2022/src/abaqus/BasicGeometry/FaceArray.py#L190-L206"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#abaqus.BasicGeometry.FaceArray.FaceArray.getByBoundingSphere" title="Permalink to this definition">#</a></dt>
+<span class="sig-name descname"><span class="pre">getByBoundingSphere</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">center</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">tuple</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">radius</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/haiiliin/pyabaqus/blob/V2022/src/abaqus/BasicGeometry/FaceArray.py#L199-L215"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#abaqus.BasicGeometry.FaceArray.FaceArray.getByBoundingSphere" title="Permalink to this definition">#</a></dt>
 <dd><p>This method returns an array of face objects that lie within the specified bounding
 sphere.</p>
 <dl class="field-list simple">
@@ -1908,21 +1908,21 @@ sphere.</p>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="abaqus.BasicGeometry.FaceArray.FaceArray.getClosest">
-<span class="sig-name descname"><span class="pre">getClosest</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">coordinates</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">tuple</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">searchTolerance</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">''</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/haiiliin/pyabaqus/blob/V2022/src/abaqus/BasicGeometry/FaceArray.py#L223-L255"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#abaqus.BasicGeometry.FaceArray.FaceArray.getClosest" title="Permalink to this definition">#</a></dt>
+<span class="sig-name descname"><span class="pre">getClosest</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">coordinates</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">tuple</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">searchTolerance</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">''</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/haiiliin/pyabaqus/blob/V2022/src/abaqus/BasicGeometry/FaceArray.py#L232-L264"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#abaqus.BasicGeometry.FaceArray.FaceArray.getClosest" title="Permalink to this definition">#</a></dt>
 <dd><p>This method returns an object or objects in the FaceArray closest to the given set of
 points, where the given points need not lie on the faces in the FaceArray.</p>
 <dl class="field-list">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><dl>
-<dt><strong>coordinates</strong></dt><dd><p>A sequence of a sequence of floats, where each sequence of floats describes the <em>X</em>-, 
-<em>Y</em>-, and <em>Z</em>-coordinates of a 
-point.`r=f.getClosest(coordinates=((20.0,20.0,10.0),(-1.0, -15.0, 15),))``r.keys()``[0, 
+<dt><strong>coordinates</strong></dt><dd><p>A sequence of a sequence of floats, where each sequence of floats describes the <em>X</em>-,
+<em>Y</em>-, and <em>Z</em>-coordinates of a
+point.`r=f.getClosest(coordinates=((20.0,20.0,10.0),(-1.0, -15.0, 15),))``r.keys()``[0,
 1]``r[0]``(mdb.models[‘Model-1’].parts[‘Part-1’].faces[0],</p>
 <blockquote>
 <div><p>(15.7090625762939, 20.0, 10.0))`</p>
 </div></blockquote>
 </dd>
-<dt><strong>searchTolerance</strong></dt><dd><p>A double specifying the distance within which the closest object must lie. The default 
+<dt><strong>searchTolerance</strong></dt><dd><p>A double specifying the distance within which the closest object must lie. The default
 value is half of the parent part/instance size.</p>
 </dd>
 </dl>
@@ -1952,7 +1952,7 @@ value is half of the parent part/instance size.</p>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="abaqus.BasicGeometry.FaceArray.FaceArray.getExteriorEdges">
-<span class="sig-name descname"><span class="pre">getExteriorEdges</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference external" href="https://github.com/haiiliin/pyabaqus/blob/V2022/src/abaqus/BasicGeometry/FaceArray.py#L103-L112"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#abaqus.BasicGeometry.FaceArray.FaceArray.getExteriorEdges" title="Permalink to this definition">#</a></dt>
+<span class="sig-name descname"><span class="pre">getExteriorEdges</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference external" href="https://github.com/haiiliin/pyabaqus/blob/V2022/src/abaqus/BasicGeometry/FaceArray.py#L105-L114"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#abaqus.BasicGeometry.FaceArray.FaceArray.getExteriorEdges" title="Permalink to this definition">#</a></dt>
 <dd><p>This method returns the edges on the exterior of the faces in the FaceArray. That is, it
 returns the edges that are referenced by exactly one of the faces in the sequence.</p>
 <dl class="field-list simple">
@@ -1966,7 +1966,7 @@ returns the edges that are referenced by exactly one of the faces in the sequenc
 
 <dl class="py method">
 <dt class="sig sig-object py" id="abaqus.BasicGeometry.FaceArray.FaceArray.getMask">
-<span class="sig-name descname"><span class="pre">getMask</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference external" href="https://github.com/haiiliin/pyabaqus/blob/V2022/src/abaqus/BasicGeometry/FaceArray.py#L132-L140"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#abaqus.BasicGeometry.FaceArray.FaceArray.getMask" title="Permalink to this definition">#</a></dt>
+<span class="sig-name descname"><span class="pre">getMask</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference external" href="https://github.com/haiiliin/pyabaqus/blob/V2022/src/abaqus/BasicGeometry/FaceArray.py#L134-L142"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#abaqus.BasicGeometry.FaceArray.FaceArray.getMask" title="Permalink to this definition">#</a></dt>
 <dd><p>This method returns a string specifying the object or objects.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Returns</dt>
@@ -1979,7 +1979,7 @@ returns the edges that are referenced by exactly one of the faces in the sequenc
 
 <dl class="py method">
 <dt class="sig sig-object py" id="abaqus.BasicGeometry.FaceArray.FaceArray.getSequenceFromMask">
-<span class="sig-name descname"><span class="pre">getSequenceFromMask</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">mask</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/haiiliin/pyabaqus/blob/V2022/src/abaqus/BasicGeometry/FaceArray.py#L114-L130"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#abaqus.BasicGeometry.FaceArray.FaceArray.getSequenceFromMask" title="Permalink to this definition">#</a></dt>
+<span class="sig-name descname"><span class="pre">getSequenceFromMask</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">mask</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/haiiliin/pyabaqus/blob/V2022/src/abaqus/BasicGeometry/FaceArray.py#L116-L132"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#abaqus.BasicGeometry.FaceArray.FaceArray.getSequenceFromMask" title="Permalink to this definition">#</a></dt>
 <dd><p>This method returns the object or objects in the FaceArray identified using the
 specified <em>mask</em>. This command is generated when the JournalOptions are set to
 COMPRESSEDINDEX. When a large number of objects are involved, this method is highly
@@ -2056,12 +2056,12 @@ the edge.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><dl class="simple">
-<dt><strong>parameter</strong></dt><dd><p>A Float specifying the normalized parameter location on the IgnoredEdge where the 
-curvature is to be computed. This argument is mutually exclusive with the argument 
+<dt><strong>parameter</strong></dt><dd><p>A Float specifying the normalized parameter location on the IgnoredEdge where the
+curvature is to be computed. This argument is mutually exclusive with the argument
 <em>point</em>.</p>
 </dd>
-<dt><strong>point</strong></dt><dd><p>A tuple of <em>X</em>-, <em>Y</em>-, and <em>Z</em>-coordinates of a point at which the curvature is to be 
-computed. If <em>point</em> does not lie on the IgnoredEdge an attempt is made to project it 
+<dt><strong>point</strong></dt><dd><p>A tuple of <em>X</em>-, <em>Y</em>-, and <em>Z</em>-coordinates of a point at which the curvature is to be
+computed. If <em>point</em> does not lie on the IgnoredEdge an attempt is made to project it
 onto the IgnoredEdge and use the projected point.</p>
 </dd>
 </dl>
@@ -2179,18 +2179,18 @@ represents such subset.</p>
 <dl class="field-list">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><dl>
-<dt><strong>coordinates</strong></dt><dd><p>A sequence of Floats specifying the <em>X</em>-, <em>Y</em>-, and <em>Z</em>-coordinates of the object to 
-find.findAt returns either an IgnoredEdge object or a sequence of IgnoredEdge objects 
-based on the type of input.If <em>coordinates</em> is a sequence of Floats, findAt returns the 
-IgnoredEdge object at that point.If you omit the <em>coordinates</em> keyword argument, findAt 
-accepts as arguments a sequence of sequence of floats in the following 
+<dt><strong>coordinates</strong></dt><dd><p>A sequence of Floats specifying the <em>X</em>-, <em>Y</em>-, and <em>Z</em>-coordinates of the object to
+find.findAt returns either an IgnoredEdge object or a sequence of IgnoredEdge objects
+based on the type of input.If <em>coordinates</em> is a sequence of Floats, findAt returns the
+IgnoredEdge object at that point.If you omit the <em>coordinates</em> keyword argument, findAt
+accepts as arguments a sequence of sequence of floats in the following
 format:<a href="#id1"><span class="problematic" id="id2">`</span></a>ignoredEdges = e.findAt(((20.19686, -169.513997, 27.798593), ),</p>
 <blockquote>
 <div><p>((19.657627, -167.295749, 27.056402), ),                        ((18.274129,</p>
 </div></blockquote>
 <p>-157.144741, 25.15218), ))`</p>
 </dd>
-<dt><strong>printWarning</strong></dt><dd><p>A Boolean specifying whether a message is to be printed to the CLI if no entity is found 
+<dt><strong>printWarning</strong></dt><dd><p>A Boolean specifying whether a message is to be printed to the CLI if no entity is found
 at the specified location. The default value is True.</p>
 </dd>
 </dl>
@@ -2211,15 +2211,15 @@ of points, where the given points need not lie on the edges in the IgnoredEdgeAr
 <dl class="field-list">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><dl>
-<dt><strong>coordinates</strong></dt><dd><p>A sequence of a sequence of floats, where each sequence of floats describes the <em>X</em>-, 
-<em>Y</em>-, and <em>Z</em>-coordinates of a 
-point.`r=e.getClosest(coordinates=((20.0,20.0,10.0),(-1.0, -15.0, 15),))``r.keys()``[0, 
+<dt><strong>coordinates</strong></dt><dd><p>A sequence of a sequence of floats, where each sequence of floats describes the <em>X</em>-,
+<em>Y</em>-, and <em>Z</em>-coordinates of a
+point.`r=e.getClosest(coordinates=((20.0,20.0,10.0),(-1.0, -15.0, 15),))``r.keys()``[0,
 1]``r[0]``(mdb.models[‘Model-1’].parts[‘Part-1’].ignoredEdges[3],</p>
 <blockquote>
 <div><p>(15.7090625762939, 20.0, 10.0))`</p>
 </div></blockquote>
 </dd>
-<dt><strong>searchTolerance</strong></dt><dd><p>A double specifying the distance within which the closest object must lie. The default 
+<dt><strong>searchTolerance</strong></dt><dd><p>A double specifying the distance within which the closest object must lie. The default
 value is half of the parent part/instance size.</p>
 </dd>
 </dl>
@@ -2368,16 +2368,16 @@ IgnoredVertexArray represents such subset.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><dl class="simple">
-<dt><strong>coordinates</strong></dt><dd><p>A sequence of Floats specifying the <em>X</em>-, <em>Y</em>-, and <em>Z</em>-coordinates of the object to 
-find.findAt returns either a IgnoredVertex object or a sequence of IgnoredVertex objects 
-based on the type of input.If <em>coordinates</em> is a sequence of Floats, findAt returns the 
-IgnoredVertex object at that point.If you omit the <em>coordinates</em> keyword argument, 
-findAt accepts as arguments a sequence of sequence of floats in the following 
-format:<cite>verts = v.findAt(((20.19686, -169.513997, 27.798593), ),                 
-((19.657627, -167.295749, 27.056402), ),                 ((18.274129, -157.144741, 
+<dt><strong>coordinates</strong></dt><dd><p>A sequence of Floats specifying the <em>X</em>-, <em>Y</em>-, and <em>Z</em>-coordinates of the object to
+find.findAt returns either a IgnoredVertex object or a sequence of IgnoredVertex objects
+based on the type of input.If <em>coordinates</em> is a sequence of Floats, findAt returns the
+IgnoredVertex object at that point.If you omit the <em>coordinates</em> keyword argument,
+findAt accepts as arguments a sequence of sequence of floats in the following
+format:<cite>verts = v.findAt(((20.19686, -169.513997, 27.798593), ),
+((19.657627, -167.295749, 27.056402), ),                 ((18.274129, -157.144741,
 25.15218), ))</cite></p>
 </dd>
-<dt><strong>printWarning</strong></dt><dd><p>A Boolean specifying whether a message is to be printed to the CLI if no entity is found 
+<dt><strong>printWarning</strong></dt><dd><p>A Boolean specifying whether a message is to be printed to the CLI if no entity is found
 at the specified location. The default value is True.</p>
 </dd>
 </dl>
@@ -2399,15 +2399,15 @@ IgnoredVertexArray.</p>
 <dl class="field-list">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><dl>
-<dt><strong>coordinates</strong></dt><dd><p>A sequence of a sequence of floats, where each sequence of floats describes the <em>X</em>-, 
-<em>Y</em>-, and <em>Z</em>-coordinates of a 
-point.`r=e.getClosest(coordinates=((20.0,20.0,10.0),(-1.0, -15.0, 15),))``r.keys()``[0, 
+<dt><strong>coordinates</strong></dt><dd><p>A sequence of a sequence of floats, where each sequence of floats describes the <em>X</em>-,
+<em>Y</em>-, and <em>Z</em>-coordinates of a
+point.`r=e.getClosest(coordinates=((20.0,20.0,10.0),(-1.0, -15.0, 15),))``r.keys()``[0,
 1]``r[0]``(mdb.models[‘Model-1’].parts[‘Part-1’].ignoredVertices[3],</p>
 <blockquote>
 <div><p>(15.7090625762939, 20.0, 10.0))`</p>
 </div></blockquote>
 </dd>
-<dt><strong>searchTolerance</strong></dt><dd><p>A double specifying the distance within which the closest object must lie. The default 
+<dt><strong>searchTolerance</strong></dt><dd><p>A double specifying the distance within which the closest object must lie. The default
 value is half of the parent part/instance size.</p>
 </dd>
 </dl>
@@ -2479,10 +2479,10 @@ efficient.</p>
 <dt class="sig sig-object py" id="abaqus.BasicGeometry.InterestingPoint.InterestingPoint">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">InterestingPoint</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">edge</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#abaqus.BasicGeometry.Edge.Edge" title="abaqus.BasicGeometry.Edge.Edge"><span class="pre">Edge</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">rule</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">SymbolicConstantType</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/haiiliin/pyabaqus/blob/V2022/src/abaqus/BasicGeometry/InterestingPoint.py#L5-L50"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#abaqus.BasicGeometry.InterestingPoint.InterestingPoint" title="Permalink to this definition">#</a></dt>
 <dd><p>Interesting points can be located at the following:
-- The middle of an edge. 
-- The middle of an arc. 
-- The center of an arc. 
-An InterestingPoint object is a temporary object and cannot be accessed from the Mdb 
+- The middle of an edge.
+- The middle of an arc.
+- The center of an arc.
+An InterestingPoint object is a temporary object and cannot be accessed from the Mdb
 object.</p>
 <p class="rubric">Notes</p>
 <p>This object can be accessed by:</p>
@@ -2531,9 +2531,9 @@ object.</p>
 <h3>ReferencePoint<a class="headerlink" href="#referencepoint" title="Permalink to this headline">#</a></h3>
 <dl class="py class">
 <dt class="sig sig-object py" id="abaqus.BasicGeometry.ReferencePoint.ReferencePoint">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">ReferencePoint</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">point</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Union</span><span class="p"><span class="pre">[</span></span><span class="pre">tuple</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference internal" href="#abaqus.BasicGeometry.Vertex.Vertex" title="abaqus.BasicGeometry.Vertex.Vertex"><span class="pre">Vertex</span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference internal" href="#abaqus.BasicGeometry.InterestingPoint.InterestingPoint" title="abaqus.BasicGeometry.InterestingPoint.InterestingPoint"><span class="pre">InterestingPoint</span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference internal" href="../mesh.html#abaqus.Mesh.MeshNode.MeshNode" title="abaqus.Mesh.MeshNode.MeshNode"><span class="pre">MeshNode</span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference internal" href="datum.html#abaqus.Datum.Datum.Datum" title="abaqus.Datum.Datum.Datum"><span class="pre">Datum</span></a><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">instanceName</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">''</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/haiiliin/pyabaqus/blob/V2022/src/abaqus/BasicGeometry/ReferencePoint.py#L9-L64"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#abaqus.BasicGeometry.ReferencePoint.ReferencePoint" title="Permalink to this definition">#</a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">ReferencePoint</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">point</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Union</span><span class="p"><span class="pre">[</span></span><span class="pre">tuple</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference internal" href="#abaqus.BasicGeometry.Vertex.Vertex" title="abaqus.BasicGeometry.Vertex.Vertex"><span class="pre">Vertex</span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference internal" href="#abaqus.BasicGeometry.InterestingPoint.InterestingPoint" title="abaqus.BasicGeometry.InterestingPoint.InterestingPoint"><span class="pre">InterestingPoint</span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference internal" href="../mesh.html#abaqus.Mesh.MeshNode.MeshNode" title="abaqus.Mesh.MeshNode.MeshNode"><span class="pre">MeshNode</span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference internal" href="datum.html#abaqus.Datum.Datum.Datum" title="abaqus.Datum.Datum.Datum"><span class="pre">Datum</span></a><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">instanceName</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">''</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/haiiliin/pyabaqus/blob/V2022/src/abaqus/BasicGeometry/ReferencePoint.py#L9-L68"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#abaqus.BasicGeometry.ReferencePoint.ReferencePoint" title="Permalink to this definition">#</a></dt>
 <dd><p>The ReferencePoint object has no direct constructor; it is created when a Feature object
-is created. The ReferencePoint method creates a Feature object that creates a 
+is created. The ReferencePoint method creates a Feature object that creates a
 ReferencePoint object.</p>
 <p class="rubric">Notes</p>
 <p>This object can be accessed by:</p>
@@ -2562,7 +2562,7 @@ ReferencePoint object.</p>
 <h3>ReferencePointArray<a class="headerlink" href="#referencepointarray" title="Permalink to this headline">#</a></h3>
 <dl class="py class">
 <dt class="sig sig-object py" id="abaqus.BasicGeometry.ReferencePointArray.ReferencePointArray">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">ReferencePointArray</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">iterable</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">()</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">/</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/haiiliin/pyabaqus/blob/V2022/src/abaqus/BasicGeometry/ReferencePointArray.py#L4-L7"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#abaqus.BasicGeometry.ReferencePointArray.ReferencePointArray" title="Permalink to this definition">#</a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">ReferencePointArray</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">iterable</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">()</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">/</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/haiiliin/pyabaqus/blob/V2022/src/abaqus/BasicGeometry/ReferencePointArray.py#L4-L6"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#abaqus.BasicGeometry.ReferencePointArray.ReferencePointArray" title="Permalink to this definition">#</a></dt>
 <dd><p class="rubric">Methods</p>
 <div class="table-wrapper docutils container">
 <table class="docutils align-default">
@@ -2584,7 +2584,7 @@ ReferencePoint object.</p>
 <h3>ReferencePoints<a class="headerlink" href="#referencepoints" title="Permalink to this headline">#</a></h3>
 <dl class="py class">
 <dt class="sig sig-object py" id="abaqus.BasicGeometry.ReferencePoints.ReferencePoints">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">ReferencePoints</span></span><a class="reference external" href="https://github.com/haiiliin/pyabaqus/blob/V2022/src/abaqus/BasicGeometry/ReferencePoints.py#L4-L10"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#abaqus.BasicGeometry.ReferencePoints.ReferencePoints" title="Permalink to this definition">#</a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">ReferencePoints</span></span><a class="reference external" href="https://github.com/haiiliin/pyabaqus/blob/V2022/src/abaqus/BasicGeometry/ReferencePoints.py#L4-L9"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#abaqus.BasicGeometry.ReferencePoints.ReferencePoints" title="Permalink to this definition">#</a></dt>
 <dd></dd></dl>
 
 </section>
@@ -2592,9 +2592,9 @@ ReferencePoint object.</p>
 <h3>Transform<a class="headerlink" href="#transform" title="Permalink to this headline">#</a></h3>
 <dl class="py class">
 <dt class="sig sig-object py" id="abaqus.BasicGeometry.Transform.Transform">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">Transform</span></span><a class="reference external" href="https://github.com/haiiliin/pyabaqus/blob/V2022/src/abaqus/BasicGeometry/Transform.py#L3-L27"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#abaqus.BasicGeometry.Transform.Transform" title="Permalink to this definition">#</a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">Transform</span></span><a class="reference external" href="https://github.com/haiiliin/pyabaqus/blob/V2022/src/abaqus/BasicGeometry/Transform.py#L1-L25"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#abaqus.BasicGeometry.Transform.Transform" title="Permalink to this definition">#</a></dt>
 <dd><p>The MakeSketchTransform method creates a Transform object. The Transform object has no
-direct constructor. A Transform object is a 4×3 matrix of Floats that represents the 
+direct constructor. A Transform object is a 4×3 matrix of Floats that represents the
 transformation from sketch coordinates to assembly coordinates or to part coordinates.</p>
 <p class="rubric">Notes</p>
 <p>This object can be accessed by:</p>
@@ -2618,7 +2618,7 @@ transformation from sketch coordinates to assembly coordinates or to part coordi
 </div>
 <dl class="py method">
 <dt class="sig sig-object py" id="abaqus.BasicGeometry.Transform.Transform.matrix">
-<span class="sig-name descname"><span class="pre">matrix</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference external" href="https://github.com/haiiliin/pyabaqus/blob/V2022/src/abaqus/BasicGeometry/Transform.py#L19-L27"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#abaqus.BasicGeometry.Transform.Transform.matrix" title="Permalink to this definition">#</a></dt>
+<span class="sig-name descname"><span class="pre">matrix</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference external" href="https://github.com/haiiliin/pyabaqus/blob/V2022/src/abaqus/BasicGeometry/Transform.py#L17-L25"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#abaqus.BasicGeometry.Transform.Transform.matrix" title="Permalink to this definition">#</a></dt>
 <dd><p>This method returns the transformation matrix as a tuple of 12 Floats.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Returns</dt>
@@ -2743,7 +2743,7 @@ vertex.</p>
 <h3>VertexArray<a class="headerlink" href="#vertexarray" title="Permalink to this headline">#</a></h3>
 <dl class="py class">
 <dt class="sig sig-object py" id="abaqus.BasicGeometry.VertexArray.VertexArray">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">VertexArray</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">vertices</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#abaqus.BasicGeometry.Vertex.Vertex" title="abaqus.BasicGeometry.Vertex.Vertex"><span class="pre">Vertex</span></a><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/haiiliin/pyabaqus/blob/V2022/src/abaqus/BasicGeometry/VertexArray.py#L5-L231"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#abaqus.BasicGeometry.VertexArray.VertexArray" title="Permalink to this definition">#</a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">VertexArray</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">vertices</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#abaqus.BasicGeometry.Vertex.Vertex" title="abaqus.BasicGeometry.Vertex.Vertex"><span class="pre">Vertex</span></a><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/haiiliin/pyabaqus/blob/V2022/src/abaqus/BasicGeometry/VertexArray.py#L5-L238"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#abaqus.BasicGeometry.VertexArray.VertexArray" title="Permalink to this definition">#</a></dt>
 <dd><p>The VertexArray is a sequence of ConstrainedSketchVertex objects. If the part is modified, then
 VertexArray must be updated for that part.</p>
 <p class="rubric">Notes</p>
@@ -2816,15 +2816,15 @@ such subset.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><dl class="simple">
-<dt><strong>coordinates</strong></dt><dd><p>A sequence of Floats specifying the <em>X</em>-, <em>Y</em>-, and <em>Z</em>-coordinates of the object to 
+<dt><strong>coordinates</strong></dt><dd><p>A sequence of Floats specifying the <em>X</em>-, <em>Y</em>-, and <em>Z</em>-coordinates of the object to
 find.findAt returns either a ConstrainedSketchVertex object or a sequence of ConstrainedSketchVertex objects based on the
 type of input.If <em>coordinates</em> is a sequence of Floats, findAt returns the ConstrainedSketchVertex object
-at that point.If you omit the <em>coordinates</em> keyword argument, findAt accepts as 
-arguments a sequence of sequence of floats in the following format:<cite>verts = 
-v.findAt(((20.19686, -169.513997, 27.798593), ),                 ((19.657627, 
+at that point.If you omit the <em>coordinates</em> keyword argument, findAt accepts as
+arguments a sequence of sequence of floats in the following format:<cite>verts =
+v.findAt(((20.19686, -169.513997, 27.798593), ),                 ((19.657627,
 -167.295749, 27.056402), ),                 ((18.274129, -157.144741, 25.15218), ))</cite></p>
 </dd>
-<dt><strong>printWarning</strong></dt><dd><p>A Boolean specifying whether a message is to be printed to the CLI if no entity is found 
+<dt><strong>printWarning</strong></dt><dd><p>A Boolean specifying whether a message is to be printed to the CLI if no entity is found
 at the specified location. The default value is True.</p>
 </dd>
 </dl>
@@ -2839,7 +2839,7 @@ at the specified location. The default value is True.</p>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="abaqus.BasicGeometry.VertexArray.VertexArray.getBoundingBox">
-<span class="sig-name descname"><span class="pre">getBoundingBox</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference external" href="https://github.com/haiiliin/pyabaqus/blob/V2022/src/abaqus/BasicGeometry/VertexArray.py#L184-L197"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#abaqus.BasicGeometry.VertexArray.VertexArray.getBoundingBox" title="Permalink to this definition">#</a></dt>
+<span class="sig-name descname"><span class="pre">getBoundingBox</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference external" href="https://github.com/haiiliin/pyabaqus/blob/V2022/src/abaqus/BasicGeometry/VertexArray.py#L191-L204"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#abaqus.BasicGeometry.VertexArray.VertexArray.getBoundingBox" title="Permalink to this definition">#</a></dt>
 <dd><p>This method returns a dictionary of two tuples representing minimum and maximum boundary
 values of the bounding box of the minimum size containing the vertex sequence.</p>
 <dl class="field-list simple">
@@ -2857,7 +2857,7 @@ values of the bounding box of the minimum size containing the vertex sequence.</
 
 <dl class="py method">
 <dt class="sig sig-object py" id="abaqus.BasicGeometry.VertexArray.VertexArray.getByBoundingBox">
-<span class="sig-name descname"><span class="pre">getByBoundingBox</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">xMin</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">yMin</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">zMin</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">xMax</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">yMax</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">zMax</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">''</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/haiiliin/pyabaqus/blob/V2022/src/abaqus/BasicGeometry/VertexArray.py#L117-L142"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#abaqus.BasicGeometry.VertexArray.VertexArray.getByBoundingBox" title="Permalink to this definition">#</a></dt>
+<span class="sig-name descname"><span class="pre">getByBoundingBox</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">xMin</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">yMin</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">zMin</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">xMax</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">yMax</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">zMax</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">''</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/haiiliin/pyabaqus/blob/V2022/src/abaqus/BasicGeometry/VertexArray.py#L117-L149"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#abaqus.BasicGeometry.VertexArray.VertexArray.getByBoundingBox" title="Permalink to this definition">#</a></dt>
 <dd><p>This method returns an array of vertex objects that lie within the specified bounding
 box.</p>
 <dl class="field-list simple">
@@ -2887,16 +2887,16 @@ box.</p>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="abaqus.BasicGeometry.VertexArray.VertexArray.getByBoundingCylinder">
-<span class="sig-name descname"><span class="pre">getByBoundingCylinder</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">center1</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">tuple</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">center2</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">tuple</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">radius</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/haiiliin/pyabaqus/blob/V2022/src/abaqus/BasicGeometry/VertexArray.py#L144-L164"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#abaqus.BasicGeometry.VertexArray.VertexArray.getByBoundingCylinder" title="Permalink to this definition">#</a></dt>
+<span class="sig-name descname"><span class="pre">getByBoundingCylinder</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">center1</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">tuple</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">center2</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">tuple</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">radius</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/haiiliin/pyabaqus/blob/V2022/src/abaqus/BasicGeometry/VertexArray.py#L151-L171"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#abaqus.BasicGeometry.VertexArray.VertexArray.getByBoundingCylinder" title="Permalink to this definition">#</a></dt>
 <dd><p>This method returns an array of vertex objects that lie within the specified bounding
 cylinder.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><dl class="simple">
-<dt><strong>center1</strong></dt><dd><p>A tuple of the <em>X</em>-, <em>Y</em>-, and <em>Z</em>-coordinates of the center of the first end of the 
+<dt><strong>center1</strong></dt><dd><p>A tuple of the <em>X</em>-, <em>Y</em>-, and <em>Z</em>-coordinates of the center of the first end of the
 cylinder.</p>
 </dd>
-<dt><strong>center2</strong></dt><dd><p>A tuple of the <em>X</em>-, <em>Y</em>-, and <em>Z</em>-coordinates of the center of the second end of the 
+<dt><strong>center2</strong></dt><dd><p>A tuple of the <em>X</em>-, <em>Y</em>-, and <em>Z</em>-coordinates of the center of the second end of the
 cylinder.</p>
 </dd>
 <dt><strong>radius</strong></dt><dd><p>A float specifying the radius of the cylinder.</p>
@@ -2913,7 +2913,7 @@ cylinder.</p>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="abaqus.BasicGeometry.VertexArray.VertexArray.getByBoundingSphere">
-<span class="sig-name descname"><span class="pre">getByBoundingSphere</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">center</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">tuple</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">radius</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/haiiliin/pyabaqus/blob/V2022/src/abaqus/BasicGeometry/VertexArray.py#L166-L182"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#abaqus.BasicGeometry.VertexArray.VertexArray.getByBoundingSphere" title="Permalink to this definition">#</a></dt>
+<span class="sig-name descname"><span class="pre">getByBoundingSphere</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">center</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">tuple</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">radius</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/haiiliin/pyabaqus/blob/V2022/src/abaqus/BasicGeometry/VertexArray.py#L173-L189"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#abaqus.BasicGeometry.VertexArray.VertexArray.getByBoundingSphere" title="Permalink to this definition">#</a></dt>
 <dd><p>This method returns an array of vertex objects that lie within the specified bounding
 sphere.</p>
 <dl class="field-list simple">
@@ -2935,19 +2935,19 @@ sphere.</p>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="abaqus.BasicGeometry.VertexArray.VertexArray.getClosest">
-<span class="sig-name descname"><span class="pre">getClosest</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">coordinates</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">tuple</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">searchTolerance</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">''</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/haiiliin/pyabaqus/blob/V2022/src/abaqus/BasicGeometry/VertexArray.py#L199-L231"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#abaqus.BasicGeometry.VertexArray.VertexArray.getClosest" title="Permalink to this definition">#</a></dt>
+<span class="sig-name descname"><span class="pre">getClosest</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">coordinates</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">tuple</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">searchTolerance</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">''</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/haiiliin/pyabaqus/blob/V2022/src/abaqus/BasicGeometry/VertexArray.py#L206-L238"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#abaqus.BasicGeometry.VertexArray.VertexArray.getClosest" title="Permalink to this definition">#</a></dt>
 <dd><p>This method returns a object or objects in the VertexArray closest to the given set of
 points, where the given points need not lie on ConstrainedSketchVertex objects in the VertexArray.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><dl class="simple">
-<dt><strong>coordinates</strong></dt><dd><p>A sequence of a sequence of floats, where each sequence of floats describes the <em>X</em>-, 
-<em>Y</em>-, and <em>Z</em>-coordinates of a 
-point.`r=v.getClosest(coordinates=((20.0,20.0,10.0),(-1.0, -15.0, 15),))``r.keys()``[0, 
-1]``r[0]``(mdb.models[‘Model-1’].parts[‘Part-1’].vertices[0],        (15.7090625762939, 
+<dt><strong>coordinates</strong></dt><dd><p>A sequence of a sequence of floats, where each sequence of floats describes the <em>X</em>-,
+<em>Y</em>-, and <em>Z</em>-coordinates of a
+point.`r=v.getClosest(coordinates=((20.0,20.0,10.0),(-1.0, -15.0, 15),))``r.keys()``[0,
+1]``r[0]``(mdb.models[‘Model-1’].parts[‘Part-1’].vertices[0],        (15.7090625762939,
 29.1666641235352, 20.0))`</p>
 </dd>
-<dt><strong>searchTolerance</strong></dt><dd><p>A double specifying the distance within which the closest object must lie. The default 
+<dt><strong>searchTolerance</strong></dt><dd><p>A double specifying the distance within which the closest object must lie. The default
 value is half of the parent part/instance size.</p>
 </dd>
 </dl>

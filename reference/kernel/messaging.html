@@ -312,7 +312,7 @@
 <dt class="sig sig-object py" id="abaqus.Messaging.DataObject.DataObject">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">DataObject</span></span><a class="reference external" href="https://github.com/haiiliin/pyabaqus/blob/V2022/src/abaqus/Messaging/DataObject.py#L4-L153"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#abaqus.Messaging.DataObject.DataObject" title="Permalink to this definition">#</a></dt>
 <dd><p>An instance of the DataObject object is passed to each callback. The DataObject object
-has no methods. The members of a DataObject object depend on the type of the object. All 
+has no methods. The members of a DataObject object depend on the type of the object. All
 DataObject instances have the following members, regardless of type:</p>
 <p class="rubric">Notes</p>
 <p>This object can be accessed by:</p>
@@ -385,10 +385,10 @@ Possible values are BatchPre, Packager, Standard, Explicit, and Calculator.</p>
 <h3>MonitorMgr<a class="headerlink" href="#monitormgr" title="Permalink to this headline">#</a></h3>
 <dl class="py class">
 <dt class="sig sig-object py" id="abaqus.Messaging.MonitorMgr.MonitorMgr">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">MonitorMgr</span></span><a class="reference external" href="https://github.com/haiiliin/pyabaqus/blob/V2022/src/abaqus/Messaging/MonitorMgr.py#L4-L99"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#abaqus.Messaging.MonitorMgr.MonitorMgr" title="Permalink to this definition">#</a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">MonitorMgr</span></span><a class="reference external" href="https://github.com/haiiliin/pyabaqus/blob/V2022/src/abaqus/Messaging/MonitorMgr.py#L4-L106"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#abaqus.Messaging.MonitorMgr.MonitorMgr" title="Permalink to this definition">#</a></dt>
 <dd><p>An instance of the MonitorMgr object is created when you import the abaqus module. No
-other instance of the MonitorMgr object is required. (This MonitorMgr object is not to 
-be confused with the degree of freedom (DOF) monitor that is constructed from the Step 
+other instance of the MonitorMgr object is required. (This MonitorMgr object is not to
+be confused with the degree of freedom (DOF) monitor that is constructed from the Step
 object.)</p>
 <p class="rubric">Notes</p>
 <p>This object can be accessed by:</p>
@@ -417,7 +417,7 @@ object.)</p>
 </div>
 <dl class="py method">
 <dt class="sig sig-object py" id="abaqus.Messaging.MonitorMgr.MonitorMgr.addMessageCallback">
-<span class="sig-name descname"><span class="pre">addMessageCallback</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">jobName</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">messageType</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">SymbolicConstantType</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">callback</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">SymbolicConstantType</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">userData</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">''</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/haiiliin/pyabaqus/blob/V2022/src/abaqus/Messaging/MonitorMgr.py#L20-L43"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#abaqus.Messaging.MonitorMgr.MonitorMgr.addMessageCallback" title="Permalink to this definition">#</a></dt>
+<span class="sig-name descname"><span class="pre">addMessageCallback</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">jobName</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">messageType</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">SymbolicConstantType</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">callback</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">SymbolicConstantType</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">userData</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">''</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/haiiliin/pyabaqus/blob/V2022/src/abaqus/Messaging/MonitorMgr.py#L20-L48"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#abaqus.Messaging.MonitorMgr.MonitorMgr.addMessageCallback" title="Permalink to this definition">#</a></dt>
 <dd><p>This method specifies a callback function that will be called when the specified message
 is received from the analysis product.
 For more information, see An example of a callback function.</p>
@@ -426,14 +426,14 @@ For more information, see An example of a callback function.</p>
 <dd class="field-odd"><dl class="simple">
 <dt><strong>jobName</strong></dt><dd><p>A String specifying the name of the job to be monitored or the SymbolicConstant ANY_JOB.</p>
 </dd>
-<dt><strong>messageType</strong></dt><dd><p>A SymbolicConstant specifying which message type will call this callback. Possible 
-values 
+<dt><strong>messageType</strong></dt><dd><p>A SymbolicConstant specifying which message type will call this callback. Possible
+values
 are:ABORTEDANY_JOBANY_MESSAGE_TYPECOMPLETEDEND_STEPERRORHEADINGHEALER_JOBHEALER_TYPEINTERRUPTEDITERATIONJOB_ABORTEDJOB_COMPLETEDJOB_INTERRUPTEDJOB_SUBMITTEDMONITOR_DATAODB_FILEODB_FRAMESIMULATION_ABORTEDSIMULATION_COMPLETEDSIMULATION_INTERRUPTEDSIMULATION_SUBMITTEDSTARTEDSTATUSSTEPWARNING</p>
 </dd>
-<dt><strong>callback</strong></dt><dd><p>A Python function to be called. The interface definition of the callback function is 
-:<a href="#id1"><span class="problematic" id="id2">`</span></a>def onMessage(jobName, messageType, data, userData)`*jobName* is a 
-String.*messageType* is a SymbolicConstant with possible values as listed previously for 
-the addMessageCallback method.*data* is a DataObject object.*userData* is the object 
+<dt><strong>callback</strong></dt><dd><p>A Python function to be called. The interface definition of the callback function is
+:<a href="#id1"><span class="problematic" id="id2">`</span></a>def onMessage(jobName, messageType, data, userData)`*jobName* is a
+String.*messageType* is a SymbolicConstant with possible values as listed previously for
+the addMessageCallback method.*data* is a DataObject object.*userData* is the object
 passed as the <em>userData</em> argument to the addMessageCallback method.</p>
 </dd>
 <dt><strong>userData</strong></dt><dd><p>Any Python object or None. This object is passed to the callback function.</p>
@@ -445,7 +445,7 @@ passed as the <em>userData</em> argument to the addMessageCallback method.</p>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="abaqus.Messaging.MonitorMgr.MonitorMgr.checkMonitorStatus">
-<span class="sig-name descname"><span class="pre">checkMonitorStatus</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference external" href="https://github.com/haiiliin/pyabaqus/blob/V2022/src/abaqus/Messaging/MonitorMgr.py#L91-L99"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#abaqus.Messaging.MonitorMgr.MonitorMgr.checkMonitorStatus" title="Permalink to this definition">#</a></dt>
+<span class="sig-name descname"><span class="pre">checkMonitorStatus</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference external" href="https://github.com/haiiliin/pyabaqus/blob/V2022/src/abaqus/Messaging/MonitorMgr.py#L98-L106"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#abaqus.Messaging.MonitorMgr.MonitorMgr.checkMonitorStatus" title="Permalink to this definition">#</a></dt>
 <dd><p>This method raises a MonitorError exception if the monitoring status is not ENABLED.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Raises</dt>
@@ -459,7 +459,7 @@ passed as the <em>userData</em> argument to the addMessageCallback method.</p>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="abaqus.Messaging.MonitorMgr.MonitorMgr.removeMessageCallback">
-<span class="sig-name descname"><span class="pre">removeMessageCallback</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">jobName</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">messageType</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">SymbolicConstantType</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">callback</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">userData</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/haiiliin/pyabaqus/blob/V2022/src/abaqus/Messaging/MonitorMgr.py#L45-L89"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#abaqus.Messaging.MonitorMgr.MonitorMgr.removeMessageCallback" title="Permalink to this definition">#</a></dt>
+<span class="sig-name descname"><span class="pre">removeMessageCallback</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">jobName</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">messageType</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">SymbolicConstantType</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">callback</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">userData</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/haiiliin/pyabaqus/blob/V2022/src/abaqus/Messaging/MonitorMgr.py#L50-L96"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#abaqus.Messaging.MonitorMgr.MonitorMgr.removeMessageCallback" title="Permalink to this definition">#</a></dt>
 <dd><p>This method removes a callback function. You specify the callback function to remove
 using the same arguments you used to add the callback.</p>
 <dl class="field-list simple">
@@ -467,39 +467,39 @@ using the same arguments you used to add the callback.</p>
 <dd class="field-odd"><dl class="simple">
 <dt><strong>jobName</strong></dt><dd><p>A String specifying the name of the job to be monitored or the SymbolicConstant ANY_JOB.</p>
 </dd>
-<dt><strong>messageType</strong></dt><dd><p>A SymbolicConstant specifying which message type will call this callback. Possible 
-values are: 
-- ABORTED 
-- ANY_JOB 
-- ANY_MESSAGE_TYPE 
-- COMPLETED 
-- END_STEP 
-- ERROR 
-- HEADING 
-- HEALER_JOB 
-- HEALER_TYPE 
-- INTERRUPTED 
-- ITERATION 
-- JOB_ABORTED 
-- JOB_COMPLETED 
-- JOB_INTERRUPTED 
-- JOB_SUBMITTED 
-- MONITOR_DATA 
-- ODB_FILE 
-- ODB_FRAME 
-- SIMULATION_ABORTED 
-- SIMULATION_COMPLETED 
-- SIMULATION_INTERRUPTED 
-- SIMULATION_SUBMITTED 
-- STARTED 
-- STATUS 
-- STEP 
+<dt><strong>messageType</strong></dt><dd><p>A SymbolicConstant specifying which message type will call this callback. Possible
+values are:
+- ABORTED
+- ANY_JOB
+- ANY_MESSAGE_TYPE
+- COMPLETED
+- END_STEP
+- ERROR
+- HEADING
+- HEALER_JOB
+- HEALER_TYPE
+- INTERRUPTED
+- ITERATION
+- JOB_ABORTED
+- JOB_COMPLETED
+- JOB_INTERRUPTED
+- JOB_SUBMITTED
+- MONITOR_DATA
+- ODB_FILE
+- ODB_FRAME
+- SIMULATION_ABORTED
+- SIMULATION_COMPLETED
+- SIMULATION_INTERRUPTED
+- SIMULATION_SUBMITTED
+- STARTED
+- STATUS
+- STEP
 - WARNING</p>
 </dd>
-<dt><strong>callback</strong></dt><dd><p>A Python function to be called; it must be the same as the <em>callback</em> argument specified 
+<dt><strong>callback</strong></dt><dd><p>A Python function to be called; it must be the same as the <em>callback</em> argument specified
 in the original call to addMessageCallback.</p>
 </dd>
-<dt><strong>userData</strong></dt><dd><p>Any Python object or None; it must be the same as the <em>userData</em> argument specified in 
+<dt><strong>userData</strong></dt><dd><p>Any Python object or None; it must be the same as the <em>userData</em> argument specified in
 the original call to addMessageCallback.</p>
 </dd>
 </dl>

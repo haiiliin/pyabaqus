@@ -308,7 +308,7 @@
 <h2>Create parts<a class="headerlink" href="#create-parts" title="Permalink to this headline">#</a></h2>
 <dl class="py class">
 <dt class="sig sig-object py">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">PartModel</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">description</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">stefanBoltzmann</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">absoluteZero</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">waveFormulation</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">SymbolicConstantType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'NOT_SET'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">modelType</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">SymbolicConstantType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'STANDARD_EXPLICIT'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">universalGas</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">copyConstraints</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">BooleanType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">copyConnectors</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">BooleanType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">copyInteractions</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">BooleanType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">1</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/haiiliin/pyabaqus/blob/V2022/src/abaqus/Part/PartModel.py#L6-L51"><span class="viewcode-link"><span class="pre">[source]</span></span></a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">PartModel</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">description</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">stefanBoltzmann</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">absoluteZero</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">waveFormulation</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">SymbolicConstantType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'NOT_SET'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">modelType</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">SymbolicConstantType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'STANDARD_EXPLICIT'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">universalGas</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">copyConstraints</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">BooleanType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">copyConnectors</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">BooleanType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">copyInteractions</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">BooleanType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">1</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/haiiliin/pyabaqus/blob/V2022/src/abaqus/Part/PartModel.py#L6-L56"><span class="viewcode-link"><span class="pre">[source]</span></span></a></dt>
 <dd><p>Abaqus creates a Model object named <cite>Model-1</cite> when a session is started.</p>
 <p class="rubric">Notes</p>
 <p>This object can be accessed by:</p>
@@ -333,7 +333,7 @@
 
 <dl class="py class">
 <dt class="sig sig-object py">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">PartBase</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dimensionality</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">SymbolicConstantType</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">type</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">SymbolicConstantType</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">twist</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">BooleanType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">OFF</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/haiiliin/pyabaqus/blob/V2022/src/abaqus/Part/PartBase.py#L42-L1766"><span class="viewcode-link"><span class="pre">[source]</span></span></a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">PartBase</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dimensionality</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">SymbolicConstantType</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">type</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">SymbolicConstantType</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">twist</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">BooleanType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">OFF</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/haiiliin/pyabaqus/blob/V2022/src/abaqus/Part/PartBase.py#L43-L1866"><span class="viewcode-link"><span class="pre">[source]</span></span></a></dt>
 <dt class="sig sig-object py">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">PartBase</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">objectToCopy</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">scale</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mirrorPlane</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">SymbolicConstantType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">NONE</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">compressFeatureList</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">BooleanType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">OFF</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">separate</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">BooleanType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">OFF</span></span></em><span class="sig-paren">)</span></dt>
 <dd><p>The Part object defines the physical attributes of a structure. Parts are instanced into
@@ -374,7 +374,7 @@ in the part.</p>
 </dd>
 <dt><strong>featuresById: dict[str, Feature]</strong></dt><dd><p>A repository of <a class="reference internal" href="../../../reference/mdb/model/part_assembly/feature.html#abaqus.Feature.Feature.Feature" title="abaqus.Feature.Feature.Feature"><code class="xref py py-class docutils literal notranslate"><span class="pre">Feature</span></code></a> objects specifying all Feature objects in the part.
 The Feature
-objects in the featuresById repository are the same as the Feature objects in the 
+objects in the featuresById repository are the same as the Feature objects in the
 features’ repository. However, the key to the objects in the featuresById repository is
 an integer specifying the <em>ID</em>, whereas the key to the objects in the features’
 repository is a string specifying the <strong>name</strong>.
@@ -494,7 +494,7 @@ part.</p>
 </div>
 <dl class="py method">
 <dt class="sig sig-object py">
-<span class="sig-name descname"><span class="pre">Part2DGeomFrom2DMesh</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">part</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="../../../reference/mdb/model/part.html#abaqus.Part.PartBase.PartBase" title="abaqus.Part.PartBase.PartBase"><span class="pre">PartBase</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">featureAngle</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">splineCurvatureLimit</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">90</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">twist</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">BooleanType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/haiiliin/pyabaqus/blob/V2022/src/abaqus/Part/PartBase.py#L855-L901"><span class="viewcode-link"><span class="pre">[source]</span></span></a></dt>
+<span class="sig-name descname"><span class="pre">Part2DGeomFrom2DMesh</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">part</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="../../../reference/mdb/model/part.html#abaqus.Part.PartBase.PartBase" title="abaqus.Part.PartBase.PartBase"><span class="pre">PartBase</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">featureAngle</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">splineCurvatureLimit</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">90</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">twist</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">BooleanType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/haiiliin/pyabaqus/blob/V2022/src/abaqus/Part/PartBase.py#L915-L967"><span class="viewcode-link"><span class="pre">[source]</span></span></a></dt>
 <dd><p>This method creates a geometric Part object from the outline of an existing
 two-dimensional orphan mesh Part object and places it in the parts repository. If the
 Part2DGeomFrom2DMesh method cannot create a valid two-dimensional shell section from the
@@ -507,14 +507,14 @@ base shell feature.</p>
 </dd>
 <dt><strong>part</strong></dt><dd><p>A Part object specifying an existing two-dimensional orphan mesh Part object.</p>
 </dd>
-<dt><strong>featureAngle</strong></dt><dd><p>A Float specifying the angle (in degrees) between line segments that triggers a break in 
+<dt><strong>featureAngle</strong></dt><dd><p>A Float specifying the angle (in degrees) between line segments that triggers a break in
 the geometry.</p>
 </dd>
-<dt><strong>splineCurvatureLimit</strong></dt><dd><p>A Float specifying the traversal angle in degrees of the spline that triggers a break in 
+<dt><strong>splineCurvatureLimit</strong></dt><dd><p>A Float specifying the traversal angle in degrees of the spline that triggers a break in
 the geometry. The default value is 90.</p>
 </dd>
-<dt><strong>twist</strong></dt><dd><p>A Boolean specifying whether to include a twist DEGREE OF FREEDOM in the part (only 
-available when <a href="#id1"><span class="problematic" id="id2">*</span></a>dimensionality*=AXISYMMETRIC and <a href="#id3"><span class="problematic" id="id4">*</span></a>type*=DEFORMABLE_BODY). The default 
+<dt><strong>twist</strong></dt><dd><p>A Boolean specifying whether to include a twist DEGREE OF FREEDOM in the part (only
+available when <a href="#id1"><span class="problematic" id="id2">*</span></a>dimensionality*=AXISYMMETRIC and <a href="#id3"><span class="problematic" id="id4">*</span></a>type*=DEFORMABLE_BODY). The default
 value is OFF.</p>
 </dd>
 </dl>
@@ -527,11 +527,11 @@ If the specified part is not an orphan mesh part:</p>
 <div><p>Specified part must be an orphan mesh.</p>
 </div></blockquote>
 <dl class="simple">
-<dt>If the Part2DGeomFrom2DMesh method cannot create a valid two-dimensional shell section from the two-dimensional mesh: </dt><dd><p>Planar shell feature failed</p>
+<dt>If the Part2DGeomFrom2DMesh method cannot create a valid two-dimensional shell section from the two-dimensional mesh:</dt><dd><p>Planar shell feature failed</p>
 </dd>
-<dt>If the specified part is not two-dimensional: </dt><dd><p>Cannot create a geometry from a 3D part.</p>
+<dt>If the specified part is not two-dimensional:</dt><dd><p>Cannot create a geometry from a 3D part.</p>
 </dd>
-<dt>If the specified part is a rigid body: </dt><dd><p>Cannot create a geometry from a rigid body.</p>
+<dt>If the specified part is a rigid body:</dt><dd><p>Cannot create a geometry from a rigid body.</p>
 </dd>
 </dl>
 </dd>
@@ -547,7 +547,7 @@ If the specified part is not an orphan mesh part:</p>
 
 <dl class="py method">
 <dt class="sig sig-object py">
-<span class="sig-name descname"><span class="pre">PartFromBooleanCut</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">instanceToBeCut</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cuttingInstances</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">tuple</span><span class="p"><span class="pre">[</span></span><span class="pre">abaqus.Part.PartBase.PartInstance</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/haiiliin/pyabaqus/blob/V2022/src/abaqus/Part/PartBase.py#L349-L376"><span class="viewcode-link"><span class="pre">[source]</span></span></a></dt>
+<span class="sig-name descname"><span class="pre">PartFromBooleanCut</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">instanceToBeCut</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cuttingInstances</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">tuple</span><span class="p"><span class="pre">[</span></span><span class="pre">abaqus.Part.PartBase.PartInstance</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/haiiliin/pyabaqus/blob/V2022/src/abaqus/Part/PartBase.py#L362-L391"><span class="viewcode-link"><span class="pre">[source]</span></span></a></dt>
 <dd><p>This method creates a Part in the parts repository after subtracting or cutting the
 geometries of a group of part instances from that of a base part instance.</p>
 <dl class="field-list simple">
@@ -557,7 +557,7 @@ geometries of a group of part instances from that of a base part instance.</p>
 </dd>
 <dt><strong>instanceToBeCut</strong></dt><dd><p>A PartInstance specifying the base instance from which to cut other instances.</p>
 </dd>
-<dt><strong>cuttingInstances</strong></dt><dd><p>A sequence of PartInstance objects specifying the instances with which to cut the base 
+<dt><strong>cuttingInstances</strong></dt><dd><p>A sequence of PartInstance objects specifying the instances with which to cut the base
 instance.</p>
 </dd>
 </dl>
@@ -578,7 +578,7 @@ instance.</p>
 
 <dl class="py method">
 <dt class="sig sig-object py">
-<span class="sig-name descname"><span class="pre">PartFromBooleanMerge</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">instances</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">tuple</span><span class="p"><span class="pre">[</span></span><span class="pre">abaqus.Part.PartBase.PartInstance</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">keepIntersections</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">BooleanType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mergeNodes</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">SymbolicConstantType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'BOUNDARY_ONLY'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">nodeMergingTolerance</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">removeDuplicateElements</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">BooleanType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">domain</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">SymbolicConstantType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'GEOMETRY'</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/haiiliin/pyabaqus/blob/V2022/src/abaqus/Part/PartBase.py#L378-L423"><span class="viewcode-link"><span class="pre">[source]</span></span></a></dt>
+<span class="sig-name descname"><span class="pre">PartFromBooleanMerge</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">instances</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">tuple</span><span class="p"><span class="pre">[</span></span><span class="pre">abaqus.Part.PartBase.PartInstance</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">keepIntersections</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">BooleanType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mergeNodes</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">SymbolicConstantType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'BOUNDARY_ONLY'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">nodeMergingTolerance</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">removeDuplicateElements</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">BooleanType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">domain</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">SymbolicConstantType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'GEOMETRY'</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/haiiliin/pyabaqus/blob/V2022/src/abaqus/Part/PartBase.py#L393-L445"><span class="viewcode-link"><span class="pre">[source]</span></span></a></dt>
 <dd><p>This method creates a Part in the parts repository after merging two or more part
 instances. The part instances can be either Abaqus native parts or orphan mesh parts,
 but they cannot be a combination of both.</p>
@@ -589,22 +589,22 @@ but they cannot be a combination of both.</p>
 </dd>
 <dt><strong>instances</strong></dt><dd><p>A sequence of PartInstance objects specifying the part instances to merge.</p>
 </dd>
-<dt><strong>keepIntersections</strong></dt><dd><p>A Boolean specifying whether the boundary intersections of Abaqus native part instances 
+<dt><strong>keepIntersections</strong></dt><dd><p>A Boolean specifying whether the boundary intersections of Abaqus native part instances
 should be retained after the merge operation. The default value is False.</p>
 </dd>
-<dt><strong>mergeNodes</strong></dt><dd><p>A SymbolicConstant specifying whether the nodes of orphan mesh part instances should be 
-retained after the merge operation. Possible values are BOUNDARY_ONLY, ALL, or NONE. The 
+<dt><strong>mergeNodes</strong></dt><dd><p>A SymbolicConstant specifying whether the nodes of orphan mesh part instances should be
+retained after the merge operation. Possible values are BOUNDARY_ONLY, ALL, or NONE. The
 default value is BOUNDARY_ONLY.</p>
 </dd>
-<dt><strong>nodeMergingTolerance</strong></dt><dd><p>A Float specifying the maximum distance between nodes of orphan mesh part instances that 
-will be merged and replaced with a single new node. The location of the new node is the 
+<dt><strong>nodeMergingTolerance</strong></dt><dd><p>A Float specifying the maximum distance between nodes of orphan mesh part instances that
+will be merged and replaced with a single new node. The location of the new node is the
 average position of the deleted nodes. The default value is 10–6.</p>
 </dd>
-<dt><strong>removeDuplicateElements</strong></dt><dd><p>A Boolean specifying whether elements with the same connectivity after the merge will 
+<dt><strong>removeDuplicateElements</strong></dt><dd><p>A Boolean specifying whether elements with the same connectivity after the merge will
 merged into a single element. The default value is ON.</p>
 </dd>
-<dt><strong>domain</strong></dt><dd><p>A SymbolicConstant specifying whether the part instances being merged are geometric 
-instances or mesh instances. Possible values are GEOMETRY, MESH or BOTH. The default 
+<dt><strong>domain</strong></dt><dd><p>A SymbolicConstant specifying whether the part instances being merged are geometric
+instances or mesh instances. Possible values are GEOMETRY, MESH or BOTH. The default
 value is GEOMETRY.</p>
 </dd>
 </dl>
@@ -625,7 +625,7 @@ value is GEOMETRY.</p>
 
 <dl class="py method">
 <dt class="sig sig-object py">
-<span class="sig-name descname"><span class="pre">PartFromExtrude2DMesh</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">part</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="../../../reference/mdb/model/part.html#abaqus.Part.PartBase.PartBase" title="abaqus.Part.PartBase.PartBase"><span class="pre">PartBase</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">depth</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">elementSize</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/haiiliin/pyabaqus/blob/V2022/src/abaqus/Part/PartBase.py#L425-L459"><span class="viewcode-link"><span class="pre">[source]</span></span></a></dt>
+<span class="sig-name descname"><span class="pre">PartFromExtrude2DMesh</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">part</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="../../../reference/mdb/model/part.html#abaqus.Part.PartBase.PartBase" title="abaqus.Part.PartBase.PartBase"><span class="pre">PartBase</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">depth</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">elementSize</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/haiiliin/pyabaqus/blob/V2022/src/abaqus/Part/PartBase.py#L447-L483"><span class="viewcode-link"><span class="pre">[source]</span></span></a></dt>
 <dd><p>This method creates a Part object by extruding an existing two-dimensional orphan mesh
 Part object in the positive <em>Z</em>-direction and places it in the parts repository.</p>
 <dl class="field-list">
@@ -649,9 +649,9 @@ Part object in the positive <em>Z</em>-direction and places it in the parts repo
 <div><p>Cannot extrude a geometric part.</p>
 </div></blockquote>
 <ul class="simple">
-<li><p>If the specified part is not two-dimensional: 
+<li><p>If the specified part is not two-dimensional:
 Cannot extrude a 3D part.</p></li>
-<li><p>If the specified part is a rigid body: 
+<li><p>If the specified part is a rigid body:
 Cannot change dimension of a rigid body.</p></li>
 </ul>
 </dd>
@@ -667,7 +667,7 @@ Cannot change dimension of a rigid body.</p></li>
 
 <dl class="py method">
 <dt class="sig sig-object py">
-<span class="sig-name descname"><span class="pre">PartFromGeometryFile</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">geometryFile</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="../../../reference/mdb/model/part.html#abaqus.Part.AcisFile.AcisFile" title="abaqus.Part.AcisFile.AcisFile"><span class="pre">AcisFile</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">dimensionality</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">SymbolicConstantType</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">type</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">SymbolicConstantType</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bodyNum</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">combine</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">BooleanType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">booleanSolids</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">BooleanType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">retainBoundary</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">BooleanType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">usePartNameFromFile</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">BooleanType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">stitchTolerance</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">twist</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">BooleanType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">scale</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">convertToAnalytical</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">convertToPrecise</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/haiiliin/pyabaqus/blob/V2022/src/abaqus/Part/PartBase.py#L461-L540"><span class="viewcode-link"><span class="pre">[source]</span></span></a></dt>
+<span class="sig-name descname"><span class="pre">PartFromGeometryFile</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">geometryFile</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="../../../reference/mdb/model/part.html#abaqus.Part.AcisFile.AcisFile" title="abaqus.Part.AcisFile.AcisFile"><span class="pre">AcisFile</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">dimensionality</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">SymbolicConstantType</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">type</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">SymbolicConstantType</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bodyNum</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">combine</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">BooleanType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">booleanSolids</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">BooleanType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">retainBoundary</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">BooleanType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">usePartNameFromFile</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">BooleanType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">stitchTolerance</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">twist</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">BooleanType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">scale</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">convertToAnalytical</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">convertToPrecise</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/haiiliin/pyabaqus/blob/V2022/src/abaqus/Part/PartBase.py#L485-L576"><span class="viewcode-link"><span class="pre">[source]</span></span></a></dt>
 <dd><p>This method creates a Part object and places it in the parts repository.</p>
 <dl class="field-list">
 <dt class="field-odd">Parameters</dt>
@@ -676,50 +676,50 @@ Cannot change dimension of a rigid body.</p></li>
 </dd>
 <dt><strong>geometryFile</strong></dt><dd><p>An AcisFile object specifying a file containing geometry.</p>
 </dd>
-<dt><strong>dimensionality</strong></dt><dd><p>A SymbolicConstant specifying the dimensionality of the part. Possible values are 
+<dt><strong>dimensionality</strong></dt><dd><p>A SymbolicConstant specifying the dimensionality of the part. Possible values are
 THREE_D, TWO_D_PLANAR, and AXISYMMETRIC.</p>
 </dd>
-<dt><strong>type</strong></dt><dd><p>A SymbolicConstant specifying the type of the part. Possible values are DEFORMABLE_BODY, 
+<dt><strong>type</strong></dt><dd><p>A SymbolicConstant specifying the type of the part. Possible values are DEFORMABLE_BODY,
 EULERIAN, DISCRETE_RIGID_SURFACE, and ANALYTIC_RIGID_SURFACE.</p>
 </dd>
-<dt><strong>bodyNum</strong></dt><dd><p>An Int specifying the desired body to be selected from an ACIS object containing a list 
+<dt><strong>bodyNum</strong></dt><dd><p>An Int specifying the desired body to be selected from an ACIS object containing a list
 of <em>N</em> ACIS bodies. Possible values are 1 ≤≤ <em>bodyNum</em> ≤≤ <em>N</em>. The default value is 1.</p>
 </dd>
-<dt><strong>combine</strong></dt><dd><p>A Boolean specifying weather to create a single part by combining all the bodies in the 
-ACIS object. This argument is ignored if <em>bodyNum</em> is specified. The default value is 
+<dt><strong>combine</strong></dt><dd><p>A Boolean specifying weather to create a single part by combining all the bodies in the
+ACIS object. This argument is ignored if <em>bodyNum</em> is specified. The default value is
 False.</p>
 </dd>
-<dt><strong>booleanSolids</strong></dt><dd><p>A Boolean specifying whether the solids should be boolean while combining all the 
+<dt><strong>booleanSolids</strong></dt><dd><p>A Boolean specifying whether the solids should be boolean while combining all the
 bodies.The default value is FALSE.</p>
 </dd>
-<dt><strong>retainBoundary</strong></dt><dd><p>A Boolean specifying whether the intersecting boundaries should be retained while 
+<dt><strong>retainBoundary</strong></dt><dd><p>A Boolean specifying whether the intersecting boundaries should be retained while
 boolean the solids.The default value is FALSE.</p>
 </dd>
-<dt><strong>usePartNameFromFile</strong></dt><dd><p>A Boolean specifying whether the part names specified in a STEP file should be used as 
-the names in the Abaqus model database. If this option is TRUE, the part names in the 
-STEP file will be used; if FALSE, each imported part will be named using the text of the 
-<em>name</em> argument followed by a number. This functionality is available only for import 
+<dt><strong>usePartNameFromFile</strong></dt><dd><p>A Boolean specifying whether the part names specified in a STEP file should be used as
+the names in the Abaqus model database. If this option is TRUE, the part names in the
+STEP file will be used; if FALSE, each imported part will be named using the text of the
+<em>name</em> argument followed by a number. This functionality is available only for import
 from STEP files; for import from all other types of files this option should be FALSE.</p>
 </dd>
-<dt><strong>stitchTolerance</strong></dt><dd><p>A Float indicating the maximum gap to be stitched. The value should be smaller than the 
-minimum feature size and bigger than the maximum gap expected to be stitched in the 
-model. Otherwise this command may remove small (sliver) edges that are smaller than the 
+<dt><strong>stitchTolerance</strong></dt><dd><p>A Float indicating the maximum gap to be stitched. The value should be smaller than the
+minimum feature size and bigger than the maximum gap expected to be stitched in the
+model. Otherwise this command may remove small (sliver) edges that are smaller than the
 tolerance. The default value is 1.0</p>
 </dd>
-<dt><strong>twist</strong></dt><dd><p>A Boolean specifying whether to include a twist DEGREE OF FREEDOM in the part (only 
-available when <a href="#id5"><span class="problematic" id="id6">*</span></a>dimensionality*=AXISYMMETRIC and <a href="#id7"><span class="problematic" id="id8">*</span></a>type*=DEFORMABLE_BODY). The default 
+<dt><strong>twist</strong></dt><dd><p>A Boolean specifying whether to include a twist DEGREE OF FREEDOM in the part (only
+available when <a href="#id5"><span class="problematic" id="id6">*</span></a>dimensionality*=AXISYMMETRIC and <a href="#id7"><span class="problematic" id="id8">*</span></a>type*=DEFORMABLE_BODY). The default
 value is OFF.</p>
 </dd>
-<dt><strong>scale</strong></dt><dd><p>A Float specifying the scaling factor to apply to the imported geometric entities. The 
+<dt><strong>scale</strong></dt><dd><p>A Float specifying the scaling factor to apply to the imported geometric entities. The
 default value is 1.0.</p>
 </dd>
-<dt><strong>convertToAnalytical</strong></dt><dd><p>An Int specifying whether to convert to analytical entities. Possible values are 0 or 1. 
-The default value is 0. If <a href="#id9"><span class="problematic" id="id10">*</span></a>convertToAnalytical*=1, all the numerical entities, such as 
-splines, are converted to analytical entities, such as arcs and lines, during the repair 
+<dt><strong>convertToAnalytical</strong></dt><dd><p>An Int specifying whether to convert to analytical entities. Possible values are 0 or 1.
+The default value is 0. If <a href="#id9"><span class="problematic" id="id10">*</span></a>convertToAnalytical*=1, all the numerical entities, such as
+splines, are converted to analytical entities, such as arcs and lines, during the repair
 phase of the command.</p>
 </dd>
-<dt><strong>convertToPrecise</strong></dt><dd><p>An Int specifying whether to convert to precise geometry. Possible value are 0 or 1. The 
-default value is 0. If <a href="#id11"><span class="problematic" id="id12">*</span></a>convertToPrecise*=1, the application will attempt to re-evaluate 
+<dt><strong>convertToPrecise</strong></dt><dd><p>An Int specifying whether to convert to precise geometry. Possible value are 0 or 1. The
+default value is 0. If <a href="#id11"><span class="problematic" id="id12">*</span></a>convertToPrecise*=1, the application will attempt to re-evaluate
 the tolerant entities to be more precise.</p>
 </dd>
 </dl>
@@ -732,9 +732,9 @@ the tolerant entities to be more precise.</p>
 <div><p>PartError: the file is corrupt</p>
 </div></blockquote>
 <ul class="simple">
-<li><p>If the dimensionality does not correspond to what is found in the ACIS file: 
+<li><p>If the dimensionality does not correspond to what is found in the ACIS file:
 PartError: dimensionality does not match the contents of the file</p></li>
-<li><p>If the type does not correspond to what is found in the ACIS file: 
+<li><p>If the type does not correspond to what is found in the ACIS file:
 PartError: type does not match the contents of the file</p></li>
 </ul>
 </dd>
@@ -750,7 +750,7 @@ PartError: type does not match the contents of the file</p></li>
 
 <dl class="py method">
 <dt class="sig sig-object py">
-<span class="sig-name descname"><span class="pre">PartFromInstanceMesh</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">partInstances</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">tuple</span><span class="p"><span class="pre">[</span></span><span class="pre">abaqus.Part.PartBase.PartInstance</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">()</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">copyPartSets</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">BooleanType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">copyAssemblySets</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">BooleanType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/haiiliin/pyabaqus/blob/V2022/src/abaqus/Part/PartBase.py#L542-L582"><span class="viewcode-link"><span class="pre">[source]</span></span></a></dt>
+<span class="sig-name descname"><span class="pre">PartFromInstanceMesh</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">partInstances</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">tuple</span><span class="p"><span class="pre">[</span></span><span class="pre">abaqus.Part.PartBase.PartInstance</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">()</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">copyPartSets</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">BooleanType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">copyAssemblySets</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">BooleanType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/haiiliin/pyabaqus/blob/V2022/src/abaqus/Part/PartBase.py#L578-L623"><span class="viewcode-link"><span class="pre">[source]</span></span></a></dt>
 <dd><p>This method creates a Part object containing the mesh found in the supplied PartInstance
 objects and places the new Part object in the parts repository.</p>
 <dl class="field-list">
@@ -758,14 +758,14 @@ objects and places the new Part object in the parts repository.</p>
 <dd class="field-odd"><dl class="simple">
 <dt><strong>name</strong></dt><dd><p>A String specifying the repository key.</p>
 </dd>
-<dt><strong>partInstances</strong></dt><dd><p>A sequence of PartInstance objects to be used in the creation of the new mesh part. If 
-the <em>partInstances</em> argument is omitted, the new Part object contains the mesh of all 
+<dt><strong>partInstances</strong></dt><dd><p>A sequence of PartInstance objects to be used in the creation of the new mesh part. If
+the <em>partInstances</em> argument is omitted, the new Part object contains the mesh of all
 the part instances in the assembly.</p>
 </dd>
-<dt><strong>copyPartSets</strong></dt><dd><p>A Boolean specifying whether to copy sets, surfaces, and attributes from the base part 
+<dt><strong>copyPartSets</strong></dt><dd><p>A Boolean specifying whether to copy sets, surfaces, and attributes from the base part
 or parts of the specified part instances to the new part. The default is False.</p>
 </dd>
-<dt><strong>copyAssemblySets</strong></dt><dd><p>A Boolean specifying whether to copy assembly-level sets that reference entities of the 
+<dt><strong>copyAssemblySets</strong></dt><dd><p>A Boolean specifying whether to copy assembly-level sets that reference entities of the
 specified part instances to the new part. The default is False.</p>
 </dd>
 </dl>
@@ -773,15 +773,15 @@ specified part instances to the new part. The default is False.</p>
 <dt class="field-even">Returns</dt>
 <dd class="field-even"><dl>
 <dt>part: <code class="xref py py-obj docutils literal notranslate"><span class="pre">Part</span></code></dt><dd><p>A Part object
-- If the analysis type (deformable or rigid) is not consistent among the supplied part 
+- If the analysis type (deformable or rigid) is not consistent among the supplied part
 instances:</p>
 <blockquote>
 <div><p>The selected part instances do not have a consistent analysis type.</p>
 </div></blockquote>
 <ul class="simple">
-<li><p>If the assembly does not contain a mesh: 
+<li><p>If the assembly does not contain a mesh:
 The current assembly does not contain a mesh for a mesh part.</p></li>
-<li><p>If the specified part instances do not contain a mesh: 
+<li><p>If the specified part instances do not contain a mesh:
 The selected part instances do not have a mesh for a mesh part.</p></li>
 </ul>
 </dd>
@@ -797,7 +797,7 @@ The selected part instances do not have a mesh for a mesh part.</p></li>
 
 <dl class="py method">
 <dt class="sig sig-object py">
-<span class="sig-name descname"><span class="pre">PartFromMesh</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">copySets</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">BooleanType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/haiiliin/pyabaqus/blob/V2022/src/abaqus/Part/PartBase.py#L584-L611"><span class="viewcode-link"><span class="pre">[source]</span></span></a></dt>
+<span class="sig-name descname"><span class="pre">PartFromMesh</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">copySets</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">BooleanType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/haiiliin/pyabaqus/blob/V2022/src/abaqus/Part/PartBase.py#L625-L652"><span class="viewcode-link"><span class="pre">[source]</span></span></a></dt>
 <dd><p>This method creates a Part object containing the mesh found in the part and places the
 new Part object in the parts repository.</p>
 <dl class="field-list">
@@ -805,7 +805,7 @@ new Part object in the parts repository.</p>
 <dd class="field-odd"><dl class="simple">
 <dt><strong>name</strong></dt><dd><p>A String specifying the repository key.</p>
 </dd>
-<dt><strong>copySets</strong></dt><dd><p>A Boolean specifying whether to copy sets, surfaces, and attributes to the new part. The 
+<dt><strong>copySets</strong></dt><dd><p>A Boolean specifying whether to copy sets, surfaces, and attributes to the new part. The
 default is False.</p>
 </dd>
 </dl>
@@ -830,7 +830,7 @@ default is False.</p>
 
 <dl class="py method">
 <dt class="sig sig-object py">
-<span class="sig-name descname"><span class="pre">PartFromMeshMirror</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">part</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="../../../reference/mdb/model/part.html#abaqus.Part.PartBase.PartBase" title="abaqus.Part.PartBase.PartBase"><span class="pre">PartBase</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">point1</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">tuple</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">point2</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">tuple</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/haiiliin/pyabaqus/blob/V2022/src/abaqus/Part/PartBase.py#L613-L655"><span class="viewcode-link"><span class="pre">[source]</span></span></a></dt>
+<span class="sig-name descname"><span class="pre">PartFromMeshMirror</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">part</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="../../../reference/mdb/model/part.html#abaqus.Part.PartBase.PartBase" title="abaqus.Part.PartBase.PartBase"><span class="pre">PartBase</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">point1</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">tuple</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">point2</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">tuple</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/haiiliin/pyabaqus/blob/V2022/src/abaqus/Part/PartBase.py#L654-L698"><span class="viewcode-link"><span class="pre">[source]</span></span></a></dt>
 <dd><p>This method creates a Part object by mirroring an existing orphan mesh Part object about
 a specified plane and places it in the parts repository. The result is a union of the
 original and the mirrored copy. Contrast the PartFromMeshMirror method with the
@@ -843,10 +843,10 @@ only the second half of the part but does not unite the two halves.</p>
 </dd>
 <dt><strong>part</strong></dt><dd><p>A Part object specifying an existing orphan mesh part.</p>
 </dd>
-<dt><strong>point1</strong></dt><dd><p>A sequence of three Floats specifying a point on the mirror plane. This point is the 
+<dt><strong>point1</strong></dt><dd><p>A sequence of three Floats specifying a point on the mirror plane. This point is the
 local origin in the local system of the plane.</p>
 </dd>
-<dt><strong>point2</strong></dt><dd><p>A sequence of three Floats specifying a point in the direction of the normal to the 
+<dt><strong>point2</strong></dt><dd><p>A sequence of three Floats specifying a point in the direction of the normal to the
 mirror plane. This point must not be coincident with <em>point1</em>.</p>
 </dd>
 </dl>
@@ -859,14 +859,14 @@ mirror plane. This point must not be coincident with <em>point1</em>.</p>
 <div><p>Cannot mirror a geometric part.</p>
 </div></blockquote>
 <ul class="simple">
-<li><p>If the specified part is a rigid body: 
+<li><p>If the specified part is a rigid body:
 Cannot mirror a rigid body.</p></li>
-<li><p>If <em>point1</em> and <em>point2</em> are coincident: 
+<li><p>If <em>point1</em> and <em>point2</em> are coincident:
 Mirror plane director has zero length.</p></li>
 <li><p>If the specified part is two-dimensional and the plane is not parallel to the</p></li>
 </ul>
 <dl class="simple">
-<dt><em>Z</em>-axis: </dt><dd><p>Mirror plane must be parallel to Z axis for 2D parts</p>
+<dt><em>Z</em>-axis:</dt><dd><p>Mirror plane must be parallel to Z axis for 2D parts</p>
 </dd>
 </dl>
 </dd>
@@ -882,7 +882,7 @@ Mirror plane director has zero length.</p></li>
 
 <dl class="py method">
 <dt class="sig sig-object py">
-<span class="sig-name descname"><span class="pre">PartFromNodesAndElements</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dimensionality</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">SymbolicConstantType</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">type</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">SymbolicConstantType</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">nodes</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">tuple</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">elements</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">tuple</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">twist</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">BooleanType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/haiiliin/pyabaqus/blob/V2022/src/abaqus/Part/PartBase.py#L657-L700"><span class="viewcode-link"><span class="pre">[source]</span></span></a></dt>
+<span class="sig-name descname"><span class="pre">PartFromNodesAndElements</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dimensionality</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">SymbolicConstantType</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">type</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">SymbolicConstantType</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">nodes</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">tuple</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">elements</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">tuple</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">twist</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">BooleanType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/haiiliin/pyabaqus/blob/V2022/src/abaqus/Part/PartBase.py#L700-L749"><span class="viewcode-link"><span class="pre">[source]</span></span></a></dt>
 <dd><p>This method creates a Part object from nodes and elements and places it in the parts
 repository.</p>
 <dl class="field-list simple">
@@ -890,23 +890,23 @@ repository.</p>
 <dd class="field-odd"><dl class="simple">
 <dt><strong>name</strong></dt><dd><p>A String specifying the repository key.</p>
 </dd>
-<dt><strong>dimensionality</strong></dt><dd><p>A SymbolicConstant specifying the dimensionality of the part. Possible values are 
+<dt><strong>dimensionality</strong></dt><dd><p>A SymbolicConstant specifying the dimensionality of the part. Possible values are
 THREE_D, TWO_D_PLANAR, and AXISYMMETRIC.</p>
 </dd>
-<dt><strong>type</strong></dt><dd><p>A SymbolicConstant specifying the type of the part. Possible values are DEFORMABLE_BODY, 
+<dt><strong>type</strong></dt><dd><p>A SymbolicConstant specifying the type of the part. Possible values are DEFORMABLE_BODY,
 EULERIAN, DISCRETE_RIGID_SURFACE, and ANALYTIC_RIGID_SURFACE.</p>
 </dd>
-<dt><strong>nodes</strong></dt><dd><p>A sequence of (<em>nodeLabels</em>, <em>nodeCoords</em>) specifying the nodes of the mesh. 
-<em>nodeLabels</em> is a sequence of Ints specifying the node labels, and <em>nodeCoords</em> is a 
+<dt><strong>nodes</strong></dt><dd><p>A sequence of (<em>nodeLabels</em>, <em>nodeCoords</em>) specifying the nodes of the mesh.
+<em>nodeLabels</em> is a sequence of Ints specifying the node labels, and <em>nodeCoords</em> is a
 sequence of sequences of three Floats specifying the nodal coordinates.</p>
 </dd>
-<dt><strong>elements</strong></dt><dd><p>A sequence of sequences of(<em>meshType</em>, <em>elementLabels</em>, <em>elementConns</em>) specifying the 
-elements of the mesh. <em>meshType</em> is a String specifying the element type. 
-<em>elementlabels</em> is a sequence of Ints specifying the element labels. <em>elementConns</em> is a 
+<dt><strong>elements</strong></dt><dd><p>A sequence of sequences of(<em>meshType</em>, <em>elementLabels</em>, <em>elementConns</em>) specifying the
+elements of the mesh. <em>meshType</em> is a String specifying the element type.
+<em>elementlabels</em> is a sequence of Ints specifying the element labels. <em>elementConns</em> is a
 sequence of sequences of node labels specifying the element connectivity.</p>
 </dd>
-<dt><strong>twist</strong></dt><dd><p>A boolean specifying whether the part is defined with twist. This option has meaning 
-only when <a href="#id13"><span class="problematic" id="id14">*</span></a>dimensionality*=AXISYMMETRIC. Possible values are ON and OFF. The default 
+<dt><strong>twist</strong></dt><dd><p>A boolean specifying whether the part is defined with twist. This option has meaning
+only when <a href="#id13"><span class="problematic" id="id14">*</span></a>dimensionality*=AXISYMMETRIC. Possible values are ON and OFF. The default
 value is OFF.</p>
 </dd>
 </dl>
@@ -927,7 +927,7 @@ value is OFF.</p>
 
 <dl class="py method">
 <dt class="sig sig-object py">
-<span class="sig-name descname"><span class="pre">PartFromOdb</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">odb</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fileName</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">instance</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">elementSet</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">shape</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">SymbolicConstantType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'UNDEFORMED'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">step</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">frame</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">twist</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">BooleanType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/haiiliin/pyabaqus/blob/V2022/src/abaqus/Part/PartBase.py#L702-L769"><span class="viewcode-link"><span class="pre">[source]</span></span></a></dt>
+<span class="sig-name descname"><span class="pre">PartFromOdb</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">odb</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fileName</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">instance</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">elementSet</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">shape</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">SymbolicConstantType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'UNDEFORMED'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">step</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">frame</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">twist</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">BooleanType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/haiiliin/pyabaqus/blob/V2022/src/abaqus/Part/PartBase.py#L751-L827"><span class="viewcode-link"><span class="pre">[source]</span></span></a></dt>
 <dd><p>This method creates an orphan mesh Part object by reading an output database. The new
 part is placed in the parts repository.</p>
 <dl class="field-list">
@@ -937,30 +937,30 @@ part is placed in the parts repository.</p>
 </dd>
 <dt><strong>odb</strong></dt><dd><p>An output database object.</p>
 </dd>
-<dt><strong>fileName</strong></dt><dd><p>A String specifying the name of the output database file from which to create the part. 
+<dt><strong>fileName</strong></dt><dd><p>A String specifying the name of the output database file from which to create the part.
 The default value is an empty string.</p>
 </dd>
-<dt><strong>instance</strong></dt><dd><p>A String specifying the part instance in the output database from which to create the 
-part. If no instance name is specified, Abaqus creates an orphan mesh part from the 
+<dt><strong>instance</strong></dt><dd><p>A String specifying the part instance in the output database from which to create the
+part. If no instance name is specified, Abaqus creates an orphan mesh part from the
 first part instance in the output database.</p>
 </dd>
-<dt><strong>elementSet</strong></dt><dd><p>A String specifying an element set defined on the output database. Only elements from 
+<dt><strong>elementSet</strong></dt><dd><p>A String specifying an element set defined on the output database. Only elements from
 this set will be imported. The default is to import all element sets.</p>
 </dd>
-<dt><strong>shape</strong></dt><dd><p>A SymbolicConstant specifying the configuration state. Possible values are UNDEFORMED 
+<dt><strong>shape</strong></dt><dd><p>A SymbolicConstant specifying the configuration state. Possible values are UNDEFORMED
 and DEFORMED. The default value is UNDEFORMED.</p>
 </dd>
-<dt><strong>step</strong></dt><dd><p>An Int specifying the step number for reading deformed coordinates. 0≤step≤N−10≤step≤N-1 
-where NN is the number of available steps. The default value is the last available step. 
+<dt><strong>step</strong></dt><dd><p>An Int specifying the step number for reading deformed coordinates. 0≤step≤N−10≤step≤N-1
+where NN is the number of available steps. The default value is the last available step.
 You should specify the <em>step</em> argument only when <a href="#id15"><span class="problematic" id="id16">*</span></a>shape*=DEFORMED.</p>
 </dd>
-<dt><strong>frame</strong></dt><dd><p>An Int specifying the frame number for reading deformed coordinates. 
-0≤frame≤N−10≤frame≤N-1 where NN is the number of available frames. The default value is 
-the last available frame. You should specify the <em>frame</em> argument only when 
+<dt><strong>frame</strong></dt><dd><p>An Int specifying the frame number for reading deformed coordinates.
+0≤frame≤N−10≤frame≤N-1 where NN is the number of available frames. The default value is
+the last available frame. You should specify the <em>frame</em> argument only when
 <a href="#id17"><span class="problematic" id="id18">*</span></a>shape*=DEFORMED.</p>
 </dd>
-<dt><strong>twist</strong></dt><dd><p>A Boolean specifying whether to include a twist DEGREE OF FREEDOM in the part (only 
-available when <a href="#id19"><span class="problematic" id="id20">*</span></a>dimensionality*=AXISYMMETRIC and <a href="#id21"><span class="problematic" id="id22">*</span></a>type*=DEFORMABLE_BODY). The default 
+<dt><strong>twist</strong></dt><dd><p>A Boolean specifying whether to include a twist DEGREE OF FREEDOM in the part (only
+available when <a href="#id19"><span class="problematic" id="id20">*</span></a>dimensionality*=AXISYMMETRIC and <a href="#id21"><span class="problematic" id="id22">*</span></a>type*=DEFORMABLE_BODY). The default
 value is OFF.</p>
 </dd>
 </dl>
@@ -972,21 +972,21 @@ value is OFF.</p>
 <blockquote>
 <div><p>File contains both axisymmetric and nonaxisymmetric elements.File contains both 2D and</p>
 </div></blockquote>
-<p>3D elements.File contains both rigid and deformable elements. 
+<p>3D elements.File contains both rigid and deformable elements.
 - If more than one part is found on the output database:</p>
 <blockquote>
 <div><p>PartError: importing of more than one part is not currently supported</p>
 </div></blockquote>
 <ul class="simple">
-<li><p>If the output database does not contain any valid results for the specified step: 
+<li><p>If the output database does not contain any valid results for the specified step:
 Error. File does not contain any valid frames.</p></li>
-<li><p>If the specified step and frame do not contain any displacements: 
+<li><p>If the specified step and frame do not contain any displacements:
 Error. Specified frame does not contain nodal displacements.</p></li>
-<li><p>If the specified element set is not found on the output database: 
+<li><p>If the specified element set is not found on the output database:
 Error. Specified element set is not defined in the ODB.</p></li>
-<li><p>If the step number is invalid: 
+<li><p>If the step number is invalid:
 OdiError: Invalid step index: i. Available step indices: 0 - j.</p></li>
-<li><p>If the frame number is invalid: 
+<li><p>If the frame number is invalid:
 OdiError: Invalid frame index: i. Available frame indices: 0 - j.</p></li>
 </ul>
 </dd>
@@ -1002,7 +1002,7 @@ OdiError: Invalid frame index: i. Available frame indices: 0 - j.</p></li>
 
 <dl class="py method">
 <dt class="sig sig-object py">
-<span class="sig-name descname"><span class="pre">PartFromSection3DMeshByPlane</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">part</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="../../../reference/mdb/model/part.html#abaqus.Part.PartBase.PartBase" title="abaqus.Part.PartBase.PartBase"><span class="pre">PartBase</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">point1</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">point2</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">point3</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">tuple</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/haiiliin/pyabaqus/blob/V2022/src/abaqus/Part/PartBase.py#L771-L817"><span class="viewcode-link"><span class="pre">[source]</span></span></a></dt>
+<span class="sig-name descname"><span class="pre">PartFromSection3DMeshByPlane</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">part</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="../../../reference/mdb/model/part.html#abaqus.Part.PartBase.PartBase" title="abaqus.Part.PartBase.PartBase"><span class="pre">PartBase</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">point1</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">point2</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">point3</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">tuple</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/haiiliin/pyabaqus/blob/V2022/src/abaqus/Part/PartBase.py#L829-L877"><span class="viewcode-link"><span class="pre">[source]</span></span></a></dt>
 <dd><p>This method creates a Part object by cutting an existing three-dimensional orphan mesh
 Part object by a plane and places it in the parts repository. This method is valid only
 for orphan mesh parts composed of 8-node brick elements.</p>
@@ -1013,13 +1013,13 @@ for orphan mesh parts composed of 8-node brick elements.</p>
 </dd>
 <dt><strong>part</strong></dt><dd><p>A Part object specifying an existing three-dimensional orphan mesh part.</p>
 </dd>
-<dt><strong>point1</strong></dt><dd><p>A Sequence of three Floats specifying a point on the cutting plane. This point is the 
+<dt><strong>point1</strong></dt><dd><p>A Sequence of three Floats specifying a point on the cutting plane. This point is the
 local origin in the local system of the plane.</p>
 </dd>
-<dt><strong>point2</strong></dt><dd><p>A Sequence of three Floats specifying a point in the direction of the normal to the 
+<dt><strong>point2</strong></dt><dd><p>A Sequence of three Floats specifying a point in the direction of the normal to the
 cutting plane. This point must not be coincident with <em>point1</em>.</p>
 </dd>
-<dt><strong>point3</strong></dt><dd><p>A sequence of three Floats specifying the direction of the local 1-axis in the local 
+<dt><strong>point3</strong></dt><dd><p>A sequence of three Floats specifying the direction of the local 1-axis in the local
 system of the plane. This point must not project onto <em>point1</em>.</p>
 </dd>
 </dl>
@@ -1032,15 +1032,15 @@ system of the plane. This point must not project onto <em>point1</em>.</p>
 <div><p>Cannot reduce dimension of a geometric part.</p>
 </div></blockquote>
 <ul class="simple">
-<li><p>If the specified part is not three-dimensional: 
+<li><p>If the specified part is not three-dimensional:
 Cannot reduce dimension of a 2D part.</p></li>
-<li><p>If the specified part is a rigid body: 
+<li><p>If the specified part is a rigid body:
 Cannot change dimension of a rigid body.</p></li>
-<li><p>If <em>point1</em> and <em>point2</em> are coincident: 
+<li><p>If <em>point1</em> and <em>point2</em> are coincident:
 Cutting plane director has zero length.</p></li>
-<li><p>If <em>point3</em> projects onto <em>point1</em>: 
+<li><p>If <em>point3</em> projects onto <em>point1</em>:
 Local axis point projects to origin.</p></li>
-<li><p>If no elements are cut by the specified plane: 
+<li><p>If no elements are cut by the specified plane:
 Cannot reduce part dimension.</p></li>
 </ul>
 </dd>
@@ -1056,7 +1056,7 @@ Cannot reduce part dimension.</p></li>
 
 <dl class="py method">
 <dt class="sig sig-object py">
-<span class="sig-name descname"><span class="pre">PartFromSubstructure</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">substructureFile</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">odbFile</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/haiiliin/pyabaqus/blob/V2022/src/abaqus/Part/PartBase.py#L819-L853"><span class="viewcode-link"><span class="pre">[source]</span></span></a></dt>
+<span class="sig-name descname"><span class="pre">PartFromSubstructure</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">substructureFile</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">odbFile</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/haiiliin/pyabaqus/blob/V2022/src/abaqus/Part/PartBase.py#L879-L913"><span class="viewcode-link"><span class="pre">[source]</span></span></a></dt>
 <dd><p>This method creates a substructure Part object by reading a substructure sim file and
 places it in the parts repository.</p>
 <dl class="field-list">
@@ -1078,12 +1078,12 @@ places it in the parts repository.</p>
 <div><p>File specified does not contain a substructure.</p>
 </div></blockquote>
 <ul class="simple">
-<li><p>If the specified part already exists: 
+<li><p>If the specified part already exists:
 A part with the same name already exists.</p></li>
-<li><p>If the substructure cannot be imported: 
+<li><p>If the substructure cannot be imported:
 The output database is missing nodes and elements.Nested substructures are not</p></li>
 </ul>
-<p>supported.The substructure sim file was generated using a version that is different from 
+<p>supported.The substructure sim file was generated using a version that is different from
 the current version.</p>
 </dd>
 </dl>
@@ -1098,7 +1098,7 @@ the current version.</p>
 
 <dl class="py method">
 <dt class="sig sig-object py">
-<span class="sig-name descname"><span class="pre">PartFromSubstructure</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">substructureFile</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">odbFile</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/haiiliin/pyabaqus/blob/V2022/src/abaqus/Part/PartBase.py#L819-L853"><span class="viewcode-link"><span class="pre">[source]</span></span></a></dt>
+<span class="sig-name descname"><span class="pre">PartFromSubstructure</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">substructureFile</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">odbFile</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/haiiliin/pyabaqus/blob/V2022/src/abaqus/Part/PartBase.py#L879-L913"><span class="viewcode-link"><span class="pre">[source]</span></span></a></dt>
 <dd><p>This method creates a substructure Part object by reading a substructure sim file and
 places it in the parts repository.</p>
 <dl class="field-list">
@@ -1120,12 +1120,12 @@ places it in the parts repository.</p>
 <div><p>File specified does not contain a substructure.</p>
 </div></blockquote>
 <ul class="simple">
-<li><p>If the specified part already exists: 
+<li><p>If the specified part already exists:
 A part with the same name already exists.</p></li>
-<li><p>If the substructure cannot be imported: 
+<li><p>If the substructure cannot be imported:
 The output database is missing nodes and elements.Nested substructures are not</p></li>
 </ul>
-<p>supported.The substructure sim file was generated using a version that is different from 
+<p>supported.The substructure sim file was generated using a version that is different from
 the current version.</p>
 </dd>
 </dl>

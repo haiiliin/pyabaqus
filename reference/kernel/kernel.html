@@ -312,7 +312,7 @@
 <h3>CommandRegister<a class="headerlink" href="#commandregister" title="Permalink to this headline">#</a></h3>
 <dl class="py class">
 <dt class="sig sig-object py" id="abaqus.CustomKernel.CommandRegister.CommandRegister">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">CommandRegister</span></span><a class="reference external" href="https://github.com/haiiliin/pyabaqus/blob/V2022/src/abaqus/CustomKernel/CommandRegister.py#L3-L33"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#abaqus.CustomKernel.CommandRegister.CommandRegister" title="Permalink to this definition">#</a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">CommandRegister</span></span><a class="reference external" href="https://github.com/haiiliin/pyabaqus/blob/V2022/src/abaqus/CustomKernel/CommandRegister.py#L1-L31"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#abaqus.CustomKernel.CommandRegister.CommandRegister" title="Permalink to this definition">#</a></dt>
 <dd><p>This class allows you to derive a general class that can be queried from the GUI and is
 capable of notifying the GUI when the contents of the class change.</p>
 <p class="rubric">Notes</p>
@@ -329,8 +329,8 @@ capable of notifying the GUI when the contents of the class change.</p>
 <dt class="sig sig-object py" id="abaqus.CustomKernel.RegisteredDictionary.RegisteredDictionary">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">RegisteredDictionary</span></span><a class="reference external" href="https://github.com/haiiliin/pyabaqus/blob/V2022/src/abaqus/CustomKernel/RegisteredDictionary.py#L4-L54"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#abaqus.CustomKernel.RegisteredDictionary.RegisteredDictionary" title="Permalink to this definition">#</a></dt>
 <dd><p>This class allows you to create a dictionary that can be queried from the GUI and is
-capable of notifying the GUI when the contents of the dictionary change. The keys to a 
-RegisteredDictionary must be either strings or integers. 
+capable of notifying the GUI when the contents of the dictionary change. The keys to a
+RegisteredDictionary must be either strings or integers.
 The RegisteredDictionary object is derived from the CommandRegister object.</p>
 <p class="rubric">Notes</p>
 <p>This object can be accessed by:</p>
@@ -384,9 +384,9 @@ addition, the RegisteredDictionary object supports the changeKey method.</p>
 <h3>RegisteredList<a class="headerlink" href="#registeredlist" title="Permalink to this headline">#</a></h3>
 <dl class="py class">
 <dt class="sig sig-object py" id="abaqus.CustomKernel.RegisteredList.RegisteredList">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">RegisteredList</span></span><a class="reference external" href="https://github.com/haiiliin/pyabaqus/blob/V2022/src/abaqus/CustomKernel/RegisteredList.py#L4-L40"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#abaqus.CustomKernel.RegisteredList.RegisteredList" title="Permalink to this definition">#</a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">RegisteredList</span></span><a class="reference external" href="https://github.com/haiiliin/pyabaqus/blob/V2022/src/abaqus/CustomKernel/RegisteredList.py#L4-L39"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#abaqus.CustomKernel.RegisteredList.RegisteredList" title="Permalink to this definition">#</a></dt>
 <dd><p>This class allows you to create a list that can be queried from the GUI and is capable
-of notifying the GUI when the contents of the list change. 
+of notifying the GUI when the contents of the list change.
 The RegisteredList object is derived from the CommandRegister object.</p>
 <p class="rubric">Notes</p>
 <p>This object can be accessed by:</p>
@@ -409,7 +409,7 @@ The RegisteredList object is derived from the CommandRegister object.</p>
 </div>
 <dl class="py method">
 <dt class="sig sig-object py" id="abaqus.CustomKernel.RegisteredList.RegisteredList.Methods">
-<span class="sig-name descname"><span class="pre">Methods</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference external" href="https://github.com/haiiliin/pyabaqus/blob/V2022/src/abaqus/CustomKernel/RegisteredList.py#L37-L40"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#abaqus.CustomKernel.RegisteredList.RegisteredList.Methods" title="Permalink to this definition">#</a></dt>
+<span class="sig-name descname"><span class="pre">Methods</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference external" href="https://github.com/haiiliin/pyabaqus/blob/V2022/src/abaqus/CustomKernel/RegisteredList.py#L37-L39"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#abaqus.CustomKernel.RegisteredList.RegisteredList.Methods" title="Permalink to this definition">#</a></dt>
 <dd><p>The RegisteredList object supports the same methods as a standard Python list object.</p>
 </dd></dl>
 
@@ -420,9 +420,9 @@ The RegisteredList object is derived from the CommandRegister object.</p>
 <h3>RegisteredTuple<a class="headerlink" href="#registeredtuple" title="Permalink to this headline">#</a></h3>
 <dl class="py class">
 <dt class="sig sig-object py" id="abaqus.CustomKernel.RegisteredTuple.RegisteredTuple">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">RegisteredTuple</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">tuple</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">tuple</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/haiiliin/pyabaqus/blob/V2022/src/abaqus/CustomKernel/RegisteredTuple.py#L4-L45"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#abaqus.CustomKernel.RegisteredTuple.RegisteredTuple" title="Permalink to this definition">#</a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">RegisteredTuple</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">tuple</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">tuple</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/haiiliin/pyabaqus/blob/V2022/src/abaqus/CustomKernel/RegisteredTuple.py#L4-L44"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#abaqus.CustomKernel.RegisteredTuple.RegisteredTuple" title="Permalink to this definition">#</a></dt>
 <dd><p>This class allows you to create a tuple that can be queried from the GUI and is capable
-of notifying the GUI when the contents of any of the tuple’s members change. 
+of notifying the GUI when the contents of any of the tuple’s members change.
 The RegisteredTuple object is derived from the CommandRegister object.</p>
 <p class="rubric">Notes</p>
 <p>This object can be accessed by:</p>
@@ -445,7 +445,7 @@ The RegisteredTuple object is derived from the CommandRegister object.</p>
 </div>
 <dl class="py method">
 <dt class="sig sig-object py" id="abaqus.CustomKernel.RegisteredTuple.RegisteredTuple.Methods">
-<span class="sig-name descname"><span class="pre">Methods</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference external" href="https://github.com/haiiliin/pyabaqus/blob/V2022/src/abaqus/CustomKernel/RegisteredTuple.py#L42-L45"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#abaqus.CustomKernel.RegisteredTuple.RegisteredTuple.Methods" title="Permalink to this definition">#</a></dt>
+<span class="sig-name descname"><span class="pre">Methods</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference external" href="https://github.com/haiiliin/pyabaqus/blob/V2022/src/abaqus/CustomKernel/RegisteredTuple.py#L42-L44"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#abaqus.CustomKernel.RegisteredTuple.RegisteredTuple.Methods" title="Permalink to this definition">#</a></dt>
 <dd><p>The RegisteredTuple object supports the same methods as a standard Python list object.</p>
 </dd></dl>
 
@@ -458,8 +458,8 @@ The RegisteredTuple object is derived from the CommandRegister object.</p>
 <dt class="sig sig-object py" id="abaqus.CustomKernel.RepositorySupport.RepositorySupport">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">RepositorySupport</span></span><a class="reference external" href="https://github.com/haiiliin/pyabaqus/blob/V2022/src/abaqus/CustomKernel/RepositorySupport.py#L4-L56"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#abaqus.CustomKernel.RepositorySupport.RepositorySupport" title="Permalink to this definition">#</a></dt>
 <dd><p>The RepositorySupport is a base class from which you can derive your own classes that
-are designed to contain custom repositories. Instances of this class can be queried from 
-the GUI and are capable of notifying the GUI when the contents of the instance change. 
+are designed to contain custom repositories. Instances of this class can be queried from
+the GUI and are capable of notifying the GUI when the contents of the instance change.
 The RepositorySupport object is derived from the CommandRegister object.</p>
 <p class="rubric">Notes</p>
 <p>This object can be accessed by:</p>
@@ -496,7 +496,7 @@ modified by the changeKey method.</p>
 <dd class="field-odd"><dl class="simple">
 <dt><strong>name</strong></dt><dd><p>A String specifying the name of the repository.</p>
 </dd>
-<dt><strong>constructors</strong></dt><dd><p>A constructor or sequence of constructors specifying which classes will store their 
+<dt><strong>constructors</strong></dt><dd><p>A constructor or sequence of constructors specifying which classes will store their
 instances in the repository.</p>
 </dd>
 </dl>
