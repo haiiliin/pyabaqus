@@ -1,4 +1,4 @@
-# pyabaqus 2021
+# pyabaqus 2016
 
 [![Maintainer](https://img.shields.io/badge/maintainer-haiiliin-blue)](https://github.com/haiiliin)
 [![Documentation Status](https://readthedocs.org/projects/pyabaqus/badge/?version=latest)](https://pyabaqus.haiiliin.com/en/latest/?badge=latest)
