@@ -5,8 +5,8 @@ from ..Region.Region import Region
 
 class HeatCapacitance(Inertia):
     """The HeatCapacitance object defines point heat capacitance on a part or an assembly
-    region. 
-    The HeatCapacitance object is derived from the Inertia object. 
+    region.
+    The HeatCapacitance object is derived from the Inertia object.
 
     Attributes
     ----------
@@ -38,11 +38,17 @@ class HeatCapacitance(Inertia):
 
     """
 
-    # A Boolean specifying whether the inertia is suppressed or not. The default value is OFF. 
+    # A Boolean specifying whether the inertia is suppressed or not. The default value is OFF.
     suppressed: Boolean = OFF
 
-    def __init__(self, name: str, region: Region, table: tuple, temperatureDependency: Boolean = OFF,
-                 dependencies: int = 0):
+    def __init__(
+        self,
+        name: str,
+        region: Region,
+        table: tuple,
+        temperatureDependency: Boolean = OFF,
+        dependencies: int = 0,
+    ):
         """This method creates a HeatCapacitance object.
 
         Notes
@@ -53,20 +59,20 @@ class HeatCapacitance(Inertia):
 
             mdb.models[name].parts[name].engineeringFeatures.HeatCapacitance
             mdb.models[name].rootAssembly.engineeringFeatures.HeatCapacitance
-        
+
         Parameters
         ----------
         name
-            A String specifying the repository key. 
+            A String specifying the repository key.
         region
-            A Region object specifying the region to which the heat capacitance is applied. 
+            A Region object specifying the region to which the heat capacitance is applied.
         table
-            A sequence of sequences of Floats specifying heat capacitance properties. The items in 
-            the table data are described below. 
+            A sequence of sequences of Floats specifying heat capacitance properties. The items in
+            the table data are described below.
         temperatureDependency
-            A Boolean specifying whether the data depend on temperature. The default value is OFF. 
+            A Boolean specifying whether the data depend on temperature. The default value is OFF.
         dependencies
-            An Int specifying the number of field variable dependencies. The default value is 0. 
+            An Int specifying the number of field variable dependencies. The default value is 0.
 
         Returns
         -------
@@ -77,12 +83,12 @@ class HeatCapacitance(Inertia):
 
     def setValues(self, temperatureDependency: Boolean = OFF, dependencies: int = 0):
         """This method modifies the HeatCapacitance object.
-        
+
         Parameters
         ----------
         temperatureDependency
-            A Boolean specifying whether the data depend on temperature. The default value is OFF. 
+            A Boolean specifying whether the data depend on temperature. The default value is OFF.
         dependencies
-            An Int specifying the number of field variable dependencies. The default value is 0. 
+            An Int specifying the number of field variable dependencies. The default value is 0.
         """
         pass

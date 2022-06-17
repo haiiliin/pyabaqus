@@ -6,7 +6,7 @@ from ..Region.RegionPart import RegionPart
 
 class Part(MeshEditPart, MeshPart, PropertyPart, RegionPart):
     """The Part object defines the physical attributes of a structure. Parts are instanced into
-    the assembly and positioned before an analysis. 
+    the assembly and positioned before an analysis.
 
     Attributes
     ----------
@@ -101,4 +101,5 @@ class Part(MeshEditPart, MeshPart, PropertyPart, RegionPart):
         mdb.models[name].parts[name]
 
     """
+
     pass

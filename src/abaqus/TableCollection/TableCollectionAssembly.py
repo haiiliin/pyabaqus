@@ -6,8 +6,8 @@ from ..Region.Region import Region
 
 class TableCollectionAssembly(AssemblyBase):
     """An Assembly object is a container for instances of parts. The Assembly object has no
-    constructor command. Abaqus creates the *rootAssembly* member when a Model object is 
-    created. 
+    constructor command. Abaqus creates the *rootAssembly* member when a Model object is
+    created.
 
     Notes
     -----
@@ -20,21 +20,28 @@ class TableCollectionAssembly(AssemblyBase):
 
     """
 
-    elementProgressiveActivations: dict[str, ElementProgressiveActivation] = dict[str, ElementProgressiveActivation]()
+    elementProgressiveActivations: dict[str, ElementProgressiveActivation] = dict[
+        str, ElementProgressiveActivation
+    ]()
 
-    def ElementProgressiveActivation(self, name: str, elset: Region = Region(), deformation: Boolean = OFF,
-                                     freeSurfaceType: SymbolicConstant = NONE) -> ElementProgressiveActivation:
+    def ElementProgressiveActivation(
+        self,
+        name: str,
+        elset: Region = Region(),
+        deformation: Boolean = OFF,
+        freeSurfaceType: SymbolicConstant = NONE,
+    ) -> ElementProgressiveActivation:
         """This method creates an ElementProgressiveActivation object and places it in the
         elementProgressiveActivation repository.
 
         Notes
         -----
             This function can be accessed by:
-            
+
             .. code-block:: python
-            
+
                 mdb.models[name].rootAssembly.ElementProgressiveActivation
-        
+
         Parameters
         ----------
         name
@@ -61,6 +68,9 @@ class TableCollectionAssembly(AssemblyBase):
         ------
             AbaqusException: If the region does not contain only elements.
         """
-        self.elementProgressiveActivations[name] = elementProgressiveActivation = ElementProgressiveActivation(
-            name, elset, deformation, freeSurfaceType)
+        self.elementProgressiveActivations[
+            name
+        ] = elementProgressiveActivation = ElementProgressiveActivation(
+            name, elset, deformation, freeSurfaceType
+        )
         return elementProgressiveActivation

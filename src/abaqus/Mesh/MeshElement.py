@@ -4,9 +4,9 @@ from .MeshNode import MeshNode
 
 class MeshElement:
     """The MeshElement object refers to an element of a native mesh or an orphan mesh. A
-    MeshElement object can be accessed via a part or part instance using an index that 
-    refers to the internal numbering of the element repository. The index does not refer to 
-    the element label. 
+    MeshElement object can be accessed via a part or part instance using an index that
+    refers to the internal numbering of the element repository. The index does not refer to
+    the element label.
 
     Attributes
     ----------
@@ -55,21 +55,23 @@ class MeshElement:
 
     """
 
-    # An Int specifying the element label. 
+    # An Int specifying the element label.
     label: int = None
 
-    # A SymbolicConstant specifying the Abaqus element code. 
+    # A SymbolicConstant specifying the Abaqus element code.
     type: SymbolicConstant = None
 
-    # A String specifying the name of the part instance that owns this element. 
-    instanceName: str = ''
+    # A String specifying the name of the part instance that owns this element.
+    instanceName: str = ""
 
-    # A tuple of Ints specifying the internal node indices that define the nodal connectivity. 
-    # It is important to note the difference with OdbMeshElement object of ODB where the 
-    # connectivity is node labels instead of node indices. 
+    # A tuple of Ints specifying the internal node indices that define the nodal connectivity.
+    # It is important to note the difference with OdbMeshElement object of ODB where the
+    # connectivity is node labels instead of node indices.
     connectivity: int = None
 
-    def Element(self, nodes: tuple[MeshNode], elemShape: SymbolicConstant, label: int = None):
+    def Element(
+        self, nodes: tuple[MeshNode], elemShape: SymbolicConstant, label: int = None
+    ):
         """This method creates an element on an orphan mesh part from a sequence of nodes.
 
         Notes
@@ -79,16 +81,16 @@ class MeshElement:
         .. code-block:: python
 
             mdb.models[name].parts[*name*].Element
-        
+
         Parameters
         ----------
         nodes
-            A sequence of MeshNode objects. 
+            A sequence of MeshNode objects.
         elemShape
-            A SymbolicConstant specifying the shape of the new element. Possible values are LINE2, 
-            LINE3, TRI3, TRI6, QUAD4, QUAD8, TET4, TET10, WEDGE6, WEDGE15, HEX8, and HEX20. 
+            A SymbolicConstant specifying the shape of the new element. Possible values are LINE2,
+            LINE3, TRI3, TRI6, QUAD4, QUAD8, TET4, TET10, WEDGE6, WEDGE15, HEX8, and HEX20.
         label
-            An Int specifying the element label. 
+            An Int specifying the element label.
 
         Returns
         -------
@@ -137,11 +139,11 @@ class MeshElement:
         """This method returns an array of mesh element objects that are obtained by recursively
         finding adjacent elements along a feature edge with a face angle of less than or equal
         to the specified angle.
-        
+
         Parameters
         ----------
         angle
-            A float specifying the value of the face angle in degrees. 
+            A float specifying the value of the face angle in degrees.
 
         Returns
         -------
@@ -151,12 +153,12 @@ class MeshElement:
 
     def setValues(self, label: int = None):
         """This method modifies the MeshElement object.
-        
+
         Parameters
         ----------
         label
-            An Int specifying the element label. This member may only be edited if the element 
-            belongs to an orphan mesh part. The specified label must be non-negative and must not be 
-            in use by any other element of the same part. 
+            An Int specifying the element label. This member may only be edited if the element
+            belongs to an orphan mesh part. The specified label must be non-negative and must not be
+            in use by any other element of the same part.
         """
         pass

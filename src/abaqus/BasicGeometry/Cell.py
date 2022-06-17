@@ -23,9 +23,9 @@ class Cell:
     Notes
     -----
     This object can be accessed by:
-    
+
     .. code-block:: python
-        
+
         import part
         mdb.models[name].parts[name].allInternalSets[name].cells[i]
         mdb.models[name].parts[name].allSets[name].cells[i]
@@ -43,37 +43,37 @@ class Cell:
 
     """
 
-    # An Int specifying the index of the cell in the CellArray. 
+    # An Int specifying the index of the cell in the CellArray.
     index: int = None
 
-    # A Boolean specifying whether the cell belongs to the reference representation of the 
-    # Part or Instance. 
+    # A Boolean specifying whether the cell belongs to the reference representation of the
+    # Part or Instance.
     isReferenceRep: Boolean = OFF
 
-    # A tuple of Floats specifying the *X*-, *Y*-, and *Z*-coordinates of a point located on 
-    # the cell. 
+    # A tuple of Floats specifying the *X*-, *Y*-, and *Z*-coordinates of a point located on
+    # the cell.
     pointOn: float = None
 
-    # A tuple of Floats specifying the name of the feature that created this cell. 
+    # A tuple of Floats specifying the name of the feature that created this cell.
     featureName: float = None
 
-    # A tuple of Floats specifying the name of the part instance for this cell (if 
-    # applicable). 
+    # A tuple of Floats specifying the name of the part instance for this cell (if
+    # applicable).
     instanceName: float = None
 
     def getSize(self, printResults: Boolean = True):
         """This method returns a Float indicating the volume of the cell.
-        
+
         Parameters
         ----------
         printResults
-            A Boolean that determines whether a verbose output is to be printed. The default is 
-            True. 
+            A Boolean that determines whether a verbose output is to be printed. The default is
+            True.
 
         Returns
         -------
             A Float.
-            
+
         """
         pass
 
@@ -84,7 +84,7 @@ class Cell:
         Returns
         -------
             A tuple of integers.
-            
+
         """
         pass
 
@@ -94,7 +94,7 @@ class Cell:
         Returns
         -------
             A tuple of integers.
-            
+
         """
         pass
 
@@ -104,7 +104,7 @@ class Cell:
         Returns
         -------
             A tuple of integers.
-            
+
         """
         pass
 
@@ -114,7 +114,7 @@ class Cell:
         Returns
         -------
             A CellArray object which is a sequence of Cell objects.
-            
+
         """
         pass
 
@@ -124,7 +124,7 @@ class Cell:
         Returns
         -------
             A MeshNodeArray object which is a sequence of MeshNode objects.
-            
+
         """
         pass
 
@@ -134,7 +134,7 @@ class Cell:
         Returns
         -------
             A MeshElementArray object which is a sequence of MeshElement objects.
-            
+
         """
         pass
 
@@ -145,6 +145,6 @@ class Cell:
         Returns
         -------
             An array of String.
-            
+
         """
         pass

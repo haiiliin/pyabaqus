@@ -3,8 +3,8 @@ from .ConnectorBehaviorOption import ConnectorBehaviorOption
 
 class ConnectorStop(ConnectorBehaviorOption):
     """The ConnectorStop object defines connector stops for one or more components of a
-    connector's relative motion. 
-    The ConnectorStop object is derived from the ConnectorBehaviorOption object. 
+    connector's relative motion.
+    The ConnectorStop object is derived from the ConnectorBehaviorOption object.
 
     Notes
     -----
@@ -23,7 +23,9 @@ class ConnectorStop(ConnectorBehaviorOption):
 
     """
 
-    def __init__(self, minMotion: float = None, maxMotion: float = None, components: tuple = ()):
+    def __init__(
+        self, minMotion: float = None, maxMotion: float = None, components: tuple = ()
+    ):
         """This method creates a connector stop behavior option for a ConnectorSection object.
 
         Notes
@@ -36,27 +38,27 @@ class ConnectorStop(ConnectorBehaviorOption):
             connectorBehavior.ConnectorStop
             import odbConnectorBehavior
             odbConnectorBehavior.ConnectorStop
-        
+
         Parameters
         ----------
         minMotion
-            None or a Float specifying the lower bound for the connector's relative position for all 
-            specified components, or no lower bound. The default value is None. 
+            None or a Float specifying the lower bound for the connector's relative position for all
+            specified components, or no lower bound. The default value is None.
         maxMotion
-            None or a Float specifying the upper bound for the connector's relative position for all 
-            specified components, or no upper bound. The default value is None. 
+            None or a Float specifying the upper bound for the connector's relative position for all
+            specified components, or no upper bound. The default value is None.
         components
-            A sequence of Ints specifying the components of relative motion for which the behavior 
-            is defined. Possible values are 1 ≤≤ *components* ≤≤ 6. Only available components can be 
-            specified. The default value is an empty sequence. 
+            A sequence of Ints specifying the components of relative motion for which the behavior
+            is defined. Possible values are 1 ≤≤ *components* ≤≤ 6. Only available components can be
+            specified. The default value is an empty sequence.
 
         Returns
         -------
-            A ConnectorStop object. 
+            A ConnectorStop object.
 
         Raises
         ------
-            ValueError and TextError. 
+            ValueError and TextError.
         """
         super().__init__()
         pass
@@ -66,6 +68,6 @@ class ConnectorStop(ConnectorBehaviorOption):
 
         Raises
         ------
-            ValueError. 
+            ValueError.
         """
         pass

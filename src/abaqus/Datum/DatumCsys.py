@@ -6,9 +6,9 @@ from .DatumPoint import DatumPoint
 
 class DatumCsys(Datum):
     """The DatumCsys object has no direct constructor; it is created when a Feature object is
-    created. For example, the DatumCsysByOffset method creates a Feature object that creates 
-    a DatumCsys object. 
-    The DatumCsys object is derived from the Datum object. 
+    created. For example, the DatumCsysByOffset method creates a Feature object that creates
+    a DatumCsys object.
+    The DatumCsys object is derived from the Datum object.
 
     Attributes
     ----------
@@ -27,9 +27,9 @@ class DatumCsys(Datum):
     Notes
     -----
     This object can be accessed by:
-    
+
     .. code-block:: python
-        
+
         import part
         mdb.models[name].parts[name].datums[i]
         import assembly
@@ -44,18 +44,18 @@ class DatumCsys(Datum):
 
     """
 
-    # A SymbolicConstant specifying the type of the coordinate system. Possible values are 
-    # CARTESIAN, CYLINDRICAL, and SPHERICAL. 
+    # A SymbolicConstant specifying the type of the coordinate system. Possible values are
+    # CARTESIAN, CYLINDRICAL, and SPHERICAL.
     coordSysType: SymbolicConstant = None
 
-    # A DatumPoint object specifying the origin of the coordinate system. 
+    # A DatumPoint object specifying the origin of the coordinate system.
     origin: DatumPoint = DatumPoint()
 
-    # A DatumAxis object specifying the 1-direction of the coordinate system. 
+    # A DatumAxis object specifying the 1-direction of the coordinate system.
     axis1: DatumAxis = DatumAxis()
 
-    # A DatumAxis object specifying the 2-direction of the coordinate system. 
+    # A DatumAxis object specifying the 2-direction of the coordinate system.
     axis2: DatumAxis = DatumAxis()
 
-    # A DatumAxis object specifying the 3-direction of the coordinate system. 
+    # A DatumAxis object specifying the 3-direction of the coordinate system.
     axis3: DatumAxis = DatumAxis()

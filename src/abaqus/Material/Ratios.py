@@ -32,7 +32,9 @@ class Ratios:
 
     """
 
-    def __init__(self, table: tuple, temperatureDependency: Boolean = OFF, dependencies: int = 0):
+    def __init__(
+        self, table: tuple, temperatureDependency: Boolean = OFF, dependencies: int = 0
+    ):
         """This method creates a Ratios object.
 
         Notes
@@ -45,19 +47,19 @@ class Ratios:
             mdb.models[name].materials[name].swelling.Ratios
             session.odbs[name].materials[name].moistureSwelling.Ratios
             session.odbs[name].materials[name].swelling.Ratios
-        
+
         Parameters
         ----------
         table
-            A sequence of sequences of Floats specifying the items described below. 
+            A sequence of sequences of Floats specifying the items described below.
         temperatureDependency
-            A Boolean specifying whether the data depend on temperature. The default value is OFF. 
+            A Boolean specifying whether the data depend on temperature. The default value is OFF.
         dependencies
-            An Int specifying the number of field variable dependencies. The default value is 0. 
+            An Int specifying the number of field variable dependencies. The default value is 0.
 
         Returns
         -------
-            A Ratios object. 
+            A Ratios object.
 
         Raises
         ------

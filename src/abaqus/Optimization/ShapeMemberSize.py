@@ -5,7 +5,7 @@ from ..Region.Region import Region
 
 class ShapeMemberSize(GeometricRestriction):
     """The ShapeMemberSize object defines a shape member size geometric restriction.
-    The ShapeMemberSize object is derived from the GeometricRestriction object. 
+    The ShapeMemberSize object is derived from the GeometricRestriction object.
 
     Notes
     -----
@@ -18,8 +18,14 @@ class ShapeMemberSize(GeometricRestriction):
 
     """
 
-    def __init__(self, name: str, region: Region, maxThickness: float = 0, minThickness: float = 0,
-                 sizeRestriction: SymbolicConstant = MINIMUM):
+    def __init__(
+        self,
+        name: str,
+        region: Region,
+        maxThickness: float = 0,
+        minThickness: float = 0,
+        sizeRestriction: SymbolicConstant = MINIMUM,
+    ):
         """This method creates a ShapeMemberSize object.
 
         Notes
@@ -29,21 +35,21 @@ class ShapeMemberSize(GeometricRestriction):
         .. code-block:: python
 
                       mdb.models[name].optimizationTasks[name].ShapeMemberSize
-        
+
         Parameters
         ----------
         name
-            A String specifying the geometric restriction repository key. 
+            A String specifying the geometric restriction repository key.
         region
-            A Region object specifying the region to which the geometric restriction is applied. 
-            When used with a TopologyTask, there is no default value. When used with a ShapeTask, 
-            the default value is MODEL. 
+            A Region object specifying the region to which the geometric restriction is applied.
+            When used with a TopologyTask, there is no default value. When used with a ShapeTask,
+            the default value is MODEL.
         maxThickness
-            A Float specifying the maximum thickness. The default value is 0.0. 
+            A Float specifying the maximum thickness. The default value is 0.0.
         minThickness
-            A Float specifying the minimum thickness. The default value is 0.0. 
+            A Float specifying the minimum thickness. The default value is 0.0.
         sizeRestriction
-            A SymbolicConstant specifying whether to restrict the minimum or maximum thickness. 
+            A SymbolicConstant specifying whether to restrict the minimum or maximum thickness.
             Possible values are MAXIMUM and MINIMUM. The default value is MINIMUM.
 
         Returns
@@ -53,18 +59,22 @@ class ShapeMemberSize(GeometricRestriction):
         super().__init__()
         pass
 
-    def setValues(self, maxThickness: float = 0, minThickness: float = 0,
-                  sizeRestriction: SymbolicConstant = MINIMUM):
+    def setValues(
+        self,
+        maxThickness: float = 0,
+        minThickness: float = 0,
+        sizeRestriction: SymbolicConstant = MINIMUM,
+    ):
         """This method modifies the ShapeMemberSize object.
-        
+
         Parameters
         ----------
         maxThickness
-            A Float specifying the maximum thickness. The default value is 0.0. 
+            A Float specifying the maximum thickness. The default value is 0.0.
         minThickness
-            A Float specifying the minimum thickness. The default value is 0.0. 
+            A Float specifying the minimum thickness. The default value is 0.0.
         sizeRestriction
-            A SymbolicConstant specifying whether to restrict the minimum or maximum thickness. 
+            A SymbolicConstant specifying whether to restrict the minimum or maximum thickness.
             Possible values are MAXIMUM and MINIMUM. The default value is MINIMUM.
         """
         pass

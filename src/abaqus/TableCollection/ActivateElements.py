@@ -1,7 +1,6 @@
-
 class ActivateElements:
     """The ActivateElements object is used turn on progressive element activation within a step
-    definition. 
+    definition.
 
     Notes
     -----
@@ -18,8 +17,13 @@ class ActivateElements:
 
     """
 
-    def __init__(self, tableCollection: str, activation: str, eigenTimeConst: str = '',
-                 expansionTimeConstant: str = ''):
+    def __init__(
+        self,
+        tableCollection: str,
+        activation: str,
+        eigenTimeConst: str = "",
+        expansionTimeConstant: str = "",
+    ):
         """This method creates an ActivateElements object.
 
         Notes
@@ -29,23 +33,23 @@ class ActivateElements:
         .. code-block:: python
 
             mdb.models[name].ActivateElements
-        
+
         Parameters
         ----------
         tableCollection
-            A String specifying the name of the tableCollection object. 
+            A String specifying the name of the tableCollection object.
         activation
-            A string specifying the name of progressive element activation. 
+            A string specifying the name of progressive element activation.
         eigenTimeConst
-            A Double specifying the time constant used to ramp up the eigenstrains at element 
-            activation. 
+            A Double specifying the time constant used to ramp up the eigenstrains at element
+            activation.
         expansionTimeConstant
-            A Double specifying the time constant used to ramp up the thermal strains at element 
-            activation. 
+            A Double specifying the time constant used to ramp up the thermal strains at element
+            activation.
 
         Returns
         -------
-            An ActivateElements object. 
+            An ActivateElements object.
 
         Raises
         ------

@@ -10,20 +10,25 @@ from .OdbSet import OdbSet
 
 
 class OdbAssembly(OdbAssemblyBase):
-
-    def DatumCsysByThreePoints(self, name: str, coordSysType: SymbolicConstant, origin: tuple, point1: tuple,
-                               point2: tuple):
+    def DatumCsysByThreePoints(
+        self,
+        name: str,
+        coordSysType: SymbolicConstant,
+        origin: tuple,
+        point1: tuple,
+        point2: tuple,
+    ):
         """This method creates an OdbDatumCsys object using three points. A datum coordinate system
         created with this method results in a fixed system.
 
         Notes
         -----
             This function can be accessed by:
-            
+
             .. code-block:: python
-            
+
                 session.odbs[name].rootAssembly.DatumCsysByThreePoints
-        
+
         Parameters
         ----------
         name
@@ -46,8 +51,14 @@ class OdbAssembly(OdbAssemblyBase):
         self.datumCsyses[name] = datumCsys = OdbDatumCsys()
         return datumCsys
 
-    def DatumCsysByThreeNodes(self, name: str, coordSysType: SymbolicConstant, origin: OdbMeshNode, point1: OdbMeshNode,
-                              point2: OdbMeshNode):
+    def DatumCsysByThreeNodes(
+        self,
+        name: str,
+        coordSysType: SymbolicConstant,
+        origin: OdbMeshNode,
+        point1: OdbMeshNode,
+        point2: OdbMeshNode,
+    ):
         """This method creates an OdbDatumCsys object using the coordinates of three OdbMeshNode
         objects. A datum coordinate system created with this method results in a system that
         follows the position of the three nodes. Results, such as those for displacement, are
@@ -58,11 +69,11 @@ class OdbAssembly(OdbAssemblyBase):
         Notes
         -----
             This function can be accessed by:
-            
+
             .. code-block:: python
-            
+
                 session.odbs[name].rootAssembly.DatumCsysByThreeNodes
-        
+
         Parameters
         ----------
         name
@@ -84,9 +95,14 @@ class OdbAssembly(OdbAssemblyBase):
         self.datumCsyses[name] = datumCsys = OdbDatumCsys()
         return datumCsys
 
-    def DatumCsysByThreeCircNodes(self, name: str, coordSysType: SymbolicConstant, node1Arc: OdbMeshNode,
-                                  node2Arc: OdbMeshNode,
-                                  node3Arc: OdbMeshNode):
+    def DatumCsysByThreeCircNodes(
+        self,
+        name: str,
+        coordSysType: SymbolicConstant,
+        node1Arc: OdbMeshNode,
+        node2Arc: OdbMeshNode,
+        node3Arc: OdbMeshNode,
+    ):
         """This method is convenient to use where there are no nodes along the axis of a hollow
         cylinder or at the center of a hollow sphere. The three nodes that you provide as
         arguments determine a circle in space. The center of the circle is the origin of the
@@ -97,11 +113,11 @@ class OdbAssembly(OdbAssemblyBase):
         Notes
         -----
             This function can be accessed by:
-            
+
             .. code-block:: python
-            
+
                 session.odbs[name].rootAssembly.DatumCsysByThreeCircNodes
-        
+
         Parameters
         ----------
         name
@@ -123,7 +139,9 @@ class OdbAssembly(OdbAssemblyBase):
         self.datumCsyses[name] = datumCsys = OdbDatumCsys()
         return datumCsys
 
-    def DatumCsysBy6dofNode(self, name: str, coordSysType: SymbolicConstant, origin: OdbMeshNode):
+    def DatumCsysBy6dofNode(
+        self, name: str, coordSysType: SymbolicConstant, origin: OdbMeshNode
+    ):
         """A datum coordinate system created with this method results in a system that follows the
         position of a node. The node location defines the origin of the datum coordinate system.
         The rotational displacement (UR1, UR2, UR3) of the node defines the orientation of the
@@ -134,11 +152,11 @@ class OdbAssembly(OdbAssemblyBase):
         Notes
         -----
             This function can be accessed by:
-            
+
             .. code-block:: python
-            
+
                 session.odbs[name].rootAssembly.DatumCsysBy6dofNode
-        
+
         Parameters
         ----------
         name
@@ -162,11 +180,11 @@ class OdbAssembly(OdbAssemblyBase):
         Notes
         -----
             This function can be accessed by:
-            
+
             .. code-block:: python
-            
+
                 session.odbs[name].rootAssembly.DatumCsys
-        
+
         Parameters
         ----------
         name
@@ -181,17 +199,19 @@ class OdbAssembly(OdbAssemblyBase):
         self.datumCsyses[name] = datumCsys = OdbDatumCsys()
         return datumCsys
 
-    def Instance(self, name: str, object: OdbPart, localCoordSystem: tuple = ()) -> OdbInstance:
+    def Instance(
+        self, name: str, object: OdbPart, localCoordSystem: tuple = ()
+    ) -> OdbInstance:
         """This method creates an OdbInstance object from an OdbPart object.
 
         Notes
         -----
             This function can be accessed by:
-            
+
             .. code-block:: python
-            
+
                 session.odbs[*name*].rootAssembly.Instance
-        
+
         Parameters
         ----------
         name
@@ -199,17 +219,17 @@ class OdbAssembly(OdbAssemblyBase):
         object
             An OdbPart object.
         localCoordSystem
-            A sequence of sequences of three Floats specifying the rotation and translation of the 
-            part instance in the global Cartesian coordinate system. The first three sequences 
-            specify the new local coordinate system with its center at the origin.The first sequence 
-            specifies a point on the 1-axis.The second sequence specifies a point on the 2-axis.The 
-            third sequence specifies a point on the 3-axis.The fourth sequence specifies the 
-            translation of the local coordinate system from the origin to its intended location.For 
-            example, the following sequence moves a part 10 units in the *X*-direction with no 
-            rotation:`localCoordSystem = ((1, 0, 0), (0, 1, 0), (0, 0, 1), (10, 0, 0))`The following 
-            sequence moves a part 5 units in the *X*-direction with rotation: 
-            `localCoordSystem = ((0, 1, 0), (1, 0, 0), (0, 0, 1), (5, 0, 0))`transforms a part 
-            containing the two points`Pt1= (1,0,0) Pt2= (2,0,0)` to `Pt1 = (0, 6, 0) Pt2 = (0, 7, 0)` 
+            A sequence of sequences of three Floats specifying the rotation and translation of the
+            part instance in the global Cartesian coordinate system. The first three sequences
+            specify the new local coordinate system with its center at the origin.The first sequence
+            specifies a point on the 1-axis.The second sequence specifies a point on the 2-axis.The
+            third sequence specifies a point on the 3-axis.The fourth sequence specifies the
+            translation of the local coordinate system from the origin to its intended location.For
+            example, the following sequence moves a part 10 units in the *X*-direction with no
+            rotation:`localCoordSystem = ((1, 0, 0), (0, 1, 0), (0, 0, 1), (10, 0, 0))`The following
+            sequence moves a part 5 units in the *X*-direction with rotation:
+            `localCoordSystem = ((0, 1, 0), (1, 0, 0), (0, 0, 1), (5, 0, 0))`transforms a part
+            containing the two points`Pt1= (1,0,0) Pt2= (2,0,0)` to `Pt1 = (0, 6, 0) Pt2 = (0, 7, 0)`
 
         Returns
         -------
@@ -218,22 +238,27 @@ class OdbAssembly(OdbAssemblyBase):
         self.instances[name] = odbInstance = OdbInstance(name, object, localCoordSystem)
         return odbInstance
 
-    def OdbRigidBody(self, referenceNode: OdbSet, position: SymbolicConstant = INPUT, isothermal: Boolean = ON,
-                     elements: OdbSet = OdbSet('set', tuple[OdbMeshNode]()),
-                     tieNodes: OdbSet = OdbSet('set', tuple[OdbMeshNode]()),
-                     pinNodes: OdbSet = OdbSet('set', tuple[OdbMeshNode]()),
-                     analyticSurface: AnalyticSurface = AnalyticSurface()) -> OdbRigidBody:
+    def OdbRigidBody(
+        self,
+        referenceNode: OdbSet,
+        position: SymbolicConstant = INPUT,
+        isothermal: Boolean = ON,
+        elements: OdbSet = OdbSet("set", tuple[OdbMeshNode]()),
+        tieNodes: OdbSet = OdbSet("set", tuple[OdbMeshNode]()),
+        pinNodes: OdbSet = OdbSet("set", tuple[OdbMeshNode]()),
+        analyticSurface: AnalyticSurface = AnalyticSurface(),
+    ) -> OdbRigidBody:
         """This method creates a OdbRigidBody object.
 
         Notes
         -----
             This function can be accessed by:
-            
+
             .. code-block:: python
-            
+
                 session.odbs[*name*].rootAssembly.instances[*name*].RigidBody
                 session.odbs[*name*].rootAssembly.RigidBody
-        
+
         Parameters
         ----------
         referenceNode
@@ -263,7 +288,15 @@ class OdbAssembly(OdbAssemblyBase):
         -------
             An OdbRigidBody object.
         """
-        odbRigidBody = OdbRigidBody(referenceNode, position, isothermal, elements, tieNodes, pinNodes, analyticSurface)
+        odbRigidBody = OdbRigidBody(
+            referenceNode,
+            position,
+            isothermal,
+            elements,
+            tieNodes,
+            pinNodes,
+            analyticSurface,
+        )
         self.rigidBodies.append(odbRigidBody)
         return odbRigidBody
 
@@ -275,13 +308,13 @@ class OdbAssembly(OdbAssemblyBase):
         Notes
         -----
             This function can be accessed by:
-            
+
             .. code-block:: python
-            
+
                 session.odbs[*name*].parts[*name*].NodeSet
                 session.odbs[*name*].rootAssembly.instances[*name*].NodeSet
                 session.odbs[*name*].rootAssembly.NodeSet
-        
+
         Parameters
         ----------
         name

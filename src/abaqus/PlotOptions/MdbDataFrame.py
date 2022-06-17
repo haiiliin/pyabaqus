@@ -4,11 +4,12 @@ class MdbDataFrame:
     Notes
     -----
     This object can be accessed by:
-    
+
     .. code-block:: python
-        
+
         import visualization
         session.mdbData[name].steps[i].frames[i]
 
     """
+
     pass

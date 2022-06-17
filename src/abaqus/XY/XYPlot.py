@@ -11,20 +11,21 @@ from .XYPlotBase import XYPlotBase
 
 
 class XYPlot(XYPlotBase):
-
     @staticmethod
-    def AreaStyle(color: str = '', fill: Boolean = ON, style: SymbolicConstant = SOLID) -> AreaStyle:
+    def AreaStyle(
+        color: str = "", fill: Boolean = ON, style: SymbolicConstant = SOLID
+    ) -> AreaStyle:
         """This method creates an AreaStyle.
 
         Notes
         -----
             This function can be accessed by:
-            
+
             .. code-block:: python
-            
+
                 session.AreaStyle
                 xyPlot.AreaStyle
-        
+
         Parameters
         ----------
         color
@@ -49,19 +50,23 @@ class XYPlot(XYPlotBase):
         return areaStyle
 
     @staticmethod
-    def LineStyle(color: str = '', show: Boolean = ON, style: SymbolicConstant = SOLID,
-                  thickness: float = 0) -> LineStyle:
+    def LineStyle(
+        color: str = "",
+        show: Boolean = ON,
+        style: SymbolicConstant = SOLID,
+        thickness: float = 0,
+    ) -> LineStyle:
         """This method creates a LineStyle.
 
         Notes
         -----
             This function can be accessed by:
-            
+
             .. code-block:: python
-            
+
                 session.LineStyle
                 xyPlot.LineStyle
-        
+
         Parameters
         ----------
         color
@@ -90,18 +95,18 @@ class XYPlot(XYPlotBase):
         return lineStyle
 
     @staticmethod
-    def QuantityType(label: str = '', type: SymbolicConstant = None) -> QuantityType:
+    def QuantityType(label: str = "", type: SymbolicConstant = None) -> QuantityType:
         """This method creates a QuantityType object.
 
         Notes
         -----
             This function can be accessed by:
-            
+
             .. code-block:: python
-            
+
                 session.QuantityType
                 xyPlot.QuantityType
-        
+
         Parameters
         ----------
         label
@@ -190,19 +195,23 @@ class XYPlot(XYPlotBase):
         return quantityType
 
     @staticmethod
-    def SymbolStyle(color: str = '', show: Boolean = ON, marker: SymbolicConstant = FILLED_CIRCLE,
-                    size: float = 2) -> SymbolStyle:
+    def SymbolStyle(
+        color: str = "",
+        show: Boolean = ON,
+        marker: SymbolicConstant = FILLED_CIRCLE,
+        size: float = 2,
+    ) -> SymbolStyle:
         """This method creates a SymbolStyle object.
 
         Notes
         -----
             This function can be accessed by:
-            
+
             .. code-block:: python
-            
+
                 session.SymbolStyle
                 xyPlot.SymbolStyle
-        
+
         Parameters
         ----------
         color
@@ -242,18 +251,20 @@ class XYPlot(XYPlotBase):
         return symbolStyle
 
     @staticmethod
-    def TextStyle(color: str = '', show: Boolean = ON, font: str = '', rotationAngle: float = 0) -> TextStyle:
+    def TextStyle(
+        color: str = "", show: Boolean = ON, font: str = "", rotationAngle: float = 0
+    ) -> TextStyle:
         """This method creates a TextStyle.
 
         Notes
         -----
             This function can be accessed by:
-            
+
             .. code-block:: python
-            
+
                 session.TextStyle
                 xyPlot.TextStyle
-        
+
         Parameters
         ----------
         color
@@ -282,21 +293,29 @@ class XYPlot(XYPlotBase):
 
     @staticmethod
     @typing.overload
-    def XYData(data: tuple, name: str = '', sourceDescription: str = '', contentDescription: str = '',
-               positionDescription: str = '', legendLabel: str = '', xValuesLabel: str = '',
-               yValuesLabel: str = '', axis1QuantityType: QuantityType = None,
-               axis2QuantityType: QuantityType = None) -> XYData:
+    def XYData(
+        data: tuple,
+        name: str = "",
+        sourceDescription: str = "",
+        contentDescription: str = "",
+        positionDescription: str = "",
+        legendLabel: str = "",
+        xValuesLabel: str = "",
+        yValuesLabel: str = "",
+        axis1QuantityType: QuantityType = None,
+        axis2QuantityType: QuantityType = None,
+    ) -> XYData:
         """This method creates an XYData object from a sequence of *X–Y* data pairs.
 
         Notes
         -----
             This function can be accessed by:
-            
+
             .. code-block:: python
-            
+
                 session.XYData
                 xyPlot.XYData
-        
+
         Parameters
         ----------
         data
@@ -345,13 +364,13 @@ class XYPlot(XYPlotBase):
         Notes
         -----
             This function can be accessed by:
-            
+
             .. code-block:: python
-            
+
                 session.odbs[*name*].userData.XYData
                 session.XYData
                 xyPlot.XYData
-        
+
         Parameters
         ----------
         objectToCopy

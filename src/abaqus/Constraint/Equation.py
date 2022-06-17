@@ -4,7 +4,7 @@ from .Constraint import Constraint
 
 class Equation(Constraint):
     """The Equation object defines a linear multi-point constraint between a set of degrees of
-    freedom. 
+    freedom.
     The Equation object is derived from the ConstrainedSketchConstraint object.
 
     Attributes
@@ -28,8 +28,8 @@ class Equation(Constraint):
 
     """
 
-    # A Boolean specifying whether the constraint is suppressed or not. The default value is 
-    # OFF. 
+    # A Boolean specifying whether the constraint is suppressed or not. The default value is
+    # OFF.
     suppressed: Boolean = OFF
 
     def __init__(self, name: str, terms: tuple):
@@ -42,23 +42,23 @@ class Equation(Constraint):
         .. code-block:: python
 
             mdb.models[name].Equation
-        
+
         Parameters
         ----------
         name
-            A String specifying the constraint repository key. 
+            A String specifying the constraint repository key.
         terms
-            A sequence of (Float, String, Int, Int) sequences specifying a coefficient, Set name, 
-            degree of freedom, and coordinate system ID. The coordinate system ID is optional. 
+            A sequence of (Float, String, Int, Int) sequences specifying a coefficient, Set name,
+            degree of freedom, and coordinate system ID. The coordinate system ID is optional.
 
         Returns
         -------
-            An Equation object. 
+            An Equation object.
 
         Raises
         ------
-            - If *terms* does not contain more than one entry: 
-              Equation must have two or more terms. 
+            - If *terms* does not contain more than one entry:
+              Equation must have two or more terms.
         """
         super().__init__()
         pass
@@ -68,7 +68,7 @@ class Equation(Constraint):
 
         Raises
         ------
-            - If *terms* does not contain more than one entry: 
-              Equation must have two or more terms. 
+            - If *terms* does not contain more than one entry:
+              Equation must have two or more terms.
         """
         pass

@@ -33,18 +33,18 @@ class PorousBulkModuli:
         Notes
         -----
             This function can be accessed by:
-            
+
             .. code-block:: python
-            
+
                 mdb.models[name].materials[name].PorousBulkModuli
                 session.odbs[name].materials[name].PorousBulkModuli
-        
+
         Parameters
         ----------
         table
-            A sequence of sequences of Floats specifying the items described below. 
+            A sequence of sequences of Floats specifying the items described below.
         temperatureDependency
-            A Boolean specifying whether the data depend on temperature. The default value is OFF. 
+            A Boolean specifying whether the data depend on temperature. The default value is OFF.
 
         Returns
         -------
@@ -53,6 +53,5 @@ class PorousBulkModuli:
         pass
 
     def setValues(self):
-        """This method modifies the PorousBulkModuli object.
-        """
+        """This method modifies the PorousBulkModuli object."""
         pass

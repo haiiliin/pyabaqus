@@ -34,57 +34,63 @@ class Hyperfoam:
 
     """
 
-    # A BiaxialTestData object. 
+    # A BiaxialTestData object.
     biaxialTestData: BiaxialTestData = BiaxialTestData(((),))
 
-    # A VolumetricTestData object. 
+    # A VolumetricTestData object.
     volumetricTestData: VolumetricTestData = VolumetricTestData(((),))
 
-    # A PlanarTestData object. 
+    # A PlanarTestData object.
     planarTestData: PlanarTestData = PlanarTestData(((),))
 
-    # A SimpleShearTestData object. 
+    # A SimpleShearTestData object.
     simpleShearTestData: SimpleShearTestData = SimpleShearTestData(((),))
 
-    # A UniaxialTestData object. 
+    # A UniaxialTestData object.
     uniaxialTestData: UniaxialTestData = UniaxialTestData(((),))
 
-    def __init__(self, testData: Boolean = OFF, poisson: float = None, n: int = 1,
-                 temperatureDependency: Boolean = OFF, moduli: SymbolicConstant = LONG_TERM,
-                 table: tuple = ()):
+    def __init__(
+        self,
+        testData: Boolean = OFF,
+        poisson: float = None,
+        n: int = 1,
+        temperatureDependency: Boolean = OFF,
+        moduli: SymbolicConstant = LONG_TERM,
+        table: tuple = (),
+    ):
         """This method creates a Hyperfoam object.
 
         Notes
         -----
             This function can be accessed by:
-            
+
             .. code-block:: python
-            
+
                 mdb.models[name].materials[name].Hyperfoam
                 session.odbs[name].materials[name].Hyperfoam
-        
+
         Parameters
         ----------
         testData
-            A Boolean specifying whether test data are supplied. The default value is OFF. 
+            A Boolean specifying whether test data are supplied. The default value is OFF.
         poisson
-            None or a Float specifying the effective Poisson's ratio, νν, of the material. This 
-            argument is valid only when *testData*=ON. The default value is None. 
+            None or a Float specifying the effective Poisson's ratio, νν, of the material. This
+            argument is valid only when *testData*=ON. The default value is None.
         n
-            An Int specifying the order of the strain energy potential. Possible values are 1 ≤n≤≤n≤ 
-            6. The default value is 1. 
+            An Int specifying the order of the strain energy potential. Possible values are 1 ≤n≤≤n≤
+            6. The default value is 1.
         temperatureDependency
-            A Boolean specifying whether the data depend on temperature. The default value is OFF. 
+            A Boolean specifying whether the data depend on temperature. The default value is OFF.
         moduli
-            A SymbolicConstant specifying the time-dependence of the material constants. Possible 
-            values are INSTANTANEOUS and LONG_TERM. The default value is LONG_TERM. 
+            A SymbolicConstant specifying the time-dependence of the material constants. Possible
+            values are INSTANTANEOUS and LONG_TERM. The default value is LONG_TERM.
         table
-            A sequence of sequences of Floats specifying the items described below. This argument is 
-            valid only when *testData*=OFF. The default value is an empty sequence. 
+            A sequence of sequences of Floats specifying the items described below. This argument is
+            valid only when *testData*=OFF. The default value is an empty sequence.
 
         Returns
         -------
-            A Hyperfoam object. 
+            A Hyperfoam object.
 
         Raises
         ------

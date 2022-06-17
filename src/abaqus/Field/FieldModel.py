@@ -7,22 +7,28 @@ from ..Model.ModelBase import ModelBase
 
 
 class FieldModel(ModelBase):
-
-    def DiscreteField(self, name: str, defaultValues: tuple, fieldType: SymbolicConstant,
-                      location: SymbolicConstant = NODES, dataWidth: int = 1,
-                      data: DataTableArray = None, description: str = '',
-                      orientationType: SymbolicConstant = CARTESIAN,
-                      partLevelOrientation: Boolean = OFF) -> DiscreteField:
+    def DiscreteField(
+        self,
+        name: str,
+        defaultValues: tuple,
+        fieldType: SymbolicConstant,
+        location: SymbolicConstant = NODES,
+        dataWidth: int = 1,
+        data: DataTableArray = None,
+        description: str = "",
+        orientationType: SymbolicConstant = CARTESIAN,
+        partLevelOrientation: Boolean = OFF,
+    ) -> DiscreteField:
         """This method creates a DiscreteField object.
 
         Notes
         -----
             This function can be accessed by:
-            
+
             .. code-block:: python
-            
+
                 mdb.models[name].DiscreteField
-        
+
         Parameters
         ----------
         name
@@ -57,23 +63,32 @@ class FieldModel(ModelBase):
         ------
             AbaqusException.
         """
-        self.discreteFields[name] = discreteField = DiscreteField(name, defaultValues, fieldType, location, dataWidth,
-                                                                  data, description, orientationType,
-                                                                  partLevelOrientation)
+        self.discreteFields[name] = discreteField = DiscreteField(
+            name,
+            defaultValues,
+            fieldType,
+            location,
+            dataWidth,
+            data,
+            description,
+            orientationType,
+            partLevelOrientation,
+        )
         return discreteField
 
-    def ExpressionField(self, name: str, expression: str, localCsys: str = None,
-                        description: str = '') -> ExpressionField:
+    def ExpressionField(
+        self, name: str, expression: str, localCsys: str = None, description: str = ""
+    ) -> ExpressionField:
         """This method creates an ExpressionField object.
 
         Notes
         -----
             This function can be accessed by:
-            
+
             .. code-block:: python
-            
+
                 mdb.models[name].ExpressionField
-        
+
         Parameters
         ----------
         name
@@ -96,27 +111,42 @@ class FieldModel(ModelBase):
         ------
             TextException.
         """
-        self.analyticalFields[name] = expressionField = ExpressionField(name, expression, localCsys, description)
+        self.analyticalFields[name] = expressionField = ExpressionField(
+            name, expression, localCsys, description
+        )
         return expressionField
 
-    def MappedField(self, name: str, regionType: SymbolicConstant = POINT, partLevelData: Boolean = OFF,
-                    pointDataFormat: SymbolicConstant = XYZ, gridPointPlane: SymbolicConstant = XYPLANE,
-                    defaultUnMappedValue: float = 0, mappingAlgorithm: SymbolicConstant = SURFACE,
-                    searchTolType: SymbolicConstant = RELATIVE, boundarySearchTol: float = 0,
-                    neighborhoodSearchTol: float = 1000000, negativeNormalSearchTol: float = 0,
-                    positiveNormalSearchTol: float = 0, scaleCoordinates: Boolean = OFF,
-                    gridPointData: tuple = (), xyzPointData: tuple = (),
-                    coordinateScalingFactors: tuple = (), localCsys: str = None, description: str = '') -> MappedField:
+    def MappedField(
+        self,
+        name: str,
+        regionType: SymbolicConstant = POINT,
+        partLevelData: Boolean = OFF,
+        pointDataFormat: SymbolicConstant = XYZ,
+        gridPointPlane: SymbolicConstant = XYPLANE,
+        defaultUnMappedValue: float = 0,
+        mappingAlgorithm: SymbolicConstant = SURFACE,
+        searchTolType: SymbolicConstant = RELATIVE,
+        boundarySearchTol: float = 0,
+        neighborhoodSearchTol: float = 1000000,
+        negativeNormalSearchTol: float = 0,
+        positiveNormalSearchTol: float = 0,
+        scaleCoordinates: Boolean = OFF,
+        gridPointData: tuple = (),
+        xyzPointData: tuple = (),
+        coordinateScalingFactors: tuple = (),
+        localCsys: str = None,
+        description: str = "",
+    ) -> MappedField:
         """This method creates an MappedField object.
 
         Notes
         -----
             This function can be accessed by:
-            
+
             .. code-block:: python
-            
+
                 mdb.models[name].MappedField
-        
+
         Parameters
         ----------
         name
@@ -194,10 +224,24 @@ class FieldModel(ModelBase):
         ------
             AbaqusException.
         """
-        self.analyticalFields[name] = mappedField = MappedField(name, regionType, partLevelData, pointDataFormat,
-                                                                gridPointPlane, defaultUnMappedValue, mappingAlgorithm,
-                                                                searchTolType, boundarySearchTol, neighborhoodSearchTol,
-                                                                negativeNormalSearchTol, positiveNormalSearchTol,
-                                                                scaleCoordinates, gridPointData, xyzPointData,
-                                                                coordinateScalingFactors, localCsys, description)
+        self.analyticalFields[name] = mappedField = MappedField(
+            name,
+            regionType,
+            partLevelData,
+            pointDataFormat,
+            gridPointPlane,
+            defaultUnMappedValue,
+            mappingAlgorithm,
+            searchTolType,
+            boundarySearchTol,
+            neighborhoodSearchTol,
+            negativeNormalSearchTol,
+            positiveNormalSearchTol,
+            scaleCoordinates,
+            gridPointData,
+            xyzPointData,
+            coordinateScalingFactors,
+            localCsys,
+            description,
+        )
         return mappedField

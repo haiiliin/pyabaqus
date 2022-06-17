@@ -1,5 +1,3 @@
-
-
 class EventSeriesType:
     """The EventSeriesType object is used to define a type of event in a process.
 
@@ -18,7 +16,7 @@ class EventSeriesType:
 
     """
 
-    def __init__(self, name: str, createStepName: str, fields: str = ''):
+    def __init__(self, name: str, createStepName: str, fields: str = ""):
         """This method creates an EventSeriesType object.
 
         Notes
@@ -28,19 +26,19 @@ class EventSeriesType:
         .. code-block:: python
 
             mdb.models[name].EventSeriesType
-        
+
         Parameters
         ----------
         name
-            A String specifying the repository key. 
+            A String specifying the repository key.
         createStepName
-            A string specifying the step name. 
+            A string specifying the step name.
         fields
-            A String array specifying fields. The default value is an empty array. 
+            A String array specifying fields. The default value is an empty array.
 
         Returns
         -------
-            A EventSeriesType object. 
+            A EventSeriesType object.
 
         Raises
         ------
@@ -48,13 +46,13 @@ class EventSeriesType:
         """
         pass
 
-    def setValues(self, fields: str = ''):
+    def setValues(self, fields: str = ""):
         """This method modifies the EventSeriesType object.
-        
+
         Parameters
         ----------
         fields
-            A String array specifying fields. The default value is an empty array. 
+            A String array specifying fields. The default value is an empty array.
 
         Returns
         -------

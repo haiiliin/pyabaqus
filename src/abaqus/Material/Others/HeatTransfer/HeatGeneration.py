@@ -24,9 +24,9 @@ class HeatGeneration:
         Notes
         -----
             This function can be accessed by:
-            
+
             .. code-block:: python
-            
+
                 mdb.models[name].materials[name].HeatGeneration
                 session.odbs[name].materials[name].HeatGeneration
 

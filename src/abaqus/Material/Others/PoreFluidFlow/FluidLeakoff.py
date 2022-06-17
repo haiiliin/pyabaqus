@@ -3,7 +3,7 @@ from abaqusConstants import *
 
 class FluidLeakoff:
     """The FluidLeakoff object specifies leak-off coefficients for pore pressure cohesive
-    elements. 
+    elements.
 
     Notes
     -----
@@ -32,31 +32,36 @@ class FluidLeakoff:
 
     """
 
-    def __init__(self, temperatureDependency: Boolean = OFF, dependencies: int = 0,
-                 type: SymbolicConstant = COEFFICIENTS, table: tuple = ()):
+    def __init__(
+        self,
+        temperatureDependency: Boolean = OFF,
+        dependencies: int = 0,
+        type: SymbolicConstant = COEFFICIENTS,
+        table: tuple = (),
+    ):
         """This method creates a FluidLeakoff object.
 
         Notes
         -----
             This function can be accessed by:
-            
+
             .. code-block:: python
-            
+
                 mdb.models[name].materials[name].FluidLeakoff
                 session.odbs[name].materials[name].FluidLeakoff
-        
+
         Parameters
         ----------
         temperatureDependency
-            A Boolean specifying whether the data depend on temperature. The default value is OFF. 
+            A Boolean specifying whether the data depend on temperature. The default value is OFF.
         dependencies
-            An Int specifying the number of field variable dependencies. The default value is 0. 
+            An Int specifying the number of field variable dependencies. The default value is 0.
         type
-            A SymbolicConstant specifying the type of fluid leak-off. Possible values are 
-            COEFFICIENTS and USER. The default value is COEFFICIENTS. 
+            A SymbolicConstant specifying the type of fluid leak-off. Possible values are
+            COEFFICIENTS and USER. The default value is COEFFICIENTS.
         table
-            A sequence of sequences of Floats specifying the items described below. The default 
-            value is an empty sequence. 
+            A sequence of sequences of Floats specifying the items described below. The default
+            value is an empty sequence.
 
         Returns
         -------
@@ -65,6 +70,5 @@ class FluidLeakoff:
         pass
 
     def setValues(self):
-        """This method modifies the FluidLeakoff object.
-        """
+        """This method modifies the FluidLeakoff object."""
         pass

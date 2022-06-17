@@ -14,16 +14,16 @@ class Plastic:
     Notes
     -----
     This object can be accessed by:
-    
+
     .. code-block:: python
-        
+
         import material
         mdb.models[name].materials[name].Plastic
         import odbMaterial
         session.odbs[name].materials[name].Plastic
 
     The table data for this object are:
-    
+
     - If *hardening*=ISOTROPIC, or if *hardening*=COMBINED and *dataType*=HALF_CYCLE, the table data specify the following:
         - Yield stress.
         - Plastic strain.
@@ -71,68 +71,76 @@ class Plastic:
 
     """
 
-    # A RateDependent object. 
+    # A RateDependent object.
     rateDependent: RateDependent = RateDependent(((),))
 
-    # A Potential object. 
+    # A Potential object.
     potential: Potential = Potential(((),))
 
-    # A CyclicHardening object. 
+    # A CyclicHardening object.
     cyclicHardening: CyclicHardening = CyclicHardening(((),))
 
-    # An Ornl object. 
+    # An Ornl object.
     ornl: Ornl = Ornl()
 
-    # A CycledPlastic object. 
+    # A CycledPlastic object.
     cycledPlastic: CycledPlastic = CycledPlastic(((),))
 
-    # An AnnealTemperature object. 
+    # An AnnealTemperature object.
     annealTemperature: AnnealTemperature = AnnealTemperature(((),))
 
-    # A TensileFailure object. 
+    # A TensileFailure object.
     tensileFailure: TensileFailure = TensileFailure()
 
-    def __init__(self, table: tuple, hardening: SymbolicConstant = ISOTROPIC, rate: Boolean = OFF,
-                 dataType: SymbolicConstant = HALF_CYCLE, strainRangeDependency: Boolean = OFF,
-                 numBackstresses: int = 1, temperatureDependency: Boolean = OFF, dependencies: int = 0):
+    def __init__(
+        self,
+        table: tuple,
+        hardening: SymbolicConstant = ISOTROPIC,
+        rate: Boolean = OFF,
+        dataType: SymbolicConstant = HALF_CYCLE,
+        strainRangeDependency: Boolean = OFF,
+        numBackstresses: int = 1,
+        temperatureDependency: Boolean = OFF,
+        dependencies: int = 0,
+    ):
         """This method creates a Plastic object.
 
         Notes
         -----
             This function can be accessed by:
-            
+
             .. code-block:: python
-            
+
                 mdb.models[name].materials[name].Plastic
                 session.odbs[name].materials[name].Plastic
-        
+
         Parameters
         ----------
         table
-            A sequence of sequences of Floats specifying the items described below. 
+            A sequence of sequences of Floats specifying the items described below.
         hardening
-            A SymbolicConstant specifying the type of hardening. Possible values are ISOTROPIC, 
-            KINEMATIC, COMBINED, JOHNSON_COOK, and USER. The default value is ISOTROPIC. 
+            A SymbolicConstant specifying the type of hardening. Possible values are ISOTROPIC,
+            KINEMATIC, COMBINED, JOHNSON_COOK, and USER. The default value is ISOTROPIC.
         rate
-            A Boolean specifying whether the data depend on rate. The default value is OFF. 
+            A Boolean specifying whether the data depend on rate. The default value is OFF.
         dataType
-            A SymbolicConstant specifying the type of combined hardening. This argument is only 
-            valid if *hardening*=COMBINED. Possible values are HALF_CYCLE, PARAMETERS, and 
-            STABILIZED. The default value is HALF_CYCLE. 
+            A SymbolicConstant specifying the type of combined hardening. This argument is only
+            valid if *hardening*=COMBINED. Possible values are HALF_CYCLE, PARAMETERS, and
+            STABILIZED. The default value is HALF_CYCLE.
         strainRangeDependency
-            A Boolean specifying whether the data depend on strain range. This argument is only 
-            valid if *hardening*=COMBINED and *dataType*=STABILIZED. The default value is OFF. 
+            A Boolean specifying whether the data depend on strain range. This argument is only
+            valid if *hardening*=COMBINED and *dataType*=STABILIZED. The default value is OFF.
         numBackstresses
-            An Int specifying the number of backstresses. This argument is only valid if 
-            *hardening*=COMBINED. The default value is 1. 
+            An Int specifying the number of backstresses. This argument is only valid if
+            *hardening*=COMBINED. The default value is 1.
         temperatureDependency
-            A Boolean specifying whether the data depend on temperature. The default value is OFF. 
+            A Boolean specifying whether the data depend on temperature. The default value is OFF.
         dependencies
             An Int specifying the number of field variable dependencies. The default value is 0.
 
         Returns
         -------
-            A Plastic object. 
+            A Plastic object.
 
         Raises
         ------

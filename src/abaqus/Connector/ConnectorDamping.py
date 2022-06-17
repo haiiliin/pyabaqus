@@ -5,8 +5,8 @@ from .ConnectorOptions import ConnectorOptions
 
 class ConnectorDamping(ConnectorBehaviorOption):
     """The ConnectorDamping object defines damping behavior for one or more components of a
-    connector's relative motion. 
-    The ConnectorDamping object is derived from the ConnectorBehaviorOption object. 
+    connector's relative motion.
+    The ConnectorDamping object is derived from the ConnectorBehaviorOption object.
 
     Attributes
     ----------
@@ -70,14 +70,21 @@ class ConnectorDamping(ConnectorBehaviorOption):
 
     """
 
-    # A ConnectorOptions object specifying the ConnectorOptions used to define tabular options 
-    # for this ConnectorBehaviorOption. 
+    # A ConnectorOptions object specifying the ConnectorOptions used to define tabular options
+    # for this ConnectorBehaviorOption.
     options: ConnectorOptions = ConnectorOptions()
 
-    def __init__(self, behavior: SymbolicConstant = LINEAR, coupling: SymbolicConstant = UNCOUPLED,
-                 dependencies: int = 0, temperatureDependency: Boolean = OFF,
-                 frequencyDependency: Boolean = OFF, table: tuple = (),
-                 independentComponents: tuple = (), components: tuple = ()):
+    def __init__(
+        self,
+        behavior: SymbolicConstant = LINEAR,
+        coupling: SymbolicConstant = UNCOUPLED,
+        dependencies: int = 0,
+        temperatureDependency: Boolean = OFF,
+        frequencyDependency: Boolean = OFF,
+        table: tuple = (),
+        independentComponents: tuple = (),
+        components: tuple = (),
+    ):
         """This method creates a connector damping behavior option for a ConnectorSection object.
 
         Notes
@@ -90,48 +97,48 @@ class ConnectorDamping(ConnectorBehaviorOption):
                       connectorBehavior.ConnectorDamping
                       import odbConnectorBehavior
                       odbConnectorBehavior.ConnectorDamping
-        
+
         Parameters
         ----------
         behavior
-            A SymbolicConstant specifying if the damping behavior is linear or nonlinear. Possible 
-            values are LINEAR and NONLINEAR. The default value is LINEAR. 
+            A SymbolicConstant specifying if the damping behavior is linear or nonlinear. Possible
+            values are LINEAR and NONLINEAR. The default value is LINEAR.
         coupling
-            A SymbolicConstant specifying whether the damping behavior is coupled between the 
-            connector's components of relative motion. If *behavior*=LINEAR, then possible values 
-            are UNCOUPLED and COUPLED. If *behavior*=NONLINEAR, then possible values are UNCOUPLED, 
-            COUPLED_POSITION, and COUPLED_MOTION. Possible values are UNCOUPLED, COUPLED, 
-            COUPLED_POSITION, and COUPLED_MOTION. The default value is UNCOUPLED. 
+            A SymbolicConstant specifying whether the damping behavior is coupled between the
+            connector's components of relative motion. If *behavior*=LINEAR, then possible values
+            are UNCOUPLED and COUPLED. If *behavior*=NONLINEAR, then possible values are UNCOUPLED,
+            COUPLED_POSITION, and COUPLED_MOTION. Possible values are UNCOUPLED, COUPLED,
+            COUPLED_POSITION, and COUPLED_MOTION. The default value is UNCOUPLED.
         dependencies
-            An Int specifying the number of field variable dependencies. The default value is 0. 
+            An Int specifying the number of field variable dependencies. The default value is 0.
         temperatureDependency
-            A Boolean specifying whether the behavior data depend on temperature. The default value 
-            is OFF. 
+            A Boolean specifying whether the behavior data depend on temperature. The default value
+            is OFF.
         frequencyDependency
-            A Boolean specifying whether the behavior data depend on frequency. This value is 
-            applicable only if *behavior*= LINEAR and *coupling*=UNCOUPLED. The default value is 
-            OFF. 
+            A Boolean specifying whether the behavior data depend on frequency. This value is
+            applicable only if *behavior*= LINEAR and *coupling*=UNCOUPLED. The default value is
+            OFF.
         table
-            A sequence of sequences of Floats specifying damping properties. Items in the table data 
-            are described below. The default value is an empty sequence. 
+            A sequence of sequences of Floats specifying damping properties. Items in the table data
+            are described below. The default value is an empty sequence.
         independentComponents
-            A sequence of Ints specifying the list of independent components that are included in 
-            the definition of the connector damping data. This argument is applicable only if 
-            *behavior*=NONLINEAR and *coupling*=COUPLED_POSITION or COUPLED_MOTION. When this 
-            argument is applicable, at least one value must be specified. Only available components 
-            can be specified. The default value is an empty sequence. 
+            A sequence of Ints specifying the list of independent components that are included in
+            the definition of the connector damping data. This argument is applicable only if
+            *behavior*=NONLINEAR and *coupling*=COUPLED_POSITION or COUPLED_MOTION. When this
+            argument is applicable, at least one value must be specified. Only available components
+            can be specified. The default value is an empty sequence.
         components
-            A sequence of Ints specifying the components of relative motion for which the behavior 
-            is defined. Possible values are 1 ≤≤ *components* ≤≤ 6. Only available components can be 
-            specified. The default value is an empty sequence. 
+            A sequence of Ints specifying the components of relative motion for which the behavior
+            is defined. Possible values are 1 ≤≤ *components* ≤≤ 6. Only available components can be
+            specified. The default value is an empty sequence.
 
         Returns
         -------
-            A ConnectorDamping object. 
+            A ConnectorDamping object.
 
         Raises
         ------
-            ValueError and TextError. 
+            ValueError and TextError.
         """
         super().__init__()
         pass
@@ -141,6 +148,6 @@ class ConnectorDamping(ConnectorBehaviorOption):
 
         Raises
         ------
-            ValueError. 
+            ValueError.
         """
         pass

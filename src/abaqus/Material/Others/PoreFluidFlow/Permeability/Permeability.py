@@ -45,47 +45,53 @@ class Permeability:
 
     """
 
-    # A SaturationDependence object specifying the dependence of the permeability of a 
-    # material on the saturation of the wetting liquid. 
+    # A SaturationDependence object specifying the dependence of the permeability of a
+    # material on the saturation of the wetting liquid.
     saturationDependence: SaturationDependence = SaturationDependence(((),))
 
-    # A VelocityDependence object specifying the dependence of the permeability of a material 
-    # on the velocity of fluid flow. 
+    # A VelocityDependence object specifying the dependence of the permeability of a material
+    # on the velocity of fluid flow.
     velocityDependence: VelocityDependence = VelocityDependence(((),))
 
-    def __init__(self, specificWeight: float, inertialDragCoefficient: float, table: tuple,
-                 type: SymbolicConstant = ISOTROPIC, temperatureDependency: Boolean = OFF,
-                 dependencies: int = 0):
+    def __init__(
+        self,
+        specificWeight: float,
+        inertialDragCoefficient: float,
+        table: tuple,
+        type: SymbolicConstant = ISOTROPIC,
+        temperatureDependency: Boolean = OFF,
+        dependencies: int = 0,
+    ):
         """This method creates a Permeability object.
 
         Notes
         -----
             This function can be accessed by:
-            
+
             .. code-block:: python
-            
+
                 mdb.models[name].materials[name].Permeability
                 session.odbs[name].materials[name].Permeability
-        
+
         Parameters
         ----------
         specificWeight
-            A Float specifying the specific weight of the wetting liquid, γwγw. 
+            A Float specifying the specific weight of the wetting liquid, γwγw.
         inertialDragCoefficient
-            A Float specifying The inertial drag coefficient of the wetting liquid, γwγw. 
+            A Float specifying The inertial drag coefficient of the wetting liquid, γwγw.
         table
-            A sequence of sequences of Floats specifying the items described below. 
+            A sequence of sequences of Floats specifying the items described below.
         type
-            A SymbolicConstant specifying the type of permeability. Possible values are ISOTROPIC, 
-            ORTHOTROPIC, and ANISOTROPIC. The default value is ISOTROPIC. 
+            A SymbolicConstant specifying the type of permeability. Possible values are ISOTROPIC,
+            ORTHOTROPIC, and ANISOTROPIC. The default value is ISOTROPIC.
         temperatureDependency
-            A Boolean specifying whether the data depend on temperature. The default value is OFF. 
+            A Boolean specifying whether the data depend on temperature. The default value is OFF.
         dependencies
-            An Int specifying the number of field variable dependencies. The default value is 0. 
+            An Int specifying the number of field variable dependencies. The default value is 0.
 
         Returns
         -------
-            A Permeability object. 
+            A Permeability object.
 
         Raises
         ------

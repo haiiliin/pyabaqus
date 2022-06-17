@@ -22,9 +22,9 @@ class Vertex:
     Notes
     -----
     This object can be accessed by:
-    
+
     .. code-block:: python
-        
+
         import part
         mdb.models[name].parts[name].allInternalSets[name].vertices[i]
         mdb.models[name].parts[name].allSets[name].vertices[i]
@@ -47,18 +47,18 @@ class Vertex:
     # An Int specifying the index of the ConstrainedSketchVertex in the VertexArray.
     index: int = None
 
-    # A Boolean specifying whether the vertex belongs to the reference representation of the 
-    # Part or Instance. 
+    # A Boolean specifying whether the vertex belongs to the reference representation of the
+    # Part or Instance.
     isReferenceRep: Boolean = OFF
 
-    # A tuple of Floats specifying the *X* -, *Y* -, and *Z* -coordinates of the vertex. 
+    # A tuple of Floats specifying the *X* -, *Y* -, and *Z* -coordinates of the vertex.
     pointOn: float = None
 
-    # A tuple of Floats specifying the name of the feature that created this vertex. 
+    # A tuple of Floats specifying the name of the feature that created this vertex.
     featureName: float = None
 
-    # A tuple of Floats specifying the name of the part instance for this vertex (if 
-    # applicable). 
+    # A tuple of Floats specifying the name of the part instance for this vertex (if
+    # applicable).
     instanceName: float = None
 
     def getEdges(self):
@@ -68,7 +68,7 @@ class Vertex:
         Returns
         -------
             A tuple of integers.
-            
+
         """
         pass
 
@@ -78,7 +78,7 @@ class Vertex:
         Returns
         -------
             A MeshNodeArray object which is a sequence of MeshNode objects.
-            
+
         """
         pass
 
@@ -88,6 +88,6 @@ class Vertex:
         Returns
         -------
             A MeshElementArray object which is a sequence of MeshElement objects.
-            
+
         """
         pass

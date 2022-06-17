@@ -8,8 +8,8 @@ from ..Mesh.MeshNode import MeshNode
 
 class ReferencePoint:
     """The ReferencePoint object has no direct constructor; it is created when a Feature object
-    is created. The ReferencePoint method creates a Feature object that creates a 
-    ReferencePoint object. 
+    is created. The ReferencePoint method creates a Feature object that creates a
+    ReferencePoint object.
 
     Notes
     -----
@@ -36,7 +36,11 @@ class ReferencePoint:
 
     """
 
-    def __init__(self, point: typing.Union[tuple, Vertex, InterestingPoint, MeshNode, Datum], instanceName: str = ''):
+    def __init__(
+        self,
+        point: typing.Union[tuple, Vertex, InterestingPoint, MeshNode, Datum],
+        instanceName: str = "",
+    ):
         """This method creates a Feature object and a ReferencePoint object at the specified
         location.
 
@@ -48,7 +52,7 @@ class ReferencePoint:
 
             mdb.models[name].rootAssembly.ReferencePoint
             mdb.models[name].parts[name].ReferencePoint
-        
+
         Parameters
         ----------
         point

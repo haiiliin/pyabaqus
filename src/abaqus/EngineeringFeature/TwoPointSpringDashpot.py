@@ -4,8 +4,8 @@ from .SpringDashpot import SpringDashpot
 
 class TwoPointSpringDashpot(SpringDashpot):
     """The TwoPointSpringDashpot object defines springs and/or dashpots between two points on a
-    part or an assembly. 
-    The TwoPointSpringDashpot object is derived from the SpringDashpot object. 
+    part or an assembly.
+    The TwoPointSpringDashpot object is derived from the SpringDashpot object.
 
     Attributes
     ----------
@@ -32,13 +32,23 @@ class TwoPointSpringDashpot(SpringDashpot):
 
     """
 
-    # A Boolean specifying whether the spring/dashpot is suppressed or not. The default value 
-    # is OFF. 
+    # A Boolean specifying whether the spring/dashpot is suppressed or not. The default value
+    # is OFF.
     suppressed: Boolean = OFF
 
-    def __init__(self, name: str, regionPairs: tuple, axis: SymbolicConstant, dof1: int = 0, dof2: int = 0,
-                 orientation: str = None, springBehavior: Boolean = OFF, dashpotBehavior: Boolean = OFF,
-                 springStiffness: float = 0, dashpotCoefficient: float = 0):
+    def __init__(
+        self,
+        name: str,
+        regionPairs: tuple,
+        axis: SymbolicConstant,
+        dof1: int = 0,
+        dof2: int = 0,
+        orientation: str = None,
+        springBehavior: Boolean = OFF,
+        dashpotBehavior: Boolean = OFF,
+        springStiffness: float = 0,
+        dashpotCoefficient: float = 0,
+    ):
         """This method creates a TwoPointSpringDashpot object.
 
         Notes
@@ -97,39 +107,46 @@ class TwoPointSpringDashpot(SpringDashpot):
         super().__init__()
         pass
 
-    def setValues(self, dof1: int = 0, dof2: int = 0, orientation: str = None, springBehavior: Boolean = OFF,
-                  dashpotBehavior: Boolean = OFF, springStiffness: float = 0,
-                  dashpotCoefficient: float = 0):
+    def setValues(
+        self,
+        dof1: int = 0,
+        dof2: int = 0,
+        orientation: str = None,
+        springBehavior: Boolean = OFF,
+        dashpotBehavior: Boolean = OFF,
+        springStiffness: float = 0,
+        dashpotCoefficient: float = 0,
+    ):
         """This method modifies the TwoPointSpringDashpot object.
-        
+
         Parameters
         ----------
         dof1
-            An Int specifying the degree of freedom with which the springs and/or dashpots are 
-            associated at their first points. The *dof1* argument applies only when 
-            *axis*=FIXED_DOFS. The default value is 0. 
+            An Int specifying the degree of freedom with which the springs and/or dashpots are
+            associated at their first points. The *dof1* argument applies only when
+            *axis*=FIXED_DOFS. The default value is 0.
         dof2
-            An Int specifying the degree of freedom with which the springs and/or dashpots are 
-            associated at their second points. The *dof2* argument applies only when 
-            *axis*=FIXED_DOFS. The default value is 0. 
+            An Int specifying the degree of freedom with which the springs and/or dashpots are
+            associated at their second points. The *dof2* argument applies only when
+            *axis*=FIXED_DOFS. The default value is 0.
         orientation
-            None or a DatumCsys object specifying the local directions for the spring and/or 
-            dashpot. If *orientation*=None, the spring and/or dashpot data are defined in the global 
-            coordinate system. The default value is None.The *orientation* argument applies only 
-            when *axis*=FIXED_DOFS. 
+            None or a DatumCsys object specifying the local directions for the spring and/or
+            dashpot. If *orientation*=None, the spring and/or dashpot data are defined in the global
+            coordinate system. The default value is None.The *orientation* argument applies only
+            when *axis*=FIXED_DOFS.
         springBehavior
-            A Boolean specifying whether to apply spring behavior to the selected point pairs. The 
-            default value is OFF.At least one of the arguments *springBehavior*=ON or 
-            *dashpotBehavior*=ON must be specified. 
+            A Boolean specifying whether to apply spring behavior to the selected point pairs. The
+            default value is OFF.At least one of the arguments *springBehavior*=ON or
+            *dashpotBehavior*=ON must be specified.
         dashpotBehavior
-            A Boolean specifying whether to apply dashpot behavior to the selected point pairs. The 
-            default value is OFF.At least one of the arguments *springBehavior*=ON or 
-            *dashpotBehavior*=ON must be specified. 
+            A Boolean specifying whether to apply dashpot behavior to the selected point pairs. The
+            default value is OFF.At least one of the arguments *springBehavior*=ON or
+            *dashpotBehavior*=ON must be specified.
         springStiffness
-            A Float specifying the force per relative displacement for the springs. The default 
-            value is 0.0. 
+            A Float specifying the force per relative displacement for the springs. The default
+            value is 0.0.
         dashpotCoefficient
-            A Float specifying the force per relative velocity for the dashpots. The default value 
-            is 0.0. 
+            A Float specifying the force per relative velocity for the dashpots. The default value
+            is 0.0.
         """
         pass

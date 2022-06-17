@@ -4,7 +4,7 @@ from .DataSet import DataSet
 
 class Calibration:
     """A Calibration object is the object used to specify a material calibration. The
-    Calibration object stores the data that is used for specifying materials from test data. 
+    Calibration object stores the data that is used for specifying materials from test data.
 
     Attributes
     ----------
@@ -24,10 +24,10 @@ class Calibration:
 
     """
 
-    # A DataSet object. 
+    # A DataSet object.
     dataSets: DataSet = None
 
-    # A Behavior object. 
+    # A Behavior object.
     behaviors: Behavior = None
 
     def __init__(self, name: str):
@@ -40,11 +40,11 @@ class Calibration:
         .. code-block:: python
 
                       mdb.models[name].Calibration
-        
+
         Parameters
         ----------
         name
-            A String specifying the name of the new calibration. 
+            A String specifying the name of the new calibration.
 
         Returns
         -------
@@ -62,7 +62,7 @@ class Calibration:
         .. code-block:: python
 
                       mdb.models[name].Calibration
-        
+
         Parameters
         ----------
         name
@@ -78,7 +78,9 @@ class Calibration:
         self.behaviors = behavior = Behavior(name, typeName)
         return behavior
 
-    def DataSet(self, name: str, data: tuple = (), type: str = '', form: str = '') -> DataSet:
+    def DataSet(
+        self, name: str, data: tuple = (), type: str = "", form: str = ""
+    ) -> DataSet:
         """This method creates a DataSet object.
 
         Notes
@@ -88,7 +90,7 @@ class Calibration:
         .. code-block:: python
 
                       mdb.models[name].Calibration
-        
+
         Parameters
         ----------
         name

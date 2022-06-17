@@ -4,9 +4,9 @@ class TriaxialTestData:
     Notes
     -----
     This object can be accessed by:
-    
+
     .. code-block:: python
-        
+
         import material
         mdb.models[name].materials[name].druckerPrager.triaxialTestData
         import odbMaterial
@@ -23,35 +23,37 @@ class TriaxialTestData:
 
     """
 
-    def __init__(self, table: tuple, a: float = None, b: float = None, pt: float = None):
+    def __init__(
+        self, table: tuple, a: float = None, b: float = None, pt: float = None
+    ):
         """This method creates a TriaxialTestData object.
 
         Notes
         -----
             This function can be accessed by:
-            
+
             .. code-block:: python
-            
+
                 mdb.models[name].materials[name].druckerPrager.TriaxialTestData
                 session.odbs[name].materials[name].druckerPrager.TriaxialTestData
-        
+
         Parameters
         ----------
         table
-            A sequence of sequences of Floats specifying the items described below. 
+            A sequence of sequences of Floats specifying the items described below.
         a
-            None or a Float specifying the value of the material constant aa. None is used when the 
-            value is unknown or it is not held fixed at the input value. The default value is None. 
+            None or a Float specifying the value of the material constant aa. None is used when the
+            value is unknown or it is not held fixed at the input value. The default value is None.
         b
-            None or a Float specifying the value of the material constant bb. None is used when the 
-            value is unknown or it is not held fixed at the input value. The default value is None. 
+            None or a Float specifying the value of the material constant bb. None is used when the
+            value is unknown or it is not held fixed at the input value. The default value is None.
         pt
-            None or a Float specifying the value of the material constant pt. None is used when the 
-            value is unknown or it is not held fixed at the input value. The default value is None. 
+            None or a Float specifying the value of the material constant pt. None is used when the
+            value is unknown or it is not held fixed at the input value. The default value is None.
 
         Returns
         -------
-            A TriaxialTestData object. 
+            A TriaxialTestData object.
 
         Raises
         ------

@@ -19,11 +19,13 @@ class AnimationSession(SessionBase):
 
     """
 
-    def writeImageAnimation(self, fileName: str, format: SymbolicConstant, canvasObjects: tuple = ()):
+    def writeImageAnimation(
+        self, fileName: str, format: SymbolicConstant, canvasObjects: tuple = ()
+    ):
         """This method writes the animations present in the list of canvas objects to a file. It
         generates an animation file using the given file name and file format and uses the
         values in the appropriate options object.
-        
+
         Parameters
         ----------
         fileName
@@ -37,9 +39,17 @@ class AnimationSession(SessionBase):
         """
         pass
 
-    def Movie(self, name: str, fileName: str, startFrame: int = 0, endFrame: int = None,
-              timelineStartFrame: int = 0, timelineEndFrame: int = None, timelineStartTime: float = 0,
-              timelineEndTime: typing.Union[SymbolicConstant, float] = END_FRAME_TIME) -> Movie:
+    def Movie(
+        self,
+        name: str,
+        fileName: str,
+        startFrame: int = 0,
+        endFrame: int = None,
+        timelineStartFrame: int = 0,
+        timelineEndFrame: int = None,
+        timelineStartTime: float = 0,
+        timelineEndTime: typing.Union[SymbolicConstant, float] = END_FRAME_TIME,
+    ) -> Movie:
         """This method creates a Movie object from the contents of the specified file.
 
         Notes
@@ -49,7 +59,7 @@ class AnimationSession(SessionBase):
         .. code-block:: python
 
             session.Movie
-        
+
         Parameters
         ----------
         name
@@ -93,6 +103,14 @@ class AnimationSession(SessionBase):
             - If the contents of *fileName* are corrupt or can not be decoded:
               ValueError: Unable to decode movie file
         """
-        self.movies[name] = movie = Movie(name, fileName, startFrame, endFrame, timelineStartFrame, timelineEndFrame,
-                                          timelineStartTime, timelineEndTime)
+        self.movies[name] = movie = Movie(
+            name,
+            fileName,
+            startFrame,
+            endFrame,
+            timelineStartFrame,
+            timelineEndFrame,
+            timelineStartTime,
+            timelineEndTime,
+        )
         return movie

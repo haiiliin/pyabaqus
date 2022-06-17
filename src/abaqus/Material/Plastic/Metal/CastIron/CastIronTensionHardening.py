@@ -3,14 +3,14 @@ from abaqusConstants import *
 
 class CastIronTensionHardening:
     """The CastIronTensionHardening object specifies hardening for the Cast- Iron plasticity
-    model. 
+    model.
 
     Notes
     -----
     This object can be accessed by:
-    
+
     .. code-block:: python
-        
+
         import material
         mdb.models[name].materials[name].castIronPlasticity.castIronTensionHardening
         import odbMaterial
@@ -31,7 +31,9 @@ class CastIronTensionHardening:
 
     """
 
-    def __init__(self, table: tuple, temperatureDependency: Boolean = OFF, dependencies: int = 0):
+    def __init__(
+        self, table: tuple, temperatureDependency: Boolean = OFF, dependencies: int = 0
+    ):
         """This method creates a CastIronTensionHardening object.
 
         Notes

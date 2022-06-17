@@ -1,7 +1,6 @@
-
 class TransverseShearShell:
     """The TransverseShearShell object defines the transverse shear stiffness properties of a
-    shell section. 
+    shell section.
 
     Notes
     -----
@@ -31,15 +30,15 @@ class TransverseShearShell:
 
             mdb.models[name].sections[name].TransverseShearShell
             session.odbs[name].sections[name].TransverseShearShell
-        
+
         Parameters
         ----------
         k11
-            A Float specifying the shear stiffness of the section in the first direction. 
+            A Float specifying the shear stiffness of the section in the first direction.
         k22
-            A Float specifying the shear stiffness of the section in the second direction. 
+            A Float specifying the shear stiffness of the section in the second direction.
         k12
-            A Float specifying the coupling term in the shear stiffness of the section. 
+            A Float specifying the coupling term in the shear stiffness of the section.
 
         Returns
         -------
@@ -48,6 +47,5 @@ class TransverseShearShell:
         pass
 
     def setValues(self):
-        """This method modifies the TransverseShearShell object.
-        """
+        """This method modifies the TransverseShearShell object."""
         pass

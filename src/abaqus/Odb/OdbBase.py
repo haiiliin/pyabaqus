@@ -59,49 +59,51 @@ class OdbBase:
 
     """
 
-    # A Boolean specifying whether the output database was opened with read-only access. 
+    # A Boolean specifying whether the output database was opened with read-only access.
     isReadOnly: Boolean = OFF
 
-    # A repository of Amplitude objects. 
+    # A repository of Amplitude objects.
     amplitudes: dict[str, Amplitude] = dict[str, Amplitude]()
 
-    # A repository of Filter objects. 
+    # A repository of Filter objects.
     filters: dict[str, Filter] = dict[str, Filter]()
 
-    # An OdbAssembly object. 
+    # An OdbAssembly object.
     rootAssembly: OdbAssembly = OdbAssembly()
 
-    # A JobData object. 
+    # A JobData object.
     jobData: JobData = JobData()
 
-    # A repository of OdbPart objects. 
+    # A repository of OdbPart objects.
     parts: dict[str, OdbPart] = dict[str, OdbPart]()
 
-    # A repository of Material objects. 
+    # A repository of Material objects.
     materials: dict[str, Material] = dict[str, Material]()
 
-    # A repository of OdbStep objects. 
+    # A repository of OdbStep objects.
     steps: dict[str, OdbStep] = dict[str, OdbStep]()
 
-    # A repository of Section objects. 
+    # A repository of Section objects.
     sections: dict[str, Section] = dict[str, Section]()
 
-    # A repository of SectionCategory objects. 
+    # A repository of SectionCategory objects.
     sectionCategories: dict[str, SectionCategory] = dict[str, SectionCategory]()
 
-    # A SectorDefinition object. 
+    # A SectorDefinition object.
     sectorDefinition: SectorDefinition = SectorDefinition()
 
-    # A UserData object. 
+    # A UserData object.
     userData: UserData = UserData()
 
-    # A RepositorySupport object. 
+    # A RepositorySupport object.
     customData: RepositorySupport = RepositorySupport()
 
-    # A repository of Profile objects. 
+    # A repository of Profile objects.
     profiles: dict[str, Profile] = dict[str, Profile]()
 
-    def __init__(self, name: str, analysisTitle: str = '', description: str = '', path: str = ''):
+    def __init__(
+        self, name: str, analysisTitle: str = "", description: str = "", path: str = ""
+    ):
         """This method creates a new Odb object.
 
         Notes
@@ -111,20 +113,20 @@ class OdbBase:
         .. code-block:: python
 
             session.Odb
-        
+
         Parameters
         ----------
         name
-            A String specifying the repository key. 
+            A String specifying the repository key.
         analysisTitle
-            A String specifying the title of the output database. The default value is an empty 
-            string. 
+            A String specifying the title of the output database. The default value is an empty
+            string.
         description
-            A String specifying the description of the output database. The default value is an 
-            empty string. 
+            A String specifying the description of the output database. The default value is an
+            empty string.
         path
-            A String specifying the path to the file where the new output database (.odb ) file will 
-            be written. The default value is an empty string. 
+            A String specifying the path to the file where the new output database (.odb ) file will
+            be written. The default value is an empty string.
 
         Returns
         -------
@@ -133,8 +135,7 @@ class OdbBase:
         pass
 
     def close(self):
-        """This method closes an output database.
-        """
+        """This method closes an output database."""
         pass
 
     def getFrame(self, frameValue: str, match: SymbolicConstant = CLOSEST):
@@ -142,28 +143,28 @@ class OdbBase:
         interpolate values between frames. The method is not applicable to an Odb object
         containing steps with different domains or to an Odb object containing a step with load
         case specific data.
-        
+
         Parameters
         ----------
         frameValue
-            A Double specifying the value at which the frame is required. *frameValue* can be the 
-            total time or frequency. 
+            A Double specifying the value at which the frame is required. *frameValue* can be the
+            total time or frequency.
         match
-            A SymbolicConstant specifying which frame to return if there is no frame at the exact 
-            frame value. Possible values are CLOSEST, BEFORE, AFTER, and EXACT. The default value is 
-            CLOSEST.When *match*=CLOSEST, Abaqus returns the closest frame. If the frame value 
-            requested is exactly halfway between two frames, Abaqus returns the frame after the 
-            value.When *match*=EXACT, Abaqus raises an exception if the exact frame value does not 
-            exist. 
+            A SymbolicConstant specifying which frame to return if there is no frame at the exact
+            frame value. Possible values are CLOSEST, BEFORE, AFTER, and EXACT. The default value is
+            CLOSEST.When *match*=CLOSEST, Abaqus returns the closest frame. If the frame value
+            requested is exactly halfway between two frames, Abaqus returns the frame after the
+            value.When *match*=EXACT, Abaqus raises an exception if the exact frame value does not
+            exist.
 
         Returns
         -------
-            An OdbFrame object. 
+            An OdbFrame object.
 
         Raises
         ------
-            - If the exact frame is not found: 
-              OdbError: Frame not found. 
+            - If the exact frame is not found:
+              OdbError: Frame not found.
         """
         pass
 
@@ -172,9 +173,9 @@ class OdbBase:
 
         Raises
         ------
-            - OdbError 
-              Database save failed. The database was opened as read-only. Modification of data is 
-            not permitted. 
+            - OdbError
+              Database save failed. The database was opened as read-only. Modification of data is
+            not permitted.
         """
         pass
 

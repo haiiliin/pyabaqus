@@ -6,9 +6,9 @@ from ..Datum.DatumCsys import DatumCsys
 
 class AnalyticalField(Field):
     """The AnalyticalField object is the abstract base type for other AnalyticalField objects.
-    The AnalyticalField object has no explicit constructor. The methods and members of the 
-    AnalyticalField object are common to all objects derived from the AnalyticalField. 
-    The AnalyticalField object is derived from the Field object. 
+    The AnalyticalField object has no explicit constructor. The methods and members of the
+    AnalyticalField object are common to all objects derived from the AnalyticalField.
+    The AnalyticalField object is derived from the Field object.
 
     Attributes
     ----------
@@ -34,31 +34,45 @@ class AnalyticalField(Field):
 
     """
 
-    # A String specifying the repository key. 
-    name: str = ''
+    # A String specifying the repository key.
+    name: str = ""
 
-    # None or a DatumCsys object specifying the local coordinate system of the field. If 
-    # *localCsys*=None, the field is defined in the global coordinate system. The default 
-    # value is None. 
+    # None or a DatumCsys object specifying the local coordinate system of the field. If
+    # *localCsys*=None, the field is defined in the global coordinate system. The default
+    # value is None.
     localCsys: DatumCsys = DatumCsys()
 
-    # A String specifying the description of the field. The default value is an empty string. 
-    description: str = ''
+    # A String specifying the description of the field. The default value is an empty string.
+    description: str = ""
 
     # An OdbMeshRegionData object.
-    odbMeshRegionData: OdbMeshRegionData = OdbMeshRegionData('', '')
+    odbMeshRegionData: OdbMeshRegionData = OdbMeshRegionData("", "")
 
-    def OdbMeshRegionData(self, odbFileName: str, variableLabel: str, stepIndex: int = 0, frameIndex: int = 0,
-                          outputPosition: SymbolicConstant = UNDEFINED_POSITION,
-                          dataType: SymbolicConstant = SCALAR, storageType: SymbolicConstant = FLOAT,
-                          quantityToPlot: SymbolicConstant = FIELD_OUTPUT, averageElementOutput: str = OFF,
-                          useRegionBoundaries: str = OFF, regionBoundaries: SymbolicConstant = NONE,
-                          includeFeatureBoundaries: str = ON, featureAngle: float = 20,
-                          averageOnlyDisplayed: str = OFF, averagingThreshold: float = 75,
-                          computeOrder: SymbolicConstant = EXTRAPOLATE_COMPUTE_AVERAGE,
-                          numericForm: SymbolicConstant = REAL, complexAngle: float = 0, sectionPoint: str = '',
-                          refinementType: SymbolicConstant = None, refinementLabel: str = '',
-                          displayOutputPosition: SymbolicConstant = None) -> OdbMeshRegionData:
+    def OdbMeshRegionData(
+        self,
+        odbFileName: str,
+        variableLabel: str,
+        stepIndex: int = 0,
+        frameIndex: int = 0,
+        outputPosition: SymbolicConstant = UNDEFINED_POSITION,
+        dataType: SymbolicConstant = SCALAR,
+        storageType: SymbolicConstant = FLOAT,
+        quantityToPlot: SymbolicConstant = FIELD_OUTPUT,
+        averageElementOutput: str = OFF,
+        useRegionBoundaries: str = OFF,
+        regionBoundaries: SymbolicConstant = NONE,
+        includeFeatureBoundaries: str = ON,
+        featureAngle: float = 20,
+        averageOnlyDisplayed: str = OFF,
+        averagingThreshold: float = 75,
+        computeOrder: SymbolicConstant = EXTRAPOLATE_COMPUTE_AVERAGE,
+        numericForm: SymbolicConstant = REAL,
+        complexAngle: float = 0,
+        sectionPoint: str = "",
+        refinementType: SymbolicConstant = None,
+        refinementLabel: str = "",
+        displayOutputPosition: SymbolicConstant = None,
+    ) -> OdbMeshRegionData:
         """This method creates an OdbMeshRegionData object.
 
         Notes
@@ -68,7 +82,7 @@ class AnalyticalField(Field):
         .. code-block:: python
 
             mdb.models[name].analyticalFields[name].OdbMeshRegionData
-        
+
         Parameters
         ----------
         odbFileName
@@ -187,10 +201,28 @@ class AnalyticalField(Field):
         ------
             TextException.
         """
-        self.odbMeshRegionData = OdbMeshRegionData(odbFileName, variableLabel, stepIndex, frameIndex, outputPosition,
-                                                   dataType, storageType, quantityToPlot, averageElementOutput,
-                                                   useRegionBoundaries, regionBoundaries, includeFeatureBoundaries,
-                                                   featureAngle, averageOnlyDisplayed, averagingThreshold, computeOrder,
-                                                   numericForm, complexAngle, sectionPoint, refinementType,
-                                                   refinementLabel, displayOutputPosition)
+        self.odbMeshRegionData = OdbMeshRegionData(
+            odbFileName,
+            variableLabel,
+            stepIndex,
+            frameIndex,
+            outputPosition,
+            dataType,
+            storageType,
+            quantityToPlot,
+            averageElementOutput,
+            useRegionBoundaries,
+            regionBoundaries,
+            includeFeatureBoundaries,
+            featureAngle,
+            averageOnlyDisplayed,
+            averagingThreshold,
+            computeOrder,
+            numericForm,
+            complexAngle,
+            sectionPoint,
+            refinementType,
+            refinementLabel,
+            displayOutputPosition,
+        )
         return self.odbMeshRegionData

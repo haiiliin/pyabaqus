@@ -4,7 +4,7 @@ from ..Region.Region import Region
 
 class SizingMemberSize(GeometricRestriction):
     """The SizingMemberSize object defines a sizing member size geometric restriction.
-    The SizingMemberSize object is derived from the GeometricRestriction object. 
+    The SizingMemberSize object is derived from the GeometricRestriction object.
 
     Notes
     -----
@@ -27,15 +27,15 @@ class SizingMemberSize(GeometricRestriction):
         .. code-block:: python
 
                       mdb.models[name].optimizationTasks[name].SizingMemberSize
-        
+
         Parameters
         ----------
         name
-            A String specifying the geometric restriction repository key. 
+            A String specifying the geometric restriction repository key.
         region
-            A Region object specifying the region to which the geometric restriction is applied. 
+            A Region object specifying the region to which the geometric restriction is applied.
         minWidth
-            A Float specifying the min width. 
+            A Float specifying the min width.
 
         Returns
         -------
@@ -47,6 +47,5 @@ class SizingMemberSize(GeometricRestriction):
         pass
 
     def setValues(self):
-        """This method modifies the sizingMemberSize object.
-        """
+        """This method modifies the sizingMemberSize object."""
         pass

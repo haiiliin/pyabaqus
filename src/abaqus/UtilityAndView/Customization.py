@@ -22,21 +22,21 @@ def journalMethodCall(objectPath: str, methodName: str, args: tuple, kargs: str)
     Notes
     -----
         This function can be accessed by:
-        
+
         .. code-block:: python
-        
+
             journalMethodCall
 
     Parameters
     ----------
     objectPath
-        A String specifying the path to the object. 
+        A String specifying the path to the object.
     methodName
-        A String specifying the name of the method. 
+        A String specifying the name of the method.
     args
-        A sequence specifying the positional arguments to be written to the journal file. 
+        A sequence specifying the positional arguments to be written to the journal file.
     kargs
-        A Python dict object specifying the keyword arguments to be written to the journal file. 
+        A Python dict object specifying the keyword arguments to be written to the journal file.
 
     """
     pass

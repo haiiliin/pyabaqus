@@ -5,31 +5,37 @@ class ConstrainedSketchParameterModel(ConstrainedSketchBase):
     """A ConstrainedSketch object contains the entities that are used to create a sketch. The
     objects include ConstrainedSketchGeometry objects contained in the ConstrainedSketchGeometry Repository,
     such as Line, Arc, and Spline. ConstrainedSketchVertex, ConstrainedSketchDimension, ConstrainedSketchConstraint, and ConstrainedSketchParameter objects are
-    contained in their respective repositories. 
+    contained in their respective repositories.
 
     Notes
     -----
     This object can be accessed by:
-    
+
     .. code-block:: python
-        
+
         import sketch
         mdb.models[name].sketches[name]
 
     """
 
-    def ConstrainedSketchParameter(self, name: str, path: str = '', expression: str = '', previousParameter: str = ''):
+    def ConstrainedSketchParameter(
+        self,
+        name: str,
+        path: str = "",
+        expression: str = "",
+        previousParameter: str = "",
+    ):
         """This method creates a parameter and optionally associates a dimension with this
         parameter.
 
         Notes
         -----
             This function can be accessed by:
-            
+
             .. code-block:: python
-            
+
                 mdb.models[name].sketches[name].ConstrainedSketchParameter
-        
+
         Parameters
         ----------
         name

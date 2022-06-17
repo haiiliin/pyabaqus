@@ -15,17 +15,17 @@ class MaterialModel(ModelBase):
 
     """
 
-    def Material(self, name: str, description: str = '', materialIdentifier: str = ''):
+    def Material(self, name: str, description: str = "", materialIdentifier: str = ""):
         """This method creates a Material object.
 
         Notes
         -----
             This function can be accessed by:
-            
+
             .. code-block:: python
-            
+
                 mdb.models[name].Material
-        
+
         Parameters
         ----------
         name
@@ -41,5 +41,7 @@ class MaterialModel(ModelBase):
         -------
             A Material object.
         """
-        self.materials[name] = material = Material(name, description, materialIdentifier)
+        self.materials[name] = material = Material(
+            name, description, materialIdentifier
+        )
         return material

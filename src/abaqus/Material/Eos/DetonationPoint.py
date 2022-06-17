@@ -1,7 +1,7 @@
 class DetonationPoint:
     """A DetonationPoint object specifies a suboption of the Eos object. The DetonationPoint
-    object defines either isotropic linear elastic shear or linear viscous shear behavior 
-    for a hydrodynamic material. 
+    object defines either isotropic linear elastic shear or linear viscous shear behavior
+    for a hydrodynamic material.
 
     Notes
     -----
@@ -32,16 +32,16 @@ class DetonationPoint:
         Notes
         -----
             This function can be accessed by:
-            
+
             .. code-block:: python
-            
+
                 mdb.models[name].materials[name].eos.DetonationPoint
                 session.odbs[name].materials[name].eos.DetonationPoint
-        
+
         Parameters
         ----------
         table
-            A sequence of sequences of Floats specifying the items described below. 
+            A sequence of sequences of Floats specifying the items described below.
 
         Returns
         -------
@@ -50,6 +50,5 @@ class DetonationPoint:
         pass
 
     def setValues(self):
-        """This method modifies the DetonationPoint object.
-        """
+        """This method modifies the DetonationPoint object."""
         pass

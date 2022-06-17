@@ -8,16 +8,16 @@ class ClayPlasticity:
     Notes
     -----
     This object can be accessed by:
-    
+
     .. code-block:: python
-        
+
         import material
         mdb.models[name].materials[name].clayPlasticity
         import odbMaterial
         session.odbs[name].materials[name].clayPlasticity
 
     The table data for this object are:
-    
+
     - If *hardening*=EXPONENTIAL, the table data specify the following:
         - Logarithmic Plastic bulk modulus, λ (dimensionless).
         - Stress ratio at critical state, M.
@@ -44,41 +44,47 @@ class ClayPlasticity:
 
     """
 
-    # A ClayHardening object. 
+    # A ClayHardening object.
     clayHardening: ClayHardening = ClayHardening(((),))
 
-    def __init__(self, table: tuple, intercept: float = None, hardening: SymbolicConstant = EXPONENTIAL,
-                 temperatureDependency: Boolean = OFF, dependencies: int = 0):
+    def __init__(
+        self,
+        table: tuple,
+        intercept: float = None,
+        hardening: SymbolicConstant = EXPONENTIAL,
+        temperatureDependency: Boolean = OFF,
+        dependencies: int = 0,
+    ):
         """This method creates a ClayPlasticity object.
 
         Notes
         -----
             This function can be accessed by:
-            
+
             .. code-block:: python
-            
+
                 mdb.models[name].materials[name].ClayPlasticity
                 session.odbs[name].materials[name].ClayPlasticity
-        
+
         Parameters
         ----------
         table
-            A sequence of sequences of Floats specifying the items described below. 
+            A sequence of sequences of Floats specifying the items described below.
         intercept
-            None or a Float specifying e1e1, the intercept of the virgin consolidation line with the 
-            void ratio axis in a plot of void ratio versus the logarithm of pressure stress. The 
-            default value is None.This argument is valid only if *hardening*=EXPONENTIAL. 
+            None or a Float specifying e1e1, the intercept of the virgin consolidation line with the
+            void ratio axis in a plot of void ratio versus the logarithm of pressure stress. The
+            default value is None.This argument is valid only if *hardening*=EXPONENTIAL.
         hardening
-            A SymbolicConstant specifying the type of hardening/softening definition. Possible 
-            values are EXPONENTIAL and TABULAR. The default value is EXPONENTIAL. 
+            A SymbolicConstant specifying the type of hardening/softening definition. Possible
+            values are EXPONENTIAL and TABULAR. The default value is EXPONENTIAL.
         temperatureDependency
-            A Boolean specifying whether the data depend on temperature. The default value is OFF. 
+            A Boolean specifying whether the data depend on temperature. The default value is OFF.
         dependencies
-            An Int specifying the number of field variable dependencies. The default value is 0. 
+            An Int specifying the number of field variable dependencies. The default value is 0.
 
         Returns
         -------
-            A ClayPlasticity object. 
+            A ClayPlasticity object.
 
         Raises
         ------

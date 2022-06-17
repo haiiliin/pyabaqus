@@ -1,8 +1,6 @@
-
-
 class GapHeatGeneration:
     """The GapHeatGeneration object specifies heat generation for a contact interaction
-    property. 
+    property.
 
     Attributes
     ----------
@@ -28,12 +26,12 @@ class GapHeatGeneration:
 
     """
 
-    # A Float specifying the fraction of dissipated energy caused by friction or electric 
-    # currents that is converted to heat. The default value is 1.0. 
+    # A Float specifying the fraction of dissipated energy caused by friction or electric
+    # currents that is converted to heat. The default value is 1.0.
     conversionFraction: float = 1
 
     # A Float specifying the fraction of converted heat distributed to the slave surface.
-    # The default value is 0.5. 
+    # The default value is 0.5.
     slaveFraction: float = 0
 
     def __init__(self, conversionFraction: float = 1, slaveFraction: float = 0):
@@ -46,15 +44,15 @@ class GapHeatGeneration:
         .. code-block:: python
 
             mdb.models[name].interactionProperties[name].HeatGeneration
-        
+
         Parameters
         ----------
         conversionFraction
-            A Float specifying the fraction of dissipated energy caused by friction or electric 
-            currents that is converted to heat. The default value is 1.0. 
+            A Float specifying the fraction of dissipated energy caused by friction or electric
+            currents that is converted to heat. The default value is 1.0.
         slaveFraction
             A Float specifying the fraction of converted heat distributed to the slave surface.
-            The default value is 0.5. 
+            The default value is 0.5.
 
         Returns
         -------
@@ -63,6 +61,5 @@ class GapHeatGeneration:
         pass
 
     def setValues(self):
-        """This method modifies the GapHeatGeneration object.
-        """
+        """This method modifies the GapHeatGeneration object."""
         pass

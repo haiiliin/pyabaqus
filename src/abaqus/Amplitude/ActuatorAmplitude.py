@@ -4,7 +4,7 @@ from .Amplitude import Amplitude
 
 class ActuatorAmplitude(Amplitude):
     """The ActuatorAmplitude object defines an actuator amplitude curve.
-    The ActuatorAmplitude object is derived from the Amplitude object. 
+    The ActuatorAmplitude object is derived from the Amplitude object.
 
     Notes
     -----
@@ -34,34 +34,34 @@ class ActuatorAmplitude(Amplitude):
 
             mdb.models[name].ActuatorAmplitude
             session.odbs[name].ActuatorAmplitude
-        
+
         Parameters
         ----------
         name
-            A String specifying the repository key. 
+            A String specifying the repository key.
         timeSpan
-            A SymbolicConstant specifying the time span of the amplitude. Possible values are STEP 
-            and TOTAL. The default value is STEP. 
+            A SymbolicConstant specifying the time span of the amplitude. Possible values are STEP
+            and TOTAL. The default value is STEP.
 
         Returns
         -------
-            An ActuatorAmplitude object. 
-            
+            An ActuatorAmplitude object.
+
         Raises
         ------
         InvalidNameError
-        RangeError 
+        RangeError
         """
         super().__init__()
         pass
 
     def setValues(self, timeSpan: SymbolicConstant = STEP):
         """This method modifies the ActuatorAmplitude object.
-        
+
         Parameters
         ----------
         timeSpan
-            A SymbolicConstant specifying the time span of the amplitude. Possible values are STEP 
+            A SymbolicConstant specifying the time span of the amplitude. Possible values are STEP
             and TOTAL. The default value is STEP.
 
         Raises

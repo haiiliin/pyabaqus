@@ -17,37 +17,35 @@ class Constraint:
     Notes
     -----
     This object can be accessed by:
-    
+
     .. code-block:: python
-        
+
         import interaction
         mdb.models[name].constraints[name]
 
     """
 
-    # A String specifying the constraint repository key. 
-    name: str = ''
+    # A String specifying the constraint repository key.
+    name: str = ""
 
-    # A Boolean specifying whether the constraint is suppressed or not. The default value is 
-    # OFF. 
+    # A Boolean specifying whether the constraint is suppressed or not. The default value is
+    # OFF.
     suppressed: Boolean = OFF
 
     def resume(self):
-        """This method resumes the constraint that was previously suppressed.
-        """
+        """This method resumes the constraint that was previously suppressed."""
         pass
 
     def suppress(self):
-        """This method suppresses the constraint.
-        """
+        """This method suppresses the constraint."""
         pass
 
     def delete(self, indices: tuple):
         """This method allows you to delete existing constraints.
-        
+
         Parameters
         ----------
         indices
-            A sequence of Ints specifying the index of each constraint to delete. 
+            A sequence of Ints specifying the index of each constraint to delete.
         """
         pass

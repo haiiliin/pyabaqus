@@ -29,13 +29,15 @@ class Stringer:
 
     """
 
-    # A MeshElementArray object. 
+    # A MeshElementArray object.
     elements: MeshElementArray = MeshElementArray([])
 
-    # An EdgeArray object. 
+    # An EdgeArray object.
     edges: EdgeArray = EdgeArray([])
 
-    def __init__(self, name: str, edges: tuple[Edge] = (), elementEdges: tuple[MeshEdge] = ()):
+    def __init__(
+        self, name: str, edges: tuple[Edge] = (), elementEdges: tuple[MeshEdge] = ()
+    ):
         """This method creates a stringer from a sequence of objects in a model database. At least
         one of the optional arguments needs to be specified.
 
@@ -46,17 +48,17 @@ class Stringer:
         .. code-block:: python
 
             mdb.models[name].parts[*name*].Stringer
-        
+
         Parameters
         ----------
         name
-            A String specifying the repository key. The default value is an empty string. 
+            A String specifying the repository key. The default value is an empty string.
         edges
-            A sequence of Edge objects specifying the edges on which stringers should be created. 
-            Applicable to three and two dimensional parts. 
+            A sequence of Edge objects specifying the edges on which stringers should be created.
+            Applicable to three and two dimensional parts.
         elementEdges
-            A sequence of MeshEdge objects specifying the mesh edges on which stringers should be 
-            created. Applicable to three and two dimensional parts. 
+            A sequence of MeshEdge objects specifying the mesh edges on which stringers should be
+            created. Applicable to three and two dimensional parts.
 
         Returns
         -------
@@ -64,7 +66,9 @@ class Stringer:
         """
         pass
 
-    def EditStringer(self, name: str, edges: tuple[Edge] = (), elementEdges: tuple[MeshEdge] = ()):
+    def EditStringer(
+        self, name: str, edges: tuple[Edge] = (), elementEdges: tuple[MeshEdge] = ()
+    ):
         """This method modifies underlying entities of the selected stringer. At least one of the
         optional arguments needs to be specified.
 
@@ -75,17 +79,17 @@ class Stringer:
         .. code-block:: python
 
             mdb.models[name].parts[*name*].Stringer
-        
+
         Parameters
         ----------
         name
-            A String specifying the repository key. The default value is an empty string. 
+            A String specifying the repository key. The default value is an empty string.
         edges
-            A sequence of Edge objects specifying the edges on which stringers should be created. 
-            Applicable to three and two dimensional parts. 
+            A sequence of Edge objects specifying the edges on which stringers should be created.
+            Applicable to three and two dimensional parts.
         elementEdges
-            A sequence of MeshEdge objects specifying the mesh edges on which stringers should be 
-            created. Applicable to three and two dimensional parts. 
+            A sequence of MeshEdge objects specifying the mesh edges on which stringers should be
+            created. Applicable to three and two dimensional parts.
 
         Returns
         -------

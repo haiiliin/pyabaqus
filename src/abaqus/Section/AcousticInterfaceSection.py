@@ -3,7 +3,7 @@ from .Section import Section
 
 class AcousticInterfaceSection(Section):
     """The AcousticInterfaceSection object defines the properties of an acoustic section.
-    The AcousticInterfaceSection object is derived from the Section object. 
+    The AcousticInterfaceSection object is derived from the Section object.
 
     Notes
     -----
@@ -33,34 +33,34 @@ class AcousticInterfaceSection(Section):
 
             mdb.models[name].AcousticInterfaceSection
             session.odbs[name].AcousticInterfaceSection
-        
+
         Parameters
         ----------
         name
-            A String specifying the repository key. 
+            A String specifying the repository key.
         thickness
-            A Float specifying the thickness of the section. Possible values are *thickness* >> 0.0. 
-            The default value is 1.0. 
+            A Float specifying the thickness of the section. Possible values are *thickness* >> 0.0.
+            The default value is 1.0.
 
         Returns
         -------
-            An AcousticInterfaceSection object. 
-            
+            An AcousticInterfaceSection object.
+
         Raises
         ------
         InvalidNameError
-        RangeError 
+        RangeError
         """
         super().__init__()
         pass
 
     def setValues(self, thickness: float = 1):
         """This method modifies the AcousticInterfaceSection object.
-        
+
         Parameters
         ----------
         thickness
-            A Float specifying the thickness of the section. Possible values are *thickness* >> 0.0. 
+            A Float specifying the thickness of the section. Possible values are *thickness* >> 0.0.
             The default value is 1.0.
 
         Raises

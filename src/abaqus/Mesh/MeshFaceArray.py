@@ -28,11 +28,11 @@ class MeshFaceArray(list[MeshFace]):
         .. code-block:: python
 
             mesh.MeshFaceArray
-        
+
         Parameters
         ----------
         faces
-            A list of MeshFace objects. 
+            A list of MeshFace objects.
 
         Returns
         -------
@@ -43,20 +43,20 @@ class MeshFaceArray(list[MeshFace]):
     def getSequenceFromMask(self, mask: str):
         """This method returns the objects in the MeshFaceArray identified using the specified
         *mask*. When large number of objects are involved, this method is highly efficient.
-        
+
         Parameters
         ----------
         mask
-            A String specifying the object or objects. 
+            A String specifying the object or objects.
 
         Returns
         -------
-            A MeshFaceArray object. 
+            A MeshFaceArray object.
 
         Raises
         ------
-            - An exception occurs if the resulting sequence is empty. 
-              Error: The mask results in an empty sequence 
+            - An exception occurs if the resulting sequence is empty.
+              Error: The mask results in an empty sequence
         """
         pass
 

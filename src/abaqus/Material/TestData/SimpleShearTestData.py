@@ -4,9 +4,9 @@ class SimpleShearTestData:
     Notes
     -----
     This object can be accessed by:
-    
+
     .. code-block:: python
-        
+
         import material
         mdb.models[name].materials[name].hyperfoam.simpleShearTestData
         import odbMaterial
@@ -30,16 +30,16 @@ class SimpleShearTestData:
         Notes
         -----
             This function can be accessed by:
-            
+
             .. code-block:: python
-            
+
                 mdb.models[name].materials[name].hyperfoam.SimpleShearTestData
                 session.odbs[name].materials[name].hyperfoam.SimpleShearTestData
-        
+
         Parameters
         ----------
         table
-            A sequence of sequences of Floats specifying the items described below. 
+            A sequence of sequences of Floats specifying the items described below.
 
         Returns
         -------
@@ -48,6 +48,5 @@ class SimpleShearTestData:
         pass
 
     def setValues(self):
-        """This method modifies the SimpleShearTestData object.
-        """
+        """This method modifies the SimpleShearTestData object."""
         pass

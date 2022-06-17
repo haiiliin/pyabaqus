@@ -1,4 +1,6 @@
-from .DirectDampingByFrequencyComponentArray import DirectDampingByFrequencyComponentArray
+from .DirectDampingByFrequencyComponentArray import (
+    DirectDampingByFrequencyComponentArray,
+)
 
 
 class DirectDampingByFrequency:
@@ -12,13 +14,15 @@ class DirectDampingByFrequency:
     Notes
     -----
     This object can be accessed by:
-    
+
     .. code-block:: python
-    
+
         import step
         mdb.models[name].steps[name].directDampingByFrequency
 
     """
 
-    # A DirectDampingByFrequencyComponentArray object. 
-    components: DirectDampingByFrequencyComponentArray = DirectDampingByFrequencyComponentArray()
+    # A DirectDampingByFrequencyComponentArray object.
+    components: DirectDampingByFrequencyComponentArray = (
+        DirectDampingByFrequencyComponentArray()
+    )

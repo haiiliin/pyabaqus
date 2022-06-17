@@ -3,7 +3,7 @@ from abaqusConstants import *
 
 class GapConductance:
     """The GapConductance object specifies conductive heat transfer between closely adjacent
-    (or contacting) surfaces. 
+    (or contacting) surfaces.
 
     Notes
     -----
@@ -31,30 +31,35 @@ class GapConductance:
 
     """
 
-    def __init__(self, pressureDependency: Boolean = OFF, dependencies: int = 0, table: tuple = ()):
+    def __init__(
+        self,
+        pressureDependency: Boolean = OFF,
+        dependencies: int = 0,
+        table: tuple = (),
+    ):
         """This method creates a GapConductance object.
 
         Notes
         -----
             This function can be accessed by:
-            
+
             .. code-block:: python
-            
+
                 mdb.models[name].materials[name].GapConductance
                 session.odbs[name].materials[name].GapConductance
-        
+
         Parameters
         ----------
         pressureDependency
-            A Boolean specifying whether the data depend on pressure. The default value is OFF. 
+            A Boolean specifying whether the data depend on pressure. The default value is OFF.
         dependencies
-            An Int specifying the number of field variable dependencies. The default value is 0. 
+            An Int specifying the number of field variable dependencies. The default value is 0.
         table
-            A sequence of sequences of Floats specifying the items described below. 
+            A sequence of sequences of Floats specifying the items described below.
 
         Returns
         -------
-            A GapConductance object. 
+            A GapConductance object.
 
         Raises
         ------

@@ -5,7 +5,7 @@ import typing
 
 
 @typing.overload
-def getInput(prompt: str, default: str = ''):
+def getInput(prompt: str, default: str = ""):
     """This method is used to obtain a single input from a user from a dialog box. The method
     displays a modal dialog box with a text field prefaced by the specified label. The user
     enters data in the text field or accepts the optional default value that is displayed in
@@ -20,28 +20,28 @@ def getInput(prompt: str, default: str = ''):
     Notes
     -----
         This function can be accessed by:
-        
+
         .. code-block:: python
-        
+
             getInput
 
     Parameters
     ----------
     prompt
-        A String specifying the text field in the dialog box. 
+        A String specifying the text field in the dialog box.
     default
-        A String specifying a default value to be displayed in the text field in the dialog box. 
+        A String specifying a default value to be displayed in the text field in the dialog box.
 
     Returns
     -------
-        A String or None if the user clicks Cancel. 
+        A String or None if the user clicks Cancel.
 
     """
     pass
 
 
 @typing.overload
-def getInput(fields: tuple, label: str = '', dialogTitle: str = ''):
+def getInput(fields: tuple, label: str = "", dialogTitle: str = ""):
     """This method is used to obtain multiple inputs from a user from a dialog box. The method
     displays a modal dialog box with a column of text fields prefaced by the specified
     labels. The user enters data in the text fields or accepts the optional default values
@@ -54,30 +54,30 @@ def getInput(fields: tuple, label: str = '', dialogTitle: str = ''):
     Notes
     -----
         This function can be accessed by:
-        
+
         .. code-block:: python
-        
+
             getInputs
 
     Parameters
     ----------
     fields
-        A sequence of sequence of Strings specifying the text fields in the dialog box. Each 
-        inner sequence is a pair of Strings specifying a label that describes a text field along 
-        with a default value that appears in the text field. If the field has no default value, 
-        you should enter an empty string in the second string in the pair. 
+        A sequence of sequence of Strings specifying the text fields in the dialog box. Each
+        inner sequence is a pair of Strings specifying a label that describes a text field along
+        with a default value that appears in the text field. If the field has no default value,
+        you should enter an empty string in the second string in the pair.
     label
-        A String specifying a label to be placed at the top of the dialog box. The default is an 
-        empty string, indicating that no label will be shown. 
+        A String specifying a label to be placed at the top of the dialog box. The default is an
+        empty string, indicating that no label will be shown.
     dialogTitle
-        A String specifying the text to be shown in the title bar of the dialog box. The default 
-        is Get Inputs. 
+        A String specifying the text to be shown in the title bar of the dialog box. The default
+        is Get Inputs.
 
     Returns
     -------
-        A sequence of Strings representing the data in each of the text fields in the dialog 
-        box. If the user clicks the Cancel button, the method returns a sequence of None 
-        objects. 
+        A sequence of Strings representing the data in each of the text fields in the dialog
+        box. If the user clicks the Cancel button, the method returns a sequence of None
+        objects.
 
     """
     pass
@@ -101,22 +101,22 @@ def getWarningReply(message: str, buttons: str):
     Notes
     -----
         This function can be accessed by:
-        
+
         .. code-block:: python
-        
+
             getWarningReply
 
     Parameters
     ----------
     message
-        A String specifying the message in the warning dialog box. 
+        A String specifying the message in the warning dialog box.
     buttons
-        A Sequence of standard buttons to be displayed in the warning dialog box. Permissible 
-        values are YES, NO, YES_TO_ALL and CANCEL. 
+        A Sequence of standard buttons to be displayed in the warning dialog box. Permissible
+        values are YES, NO, YES_TO_ALL and CANCEL.
 
     Returns
     -------
-        The button that the user clicks. 
+        The button that the user clicks.
 
     """
     pass

@@ -43,14 +43,14 @@ class SectionPoint:
         .. code-block:: python
 
             session.odbs[*name*].sectionCategories[*name*].SectionPoint
-        
+
         Parameters
         ----------
         number
-            An Int specifying the number of the section point. See Beam elements and Shell elements 
-            for the numbering convention. 
+            An Int specifying the number of the section point. See Beam elements and Shell elements
+            for the numbering convention.
         description
-            A String specifying the description of the section point. 
+            A String specifying the description of the section point.
 
         Returns
         -------

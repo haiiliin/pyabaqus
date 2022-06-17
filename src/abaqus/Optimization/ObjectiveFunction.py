@@ -20,10 +20,16 @@ class ObjectiveFunction:
         mdb.models[name].optimizationTasks[name].objectiveFunctions[name]
 
     """
+
     # Optimization objectives
     objectives: OptimizationObjectiveArray = OptimizationObjectiveArray()
 
-    def __init__(self, name: str, objectives: OptimizationObjectiveArray, target: SymbolicConstant = MINIMIZE):
+    def __init__(
+        self,
+        name: str,
+        objectives: OptimizationObjectiveArray,
+        target: SymbolicConstant = MINIMIZE,
+    ):
         """This method creates an ObjectiveFunction object.
 
         Notes
@@ -33,35 +39,35 @@ class ObjectiveFunction:
         .. code-block:: python
 
                       mdb.models[name].optimizationTasks[name].ObjectiveFunction
-        
+
         Parameters
         ----------
         name
-            A String specifying the objective function repository key. 
+            A String specifying the objective function repository key.
         objectives
-            An OptimizationObjectiveArray object. 
+            An OptimizationObjectiveArray object.
         target
-            A SymbolicConstant specifying the target of the objective function. Possible values are 
-            MINIMIZE, MAXIMIZE, and MINIMIZE_MAXIMUM. The default value is MINIMIZE. 
+            A SymbolicConstant specifying the target of the objective function. Possible values are
+            MINIMIZE, MAXIMIZE, and MINIMIZE_MAXIMUM. The default value is MINIMIZE.
 
         Returns
         -------
-            An ObjectiveFunction object. 
-            
+            An ObjectiveFunction object.
+
         Raises
         ------
         InvalidNameError
-        RangeError 
+        RangeError
         """
         pass
 
     def setValues(self, target: SymbolicConstant = MINIMIZE):
         """This method modifies the ObjectiveFunction object.
-        
+
         Parameters
         ----------
         target
-            A SymbolicConstant specifying the target of the objective function. Possible values are 
+            A SymbolicConstant specifying the target of the objective function. Possible values are
             MINIMIZE, MAXIMIZE, and MINIMIZE_MAXIMUM. The default value is MINIMIZE.
 
         Raises

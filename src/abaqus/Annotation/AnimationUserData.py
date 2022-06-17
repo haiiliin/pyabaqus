@@ -7,24 +7,32 @@ from ..Odb.UserDataBase import UserDataBase
 
 
 class AnimationUserData(UserDataBase):
-
-    def Arrow(self, name: str, startPoint: tuple[float] = (), endPoint: tuple[float] = (),
-              startAnchor: typing.Union[SymbolicConstant, float] = BOTTOM_LEFT,
-              endAnchor: typing.Union[SymbolicConstant, float] = BOTTOM_LEFT,
-              startHeadStyle: SymbolicConstant = NONE, endHeadStyle: SymbolicConstant = FILLED_ARROW,
-              startGap: float = 0, endGap: float = 0, color: str = '',
-              lineStyle: SymbolicConstant = SOLID, lineThickness: SymbolicConstant = VERY_THIN) -> Arrow:
+    def Arrow(
+        self,
+        name: str,
+        startPoint: tuple[float] = (),
+        endPoint: tuple[float] = (),
+        startAnchor: typing.Union[SymbolicConstant, float] = BOTTOM_LEFT,
+        endAnchor: typing.Union[SymbolicConstant, float] = BOTTOM_LEFT,
+        startHeadStyle: SymbolicConstant = NONE,
+        endHeadStyle: SymbolicConstant = FILLED_ARROW,
+        startGap: float = 0,
+        endGap: float = 0,
+        color: str = "",
+        lineStyle: SymbolicConstant = SOLID,
+        lineThickness: SymbolicConstant = VERY_THIN,
+    ) -> Arrow:
         """This method creates an Arrow object.
 
         Notes
         -----
             This function can be accessed by:
-            
+
             .. code-block:: python
-            
+
                 mdb.Arrow
                 session.odbs[*name*].userData.Arrow
-        
+
         Parameters
         ----------
         name
@@ -111,27 +119,48 @@ class AnimationUserData(UserDataBase):
         -------
             An Arrow object.
         """
-        self.annotations[name] = arrow = Arrow(name, startPoint, endPoint, startAnchor, endAnchor, startHeadStyle,
-                                               endHeadStyle, startGap, endGap, color, lineStyle, lineThickness)
+        self.annotations[name] = arrow = Arrow(
+            name,
+            startPoint,
+            endPoint,
+            startAnchor,
+            endAnchor,
+            startHeadStyle,
+            endHeadStyle,
+            startGap,
+            endGap,
+            color,
+            lineStyle,
+            lineThickness,
+        )
         return arrow
 
-    def Text(self, name: str, text: str = '', offset: tuple[float] = (),
-             anchor: typing.Union[SymbolicConstant, float] = BOTTOM_LEFT,
-             referencePoint: typing.Union[SymbolicConstant, float] = BOTTOM_LEFT,
-             rotationAngle: float = 0, color: str = '', font: str = '',
-             backgroundStyle: SymbolicConstant = TRANSPARENT, backgroundColor: str = '',
-             box: Boolean = OFF, justification: SymbolicConstant = JUSTIFY_LEFT) -> Text:
+    def Text(
+        self,
+        name: str,
+        text: str = "",
+        offset: tuple[float] = (),
+        anchor: typing.Union[SymbolicConstant, float] = BOTTOM_LEFT,
+        referencePoint: typing.Union[SymbolicConstant, float] = BOTTOM_LEFT,
+        rotationAngle: float = 0,
+        color: str = "",
+        font: str = "",
+        backgroundStyle: SymbolicConstant = TRANSPARENT,
+        backgroundColor: str = "",
+        box: Boolean = OFF,
+        justification: SymbolicConstant = JUSTIFY_LEFT,
+    ) -> Text:
         """This method creates a Text object.
 
         Notes
         -----
             This function can be accessed by:
-            
+
             .. code-block:: python
-            
+
                 mdb.Text
                 session.odbs[*name*].userData.Text
-        
+
         Parameters
         ----------
         name
@@ -199,6 +228,18 @@ class AnimationUserData(UserDataBase):
             A Text object.
             !img
         """
-        self.annotations[name] = text = Text(name, text, offset, anchor, referencePoint, rotationAngle, color, font,
-                                             backgroundStyle, backgroundColor, box, justification)
+        self.annotations[name] = text = Text(
+            name,
+            text,
+            offset,
+            anchor,
+            referencePoint,
+            rotationAngle,
+            color,
+            font,
+            backgroundStyle,
+            backgroundColor,
+            box,
+            justification,
+        )
         return text

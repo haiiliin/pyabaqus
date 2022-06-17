@@ -3,7 +3,7 @@ from .Section import Section
 
 class EulerianSection(Section):
     """The EulerianSection object defines the properties of a Eulerian section.
-    The EulerianSection object is derived from the Section object. 
+    The EulerianSection object is derived from the Section object.
 
     Notes
     -----
@@ -33,14 +33,14 @@ class EulerianSection(Section):
 
             mdb.models[name].EulerianSection
             session.odbs[name].EulerianSection
-        
+
         Parameters
         ----------
         name
-            A String specifying the repository key. 
+            A String specifying the repository key.
         data
-            A String-to-String Dictionary specifying a dictionary mapping Material instance names to 
-            Material names. Internally the specified mapping gets sorted on Material instance name. 
+            A String-to-String Dictionary specifying a dictionary mapping Material instance names to
+            Material names. Internally the specified mapping gets sorted on Material instance name.
 
         Returns
         -------
@@ -50,6 +50,5 @@ class EulerianSection(Section):
         pass
 
     def setValues(self):
-        """This method modifies the EulerianSection object.
-        """
+        """This method modifies the EulerianSection object."""
         pass

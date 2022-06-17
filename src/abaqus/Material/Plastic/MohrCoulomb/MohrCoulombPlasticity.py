@@ -9,9 +9,9 @@ class MohrCoulombPlasticity:
     Notes
     -----
     This object can be accessed by:
-    
+
     .. code-block:: python
-        
+
         import material
         mdb.models[name].materials[name].mohrCoulombPlasticity
         import odbMaterial
@@ -32,48 +32,54 @@ class MohrCoulombPlasticity:
 
     """
 
-    # A MohrCoulombHardening object. 
+    # A MohrCoulombHardening object.
     mohrCoulombHardening: MohrCoulombHardening = MohrCoulombHardening(((),))
 
-    # A TensionCutOff object. 
+    # A TensionCutOff object.
     tensionCutOff: TensionCutOff = TensionCutOff(((),))
 
-    def __init__(self, table: tuple, deviatoricEccentricity: float = None, meridionalEccentricity: float = 0,
-                 temperatureDependency: Boolean = OFF, dependencies: int = 0,
-                 useTensionCutoff: Boolean = OFF):
+    def __init__(
+        self,
+        table: tuple,
+        deviatoricEccentricity: float = None,
+        meridionalEccentricity: float = 0,
+        temperatureDependency: Boolean = OFF,
+        dependencies: int = 0,
+        useTensionCutoff: Boolean = OFF,
+    ):
         """This method creates a MohrCoulombPlasticity object.
 
         Notes
         -----
             This function can be accessed by:
-            
+
             .. code-block:: python
-            
+
                 mdb.models[name].materials[name].MohrCoulombPlasticity
                 session.odbs[name].materials[name].MohrCoulombPlasticity
-        
+
         Parameters
         ----------
         table
-            A sequence of sequences of Floats specifying the items described below. 
+            A sequence of sequences of Floats specifying the items described below.
         deviatoricEccentricity
-            None or a Float specifying the flow potential eccentricity in the deviatoric plane, e; 
-            1/2 ≤ 1.0. If *deviatoricEccentricity*=None, Abaqus calculates the value using the 
-            specified Mohr-Coulomb angle of friction. The default value is None. 
+            None or a Float specifying the flow potential eccentricity in the deviatoric plane, e;
+            1/2 ≤ 1.0. If *deviatoricEccentricity*=None, Abaqus calculates the value using the
+            specified Mohr-Coulomb angle of friction. The default value is None.
         meridionalEccentricity
-            A Float specifying the flow potential eccentricity in the meridional plane, ϵϵ. The 
-            default value is 0.1. 
+            A Float specifying the flow potential eccentricity in the meridional plane, ϵϵ. The
+            default value is 0.1.
         temperatureDependency
-            A Boolean specifying whether the data depend on temperature. The default value is OFF. 
+            A Boolean specifying whether the data depend on temperature. The default value is OFF.
         dependencies
-            An Int specifying the number of field variable dependencies. The default value is 0. 
+            An Int specifying the number of field variable dependencies. The default value is 0.
         useTensionCutoff
-            A Boolean specifying whether tension cutoff specification is needed. The default value 
-            is OFF. 
+            A Boolean specifying whether tension cutoff specification is needed. The default value
+            is OFF.
 
         Returns
         -------
-            A MohrCoulombPlasticity object. 
+            A MohrCoulombPlasticity object.
 
         Raises
         ------

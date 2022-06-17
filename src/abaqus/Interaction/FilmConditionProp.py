@@ -4,8 +4,8 @@ from .ContactProperty import ContactProperty
 
 class FilmConditionProp(ContactProperty):
     """The FilmConditionProp object is an interaction property that defines a film coefficient
-    as a function of temperature and field variables. 
-    The FilmConditionProp object is derived from the InteractionProperty object. 
+    as a function of temperature and field variables.
+    The FilmConditionProp object is derived from the InteractionProperty object.
 
     Notes
     -----
@@ -22,8 +22,13 @@ class FilmConditionProp(ContactProperty):
 
     """
 
-    def __init__(self, name: str, temperatureDependency: Boolean = OFF, dependencies: int = 0,
-                 property: tuple = ()):
+    def __init__(
+        self,
+        name: str,
+        temperatureDependency: Boolean = OFF,
+        dependencies: int = 0,
+        property: tuple = (),
+    ):
         """This method creates a FilmConditionProp object.
 
         Notes
@@ -33,22 +38,22 @@ class FilmConditionProp(ContactProperty):
         .. code-block:: python
 
             mdb.models[name].FilmConditionProp
-        
+
         Parameters
         ----------
         name
-            A String specifying the interaction property repository key. 
+            A String specifying the interaction property repository key.
         temperatureDependency
-            A Boolean specifying whether the data depend on temperature. The default value is OFF. 
+            A Boolean specifying whether the data depend on temperature. The default value is OFF.
         dependencies
-            An Int specifying the number of field variable dependencies. The default value is 0. 
+            An Int specifying the number of field variable dependencies. The default value is 0.
         property
-            A sequence of sequences of Floats specifying the following: 
-            - The film coefficient, hh. 
-            - Temperature, if the data depend on temperature. 
-            - Value of the first field variable, if the data depend on field variables. 
-            - Value of the second field variable. 
-            - Etc. 
+            A sequence of sequences of Floats specifying the following:
+            - The film coefficient, hh.
+            - Temperature, if the data depend on temperature.
+            - Value of the first field variable, if the data depend on field variables.
+            - Value of the second field variable.
+            - Etc.
 
         Returns
         -------
@@ -57,21 +62,26 @@ class FilmConditionProp(ContactProperty):
         super().__init__(name)
         pass
 
-    def setValues(self, temperatureDependency: Boolean = OFF, dependencies: int = 0, property: tuple = ()):
+    def setValues(
+        self,
+        temperatureDependency: Boolean = OFF,
+        dependencies: int = 0,
+        property: tuple = (),
+    ):
         """This method modifies the FilmConditionProp object.
-        
+
         Parameters
         ----------
         temperatureDependency
-            A Boolean specifying whether the data depend on temperature. The default value is OFF. 
+            A Boolean specifying whether the data depend on temperature. The default value is OFF.
         dependencies
-            An Int specifying the number of field variable dependencies. The default value is 0. 
+            An Int specifying the number of field variable dependencies. The default value is 0.
         property
-            A sequence of sequences of Floats specifying the following: 
-            - The film coefficient, hh. 
-            - Temperature, if the data depend on temperature. 
-            - Value of the first field variable, if the data depend on field variables. 
-            - Value of the second field variable. 
-            - Etc. 
+            A sequence of sequences of Floats specifying the following:
+            - The film coefficient, hh.
+            - Temperature, if the data depend on temperature.
+            - Value of the first field variable, if the data depend on field variables.
+            - Value of the second field variable.
+            - Etc.
         """
         pass

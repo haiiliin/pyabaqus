@@ -10,16 +10,16 @@ class CapPlasticity:
     Notes
     -----
     This object can be accessed by:
-    
+
     .. code-block:: python
-        
+
         import material
         mdb.models[name].materials[name].capPlasticity
         import odbMaterial
         session.odbs[name].materials[name].capPlasticity
 
     The table data for this object are:
-        
+
     - Material cohesion, d, in the p–t plane (Abaqus/Standard) or in the p–q plane (Abaqus/Explicit).
     - Material angle of friction, β, in the p–t plane (Abaqus/Standard) or in the p–q plane (Abaqus/Explicit). Give the value in degrees.
     - Cap eccentricity parameter, RR. Its value must be greater than zero (typically 0.0 <R< 1.0).
@@ -37,39 +37,41 @@ class CapPlasticity:
 
     """
 
-    # A CapCreepCohesion object. 
+    # A CapCreepCohesion object.
     capCreepCohesion: CapCreepCohesion = CapCreepCohesion(((),))
 
-    # A CapCreepConsolidation object. 
+    # A CapCreepConsolidation object.
     capCreepConsolidation: CapCreepConsolidation = CapCreepConsolidation(((),))
 
-    # A CapHardening object. 
+    # A CapHardening object.
     capHardening: CapHardening = CapHardening(((),))
 
-    def __init__(self, table: tuple, temperatureDependency: Boolean = OFF, dependencies: int = 0):
+    def __init__(
+        self, table: tuple, temperatureDependency: Boolean = OFF, dependencies: int = 0
+    ):
         """This method creates a CapPlasticity object.
 
         Notes
         -----
             This function can be accessed by:
-            
+
             .. code-block:: python
-            
+
                 mdb.models[name].materials[name].CapPlasticity
                 session.odbs[name].materials[name].CapPlasticity
-        
+
         Parameters
         ----------
         table
-            A sequence of sequences of Floats specifying the items described below. 
+            A sequence of sequences of Floats specifying the items described below.
         temperatureDependency
-            A Boolean specifying whether the data depend on temperature. The default value is OFF. 
+            A Boolean specifying whether the data depend on temperature. The default value is OFF.
         dependencies
-            An Int specifying the number of field variable dependencies. The default value is 0. 
+            An Int specifying the number of field variable dependencies. The default value is 0.
 
         Returns
         -------
-            A CapPlasticity object. 
+            A CapPlasticity object.
 
         Raises
         ------

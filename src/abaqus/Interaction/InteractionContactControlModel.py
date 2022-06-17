@@ -5,20 +5,26 @@ from ..Model.ModelBase import ModelBase
 
 
 class InteractionContactControlModel(ModelBase):
-
-    def ExpContactControl(self, name: str, globTrkChoice: SymbolicConstant = DEFAULT, globTrkInc: int = None,
-                          fastLocalTrk: Boolean = ON, scalePenalty: float = 1, warpCheckPeriod: int = 20,
-                          warpCutoff: float = 20) -> ExpContactControl:
+    def ExpContactControl(
+        self,
+        name: str,
+        globTrkChoice: SymbolicConstant = DEFAULT,
+        globTrkInc: int = None,
+        fastLocalTrk: Boolean = ON,
+        scalePenalty: float = 1,
+        warpCheckPeriod: int = 20,
+        warpCutoff: float = 20,
+    ) -> ExpContactControl:
         """This method creates an ExpContactControl object.
 
         Notes
         -----
             This function can be accessed by:
-            
+
             .. code-block:: python
-            
+
                 mdb.models[name].ExpContactControl
-        
+
         Parameters
         ----------
         name
@@ -53,29 +59,48 @@ class InteractionContactControlModel(ModelBase):
         ------
             RangeError.
         """
-        self.contactControls[name] = contactControl = ExpContactControl(name, globTrkChoice, globTrkInc, fastLocalTrk,
-                                                                        scalePenalty, warpCheckPeriod, warpCutoff)
+        self.contactControls[name] = contactControl = ExpContactControl(
+            name,
+            globTrkChoice,
+            globTrkInc,
+            fastLocalTrk,
+            scalePenalty,
+            warpCheckPeriod,
+            warpCutoff,
+        )
         return contactControl
 
-    def StdContactControl(self, name: str, stiffnessScaleFactor: float = 1,
-                          penetrationTolChoice: SymbolicConstant = RELATIVE,
-                          relativePenetrationTolerance: float = None, absolutePenetrationTolerance: float = None,
-                          frictionOnset: SymbolicConstant = None, automaticTolerances: Boolean = OFF,
-                          maxchp: int = 0, perrmx: float = 0, uerrmx: float = 0,
-                          stabilizeChoice: SymbolicConstant = NONE, dampFactor: float = 1, dampCoef: float = 0,
-                          tangFraction: float = 1, eosFraction: float = 0,
-                          zeroDampingChoice: SymbolicConstant = COMPUTE, zeroDamping: float = None,
-                          enforceWithLagrangeMultipliers: SymbolicConstant = DEFAULT) -> StdContactControl:
+    def StdContactControl(
+        self,
+        name: str,
+        stiffnessScaleFactor: float = 1,
+        penetrationTolChoice: SymbolicConstant = RELATIVE,
+        relativePenetrationTolerance: float = None,
+        absolutePenetrationTolerance: float = None,
+        frictionOnset: SymbolicConstant = None,
+        automaticTolerances: Boolean = OFF,
+        maxchp: int = 0,
+        perrmx: float = 0,
+        uerrmx: float = 0,
+        stabilizeChoice: SymbolicConstant = NONE,
+        dampFactor: float = 1,
+        dampCoef: float = 0,
+        tangFraction: float = 1,
+        eosFraction: float = 0,
+        zeroDampingChoice: SymbolicConstant = COMPUTE,
+        zeroDamping: float = None,
+        enforceWithLagrangeMultipliers: SymbolicConstant = DEFAULT,
+    ) -> StdContactControl:
         """This method creates an StdContactControl object.
 
         Notes
         -----
             This function can be accessed by:
-            
+
             .. code-block:: python
-            
+
                 mdb.models[name].StdContactControl
-        
+
         Parameters
         ----------
         name
@@ -168,12 +193,24 @@ class InteractionContactControlModel(ModelBase):
         ------
             RangeError.
         """
-        self.contactControls[name] = contactControl = StdContactControl(name, stiffnessScaleFactor,
-                                                                        penetrationTolChoice,
-                                                                        relativePenetrationTolerance,
-                                                                        absolutePenetrationTolerance, frictionOnset,
-                                                                        automaticTolerances, maxchp, perrmx, uerrmx,
-                                                                        stabilizeChoice, dampFactor, dampCoef,
-                                                                        tangFraction, eosFraction, zeroDampingChoice,
-                                                                        zeroDamping, enforceWithLagrangeMultipliers)
+        self.contactControls[name] = contactControl = StdContactControl(
+            name,
+            stiffnessScaleFactor,
+            penetrationTolChoice,
+            relativePenetrationTolerance,
+            absolutePenetrationTolerance,
+            frictionOnset,
+            automaticTolerances,
+            maxchp,
+            perrmx,
+            uerrmx,
+            stabilizeChoice,
+            dampFactor,
+            dampCoef,
+            tangFraction,
+            eosFraction,
+            zeroDampingChoice,
+            zeroDamping,
+            enforceWithLagrangeMultipliers,
+        )
         return contactControl

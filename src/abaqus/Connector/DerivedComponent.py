@@ -5,7 +5,7 @@ from .CDCTermArray import CDCTermArray
 
 class DerivedComponent:
     """A DerivedComponent object describes user-customized components for use in defining
-    ConnectorFriction and Potential objects. 
+    ConnectorFriction and Potential objects.
 
     Attributes
     ----------
@@ -35,7 +35,7 @@ class DerivedComponent:
 
     """
 
-    # A CDCTermArray object. 
+    # A CDCTermArray object.
     cdcTerms: CDCTermArray = CDCTermArray()
 
     def __init__(self):
@@ -58,11 +58,11 @@ class DerivedComponent:
 
         Returns
         -------
-            A DerivedComponent object. 
+            A DerivedComponent object.
 
         Raises
         ------
-            ValueError and TextError. 
+            ValueError and TextError.
         """
         pass
 
@@ -71,14 +71,22 @@ class DerivedComponent:
 
         Raises
         ------
-            ValueError. 
+            ValueError.
         """
         pass
 
-    def CDCTerm(self, intrinsicComponents: tuple, table: tuple, termOperator: SymbolicConstant = RSS,
-                termSign: SymbolicConstant = POSITIVE, localDependency: Boolean = OFF,
-                indepCompType: SymbolicConstant = POSITION, indepComponents: tuple = (),
-                tempDependency: Boolean = OFF, fieldDependencies: int = 0) -> CDCTerm:
+    def CDCTerm(
+        self,
+        intrinsicComponents: tuple,
+        table: tuple,
+        termOperator: SymbolicConstant = RSS,
+        termSign: SymbolicConstant = POSITIVE,
+        localDependency: Boolean = OFF,
+        indepCompType: SymbolicConstant = POSITION,
+        indepComponents: tuple = (),
+        tempDependency: Boolean = OFF,
+        fieldDependencies: int = 0,
+    ) -> CDCTerm:
         """This method creates a CDCTerm object.
 
         Notes
@@ -95,7 +103,7 @@ class DerivedComponent:
             session.odbs[name].sections[name].behaviorOptions[i].DerivedComponent
             session.odbs[name].sections[name].behaviorOptions[i].evolutionPotentials[i].DerivedComponent
             session.odbs[name].sections[name].behaviorOptions[i].initiationPotentials[i].DerivedComponent
-        
+
         Parameters
         ----------
         intrinsicComponents
@@ -146,7 +154,16 @@ class DerivedComponent:
         ------
             ValueError and TextError.
         """
-        cDCTerm = CDCTerm(intrinsicComponents, table, termOperator, termSign, localDependency,
-                          indepCompType, indepComponents, tempDependency, fieldDependencies)
+        cDCTerm = CDCTerm(
+            intrinsicComponents,
+            table,
+            termOperator,
+            termSign,
+            localDependency,
+            indepCompType,
+            indepComponents,
+            tempDependency,
+            fieldDependencies,
+        )
         self.cdcTerms.append(cDCTerm)
         return cDCTerm

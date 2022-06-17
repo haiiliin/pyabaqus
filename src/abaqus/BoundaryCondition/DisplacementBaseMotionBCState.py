@@ -4,12 +4,12 @@ from .BoundaryConditionState import BoundaryConditionState
 
 class DisplacementBaseMotionBCState(BoundaryConditionState):
     """The DisplacementBaseMotionBCState object stores the propagating data for a velocity base
-    motion boundary condition in a step. One instance of this object is created internally 
-    by the DisplacementBaseMotionBC object for each step. The instance is also deleted 
-    internally by the DisplacementBaseMotionBC object. 
-    The DisplacementBaseMotionBCState object has no constructor or methods. 
-    The DisplacementBaseMotionBCState object is derived from the BoundaryConditionState 
-    object. 
+    motion boundary condition in a step. One instance of this object is created internally
+    by the DisplacementBaseMotionBC object for each step. The instance is also deleted
+    internally by the DisplacementBaseMotionBC object.
+    The DisplacementBaseMotionBCState object has no constructor or methods.
+    The DisplacementBaseMotionBCState object is derived from the BoundaryConditionState
+    object.
 
     Attributes
     ----------
@@ -37,9 +37,9 @@ class DisplacementBaseMotionBCState(BoundaryConditionState):
     Notes
     -----
     This object can be accessed by:
-    
+
     .. code-block:: python
-        
+
         import load
         mdb.models[name].steps[name].boundaryConditionStates[name]
 
@@ -49,8 +49,8 @@ class DisplacementBaseMotionBCState(BoundaryConditionState):
 
     """
 
-    # A SymbolicConstant specifying the propagation state of the amplitude reference. Possible 
-    # values are UNSET, SET, UNCHANGED, FREED, and MODIFIED. 
+    # A SymbolicConstant specifying the propagation state of the amplitude reference. Possible
+    # values are UNSET, SET, UNCHANGED, FREED, and MODIFIED.
     amplitudeState: SymbolicConstant = None
 
     # A SymbolicConstant specifying the propagation state of the BoundaryConditionState object. Possible values are:
@@ -68,6 +68,6 @@ class DisplacementBaseMotionBCState(BoundaryConditionState):
     # BUILT_INTO_MODES
     status: SymbolicConstant = None
 
-    # A String specifying the name of the amplitude reference. The String is empty if the 
-    # boundary condition has no amplitude reference. 
-    amplitude: str = ''
+    # A String specifying the name of the amplitude reference. The String is empty if the
+    # boundary condition has no amplitude reference.
+    amplitude: str = ""

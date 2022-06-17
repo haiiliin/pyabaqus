@@ -24,21 +24,21 @@ class UserOutputVariables:
         Notes
         -----
             This function can be accessed by:
-            
+
             .. code-block:: python
-            
+
                 mdb.models[name].materials[name].UserOutputVariables
                 session.odbs[name].materials[name].UserOutputVariables
-        
+
         Parameters
         ----------
         n
-            An Int specifying the number of user-defined variables required at each material point. 
-            The default value is 0. 
+            An Int specifying the number of user-defined variables required at each material point.
+            The default value is 0.
 
         Returns
         -------
-            A UserOutputVariables object. 
+            A UserOutputVariables object.
 
         Raises
         ------

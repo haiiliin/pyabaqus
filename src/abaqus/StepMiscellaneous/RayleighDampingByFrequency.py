@@ -1,4 +1,6 @@
-from .RayleighDampingByFrequencyComponentArray import RayleighDampingByFrequencyComponentArray
+from .RayleighDampingByFrequencyComponentArray import (
+    RayleighDampingByFrequencyComponentArray,
+)
 
 
 class RayleighDampingByFrequency:
@@ -12,13 +14,15 @@ class RayleighDampingByFrequency:
     Notes
     -----
     This object can be accessed by:
-    
+
     .. code-block:: python
-    
+
         import step
         mdb.models[name].steps[name].rayleighDampingByFrequency
 
     """
 
-    # A RayleighDampingByFrequencyComponentArray object. 
-    components: RayleighDampingByFrequencyComponentArray = RayleighDampingByFrequencyComponentArray()
+    # A RayleighDampingByFrequencyComponentArray object.
+    components: RayleighDampingByFrequencyComponentArray = (
+        RayleighDampingByFrequencyComponentArray()
+    )

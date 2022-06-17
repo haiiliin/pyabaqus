@@ -4,9 +4,9 @@ from ..Session.NumberFormat import NumberFormat
 
 class FieldReportOptions:
     """The FieldReportOptions object stores settings used by the writeFieldReport method when
-    you write a FieldOutput object to an ASCII file. The FieldReportOptions object has no 
-    constructor. Abaqus creates the *fieldReportOptions* member when you import the 
-    Visualization module. 
+    you write a FieldOutput object to an ASCII file. The FieldReportOptions object has no
+    constructor. Abaqus creates the *fieldReportOptions* member when you import the
+    Visualization module.
 
     Attributes
     ----------
@@ -24,41 +24,49 @@ class FieldReportOptions:
         session.fieldReportOptions
 
     """
+
     # Format of the number
     numberFormat: NumberFormat = NumberFormat()
 
-    def setValues(self, numColumns: int = 80, numberFormat: NumberFormat = NumberFormat(),
-                  printXYData: Boolean = ON, printTotal: Boolean = ON, printMinMax: Boolean = ON,
-                  pageWidth: SymbolicConstant = NO_LIMIT, columnLayout: SymbolicConstant = SINGLE_TABLE,
-                  sort: SymbolicConstant = ASCENDING):
+    def setValues(
+        self,
+        numColumns: int = 80,
+        numberFormat: NumberFormat = NumberFormat(),
+        printXYData: Boolean = ON,
+        printTotal: Boolean = ON,
+        printMinMax: Boolean = ON,
+        pageWidth: SymbolicConstant = NO_LIMIT,
+        columnLayout: SymbolicConstant = SINGLE_TABLE,
+        sort: SymbolicConstant = ASCENDING,
+    ):
         """This method modifies the FieldReportOptions object.
-        
+
         Parameters
         ----------
         numColumns
-            An Int specifying the number of columns to display for the tabular report. The default 
-            value is 80. 
+            An Int specifying the number of columns to display for the tabular report. The default
+            value is 80.
         numberFormat
-            A NumberFormat object specifying the format type, number of digits and precision used to 
-            print the numeric output. 
+            A NumberFormat object specifying the format type, number of digits and precision used to
+            print the numeric output.
         printXYData
-            A Boolean specifying whether to include *X–Y* data values in the tabular report. The 
-            default value is ON. 
+            A Boolean specifying whether to include *X–Y* data values in the tabular report. The
+            default value is ON.
         printTotal
-            A Boolean specifying whether to include column totals in the tabular report. The default 
-            value is ON. 
+            A Boolean specifying whether to include column totals in the tabular report. The default
+            value is ON.
         printMinMax
-            A Boolean specifying whether to include column summary minimum and maximum values in the 
-            tabular report. The default value is ON. 
+            A Boolean specifying whether to include column summary minimum and maximum values in the
+            tabular report. The default value is ON.
         pageWidth
-            A SymbolicConstant specifying how the width of the tabular report is to be determined. 
-            Possible values are NO_LIMIT and SPECIFY. The default value is NO_LIMIT. 
+            A SymbolicConstant specifying how the width of the tabular report is to be determined.
+            Possible values are NO_LIMIT and SPECIFY. The default value is NO_LIMIT.
         columnLayout
-            A SymbolicConstant specifying how values are to be presented in the tabular report. 
-            Possible values are SINGLE_TABLE and SEPARATE_TABLES. The default value is SINGLE_TABLE. 
+            A SymbolicConstant specifying how values are to be presented in the tabular report.
+            Possible values are SINGLE_TABLE and SEPARATE_TABLES. The default value is SINGLE_TABLE.
         sort
-            A SymbolicConstant specifying the order in which values are to be sorted within a 
-            tabular report. Possible values are ASCENDING and DESCENDING. The default value is 
+            A SymbolicConstant specifying the order in which values are to be sorted within a
+            tabular report. Possible values are ASCENDING and DESCENDING. The default value is
             ASCENDING.
 
         Returns
@@ -67,8 +75,13 @@ class FieldReportOptions:
         """
         pass
 
-    def NumberFormat(self, blankPad: Boolean = ON, format: SymbolicConstant = ENGINEERING, numDigits: int = 6,
-                     precision: int = 0) -> NumberFormat:
+    def NumberFormat(
+        self,
+        blankPad: Boolean = ON,
+        format: SymbolicConstant = ENGINEERING,
+        numDigits: int = 6,
+        precision: int = 0,
+    ) -> NumberFormat:
         """This method creates a NumberFormat object.
 
         Notes
@@ -80,7 +93,7 @@ class FieldReportOptions:
             session.defaultFieldReportOptions.NumberFormat
             session.fieldReportOptions.NumberFormat
             session.journalOptions.NumberFormat
-        
+
         Parameters
         ----------
         blankPad
@@ -102,5 +115,7 @@ class FieldReportOptions:
         -------
             A NumberFormat object.
         """
-        self.numberFormat = numberFormat = NumberFormat(blankPad, format, numDigits, precision)
+        self.numberFormat = numberFormat = NumberFormat(
+            blankPad, format, numDigits, precision
+        )
         return numberFormat

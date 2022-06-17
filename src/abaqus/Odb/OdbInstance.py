@@ -7,23 +7,27 @@ from .OdbSet import OdbSet
 
 
 class OdbInstance(OdbInstanceBase):
-
-    def OdbRigidBody(self, referenceNode: OdbSet, position: SymbolicConstant = INPUT, isothermal: Boolean = ON,
-                     elements: OdbSet = OdbSet('set', tuple[OdbMeshNode]()),
-                     tieNodes: OdbSet = OdbSet('set', tuple[OdbMeshNode]()),
-                     pinNodes: OdbSet = OdbSet('set', tuple[OdbMeshNode]()),
-                     analyticSurface: AnalyticSurface = AnalyticSurface()) -> OdbRigidBody:
+    def OdbRigidBody(
+        self,
+        referenceNode: OdbSet,
+        position: SymbolicConstant = INPUT,
+        isothermal: Boolean = ON,
+        elements: OdbSet = OdbSet("set", tuple[OdbMeshNode]()),
+        tieNodes: OdbSet = OdbSet("set", tuple[OdbMeshNode]()),
+        pinNodes: OdbSet = OdbSet("set", tuple[OdbMeshNode]()),
+        analyticSurface: AnalyticSurface = AnalyticSurface(),
+    ) -> OdbRigidBody:
         """This method creates a OdbRigidBody object.
 
         Notes
         -----
             This function can be accessed by:
-            
+
             .. code-block:: python
-            
+
                 session.odbs[*name*].rootAssembly.instances[*name*].RigidBody
                 session.odbs[*name*].rootAssembly.RigidBody
-        
+
         Parameters
         ----------
         referenceNode
@@ -53,7 +57,15 @@ class OdbInstance(OdbInstanceBase):
         -------
             An OdbRigidBody object.
         """
-        odbRigidBody = OdbRigidBody(referenceNode, position, isothermal, elements, tieNodes, pinNodes, analyticSurface)
+        odbRigidBody = OdbRigidBody(
+            referenceNode,
+            position,
+            isothermal,
+            elements,
+            tieNodes,
+            pinNodes,
+            analyticSurface,
+        )
         self.rigidBodies.append(odbRigidBody)
         return odbRigidBody
 
@@ -65,13 +77,13 @@ class OdbInstance(OdbInstanceBase):
         Notes
         -----
             This function can be accessed by:
-            
+
             .. code-block:: python
-            
+
                 session.odbs[*name*].parts[*name*].NodeSet
                 session.odbs[*name*].rootAssembly.instances[*name*].NodeSet
                 session.odbs[*name*].rootAssembly.NodeSet
-        
+
         Parameters
         ----------
         name

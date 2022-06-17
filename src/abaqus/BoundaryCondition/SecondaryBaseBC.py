@@ -6,7 +6,7 @@ from ..Region.RegionArray import RegionArray
 
 class SecondaryBaseBC(BoundaryCondition):
     """The SecondaryBaseBC object stores the data for a slave base boundary condition.
-    The SecondaryBaseBC object is derived from the BoundaryCondition object. 
+    The SecondaryBaseBC object is derived from the BoundaryCondition object.
 
     Attributes
     ----------
@@ -38,29 +38,31 @@ class SecondaryBaseBC(BoundaryCondition):
 
     """
 
-    # A String specifying the boundary condition repository key. 
-    name: str = ''
+    # A String specifying the boundary condition repository key.
+    name: str = ""
 
-    # A tuple of tuples of Ints specifying the constrained degrees-of-freedom. 
+    # A tuple of tuples of Ints specifying the constrained degrees-of-freedom.
     dofs: int = None
 
-    # A RegionArray object specifying the region to which the boundary condition is applied. 
-    # Note that the usual *region* is ignored. The default value is MODEL. 
+    # A RegionArray object specifying the region to which the boundary condition is applied.
+    # Note that the usual *region* is ignored. The default value is MODEL.
     regions: RegionArray = MODEL
 
-    # A SymbolicConstant specifying the category of the boundary condition. Possible values 
-    # are MECHANICAL and THERMAL. 
+    # A SymbolicConstant specifying the category of the boundary condition. Possible values
+    # are MECHANICAL and THERMAL.
     category: SymbolicConstant = None
 
-    # A Region object specifying the region to which the boundary condition is applied. 
+    # A Region object specifying the region to which the boundary condition is applied.
     region: Region = Region()
 
-    # None or a DatumCsys object specifying the local coordinate system of the boundary 
-    # condition's degrees of freedom. If *localCsys*=None, the degrees of freedom are defined 
-    # in the global coordinate system. The default value is None. 
+    # None or a DatumCsys object specifying the local coordinate system of the boundary
+    # condition's degrees of freedom. If *localCsys*=None, the degrees of freedom are defined
+    # in the global coordinate system. The default value is None.
     localCsys: str = None
 
-    def __init__(self, name: str, createStepName: str, regions: RegionArray, dofs: tuple):
+    def __init__(
+        self, name: str, createStepName: str, regions: RegionArray, dofs: tuple
+    ):
         """This method creates a SecondaryBaseBC object.
 
         Notes
@@ -70,18 +72,18 @@ class SecondaryBaseBC(BoundaryCondition):
         .. code-block:: python
 
             mdb.models[name].SecondaryBaseBC
-        
+
         Parameters
         ----------
         name
-            A String specifying the boundary condition repository key. 
+            A String specifying the boundary condition repository key.
         createStepName
-            A String specifying the name of the step in which the boundary condition is created. 
+            A String specifying the name of the step in which the boundary condition is created.
         regions
-            A RegionArray object specifying the region to which the boundary condition is applied. 
-            Note that the usual *region* is ignored. The default value is MODEL. 
+            A RegionArray object specifying the region to which the boundary condition is applied.
+            Note that the usual *region* is ignored. The default value is MODEL.
         dofs
-            A sequence of sequences of Ints specifying the constrained degrees-of-freedom. 
+            A sequence of sequences of Ints specifying the constrained degrees-of-freedom.
 
         Returns
         -------
@@ -99,10 +101,10 @@ class SecondaryBaseBC(BoundaryCondition):
     def setValuesInStep(self, stepName: str):
         """This method modifies the propagating data for an existing SecondaryBaseBC object in the
         specified step.
-        
+
         Parameters
         ----------
         stepName
-            A String specifying the name of the step in which the boundary condition is modified. 
+            A String specifying the name of the step in which the boundary condition is modified.
         """
         pass

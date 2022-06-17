@@ -21,9 +21,9 @@ class OdbAuxiliaryData:
     Notes
     -----
     This object can be accessed by:
-    
+
     .. code-block:: python
-        
+
         import visualization
         session.odbData[name].diagnosticData.analysisErrors[i].data[i]
         session.odbData[name].diagnosticData.analysisWarnings[i].data[i]
@@ -31,18 +31,18 @@ class OdbAuxiliaryData:
 
     """
 
-    # A tuple consisting of element instance names. This attribute is read-only. 
+    # A tuple consisting of element instance names. This attribute is read-only.
     elementInstanceNames: tuple = ()
 
-    # A tuple consisting of element label names. This attribute is read-only. 
+    # A tuple consisting of element label names. This attribute is read-only.
     elementLabels: tuple = ()
 
-    # A boolean specifying whether the OdbAuxiliaryData object has values in it. This 
-    # attribute is read-only. 
+    # A boolean specifying whether the OdbAuxiliaryData object has values in it. This
+    # attribute is read-only.
     hasValues: Boolean = OFF
 
-    # A tuple consisting of node instance names. This attribute is read-only. 
+    # A tuple consisting of node instance names. This attribute is read-only.
     nodeInstanceNames: tuple = ()
 
-    # A tuple consisting of node label names. This attribute is read-only. 
+    # A tuple consisting of node label names. This attribute is read-only.
     nodeLables: tuple = ()

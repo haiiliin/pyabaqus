@@ -7,9 +7,9 @@ class DeformationPlasticity:
     Notes
     -----
     This object can be accessed by:
-    
+
     .. code-block:: python
-        
+
         import material
         mdb.models[name].materials[name].deformationPlasticity
         import odbMaterial
@@ -36,22 +36,22 @@ class DeformationPlasticity:
         Notes
         -----
             This function can be accessed by:
-            
+
             .. code-block:: python
-            
+
                 mdb.models[name].materials[name].DeformationPlasticity
                 session.odbs[name].materials[name].DeformationPlasticity
-        
+
         Parameters
         ----------
         table
-            A sequence of sequences of Floats specifying the items described below. 
+            A sequence of sequences of Floats specifying the items described below.
         temperatureDependency
-            A Boolean specifying whether the data depend on temperature. The default value is OFF. 
+            A Boolean specifying whether the data depend on temperature. The default value is OFF.
 
         Returns
         -------
-            A DeformationPlasticity object. 
+            A DeformationPlasticity object.
 
         Raises
         ------

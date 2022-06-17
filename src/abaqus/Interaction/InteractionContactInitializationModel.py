@@ -5,22 +5,28 @@ from ..Model.ModelBase import ModelBase
 
 
 class InteractionContactInitializationModel(ModelBase):
-
-    def ExpInitialization(self, name: str, overclosureType: SymbolicConstant = ADJUST,
-                          interferenceDistance: float = None, clearanceDistance: float = None,
-                          openingTolerance: float = None, overclosureTolerance: float = None,
-                          adjustNodalCoords: Boolean = True, slaveNodesetName: str = None,
-                          stepFraction: float = 1) -> ExpInitialization:
+    def ExpInitialization(
+        self,
+        name: str,
+        overclosureType: SymbolicConstant = ADJUST,
+        interferenceDistance: float = None,
+        clearanceDistance: float = None,
+        openingTolerance: float = None,
+        overclosureTolerance: float = None,
+        adjustNodalCoords: Boolean = True,
+        slaveNodesetName: str = None,
+        stepFraction: float = 1,
+    ) -> ExpInitialization:
         """This method creates an ExpInitialization object.
 
         Notes
         -----
             This function can be accessed by:
-            
+
             .. code-block:: python
-            
+
                 mdb.models[name].ExpInitialization
-        
+
         Parameters
         ----------
         name
@@ -66,29 +72,38 @@ class InteractionContactInitializationModel(ModelBase):
         ------
             RangeError.
         """
-        self.contactInitializations[name] = contactInitialization = ExpInitialization(name, overclosureType,
-                                                                                      interferenceDistance,
-                                                                                      clearanceDistance,
-                                                                                      openingTolerance,
-                                                                                      overclosureTolerance,
-                                                                                      adjustNodalCoords,
-                                                                                      slaveNodesetName,
-                                                                                      stepFraction)
+        self.contactInitializations[name] = contactInitialization = ExpInitialization(
+            name,
+            overclosureType,
+            interferenceDistance,
+            clearanceDistance,
+            openingTolerance,
+            overclosureTolerance,
+            adjustNodalCoords,
+            slaveNodesetName,
+            stepFraction,
+        )
         return contactInitialization
 
-    def StdInitialization(self, name: str, overclosureType: SymbolicConstant = ADJUST,
-                          interferenceDistance: float = None, clearanceDistance: float = None,
-                          openingTolerance: float = None, overclosureTolerance: float = None) -> StdInitialization:
+    def StdInitialization(
+        self,
+        name: str,
+        overclosureType: SymbolicConstant = ADJUST,
+        interferenceDistance: float = None,
+        clearanceDistance: float = None,
+        openingTolerance: float = None,
+        overclosureTolerance: float = None,
+    ) -> StdInitialization:
         """This method creates a StdInitialization object.
 
         Notes
         -----
             This function can be accessed by:
-            
+
             .. code-block:: python
-            
+
                 mdb.models[name].StdInitialization
-        
+
         Parameters
         ----------
         name
@@ -120,9 +135,12 @@ class InteractionContactInitializationModel(ModelBase):
         ------
             RangeError.
         """
-        self.contactInitializations[name] = contactInitialization = StdInitialization(name, overclosureType,
-                                                                                      interferenceDistance,
-                                                                                      clearanceDistance,
-                                                                                      openingTolerance,
-                                                                                      overclosureTolerance)
+        self.contactInitializations[name] = contactInitialization = StdInitialization(
+            name,
+            overclosureType,
+            interferenceDistance,
+            clearanceDistance,
+            openingTolerance,
+            overclosureTolerance,
+        )
         return contactInitialization

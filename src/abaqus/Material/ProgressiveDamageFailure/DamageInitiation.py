@@ -6,14 +6,14 @@ from .DamageStabilizationCohesive import DamageStabilizationCohesive
 
 class DamageInitiation:
     """The DamageInitiation object specifies material properties to define the initiation of
-    damage. 
+    damage.
 
     Notes
     -----
     This object can be accessed by:
-    
+
     .. code-block:: python
-        
+
         import material
         mdb.models[name].materials[name].ductileDamageInitiation
         mdb.models[name].materials[name].fldDamageInitiation
@@ -46,7 +46,7 @@ class DamageInitiation:
         session.odbs[name].materials[name].shearDamageInitiation
 
     The table data for this object are:
-    
+
     - If constructor is DuctileDamageInitiation, the table data specify the following:
         - Equivalent fracture strain at damage initiation.
         - Stress triaxiality.
@@ -157,132 +157,146 @@ class DamageInitiation:
 
     """
 
-    # A SymbolicConstant specifying the damage initiation definition. Possible values are FLD 
-    # and MSFLD. The default value is MSFLD. 
+    # A SymbolicConstant specifying the damage initiation definition. Possible values are FLD
+    # and MSFLD. The default value is MSFLD.
     definition: SymbolicConstant = MSFLD
 
-    # A Float specifying the critical value of the deformation severity index for equivalent 
+    # A Float specifying the critical value of the deformation severity index for equivalent
     # Plastic strains. The default value is 10.0.
     feq: float = 10
 
-    # A Float specifying the critical value of the deformation severity index for strains 
-    # normal to the groove direction. The default value is 10.0. 
+    # A Float specifying the critical value of the deformation severity index for strains
+    # normal to the groove direction. The default value is 10.0.
     fnn: float = 10
 
-    # A Float specifying the critical value of the deformation severity index for shear 
-    # strains. The default value is 10.0. 
+    # A Float specifying the critical value of the deformation severity index for shear
+    # strains. The default value is 10.0.
     fnt: float = 10
 
-    # An Int specifying the frequency, in increments, at which the Marciniak-Kuczynski 
-    # analysis is going to be performed. The default value is 1. 
+    # An Int specifying the frequency, in increments, at which the Marciniak-Kuczynski
+    # analysis is going to be performed. The default value is 1.
     frequency: int = 1
 
-    # A Float specifying the value of Ks. The default value is 0.0. 
+    # A Float specifying the value of Ks. The default value is 0.0.
     ks: float = 0
 
-    # An Int specifying the number of imperfections to be considered for the evaluation of the 
-    # Marciniak-Kuczynski analysis. These imperfections are assumed to be equally spaced in 
-    # the angular direction. The default value is 4. 
+    # An Int specifying the number of imperfections to be considered for the evaluation of the
+    # Marciniak-Kuczynski analysis. These imperfections are assumed to be equally spaced in
+    # the angular direction. The default value is 4.
     numberImperfections: int = 4
 
-    # A Boolean specifying whether the data depend on temperature. The default value is OFF. 
+    # A Boolean specifying whether the data depend on temperature. The default value is OFF.
     temperatureDependency: Boolean = OFF
 
-    # An Int specifying the number of field variable dependencies. The default value is 0. 
+    # An Int specifying the number of field variable dependencies. The default value is 0.
     dependencies: int = 0
 
-    # A Float specifying the value of the coefficient that will multiply the shear 
-    # contribution to the Hashin's fiber initiation criterion. The default value is 0.0. 
+    # A Float specifying the value of the coefficient that will multiply the shear
+    # contribution to the Hashin's fiber initiation criterion. The default value is 0.0.
     alpha: float = 0
 
-    # A Float specifying the factor used for filtering the ratio of principal strain rates 
-    # used for the evaluation of the MSFLD damage initiation criterion. The default value is 
-    # 1.0. 
+    # A Float specifying the factor used for filtering the ratio of principal strain rates
+    # used for the evaluation of the MSFLD damage initiation criterion. The default value is
+    # 1.0.
     omega: float = 1
 
-    # A Float specifying the tolerance within which the damage initiation criterion must be 
-    # satisfied. The default value is 0.05. 
+    # A Float specifying the tolerance within which the damage initiation criterion must be
+    # satisfied. The default value is 0.05.
     tolerance: float = 0
 
-    # A SymbolicConstant specifying the damage initiation direction. Possible values are NMORI 
-    # and TMORI. The default value is NMORI. 
+    # A SymbolicConstant specifying the damage initiation direction. Possible values are NMORI
+    # and TMORI. The default value is NMORI.
     direction: SymbolicConstant = NMORI
 
-    # A tuple of tuples of Floats specifying the items described in the "Table data" section. 
+    # A tuple of tuples of Floats specifying the items described in the "Table data" section.
     table: float = None
 
-    # A DamageEvolution object. 
+    # A DamageEvolution object.
     damageEvolution: DamageEvolution = None
 
-    # A DamageStabilization object. 
+    # A DamageStabilization object.
     damageStabilization: DamageStabilization = None
 
-    # A DamageStabilizationCohesive object. 
-    damageStabilizationCohesive: DamageStabilizationCohesive = DamageStabilizationCohesive()
+    # A DamageStabilizationCohesive object.
+    damageStabilizationCohesive: DamageStabilizationCohesive = (
+        DamageStabilizationCohesive()
+    )
 
-    def DuctileDamageInitiation(self, table: tuple, definition: SymbolicConstant = MSFLD, feq: float = 10,
-                                fnn: float = 10,
-                                fnt: float = 10, frequency: int = 1, ks: float = 0, numberImperfections: int = 4,
-                                temperatureDependency: Boolean = OFF, dependencies: int = 0, alpha: float = 0,
-                                omega: float = 1, tolerance: float = 0, direction: SymbolicConstant = NMORI):
+    def DuctileDamageInitiation(
+        self,
+        table: tuple,
+        definition: SymbolicConstant = MSFLD,
+        feq: float = 10,
+        fnn: float = 10,
+        fnt: float = 10,
+        frequency: int = 1,
+        ks: float = 0,
+        numberImperfections: int = 4,
+        temperatureDependency: Boolean = OFF,
+        dependencies: int = 0,
+        alpha: float = 0,
+        omega: float = 1,
+        tolerance: float = 0,
+        direction: SymbolicConstant = NMORI,
+    ):
         """This method creates a DamageInitiation object.
 
         Notes
         -----
             This function can be accessed by:
-            
+
             .. code-block:: python
-            
+
                 mdb.models[name].materials[name].DuctileDamageInitiation
                 session.odbs[name].materials[name].DuctileDamageInitiation
-        
+
         Parameters
         ----------
         table
-            A sequence of sequences of Floats specifying the items described in the "Table data" 
-            section. 
+            A sequence of sequences of Floats specifying the items described in the "Table data"
+            section.
         definition
-            A SymbolicConstant specifying the damage initiation definition. Possible values are FLD 
-            and MSFLD. The default value is MSFLD. 
+            A SymbolicConstant specifying the damage initiation definition. Possible values are FLD
+            and MSFLD. The default value is MSFLD.
         feq
-            A Float specifying the critical value of the deformation severity index for equivalent 
+            A Float specifying the critical value of the deformation severity index for equivalent
             Plastic strains. The default value is 10.0.
         fnn
-            A Float specifying the critical value of the deformation severity index for strains 
-            normal to the groove direction. The default value is 10.0. 
+            A Float specifying the critical value of the deformation severity index for strains
+            normal to the groove direction. The default value is 10.0.
         fnt
-            A Float specifying the critical value of the deformation severity index for shear 
-            strains. The default value is 10.0. 
+            A Float specifying the critical value of the deformation severity index for shear
+            strains. The default value is 10.0.
         frequency
-            An Int specifying the frequency, in increments, at which the Marciniak-Kuczynski 
-            analysis is going to be performed. The default value is 1. 
+            An Int specifying the frequency, in increments, at which the Marciniak-Kuczynski
+            analysis is going to be performed. The default value is 1.
         ks
-            A Float specifying the value of Ks. The default value is 0.0. 
+            A Float specifying the value of Ks. The default value is 0.0.
         numberImperfections
-            An Int specifying the number of imperfections to be considered for the evaluation of the 
-            Marciniak-Kuczynski analysis. These imperfections are assumed to be equally spaced in 
-            the angular direction. The default value is 4. 
+            An Int specifying the number of imperfections to be considered for the evaluation of the
+            Marciniak-Kuczynski analysis. These imperfections are assumed to be equally spaced in
+            the angular direction. The default value is 4.
         temperatureDependency
-            A Boolean specifying whether the data depend on temperature. The default value is OFF. 
+            A Boolean specifying whether the data depend on temperature. The default value is OFF.
         dependencies
-            An Int specifying the number of field variable dependencies. The default value is 0. 
+            An Int specifying the number of field variable dependencies. The default value is 0.
         alpha
-            A Float specifying the value of the coefficient that will multiply the shear 
-            contribution to the Hashin's fiber initiation criterion. The default value is 0.0. 
+            A Float specifying the value of the coefficient that will multiply the shear
+            contribution to the Hashin's fiber initiation criterion. The default value is 0.0.
         omega
-            A Float specifying the factor used for filtering the ratio of principal strain rates 
-            used for the evaluation of the MSFLD damage initiation criterion. The default value is 
-            1.0. 
+            A Float specifying the factor used for filtering the ratio of principal strain rates
+            used for the evaluation of the MSFLD damage initiation criterion. The default value is
+            1.0.
         tolerance
-            A Float specifying the tolerance within which the damage initiation criterion must be 
-            satisfied. The default value is 0.05. 
+            A Float specifying the tolerance within which the damage initiation criterion must be
+            satisfied. The default value is 0.05.
         direction
-            A SymbolicConstant specifying the damage initiation direction. Possible values are NMORI 
-            and TMORI. The default value is NMORI. 
+            A SymbolicConstant specifying the damage initiation direction. Possible values are NMORI
+            and TMORI. The default value is NMORI.
 
         Returns
         -------
-            A DamageInitiation object. 
+            A DamageInitiation object.
 
         Raises
         ------
@@ -290,68 +304,81 @@ class DamageInitiation:
         """
         pass
 
-    def FldDamageInitiation(self, table: tuple, definition: SymbolicConstant = MSFLD, feq: float = 10, fnn: float = 10,
-                            fnt: float = 10, frequency: int = 1, ks: float = 0, numberImperfections: int = 4,
-                            temperatureDependency: Boolean = OFF, dependencies: int = 0, alpha: float = 0,
-                            omega: float = 1, tolerance: float = 0, direction: SymbolicConstant = NMORI):
+    def FldDamageInitiation(
+        self,
+        table: tuple,
+        definition: SymbolicConstant = MSFLD,
+        feq: float = 10,
+        fnn: float = 10,
+        fnt: float = 10,
+        frequency: int = 1,
+        ks: float = 0,
+        numberImperfections: int = 4,
+        temperatureDependency: Boolean = OFF,
+        dependencies: int = 0,
+        alpha: float = 0,
+        omega: float = 1,
+        tolerance: float = 0,
+        direction: SymbolicConstant = NMORI,
+    ):
         """This method creates a DamageInitiation object.
 
         Notes
         -----
             This function can be accessed by:
-            
+
             .. code-block:: python
-            
+
                 mdb.models[name].materials[name].FldDamageInitiation
                 session.odbs[name].materials[name].FldDamageInitiation
-        
+
         Parameters
         ----------
         table
-            A sequence of sequences of Floats specifying the items described in the "Table data" 
-            section. 
+            A sequence of sequences of Floats specifying the items described in the "Table data"
+            section.
         definition
-            A SymbolicConstant specifying the damage initiation definition. Possible values are FLD 
-            and MSFLD. The default value is MSFLD. 
+            A SymbolicConstant specifying the damage initiation definition. Possible values are FLD
+            and MSFLD. The default value is MSFLD.
         feq
-            A Float specifying the critical value of the deformation severity index for equivalent 
+            A Float specifying the critical value of the deformation severity index for equivalent
             Plastic strains. The default value is 10.0.
         fnn
-            A Float specifying the critical value of the deformation severity index for strains 
-            normal to the groove direction. The default value is 10.0. 
+            A Float specifying the critical value of the deformation severity index for strains
+            normal to the groove direction. The default value is 10.0.
         fnt
-            A Float specifying the critical value of the deformation severity index for shear 
-            strains. The default value is 10.0. 
+            A Float specifying the critical value of the deformation severity index for shear
+            strains. The default value is 10.0.
         frequency
-            An Int specifying the frequency, in increments, at which the Marciniak-Kuczynski 
-            analysis is going to be performed. The default value is 1. 
+            An Int specifying the frequency, in increments, at which the Marciniak-Kuczynski
+            analysis is going to be performed. The default value is 1.
         ks
-            A Float specifying the value of Ks. The default value is 0.0. 
+            A Float specifying the value of Ks. The default value is 0.0.
         numberImperfections
-            An Int specifying the number of imperfections to be considered for the evaluation of the 
-            Marciniak-Kuczynski analysis. These imperfections are assumed to be equally spaced in 
-            the angular direction. The default value is 4. 
+            An Int specifying the number of imperfections to be considered for the evaluation of the
+            Marciniak-Kuczynski analysis. These imperfections are assumed to be equally spaced in
+            the angular direction. The default value is 4.
         temperatureDependency
-            A Boolean specifying whether the data depend on temperature. The default value is OFF. 
+            A Boolean specifying whether the data depend on temperature. The default value is OFF.
         dependencies
-            An Int specifying the number of field variable dependencies. The default value is 0. 
+            An Int specifying the number of field variable dependencies. The default value is 0.
         alpha
-            A Float specifying the value of the coefficient that will multiply the shear 
-            contribution to the Hashin's fiber initiation criterion. The default value is 0.0. 
+            A Float specifying the value of the coefficient that will multiply the shear
+            contribution to the Hashin's fiber initiation criterion. The default value is 0.0.
         omega
-            A Float specifying the factor used for filtering the ratio of principal strain rates 
-            used for the evaluation of the MSFLD damage initiation criterion. The default value is 
-            1.0. 
+            A Float specifying the factor used for filtering the ratio of principal strain rates
+            used for the evaluation of the MSFLD damage initiation criterion. The default value is
+            1.0.
         tolerance
-            A Float specifying the tolerance within which the damage initiation criterion must be 
-            satisfied. The default value is 0.05. 
+            A Float specifying the tolerance within which the damage initiation criterion must be
+            satisfied. The default value is 0.05.
         direction
-            A SymbolicConstant specifying the damage initiation direction. Possible values are NMORI 
-            and TMORI. The default value is NMORI. 
+            A SymbolicConstant specifying the damage initiation direction. Possible values are NMORI
+            and TMORI. The default value is NMORI.
 
         Returns
         -------
-            A DamageInitiation object. 
+            A DamageInitiation object.
 
         Raises
         ------
@@ -359,68 +386,81 @@ class DamageInitiation:
         """
         pass
 
-    def FlsdDamageInitiation(self, table: tuple, definition: SymbolicConstant = MSFLD, feq: float = 10, fnn: float = 10,
-                             fnt: float = 10, frequency: int = 1, ks: float = 0, numberImperfections: int = 4,
-                             temperatureDependency: Boolean = OFF, dependencies: int = 0, alpha: float = 0,
-                             omega: float = 1, tolerance: float = 0, direction: SymbolicConstant = NMORI):
+    def FlsdDamageInitiation(
+        self,
+        table: tuple,
+        definition: SymbolicConstant = MSFLD,
+        feq: float = 10,
+        fnn: float = 10,
+        fnt: float = 10,
+        frequency: int = 1,
+        ks: float = 0,
+        numberImperfections: int = 4,
+        temperatureDependency: Boolean = OFF,
+        dependencies: int = 0,
+        alpha: float = 0,
+        omega: float = 1,
+        tolerance: float = 0,
+        direction: SymbolicConstant = NMORI,
+    ):
         """This method creates a DamageInitiation object.
 
         Notes
         -----
             This function can be accessed by:
-            
+
             .. code-block:: python
-            
+
                 mdb.models[name].materials[name].FlsdDamageInitiation
                 session.odbs[name].materials[name].FlsdDamageInitiation
-        
+
         Parameters
         ----------
         table
-            A sequence of sequences of Floats specifying the items described in the "Table data" 
-            section. 
+            A sequence of sequences of Floats specifying the items described in the "Table data"
+            section.
         definition
-            A SymbolicConstant specifying the damage initiation definition. Possible values are FLD 
-            and MSFLD. The default value is MSFLD. 
+            A SymbolicConstant specifying the damage initiation definition. Possible values are FLD
+            and MSFLD. The default value is MSFLD.
         feq
-            A Float specifying the critical value of the deformation severity index for equivalent 
+            A Float specifying the critical value of the deformation severity index for equivalent
             Plastic strains. The default value is 10.0.
         fnn
-            A Float specifying the critical value of the deformation severity index for strains 
-            normal to the groove direction. The default value is 10.0. 
+            A Float specifying the critical value of the deformation severity index for strains
+            normal to the groove direction. The default value is 10.0.
         fnt
-            A Float specifying the critical value of the deformation severity index for shear 
-            strains. The default value is 10.0. 
+            A Float specifying the critical value of the deformation severity index for shear
+            strains. The default value is 10.0.
         frequency
-            An Int specifying the frequency, in increments, at which the Marciniak-Kuczynski 
-            analysis is going to be performed. The default value is 1. 
+            An Int specifying the frequency, in increments, at which the Marciniak-Kuczynski
+            analysis is going to be performed. The default value is 1.
         ks
-            A Float specifying the value of Ks. The default value is 0.0. 
+            A Float specifying the value of Ks. The default value is 0.0.
         numberImperfections
-            An Int specifying the number of imperfections to be considered for the evaluation of the 
-            Marciniak-Kuczynski analysis. These imperfections are assumed to be equally spaced in 
-            the angular direction. The default value is 4. 
+            An Int specifying the number of imperfections to be considered for the evaluation of the
+            Marciniak-Kuczynski analysis. These imperfections are assumed to be equally spaced in
+            the angular direction. The default value is 4.
         temperatureDependency
-            A Boolean specifying whether the data depend on temperature. The default value is OFF. 
+            A Boolean specifying whether the data depend on temperature. The default value is OFF.
         dependencies
-            An Int specifying the number of field variable dependencies. The default value is 0. 
+            An Int specifying the number of field variable dependencies. The default value is 0.
         alpha
-            A Float specifying the value of the coefficient that will multiply the shear 
-            contribution to the Hashin's fiber initiation criterion. The default value is 0.0. 
+            A Float specifying the value of the coefficient that will multiply the shear
+            contribution to the Hashin's fiber initiation criterion. The default value is 0.0.
         omega
-            A Float specifying the factor used for filtering the ratio of principal strain rates 
-            used for the evaluation of the MSFLD damage initiation criterion. The default value is 
-            1.0. 
+            A Float specifying the factor used for filtering the ratio of principal strain rates
+            used for the evaluation of the MSFLD damage initiation criterion. The default value is
+            1.0.
         tolerance
-            A Float specifying the tolerance within which the damage initiation criterion must be 
-            satisfied. The default value is 0.05. 
+            A Float specifying the tolerance within which the damage initiation criterion must be
+            satisfied. The default value is 0.05.
         direction
-            A SymbolicConstant specifying the damage initiation direction. Possible values are NMORI 
-            and TMORI. The default value is NMORI. 
+            A SymbolicConstant specifying the damage initiation direction. Possible values are NMORI
+            and TMORI. The default value is NMORI.
 
         Returns
         -------
-            A DamageInitiation object. 
+            A DamageInitiation object.
 
         Raises
         ------
@@ -428,69 +468,81 @@ class DamageInitiation:
         """
         pass
 
-    def JohnsonCookDamageInitiation(self, table: tuple, definition: SymbolicConstant = MSFLD, feq: float = 10,
-                                    fnn: float = 10,
-                                    fnt: float = 10, frequency: int = 1, ks: float = 0, numberImperfections: int = 4,
-                                    temperatureDependency: Boolean = OFF, dependencies: int = 0, alpha: float = 0,
-                                    omega: float = 1, tolerance: float = 0, direction: SymbolicConstant = NMORI):
+    def JohnsonCookDamageInitiation(
+        self,
+        table: tuple,
+        definition: SymbolicConstant = MSFLD,
+        feq: float = 10,
+        fnn: float = 10,
+        fnt: float = 10,
+        frequency: int = 1,
+        ks: float = 0,
+        numberImperfections: int = 4,
+        temperatureDependency: Boolean = OFF,
+        dependencies: int = 0,
+        alpha: float = 0,
+        omega: float = 1,
+        tolerance: float = 0,
+        direction: SymbolicConstant = NMORI,
+    ):
         """This method creates a DamageInitiation object.
 
         Notes
         -----
             This function can be accessed by:
-            
+
             .. code-block:: python
-            
+
                 mdb.models[name].materials[name].JohnsonCookDamageInitiation
                 session.odbs[name].materials[name].JohnsonCookDamageInitiation
-        
+
         Parameters
         ----------
         table
-            A sequence of sequences of Floats specifying the items described in the "Table data" 
-            section. 
+            A sequence of sequences of Floats specifying the items described in the "Table data"
+            section.
         definition
-            A SymbolicConstant specifying the damage initiation definition. Possible values are FLD 
-            and MSFLD. The default value is MSFLD. 
+            A SymbolicConstant specifying the damage initiation definition. Possible values are FLD
+            and MSFLD. The default value is MSFLD.
         feq
-            A Float specifying the critical value of the deformation severity index for equivalent 
+            A Float specifying the critical value of the deformation severity index for equivalent
             Plastic strains. The default value is 10.0.
         fnn
-            A Float specifying the critical value of the deformation severity index for strains 
-            normal to the groove direction. The default value is 10.0. 
+            A Float specifying the critical value of the deformation severity index for strains
+            normal to the groove direction. The default value is 10.0.
         fnt
-            A Float specifying the critical value of the deformation severity index for shear 
-            strains. The default value is 10.0. 
+            A Float specifying the critical value of the deformation severity index for shear
+            strains. The default value is 10.0.
         frequency
-            An Int specifying the frequency, in increments, at which the Marciniak-Kuczynski 
-            analysis is going to be performed. The default value is 1. 
+            An Int specifying the frequency, in increments, at which the Marciniak-Kuczynski
+            analysis is going to be performed. The default value is 1.
         ks
-            A Float specifying the value of Ks. The default value is 0.0. 
+            A Float specifying the value of Ks. The default value is 0.0.
         numberImperfections
-            An Int specifying the number of imperfections to be considered for the evaluation of the 
-            Marciniak-Kuczynski analysis. These imperfections are assumed to be equally spaced in 
-            the angular direction. The default value is 4. 
+            An Int specifying the number of imperfections to be considered for the evaluation of the
+            Marciniak-Kuczynski analysis. These imperfections are assumed to be equally spaced in
+            the angular direction. The default value is 4.
         temperatureDependency
-            A Boolean specifying whether the data depend on temperature. The default value is OFF. 
+            A Boolean specifying whether the data depend on temperature. The default value is OFF.
         dependencies
-            An Int specifying the number of field variable dependencies. The default value is 0. 
+            An Int specifying the number of field variable dependencies. The default value is 0.
         alpha
-            A Float specifying the value of the coefficient that will multiply the shear 
-            contribution to the Hashin's fiber initiation criterion. The default value is 0.0. 
+            A Float specifying the value of the coefficient that will multiply the shear
+            contribution to the Hashin's fiber initiation criterion. The default value is 0.0.
         omega
-            A Float specifying the factor used for filtering the ratio of principal strain rates 
-            used for the evaluation of the MSFLD damage initiation criterion. The default value is 
-            1.0. 
+            A Float specifying the factor used for filtering the ratio of principal strain rates
+            used for the evaluation of the MSFLD damage initiation criterion. The default value is
+            1.0.
         tolerance
-            A Float specifying the tolerance within which the damage initiation criterion must be 
-            satisfied. The default value is 0.05. 
+            A Float specifying the tolerance within which the damage initiation criterion must be
+            satisfied. The default value is 0.05.
         direction
-            A SymbolicConstant specifying the damage initiation direction. Possible values are NMORI 
-            and TMORI. The default value is NMORI. 
+            A SymbolicConstant specifying the damage initiation direction. Possible values are NMORI
+            and TMORI. The default value is NMORI.
 
         Returns
         -------
-            A DamageInitiation object. 
+            A DamageInitiation object.
 
         Raises
         ------
@@ -498,72 +550,85 @@ class DamageInitiation:
         """
         pass
 
-    def MaxeDamageInitiation(self, table: tuple, definition: SymbolicConstant = MSFLD, feq: float = 10, fnn: float = 10,
-                             fnt: float = 10, frequency: int = 1, ks: float = 0, numberImperfections: int = 4,
-                             temperatureDependency: Boolean = OFF, dependencies: int = 0, alpha: float = 0,
-                             omega: float = 1, tolerance: float = 0, direction: SymbolicConstant = NMORI,
-                             position: SymbolicConstant = CENTROID):
+    def MaxeDamageInitiation(
+        self,
+        table: tuple,
+        definition: SymbolicConstant = MSFLD,
+        feq: float = 10,
+        fnn: float = 10,
+        fnt: float = 10,
+        frequency: int = 1,
+        ks: float = 0,
+        numberImperfections: int = 4,
+        temperatureDependency: Boolean = OFF,
+        dependencies: int = 0,
+        alpha: float = 0,
+        omega: float = 1,
+        tolerance: float = 0,
+        direction: SymbolicConstant = NMORI,
+        position: SymbolicConstant = CENTROID,
+    ):
         """This method creates a DamageInitiation object.
 
         Notes
         -----
             This function can be accessed by:
-            
+
             .. code-block:: python
-            
+
                 mdb.models[name].materials[name].MaxeDamageInitiation
                 session.odbs[name].materials[name].MaxeDamageInitiation
-        
+
         Parameters
         ----------
         table
-            A sequence of sequences of Floats specifying the items described in the "Table data" 
-            section. 
+            A sequence of sequences of Floats specifying the items described in the "Table data"
+            section.
         definition
-            A SymbolicConstant specifying the damage initiation definition. Possible values are FLD 
-            and MSFLD. The default value is MSFLD. 
+            A SymbolicConstant specifying the damage initiation definition. Possible values are FLD
+            and MSFLD. The default value is MSFLD.
         feq
-            A Float specifying the critical value of the deformation severity index for equivalent 
+            A Float specifying the critical value of the deformation severity index for equivalent
             Plastic strains. The default value is 10.0.
         fnn
-            A Float specifying the critical value of the deformation severity index for strains 
-            normal to the groove direction. The default value is 10.0. 
+            A Float specifying the critical value of the deformation severity index for strains
+            normal to the groove direction. The default value is 10.0.
         fnt
-            A Float specifying the critical value of the deformation severity index for shear 
-            strains. The default value is 10.0. 
+            A Float specifying the critical value of the deformation severity index for shear
+            strains. The default value is 10.0.
         frequency
-            An Int specifying the frequency, in increments, at which the Marciniak-Kuczynski 
-            analysis is going to be performed. The default value is 1. 
+            An Int specifying the frequency, in increments, at which the Marciniak-Kuczynski
+            analysis is going to be performed. The default value is 1.
         ks
-            A Float specifying the value of Ks. The default value is 0.0. 
+            A Float specifying the value of Ks. The default value is 0.0.
         numberImperfections
-            An Int specifying the number of imperfections to be considered for the evaluation of the 
-            Marciniak-Kuczynski analysis. These imperfections are assumed to be equally spaced in 
-            the angular direction. The default value is 4. 
+            An Int specifying the number of imperfections to be considered for the evaluation of the
+            Marciniak-Kuczynski analysis. These imperfections are assumed to be equally spaced in
+            the angular direction. The default value is 4.
         temperatureDependency
-            A Boolean specifying whether the data depend on temperature. The default value is OFF. 
+            A Boolean specifying whether the data depend on temperature. The default value is OFF.
         dependencies
-            An Int specifying the number of field variable dependencies. The default value is 0. 
+            An Int specifying the number of field variable dependencies. The default value is 0.
         alpha
-            A Float specifying the value of the coefficient that will multiply the shear 
-            contribution to the Hashin's fiber initiation criterion. The default value is 0.0. 
+            A Float specifying the value of the coefficient that will multiply the shear
+            contribution to the Hashin's fiber initiation criterion. The default value is 0.0.
         omega
-            A Float specifying the factor used for filtering the ratio of principal strain rates 
-            used for the evaluation of the MSFLD damage initiation criterion. The default value is 
-            1.0. 
+            A Float specifying the factor used for filtering the ratio of principal strain rates
+            used for the evaluation of the MSFLD damage initiation criterion. The default value is
+            1.0.
         tolerance
-            A Float specifying the tolerance within which the damage initiation criterion must be 
-            satisfied. The default value is 0.05. 
+            A Float specifying the tolerance within which the damage initiation criterion must be
+            satisfied. The default value is 0.05.
         direction
-            A SymbolicConstant specifying the damage initiation direction. Possible values are NMORI 
-            and TMORI. The default value is NMORI. 
+            A SymbolicConstant specifying the damage initiation direction. Possible values are NMORI
+            and TMORI. The default value is NMORI.
         position
-            An SymbolicConstant specifying the damage initiation position. Possible values are 
-            CENTROID, CRACKTIP and COMBINED. The default value is CENTROID. 
+            An SymbolicConstant specifying the damage initiation position. Possible values are
+            CENTROID, CRACKTIP and COMBINED. The default value is CENTROID.
 
         Returns
         -------
-            A DamageInitiation object. 
+            A DamageInitiation object.
 
         Raises
         ------
@@ -571,72 +636,85 @@ class DamageInitiation:
         """
         pass
 
-    def MaxsDamageInitiation(self, table: tuple, definition: SymbolicConstant = MSFLD, feq: float = 10, fnn: float = 10,
-                             fnt: float = 10, frequency: int = 1, ks: float = 0, numberImperfections: int = 4,
-                             temperatureDependency: Boolean = OFF, dependencies: int = 0, alpha: float = 0,
-                             omega: float = 1, tolerance: float = 0, direction: SymbolicConstant = NMORI,
-                             position: SymbolicConstant = CENTROID):
+    def MaxsDamageInitiation(
+        self,
+        table: tuple,
+        definition: SymbolicConstant = MSFLD,
+        feq: float = 10,
+        fnn: float = 10,
+        fnt: float = 10,
+        frequency: int = 1,
+        ks: float = 0,
+        numberImperfections: int = 4,
+        temperatureDependency: Boolean = OFF,
+        dependencies: int = 0,
+        alpha: float = 0,
+        omega: float = 1,
+        tolerance: float = 0,
+        direction: SymbolicConstant = NMORI,
+        position: SymbolicConstant = CENTROID,
+    ):
         """This method creates a DamageInitiation object.
 
         Notes
         -----
             This function can be accessed by:
-            
+
             .. code-block:: python
-            
+
                 mdb.models[name].materials[name].MaxsDamageInitiation
                 session.odbs[name].materials[name].MaxsDamageInitiation
-        
+
         Parameters
         ----------
         table
-            A sequence of sequences of Floats specifying the items described in the "Table data" 
-            section. 
+            A sequence of sequences of Floats specifying the items described in the "Table data"
+            section.
         definition
-            A SymbolicConstant specifying the damage initiation definition. Possible values are FLD 
-            and MSFLD. The default value is MSFLD. 
+            A SymbolicConstant specifying the damage initiation definition. Possible values are FLD
+            and MSFLD. The default value is MSFLD.
         feq
-            A Float specifying the critical value of the deformation severity index for equivalent 
+            A Float specifying the critical value of the deformation severity index for equivalent
             Plastic strains. The default value is 10.0.
         fnn
-            A Float specifying the critical value of the deformation severity index for strains 
-            normal to the groove direction. The default value is 10.0. 
+            A Float specifying the critical value of the deformation severity index for strains
+            normal to the groove direction. The default value is 10.0.
         fnt
-            A Float specifying the critical value of the deformation severity index for shear 
-            strains. The default value is 10.0. 
+            A Float specifying the critical value of the deformation severity index for shear
+            strains. The default value is 10.0.
         frequency
-            An Int specifying the frequency, in increments, at which the Marciniak-Kuczynski 
-            analysis is going to be performed. The default value is 1. 
+            An Int specifying the frequency, in increments, at which the Marciniak-Kuczynski
+            analysis is going to be performed. The default value is 1.
         ks
-            A Float specifying the value of Ks. The default value is 0.0. 
+            A Float specifying the value of Ks. The default value is 0.0.
         numberImperfections
-            An Int specifying the number of imperfections to be considered for the evaluation of the 
-            Marciniak-Kuczynski analysis. These imperfections are assumed to be equally spaced in 
-            the angular direction. The default value is 4. 
+            An Int specifying the number of imperfections to be considered for the evaluation of the
+            Marciniak-Kuczynski analysis. These imperfections are assumed to be equally spaced in
+            the angular direction. The default value is 4.
         temperatureDependency
-            A Boolean specifying whether the data depend on temperature. The default value is OFF. 
+            A Boolean specifying whether the data depend on temperature. The default value is OFF.
         dependencies
-            An Int specifying the number of field variable dependencies. The default value is 0. 
+            An Int specifying the number of field variable dependencies. The default value is 0.
         alpha
-            A Float specifying the value of the coefficient that will multiply the shear 
-            contribution to the Hashin's fiber initiation criterion. The default value is 0.0. 
+            A Float specifying the value of the coefficient that will multiply the shear
+            contribution to the Hashin's fiber initiation criterion. The default value is 0.0.
         omega
-            A Float specifying the factor used for filtering the ratio of principal strain rates 
-            used for the evaluation of the MSFLD damage initiation criterion. The default value is 
-            1.0. 
+            A Float specifying the factor used for filtering the ratio of principal strain rates
+            used for the evaluation of the MSFLD damage initiation criterion. The default value is
+            1.0.
         tolerance
-            A Float specifying the tolerance within which the damage initiation criterion must be 
-            satisfied. The default value is 0.05. 
+            A Float specifying the tolerance within which the damage initiation criterion must be
+            satisfied. The default value is 0.05.
         direction
-            A SymbolicConstant specifying the damage initiation direction. Possible values are NMORI 
-            and TMORI. The default value is NMORI. 
+            A SymbolicConstant specifying the damage initiation direction. Possible values are NMORI
+            and TMORI. The default value is NMORI.
         position
-            An SymbolicConstant specifying the damage initiation position. Possible values are 
-            CENTROID, CRACKTIP and COMBINED. The default value is CENTROID. 
+            An SymbolicConstant specifying the damage initiation position. Possible values are
+            CENTROID, CRACKTIP and COMBINED. The default value is CENTROID.
 
         Returns
         -------
-            A DamageInitiation object. 
+            A DamageInitiation object.
 
         Raises
         ------
@@ -644,68 +722,81 @@ class DamageInitiation:
         """
         pass
 
-    def MkDamageInitiation(self, table: tuple, definition: SymbolicConstant = MSFLD, feq: float = 10, fnn: float = 10,
-                           fnt: float = 10, frequency: int = 1, ks: float = 0, numberImperfections: int = 4,
-                           temperatureDependency: Boolean = OFF, dependencies: int = 0, alpha: float = 0,
-                           omega: float = 1, tolerance: float = 0, direction: SymbolicConstant = NMORI):
+    def MkDamageInitiation(
+        self,
+        table: tuple,
+        definition: SymbolicConstant = MSFLD,
+        feq: float = 10,
+        fnn: float = 10,
+        fnt: float = 10,
+        frequency: int = 1,
+        ks: float = 0,
+        numberImperfections: int = 4,
+        temperatureDependency: Boolean = OFF,
+        dependencies: int = 0,
+        alpha: float = 0,
+        omega: float = 1,
+        tolerance: float = 0,
+        direction: SymbolicConstant = NMORI,
+    ):
         """This method creates a DamageInitiation object.
 
         Notes
         -----
             This function can be accessed by:
-            
+
             .. code-block:: python
-            
+
                 mdb.models[name].materials[name].MkDamageInitiation
                 session.odbs[name].materials[name].MkDamageInitiation
-        
+
         Parameters
         ----------
         table
-            A sequence of sequences of Floats specifying the items described in the "Table data" 
-            section. 
+            A sequence of sequences of Floats specifying the items described in the "Table data"
+            section.
         definition
-            A SymbolicConstant specifying the damage initiation definition. Possible values are FLD 
-            and MSFLD. The default value is MSFLD. 
+            A SymbolicConstant specifying the damage initiation definition. Possible values are FLD
+            and MSFLD. The default value is MSFLD.
         feq
-            A Float specifying the critical value of the deformation severity index for equivalent 
+            A Float specifying the critical value of the deformation severity index for equivalent
             Plastic strains. The default value is 10.0.
         fnn
-            A Float specifying the critical value of the deformation severity index for strains 
-            normal to the groove direction. The default value is 10.0. 
+            A Float specifying the critical value of the deformation severity index for strains
+            normal to the groove direction. The default value is 10.0.
         fnt
-            A Float specifying the critical value of the deformation severity index for shear 
-            strains. The default value is 10.0. 
+            A Float specifying the critical value of the deformation severity index for shear
+            strains. The default value is 10.0.
         frequency
-            An Int specifying the frequency, in increments, at which the Marciniak-Kuczynski 
-            analysis is going to be performed. The default value is 1. 
+            An Int specifying the frequency, in increments, at which the Marciniak-Kuczynski
+            analysis is going to be performed. The default value is 1.
         ks
-            A Float specifying the value of Ks. The default value is 0.0. 
+            A Float specifying the value of Ks. The default value is 0.0.
         numberImperfections
-            An Int specifying the number of imperfections to be considered for the evaluation of the 
-            Marciniak-Kuczynski analysis. These imperfections are assumed to be equally spaced in 
-            the angular direction. The default value is 4. 
+            An Int specifying the number of imperfections to be considered for the evaluation of the
+            Marciniak-Kuczynski analysis. These imperfections are assumed to be equally spaced in
+            the angular direction. The default value is 4.
         temperatureDependency
-            A Boolean specifying whether the data depend on temperature. The default value is OFF. 
+            A Boolean specifying whether the data depend on temperature. The default value is OFF.
         dependencies
-            An Int specifying the number of field variable dependencies. The default value is 0. 
+            An Int specifying the number of field variable dependencies. The default value is 0.
         alpha
-            A Float specifying the value of the coefficient that will multiply the shear 
-            contribution to the Hashin's fiber initiation criterion. The default value is 0.0. 
+            A Float specifying the value of the coefficient that will multiply the shear
+            contribution to the Hashin's fiber initiation criterion. The default value is 0.0.
         omega
-            A Float specifying the factor used for filtering the ratio of principal strain rates 
-            used for the evaluation of the MSFLD damage initiation criterion. The default value is 
-            1.0. 
+            A Float specifying the factor used for filtering the ratio of principal strain rates
+            used for the evaluation of the MSFLD damage initiation criterion. The default value is
+            1.0.
         tolerance
-            A Float specifying the tolerance within which the damage initiation criterion must be 
-            satisfied. The default value is 0.05. 
+            A Float specifying the tolerance within which the damage initiation criterion must be
+            satisfied. The default value is 0.05.
         direction
-            A SymbolicConstant specifying the damage initiation direction. Possible values are NMORI 
-            and TMORI. The default value is NMORI. 
+            A SymbolicConstant specifying the damage initiation direction. Possible values are NMORI
+            and TMORI. The default value is NMORI.
 
         Returns
         -------
-            A DamageInitiation object. 
+            A DamageInitiation object.
 
         Raises
         ------
@@ -713,69 +804,81 @@ class DamageInitiation:
         """
         pass
 
-    def MsfldDamageInitiation(self, table: tuple, definition: SymbolicConstant = MSFLD, feq: float = 10,
-                              fnn: float = 10,
-                              fnt: float = 10, frequency: int = 1, ks: float = 0, numberImperfections: int = 4,
-                              temperatureDependency: Boolean = OFF, dependencies: int = 0, alpha: float = 0,
-                              omega: float = 1, tolerance: float = 0, direction: SymbolicConstant = NMORI):
+    def MsfldDamageInitiation(
+        self,
+        table: tuple,
+        definition: SymbolicConstant = MSFLD,
+        feq: float = 10,
+        fnn: float = 10,
+        fnt: float = 10,
+        frequency: int = 1,
+        ks: float = 0,
+        numberImperfections: int = 4,
+        temperatureDependency: Boolean = OFF,
+        dependencies: int = 0,
+        alpha: float = 0,
+        omega: float = 1,
+        tolerance: float = 0,
+        direction: SymbolicConstant = NMORI,
+    ):
         """This method creates a DamageInitiation object.
 
         Notes
         -----
             This function can be accessed by:
-            
+
             .. code-block:: python
-            
+
                 mdb.models[name].materials[name].MsfldDamageInitiation
                 session.odbs[name].materials[name].MsfldDamageInitiation
-        
+
         Parameters
         ----------
         table
-            A sequence of sequences of Floats specifying the items described in the "Table data" 
-            section. 
+            A sequence of sequences of Floats specifying the items described in the "Table data"
+            section.
         definition
-            A SymbolicConstant specifying the damage initiation definition. Possible values are FLD 
-            and MSFLD. The default value is MSFLD. 
+            A SymbolicConstant specifying the damage initiation definition. Possible values are FLD
+            and MSFLD. The default value is MSFLD.
         feq
-            A Float specifying the critical value of the deformation severity index for equivalent 
+            A Float specifying the critical value of the deformation severity index for equivalent
             Plastic strains. The default value is 10.0.
         fnn
-            A Float specifying the critical value of the deformation severity index for strains 
-            normal to the groove direction. The default value is 10.0. 
+            A Float specifying the critical value of the deformation severity index for strains
+            normal to the groove direction. The default value is 10.0.
         fnt
-            A Float specifying the critical value of the deformation severity index for shear 
-            strains. The default value is 10.0. 
+            A Float specifying the critical value of the deformation severity index for shear
+            strains. The default value is 10.0.
         frequency
-            An Int specifying the frequency, in increments, at which the Marciniak-Kuczynski 
-            analysis is going to be performed. The default value is 1. 
+            An Int specifying the frequency, in increments, at which the Marciniak-Kuczynski
+            analysis is going to be performed. The default value is 1.
         ks
-            A Float specifying the value of Ks. The default value is 0.0. 
+            A Float specifying the value of Ks. The default value is 0.0.
         numberImperfections
-            An Int specifying the number of imperfections to be considered for the evaluation of the 
-            Marciniak-Kuczynski analysis. These imperfections are assumed to be equally spaced in 
-            the angular direction. The default value is 4. 
+            An Int specifying the number of imperfections to be considered for the evaluation of the
+            Marciniak-Kuczynski analysis. These imperfections are assumed to be equally spaced in
+            the angular direction. The default value is 4.
         temperatureDependency
-            A Boolean specifying whether the data depend on temperature. The default value is OFF. 
+            A Boolean specifying whether the data depend on temperature. The default value is OFF.
         dependencies
-            An Int specifying the number of field variable dependencies. The default value is 0. 
+            An Int specifying the number of field variable dependencies. The default value is 0.
         alpha
-            A Float specifying the value of the coefficient that will multiply the shear 
-            contribution to the Hashin's fiber initiation criterion. The default value is 0.0. 
+            A Float specifying the value of the coefficient that will multiply the shear
+            contribution to the Hashin's fiber initiation criterion. The default value is 0.0.
         omega
-            A Float specifying the factor used for filtering the ratio of principal strain rates 
-            used for the evaluation of the MSFLD damage initiation criterion. The default value is 
-            1.0. 
+            A Float specifying the factor used for filtering the ratio of principal strain rates
+            used for the evaluation of the MSFLD damage initiation criterion. The default value is
+            1.0.
         tolerance
-            A Float specifying the tolerance within which the damage initiation criterion must be 
-            satisfied. The default value is 0.05. 
+            A Float specifying the tolerance within which the damage initiation criterion must be
+            satisfied. The default value is 0.05.
         direction
-            A SymbolicConstant specifying the damage initiation direction. Possible values are NMORI 
-            and TMORI. The default value is NMORI. 
+            A SymbolicConstant specifying the damage initiation direction. Possible values are NMORI
+            and TMORI. The default value is NMORI.
 
         Returns
         -------
-            A DamageInitiation object. 
+            A DamageInitiation object.
 
         Raises
         ------
@@ -783,73 +886,85 @@ class DamageInitiation:
         """
         pass
 
-    def QuadeDamageInitiation(self, table: tuple, definition: SymbolicConstant = MSFLD, feq: float = 10,
-                              fnn: float = 10,
-                              fnt: float = 10, frequency: int = 1, ks: float = 0, numberImperfections: int = 4,
-                              temperatureDependency: Boolean = OFF, dependencies: int = 0, alpha: float = 0,
-                              omega: float = 1, tolerance: float = 0, direction: SymbolicConstant = NMORI,
-                              position: SymbolicConstant = CENTROID):
+    def QuadeDamageInitiation(
+        self,
+        table: tuple,
+        definition: SymbolicConstant = MSFLD,
+        feq: float = 10,
+        fnn: float = 10,
+        fnt: float = 10,
+        frequency: int = 1,
+        ks: float = 0,
+        numberImperfections: int = 4,
+        temperatureDependency: Boolean = OFF,
+        dependencies: int = 0,
+        alpha: float = 0,
+        omega: float = 1,
+        tolerance: float = 0,
+        direction: SymbolicConstant = NMORI,
+        position: SymbolicConstant = CENTROID,
+    ):
         """This method creates a DamageInitiation object.
 
         Notes
         -----
             This function can be accessed by:
-            
+
             .. code-block:: python
-            
+
                 mdb.models[name].materials[name].QuadeDamageInitiation
                 session.odbs[name].materials[name].QuadeDamageInitiation
-        
+
         Parameters
         ----------
         table
-            A sequence of sequences of Floats specifying the items described in the "Table data" 
-            section. 
+            A sequence of sequences of Floats specifying the items described in the "Table data"
+            section.
         definition
-            A SymbolicConstant specifying the damage initiation definition. Possible values are FLD 
-            and MSFLD. The default value is MSFLD. 
+            A SymbolicConstant specifying the damage initiation definition. Possible values are FLD
+            and MSFLD. The default value is MSFLD.
         feq
-            A Float specifying the critical value of the deformation severity index for equivalent 
+            A Float specifying the critical value of the deformation severity index for equivalent
             Plastic strains. The default value is 10.0.
         fnn
-            A Float specifying the critical value of the deformation severity index for strains 
-            normal to the groove direction. The default value is 10.0. 
+            A Float specifying the critical value of the deformation severity index for strains
+            normal to the groove direction. The default value is 10.0.
         fnt
-            A Float specifying the critical value of the deformation severity index for shear 
-            strains. The default value is 10.0. 
+            A Float specifying the critical value of the deformation severity index for shear
+            strains. The default value is 10.0.
         frequency
-            An Int specifying the frequency, in increments, at which the Marciniak-Kuczynski 
-            analysis is going to be performed. The default value is 1. 
+            An Int specifying the frequency, in increments, at which the Marciniak-Kuczynski
+            analysis is going to be performed. The default value is 1.
         ks
-            A Float specifying the value of Ks. The default value is 0.0. 
+            A Float specifying the value of Ks. The default value is 0.0.
         numberImperfections
-            An Int specifying the number of imperfections to be considered for the evaluation of the 
-            Marciniak-Kuczynski analysis. These imperfections are assumed to be equally spaced in 
-            the angular direction. The default value is 4. 
+            An Int specifying the number of imperfections to be considered for the evaluation of the
+            Marciniak-Kuczynski analysis. These imperfections are assumed to be equally spaced in
+            the angular direction. The default value is 4.
         temperatureDependency
-            A Boolean specifying whether the data depend on temperature. The default value is OFF. 
+            A Boolean specifying whether the data depend on temperature. The default value is OFF.
         dependencies
-            An Int specifying the number of field variable dependencies. The default value is 0. 
+            An Int specifying the number of field variable dependencies. The default value is 0.
         alpha
-            A Float specifying the value of the coefficient that will multiply the shear 
-            contribution to the Hashin's fiber initiation criterion. The default value is 0.0. 
+            A Float specifying the value of the coefficient that will multiply the shear
+            contribution to the Hashin's fiber initiation criterion. The default value is 0.0.
         omega
-            A Float specifying the factor used for filtering the ratio of principal strain rates 
-            used for the evaluation of the MSFLD damage initiation criterion. The default value is 
-            1.0. 
+            A Float specifying the factor used for filtering the ratio of principal strain rates
+            used for the evaluation of the MSFLD damage initiation criterion. The default value is
+            1.0.
         tolerance
-            A Float specifying the tolerance within which the damage initiation criterion must be 
-            satisfied. The default value is 0.05. 
+            A Float specifying the tolerance within which the damage initiation criterion must be
+            satisfied. The default value is 0.05.
         direction
-            A SymbolicConstant specifying the damage initiation direction. Possible values are NMORI 
-            and TMORI. The default value is NMORI. 
+            A SymbolicConstant specifying the damage initiation direction. Possible values are NMORI
+            and TMORI. The default value is NMORI.
         position
-            An SymbolicConstant specifying the damage initiation position. Possible values are 
-            CENTROID, CRACKTIP and COMBINED. The default value is CENTROID. 
+            An SymbolicConstant specifying the damage initiation position. Possible values are
+            CENTROID, CRACKTIP and COMBINED. The default value is CENTROID.
 
         Returns
         -------
-            A DamageInitiation object. 
+            A DamageInitiation object.
 
         Raises
         ------
@@ -857,73 +972,85 @@ class DamageInitiation:
         """
         pass
 
-    def QuadsDamageInitiation(self, table: tuple, definition: SymbolicConstant = MSFLD, feq: float = 10,
-                              fnn: float = 10,
-                              fnt: float = 10, frequency: int = 1, ks: float = 0, numberImperfections: int = 4,
-                              temperatureDependency: Boolean = OFF, dependencies: int = 0, alpha: float = 0,
-                              omega: float = 1, tolerance: float = 0, direction: SymbolicConstant = NMORI,
-                              position: SymbolicConstant = CENTROID):
+    def QuadsDamageInitiation(
+        self,
+        table: tuple,
+        definition: SymbolicConstant = MSFLD,
+        feq: float = 10,
+        fnn: float = 10,
+        fnt: float = 10,
+        frequency: int = 1,
+        ks: float = 0,
+        numberImperfections: int = 4,
+        temperatureDependency: Boolean = OFF,
+        dependencies: int = 0,
+        alpha: float = 0,
+        omega: float = 1,
+        tolerance: float = 0,
+        direction: SymbolicConstant = NMORI,
+        position: SymbolicConstant = CENTROID,
+    ):
         """This method creates a DamageInitiation object.
 
         Notes
         -----
             This function can be accessed by:
-            
+
             .. code-block:: python
-            
+
                 mdb.models[name].materials[name].QuadsDamageInitiation
                 session.odbs[name].materials[name].QuadsDamageInitiation
-        
+
         Parameters
         ----------
         table
-            A sequence of sequences of Floats specifying the items described in the "Table data" 
-            section. 
+            A sequence of sequences of Floats specifying the items described in the "Table data"
+            section.
         definition
-            A SymbolicConstant specifying the damage initiation definition. Possible values are FLD 
-            and MSFLD. The default value is MSFLD. 
+            A SymbolicConstant specifying the damage initiation definition. Possible values are FLD
+            and MSFLD. The default value is MSFLD.
         feq
-            A Float specifying the critical value of the deformation severity index for equivalent 
+            A Float specifying the critical value of the deformation severity index for equivalent
             Plastic strains. The default value is 10.0.
         fnn
-            A Float specifying the critical value of the deformation severity index for strains 
-            normal to the groove direction. The default value is 10.0. 
+            A Float specifying the critical value of the deformation severity index for strains
+            normal to the groove direction. The default value is 10.0.
         fnt
-            A Float specifying the critical value of the deformation severity index for shear 
-            strains. The default value is 10.0. 
+            A Float specifying the critical value of the deformation severity index for shear
+            strains. The default value is 10.0.
         frequency
-            An Int specifying the frequency, in increments, at which the Marciniak-Kuczynski 
-            analysis is going to be performed. The default value is 1. 
+            An Int specifying the frequency, in increments, at which the Marciniak-Kuczynski
+            analysis is going to be performed. The default value is 1.
         ks
-            A Float specifying the value of Ks. The default value is 0.0. 
+            A Float specifying the value of Ks. The default value is 0.0.
         numberImperfections
-            An Int specifying the number of imperfections to be considered for the evaluation of the 
-            Marciniak-Kuczynski analysis. These imperfections are assumed to be equally spaced in 
-            the angular direction. The default value is 4. 
+            An Int specifying the number of imperfections to be considered for the evaluation of the
+            Marciniak-Kuczynski analysis. These imperfections are assumed to be equally spaced in
+            the angular direction. The default value is 4.
         temperatureDependency
-            A Boolean specifying whether the data depend on temperature. The default value is OFF. 
+            A Boolean specifying whether the data depend on temperature. The default value is OFF.
         dependencies
-            An Int specifying the number of field variable dependencies. The default value is 0. 
+            An Int specifying the number of field variable dependencies. The default value is 0.
         alpha
-            A Float specifying the value of the coefficient that will multiply the shear 
-            contribution to the Hashin's fiber initiation criterion. The default value is 0.0. 
+            A Float specifying the value of the coefficient that will multiply the shear
+            contribution to the Hashin's fiber initiation criterion. The default value is 0.0.
         omega
-            A Float specifying the factor used for filtering the ratio of principal strain rates 
-            used for the evaluation of the MSFLD damage initiation criterion. The default value is 
-            1.0. 
+            A Float specifying the factor used for filtering the ratio of principal strain rates
+            used for the evaluation of the MSFLD damage initiation criterion. The default value is
+            1.0.
         tolerance
-            A Float specifying the tolerance within which the damage initiation criterion must be 
-            satisfied. The default value is 0.05. 
+            A Float specifying the tolerance within which the damage initiation criterion must be
+            satisfied. The default value is 0.05.
         direction
-            A SymbolicConstant specifying the damage initiation direction. Possible values are NMORI 
-            and TMORI. The default value is NMORI. 
+            A SymbolicConstant specifying the damage initiation direction. Possible values are NMORI
+            and TMORI. The default value is NMORI.
         position
-            An SymbolicConstant specifying the damage initiation position. Possible values are 
-            CENTROID, CRACKTIP and COMBINED. The default value is CENTROID. 
+            An SymbolicConstant specifying the damage initiation position. Possible values are
+            CENTROID, CRACKTIP and COMBINED. The default value is CENTROID.
 
         Returns
         -------
-            A DamageInitiation object. 
+            A DamageInitiation object.
 
         Raises
         ------
@@ -931,73 +1058,85 @@ class DamageInitiation:
         """
         pass
 
-    def MaxpeDamageInitiation(self, table: tuple, definition: SymbolicConstant = MSFLD, feq: float = 10,
-                              fnn: float = 10,
-                              fnt: float = 10, frequency: int = 1, ks: float = 0, numberImperfections: int = 4,
-                              temperatureDependency: Boolean = OFF, dependencies: int = 0, alpha: float = 0,
-                              omega: float = 1, tolerance: float = 0, direction: SymbolicConstant = NMORI,
-                              position: SymbolicConstant = CENTROID):
+    def MaxpeDamageInitiation(
+        self,
+        table: tuple,
+        definition: SymbolicConstant = MSFLD,
+        feq: float = 10,
+        fnn: float = 10,
+        fnt: float = 10,
+        frequency: int = 1,
+        ks: float = 0,
+        numberImperfections: int = 4,
+        temperatureDependency: Boolean = OFF,
+        dependencies: int = 0,
+        alpha: float = 0,
+        omega: float = 1,
+        tolerance: float = 0,
+        direction: SymbolicConstant = NMORI,
+        position: SymbolicConstant = CENTROID,
+    ):
         """This method creates a DamageInitiation object.
 
         Notes
         -----
             This function can be accessed by:
-            
+
             .. code-block:: python
-            
+
                 mdb.models[name].materials[name].MaxpeDamageInitiation
                 session.odbs[name].materials[name].MaxpeDamageInitiation
-        
+
         Parameters
         ----------
         table
-            A sequence of sequences of Floats specifying the items described in the "Table data" 
-            section. 
+            A sequence of sequences of Floats specifying the items described in the "Table data"
+            section.
         definition
-            A SymbolicConstant specifying the damage initiation definition. Possible values are FLD 
-            and MSFLD. The default value is MSFLD. 
+            A SymbolicConstant specifying the damage initiation definition. Possible values are FLD
+            and MSFLD. The default value is MSFLD.
         feq
-            A Float specifying the critical value of the deformation severity index for equivalent 
+            A Float specifying the critical value of the deformation severity index for equivalent
             Plastic strains. The default value is 10.0.
         fnn
-            A Float specifying the critical value of the deformation severity index for strains 
-            normal to the groove direction. The default value is 10.0. 
+            A Float specifying the critical value of the deformation severity index for strains
+            normal to the groove direction. The default value is 10.0.
         fnt
-            A Float specifying the critical value of the deformation severity index for shear 
-            strains. The default value is 10.0. 
+            A Float specifying the critical value of the deformation severity index for shear
+            strains. The default value is 10.0.
         frequency
-            An Int specifying the frequency, in increments, at which the Marciniak-Kuczynski 
-            analysis is going to be performed. The default value is 1. 
+            An Int specifying the frequency, in increments, at which the Marciniak-Kuczynski
+            analysis is going to be performed. The default value is 1.
         ks
-            A Float specifying the value of Ks. The default value is 0.0. 
+            A Float specifying the value of Ks. The default value is 0.0.
         numberImperfections
-            An Int specifying the number of imperfections to be considered for the evaluation of the 
-            Marciniak-Kuczynski analysis. These imperfections are assumed to be equally spaced in 
-            the angular direction. The default value is 4. 
+            An Int specifying the number of imperfections to be considered for the evaluation of the
+            Marciniak-Kuczynski analysis. These imperfections are assumed to be equally spaced in
+            the angular direction. The default value is 4.
         temperatureDependency
-            A Boolean specifying whether the data depend on temperature. The default value is OFF. 
+            A Boolean specifying whether the data depend on temperature. The default value is OFF.
         dependencies
-            An Int specifying the number of field variable dependencies. The default value is 0. 
+            An Int specifying the number of field variable dependencies. The default value is 0.
         alpha
-            A Float specifying the value of the coefficient that will multiply the shear 
-            contribution to the Hashin's fiber initiation criterion. The default value is 0.0. 
+            A Float specifying the value of the coefficient that will multiply the shear
+            contribution to the Hashin's fiber initiation criterion. The default value is 0.0.
         omega
-            A Float specifying the factor used for filtering the ratio of principal strain rates 
-            used for the evaluation of the MSFLD damage initiation criterion. The default value is 
-            1.0. 
+            A Float specifying the factor used for filtering the ratio of principal strain rates
+            used for the evaluation of the MSFLD damage initiation criterion. The default value is
+            1.0.
         tolerance
-            A Float specifying the tolerance within which the damage initiation criterion must be 
-            satisfied. The default value is 0.05. 
+            A Float specifying the tolerance within which the damage initiation criterion must be
+            satisfied. The default value is 0.05.
         direction
-            A SymbolicConstant specifying the damage initiation direction. Possible values are NMORI 
-            and TMORI. The default value is NMORI. 
+            A SymbolicConstant specifying the damage initiation direction. Possible values are NMORI
+            and TMORI. The default value is NMORI.
         position
-            An SymbolicConstant specifying the damage initiation position. Possible values are 
-            CENTROID, CRACKTIP and COMBINED. The default value is CENTROID. 
+            An SymbolicConstant specifying the damage initiation position. Possible values are
+            CENTROID, CRACKTIP and COMBINED. The default value is CENTROID.
 
         Returns
         -------
-            A DamageInitiation object. 
+            A DamageInitiation object.
 
         Raises
         ------
@@ -1005,73 +1144,85 @@ class DamageInitiation:
         """
         pass
 
-    def MaxpsDamageInitiation(self, table: tuple, definition: SymbolicConstant = MSFLD, feq: float = 10,
-                              fnn: float = 10,
-                              fnt: float = 10, frequency: int = 1, ks: float = 0, numberImperfections: int = 4,
-                              temperatureDependency: Boolean = OFF, dependencies: int = 0, alpha: float = 0,
-                              omega: float = 1, tolerance: float = 0, direction: SymbolicConstant = NMORI,
-                              position: SymbolicConstant = CENTROID):
+    def MaxpsDamageInitiation(
+        self,
+        table: tuple,
+        definition: SymbolicConstant = MSFLD,
+        feq: float = 10,
+        fnn: float = 10,
+        fnt: float = 10,
+        frequency: int = 1,
+        ks: float = 0,
+        numberImperfections: int = 4,
+        temperatureDependency: Boolean = OFF,
+        dependencies: int = 0,
+        alpha: float = 0,
+        omega: float = 1,
+        tolerance: float = 0,
+        direction: SymbolicConstant = NMORI,
+        position: SymbolicConstant = CENTROID,
+    ):
         """This method creates a DamageInitiation object.
 
         Notes
         -----
             This function can be accessed by:
-            
+
             .. code-block:: python
-            
+
                 mdb.models[name].materials[name].MaxpsDamageInitiation
                 session.odbs[name].materials[name].MaxpsDamageInitiation
-        
+
         Parameters
         ----------
         table
-            A sequence of sequences of Floats specifying the items described in the "Table data" 
-            section. 
+            A sequence of sequences of Floats specifying the items described in the "Table data"
+            section.
         definition
-            A SymbolicConstant specifying the damage initiation definition. Possible values are FLD 
-            and MSFLD. The default value is MSFLD. 
+            A SymbolicConstant specifying the damage initiation definition. Possible values are FLD
+            and MSFLD. The default value is MSFLD.
         feq
-            A Float specifying the critical value of the deformation severity index for equivalent 
+            A Float specifying the critical value of the deformation severity index for equivalent
             Plastic strains. The default value is 10.0.
         fnn
-            A Float specifying the critical value of the deformation severity index for strains 
-            normal to the groove direction. The default value is 10.0. 
+            A Float specifying the critical value of the deformation severity index for strains
+            normal to the groove direction. The default value is 10.0.
         fnt
-            A Float specifying the critical value of the deformation severity index for shear 
-            strains. The default value is 10.0. 
+            A Float specifying the critical value of the deformation severity index for shear
+            strains. The default value is 10.0.
         frequency
-            An Int specifying the frequency, in increments, at which the Marciniak-Kuczynski 
-            analysis is going to be performed. The default value is 1. 
+            An Int specifying the frequency, in increments, at which the Marciniak-Kuczynski
+            analysis is going to be performed. The default value is 1.
         ks
-            A Float specifying the value of Ks. The default value is 0.0. 
+            A Float specifying the value of Ks. The default value is 0.0.
         numberImperfections
-            An Int specifying the number of imperfections to be considered for the evaluation of the 
-            Marciniak-Kuczynski analysis. These imperfections are assumed to be equally spaced in 
-            the angular direction. The default value is 4. 
+            An Int specifying the number of imperfections to be considered for the evaluation of the
+            Marciniak-Kuczynski analysis. These imperfections are assumed to be equally spaced in
+            the angular direction. The default value is 4.
         temperatureDependency
-            A Boolean specifying whether the data depend on temperature. The default value is OFF. 
+            A Boolean specifying whether the data depend on temperature. The default value is OFF.
         dependencies
-            An Int specifying the number of field variable dependencies. The default value is 0. 
+            An Int specifying the number of field variable dependencies. The default value is 0.
         alpha
-            A Float specifying the value of the coefficient that will multiply the shear 
-            contribution to the Hashin's fiber initiation criterion. The default value is 0.0. 
+            A Float specifying the value of the coefficient that will multiply the shear
+            contribution to the Hashin's fiber initiation criterion. The default value is 0.0.
         omega
-            A Float specifying the factor used for filtering the ratio of principal strain rates 
-            used for the evaluation of the MSFLD damage initiation criterion. The default value is 
-            1.0. 
+            A Float specifying the factor used for filtering the ratio of principal strain rates
+            used for the evaluation of the MSFLD damage initiation criterion. The default value is
+            1.0.
         tolerance
-            A Float specifying the tolerance within which the damage initiation criterion must be 
-            satisfied. The default value is 0.05. 
+            A Float specifying the tolerance within which the damage initiation criterion must be
+            satisfied. The default value is 0.05.
         direction
-            A SymbolicConstant specifying the damage initiation direction. Possible values are NMORI 
-            and TMORI. The default value is NMORI. 
+            A SymbolicConstant specifying the damage initiation direction. Possible values are NMORI
+            and TMORI. The default value is NMORI.
         position
-            An SymbolicConstant specifying the damage initiation position. Possible values are 
-            CENTROID, CRACKTIP and COMBINED. The default value is CENTROID. 
+            An SymbolicConstant specifying the damage initiation position. Possible values are
+            CENTROID, CRACKTIP and COMBINED. The default value is CENTROID.
 
         Returns
         -------
-            A DamageInitiation object. 
+            A DamageInitiation object.
 
         Raises
         ------
@@ -1079,69 +1230,81 @@ class DamageInitiation:
         """
         pass
 
-    def ShearDamageInitiation(self, table: tuple, definition: SymbolicConstant = MSFLD, feq: float = 10,
-                              fnn: float = 10,
-                              fnt: float = 10, frequency: int = 1, ks: float = 0, numberImperfections: int = 4,
-                              temperatureDependency: Boolean = OFF, dependencies: int = 0, alpha: float = 0,
-                              omega: float = 1, tolerance: float = 0, direction: SymbolicConstant = NMORI):
+    def ShearDamageInitiation(
+        self,
+        table: tuple,
+        definition: SymbolicConstant = MSFLD,
+        feq: float = 10,
+        fnn: float = 10,
+        fnt: float = 10,
+        frequency: int = 1,
+        ks: float = 0,
+        numberImperfections: int = 4,
+        temperatureDependency: Boolean = OFF,
+        dependencies: int = 0,
+        alpha: float = 0,
+        omega: float = 1,
+        tolerance: float = 0,
+        direction: SymbolicConstant = NMORI,
+    ):
         """This method creates a DamageInitiation object.
 
         Notes
         -----
             This function can be accessed by:
-            
+
             .. code-block:: python
-            
+
                 mdb.models[name].materials[name].ShearDamageInitiation
                 session.odbs[name].materials[name].ShearDamageInitiation
-        
+
         Parameters
         ----------
         table
-            A sequence of sequences of Floats specifying the items described in the "Table data" 
-            section. 
+            A sequence of sequences of Floats specifying the items described in the "Table data"
+            section.
         definition
-            A SymbolicConstant specifying the damage initiation definition. Possible values are FLD 
-            and MSFLD. The default value is MSFLD. 
+            A SymbolicConstant specifying the damage initiation definition. Possible values are FLD
+            and MSFLD. The default value is MSFLD.
         feq
-            A Float specifying the critical value of the deformation severity index for equivalent 
+            A Float specifying the critical value of the deformation severity index for equivalent
             Plastic strains. The default value is 10.0.
         fnn
-            A Float specifying the critical value of the deformation severity index for strains 
-            normal to the groove direction. The default value is 10.0. 
+            A Float specifying the critical value of the deformation severity index for strains
+            normal to the groove direction. The default value is 10.0.
         fnt
-            A Float specifying the critical value of the deformation severity index for shear 
-            strains. The default value is 10.0. 
+            A Float specifying the critical value of the deformation severity index for shear
+            strains. The default value is 10.0.
         frequency
-            An Int specifying the frequency, in increments, at which the Marciniak-Kuczynski 
-            analysis is going to be performed. The default value is 1. 
+            An Int specifying the frequency, in increments, at which the Marciniak-Kuczynski
+            analysis is going to be performed. The default value is 1.
         ks
-            A Float specifying the value of Ks. The default value is 0.0. 
+            A Float specifying the value of Ks. The default value is 0.0.
         numberImperfections
-            An Int specifying the number of imperfections to be considered for the evaluation of the 
-            Marciniak-Kuczynski analysis. These imperfections are assumed to be equally spaced in 
-            the angular direction. The default value is 4. 
+            An Int specifying the number of imperfections to be considered for the evaluation of the
+            Marciniak-Kuczynski analysis. These imperfections are assumed to be equally spaced in
+            the angular direction. The default value is 4.
         temperatureDependency
-            A Boolean specifying whether the data depend on temperature. The default value is OFF. 
+            A Boolean specifying whether the data depend on temperature. The default value is OFF.
         dependencies
-            An Int specifying the number of field variable dependencies. The default value is 0. 
+            An Int specifying the number of field variable dependencies. The default value is 0.
         alpha
-            A Float specifying the value of the coefficient that will multiply the shear 
-            contribution to the Hashin's fiber initiation criterion. The default value is 0.0. 
+            A Float specifying the value of the coefficient that will multiply the shear
+            contribution to the Hashin's fiber initiation criterion. The default value is 0.0.
         omega
-            A Float specifying the factor used for filtering the ratio of principal strain rates 
-            used for the evaluation of the MSFLD damage initiation criterion. The default value is 
-            1.0. 
+            A Float specifying the factor used for filtering the ratio of principal strain rates
+            used for the evaluation of the MSFLD damage initiation criterion. The default value is
+            1.0.
         tolerance
-            A Float specifying the tolerance within which the damage initiation criterion must be 
-            satisfied. The default value is 0.05. 
+            A Float specifying the tolerance within which the damage initiation criterion must be
+            satisfied. The default value is 0.05.
         direction
-            A SymbolicConstant specifying the damage initiation direction. Possible values are NMORI 
-            and TMORI. The default value is NMORI. 
+            A SymbolicConstant specifying the damage initiation direction. Possible values are NMORI
+            and TMORI. The default value is NMORI.
 
         Returns
         -------
-            A DamageInitiation object. 
+            A DamageInitiation object.
 
         Raises
         ------
@@ -1149,69 +1312,81 @@ class DamageInitiation:
         """
         pass
 
-    def HashinDamageInitiation(self, table: tuple, definition: SymbolicConstant = MSFLD, feq: float = 10,
-                               fnn: float = 10,
-                               fnt: float = 10, frequency: int = 1, ks: float = 0, numberImperfections: int = 4,
-                               temperatureDependency: Boolean = OFF, dependencies: int = 0, alpha: float = 0,
-                               omega: float = 1, tolerance: float = 0, direction: SymbolicConstant = NMORI):
+    def HashinDamageInitiation(
+        self,
+        table: tuple,
+        definition: SymbolicConstant = MSFLD,
+        feq: float = 10,
+        fnn: float = 10,
+        fnt: float = 10,
+        frequency: int = 1,
+        ks: float = 0,
+        numberImperfections: int = 4,
+        temperatureDependency: Boolean = OFF,
+        dependencies: int = 0,
+        alpha: float = 0,
+        omega: float = 1,
+        tolerance: float = 0,
+        direction: SymbolicConstant = NMORI,
+    ):
         """This method creates a DamageInitiation object.
 
         Notes
         -----
             This function can be accessed by:
-            
+
             .. code-block:: python
-            
+
                 mdb.models[name].materials[name].HashinDamageInitiation
                 session.odbs[name].materials[name].HashinDamageInitiation
-        
+
         Parameters
         ----------
         table
-            A sequence of sequences of Floats specifying the items described in the "Table data" 
-            section. 
+            A sequence of sequences of Floats specifying the items described in the "Table data"
+            section.
         definition
-            A SymbolicConstant specifying the damage initiation definition. Possible values are FLD 
-            and MSFLD. The default value is MSFLD. 
+            A SymbolicConstant specifying the damage initiation definition. Possible values are FLD
+            and MSFLD. The default value is MSFLD.
         feq
-            A Float specifying the critical value of the deformation severity index for equivalent 
+            A Float specifying the critical value of the deformation severity index for equivalent
             Plastic strains. The default value is 10.0.
         fnn
-            A Float specifying the critical value of the deformation severity index for strains 
-            normal to the groove direction. The default value is 10.0. 
+            A Float specifying the critical value of the deformation severity index for strains
+            normal to the groove direction. The default value is 10.0.
         fnt
-            A Float specifying the critical value of the deformation severity index for shear 
-            strains. The default value is 10.0. 
+            A Float specifying the critical value of the deformation severity index for shear
+            strains. The default value is 10.0.
         frequency
-            An Int specifying the frequency, in increments, at which the Marciniak-Kuczynski 
-            analysis is going to be performed. The default value is 1. 
+            An Int specifying the frequency, in increments, at which the Marciniak-Kuczynski
+            analysis is going to be performed. The default value is 1.
         ks
-            A Float specifying the value of Ks. The default value is 0.0. 
+            A Float specifying the value of Ks. The default value is 0.0.
         numberImperfections
-            An Int specifying the number of imperfections to be considered for the evaluation of the 
-            Marciniak-Kuczynski analysis. These imperfections are assumed to be equally spaced in 
-            the angular direction. The default value is 4. 
+            An Int specifying the number of imperfections to be considered for the evaluation of the
+            Marciniak-Kuczynski analysis. These imperfections are assumed to be equally spaced in
+            the angular direction. The default value is 4.
         temperatureDependency
-            A Boolean specifying whether the data depend on temperature. The default value is OFF. 
+            A Boolean specifying whether the data depend on temperature. The default value is OFF.
         dependencies
-            An Int specifying the number of field variable dependencies. The default value is 0. 
+            An Int specifying the number of field variable dependencies. The default value is 0.
         alpha
-            A Float specifying the value of the coefficient that will multiply the shear 
-            contribution to the Hashin's fiber initiation criterion. The default value is 0.0. 
+            A Float specifying the value of the coefficient that will multiply the shear
+            contribution to the Hashin's fiber initiation criterion. The default value is 0.0.
         omega
-            A Float specifying the factor used for filtering the ratio of principal strain rates 
-            used for the evaluation of the MSFLD damage initiation criterion. The default value is 
-            1.0. 
+            A Float specifying the factor used for filtering the ratio of principal strain rates
+            used for the evaluation of the MSFLD damage initiation criterion. The default value is
+            1.0.
         tolerance
-            A Float specifying the tolerance within which the damage initiation criterion must be 
-            satisfied. The default value is 0.05. 
+            A Float specifying the tolerance within which the damage initiation criterion must be
+            satisfied. The default value is 0.05.
         direction
-            A SymbolicConstant specifying the damage initiation direction. Possible values are NMORI 
-            and TMORI. The default value is NMORI. 
+            A SymbolicConstant specifying the damage initiation direction. Possible values are NMORI
+            and TMORI. The default value is NMORI.
 
         Returns
         -------
-            A DamageInitiation object. 
+            A DamageInitiation object.
 
         Raises
         ------
@@ -1220,6 +1395,5 @@ class DamageInitiation:
         pass
 
     def setValues(self):
-        """This method modifies the DamageInitiation object.
-        """
+        """This method modifies the DamageInitiation object."""
         pass

@@ -24,14 +24,14 @@ def getGuiPrefsFileName() -> str:
     Notes
     -----
     This function can be accessed by:
-        
+
     .. code-block:: python
 
         caePrefsAccess.getGuiPrefsFileName
 
     Returns
     -------
-        A String with the default file name for the GUI preferences file. 
+        A String with the default file name for the GUI preferences file.
 
     """
     pass
@@ -45,7 +45,7 @@ def getDisplayNamesInGuiPreferences(fileName: str) -> list[str]:
     Notes
     -----
     This function can be accessed by:
-        
+
     .. code-block:: python
 
         caePrefsAccess.getDisplayNamesInGuiPreferences
@@ -53,26 +53,29 @@ def getDisplayNamesInGuiPreferences(fileName: str) -> list[str]:
     Parameters
     ----------
     fileName: str
-        A String that specifies the path to the preferences file. 
+        A String that specifies the path to the preferences file.
 
     Returns
     -------
-        A list of Strings of displayNames. 
+        A list of Strings of displayNames.
 
     """
     pass
 
 
-def printValuesList(object: str, maxRecursionDepth: typing.Union[int, typing.Literal['UNLIMITED']] = None,
-                    asString: Boolean = False) -> str:
+def printValuesList(
+    object: str,
+    maxRecursionDepth: typing.Union[int, typing.Literal["UNLIMITED"]] = None,
+    asString: Boolean = False,
+) -> str:
     """This function enables you to print all of the options and their values for a set of
     guiPreferences or sessionOptions settings derived from the abaqus_2021.gpr file.
 
     Notes
     -----
-        
+
     This function can be accessed by:
-        
+
     .. code-block:: python
 
         caePrefsAccess.printValuesList
@@ -80,26 +83,26 @@ def printValuesList(object: str, maxRecursionDepth: typing.Union[int, typing.Lit
     Parameters
     ----------
     object: str
-        The guiPreferences object or sessionOptions object for which you want to print options 
-        and their values. 
+        The guiPreferences object or sessionOptions object for which you want to print options
+        and their values.
     maxRecursionDepth: typing.Union[int, typing.Literal['UNLIMITED']]
-        An Int, or SymbolicConstant UNLIMITED, that specifies the depth of recursion when 
-        accessing the attributes of *object*. 
+        An Int, or SymbolicConstant UNLIMITED, that specifies the depth of recursion when
+        accessing the attributes of *object*.
     asString: Boolean
-        A Boolean specifying how the string representation of each option is printed. If 
-        *asString* is True, printValuesList prints the str of each option; otherwise 
-        printValuesList prints the repr of the options. The default value is False. 
+        A Boolean specifying how the string representation of each option is printed. If
+        *asString* is True, printValuesList prints the str of each option; otherwise
+        printValuesList prints the repr of the options. The default value is False.
 
     Returns
     -------
-        A String displaying the path, name, and value for all of the options in the object that 
-        you select. 
+        A String displaying the path, name, and value for all of the options in the object that
+        you select.
 
     """
     pass
 
 
-def openGuiPreferences(displayName: str, fileName: str = '') -> CaeGuiPrefs:
+def openGuiPreferences(displayName: str, fileName: str = "") -> CaeGuiPrefs:
     """This function enables you to examine and change many default behaviors in the Abaqus/CAE
     graphical user interface. Abaqus stores preferences for each display you use in a
     separate guiPreferences section of the abaqus_2021.gpr file.
@@ -107,7 +110,7 @@ def openGuiPreferences(displayName: str, fileName: str = '') -> CaeGuiPrefs:
     Notes
     -----
     This function can be accessed by:
-        
+
     .. code-block:: python
 
         caePrefsAccess.openGuiPreferences
@@ -115,24 +118,26 @@ def openGuiPreferences(displayName: str, fileName: str = '') -> CaeGuiPrefs:
     Parameters
     ----------
     displayName: str
-        A String that specifies the display for which you want to investigate GUI preferences 
-        from the abaqus_2021.gpr file. You can retrieve the available display names in the file 
-        by using the getDisplayNamesInGuiPreferences method. 
+        A String that specifies the display for which you want to investigate GUI preferences
+        from the abaqus_2021.gpr file. You can retrieve the available display names in the file
+        by using the getDisplayNamesInGuiPreferences method.
     fileName: str
-        A String specifying the path to the preferences file. The openGuiPreferences method uses 
-        this argument if you are working with a preferences file that is not at the default 
-        location.If this argument is omitted, the abaqus_2021.gpr file in your home directory is 
-        opened. 
+        A String specifying the path to the preferences file. The openGuiPreferences method uses
+        this argument if you are working with a preferences file that is not at the default
+        location.If this argument is omitted, the abaqus_2021.gpr file in your home directory is
+        opened.
 
     Returns
     -------
-        A CaeGuiPrefs object. 
+        A CaeGuiPrefs object.
 
     """
     pass
 
 
-def openSessionOptions(fileName: str = '', directory: typing.Literal['CURRENT', 'HOME'] = HOME) -> CaeKerPrefs:
+def openSessionOptions(
+    fileName: str = "", directory: typing.Literal["CURRENT", "HOME"] = HOME
+) -> CaeKerPrefs:
     """This function enables you to examine and change the default behavior for many session
     options Abaqus/CAE; that is, the settings that you can save in Abaqus/CAE from the
     FileSave Display ConstrainedSketchOptions menu option. Abaqus stores default session options in the
@@ -140,9 +145,9 @@ def openSessionOptions(fileName: str = '', directory: typing.Literal['CURRENT', 
 
     Notes
     -----
-        
+
     This function can be accessed by:
-        
+
     .. code-block:: python
 
         caePrefsAccess.openSessionOptions
@@ -150,25 +155,25 @@ def openSessionOptions(fileName: str = '', directory: typing.Literal['CURRENT', 
     Parameters
     ----------
     fileName: str
-        A String specifying the path to the preferences file. The openSessionOptions method uses 
-        this argument if you are working with a preferences file that is not at the default 
-        location.If this argument is omitted, the abaqus_2021.gpr file in your home directory is 
-        opened. 
+        A String specifying the path to the preferences file. The openSessionOptions method uses
+        this argument if you are working with a preferences file that is not at the default
+        location.If this argument is omitted, the abaqus_2021.gpr file in your home directory is
+        opened.
     directory: typing.Literal['CURRENT', 'HOME']
-        A SymbolicConstant specifying the location of the preferences file. Possible values 
+        A SymbolicConstant specifying the location of the preferences file. Possible values
         are:
-            
-        - CURRENT to open the preferences file in the current directory 
+
+        - CURRENT to open the preferences file in the current directory
         (caePrefsAccess.CURRENT)
-        - HOME to open the preferences file in your home directory 
-        (caePrefsAccess.HOME) 
-        
-        The default value is HOME. Either **fileName** or **directory** must be 
-        supplied. The **fileName** or **directory** arguments are mutually exclusive. 
+        - HOME to open the preferences file in your home directory
+        (caePrefsAccess.HOME)
+
+        The default value is HOME. Either **fileName** or **directory** must be
+        supplied. The **fileName** or **directory** arguments are mutually exclusive.
 
     Returns
     -------
-        A CaeKerPrefs object. 
+        A CaeKerPrefs object.
 
     """
     pass

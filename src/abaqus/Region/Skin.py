@@ -34,17 +34,23 @@ class Skin:
 
     """
 
-    # A MeshElementArray object. 
+    # A MeshElementArray object.
     elements: MeshElementArray = MeshElementArray([])
 
-    # An EdgeArray object. 
+    # An EdgeArray object.
     edges: EdgeArray = EdgeArray([])
 
-    # A FaceArray object. 
+    # A FaceArray object.
     faces: FaceArray = FaceArray([])
 
-    def __init__(self, name: str, faces: tuple[Face] = (), edges: tuple[Edge] = (),
-                 elementFaces: tuple[MeshFace] = (), elementEdges: tuple[MeshEdge] = ()):
+    def __init__(
+        self,
+        name: str,
+        faces: tuple[Face] = (),
+        edges: tuple[Edge] = (),
+        elementFaces: tuple[MeshFace] = (),
+        elementEdges: tuple[MeshEdge] = (),
+    ):
         """This method creates a skin from a sequence of objects in a model database. At least one
         of the optional arguments needs to be specified.
 
@@ -55,23 +61,23 @@ class Skin:
         .. code-block:: python
 
             mdb.models[name].parts[*name*].Skin
-        
+
         Parameters
         ----------
         name
-            A String specifying the repository key. The default value is an empty string. 
+            A String specifying the repository key. The default value is an empty string.
         faces
-            A sequence of Face objects specifying the faces on which skins should be created. 
-            Applicable to three and two dimensional parts. 
+            A sequence of Face objects specifying the faces on which skins should be created.
+            Applicable to three and two dimensional parts.
         edges
-            A sequence of Edge objects specifying the edges on which skins should be created. 
-            Applicable to axisymmetric parts. 
+            A sequence of Edge objects specifying the edges on which skins should be created.
+            Applicable to axisymmetric parts.
         elementFaces
-            A sequence of MeshFace objects specifying the mesh faces on which skins should be 
-            created. Applicable to three and two dimensional parts. 
+            A sequence of MeshFace objects specifying the mesh faces on which skins should be
+            created. Applicable to three and two dimensional parts.
         elementEdges
-            A sequence of MeshEdge objects specifying the mesh edges on which skins should be 
-            created. Applicable to axisymmetric parts. 
+            A sequence of MeshEdge objects specifying the mesh edges on which skins should be
+            created. Applicable to axisymmetric parts.
 
         Returns
         -------
@@ -79,8 +85,14 @@ class Skin:
         """
         pass
 
-    def EditSkin(self, name: str = '', faces: tuple[Face] = (), edges: tuple[Edge] = (),
-                 elementFaces: tuple[MeshFace] = (), elementEdges: tuple[MeshEdge] = ()):
+    def EditSkin(
+        self,
+        name: str = "",
+        faces: tuple[Face] = (),
+        edges: tuple[Edge] = (),
+        elementFaces: tuple[MeshFace] = (),
+        elementEdges: tuple[MeshEdge] = (),
+    ):
         """This method modifies underlying entities of the selected skin. At least one of the
         optional arguments needs to be specified.
 
@@ -91,23 +103,23 @@ class Skin:
         .. code-block:: python
 
             mdb.models[name].parts[*name*].Skin
-        
+
         Parameters
         ----------
         name
-            A String specifying the repository key. The default value is an empty string. 
+            A String specifying the repository key. The default value is an empty string.
         faces
-            A sequence of Face objects specifying the faces on which skins should be created. 
-            Applicable to three and two dimensional parts. 
+            A sequence of Face objects specifying the faces on which skins should be created.
+            Applicable to three and two dimensional parts.
         edges
-            A sequence of Edge objects specifying the edges on which skins should be created. 
-            Applicable to axisymmetric parts. 
+            A sequence of Edge objects specifying the edges on which skins should be created.
+            Applicable to axisymmetric parts.
         elementFaces
-            A sequence of MeshFace objects specifying the mesh faces on which skins should be 
-            created. Applicable to three and two dimensional parts. 
+            A sequence of MeshFace objects specifying the mesh faces on which skins should be
+            created. Applicable to three and two dimensional parts.
         elementEdges
-            A sequence of MeshEdge objects specifying the mesh edges on which skins should be 
-            created. Applicable to axisymmetric parts. 
+            A sequence of MeshEdge objects specifying the mesh edges on which skins should be
+            created. Applicable to axisymmetric parts.
 
         Returns
         -------

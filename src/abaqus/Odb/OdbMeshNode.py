@@ -12,9 +12,9 @@ class OdbMeshNode:
     Notes
     -----
     This object can be accessed by:
-    
+
     .. code-block:: python
-        
+
         import odbAccess
         session.odbs[name].parts[name].nodes[i]
         session.odbs[name].parts[name].nodeSets[name].nodes[i]
@@ -31,9 +31,9 @@ class OdbMeshNode:
 
     """
 
-    # An Int specifying the node label. 
+    # An Int specifying the node label.
     label: int = None
 
-    # A tuple of Floats specifying the nodal coordinates in the global Cartesian coordinate 
-    # system. 
+    # A tuple of Floats specifying the nodal coordinates in the global Cartesian coordinate
+    # system.
     coordinates: float = None

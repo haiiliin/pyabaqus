@@ -5,7 +5,7 @@ from ..TableCollection.PropertyTable import PropertyTable
 
 class TableCollection:
     """A TableCollection is an object used to define the containers that encapsulate the
-    ParameterTable and PropertyTable objects. 
+    ParameterTable and PropertyTable objects.
 
     Attributes
     ----------
@@ -30,10 +30,10 @@ class TableCollection:
 
     """
 
-    # A repository of the PropertyTable object. 
+    # A repository of the PropertyTable object.
     propertyTables: dict[str, PropertyTable] = dict[str, PropertyTable]()
 
-    # A repository of the ParameterTable object 
+    # A repository of the ParameterTable object
     parameterTables: dict[str, ParameterTable] = dict[str, ParameterTable]()
 
     # sequence of the DataTable object
@@ -50,11 +50,11 @@ class TableCollection:
         .. code-block:: python
 
             mdb.models[name].TableCollection
-        
+
         Parameters
         ----------
         name
-            A String specifying the repository key. 
+            A String specifying the repository key.
 
         Returns
         -------
@@ -72,7 +72,7 @@ class TableCollection:
         .. code-block:: python
 
             mdb.models[name].TableCollection
-        
+
         Parameters
         ----------
         label
@@ -101,7 +101,7 @@ class TableCollection:
         .. code-block:: python
 
             mdb.models[name].TableCollection
-        
+
         Parameters
         ----------
         name
@@ -114,7 +114,9 @@ class TableCollection:
         self.parameterTables[name] = parameterTable = ParameterTable(name)
         return parameterTable
 
-    def PropertyTable(self, name: str, properties: str, variables: str = '') -> PropertyTable:
+    def PropertyTable(
+        self, name: str, properties: str, variables: str = ""
+    ) -> PropertyTable:
         """This method creates a PropertyTable object.
 
         Notes
@@ -124,7 +126,7 @@ class TableCollection:
         .. code-block:: python
 
             mdb.models[name].TableCollection
-        
+
         Parameters
         ----------
         name
@@ -143,5 +145,7 @@ class TableCollection:
         ------
             RangeError.
         """
-        self.propertyTables[name] = propertyTable = PropertyTable(name, properties, variables)
+        self.propertyTables[name] = propertyTable = PropertyTable(
+            name, properties, variables
+        )
         return propertyTable

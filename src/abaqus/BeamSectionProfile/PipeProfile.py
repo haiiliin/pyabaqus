@@ -1,9 +1,10 @@
 from .Profile import Profile
 
+
 class PipeProfile(Profile):
 
-    """The PipeProfile object defines the properties of a circular pipe profile. 
-    The PipeProfile object is derived from the Profile object. 
+    """The PipeProfile object defines the properties of a circular pipe profile.
+    The PipeProfile object is derived from the Profile object.
 
     Notes
     -----
@@ -33,26 +34,26 @@ class PipeProfile(Profile):
 
             mdb.models[name].PipeProfile
             session.odbs[name].PipeProfile
-        
+
         Parameters
         ----------
         name
-            A String specifying the repository key. 
+            A String specifying the repository key.
         r
-            A Float specifying the outer radius of the pipe. For more information, see [Beam 
-            cross-section 
-            library](https://help.3ds.com/2021/English/DSSIMULIA_Established/SIMACAEELMRefMap/simaelm-c-beamcrosssectlib.htm?ContextScope=all). 
+            A Float specifying the outer radius of the pipe. For more information, see [Beam
+            cross-section
+            library](https://help.3ds.com/2021/English/DSSIMULIA_Established/SIMACAEELMRefMap/simaelm-c-beamcrosssectlib.htm?ContextScope=all).
         t
-            A Float specifying the wall thickness of the pipe. 
+            A Float specifying the wall thickness of the pipe.
 
         Returns
         -------
-            A PipeProfile object. 
+            A PipeProfile object.
 
         Raises
         ------
         RangeError
-            
+
         """
         super().__init__()
         pass
@@ -63,7 +64,6 @@ class PipeProfile(Profile):
         Raises
         ------
         RangeError
-            
+
         """
         pass
-

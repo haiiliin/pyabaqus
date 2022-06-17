@@ -1,9 +1,10 @@
 from .Profile import Profile
 
+
 class RectangularProfile(Profile):
 
-    """The RectangularProfile object defines the properties of a solid rectangular profile. 
-    The RectangularProfile object is derived from the Profile object. 
+    """The RectangularProfile object defines the properties of a solid rectangular profile.
+    The RectangularProfile object is derived from the Profile object.
 
     Notes
     -----
@@ -33,26 +34,26 @@ class RectangularProfile(Profile):
 
             mdb.models[name].RectangularProfile
             session.odbs[name].RectangularProfile
-        
+
         Parameters
         ----------
         name
-            A String specifying the repository key. 
+            A String specifying the repository key.
         a
-            A positive Float specifying the *a* dimension of the rectangular profile. For more 
-            information, see [Beam cross-section 
-            library](https://help.3ds.com/2021/English/DSSIMULIA_Established/SIMACAEELMRefMap/simaelm-c-beamcrosssectlib.htm?ContextScope=all). 
+            A positive Float specifying the *a* dimension of the rectangular profile. For more
+            information, see [Beam cross-section
+            library](https://help.3ds.com/2021/English/DSSIMULIA_Established/SIMACAEELMRefMap/simaelm-c-beamcrosssectlib.htm?ContextScope=all).
         b
-            A positive Float specifying the *b* dimension of the rectangular profile. 
+            A positive Float specifying the *b* dimension of the rectangular profile.
 
         Returns
         -------
-            A RectangularProfile object. 
+            A RectangularProfile object.
 
         Raises
         ------
         RangeError
-            
+
         """
         super().__init__()
         pass
@@ -63,7 +64,6 @@ class RectangularProfile(Profile):
         Raises
         ------
         RangeError
-            
+
         """
         pass
-

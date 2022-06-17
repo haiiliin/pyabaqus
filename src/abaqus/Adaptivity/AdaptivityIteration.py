@@ -4,7 +4,7 @@ from .RuleResult import RuleResult
 
 class AdaptivityIteration:
     """The AdaptivityIteration object contains information about a given iteration of the
-    varying topology adaptivity process (adaptive remeshing). 
+    varying topology adaptivity process (adaptive remeshing).
 
     Attributes
     ----------
@@ -24,12 +24,19 @@ class AdaptivityIteration:
 
     """
 
-    # A repository of RuleResult objects specifying the calculated results from sizing 
-    # functions corresponding to the RemeshingRule objects for this iteration of an adaptivity 
-    # process. 
+    # A repository of RuleResult objects specifying the calculated results from sizing
+    # functions corresponding to the RemeshingRule objects for this iteration of an adaptivity
+    # process.
     ruleResults: dict[str, RuleResult] = dict[str, RuleResult]()
 
-    def __init__(self, iteration: int, jobName: str, modelName: str, odbPath: str, remeshingErrors: int):
+    def __init__(
+        self,
+        iteration: int,
+        jobName: str,
+        modelName: str,
+        odbPath: str,
+        remeshingErrors: int,
+    ):
         """This method creates an AdaptivityIteration object.
 
         Notes
@@ -39,21 +46,21 @@ class AdaptivityIteration:
         .. code-block:: python
 
             mdb.adaptivityProcesses[name].AdaptivityIteration
-        
+
         Parameters
         ----------
         iteration
-            An Int specifying the sequence number for this iteration in the adaptivity process. 
+            An Int specifying the sequence number for this iteration in the adaptivity process.
         jobName
-            A String specifying the name of the job that was run for this iteration. 
+            A String specifying the name of the job that was run for this iteration.
         modelName
-            A String specifying the name of the model that was analyzed and remeshed in this 
-            iteration. 
+            A String specifying the name of the model that was analyzed and remeshed in this
+            iteration.
         odbPath
-            A String specifying the path to the ODB file that was created for this iteration. 
+            A String specifying the path to the ODB file that was created for this iteration.
         remeshingErrors
-            An Int specifying the number of part instances which generated errors while remeshing 
-            the model in this iteration of the adaptivity process. 
+            An Int specifying the number of part instances which generated errors while remeshing
+            the model in this iteration of the adaptivity process.
 
         Returns
         -------
@@ -72,7 +79,7 @@ class AdaptivityIteration:
         .. code-block:: python
 
             mdb.adaptivityProcesses[name].AdaptivityIteration
-        
+
         Parameters
         ----------
         name
@@ -93,8 +100,14 @@ class AdaptivityIteration:
         self.ruleResults[name] = ruleResult = ErrorIndicatorResult(name, results)
         return ruleResult
 
-    def RuleResult(self, name: str, indicatorResults: dict[str, ErrorIndicatorResult], numElems: int,
-                   minSizeElemCount: int, satisfiedVars: tuple = ()) -> RuleResult:
+    def RuleResult(
+        self,
+        name: str,
+        indicatorResults: dict[str, ErrorIndicatorResult],
+        numElems: int,
+        minSizeElemCount: int,
+        satisfiedVars: tuple = (),
+    ) -> RuleResult:
         """This method creates a RuleResult with data for a RemeshingRule for a given adaptivity
         iteration.
 
@@ -105,7 +118,7 @@ class AdaptivityIteration:
         .. code-block:: python
 
             mdb.adaptivityProcesses[name].AdaptivityIteration
-        
+
         Parameters
         ----------
         name
@@ -131,6 +144,7 @@ class AdaptivityIteration:
         ------
             AbaqusException.
         """
-        self.ruleResults[name] = ruleResult = RuleResult(name, indicatorResults, numElems, minSizeElemCount,
-                                                         satisfiedVars)
+        self.ruleResults[name] = ruleResult = RuleResult(
+            name, indicatorResults, numElems, minSizeElemCount, satisfiedVars
+        )
         return ruleResult

@@ -1,6 +1,8 @@
 from abaqusConstants import *
 from ..ConstrainedSketchBase import ConstrainedSketchBase
-from ..ConstrainedSketchGeometry.ConstrainedSketchGeometry import ConstrainedSketchGeometry
+from ..ConstrainedSketchGeometry.ConstrainedSketchGeometry import (
+    ConstrainedSketchGeometry,
+)
 from ..ConstrainedSketchVertex.ConstrainedSketchVertex import ConstrainedSketchVertex
 
 
@@ -8,32 +10,38 @@ class ConstrainedSketchDimensionModel(ConstrainedSketchBase):
     """A ConstrainedSketch object contains the entities that are used to create a sketch. The
     objects include ConstrainedSketchGeometry objects contained in the ConstrainedSketchGeometry Repository,
     such as Line, Arc, and Spline. ConstrainedSketchVertex, ConstrainedSketchDimension, ConstrainedSketchConstraint, and ConstrainedSketchParameter objects are
-    contained in their respective repositories. 
+    contained in their respective repositories.
 
     Notes
     -----
     This object can be accessed by:
-    
+
     .. code-block:: python
-        
+
         import sketch
         mdb.models[name].sketches[name]
 
     """
 
-    def AngularDimension(self, line1: ConstrainedSketchGeometry, line2: ConstrainedSketchGeometry,
-                         textPoint: tuple[float], value: float = None, reference: Boolean = OFF):
+    def AngularDimension(
+        self,
+        line1: ConstrainedSketchGeometry,
+        line2: ConstrainedSketchGeometry,
+        textPoint: tuple[float],
+        value: float = None,
+        reference: Boolean = OFF,
+    ):
         """This method constructs a ConstrainedSketchDimension object between two
         ConstrainedSketchGeometry objects, with the given angle between them.
 
         Notes
         -----
             This function can be accessed by:
-            
+
             .. code-block:: python
-            
+
                 mdb.models[name].sketches[name].AngularDimension
-        
+
         Parameters
         ----------
         line1
@@ -55,8 +63,14 @@ class ConstrainedSketchDimensionModel(ConstrainedSketchBase):
         """
         pass
 
-    def HorizontalDimension(self, vertex1: ConstrainedSketchVertex, vertex2: ConstrainedSketchVertex,
-                            textPoint: tuple[float], value: float = None, reference: Boolean = OFF):
+    def HorizontalDimension(
+        self,
+        vertex1: ConstrainedSketchVertex,
+        vertex2: ConstrainedSketchVertex,
+        textPoint: tuple[float],
+        value: float = None,
+        reference: Boolean = OFF,
+    ):
         """This method constructs a ConstrainedSketchDimension object between two vertices. A
         horizontal dimension indicates the horizontal distance along the *X*-axis between two
         vertices.
@@ -64,11 +78,11 @@ class ConstrainedSketchDimensionModel(ConstrainedSketchBase):
         Notes
         -----
             This function can be accessed by:
-            
+
             .. code-block:: python
-            
+
                 mdb.models[name].sketches[name].HorizontalDimension
-        
+
         Parameters
         ----------
         vertex1
@@ -90,19 +104,25 @@ class ConstrainedSketchDimensionModel(ConstrainedSketchBase):
         """
         pass
 
-    def ObliqueDimension(self, vertex1: ConstrainedSketchVertex, vertex2: ConstrainedSketchVertex,
-                         textPoint: tuple[float], value: float = None, reference: Boolean = OFF):
+    def ObliqueDimension(
+        self,
+        vertex1: ConstrainedSketchVertex,
+        vertex2: ConstrainedSketchVertex,
+        textPoint: tuple[float],
+        value: float = None,
+        reference: Boolean = OFF,
+    ):
         """This method constructs a ConstrainedSketchDimension object between two vertices. An
         oblique dimension indicates the distance between two vertices.
 
         Notes
         -----
             This function can be accessed by:
-            
+
             .. code-block:: python
-            
+
                 mdb.models[name].sketches[name].ObliqueDimension
-        
+
         Parameters
         ----------
         vertex1
@@ -124,8 +144,15 @@ class ConstrainedSketchDimensionModel(ConstrainedSketchBase):
         """
         pass
 
-    def RadialDimension(self, curve: ConstrainedSketchGeometry, textPoint: tuple[float], value: float = None,
-                        reference: Boolean = OFF, majorRadius: float = None, minorRadius: float = None):
+    def RadialDimension(
+        self,
+        curve: ConstrainedSketchGeometry,
+        textPoint: tuple[float],
+        value: float = None,
+        reference: Boolean = OFF,
+        majorRadius: float = None,
+        minorRadius: float = None,
+    ):
         """This method constructs a ConstrainedSketchDimension object on a circular or elliptical
         arc. A radial dimension indicates the radius of an arc or circle or the major or minor
         radius of an ellipse.
@@ -133,11 +160,11 @@ class ConstrainedSketchDimensionModel(ConstrainedSketchBase):
         Notes
         -----
             This function can be accessed by:
-            
+
             .. code-block:: python
-            
+
                 mdb.models[name].sketches[name].RadialDimension
-        
+
         Parameters
         ----------
         curve
@@ -163,19 +190,25 @@ class ConstrainedSketchDimensionModel(ConstrainedSketchBase):
         """
         pass
 
-    def VerticalDimension(self, vertex1: ConstrainedSketchVertex, vertex2: ConstrainedSketchVertex,
-                          textPoint: tuple[float], value: float = None, reference: Boolean = OFF):
+    def VerticalDimension(
+        self,
+        vertex1: ConstrainedSketchVertex,
+        vertex2: ConstrainedSketchVertex,
+        textPoint: tuple[float],
+        value: float = None,
+        reference: Boolean = OFF,
+    ):
         """This method constructs a ConstrainedSketchDimension between two vertices. A vertical
         dimension controls the vertical distance along the *Y*-axis between two vertices.
 
         Notes
         -----
             This function can be accessed by:
-            
+
             .. code-block:: python
-            
+
                 mdb.models[name].sketches[name].VerticalDimension
-        
+
         Parameters
         ----------
         vertex1
@@ -197,8 +230,14 @@ class ConstrainedSketchDimensionModel(ConstrainedSketchBase):
         """
         pass
 
-    def DistanceDimension(self, entity1: ConstrainedSketchVertex, entity2: ConstrainedSketchVertex,
-                          textPoint: tuple[float], value: float = None, reference: Boolean = OFF):
+    def DistanceDimension(
+        self,
+        entity1: ConstrainedSketchVertex,
+        entity2: ConstrainedSketchVertex,
+        textPoint: tuple[float],
+        value: float = None,
+        reference: Boolean = OFF,
+    ):
         """This method constructs a ConstrainedSketchDimension object between two
         ConstrainedSketchGeometry, or aConstrainedSketchVertex and ConstrainedSketchGeometry
         object. A distance dimension specifies the shortest distance between two entities.
@@ -206,11 +245,11 @@ class ConstrainedSketchDimensionModel(ConstrainedSketchBase):
         Notes
         -----
             This function can be accessed by:
-            
+
             .. code-block:: python
-            
+
                 mdb.models[name].sketches[name].DistanceDimension
-        
+
         Parameters
         ----------
         entity1

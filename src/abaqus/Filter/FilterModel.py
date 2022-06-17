@@ -19,20 +19,27 @@ class FilterModel(ModelBase):
 
     """
 
-    def ButterworthFilter(self, name: str, cutoffFrequency: float, order: int = 2, operation: SymbolicConstant = NONE,
-                          halt: Boolean = OFF, limit: float = None,
-                          invariant: SymbolicConstant = NONE) -> ButterworthFilter:
+    def ButterworthFilter(
+        self,
+        name: str,
+        cutoffFrequency: float,
+        order: int = 2,
+        operation: SymbolicConstant = NONE,
+        halt: Boolean = OFF,
+        limit: float = None,
+        invariant: SymbolicConstant = NONE,
+    ) -> ButterworthFilter:
         """This method creates a ButterworthFilter object.
 
         Notes
         -----
             This function can be accessed by:
-            
+
             .. code-block:: python
-            
+
                 mdb.models[name].ButterworthFilter
                 session.odbs[name].ButterworthFilter
-        
+
         Parameters
         ----------
         name
@@ -62,30 +69,39 @@ class FilterModel(ModelBase):
         Returns
         -------
             A ButterworthFilter object.
-            
+
         Raises
         ------
         InvalidNameError
         RangeError
         """
-        self.filters[name] = butterworthFilter = ButterworthFilter(name, cutoffFrequency, order, operation, halt, limit,
-                                                                   invariant)
+        self.filters[name] = butterworthFilter = ButterworthFilter(
+            name, cutoffFrequency, order, operation, halt, limit, invariant
+        )
         return butterworthFilter
 
-    def Chebyshev1Filter(self, name: str, cutoffFrequency: float, rippleFactor: float = 0, order: int = 2,
-                         operation: SymbolicConstant = NONE, halt: Boolean = OFF, limit: float = None,
-                         invariant: SymbolicConstant = NONE) -> Chebyshev1Filter:
+    def Chebyshev1Filter(
+        self,
+        name: str,
+        cutoffFrequency: float,
+        rippleFactor: float = 0,
+        order: int = 2,
+        operation: SymbolicConstant = NONE,
+        halt: Boolean = OFF,
+        limit: float = None,
+        invariant: SymbolicConstant = NONE,
+    ) -> Chebyshev1Filter:
         """This method creates a Chebyshev1Filter object.
 
         Notes
         -----
             This function can be accessed by:
-            
+
             .. code-block:: python
-            
+
                 mdb.models[name].Chebyshev1Filter
                 session.odbs[name].Chebyshev1Filter
-        
+
         Parameters
         ----------
         name
@@ -118,30 +134,46 @@ class FilterModel(ModelBase):
         Returns
         -------
             A Chebyshev1Filter object.
-            
+
         Raises
         ------
         InvalidNameError
         RangeError
         """
-        self.filters[name] = chebyshev1Filter = Chebyshev1Filter(name, cutoffFrequency, rippleFactor, order, operation,
-                                                                 halt, limit, invariant)
+        self.filters[name] = chebyshev1Filter = Chebyshev1Filter(
+            name,
+            cutoffFrequency,
+            rippleFactor,
+            order,
+            operation,
+            halt,
+            limit,
+            invariant,
+        )
         return chebyshev1Filter
 
-    def Chebyshev2Filter(self, name: str, cutoffFrequency: float, rippleFactor: float = 0, order: int = 2,
-                         operation: SymbolicConstant = NONE, halt: Boolean = OFF, limit: float = None,
-                         invariant: SymbolicConstant = NONE) -> Chebyshev2Filter:
+    def Chebyshev2Filter(
+        self,
+        name: str,
+        cutoffFrequency: float,
+        rippleFactor: float = 0,
+        order: int = 2,
+        operation: SymbolicConstant = NONE,
+        halt: Boolean = OFF,
+        limit: float = None,
+        invariant: SymbolicConstant = NONE,
+    ) -> Chebyshev2Filter:
         """This method creates a Chebyshev2Filter object.
 
         Notes
         -----
             This function can be accessed by:
-            
+
             .. code-block:: python
-            
+
                 mdb.models[name].Chebyshev2Filter
                 session.odbs[name].Chebyshev2Filter
-        
+
         Parameters
         ----------
         name
@@ -174,29 +206,45 @@ class FilterModel(ModelBase):
         Returns
         -------
             A Chebyshev2Filter object.
-            
+
         Raises
         ------
         InvalidNameError
         RangeError
         """
-        self.filters[name] = chebyshev2Filter = Chebyshev2Filter(name, cutoffFrequency, rippleFactor, order, operation,
-                                                                 halt, limit, invariant)
+        self.filters[name] = chebyshev2Filter = Chebyshev2Filter(
+            name,
+            cutoffFrequency,
+            rippleFactor,
+            order,
+            operation,
+            halt,
+            limit,
+            invariant,
+        )
         return chebyshev2Filter
 
-    def OperatorFilter(self, name: str, cutoffFrequency: float, order: int = 2, operation: SymbolicConstant = NONE,
-                       halt: Boolean = OFF, limit: float = None, invariant: SymbolicConstant = NONE) -> OperatorFilter:
+    def OperatorFilter(
+        self,
+        name: str,
+        cutoffFrequency: float,
+        order: int = 2,
+        operation: SymbolicConstant = NONE,
+        halt: Boolean = OFF,
+        limit: float = None,
+        invariant: SymbolicConstant = NONE,
+    ) -> OperatorFilter:
         """This method creates an OperatorFilter object.
 
         Notes
         -----
             This function can be accessed by:
-            
+
             .. code-block:: python
-            
+
                 mdb.models[name].OperatorFilter
                 session.odbs[name].OperatorFilter
-        
+
         Parameters
         ----------
         name
@@ -226,12 +274,13 @@ class FilterModel(ModelBase):
         Returns
         -------
             An OperatorFilter object.
-            
+
         Raises
         ------
         InvalidNameError
         RangeError
         """
-        self.filters[name] = operatorFilter = OperatorFilter(name, cutoffFrequency, order, operation, halt, limit,
-                                                             invariant)
+        self.filters[name] = operatorFilter = OperatorFilter(
+            name, cutoffFrequency, order, operation, halt, limit, invariant
+        )
         return operatorFilter

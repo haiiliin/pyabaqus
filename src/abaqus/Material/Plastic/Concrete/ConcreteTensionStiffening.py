@@ -3,14 +3,14 @@ from abaqusConstants import *
 
 class ConcreteTensionStiffening:
     """The ConcreteTensionStiffening object specifies hardening for the concrete damaged
-    plasticity model. 
+    plasticity model.
 
     Notes
     -----
     This object can be accessed by:
-    
+
     .. code-block:: python
-        
+
         import material
         mdb.models[name].materials[name].concreteDamagedPlasticity.concreteTensionStiffening
         import odbMaterial
@@ -49,8 +49,14 @@ class ConcreteTensionStiffening:
 
     """
 
-    def __init__(self, table: tuple, rate: Boolean = OFF, type: SymbolicConstant = STRAIN,
-                 temperatureDependency: Boolean = OFF, dependencies: int = 0):
+    def __init__(
+        self,
+        table: tuple,
+        rate: Boolean = OFF,
+        type: SymbolicConstant = STRAIN,
+        temperatureDependency: Boolean = OFF,
+        dependencies: int = 0,
+    ):
         """This method creates a ConcreteTensionStiffening object.
 
         Notes

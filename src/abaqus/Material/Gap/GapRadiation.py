@@ -1,6 +1,6 @@
 class GapRadiation:
     """The GapRadiation object specifies radiative heat transfer between closely adjacent
-    surfaces. 
+    surfaces.
 
     Notes
     -----
@@ -24,18 +24,23 @@ class GapRadiation:
 
     """
 
-    def __init__(self, mainSurfaceEmissivity: float, secondarySurfaceEmissivity: float, table: tuple):
+    def __init__(
+        self,
+        mainSurfaceEmissivity: float,
+        secondarySurfaceEmissivity: float,
+        table: tuple,
+    ):
         """This method creates a GapRadiation object.
 
         Notes
         -----
             This function can be accessed by:
-            
+
             .. code-block:: python
-            
+
                 mdb.models[name].materials[name].Gapradiation
                 session.odbs[name].materials[name].Gapradiation
-        
+
         Parameters
         ----------
         mainSurfaceEmissivity
@@ -43,7 +48,7 @@ class GapRadiation:
         secondarySurfaceEmissivity
             A Float specifying the Emissivity of the slave surfaceϵB.
         table
-            A sequence of sequences of Floats specifying the items described below. 
+            A sequence of sequences of Floats specifying the items described below.
 
         Returns
         -------
@@ -52,6 +57,5 @@ class GapRadiation:
         pass
 
     def setValues(self):
-        """This method modifies the GapRadiation object.
-        """
+        """This method modifies the GapRadiation object."""
         pass

@@ -5,21 +5,31 @@ from ..Session.SessionBase import SessionBase
 
 
 class FieldReportSession(SessionBase):
-
-    def writeFieldRepor(self, filename: str, append: Boolean, sortItem: str, odb: Odb, step: int, frame: int,
-                        outputPosition: SymbolicConstant, displayGroup: DisplayGroup,
-                        variable: SymbolicConstant, numericForm: SymbolicConstant = None,
-                        complexAngle: float = None, stepFrame: SymbolicConstant = SPECIFY):
+    def writeFieldRepor(
+        self,
+        filename: str,
+        append: Boolean,
+        sortItem: str,
+        odb: Odb,
+        step: int,
+        frame: int,
+        outputPosition: SymbolicConstant,
+        displayGroup: DisplayGroup,
+        variable: SymbolicConstant,
+        numericForm: SymbolicConstant = None,
+        complexAngle: float = None,
+        stepFrame: SymbolicConstant = SPECIFY,
+    ):
         """This method writes a FieldOutput object to a user-defined ASCII file.
 
         Notes
         -----
             This function can be accessed by:
-            
+
             .. code-block:: python
-            
+
                 session.writeFieldReport
-        
+
         Parameters
         ----------
         filename
@@ -82,18 +92,25 @@ class FieldReportSession(SessionBase):
         """
         pass
 
-    def writeFreeBodyRepor(self, fileName: str, append: Boolean, step: int = None, frame: int = None,
-                           stepFrame: SymbolicConstant = SPECIFY, odb: Odb = None):
+    def writeFreeBodyRepor(
+        self,
+        fileName: str,
+        append: Boolean,
+        step: int = None,
+        frame: int = None,
+        stepFrame: SymbolicConstant = SPECIFY,
+        odb: Odb = None,
+    ):
         """This method writes a FreeBody object to a user-defined ASCII file.
 
         Notes
         -----
             This function can be accessed by:
-            
+
             .. code-block:: python
-            
+
                 session.writeFreeBodyReport
-        
+
         Parameters
         ----------
         fileName

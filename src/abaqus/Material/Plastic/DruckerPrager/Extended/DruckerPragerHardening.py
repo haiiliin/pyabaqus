@@ -3,21 +3,21 @@ from abaqusConstants import *
 
 class DruckerPragerHardening:
     """The DruckerPragerHardening object specifies hardening for Drucker-Prager plasticity
-    models. 
+    models.
 
     Notes
     -----
     This object can be accessed by:
-    
+
     .. code-block:: python
-        
+
         import material
         mdb.models[name].materials[name].druckerPrager.druckerPragerHardening
         import odbMaterial
         session.odbs[name].materials[name].druckerPrager.druckerPragerHardening
 
     The table data for this object are:
-    
+
     - Yield stress.
     - Absolute value of the corresponding Plastic strain. (The first tabular value entered must always be zero.)
     - Equivalent Plastic strain rate, ˙¯εpl, for which this hardening curve applies.
@@ -32,8 +32,14 @@ class DruckerPragerHardening:
 
     """
 
-    def __init__(self, table: tuple, type: SymbolicConstant = COMPRESSION, rate: Boolean = OFF,
-                 temperatureDependency: Boolean = OFF, dependencies: int = 0):
+    def __init__(
+        self,
+        table: tuple,
+        type: SymbolicConstant = COMPRESSION,
+        rate: Boolean = OFF,
+        temperatureDependency: Boolean = OFF,
+        dependencies: int = 0,
+    ):
         """This method creates a DruckerPragerHardening object.
 
         Notes

@@ -4,19 +4,23 @@ from ..Step.StepBase import StepBase
 
 
 class LoadStep(StepBase):
-
-    def LoadCase(self, name: str, boundaryConditions: tuple = (), loads: tuple = (),
-                 includeActiveBaseStateBC: Boolean = ON) -> LoadCase:
+    def LoadCase(
+        self,
+        name: str,
+        boundaryConditions: tuple = (),
+        loads: tuple = (),
+        includeActiveBaseStateBC: Boolean = ON,
+    ) -> LoadCase:
         """This method creates a load case in a step.
 
         Notes
         -----
             This function can be accessed by:
-            
+
             .. code-block:: python
-            
+
                 mdb.models[name].steps[name].LoadCase
-        
+
         Parameters
         ----------
         name
@@ -39,5 +43,7 @@ class LoadStep(StepBase):
         ------
             RangeError.
         """
-        self.loadCases[name] = loadCase = LoadCase(name, boundaryConditions, loads, includeActiveBaseStateBC)
+        self.loadCases[name] = loadCase = LoadCase(
+            name, boundaryConditions, loads, includeActiveBaseStateBC
+        )
         return loadCase

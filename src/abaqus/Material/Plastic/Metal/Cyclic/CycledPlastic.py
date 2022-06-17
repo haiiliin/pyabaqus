@@ -3,14 +3,14 @@ from abaqusConstants import *
 
 class CycledPlastic:
     """The CycledPlastic object specifies cycled yield stress data for the ORNL constitutive
-    model. 
+    model.
 
     Notes
     -----
     This object can be accessed by:
-    
+
     .. code-block:: python
-        
+
         import material
         mdb.models[name].materials[name].Plastic.cycledPlastic
         import odbMaterial
@@ -34,18 +34,18 @@ class CycledPlastic:
         Notes
         -----
             This function can be accessed by:
-            
+
             .. code-block:: python
-            
+
                 mdb.models[name].materials[name].Plastic.CycledPlastic
                 session.odbs[name].materials[name].Plastic.CycledPlastic
-        
+
         Parameters
         ----------
         table
-            A sequence of sequences of Floats specifying the items described below. 
+            A sequence of sequences of Floats specifying the items described below.
         temperatureDependency
-            A Boolean specifying whether the data depend on temperature. The default value is OFF. 
+            A Boolean specifying whether the data depend on temperature. The default value is OFF.
 
         Returns
         -------
@@ -54,6 +54,5 @@ class CycledPlastic:
         pass
 
     def setValues(self):
-        """This method modifies the CycledPlastic object.
-        """
+        """This method modifies the CycledPlastic object."""
         pass

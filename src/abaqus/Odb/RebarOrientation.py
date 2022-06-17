@@ -23,9 +23,9 @@ class RebarOrientation:
     Notes
     -----
     This object can be accessed by:
-    
+
     .. code-block:: python
-        
+
         import odbAccess
         session.odbs[name].parts[name].rebarOrientations[i]
         session.odbs[name].rootAssembly.instances[name].rebarOrientations[i]
@@ -33,16 +33,16 @@ class RebarOrientation:
 
     """
 
-    # A SymbolicConstant specifying the axis of a cylindrical or spherical datum coordinate 
-    # system about which an additional rotation is applied. Possible values are AXIS_1, 
-    # AXIS_2, and AXIS_3. 
+    # A SymbolicConstant specifying the axis of a cylindrical or spherical datum coordinate
+    # system about which an additional rotation is applied. Possible values are AXIS_1,
+    # AXIS_2, and AXIS_3.
     axis: SymbolicConstant = None
 
-    # A Float specifying the angle of the additional rotation. 
+    # A Float specifying the angle of the additional rotation.
     angle: float = None
 
-    # An OdbSet object specifying a region for which the rebar orientation is defined. 
-    region: OdbSet = OdbSet('set', tuple[OdbMeshNode]())
+    # An OdbSet object specifying a region for which the rebar orientation is defined.
+    region: OdbSet = OdbSet("set", tuple[OdbMeshNode]())
 
-    # An OdbDatumCsys object specifying a datum coordinates system. 
+    # An OdbDatumCsys object specifying a datum coordinates system.
     csys: OdbDatumCsys = OdbDatumCsys()

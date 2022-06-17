@@ -43,21 +43,28 @@ from ..Region.Region import Region
 
 
 class OptimizationTask(OptimizationTaskBase):
-
-    def SingleTermDesignResponse(self, name: str, identifier: str, csys: int = None, drivingRegion: str = None,
-                                 operation: SymbolicConstant = SUM, region: SymbolicConstant = MODEL,
-                                 shellLayer: SymbolicConstant = MAXIMUM, stepOperation: SymbolicConstant = SUM,
-                                 stepOptions: StepOptionArray = None) -> SingleTermDesignResponse:
+    def SingleTermDesignResponse(
+        self,
+        name: str,
+        identifier: str,
+        csys: int = None,
+        drivingRegion: str = None,
+        operation: SymbolicConstant = SUM,
+        region: SymbolicConstant = MODEL,
+        shellLayer: SymbolicConstant = MAXIMUM,
+        stepOperation: SymbolicConstant = SUM,
+        stepOptions: StepOptionArray = None,
+    ) -> SingleTermDesignResponse:
         """This method creates a SingleTermDesignResponse object.
 
         Notes
         -----
             This function can be accessed by:
-            
+
             .. code-block:: python
-            
+
                 mdb.models[name].optimizationTasks[name].SingleTermDesignResponse
-        
+
         Parameters
         ----------
         name
@@ -90,24 +97,37 @@ class OptimizationTask(OptimizationTaskBase):
         -------
             A SingleTermDesignResponse object.
         """
-        self.designResponses[name] = singleTermDesignResponse = SingleTermDesignResponse(name, identifier, csys,
-                                                                                         drivingRegion, operation,
-                                                                                         region, shellLayer,
-                                                                                         stepOperation, stepOptions)
+        self.designResponses[
+            name
+        ] = singleTermDesignResponse = SingleTermDesignResponse(
+            name,
+            identifier,
+            csys,
+            drivingRegion,
+            operation,
+            region,
+            shellLayer,
+            stepOperation,
+            stepOptions,
+        )
         return singleTermDesignResponse
 
-    def ObjectiveFunction(self, name: str, objectives: OptimizationObjectiveArray,
-                          target: SymbolicConstant = MINIMIZE) -> ObjectiveFunction:
+    def ObjectiveFunction(
+        self,
+        name: str,
+        objectives: OptimizationObjectiveArray,
+        target: SymbolicConstant = MINIMIZE,
+    ) -> ObjectiveFunction:
         """This method creates an ObjectiveFunction object.
 
         Notes
         -----
             This function can be accessed by:
-            
+
             .. code-block:: python
-            
+
                 mdb.models[name].optimizationTasks[name].ObjectiveFunction
-        
+
         Parameters
         ----------
         name
@@ -121,27 +141,34 @@ class OptimizationTask(OptimizationTaskBase):
         Returns
         -------
             An ObjectiveFunction object.
-            
+
         Raises
         ------
         InvalidNameError
         RangeError
         """
-        self.objectiveFunctions[name] = objectiveFunction = ObjectiveFunction(name, objectives, target)
+        self.objectiveFunctions[name] = objectiveFunction = ObjectiveFunction(
+            name, objectives, target
+        )
         return objectiveFunction
 
-    def OptimizationConstraint(self, name: str, designResponse: str, restrictionValue: float,
-                               restrictionMethod: SymbolicConstant = ABSOLUTE_EQUAL) -> OptimizationConstraint:
+    def OptimizationConstraint(
+        self,
+        name: str,
+        designResponse: str,
+        restrictionValue: float,
+        restrictionMethod: SymbolicConstant = ABSOLUTE_EQUAL,
+    ) -> OptimizationConstraint:
         """This method creates an OptimizationConstraint object.
 
         Notes
         -----
             This function can be accessed by:
-            
+
             .. code-block:: python
-            
+
                 mdb.models[name].optimizationTasks[name].OptimizationConstraint
-        
+
         Parameters
         ----------
         name
@@ -159,29 +186,38 @@ class OptimizationTask(OptimizationTaskBase):
         Returns
         -------
             An OptimizationConstraint object.
-            
+
         Raises
         ------
         InvalidNameError
         RangeError
         """
-        self.optimizationConstraints[name] = optimizationConstraint = OptimizationConstraint(name, designResponse,
-                                                                                             restrictionValue,
-                                                                                             restrictionMethod)
+        self.optimizationConstraints[
+            name
+        ] = optimizationConstraint = OptimizationConstraint(
+            name, designResponse, restrictionValue, restrictionMethod
+        )
         return optimizationConstraint
 
-    def BeadFixedRegion(self, name: str, region: Region, csys: int = None, u1: Boolean = OFF, u2: Boolean = OFF,
-                        u3: Boolean = OFF) -> BeadFixedRegion:
+    def BeadFixedRegion(
+        self,
+        name: str,
+        region: Region,
+        csys: int = None,
+        u1: Boolean = OFF,
+        u2: Boolean = OFF,
+        u3: Boolean = OFF,
+    ) -> BeadFixedRegion:
         """This method creates a BeadFixedRegion object.
 
         Notes
         -----
             This function can be accessed by:
-            
+
             .. code-block:: python
-            
+
                 mdb.models[name].optimizationTasks[name].BeadFixedRegion
-        
+
         Parameters
         ----------
         name
@@ -206,20 +242,24 @@ class OptimizationTask(OptimizationTaskBase):
         -------
             A BeadFixedRegion object.
         """
-        self.geometricRestrictions[name] = geometricRestriction = BeadFixedRegion(name, region, csys, u1, u2, u3)
+        self.geometricRestrictions[name] = geometricRestriction = BeadFixedRegion(
+            name, region, csys, u1, u2, u3
+        )
         return geometricRestriction
 
-    def BeadGrowth(self, name: str, region: Region, beadGrowth: float = 0, shrink: float = 0) -> BeadGrowth:
+    def BeadGrowth(
+        self, name: str, region: Region, beadGrowth: float = 0, shrink: float = 0
+    ) -> BeadGrowth:
         """This method creates a BeadGrowth object.
 
         Notes
         -----
             This function can be accessed by:
-            
+
             .. code-block:: python
-            
+
                 mdb.models[name].optimizationTasks[name].BeadGrowth
-        
+
         Parameters
         ----------
         name
@@ -237,21 +277,24 @@ class OptimizationTask(OptimizationTaskBase):
         -------
             A BeadGrowth object.
         """
-        self.geometricRestrictions[name] = geometricRestriction = BeadGrowth(name, region, beadGrowth, shrink)
+        self.geometricRestrictions[name] = geometricRestriction = BeadGrowth(
+            name, region, beadGrowth, shrink
+        )
         return geometricRestriction
 
-    def BeadPenetrationCheck(self, name: str, beadPenetrationCheckRegion: Region,
-                             region: Region) -> BeadPenetrationCheck:
+    def BeadPenetrationCheck(
+        self, name: str, beadPenetrationCheckRegion: Region, region: Region
+    ) -> BeadPenetrationCheck:
         """This method creates a BeadPenetrationCheck object.
 
         Notes
         -----
             This function can be accessed by:
-            
+
             .. code-block:: python
-            
+
                 mdb.models[name].optimizationTasks[name].BeadPenetrationCheck
-        
+
         Parameters
         ----------
         name
@@ -265,22 +308,28 @@ class OptimizationTask(OptimizationTaskBase):
         -------
             A BeadPenetrationCheck object.
         """
-        self.geometricRestrictions[name] = geometricRestriction = BeadPenetrationCheck(name, beadPenetrationCheckRegion,
-                                                                                       region)
+        self.geometricRestrictions[name] = geometricRestriction = BeadPenetrationCheck(
+            name, beadPenetrationCheckRegion, region
+        )
         return geometricRestriction
 
-    def BeadPlanarSymmetry(self, name: str, region: Region, axis: SymbolicConstant = AXIS_1,
-                           csys: int = None) -> BeadPlanarSymmetry:
+    def BeadPlanarSymmetry(
+        self,
+        name: str,
+        region: Region,
+        axis: SymbolicConstant = AXIS_1,
+        csys: int = None,
+    ) -> BeadPlanarSymmetry:
         """This method creates a BeadPlanarSymmetry object.
 
         Notes
         -----
             This function can be accessed by:
-            
+
             .. code-block:: python
-            
+
                 mdb.models[name].optimizationTasks[name].BeadPlanarSymmetry
-        
+
         Parameters
         ----------
         name
@@ -299,20 +348,24 @@ class OptimizationTask(OptimizationTaskBase):
         -------
             A BeadPlanarSymmetry object.
         """
-        self.geometricRestrictions[name] = geometricRestriction = BeadPlanarSymmetry(name, region, axis, csys)
+        self.geometricRestrictions[name] = geometricRestriction = BeadPlanarSymmetry(
+            name, region, axis, csys
+        )
         return geometricRestriction
 
-    def BeadPointSymmetry(self, name: str, region: Region, csys: int = None) -> BeadPointSymmetry:
+    def BeadPointSymmetry(
+        self, name: str, region: Region, csys: int = None
+    ) -> BeadPointSymmetry:
         """This method creates a BeadPointSymmetry object.
 
         Notes
         -----
             This function can be accessed by:
-            
+
             .. code-block:: python
-            
+
                 mdb.models[name].optimizationTasks[name].BeadPointSymmetry
-        
+
         Parameters
         ----------
         name
@@ -328,21 +381,29 @@ class OptimizationTask(OptimizationTaskBase):
         -------
             A BeadPointSymmetry object.
         """
-        self.geometricRestrictions[name] = geometricRestriction = BeadPointSymmetry(name, region, csys)
+        self.geometricRestrictions[name] = geometricRestriction = BeadPointSymmetry(
+            name, region, csys
+        )
         return geometricRestriction
 
-    def BeadRotationalSymmetry(self, name: str, angle: float, region: Region, axis: SymbolicConstant = AXIS_1,
-                               csys: int = None) -> BeadRotationalSymmetry:
+    def BeadRotationalSymmetry(
+        self,
+        name: str,
+        angle: float,
+        region: Region,
+        axis: SymbolicConstant = AXIS_1,
+        csys: int = None,
+    ) -> BeadRotationalSymmetry:
         """This method creates a BeadRotationalSymmetry object.
 
         Notes
         -----
             This function can be accessed by:
-            
+
             .. code-block:: python
-            
+
                 mdb.models[name].optimizationTasks[name].BeadRotationalSymmetry
-        
+
         Parameters
         ----------
         name
@@ -363,24 +424,36 @@ class OptimizationTask(OptimizationTaskBase):
         -------
             A BeadRotationalSymmetry object.
         """
-        self.geometricRestrictions[name] = geometricRestriction = BeadRotationalSymmetry(name, angle, region, axis,
-                                                                                         csys)
+        self.geometricRestrictions[
+            name
+        ] = geometricRestriction = BeadRotationalSymmetry(
+            name, angle, region, axis, csys
+        )
         return geometricRestriction
 
-    def DesignDirection(self, name: str, region: Region, csys: int = None, masterPoint: str = None,
-                        masterPointDetermination: SymbolicConstant = MAXIMUM,
-                        movementRestriction: SymbolicConstant = VECTOR, presumeFeasibleRegionAtStart: Boolean = ON,
-                        u1: Boolean = ON, u2: Boolean = ON, u3: Boolean = ON) -> DesignDirection:
+    def DesignDirection(
+        self,
+        name: str,
+        region: Region,
+        csys: int = None,
+        masterPoint: str = None,
+        masterPointDetermination: SymbolicConstant = MAXIMUM,
+        movementRestriction: SymbolicConstant = VECTOR,
+        presumeFeasibleRegionAtStart: Boolean = ON,
+        u1: Boolean = ON,
+        u2: Boolean = ON,
+        u3: Boolean = ON,
+    ) -> DesignDirection:
         """This method creates a DesignDirection object.
 
         Notes
         -----
             This function can be accessed by:
-            
+
             .. code-block:: python
-            
+
                 mdb.models[name].optimizationTasks[name].DesignDirection
-        
+
         Parameters
         ----------
         name
@@ -424,27 +497,45 @@ class OptimizationTask(OptimizationTaskBase):
         -------
             A DesignDirection object.
         """
-        self.geometricRestrictions[name] = geometricRestriction = DesignDirection(name, region, csys, masterPoint,
-                                                                                  masterPointDetermination,
-                                                                                  movementRestriction,
-                                                                                  presumeFeasibleRegionAtStart, u1, u2,
-                                                                                  u3)
+        self.geometricRestrictions[name] = geometricRestriction = DesignDirection(
+            name,
+            region,
+            csys,
+            masterPoint,
+            masterPointDetermination,
+            movementRestriction,
+            presumeFeasibleRegionAtStart,
+            u1,
+            u2,
+            u3,
+        )
         return geometricRestriction
 
-    def DrillControl(self, name: str, clientDirection: tuple, region: Region, csys: int = None, drawAngle: float = 0,
-                     masterPoint: str = None, masterPointDetermination: SymbolicConstant = MAXIMUM,
-                     presumeFeasibleRegionAtStart: Boolean = ON, tolerance1: float = 0, tolerance2: float = 0,
-                     tolerance3: float = 0, undercutTolerance: float = 0) -> DrillControl:
+    def DrillControl(
+        self,
+        name: str,
+        clientDirection: tuple,
+        region: Region,
+        csys: int = None,
+        drawAngle: float = 0,
+        masterPoint: str = None,
+        masterPointDetermination: SymbolicConstant = MAXIMUM,
+        presumeFeasibleRegionAtStart: Boolean = ON,
+        tolerance1: float = 0,
+        tolerance2: float = 0,
+        tolerance3: float = 0,
+        undercutTolerance: float = 0,
+    ) -> DrillControl:
         """This method creates a DrillControl object.
 
         Notes
         -----
             This function can be accessed by:
-            
+
             .. code-block:: python
-            
+
                 mdb.models[name].optimizationTasks[name].DrillControl
-        
+
         Parameters
         ----------
         name
@@ -488,26 +579,42 @@ class OptimizationTask(OptimizationTaskBase):
         -------
             A DrillControl object.
         """
-        self.geometricRestrictions[name] = geometricRestriction = DrillControl(name, clientDirection, region, csys,
-                                                                               drawAngle, masterPoint,
-                                                                               masterPointDetermination,
-                                                                               presumeFeasibleRegionAtStart, tolerance1,
-                                                                               tolerance2, tolerance3,
-                                                                               undercutTolerance)
+        self.geometricRestrictions[name] = geometricRestriction = DrillControl(
+            name,
+            clientDirection,
+            region,
+            csys,
+            drawAngle,
+            masterPoint,
+            masterPointDetermination,
+            presumeFeasibleRegionAtStart,
+            tolerance1,
+            tolerance2,
+            tolerance3,
+            undercutTolerance,
+        )
         return geometricRestriction
 
-    def FixedRegion(self, name: str, region: Region, csys: int = None, presumeFeasibleRegionAtStart: Boolean = ON,
-                    u1: Boolean = OFF, u2: Boolean = OFF, u3: Boolean = OFF) -> FixedRegion:
+    def FixedRegion(
+        self,
+        name: str,
+        region: Region,
+        csys: int = None,
+        presumeFeasibleRegionAtStart: Boolean = ON,
+        u1: Boolean = OFF,
+        u2: Boolean = OFF,
+        u3: Boolean = OFF,
+    ) -> FixedRegion:
         """This method creates a FixedRegion object.
 
         Notes
         -----
             This function can be accessed by:
-            
+
             .. code-block:: python
-            
+
                 mdb.models[name].optimizationTasks[name].FixedRegion
-        
+
         Parameters
         ----------
         name
@@ -537,8 +644,9 @@ class OptimizationTask(OptimizationTaskBase):
         -------
             A FixedRegion object.
         """
-        self.geometricRestrictions[name] = geometricRestriction = FixedRegion(name, region, csys,
-                                                                              presumeFeasibleRegionAtStart, u1, u2, u3)
+        self.geometricRestrictions[name] = geometricRestriction = FixedRegion(
+            name, region, csys, presumeFeasibleRegionAtStart, u1, u2, u3
+        )
         return geometricRestriction
 
     def FrozenArea(self, name: str, region: Region = Region()) -> FrozenArea:
@@ -547,11 +655,11 @@ class OptimizationTask(OptimizationTaskBase):
         Notes
         -----
             This function can be accessed by:
-            
+
             .. code-block:: python
-            
+
                 mdb.models[name].optimizationTasks[name].FrozenArea
-        
+
         Parameters
         ----------
         name
@@ -565,21 +673,29 @@ class OptimizationTask(OptimizationTaskBase):
         -------
             A FrozenArea object.
         """
-        self.geometricRestrictions[name] = geometricRestriction = FrozenArea(name, region)
+        self.geometricRestrictions[name] = geometricRestriction = FrozenArea(
+            name, region
+        )
         return geometricRestriction
 
-    def Growth(self, name: str, region: Region, growth: float = 0,
-               presumeFeasibleRegionAtStart: Boolean = ON, shrink: float = 0) -> Growth:
+    def Growth(
+        self,
+        name: str,
+        region: Region,
+        growth: float = 0,
+        presumeFeasibleRegionAtStart: Boolean = ON,
+        shrink: float = 0,
+    ) -> Growth:
         """This method creates a Growth object.
 
         Notes
         -----
             This function can be accessed by:
-            
+
             .. code-block:: python
-            
+
                 mdb.models[name].optimizationTasks[name].Growth
-        
+
         Parameters
         ----------
         name
@@ -602,22 +718,28 @@ class OptimizationTask(OptimizationTaskBase):
         -------
             A Growth object.
         """
-        self.geometricRestrictions[name] = geometricRestriction = Growth(name, region, growth,
-                                                                         presumeFeasibleRegionAtStart, shrink)
+        self.geometricRestrictions[name] = geometricRestriction = Growth(
+            name, region, growth, presumeFeasibleRegionAtStart, shrink
+        )
         return geometricRestriction
 
-    def PenetrationCheck(self, name: str, penetrationCheckRegion: Region, region: Region,
-                         presumeFeasibleRegionAtStart: Boolean = ON) -> PenetrationCheck:
+    def PenetrationCheck(
+        self,
+        name: str,
+        penetrationCheckRegion: Region,
+        region: Region,
+        presumeFeasibleRegionAtStart: Boolean = ON,
+    ) -> PenetrationCheck:
         """This method creates a PenetrationCheck object.
 
         Notes
         -----
             This function can be accessed by:
-            
+
             .. code-block:: python
-            
+
                 mdb.models[name].optimizationTasks[name].PenetrationCheck
-        
+
         Parameters
         ----------
         name
@@ -636,26 +758,36 @@ class OptimizationTask(OptimizationTaskBase):
         -------
             A PenetrationCheck object.
         """
-        self.geometricRestrictions[name] = geometricRestriction = PenetrationCheck(name, penetrationCheckRegion, region,
-                                                                                   presumeFeasibleRegionAtStart)
+        self.geometricRestrictions[name] = geometricRestriction = PenetrationCheck(
+            name, penetrationCheckRegion, region, presumeFeasibleRegionAtStart
+        )
         return geometricRestriction
 
-    def ShapeDemoldControl(self, name: str, pullDirection: tuple, region: Region,
-                           collisionCheckRegion: SymbolicConstant = DEMOLD_REGION, csys: int = None,
-                           drawAngle: float = 0, masterPointDetermination: SymbolicConstant = MAXIMUM,
-                           presumeFeasibleRegionAtStart: Boolean = ON, tolerance1: float = 0,
-                           tolerance2: float = 0, tolerance3: float = 0,
-                           undercutTolerance: float = 0) -> ShapeDemoldControl:
+    def ShapeDemoldControl(
+        self,
+        name: str,
+        pullDirection: tuple,
+        region: Region,
+        collisionCheckRegion: SymbolicConstant = DEMOLD_REGION,
+        csys: int = None,
+        drawAngle: float = 0,
+        masterPointDetermination: SymbolicConstant = MAXIMUM,
+        presumeFeasibleRegionAtStart: Boolean = ON,
+        tolerance1: float = 0,
+        tolerance2: float = 0,
+        tolerance3: float = 0,
+        undercutTolerance: float = 0,
+    ) -> ShapeDemoldControl:
         """This method creates a ShapeDemoldControl object.
 
         Notes
         -----
             This function can be accessed by:
-            
+
             .. code-block:: python
-            
+
                 mdb.models[name].optimizationTasks[name].ShapeDemoldControl
-        
+
         Parameters
         ----------
         name
@@ -700,26 +832,40 @@ class OptimizationTask(OptimizationTaskBase):
         -------
             A ShapeDemoldControl object.
         """
-        self.geometricRestrictions[name] = geometricRestriction = ShapeDemoldControl(name, pullDirection, region,
-                                                                                     collisionCheckRegion, csys,
-                                                                                     drawAngle, masterPointDetermination,
-                                                                                     presumeFeasibleRegionAtStart,
-                                                                                     tolerance1, tolerance2, tolerance3,
-                                                                                     undercutTolerance)
+        self.geometricRestrictions[name] = geometricRestriction = ShapeDemoldControl(
+            name,
+            pullDirection,
+            region,
+            collisionCheckRegion,
+            csys,
+            drawAngle,
+            masterPointDetermination,
+            presumeFeasibleRegionAtStart,
+            tolerance1,
+            tolerance2,
+            tolerance3,
+            undercutTolerance,
+        )
         return geometricRestriction
 
-    def ShapeMemberSize(self, name: str, region: Region, maxThickness: float = 0, minThickness: float = 0,
-                        sizeRestriction: SymbolicConstant = MINIMUM) -> ShapeMemberSize:
+    def ShapeMemberSize(
+        self,
+        name: str,
+        region: Region,
+        maxThickness: float = 0,
+        minThickness: float = 0,
+        sizeRestriction: SymbolicConstant = MINIMUM,
+    ) -> ShapeMemberSize:
         """This method creates a ShapeMemberSize object.
 
         Notes
         -----
             This function can be accessed by:
-            
+
             .. code-block:: python
-            
+
                 mdb.models[name].optimizationTasks[name].ShapeMemberSize
-        
+
         Parameters
         ----------
         name
@@ -740,25 +886,34 @@ class OptimizationTask(OptimizationTaskBase):
         -------
             A ShapeMemberSize object.
         """
-        self.geometricRestrictions[name] = geometricRestriction = ShapeMemberSize(name, region, maxThickness,
-                                                                                  minThickness, sizeRestriction)
+        self.geometricRestrictions[name] = geometricRestriction = ShapeMemberSize(
+            name, region, maxThickness, minThickness, sizeRestriction
+        )
         return geometricRestriction
 
-    def ShapePlanarSymmetry(self, name: str, clientDirection: tuple, region: Region,
-                            allowNonSymmetricMesh: Boolean = TRUE, csys: int = None,
-                            mainPointDetermination: SymbolicConstant = MAXIMUM,
-                            presumeFeasibleRegionAtStart: Boolean = ON, tolerance1: float = 0,
-                            tolerance2: float = 0, tolerance3: float = 0) -> ShapePlanarSymmetry:
+    def ShapePlanarSymmetry(
+        self,
+        name: str,
+        clientDirection: tuple,
+        region: Region,
+        allowNonSymmetricMesh: Boolean = TRUE,
+        csys: int = None,
+        mainPointDetermination: SymbolicConstant = MAXIMUM,
+        presumeFeasibleRegionAtStart: Boolean = ON,
+        tolerance1: float = 0,
+        tolerance2: float = 0,
+        tolerance3: float = 0,
+    ) -> ShapePlanarSymmetry:
         """This method creates a ShapePlanarSymmetry object.
 
         Notes
         -----
             This function can be accessed by:
-            
+
             .. code-block:: python
-            
+
                 mdb.models[name].optimizationTasks[name].ShapePlanarSymmetry
-        
+
         Parameters
         ----------
         name
@@ -798,28 +953,41 @@ class OptimizationTask(OptimizationTaskBase):
         -------
             A ShapePlanarSymmetry object.
         """
-        self.geometricRestrictions[name] = geometricRestriction = ShapePlanarSymmetry(name, clientDirection, region,
-                                                                                      allowNonSymmetricMesh, csys,
-                                                                                      mainPointDetermination,
-                                                                                      presumeFeasibleRegionAtStart,
-                                                                                      tolerance1, tolerance2,
-                                                                                      tolerance3)
+        self.geometricRestrictions[name] = geometricRestriction = ShapePlanarSymmetry(
+            name,
+            clientDirection,
+            region,
+            allowNonSymmetricMesh,
+            csys,
+            mainPointDetermination,
+            presumeFeasibleRegionAtStart,
+            tolerance1,
+            tolerance2,
+            tolerance3,
+        )
         return geometricRestriction
 
-    def ShapePointSymmetry(self, name: str, region: Region, csys: int = None,
-                           masterPointDetermination: SymbolicConstant = MAXIMUM,
-                           presumeFeasibleRegionAtStart: Boolean = ON, tolerance1: float = 0,
-                           tolerance2: float = 0, tolerance3: float = 0) -> ShapePointSymmetry:
+    def ShapePointSymmetry(
+        self,
+        name: str,
+        region: Region,
+        csys: int = None,
+        masterPointDetermination: SymbolicConstant = MAXIMUM,
+        presumeFeasibleRegionAtStart: Boolean = ON,
+        tolerance1: float = 0,
+        tolerance2: float = 0,
+        tolerance3: float = 0,
+    ) -> ShapePointSymmetry:
         """This method creates a ShapePointSymmetry object.
 
         Notes
         -----
             This function can be accessed by:
-            
+
             .. code-block:: python
-            
+
                 mdb.models[name].optimizationTasks[name].ShapePointSymmetry
-        
+
         Parameters
         ----------
         name
@@ -852,27 +1020,44 @@ class OptimizationTask(OptimizationTaskBase):
         -------
             A ShapePointSymmetry object.
         """
-        self.geometricRestrictions[name] = geometricRestriction = ShapePointSymmetry(name, region, csys,
-                                                                                     masterPointDetermination,
-                                                                                     presumeFeasibleRegionAtStart,
-                                                                                     tolerance1, tolerance2, tolerance3)
+        self.geometricRestrictions[name] = geometricRestriction = ShapePointSymmetry(
+            name,
+            region,
+            csys,
+            masterPointDetermination,
+            presumeFeasibleRegionAtStart,
+            tolerance1,
+            tolerance2,
+            tolerance3,
+        )
         return geometricRestriction
 
-    def ShapeRotationalSymmetry(self, name: str, clientDirection: tuple, region: Region,
-                                allowNonSymmetricMesh: Boolean = TRUE, angle: float = 0, csys: int = None,
-                                masterPoint: str = None, masterPointDetermination: SymbolicConstant = MAXIMUM,
-                                presumeFeasibleRegionAtStart: Boolean = ON, startPoint: float = None,
-                                tolerance1: float = 0, tolerance2: float = 0, tolerance3: float = 0) -> ShapeRotationalSymmetry:
+    def ShapeRotationalSymmetry(
+        self,
+        name: str,
+        clientDirection: tuple,
+        region: Region,
+        allowNonSymmetricMesh: Boolean = TRUE,
+        angle: float = 0,
+        csys: int = None,
+        masterPoint: str = None,
+        masterPointDetermination: SymbolicConstant = MAXIMUM,
+        presumeFeasibleRegionAtStart: Boolean = ON,
+        startPoint: float = None,
+        tolerance1: float = 0,
+        tolerance2: float = 0,
+        tolerance3: float = 0,
+    ) -> ShapeRotationalSymmetry:
         """This method creates a ShapeRotationalSymmetry object.
 
         Notes
         -----
             This function can be accessed by:
-            
+
             .. code-block:: python
-            
+
                 mdb.models[name].optimizationTasks[name].ShapeRotationalSymmetry
-        
+
         Parameters
         ----------
         name
@@ -921,13 +1106,23 @@ class OptimizationTask(OptimizationTaskBase):
         -------
             A ShapeRotationalSymmetry object.
         """
-        self.geometricRestrictions[name] = geometricRestriction = ShapeRotationalSymmetry(name, clientDirection, region,
-                                                                                          allowNonSymmetricMesh, angle,
-                                                                                          csys, masterPoint,
-                                                                                          masterPointDetermination,
-                                                                                          presumeFeasibleRegionAtStart,
-                                                                                          startPoint, tolerance1,
-                                                                                          tolerance2, tolerance3)
+        self.geometricRestrictions[
+            name
+        ] = geometricRestriction = ShapeRotationalSymmetry(
+            name,
+            clientDirection,
+            region,
+            allowNonSymmetricMesh,
+            angle,
+            csys,
+            masterPoint,
+            masterPointDetermination,
+            presumeFeasibleRegionAtStart,
+            startPoint,
+            tolerance1,
+            tolerance2,
+            tolerance3,
+        )
         return geometricRestriction
 
     def SizingClusterAreas(self, name: str, regions: tuple) -> SizingClusterAreas:
@@ -936,11 +1131,11 @@ class OptimizationTask(OptimizationTaskBase):
         Notes
         -----
             This function can be accessed by:
-            
+
             .. code-block:: python
-            
+
                 mdb.models[name].optimizationTasks[name].SizingClusterAreas
-        
+
         Parameters
         ----------
         name
@@ -953,21 +1148,30 @@ class OptimizationTask(OptimizationTaskBase):
         -------
             A SizingClusterAreas object.
         """
-        self.geometricRestrictions[name] = geometricRestriction = SizingClusterAreas(name, regions)
+        self.geometricRestrictions[name] = geometricRestriction = SizingClusterAreas(
+            name, regions
+        )
         return geometricRestriction
 
-    def SizingCyclicSymmetry(self, name: str, region: Region, translation: float, axis: SymbolicConstant = AXIS_1,
-                             csys: int = None, ignoreFrozenArea: Boolean = OFF) -> SizingCyclicSymmetry:
+    def SizingCyclicSymmetry(
+        self,
+        name: str,
+        region: Region,
+        translation: float,
+        axis: SymbolicConstant = AXIS_1,
+        csys: int = None,
+        ignoreFrozenArea: Boolean = OFF,
+    ) -> SizingCyclicSymmetry:
         """This method creates a SizingCyclicSymmetry object.
 
         Notes
         -----
             This function can be accessed by:
-            
+
             .. code-block:: python
-            
+
                 mdb.models[name].optimizationTasks[name].SizingCyclicSymmetry
-        
+
         Parameters
         ----------
         name
@@ -991,8 +1195,9 @@ class OptimizationTask(OptimizationTaskBase):
         -------
             A SizingCyclicSymmetry object.
         """
-        self.geometricRestrictions[name] = geometricRestriction = SizingCyclicSymmetry(name, region, translation, axis,
-                                                                                       csys, ignoreFrozenArea)
+        self.geometricRestrictions[name] = geometricRestriction = SizingCyclicSymmetry(
+            name, region, translation, axis, csys, ignoreFrozenArea
+        )
         return geometricRestriction
 
     def SizingFrozenArea(self, name: str, region: Region) -> SizingFrozenArea:
@@ -1001,11 +1206,11 @@ class OptimizationTask(OptimizationTaskBase):
         Notes
         -----
             This function can be accessed by:
-            
+
             .. code-block:: python
-            
+
                 mdb.models[name].optimizationTasks[name].SizingFrozenArea
-        
+
         Parameters
         ----------
         name
@@ -1017,20 +1222,24 @@ class OptimizationTask(OptimizationTaskBase):
         -------
             A SizingFrozenArea object.
         """
-        self.geometricRestrictions[name] = geometricRestriction = SizingFrozenArea(name, region)
+        self.geometricRestrictions[name] = geometricRestriction = SizingFrozenArea(
+            name, region
+        )
         return geometricRestriction
 
-    def SizingMemberSize(self, name: str, region: Region, minWidth: float) -> SizingMemberSize:
+    def SizingMemberSize(
+        self, name: str, region: Region, minWidth: float
+    ) -> SizingMemberSize:
         """This method creates a SizingMemberSize object.
 
         Notes
         -----
             This function can be accessed by:
-            
+
             .. code-block:: python
-            
+
                 mdb.models[name].optimizationTasks[name].SizingMemberSize
-        
+
         Parameters
         ----------
         name
@@ -1046,21 +1255,29 @@ class OptimizationTask(OptimizationTaskBase):
         Raises
         ------
         """
-        self.geometricRestrictions[name] = geometricRestriction = SizingMemberSize(name, region, minWidth)
+        self.geometricRestrictions[name] = geometricRestriction = SizingMemberSize(
+            name, region, minWidth
+        )
         return geometricRestriction
 
-    def SizingPlanarSymmetry(self, name: str, region: Region, axis: SymbolicConstant = AXIS_1, csys: int = None,
-                             ignoreFrozenArea: Boolean = OFF) -> SizingPlanarSymmetry:
+    def SizingPlanarSymmetry(
+        self,
+        name: str,
+        region: Region,
+        axis: SymbolicConstant = AXIS_1,
+        csys: int = None,
+        ignoreFrozenArea: Boolean = OFF,
+    ) -> SizingPlanarSymmetry:
         """This method creates a SizingPlanarSymmetry object.
 
         Notes
         -----
             This function can be accessed by:
-            
+
             .. code-block:: python
-            
+
                 mdb.models[name].optimizationTasks[name].SizingPlanarSymmetry
-        
+
         Parameters
         ----------
         name
@@ -1081,22 +1298,28 @@ class OptimizationTask(OptimizationTaskBase):
         -------
             A SizingPlanarSymmetry object.
         """
-        self.geometricRestrictions[name] = geometricRestriction = SizingPlanarSymmetry(name, region, axis, csys,
-                                                                                       ignoreFrozenArea)
+        self.geometricRestrictions[name] = geometricRestriction = SizingPlanarSymmetry(
+            name, region, axis, csys, ignoreFrozenArea
+        )
         return geometricRestriction
 
-    def SizingPointSymmetry(self, name: str, region: Region, csys: int = None,
-                            ignoreFrozenArea: Boolean = OFF) -> SizingPointSymmetry:
+    def SizingPointSymmetry(
+        self,
+        name: str,
+        region: Region,
+        csys: int = None,
+        ignoreFrozenArea: Boolean = OFF,
+    ) -> SizingPointSymmetry:
         """This method creates a SizingPointSymmetry object.
 
         Notes
         -----
             This function can be accessed by:
-            
+
             .. code-block:: python
-            
+
                 mdb.models[name].optimizationTasks[name].SizingPointSymmetry
-        
+
         Parameters
         ----------
         name
@@ -1114,22 +1337,30 @@ class OptimizationTask(OptimizationTaskBase):
         -------
             A SizingPointSymmetry object.
         """
-        self.geometricRestrictions[name] = geometricRestriction = SizingPointSymmetry(name, region, csys,
-                                                                                      ignoreFrozenArea)
+        self.geometricRestrictions[name] = geometricRestriction = SizingPointSymmetry(
+            name, region, csys, ignoreFrozenArea
+        )
         return geometricRestriction
 
-    def SizingRotationalSymmetry(self, name: str, angle: float, region: Region, axis: SymbolicConstant = AXIS_1,
-                                 csys: int = None, ignoreFrozenArea: Boolean = OFF) -> SizingRotationalSymmetry:
+    def SizingRotationalSymmetry(
+        self,
+        name: str,
+        angle: float,
+        region: Region,
+        axis: SymbolicConstant = AXIS_1,
+        csys: int = None,
+        ignoreFrozenArea: Boolean = OFF,
+    ) -> SizingRotationalSymmetry:
         """This method creates a SizingRotationalSymmetry object.
 
         Notes
         -----
             This function can be accessed by:
-            
+
             .. code-block:: python
-            
+
                 mdb.models[name].optimizationTasks[name].SizingRotationalSymmetry
-        
+
         Parameters
         ----------
         name
@@ -1152,24 +1383,37 @@ class OptimizationTask(OptimizationTaskBase):
         -------
             A SizingRotationalSymmetry object.
         """
-        self.geometricRestrictions[name] = geometricRestriction = SizingRotationalSymmetry(name, angle, region, axis,
-                                                                                           csys, ignoreFrozenArea)
+        self.geometricRestrictions[
+            name
+        ] = geometricRestriction = SizingRotationalSymmetry(
+            name, angle, region, axis, csys, ignoreFrozenArea
+        )
         return geometricRestriction
 
-    def SlideRegionControl(self, name: str, clientDirection: tuple, region: Region,
-                           approach: SymbolicConstant = FREE_FORM, csys: int = None, freeFormRegion: str = None,
-                           presumeFeasibleRegionAtStart: Boolean = ON, revolvedRegion: str = None,
-                           tolerance1: float = 0, tolerance2: float = 0, tolerance3: float = 0) -> SlideRegionControl:
+    def SlideRegionControl(
+        self,
+        name: str,
+        clientDirection: tuple,
+        region: Region,
+        approach: SymbolicConstant = FREE_FORM,
+        csys: int = None,
+        freeFormRegion: str = None,
+        presumeFeasibleRegionAtStart: Boolean = ON,
+        revolvedRegion: str = None,
+        tolerance1: float = 0,
+        tolerance2: float = 0,
+        tolerance3: float = 0,
+    ) -> SlideRegionControl:
         """This method creates a SlideRegionControl object.
 
         Notes
         -----
             This function can be accessed by:
-            
+
             .. code-block:: python
-            
+
                 mdb.models[name].optimizationTasks[name].SlideRegionControl
-        
+
         Parameters
         ----------
         name
@@ -1214,27 +1458,46 @@ class OptimizationTask(OptimizationTaskBase):
         -------
             A SlideRegionControl object.
         """
-        self.geometricRestrictions[name] = geometricRestriction = SlideRegionControl(name, clientDirection, region,
-                                                                                     approach, csys, freeFormRegion,
-                                                                                     presumeFeasibleRegionAtStart,
-                                                                                     revolvedRegion, tolerance1,
-                                                                                     tolerance2, tolerance3)
+        self.geometricRestrictions[name] = geometricRestriction = SlideRegionControl(
+            name,
+            clientDirection,
+            region,
+            approach,
+            csys,
+            freeFormRegion,
+            presumeFeasibleRegionAtStart,
+            revolvedRegion,
+            tolerance1,
+            tolerance2,
+            tolerance3,
+        )
         return geometricRestriction
 
-    def StampControl(self, name: str, clientDirection: tuple, region: Region, csys: int = None, drawAngle: float = 0,
-                     masterPoint: str = None, masterPointDetermination: SymbolicConstant = MAXIMUM,
-                     presumeFeasibleRegionAtStart: Boolean = ON, tolerance1: float = 0, tolerance2: float = 0,
-                     tolerance3: float = 0, undercutTolerance: float = 0) -> StampControl:
+    def StampControl(
+        self,
+        name: str,
+        clientDirection: tuple,
+        region: Region,
+        csys: int = None,
+        drawAngle: float = 0,
+        masterPoint: str = None,
+        masterPointDetermination: SymbolicConstant = MAXIMUM,
+        presumeFeasibleRegionAtStart: Boolean = ON,
+        tolerance1: float = 0,
+        tolerance2: float = 0,
+        tolerance3: float = 0,
+        undercutTolerance: float = 0,
+    ) -> StampControl:
         """This method creates a StampControl object.
 
         Notes
         -----
             This function can be accessed by:
-            
+
             .. code-block:: python
-            
+
                 mdb.models[name].optimizationTasks[name].StampControl
-        
+
         Parameters
         ----------
         name
@@ -1277,26 +1540,41 @@ class OptimizationTask(OptimizationTaskBase):
         -------
             A StampControl object.
         """
-        self.geometricRestrictions[name] = geometricRestriction = StampControl(name, clientDirection, region, csys,
-                                                                               drawAngle, masterPoint,
-                                                                               masterPointDetermination,
-                                                                               presumeFeasibleRegionAtStart, tolerance1,
-                                                                               tolerance2, tolerance3,
-                                                                               undercutTolerance)
+        self.geometricRestrictions[name] = geometricRestriction = StampControl(
+            name,
+            clientDirection,
+            region,
+            csys,
+            drawAngle,
+            masterPoint,
+            masterPointDetermination,
+            presumeFeasibleRegionAtStart,
+            tolerance1,
+            tolerance2,
+            tolerance3,
+            undercutTolerance,
+        )
         return geometricRestriction
 
-    def TopologyCyclicSymmetry(self, name: str, region: Region, translation: float, axis: SymbolicConstant = AXIS_1,
-                               csys: int = None, ignoreFrozenArea: Boolean = OFF) -> TopologyCyclicSymmetry:
+    def TopologyCyclicSymmetry(
+        self,
+        name: str,
+        region: Region,
+        translation: float,
+        axis: SymbolicConstant = AXIS_1,
+        csys: int = None,
+        ignoreFrozenArea: Boolean = OFF,
+    ) -> TopologyCyclicSymmetry:
         """This method creates a TopologyCyclicSymmetry object.
 
         Notes
         -----
             This function can be accessed by:
-            
+
             .. code-block:: python
-            
+
                 mdb.models[name].optimizationTasks[name].TopologyCyclicSymmetry
-        
+
         Parameters
         ----------
         name
@@ -1322,23 +1600,34 @@ class OptimizationTask(OptimizationTaskBase):
         -------
             A TopologyCyclicSymmetry object.
         """
-        self.geometricRestrictions[name] = geometricRestriction = TopologyCyclicSymmetry(name, region, translation,
-                                                                                         axis, csys, ignoreFrozenArea)
+        self.geometricRestrictions[
+            name
+        ] = geometricRestriction = TopologyCyclicSymmetry(
+            name, region, translation, axis, csys, ignoreFrozenArea
+        )
         return geometricRestriction
 
-    def TopologyDemoldControl(self, name: str, region: Region, csys: int = None, draftAngle: float = 0,
-                              collisionCheckRegion: SymbolicConstant = DEMOLD_REGION, pointRegion: Region = Region(),
-                              pullDirection: tuple = (), technique: SymbolicConstant = AUTO) -> TopologyDemoldControl:
+    def TopologyDemoldControl(
+        self,
+        name: str,
+        region: Region,
+        csys: int = None,
+        draftAngle: float = 0,
+        collisionCheckRegion: SymbolicConstant = DEMOLD_REGION,
+        pointRegion: Region = Region(),
+        pullDirection: tuple = (),
+        technique: SymbolicConstant = AUTO,
+    ) -> TopologyDemoldControl:
         """This method creates a TopologyDemoldControl object.
 
         Notes
         -----
             This function can be accessed by:
-            
+
             .. code-block:: python
-            
+
                 mdb.models[name].optimizationTasks[name].TopologyDemoldControl
-        
+
         Parameters
         ----------
         name
@@ -1372,24 +1661,37 @@ class OptimizationTask(OptimizationTaskBase):
         -------
             A TopologyDemoldControl object.
         """
-        self.geometricRestrictions[name] = geometricRestriction = TopologyDemoldControl(name, region, csys, draftAngle,
-                                                                                        collisionCheckRegion,
-                                                                                        pointRegion, pullDirection,
-                                                                                        technique)
+        self.geometricRestrictions[name] = geometricRestriction = TopologyDemoldControl(
+            name,
+            region,
+            csys,
+            draftAngle,
+            collisionCheckRegion,
+            pointRegion,
+            pullDirection,
+            technique,
+        )
         return geometricRestriction
 
-    def TopologyMemberSize(self, name: str, region: Region, maxThickness: float = 0, minThickness: float = 0,
-                           separation: float = 0, sizeRestriction: SymbolicConstant = MINIMUM) -> TopologyMemberSize:
+    def TopologyMemberSize(
+        self,
+        name: str,
+        region: Region,
+        maxThickness: float = 0,
+        minThickness: float = 0,
+        separation: float = 0,
+        sizeRestriction: SymbolicConstant = MINIMUM,
+    ) -> TopologyMemberSize:
         """This method creates a TopologyMemberSize object.
 
         Notes
         -----
             This function can be accessed by:
-            
+
             .. code-block:: python
-            
+
                 mdb.models[name].optimizationTasks[name].TopologyMemberSize
-        
+
         Parameters
         ----------
         name
@@ -1413,25 +1715,33 @@ class OptimizationTask(OptimizationTaskBase):
         -------
             A TopologyMemberSize object.
         """
-        self.geometricRestrictions[name] = geometricRestriction = TopologyMemberSize(name, region, maxThickness,
-                                                                                     minThickness, separation,
-                                                                                     sizeRestriction)
+        self.geometricRestrictions[name] = geometricRestriction = TopologyMemberSize(
+            name, region, maxThickness, minThickness, separation, sizeRestriction
+        )
         return geometricRestriction
 
-    def TopologyOverhangControl(self, name: str, pullDirection: tuple, region: Region, csys: int = None,
-                                draftAngle: float = 45, overhangCheckRegion: SymbolicConstant = OVERHANG_REGION,
-                                pointRegion: Region = Region(), radius: float = None,
-                                technique: SymbolicConstant = AUTO) -> TopologyOverhangControl:
+    def TopologyOverhangControl(
+        self,
+        name: str,
+        pullDirection: tuple,
+        region: Region,
+        csys: int = None,
+        draftAngle: float = 45,
+        overhangCheckRegion: SymbolicConstant = OVERHANG_REGION,
+        pointRegion: Region = Region(),
+        radius: float = None,
+        technique: SymbolicConstant = AUTO,
+    ) -> TopologyOverhangControl:
         """This method creates a TopologyOverhangControl object.
 
         Notes
         -----
             This function can be accessed by:
-            
+
             .. code-block:: python
-            
+
                 mdb.models[name].optimizationTasks[name].TopologyOverhangControl
-        
+
         Parameters
         ----------
         name
@@ -1467,25 +1777,39 @@ class OptimizationTask(OptimizationTaskBase):
         -------
             A TopologyOverhangControl object.
         """
-        self.geometricRestrictions[name] = geometricRestriction = TopologyOverhangControl(name, pullDirection, region,
-                                                                                          csys, draftAngle,
-                                                                                          overhangCheckRegion,
-                                                                                          pointRegion, radius,
-                                                                                          technique)
+        self.geometricRestrictions[
+            name
+        ] = geometricRestriction = TopologyOverhangControl(
+            name,
+            pullDirection,
+            region,
+            csys,
+            draftAngle,
+            overhangCheckRegion,
+            pointRegion,
+            radius,
+            technique,
+        )
         return geometricRestriction
 
-    def TopologyPlanarSymmetry(self, name: str, region: Region, axis: SymbolicConstant = AXIS_1, csys: int = None,
-                               ignoreFrozenArea: Boolean = OFF) -> TopologyPlanarSymmetry:
+    def TopologyPlanarSymmetry(
+        self,
+        name: str,
+        region: Region,
+        axis: SymbolicConstant = AXIS_1,
+        csys: int = None,
+        ignoreFrozenArea: Boolean = OFF,
+    ) -> TopologyPlanarSymmetry:
         """This method creates a TopologyPlanarSymmetry object.
 
         Notes
         -----
             This function can be accessed by:
-            
+
             .. code-block:: python
-            
+
                 mdb.models[name].optimizationTasks[name].TopologyPlanarSymmetry
-        
+
         Parameters
         ----------
         name
@@ -1508,22 +1832,30 @@ class OptimizationTask(OptimizationTaskBase):
         -------
             A TopologyPlanarSymmetry object.
         """
-        self.geometricRestrictions[name] = geometricRestriction = TopologyPlanarSymmetry(name, region, axis, csys,
-                                                                                         ignoreFrozenArea)
+        self.geometricRestrictions[
+            name
+        ] = geometricRestriction = TopologyPlanarSymmetry(
+            name, region, axis, csys, ignoreFrozenArea
+        )
         return geometricRestriction
 
-    def TopologyPointSymmetry(self, name: str, region: Region, csys: int = None,
-                              ignoreFrozenArea: Boolean = OFF) -> TopologyPointSymmetry:
+    def TopologyPointSymmetry(
+        self,
+        name: str,
+        region: Region,
+        csys: int = None,
+        ignoreFrozenArea: Boolean = OFF,
+    ) -> TopologyPointSymmetry:
         """This method creates a TopologyPointSymmetry object.
 
         Notes
         -----
             This function can be accessed by:
-            
+
             .. code-block:: python
-            
+
                 mdb.models[name].optimizationTasks[name].TopologyPointSymmetry
-        
+
         Parameters
         ----------
         name
@@ -1543,22 +1875,30 @@ class OptimizationTask(OptimizationTaskBase):
         -------
             A TopologyPointSymmetry object.
         """
-        self.geometricRestrictions[name] = geometricRestriction = TopologyPointSymmetry(name, region, csys,
-                                                                                        ignoreFrozenArea)
+        self.geometricRestrictions[name] = geometricRestriction = TopologyPointSymmetry(
+            name, region, csys, ignoreFrozenArea
+        )
         return geometricRestriction
 
-    def TopologyRotationalSymmetry(self, name: str, angle: float, region: Region, axis: SymbolicConstant = AXIS_1,
-                                   csys: int = None, ignoreFrozenArea: Boolean = OFF) -> TopologyRotationalSymmetry:
+    def TopologyRotationalSymmetry(
+        self,
+        name: str,
+        angle: float,
+        region: Region,
+        axis: SymbolicConstant = AXIS_1,
+        csys: int = None,
+        ignoreFrozenArea: Boolean = OFF,
+    ) -> TopologyRotationalSymmetry:
         """This method creates a TopologyRotationalSymmetry object.
 
         Notes
         -----
             This function can be accessed by:
-            
+
             .. code-block:: python
-            
+
                 mdb.models[name].optimizationTasks[name].TopologyRotationalSymmetry
-        
+
         Parameters
         ----------
         name
@@ -1583,23 +1923,36 @@ class OptimizationTask(OptimizationTaskBase):
         -------
             A TopologyRotationalSymmetry object.
         """
-        self.geometricRestrictions[name] = geometricRestriction = TopologyRotationalSymmetry(name, angle, region, axis,
-                                                                                             csys, ignoreFrozenArea)
+        self.geometricRestrictions[
+            name
+        ] = geometricRestriction = TopologyRotationalSymmetry(
+            name, angle, region, axis, csys, ignoreFrozenArea
+        )
         return geometricRestriction
 
-    def TurnControl(self, name: str, clientDirection: tuple, region: Region, csys: int = None, masterPoint: str = None,
-                    masterPointDetermination: SymbolicConstant = MAXIMUM, presumeFeasibleRegionAtStart: Boolean = ON,
-                    tolerance1: float = 0, tolerance2: float = 0, tolerance3: float = 0) -> TurnControl:
+    def TurnControl(
+        self,
+        name: str,
+        clientDirection: tuple,
+        region: Region,
+        csys: int = None,
+        masterPoint: str = None,
+        masterPointDetermination: SymbolicConstant = MAXIMUM,
+        presumeFeasibleRegionAtStart: Boolean = ON,
+        tolerance1: float = 0,
+        tolerance2: float = 0,
+        tolerance3: float = 0,
+    ) -> TurnControl:
         """This method creates a TurnControl object.
 
         Notes
         -----
             This function can be accessed by:
-            
+
             .. code-block:: python
-            
+
                 mdb.models[name].optimizationTasks[name].TurnControl
-        
+
         Parameters
         ----------
         name
@@ -1639,8 +1992,16 @@ class OptimizationTask(OptimizationTaskBase):
         -------
             A TurnControl object.
         """
-        self.geometricRestrictions[name] = geometricRestriction = TurnControl(name, clientDirection, region, csys,
-                                                                              masterPoint, masterPointDetermination,
-                                                                              presumeFeasibleRegionAtStart, tolerance1,
-                                                                              tolerance2, tolerance3)
+        self.geometricRestrictions[name] = geometricRestriction = TurnControl(
+            name,
+            clientDirection,
+            region,
+            csys,
+            masterPoint,
+            masterPointDetermination,
+            presumeFeasibleRegionAtStart,
+            tolerance1,
+            tolerance2,
+            tolerance3,
+        )
         return geometricRestriction

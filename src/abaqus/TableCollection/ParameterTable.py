@@ -5,9 +5,9 @@ from ..TableCollection.ParameterColumnArray import ParameterColumnArray
 
 class ParameterTable:
     """A ParameterTable is an object that is used to define the containers that encapsulate
-    ParameterColumn and DataTable objects. The data of DataTable is dependent on the 
-    contents of ParameterColumn. After DataTable is instantiated, making changes to 
-    ParameterColumn may lead to data corruption. 
+    ParameterColumn and DataTable objects. The data of DataTable is dependent on the
+    contents of ParameterColumn. After DataTable is instantiated, making changes to
+    ParameterColumn may lead to data corruption.
 
     Attributes
     ----------
@@ -31,11 +31,11 @@ class ParameterTable:
 
     """
 
-    # A ParameterColumnArray specifying all the columns in the ParameterTable. 
+    # A ParameterColumnArray specifying all the columns in the ParameterTable.
     columns: ParameterColumnArray = ParameterColumnArray()
 
-    # A DataTableArray specifying all the dataTables in the ParameterTable. 
-    dataTables: str = ''
+    # A DataTableArray specifying all the dataTables in the ParameterTable.
+    dataTables: str = ""
 
     def __init__(self, name: str):
         """This method creates a ParameterTable object and places it in the parameterTables
@@ -48,11 +48,11 @@ class ParameterTable:
         .. code-block:: python
 
             mdb.models[name].tableCollections[name].ParameterTable
-        
+
         Parameters
         ----------
         name
-            A String specifying the repository key. 
+            A String specifying the repository key.
 
         Returns
         -------
@@ -60,8 +60,14 @@ class ParameterTable:
         """
         pass
 
-    def Column(self, type: SymbolicConstant, unit: str = '', description: str = '', default: str = '',
-               allowedValues: str = '') -> ParameterColumn:
+    def Column(
+        self,
+        type: SymbolicConstant,
+        unit: str = "",
+        description: str = "",
+        default: str = "",
+        allowedValues: str = "",
+    ) -> ParameterColumn:
         """ParameterColumn is a constructor method that creates a ParameterColumn object and stores
         it in the array data structure. It is accessible from the ParameterTable object using a
         column member.
@@ -73,7 +79,7 @@ class ParameterTable:
         .. code-block:: python
 
             mdb.models[name].tableCollections[name].ParameterTable
-        
+
         Parameters
         ----------
         type
@@ -97,6 +103,8 @@ class ParameterTable:
         ------
             Incompatible data are given.
         """
-        parameterColumn = ParameterColumn(type, unit, description, default, allowedValues)
+        parameterColumn = ParameterColumn(
+            type, unit, description, default, allowedValues
+        )
         self.columns.append(parameterColumn)
         return parameterColumn

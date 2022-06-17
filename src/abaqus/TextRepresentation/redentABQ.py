@@ -18,28 +18,30 @@ Notes
 """
 
 
-def indentFile(path: str, indent: str = '', backup: Boolean = False, runTest: Boolean = False):
+def indentFile(
+    path: str, indent: str = "", backup: Boolean = False, runTest: Boolean = False
+):
     """This method outputs the indented file to the terminal window or backs up the specified
     file and replaces it.
 
     Parameters
     ----------
     path
-        A String specifying the file to be processed. 
+        A String specifying the file to be processed.
     indent
-        A String specifying the amount of indentation to be used. The default value is four 
-        spaces of indentation. Custom indentation strings must be flanked by quotation marks (" 
-        "). 
+        A String specifying the amount of indentation to be used. The default value is four
+        spaces of indentation. Custom indentation strings must be flanked by quotation marks ("
+        ").
     backup
-        A Boolean specifying whether to back up the file specified in the *path* argument if 
-        changes are made. The default value is False. 
+        A Boolean specifying whether to back up the file specified in the *path* argument if
+        changes are made. The default value is False.
     runTest
-        A Boolean specifying whether to test the newly indented file to ensure that it is 
-        semantically the same after any changes. The default value is False. 
+        A Boolean specifying whether to test the newly indented file to ensure that it is
+        semantically the same after any changes. The default value is False.
 
     Returns
     -------
-        A Boolean. True, if the indentation is successful; otherwise, False. 
+        A Boolean. True, if the indentation is successful; otherwise, False.
 
     """
     pass

@@ -68,55 +68,55 @@ class OdbInstanceBase:
 
     """
 
-    # A String specifying the instance name. 
-    name: str = ''
+    # A String specifying the instance name.
+    name: str = ""
 
-    # A SymbolicConstant specifying the type of the Part object. Only a value of 
-    # DEFORMABLE_BODY is currently supported. 
+    # A SymbolicConstant specifying the type of the Part object. Only a value of
+    # DEFORMABLE_BODY is currently supported.
     type: SymbolicConstant = None
 
-    # A SymbolicConstant specifying the dimensionality of the Part object. Possible values are 
-    # THREE_D, TWO_D_PLANAR, AXISYMMETRIC, and UNKNOWN_DIMENSION. 
+    # A SymbolicConstant specifying the dimensionality of the Part object. Possible values are
+    # THREE_D, TWO_D_PLANAR, AXISYMMETRIC, and UNKNOWN_DIMENSION.
     embeddedSpace: SymbolicConstant = None
 
-    # A SymbolicConstant specifying the state of the Instance as modified by the analysis. 
-    # This member is only present if the Instance is part of the RootAssemblyState tree. 
-    # Possible values are:PROPAGATED, specifying that the value is the same as the previous 
-    # frame or the original rootAssembly.MODIFIED, specifying that the geometry of the 
-    # instance has been changed at this frame.The default value is PROPAGATED. 
+    # A SymbolicConstant specifying the state of the Instance as modified by the analysis.
+    # This member is only present if the Instance is part of the RootAssemblyState tree.
+    # Possible values are:PROPAGATED, specifying that the value is the same as the previous
+    # frame or the original rootAssembly.MODIFIED, specifying that the geometry of the
+    # instance has been changed at this frame.The default value is PROPAGATED.
     resultState: SymbolicConstant = PROPAGATED
 
-    # An OdbMeshNodeArray object. 
+    # An OdbMeshNodeArray object.
     nodes: OdbMeshNodeArray = OdbMeshNodeArray()
 
-    # An OdbMeshElementArray object. 
+    # An OdbMeshElementArray object.
     elements: OdbMeshElementArray = OdbMeshElementArray()
 
-    # A repository of OdbSet objects specifying node sets. 
+    # A repository of OdbSet objects specifying node sets.
     nodeSets: dict[str, OdbSet] = dict[str, OdbSet]()
 
-    # A repository of OdbSet objects specifying element sets. 
+    # A repository of OdbSet objects specifying element sets.
     elementSets: dict[str, OdbSet] = dict[str, OdbSet]()
 
-    # A repository of OdbSet objects specifying surfaces. 
+    # A repository of OdbSet objects specifying surfaces.
     surfaces: dict[str, OdbSet] = dict[str, OdbSet]()
 
-    # A SectionAssignmentArray object. 
+    # A SectionAssignmentArray object.
     sectionAssignments: SectionAssignmentArray = SectionAssignmentArray()
 
-    # An OdbRigidBodyArray object. 
+    # An OdbRigidBodyArray object.
     rigidBodies: OdbRigidBodyArray = OdbRigidBodyArray()
 
-    # A BeamOrientationArray object. 
+    # A BeamOrientationArray object.
     beamOrientations: BeamOrientationArray = BeamOrientationArray()
 
-    # A MaterialOrientationArray object. 
+    # A MaterialOrientationArray object.
     materialOrientations: MaterialOrientationArray = MaterialOrientationArray()
 
-    # A RebarOrientationArray object. 
+    # A RebarOrientationArray object.
     rebarOrientations: RebarOrientationArray = RebarOrientationArray()
 
-    # An AnalyticSurface object specifying analytic Surface defined on the instance. 
+    # An AnalyticSurface object specifying analytic Surface defined on the instance.
     analyticSurface: AnalyticSurface = AnalyticSurface()
 
     def __init__(self, name: str, object: OdbPart, localCoordSystem: tuple = ()):
@@ -129,25 +129,25 @@ class OdbInstanceBase:
         .. code-block:: python
 
             session.odbs[*name*].rootAssembly.Instance
-        
+
         Parameters
         ----------
         name
-            A String specifying the instance name. 
+            A String specifying the instance name.
         object
-            An OdbPart object. 
+            An OdbPart object.
         localCoordSystem
-            A sequence of sequences of three Floats specifying the rotation and translation of the 
-            part instance in the global Cartesian coordinate system. The first three sequences 
-            specify the new local coordinate system with its center at the origin.The first sequence 
-            specifies a point on the 1-axis.The second sequence specifies a point on the 2-axis.The 
-            third sequence specifies a point on the 3-axis.The fourth sequence specifies the 
-            translation of the local coordinate system from the origin to its intended location.For 
-            example, the following sequence moves a part 10 units in the *X*-direction with no 
-            rotation: `localCoordSystem = ((1, 0, 0), (0, 1, 0), (0, 0, 1), (10, 0, 0))`The following 
-            sequence moves a part 5 units in the *X*-direction with rotation: 
-            `localCoordSystem = ((0, 1, 0), (1, 0, 0), (0, 0, 1), (5, 0, 0))` transforms a part 
-            containing the two points `Pt1= (1,0,0) Pt2= (2,0,0)` to `Pt1 = (0, 6, 0) Pt2 = (0, 7, 0)` 
+            A sequence of sequences of three Floats specifying the rotation and translation of the
+            part instance in the global Cartesian coordinate system. The first three sequences
+            specify the new local coordinate system with its center at the origin.The first sequence
+            specifies a point on the 1-axis.The second sequence specifies a point on the 2-axis.The
+            third sequence specifies a point on the 3-axis.The fourth sequence specifies the
+            translation of the local coordinate system from the origin to its intended location.For
+            example, the following sequence moves a part 10 units in the *X*-direction with no
+            rotation: `localCoordSystem = ((1, 0, 0), (0, 1, 0), (0, 0, 1), (10, 0, 0))`The following
+            sequence moves a part 5 units in the *X*-direction with rotation:
+            `localCoordSystem = ((0, 1, 0), (1, 0, 0), (0, 0, 1), (5, 0, 0))` transforms a part
+            containing the two points `Pt1= (1,0,0) Pt2= (2,0,0)` to `Pt1 = (0, 6, 0) Pt2 = (0, 7, 0)`
 
         Returns
         -------
@@ -155,92 +155,104 @@ class OdbInstanceBase:
         """
         pass
 
-    def assignBeamOrientation(self, region: str, method: SymbolicConstant, vector: tuple):
+    def assignBeamOrientation(
+        self, region: str, method: SymbolicConstant, vector: tuple
+    ):
         """This method assigns a beam section orientation to a region of a part instance.
-        
+
         Parameters
         ----------
         region
-            An OdbSet specifying a region on an instance. 
+            An OdbSet specifying a region on an instance.
         method
-            A SymbolicConstant specifying the assignment method. Only a value of N1_COSINES is 
-            currently supported. 
+            A SymbolicConstant specifying the assignment method. Only a value of N1_COSINES is
+            currently supported.
         vector
-            A sequence of three Floats specifying the approximate local n1n1-direction of the beam 
-            cross-section. 
+            A sequence of three Floats specifying the approximate local n1n1-direction of the beam
+            cross-section.
         """
         pass
 
-    def assignMaterialOrientation(self, region: str, localCsys: OdbDatumCsys, axis: SymbolicConstant = AXIS_1,
-                                  angle: float = 0,
-                                  stackDirection: SymbolicConstant = STACK_3):
+    def assignMaterialOrientation(
+        self,
+        region: str,
+        localCsys: OdbDatumCsys,
+        axis: SymbolicConstant = AXIS_1,
+        angle: float = 0,
+        stackDirection: SymbolicConstant = STACK_3,
+    ):
         """This method assigns a material orientation to a region of a part instance.
-        
+
         Parameters
         ----------
         region
-            An OdbSet specifying a region on an instance. 
+            An OdbSet specifying a region on an instance.
         localCsys
-            An OdbDatumCsys object specifying the local coordinate system or None, indicating the 
-            global coordinate system. 
+            An OdbDatumCsys object specifying the local coordinate system or None, indicating the
+            global coordinate system.
         axis
-            A SymbolicConstant specifying the axis of a cylindrical or spherical datum coordinate 
-            system about which an additional rotation is applied. For shells this axis is also the 
-            shell normal. Possible values are AXIS_1, AXIS_2, and AXIS_3. The default value is 
-            AXIS_1. 
+            A SymbolicConstant specifying the axis of a cylindrical or spherical datum coordinate
+            system about which an additional rotation is applied. For shells this axis is also the
+            shell normal. Possible values are AXIS_1, AXIS_2, and AXIS_3. The default value is
+            AXIS_1.
         angle
-            A Float specifying the angle of the additional rotation. The default value is 0.0. 
+            A Float specifying the angle of the additional rotation. The default value is 0.0.
         stackDirection
-            A SymbolicConstant specifying the stack or thickness direction of the material. Possible 
-            values are STACK_1, STACK_2, STACK_3, and STACK_ORIENTATION. The default value is 
-            STACK_3. 
+            A SymbolicConstant specifying the stack or thickness direction of the material. Possible
+            values are STACK_1, STACK_2, STACK_3, and STACK_ORIENTATION. The default value is
+            STACK_3.
         """
         pass
 
-    def assignRebarOrientation(self, region: str, localCsys: OdbDatumCsys, axis: SymbolicConstant = AXIS_1,
-                               angle: float = 0):
+    def assignRebarOrientation(
+        self,
+        region: str,
+        localCsys: OdbDatumCsys,
+        axis: SymbolicConstant = AXIS_1,
+        angle: float = 0,
+    ):
         """This method assigns a rebar reference orientation to a region of a part instance.
-        
+
         Parameters
         ----------
         region
-            An OdbSet specifying a region on an instance. 
+            An OdbSet specifying a region on an instance.
         localCsys
-            An OdbDatumCsys object specifying the local coordinate system or None, indicating the 
-            global coordinate system. 
+            An OdbDatumCsys object specifying the local coordinate system or None, indicating the
+            global coordinate system.
         axis
-            A SymbolicConstant specifying the axis of a cylindrical or spherical datum coordinate 
-            system about which an additional rotation is applied. For shells this axis is also the 
-            shell normal. Possible values are AXIS_1, AXIS_2, and AXIS_3. The default value is 
-            AXIS_1. 
+            A SymbolicConstant specifying the axis of a cylindrical or spherical datum coordinate
+            system about which an additional rotation is applied. For shells this axis is also the
+            shell normal. Possible values are AXIS_1, AXIS_2, and AXIS_3. The default value is
+            AXIS_1.
         angle
-            A Float specifying the angle of the additional rotation. The default value is 0.0. 
+            A Float specifying the angle of the additional rotation. The default value is 0.0.
         """
         pass
 
     def getElementFromLabel(self, label: int):
         """This method is used to retrieved an element with a specific label from an instance
         object.
-        
+
         Parameters
         ----------
         label
-            An Int specifying the element label. 
+            An Int specifying the element label.
 
         Returns
         -------
-            An OdbMeshElement object. 
+            An OdbMeshElement object.
 
         Raises
         ------
-            - If no element with the specified label exists: 
-              OdbError: Invalid element label 
+            - If no element with the specified label exists:
+              OdbError: Invalid element label
         """
         pass
 
     def getNodeFromLabel(self, label: int):
         """This method is used to retrieved a node with a specific label from an instance object.
-        
+
         Parameters
         ----------
         label
@@ -259,125 +271,145 @@ class OdbInstanceBase:
 
     def assignSection(self, region: str, section: Section):
         """This method is used to assign a section to a region on an instance.
-        
+
         Parameters
         ----------
         region
-            An OdbSet specifying a region on an instance. 
+            An OdbSet specifying a region on an instance.
         section
             A Section object.
 
         Raises
         ------
-            - If *region* is not an element set: 
-              OdbError: Section assignment requires element set. 
-            - If the element set is not from the current instance: 
-              OdbError: Section assignment requires element set from this part instance. 
+            - If *region* is not an element set:
+              OdbError: Section assignment requires element set.
+            - If the element set is not from the current instance:
+              OdbError: Section assignment requires element set from this part instance.
         """
         pass
 
-    def AnalyticRigidSurf2DPlanar(self, name: str, profile: tuple[AnalyticSurfaceSegment], filletRadius: str = 0):
+    def AnalyticRigidSurf2DPlanar(
+        self, name: str, profile: tuple[AnalyticSurfaceSegment], filletRadius: str = 0
+    ):
         """This method is used to define a two-dimensional AnalyticSurface object on the instance.
-        
+
         Parameters
         ----------
         name
-            The name of the analytic surface. 
+            The name of the analytic surface.
         profile
-            A sequence of AnalyticSurfaceSegment objects or an OdbSequenceAnalyticSurfaceSegment 
-            object. 
+            A sequence of AnalyticSurfaceSegment objects or an OdbSequenceAnalyticSurfaceSegment
+            object.
         filletRadius
-            A Double specifying the radius of curvature to smooth discontinuities between adjoining 
+            A Double specifying the radius of curvature to smooth discontinuities between adjoining
             segments. The default value is 0.0.
 
         Raises
         ------
-            - If OdbPart associated with the part instance is of type THREE_D: 
-              OdbError: 2D-Planar Analytic Rigid Surface can be defined only if the instance is of 
-            type TWO_D_PLANAR or AXISYMMETRIC. 
+            - If OdbPart associated with the part instance is of type THREE_D:
+              OdbError: 2D-Planar Analytic Rigid Surface can be defined only if the instance is of
+            type TWO_D_PLANAR or AXISYMMETRIC.
         """
         pass
 
-    def AnalyticRigidSurfExtrude(self, name: str, profile: tuple[AnalyticSurfaceSegment], filletRadius: str = 0,
-                                 localCoordData: tuple = ()):
+    def AnalyticRigidSurfExtrude(
+        self,
+        name: str,
+        profile: tuple[AnalyticSurfaceSegment],
+        filletRadius: str = 0,
+        localCoordData: tuple = (),
+    ):
         """This method is used to define a three-dimensional cylindrical AnalyticSurface on the
         instance.
-        
+
         Parameters
         ----------
         name
-            The name of the analytic surface. 
+            The name of the analytic surface.
         profile
-            A sequence of AnalyticSurfaceSegment objects or an OdbSequenceAnalyticSurfaceSegment 
-            object. 
+            A sequence of AnalyticSurfaceSegment objects or an OdbSequenceAnalyticSurfaceSegment
+            object.
         filletRadius
-            A Double specifying the radius of curvature to smooth discontinuities between adjoining 
-            segments. The default value is 0.0. 
+            A Double specifying the radius of curvature to smooth discontinuities between adjoining
+            segments. The default value is 0.0.
         localCoordData
-            A sequence of sequences of Floats specifying the global coordinates of points used to 
+            A sequence of sequences of Floats specifying the global coordinates of points used to
             define the local coordinate system.
 
         Raises
         ------
-            - If OdbPart associated with the part instance is not of type THREE_D: 
-              OdbError: Analytic Rigid Surface of type CYLINDER can be defined only if the instance 
-            is of type THREE_D. 
+            - If OdbPart associated with the part instance is not of type THREE_D:
+              OdbError: Analytic Rigid Surface of type CYLINDER can be defined only if the instance
+            is of type THREE_D.
         """
         pass
 
-    def AnalyticRigidSurfRevolve(self, name: str, profile: tuple[AnalyticSurfaceSegment], filletRadius: str = 0,
-                                 localCoordData: tuple = ()):
+    def AnalyticRigidSurfRevolve(
+        self,
+        name: str,
+        profile: tuple[AnalyticSurfaceSegment],
+        filletRadius: str = 0,
+        localCoordData: tuple = (),
+    ):
         """This method is used to define a three-dimensional AnalyticSurface of revolution on the
         instance.
-        
+
         Parameters
         ----------
         name
-            The name of the analytic surface. 
+            The name of the analytic surface.
         profile
-            A sequence of AnalyticSurfaceSegment objects or an OdbSequenceAnalyticSurfaceSegment 
-            object. 
+            A sequence of AnalyticSurfaceSegment objects or an OdbSequenceAnalyticSurfaceSegment
+            object.
         filletRadius
-            A Double specifying the radius of curvature to smooth discontinuities between adjoining 
-            segments. The default value is 0.0. 
+            A Double specifying the radius of curvature to smooth discontinuities between adjoining
+            segments. The default value is 0.0.
         localCoordData
-            A sequence of sequences of Floats specifying the global coordinates of points used to 
+            A sequence of sequences of Floats specifying the global coordinates of points used to
             define the local coordinate system.
 
         Raises
         ------
-            - If OdbPart associated with the part instance is not of type THREE_D: 
-              OdbError: Analytic Rigid Surface of type REVOLUTION can be defined only if the 
-            instance is of type THREE_D. 
+            - If OdbPart associated with the part instance is not of type THREE_D:
+              OdbError: Analytic Rigid Surface of type REVOLUTION can be defined only if the
+            instance is of type THREE_D.
         """
         pass
 
-    def RigidBody(self, referenceNode: str, position: str = INPUT, isothermal: Boolean = OFF, elset: str = '',
-                  pinNodes: str = '', tieNodes: str = '', analyticSurface: str = ''):
+    def RigidBody(
+        self,
+        referenceNode: str,
+        position: str = INPUT,
+        isothermal: Boolean = OFF,
+        elset: str = "",
+        pinNodes: str = "",
+        tieNodes: str = "",
+        analyticSurface: str = "",
+    ):
         """This method defines an OdbRigidBody on the instance.
-        
+
         Parameters
         ----------
         referenceNode
-            An OdbSet specifying the reference node assigned to the rigid body. 
+            An OdbSet specifying the reference node assigned to the rigid body.
         position
-            A symbolic constant specify if the location of the reference node is to be defined by 
-            the user. Possible values are INPUT, and CENTER_OF_MASS. The default value is INPUT. 
+            A symbolic constant specify if the location of the reference node is to be defined by
+            the user. Possible values are INPUT, and CENTER_OF_MASS. The default value is INPUT.
         isothermal
-            A Boolean specifying an isothermal rigid body. The default value is OFF. This parameter 
-            is used only for a fully-coupled thermal stress analysis. 
+            A Boolean specifying an isothermal rigid body. The default value is OFF. This parameter
+            is used only for a fully-coupled thermal stress analysis.
         elset
-            An OdbSet specifying an element set assigned to the rigid body. 
+            An OdbSet specifying an element set assigned to the rigid body.
         pinNodes
-            An OdbSet specifying pin-type nodes assigned to the rigid body. 
+            An OdbSet specifying pin-type nodes assigned to the rigid body.
         tieNodes
-            An OdbSet specifying tie-type nodes assigned to the rigid body. 
+            An OdbSet specifying tie-type nodes assigned to the rigid body.
         analyticSurface
             An AnalyticSurface specifying the Analytic Rigid Surface assigned to the rigid body.
 
         Raises
         ------
-            - If *referenceNode* is not a node set: 
-              OdbError: Rigid body definition requires a node set. 
+            - If *referenceNode* is not a node set:
+              OdbError: Rigid body definition requires a node set.
         """
         pass

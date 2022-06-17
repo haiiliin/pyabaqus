@@ -24,9 +24,9 @@ class UserDefinedField:
         Notes
         -----
             This function can be accessed by:
-            
+
             .. code-block:: python
-            
+
                 mdb.models[name].materials[name].UserDefinedField
                 session.odbs[name].materials[name].UserDefinedField
 

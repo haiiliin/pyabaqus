@@ -21,7 +21,9 @@ Notes
 """
 
 
-def deleteObjectCallback(callback: str, path: str, userData: str = None, includeChildren: Boolean = False):
+def deleteObjectCallback(
+    callback: str, path: str, userData: str = None, includeChildren: Boolean = False
+):
     """This method adds a callback function that will be invoked when the specified Abaqus
     Scripting Interface objects are about to be deleted. The callback is invoked only when
     the object is deleted using the Python statement del object. The callback is not invoked
@@ -31,30 +33,30 @@ def deleteObjectCallback(callback: str, path: str, userData: str = None, include
     Notes
     -----
         This function can be accessed by:
-        
+
         .. code-block:: python
-        
+
             deleteObjectCallback.addCallback
 
     Parameters
     ----------
     callback
-        A Python function to be called when an object matching the specified path is about to be 
-        deleted. The interface definition of the callback function is:`def 
-        functionName(objectPath, userData)`where:*objectPath* is the path to the object about to 
-        be deleted.*userData* is the object passed as the *userData* argument to the addCallback 
-        method. 
+        A Python function to be called when an object matching the specified path is about to be
+        deleted. The interface definition of the callback function is:`def
+        functionName(objectPath, userData)`where:*objectPath* is the path to the object about to
+        be deleted.*userData* is the object passed as the *userData* argument to the addCallback
+        method.
     path
-        A String specifying the path to an object or the SymbolicConstant ANY. You can include 
-        wildcards in the path to specify a pattern to be matched. Examples of valid paths 
-        are:`path='mdb.models[*]' path=”mdb.models['Axle*'].parts[*]” 
-        path='mdb.models[*].materials[*]' ` 
+        A String specifying the path to an object or the SymbolicConstant ANY. You can include
+        wildcards in the path to specify a pattern to be matched. Examples of valid paths
+        are:`path='mdb.models[*]' path=”mdb.models['Axle*'].parts[*]”
+        path='mdb.models[*].materials[*]' `
     userData
-        Any type of data. This data will be passed to the callback function. The default value 
-        is None. 
+        Any type of data. This data will be passed to the callback function. The default value
+        is None.
     includeChildren
-        A Boolean specifying that the callback should be called if an object owned by the object 
-        specified by the *path* argument is about to be deleted. The default value is False. 
+        A Boolean specifying that the callback should be called if an object owned by the object
+        specified by the *path* argument is about to be deleted. The default value is False.
 
     """
     pass
