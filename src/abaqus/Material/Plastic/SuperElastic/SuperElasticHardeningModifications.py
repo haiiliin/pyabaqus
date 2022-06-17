@@ -1,20 +1,20 @@
 class SuperElasticHardeningModifications:
     """The SuperElasticHardeningModifications object specifies the variation of the
-    transformation stress levels of a material model. 
+    transformation stress levels of a material model.
 
     Notes
     -----
     This object can be accessed by:
-    
+
     .. code-block:: python
-        
+
         import material
         mdb.models[name].materials[name].superElasticity.SuperElasticHardening
         import odbMaterial
         session.odbs[name].materials[name].superElasticity.SuperElasticHardening
 
     The table data for this object are:
-    
+
     - Start of Transformation (Loading).
     - End of Transformation (Loading).
     - Start of Transformation (Unloading).
@@ -33,22 +33,22 @@ class SuperElasticHardeningModifications:
         Notes
         -----
             This function can be accessed by:
-            
+
             .. code-block:: python
-            
+
                 mdb.models[name].materials[name].superElasticity.SuperElasticHardeningModifications
                 session.odbs[name].materials[name].superElasticity.SuperElasticHardeningModifications
-        
+
         Parameters
         ----------
         table
-            A sequence of sequences of Floats specifying the items described below or user-defined 
+            A sequence of sequences of Floats specifying the items described below or user-defined
             data if the dependence of the transformation stress levels on Plastic strain is
-            specified in a user subroutine. 
+            specified in a user subroutine.
 
         Returns
         -------
-            A SuperElasticHardeningModifications object. 
+            A SuperElasticHardeningModifications object.
 
         Raises
         ------

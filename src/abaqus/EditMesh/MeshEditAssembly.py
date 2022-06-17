@@ -10,8 +10,8 @@ from ..Region.Region import Region
 
 class MeshEditAssembly(AssemblyBase):
     """An Assembly object is a container for instances of parts. The Assembly object has no
-    constructor command. Abaqus creates the *rootAssembly* member when a Model object is 
-    created. 
+    constructor command. Abaqus creates the *rootAssembly* member when a Model object is
+    created.
 
     Notes
     -----
@@ -27,138 +27,155 @@ class MeshEditAssembly(AssemblyBase):
     def collapseMeshEdge(self, edge: str, collapseMethod: SymbolicConstant):
         """This method collapses an edge of a quadrilateral or triangular element of a part
         instance.
-        
+
         Parameters
         ----------
         edge
-            A single MeshEdge object specifying the element edge to collapse. 
+            A single MeshEdge object specifying the element edge to collapse.
         collapseMethod
-            A SymbolicConstant specifying the method used to collapse the edge. Possible values are 
-            FORWARD, REVERSE, and AVERAGE. 
+            A SymbolicConstant specifying the method used to collapse the edge. Possible values are
+            FORWARD, REVERSE, and AVERAGE.
         """
         pass
 
     def combineElement(self, elements: tuple):
         """This method combines two triangular elements of a part instance.
-        
+
         Parameters
         ----------
         elements
-            A sequence of triangular MeshElement objects specifying the elements to combine. 
+            A sequence of triangular MeshElement objects specifying the elements to combine.
         """
         pass
 
-    def deleteElement(self, elements: tuple[MeshElement], deleteUnreferencedNodes: Boolean = OFF):
+    def deleteElement(
+        self, elements: tuple[MeshElement], deleteUnreferencedNodes: Boolean = OFF
+    ):
         """This method deletes the given elements from a part instance. The elements must have been
         generated using the bottom-up meshing technique.
-        
+
         Parameters
         ----------
         elements
-            A sequence of MeshElement objects or a Set object containing elements. 
+            A sequence of MeshElement objects or a Set object containing elements.
         deleteUnreferencedNodes
-            A Boolean specifying whether to delete all those associated nodes that become 
-            unreferenced after the given elements are deleted. The default value is OFF. 
+            A Boolean specifying whether to delete all those associated nodes that become
+            unreferenced after the given elements are deleted. The default value is OFF.
         """
         pass
 
     def projectNode(self, nodes: tuple[MeshNode], projectionReference: str):
         """This method projects the given nodes of a part instance onto a mesh entity, geometric
         entity, or a datum object.
-        
+
         Parameters
         ----------
         nodes
-            A sequence of MeshNode objects to be projected. 
+            A sequence of MeshNode objects to be projected.
         projectionReference
-            An object specifying the target for the node projection operation. The 
-            *projectionReference* can be any one of the following objects: MeshNode, MeshEdge, 
+            An object specifying the target for the node projection operation. The
+            *projectionReference* can be any one of the following objects: MeshNode, MeshEdge,
             MeshFace, ConstrainedSketchVertex, Edge, Face, DatumPoint, DatumAxis, or DatumPlane.
         """
         pass
 
-    def editNode(self, nodes: tuple[MeshNode], coordinate1: float = None, coordinate2: float = None,
-                 coordinate3: float = None, coordinates: tuple = (), offset1: float = None,
-                 offset2: float = None, offset3: float = None, localCsys: DatumCsys = DatumCsys(),
-                 projectToGeometry: Boolean = ON):
+    def editNode(
+        self,
+        nodes: tuple[MeshNode],
+        coordinate1: float = None,
+        coordinate2: float = None,
+        coordinate3: float = None,
+        coordinates: tuple = (),
+        offset1: float = None,
+        offset2: float = None,
+        offset3: float = None,
+        localCsys: DatumCsys = DatumCsys(),
+        projectToGeometry: Boolean = ON,
+    ):
         """This method changes the coordinates of the given nodes on a part instance.
-        
+
         Parameters
         ----------
         nodes
-            A sequence of MeshNode objects or a Set object containing nodes. 
+            A sequence of MeshNode objects or a Set object containing nodes.
         coordinate1
-            A Float specifying the value of the first coordinate. If *coordinate1* and *offset1* are 
-            unspecified, the existing value does not change. 
+            A Float specifying the value of the first coordinate. If *coordinate1* and *offset1* are
+            unspecified, the existing value does not change.
         coordinate2
-            A Float specifying the value of the second coordinate. If *coordinate2* and *offset2* 
-            are unspecified, the existing value does not change. 
+            A Float specifying the value of the second coordinate. If *coordinate2* and *offset2*
+            are unspecified, the existing value does not change.
         coordinate3
-            A Float specifying the value of the third coordinate. If *coordinate3* and *offset3* are 
-            unspecified, the existing value does not change. 
+            A Float specifying the value of the third coordinate. If *coordinate3* and *offset3* are
+            unspecified, the existing value does not change.
         coordinates
-            A sequence of three-dimensional coordinate tuples specifying the coordinates for each of 
-            the given nodes. When specified, the number of coordinate tuples must match the number 
-            of given nodes, and be ordered to correspond to the given nodes in *ascending order* 
-            according to index. Furthermore, *coordinate1*, *coordinate2*, *coordinate3*, *offset1*, 
-            *offset2*, or *offset3* may not be specified. 
+            A sequence of three-dimensional coordinate tuples specifying the coordinates for each of
+            the given nodes. When specified, the number of coordinate tuples must match the number
+            of given nodes, and be ordered to correspond to the given nodes in *ascending order*
+            according to index. Furthermore, *coordinate1*, *coordinate2*, *coordinate3*, *offset1*,
+            *offset2*, or *offset3* may not be specified.
         offset1
-            A Float specifying an offset to apply to the value of the first coordinate of the 
-            specified nodes. 
+            A Float specifying an offset to apply to the value of the first coordinate of the
+            specified nodes.
         offset2
-            A Float specifying an offset to apply to the value of the second coordinate of the 
-            specified nodes. 
+            A Float specifying an offset to apply to the value of the second coordinate of the
+            specified nodes.
         offset3
-            A Float specifying an offset to apply to the value of the third coordinate of the 
-            specified nodes. 
+            A Float specifying an offset to apply to the value of the third coordinate of the
+            specified nodes.
         localCsys
-            A DatumCsys object specifying the local coordinate system. If unspecified, the global 
-            coordinate system will be used. 
+            A DatumCsys object specifying the local coordinate system. If unspecified, the global
+            coordinate system will be used.
         projectToGeometry
-            A Boolean specifying whether to project nodes back to their original geometry. For 
-            example, if a node is on a face, this method first positions the node at the new 
+            A Boolean specifying whether to project nodes back to their original geometry. For
+            example, if a node is on a face, this method first positions the node at the new
             location and then projects it back to the original face. The default value is ON.
 
         Raises
         ------
-            A coordinate and an offset may not both be specified for the same coordinate component. 
+            A coordinate and an offset may not both be specified for the same coordinate component.
         """
         pass
 
     @typing.overload
-    def mergeNodes(self, nodes: tuple[MeshNode], tolerance: float = None,
-                   removeDuplicateElements: Boolean = True):
+    def mergeNodes(
+        self,
+        nodes: tuple[MeshNode],
+        tolerance: float = None,
+        removeDuplicateElements: Boolean = True,
+    ):
         """Merge the nodes of a part instance. The nodes must have been generated using the
         bottom-up meshing technique.
-        
+
         Parameters
         ----------
         nodes
-            A sequence of MeshNode objects specifying the nodes to merge. 
+            A sequence of MeshNode objects specifying the nodes to merge.
         tolerance
-            A Float specifying the maximum distance between nodes that will be merged to a single 
-            node. The location of the new node is the average position of the merged nodes. The 
-            default value is 10–6. 
+            A Float specifying the maximum distance between nodes that will be merged to a single
+            node. The location of the new node is the average position of the merged nodes. The
+            default value is 10–6.
         removeDuplicateElements
-            A Boolean specifying whether elements with the same connectivity after the merge will 
-            merged into a single element. The default value is True. 
+            A Boolean specifying whether elements with the same connectivity after the merge will
+            merged into a single element. The default value is True.
         """
         pass
 
     @typing.overload
-    def mergeNodes(self, node1: MeshNode, node2: MeshNode, removeDuplicateElements: Boolean = True):
+    def mergeNodes(
+        self, node1: MeshNode, node2: MeshNode, removeDuplicateElements: Boolean = True
+    ):
         """Merge two nodes of a part instance. At least one of the two nodes must have been
         generated using the bottom-up meshing technique.
-        
+
         Parameters
         ----------
         node1
-            A MeshNode object specifying the first node to merge. 
+            A MeshNode object specifying the first node to merge.
         node2
-            A MeshNode object specifying the second node to merge. 
+            A MeshNode object specifying the second node to merge.
         removeDuplicateElements
-            A Boolean specifying whether elements with the same connectivity after the merge will 
-            merged into a single element. The default value is True. 
+            A Boolean specifying whether elements with the same connectivity after the merge will
+            merged into a single element. The default value is True.
         """
         pass
 
@@ -167,78 +184,88 @@ class MeshEditAssembly(AssemblyBase):
 
     def splitElement(self, elements: tuple):
         """This method splits quadrilateral elements into triangular elements.
-        
+
         Parameters
         ----------
         elements
-            A sequence of quadrilateral MeshElement objects specifying the elements to split. Each 
-            quadrilateral element is split into two triangular elements by the shorter diagonal. 
+            A sequence of quadrilateral MeshElement objects specifying the elements to split. Each
+            quadrilateral element is split into two triangular elements by the shorter diagonal.
         """
         pass
 
     def splitMeshEdge(self, edge: str, parameter: float = 0):
         """This method splits an edge of a quadrilateral or triangular element of a part instance.
-        
+
         Parameters
         ----------
         edge
-            A single MeshEdge object specifying the element edge to split. 
+            A single MeshEdge object specifying the element edge to split.
         parameter
-            A Float specifying the normalized distance along the *edge* at which to split. Possible 
-            values are 0.0 << *parameter* << 1.0. The default value is 0.5. 
+            A Float specifying the normalized distance along the *edge* at which to split. Possible
+            values are 0.0 << *parameter* << 1.0. The default value is 0.5.
         """
         pass
 
     def swapMeshEdge(self, edge: str):
         """This method swaps the diagonal of two adjacent triangular elements of a part instance.
-        
+
         Parameters
         ----------
         edge
-            A single MeshEdge object specifying the element edge to swap. 
+            A single MeshEdge object specifying the element edge to swap.
         """
         pass
 
-    def generateMeshByOffset(self, region: Region, meshType: str, totalThickness: float, distanceBetweenLayers: float,
-                             numLayers: int, offsetDirection: str = OUTWARD, initialOffset: float = 0.0,
-                             shareNodes: str = False, deleteBaseElements: Boolean = False,
-                             constantThicknessCorners: Boolean = False, extendElementSets: Boolean = False):
+    def generateMeshByOffset(
+        self,
+        region: Region,
+        meshType: str,
+        totalThickness: float,
+        distanceBetweenLayers: float,
+        numLayers: int,
+        offsetDirection: str = OUTWARD,
+        initialOffset: float = 0.0,
+        shareNodes: str = False,
+        deleteBaseElements: Boolean = False,
+        constantThicknessCorners: Boolean = False,
+        extendElementSets: Boolean = False,
+    ):
         """This method generates a solid or shell mesh from an orphan mesh surface by generating
         layers of elements that propagate out normal to the surface boundary.
-        
+
         Parameters
         ----------
         region
-            A Region object specifying the domain to be offset. 
+            A Region object specifying the domain to be offset.
         meshType
-            A Symbolic Constant specifying the type of mesh to be generated. Possible values are 
-            SOLID or SHELL. 
+            A Symbolic Constant specifying the type of mesh to be generated. Possible values are
+            SOLID or SHELL.
         totalThickness
-            A Float specifying the total thickness of the solid layers. This argument applies only 
-            when *meshType*=SOLID. 
+            A Float specifying the total thickness of the solid layers. This argument applies only
+            when *meshType*=SOLID.
         distanceBetweenLayers
-            A Float specifying the distance between shell layers. This argument applies only when 
-            *meshType*=SHELL. 
+            A Float specifying the distance between shell layers. This argument applies only when
+            *meshType*=SHELL.
         numLayers
-            An Int specifying the number of element layers to be generated. 
+            An Int specifying the number of element layers to be generated.
         offsetDirection
-            A Symbolic Constant specifying the direction of the offset. This argument is required 
-            only when the given region relates to a shell mesh. Possible values are OUTWARD, INWARD, 
-            and BOTH. The default value is OUTWARD. 
+            A Symbolic Constant specifying the direction of the offset. This argument is required
+            only when the given region relates to a shell mesh. Possible values are OUTWARD, INWARD,
+            and BOTH. The default value is OUTWARD.
         initialOffset
-            A Float specifying the magnitude of the initial offset. The default value is zero. 
+            A Float specifying the magnitude of the initial offset. The default value is zero.
         shareNodes
-            Boolean specifying whether the first layer of nodes should be shared with nodes on the 
-            base surface. The default value is False. 
+            Boolean specifying whether the first layer of nodes should be shared with nodes on the
+            base surface. The default value is False.
         deleteBaseElements
-            A Boolean specifying whether to delete the shell elements after the offset layers are 
-            generated. The default value is False. This argument applies only when *meshType*=SHELL. 
+            A Boolean specifying whether to delete the shell elements after the offset layers are
+            generated. The default value is False. This argument applies only when *meshType*=SHELL.
         constantThicknessCorners
-            A Boolean specifying whether to use element-based thickness or nodal-based thickness. 
-            The default value is False. 
+            A Boolean specifying whether to use element-based thickness or nodal-based thickness.
+            The default value is False.
         extendElementSets
-            A Boolean specifying whether existing element sets that include base elements will be 
-            extended to include corresponding offset elements. The default value is False. 
+            A Boolean specifying whether existing element sets that include base elements will be
+            extended to include corresponding offset elements. The default value is False.
         """
         pass
 

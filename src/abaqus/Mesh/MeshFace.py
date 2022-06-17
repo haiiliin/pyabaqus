@@ -1,7 +1,7 @@
 class MeshFace:
     """The MeshFace object refers to an element face. It has no constructor or members. A
-    MeshFace object can be accessed via a MeshFaceArray or a repository on a part or part 
-    instance. 
+    MeshFace object can be accessed via a MeshFaceArray or a repository on a part or part
+    instance.
 
     Attributes
     ----------
@@ -13,9 +13,9 @@ class MeshFace:
     Notes
     -----
     This object can be accessed by:
-    
+
     .. code-block:: python
-        
+
         import part
         mdb.models[name].parts[name].elementFaces[i]
         mdb.models[name].parts[name].elemFaces[i]
@@ -27,10 +27,10 @@ class MeshFace:
 
     """
 
-    # An Int specifying an Int specifying the element label. 
+    # An Int specifying an Int specifying the element label.
     label: int = None
 
-    # An Int specifying a symbolic constant specifying the side of the element. 
+    # An Int specifying a symbolic constant specifying the side of the element.
     face: int = None
 
     def getElemEdges(self):
@@ -67,11 +67,11 @@ class MeshFace:
         """This method returns an array of mesh node objects that are obtained by recursively
         finding adjacent element faces that are at an angle of less than or equal to the
         specified angle.
-        
+
         Parameters
         ----------
         angle
-            A float specifying the value of the face angle. 
+            A float specifying the value of the face angle.
 
         Returns
         -------
@@ -86,7 +86,7 @@ class MeshFace:
         Returns
         -------
         normal: tuple[float]
-            A tuple of 3 floats representing the unit normal vector. If the element face is 
+            A tuple of 3 floats representing the unit normal vector. If the element face is
             collapsed such that a normal cannot be computed, a zero-length vector is returned.
         """
         pass
@@ -95,11 +95,11 @@ class MeshFace:
         """This method returns an array of element face objects that are obtained by recursively
         finding adjacent element faces that are at an angle of less than or equal to the
         specified angle.
-        
+
         Parameters
         ----------
         angle
-            A float specifying the value of the face angle. 
+            A float specifying the value of the face angle.
 
         Returns
         -------
@@ -112,11 +112,11 @@ class MeshFace:
         """This method returns an array of element edge objects that are obtained by recursively
         finding adjacent element edges that are at an angle of less than or equal to the
         specified face angle.
-        
+
         Parameters
         ----------
         angle
-            A float specifying the value of the face angle in degrees. 
+            A float specifying the value of the face angle in degrees.
 
         Returns
         -------
@@ -129,11 +129,11 @@ class MeshFace:
         """This method returns an array of mesh Element objects that are obtained by recursively
         finding adjacent element faces that are at an angle of less than or equal to the
         specified angle.
-        
+
         Parameters
         ----------
         angle
-            A float specifying the value of the face angle. 
+            A float specifying the value of the face angle.
 
         Returns
         -------
@@ -146,11 +146,11 @@ class MeshFace:
         """This method returns an array of element edge objects that are obtained by recursively
         finding adjacent element faces that are at an angle of less than or equal to the
         specified face angle with the seed face.
-        
+
         Parameters
         ----------
         angle
-            A float specifying the value of the face angle in degrees. 
+            A float specifying the value of the face angle in degrees.
 
         Returns
         -------
@@ -174,11 +174,11 @@ class MeshFace:
         """This method returns an array of element face objects, obtained by traversing shell
         elements or the exterior of a solid mesh, and recursively finding adjacent element faces
         by layer.
-        
+
         Parameters
         ----------
         numLayers
-            A int specifying the value of the number of layers. 
+            A int specifying the value of the number of layers.
 
         Returns
         -------

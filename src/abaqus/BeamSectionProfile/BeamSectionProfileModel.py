@@ -34,11 +34,11 @@ class BeamSectionProfileModel(ModelBase):
         Notes
         -----
             This function can be accessed by:
-            
+
             .. code-block:: python
-            
+
                 mdb.models[name].beamProfilesFromOdb
-        
+
         Parameters
         ----------
         fileName
@@ -61,12 +61,12 @@ class BeamSectionProfileModel(ModelBase):
         Notes
         -----
             This function can be accessed by:
-            
+
             .. code-block:: python
-            
+
                 mdb.models[name].ArbitraryProfile
                 session.odbs[name].ArbitraryProfile
-        
+
         Parameters
         ----------
         name
@@ -86,19 +86,28 @@ class BeamSectionProfileModel(ModelBase):
         self.profiles[name] = arbitraryProfile = ArbitraryProfile(name, table)
         return arbitraryProfile
 
-    def BoxProfile(self, name: str, a: float, b: float, uniformThickness: Boolean, t1: float, t2: float = 0,
-                   t3: float = 0, t4: float = 0) -> BoxProfile:
+    def BoxProfile(
+        self,
+        name: str,
+        a: float,
+        b: float,
+        uniformThickness: Boolean,
+        t1: float,
+        t2: float = 0,
+        t3: float = 0,
+        t4: float = 0,
+    ) -> BoxProfile:
         """This method creates a BoxProfile object.
 
         Notes
         -----
             This function can be accessed by:
-            
+
             .. code-block:: python
-            
+
                 mdb.models[name].BoxProfile
                 session.odbs[name].BoxProfile
-        
+
         Parameters
         ----------
         name
@@ -133,7 +142,9 @@ class BeamSectionProfileModel(ModelBase):
             RangeError.
             !img
         """
-        self.profiles[name] = boxProfile = BoxProfile(name, a, b, uniformThickness, t1, t2, t3, t4)
+        self.profiles[name] = boxProfile = BoxProfile(
+            name, a, b, uniformThickness, t1, t2, t3, t4
+        )
         return boxProfile
 
     def CircularProfile(self, name: str, r: float) -> CircularProfile:
@@ -142,12 +153,12 @@ class BeamSectionProfileModel(ModelBase):
         Notes
         -----
             This function can be accessed by:
-            
+
             .. code-block:: python
-            
+
                 mdb.models[name].CircularProfile
                 session.odbs[name].CircularProfile
-        
+
         Parameters
         ----------
         name
@@ -169,19 +180,28 @@ class BeamSectionProfileModel(ModelBase):
         self.profiles[name] = circularProfile = CircularProfile(name, r)
         return circularProfile
 
-    def GeneralizedProfile(self, name: str, area: float, i11: float, i12: float, i22: float, j: float, gammaO: float,
-                           gammaW: float) -> GeneralizedProfile:
+    def GeneralizedProfile(
+        self,
+        name: str,
+        area: float,
+        i11: float,
+        i12: float,
+        i22: float,
+        j: float,
+        gammaO: float,
+        gammaW: float,
+    ) -> GeneralizedProfile:
         """This method creates a GeneralizedProfile object.
 
         Notes
         -----
             This function can be accessed by:
-            
+
             .. code-block:: python
-            
+
                 mdb.models[name].GeneralizedProfile
                 session.odbs[name].GeneralizedProfile
-        
+
         Parameters
         ----------
         name
@@ -210,7 +230,9 @@ class BeamSectionProfileModel(ModelBase):
             RangeError.
             !img
         """
-        self.profiles[name] = generalizedProfile = GeneralizedProfile(name, area, i11, i12, i22, j, gammaO, gammaW)
+        self.profiles[name] = generalizedProfile = GeneralizedProfile(
+            name, area, i11, i12, i22, j, gammaO, gammaW
+        )
         return generalizedProfile
 
     def HexagonalProfile(self, name: str, r: float, t: float) -> HexagonalProfile:
@@ -219,12 +241,12 @@ class BeamSectionProfileModel(ModelBase):
         Notes
         -----
             This function can be accessed by:
-            
+
             .. code-block:: python
-            
+
                 mdb.models[name].HexagonalProfile
                 session.odbs[name].HexagonalProfile
-        
+
         Parameters
         ----------
         name
@@ -249,19 +271,28 @@ class BeamSectionProfileModel(ModelBase):
         self.profiles[name] = hexagonalProfile = HexagonalProfile(name, r, t)
         return hexagonalProfile
 
-    def IProfile(self, name: str, l: float, h: float, b1: float, b2: float, t1: float, t2: float,
-                 t3: float) -> IProfile:
+    def IProfile(
+        self,
+        name: str,
+        l: float,
+        h: float,
+        b1: float,
+        b2: float,
+        t1: float,
+        t2: float,
+        t3: float,
+    ) -> IProfile:
         """This method creates an IProfile object.
 
         Notes
         -----
             This function can be accessed by:
-            
+
             .. code-block:: python
-            
+
                 mdb.models[name].IProfile
                 session.odbs[name].IProfile
-        
+
         Parameters
         ----------
         name
@@ -301,12 +332,12 @@ class BeamSectionProfileModel(ModelBase):
         Notes
         -----
             This function can be accessed by:
-            
+
             .. code-block:: python
-            
+
                 mdb.models[name].LProfile
                 session.odbs[name].LProfile
-        
+
         Parameters
         ----------
         name
@@ -342,12 +373,12 @@ class BeamSectionProfileModel(ModelBase):
         Notes
         -----
             This function can be accessed by:
-            
+
             .. code-block:: python
-            
+
                 mdb.models[name].PipeProfile
                 session.odbs[name].PipeProfile
-        
+
         Parameters
         ----------
         name
@@ -377,12 +408,12 @@ class BeamSectionProfileModel(ModelBase):
         Notes
         -----
             This function can be accessed by:
-            
+
             .. code-block:: python
-            
+
                 mdb.models[name].RectangularProfile
                 session.odbs[name].RectangularProfile
-        
+
         Parameters
         ----------
         name
@@ -406,18 +437,20 @@ class BeamSectionProfileModel(ModelBase):
         self.profiles[name] = rectangularProfile = RectangularProfile(name, a, b)
         return rectangularProfile
 
-    def TProfile(self, name: str, b: float, h: float, l: float, tf: float, tw: float) -> TProfile:
+    def TProfile(
+        self, name: str, b: float, h: float, l: float, tf: float, tw: float
+    ) -> TProfile:
         """This method creates a TProfile object.
 
         Notes
         -----
             This function can be accessed by:
-            
+
             .. code-block:: python
-            
+
                 mdb.models[name].TProfile
                 session.odbs[name].TProfile
-        
+
         Parameters
         ----------
         name
@@ -450,18 +483,20 @@ class BeamSectionProfileModel(ModelBase):
         self.profiles[name] = tProfile = TProfile(name, b, h, l, tf, tw)
         return tProfile
 
-    def TrapezoidalProfile(self, name: str, a: float, b: float, c: float, d: float) -> TrapezoidalProfile:
+    def TrapezoidalProfile(
+        self, name: str, a: float, b: float, c: float, d: float
+    ) -> TrapezoidalProfile:
         """This method creates a TrapezoidalProfile object.
 
         Notes
         -----
             This function can be accessed by:
-            
+
             .. code-block:: python
-            
+
                 mdb.models[name].TrapezoidalProfile
                 session.odbs[name].TrapezoidalProfile
-        
+
         Parameters
         ----------
         name

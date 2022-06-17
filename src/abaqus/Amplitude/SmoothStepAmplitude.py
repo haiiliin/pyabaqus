@@ -4,8 +4,8 @@ from .Amplitude import Amplitude
 
 class SmoothStepAmplitude(Amplitude):
     """The SmoothStepAmplitude object defines an amplitude that ramps up or down smoothly from
-    one data point to another. 
-    The SmoothStepAmplitude object is derived from the Amplitude object. 
+    one data point to another.
+    The SmoothStepAmplitude object is derived from the Amplitude object.
 
     Notes
     -----
@@ -35,37 +35,37 @@ class SmoothStepAmplitude(Amplitude):
 
             mdb.models[name].SmoothStepAmplitude
             session.odbs[name].SmoothStepAmplitude
-        
+
         Parameters
         ----------
         name
-            A String specifying the repository key. 
+            A String specifying the repository key.
         data
-            A sequence of pairs of Floats specifying time/frequency and amplitude pairs. Possible 
-            values for time/frequency are positive numbers. 
+            A sequence of pairs of Floats specifying time/frequency and amplitude pairs. Possible
+            values for time/frequency are positive numbers.
         timeSpan
-            A SymbolicConstant specifying the time span of the amplitude. Possible values are STEP 
-            and TOTAL. The default value is STEP. 
+            A SymbolicConstant specifying the time span of the amplitude. Possible values are STEP
+            and TOTAL. The default value is STEP.
 
         Returns
         -------
-            A SmoothStepAmplitude object. 
-            
+            A SmoothStepAmplitude object.
+
         Raises
         ------
         InvalidNameError
-        RangeError 
+        RangeError
         """
         super().__init__()
         pass
 
     def setValues(self, timeSpan: SymbolicConstant = STEP):
         """This method modifies the SmoothStepAmplitude object.
-        
+
         Parameters
         ----------
         timeSpan
-            A SymbolicConstant specifying the time span of the amplitude. Possible values are STEP 
+            A SymbolicConstant specifying the time span of the amplitude. Possible values are STEP
             and TOTAL. The default value is STEP.
 
         Raises

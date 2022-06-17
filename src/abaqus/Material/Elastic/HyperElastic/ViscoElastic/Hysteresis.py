@@ -1,7 +1,6 @@
-
 class Hysteresis:
     """The Hysteresis object specifies the creep part of the material model for the hysteretic
-    behavior of elastomers. 
+    behavior of elastomers.
 
     Notes
     -----
@@ -33,20 +32,20 @@ class Hysteresis:
         Notes
         -----
             This function can be accessed by:
-            
+
             .. code-block:: python
-            
+
                 mdb.models[name].materials[name].hyperelastic.Hysteresis
                 session.odbs[name].materials[name].hyperelastic.Hysteresis
-        
+
         Parameters
         ----------
         table
-            A sequence of sequences of Floats specifying the items described below. 
+            A sequence of sequences of Floats specifying the items described below.
 
         Returns
         -------
-            A Hysteresis object. 
+            A Hysteresis object.
 
         Raises
         ------

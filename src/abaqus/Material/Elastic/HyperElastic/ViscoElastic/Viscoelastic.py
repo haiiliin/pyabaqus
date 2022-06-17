@@ -67,33 +67,41 @@ class Viscoelastic:
 
     """
 
-    # A CombinedTestData object. 
+    # A CombinedTestData object.
     combinedTestData: CombinedTestData = CombinedTestData(((),))
 
-    # A ShearTestData object. 
+    # A ShearTestData object.
     shearTestData: ShearTestData = ShearTestData(((),))
 
-    # A Trs object. 
+    # A Trs object.
     trs: Trs = Trs()
 
-    # A VolumetricTestData object. 
+    # A VolumetricTestData object.
     volumetricTestData: VolumetricTestData = VolumetricTestData(((),))
 
-    def __init__(self, domain: SymbolicConstant, table: tuple, frequency: SymbolicConstant = FORMULA,
-                 type: SymbolicConstant = ISOTROPIC, preload: SymbolicConstant = NONE,
-                 time: SymbolicConstant = PRONY, errtol: float = 0, nmax: int = 13,
-                 volumetricTable: tuple = ()):
+    def __init__(
+        self,
+        domain: SymbolicConstant,
+        table: tuple,
+        frequency: SymbolicConstant = FORMULA,
+        type: SymbolicConstant = ISOTROPIC,
+        preload: SymbolicConstant = NONE,
+        time: SymbolicConstant = PRONY,
+        errtol: float = 0,
+        nmax: int = 13,
+        volumetricTable: tuple = (),
+    ):
         """This method creates a Viscoelastic object.
 
         Notes
         -----
             This function can be accessed by:
-            
+
             .. code-block:: python
-            
+
                 mdb.models[name].materials[name].Viscoelastic
                 session.odbs[name].materials[name].Viscoelastic
-        
+
         Parameters
         ----------
         domain
@@ -101,41 +109,41 @@ class Viscoelastic:
             - FREQUENCY, specifying a frequency domain. This domain is only available for an Abaqus/Standard analysis.
             - TIME, specifying a time domain.
         table
-            A sequence of sequences of Floats specifying the items described below. 
+            A sequence of sequences of Floats specifying the items described below.
         frequency
-            A SymbolicConstant specifying the frequency domain definition. This argument is required 
-            only when *domain*=FREQUENCY. Possible values are FORMULA, TABULAR, PRONY, 
-            CREEP_TEST_DATA, and RELAXATION_TEST_DATA. The default value is FORMULA. 
+            A SymbolicConstant specifying the frequency domain definition. This argument is required
+            only when *domain*=FREQUENCY. Possible values are FORMULA, TABULAR, PRONY,
+            CREEP_TEST_DATA, and RELAXATION_TEST_DATA. The default value is FORMULA.
         type
-            A SymbolicConstant specifying the type. This argument is required only when 
-            *domain*=FREQUENCY and *frequency*=TABULAR. Possible values are ISOTROPIC and TRACTION. 
-            The default value is ISOTROPIC. 
+            A SymbolicConstant specifying the type. This argument is required only when
+            *domain*=FREQUENCY and *frequency*=TABULAR. Possible values are ISOTROPIC and TRACTION.
+            The default value is ISOTROPIC.
         preload
-            A SymbolicConstant specifying the preload. This argument is required only when 
-            *domain*=FREQUENCY and *frequency*=TABULAR. Possible values are NONE, UNIAXIAL, 
-            VOLUMETRIC, and UNIAXIAL_VOLUMETRIC. The default value is NONE. 
+            A SymbolicConstant specifying the preload. This argument is required only when
+            *domain*=FREQUENCY and *frequency*=TABULAR. Possible values are NONE, UNIAXIAL,
+            VOLUMETRIC, and UNIAXIAL_VOLUMETRIC. The default value is NONE.
         time
-            A SymbolicConstant specifying the time domain definition. This argument is required only 
-            when *domain*=TIME. Possible values are PRONY, CREEP_TEST_DATA, RELAXATION_TEST_DATA, 
-            and FREQUENCY_DATA. The default value is PRONY. 
+            A SymbolicConstant specifying the time domain definition. This argument is required only
+            when *domain*=TIME. Possible values are PRONY, CREEP_TEST_DATA, RELAXATION_TEST_DATA,
+            and FREQUENCY_DATA. The default value is PRONY.
         errtol
-            A Float specifying the allowable average root-mean-square error of the data points in 
-            the least-squares fit. The Float values correspond to percentages; for example, 0.01 is 
-            1%. The default value is 0.01.This argument is valid only when *time*=CREEP_TEST_DATA, 
-            RELAXATION_TEST_DATA or FREQUENCY_DATA; or only when *frequency*=CREEP_TEST_DATA or 
-            RELAXATION_TEST_DATA. 
+            A Float specifying the allowable average root-mean-square error of the data points in
+            the least-squares fit. The Float values correspond to percentages; for example, 0.01 is
+            1%. The default value is 0.01.This argument is valid only when *time*=CREEP_TEST_DATA,
+            RELAXATION_TEST_DATA or FREQUENCY_DATA; or only when *frequency*=CREEP_TEST_DATA or
+            RELAXATION_TEST_DATA.
         nmax
-            An Int specifying the maximum number of terms NN in the Prony series. The maximum value 
-            is 13. The default value is 13.This argument is valid only when *time*=CREEP_TEST_DATA, 
-            RELAXATION_TEST_DATA or FREQUENCY_DATA; or only when *frequency*=CREEP_TEST_DATA or 
-            RELAXATION_TEST_DATA. 
+            An Int specifying the maximum number of terms NN in the Prony series. The maximum value
+            is 13. The default value is 13.This argument is valid only when *time*=CREEP_TEST_DATA,
+            RELAXATION_TEST_DATA or FREQUENCY_DATA; or only when *frequency*=CREEP_TEST_DATA or
+            RELAXATION_TEST_DATA.
         volumetricTable
-            A sequence of sequences of Floats specifying the items described below. The default 
-            value is an empty sequence. 
+            A sequence of sequences of Floats specifying the items described below. The default
+            value is an empty sequence.
 
         Returns
         -------
-            A Viscoelastic object. 
+            A Viscoelastic object.
 
         Raises
         ------

@@ -6,8 +6,8 @@ from .ConnectorPotentialArray import ConnectorPotentialArray
 
 class ConnectorPlasticity(ConnectorBehaviorOption):
     """The ConnectorPlasticity object defines Plastic behavior for one or more components of a
-    connector's relative motion. 
-    The ConnectorPlasticity object is derived from the ConnectorBehaviorOption object. 
+    connector's relative motion.
+    The ConnectorPlasticity object is derived from the ConnectorBehaviorOption object.
 
     Attributes
     ----------
@@ -80,22 +80,32 @@ class ConnectorPlasticity(ConnectorBehaviorOption):
 
     """
 
-    # A ConnectorOptions object specifying the ConnectorOptions used to define tabular options 
-    # for the isotropic hardening table. 
+    # A ConnectorOptions object specifying the ConnectorOptions used to define tabular options
+    # for the isotropic hardening table.
     isotropicOptions: ConnectorOptions = ConnectorOptions()
 
-    # A ConnectorOptions object specifying the ConnectorOptions used to define tabular options 
-    # for the kinematic hardening table. 
+    # A ConnectorOptions object specifying the ConnectorOptions used to define tabular options
+    # for the kinematic hardening table.
     kinematicOptions: ConnectorOptions = ConnectorOptions()
 
-    def __init__(self, coupling: SymbolicConstant = UNCOUPLED, isotropic: Boolean = ON,
-                 isotropicType: SymbolicConstant = TABULAR, isotropicTemperature: Boolean = OFF,
-                 isotropicDependencies: int = 0, kinematic: Boolean = OFF,
-                 kinematicType: SymbolicConstant = HALF_CYCLE, kinematicTemperature: Boolean = OFF,
-                 kinematicDependencies: int = 0, forcePotentialOperator: SymbolicConstant = SUM,
-                 forcePotentialExponent: float = 2,
-                 connectorPotentials: ConnectorPotentialArray = None,
-                 isotropicTable: tuple = (), kinematicTable: tuple = (), components: tuple = ()):
+    def __init__(
+        self,
+        coupling: SymbolicConstant = UNCOUPLED,
+        isotropic: Boolean = ON,
+        isotropicType: SymbolicConstant = TABULAR,
+        isotropicTemperature: Boolean = OFF,
+        isotropicDependencies: int = 0,
+        kinematic: Boolean = OFF,
+        kinematicType: SymbolicConstant = HALF_CYCLE,
+        kinematicTemperature: Boolean = OFF,
+        kinematicDependencies: int = 0,
+        forcePotentialOperator: SymbolicConstant = SUM,
+        forcePotentialExponent: float = 2,
+        connectorPotentials: ConnectorPotentialArray = None,
+        isotropicTable: tuple = (),
+        kinematicTable: tuple = (),
+        components: tuple = (),
+    ):
         """This method creates a connector plasticity behavior option for a ConnectorSection
         object.
 
@@ -109,70 +119,70 @@ class ConnectorPlasticity(ConnectorBehaviorOption):
                       connectorBehavior.ConnectorPlasticity
                       import odbConnectorBehavior
                       odbConnectorBehavior.ConnectorPlasticity
-        
+
         Parameters
         ----------
         coupling
-            A SymbolicConstant specifying whether or not the behavior is coupled. Possible values 
-            are UNCOUPLED and COUPLED. The default value is UNCOUPLED. 
+            A SymbolicConstant specifying whether or not the behavior is coupled. Possible values
+            are UNCOUPLED and COUPLED. The default value is UNCOUPLED.
         isotropic
-            A Boolean specifying whether isotropic hardening data will be used. The default value is 
-            ON.If *isotropic*=OFF, then *kinematic* must be specified as ON. 
+            A Boolean specifying whether isotropic hardening data will be used. The default value is
+            ON.If *isotropic*=OFF, then *kinematic* must be specified as ON.
         isotropicType
-            A SymbolicConstant specifying the type of isotropic hardening to be specified. Possible 
-            values are TABULAR and EXPONENTIAL_LAW. The default value is TABULAR.This argument is 
-            applicable only if *isotropic*=ON. 
+            A SymbolicConstant specifying the type of isotropic hardening to be specified. Possible
+            values are TABULAR and EXPONENTIAL_LAW. The default value is TABULAR.This argument is
+            applicable only if *isotropic*=ON.
         isotropicTemperature
-            A Boolean specifying whether the isotropic data depend on temperature. The default value 
-            is OFF.This argument is applicable only if *isotropic*=ON. 
+            A Boolean specifying whether the isotropic data depend on temperature. The default value
+            is OFF.This argument is applicable only if *isotropic*=ON.
         isotropicDependencies
-            An Int specifying the number of field variable dependencies for the isotropic data. The 
-            default value is 0.This argument is applicable only if *isotropic*=ON. 
+            An Int specifying the number of field variable dependencies for the isotropic data. The
+            default value is 0.This argument is applicable only if *isotropic*=ON.
         kinematic
-            A Boolean specifying whether kinematic hardening data will be used. The default value is 
-            OFF.If *kinematic*=OFF, then *isotropic* must be specified as ON. 
+            A Boolean specifying whether kinematic hardening data will be used. The default value is
+            OFF.If *kinematic*=OFF, then *isotropic* must be specified as ON.
         kinematicType
-            A SymbolicConstant specifying the type of kinematic hardening to be specified. Possible 
-            values are HALF_CYCLE, STABILIZED, and PARAMETERS. The default value is HALF_CYCLE.This 
-            argument is applicable only if *kinematic*=ON. 
+            A SymbolicConstant specifying the type of kinematic hardening to be specified. Possible
+            values are HALF_CYCLE, STABILIZED, and PARAMETERS. The default value is HALF_CYCLE.This
+            argument is applicable only if *kinematic*=ON.
         kinematicTemperature
-            A Boolean specifying whether the kinematic data depend on temperature. The default value 
-            is OFF.This argument is applicable only if *kinematic*=ON. 
+            A Boolean specifying whether the kinematic data depend on temperature. The default value
+            is OFF.This argument is applicable only if *kinematic*=ON.
         kinematicDependencies
-            An Int specifying the number of field variable dependencies for the kinematic data. The 
-            default value is 0.This argument is applicable only if *kinematic*=ON. 
+            An Int specifying the number of field variable dependencies for the kinematic data. The
+            default value is 0.This argument is applicable only if *kinematic*=ON.
         forcePotentialOperator
-            A SymbolicConstant specifying the contribution operator for the force potential 
-            contributions. Possible values are SUM and MAXIMUM. The default value is SUM.This 
-            argument is applicable only if *coupling*=COUPLED. 
+            A SymbolicConstant specifying the contribution operator for the force potential
+            contributions. Possible values are SUM and MAXIMUM. The default value is SUM.This
+            argument is applicable only if *coupling*=COUPLED.
         forcePotentialExponent
-            A Float specifying the number equal to the inverse of the overall exponent in the force 
-            potential definition. The default value is 2.0.This argument is applicable only if 
-            *coupling*=COUPLED and if *forcePotentialOperator*=SUM. 
+            A Float specifying the number equal to the inverse of the overall exponent in the force
+            potential definition. The default value is 2.0.This argument is applicable only if
+            *coupling*=COUPLED and if *forcePotentialOperator*=SUM.
         connectorPotentials
-            A ConnectorPotentialArray object specifying one ConnectorPotential object for each force 
-            potential contribution. This member can be specified only if *coupling*=COUPLED. 
+            A ConnectorPotentialArray object specifying one ConnectorPotential object for each force
+            potential contribution. This member can be specified only if *coupling*=COUPLED.
         isotropicTable
-            A sequence of sequences of Floats specifying isotropic plasticity properties. Items in 
-            the *isotropicTable* data are described below. This argument is applicable only if 
-            *isotropic*=ON. The default value is an empty sequence. 
+            A sequence of sequences of Floats specifying isotropic plasticity properties. Items in
+            the *isotropicTable* data are described below. This argument is applicable only if
+            *isotropic*=ON. The default value is an empty sequence.
         kinematicTable
-            A sequence of sequences of Floats specifying kinematic plasticity properties. Items in 
-            the *kinematicTable* data are described below. This argument is applicable only if 
-            *kinematic*=ON. The default value is an empty sequence. 
+            A sequence of sequences of Floats specifying kinematic plasticity properties. Items in
+            the *kinematicTable* data are described below. This argument is applicable only if
+            *kinematic*=ON. The default value is an empty sequence.
         components
-            A sequence of Ints specifying the components of relative motion for which the behavior 
-            is defined. Possible values are 1 ≤≤ *components* ≤≤ 6. Only available components can be 
-            specified. This argument can be specified only if *coupling*=UNCOUPLED. The default 
-            value is an empty sequence. 
+            A sequence of Ints specifying the components of relative motion for which the behavior
+            is defined. Possible values are 1 ≤≤ *components* ≤≤ 6. Only available components can be
+            specified. This argument can be specified only if *coupling*=UNCOUPLED. The default
+            value is an empty sequence.
 
         Returns
         -------
-            A ConnectorPlasticity object. 
+            A ConnectorPlasticity object.
 
         Raises
         ------
-            ValueError and TextError. 
+            ValueError and TextError.
         """
         super().__init__()
         pass
@@ -182,6 +192,6 @@ class ConnectorPlasticity(ConnectorBehaviorOption):
 
         Raises
         ------
-            ValueError. 
+            ValueError.
         """
         pass

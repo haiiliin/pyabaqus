@@ -22,13 +22,13 @@ class Spectrum:
         .. code-block:: python
 
             session.Spectrum
-        
+
         Parameters
         ----------
         name
-            A string name for the spectrum. 
+            A string name for the spectrum.
         colors
-            A sequence of strings indicating the colors of the spectrum. 
+            A sequence of strings indicating the colors of the spectrum.
 
         Returns
         -------

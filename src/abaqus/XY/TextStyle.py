@@ -3,9 +3,9 @@ from abaqusConstants import *
 
 class TextStyle:
     """The TextStyle object is used to store the text properties to be used for drawing XY-plot
-    text objects. 
-    TextStyle objects are automatically created when creating a chart or can be created with 
-    methods described below. 
+    text objects.
+    TextStyle objects are automatically created when creating a chart or can be created with
+    methods described below.
 
     Notes
     -----
@@ -40,7 +40,13 @@ class TextStyle:
 
     """
 
-    def __init__(self, color: str = '', show: Boolean = ON, font: str = '', rotationAngle: float = 0):
+    def __init__(
+        self,
+        color: str = "",
+        show: Boolean = ON,
+        font: str = "",
+        rotationAngle: float = 0,
+    ):
         """This method creates a TextStyle.
 
         Notes
@@ -51,48 +57,54 @@ class TextStyle:
 
             session.TextStyle
             xyPlot.TextStyle
-        
+
         Parameters
         ----------
         color
-            A String specifying the color to be used when drawing text with this TextStyle object. 
-            The default value is "White". 
+            A String specifying the color to be used when drawing text with this TextStyle object.
+            The default value is "White".
         show
-            A Boolean specifying whether to draw the text when using this TextStyle object. The 
-            default value is ON. 
+            A Boolean specifying whether to draw the text when using this TextStyle object. The
+            default value is ON.
         font
-            A String specifying the name of the font to be used when drawing text with this 
-            TextStyle object. The default value is "-*-verdana-medium-r-normal-*-*-120-*-*-p-*-*-*". 
+            A String specifying the name of the font to be used when drawing text with this
+            TextStyle object. The default value is "-*-verdana-medium-r-normal-*-*-120-*-*-p-*-*-*".
         rotationAngle
-            A Float specifying the angle in degrees used for displaying the text. The default value 
-            is 0.0. 
+            A Float specifying the angle in degrees used for displaying the text. The default value
+            is 0.0.
 
         Returns
         -------
-            A TextStyle object. 
+            A TextStyle object.
 
         Raises
         ------
-            ColorError 
+            ColorError
         """
         pass
 
-    def setValues(self, color: str = '', show: Boolean = ON, font: str = '', rotationAngle: float = 0):
+    def setValues(
+        self,
+        color: str = "",
+        show: Boolean = ON,
+        font: str = "",
+        rotationAngle: float = 0,
+    ):
         """This method modifies the TextStyle object.
-        
+
         Parameters
         ----------
         color
-            A String specifying the color to be used when drawing text with this TextStyle object. 
-            The default value is "White". 
+            A String specifying the color to be used when drawing text with this TextStyle object.
+            The default value is "White".
         show
-            A Boolean specifying whether to draw the text when using this TextStyle object. The 
-            default value is ON. 
+            A Boolean specifying whether to draw the text when using this TextStyle object. The
+            default value is ON.
         font
-            A String specifying the name of the font to be used when drawing text with this 
-            TextStyle object. The default value is "-*-verdana-medium-r-normal-*-*-120-*-*-p-*-*-*". 
+            A String specifying the name of the font to be used when drawing text with this
+            TextStyle object. The default value is "-*-verdana-medium-r-normal-*-*-120-*-*-p-*-*-*".
         rotationAngle
-            A Float specifying the angle in degrees used for displaying the text. The default value 
-            is 0.0. 
+            A Float specifying the angle in degrees used for displaying the text. The default value
+            is 0.0.
         """
         pass

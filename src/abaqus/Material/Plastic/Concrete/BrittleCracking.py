@@ -5,21 +5,21 @@ from .BrittleShear import BrittleShear
 
 class BrittleCracking:
     """The BrittleCracking object specifies cracking and postcracking properties for the
-    brittle cracking material model. 
+    brittle cracking material model.
 
     Notes
     -----
     This object can be accessed by:
-    
+
     .. code-block:: python
-        
+
         import material
         mdb.models[name].materials[name].brittleCracking
         import odbMaterial
         session.odbs[name].materials[name].brittleCracking
 
     The table data for this object are:
-    
+
     - If *type*=STRAIN the table data specify the following:
         - Remaining direct stress after cracking.
         - Direct cracking strain.
@@ -48,36 +48,41 @@ class BrittleCracking:
 
     """
 
-    # A BrittleShear object. 
+    # A BrittleShear object.
     brittleShear: BrittleShear = BrittleShear(((),))
 
-    # A BrittleFailure object. 
+    # A BrittleFailure object.
     brittleFailure: BrittleFailure = BrittleFailure(((),))
 
-    def __init__(self, table: tuple, temperatureDependency: Boolean = OFF, dependencies: int = 0,
-                 type: SymbolicConstant = STRAIN):
+    def __init__(
+        self,
+        table: tuple,
+        temperatureDependency: Boolean = OFF,
+        dependencies: int = 0,
+        type: SymbolicConstant = STRAIN,
+    ):
         """This method creates a BrittleCracking object.
 
         Notes
         -----
             This function can be accessed by:
-            
+
             .. code-block:: python
-            
+
                 mdb.models[name].materials[name].BrittleCracking
                 session.odbs[name].materials[name].BrittleCracking
-        
+
         Parameters
         ----------
         table
-            A sequence of sequences of Floats specifying the items described below. 
+            A sequence of sequences of Floats specifying the items described below.
         temperatureDependency
-            A Boolean specifying whether the data depend on temperature. The default value is OFF. 
+            A Boolean specifying whether the data depend on temperature. The default value is OFF.
         dependencies
-            An Int specifying the number of field variable dependencies. The default value is 0. 
+            An Int specifying the number of field variable dependencies. The default value is 0.
         type
-            A SymbolicConstant specifying the type of postcracking behavior. Possible values are 
-            STRAIN, DISPLACEMENT, and GFI. The default value is STRAIN. 
+            A SymbolicConstant specifying the type of postcracking behavior. Possible values are
+            STRAIN, DISPLACEMENT, and GFI. The default value is STRAIN.
 
         Returns
         -------
@@ -86,6 +91,5 @@ class BrittleCracking:
         pass
 
     def setValues(self):
-        """This method modifies the BrittleCracking object.
-        """
+        """This method modifies the BrittleCracking object."""
         pass

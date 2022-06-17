@@ -16,17 +16,17 @@ class MaterialOdb(OdbBase):
 
     """
 
-    def Material(self, name: str, description: str = '', materialIdentifier: str = ''):
+    def Material(self, name: str, description: str = "", materialIdentifier: str = ""):
         """This method creates a Material object.
 
         Notes
         -----
             This function can be accessed by:
-            
+
             .. code-block:: python
-            
+
                 session.odbs[name].Material
-        
+
         Parameters
         ----------
         name
@@ -42,5 +42,7 @@ class MaterialOdb(OdbBase):
         -------
             A Material object.
         """
-        self.materials[name] = material = Material(name, description, materialIdentifier)
+        self.materials[name] = material = Material(
+            name, description, materialIdentifier
+        )
         return material

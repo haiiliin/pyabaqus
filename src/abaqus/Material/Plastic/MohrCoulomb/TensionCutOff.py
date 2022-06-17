@@ -3,14 +3,14 @@ from abaqusConstants import *
 
 class TensionCutOff:
     """The TensionCutOff object specifies tension cutoff for different material models for
-    example the Mohr-Coulomb plasticity model. 
+    example the Mohr-Coulomb plasticity model.
 
     Notes
     -----
     This object can be accessed by:
-    
+
     .. code-block:: python
-        
+
         import material
         mdb.models[name].materials[name].mohrCoulombPlasticity.tensionCutOff
         import odbMaterial
@@ -31,30 +31,32 @@ class TensionCutOff:
 
     """
 
-    def __init__(self, table: tuple, temperatureDependency: Boolean = OFF, dependencies: int = 0):
+    def __init__(
+        self, table: tuple, temperatureDependency: Boolean = OFF, dependencies: int = 0
+    ):
         """This method creates a TensionCutOff object.
 
         Notes
         -----
             This function can be accessed by:
-            
+
             .. code-block:: python
-            
+
                 mdb.models[name].materials[name].mohrCoulombPlasticity.TensionCutOff
                 session.odbs[name].materials[name].mohrCoulombPlasticity.TensionCutOff
-        
+
         Parameters
         ----------
         table
-            A sequence of sequences of Floats specifying the items described below. 
+            A sequence of sequences of Floats specifying the items described below.
         temperatureDependency
-            A Boolean specifying whether the data depend on temperature. The default value is OFF. 
+            A Boolean specifying whether the data depend on temperature. The default value is OFF.
         dependencies
-            An Int specifying the number of field variable dependencies. The default value is 0. 
+            An Int specifying the number of field variable dependencies. The default value is 0.
 
         Returns
         -------
-            A TensionCutOff object. 
+            A TensionCutOff object.
 
         Raises
         ------

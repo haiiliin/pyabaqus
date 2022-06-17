@@ -28,11 +28,11 @@ class MeshEdgeArray(list[MeshEdge]):
         .. code-block:: python
 
             mesh.MeshEdgeArray
-        
+
         Parameters
         ----------
         elemEdges
-            A list of MeshEdge objects. 
+            A list of MeshEdge objects.
 
         Returns
         -------
@@ -43,20 +43,20 @@ class MeshEdgeArray(list[MeshEdge]):
     def getSequenceFromMask(self, mask: str):
         """This method returns the objects in the MeshEdgeArray identified using the specified
         *mask*. When large number of objects are involved, this method is highly efficient.
-        
+
         Parameters
         ----------
         mask
-            A String specifying the object or objects. 
+            A String specifying the object or objects.
 
         Returns
         -------
-            A MeshEdgeArray object. 
+            A MeshEdgeArray object.
 
         Raises
         ------
-            - An exception occurs if the resulting sequence is empty. 
-              Error: The mask results in an empty sequence 
+            - An exception occurs if the resulting sequence is empty.
+              Error: The mask results in an empty sequence
         """
         pass
 

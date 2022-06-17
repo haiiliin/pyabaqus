@@ -4,8 +4,8 @@ from .ContactProperty import ContactProperty
 
 class AcousticImpedanceProp(ContactProperty):
     """The AcousticImpedanceProp object is an interaction property that defines the properties
-    referred to by an AcousticImpedance object. 
-    The AcousticImpedanceProp object is derived from the InteractionProperty object. 
+    referred to by an AcousticImpedance object.
+    The AcousticImpedanceProp object is derived from the InteractionProperty object.
 
     Notes
     -----
@@ -22,8 +22,13 @@ class AcousticImpedanceProp(ContactProperty):
 
     """
 
-    def __init__(self, name: str, tableType: SymbolicConstant, table: tuple,
-                 frequencyDependency: Boolean = OFF):
+    def __init__(
+        self,
+        name: str,
+        tableType: SymbolicConstant,
+        table: tuple,
+        frequencyDependency: Boolean = OFF,
+    ):
         """This method creates an AcousticImpedanceProp object.
 
         Notes
@@ -33,24 +38,24 @@ class AcousticImpedanceProp(ContactProperty):
         .. code-block:: python
 
             mdb.models[name].AcousticImpedanceProp
-        
+
         Parameters
         ----------
         name
-            A String specifying the interaction property repository key. 
+            A String specifying the interaction property repository key.
         tableType
-            A SymbolicConstant specifying the type of tabular data to be defined. Possible values 
-            are IMPEDANCE and ADMITTANCE. 
+            A SymbolicConstant specifying the type of tabular data to be defined. Possible values
+            are IMPEDANCE and ADMITTANCE.
         table
-            A sequence of sequences of Floats specifying acoustic impedance properties.If 
-            *tableType*=IMPEDANCE, each sequence of the table data specifies:The real part of the 
-            complex impedance.The imaginary part of the complex impedance.Frequency, if the data 
-            depend on frequency.If *tableType*=ADMITTANCE, each sequence of the table data 
-            specifies:The real part of the complex admittance.The imaginary part of the complex 
-            admittance.Frequency, if the data depend on frequency. 
+            A sequence of sequences of Floats specifying acoustic impedance properties.If
+            *tableType*=IMPEDANCE, each sequence of the table data specifies:The real part of the
+            complex impedance.The imaginary part of the complex impedance.Frequency, if the data
+            depend on frequency.If *tableType*=ADMITTANCE, each sequence of the table data
+            specifies:The real part of the complex admittance.The imaginary part of the complex
+            admittance.Frequency, if the data depend on frequency.
         frequencyDependency
-            A Boolean specifying whether the *table* data depend on frequency. The default value is 
-            OFF. 
+            A Boolean specifying whether the *table* data depend on frequency. The default value is
+            OFF.
 
         Returns
         -------
@@ -61,11 +66,11 @@ class AcousticImpedanceProp(ContactProperty):
 
     def setValues(self, frequencyDependency: Boolean = OFF):
         """This method modifies the AcousticImpedanceProp object.
-        
+
         Parameters
         ----------
         frequencyDependency
-            A Boolean specifying whether the *table* data depend on frequency. The default value is 
-            OFF. 
+            A Boolean specifying whether the *table* data depend on frequency. The default value is
+            OFF.
         """
         pass

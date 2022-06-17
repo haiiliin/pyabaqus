@@ -3,7 +3,7 @@ from .GeometricRestriction import GeometricRestriction
 
 class SizingClusterAreas(GeometricRestriction):
     """The SizingClusterAreas object defines a sizing cluster areas geometric restriction.
-    The SizingClusterAreas object is derived from the GeometricRestriction object. 
+    The SizingClusterAreas object is derived from the GeometricRestriction object.
 
     Notes
     -----
@@ -26,14 +26,14 @@ class SizingClusterAreas(GeometricRestriction):
         .. code-block:: python
 
                       mdb.models[name].optimizationTasks[name].SizingClusterAreas
-        
+
         Parameters
         ----------
         name
-            A String specifying the geometric restriction repository key. 
+            A String specifying the geometric restriction repository key.
         regions
-            Tuple of Region objects specifying the regions to which the geometric restriction is 
-            applied. 
+            Tuple of Region objects specifying the regions to which the geometric restriction is
+            applied.
 
         Returns
         -------
@@ -43,6 +43,5 @@ class SizingClusterAreas(GeometricRestriction):
         pass
 
     def setValues(self):
-        """This method modifies the SizingClusterAreas object.
-        """
+        """This method modifies the SizingClusterAreas object."""
         pass

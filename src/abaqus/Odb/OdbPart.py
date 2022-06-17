@@ -5,11 +5,18 @@ from .OdbSet import OdbSet
 
 
 class OdbPart(OdbPartBase):
-
-    def RigidBody(self, referenceNode: str, position: str = INPUT, isothermal: Boolean = OFF, elset: str = '',
-                  pinNodes: str = '', tieNodes: str = '', analyticSurface: str = ''):
+    def RigidBody(
+        self,
+        referenceNode: str,
+        position: str = INPUT,
+        isothermal: Boolean = OFF,
+        elset: str = "",
+        pinNodes: str = "",
+        tieNodes: str = "",
+        analyticSurface: str = "",
+    ):
         """This method defines an OdbRigidBody on the part object.
-        
+
         Parameters
         ----------
         referenceNode
@@ -48,13 +55,13 @@ class OdbPart(OdbPartBase):
         Notes
         -----
             This function can be accessed by:
-            
+
             .. code-block:: python
-            
+
                 session.odbs[*name*].parts[*name*].NodeSet
                 session.odbs[*name*].rootAssembly.instances[*name*].NodeSet
                 session.odbs[*name*].rootAssembly.NodeSet
-        
+
         Parameters
         ----------
         name

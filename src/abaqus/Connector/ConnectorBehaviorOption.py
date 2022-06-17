@@ -12,9 +12,9 @@ class DerivedComponent:
 
 class ConnectorBehaviorOption:
     """The ConnectorBehaviorOption object is the abstract base type for other
-    ConnectorBehaviorOption objects. The ConnectorBehaviorOption object has no explicit 
-    constructor. The members of the ConnectorBehaviorOption object are common to all objects 
-    derived from the ConnectorBehaviorOption. 
+    ConnectorBehaviorOption objects. The ConnectorBehaviorOption object has no explicit
+    constructor. The members of the ConnectorBehaviorOption object are common to all objects
+    derived from the ConnectorBehaviorOption.
 
     Attributes
     ----------
@@ -79,12 +79,20 @@ class ConnectorBehaviorOption:
     # A TangentialBehavior object
     tangentialBehavior: TangentialBehavior = TangentialBehavior()
 
-    def TangentialBehavior(self, formulation: SymbolicConstant = PENALTY, slipRateDependency: Boolean = OFF,
-                           pressureDependency: Boolean = OFF, temperatureDependency: Boolean = OFF,
-                           dependencies: int = 0, exponentialDecayDefinition: SymbolicConstant = COEFFICIENTS,
-                           shearStressLimit: float = None, maximumElasticSlip: SymbolicConstant = FRACTION,
-                           fraction: float = None, absoluteDistance: float = None,
-                           table: tuple = ()) -> TangentialBehavior:
+    def TangentialBehavior(
+        self,
+        formulation: SymbolicConstant = PENALTY,
+        slipRateDependency: Boolean = OFF,
+        pressureDependency: Boolean = OFF,
+        temperatureDependency: Boolean = OFF,
+        dependencies: int = 0,
+        exponentialDecayDefinition: SymbolicConstant = COEFFICIENTS,
+        shearStressLimit: float = None,
+        maximumElasticSlip: SymbolicConstant = FRACTION,
+        fraction: float = None,
+        absoluteDistance: float = None,
+        table: tuple = (),
+    ) -> TangentialBehavior:
         """This method creates a TangentialBehavior object.
 
         Notes
@@ -95,7 +103,7 @@ class ConnectorBehaviorOption:
 
             mdb.models[name].sections[name].behaviorOptions[i].TangentialBehavior
             session.odbs[name].sections[name].behaviorOptions[i].TangentialBehavior
-        
+
         Parameters
         ----------
         formulation
@@ -136,8 +144,18 @@ class ConnectorBehaviorOption:
             A TangentialBehavior object.
         """
         self.tangentialBehavior = tangentialBehavior = TangentialBehavior(
-            formulation, slipRateDependency, pressureDependency, temperatureDependency, dependencies,
-            exponentialDecayDefinition, shearStressLimit, maximumElasticSlip, fraction, absoluteDistance, table)
+            formulation,
+            slipRateDependency,
+            pressureDependency,
+            temperatureDependency,
+            dependencies,
+            exponentialDecayDefinition,
+            shearStressLimit,
+            maximumElasticSlip,
+            fraction,
+            absoluteDistance,
+            table,
+        )
         return tangentialBehavior
 
     def DerivedComponent(self) -> DerivedComponent:
@@ -163,11 +181,18 @@ class ConnectorBehaviorOption:
         self.derivedComponent = derivedComponent = DerivedComponent()
         return derivedComponent
 
-    def ConnectorOptions(self, useBehRegSettings: Boolean = ON, regularize: Boolean = ON,
-                         defaultTolerance: Boolean = ON, regularization: float = 0,
-                         defaultRateFactor: Boolean = ON, rateFactor: float = 0,
-                         interpolation: SymbolicConstant = LINEAR, useBehExtSettings: Boolean = ON,
-                         extrapolation: SymbolicConstant = CONSTANT) -> ConnectorOptions:
+    def ConnectorOptions(
+        self,
+        useBehRegSettings: Boolean = ON,
+        regularize: Boolean = ON,
+        defaultTolerance: Boolean = ON,
+        regularization: float = 0,
+        defaultRateFactor: Boolean = ON,
+        rateFactor: float = 0,
+        interpolation: SymbolicConstant = LINEAR,
+        useBehExtSettings: Boolean = ON,
+        extrapolation: SymbolicConstant = CONSTANT,
+    ) -> ConnectorOptions:
         """This method creates a connector options object to be used in conjunction with an
         allowable connector behavior option, derived component term, or connector section.
 
@@ -179,7 +204,7 @@ class ConnectorBehaviorOption:
 
             mdb.models[name].sections[name].behaviorOptions[i].TangentialBehavior
             session.odbs[name].sections[name].behaviorOptions[i].TangentialBehavior
-        
+
         Parameters
         ----------
         useBehRegSettings
@@ -230,7 +255,15 @@ class ConnectorBehaviorOption:
         ------
             ValueError and TextError.
         """
-        self.options = connectorOptions = ConnectorOptions(useBehRegSettings, regularize, defaultTolerance,
-                                                           regularization, defaultRateFactor, rateFactor, interpolation,
-                                                           useBehExtSettings, extrapolation)
+        self.options = connectorOptions = ConnectorOptions(
+            useBehRegSettings,
+            regularize,
+            defaultTolerance,
+            regularization,
+            defaultRateFactor,
+            rateFactor,
+            interpolation,
+            useBehExtSettings,
+            extrapolation,
+        )
         return connectorOptions

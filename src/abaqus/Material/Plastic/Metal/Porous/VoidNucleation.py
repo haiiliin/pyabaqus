@@ -7,16 +7,16 @@ class VoidNucleation:
     Notes
     -----
     This object can be accessed by:
-    
+
     .. code-block:: python
-        
+
         import material
         mdb.models[name].materials[name].porousMetalPlasticity.voidNucleation
         import odbMaterial
         session.odbs[name].materials[name].porousMetalPlasticity.voidNucleation
 
     The table data for this object are:
-    
+
     - εN, the mean value of the nucleation-strain normal distribution.
     - sN, the standard deviation of the nucleation-strain normal distribution.
     - fN, the volume fraction of nucleating voids.
@@ -31,7 +31,9 @@ class VoidNucleation:
 
     """
 
-    def __init__(self, table: tuple, temperatureDependency: Boolean = OFF, dependencies: int = 0):
+    def __init__(
+        self, table: tuple, temperatureDependency: Boolean = OFF, dependencies: int = 0
+    ):
         """This method creates a VoidNucleation object.
 
         Notes

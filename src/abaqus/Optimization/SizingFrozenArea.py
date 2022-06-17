@@ -4,7 +4,7 @@ from ..Region.Region import Region
 
 class SizingFrozenArea(GeometricRestriction):
     """The SizingFrozenArea object defines a sizing frozen area geometric restriction.
-    The SizingFrozenArea object is derived from the GeometricRestriction object. 
+    The SizingFrozenArea object is derived from the GeometricRestriction object.
 
     Notes
     -----
@@ -27,13 +27,13 @@ class SizingFrozenArea(GeometricRestriction):
         .. code-block:: python
 
                       mdb.models[name].optimizationTasks[name].SizingFrozenArea
-        
+
         Parameters
         ----------
         name
-            A String specifying the geometric restriction repository key. 
+            A String specifying the geometric restriction repository key.
         region
-            A Region object specifying the region to which the geometric restriction is applied. 
+            A Region object specifying the region to which the geometric restriction is applied.
 
         Returns
         -------
@@ -43,6 +43,5 @@ class SizingFrozenArea(GeometricRestriction):
         pass
 
     def setValues(self):
-        """This method modifies the SizingFrozenArea object.
-        """
+        """This method modifies the SizingFrozenArea object."""
         pass

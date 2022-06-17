@@ -3,8 +3,8 @@ from .ContactProperty import ContactProperty
 
 class ActuatorSensorProp(ContactProperty):
     """The ActuatorSensorProp object is an interaction property that defines the properties
-    referred to by an ActuatorSensor object. 
-    The ActuatorSensorProp object is derived from the InteractionProperty object. 
+    referred to by an ActuatorSensor object.
+    The ActuatorSensorProp object is derived from the InteractionProperty object.
 
     Notes
     -----
@@ -21,7 +21,9 @@ class ActuatorSensorProp(ContactProperty):
 
     """
 
-    def __init__(self, name: str, realProperties: tuple = (), integerProperties: tuple = ()):
+    def __init__(
+        self, name: str, realProperties: tuple = (), integerProperties: tuple = ()
+    ):
         """This method creates an ActuatorSensorProp object.
 
         Notes
@@ -31,17 +33,17 @@ class ActuatorSensorProp(ContactProperty):
         .. code-block:: python
 
             mdb.models[name].ActuatorSensorProp
-        
+
         Parameters
         ----------
         name
-            A String specifying the interaction property repository key. 
+            A String specifying the interaction property repository key.
         realProperties
-            A sequence of Floats specifying the PROPS array used by user subroutine UEL. The default 
-            value is an empty sequence. 
+            A sequence of Floats specifying the PROPS array used by user subroutine UEL. The default
+            value is an empty sequence.
         integerProperties
-            A sequence of Ints specifying the JPROPS array used by user subroutine UEL. The default 
-            value is an empty sequence. 
+            A sequence of Ints specifying the JPROPS array used by user subroutine UEL. The default
+            value is an empty sequence.
 
         Returns
         -------
@@ -52,14 +54,14 @@ class ActuatorSensorProp(ContactProperty):
 
     def setValues(self, realProperties: tuple = (), integerProperties: tuple = ()):
         """This method modifies the ActuatorSensorProp object.
-        
+
         Parameters
         ----------
         realProperties
-            A sequence of Floats specifying the PROPS array used by user subroutine UEL. The default 
-            value is an empty sequence. 
+            A sequence of Floats specifying the PROPS array used by user subroutine UEL. The default
+            value is an empty sequence.
         integerProperties
-            A sequence of Ints specifying the JPROPS array used by user subroutine UEL. The default 
-            value is an empty sequence. 
+            A sequence of Ints specifying the JPROPS array used by user subroutine UEL. The default
+            value is an empty sequence.
         """
         pass

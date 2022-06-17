@@ -66,50 +66,58 @@ class MagneticPermeability:
 
     """
 
-    def __init__(self, table: tuple, table2: tuple, table3: tuple, type: SymbolicConstant = ISOTROPIC,
-                 frequencyDependency: Boolean = OFF, temperatureDependency: Boolean = OFF,
-                 dependencies: int = 0, nonlinearBH: Boolean = OFF):
+    def __init__(
+        self,
+        table: tuple,
+        table2: tuple,
+        table3: tuple,
+        type: SymbolicConstant = ISOTROPIC,
+        frequencyDependency: Boolean = OFF,
+        temperatureDependency: Boolean = OFF,
+        dependencies: int = 0,
+        nonlinearBH: Boolean = OFF,
+    ):
         """This method creates a MagneticPermeability object.
 
         Notes
         -----
             This function can be accessed by:
-            
+
             .. code-block:: python
-            
+
                 mdb.models[name].materials[name].MagneticPermeability
                 session.odbs[name].materials[name].MagneticPermeability
-        
+
         Parameters
         ----------
         table
-            A sequence of sequences of Floats specifying the items described below in “Table data.” 
-            If *type*=ORTHOTROPIC and nonlinearBH=ON, the data specified in the *table* is for the 
-            first direction and *table2* and *table3* must be specified. 
+            A sequence of sequences of Floats specifying the items described below in “Table data.”
+            If *type*=ORTHOTROPIC and nonlinearBH=ON, the data specified in the *table* is for the
+            first direction and *table2* and *table3* must be specified.
         table2
-            A sequence of sequences of Floats specifying the items described below in “Table data” 
-            in the second direction. *table2* must be specified only if *type*=ORTHOTROPIC and 
-            nonlinearBH=ON. 
+            A sequence of sequences of Floats specifying the items described below in “Table data”
+            in the second direction. *table2* must be specified only if *type*=ORTHOTROPIC and
+            nonlinearBH=ON.
         table3
-            A sequence of sequences of Floats specifying the items described below in “Table data” 
-            in the third direction. *table3* must be specified only if *type*=ORTHOTROPIC and 
-            nonlinearBH=ON. 
+            A sequence of sequences of Floats specifying the items described below in “Table data”
+            in the third direction. *table3* must be specified only if *type*=ORTHOTROPIC and
+            nonlinearBH=ON.
         type
-            A SymbolicConstant specifying the type of magnetic permeability. Possible values are 
-            ISOTROPIC, ORTHOTROPIC, and ANISOTROPIC. The default value is ISOTROPIC. 
+            A SymbolicConstant specifying the type of magnetic permeability. Possible values are
+            ISOTROPIC, ORTHOTROPIC, and ANISOTROPIC. The default value is ISOTROPIC.
         frequencyDependency
-            A Boolean specifying whether the data depend on frequency. The default value is OFF. 
+            A Boolean specifying whether the data depend on frequency. The default value is OFF.
         temperatureDependency
-            A Boolean specifying whether the data depend on temperature. The default value is OFF. 
+            A Boolean specifying whether the data depend on temperature. The default value is OFF.
         dependencies
-            An Int specifying the number of field variable dependencies. The default value is 0. 
+            An Int specifying the number of field variable dependencies. The default value is 0.
         nonlinearBH
-            A Boolean specifying whether the magnetic behavior is nonlinear and available in tabular 
-            form of magnetic flux density versus magnetic field values. The default value is OFF. 
+            A Boolean specifying whether the magnetic behavior is nonlinear and available in tabular
+            form of magnetic flux density versus magnetic field values. The default value is OFF.
 
         Returns
         -------
-            A MagneticPermeability object. 
+            A MagneticPermeability object.
 
         Raises
         ------

@@ -50,41 +50,48 @@ class Expansion:
 
     """
 
-    def __init__(self, type: SymbolicConstant = ISOTROPIC, userSubroutine: Boolean = OFF, zero: float = 0,
-                 temperatureDependency: Boolean = OFF, dependencies: int = 0, table: tuple = ()):
+    def __init__(
+        self,
+        type: SymbolicConstant = ISOTROPIC,
+        userSubroutine: Boolean = OFF,
+        zero: float = 0,
+        temperatureDependency: Boolean = OFF,
+        dependencies: int = 0,
+        table: tuple = (),
+    ):
         """This method creates an Expansion object.
 
         Notes
         -----
             This function can be accessed by:
-            
+
             .. code-block:: python
-            
+
                 mdb.models[name].materials[name].Expansion
                 session.odbs[name].materials[name].Expansion
-        
+
         Parameters
         ----------
         type
-            A SymbolicConstant specifying the type of expansion. Possible values are ISOTROPIC, 
-            ORTHOTROPIC, ANISOTROPIC, and SHORT_FIBER. The default value is ISOTROPIC. 
+            A SymbolicConstant specifying the type of expansion. Possible values are ISOTROPIC,
+            ORTHOTROPIC, ANISOTROPIC, and SHORT_FIBER. The default value is ISOTROPIC.
         userSubroutine
-            A Boolean specifying whether a user subroutine is used to define the increments of 
-            thermal strain. The default value is OFF. 
+            A Boolean specifying whether a user subroutine is used to define the increments of
+            thermal strain. The default value is OFF.
         zero
-            A Float specifying the value of θ0 if the thermal expansion is temperature-dependent or 
-            field-variable-dependent. The default value is 0.0. 
+            A Float specifying the value of θ0 if the thermal expansion is temperature-dependent or
+            field-variable-dependent. The default value is 0.0.
         temperatureDependency
-            A Boolean specifying whether the data depend on temperature. The default value is OFF. 
+            A Boolean specifying whether the data depend on temperature. The default value is OFF.
         dependencies
-            An Int specifying the number of field variable dependencies. The default value is 0. 
+            An Int specifying the number of field variable dependencies. The default value is 0.
         table
-            A sequence of sequences of Floats specifying the items described below. The default 
-            value is an empty sequence.This argument is required only if *type* is not USER. 
+            A sequence of sequences of Floats specifying the items described below. The default
+            value is an empty sequence.This argument is required only if *type* is not USER.
 
         Returns
         -------
-            An Expansion object. 
+            An Expansion object.
 
         Raises
         ------

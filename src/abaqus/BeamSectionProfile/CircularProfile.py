@@ -1,9 +1,10 @@
 from .Profile import Profile
 
+
 class CircularProfile(Profile):
 
-    """The CircularProfile object defines the properties of a solid circular profile. 
-    The CircularProfile object is derived from the Profile object. 
+    """The CircularProfile object defines the properties of a solid circular profile.
+    The CircularProfile object is derived from the Profile object.
 
     Notes
     -----
@@ -33,24 +34,24 @@ class CircularProfile(Profile):
 
             mdb.models[name].CircularProfile
             session.odbs[name].CircularProfile
-        
+
         Parameters
         ----------
         name
-            A String specifying the repository key. 
+            A String specifying the repository key.
         r
-            A positive Float specifying the *r* dimension (outer radius) of the circular profile. 
-            For more information, see [Beam cross-section 
-            library](https://help.3ds.com/2021/English/DSSIMULIA_Established/SIMACAEELMRefMap/simaelm-c-beamcrosssectlib.htm?ContextScope=all). 
+            A positive Float specifying the *r* dimension (outer radius) of the circular profile.
+            For more information, see [Beam cross-section
+            library](https://help.3ds.com/2021/English/DSSIMULIA_Established/SIMACAEELMRefMap/simaelm-c-beamcrosssectlib.htm?ContextScope=all).
 
         Returns
         -------
-            A CircularProfile object. 
+            A CircularProfile object.
 
         Raises
         ------
         RangeError
-            
+
         """
         super().__init__()
         pass
@@ -61,7 +62,6 @@ class CircularProfile(Profile):
         Raises
         ------
         RangeError
-            
+
         """
         pass
-

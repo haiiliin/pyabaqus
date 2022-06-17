@@ -1,3 +1,2 @@
-
 class EventSeriesData:
     pass

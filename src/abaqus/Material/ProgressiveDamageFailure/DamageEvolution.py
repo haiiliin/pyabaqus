@@ -3,14 +3,14 @@ from abaqusConstants import *
 
 class DamageEvolution:
     """The DamageEvolution object specifies material properties to define the evolution of
-    damage. 
+    damage.
 
     Notes
     -----
     This object can be accessed by:
-    
+
     .. code-block:: python
-        
+
         import material
         mdb.models[name].materials[name].ductileDamageInitiation.damageEvolution
         mdb.models[name].materials[name].fldDamageInitiation.damageEvolution
@@ -43,7 +43,7 @@ class DamageEvolution:
         session.odbs[name].materials[name].shearDamageInitiation.damageEvolution
 
     The table data for this object are:
-    
+
     - If *type*=DISPLACEMENT, and *softening*=LINEAR, and *mixedModeBehavior*=MODE_INDEPENDENT, the table data specify the following:
         - Equivalent total or Plastic displacement at failure, measured from the time of damage initiation.
         - Temperature, if the data depend on temperature.
@@ -142,11 +142,18 @@ class DamageEvolution:
 
     """
 
-    def __init__(self, type: SymbolicConstant, table: tuple, degradation: SymbolicConstant = MAXIMUM,
-                 temperatureDependency: Boolean = OFF, dependencies: int = 0,
-                 mixedModeBehavior: SymbolicConstant = MODE_INDEPENDENT,
-                 modeMixRatio: SymbolicConstant = ENERGY, power: float = None,
-                 softening: SymbolicConstant = LINEAR):
+    def __init__(
+        self,
+        type: SymbolicConstant,
+        table: tuple,
+        degradation: SymbolicConstant = MAXIMUM,
+        temperatureDependency: Boolean = OFF,
+        dependencies: int = 0,
+        mixedModeBehavior: SymbolicConstant = MODE_INDEPENDENT,
+        modeMixRatio: SymbolicConstant = ENERGY,
+        power: float = None,
+        softening: SymbolicConstant = LINEAR,
+    ):
         """This method creates a DamageEvolution object.
 
         Notes

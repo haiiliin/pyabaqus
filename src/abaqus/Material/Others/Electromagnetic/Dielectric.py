@@ -52,32 +52,38 @@ class Dielectric:
 
     """
 
-    def __init__(self, table: tuple, type: SymbolicConstant = ISOTROPIC, frequencyDependency: Boolean = OFF,
-                 temperatureDependency: Boolean = OFF, dependencies: int = 0):
+    def __init__(
+        self,
+        table: tuple,
+        type: SymbolicConstant = ISOTROPIC,
+        frequencyDependency: Boolean = OFF,
+        temperatureDependency: Boolean = OFF,
+        dependencies: int = 0,
+    ):
         """This method creates a Dielectric object.
 
         Notes
         -----
             This function can be accessed by:
-            
+
             .. code-block:: python
-            
+
                 mdb.models[name].materials[name].Dielectric
                 session.odbs[name].materials[name].Dielectric
-        
+
         Parameters
         ----------
         table
-            A sequence of sequences of Floats specifying the items described below. 
+            A sequence of sequences of Floats specifying the items described below.
         type
-            A SymbolicConstant specifying the dielectric behavior. Possible values are ISOTROPIC, 
-            ORTHOTROPIC, and ANISOTROPIC. The default value is ISOTROPIC. 
+            A SymbolicConstant specifying the dielectric behavior. Possible values are ISOTROPIC,
+            ORTHOTROPIC, and ANISOTROPIC. The default value is ISOTROPIC.
         frequencyDependency
-            A Boolean specifying whether the data depend on frequency. The default value is OFF. 
+            A Boolean specifying whether the data depend on frequency. The default value is OFF.
         temperatureDependency
-            A Boolean specifying whether the data depend on temperature. The default value is OFF. 
+            A Boolean specifying whether the data depend on temperature. The default value is OFF.
         dependencies
-            An Int specifying the number of field variable dependencies. The default value is 0. 
+            An Int specifying the number of field variable dependencies. The default value is 0.
 
         Returns
         -------
@@ -86,6 +92,5 @@ class Dielectric:
         pass
 
     def setValues(self):
-        """This method modifies the Dielectric object.
-        """
+        """This method modifies the Dielectric object."""
         pass

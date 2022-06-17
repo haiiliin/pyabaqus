@@ -4,8 +4,8 @@ from ..Region.Region import Region
 
 class FluidCavityPressure(PredefinedField):
     """The FluidCavityPressure object stores the data for initial fluid cavity pressures. The
-    base class*region* argument can not be specifed with this object. 
-    The FluidCavityPressure object is derived from the PredefinedField object. 
+    base class*region* argument can not be specifed with this object.
+    The FluidCavityPressure object is derived from the PredefinedField object.
 
     Attributes
     ----------
@@ -27,7 +27,7 @@ class FluidCavityPressure(PredefinedField):
 
     """
 
-    # A Region object on which the *fluidCavity* interaction is specified. 
+    # A Region object on which the *fluidCavity* interaction is specified.
     region: Region = Region()
 
     def __init__(self, name: str, fluidCavity: str, fluidPressure: float):
@@ -40,15 +40,15 @@ class FluidCavityPressure(PredefinedField):
         .. code-block:: python
 
             mdb.models[name].FluidCavityPressure
-        
+
         Parameters
         ----------
         name
-            A String specifying the repository key. 
+            A String specifying the repository key.
         fluidCavity
-            A String specifying the name of a Fluid Cavity Interaction. 
+            A String specifying the name of a Fluid Cavity Interaction.
         fluidPressure
-            A Float specifying the initial fluid pressure. 
+            A Float specifying the initial fluid pressure.
 
         Returns
         -------
@@ -58,6 +58,5 @@ class FluidCavityPressure(PredefinedField):
         pass
 
     def setValues(self):
-        """This method modifies the FluidCavityPressure object.
-        """
+        """This method modifies the FluidCavityPressure object."""
         pass

@@ -28,8 +28,8 @@ class AdjustPoints(Constraint):
 
     """
 
-    # A Boolean specifying whether the constraint is suppressed or not. The default value is 
-    # OFF. 
+    # A Boolean specifying whether the constraint is suppressed or not. The default value is
+    # OFF.
     suppressed: Boolean = OFF
 
     def __init__(self, name: str, surface: Region, controlPoints: Region):
@@ -42,15 +42,15 @@ class AdjustPoints(Constraint):
         .. code-block:: python
 
             mdb.models[name].AdjustPoints
-        
+
         Parameters
         ----------
         name
-            A String specifying the constraint repository key. 
+            A String specifying the constraint repository key.
         surface
-            A Region object specifying the surface to which the *controlPoints* are adjusted. 
+            A Region object specifying the surface to which the *controlPoints* are adjusted.
         controlPoints
-            A Region object specifying the constraint control points. 
+            A Region object specifying the constraint control points.
 
         Returns
         -------
@@ -60,6 +60,5 @@ class AdjustPoints(Constraint):
         pass
 
     def setValues(self):
-        """This method modifies the AdjustPoints object.
-        """
+        """This method modifies the AdjustPoints object."""
         pass

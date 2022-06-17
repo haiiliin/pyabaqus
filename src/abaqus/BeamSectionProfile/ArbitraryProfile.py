@@ -1,9 +1,10 @@
 from .Profile import Profile
 
+
 class ArbitraryProfile(Profile):
 
-    """The ArbitraryProfile object defines the properties of an arbitrary profile. 
-    The ArbitraryProfile object is derived from the Profile object. 
+    """The ArbitraryProfile object defines the properties of an arbitrary profile.
+    The ArbitraryProfile object is derived from the Profile object.
 
     Notes
     -----
@@ -42,22 +43,22 @@ class ArbitraryProfile(Profile):
 
             mdb.models[name].ArbitraryProfile
             session.odbs[name].ArbitraryProfile
-        
+
         Parameters
         ----------
         name
-            A String specifying the repository key. 
+            A String specifying the repository key.
         table
-            A sequence of sequences of Floats specifying the items described below. 
+            A sequence of sequences of Floats specifying the items described below.
 
         Returns
         -------
-            An ArbitraryProfile object. 
+            An ArbitraryProfile object.
 
         Raises
         ------
         RangeError
-            
+
         """
         super().__init__()
         pass
@@ -68,7 +69,6 @@ class ArbitraryProfile(Profile):
         Raises
         ------
         RangeError
-            
+
         """
         pass
-

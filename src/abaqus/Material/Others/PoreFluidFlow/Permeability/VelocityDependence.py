@@ -1,6 +1,6 @@
 class VelocityDependence:
     """The VelocityDependence object specifies the dependence of the permeability of a material
-    on the velocity of fluid flow. 
+    on the velocity of fluid flow.
 
     Notes
     -----
@@ -30,20 +30,20 @@ class VelocityDependence:
         Notes
         -----
             This function can be accessed by:
-            
+
             .. code-block:: python
-            
+
                 mdb.models[name].materials[name].permeability.VelocityDependence
                 session.odbs[name].materials[name].permeability.VelocityDependence
-        
+
         Parameters
         ----------
         table
-            A sequence of sequences of Floats specifying the items described below. 
+            A sequence of sequences of Floats specifying the items described below.
 
         Returns
         -------
-            A VelocityDependence object. 
+            A VelocityDependence object.
 
         Raises
         ------

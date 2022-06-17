@@ -5,8 +5,8 @@ from ..Mesh.MeshFace import MeshFace
 
 
 class Feature(FeatureBase):
-    """The following commands operate on Feature objects. For more information about the 
-    Feature object, see Feature object. 
+    """The following commands operate on Feature objects. For more information about the
+    Feature object, see Feature object.
 
     Notes
     -----
@@ -19,13 +19,22 @@ class Feature(FeatureBase):
     """
 
     @staticmethod
-    def AttachmentLines(name: str, points: int, sourceFaces: tuple[Face], sourceElementFaces: tuple[MeshFace],
-                        targetFaces: tuple[Face], targetElementFaces: tuple[MeshFace],
-                        projectionMethod: SymbolicConstant = PROJECT_BY_PROXIMITY,
-                        projectionDirStartPt: float = None, projectionDirEndPt: float = None,
-                        sourceToTargetProjMethod: SymbolicConstant = PROJECT_BY_NUMBER,
-                        numProjections: str = '', projectionDistance: str = '',
-                        flipSourceToTargetDirection: Boolean = OFF, setName: str = '') -> 'Feature':
+    def AttachmentLines(
+        name: str,
+        points: int,
+        sourceFaces: tuple[Face],
+        sourceElementFaces: tuple[MeshFace],
+        targetFaces: tuple[Face],
+        targetElementFaces: tuple[MeshFace],
+        projectionMethod: SymbolicConstant = PROJECT_BY_PROXIMITY,
+        projectionDirStartPt: float = None,
+        projectionDirEndPt: float = None,
+        sourceToTargetProjMethod: SymbolicConstant = PROJECT_BY_NUMBER,
+        numProjections: str = "",
+        projectionDistance: str = "",
+        flipSourceToTargetDirection: Boolean = OFF,
+        setName: str = "",
+    ) -> "Feature":
         """This method creates a Feature object by creating attachment lines between the given set
         of source and target faces. The given points are first projected onto the source faces
         using the specified projection method. The points are then projected normal to the
@@ -41,7 +50,7 @@ class Feature(FeatureBase):
         .. code-block:: python
 
             mdb.models[name].rootAssembly.AttachmentLines
-        
+
         Parameters
         ----------
         name
@@ -98,7 +107,7 @@ class Feature(FeatureBase):
         return Feature()
 
     @staticmethod
-    def Coaxial(movableAxis: str, fixedAxis: str, flip: Boolean) -> 'Feature':
+    def Coaxial(movableAxis: str, fixedAxis: str, flip: Boolean) -> "Feature":
         """This method moves an instance so that its selected face is coaxial with the selected
         face of a fixed instance.
 
@@ -109,28 +118,28 @@ class Feature(FeatureBase):
         .. code-block:: python
 
             mdb.models[name].rootAssembly.AttachmentLines
-        
+
         Parameters
         ----------
         movableAxis
-            A cylindrical or conical Face on the part instance to be moved. 
+            A cylindrical or conical Face on the part instance to be moved.
         fixedAxis
-            A cylindrical or conical Face on the part instance that remains fixed. 
+            A cylindrical or conical Face on the part instance that remains fixed.
         flip
-            A Boolean specifying whether the axes are forward aligned (OFF) or reverse aligned (ON). 
+            A Boolean specifying whether the axes are forward aligned (OFF) or reverse aligned (ON).
 
         Returns
         -------
-            A Feature object. 
+            A Feature object.
 
         Raises
         ------
-            AbaqusException. 
+            AbaqusException.
         """
         return Feature()
 
     @staticmethod
-    def CoincidentPoint(movablePoint: str, fixedPoint: str) -> 'Feature':
+    def CoincidentPoint(movablePoint: str, fixedPoint: str) -> "Feature":
         """This method moves an instance so that a specified point is coincident with a specified
         point of a fixed instance.
 
@@ -141,15 +150,15 @@ class Feature(FeatureBase):
         .. code-block:: python
 
             mdb.models[name].rootAssembly.AttachmentLines
-        
+
         Parameters
         ----------
         movablePoint
             A ConstrainedSketchVertex, a Datum point, or a ReferencePoint or a mesh node from an orphan mesh on the
-            part instance to be moved. 
+            part instance to be moved.
         fixedPoint
             A ConstrainedSketchVertex, a Datum point, or a ReferencePoint or a mesh node from an orphan mesh on the
-            part instance to remain fixed. 
+            part instance to remain fixed.
 
         Returns
         -------
@@ -159,7 +168,9 @@ class Feature(FeatureBase):
         return Feature()
 
     @staticmethod
-    def EdgeToEdge(movableAxis: str, fixedAxis: str, flip: Boolean, clearance: float) -> 'Feature':
+    def EdgeToEdge(
+        movableAxis: str, fixedAxis: str, flip: Boolean, clearance: float
+    ) -> "Feature":
         """This method moves an instance so that its edge is parallel to an edge of a fixed
         instance.
 
@@ -170,34 +181,36 @@ class Feature(FeatureBase):
         .. code-block:: python
 
             mdb.models[name].rootAssembly.AttachmentLines
-        
+
         Parameters
         ----------
         movableAxis
-            A straight Edge, a Datum axis, or an element edge from an orphan mesh on the part 
-            instance to be moved. 
+            A straight Edge, a Datum axis, or an element edge from an orphan mesh on the part
+            instance to be moved.
         fixedAxis
-            A straight Edge, a Datum axis, or an element edge from an orphan mesh on the part 
-            instance to remain fixed. 
+            A straight Edge, a Datum axis, or an element edge from an orphan mesh on the part
+            instance to remain fixed.
         flip
-            A Boolean specifying whether the edges are forward aligned (OFF) or reverse aligned 
-            (ON). 
+            A Boolean specifying whether the edges are forward aligned (OFF) or reverse aligned
+            (ON).
         clearance
-            A Float specifying the distance between the two edges (for two-dimensional and 
-            axisymmetric instances only). 
+            A Float specifying the distance between the two edges (for two-dimensional and
+            axisymmetric instances only).
 
         Returns
         -------
-            A Feature Object. 
+            A Feature Object.
 
         Raises
         ------
-            AbaqusException. 
+            AbaqusException.
         """
         return Feature()
 
     @staticmethod
-    def FaceToFace(movablePlane: str, fixedPlane: str, flip: Boolean, clearance: float) -> 'Feature':
+    def FaceToFace(
+        movablePlane: str, fixedPlane: str, flip: Boolean, clearance: float
+    ) -> "Feature":
         """This method moves an instance so that its face is coincident with a face of a fixed
         instance.
 
@@ -208,33 +221,33 @@ class Feature(FeatureBase):
         .. code-block:: python
 
             mdb.models[name].rootAssembly.AttachmentLines
-        
+
         Parameters
         ----------
         movablePlane
-            A planar face, a Datum plane, or a face from an orphan mesh on the part instance to be 
-            moved. 
+            A planar face, a Datum plane, or a face from an orphan mesh on the part instance to be
+            moved.
         fixedPlane
-            A planar face, a Datum plane, or a face from an orphan mesh on the part instance to 
-            remain fixed. 
+            A planar face, a Datum plane, or a face from an orphan mesh on the part instance to
+            remain fixed.
         flip
-            A Boolean specifying whether the normals to the faces are forward aligned (OFF) or 
-            reverse aligned (ON). 
+            A Boolean specifying whether the normals to the faces are forward aligned (OFF) or
+            reverse aligned (ON).
         clearance
-            A Float specifying the distance between the two faces. 
+            A Float specifying the distance between the two faces.
 
         Returns
         -------
-            A Feature Object. 
+            A Feature Object.
 
         Raises
         ------
-            AbaqusException. 
+            AbaqusException.
         """
         return Feature()
 
     @staticmethod
-    def ParallelCsys(movableCsys: str, fixedCsys: str) -> 'Feature':
+    def ParallelCsys(movableCsys: str, fixedCsys: str) -> "Feature":
         """This method moves an instance so that its Datum coordinate system is parallel to a Datum
         coordinate system of a fixed instance.
 
@@ -245,26 +258,26 @@ class Feature(FeatureBase):
         .. code-block:: python
 
             mdb.models[name].rootAssembly.AttachmentLines
-        
+
         Parameters
         ----------
         movableCsys
-            A Datum coordinate system on the part instance to be moved. 
+            A Datum coordinate system on the part instance to be moved.
         fixedCsys
-            A Datum coordinate system on the part instance to remain fixed. 
+            A Datum coordinate system on the part instance to remain fixed.
 
         Returns
         -------
-            A Feature object. 
+            A Feature object.
 
         Raises
         ------
-            AbaqusException. 
+            AbaqusException.
         """
         return Feature()
 
     @staticmethod
-    def ParallelEdge(movableAxis: str, fixedAxis: str, flip: Boolean) -> 'Feature':
+    def ParallelEdge(movableAxis: str, fixedAxis: str, flip: Boolean) -> "Feature":
         """This method moves an instance so that its edge is parallel to an edge of a fixed
         instance.
 
@@ -275,31 +288,31 @@ class Feature(FeatureBase):
         .. code-block:: python
 
             mdb.models[name].rootAssembly.AttachmentLines
-        
+
         Parameters
         ----------
         movableAxis
-            A straight Edge, a Datum axis, or an element edge from an orphan mesh on the part 
-            instance to be moved. 
+            A straight Edge, a Datum axis, or an element edge from an orphan mesh on the part
+            instance to be moved.
         fixedAxis
-            A straight Edge, a Datum axis, or an element edge from an orphan mesh on the part 
-            instance to remain fixed. 
+            A straight Edge, a Datum axis, or an element edge from an orphan mesh on the part
+            instance to remain fixed.
         flip
-            A Boolean specifying whether the edges are forward aligned (OFF) or reverse aligned 
-            (ON). 
+            A Boolean specifying whether the edges are forward aligned (OFF) or reverse aligned
+            (ON).
 
         Returns
         -------
-            A Feature object. 
+            A Feature object.
 
         Raises
         ------
-            AbaqusException. 
+            AbaqusException.
         """
         return Feature()
 
     @staticmethod
-    def ParallelFace(movablePlane: str, fixedPlane: str, flip: Boolean) -> 'Feature':
+    def ParallelFace(movablePlane: str, fixedPlane: str, flip: Boolean) -> "Feature":
         """This method moves an instance so that its face is parallel to a face of a fixed
         instance.
 
@@ -310,7 +323,7 @@ class Feature(FeatureBase):
         .. code-block:: python
 
             mdb.models[name].rootAssembly.AttachmentLines
-        
+
         Parameters
         ----------
         movablePlane

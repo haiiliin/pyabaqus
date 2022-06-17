@@ -54,43 +54,49 @@ class Diffusivity:
 
     """
 
-    # A PressureEffect object. 
+    # A PressureEffect object.
     pressureEffect: PressureEffect = PressureEffect(((),))
 
-    # A SoretEffect object. 
+    # A SoretEffect object.
     soretEffect: SoretEffect = SoretEffect(((),))
 
-    def __init__(self, table: tuple, type: SymbolicConstant = ISOTROPIC, law: SymbolicConstant = GENERAL,
-                 temperatureDependency: Boolean = OFF, dependencies: int = 0):
+    def __init__(
+        self,
+        table: tuple,
+        type: SymbolicConstant = ISOTROPIC,
+        law: SymbolicConstant = GENERAL,
+        temperatureDependency: Boolean = OFF,
+        dependencies: int = 0,
+    ):
         """This method creates a Diffusivity object.
 
         Notes
         -----
             This function can be accessed by:
-            
+
             .. code-block:: python
-            
+
                 mdb.models[name].materials[name].Diffusivity
                 session.odbs[name].materials[name].Diffusivity
-        
+
         Parameters
         ----------
         table
-            A sequence of sequences of Floats specifying the items described below. 
+            A sequence of sequences of Floats specifying the items described below.
         type
-            A SymbolicConstant specifying the type of diffusivity. Possible values are ISOTROPIC, 
-            ORTHOTROPIC, and ANISOTROPIC. The default value is ISOTROPIC. 
+            A SymbolicConstant specifying the type of diffusivity. Possible values are ISOTROPIC,
+            ORTHOTROPIC, and ANISOTROPIC. The default value is ISOTROPIC.
         law
-            A SymbolicConstant specifying the diffusion behavior. Possible values are GENERAL and 
-            FICK. The default value is GENERAL. 
+            A SymbolicConstant specifying the diffusion behavior. Possible values are GENERAL and
+            FICK. The default value is GENERAL.
         temperatureDependency
-            A Boolean specifying whether the data depend on temperature. The default value is OFF. 
+            A Boolean specifying whether the data depend on temperature. The default value is OFF.
         dependencies
-            An Int specifying the number of field variable dependencies. The default value is 0. 
+            An Int specifying the number of field variable dependencies. The default value is 0.
 
         Returns
         -------
-            A Diffusivity object. 
+            A Diffusivity object.
 
         Raises
         ------

@@ -12,7 +12,7 @@ from ..PlotOptions.ViewCutOptions import ViewCutOptions
 
 class DefaultOdbDisplay:
     """The DefaultOdbDisplay object is a limited-functionality version of the OdbDisplay
-    object. 
+    object.
 
     Attributes
     ----------
@@ -40,40 +40,40 @@ class DefaultOdbDisplay:
     Notes
     -----
     This object can be accessed by:
-    
+
     .. code-block:: python
-        
+
         import visualization
         session.defaultOdbDisplay
 
     """
 
-    # A BasicOptions object. 
+    # A BasicOptions object.
     basicOptions: BasicOptions = BasicOptions()
 
-    # A CommonOptions object. 
+    # A CommonOptions object.
     commonOptions: CommonOptions = CommonOptions()
 
-    # A ContourOptions object. 
+    # A ContourOptions object.
     contourOptions: ContourOptions = ContourOptions()
 
-    # A DisplayBodyOptions object. 
+    # A DisplayBodyOptions object.
     displayBodyOptions: DisplayBodyOptions = DisplayBodyOptions()
 
-    # A FreeBodyOptions object. 
+    # A FreeBodyOptions object.
     freeBodyOptions: FreeBodyOptions = FreeBodyOptions()
 
-    # A StreamOptions object. 
+    # A StreamOptions object.
     streamOptions: StreamOptions = StreamOptions()
 
-    # An OrientationOptions object. 
+    # An OrientationOptions object.
     materialOrientationOptions: OrientationOptions = OrientationOptions()
 
-    # A SuperimposeOptions object. 
+    # A SuperimposeOptions object.
     superimposeOptions: SuperimposeOptions = SuperimposeOptions()
 
-    # A SymbolOptions object. 
+    # A SymbolOptions object.
     symbolOptions: SymbolOptions = SymbolOptions()
 
-    # A ViewCutOptions object. 
+    # A ViewCutOptions object.
     viewCutOptions: ViewCutOptions = ViewCutOptions()

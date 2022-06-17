@@ -24,24 +24,24 @@ class Depvar:
         Notes
         -----
             This function can be accessed by:
-            
+
             .. code-block:: python
-            
+
                 mdb.models[name].materials[name].Depvar
                 session.odbs[name].materials[name].Depvar
-        
+
         Parameters
         ----------
         deleteVar
-            An Int specifying the state variable number controlling the element deletion flag. The 
-            default value is 0.This argument applies only to Abaqus/Explicit analyses. 
+            An Int specifying the state variable number controlling the element deletion flag. The
+            default value is 0.This argument applies only to Abaqus/Explicit analyses.
         n
-            An Int specifying the number of solution-dependent state variables required at each 
-            integration point. The default value is 0. 
+            An Int specifying the number of solution-dependent state variables required at each
+            integration point. The default value is 0.
 
         Returns
         -------
-            A Depvar object. 
+            A Depvar object.
 
         Raises
         ------

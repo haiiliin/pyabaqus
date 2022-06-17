@@ -25,11 +25,11 @@ class AcisMdb(MdbBase):
         Notes
         -----
             This function can be accessed by:
-            
+
             .. code-block:: python
-            
+
                 mdb.openAcis
-        
+
         Parameters
         ----------
         fileName
@@ -52,19 +52,23 @@ class AcisMdb(MdbBase):
         return AcisFile()
 
     @staticmethod
-    def openCatia(fileName: str, topology: SymbolicConstant = None, convertUnits: SymbolicConstant = OFF,
-                  combineBodies: Boolean = OFF):
+    def openCatia(
+        fileName: str,
+        topology: SymbolicConstant = None,
+        convertUnits: SymbolicConstant = OFF,
+        combineBodies: Boolean = OFF,
+    ):
         """This method creates an AcisFile object from a file containing V5-format geometry. This
         object is subsequently used by the PartFromGeometryFile method.
 
         Notes
         -----
             This function can be accessed by:
-            
+
             .. code-block:: python
-            
+
                 mdb.openCatia
-        
+
         Parameters
         ----------
         fileName
@@ -90,8 +94,12 @@ class AcisMdb(MdbBase):
         return AcisFile()
 
     @staticmethod
-    def openEnf(fileName: str, fileType: str, topology: SymbolicConstant = SOLID,
-                convertUnits: Boolean = OFF):
+    def openEnf(
+        fileName: str,
+        fileType: str,
+        topology: SymbolicConstant = SOLID,
+        convertUnits: Boolean = OFF,
+    ):
         """This method creates an AcisFile object from a file containing Elysium Neutral
         File-format geometry that was created by CATIA V5, I-DEAS, or Pro/ENGINEER. This object
         is subsequently used by the PartFromGeometryFile method.
@@ -99,11 +107,11 @@ class AcisMdb(MdbBase):
         Notes
         -----
             This function can be accessed by:
-            
+
             .. code-block:: python
-            
+
                 mdb.openEnf
-        
+
         Parameters
         ----------
         fileName
@@ -130,21 +138,26 @@ class AcisMdb(MdbBase):
         return AcisFile()
 
     @staticmethod
-    def openIges(fileName: str, trimCurve: SymbolicConstant = DEFAULT,
-                 scaleFromFile: SymbolicConstant = OFF, msbo: Boolean = False,
-                 includedLayers: tuple = (), topology: SymbolicConstant = SOLID,
-                 uniteWires: SymbolicConstant = ON):
+    def openIges(
+        fileName: str,
+        trimCurve: SymbolicConstant = DEFAULT,
+        scaleFromFile: SymbolicConstant = OFF,
+        msbo: Boolean = False,
+        includedLayers: tuple = (),
+        topology: SymbolicConstant = SOLID,
+        uniteWires: SymbolicConstant = ON,
+    ):
         """This method creates an AcisFile object from a file containing IGES-format geometry. This
         object is subsequently used by the PartFromGeometryFile method.
 
         Notes
         -----
             This function can be accessed by:
-            
+
             .. code-block:: python
-            
+
                 mdb.openIges
-        
+
         Parameters
         ----------
         fileName
@@ -197,11 +210,11 @@ class AcisMdb(MdbBase):
         Notes
         -----
             This function can be accessed by:
-            
+
             .. code-block:: python
-            
+
                 mdb.openParasolid
-        
+
         Parameters
         ----------
         fileName
@@ -227,11 +240,11 @@ class AcisMdb(MdbBase):
         Notes
         -----
             This function can be accessed by:
-            
+
             .. code-block:: python
-            
+
                 mdb.openStep
-        
+
         Parameters
         ----------
         fileName
@@ -259,11 +272,11 @@ class AcisMdb(MdbBase):
         Notes
         -----
             This function can be accessed by:
-            
+
             .. code-block:: python
-            
+
                 mdb.openVda
-        
+
         Parameters
         ----------
         fileName
@@ -288,11 +301,11 @@ class AcisMdb(MdbBase):
         Notes
         -----
             This function can be accessed by:
-            
+
             .. code-block:: python
-            
+
                 openSolidworks
-        
+
         Parameters
         ----------
         fileName

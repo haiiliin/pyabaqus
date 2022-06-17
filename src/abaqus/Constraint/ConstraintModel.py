@@ -29,17 +29,19 @@ class ConstraintModel(ModelBase):
 
     """
 
-    def AdjustPoints(self, name: str, surface: Region, controlPoints: Region) -> AdjustPoints:
+    def AdjustPoints(
+        self, name: str, surface: Region, controlPoints: Region
+    ) -> AdjustPoints:
         """This method creates an AdjustPoints object.
 
         Notes
         -----
             This function can be accessed by:
-            
+
             .. code-block:: python
-            
+
                 mdb.models[name].AdjustPoints
-        
+
         Parameters
         ----------
         name
@@ -56,21 +58,33 @@ class ConstraintModel(ModelBase):
         self.constraints[name] = constraint = AdjustPoints(name, surface, controlPoints)
         return constraint
 
-    def Coupling(self, name: str, surface: Region, controlPoint: Region,
-                 influenceRadius: typing.Union[SymbolicConstant, float], couplingType: SymbolicConstant,
-                 adjust: Boolean = OFF, localCsys: str = None, u1: Boolean = ON, u2: Boolean = ON,
-                 u3: Boolean = ON, ur1: Boolean = ON, ur2: Boolean = ON, ur3: Boolean = ON,
-                 weightingMethod: SymbolicConstant = UNIFORM) -> Coupling:
+    def Coupling(
+        self,
+        name: str,
+        surface: Region,
+        controlPoint: Region,
+        influenceRadius: typing.Union[SymbolicConstant, float],
+        couplingType: SymbolicConstant,
+        adjust: Boolean = OFF,
+        localCsys: str = None,
+        u1: Boolean = ON,
+        u2: Boolean = ON,
+        u3: Boolean = ON,
+        ur1: Boolean = ON,
+        ur2: Boolean = ON,
+        ur3: Boolean = ON,
+        weightingMethod: SymbolicConstant = UNIFORM,
+    ) -> Coupling:
         """This method creates a Coupling object.
 
         Notes
         -----
             This function can be accessed by:
-            
+
             .. code-block:: python
-            
+
                 mdb.models[name].Coupling
-        
+
         Parameters
         ----------
         name
@@ -126,21 +140,37 @@ class ConstraintModel(ModelBase):
         -------
             A Coupling object.
         """
-        self.constraints[name] = constraint = Coupling(name, surface, controlPoint, influenceRadius, couplingType,
-                                                       adjust, localCsys, u1, u2, u3, ur1, ur2, ur3, weightingMethod)
+        self.constraints[name] = constraint = Coupling(
+            name,
+            surface,
+            controlPoint,
+            influenceRadius,
+            couplingType,
+            adjust,
+            localCsys,
+            u1,
+            u2,
+            u3,
+            ur1,
+            ur2,
+            ur3,
+            weightingMethod,
+        )
         return constraint
 
-    def DisplayBody(self, name: str, instance: PartInstance, controlPoints: ModelDotArray) -> DisplayBody:
+    def DisplayBody(
+        self, name: str, instance: PartInstance, controlPoints: ModelDotArray
+    ) -> DisplayBody:
         """This method creates a DisplayBody object.
 
         Notes
         -----
             This function can be accessed by:
-            
+
             .. code-block:: python
-            
+
                 mdb.models[name].DisplayBody
-        
+
         Parameters
         ----------
         name
@@ -161,19 +191,26 @@ class ConstraintModel(ModelBase):
         self.constraints[name] = constraint = DisplayBody(name, instance, controlPoints)
         return constraint
 
-    def EmbeddedRegion(self, name: str, embeddedRegion: Region, hostRegion: Region,
-                       weightFactorTolerance: float = None, toleranceMethod: SymbolicConstant = BOTH,
-                       absoluteTolerance: float = 0, fractionalTolerance: float = 0) -> EmbeddedRegion:
+    def EmbeddedRegion(
+        self,
+        name: str,
+        embeddedRegion: Region,
+        hostRegion: Region,
+        weightFactorTolerance: float = None,
+        toleranceMethod: SymbolicConstant = BOTH,
+        absoluteTolerance: float = 0,
+        fractionalTolerance: float = 0,
+    ) -> EmbeddedRegion:
         """This method creates a EmbeddedRegion object.
 
         Notes
         -----
             This function can be accessed by:
-            
+
             .. code-block:: python
-            
+
                 mdb.models[name].EmbeddedRegion
-        
+
         Parameters
         ----------
         name
@@ -206,8 +243,15 @@ class ConstraintModel(ModelBase):
         -------
             An EmbeddedRegion object.
         """
-        self.constraints[name] = constraint = EmbeddedRegion(name, embeddedRegion, hostRegion, weightFactorTolerance,
-                                                             toleranceMethod, absoluteTolerance, fractionalTolerance)
+        self.constraints[name] = constraint = EmbeddedRegion(
+            name,
+            embeddedRegion,
+            hostRegion,
+            weightFactorTolerance,
+            toleranceMethod,
+            absoluteTolerance,
+            fractionalTolerance,
+        )
         return constraint
 
     def Equation(self, name: str, terms: tuple) -> Equation:
@@ -216,11 +260,11 @@ class ConstraintModel(ModelBase):
         Notes
         -----
             This function can be accessed by:
-            
+
             .. code-block:: python
-            
+
                 mdb.models[name].Equation
-        
+
         Parameters
         ----------
         name
@@ -241,19 +285,26 @@ class ConstraintModel(ModelBase):
         self.constraints[name] = constraint = Equation(name, terms)
         return constraint
 
-    def MultipointConstraint(self, name: str, surface: Region, controlPoint: Region, mpcType: SymbolicConstant,
-                             csys: str = None, userType: int = 0,
-                             userMode: SymbolicConstant = DOF_MODE_MPC) -> MultipointConstraint:
+    def MultipointConstraint(
+        self,
+        name: str,
+        surface: Region,
+        controlPoint: Region,
+        mpcType: SymbolicConstant,
+        csys: str = None,
+        userType: int = 0,
+        userMode: SymbolicConstant = DOF_MODE_MPC,
+    ) -> MultipointConstraint:
         """This method creates a MultipointConstraint object.
 
         Notes
         -----
             This function can be accessed by:
-            
+
             .. code-block:: python
-            
+
                 mdb.models[name].MultipointConstraint
-        
+
         Parameters
         ----------
         name
@@ -284,23 +335,32 @@ class ConstraintModel(ModelBase):
         -------
             A MultipointConstraint object.
         """
-        self.constraints[name] = constraint = MultipointConstraint(name, surface, controlPoint, mpcType, csys, userType,
-                                                                   userMode)
+        self.constraints[name] = constraint = MultipointConstraint(
+            name, surface, controlPoint, mpcType, csys, userType, userMode
+        )
         return constraint
 
-    def RigidBody(self, name: str, refPointRegion: Region, bodyRegion: str = None, tieRegion: str = None,
-                  pinRegion: str = None, surfaceRegion: str = None, refPointAtCOM: Boolean = OFF,
-                  isothermal: Boolean = OFF) -> RigidBody:
+    def RigidBody(
+        self,
+        name: str,
+        refPointRegion: Region,
+        bodyRegion: str = None,
+        tieRegion: str = None,
+        pinRegion: str = None,
+        surfaceRegion: str = None,
+        refPointAtCOM: Boolean = OFF,
+        isothermal: Boolean = OFF,
+    ) -> RigidBody:
         """This method creates a RigidBody object.
 
         Notes
         -----
             This function can be accessed by:
-            
+
             .. code-block:: python
-            
+
                 mdb.models[name].RigidBody
-        
+
         Parameters
         ----------
         name
@@ -330,24 +390,38 @@ class ConstraintModel(ModelBase):
         -------
             A RigidBody object.
         """
-        self.constraints[name] = constraint = RigidBody(name, refPointRegion, bodyRegion, tieRegion, pinRegion,
-                                                        surfaceRegion, refPointAtCOM, isothermal)
+        self.constraints[name] = constraint = RigidBody(
+            name,
+            refPointRegion,
+            bodyRegion,
+            tieRegion,
+            pinRegion,
+            surfaceRegion,
+            refPointAtCOM,
+            isothermal,
+        )
         return constraint
 
-    def ShellSolidCoupling(self, name: str, shellEdge: Region, solidFace: Region,
-                           positionToleranceMethod: SymbolicConstant = COMPUTED, positionTolerance: float = 0,
-                           influenceDistanceMethod: SymbolicConstant = DEFAULT,
-                           influenceDistance: float = 0) -> ShellSolidCoupling:
+    def ShellSolidCoupling(
+        self,
+        name: str,
+        shellEdge: Region,
+        solidFace: Region,
+        positionToleranceMethod: SymbolicConstant = COMPUTED,
+        positionTolerance: float = 0,
+        influenceDistanceMethod: SymbolicConstant = DEFAULT,
+        influenceDistance: float = 0,
+    ) -> ShellSolidCoupling:
         """This method creates a ShellSolidCoupling object.
 
         Notes
         -----
             This function can be accessed by:
-            
+
             .. code-block:: python
-            
+
                 mdb.models[name].ShellSolidCoupling
-        
+
         Parameters
         ----------
         name
@@ -375,26 +449,41 @@ class ConstraintModel(ModelBase):
         -------
             A ShellSolidCoupling object.
         """
-        self.constraints[name] = constraint = ShellSolidCoupling(name, shellEdge, solidFace, positionToleranceMethod,
-                                                                 positionTolerance, influenceDistanceMethod,
-                                                                 influenceDistance)
+        self.constraints[name] = constraint = ShellSolidCoupling(
+            name,
+            shellEdge,
+            solidFace,
+            positionToleranceMethod,
+            positionTolerance,
+            influenceDistanceMethod,
+            influenceDistance,
+        )
         return constraint
 
-    def Tie(self, name: str, main: Region, secondary: Region, adjust: Boolean = ON,
-            positionToleranceMethod: SymbolicConstant = COMPUTED, positionTolerance: float = 0,
-            tieRotations: Boolean = ON, constraintRatioMethod: SymbolicConstant = DEFAULT,
-            constraintRatio: float = 0, constraintEnforcement: SymbolicConstant = SOLVER_DEFAULT,
-            thickness: Boolean = ON) -> Tie:
+    def Tie(
+        self,
+        name: str,
+        main: Region,
+        secondary: Region,
+        adjust: Boolean = ON,
+        positionToleranceMethod: SymbolicConstant = COMPUTED,
+        positionTolerance: float = 0,
+        tieRotations: Boolean = ON,
+        constraintRatioMethod: SymbolicConstant = DEFAULT,
+        constraintRatio: float = 0,
+        constraintEnforcement: SymbolicConstant = SOLVER_DEFAULT,
+        thickness: Boolean = ON,
+    ) -> Tie:
         """This method creates a Tie object.
 
         Notes
         -----
             This function can be accessed by:
-            
+
             .. code-block:: python
-            
+
                 mdb.models[name].Tie
-        
+
         Parameters
         ----------
         name
@@ -434,7 +523,17 @@ class ConstraintModel(ModelBase):
         -------
             A Tie object.
         """
-        self.constraints[name] = constraint = Tie(name, main, secondary, adjust, positionToleranceMethod,
-                                                  positionTolerance, tieRotations, constraintRatioMethod,
-                                                  constraintRatio, constraintEnforcement, thickness)
+        self.constraints[name] = constraint = Tie(
+            name,
+            main,
+            secondary,
+            adjust,
+            positionToleranceMethod,
+            positionTolerance,
+            tieRotations,
+            constraintRatioMethod,
+            constraintRatio,
+            constraintEnforcement,
+            thickness,
+        )
         return constraint

@@ -4,11 +4,11 @@ from .SectionPointArray import SectionPointArray
 
 class SectionCategory:
     """The SectionCategory object is used to group regions of the model with like sections.
-    Section definitions that contain the same number of section points or integration points 
-    are grouped together. 
-    To access data for a particular section definition, use the individual Section objects 
-    in the output database. For more information, see Beam Section profile commands and 
-    Section commands. 
+    Section definitions that contain the same number of section points or integration points
+    are grouped together.
+    To access data for a particular section definition, use the individual Section objects
+    in the output database. For more information, see Beam Section profile commands and
+    Section commands.
 
     Attributes
     ----------
@@ -43,7 +43,7 @@ class SectionCategory:
 
     """
 
-    # A SectionPointArray object. 
+    # A SectionPointArray object.
     sectionPoints: SectionPointArray = SectionPointArray()
 
     def __init__(self, name: str, description: str):
@@ -56,13 +56,13 @@ class SectionCategory:
         .. code-block:: python
 
             session.odbs[*name*].SectionCategory
-        
+
         Parameters
         ----------
         name
-            A String specifying the name of the category. 
+            A String specifying the name of the category.
         description
-            A String specifying the description of the category. 
+            A String specifying the description of the category.
 
         Returns
         -------
@@ -80,7 +80,7 @@ class SectionCategory:
         .. code-block:: python
 
             session.odbs[*name*].SectionCategory
-        
+
         Parameters
         ----------
         number

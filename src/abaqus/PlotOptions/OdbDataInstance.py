@@ -9,13 +9,13 @@ class OdbDataInstance:
     Notes
     -----
     This object can be accessed by:
-    
+
     .. code-block:: python
-        
+
         import visualization
         session.odbData[name].instances[i]
 
     """
 
-    # A String specifying the instance name. This attribute is read-only. 
-    name: str = ''
+    # A String specifying the instance name. This attribute is read-only.
+    name: str = ""

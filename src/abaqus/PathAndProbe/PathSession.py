@@ -8,22 +8,30 @@ from ..Session.SessionBase import SessionBase
 
 
 class PathSession(SessionBase):
-
-    def Path(self, name: str, type: SymbolicConstant, expression: tuple,
-             circleDefinition: SymbolicConstant, numSegments: int, startAngle: float,
-             endAngle: float, radius: typing.Union[SymbolicConstant, float], radialAngle: float,
-             startRadius: typing.Union[SymbolicConstant, float],
-             endRadius: typing.Union[SymbolicConstant, float]) -> Path:
+    def Path(
+        self,
+        name: str,
+        type: SymbolicConstant,
+        expression: tuple,
+        circleDefinition: SymbolicConstant,
+        numSegments: int,
+        startAngle: float,
+        endAngle: float,
+        radius: typing.Union[SymbolicConstant, float],
+        radialAngle: float,
+        startRadius: typing.Union[SymbolicConstant, float],
+        endRadius: typing.Union[SymbolicConstant, float],
+    ) -> Path:
         """This method creates a Path object.
 
         Notes
         -----
             This function can be accessed by:
-            
+
             .. code-block:: python
-            
+
                 session.Path
-        
+
         Parameters
         ----------
         name
@@ -92,8 +100,19 @@ class PathSession(SessionBase):
             ValueError: When *type*=CIRCUMFERENTIAL or RADIAL, the three points specified in
             *expression* are collinear.
         """
-        self.paths[name] = path = Path(name, type, expression, circleDefinition, numSegments, startAngle, endAngle,
-                                       radius, radialAngle, startRadius, endRadius)
+        self.paths[name] = path = Path(
+            name,
+            type,
+            expression,
+            circleDefinition,
+            numSegments,
+            startAngle,
+            endAngle,
+            radius,
+            radialAngle,
+            startRadius,
+            endRadius,
+        )
         return path
 
     def Spectrum(self, name: str, colors: tuple) -> Spectrum:
@@ -102,11 +121,11 @@ class PathSession(SessionBase):
         Notes
         -----
             This function can be accessed by:
-            
+
             .. code-block:: python
-            
+
                 session.Spectrum
-        
+
         Parameters
         ----------
         name
@@ -121,17 +140,24 @@ class PathSession(SessionBase):
         self.spectrums[name] = spectrum = Spectrum(name, colors)
         return spectrum
 
-    def Stream(self, name: str, numPointsOnRake: str, pointA: tuple = (), pointB: tuple = (), path: str = '') -> Stream:
+    def Stream(
+        self,
+        name: str,
+        numPointsOnRake: str,
+        pointA: tuple = (),
+        pointB: tuple = (),
+        path: str = "",
+    ) -> Stream:
         """This method creates aStream object and places it in the streams repository.
 
         Notes
         -----
             This function can be accessed by:
-            
+
             .. code-block:: python
-            
+
                 session.Stream
-        
+
         Parameters
         ----------
         name
@@ -151,5 +177,7 @@ class PathSession(SessionBase):
         -------
             A Stream object.
         """
-        self.streams[name] = stream = Stream(name, numPointsOnRake, pointA, pointB, path)
+        self.streams[name] = stream = Stream(
+            name, numPointsOnRake, pointA, pointB, path
+        )
         return stream

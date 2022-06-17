@@ -3,9 +3,9 @@ from abaqusConstants import *
 
 class AreaStyle:
     """The AreaStyle object is used to define how areas are to be filled when drawing XY-plot
-    objects. 
-    AreaStyle objects are automatically created whenever an Area object is created. 
-    AreaStyle objects can be created using the methods described below. 
+    objects.
+    AreaStyle objects are automatically created whenever an Area object is created.
+    AreaStyle objects can be created using the methods described below.
 
     Notes
     -----
@@ -33,7 +33,9 @@ class AreaStyle:
 
     """
 
-    def __init__(self, color: str = '', fill: Boolean = ON, style: SymbolicConstant = SOLID):
+    def __init__(
+        self, color: str = "", fill: Boolean = ON, style: SymbolicConstant = SOLID
+    ):
         """This method creates an AreaStyle.
 
         Notes
@@ -44,42 +46,44 @@ class AreaStyle:
 
             session.AreaStyle
             xyPlot.AreaStyle
-        
+
         Parameters
         ----------
         color
-            A String specifying the color to be used when filling an area with this AreaStyle 
-            object. The default value is "White". 
+            A String specifying the color to be used when filling an area with this AreaStyle
+            object. The default value is "White".
         fill
-            A Boolean specifying whether to fill the area when using this AreaStyle. The default 
-            value is ON. 
+            A Boolean specifying whether to fill the area when using this AreaStyle. The default
+            value is ON.
         style
-            A SymbolicConstant specifying the area pattern style to be used when filling an area 
-            using this AreaStyle. The default value is SOLID. 
+            A SymbolicConstant specifying the area pattern style to be used when filling an area
+            using this AreaStyle. The default value is SOLID.
 
         Returns
         -------
-            An AreaStyle object. 
+            An AreaStyle object.
 
         Raises
         ------
-            ColorError 
+            ColorError
         """
         pass
 
-    def setValues(self, color: str = '', fill: Boolean = ON, style: SymbolicConstant = SOLID):
+    def setValues(
+        self, color: str = "", fill: Boolean = ON, style: SymbolicConstant = SOLID
+    ):
         """This method modifies the AreaStyle object.
-        
+
         Parameters
         ----------
         color
-            A String specifying the color to be used when filling an area with this AreaStyle 
-            object. The default value is "White". 
+            A String specifying the color to be used when filling an area with this AreaStyle
+            object. The default value is "White".
         fill
-            A Boolean specifying whether to fill the area when using this AreaStyle. The default 
-            value is ON. 
+            A Boolean specifying whether to fill the area when using this AreaStyle. The default
+            value is ON.
         style
-            A SymbolicConstant specifying the area pattern style to be used when filling an area 
-            using this AreaStyle. The default value is SOLID. 
+            A SymbolicConstant specifying the area pattern style to be used when filling an area
+            using this AreaStyle. The default value is SOLID.
         """
         pass

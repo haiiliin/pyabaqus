@@ -63,21 +63,28 @@ class BoundaryConditionModel(ModelBase):
 
     """
 
-    def AccelerationBaseMotionBC(self, name: str, createStepName: str, dof: SymbolicConstant,
-                                 amplitudeScaleFactor: float = 1,
-                                 centerOfRotation: tuple = (), correlation: CorrelationArray = None,
-                                 secondaryBase: str = '', useComplex: Boolean = OFF,
-                                 amplitude: str = UNSET) -> AccelerationBaseMotionBC:
+    def AccelerationBaseMotionBC(
+        self,
+        name: str,
+        createStepName: str,
+        dof: SymbolicConstant,
+        amplitudeScaleFactor: float = 1,
+        centerOfRotation: tuple = (),
+        correlation: CorrelationArray = None,
+        secondaryBase: str = "",
+        useComplex: Boolean = OFF,
+        amplitude: str = UNSET,
+    ) -> AccelerationBaseMotionBC:
         """This method creates a AccelerationBaseMotionBC object.
 
         Notes
         -----
             This function can be accessed by:
-            
+
             .. code-block:: python
-            
+
                 mdb.models[name].AccelerationBaseMotionBC
-        
+
         Parameters
         ----------
         name
@@ -111,32 +118,48 @@ class BoundaryConditionModel(ModelBase):
         bc: AccelerationBC
             An AccelerationBaseMotionBC object.
         """
-        self.boundaryConditions[name] = boundaryCondition = AccelerationBaseMotionBC(name, createStepName, dof,
-                                                                                     amplitudeScaleFactor,
-                                                                                     centerOfRotation, correlation,
-                                                                                     secondaryBase, useComplex,
-                                                                                     amplitude)
-        self.steps[createStepName].boundaryConditionStates[name] = AccelerationBaseMotionBCState()
+        self.boundaryConditions[name] = boundaryCondition = AccelerationBaseMotionBC(
+            name,
+            createStepName,
+            dof,
+            amplitudeScaleFactor,
+            centerOfRotation,
+            correlation,
+            secondaryBase,
+            useComplex,
+            amplitude,
+        )
+        self.steps[createStepName].boundaryConditionStates[
+            name
+        ] = AccelerationBaseMotionBCState()
         return boundaryCondition
 
-    def AccelerationBC(self, name: str, createStepName: str, region: Region, fieldName: str = '',
-                       a1: typing.Union[SymbolicConstant, float] = UNSET,
-                       a2: typing.Union[SymbolicConstant, float] = UNSET,
-                       a3: typing.Union[SymbolicConstant, float] = UNSET,
-                       ar1: typing.Union[SymbolicConstant, float] = UNSET,
-                       ar2: typing.Union[SymbolicConstant, float] = UNSET,
-                       ar3: typing.Union[SymbolicConstant, float] = UNSET, amplitude: str = UNSET,
-                       localCsys: str = None, distributionType: SymbolicConstant = UNIFORM) -> AccelerationBC:
+    def AccelerationBC(
+        self,
+        name: str,
+        createStepName: str,
+        region: Region,
+        fieldName: str = "",
+        a1: typing.Union[SymbolicConstant, float] = UNSET,
+        a2: typing.Union[SymbolicConstant, float] = UNSET,
+        a3: typing.Union[SymbolicConstant, float] = UNSET,
+        ar1: typing.Union[SymbolicConstant, float] = UNSET,
+        ar2: typing.Union[SymbolicConstant, float] = UNSET,
+        ar3: typing.Union[SymbolicConstant, float] = UNSET,
+        amplitude: str = UNSET,
+        localCsys: str = None,
+        distributionType: SymbolicConstant = UNIFORM,
+    ) -> AccelerationBC:
         """This method creates an AccelerationBC object.
 
         Notes
         -----
             This function can be accessed by:
-            
+
             .. code-block:: python
-            
+
                 mdb.models[name].AccelerationBC
-        
+
         Parameters
         ----------
         name
@@ -190,25 +213,45 @@ class BoundaryConditionModel(ModelBase):
         bc: AccelerationBC
             An AccelerationBC object.
         """
-        self.boundaryConditions[name] = boundaryCondition = AccelerationBC(name, createStepName, region, fieldName, a1,
-                                                                           a2, a3, ar1, ar2, ar3, amplitude, localCsys,
-                                                                           distributionType)
+        self.boundaryConditions[name] = boundaryCondition = AccelerationBC(
+            name,
+            createStepName,
+            region,
+            fieldName,
+            a1,
+            a2,
+            a3,
+            ar1,
+            ar2,
+            ar3,
+            amplitude,
+            localCsys,
+            distributionType,
+        )
         self.steps[createStepName].boundaryConditionStates[name] = AccelerationBCState()
         return boundaryCondition
 
-    def AcousticPressureBC(self, name: str, createStepName: str, region: Region, fieldName: str = '',
-                           magnitude: float = 0, distributionType: SymbolicConstant = UNIFORM,
-                           amplitude: str = UNSET, fixed: Boolean = OFF) -> AcousticPressureBC:
+    def AcousticPressureBC(
+        self,
+        name: str,
+        createStepName: str,
+        region: Region,
+        fieldName: str = "",
+        magnitude: float = 0,
+        distributionType: SymbolicConstant = UNIFORM,
+        amplitude: str = UNSET,
+        fixed: Boolean = OFF,
+    ) -> AcousticPressureBC:
         """This method creates a AcousticPressureBC object.
 
         Notes
         -----
             This function can be accessed by:
-            
+
             .. code-block:: python
-            
+
                 mdb.models[name].AcousticPressureBC
-        
+
         Parameters
         ----------
         name
@@ -241,10 +284,19 @@ class BoundaryConditionModel(ModelBase):
         bc: AcousticPressureBC
             An AcousticPressureBC object.
         """
-        self.boundaryConditions[name] = boundaryCondition = AcousticPressureBC(name, createStepName, region, fieldName,
-                                                                               magnitude, distributionType, amplitude,
-                                                                               fixed)
-        self.steps[createStepName].boundaryConditionStates[name] = AcousticPressureBCState()
+        self.boundaryConditions[name] = boundaryCondition = AcousticPressureBC(
+            name,
+            createStepName,
+            region,
+            fieldName,
+            magnitude,
+            distributionType,
+            amplitude,
+            fixed,
+        )
+        self.steps[createStepName].boundaryConditionStates[
+            name
+        ] = AcousticPressureBCState()
         return boundaryCondition
 
     def Calibration(self, name: str) -> Calibration:
@@ -253,11 +305,11 @@ class BoundaryConditionModel(ModelBase):
         Notes
         -----
             This function can be accessed by:
-            
+
             .. code-block:: python
-            
+
                 mdb.models[name].Calibration
-        
+
         Parameters
         ----------
         name
@@ -271,19 +323,27 @@ class BoundaryConditionModel(ModelBase):
         self.boundaryConditions[name] = boundaryCondition = Calibration(name)
         return boundaryCondition
 
-    def ConcentrationBC(self, name: str, createStepName: str, region: Region, fieldName: str = '',
-                        magnitude: float = 0, distributionType: SymbolicConstant = UNIFORM,
-                        amplitude: str = UNSET, fixed: Boolean = OFF) -> ConcentrationBC:
+    def ConcentrationBC(
+        self,
+        name: str,
+        createStepName: str,
+        region: Region,
+        fieldName: str = "",
+        magnitude: float = 0,
+        distributionType: SymbolicConstant = UNIFORM,
+        amplitude: str = UNSET,
+        fixed: Boolean = OFF,
+    ) -> ConcentrationBC:
         """This method creates a ConcentrationBC object.
 
         Notes
         -----
             This function can be accessed by:
-            
+
             .. code-block:: python
-            
+
                 mdb.models[name].ConcentrationBC
-        
+
         Parameters
         ----------
         name
@@ -316,20 +376,37 @@ class BoundaryConditionModel(ModelBase):
         bc: ConcentrationBC
             A ConcentrationBC object.
         """
-        self.boundaryConditions[name] = boundaryCondition = ConcentrationBC(name, createStepName, region, fieldName,
-                                                                            magnitude, distributionType, amplitude,
-                                                                            fixed)
-        self.steps[createStepName].boundaryConditionStates[name] = ConcentrationBCState()
+        self.boundaryConditions[name] = boundaryCondition = ConcentrationBC(
+            name,
+            createStepName,
+            region,
+            fieldName,
+            magnitude,
+            distributionType,
+            amplitude,
+            fixed,
+        )
+        self.steps[createStepName].boundaryConditionStates[
+            name
+        ] = ConcentrationBCState()
         return boundaryCondition
 
-    def ConnAccelerationBC(self, name: str, createStepName: str, region: str = '', fastenerName: str = '',
-                           fastenerSetName: str = '', a1: typing.Union[SymbolicConstant, float] = UNSET,
-                           a2: typing.Union[SymbolicConstant, float] = UNSET,
-                           a3: typing.Union[SymbolicConstant, float] = UNSET,
-                           ar1: typing.Union[SymbolicConstant, float] = UNSET,
-                           ar2: typing.Union[SymbolicConstant, float] = UNSET,
-                           ar3: typing.Union[SymbolicConstant, float] = UNSET, amplitude: str = UNSET,
-                           distributionType: SymbolicConstant = UNIFORM) -> ConnAccelerationBC:
+    def ConnAccelerationBC(
+        self,
+        name: str,
+        createStepName: str,
+        region: str = "",
+        fastenerName: str = "",
+        fastenerSetName: str = "",
+        a1: typing.Union[SymbolicConstant, float] = UNSET,
+        a2: typing.Union[SymbolicConstant, float] = UNSET,
+        a3: typing.Union[SymbolicConstant, float] = UNSET,
+        ar1: typing.Union[SymbolicConstant, float] = UNSET,
+        ar2: typing.Union[SymbolicConstant, float] = UNSET,
+        ar3: typing.Union[SymbolicConstant, float] = UNSET,
+        amplitude: str = UNSET,
+        distributionType: SymbolicConstant = UNIFORM,
+    ) -> ConnAccelerationBC:
         """This method creates an ConnAccelerationBC object on a wire region. Alternatively, the
         boundary condition may also be applied to a wire set referenced from an assembled
         fastener template model.
@@ -337,11 +414,11 @@ class BoundaryConditionModel(ModelBase):
         Notes
         -----
             This function can be accessed by:
-            
+
             .. code-block:: python
-            
+
                 mdb.models[name].ConnAccelerationBC
-        
+
         Parameters
         ----------
         name
@@ -400,22 +477,44 @@ class BoundaryConditionModel(ModelBase):
         bc: ConnAccelerationBC
             A ConnAccelerationBC object.
         """
-        self.boundaryConditions[name] = boundaryCondition = ConnAccelerationBC(name, createStepName, region,
-                                                                               fastenerName, fastenerSetName, a1, a2,
-                                                                               a3, ar1, ar2, ar3, amplitude,
-                                                                               distributionType)
-        self.steps[createStepName].boundaryConditionStates[name] = ConnAccelerationBCState()
+        self.boundaryConditions[name] = boundaryCondition = ConnAccelerationBC(
+            name,
+            createStepName,
+            region,
+            fastenerName,
+            fastenerSetName,
+            a1,
+            a2,
+            a3,
+            ar1,
+            ar2,
+            ar3,
+            amplitude,
+            distributionType,
+        )
+        self.steps[createStepName].boundaryConditionStates[
+            name
+        ] = ConnAccelerationBCState()
         return boundaryCondition
 
-    def ConnDisplacementBC(self, name: str, createStepName: str, region: str = '', fastenerName: str = '',
-                           fastenerSetName: str = '', u1: typing.Union[SymbolicConstant, float] = UNSET,
-                           u2: typing.Union[SymbolicConstant, float] = UNSET,
-                           u3: typing.Union[SymbolicConstant, float] = UNSET,
-                           ur1: typing.Union[SymbolicConstant, float] = UNSET,
-                           ur2: typing.Union[SymbolicConstant, float] = UNSET,
-                           ur3: typing.Union[SymbolicConstant, float] = UNSET, fixed: Boolean = OFF,
-                           amplitude: str = UNSET, distributionType: SymbolicConstant = UNIFORM,
-                           buckleCase: SymbolicConstant = NOT_APPLICABLE) -> ConnDisplacementBC:
+    def ConnDisplacementBC(
+        self,
+        name: str,
+        createStepName: str,
+        region: str = "",
+        fastenerName: str = "",
+        fastenerSetName: str = "",
+        u1: typing.Union[SymbolicConstant, float] = UNSET,
+        u2: typing.Union[SymbolicConstant, float] = UNSET,
+        u3: typing.Union[SymbolicConstant, float] = UNSET,
+        ur1: typing.Union[SymbolicConstant, float] = UNSET,
+        ur2: typing.Union[SymbolicConstant, float] = UNSET,
+        ur3: typing.Union[SymbolicConstant, float] = UNSET,
+        fixed: Boolean = OFF,
+        amplitude: str = UNSET,
+        distributionType: SymbolicConstant = UNIFORM,
+        buckleCase: SymbolicConstant = NOT_APPLICABLE,
+    ) -> ConnDisplacementBC:
         """This method creates a ConnDisplacementBC object on a wire region. Alternatively, the
         boundary condition may also be applied to a wire set referenced from an assembled
         fastener template model.
@@ -423,11 +522,11 @@ class BoundaryConditionModel(ModelBase):
         Notes
         -----
             This function can be accessed by:
-            
+
             .. code-block:: python
-            
+
                 mdb.models[name].ConnDisplacementBC
-        
+
         Parameters
         ----------
         name
@@ -493,21 +592,44 @@ class BoundaryConditionModel(ModelBase):
         bc: ConnDisplacementBC
             A ConnDisplacementBC object.
         """
-        self.boundaryConditions[name] = boundaryCondition = ConnDisplacementBC(name, createStepName, region,
-                                                                               fastenerName, fastenerSetName, u1, u2,
-                                                                               u3, ur1, ur2, ur3, fixed, amplitude,
-                                                                               distributionType, buckleCase)
-        self.steps[createStepName].boundaryConditionStates[name] = ConnDisplacementBCState()
+        self.boundaryConditions[name] = boundaryCondition = ConnDisplacementBC(
+            name,
+            createStepName,
+            region,
+            fastenerName,
+            fastenerSetName,
+            u1,
+            u2,
+            u3,
+            ur1,
+            ur2,
+            ur3,
+            fixed,
+            amplitude,
+            distributionType,
+            buckleCase,
+        )
+        self.steps[createStepName].boundaryConditionStates[
+            name
+        ] = ConnDisplacementBCState()
         return boundaryCondition
 
-    def ConnVelocityBC(self, name: str, createStepName: str, region: str = '', fastenerName: str = '',
-                       fastenerSetName: str = '', v1: typing.Union[SymbolicConstant, float] = UNSET,
-                       v2: typing.Union[SymbolicConstant, float] = UNSET,
-                       v3: typing.Union[SymbolicConstant, float] = UNSET,
-                       vr1: typing.Union[SymbolicConstant, float] = UNSET,
-                       vr2: typing.Union[SymbolicConstant, float] = UNSET,
-                       vr3: typing.Union[SymbolicConstant, float] = UNSET, amplitude: str = UNSET,
-                       distributionType: SymbolicConstant = UNIFORM) -> ConnVelocityBC:
+    def ConnVelocityBC(
+        self,
+        name: str,
+        createStepName: str,
+        region: str = "",
+        fastenerName: str = "",
+        fastenerSetName: str = "",
+        v1: typing.Union[SymbolicConstant, float] = UNSET,
+        v2: typing.Union[SymbolicConstant, float] = UNSET,
+        v3: typing.Union[SymbolicConstant, float] = UNSET,
+        vr1: typing.Union[SymbolicConstant, float] = UNSET,
+        vr2: typing.Union[SymbolicConstant, float] = UNSET,
+        vr3: typing.Union[SymbolicConstant, float] = UNSET,
+        amplitude: str = UNSET,
+        distributionType: SymbolicConstant = UNIFORM,
+    ) -> ConnVelocityBC:
         """This method creates a ConnVelocityBC object on a wire region. Alternatively, the
         boundary condition may also be applied to a wire set referenced from an assembled
         fastener template model.
@@ -515,11 +637,11 @@ class BoundaryConditionModel(ModelBase):
         Notes
         -----
             This function can be accessed by:
-            
+
             .. code-block:: python
-            
+
                 mdb.models[name].ConnVelocityBC
-        
+
         Parameters
         ----------
         name
@@ -578,27 +700,46 @@ class BoundaryConditionModel(ModelBase):
         bc: ConnVelocityBC
             A ConnVelocityBC object.
         """
-        self.boundaryConditions[name] = boundaryCondition = ConnVelocityBC(name, createStepName, region, fastenerName,
-                                                                           fastenerSetName, v1, v2, v3, vr1, vr2, vr3,
-                                                                           amplitude, distributionType)
+        self.boundaryConditions[name] = boundaryCondition = ConnVelocityBC(
+            name,
+            createStepName,
+            region,
+            fastenerName,
+            fastenerSetName,
+            v1,
+            v2,
+            v3,
+            vr1,
+            vr2,
+            vr3,
+            amplitude,
+            distributionType,
+        )
         self.steps[createStepName].boundaryConditionStates[name] = ConnVelocityBCState()
         return boundaryCondition
 
-    def DisplacementBaseMotionBC(self, name: str, createStepName: str, dof: SymbolicConstant,
-                                 amplitudeScaleFactor: float = 1,
-                                 centerOfRotation: tuple = (), correlation: CorrelationArray = None,
-                                 secondaryBase: str = '', useComplex: Boolean = OFF,
-                                 amplitude: str = UNSET) -> DisplacementBaseMotionBC:
+    def DisplacementBaseMotionBC(
+        self,
+        name: str,
+        createStepName: str,
+        dof: SymbolicConstant,
+        amplitudeScaleFactor: float = 1,
+        centerOfRotation: tuple = (),
+        correlation: CorrelationArray = None,
+        secondaryBase: str = "",
+        useComplex: Boolean = OFF,
+        amplitude: str = UNSET,
+    ) -> DisplacementBaseMotionBC:
         """This method creates a DisplacementBaseMotionBC object.
 
         Notes
         -----
             This function can be accessed by:
-            
+
             .. code-block:: python
-            
+
                 mdb.models[name].DisplacementBaseMotionBC
-        
+
         Parameters
         ----------
         name
@@ -632,33 +773,50 @@ class BoundaryConditionModel(ModelBase):
         bc: DisplacementBaseMotionBC
             A DisplacementBaseMotionBC object.
         """
-        self.boundaryConditions[name] = boundaryCondition = DisplacementBaseMotionBC(name, createStepName, dof,
-                                                                                     amplitudeScaleFactor,
-                                                                                     centerOfRotation, correlation,
-                                                                                     secondaryBase, useComplex,
-                                                                                     amplitude)
-        self.steps[createStepName].boundaryConditionStates[name] = DisplacementBaseMotionBCState()
+        self.boundaryConditions[name] = boundaryCondition = DisplacementBaseMotionBC(
+            name,
+            createStepName,
+            dof,
+            amplitudeScaleFactor,
+            centerOfRotation,
+            correlation,
+            secondaryBase,
+            useComplex,
+            amplitude,
+        )
+        self.steps[createStepName].boundaryConditionStates[
+            name
+        ] = DisplacementBaseMotionBCState()
         return boundaryCondition
 
-    def DisplacementBC(self, name: str, createStepName: str, region: Region, fieldName: str = '',
-                       u1: typing.Union[SymbolicConstant, float] = UNSET,
-                       u2: typing.Union[SymbolicConstant, float] = UNSET,
-                       u3: typing.Union[SymbolicConstant, float] = UNSET,
-                       ur1: typing.Union[SymbolicConstant, float] = UNSET,
-                       ur2: typing.Union[SymbolicConstant, float] = UNSET,
-                       ur3: typing.Union[SymbolicConstant, float] = UNSET, fixed: Boolean = OFF,
-                       amplitude: str = UNSET, distributionType: SymbolicConstant = UNIFORM,
-                       localCsys: str = None, buckleCase: SymbolicConstant = NOT_APPLICABLE) -> DisplacementBC:
+    def DisplacementBC(
+        self,
+        name: str,
+        createStepName: str,
+        region: Region,
+        fieldName: str = "",
+        u1: typing.Union[SymbolicConstant, float] = UNSET,
+        u2: typing.Union[SymbolicConstant, float] = UNSET,
+        u3: typing.Union[SymbolicConstant, float] = UNSET,
+        ur1: typing.Union[SymbolicConstant, float] = UNSET,
+        ur2: typing.Union[SymbolicConstant, float] = UNSET,
+        ur3: typing.Union[SymbolicConstant, float] = UNSET,
+        fixed: Boolean = OFF,
+        amplitude: str = UNSET,
+        distributionType: SymbolicConstant = UNIFORM,
+        localCsys: str = None,
+        buckleCase: SymbolicConstant = NOT_APPLICABLE,
+    ) -> DisplacementBC:
         """This method creates a DisplacementBC object.
 
         Notes
         -----
             This function can be accessed by:
-            
+
             .. code-block:: python
-            
+
                 mdb.models[name].DisplacementBC
-        
+
         Parameters
         ----------
         name
@@ -723,25 +881,47 @@ class BoundaryConditionModel(ModelBase):
         bc: DisplacementBC
             A DisplacementBC object
         """
-        self.boundaryConditions[name] = boundaryCondition = DisplacementBC(name, createStepName, region, fieldName, u1,
-                                                                           u2, u3, ur1, ur2, ur3, fixed, amplitude,
-                                                                           distributionType, localCsys, buckleCase)
+        self.boundaryConditions[name] = boundaryCondition = DisplacementBC(
+            name,
+            createStepName,
+            region,
+            fieldName,
+            u1,
+            u2,
+            u3,
+            ur1,
+            ur2,
+            ur3,
+            fixed,
+            amplitude,
+            distributionType,
+            localCsys,
+            buckleCase,
+        )
         self.steps[createStepName].boundaryConditionStates[name] = DisplacementBCState()
         return boundaryCondition
 
-    def ElectricPotentialBC(self, name: str, createStepName: str, region: Region, fieldName: str = '',
-                            magnitude: float = 0, distributionType: SymbolicConstant = UNIFORM,
-                            amplitude: str = UNSET, fixed: Boolean = OFF) -> ElectricPotentialBC:
+    def ElectricPotentialBC(
+        self,
+        name: str,
+        createStepName: str,
+        region: Region,
+        fieldName: str = "",
+        magnitude: float = 0,
+        distributionType: SymbolicConstant = UNIFORM,
+        amplitude: str = UNSET,
+        fixed: Boolean = OFF,
+    ) -> ElectricPotentialBC:
         """This method creates an ElectricPotentialBC object.
 
         Notes
         -----
             This function can be accessed by:
-            
+
             .. code-block:: python
-            
+
                 mdb.models[name].ElectricPotentialBC
-        
+
         Parameters
         ----------
         name
@@ -774,24 +954,40 @@ class BoundaryConditionModel(ModelBase):
         bc: ElectricPotentialBC
             An ElectricPotentialBC object.
         """
-        self.boundaryConditions[name] = boundaryCondition = ElectricPotentialBC(name, createStepName, region, fieldName,
-                                                                                magnitude, distributionType, amplitude,
-                                                                                fixed)
-        self.steps[createStepName].boundaryConditionStates[name] = ElectricPotentialBCState()
+        self.boundaryConditions[name] = boundaryCondition = ElectricPotentialBC(
+            name,
+            createStepName,
+            region,
+            fieldName,
+            magnitude,
+            distributionType,
+            amplitude,
+            fixed,
+        )
+        self.steps[createStepName].boundaryConditionStates[
+            name
+        ] = ElectricPotentialBCState()
         return boundaryCondition
 
-    def EulerianBC(self, name: str, createStepName: str, region: Region, definition: SymbolicConstant = INFLOW,
-                   inflowType: SymbolicConstant = FREE, outflowType: SymbolicConstant = ZERO_PRESSURE) -> EulerianBC:
+    def EulerianBC(
+        self,
+        name: str,
+        createStepName: str,
+        region: Region,
+        definition: SymbolicConstant = INFLOW,
+        inflowType: SymbolicConstant = FREE,
+        outflowType: SymbolicConstant = ZERO_PRESSURE,
+    ) -> EulerianBC:
         """This method creates a EulerianBC object.
 
         Notes
         -----
             This function can be accessed by:
-            
+
             .. code-block:: python
-            
+
                 mdb.models[name].EulerianBC
-        
+
         Parameters
         ----------
         name
@@ -816,32 +1012,51 @@ class BoundaryConditionModel(ModelBase):
         bc: EulerianBC
             An EulerianBC object.
         """
-        self.boundaryConditions[name] = boundaryCondition = EulerianBC(name, createStepName, region, definition,
-                                                                       inflowType, outflowType)
+        self.boundaryConditions[name] = boundaryCondition = EulerianBC(
+            name, createStepName, region, definition, inflowType, outflowType
+        )
         self.steps[createStepName].boundaryConditionStates[name] = EulerianBCState()
         return boundaryCondition
 
-    def EulerianMotionBC(self, name: str, createStepName: str, instanceName: str, followRegion: Boolean = ON,
-                         region: Region = Region(), materialName: str = '',
-                         ctrPosition1: SymbolicConstant = FREE, posPosition1: SymbolicConstant = FREE,
-                         negPosition1: SymbolicConstant = FREE, expansionRatio1: float = None,
-                         contractRatio1: float = 0, ctrPosition2: SymbolicConstant = FREE,
-                         posPosition2: SymbolicConstant = FREE, negPosition2: SymbolicConstant = FREE,
-                         expansionRatio2: float = None, contractRatio2: float = 0,
-                         ctrPosition3: SymbolicConstant = FREE, posPosition3: SymbolicConstant = FREE,
-                         negPosition3: SymbolicConstant = FREE, expansionRatio3: float = None,
-                         contractRatio3: float = 0, allowContraction: Boolean = ON, aspectLimit: float = 10,
-                         vmaxFactor: float = 1, volThreshold: float = 0, bufferSize: float = 2) -> EulerianMotionBC:
+    def EulerianMotionBC(
+        self,
+        name: str,
+        createStepName: str,
+        instanceName: str,
+        followRegion: Boolean = ON,
+        region: Region = Region(),
+        materialName: str = "",
+        ctrPosition1: SymbolicConstant = FREE,
+        posPosition1: SymbolicConstant = FREE,
+        negPosition1: SymbolicConstant = FREE,
+        expansionRatio1: float = None,
+        contractRatio1: float = 0,
+        ctrPosition2: SymbolicConstant = FREE,
+        posPosition2: SymbolicConstant = FREE,
+        negPosition2: SymbolicConstant = FREE,
+        expansionRatio2: float = None,
+        contractRatio2: float = 0,
+        ctrPosition3: SymbolicConstant = FREE,
+        posPosition3: SymbolicConstant = FREE,
+        negPosition3: SymbolicConstant = FREE,
+        expansionRatio3: float = None,
+        contractRatio3: float = 0,
+        allowContraction: Boolean = ON,
+        aspectLimit: float = 10,
+        vmaxFactor: float = 1,
+        volThreshold: float = 0,
+        bufferSize: float = 2,
+    ) -> EulerianMotionBC:
         """This method creates an EulerianMotionBC object.
 
         Notes
         -----
             This function can be accessed by:
-            
+
             .. code-block:: python
-            
+
                 mdb.models[name].EulerianMotionBC
-        
+
         Parameters
         ----------
         name
@@ -933,31 +1148,58 @@ class BoundaryConditionModel(ModelBase):
         bc: EulerianMotionBC
             An EulerianMotionBC object.
         """
-        self.boundaryConditions[name] = boundaryCondition = EulerianMotionBC(name, createStepName, instanceName,
-                                                                             followRegion, region, materialName,
-                                                                             ctrPosition1, posPosition1, negPosition1,
-                                                                             expansionRatio1, contractRatio1,
-                                                                             ctrPosition2, posPosition2, negPosition2,
-                                                                             expansionRatio2, contractRatio2,
-                                                                             ctrPosition3, posPosition3, negPosition3,
-                                                                             expansionRatio3, contractRatio3,
-                                                                             allowContraction, aspectLimit, vmaxFactor,
-                                                                             volThreshold, bufferSize)
-        self.steps[createStepName].boundaryConditionStates[name] = EulerianMotionBCState()
+        self.boundaryConditions[name] = boundaryCondition = EulerianMotionBC(
+            name,
+            createStepName,
+            instanceName,
+            followRegion,
+            region,
+            materialName,
+            ctrPosition1,
+            posPosition1,
+            negPosition1,
+            expansionRatio1,
+            contractRatio1,
+            ctrPosition2,
+            posPosition2,
+            negPosition2,
+            expansionRatio2,
+            contractRatio2,
+            ctrPosition3,
+            posPosition3,
+            negPosition3,
+            expansionRatio3,
+            contractRatio3,
+            allowContraction,
+            aspectLimit,
+            vmaxFactor,
+            volThreshold,
+            bufferSize,
+        )
+        self.steps[createStepName].boundaryConditionStates[
+            name
+        ] = EulerianMotionBCState()
         return boundaryCondition
 
-    def FluidCavityPressureBC(self, name: str, createStepName: str, fluidCavity: str, magnitude: float = 0,
-                              amplitude: str = UNSET, fixed: Boolean = OFF) -> FluidCavityPressureBC:
+    def FluidCavityPressureBC(
+        self,
+        name: str,
+        createStepName: str,
+        fluidCavity: str,
+        magnitude: float = 0,
+        amplitude: str = UNSET,
+        fixed: Boolean = OFF,
+    ) -> FluidCavityPressureBC:
         """This method creates a FluidCavityPressureBC object.
 
         Notes
         -----
             This function can be accessed by:
-            
+
             .. code-block:: python
-            
+
                 mdb.models[name].FluidCavityPressureBC
-        
+
         Parameters
         ----------
         name
@@ -982,26 +1224,36 @@ class BoundaryConditionModel(ModelBase):
         bc: FluidCavityPressureBC
             A FluidCavityPressureBC object.
         """
-        self.boundaryConditions[name] = boundaryCondition = FluidCavityPressureBC(name, createStepName, fluidCavity,
-                                                                                  magnitude, amplitude, fixed)
-        self.steps[createStepName].boundaryConditionStates[name] = FluidCavityPressureBCState()
+        self.boundaryConditions[name] = boundaryCondition = FluidCavityPressureBC(
+            name, createStepName, fluidCavity, magnitude, amplitude, fixed
+        )
+        self.steps[createStepName].boundaryConditionStates[
+            name
+        ] = FluidCavityPressureBCState()
         return boundaryCondition
 
-    def MagneticVectorPotentialBC(self, name: str, createStepName: str, region: Region,
-                                  component1: SymbolicConstant = None,
-                                  component2: SymbolicConstant = UNSET, component3: SymbolicConstant = UNSET,
-                                  amplitude: str = UNSET, distributionType: SymbolicConstant = UNIFORM,
-                                  localCsys: str = None) -> MagneticVectorPotentialBC:
+    def MagneticVectorPotentialBC(
+        self,
+        name: str,
+        createStepName: str,
+        region: Region,
+        component1: SymbolicConstant = None,
+        component2: SymbolicConstant = UNSET,
+        component3: SymbolicConstant = UNSET,
+        amplitude: str = UNSET,
+        distributionType: SymbolicConstant = UNIFORM,
+        localCsys: str = None,
+    ) -> MagneticVectorPotentialBC:
         """This method creates a MagneticVectorPotentialBC object.
 
         Notes
         -----
             This function can be accessed by:
-            
+
             .. code-block:: python
-            
+
                 mdb.models[name].MagneticVectorPotentialBC
-        
+
         Parameters
         ----------
         name
@@ -1040,25 +1292,40 @@ class BoundaryConditionModel(ModelBase):
         bc: MagneticVectorPotentialBC
             A MagneticVectorPotentialBC object.
         """
-        self.boundaryConditions[name] = boundaryCondition = MagneticVectorPotentialBC(name, createStepName, region,
-                                                                                      component1, component2,
-                                                                                      component3, amplitude,
-                                                                                      distributionType, localCsys)
+        self.boundaryConditions[name] = boundaryCondition = MagneticVectorPotentialBC(
+            name,
+            createStepName,
+            region,
+            component1,
+            component2,
+            component3,
+            amplitude,
+            distributionType,
+            localCsys,
+        )
         return boundaryCondition
 
-    def MaterialFlowBC(self, name: str, createStepName: str, region: Region, fieldName: str = '',
-                       magnitude: float = 0, distributionType: SymbolicConstant = UNIFORM,
-                       amplitude: str = UNSET, fixed: Boolean = OFF) -> MaterialFlowBC:
+    def MaterialFlowBC(
+        self,
+        name: str,
+        createStepName: str,
+        region: Region,
+        fieldName: str = "",
+        magnitude: float = 0,
+        distributionType: SymbolicConstant = UNIFORM,
+        amplitude: str = UNSET,
+        fixed: Boolean = OFF,
+    ) -> MaterialFlowBC:
         """This method creates a MaterialFlowBC object.
 
         Notes
         -----
             This function can be accessed by:
-            
+
             .. code-block:: python
-            
+
                 mdb.models[name].MaterialFlowBC
-        
+
         Parameters
         ----------
         name
@@ -1091,25 +1358,40 @@ class BoundaryConditionModel(ModelBase):
         bc: MaterialFlowBC
             A MaterialFlowBC object.
         """
-        self.boundaryConditions[name] = boundaryCondition = MaterialFlowBC(name, createStepName, region, fieldName,
-                                                                           magnitude, distributionType, amplitude,
-                                                                           fixed)
+        self.boundaryConditions[name] = boundaryCondition = MaterialFlowBC(
+            name,
+            createStepName,
+            region,
+            fieldName,
+            magnitude,
+            distributionType,
+            amplitude,
+            fixed,
+        )
         self.steps[createStepName].boundaryConditionStates[name] = MaterialFlowBCState()
         return boundaryCondition
 
-    def PorePressureBC(self, name: str, createStepName: str, region: Region, fieldName: str = '',
-                       magnitude: float = 0, distributionType: SymbolicConstant = UNIFORM,
-                       amplitude: str = UNSET, fixed: Boolean = OFF) -> PorePressureBC:
+    def PorePressureBC(
+        self,
+        name: str,
+        createStepName: str,
+        region: Region,
+        fieldName: str = "",
+        magnitude: float = 0,
+        distributionType: SymbolicConstant = UNIFORM,
+        amplitude: str = UNSET,
+        fixed: Boolean = OFF,
+    ) -> PorePressureBC:
         """This method creates a PorePressureBC object.
 
         Notes
         -----
             This function can be accessed by:
-            
+
             .. code-block:: python
-            
+
                 mdb.models[name].PorePressureBC
-        
+
         Parameters
         ----------
         name
@@ -1142,25 +1424,41 @@ class BoundaryConditionModel(ModelBase):
         bc: PorePressureBC
             A PorePressureBC object.
         """
-        self.boundaryConditions[name] = boundaryCondition = PorePressureBC(name, createStepName, region, fieldName,
-                                                                           magnitude, distributionType, amplitude,
-                                                                           fixed)
+        self.boundaryConditions[name] = boundaryCondition = PorePressureBC(
+            name,
+            createStepName,
+            region,
+            fieldName,
+            magnitude,
+            distributionType,
+            amplitude,
+            fixed,
+        )
         self.steps[createStepName].boundaryConditionStates[name] = PorePressureBCState()
         return boundaryCondition
 
-    def RetainedNodalDofsBC(self, name: str, createStepName: str, region: Region, u1: Boolean = OFF, u2: Boolean = OFF,
-                            u3: Boolean = OFF, ur1: Boolean = OFF, ur2: Boolean = OFF,
-                            ur3: Boolean = OFF) -> RetainedNodalDofsBC:
+    def RetainedNodalDofsBC(
+        self,
+        name: str,
+        createStepName: str,
+        region: Region,
+        u1: Boolean = OFF,
+        u2: Boolean = OFF,
+        u3: Boolean = OFF,
+        ur1: Boolean = OFF,
+        ur2: Boolean = OFF,
+        ur3: Boolean = OFF,
+    ) -> RetainedNodalDofsBC:
         """This method creates a RetainedNodalDofsBC object.
 
         Notes
         -----
             This function can be accessed by:
-            
+
             .. code-block:: python
-            
+
                 mdb.models[name].RetainedNodalDofsBC
-        
+
         Parameters
         ----------
         name
@@ -1196,21 +1494,24 @@ class BoundaryConditionModel(ModelBase):
         bc: RetainedNodalDofsBC
             A RetainedNodalDofsBC object.
         """
-        self.boundaryConditions[name] = boundaryCondition = RetainedNodalDofsBC(name, createStepName, region, u1, u2,
-                                                                                u3, ur1, ur2, ur3)
+        self.boundaryConditions[name] = boundaryCondition = RetainedNodalDofsBC(
+            name, createStepName, region, u1, u2, u3, ur1, ur2, ur3
+        )
         return boundaryCondition
 
-    def SecondaryBaseBC(self, name: str, createStepName: str, regions: RegionArray, dofs: tuple) -> SecondaryBaseBC:
+    def SecondaryBaseBC(
+        self, name: str, createStepName: str, regions: RegionArray, dofs: tuple
+    ) -> SecondaryBaseBC:
         """This method creates a SecondaryBaseBC object.
 
         Notes
         -----
             This function can be accessed by:
-            
+
             .. code-block:: python
-            
+
                 mdb.models[name].SecondaryBaseBC
-        
+
         Parameters
         ----------
         name
@@ -1228,25 +1529,41 @@ class BoundaryConditionModel(ModelBase):
         bc: SecondaryBaseBC
             A SecondaryBaseBC object.
         """
-        self.boundaryConditions[name] = boundaryCondition = SecondaryBaseBC(name, createStepName, regions, dofs)
-        self.steps[createStepName].boundaryConditionStates[name] = SecondaryBaseBCState()
+        self.boundaryConditions[name] = boundaryCondition = SecondaryBaseBC(
+            name, createStepName, regions, dofs
+        )
+        self.steps[createStepName].boundaryConditionStates[
+            name
+        ] = SecondaryBaseBCState()
         return boundaryCondition
 
-    def SubmodelBC(self, name: str, createStepName: str, region: Region, dof: tuple, globalStep: str,
-                   timeScale: Boolean, shellThickness: float, globalDrivingRegion: str = '',
-                   absoluteExteriorTolerance: float = None, exteriorTolerance: float = 0,
-                   localCsys: str = None, globalIncrement: int = 0, centerZoneSize: float = None,
-                   intersectionOnly: Boolean = OFF) -> SubmodelBC:
+    def SubmodelBC(
+        self,
+        name: str,
+        createStepName: str,
+        region: Region,
+        dof: tuple,
+        globalStep: str,
+        timeScale: Boolean,
+        shellThickness: float,
+        globalDrivingRegion: str = "",
+        absoluteExteriorTolerance: float = None,
+        exteriorTolerance: float = 0,
+        localCsys: str = None,
+        globalIncrement: int = 0,
+        centerZoneSize: float = None,
+        intersectionOnly: Boolean = OFF,
+    ) -> SubmodelBC:
         """This method creates a SubmodelBC object.
 
         Notes
         -----
             This function can be accessed by:
-            
+
             .. code-block:: python
-            
+
                 mdb.models[name].SubmodelBC
-        
+
         Parameters
         ----------
         name
@@ -1303,27 +1620,47 @@ class BoundaryConditionModel(ModelBase):
         bc: SubmodelBC
             A SubmodelBC object.
         """
-        self.boundaryConditions[name] = boundaryCondition = SubmodelBC(name, createStepName, region, dof, globalStep,
-                                                                       timeScale, shellThickness, globalDrivingRegion,
-                                                                       absoluteExteriorTolerance, exteriorTolerance,
-                                                                       localCsys, globalIncrement, centerZoneSize,
-                                                                       intersectionOnly)
+        self.boundaryConditions[name] = boundaryCondition = SubmodelBC(
+            name,
+            createStepName,
+            region,
+            dof,
+            globalStep,
+            timeScale,
+            shellThickness,
+            globalDrivingRegion,
+            absoluteExteriorTolerance,
+            exteriorTolerance,
+            localCsys,
+            globalIncrement,
+            centerZoneSize,
+            intersectionOnly,
+        )
         self.steps[createStepName].boundaryConditionStates[name] = SubmodelBCState()
         return boundaryCondition
 
-    def TemperatureBC(self, name: str, createStepName: str, region: Region, fieldName: str = '',
-                      magnitude: float = 0, dof: tuple = (), amplitude: str = UNSET,
-                      distributionType: SymbolicConstant = UNIFORM, fixed: Boolean = OFF) -> TemperatureBC:
+    def TemperatureBC(
+        self,
+        name: str,
+        createStepName: str,
+        region: Region,
+        fieldName: str = "",
+        magnitude: float = 0,
+        dof: tuple = (),
+        amplitude: str = UNSET,
+        distributionType: SymbolicConstant = UNIFORM,
+        fixed: Boolean = OFF,
+    ) -> TemperatureBC:
         """This method creates a TemperatureBC object.
 
         Notes
         -----
             This function can be accessed by:
-            
+
             .. code-block:: python
-            
+
                 mdb.models[name].TemperatureBC
-        
+
         Parameters
         ----------
         name
@@ -1358,27 +1695,42 @@ class BoundaryConditionModel(ModelBase):
         bc: TemperatureBC
             A TemperatureBC object.
         """
-        self.boundaryConditions[name] = boundaryCondition = TemperatureBC(name, createStepName, region, fieldName,
-                                                                          magnitude, dof, amplitude, distributionType,
-                                                                          fixed)
+        self.boundaryConditions[name] = boundaryCondition = TemperatureBC(
+            name,
+            createStepName,
+            region,
+            fieldName,
+            magnitude,
+            dof,
+            amplitude,
+            distributionType,
+            fixed,
+        )
         self.steps[createStepName].boundaryConditionStates[name] = TemperatureBCState()
         return boundaryCondition
 
-    def VelocityBaseMotionBC(self, name: str, createStepName: str, dof: SymbolicConstant,
-                             amplitudeScaleFactor: float = 1,
-                             centerOfRotation: tuple = (), correlation: CorrelationArray = None,
-                             secondaryBase: str = '', useComplex: Boolean = OFF,
-                             amplitude: str = UNSET) -> VelocityBaseMotionBC:
+    def VelocityBaseMotionBC(
+        self,
+        name: str,
+        createStepName: str,
+        dof: SymbolicConstant,
+        amplitudeScaleFactor: float = 1,
+        centerOfRotation: tuple = (),
+        correlation: CorrelationArray = None,
+        secondaryBase: str = "",
+        useComplex: Boolean = OFF,
+        amplitude: str = UNSET,
+    ) -> VelocityBaseMotionBC:
         """This method creates a VelocityBaseMotionBC object.
 
         Notes
         -----
             This function can be accessed by:
-            
+
             .. code-block:: python
-            
+
                 mdb.models[name].VelocityBaseMotionBC
-        
+
         Parameters
         ----------
         name
@@ -1412,31 +1764,48 @@ class BoundaryConditionModel(ModelBase):
         bc: VelocityBaseMotionBC
             A VelocityBaseMotionBC object.
         """
-        self.boundaryConditions[name] = boundaryCondition = VelocityBaseMotionBC(name, createStepName, dof,
-                                                                                 amplitudeScaleFactor, centerOfRotation,
-                                                                                 correlation, secondaryBase, useComplex,
-                                                                                 amplitude)
-        self.steps[createStepName].boundaryConditionStates[name] = VelocityBaseMotionBCState()
+        self.boundaryConditions[name] = boundaryCondition = VelocityBaseMotionBC(
+            name,
+            createStepName,
+            dof,
+            amplitudeScaleFactor,
+            centerOfRotation,
+            correlation,
+            secondaryBase,
+            useComplex,
+            amplitude,
+        )
+        self.steps[createStepName].boundaryConditionStates[
+            name
+        ] = VelocityBaseMotionBCState()
         return boundaryCondition
 
-    def VelocityBC(self, name: str, createStepName: str, region: Region, fieldName: str = '',
-                   v1: typing.Union[SymbolicConstant, float] = UNSET,
-                   v2: typing.Union[SymbolicConstant, float] = UNSET,
-                   v3: typing.Union[SymbolicConstant, float] = UNSET,
-                   vr1: typing.Union[SymbolicConstant, float] = UNSET,
-                   vr2: typing.Union[SymbolicConstant, float] = UNSET,
-                   vr3: typing.Union[SymbolicConstant, float] = UNSET, amplitude: str = UNSET,
-                   localCsys: str = None, distributionType: SymbolicConstant = UNIFORM) -> VelocityBC:
+    def VelocityBC(
+        self,
+        name: str,
+        createStepName: str,
+        region: Region,
+        fieldName: str = "",
+        v1: typing.Union[SymbolicConstant, float] = UNSET,
+        v2: typing.Union[SymbolicConstant, float] = UNSET,
+        v3: typing.Union[SymbolicConstant, float] = UNSET,
+        vr1: typing.Union[SymbolicConstant, float] = UNSET,
+        vr2: typing.Union[SymbolicConstant, float] = UNSET,
+        vr3: typing.Union[SymbolicConstant, float] = UNSET,
+        amplitude: str = UNSET,
+        localCsys: str = None,
+        distributionType: SymbolicConstant = UNIFORM,
+    ) -> VelocityBC:
         """This method creates a VelocityBC object.
 
         Notes
         -----
             This function can be accessed by:
-            
+
             .. code-block:: python
-            
+
                 mdb.models[name].VelocityBC
-        
+
         Parameters
         ----------
         name
@@ -1490,8 +1859,20 @@ class BoundaryConditionModel(ModelBase):
         bc: VelocityBC
             A VelocityBC object.
         """
-        self.boundaryConditions[name] = boundaryCondition = VelocityBC(name, createStepName, region, fieldName, v1, v2,
-                                                                       v3, vr1, vr2, vr3, amplitude, localCsys,
-                                                                       distributionType)
+        self.boundaryConditions[name] = boundaryCondition = VelocityBC(
+            name,
+            createStepName,
+            region,
+            fieldName,
+            v1,
+            v2,
+            v3,
+            vr1,
+            vr2,
+            vr3,
+            amplitude,
+            localCsys,
+            distributionType,
+        )
         self.steps[createStepName].boundaryConditionStates[name] = VelocityBCState()
         return boundaryCondition

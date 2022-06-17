@@ -18,32 +18,38 @@ class EosCompaction:
 
     """
 
-    def __init__(self, soundSpeed: float, porosity: float, pressure: float, compactionPressure: float):
+    def __init__(
+        self,
+        soundSpeed: float,
+        porosity: float,
+        pressure: float,
+        compactionPressure: float,
+    ):
         """This method creates an EosCompaction object.
 
         Notes
         -----
             This function can be accessed by:
-            
+
             .. code-block:: python
-            
+
                 mdb.models[name].materials[name].eos.EosCompaction
                 session.odbs[name].materials[name].eos.EosCompaction
-        
+
         Parameters
         ----------
         soundSpeed
-            A Float specifying reference sound speed in the porous material. 
+            A Float specifying reference sound speed in the porous material.
         porosity
-            A Float specifying value of the porosity of the unloaded material. 
+            A Float specifying value of the porosity of the unloaded material.
         pressure
             A Float specifying pressure required to initialize Plastic behavior.
         compactionPressure
-            A Float specifying compaction pressure at which all pores are crushed. 
+            A Float specifying compaction pressure at which all pores are crushed.
 
         Returns
         -------
-            An EosCompaction object. 
+            An EosCompaction object.
 
         Raises
         ------

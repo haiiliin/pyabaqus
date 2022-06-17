@@ -4,12 +4,12 @@ from .DerivedComponent import DerivedComponent
 
 class ConnectorPotential:
     """The ConnectorPotential object is used to define a restricted set of mathematical
-    functions to represent yield or limiting surfaces in the space spanned by connector 
-    available components. It can be used only in conjunction with ConnectorDamage, 
-    ConnectorFriction, and ConnectorPlasticity objects. Because the ConnectorDamage object 
-    contains two separate ConnectorPotential repositories (one for damage initiation and one 
-    for damage evolution), there are two ConnectorPotential constructors associated with 
-    that behavior—IniPotential and EvoPotential. 
+    functions to represent yield or limiting surfaces in the space spanned by connector
+    available components. It can be used only in conjunction with ConnectorDamage,
+    ConnectorFriction, and ConnectorPlasticity objects. Because the ConnectorDamage object
+    contains two separate ConnectorPotential repositories (one for damage initiation and one
+    for damage evolution), there are two ConnectorPotential constructors associated with
+    that behavior—IniPotential and EvoPotential.
 
     Attributes
     ----------
@@ -38,13 +38,20 @@ class ConnectorPotential:
 
     """
 
-    # A DerivedComponent object specifying the DerivedComponent used in the contribution. This 
-    # argument is applicable only if *componentStyle*=DERIVED_COMPONENT. 
+    # A DerivedComponent object specifying the DerivedComponent used in the contribution. This
+    # argument is applicable only if *componentStyle*=DERIVED_COMPONENT.
     derivedComponent: DerivedComponent = DerivedComponent()
 
-    def __init__(self, componentStyle: SymbolicConstant = COMPONENT_NUMBER, componentNumber: int = 0,
-                 sign: SymbolicConstant = POSITIVE, scaleFactor: float = 1, positiveExponent: float = 2,
-                 shiftFactor: float = 0, hFunction: SymbolicConstant = ABS):
+    def __init__(
+        self,
+        componentStyle: SymbolicConstant = COMPONENT_NUMBER,
+        componentNumber: int = 0,
+        sign: SymbolicConstant = POSITIVE,
+        scaleFactor: float = 1,
+        positiveExponent: float = 2,
+        shiftFactor: float = 0,
+        hFunction: SymbolicConstant = ABS,
+    ):
         """This method creates a connector potential object to be used in conjunction with an
         allowable connector behavior option.
 
@@ -102,7 +109,7 @@ class ConnectorPotential:
 
         Raises
         ------
-            ValueError. 
+            ValueError.
         """
         pass
 

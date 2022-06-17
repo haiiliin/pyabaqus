@@ -27,14 +27,16 @@ class HistoryRegion:
 
     """
 
-    # A SymbolicConstant specifying the position of the history output. Possible values are 
-    # NODAL, INTEGRATION_POINT, WHOLE_ELEMENT, WHOLE_REGION, and WHOLE_MODEL. 
+    # A SymbolicConstant specifying the position of the history output. Possible values are
+    # NODAL, INTEGRATION_POINT, WHOLE_ELEMENT, WHOLE_REGION, and WHOLE_MODEL.
     position: SymbolicConstant = None
 
-    # A repository of HistoryOutput objects. 
+    # A repository of HistoryOutput objects.
     historyOutputs: dict[str, HistoryOutput] = dict[str, HistoryOutput]()
 
-    def __init__(self, name: str, description: str, point: HistoryPoint, loadCase: str = None):
+    def __init__(
+        self, name: str, description: str, point: HistoryPoint, loadCase: str = None
+    ):
         """This method creates a HistoryRegion object.
 
         Notes
@@ -44,18 +46,18 @@ class HistoryRegion:
         .. code-block:: python
 
             session.odbs[name].steps[name].HistoryRegion
-        
+
         Parameters
         ----------
         name
-            A String specifying the name of the HistoryRegion object. 
+            A String specifying the name of the HistoryRegion object.
         description
-            A String specifying the description of the HistoryRegion object. 
+            A String specifying the description of the HistoryRegion object.
         point
-            A HistoryPoint object specifying the point to which the history data refer. 
+            A HistoryPoint object specifying the point to which the history data refer.
         loadCase
-            None or an OdbLoadCase object specifying the load case associated with the HistoryRegion 
-            object. The default value is None. 
+            None or an OdbLoadCase object specifying the load case associated with the HistoryRegion
+            object. The default value is None.
 
         Returns
         -------
@@ -66,11 +68,11 @@ class HistoryRegion:
     @typing.overload
     def getSubset(self, variableName: str):
         """This method returns a subset of the data in the HistoryRegion object.
-        
+
         Parameters
         ----------
         variableName
-            A String specifying the name of the output variable to return. 
+            A String specifying the name of the output variable to return.
 
         Returns
         -------
@@ -81,12 +83,12 @@ class HistoryRegion:
     @typing.overload
     def getSubset(self, start: float):
         """This method returns a subset of the data in the HistoryRegion object.
-        
+
         Parameters
         ----------
         start
-            A Float specifying the start of the subset. This is the same as the first item in the 
-            data array member of the HistoryOutput object. 
+            A Float specifying the start of the subset. This is the same as the first item in the
+            data array member of the HistoryOutput object.
 
         Returns
         -------
@@ -97,14 +99,14 @@ class HistoryRegion:
     @typing.overload
     def getSubset(self, start: float, end: float):
         """This method returns a subset of the data in the HistoryRegion object.
-        
+
         Parameters
         ----------
         start
-            A Float specifying the start of the subset. This is the same as the first item in the 
-            data array member of the HistoryOutput object. 
+            A Float specifying the start of the subset. This is the same as the first item in the
+            data array member of the HistoryOutput object.
         end
-            A Float specifying the end of the subset. 
+            A Float specifying the end of the subset.
 
         Returns
         -------
@@ -115,8 +117,13 @@ class HistoryRegion:
     def getSubset(self, *args, **kwargs):
         pass
 
-    def HistoryOutput(self, name: str, description: str, type: SymbolicConstant,
-                      validInvariants: SymbolicConstant = None):
+    def HistoryOutput(
+        self,
+        name: str,
+        description: str,
+        type: SymbolicConstant,
+        validInvariants: SymbolicConstant = None,
+    ):
         """This method creates a HistoryOutput object.
 
         Notes
@@ -126,7 +133,7 @@ class HistoryRegion:
         .. code-block:: python
 
             session.odbs[name].steps[name].HistoryRegion
-        
+
         Parameters
         ----------
         name
@@ -144,5 +151,7 @@ class HistoryRegion:
         -------
             A HistoryOutput object.
         """
-        self.historyOutputs[name] = historyOutput = HistoryOutput(name, description, type, validInvariants)
+        self.historyOutputs[name] = historyOutput = HistoryOutput(
+            name, description, type, validInvariants
+        )
         return historyOutput

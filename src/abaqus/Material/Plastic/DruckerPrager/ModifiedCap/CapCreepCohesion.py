@@ -7,9 +7,9 @@ class CapCreepCohesion:
     Notes
     -----
     This object can be accessed by:
-    
+
     .. code-block:: python
-        
+
         import material
         mdb.models[name].materials[name].capPlasticity.capCreepCohesion
         import odbMaterial
@@ -50,33 +50,39 @@ class CapCreepCohesion:
 
     """
 
-    def __init__(self, table: tuple, law: SymbolicConstant = STRAIN, temperatureDependency: Boolean = OFF,
-                 dependencies: int = 0, time: SymbolicConstant = TOTAL):
+    def __init__(
+        self,
+        table: tuple,
+        law: SymbolicConstant = STRAIN,
+        temperatureDependency: Boolean = OFF,
+        dependencies: int = 0,
+        time: SymbolicConstant = TOTAL,
+    ):
         """This method creates a CapCreepCohesion object.
 
         Notes
         -----
             This function can be accessed by:
-            
+
             .. code-block:: python
-            
+
                 mdb.models[name].materials[name].capPlasticity.CapCreepCohesion
                 session.odbs[name].materials[name].capPlasticity.CapCreepCohesion
-        
+
         Parameters
         ----------
         table
-            A sequence of sequences of Floats specifying the items described below. 
+            A sequence of sequences of Floats specifying the items described below.
         law
-            A SymbolicConstant specifying the cap creep law. Possible values are STRAIN, TIME, 
-            SINGHM, USER, POWER_LAW, and TIME_POWER_LAW. The default value is STRAIN. 
+            A SymbolicConstant specifying the cap creep law. Possible values are STRAIN, TIME,
+            SINGHM, USER, POWER_LAW, and TIME_POWER_LAW. The default value is STRAIN.
         temperatureDependency
-            A Boolean specifying whether the data depend on temperature. The default value is OFF. 
+            A Boolean specifying whether the data depend on temperature. The default value is OFF.
         dependencies
-            An Int specifying the number of field variable dependencies. The default value is 0. 
+            An Int specifying the number of field variable dependencies. The default value is 0.
         time
-            A SymbolicConstant specifying the time increment for the relevant laws. Possible values 
-            are CREEP and TOTAL. The default value is TOTAL. 
+            A SymbolicConstant specifying the time increment for the relevant laws. Possible values
+            are CREEP and TOTAL. The default value is TOTAL.
 
         Returns
         -------
@@ -85,6 +91,5 @@ class CapCreepCohesion:
         pass
 
     def setValues(self):
-        """This method modifies the CapCreepCohesion object.
-        """
+        """This method modifies the CapCreepCohesion object."""
         pass

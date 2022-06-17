@@ -4,8 +4,8 @@ from .Profile import Profile
 
 class BoxProfile(Profile):
 
-    """The BoxProfile object defines the properties of a box profile. 
-    The BoxProfile object is derived from the Profile object. 
+    """The BoxProfile object defines the properties of a box profile.
+    The BoxProfile object is derived from the Profile object.
 
     Notes
     -----
@@ -24,8 +24,17 @@ class BoxProfile(Profile):
 
     """
 
-    def __init__(self, name: str, a: float, b: float, uniformThickness: Boolean, t1: float, t2: float = 0, 
-                 t3: float = 0, t4: float = 0):
+    def __init__(
+        self,
+        name: str,
+        a: float,
+        b: float,
+        uniformThickness: Boolean,
+        t1: float,
+        t2: float = 0,
+        t3: float = 0,
+        t4: float = 0,
+    ):
         """This method creates a BoxProfile object.
 
         Notes
@@ -36,63 +45,62 @@ class BoxProfile(Profile):
 
             mdb.models[name].BoxProfile
             session.odbs[name].BoxProfile
-        
+
         Parameters
         ----------
         name
-            A String specifying the repository key. 
+            A String specifying the repository key.
         a
-            A Float specifying the *a* dimension of the box profile. For more information, see [Beam 
-            cross-section 
-            library](https://help.3ds.com/2021/English/DSSIMULIA_Established/SIMACAEELMRefMap/simaelm-c-beamcrosssectlib.htm?ContextScope=all). 
+            A Float specifying the *a* dimension of the box profile. For more information, see [Beam
+            cross-section
+            library](https://help.3ds.com/2021/English/DSSIMULIA_Established/SIMACAEELMRefMap/simaelm-c-beamcrosssectlib.htm?ContextScope=all).
         b
-            A Float specifying the *b* dimension of the box profile. 
+            A Float specifying the *b* dimension of the box profile.
         uniformThickness
-            A Boolean specifying whether the thickness is uniform. 
+            A Boolean specifying whether the thickness is uniform.
         t1
-            A Float specifying the uniform wall thickness if *uniformThickness*=ON, and the wall 
-            thickness of the first segment if *uniformThickness*=OFF. 
+            A Float specifying the uniform wall thickness if *uniformThickness*=ON, and the wall
+            thickness of the first segment if *uniformThickness*=OFF.
         t2
-            A Float specifying the wall thickness of the second segment. *t2* is required only when 
-            *uniformThickness*=OFF. The default value is 0.0. 
+            A Float specifying the wall thickness of the second segment. *t2* is required only when
+            *uniformThickness*=OFF. The default value is 0.0.
         t3
-            A Float specifying the wall thickness of the third segment. *t3* is required only when 
-            *uniformThickness*=OFF. The default value is 0.0. 
+            A Float specifying the wall thickness of the third segment. *t3* is required only when
+            *uniformThickness*=OFF. The default value is 0.0.
         t4
-            A Float specifying the wall thickness of the fourth segment. *t4* is required only when 
-            *uniformThickness*=OFF. The default value is 0.0. 
+            A Float specifying the wall thickness of the fourth segment. *t4* is required only when
+            *uniformThickness*=OFF. The default value is 0.0.
 
         Returns
         -------
-            A BoxProfile object. 
+            A BoxProfile object.
 
         Raises
         ------
         RangeError
-            
+
         """
         super().__init__()
         pass
 
     def setValues(self, t2: float = 0, t3: float = 0, t4: float = 0):
         """This method modifies the BoxProfile object.
-        
+
         Parameters
         ----------
         t2
-            A Float specifying the wall thickness of the second segment. *t2* is required only when 
-            *uniformThickness*=OFF. The default value is 0.0. 
+            A Float specifying the wall thickness of the second segment. *t2* is required only when
+            *uniformThickness*=OFF. The default value is 0.0.
         t3
-            A Float specifying the wall thickness of the third segment. *t3* is required only when 
-            *uniformThickness*=OFF. The default value is 0.0. 
+            A Float specifying the wall thickness of the third segment. *t3* is required only when
+            *uniformThickness*=OFF. The default value is 0.0.
         t4
-            A Float specifying the wall thickness of the fourth segment. *t4* is required only when 
+            A Float specifying the wall thickness of the fourth segment. *t4* is required only when
             *uniformThickness*=OFF. The default value is 0.0.
 
         Raises
         ------
         RangeError
-            
+
         """
         pass
-

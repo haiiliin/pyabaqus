@@ -1,6 +1,6 @@
 class IgnoredVertex:
     """An IgnoredVertex object is a point region of the geometry that was abstracted away by a
-    virtual topology feature. 
+    virtual topology feature.
 
     Attributes
     ----------
@@ -12,9 +12,9 @@ class IgnoredVertex:
     Notes
     -----
     This object can be accessed by:
-    
+
     .. code-block:: python
-        
+
         import part
         mdb.models[name].parts[name].ignoredVertices[i]
         import assembly
@@ -23,8 +23,8 @@ class IgnoredVertex:
 
     """
 
-    # An Int specifying the index of the IgnoredVertex in the IgnoredVertexArray. 
+    # An Int specifying the index of the IgnoredVertex in the IgnoredVertexArray.
     index: int = None
 
-    # A tuple of Floats specifying the *X*-, *Y*-, and *Z*-coordinates of the vertex. 
+    # A tuple of Floats specifying the *X*-, *Y*-, and *Z*-coordinates of the vertex.
     pointOn: float = None

@@ -3,9 +3,9 @@ from .CommandRegister import CommandRegister
 
 class RepositorySupport(CommandRegister):
     """The RepositorySupport is a base class from which you can derive your own classes that
-    are designed to contain custom repositories. Instances of this class can be queried from 
-    the GUI and are capable of notifying the GUI when the contents of the instance change. 
-    The RepositorySupport object is derived from the CommandRegister object. 
+    are designed to contain custom repositories. Instances of this class can be queried from
+    the GUI and are capable of notifying the GUI when the contents of the instance change.
+    The RepositorySupport object is derived from the CommandRegister object.
 
     Notes
     -----
@@ -44,13 +44,13 @@ class RepositorySupport(CommandRegister):
         The objects stored in the repository are assumed to have an attribute called *name* that
         stores the key used to access the object in the repository. The name attribute will be
         modified by the changeKey method.
-        
+
         Parameters
         ----------
         name
-            A String specifying the name of the repository. 
+            A String specifying the name of the repository.
         constructors
-            A constructor or sequence of constructors specifying which classes will store their 
-            instances in the repository. 
+            A constructor or sequence of constructors specifying which classes will store their
+            instances in the repository.
         """
         pass

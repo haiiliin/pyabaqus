@@ -7,9 +7,9 @@ class ConstrainedSketchVertexArray:
     Notes
     -----
     This object can be accessed by:
-    
+
     .. code-block:: python
-        
+
         import sketch
         mdb.models[name].sketches[name].vertices[i]
 
@@ -17,14 +17,14 @@ class ConstrainedSketchVertexArray:
 
     def findAt(self, coordinates: tuple, printWarning: Boolean = True):
         """This method returns the ConstrainedSketchVertex located at the given coordinates.
-        
+
         Parameters
         ----------
         coordinates
-            A sequence of Floats specifying the *X*- and *Y*-coordinates of the object to find. 
+            A sequence of Floats specifying the *X*- and *Y*-coordinates of the object to find.
         printWarning
-            A Boolean specifying whether a message is to be printed to the CLI if no entity is found 
-            at the specified location. The default value is True. 
+            A Boolean specifying whether a message is to be printed to the CLI if no entity is found
+            at the specified location. The default value is True.
 
         Returns
         -------

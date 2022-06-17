@@ -3,8 +3,8 @@ from abaqusConstants import *
 
 class LineStyle:
     """The LineStyle object is used to define the line style to be used for drawing XY-Plot
-    objects. 
-    LineStyle objects can be created using the methods described below. 
+    objects.
+    LineStyle objects can be created using the methods described below.
 
     Notes
     -----
@@ -65,8 +65,13 @@ class LineStyle:
 
     """
 
-    def __init__(self, color: str = '', show: Boolean = ON, style: SymbolicConstant = SOLID,
-                 thickness: float = 0):
+    def __init__(
+        self,
+        color: str = "",
+        show: Boolean = ON,
+        style: SymbolicConstant = SOLID,
+        thickness: float = 0,
+    ):
         """This method creates a LineStyle.
 
         Notes
@@ -77,51 +82,56 @@ class LineStyle:
 
             session.LineStyle
             xyPlot.LineStyle
-        
+
         Parameters
         ----------
         color
-            A String specifying the color to be used when drawing a line with this LineStyle object. 
-            The default value is "White". 
+            A String specifying the color to be used when drawing a line with this LineStyle object.
+            The default value is "White".
         show
-            A Boolean specifying whether to draw the line when using this LineStyle. The default 
-            value is ON. 
+            A Boolean specifying whether to draw the line when using this LineStyle. The default
+            value is ON.
         style
-            A SymbolicConstant specifying the line style to be used when drawing lines using this 
-            LineStyle. Possible values are SOLID, DASHED, DOTTED, and DOT_DASH. The default value is 
-            SOLID. 
+            A SymbolicConstant specifying the line style to be used when drawing lines using this
+            LineStyle. Possible values are SOLID, DASHED, DOTTED, and DOT_DASH. The default value is
+            SOLID.
         thickness
-            A Float specifying the line thickness in mm to be used when drawing lines using this 
-            LineStyle. The default value is 0.2. 
+            A Float specifying the line thickness in mm to be used when drawing lines using this
+            LineStyle. The default value is 0.2.
 
         Returns
         -------
-            A LineStyle object. 
+            A LineStyle object.
 
         Raises
         ------
-            ColorError 
+            ColorError
         """
         pass
 
-    def setValues(self, color: str = '', show: Boolean = ON, style: SymbolicConstant = SOLID,
-                  thickness: float = 0):
+    def setValues(
+        self,
+        color: str = "",
+        show: Boolean = ON,
+        style: SymbolicConstant = SOLID,
+        thickness: float = 0,
+    ):
         """This method modifies the LineStyle object.
-        
+
         Parameters
         ----------
         color
-            A String specifying the color to be used when drawing a line with this LineStyle object. 
-            The default value is "White". 
+            A String specifying the color to be used when drawing a line with this LineStyle object.
+            The default value is "White".
         show
-            A Boolean specifying whether to draw the line when using this LineStyle. The default 
-            value is ON. 
+            A Boolean specifying whether to draw the line when using this LineStyle. The default
+            value is ON.
         style
-            A SymbolicConstant specifying the line style to be used when drawing lines using this 
-            LineStyle. Possible values are SOLID, DASHED, DOTTED, and DOT_DASH. The default value is 
-            SOLID. 
+            A SymbolicConstant specifying the line style to be used when drawing lines using this
+            LineStyle. Possible values are SOLID, DASHED, DOTTED, and DOT_DASH. The default value is
+            SOLID.
         thickness
-            A Float specifying the line thickness in mm to be used when drawing lines using this 
-            LineStyle. The default value is 0.2. 
+            A Float specifying the line thickness in mm to be used when drawing lines using this
+            LineStyle. The default value is 0.2.
         """
         pass

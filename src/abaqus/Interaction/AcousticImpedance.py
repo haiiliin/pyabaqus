@@ -5,8 +5,8 @@ from ..Region.Region import Region
 
 class AcousticImpedance(Interaction):
     """The AcousticImpedance object defines surface impedance information or nonreflecting
-    boundaries for acoustic and coupled acoustic-structural analyses. 
-    The AcousticImpedance object is derived from the Interaction object. 
+    boundaries for acoustic and coupled acoustic-structural analyses.
+    The AcousticImpedance object is derived from the Interaction object.
 
     Notes
     -----
@@ -23,10 +23,20 @@ class AcousticImpedance(Interaction):
 
     """
 
-    def __init__(self, name: str, createStepName: str, surface: Region, definition: SymbolicConstant = TABULAR,
-                 interactionProperty: str = '', nonreflectingType: SymbolicConstant = PLANE,
-                 radius: float = 1, semimajorAxis: float = 1, eccentricity: float = 0,
-                 centerCoordinates: tuple = (), directionCosine: tuple = ()):
+    def __init__(
+        self,
+        name: str,
+        createStepName: str,
+        surface: Region,
+        definition: SymbolicConstant = TABULAR,
+        interactionProperty: str = "",
+        nonreflectingType: SymbolicConstant = PLANE,
+        radius: float = 1,
+        semimajorAxis: float = 1,
+        eccentricity: float = 0,
+        centerCoordinates: tuple = (),
+        directionCosine: tuple = (),
+    ):
         """This method creates an AcousticImpedance object.
 
         Notes
@@ -36,47 +46,47 @@ class AcousticImpedance(Interaction):
         .. code-block:: python
 
             mdb.models[name].AcousticImpedance
-        
+
         Parameters
         ----------
         name
-            A String specifying the repository key. 
+            A String specifying the repository key.
         createStepName
-            A String specifying the name of the step in which the AcousticImpedance object is 
-            created. 
+            A String specifying the name of the step in which the AcousticImpedance object is
+            created.
         surface
-            A Region object specifying the acoustic boundary surface. 
+            A Region object specifying the acoustic boundary surface.
         definition
-            A SymbolicConstant specifying the type of acoustic impedance to be defined. Possible 
-            values are TABULAR and NONREFLECTING. The default value is TABULAR. 
+            A SymbolicConstant specifying the type of acoustic impedance to be defined. Possible
+            values are TABULAR and NONREFLECTING. The default value is TABULAR.
         interactionProperty
-            A String specifying the AcousticImpedanceProp object associated with this interaction. 
+            A String specifying the AcousticImpedanceProp object associated with this interaction.
         nonreflectingType
-            A SymbolicConstant specifying the type of nonreflecting geometry to be defined. Possible 
-            values are PLANE, IMPROVED, CIRCULAR, SPHERICAL, ELLIPTICAL, and PROLATE. The default 
-            value is PLANE.This argument is valid only when *definition*=NONREFLECTING. 
+            A SymbolicConstant specifying the type of nonreflecting geometry to be defined. Possible
+            values are PLANE, IMPROVED, CIRCULAR, SPHERICAL, ELLIPTICAL, and PROLATE. The default
+            value is PLANE.This argument is valid only when *definition*=NONREFLECTING.
         radius
-            A Float specifying the radius of the circle or sphere defining the boundary surface. The 
-            default value is 1.0.This argument is valid only when *definition*=NONREFLECTING, and 
-            *nonreflectingType*=CIRCULAR or SPHERICAL. 
+            A Float specifying the radius of the circle or sphere defining the boundary surface. The
+            default value is 1.0.This argument is valid only when *definition*=NONREFLECTING, and
+            *nonreflectingType*=CIRCULAR or SPHERICAL.
         semimajorAxis
-            A Float specifying the semimajor axis length of the ellipse or prolate spheroid defining 
-            the boundary surface. The default value is 1.0.This argument is valid only when 
-            *definition*=NONREFLECTING, and *nonreflectingType*=ELLIPTICAL or PROLATE. 
+            A Float specifying the semimajor axis length of the ellipse or prolate spheroid defining
+            the boundary surface. The default value is 1.0.This argument is valid only when
+            *definition*=NONREFLECTING, and *nonreflectingType*=ELLIPTICAL or PROLATE.
         eccentricity
-            A Float specifying the eccentricity of the ellipse or prolate spheroid defining the 
-            boundary surface. The default value is 0.0.This argument is valid only when 
-            *definition*=NONREFLECTING, and *nonreflectingType*=ELLIPTICAL or PROLATE. 
+            A Float specifying the eccentricity of the ellipse or prolate spheroid defining the
+            boundary surface. The default value is 0.0.This argument is valid only when
+            *definition*=NONREFLECTING, and *nonreflectingType*=ELLIPTICAL or PROLATE.
         centerCoordinates
-            A sequence of three Floats specifying the X, Y, and Z coordinates of the center of the 
-            ellipse or prolate spheroid defining the boundary surface. The default value is (0, 0, 
-            0).This argument is valid only when *definition*=NONREFLECTING, and 
-            *nonreflectingType*=ELLIPTICAL or PROLATE. 
+            A sequence of three Floats specifying the X, Y, and Z coordinates of the center of the
+            ellipse or prolate spheroid defining the boundary surface. The default value is (0, 0,
+            0).This argument is valid only when *definition*=NONREFLECTING, and
+            *nonreflectingType*=ELLIPTICAL or PROLATE.
         directionCosine
-            A sequence of three Floats specifying the X, Y, and Z components of the direction cosine 
-            of the major axis of the ellipse or prolate spheroid defining the boundary surface. The 
-            default value is (0, 0, 1).This argument is valid only when *definition*=NONREFLECTING, 
-            and *nonreflectingType*=ELLIPTICAL or PROLATE. 
+            A sequence of three Floats specifying the X, Y, and Z components of the direction cosine
+            of the major axis of the ellipse or prolate spheroid defining the boundary surface. The
+            default value is (0, 0, 1).This argument is valid only when *definition*=NONREFLECTING,
+            and *nonreflectingType*=ELLIPTICAL or PROLATE.
 
         Returns
         -------
@@ -85,58 +95,65 @@ class AcousticImpedance(Interaction):
         super().__init__()
         pass
 
-    def setValues(self, definition: SymbolicConstant = TABULAR, interactionProperty: str = '',
-                  nonreflectingType: SymbolicConstant = PLANE, radius: float = 1,
-                  semimajorAxis: float = 1, eccentricity: float = 0, centerCoordinates: tuple = (),
-                  directionCosine: tuple = ()):
+    def setValues(
+        self,
+        definition: SymbolicConstant = TABULAR,
+        interactionProperty: str = "",
+        nonreflectingType: SymbolicConstant = PLANE,
+        radius: float = 1,
+        semimajorAxis: float = 1,
+        eccentricity: float = 0,
+        centerCoordinates: tuple = (),
+        directionCosine: tuple = (),
+    ):
         """This method modifies the data for an existing AcousticImpedance object in the step where
         it is created.
-        
+
         Parameters
         ----------
         definition
-            A SymbolicConstant specifying the type of acoustic impedance to be defined. Possible 
-            values are TABULAR and NONREFLECTING. The default value is TABULAR. 
+            A SymbolicConstant specifying the type of acoustic impedance to be defined. Possible
+            values are TABULAR and NONREFLECTING. The default value is TABULAR.
         interactionProperty
-            A String specifying the AcousticImpedanceProp object associated with this interaction. 
+            A String specifying the AcousticImpedanceProp object associated with this interaction.
         nonreflectingType
-            A SymbolicConstant specifying the type of nonreflecting geometry to be defined. Possible 
-            values are PLANE, IMPROVED, CIRCULAR, SPHERICAL, ELLIPTICAL, and PROLATE. The default 
-            value is PLANE.This argument is valid only when *definition*=NONREFLECTING. 
+            A SymbolicConstant specifying the type of nonreflecting geometry to be defined. Possible
+            values are PLANE, IMPROVED, CIRCULAR, SPHERICAL, ELLIPTICAL, and PROLATE. The default
+            value is PLANE.This argument is valid only when *definition*=NONREFLECTING.
         radius
-            A Float specifying the radius of the circle or sphere defining the boundary surface. The 
-            default value is 1.0.This argument is valid only when *definition*=NONREFLECTING, and 
-            *nonreflectingType*=CIRCULAR or SPHERICAL. 
+            A Float specifying the radius of the circle or sphere defining the boundary surface. The
+            default value is 1.0.This argument is valid only when *definition*=NONREFLECTING, and
+            *nonreflectingType*=CIRCULAR or SPHERICAL.
         semimajorAxis
-            A Float specifying the semimajor axis length of the ellipse or prolate spheroid defining 
-            the boundary surface. The default value is 1.0.This argument is valid only when 
-            *definition*=NONREFLECTING, and *nonreflectingType*=ELLIPTICAL or PROLATE. 
+            A Float specifying the semimajor axis length of the ellipse or prolate spheroid defining
+            the boundary surface. The default value is 1.0.This argument is valid only when
+            *definition*=NONREFLECTING, and *nonreflectingType*=ELLIPTICAL or PROLATE.
         eccentricity
-            A Float specifying the eccentricity of the ellipse or prolate spheroid defining the 
-            boundary surface. The default value is 0.0.This argument is valid only when 
-            *definition*=NONREFLECTING, and *nonreflectingType*=ELLIPTICAL or PROLATE. 
+            A Float specifying the eccentricity of the ellipse or prolate spheroid defining the
+            boundary surface. The default value is 0.0.This argument is valid only when
+            *definition*=NONREFLECTING, and *nonreflectingType*=ELLIPTICAL or PROLATE.
         centerCoordinates
-            A sequence of three Floats specifying the X, Y, and Z coordinates of the center of the 
-            ellipse or prolate spheroid defining the boundary surface. The default value is (0, 0, 
-            0).This argument is valid only when *definition*=NONREFLECTING, and 
-            *nonreflectingType*=ELLIPTICAL or PROLATE. 
+            A sequence of three Floats specifying the X, Y, and Z coordinates of the center of the
+            ellipse or prolate spheroid defining the boundary surface. The default value is (0, 0,
+            0).This argument is valid only when *definition*=NONREFLECTING, and
+            *nonreflectingType*=ELLIPTICAL or PROLATE.
         directionCosine
-            A sequence of three Floats specifying the X, Y, and Z components of the direction cosine 
-            of the major axis of the ellipse or prolate spheroid defining the boundary surface. The 
-            default value is (0, 0, 1).This argument is valid only when *definition*=NONREFLECTING, 
-            and *nonreflectingType*=ELLIPTICAL or PROLATE. 
+            A sequence of three Floats specifying the X, Y, and Z components of the direction cosine
+            of the major axis of the ellipse or prolate spheroid defining the boundary surface. The
+            default value is (0, 0, 1).This argument is valid only when *definition*=NONREFLECTING,
+            and *nonreflectingType*=ELLIPTICAL or PROLATE.
         """
         pass
 
-    def setValuesInStep(self, stepName: str, interactionProperty: str = ''):
+    def setValuesInStep(self, stepName: str, interactionProperty: str = ""):
         """This method modifies the propagating data for an existing AcousticImpedance object in
         the specified step.
-        
+
         Parameters
         ----------
         stepName
-            A String specifying the name of the step in which the interaction is modified. 
+            A String specifying the name of the step in which the interaction is modified.
         interactionProperty
-            A String specifying the AcousticImpedanceProp object associated with this interaction. 
+            A String specifying the AcousticImpedanceProp object associated with this interaction.
         """
         pass

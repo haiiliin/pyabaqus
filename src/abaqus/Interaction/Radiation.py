@@ -1,5 +1,3 @@
-
-
 class Radiation:
     """The Radiation object specifies radiation for a contact interaction property.
 
@@ -28,16 +26,16 @@ class Radiation:
         .. code-block:: python
 
             mdb.models[name].interactionProperties[name].Radiation
-        
+
         Parameters
         ----------
         mainEmissivity
-            A Float specifying the emissivity of the main surface. 
+            A Float specifying the emissivity of the main surface.
         secondaryEmissivity
-            A Float specifying the emissivity of the secondary surface. 
+            A Float specifying the emissivity of the secondary surface.
         table
-            A sequence of sequences of Floats specifying the following:Effective viewfactor, FF.Gap 
-            clearance, dd. 
+            A sequence of sequences of Floats specifying the following:Effective viewfactor, FF.Gap
+            clearance, dd.
 
         Returns
         -------
@@ -46,6 +44,5 @@ class Radiation:
         pass
 
     def setValues(self):
-        """This method modifies the Radiation object.
-        """
+        """This method modifies the Radiation object."""
         pass

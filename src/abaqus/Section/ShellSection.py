@@ -4,9 +4,9 @@ from .TransverseShearShell import TransverseShearShell
 
 class ShellSection(Section):
     """The ShellSection object defines the properties of a shell section. The ShellSection
-    object is derived from the Section object. The ShellSection object has no explicit 
-    constructor and no methods or members. 
-    The ShellSection object is derived from the Section object. 
+    object is derived from the Section object. The ShellSection object has no explicit
+    constructor and no methods or members.
+    The ShellSection object is derived from the Section object.
 
     Attributes
     ----------
@@ -18,9 +18,9 @@ class ShellSection(Section):
     Notes
     -----
     This object can be accessed by:
-    
+
     .. code-block:: python
-        
+
         import section
         mdb.models[name].sections[name]
         import odbSection
@@ -28,8 +28,8 @@ class ShellSection(Section):
 
     """
 
-    # A String specifying the repository key. 
-    name: str = ''
+    # A String specifying the repository key.
+    name: str = ""
 
-    # A TransverseShearShell object specifying the transverse shear stiffness properties. 
+    # A TransverseShearShell object specifying the transverse shear stiffness properties.
     transverseShear: TransverseShearShell = None

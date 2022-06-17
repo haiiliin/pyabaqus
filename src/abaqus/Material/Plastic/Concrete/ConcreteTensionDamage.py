@@ -3,21 +3,21 @@ from abaqusConstants import *
 
 class ConcreteTensionDamage:
     """The ConcreteTensionDamage object specifies hardening for the concrete damaged plasticity
-    model. 
+    model.
 
     Notes
     -----
     This object can be accessed by:
-    
+
     .. code-block:: python
-        
+
         import material
         mdb.models[name].materials[name].concreteDamagedPlasticity.concreteTensionDamage
         import odbMaterial
         session.odbs[name].materials[name].concreteDamagedPlasticity.concreteTensionDamage
 
     The table data for this object are:
-    
+
     - If *type*=STRAIN, the table data specify the following:
         - Tensile damage variable, dt.
         - Direct cracking strain, ϵtc⁢k.
@@ -39,8 +39,14 @@ class ConcreteTensionDamage:
 
     """
 
-    def __init__(self, table: tuple, compressionRecovery: float = 1, type: SymbolicConstant = STRAIN,
-                 temperatureDependency: Boolean = OFF, dependencies: int = 0):
+    def __init__(
+        self,
+        table: tuple,
+        compressionRecovery: float = 1,
+        type: SymbolicConstant = STRAIN,
+        temperatureDependency: Boolean = OFF,
+        dependencies: int = 0,
+    ):
         """This method creates a ConcreteTensionDamage object.
 
         Notes

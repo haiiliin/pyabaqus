@@ -26,7 +26,7 @@ class MoistureSwelling:
 
     """
 
-    # A Ratios object. 
+    # A Ratios object.
     ratios: Ratios = Ratios(((),))
 
     def __init__(self, table: tuple):
@@ -35,16 +35,16 @@ class MoistureSwelling:
         Notes
         -----
             This function can be accessed by:
-            
+
             .. code-block:: python
-            
+
                 mdb.models[name].materials[name].MoistureSwelling
                 session.odbs[name].materials[name].MoistureSwelling
-        
+
         Parameters
         ----------
         table
-            A sequence of sequences of Floats specifying the items described below. 
+            A sequence of sequences of Floats specifying the items described below.
 
         Returns
         -------
@@ -53,6 +53,5 @@ class MoistureSwelling:
         pass
 
     def setValues(self):
-        """This method modifies the MoistureSwelling object.
-        """
+        """This method modifies the MoistureSwelling object."""
         pass

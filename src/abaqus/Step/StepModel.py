@@ -8,7 +8,9 @@ from ..Step.BuckleStep import BuckleStep
 from ..Step.ComplexFrequencyStep import ComplexFrequencyStep
 from ..Step.CoupledTempDisplacementStep import CoupledTempDisplacementStep
 from ..Step.CoupledThermalElectricStep import CoupledThermalElectricStep
-from ..Step.CoupledThermalElectricalStructuralStep import CoupledThermalElectricalStructuralStep
+from ..Step.CoupledThermalElectricalStructuralStep import (
+    CoupledThermalElectricalStructuralStep,
+)
 from ..Step.DirectCyclicStep import DirectCyclicStep
 from ..Step.EmagTimeHarmonicStep import EmagTimeHarmonicStep
 from ..Step.ExplicitDynamicsStep import ExplicitDynamicsStep
@@ -34,19 +36,37 @@ from ..Step.ViscoStep import ViscoStep
 from ..StepMiscellaneous.CompositeDamping import CompositeDamping
 from ..StepMiscellaneous.DirectDamping import DirectDamping
 from ..StepMiscellaneous.DirectDampingByFrequency import DirectDampingByFrequency
-from ..StepMiscellaneous.EmagTimeHarmonicFrequencyArray import EmagTimeHarmonicFrequencyArray
+from ..StepMiscellaneous.EmagTimeHarmonicFrequencyArray import (
+    EmagTimeHarmonicFrequencyArray,
+)
 from ..StepMiscellaneous.MassScalingArray import MassScalingArray
-from ..StepMiscellaneous.RandomResponseFrequencyArray import RandomResponseFrequencyArray
+from ..StepMiscellaneous.RandomResponseFrequencyArray import (
+    RandomResponseFrequencyArray,
+)
 from ..StepMiscellaneous.RayleighDamping import RayleighDamping
 from ..StepMiscellaneous.RayleighDampingByFrequency import RayleighDampingByFrequency
-from ..StepMiscellaneous.ResponseSpectrumComponentArray import ResponseSpectrumComponentArray
-from ..StepMiscellaneous.SteadyStateDirectFrequencyArray import SteadyStateDirectFrequencyArray
-from ..StepMiscellaneous.SteadyStateModalFrequencyArray import SteadyStateModalFrequencyArray
-from ..StepMiscellaneous.SteadyStateSubspaceFrequencyArray import SteadyStateSubspaceFrequencyArray
+from ..StepMiscellaneous.ResponseSpectrumComponentArray import (
+    ResponseSpectrumComponentArray,
+)
+from ..StepMiscellaneous.SteadyStateDirectFrequencyArray import (
+    SteadyStateDirectFrequencyArray,
+)
+from ..StepMiscellaneous.SteadyStateModalFrequencyArray import (
+    SteadyStateModalFrequencyArray,
+)
+from ..StepMiscellaneous.SteadyStateSubspaceFrequencyArray import (
+    SteadyStateSubspaceFrequencyArray,
+)
 from ..StepMiscellaneous.StructuralDamping import StructuralDamping
-from ..StepMiscellaneous.StructuralDampingByFrequency import StructuralDampingByFrequency
-from ..StepMiscellaneous.SubstructureGenerateFrequencyArray import SubstructureGenerateFrequencyArray
-from ..StepMiscellaneous.SubstructureGenerateModesArray import SubstructureGenerateModesArray
+from ..StepMiscellaneous.StructuralDampingByFrequency import (
+    StructuralDampingByFrequency,
+)
+from ..StepMiscellaneous.SubstructureGenerateFrequencyArray import (
+    SubstructureGenerateFrequencyArray,
+)
+from ..StepMiscellaneous.SubstructureGenerateModesArray import (
+    SubstructureGenerateModesArray,
+)
 
 
 class StepModel(ModelBase):
@@ -62,18 +82,24 @@ class StepModel(ModelBase):
 
     """
 
-    def AnnealStep(self, name: str, previous: str, description: str = '', refTemp: float = None,
-                   maintainAttributes: Boolean = False) -> AnnealStep:
+    def AnnealStep(
+        self,
+        name: str,
+        previous: str,
+        description: str = "",
+        refTemp: float = None,
+        maintainAttributes: Boolean = False,
+    ) -> AnnealStep:
         """This method creates an AnnealStep object.
 
         Notes
         -----
             This function can be accessed by:
-            
+
             .. code-block:: python
-            
+
                 mdb.models[name].AnnealStep
-        
+
         Parameters
         ----------
         name
@@ -95,24 +121,37 @@ class StepModel(ModelBase):
         step: AnnealStep
             An AnnealStep object.
         """
-        self.steps[name] = step = AnnealStep(name, previous, description, refTemp, maintainAttributes)
+        self.steps[name] = step = AnnealStep(
+            name, previous, description, refTemp, maintainAttributes
+        )
         return step
 
-    def BuckleStep(self, name: str, previous: str, numEigen: int, description: str = '',
-                   eigensolver: SymbolicConstant = SUBSPACE, minEigen: float = None,
-                   maxEigen: float = None, vectors: int = None, maxIterations: int = 30,
-                   blockSize: SymbolicConstant = DEFAULT, maxBlocks: SymbolicConstant = DEFAULT,
-                   matrixStorage: SymbolicConstant = SOLVER_DEFAULT, maintainAttributes: Boolean = False) -> BuckleStep:
+    def BuckleStep(
+        self,
+        name: str,
+        previous: str,
+        numEigen: int,
+        description: str = "",
+        eigensolver: SymbolicConstant = SUBSPACE,
+        minEigen: float = None,
+        maxEigen: float = None,
+        vectors: int = None,
+        maxIterations: int = 30,
+        blockSize: SymbolicConstant = DEFAULT,
+        maxBlocks: SymbolicConstant = DEFAULT,
+        matrixStorage: SymbolicConstant = SOLVER_DEFAULT,
+        maintainAttributes: Boolean = False,
+    ) -> BuckleStep:
         """This method creates a BuckleStep object.
 
         Notes
         -----
             This function can be accessed by:
-            
+
             .. code-block:: python
-            
+
                 mdb.models[name].BuckleStep
-        
+
         Parameters
         ----------
         name
@@ -157,26 +196,47 @@ class StepModel(ModelBase):
         step: BuckleStep
             A BuckleStep object.
         """
-        self.steps[name] = step = BuckleStep(name, previous, numEigen, description, eigensolver, minEigen, maxEigen,
-                                             vectors, maxIterations, blockSize, maxBlocks, matrixStorage,
-                                             maintainAttributes)
+        self.steps[name] = step = BuckleStep(
+            name,
+            previous,
+            numEigen,
+            description,
+            eigensolver,
+            minEigen,
+            maxEigen,
+            vectors,
+            maxIterations,
+            blockSize,
+            maxBlocks,
+            matrixStorage,
+            maintainAttributes,
+        )
         return step
 
-    def ComplexFrequencyStep(self, name: str, previous: str, numEigen: SymbolicConstant = ALL, description: str = '',
-                             shift: float = None, frictionDamping: Boolean = OFF,
-                             matrixStorage: SymbolicConstant = SOLVER_DEFAULT, maintainAttributes: Boolean = False,
-                             minEigen: float = None, maxEigen: float = None,
-                             propertyEvaluationFrequency: float = None) -> ComplexFrequencyStep:
+    def ComplexFrequencyStep(
+        self,
+        name: str,
+        previous: str,
+        numEigen: SymbolicConstant = ALL,
+        description: str = "",
+        shift: float = None,
+        frictionDamping: Boolean = OFF,
+        matrixStorage: SymbolicConstant = SOLVER_DEFAULT,
+        maintainAttributes: Boolean = False,
+        minEigen: float = None,
+        maxEigen: float = None,
+        propertyEvaluationFrequency: float = None,
+    ) -> ComplexFrequencyStep:
         """This method creates a ComplexFrequencyStep object.
 
         Notes
         -----
             This function can be accessed by:
-            
+
             .. code-block:: python
-            
+
                 mdb.models[name].ComplexFrequencyStep
-        
+
         Parameters
         ----------
         name
@@ -220,35 +280,58 @@ class StepModel(ModelBase):
         step: ComplexFrequencyStep
             A ComplexFrequencyStep object.
         """
-        self.steps[name] = step = ComplexFrequencyStep(name, previous, numEigen, description, shift, frictionDamping,
-                                                       matrixStorage, maintainAttributes, minEigen, maxEigen,
-                                                       propertyEvaluationFrequency)
+        self.steps[name] = step = ComplexFrequencyStep(
+            name,
+            previous,
+            numEigen,
+            description,
+            shift,
+            frictionDamping,
+            matrixStorage,
+            maintainAttributes,
+            minEigen,
+            maxEigen,
+            propertyEvaluationFrequency,
+        )
         return step
 
-    def CoupledTempDisplacementStep(self, name: str, previous: str, description: str = '',
-                                    response: SymbolicConstant = TRANSIENT,
-                                    timePeriod: float = 1, nlgeom: Boolean = OFF,
-                                    stabilizationMethod: SymbolicConstant = NONE, stabilizationMagnitude: float = None,
-                                    timeIncrementationMethod: SymbolicConstant = AUTOMATIC, maxNumInc: int = 100,
-                                    initialInc: float = None, minInc: float = None, maxInc: float = None,
-                                    deltmx: float = 0,
-                                    cetol: float = 0, creepIntegration: SymbolicConstant = IMPLICIT,
-                                    solutionTechnique: SymbolicConstant = FULL_NEWTON,
-                                    matrixStorage: SymbolicConstant = SOLVER_DEFAULT,
-                                    amplitude: SymbolicConstant = STEP,
-                                    extrapolation: SymbolicConstant = LINEAR, maintainAttributes: Boolean = False,
-                                    convertSDI: SymbolicConstant = PROPAGATED, adaptiveDampingRatio: float = 0,
-                                    continueDampingFactors: Boolean = OFF) -> CoupledTempDisplacementStep:
+    def CoupledTempDisplacementStep(
+        self,
+        name: str,
+        previous: str,
+        description: str = "",
+        response: SymbolicConstant = TRANSIENT,
+        timePeriod: float = 1,
+        nlgeom: Boolean = OFF,
+        stabilizationMethod: SymbolicConstant = NONE,
+        stabilizationMagnitude: float = None,
+        timeIncrementationMethod: SymbolicConstant = AUTOMATIC,
+        maxNumInc: int = 100,
+        initialInc: float = None,
+        minInc: float = None,
+        maxInc: float = None,
+        deltmx: float = 0,
+        cetol: float = 0,
+        creepIntegration: SymbolicConstant = IMPLICIT,
+        solutionTechnique: SymbolicConstant = FULL_NEWTON,
+        matrixStorage: SymbolicConstant = SOLVER_DEFAULT,
+        amplitude: SymbolicConstant = STEP,
+        extrapolation: SymbolicConstant = LINEAR,
+        maintainAttributes: Boolean = False,
+        convertSDI: SymbolicConstant = PROPAGATED,
+        adaptiveDampingRatio: float = 0,
+        continueDampingFactors: Boolean = OFF,
+    ) -> CoupledTempDisplacementStep:
         """This method creates a CoupledTempDisplacementStep object.
 
         Notes
         -----
             This function can be accessed by:
-            
+
             .. code-block:: python
-            
+
                 mdb.models[name].CoupledTempDisplacementStep
-        
+
         Parameters
         ----------
         name
@@ -332,42 +415,70 @@ class StepModel(ModelBase):
         step: CoupledTempDisplacementStep
             A CoupledTempDisplacementStep object.
         """
-        self.steps[name] = step = CoupledTempDisplacementStep(name, previous, description, response, timePeriod, nlgeom,
-                                                              stabilizationMethod, stabilizationMagnitude,
-                                                              timeIncrementationMethod, maxNumInc, initialInc, minInc,
-                                                              maxInc, deltmx, cetol, creepIntegration,
-                                                              solutionTechnique, matrixStorage, amplitude,
-                                                              extrapolation, maintainAttributes, convertSDI,
-                                                              adaptiveDampingRatio, continueDampingFactors)
+        self.steps[name] = step = CoupledTempDisplacementStep(
+            name,
+            previous,
+            description,
+            response,
+            timePeriod,
+            nlgeom,
+            stabilizationMethod,
+            stabilizationMagnitude,
+            timeIncrementationMethod,
+            maxNumInc,
+            initialInc,
+            minInc,
+            maxInc,
+            deltmx,
+            cetol,
+            creepIntegration,
+            solutionTechnique,
+            matrixStorage,
+            amplitude,
+            extrapolation,
+            maintainAttributes,
+            convertSDI,
+            adaptiveDampingRatio,
+            continueDampingFactors,
+        )
         return step
 
-    def CoupledThermalElectricalStructuralStep(self, name: str, previous: str, description: str = '',
-                                               response: SymbolicConstant = TRANSIENT,
-                                               timePeriod: float = 1, nlgeom: Boolean = OFF,
-                                               stabilizationMethod: SymbolicConstant = NONE,
-                                               stabilizationMagnitude: float = None,
-                                               timeIncrementationMethod: SymbolicConstant = AUTOMATIC,
-                                               maxNumInc: int = 100,
-                                               initialInc: float = None, minInc: float = None, maxInc: float = None,
-                                               deltmx: float = 0,
-                                               cetol: float = 0, creepIntegration: SymbolicConstant = IMPLICIT,
-                                               matrixStorage: SymbolicConstant = SOLVER_DEFAULT,
-                                               amplitude: SymbolicConstant = STEP,
-                                               extrapolation: SymbolicConstant = LINEAR,
-                                               maintainAttributes: Boolean = False,
-                                               convertSDI: SymbolicConstant = PROPAGATED,
-                                               adaptiveDampingRatio: float = 0,
-                                               continueDampingFactors: Boolean = OFF) -> CoupledThermalElectricalStructuralStep:
+    def CoupledThermalElectricalStructuralStep(
+        self,
+        name: str,
+        previous: str,
+        description: str = "",
+        response: SymbolicConstant = TRANSIENT,
+        timePeriod: float = 1,
+        nlgeom: Boolean = OFF,
+        stabilizationMethod: SymbolicConstant = NONE,
+        stabilizationMagnitude: float = None,
+        timeIncrementationMethod: SymbolicConstant = AUTOMATIC,
+        maxNumInc: int = 100,
+        initialInc: float = None,
+        minInc: float = None,
+        maxInc: float = None,
+        deltmx: float = 0,
+        cetol: float = 0,
+        creepIntegration: SymbolicConstant = IMPLICIT,
+        matrixStorage: SymbolicConstant = SOLVER_DEFAULT,
+        amplitude: SymbolicConstant = STEP,
+        extrapolation: SymbolicConstant = LINEAR,
+        maintainAttributes: Boolean = False,
+        convertSDI: SymbolicConstant = PROPAGATED,
+        adaptiveDampingRatio: float = 0,
+        continueDampingFactors: Boolean = OFF,
+    ) -> CoupledThermalElectricalStructuralStep:
         """This method creates a CoupledThermalElectricalStructuralStep object.
 
         Notes
         -----
             This function can be accessed by:
-            
+
             .. code-block:: python
-            
+
                 mdb.models[name].CoupledThermalElectricalStructuralStep
-        
+
         Parameters
         ----------
         name
@@ -448,35 +559,65 @@ class StepModel(ModelBase):
         step: CoupledThermalElectricalStructuralStep
             A CoupledThermalElectricalStructuralStep object.
         """
-        self.steps[name] = step = CoupledThermalElectricalStructuralStep(name, previous, description, response,
-                                                                         timePeriod, nlgeom, stabilizationMethod,
-                                                                         stabilizationMagnitude,
-                                                                         timeIncrementationMethod, maxNumInc,
-                                                                         initialInc, minInc, maxInc, deltmx, cetol,
-                                                                         creepIntegration, matrixStorage, amplitude,
-                                                                         extrapolation, maintainAttributes, convertSDI,
-                                                                         adaptiveDampingRatio, continueDampingFactors)
+        self.steps[name] = step = CoupledThermalElectricalStructuralStep(
+            name,
+            previous,
+            description,
+            response,
+            timePeriod,
+            nlgeom,
+            stabilizationMethod,
+            stabilizationMagnitude,
+            timeIncrementationMethod,
+            maxNumInc,
+            initialInc,
+            minInc,
+            maxInc,
+            deltmx,
+            cetol,
+            creepIntegration,
+            matrixStorage,
+            amplitude,
+            extrapolation,
+            maintainAttributes,
+            convertSDI,
+            adaptiveDampingRatio,
+            continueDampingFactors,
+        )
         return step
 
-    def CoupledThermalElectricStep(self, name: str, previous: str, description: str = '',
-                                   response: SymbolicConstant = TRANSIENT,
-                                   timePeriod: float = 1, timeIncrementationMethod: SymbolicConstant = AUTOMATIC,
-                                   maxNumInc: int = 100, initialInc: float = None, minInc: float = None,
-                                   maxInc: float = None, end: SymbolicConstant = PERIOD, deltmx: float = 0,
-                                   mxdem: float = 0, solutionTechnique: SymbolicConstant = FULL_NEWTON,
-                                   matrixStorage: SymbolicConstant = SOLVER_DEFAULT, amplitude: SymbolicConstant = STEP,
-                                   extrapolation: SymbolicConstant = LINEAR, maintainAttributes: Boolean = False,
-                                   convertSDI: SymbolicConstant = PROPAGATED) -> CoupledThermalElectricStep:
+    def CoupledThermalElectricStep(
+        self,
+        name: str,
+        previous: str,
+        description: str = "",
+        response: SymbolicConstant = TRANSIENT,
+        timePeriod: float = 1,
+        timeIncrementationMethod: SymbolicConstant = AUTOMATIC,
+        maxNumInc: int = 100,
+        initialInc: float = None,
+        minInc: float = None,
+        maxInc: float = None,
+        end: SymbolicConstant = PERIOD,
+        deltmx: float = 0,
+        mxdem: float = 0,
+        solutionTechnique: SymbolicConstant = FULL_NEWTON,
+        matrixStorage: SymbolicConstant = SOLVER_DEFAULT,
+        amplitude: SymbolicConstant = STEP,
+        extrapolation: SymbolicConstant = LINEAR,
+        maintainAttributes: Boolean = False,
+        convertSDI: SymbolicConstant = PROPAGATED,
+    ) -> CoupledThermalElectricStep:
         """This method creates a CoupledThermalElectricStep object.
 
         Notes
         -----
             This function can be accessed by:
-            
+
             .. code-block:: python
-            
+
                 mdb.models[name].CoupledThermalElectricStep
-        
+
         Parameters
         ----------
         name
@@ -540,34 +681,68 @@ class StepModel(ModelBase):
         step: CoupledThermalElectricStep
             A CoupledThermalElectricStep object.
         """
-        self.steps[name] = step = CoupledThermalElectricStep(name, previous, description, response, timePeriod,
-                                                             timeIncrementationMethod, maxNumInc, initialInc, minInc,
-                                                             maxInc, end, deltmx, mxdem, solutionTechnique,
-                                                             matrixStorage, amplitude, extrapolation,
-                                                             maintainAttributes, convertSDI)
+        self.steps[name] = step = CoupledThermalElectricStep(
+            name,
+            previous,
+            description,
+            response,
+            timePeriod,
+            timeIncrementationMethod,
+            maxNumInc,
+            initialInc,
+            minInc,
+            maxInc,
+            end,
+            deltmx,
+            mxdem,
+            solutionTechnique,
+            matrixStorage,
+            amplitude,
+            extrapolation,
+            maintainAttributes,
+            convertSDI,
+        )
         return step
 
-    def DirectCyclicStep(self, name: str, previous: str, description: str = '', timePeriod: float = 1,
-                         timeIncrementationMethod: SymbolicConstant = AUTOMATIC, maxNumInc: int = 100,
-                         initialInc: float = None, minInc: float = None, maxInc: float = None,
-                         maxNumIterations: int = 200, initialTerms: int = 11, maxTerms: int = 25,
-                         termsIncrement: int = 5, deltmx: float = 0, cetol: float = 0, timePoints: str = NONE,
-                         fatigue: Boolean = OFF, continueAnalysis: Boolean = OFF, minCycleInc: int = 100,
-                         maxCycleInc: int = 1000, maxNumCycles: SymbolicConstant = DEFAULT,
-                         damageExtrapolationTolerance: float = 1,
-                         matrixStorage: SymbolicConstant = SOLVER_DEFAULT,
-                         extrapolation: SymbolicConstant = LINEAR, maintainAttributes: Boolean = False,
-                         convertSDI: SymbolicConstant = PROPAGATED) -> DirectCyclicStep:
+    def DirectCyclicStep(
+        self,
+        name: str,
+        previous: str,
+        description: str = "",
+        timePeriod: float = 1,
+        timeIncrementationMethod: SymbolicConstant = AUTOMATIC,
+        maxNumInc: int = 100,
+        initialInc: float = None,
+        minInc: float = None,
+        maxInc: float = None,
+        maxNumIterations: int = 200,
+        initialTerms: int = 11,
+        maxTerms: int = 25,
+        termsIncrement: int = 5,
+        deltmx: float = 0,
+        cetol: float = 0,
+        timePoints: str = NONE,
+        fatigue: Boolean = OFF,
+        continueAnalysis: Boolean = OFF,
+        minCycleInc: int = 100,
+        maxCycleInc: int = 1000,
+        maxNumCycles: SymbolicConstant = DEFAULT,
+        damageExtrapolationTolerance: float = 1,
+        matrixStorage: SymbolicConstant = SOLVER_DEFAULT,
+        extrapolation: SymbolicConstant = LINEAR,
+        maintainAttributes: Boolean = False,
+        convertSDI: SymbolicConstant = PROPAGATED,
+    ) -> DirectCyclicStep:
         """This method creates a DirectCyclicStep object.
 
         Notes
         -----
             This function can be accessed by:
-            
+
             .. code-block:: python
-            
+
                 mdb.models[name].DirectCyclicStep
-        
+
         Parameters
         ----------
         name
@@ -654,26 +829,54 @@ class StepModel(ModelBase):
         step: DirectCyclicStep
             A DirectCyclicStep object.
         """
-        self.steps[name] = step = DirectCyclicStep(name, previous, description, timePeriod, timeIncrementationMethod,
-                                                   maxNumInc, initialInc, minInc, maxInc, maxNumIterations,
-                                                   initialTerms, maxTerms, termsIncrement, deltmx, cetol, timePoints,
-                                                   fatigue, continueAnalysis, minCycleInc, maxCycleInc, maxNumCycles,
-                                                   damageExtrapolationTolerance, matrixStorage, extrapolation,
-                                                   maintainAttributes, convertSDI)
+        self.steps[name] = step = DirectCyclicStep(
+            name,
+            previous,
+            description,
+            timePeriod,
+            timeIncrementationMethod,
+            maxNumInc,
+            initialInc,
+            minInc,
+            maxInc,
+            maxNumIterations,
+            initialTerms,
+            maxTerms,
+            termsIncrement,
+            deltmx,
+            cetol,
+            timePoints,
+            fatigue,
+            continueAnalysis,
+            minCycleInc,
+            maxCycleInc,
+            maxNumCycles,
+            damageExtrapolationTolerance,
+            matrixStorage,
+            extrapolation,
+            maintainAttributes,
+            convertSDI,
+        )
         return step
 
-    def EmagTimeHarmonicStep(self, name: str, previous: str, frequencyRange: EmagTimeHarmonicFrequencyArray,
-                             description: str = '', factorization: SymbolicConstant = COMPLEX) -> EmagTimeHarmonicStep:
+    def EmagTimeHarmonicStep(
+        self,
+        name: str,
+        previous: str,
+        frequencyRange: EmagTimeHarmonicFrequencyArray,
+        description: str = "",
+        factorization: SymbolicConstant = COMPLEX,
+    ) -> EmagTimeHarmonicStep:
         """This method creates a EmagTimeHarmonicStep object.
 
         Notes
         -----
             This function can be accessed by:
-            
+
             .. code-block:: python
-            
+
                 mdb.models[name].EmagTimeHarmonicStep
-        
+
         Parameters
         ----------
         name
@@ -695,27 +898,39 @@ class StepModel(ModelBase):
         step: EmagTimeHarmonicStep
             An EmagTimeHarmonicStep object.
         """
-        self.steps[name] = step = EmagTimeHarmonicStep(name, previous, frequencyRange, description, factorization)
+        self.steps[name] = step = EmagTimeHarmonicStep(
+            name, previous, frequencyRange, description, factorization
+        )
         return step
 
-    def ExplicitDynamicsStep(self, name: str, previous: str, description: str = '', timePeriod: float = 1,
-                             nlgeom: Boolean = ON, adiabatic: Boolean = OFF,
-                             timeIncrementationMethod: SymbolicConstant = AUTOMATIC_GLOBAL,
-                             maxIncrement: float = None, scaleFactor: float = 1,
-                             massScaling: MassScalingArray = PREVIOUS_STEP, linearBulkViscosity: float = 0,
-                             quadBulkViscosity: float = 1, userDefinedInc: float = None,
-                             maintainAttributes: Boolean = False,
-                             improvedDtMethod: Boolean = ON) -> ExplicitDynamicsStep:
+    def ExplicitDynamicsStep(
+        self,
+        name: str,
+        previous: str,
+        description: str = "",
+        timePeriod: float = 1,
+        nlgeom: Boolean = ON,
+        adiabatic: Boolean = OFF,
+        timeIncrementationMethod: SymbolicConstant = AUTOMATIC_GLOBAL,
+        maxIncrement: float = None,
+        scaleFactor: float = 1,
+        massScaling: MassScalingArray = PREVIOUS_STEP,
+        linearBulkViscosity: float = 0,
+        quadBulkViscosity: float = 1,
+        userDefinedInc: float = None,
+        maintainAttributes: Boolean = False,
+        improvedDtMethod: Boolean = ON,
+    ) -> ExplicitDynamicsStep:
         """This method creates an ExplicitDynamicsStep object.
 
         Notes
         -----
             This function can be accessed by:
-            
+
             .. code-block:: python
-            
+
                 mdb.models[name].ExplicitDynamicsStep
-        
+
         Parameters
         ----------
         name
@@ -771,35 +986,66 @@ class StepModel(ModelBase):
         step: ExplicitDynamicsStep
             An ExplicitDynamicsStep object.
         """
-        self.steps[name] = step = ExplicitDynamicsStep(name, previous, description, timePeriod, nlgeom, adiabatic,
-                                                       timeIncrementationMethod, maxIncrement, scaleFactor, massScaling,
-                                                       linearBulkViscosity, quadBulkViscosity, userDefinedInc,
-                                                       maintainAttributes, improvedDtMethod)
+        self.steps[name] = step = ExplicitDynamicsStep(
+            name,
+            previous,
+            description,
+            timePeriod,
+            nlgeom,
+            adiabatic,
+            timeIncrementationMethod,
+            maxIncrement,
+            scaleFactor,
+            massScaling,
+            linearBulkViscosity,
+            quadBulkViscosity,
+            userDefinedInc,
+            maintainAttributes,
+            improvedDtMethod,
+        )
         return step
 
-    def FrequencyStep(self, name: str, previous: str, eigensolver: SymbolicConstant,
-                      numEigen: SymbolicConstant = ALL, description: str = '', shift: float = 0,
-                      minEigen: float = None, maxEigen: float = None, vectors: int = None,
-                      maxIterations: int = 30, blockSize: SymbolicConstant = DEFAULT,
-                      maxBlocks: SymbolicConstant = DEFAULT, normalization: SymbolicConstant = DISPLACEMENT,
-                      propertyEvaluationFrequency: float = None, projectDamping: Boolean = ON,
-                      acousticCoupling: SymbolicConstant = AC_ON, acousticRangeFactor: float = 1,
-                      frictionDamping: Boolean = OFF, matrixStorage: SymbolicConstant = SOLVER_DEFAULT,
-                      maintainAttributes: Boolean = False, simLinearDynamics: Boolean = OFF,
-                      residualModes: Boolean = OFF, substructureCutoffMultiplier: float = 5,
-                      firstCutoffMultiplier: float = 1, secondCutoffMultiplier: float = 1,
-                      residualModeRegion: str = None, residualModeDof: str = None,
-                      limitSavedEigenvectorRegion: SymbolicConstant = None) -> FrequencyStep:
+    def FrequencyStep(
+        self,
+        name: str,
+        previous: str,
+        eigensolver: SymbolicConstant,
+        numEigen: SymbolicConstant = ALL,
+        description: str = "",
+        shift: float = 0,
+        minEigen: float = None,
+        maxEigen: float = None,
+        vectors: int = None,
+        maxIterations: int = 30,
+        blockSize: SymbolicConstant = DEFAULT,
+        maxBlocks: SymbolicConstant = DEFAULT,
+        normalization: SymbolicConstant = DISPLACEMENT,
+        propertyEvaluationFrequency: float = None,
+        projectDamping: Boolean = ON,
+        acousticCoupling: SymbolicConstant = AC_ON,
+        acousticRangeFactor: float = 1,
+        frictionDamping: Boolean = OFF,
+        matrixStorage: SymbolicConstant = SOLVER_DEFAULT,
+        maintainAttributes: Boolean = False,
+        simLinearDynamics: Boolean = OFF,
+        residualModes: Boolean = OFF,
+        substructureCutoffMultiplier: float = 5,
+        firstCutoffMultiplier: float = 1,
+        secondCutoffMultiplier: float = 1,
+        residualModeRegion: str = None,
+        residualModeDof: str = None,
+        limitSavedEigenvectorRegion: SymbolicConstant = None,
+    ) -> FrequencyStep:
         """This method creates a FrequencyStep object.
 
         Notes
         -----
             This function can be accessed by:
-            
+
             .. code-block:: python
-            
+
                 mdb.models[name].FrequencyStep
-        
+
         Parameters
         ----------
         name
@@ -906,32 +1152,68 @@ class StepModel(ModelBase):
         step: FrequencyStep
             A FrequencyStep object.
         """
-        self.steps[name] = step = FrequencyStep(name, previous, eigensolver, numEigen, description, shift, minEigen,
-                                                maxEigen, vectors, maxIterations, blockSize, maxBlocks, normalization,
-                                                propertyEvaluationFrequency, projectDamping, acousticCoupling,
-                                                acousticRangeFactor, frictionDamping, matrixStorage, maintainAttributes,
-                                                simLinearDynamics, residualModes, substructureCutoffMultiplier,
-                                                firstCutoffMultiplier, secondCutoffMultiplier, residualModeRegion,
-                                                residualModeDof, limitSavedEigenvectorRegion)
+        self.steps[name] = step = FrequencyStep(
+            name,
+            previous,
+            eigensolver,
+            numEigen,
+            description,
+            shift,
+            minEigen,
+            maxEigen,
+            vectors,
+            maxIterations,
+            blockSize,
+            maxBlocks,
+            normalization,
+            propertyEvaluationFrequency,
+            projectDamping,
+            acousticCoupling,
+            acousticRangeFactor,
+            frictionDamping,
+            matrixStorage,
+            maintainAttributes,
+            simLinearDynamics,
+            residualModes,
+            substructureCutoffMultiplier,
+            firstCutoffMultiplier,
+            secondCutoffMultiplier,
+            residualModeRegion,
+            residualModeDof,
+            limitSavedEigenvectorRegion,
+        )
         return step
 
-    def GeostaticStep(self, name: str, previous: str, description: str = '', nlgeom: Boolean = OFF,
-                      matrixSolver: SymbolicConstant = DIRECT,
-                      matrixStorage: SymbolicConstant = SOLVER_DEFAULT, maintainAttributes: Boolean = False,
-                      solutionTechnique: SymbolicConstant = FULL_NEWTON, reformKernel: int = 8,
-                      convertSDI: SymbolicConstant = PROPAGATED, utol: float = None, timePeriod: float = 1,
-                      timeIncrementationMethod: SymbolicConstant = AUTOMATIC, maxNumInc: int = 100,
-                      initialInc: float = None, minInc: float = None, maxInc: float = None) -> GeostaticStep:
+    def GeostaticStep(
+        self,
+        name: str,
+        previous: str,
+        description: str = "",
+        nlgeom: Boolean = OFF,
+        matrixSolver: SymbolicConstant = DIRECT,
+        matrixStorage: SymbolicConstant = SOLVER_DEFAULT,
+        maintainAttributes: Boolean = False,
+        solutionTechnique: SymbolicConstant = FULL_NEWTON,
+        reformKernel: int = 8,
+        convertSDI: SymbolicConstant = PROPAGATED,
+        utol: float = None,
+        timePeriod: float = 1,
+        timeIncrementationMethod: SymbolicConstant = AUTOMATIC,
+        maxNumInc: int = 100,
+        initialInc: float = None,
+        minInc: float = None,
+        maxInc: float = None,
+    ) -> GeostaticStep:
         """This method creates a GeostaticStep object.
 
         Notes
         -----
             This function can be accessed by:
-            
+
             .. code-block:: python
-            
+
                 mdb.models[name].GeostaticStep
-        
+
         Parameters
         ----------
         name
@@ -992,31 +1274,61 @@ class StepModel(ModelBase):
         step: GeostaticStep
             A GeostaticStep object.
         """
-        self.steps[name] = step = GeostaticStep(name, previous, description, nlgeom, matrixSolver, matrixStorage,
-                                                maintainAttributes, solutionTechnique, reformKernel, convertSDI, utol,
-                                                timePeriod, timeIncrementationMethod, maxNumInc, initialInc, minInc,
-                                                maxInc)
+        self.steps[name] = step = GeostaticStep(
+            name,
+            previous,
+            description,
+            nlgeom,
+            matrixSolver,
+            matrixStorage,
+            maintainAttributes,
+            solutionTechnique,
+            reformKernel,
+            convertSDI,
+            utol,
+            timePeriod,
+            timeIncrementationMethod,
+            maxNumInc,
+            initialInc,
+            minInc,
+            maxInc,
+        )
         return step
 
-    def HeatTransferStep(self, name: str, previous: str, description: str = '', response: SymbolicConstant = TRANSIENT,
-                         timePeriod: float = 1, timeIncrementationMethod: SymbolicConstant = AUTOMATIC,
-                         maxNumInc: int = 100, initialInc: float = None, minInc: float = None,
-                         maxInc: float = None, end: float = None, deltmx: float = 0, mxdem: float = 0,
-                         amplitude: SymbolicConstant = STEP, extrapolation: SymbolicConstant = LINEAR,
-                         matrixSolver: SymbolicConstant = DIRECT,
-                         matrixStorage: SymbolicConstant = SOLVER_DEFAULT, maintainAttributes: Boolean = False,
-                         solutionTechnique: SymbolicConstant = FULL_NEWTON, reformKernel: int = 8,
-                         convertSDI: SymbolicConstant = PROPAGATED) -> HeatTransferStep:
+    def HeatTransferStep(
+        self,
+        name: str,
+        previous: str,
+        description: str = "",
+        response: SymbolicConstant = TRANSIENT,
+        timePeriod: float = 1,
+        timeIncrementationMethod: SymbolicConstant = AUTOMATIC,
+        maxNumInc: int = 100,
+        initialInc: float = None,
+        minInc: float = None,
+        maxInc: float = None,
+        end: float = None,
+        deltmx: float = 0,
+        mxdem: float = 0,
+        amplitude: SymbolicConstant = STEP,
+        extrapolation: SymbolicConstant = LINEAR,
+        matrixSolver: SymbolicConstant = DIRECT,
+        matrixStorage: SymbolicConstant = SOLVER_DEFAULT,
+        maintainAttributes: Boolean = False,
+        solutionTechnique: SymbolicConstant = FULL_NEWTON,
+        reformKernel: int = 8,
+        convertSDI: SymbolicConstant = PROPAGATED,
+    ) -> HeatTransferStep:
         """This method creates a HeatTransferStep object.
 
         Notes
         -----
             This function can be accessed by:
-            
+
             .. code-block:: python
-            
+
                 mdb.models[name].HeatTransferStep
-        
+
         Parameters
         ----------
         name
@@ -1088,36 +1400,70 @@ class StepModel(ModelBase):
         step: HeatTransferStep
             A HeatTransferStep object.
         """
-        self.steps[name] = step = HeatTransferStep(name, previous, description, response, timePeriod,
-                                                   timeIncrementationMethod, maxNumInc, initialInc, minInc, maxInc, end,
-                                                   deltmx, mxdem, amplitude, extrapolation, matrixSolver, matrixStorage,
-                                                   maintainAttributes, solutionTechnique, reformKernel, convertSDI)
+        self.steps[name] = step = HeatTransferStep(
+            name,
+            previous,
+            description,
+            response,
+            timePeriod,
+            timeIncrementationMethod,
+            maxNumInc,
+            initialInc,
+            minInc,
+            maxInc,
+            end,
+            deltmx,
+            mxdem,
+            amplitude,
+            extrapolation,
+            matrixSolver,
+            matrixStorage,
+            maintainAttributes,
+            solutionTechnique,
+            reformKernel,
+            convertSDI,
+        )
         return step
 
-    def ImplicitDynamicsStep(self, name: str, previous: str, description: str = '', timePeriod: float = 1,
-                             nlgeom: Boolean = OFF, matrixStorage: SymbolicConstant = SOLVER_DEFAULT,
-                             application: SymbolicConstant = ANALYSIS_PRODUCT_DEFAULT, adiabatic: Boolean = OFF,
-                             timeIncrementationMethod: SymbolicConstant = AUTOMATIC, maxNumInc: int = 100,
-                             initialInc: float = None, minInc: float = None,
-                             maxInc: typing.Union[SymbolicConstant, float] = DEFAULT,
-                             hafTolMethod: SymbolicConstant = VALUE, haftol: float = None,
-                             halfIncScaleFactor: float = None, nohaf: Boolean = OFF,
-                             amplitude: SymbolicConstant = STEP,
-                             alpha: typing.Union[SymbolicConstant, float] = DEFAULT,
-                             initialConditions: SymbolicConstant = DEFAULT,
-                             extrapolation: SymbolicConstant = ANALYSIS_PRODUCT_DEFAULT, noStop: Boolean = OFF,
-                             maintainAttributes: Boolean = False, solutionTechnique: SymbolicConstant = FULL_NEWTON,
-                             reformKernel: int = 8, convertSDI: SymbolicConstant = PROPAGATED) -> ImplicitDynamicsStep:
+    def ImplicitDynamicsStep(
+        self,
+        name: str,
+        previous: str,
+        description: str = "",
+        timePeriod: float = 1,
+        nlgeom: Boolean = OFF,
+        matrixStorage: SymbolicConstant = SOLVER_DEFAULT,
+        application: SymbolicConstant = ANALYSIS_PRODUCT_DEFAULT,
+        adiabatic: Boolean = OFF,
+        timeIncrementationMethod: SymbolicConstant = AUTOMATIC,
+        maxNumInc: int = 100,
+        initialInc: float = None,
+        minInc: float = None,
+        maxInc: typing.Union[SymbolicConstant, float] = DEFAULT,
+        hafTolMethod: SymbolicConstant = VALUE,
+        haftol: float = None,
+        halfIncScaleFactor: float = None,
+        nohaf: Boolean = OFF,
+        amplitude: SymbolicConstant = STEP,
+        alpha: typing.Union[SymbolicConstant, float] = DEFAULT,
+        initialConditions: SymbolicConstant = DEFAULT,
+        extrapolation: SymbolicConstant = ANALYSIS_PRODUCT_DEFAULT,
+        noStop: Boolean = OFF,
+        maintainAttributes: Boolean = False,
+        solutionTechnique: SymbolicConstant = FULL_NEWTON,
+        reformKernel: int = 8,
+        convertSDI: SymbolicConstant = PROPAGATED,
+    ) -> ImplicitDynamicsStep:
         """This method creates an ImplicitDynamicsStep object.
 
         Notes
         -----
             This function can be accessed by:
-            
+
             .. code-block:: python
-            
+
                 mdb.models[name].ImplicitDynamicsStep
-        
+
         Parameters
         ----------
         name
@@ -1208,31 +1554,65 @@ class StepModel(ModelBase):
         step: ImplicitDynamicsStep
             An ImplicitDynamicsStep object.
         """
-        self.steps[name] = step = ImplicitDynamicsStep(name, previous, description, timePeriod, nlgeom, matrixStorage,
-                                                       application, adiabatic, timeIncrementationMethod, maxNumInc,
-                                                       initialInc, minInc, maxInc, hafTolMethod, haftol,
-                                                       halfIncScaleFactor, nohaf, amplitude, alpha, initialConditions,
-                                                       extrapolation, noStop, maintainAttributes, solutionTechnique,
-                                                       reformKernel, convertSDI)
+        self.steps[name] = step = ImplicitDynamicsStep(
+            name,
+            previous,
+            description,
+            timePeriod,
+            nlgeom,
+            matrixStorage,
+            application,
+            adiabatic,
+            timeIncrementationMethod,
+            maxNumInc,
+            initialInc,
+            minInc,
+            maxInc,
+            hafTolMethod,
+            haftol,
+            halfIncScaleFactor,
+            nohaf,
+            amplitude,
+            alpha,
+            initialConditions,
+            extrapolation,
+            noStop,
+            maintainAttributes,
+            solutionTechnique,
+            reformKernel,
+            convertSDI,
+        )
         return step
 
-    def MassDiffusionStep(self, name: str, previous: str, description: str = '', response: SymbolicConstant = TRANSIENT,
-                          timePeriod: float = 1, timeIncrementationMethod: SymbolicConstant = AUTOMATIC,
-                          maxNumInc: int = 100, initialInc: float = None, minInc: float = None,
-                          maxInc: float = None, end: SymbolicConstant = PERIOD, dcmax: float = 0,
-                          amplitude: SymbolicConstant = STEP, extrapolation: SymbolicConstant = LINEAR,
-                          maintainAttributes: Boolean = False,
-                          convertSDI: SymbolicConstant = PROPAGATED) -> MassDiffusionStep:
+    def MassDiffusionStep(
+        self,
+        name: str,
+        previous: str,
+        description: str = "",
+        response: SymbolicConstant = TRANSIENT,
+        timePeriod: float = 1,
+        timeIncrementationMethod: SymbolicConstant = AUTOMATIC,
+        maxNumInc: int = 100,
+        initialInc: float = None,
+        minInc: float = None,
+        maxInc: float = None,
+        end: SymbolicConstant = PERIOD,
+        dcmax: float = 0,
+        amplitude: SymbolicConstant = STEP,
+        extrapolation: SymbolicConstant = LINEAR,
+        maintainAttributes: Boolean = False,
+        convertSDI: SymbolicConstant = PROPAGATED,
+    ) -> MassDiffusionStep:
         """This method creates a MassDiffusionStep object.
 
         Notes
         -----
             This function can be accessed by:
-            
+
             .. code-block:: python
-            
+
                 mdb.models[name].MassDiffusionStep
-        
+
         Parameters
         ----------
         name
@@ -1287,30 +1667,52 @@ class StepModel(ModelBase):
         step: MassDiffusionStep
             A MassDiffusionStep object.
         """
-        self.steps[name] = step = MassDiffusionStep(name, previous, description, response, timePeriod,
-                                                    timeIncrementationMethod, maxNumInc, initialInc, minInc, maxInc,
-                                                    end, dcmax, amplitude, extrapolation, maintainAttributes,
-                                                    convertSDI)
+        self.steps[name] = step = MassDiffusionStep(
+            name,
+            previous,
+            description,
+            response,
+            timePeriod,
+            timeIncrementationMethod,
+            maxNumInc,
+            initialInc,
+            minInc,
+            maxInc,
+            end,
+            dcmax,
+            amplitude,
+            extrapolation,
+            maintainAttributes,
+            convertSDI,
+        )
         return step
 
-    def ModalDynamicsStep(self, name: str, previous: str, description: str = '', continueAnalysis: Boolean = OFF,
-                          timePeriod: float = 1, incSize: float = 1,
-                          directDamping: DirectDamping = DirectDamping(),
-                          compositeDamping: CompositeDamping = CompositeDamping(),
-                          rayleighDamping: RayleighDamping = RayleighDamping(),
-                          amplitude: SymbolicConstant = STEP, maintainAttributes: Boolean = False,
-                          directDampingByFrequency: DirectDampingByFrequency = DirectDampingByFrequency(),
-                          rayleighDampingByFrequency: RayleighDampingByFrequency = RayleighDampingByFrequency()) -> ModalDynamicsStep:
+    def ModalDynamicsStep(
+        self,
+        name: str,
+        previous: str,
+        description: str = "",
+        continueAnalysis: Boolean = OFF,
+        timePeriod: float = 1,
+        incSize: float = 1,
+        directDamping: DirectDamping = DirectDamping(),
+        compositeDamping: CompositeDamping = CompositeDamping(),
+        rayleighDamping: RayleighDamping = RayleighDamping(),
+        amplitude: SymbolicConstant = STEP,
+        maintainAttributes: Boolean = False,
+        directDampingByFrequency: DirectDampingByFrequency = DirectDampingByFrequency(),
+        rayleighDampingByFrequency: RayleighDampingByFrequency = RayleighDampingByFrequency(),
+    ) -> ModalDynamicsStep:
         """This method creates a ModalDynamicsStep object.
 
         Notes
         -----
             This function can be accessed by:
-            
+
             .. code-block:: python
-            
+
                 mdb.models[name].ModalDynamicsStep
-        
+
         Parameters
         ----------
         name
@@ -1349,31 +1751,49 @@ class StepModel(ModelBase):
         step: ModalDynamicsStep
             A ModalDynamicsStep object.
         """
-        self.steps[name] = step = ModalDynamicsStep(name, previous, description, continueAnalysis, timePeriod, incSize,
-                                                    directDamping, compositeDamping, rayleighDamping, amplitude,
-                                                    maintainAttributes, directDampingByFrequency,
-                                                    rayleighDampingByFrequency)
+        self.steps[name] = step = ModalDynamicsStep(
+            name,
+            previous,
+            description,
+            continueAnalysis,
+            timePeriod,
+            incSize,
+            directDamping,
+            compositeDamping,
+            rayleighDamping,
+            amplitude,
+            maintainAttributes,
+            directDampingByFrequency,
+            rayleighDampingByFrequency,
+        )
         return step
 
-    def RandomResponseStep(self, name: str, previous: str, freq: RandomResponseFrequencyArray, description: str = '',
-                           scale: SymbolicConstant = LOG, directDamping: DirectDamping = DirectDamping(),
-                           compositeDamping: CompositeDamping = CompositeDamping(),
-                           rayleighDamping: RayleighDamping = RayleighDamping(),
-                           structuralDamping: StructuralDamping = StructuralDamping(),
-                           directDampingByFrequency: DirectDampingByFrequency = DirectDampingByFrequency(),
-                           rayleighDampingByFrequency: RayleighDampingByFrequency = RayleighDampingByFrequency(),
-                           structuralDampingByFrequency: StructuralDampingByFrequency = StructuralDampingByFrequency(),
-                           maintainAttributes: Boolean = False) -> RandomResponseStep:
+    def RandomResponseStep(
+        self,
+        name: str,
+        previous: str,
+        freq: RandomResponseFrequencyArray,
+        description: str = "",
+        scale: SymbolicConstant = LOG,
+        directDamping: DirectDamping = DirectDamping(),
+        compositeDamping: CompositeDamping = CompositeDamping(),
+        rayleighDamping: RayleighDamping = RayleighDamping(),
+        structuralDamping: StructuralDamping = StructuralDamping(),
+        directDampingByFrequency: DirectDampingByFrequency = DirectDampingByFrequency(),
+        rayleighDampingByFrequency: RayleighDampingByFrequency = RayleighDampingByFrequency(),
+        structuralDampingByFrequency: StructuralDampingByFrequency = StructuralDampingByFrequency(),
+        maintainAttributes: Boolean = False,
+    ) -> RandomResponseStep:
         """This method creates a RandomResponseStep object.
 
         Notes
         -----
             This function can be accessed by:
-            
+
             .. code-block:: python
-            
+
                 mdb.models[name].RandomResponseStep
-        
+
         Parameters
         ----------
         name
@@ -1411,30 +1831,48 @@ class StepModel(ModelBase):
         step: RandomResponseStep
             A RandomResponseStep object.
         """
-        self.steps[name] = step = RandomResponseStep(name, previous, freq, description, scale, directDamping,
-                                                     compositeDamping, rayleighDamping, structuralDamping,
-                                                     directDampingByFrequency, rayleighDampingByFrequency,
-                                                     structuralDampingByFrequency, maintainAttributes)
+        self.steps[name] = step = RandomResponseStep(
+            name,
+            previous,
+            freq,
+            description,
+            scale,
+            directDamping,
+            compositeDamping,
+            rayleighDamping,
+            structuralDamping,
+            directDampingByFrequency,
+            rayleighDampingByFrequency,
+            structuralDampingByFrequency,
+            maintainAttributes,
+        )
         return step
 
-    def ResponseSpectrumStep(self, name: str, previous: str, components: ResponseSpectrumComponentArray,
-                             description: str = '', comp: SymbolicConstant = SINGLE_DIRECTION,
-                             sum: SymbolicConstant = ABS, directDamping: DirectDamping = DirectDamping(),
-                             compositeDamping: CompositeDamping = CompositeDamping(),
-                             rayleighDamping: RayleighDamping = RayleighDamping(),
-                             directDampingByFrequency: DirectDampingByFrequency = DirectDampingByFrequency(),
-                             rayleighDampingByFrequency: RayleighDampingByFrequency = RayleighDampingByFrequency(),
-                             maintainAttributes: Boolean = False) -> ResponseSpectrumStep:
+    def ResponseSpectrumStep(
+        self,
+        name: str,
+        previous: str,
+        components: ResponseSpectrumComponentArray,
+        description: str = "",
+        comp: SymbolicConstant = SINGLE_DIRECTION,
+        sum: SymbolicConstant = ABS,
+        directDamping: DirectDamping = DirectDamping(),
+        compositeDamping: CompositeDamping = CompositeDamping(),
+        rayleighDamping: RayleighDamping = RayleighDamping(),
+        directDampingByFrequency: DirectDampingByFrequency = DirectDampingByFrequency(),
+        rayleighDampingByFrequency: RayleighDampingByFrequency = RayleighDampingByFrequency(),
+        maintainAttributes: Boolean = False,
+    ) -> ResponseSpectrumStep:
         """This method creates a ResponseSpectrumStep object.
 
         Notes
         -----
             This function can be accessed by:
-            
+
             .. code-block:: python
-            
+
                 mdb.models[name].ResponseSpectrumStep
-        
+
         Parameters
         ----------
         name
@@ -1473,34 +1911,62 @@ class StepModel(ModelBase):
         step: ResponseSpectrumStep
             A ResponseSpectrumStep object.
         """
-        self.steps[name] = step = ResponseSpectrumStep(name, previous, components, description, comp, sum,
-                                                       directDamping, compositeDamping, rayleighDamping,
-                                                       directDampingByFrequency, rayleighDampingByFrequency,
-                                                       maintainAttributes)
+        self.steps[name] = step = ResponseSpectrumStep(
+            name,
+            previous,
+            components,
+            description,
+            comp,
+            sum,
+            directDamping,
+            compositeDamping,
+            rayleighDamping,
+            directDampingByFrequency,
+            rayleighDampingByFrequency,
+            maintainAttributes,
+        )
         return step
 
-    def SoilsStep(self, name: str, previous: str, description: str = '', response: SymbolicConstant = TRANSIENT,
-                  timePeriod: float = 1, nlgeom: Boolean = OFF,
-                  stabilizationMethod: SymbolicConstant = NONE, stabilizationMagnitude: float = None,
-                  creep: Boolean = ON, timeIncrementationMethod: SymbolicConstant = AUTOMATIC,
-                  initialInc: float = None, minInc: float = None, maxInc: float = None,
-                  maxNumInc: int = 100, end: SymbolicConstant = PERIOD, utol: float = None,
-                  cetol: float = 0, amplitude: SymbolicConstant = STEP,
-                  extrapolation: SymbolicConstant = LINEAR, matrixSolver: SymbolicConstant = DIRECT,
-                  matrixStorage: SymbolicConstant = SOLVER_DEFAULT, maintainAttributes: Boolean = False,
-                  solutionTechnique: SymbolicConstant = FULL_NEWTON, reformKernel: int = 8,
-                  convertSDI: SymbolicConstant = PROPAGATED, adaptiveDampingRatio: float = 0,
-                  continueDampingFactors: Boolean = OFF) -> SoilsStep:
+    def SoilsStep(
+        self,
+        name: str,
+        previous: str,
+        description: str = "",
+        response: SymbolicConstant = TRANSIENT,
+        timePeriod: float = 1,
+        nlgeom: Boolean = OFF,
+        stabilizationMethod: SymbolicConstant = NONE,
+        stabilizationMagnitude: float = None,
+        creep: Boolean = ON,
+        timeIncrementationMethod: SymbolicConstant = AUTOMATIC,
+        initialInc: float = None,
+        minInc: float = None,
+        maxInc: float = None,
+        maxNumInc: int = 100,
+        end: SymbolicConstant = PERIOD,
+        utol: float = None,
+        cetol: float = 0,
+        amplitude: SymbolicConstant = STEP,
+        extrapolation: SymbolicConstant = LINEAR,
+        matrixSolver: SymbolicConstant = DIRECT,
+        matrixStorage: SymbolicConstant = SOLVER_DEFAULT,
+        maintainAttributes: Boolean = False,
+        solutionTechnique: SymbolicConstant = FULL_NEWTON,
+        reformKernel: int = 8,
+        convertSDI: SymbolicConstant = PROPAGATED,
+        adaptiveDampingRatio: float = 0,
+        continueDampingFactors: Boolean = OFF,
+    ) -> SoilsStep:
         """This method creates a SoilsStep object.
 
         Notes
         -----
             This function can be accessed by:
-            
+
             .. code-block:: python
-            
+
                 mdb.models[name].SoilsStep
-        
+
         Parameters
         ----------
         name
@@ -1592,28 +2058,56 @@ class StepModel(ModelBase):
         step: SoilsStep
             A SoilsStep object.
         """
-        self.steps[name] = step = SoilsStep(name, previous, description, response, timePeriod, nlgeom,
-                                            stabilizationMethod, stabilizationMagnitude, creep,
-                                            timeIncrementationMethod, initialInc, minInc, maxInc, maxNumInc, end, utol,
-                                            cetol, amplitude, extrapolation, matrixSolver, matrixStorage,
-                                            maintainAttributes, solutionTechnique, reformKernel, convertSDI,
-                                            adaptiveDampingRatio, continueDampingFactors)
+        self.steps[name] = step = SoilsStep(
+            name,
+            previous,
+            description,
+            response,
+            timePeriod,
+            nlgeom,
+            stabilizationMethod,
+            stabilizationMagnitude,
+            creep,
+            timeIncrementationMethod,
+            initialInc,
+            minInc,
+            maxInc,
+            maxNumInc,
+            end,
+            utol,
+            cetol,
+            amplitude,
+            extrapolation,
+            matrixSolver,
+            matrixStorage,
+            maintainAttributes,
+            solutionTechnique,
+            reformKernel,
+            convertSDI,
+            adaptiveDampingRatio,
+            continueDampingFactors,
+        )
         return step
 
-    def StaticLinearPerturbationStep(self, name: str, previous: str, description: str = '',
-                                     matrixSolver: SymbolicConstant = DIRECT,
-                                     matrixStorage: SymbolicConstant = SOLVER_DEFAULT,
-                                     maintainAttributes: Boolean = False) -> StaticLinearPerturbationStep:
+    def StaticLinearPerturbationStep(
+        self,
+        name: str,
+        previous: str,
+        description: str = "",
+        matrixSolver: SymbolicConstant = DIRECT,
+        matrixStorage: SymbolicConstant = SOLVER_DEFAULT,
+        maintainAttributes: Boolean = False,
+    ) -> StaticLinearPerturbationStep:
         """This method creates a StaticLinearPerturbationStep object.
 
         Notes
         -----
             This function can be accessed by:
-            
+
             .. code-block:: python
-            
+
                 mdb.models[name].StaticLinearPerturbationStep
-        
+
         Parameters
         ----------
         name
@@ -1638,29 +2132,47 @@ class StepModel(ModelBase):
         step: StaticLinearPerturbationStep
             A StaticLinearPerturbationStep object.
         """
-        self.steps[name] = step = StaticLinearPerturbationStep(name, previous, description, matrixSolver, matrixStorage,
-                                                               maintainAttributes)
+        self.steps[name] = step = StaticLinearPerturbationStep(
+            name, previous, description, matrixSolver, matrixStorage, maintainAttributes
+        )
         return step
 
-    def StaticRiksStep(self, name: str, previous: str, description: str = '', nlgeom: Boolean = OFF,
-                       adiabatic: Boolean = OFF, maxLPF: float = None, nodeOn: Boolean = OFF,
-                       maximumDisplacement: float = 0, dof: int = 0, region: Region = Region(),
-                       timeIncrementationMethod: SymbolicConstant = AUTOMATIC, maxNumInc: int = 100,
-                       totalArcLength: float = 1, initialArcInc: float = None, minArcInc: float = None,
-                       maxArcInc: float = None, matrixStorage: SymbolicConstant = SOLVER_DEFAULT,
-                       extrapolation: SymbolicConstant = LINEAR, fullyPlastic: str = '', noStop: Boolean = OFF,
-                       maintainAttributes: Boolean = False, useLongTermSolution: Boolean = OFF,
-                       convertSDI: SymbolicConstant = PROPAGATED) -> StaticRiksStep:
+    def StaticRiksStep(
+        self,
+        name: str,
+        previous: str,
+        description: str = "",
+        nlgeom: Boolean = OFF,
+        adiabatic: Boolean = OFF,
+        maxLPF: float = None,
+        nodeOn: Boolean = OFF,
+        maximumDisplacement: float = 0,
+        dof: int = 0,
+        region: Region = Region(),
+        timeIncrementationMethod: SymbolicConstant = AUTOMATIC,
+        maxNumInc: int = 100,
+        totalArcLength: float = 1,
+        initialArcInc: float = None,
+        minArcInc: float = None,
+        maxArcInc: float = None,
+        matrixStorage: SymbolicConstant = SOLVER_DEFAULT,
+        extrapolation: SymbolicConstant = LINEAR,
+        fullyPlastic: str = "",
+        noStop: Boolean = OFF,
+        maintainAttributes: Boolean = False,
+        useLongTermSolution: Boolean = OFF,
+        convertSDI: SymbolicConstant = PROPAGATED,
+    ) -> StaticRiksStep:
         """This method creates a StaticRiksStep object.
 
         Notes
         -----
             This function can be accessed by:
-            
+
             .. code-block:: python
-            
+
                 mdb.models[name].StaticRiksStep
-        
+
         Parameters
         ----------
         name
@@ -1742,35 +2254,72 @@ class StepModel(ModelBase):
         step: StaticRiksStep
             A StaticRiksStep object.
         """
-        self.steps[name] = step = StaticRiksStep(name, previous, description, nlgeom, adiabatic, maxLPF, nodeOn,
-                                                 maximumDisplacement, dof, region, timeIncrementationMethod, maxNumInc,
-                                                 totalArcLength, initialArcInc, minArcInc, maxArcInc, matrixStorage,
-                                                 extrapolation, fullyPlastic, noStop, maintainAttributes,
-                                                 useLongTermSolution, convertSDI)
+        self.steps[name] = step = StaticRiksStep(
+            name,
+            previous,
+            description,
+            nlgeom,
+            adiabatic,
+            maxLPF,
+            nodeOn,
+            maximumDisplacement,
+            dof,
+            region,
+            timeIncrementationMethod,
+            maxNumInc,
+            totalArcLength,
+            initialArcInc,
+            minArcInc,
+            maxArcInc,
+            matrixStorage,
+            extrapolation,
+            fullyPlastic,
+            noStop,
+            maintainAttributes,
+            useLongTermSolution,
+            convertSDI,
+        )
         return step
 
-    def StaticStep(self, name: str, previous: str, description: str = '', timePeriod: float = 1,
-                   nlgeom: Boolean = OFF, stabilizationMethod: SymbolicConstant = NONE,
-                   stabilizationMagnitude: float = None, adiabatic: Boolean = OFF,
-                   timeIncrementationMethod: SymbolicConstant = AUTOMATIC, maxNumInc: int = 100,
-                   initialInc: float = None, minInc: float = None, maxInc: float = None,
-                   matrixSolver: SymbolicConstant = DIRECT,
-                   matrixStorage: SymbolicConstant = SOLVER_DEFAULT, amplitude: SymbolicConstant = RAMP,
-                   extrapolation: SymbolicConstant = LINEAR, fullyPlastic: str = '', noStop: Boolean = OFF,
-                   maintainAttributes: Boolean = False, useLongTermSolution: Boolean = OFF,
-                   solutionTechnique: SymbolicConstant = FULL_NEWTON, reformKernel: int = 8,
-                   convertSDI: SymbolicConstant = PROPAGATED, adaptiveDampingRatio: float = 0,
-                   continueDampingFactors: Boolean = OFF) -> StaticStep:
+    def StaticStep(
+        self,
+        name: str,
+        previous: str,
+        description: str = "",
+        timePeriod: float = 1,
+        nlgeom: Boolean = OFF,
+        stabilizationMethod: SymbolicConstant = NONE,
+        stabilizationMagnitude: float = None,
+        adiabatic: Boolean = OFF,
+        timeIncrementationMethod: SymbolicConstant = AUTOMATIC,
+        maxNumInc: int = 100,
+        initialInc: float = None,
+        minInc: float = None,
+        maxInc: float = None,
+        matrixSolver: SymbolicConstant = DIRECT,
+        matrixStorage: SymbolicConstant = SOLVER_DEFAULT,
+        amplitude: SymbolicConstant = RAMP,
+        extrapolation: SymbolicConstant = LINEAR,
+        fullyPlastic: str = "",
+        noStop: Boolean = OFF,
+        maintainAttributes: Boolean = False,
+        useLongTermSolution: Boolean = OFF,
+        solutionTechnique: SymbolicConstant = FULL_NEWTON,
+        reformKernel: int = 8,
+        convertSDI: SymbolicConstant = PROPAGATED,
+        adaptiveDampingRatio: float = 0,
+        continueDampingFactors: Boolean = OFF,
+    ) -> StaticStep:
         """This method creates a StaticStep object.
 
         Notes
         -----
             This function can be accessed by:
-            
+
             .. code-block:: python
-            
+
                 mdb.models[name].StaticStep
-        
+
         Parameters
         ----------
         name
@@ -1861,29 +2410,59 @@ class StepModel(ModelBase):
         step: StaticRiksStep
             A StaticRiksStep object.
         """
-        self.steps[name] = step = StaticStep(name, previous, description, timePeriod, nlgeom, stabilizationMethod,
-                                             stabilizationMagnitude, adiabatic, timeIncrementationMethod, maxNumInc,
-                                             initialInc, minInc, maxInc, matrixSolver, matrixStorage, amplitude,
-                                             extrapolation, fullyPlastic, noStop, maintainAttributes,
-                                             useLongTermSolution, solutionTechnique, reformKernel, convertSDI,
-                                             adaptiveDampingRatio, continueDampingFactors)
+        self.steps[name] = step = StaticStep(
+            name,
+            previous,
+            description,
+            timePeriod,
+            nlgeom,
+            stabilizationMethod,
+            stabilizationMagnitude,
+            adiabatic,
+            timeIncrementationMethod,
+            maxNumInc,
+            initialInc,
+            minInc,
+            maxInc,
+            matrixSolver,
+            matrixStorage,
+            amplitude,
+            extrapolation,
+            fullyPlastic,
+            noStop,
+            maintainAttributes,
+            useLongTermSolution,
+            solutionTechnique,
+            reformKernel,
+            convertSDI,
+            adaptiveDampingRatio,
+            continueDampingFactors,
+        )
         return step
 
-    def SteadyStateDirectStep(self, name: str, previous: str, frequencyRange: SteadyStateDirectFrequencyArray,
-                              description: str = '', factorization: SymbolicConstant = COMPLEX,
-                              scale: SymbolicConstant = LOGARITHMIC, matrixStorage: SymbolicConstant = SOLVER_DEFAULT,
-                              maintainAttributes: Boolean = False, subdivideUsingEigenfrequencies: Boolean = OFF,
-                              frictionDamping: Boolean = OFF) -> SteadyStateDirectStep:
+    def SteadyStateDirectStep(
+        self,
+        name: str,
+        previous: str,
+        frequencyRange: SteadyStateDirectFrequencyArray,
+        description: str = "",
+        factorization: SymbolicConstant = COMPLEX,
+        scale: SymbolicConstant = LOGARITHMIC,
+        matrixStorage: SymbolicConstant = SOLVER_DEFAULT,
+        maintainAttributes: Boolean = False,
+        subdivideUsingEigenfrequencies: Boolean = OFF,
+        frictionDamping: Boolean = OFF,
+    ) -> SteadyStateDirectStep:
         """This method creates a SteadyStateDirectStep object.
 
         Notes
         -----
             This function can be accessed by:
-            
+
             .. code-block:: python
-            
+
                 mdb.models[name].SteadyStateDirectStep
-        
+
         Parameters
         ----------
         name
@@ -1920,32 +2499,47 @@ class StepModel(ModelBase):
         step: SteadyStateDirectStep
             A SteadyStateDirectStep object.
         """
-        self.steps[name] = step = SteadyStateDirectStep(name, previous, frequencyRange, description, factorization,
-                                                        scale, matrixStorage, maintainAttributes,
-                                                        subdivideUsingEigenfrequencies, frictionDamping)
+        self.steps[name] = step = SteadyStateDirectStep(
+            name,
+            previous,
+            frequencyRange,
+            description,
+            factorization,
+            scale,
+            matrixStorage,
+            maintainAttributes,
+            subdivideUsingEigenfrequencies,
+            frictionDamping,
+        )
         return step
 
-    def SteadyStateModalStep(self, name: str, previous: str, frequencyRange: SteadyStateModalFrequencyArray,
-                             description: str = '', scale: SymbolicConstant = LOGARITHMIC,
-                             directDamping: DirectDamping = DirectDamping(),
-                             compositeDamping: CompositeDamping = CompositeDamping(),
-                             rayleighDamping: RayleighDamping = RayleighDamping(),
-                             structuralDamping: StructuralDamping = StructuralDamping(),
-                             directDampingByFrequency: DirectDampingByFrequency = DirectDampingByFrequency(),
-                             rayleighDampingByFrequency: RayleighDampingByFrequency = RayleighDampingByFrequency(),
-                             structuralDampingByFrequency: StructuralDampingByFrequency = StructuralDampingByFrequency(),
-                             maintainAttributes: Boolean = False,
-                             subdivideUsingEigenfrequencies: Boolean = ON) -> SteadyStateModalStep:
+    def SteadyStateModalStep(
+        self,
+        name: str,
+        previous: str,
+        frequencyRange: SteadyStateModalFrequencyArray,
+        description: str = "",
+        scale: SymbolicConstant = LOGARITHMIC,
+        directDamping: DirectDamping = DirectDamping(),
+        compositeDamping: CompositeDamping = CompositeDamping(),
+        rayleighDamping: RayleighDamping = RayleighDamping(),
+        structuralDamping: StructuralDamping = StructuralDamping(),
+        directDampingByFrequency: DirectDampingByFrequency = DirectDampingByFrequency(),
+        rayleighDampingByFrequency: RayleighDampingByFrequency = RayleighDampingByFrequency(),
+        structuralDampingByFrequency: StructuralDampingByFrequency = StructuralDampingByFrequency(),
+        maintainAttributes: Boolean = False,
+        subdivideUsingEigenfrequencies: Boolean = ON,
+    ) -> SteadyStateModalStep:
         """This method creates a SteadyStateModalStep object.
 
         Notes
         -----
             This function can be accessed by:
-            
+
             .. code-block:: python
-            
+
                 mdb.models[name].SteadyStateModalStep
-        
+
         Parameters
         ----------
         name
@@ -1986,30 +2580,50 @@ class StepModel(ModelBase):
         step: SteadyStateModalStep
             A SteadyStateModalStep object.
         """
-        self.steps[name] = step = SteadyStateModalStep(name, previous, frequencyRange, description, scale,
-                                                       directDamping, compositeDamping, rayleighDamping,
-                                                       structuralDamping, directDampingByFrequency,
-                                                       rayleighDampingByFrequency, structuralDampingByFrequency,
-                                                       maintainAttributes, subdivideUsingEigenfrequencies)
+        self.steps[name] = step = SteadyStateModalStep(
+            name,
+            previous,
+            frequencyRange,
+            description,
+            scale,
+            directDamping,
+            compositeDamping,
+            rayleighDamping,
+            structuralDamping,
+            directDampingByFrequency,
+            rayleighDampingByFrequency,
+            structuralDampingByFrequency,
+            maintainAttributes,
+            subdivideUsingEigenfrequencies,
+        )
         return step
 
-    def SteadyStateSubspaceStep(self, name: str, previous: str, frequencyRange: SteadyStateSubspaceFrequencyArray,
-                                description: str = '', factorization: SymbolicConstant = COMPLEX,
-                                scale: SymbolicConstant = LOGARITHMIC, matrixStorage: SymbolicConstant = SOLVER_DEFAULT,
-                                maintainAttributes: Boolean = False, subdivideUsingEigenfrequencies: Boolean = ON,
-                                projection: SymbolicConstant = ALL_FREQUENCIES, maxDampingChange: float = 0,
-                                maxStiffnessChange: float = 0,
-                                frictionDamping: Boolean = OFF) -> SteadyStateSubspaceStep:
+    def SteadyStateSubspaceStep(
+        self,
+        name: str,
+        previous: str,
+        frequencyRange: SteadyStateSubspaceFrequencyArray,
+        description: str = "",
+        factorization: SymbolicConstant = COMPLEX,
+        scale: SymbolicConstant = LOGARITHMIC,
+        matrixStorage: SymbolicConstant = SOLVER_DEFAULT,
+        maintainAttributes: Boolean = False,
+        subdivideUsingEigenfrequencies: Boolean = ON,
+        projection: SymbolicConstant = ALL_FREQUENCIES,
+        maxDampingChange: float = 0,
+        maxStiffnessChange: float = 0,
+        frictionDamping: Boolean = OFF,
+    ) -> SteadyStateSubspaceStep:
         """This method creates a SteadyStateSubspaceStep object.
 
         Notes
         -----
             This function can be accessed by:
-            
+
             .. code-block:: python
-            
+
                 mdb.models[name].SteadyStateSubspaceStep
-        
+
         Parameters
         ----------
         name
@@ -2056,26 +2670,46 @@ class StepModel(ModelBase):
         step: SteadyStateSubspaceStep
             A SteadyStateSubspaceStep object.
         """
-        self.steps[name] = step = SteadyStateSubspaceStep(name, previous, frequencyRange, description, factorization,
-                                                          scale, matrixStorage, maintainAttributes,
-                                                          subdivideUsingEigenfrequencies, projection, maxDampingChange,
-                                                          maxStiffnessChange, frictionDamping)
+        self.steps[name] = step = SteadyStateSubspaceStep(
+            name,
+            previous,
+            frequencyRange,
+            description,
+            factorization,
+            scale,
+            matrixStorage,
+            maintainAttributes,
+            subdivideUsingEigenfrequencies,
+            projection,
+            maxDampingChange,
+            maxStiffnessChange,
+            frictionDamping,
+        )
         return step
 
-    def SubspaceDynamicsStep(self, name: str, previous: str, description: str = '', timePeriod: float = 1,
-                             vectors: SymbolicConstant = ALL, nlgeom: Boolean = OFF, maxNumInc: int = 100,
-                             incSize: float = 0, amplitude: SymbolicConstant = STEP,
-                             maintainAttributes: Boolean = False) -> SubspaceDynamicsStep:
+    def SubspaceDynamicsStep(
+        self,
+        name: str,
+        previous: str,
+        description: str = "",
+        timePeriod: float = 1,
+        vectors: SymbolicConstant = ALL,
+        nlgeom: Boolean = OFF,
+        maxNumInc: int = 100,
+        incSize: float = 0,
+        amplitude: SymbolicConstant = STEP,
+        maintainAttributes: Boolean = False,
+    ) -> SubspaceDynamicsStep:
         """This method creates a SubspaceDynamicsStep object.
 
         Notes
         -----
             This function can be accessed by:
-            
+
             .. code-block:: python
-            
+
                 mdb.models[name].SubspaceDynamicsStep
-        
+
         Parameters
         ----------
         name
@@ -2110,33 +2744,54 @@ class StepModel(ModelBase):
         step: SubspaceDynamicsStep
             A SubspaceDynamicsStep object.
         """
-        self.steps[name] = step = SubspaceDynamicsStep(name, previous, description, timePeriod, vectors, nlgeom,
-                                                       maxNumInc, incSize, amplitude, maintainAttributes)
+        self.steps[name] = step = SubspaceDynamicsStep(
+            name,
+            previous,
+            description,
+            timePeriod,
+            vectors,
+            nlgeom,
+            maxNumInc,
+            incSize,
+            amplitude,
+            maintainAttributes,
+        )
         return step
 
-    def SubstructureGenerateStep(self, name: str, previous: str, substructureIdentifier: int, description: str = '',
-                                 recoveryMatrix: SymbolicConstant = WHOLE_MODEL, recoveryRegion: Region = Region(),
-                                 computeGravityLoadVectors: Boolean = False, computeReducedMassMatrix: Boolean = False,
-                                 computeReducedStructuralDampingMatrix: Boolean = False,
-                                 computeReducedViscousDampingMatrix: Boolean = False,
-                                 evaluateFrequencyDependentProperties: Boolean = False, frequency: float = 0,
-                                 retainedEigenmodesMethod: SymbolicConstant = NONE,
-                                 modeRange: SubstructureGenerateModesArray = None,
-                                 frequencyRange: SubstructureGenerateFrequencyArray = None,
-                                 globalDampingField: SymbolicConstant = NONE, alphaDampingRatio: float = 0,
-                                 betaDampingRatio: float = 0, structuralDampingRatio: float = 0,
-                                 viscousDampingControl: SymbolicConstant = NONE,
-                                 structuralDampingControl: SymbolicConstant = NONE) -> SubstructureGenerateStep:
+    def SubstructureGenerateStep(
+        self,
+        name: str,
+        previous: str,
+        substructureIdentifier: int,
+        description: str = "",
+        recoveryMatrix: SymbolicConstant = WHOLE_MODEL,
+        recoveryRegion: Region = Region(),
+        computeGravityLoadVectors: Boolean = False,
+        computeReducedMassMatrix: Boolean = False,
+        computeReducedStructuralDampingMatrix: Boolean = False,
+        computeReducedViscousDampingMatrix: Boolean = False,
+        evaluateFrequencyDependentProperties: Boolean = False,
+        frequency: float = 0,
+        retainedEigenmodesMethod: SymbolicConstant = NONE,
+        modeRange: SubstructureGenerateModesArray = None,
+        frequencyRange: SubstructureGenerateFrequencyArray = None,
+        globalDampingField: SymbolicConstant = NONE,
+        alphaDampingRatio: float = 0,
+        betaDampingRatio: float = 0,
+        structuralDampingRatio: float = 0,
+        viscousDampingControl: SymbolicConstant = NONE,
+        structuralDampingControl: SymbolicConstant = NONE,
+    ) -> SubstructureGenerateStep:
         """This method creates a SubstructureGenerateStep object.
 
         Notes
         -----
             This function can be accessed by:
-            
+
             .. code-block:: python
-            
+
                 mdb.models[name].SubstructureGenerateStep
-        
+
         Parameters
         ----------
         name
@@ -2205,35 +2860,58 @@ class StepModel(ModelBase):
         step: SubstructureGenerateStep
             A SubstructureGenerateStep object.
         """
-        self.steps[name] = step = SubstructureGenerateStep(name, previous, substructureIdentifier, description,
-                                                           recoveryMatrix, recoveryRegion, computeGravityLoadVectors,
-                                                           computeReducedMassMatrix,
-                                                           computeReducedStructuralDampingMatrix,
-                                                           computeReducedViscousDampingMatrix,
-                                                           evaluateFrequencyDependentProperties, frequency,
-                                                           retainedEigenmodesMethod, modeRange, frequencyRange,
-                                                           globalDampingField, alphaDampingRatio, betaDampingRatio,
-                                                           structuralDampingRatio, viscousDampingControl,
-                                                           structuralDampingControl)
+        self.steps[name] = step = SubstructureGenerateStep(
+            name,
+            previous,
+            substructureIdentifier,
+            description,
+            recoveryMatrix,
+            recoveryRegion,
+            computeGravityLoadVectors,
+            computeReducedMassMatrix,
+            computeReducedStructuralDampingMatrix,
+            computeReducedViscousDampingMatrix,
+            evaluateFrequencyDependentProperties,
+            frequency,
+            retainedEigenmodesMethod,
+            modeRange,
+            frequencyRange,
+            globalDampingField,
+            alphaDampingRatio,
+            betaDampingRatio,
+            structuralDampingRatio,
+            viscousDampingControl,
+            structuralDampingControl,
+        )
         return step
 
-    def TempDisplacementDynamicsStep(self, name: str, previous: str, description: str = '', timePeriod: float = 1,
-                                     nlgeom: Boolean = OFF,
-                                     timeIncrementationMethod: SymbolicConstant = AUTOMATIC_GLOBAL,
-                                     maxIncrement: float = None, scaleFactor: float = 1, userDefinedInc: float = None,
-                                     massScaling: MassScalingArray = PREVIOUS_STEP, linearBulkViscosity: float = 0,
-                                     quadBulkViscosity: float = 1, maintainAttributes: Boolean = False,
-                                     improvedDtMethod: Boolean = ON) -> TempDisplacementDynamicsStep:
+    def TempDisplacementDynamicsStep(
+        self,
+        name: str,
+        previous: str,
+        description: str = "",
+        timePeriod: float = 1,
+        nlgeom: Boolean = OFF,
+        timeIncrementationMethod: SymbolicConstant = AUTOMATIC_GLOBAL,
+        maxIncrement: float = None,
+        scaleFactor: float = 1,
+        userDefinedInc: float = None,
+        massScaling: MassScalingArray = PREVIOUS_STEP,
+        linearBulkViscosity: float = 0,
+        quadBulkViscosity: float = 1,
+        maintainAttributes: Boolean = False,
+        improvedDtMethod: Boolean = ON,
+    ) -> TempDisplacementDynamicsStep:
         """This method creates a TempDisplacementDynamicsStep object.
 
         Notes
         -----
             This function can be accessed by:
-            
+
             .. code-block:: python
-            
+
                 mdb.models[name].TempDisplacementDynamicsStep
-        
+
         Parameters
         ----------
         name
@@ -2284,34 +2962,61 @@ class StepModel(ModelBase):
         step: TempDisplacementDynamicsStep
             A TempDisplacementDynamicsStep object.
         """
-        self.steps[name] = step = TempDisplacementDynamicsStep(name, previous, description, timePeriod, nlgeom,
-                                                               timeIncrementationMethod, maxIncrement, scaleFactor,
-                                                               userDefinedInc, massScaling, linearBulkViscosity,
-                                                               quadBulkViscosity, maintainAttributes, improvedDtMethod)
+        self.steps[name] = step = TempDisplacementDynamicsStep(
+            name,
+            previous,
+            description,
+            timePeriod,
+            nlgeom,
+            timeIncrementationMethod,
+            maxIncrement,
+            scaleFactor,
+            userDefinedInc,
+            massScaling,
+            linearBulkViscosity,
+            quadBulkViscosity,
+            maintainAttributes,
+            improvedDtMethod,
+        )
         return step
 
-    def ViscoStep(self, name: str, previous: str, description: str = '', timePeriod: float = 1,
-                  nlgeom: Boolean = OFF, stabilizationMethod: SymbolicConstant = NONE,
-                  stabilizationMagnitude: float = None,
-                  timeIncrementationMethod: SymbolicConstant = AUTOMATIC,
-                  matrixSolver: SymbolicConstant = DIRECT,
-                  matrixStorage: SymbolicConstant = SOLVER_DEFAULT, initialInc: float = None,
-                  maxNumInc: int = 100, minInc: float = None, maxInc: float = 1,
-                  integration: SymbolicConstant = IMPLICIT_EXPLICIT, cetol: float = 0,
-                  amplitude: SymbolicConstant = STEP, extrapolation: SymbolicConstant = LINEAR,
-                  maintainAttributes: Boolean = False, solutionTechnique: SymbolicConstant = FULL_NEWTON,
-                  reformKernel: int = 8, convertSDI: SymbolicConstant = PROPAGATED,
-                  adaptiveDampingRatio: float = 0, continueDampingFactors: Boolean = OFF) -> ViscoStep:
+    def ViscoStep(
+        self,
+        name: str,
+        previous: str,
+        description: str = "",
+        timePeriod: float = 1,
+        nlgeom: Boolean = OFF,
+        stabilizationMethod: SymbolicConstant = NONE,
+        stabilizationMagnitude: float = None,
+        timeIncrementationMethod: SymbolicConstant = AUTOMATIC,
+        matrixSolver: SymbolicConstant = DIRECT,
+        matrixStorage: SymbolicConstant = SOLVER_DEFAULT,
+        initialInc: float = None,
+        maxNumInc: int = 100,
+        minInc: float = None,
+        maxInc: float = 1,
+        integration: SymbolicConstant = IMPLICIT_EXPLICIT,
+        cetol: float = 0,
+        amplitude: SymbolicConstant = STEP,
+        extrapolation: SymbolicConstant = LINEAR,
+        maintainAttributes: Boolean = False,
+        solutionTechnique: SymbolicConstant = FULL_NEWTON,
+        reformKernel: int = 8,
+        convertSDI: SymbolicConstant = PROPAGATED,
+        adaptiveDampingRatio: float = 0,
+        continueDampingFactors: Boolean = OFF,
+    ) -> ViscoStep:
         """This method creates a ViscoStep object.
 
         Notes
         -----
             This function can be accessed by:
-            
+
             .. code-block:: python
-            
+
                 mdb.models[name].ViscoStep
-        
+
         Parameters
         ----------
         name
@@ -2395,9 +3100,30 @@ class StepModel(ModelBase):
         step: ViscoStep
             A ViscoStep object.
         """
-        self.steps[name] = step = ViscoStep(name, previous, description, timePeriod, nlgeom, stabilizationMethod,
-                                            stabilizationMagnitude, timeIncrementationMethod, matrixSolver,
-                                            matrixStorage, initialInc, maxNumInc, minInc, maxInc, integration, cetol,
-                                            amplitude, extrapolation, maintainAttributes, solutionTechnique,
-                                            reformKernel, convertSDI, adaptiveDampingRatio, continueDampingFactors)
+        self.steps[name] = step = ViscoStep(
+            name,
+            previous,
+            description,
+            timePeriod,
+            nlgeom,
+            stabilizationMethod,
+            stabilizationMagnitude,
+            timeIncrementationMethod,
+            matrixSolver,
+            matrixStorage,
+            initialInc,
+            maxNumInc,
+            minInc,
+            maxInc,
+            integration,
+            cetol,
+            amplitude,
+            extrapolation,
+            maintainAttributes,
+            solutionTechnique,
+            reformKernel,
+            convertSDI,
+            adaptiveDampingRatio,
+            continueDampingFactors,
+        )
         return step

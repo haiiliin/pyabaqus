@@ -6,8 +6,8 @@ from ..Region.Set import Set
 
 class PropertyAssembly(AssemblyBase):
     """An Assembly object is a container for instances of parts. The Assembly object has no
-    constructor command. Abaqus creates the *rootAssembly* member when a Model object is 
-    created. 
+    constructor command. Abaqus creates the *rootAssembly* member when a Model object is
+    created.
 
     Notes
     -----
@@ -20,19 +20,26 @@ class PropertyAssembly(AssemblyBase):
 
     """
 
-    def SectionAssignment(self, region: Set, sectionName: str, thicknessAssignment: SymbolicConstant = FROM_SECTION,
-                          offset: float = 0, offsetType: SymbolicConstant = SINGLE_VALUE, offsetField: str = ''):
+    def SectionAssignment(
+        self,
+        region: Set,
+        sectionName: str,
+        thicknessAssignment: SymbolicConstant = FROM_SECTION,
+        offset: float = 0,
+        offsetType: SymbolicConstant = SINGLE_VALUE,
+        offsetField: str = "",
+    ):
         """This method creates a SectionAssignment object.
 
         Notes
         -----
             This function can be accessed by:
-            
+
             .. code-block:: python
-            
+
                 mdb.models[name].parts[*name*].SectionAssignment
                 mdb.models[name].rootAssembly.SectionAssignment
-        
+
         Parameters
         ----------
         region
@@ -57,6 +64,8 @@ class PropertyAssembly(AssemblyBase):
         -------
             A SectionAssignment object.
         """
-        sectionAssignment = SectionAssignment(region, sectionName, thicknessAssignment, offset, offsetType, offsetField)
+        sectionAssignment = SectionAssignment(
+            region, sectionName, thicknessAssignment, offset, offsetType, offsetField
+        )
         self.sectionAssignments.append(sectionAssignment)
         return sectionAssignment

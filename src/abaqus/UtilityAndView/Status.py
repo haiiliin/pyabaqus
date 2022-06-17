@@ -12,15 +12,15 @@ def milestone(message: str):
     Notes
     -----
         This function can be accessed by:
-        
+
         .. code-block:: python
-        
+
             milestone
 
     Parameters
     ----------
     message
-        A String specifying the text to display. 
+        A String specifying the text to display.
 
     """
     pass
@@ -33,17 +33,17 @@ def milestone(message: str, percent: int):
     Notes
     -----
         This function can be accessed by:
-        
+
         .. code-block:: python
-        
+
             milestone
 
     Parameters
     ----------
     message
-        A String specifying the text to display. 
+        A String specifying the text to display.
     percent
-        An Int specifying the percentage complete. 
+        An Int specifying the percentage complete.
 
     """
     pass
@@ -57,21 +57,21 @@ def milestone(message: str, object: str, done: int, total: int):
     Notes
     -----
         This function can be accessed by:
-        
+
         .. code-block:: python
-        
+
             milestone
 
     Parameters
     ----------
     message
-        A String specifying the operation. 
+        A String specifying the operation.
     object
-        A String specifying the object. 
+        A String specifying the object.
     done
-        An Int specifying the number being processed. 
+        An Int specifying the number being processed.
     total
-        An Int specifying the total number. 
+        An Int specifying the total number.
 
     """
     pass

@@ -10,9 +10,9 @@ class PlyStackPlot:
     Notes
     -----
     This object can be accessed by:
-    
+
     .. code-block:: python
-        
+
         import section
         import visualization
 
@@ -26,9 +26,9 @@ def MdbPlyStackPlot(part: Part, region: Region):
     Notes
     -----
         This function can be accessed by:
-        
+
         .. code-block:: python
-        
+
             section.MdbPlyStackPlot
 
     Parameters
@@ -56,9 +56,9 @@ def OdbPlyStackPlot(odb: Odb, sectionName: str, offset: float = 0):
     Notes
     -----
         This function can be accessed by:
-        
+
         .. code-block:: python
-        
+
             visualization.OdbPlyStackPlot
 
     Parameters

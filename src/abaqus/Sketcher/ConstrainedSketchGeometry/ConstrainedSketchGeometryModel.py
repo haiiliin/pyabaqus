@@ -6,31 +6,33 @@ class ConstrainedSketchGeometryModel(ConstrainedSketchBase):
     """A ConstrainedSketch object contains the entities that are used to create a sketch. The
     objects include ConstrainedSketchGeometry objects contained in the ConstrainedSketchGeometry Repository,
     such as Line, Arc, and Spline. ConstrainedSketchVertex, ConstrainedSketchDimension, ConstrainedSketchConstraint, and ConstrainedSketchParameter objects are
-    contained in their respective repositories. 
+    contained in their respective repositories.
 
     Notes
     -----
     This object can be accessed by:
-    
+
     .. code-block:: python
-        
+
         import sketch
         mdb.models[name].sketches[name]
 
     """
 
-    def Arc3Points(self, point1: tuple[float], point2: tuple[float], point3: tuple[float]):
+    def Arc3Points(
+        self, point1: tuple[float], point2: tuple[float], point3: tuple[float]
+    ):
         """This method constructs an arc using a two endpoints and an intermediate third point on
         the arc.
 
         Notes
         -----
             This function can be accessed by:
-            
+
             .. code-block:: python
-            
+
                 mdb.models[name].sketches[name].Arc3Points
-        
+
         Parameters
         ----------
         point1
@@ -47,8 +49,13 @@ class ConstrainedSketchGeometryModel(ConstrainedSketchBase):
         """
         pass
 
-    def ArcByCenterEnds(self, center: tuple[float], point1: tuple[float], point2: tuple[float],
-                        direction: SymbolicConstant):
+    def ArcByCenterEnds(
+        self,
+        center: tuple[float],
+        point1: tuple[float],
+        point2: tuple[float],
+        direction: SymbolicConstant,
+    ):
         """This method constructs an arc using a center point and two vertices. The Arc object is
         added to the geometry repository of the ConstrainedSketch object. The arc is created in
         a clockwise fashion from *point1* to *point2*.
@@ -56,11 +63,11 @@ class ConstrainedSketchGeometryModel(ConstrainedSketchBase):
         Notes
         -----
             This function can be accessed by:
-            
+
             .. code-block:: python
-            
+
                 mdb.models[name].sketches[name].ArcByCenterEnds
-        
+
         Parameters
         ----------
         center
@@ -84,18 +91,20 @@ class ConstrainedSketchGeometryModel(ConstrainedSketchBase):
         """
         pass
 
-    def ArcByStartEndTangent(self, point1: tuple[float], point2: tuple[float], vector: tuple):
+    def ArcByStartEndTangent(
+        self, point1: tuple[float], point2: tuple[float], vector: tuple
+    ):
         """This method constructs an arc using two vertices. The Arc object is added to the
         geometry repository of the ConstrainedSketch object.
 
         Notes
         -----
             This function can be accessed by:
-            
+
             .. code-block:: python
-            
+
                 mdb.models[name].sketches[name].ArcByStartEndTangent
-        
+
         Parameters
         ----------
         point1
@@ -119,11 +128,11 @@ class ConstrainedSketchGeometryModel(ConstrainedSketchBase):
         Notes
         -----
             This function can be accessed by:
-            
+
             .. code-block:: python
-            
+
                 mdb.models[name].sketches[name].CircleByCenterPerimeter
-        
+
         Parameters
         ----------
         center
@@ -138,7 +147,9 @@ class ConstrainedSketchGeometryModel(ConstrainedSketchBase):
         """
         pass
 
-    def ConstructionCircleByCenterPerimeter(self, center: tuple[float], point1: tuple[float]):
+    def ConstructionCircleByCenterPerimeter(
+        self, center: tuple[float], point1: tuple[float]
+    ):
         """This method constructs a construction circle using a center point and a point on the
         perimeter. The circle is added to the geometry repository of the ConstrainedSketch
         object.
@@ -146,11 +157,11 @@ class ConstrainedSketchGeometryModel(ConstrainedSketchBase):
         Notes
         -----
             This function can be accessed by:
-            
+
             .. code-block:: python
-            
+
                 mdb.models[name].sketches[name].ConstructionCircleByCenterPerimeter
-        
+
         Parameters
         ----------
         center
@@ -165,7 +176,9 @@ class ConstrainedSketchGeometryModel(ConstrainedSketchBase):
         """
         pass
 
-    def EllipseByCenterPerimeter(self, center: tuple[float], axisPoint1: tuple[float], axisPoint2: tuple[float]):
+    def EllipseByCenterPerimeter(
+        self, center: tuple[float], axisPoint1: tuple[float], axisPoint2: tuple[float]
+    ):
         """This method constructs an ellipse using a center point, a major axis point, and a minor
         axis point. The ellipse is added to the geometry repository of the ConstrainedSketch
         object.
@@ -173,11 +186,11 @@ class ConstrainedSketchGeometryModel(ConstrainedSketchBase):
         Notes
         -----
             This function can be accessed by:
-            
+
             .. code-block:: python
-            
+
                 mdb.models[name].sketches[name].EllipseByCenterPerimeter
-        
+
         Parameters
         ----------
         center
@@ -194,19 +207,25 @@ class ConstrainedSketchGeometryModel(ConstrainedSketchBase):
         """
         pass
 
-    def FilletByRadius(self, radius: float, curve1: 'ConstrainedSketchGeometryModel', nearPoint1: tuple[float],
-                       curve2: 'ConstrainedSketchGeometryModel', nearPoint2: tuple[float]):
+    def FilletByRadius(
+        self,
+        radius: float,
+        curve1: "ConstrainedSketchGeometryModel",
+        nearPoint1: tuple[float],
+        curve2: "ConstrainedSketchGeometryModel",
+        nearPoint2: tuple[float],
+    ):
         """This method constructs a fillet arc of a given radius between two curves. The fillet is
         added to the geometry repository of the ConstrainedSketch object.
 
         Notes
         -----
             This function can be accessed by:
-            
+
             .. code-block:: python
-            
+
                 mdb.models[name].sketches[name].FilletByRadius
-        
+
         Parameters
         ----------
         radius
@@ -242,11 +261,11 @@ class ConstrainedSketchGeometryModel(ConstrainedSketchBase):
         Notes
         -----
             This function can be accessed by:
-            
+
             .. code-block:: python
-            
+
                 mdb.models[name].sketches[name].Line
-        
+
         Parameters
         ----------
         point1
@@ -267,11 +286,11 @@ class ConstrainedSketchGeometryModel(ConstrainedSketchBase):
         Notes
         -----
             This function can be accessed by:
-            
+
             .. code-block:: python
-            
+
                 mdb.models[name].sketches[name].ConstructionLine
-        
+
         Parameters
         ----------
         point1
@@ -292,11 +311,11 @@ class ConstrainedSketchGeometryModel(ConstrainedSketchBase):
         Notes
         -----
             This function can be accessed by:
-            
+
             .. code-block:: python
-            
+
                 mdb.models[name].sketches[name].Spline
-        
+
         Parameters
         ----------
         points
@@ -320,11 +339,11 @@ class ConstrainedSketchGeometryModel(ConstrainedSketchBase):
         Notes
         -----
             This function can be accessed by:
-            
+
             .. code-block:: python
-            
+
                 mdb.models[name].sketches[name].Spot
-        
+
         Parameters
         ----------
         point
@@ -358,11 +377,13 @@ class ConstrainedSketchGeometryModel(ConstrainedSketchBase):
         """
         pass
 
-    def getPointAtDistance(self, point: tuple[float], distance: str, percentage: Boolean = OFF):
+    def getPointAtDistance(
+        self, point: tuple[float], distance: str, percentage: Boolean = OFF
+    ):
         """This method returns a point offset along the given ConstrainedSketchGeometry from the
         given end by a specified arc length distance or a percentage of the total length of the
         ConstrainedSketchGeometry object.
-        
+
         Parameters
         ----------
         point

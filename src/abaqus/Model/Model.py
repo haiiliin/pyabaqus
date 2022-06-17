@@ -19,10 +19,27 @@ from ..StepOutput.OutputModel import OutputModel
 from ..TableCollection.TableCollectionModel import TableCollectionModel
 
 
-class Model(AdaptivityModel, AmplitudeModel, AssemblyModel, BoundaryConditionModel, CalibrationModel, ConstraintModel,
-            FilterModel, InteractionModel, LoadModel, MaterialModel, OptimizationTaskModel, PartModel,
-            PredefinedFieldModel, BeamSectionProfileModel, OutputModel, SectionModel, SketchModel, StepModel,
-            TableCollectionModel):
+class Model(
+    AdaptivityModel,
+    AmplitudeModel,
+    AssemblyModel,
+    BoundaryConditionModel,
+    CalibrationModel,
+    ConstraintModel,
+    FilterModel,
+    InteractionModel,
+    LoadModel,
+    MaterialModel,
+    OptimizationTaskModel,
+    PartModel,
+    PredefinedFieldModel,
+    BeamSectionProfileModel,
+    OutputModel,
+    SectionModel,
+    SketchModel,
+    StepModel,
+    TableCollectionModel,
+):
     """Abaqus creates a Model object named `Model-1` when a session is started.
 
     Attributes
@@ -158,4 +175,5 @@ class Model(AdaptivityModel, AmplitudeModel, AssemblyModel, BoundaryConditionMod
     - PHYSICAL CONSTANTS
 
     """
+
     pass

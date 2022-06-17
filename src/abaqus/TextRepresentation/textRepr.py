@@ -11,107 +11,123 @@ Notes
 """
 
 
-def getIndentedRepr(object, maxRecursionDepth: SymbolicConstant = None,
-                    maxElementsInSequence: SymbolicConstant = None, significantDigits: float = 6):
+def getIndentedRepr(
+    object,
+    maxRecursionDepth: SymbolicConstant = None,
+    maxElementsInSequence: SymbolicConstant = None,
+    significantDigits: float = 6,
+):
     """This method returns a String with each level of parentheses indented.
 
     Parameters
     ----------
     object
-        A Python object to be processed. (The Python object can be an Abaqus object.) This 
-        argument can also be a String representation of a Python object obtained from 
-        str(*object*). 
+        A Python object to be processed. (The Python object can be an Abaqus object.) This
+        argument can also be a String representation of a Python object obtained from
+        str(*object*).
     maxRecursionDepth
-        An Int specifying the maximum depth to which the object will be printed, the 
-        SymbolicConstant UNLIMITED, or None. A value of None implies that the current setting in 
-        the TextReprOptions object will be used. If *object* is not an Abaqus object, 
-        *maxRecursionDepth* has no effect. The default value is None.You should take care when 
-        setting *maxRecursionDepth*=UNLIMITED because the resulting output can be very large. To 
-        limit the output, you should set *maxElementsInSequence* to a small number. 
+        An Int specifying the maximum depth to which the object will be printed, the
+        SymbolicConstant UNLIMITED, or None. A value of None implies that the current setting in
+        the TextReprOptions object will be used. If *object* is not an Abaqus object,
+        *maxRecursionDepth* has no effect. The default value is None.You should take care when
+        setting *maxRecursionDepth*=UNLIMITED because the resulting output can be very large. To
+        limit the output, you should set *maxElementsInSequence* to a small number.
     maxElementsInSequence
-        An Int specifying the maximum number of elements of a sequence to return or the 
-        SymbolicConstant UNLIMITED. The initial value is 100. After the maximum number of 
-        elements have been printed, the remainder are indicated by the string '...'. 
+        An Int specifying the maximum number of elements of a sequence to return or the
+        SymbolicConstant UNLIMITED. The initial value is 100. After the maximum number of
+        elements have been printed, the remainder are indicated by the string '...'.
     significantDigits
-        An Int specifying the number of significant digits for Floats in the output. Possible 
-        values are 0 << *significantDigits* ≤≤ 15. The default value is 6. 
+        An Int specifying the number of significant digits for Floats in the output. Possible
+        values are 0 << *significantDigits* ≤≤ 15. The default value is 6.
 
     Returns
     -------
-        A String. 
+        A String.
 
     """
     pass
 
 
-def getPaths(object, maxRecursionDepth: SymbolicConstant = None,
-             maxElementsInSequence: SymbolicConstant = None, pathRoot: str = ''):
+def getPaths(
+    object,
+    maxRecursionDepth: SymbolicConstant = None,
+    maxElementsInSequence: SymbolicConstant = None,
+    pathRoot: str = "",
+):
     """This method processes the argument and interprets its structure. It then returns a
     String containing the object paths of all the child objects found.
 
     Parameters
     ----------
     object
-        A Python object to be processed. (The Python object can be an Abaqus object.) This 
-        argument can also be a String representation of a Python object. 
+        A Python object to be processed. (The Python object can be an Abaqus object.) This
+        argument can also be a String representation of a Python object.
     maxRecursionDepth
-        An Int specifying the maximum depth to which the object will be printed, the 
-        SymbolicConstant UNLIMITED, or None. A value of None implies that the current setting in 
-        the TextReprOptions object will be used. If *object* is not an Abaqus object, 
-        *maxRecursionDepth* has no effect. The default value is None.You should take care when 
-        setting *maxRecursionDepth*=UNLIMITED because the resulting output can be very large. To 
-        limit the output, you should set *maxElementsInSequence* to a small number. 
+        An Int specifying the maximum depth to which the object will be printed, the
+        SymbolicConstant UNLIMITED, or None. A value of None implies that the current setting in
+        the TextReprOptions object will be used. If *object* is not an Abaqus object,
+        *maxRecursionDepth* has no effect. The default value is None.You should take care when
+        setting *maxRecursionDepth*=UNLIMITED because the resulting output can be very large. To
+        limit the output, you should set *maxElementsInSequence* to a small number.
     maxElementsInSequence
-        An Int specifying the maximum number of elements of a sequence to return or the 
-        SymbolicConstant UNLIMITED. The initial value is 100. After the maximum number of 
-        elements have been printed, the remainder are indicated by the string '...'. 
+        An Int specifying the maximum number of elements of a sequence to return or the
+        SymbolicConstant UNLIMITED. The initial value is 100. After the maximum number of
+        elements have been printed, the remainder are indicated by the string '...'.
     pathRoot
-        A String specifying the root of the paths. This String is prepended to each path found. 
-        The default value is None, implying that the path to *object* will be used unless 
-        *object* is a String. 
+        A String specifying the root of the paths. This String is prepended to each path found.
+        The default value is None, implying that the path to *object* will be used unless
+        *object* is a String.
 
     Returns
     -------
-        A String. 
+        A String.
 
     """
     pass
 
 
-def getTypes(object, maxRecursionDepth: SymbolicConstant = None,
-             maxElementsInSequence: SymbolicConstant = None, pathRoot: str = ''):
+def getTypes(
+    object,
+    maxRecursionDepth: SymbolicConstant = None,
+    maxElementsInSequence: SymbolicConstant = None,
+    pathRoot: str = "",
+):
     """This method processes the argument, interprets its structure, and returns a String
     containing all the object types within the object in the form '*TypeName* *Path*'.
 
     Parameters
     ----------
     object
-        An Abaqus object. 
+        An Abaqus object.
     maxRecursionDepth
-        An Int specifying the maximum depth to which the object will be printed, the 
-        SymbolicConstant UNLIMITED, or None. A value of None implies that the current setting in 
-        the TextReprOptions object will be used. The default value is None.You should take care 
-        when setting *maxRecursionDepth*=UNLIMITED because the resulting output can be very 
-        large. To limit the output, you should set *maxElementsInSequence* to a small number. 
+        An Int specifying the maximum depth to which the object will be printed, the
+        SymbolicConstant UNLIMITED, or None. A value of None implies that the current setting in
+        the TextReprOptions object will be used. The default value is None.You should take care
+        when setting *maxRecursionDepth*=UNLIMITED because the resulting output can be very
+        large. To limit the output, you should set *maxElementsInSequence* to a small number.
     maxElementsInSequence
-        An Int specifying the maximum number of elements of a sequence to return or the 
-        SymbolicConstant UNLIMITED. The initial value is 100. After the maximum number of 
-        elements have been printed, the remainder are indicated by the string '...'. 
+        An Int specifying the maximum number of elements of a sequence to return or the
+        SymbolicConstant UNLIMITED. The initial value is 100. After the maximum number of
+        elements have been printed, the remainder are indicated by the string '...'.
     pathRoot
-        A String specifying the root of the paths. This String is prepended to each path found. 
-        The default value is None, implying that the path to *object* will be used unless 
-        *object* is a String. 
+        A String specifying the root of the paths. This String is prepended to each path found.
+        The default value is None, implying that the path to *object* will be used unless
+        *object* is a String.
 
     Returns
     -------
-        A String. 
+        A String.
 
     """
     pass
 
 
-def prettyPrint(object, maxRecursionDepth: SymbolicConstant = None,
-                maxElementsInSequence: SymbolicConstant = None, significantDigits: float = 6):
+def prettyPrint(
+    object,
+    maxRecursionDepth: SymbolicConstant = None,
+    maxElementsInSequence: SymbolicConstant = None,
+    significantDigits: float = 6,
+):
     """This method prints a formatted version of the object. The prettyPrint function uses
     getIndentedRepr to format the String representation, but does not save the full text
     output of getIndentedRepr. Therefore this function can be used in cases where
@@ -120,27 +136,31 @@ def prettyPrint(object, maxRecursionDepth: SymbolicConstant = None,
     Parameters
     ----------
     object
-        An Abaqus object. 
+        An Abaqus object.
     maxRecursionDepth
-        An Int specifying the maximum depth to which the object will be printed, the 
-        SymbolicConstant UNLIMITED, or None. A value of None implies that the current setting in 
-        the TextReprOptions object will be used. The default value is None.You should take care 
-        when setting *maxRecursionDepth*=UNLIMITED because the resulting output can be very 
-        large. To limit the output, you should set *maxElementsInSequence* to a small number. 
+        An Int specifying the maximum depth to which the object will be printed, the
+        SymbolicConstant UNLIMITED, or None. A value of None implies that the current setting in
+        the TextReprOptions object will be used. The default value is None.You should take care
+        when setting *maxRecursionDepth*=UNLIMITED because the resulting output can be very
+        large. To limit the output, you should set *maxElementsInSequence* to a small number.
     maxElementsInSequence
-        An Int specifying the maximum number of elements of a sequence to return or the 
-        SymbolicConstant UNLIMITED. The initial value is 100. After the maximum number of 
-        elements have been printed, the remainder are indicated by the string '...'. 
+        An Int specifying the maximum number of elements of a sequence to return or the
+        SymbolicConstant UNLIMITED. The initial value is 100. After the maximum number of
+        elements have been printed, the remainder are indicated by the string '...'.
     significantDigits
-        An Int specifying the number of significant digits for Floats in the output. Possible 
-        values are 0 << *significantDigits* ≤≤ 15. The default value is 6. 
+        An Int specifying the number of significant digits for Floats in the output. Possible
+        values are 0 << *significantDigits* ≤≤ 15. The default value is 6.
 
     """
     pass
 
 
-def printPaths(object, maxRecursionDepth: SymbolicConstant = None,
-               maxElementsInSequence: SymbolicConstant = None, pathRoot: str = ''):
+def printPaths(
+    object,
+    maxRecursionDepth: SymbolicConstant = None,
+    maxElementsInSequence: SymbolicConstant = None,
+    pathRoot: str = "",
+):
     """This method prints the object path of the *object* argument and its members, depending
     on the *maxRecursionDepth* argument. The printPaths function uses getPaths to print a
     list of paths to each of the child objects in *object*.
@@ -148,50 +168,54 @@ def printPaths(object, maxRecursionDepth: SymbolicConstant = None,
     Parameters
     ----------
     object
-        An Abaqus object. This argument can also be a String representation of an Abaqus object 
-        obtained from str(*object*). 
+        An Abaqus object. This argument can also be a String representation of an Abaqus object
+        obtained from str(*object*).
     maxRecursionDepth
-        An Int specifying the maximum depth to which the object will be printed, the 
-        SymbolicConstant UNLIMITED, or None. A value of None implies that the current setting in 
-        the TextReprOptions object will be used. The default value is None.You should take care 
-        when setting *maxRecursionDepth*=UNLIMITED because the resulting output can be very 
-        large. To limit the output, you should set *maxElementsInSequence* to a small number. 
+        An Int specifying the maximum depth to which the object will be printed, the
+        SymbolicConstant UNLIMITED, or None. A value of None implies that the current setting in
+        the TextReprOptions object will be used. The default value is None.You should take care
+        when setting *maxRecursionDepth*=UNLIMITED because the resulting output can be very
+        large. To limit the output, you should set *maxElementsInSequence* to a small number.
     maxElementsInSequence
-        An Int specifying the maximum number of elements of a sequence to return or the 
-        SymbolicConstant UNLIMITED. The initial value is 100. After the maximum number of 
-        elements have been printed, the remainder are indicated by the string '...'. 
+        An Int specifying the maximum number of elements of a sequence to return or the
+        SymbolicConstant UNLIMITED. The initial value is 100. After the maximum number of
+        elements have been printed, the remainder are indicated by the string '...'.
     pathRoot
-        A String specifying the root of the paths to be printed. This String is prepended to 
-        each path found. The default value is None, implying that the path to *object* will be 
-        used. 
+        A String specifying the root of the paths to be printed. This String is prepended to
+        each path found. The default value is None, implying that the path to *object* will be
+        used.
 
     """
     pass
 
 
-def printTypes(object, maxRecursionDepth: SymbolicConstant = None,
-               maxElementsInSequence: SymbolicConstant = None, pathRoot: str = ''):
+def printTypes(
+    object,
+    maxRecursionDepth: SymbolicConstant = None,
+    maxElementsInSequence: SymbolicConstant = None,
+    pathRoot: str = "",
+):
     """This method prints the object type. The printTypes function uses getTypes to print a
     list of all the object types in *object*.
 
     Parameters
     ----------
     object
-        An Abaqus object. 
+        An Abaqus object.
     maxRecursionDepth
-        An Int specifying the maximum depth to which the object will be printed, the 
-        SymbolicConstant UNLIMITED, or None. A value of None implies that the current setting in 
-        the TextReprOptions object will be used. The default value is None.You should take care 
-        when setting *maxRecursionDepth*=UNLIMITED because the resulting output can be very 
-        large. To limit the output, you should set *maxElementsInSequence* to a small number. 
+        An Int specifying the maximum depth to which the object will be printed, the
+        SymbolicConstant UNLIMITED, or None. A value of None implies that the current setting in
+        the TextReprOptions object will be used. The default value is None.You should take care
+        when setting *maxRecursionDepth*=UNLIMITED because the resulting output can be very
+        large. To limit the output, you should set *maxElementsInSequence* to a small number.
     maxElementsInSequence
-        An Int specifying the maximum number of elements of a sequence to return or the 
-        SymbolicConstant UNLIMITED. The initial value is 100. After the maximum number of 
-        elements have been printed, the remainder are indicated by the string '...'. 
+        An Int specifying the maximum number of elements of a sequence to return or the
+        SymbolicConstant UNLIMITED. The initial value is 100. After the maximum number of
+        elements have been printed, the remainder are indicated by the string '...'.
     pathRoot
-        A String specifying the root of the paths to be printed. This String is prepended to 
-        each path found. The default value is None, implying that the path to *object* will be 
-        used. 
+        A String specifying the root of the paths to be printed. This String is prepended to
+        each path found. The default value is None, implying that the path to *object* will be
+        used.
 
     """
     pass

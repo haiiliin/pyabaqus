@@ -3,14 +3,14 @@ from abaqusConstants import *
 
 class PlanarTestData:
     """The PlanarTestData object specifies planar test (or pure shear) data (compression and/or
-    tension). 
+    tension).
 
     Notes
     -----
     This object can be accessed by:
-    
+
     .. code-block:: python
-        
+
         import material
         mdb.models[name].materials[name].hyperelastic.planarTestData
         mdb.models[name].materials[name].hyperfoam.planarTestData
@@ -36,37 +36,43 @@ class PlanarTestData:
 
     """
 
-    def __init__(self, table: tuple, smoothing: int = None, lateralNominalStrain: Boolean = OFF,
-                 temperatureDependency: Boolean = OFF, dependencies: int = 0):
+    def __init__(
+        self,
+        table: tuple,
+        smoothing: int = None,
+        lateralNominalStrain: Boolean = OFF,
+        temperatureDependency: Boolean = OFF,
+        dependencies: int = 0,
+    ):
         """This method creates a PlanarTestData object.
 
         Notes
         -----
             This function can be accessed by:
-            
+
             .. code-block:: python
-            
+
                 mdb.models[name].materials[name].hyperelastic.PlanarTestData
                 mdb.models[name].materials[name].hyperfoam.PlanarTestData
                 mdb.models[name].materials[name].mullinsEffect.PlanarTestData
                 session.odbs[name].materials[name].hyperelastic.PlanarTestData
                 session.odbs[name].materials[name].hyperfoam.PlanarTestData
                 session.odbs[name].materials[name].mullinsEffect.PlanarTestData
-        
+
         Parameters
         ----------
         table
-            A sequence of sequences of Floats specifying the items described below. 
+            A sequence of sequences of Floats specifying the items described below.
         smoothing
-            None or an Int specifying the value for smoothing. If *smoothing*=None, no smoothing is 
-            employed. The default value is None. 
+            None or an Int specifying the value for smoothing. If *smoothing*=None, no smoothing is
+            employed. The default value is None.
         lateralNominalStrain
-            A Boolean specifying whether to include lateral nominal strain. The default value is 
-            OFF. 
+            A Boolean specifying whether to include lateral nominal strain. The default value is
+            OFF.
         temperatureDependency
-            A Boolean specifying whether the data depend on temperature. The default value is OFF. 
+            A Boolean specifying whether the data depend on temperature. The default value is OFF.
         dependencies
-            An Int specifying the number of field variable dependencies. The default value is 0. 
+            An Int specifying the number of field variable dependencies. The default value is 0.
 
         Returns
         -------
@@ -75,6 +81,5 @@ class PlanarTestData:
         pass
 
     def setValues(self):
-        """This method modifies the PlanarTestData object.
-        """
+        """This method modifies the PlanarTestData object."""
         pass

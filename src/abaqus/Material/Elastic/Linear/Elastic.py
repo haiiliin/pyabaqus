@@ -9,9 +9,9 @@ class Elastic:
     Notes
     -----
     This object can be accessed by:
-        
+
     .. code-block:: python
-            
+
         import material
         mdb.models[name].materials[name].elastic
         import odbMaterial
@@ -125,59 +125,66 @@ class Elastic:
 
     """
 
-    # A FailStress object. 
+    # A FailStress object.
     failStress: FailStress = FailStress(((),))
 
-    # A FailStrain object. 
+    # A FailStrain object.
     failStrain: FailStrain = FailStrain(((),))
 
-    def __init__(self, table: tuple, type: SymbolicConstant = ISOTROPIC, noCompression: Boolean = OFF,
-                 noTension: Boolean = OFF, temperatureDependency: Boolean = OFF, dependencies: int = 0,
-                 moduli: SymbolicConstant = LONG_TERM):
+    def __init__(
+        self,
+        table: tuple,
+        type: SymbolicConstant = ISOTROPIC,
+        noCompression: Boolean = OFF,
+        noTension: Boolean = OFF,
+        temperatureDependency: Boolean = OFF,
+        dependencies: int = 0,
+        moduli: SymbolicConstant = LONG_TERM,
+    ):
         """This method creates an Elastic object.
 
         Notes
         -----
             This function can be accessed by:
-            
+
             .. code-block:: python
-            
+
                 mdb.models[name].materials[name].Elastic
                 session.odbs[name].materials[name].Elastic
-        
+
         Parameters
         ----------
         table
-            A sequence of sequences of Floats specifying the items described below. 
+            A sequence of sequences of Floats specifying the items described below.
         type
-            A SymbolicConstant specifying the type of elasticity data provided. Possible values are: 
-            
-            - ISOTROPIC 
-            - ORTHOTROPIC 
-            - ANISOTROPIC 
-            - ENGINEERING_CONSTANTS 
-            - LAMINA 
-            - TRACTION 
-            - COUPLED_TRACTION 
-            - SHORT_FIBER 
-            - SHEAR 
-            - BILAMINA 
-            The default value is ISOTROPIC. 
+            A SymbolicConstant specifying the type of elasticity data provided. Possible values are:
+
+            - ISOTROPIC
+            - ORTHOTROPIC
+            - ANISOTROPIC
+            - ENGINEERING_CONSTANTS
+            - LAMINA
+            - TRACTION
+            - COUPLED_TRACTION
+            - SHORT_FIBER
+            - SHEAR
+            - BILAMINA
+            The default value is ISOTROPIC.
         noCompression
-            A Boolean specifying whether compressive stress is allowed. The default value is OFF. 
+            A Boolean specifying whether compressive stress is allowed. The default value is OFF.
         noTension
-            A Boolean specifying whether tensile stress is allowed. The default value is OFF. 
+            A Boolean specifying whether tensile stress is allowed. The default value is OFF.
         temperatureDependency
-            A Boolean specifying whether the data depend on temperature. The default value is OFF. 
+            A Boolean specifying whether the data depend on temperature. The default value is OFF.
         dependencies
-            An Int specifying the number of field variable dependencies. The default value is 0. 
+            An Int specifying the number of field variable dependencies. The default value is 0.
         moduli
-            A SymbolicConstant specifying the time-dependence of the elastic material constants. 
-            Possible values are INSTANTANEOUS and LONG_TERM. The default value is LONG_TERM. 
+            A SymbolicConstant specifying the time-dependence of the elastic material constants.
+            Possible values are INSTANTANEOUS and LONG_TERM. The default value is LONG_TERM.
 
         Returns
         -------
-            An Elastic object. 
+            An Elastic object.
 
         Raises
         ------

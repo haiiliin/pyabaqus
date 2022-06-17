@@ -7,20 +7,24 @@ from ..Connector.ConnectorSection import ConnectorSection
 
 
 class Section(ConnectorSection):
-
-    def TransverseShearBeam(self, scfDefinition: SymbolicConstant, k23: float = None, k13: float = None,
-                            slendernessCompensation: typing.Union[SymbolicConstant, float] = 0) -> TransverseShearBeam:
+    def TransverseShearBeam(
+        self,
+        scfDefinition: SymbolicConstant,
+        k23: float = None,
+        k13: float = None,
+        slendernessCompensation: typing.Union[SymbolicConstant, float] = 0,
+    ) -> TransverseShearBeam:
         """This method creates a TransverseShearBeam object.
 
         Notes
         -----
             This function can be accessed by:
-            
+
             .. code-block:: python
-            
+
                 mdb.models[name].sections[name].TransverseShearBeam
                 session.odbs[name].sections[name].TransverseShearBeam
-        
+
         Parameters
         ----------
         scfDefinition
@@ -40,22 +44,25 @@ class Section(ConnectorSection):
         -------
             A TransverseShearBeam object.
         """
-        self.beamTransverseShear = transverseShearBeam = TransverseShearBeam(scfDefinition, k23, k13,
-                                                                             slendernessCompensation)
+        self.beamTransverseShear = transverseShearBeam = TransverseShearBeam(
+            scfDefinition, k23, k13, slendernessCompensation
+        )
         return transverseShearBeam
 
-    def TransverseShearShell(self, k11: float, k22: float, k12: float) -> TransverseShearShell:
+    def TransverseShearShell(
+        self, k11: float, k22: float, k12: float
+    ) -> TransverseShearShell:
         """This method creates a TransverseShearShell object.
 
         Notes
         -----
             This function can be accessed by:
-            
+
             .. code-block:: python
-            
+
                 mdb.models[name].sections[name].TransverseShearShell
                 session.odbs[name].sections[name].TransverseShearShell
-        
+
         Parameters
         ----------
         k11
@@ -69,5 +76,7 @@ class Section(ConnectorSection):
         -------
             A TransverseShearShell object.
         """
-        self.transverseShear = transverseShearShell = TransverseShearShell(k11, k22, k12)
+        self.transverseShear = transverseShearShell = TransverseShearShell(
+            k11, k22, k12
+        )
         return transverseShearShell

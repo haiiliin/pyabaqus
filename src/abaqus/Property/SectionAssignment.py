@@ -4,7 +4,7 @@ from ..Region.Set import Set
 
 class SectionAssignment:
     """The SectionAssignment object is used to specify a section assignment on an assembly or
-    part. Section assignments on the assembly are limited to connector elements only. 
+    part. Section assignments on the assembly are limited to connector elements only.
 
     Attributes
     ----------
@@ -30,12 +30,19 @@ class SectionAssignment:
 
     """
 
-    # A Boolean specifying whether the section assignment is suppressed or not. The default 
-    # value is OFF. 
+    # A Boolean specifying whether the section assignment is suppressed or not. The default
+    # value is OFF.
     suppressed: Boolean = OFF
 
-    def __init__(self, region: Set, sectionName: str, thicknessAssignment: SymbolicConstant = FROM_SECTION,
-                 offset: float = 0, offsetType: SymbolicConstant = SINGLE_VALUE, offsetField: str = ''):
+    def __init__(
+        self,
+        region: Set,
+        sectionName: str,
+        thicknessAssignment: SymbolicConstant = FROM_SECTION,
+        offset: float = 0,
+        offsetType: SymbolicConstant = SINGLE_VALUE,
+        offsetField: str = "",
+    ):
         """This method creates a SectionAssignment object.
 
         Notes
@@ -46,26 +53,26 @@ class SectionAssignment:
 
             mdb.models[name].parts[*name*].SectionAssignment
             mdb.models[name].rootAssembly.SectionAssignment
-        
+
         Parameters
         ----------
         region
-            A Set object specifying the region to which the section is assigned. 
+            A Set object specifying the region to which the section is assigned.
         sectionName
-            A String specifying the name of the section. 
+            A String specifying the name of the section.
         thicknessAssignment
-            A SymbolicConstant specifying section thickness assignment method. Possible values are 
-            FROM_SECTION and FROM_GEOMETRY. The default value is FROM_SECTION. 
+            A SymbolicConstant specifying section thickness assignment method. Possible values are
+            FROM_SECTION and FROM_GEOMETRY. The default value is FROM_SECTION.
         offset
-            A Float specifying the offset of the shell section. The default value is 0.0. 
+            A Float specifying the offset of the shell section. The default value is 0.0.
         offsetType
-            A SymbolicConstant specifying the method used to define the shell offset. If 
-            *offsetType* is set to OFFSET_FIELD the *offsetField* must have a value. Possible values 
-            are SINGLE_VALUE, MIDDLE_SURFACE, TOP_SURFACE, BOTTOM_SURFACE, FROM_GEOMETRY, and 
-            OFFSET_FIELD. The default value is SINGLE_VALUE. 
+            A SymbolicConstant specifying the method used to define the shell offset. If
+            *offsetType* is set to OFFSET_FIELD the *offsetField* must have a value. Possible values
+            are SINGLE_VALUE, MIDDLE_SURFACE, TOP_SURFACE, BOTTOM_SURFACE, FROM_GEOMETRY, and
+            OFFSET_FIELD. The default value is SINGLE_VALUE.
         offsetField
-            A String specifying the name of the field specifying the offset. The default value is 
-            "". 
+            A String specifying the name of the field specifying the offset. The default value is
+            "".
 
         Returns
         -------
@@ -74,13 +81,11 @@ class SectionAssignment:
         pass
 
     def resume(self):
-        """This method resumes the section assignment that was previously suppressed.
-        """
+        """This method resumes the section assignment that was previously suppressed."""
         pass
 
     def suppress(self):
-        """This method suppresses the section assignment.
-        """
+        """This method suppresses the section assignment."""
         pass
 
     def getVertices(self):
@@ -89,17 +94,16 @@ class SectionAssignment:
 
         Returns
         -------
-            A sequence of tuples of floats. 
+            A sequence of tuples of floats.
 
         Raises
         ------
-            - An exception is thrown if getVertices() is called on any section assignment except 
-            connector section assignment. 
-              This method is valid only for connector section assignments. 
+            - An exception is thrown if getVertices() is called on any section assignment except
+            connector section assignment.
+              This method is valid only for connector section assignments.
         """
         pass
 
     def setValues(self):
-        """This method modifies the SectionAssignment object.
-        """
+        """This method modifies the SectionAssignment object."""
         pass

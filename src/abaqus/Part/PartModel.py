@@ -16,18 +16,23 @@ class PartModel(ModelBase):
 
     """
 
-    def Part(self, name: str, dimensionality: SymbolicConstant, type: SymbolicConstant,
-             twist: Boolean = OFF):
+    def Part(
+        self,
+        name: str,
+        dimensionality: SymbolicConstant,
+        type: SymbolicConstant,
+        twist: Boolean = OFF,
+    ):
         """This method creates a Part object and places it in the parts repository.
 
         Notes
         -----
             This function can be accessed by:
-            
+
             .. code-block:: python
-            
+
                 mdb.models[name].Part
-        
+
         Parameters
         ----------
         name

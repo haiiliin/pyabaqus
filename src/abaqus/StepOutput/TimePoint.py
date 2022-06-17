@@ -1,6 +1,6 @@
 class TimePoint:
     """The TimePoint object defines time points at which data are written to the output
-    database or restart files. 
+    database or restart files.
 
     Notes
     -----
@@ -27,23 +27,23 @@ class TimePoint:
         .. code-block:: python
 
             mdb.models[name].TimePoint
-        
+
         Parameters
         ----------
         name
-            A String specifying the repository key. 
+            A String specifying the repository key.
         points
-            A sequence of sequences of Floats specifying time points at which data are written to 
-            the output database or restart files. 
+            A sequence of sequences of Floats specifying time points at which data are written to
+            the output database or restart files.
 
         Returns
         -------
-            A TimePoint object. 
-            
+            A TimePoint object.
+
         Raises
         ------
         InvalidNameError
-        RangeError 
+        RangeError
         """
         pass
 

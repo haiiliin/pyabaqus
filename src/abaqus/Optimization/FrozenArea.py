@@ -4,7 +4,7 @@ from ..Region.Region import Region
 
 class FrozenArea(GeometricRestriction):
     """The FrozenArea object defines a frozen area geometric restriction.
-    The FrozenArea object is derived from the GeometricRestriction object. 
+    The FrozenArea object is derived from the GeometricRestriction object.
 
     Notes
     -----
@@ -27,15 +27,15 @@ class FrozenArea(GeometricRestriction):
         .. code-block:: python
 
                       mdb.models[name].optimizationTasks[name].FrozenArea
-        
+
         Parameters
         ----------
         name
-            A String specifying the geometric restriction repository key. 
+            A String specifying the geometric restriction repository key.
         region
-            A Region object specifying the region to which the geometric restriction is applied. 
-            When used with a TopologyTask, there is no default value. When used with a ShapeTask, 
-            the default value is MODEL. 
+            A Region object specifying the region to which the geometric restriction is applied.
+            When used with a TopologyTask, there is no default value. When used with a ShapeTask,
+            the default value is MODEL.
 
         Returns
         -------
@@ -46,12 +46,12 @@ class FrozenArea(GeometricRestriction):
 
     def setValues(self, region: Region = Region()):
         """This method modifies the FrozenArea object.
-        
+
         Parameters
         ----------
         region
-            A Region object specifying the region to which the geometric restriction is applied. 
-            When used with a TopologyTask, there is no default value. When used with a ShapeTask, 
-            the default value is MODEL. 
+            A Region object specifying the region to which the geometric restriction is applied.
+            When used with a TopologyTask, there is no default value. When used with a ShapeTask,
+            the default value is MODEL.
         """
         pass

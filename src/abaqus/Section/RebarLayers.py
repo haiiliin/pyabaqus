@@ -23,7 +23,9 @@ class RebarLayers:
 
     """
 
-    def __init__(self, rebarSpacing: SymbolicConstant, layerTable: LayerPropertiesArray):
+    def __init__(
+        self, rebarSpacing: SymbolicConstant, layerTable: LayerPropertiesArray
+    ):
         """This method creates a RebarLayers object.
 
         Notes
@@ -35,14 +37,14 @@ class RebarLayers:
             mdb.models[name].parts[name].compositeLayups[i].section.RebarLayers
             mdb.models[name].sections[name].RebarLayers
             session.odbs[name].sections[name].RebarLayers
-        
+
         Parameters
         ----------
         rebarSpacing
-            A SymbolicConstant specifying the type of rebar geometry. Possible values are CONSTANT, 
-            ANGULAR, and LIFT_EQUATION. 
+            A SymbolicConstant specifying the type of rebar geometry. Possible values are CONSTANT,
+            ANGULAR, and LIFT_EQUATION.
         layerTable
-            A LayerPropertiesArray object specifying the layers of reinforcement. 
+            A LayerPropertiesArray object specifying the layers of reinforcement.
 
         Returns
         -------
@@ -51,6 +53,5 @@ class RebarLayers:
         pass
 
     def setValues(self):
-        """This method modifies the RebarLayers object.
-        """
+        """This method modifies the RebarLayers object."""
         pass

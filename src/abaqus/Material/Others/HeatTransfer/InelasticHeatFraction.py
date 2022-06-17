@@ -1,6 +1,6 @@
 class InelasticHeatFraction:
     """The InelasticHeatFraction object defines the fraction of the rate of inelastic
-    dissipation that appears as a heat source. 
+    dissipation that appears as a heat source.
 
     Notes
     -----
@@ -25,22 +25,22 @@ class InelasticHeatFraction:
         Notes
         -----
             This function can be accessed by:
-            
+
             .. code-block:: python
-            
+
                 mdb.models[name].materials[name].InelasticHeatFraction
                 session.odbs[name].materials[name].InelasticHeatFraction
-        
+
         Parameters
         ----------
         fraction
-            A Float specifying the fraction of inelastic dissipation rate that appears as a heat 
-            flux per unit volume. The fraction may include a unit conversion factor if required. 
-            Possible values are 0.0 ≤≤ *fraction* ≤≤ 1.0. The default value is 0.9. 
+            A Float specifying the fraction of inelastic dissipation rate that appears as a heat
+            flux per unit volume. The fraction may include a unit conversion factor if required.
+            Possible values are 0.0 ≤≤ *fraction* ≤≤ 1.0. The default value is 0.9.
 
         Returns
         -------
-            An InelasticHeatFraction object. 
+            An InelasticHeatFraction object.
 
         Raises
         ------

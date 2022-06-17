@@ -24,45 +24,50 @@ Notes
 """
 
 
-def addCallback(caller: str, methodName: str, callback: str, userData: str = None,
-               callAfter: Boolean = OFF):
+def addCallback(
+    caller: str,
+    methodName: str,
+    callback: str,
+    userData: str = None,
+    callAfter: Boolean = OFF,
+):
     """This method adds a callback function that will be invoked when certain Abaqus/CAE
     commands are about to be executed.
 
     Notes
     -----
         This function can be accessed by:
-        
+
         .. code-block:: python
-        
+
             methodCallback.addCallback
 
     Parameters
     ----------
     caller
-        An object or type object specifying which object will trigger the callback function to 
-        be invoked or the Symbolic Constant ALL_TYPES. 
+        An object or type object specifying which object will trigger the callback function to
+        be invoked or the Symbolic Constant ALL_TYPES.
     methodName
-        A String specifying the name of the method on the caller that will trigger the callback 
-        function to be invoked or the Symbolic Constant ALL_METHODS. 
+        A String specifying the name of the method on the caller that will trigger the callback
+        function to be invoked or the Symbolic Constant ALL_METHODS.
     callback
-        A Python function to be called when a command matching the specified caller and method 
-        name is about to be executed. The interface definition of the callback function is:`def 
-        functionName(callingMethod, args, keywordArgs, userData)`where:*callingMethod* is the 
-        method that called this function.*args* is the sequence of non-keyword arguments that 
-        was passed to the calling method.*keywordArgs* is the dictionary of keyword arguments 
-        that was passed to the calling method.*userData* is the object passed as the *userData* 
-        argument to the addCallback method. 
+        A Python function to be called when a command matching the specified caller and method
+        name is about to be executed. The interface definition of the callback function is:`def
+        functionName(callingMethod, args, keywordArgs, userData)`where:*callingMethod* is the
+        method that called this function.*args* is the sequence of non-keyword arguments that
+        was passed to the calling method.*keywordArgs* is the dictionary of keyword arguments
+        that was passed to the calling method.*userData* is the object passed as the *userData*
+        argument to the addCallback method.
     userData
-        Any type of data. This data will be passed to the callback function. The default value 
-        is None. 
+        Any type of data. This data will be passed to the callback function. The default value
+        is None.
     callAfter
-        A Boolean specifying that the callback should be called after the method has executed 
-        (instead of before the method is called). The default value is False, which indicates 
-        that the callback should be called before the method has executed.If *callAfter*=True, 
-        you can also access the return value of the command from within the callback by 
-        including the following statement:`returnValue = getMethodReturnValue()`The 
-        getMethodReturnValue function is in the global namespace of the callback function. 
+        A Boolean specifying that the callback should be called after the method has executed
+        (instead of before the method is called). The default value is False, which indicates
+        that the callback should be called before the method has executed.If *callAfter*=True,
+        you can also access the return value of the command from within the callback by
+        including the following statement:`returnValue = getMethodReturnValue()`The
+        getMethodReturnValue function is in the global namespace of the callback function.
 
     """
     pass
@@ -75,30 +80,30 @@ def removeCallback(caller: str, methodName: str, callback: str, userData: str = 
     Notes
     -----
         This function can be accessed by:
-        
+
         .. code-block:: python
-        
+
             methodCallback.removeCallback
 
     Parameters
     ----------
     caller
-        An object or type object specifying which object will trigger the callback function to 
-        be invoked or the Symbolic Constant ALL_TYPES. 
+        An object or type object specifying which object will trigger the callback function to
+        be invoked or the Symbolic Constant ALL_TYPES.
     methodName
-        A String specifying the name of the method on the caller that will trigger the callback 
-        function to be invoked or the Symbolic Constant ALL_METHODS. 
+        A String specifying the name of the method on the caller that will trigger the callback
+        function to be invoked or the Symbolic Constant ALL_METHODS.
     callback
-        A Python function to be called when a command matching the specified caller and method 
-        name is about to be executed. The interface definition of the callback function is:`def 
-        functionName(callingMethod, args, keywordArgs, userData)`where:*callingMethod* is the 
-        method that called this function.*args* is the sequence of nonkeyword arguments that was 
-        passed to the calling method.*keywordArgs* is the dictionary of keyword arguments that 
-        was passed to the calling method.*userData* is the object passed as the *userData* 
-        argument to the removeCallback method. 
+        A Python function to be called when a command matching the specified caller and method
+        name is about to be executed. The interface definition of the callback function is:`def
+        functionName(callingMethod, args, keywordArgs, userData)`where:*callingMethod* is the
+        method that called this function.*args* is the sequence of nonkeyword arguments that was
+        passed to the calling method.*keywordArgs* is the dictionary of keyword arguments that
+        was passed to the calling method.*userData* is the object passed as the *userData*
+        argument to the removeCallback method.
     userData
-        Any type of data. This data will be passed to the callback function. The default value 
-        is None. 
+        Any type of data. This data will be passed to the callback function. The default value
+        is None.
 
     """
     pass

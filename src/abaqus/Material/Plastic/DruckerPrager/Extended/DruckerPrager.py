@@ -11,9 +11,9 @@ class DruckerPrager:
     Notes
     -----
     This object can be accessed by:
-    
+
     .. code-block:: python
-        
+
         import material
         mdb.models[name].materials[name].druckerPrager
         import odbMaterial
@@ -51,57 +51,64 @@ class DruckerPrager:
 
     """
 
-    # A DruckerPragerCreep object. 
+    # A DruckerPragerCreep object.
     druckerPragerCreep: DruckerPragerCreep = DruckerPragerCreep(((),))
 
-    # A DruckerPragerHardening object. 
+    # A DruckerPragerHardening object.
     druckerPragerHardening: DruckerPragerHardening = DruckerPragerHardening(((),))
 
-    # A RateDependent object. 
+    # A RateDependent object.
     rateDependent: RateDependent = RateDependent(((),))
 
-    # A TriaxialTestData object. 
+    # A TriaxialTestData object.
     triaxialTestData: TriaxialTestData = TriaxialTestData(((),))
 
-    def __init__(self, table: tuple, shearCriterion: SymbolicConstant = LINEAR, eccentricity: float = 0,
-                 testData: Boolean = OFF, temperatureDependency: Boolean = OFF, dependencies: int = 0):
+    def __init__(
+        self,
+        table: tuple,
+        shearCriterion: SymbolicConstant = LINEAR,
+        eccentricity: float = 0,
+        testData: Boolean = OFF,
+        temperatureDependency: Boolean = OFF,
+        dependencies: int = 0,
+    ):
         """This method creates a DruckerPrager object.
 
         Notes
         -----
             This function can be accessed by:
-            
+
             .. code-block:: python
-            
+
                 mdb.models[name].materials[name].DruckerPrager
                 session.odbs[name].materials[name].DruckerPrager
-        
+
         Parameters
         ----------
         table
-            A sequence of sequences of Floats specifying the items described below. 
+            A sequence of sequences of Floats specifying the items described below.
         shearCriterion
-            A SymbolicConstant specifying the yield criterion. Possible values are LINEAR, 
-            HYPERBOLIC, and EXPONENTIAL. The default value is LINEAR.This argument applies only to 
-            Abaqus/Standard analyses. Only the linear Drucker-Prager model is available in 
-            Abaqus/Explicit analyses. 
+            A SymbolicConstant specifying the yield criterion. Possible values are LINEAR,
+            HYPERBOLIC, and EXPONENTIAL. The default value is LINEAR.This argument applies only to
+            Abaqus/Standard analyses. Only the linear Drucker-Prager model is available in
+            Abaqus/Explicit analyses.
         eccentricity
-            A Float specifying the flow potential eccentricity, ϵϵ, a small positive number that 
-            defines the rate at which the hyperbolic flow potential approaches its asymptote. The 
-            default value is 0.1.This argument applies only to Abaqus/Standard analyses. 
+            A Float specifying the flow potential eccentricity, ϵϵ, a small positive number that
+            defines the rate at which the hyperbolic flow potential approaches its asymptote. The
+            default value is 0.1.This argument applies only to Abaqus/Standard analyses.
         testData
-            A Boolean specifying whether the material constants for the exponent model are to be 
-            computed by Abaqus/Standard from triaxial test data at different levels of confining 
-            pressure. The default value is OFF.This argument is valid only if 
-            *shearCriterion*=EXPONENTIAL. 
+            A Boolean specifying whether the material constants for the exponent model are to be
+            computed by Abaqus/Standard from triaxial test data at different levels of confining
+            pressure. The default value is OFF.This argument is valid only if
+            *shearCriterion*=EXPONENTIAL.
         temperatureDependency
-            A Boolean specifying whether the data depend on temperature. The default value is OFF. 
+            A Boolean specifying whether the data depend on temperature. The default value is OFF.
         dependencies
-            An Int specifying the number of field variable dependencies. The default value is 0. 
+            An Int specifying the number of field variable dependencies. The default value is 0.
 
         Returns
         -------
-            A DruckerPrager object. 
+            A DruckerPrager object.
 
         Raises
         ------

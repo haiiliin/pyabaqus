@@ -57,15 +57,19 @@ from ..Interaction.SurfaceOffsetAssignment import SurfaceOffsetAssignment
 from ..Interaction.SurfaceThicknessAssignment import SurfaceThicknessAssignment
 from ..Interaction.SurfaceToSurfaceContactExp import SurfaceToSurfaceContactExp
 from ..Interaction.SurfaceToSurfaceContactStd import SurfaceToSurfaceContactStd
-from ..Interaction.SurfaceVertexCriteriaAssignment import SurfaceVertexCriteriaAssignment
+from ..Interaction.SurfaceVertexCriteriaAssignment import (
+    SurfaceVertexCriteriaAssignment,
+)
 from ..Interaction.XFEMCrackGrowth import XFEMCrackGrowth
 from ..Region.Region import Region
 from ..Region.RegionArray import RegionArray
 
 
-class InteractionModel(InteractionContactControlModel,
-                       InteractionContactInitializationModel,
-                       InteractionPropertyModel):
+class InteractionModel(
+    InteractionContactControlModel,
+    InteractionContactInitializationModel,
+    InteractionPropertyModel,
+):
     """Abaqus creates a Model object named `Model-1` when a session is started.
 
     Notes
@@ -78,22 +82,36 @@ class InteractionModel(InteractionContactControlModel,
 
     """
 
-    def contactDetection(self, name: str = '', createStepName: str = '', searchDomain: SymbolicConstant = MODEL,
-                         defaultType: SymbolicConstant = CONTACT, interactionProperty: str = '',
-                         separationTolerance: float = None, extendByAngle: float = 20,
-                         mergeWithinAngle: float = 20, searchSingleInstances: Boolean = OFF,
-                         nameEachSurfaceFound: Boolean = ON, createUnionOfMainSurfaces: Boolean = OFF,
-                         createUnionOfSecondarySurfaces: Boolean = OFF,
-                         createUnionOfMainSecondarySurfaces: Boolean = OFF, includePlanar: Boolean = ON,
-                         includeCylindricalSphericalToric: Boolean = ON, includeSplineBased: Boolean = ON,
-                         includeMeshSolid: Boolean = ON, includeMeshShell: Boolean = ON,
-                         includeMeshMembrane: Boolean = OFF, includeOverclosed: Boolean = ON,
-                         includeNonOverlapping: Boolean = OFF,
-                         meshedGeometrySearchTechnique: SymbolicConstant = USE_GEOMETRY,
-                         useShellThickness: Boolean = ON, surfaceSmoothing: SymbolicConstant = None):
+    def contactDetection(
+        self,
+        name: str = "",
+        createStepName: str = "",
+        searchDomain: SymbolicConstant = MODEL,
+        defaultType: SymbolicConstant = CONTACT,
+        interactionProperty: str = "",
+        separationTolerance: float = None,
+        extendByAngle: float = 20,
+        mergeWithinAngle: float = 20,
+        searchSingleInstances: Boolean = OFF,
+        nameEachSurfaceFound: Boolean = ON,
+        createUnionOfMainSurfaces: Boolean = OFF,
+        createUnionOfSecondarySurfaces: Boolean = OFF,
+        createUnionOfMainSecondarySurfaces: Boolean = OFF,
+        includePlanar: Boolean = ON,
+        includeCylindricalSphericalToric: Boolean = ON,
+        includeSplineBased: Boolean = ON,
+        includeMeshSolid: Boolean = ON,
+        includeMeshShell: Boolean = ON,
+        includeMeshMembrane: Boolean = OFF,
+        includeOverclosed: Boolean = ON,
+        includeNonOverlapping: Boolean = OFF,
+        meshedGeometrySearchTechnique: SymbolicConstant = USE_GEOMETRY,
+        useShellThickness: Boolean = ON,
+        surfaceSmoothing: SymbolicConstant = None,
+    ):
         """This method uses contact detection to create SurfaceToSurfaceContactStd,
         SurfaceToSurfaceContactExp, and Tie objects.
-        
+
         Parameters
         ----------
         name
@@ -193,20 +211,30 @@ class InteractionModel(InteractionContactControlModel,
         """
         pass
 
-    def AcousticImpedance(self, name: str, createStepName: str, surface: Region, definition: SymbolicConstant = TABULAR,
-                          interactionProperty: str = '', nonreflectingType: SymbolicConstant = PLANE,
-                          radius: float = 1, semimajorAxis: float = 1, eccentricity: float = 0,
-                          centerCoordinates: tuple = (), directionCosine: tuple = ()) -> AcousticImpedance:
+    def AcousticImpedance(
+        self,
+        name: str,
+        createStepName: str,
+        surface: Region,
+        definition: SymbolicConstant = TABULAR,
+        interactionProperty: str = "",
+        nonreflectingType: SymbolicConstant = PLANE,
+        radius: float = 1,
+        semimajorAxis: float = 1,
+        eccentricity: float = 0,
+        centerCoordinates: tuple = (),
+        directionCosine: tuple = (),
+    ) -> AcousticImpedance:
         """This method creates an AcousticImpedance object.
 
         Notes
         -----
             This function can be accessed by:
-            
+
             .. code-block:: python
-            
+
                 mdb.models[name].AcousticImpedance
-        
+
         Parameters
         ----------
         name
@@ -252,24 +280,38 @@ class InteractionModel(InteractionContactControlModel,
         -------
             An AcousticImpedance object.
         """
-        self.interactions[name] = interaction = AcousticImpedance(name, createStepName, surface, definition,
-                                                                  interactionProperty, nonreflectingType, radius,
-                                                                  semimajorAxis, eccentricity, centerCoordinates,
-                                                                  directionCosine)
+        self.interactions[name] = interaction = AcousticImpedance(
+            name,
+            createStepName,
+            surface,
+            definition,
+            interactionProperty,
+            nonreflectingType,
+            radius,
+            semimajorAxis,
+            eccentricity,
+            centerCoordinates,
+            directionCosine,
+        )
         return interaction
 
-    def AcousticImpedanceProp(self, name: str, tableType: SymbolicConstant, table: tuple,
-                              frequencyDependency: Boolean = OFF) -> AcousticImpedanceProp:
+    def AcousticImpedanceProp(
+        self,
+        name: str,
+        tableType: SymbolicConstant,
+        table: tuple,
+        frequencyDependency: Boolean = OFF,
+    ) -> AcousticImpedanceProp:
         """This method creates an AcousticImpedanceProp object.
 
         Notes
         -----
             This function can be accessed by:
-            
+
             .. code-block:: python
-            
+
                 mdb.models[name].AcousticImpedanceProp
-        
+
         Parameters
         ----------
         name
@@ -292,22 +334,34 @@ class InteractionModel(InteractionContactControlModel,
         -------
             An AcousticImpedanceProp object.
         """
-        self.interactions[name] = interaction = AcousticImpedanceProp(name, tableType, table, frequencyDependency)
+        self.interactions[name] = interaction = AcousticImpedanceProp(
+            name, tableType, table, frequencyDependency
+        )
         return interaction
 
-    def ActuatorSensor(self, name: str, createStepName: str, point: Region, interactionProperty: str,
-                       noCoordComponents: int, unsymm: Boolean, noSolutionDepVar: int, userSubUel: str,
-                       dof: str, solutionDepVars: tuple) -> ActuatorSensor:
+    def ActuatorSensor(
+        self,
+        name: str,
+        createStepName: str,
+        point: Region,
+        interactionProperty: str,
+        noCoordComponents: int,
+        unsymm: Boolean,
+        noSolutionDepVar: int,
+        userSubUel: str,
+        dof: str,
+        solutionDepVars: tuple,
+    ) -> ActuatorSensor:
         """This method creates an ActuatorSensor object.
 
         Notes
         -----
             This function can be accessed by:
-            
+
             .. code-block:: python
-            
+
                 mdb.models[name].ActuatorSensor
-        
+
         Parameters
         ----------
         name
@@ -338,23 +392,33 @@ class InteractionModel(InteractionContactControlModel,
         -------
             An ActuatorSensor object.
         """
-        self.interactions[name] = interaction = ActuatorSensor(name, createStepName, point, interactionProperty,
-                                                               noCoordComponents, unsymm, noSolutionDepVar, userSubUel,
-                                                               dof, solutionDepVars)
+        self.interactions[name] = interaction = ActuatorSensor(
+            name,
+            createStepName,
+            point,
+            interactionProperty,
+            noCoordComponents,
+            unsymm,
+            noSolutionDepVar,
+            userSubUel,
+            dof,
+            solutionDepVars,
+        )
         return interaction
 
-    def ActuatorSensorProp(self, name: str, realProperties: tuple = (),
-                           integerProperties: tuple = ()) -> ActuatorSensorProp:
+    def ActuatorSensorProp(
+        self, name: str, realProperties: tuple = (), integerProperties: tuple = ()
+    ) -> ActuatorSensorProp:
         """This method creates an ActuatorSensorProp object.
 
         Notes
         -----
             This function can be accessed by:
-            
+
             .. code-block:: python
-            
+
                 mdb.models[name].ActuatorSensorProp
-        
+
         Parameters
         ----------
         name
@@ -370,36 +434,63 @@ class InteractionModel(InteractionContactControlModel,
         -------
             An ActuatorSensorProp object.
         """
-        self.interactions[name] = interaction = ActuatorSensorProp(name, realProperties, integerProperties)
+        self.interactions[name] = interaction = ActuatorSensorProp(
+            name, realProperties, integerProperties
+        )
         return interaction
 
-    def CavityRadiation(self, name: str, createStepName: str, surfaces: RegionArray, surfaceEmissivities: tuple = (),
-                        ambientTemp: float = None, blocking: SymbolicConstant = BLOCKING_ALL,
-                        blockingSurfaces: RegionArray = None, rangeOfView: float = None,
-                        surfaceReflection: Boolean = ON, viewfactorAccurTol: float = 0,
-                        minInfinitesimalRatio: float = 64, numPointsPerEdge: int = 3,
-                        minLumpedAreaDS: float = 5, cyclicSymmetry: Boolean = OFF, cyclicImages: int = 2,
-                        cyclicRotPt: ModelDot = ModelDot(), cyclicRotEndPt: ModelDot = ModelDot(),
-                        cyclicSymPt: ModelDot = ModelDot(), periodicSymmetries: int = 0,
-                        periodicImages_1: int = 2, periodicImages_2: int = 2, periodicImages_3: int = 2,
-                        periodicSymAxis_1: str = '', periodicSymAxis_2: str = '', periodicSymPlane_1: str = '',
-                        periodicSymPlane_2: str = '', periodicSymPlane_3: str = '',
-                        periodicDistance_1: tuple = (), periodicDistance_2: tuple = (),
-                        periodicDistance_3: tuple = (), periodicSymZ: float = None, periodicDistZ: float = None,
-                        reflectionSymmetries: int = 0, reflectionSymAxis_1: str = '',
-                        reflectionSymAxis_2: str = '', reflectionSymPlane_1: str = '',
-                        reflectionSymPlane_2: str = '', reflectionSymPlane_3: str = '',
-                        reflectionSymZ: float = None) -> CavityRadiation:
+    def CavityRadiation(
+        self,
+        name: str,
+        createStepName: str,
+        surfaces: RegionArray,
+        surfaceEmissivities: tuple = (),
+        ambientTemp: float = None,
+        blocking: SymbolicConstant = BLOCKING_ALL,
+        blockingSurfaces: RegionArray = None,
+        rangeOfView: float = None,
+        surfaceReflection: Boolean = ON,
+        viewfactorAccurTol: float = 0,
+        minInfinitesimalRatio: float = 64,
+        numPointsPerEdge: int = 3,
+        minLumpedAreaDS: float = 5,
+        cyclicSymmetry: Boolean = OFF,
+        cyclicImages: int = 2,
+        cyclicRotPt: ModelDot = ModelDot(),
+        cyclicRotEndPt: ModelDot = ModelDot(),
+        cyclicSymPt: ModelDot = ModelDot(),
+        periodicSymmetries: int = 0,
+        periodicImages_1: int = 2,
+        periodicImages_2: int = 2,
+        periodicImages_3: int = 2,
+        periodicSymAxis_1: str = "",
+        periodicSymAxis_2: str = "",
+        periodicSymPlane_1: str = "",
+        periodicSymPlane_2: str = "",
+        periodicSymPlane_3: str = "",
+        periodicDistance_1: tuple = (),
+        periodicDistance_2: tuple = (),
+        periodicDistance_3: tuple = (),
+        periodicSymZ: float = None,
+        periodicDistZ: float = None,
+        reflectionSymmetries: int = 0,
+        reflectionSymAxis_1: str = "",
+        reflectionSymAxis_2: str = "",
+        reflectionSymPlane_1: str = "",
+        reflectionSymPlane_2: str = "",
+        reflectionSymPlane_3: str = "",
+        reflectionSymZ: float = None,
+    ) -> CavityRadiation:
         """This method creates a CavityRadiation object.
 
         Notes
         -----
             This function can be accessed by:
-            
+
             .. code-block:: python
-            
+
                 mdb.models[name].CavityRadiation
-        
+
         Parameters
         ----------
         name
@@ -558,35 +649,66 @@ class InteractionModel(InteractionContactControlModel,
         -------
             A CavityRadiation object.
         """
-        self.interactions[name] = interaction = CavityRadiation(name, createStepName, surfaces, surfaceEmissivities,
-                                                                ambientTemp, blocking, blockingSurfaces, rangeOfView,
-                                                                surfaceReflection, viewfactorAccurTol,
-                                                                minInfinitesimalRatio, numPointsPerEdge,
-                                                                minLumpedAreaDS, cyclicSymmetry, cyclicImages,
-                                                                cyclicRotPt, cyclicRotEndPt, cyclicSymPt,
-                                                                periodicSymmetries, periodicImages_1, periodicImages_2,
-                                                                periodicImages_3, periodicSymAxis_1, periodicSymAxis_2,
-                                                                periodicSymPlane_1, periodicSymPlane_2,
-                                                                periodicSymPlane_3, periodicDistance_1,
-                                                                periodicDistance_2, periodicDistance_3, periodicSymZ,
-                                                                periodicDistZ, reflectionSymmetries,
-                                                                reflectionSymAxis_1, reflectionSymAxis_2,
-                                                                reflectionSymPlane_1, reflectionSymPlane_2,
-                                                                reflectionSymPlane_3, reflectionSymZ)
+        self.interactions[name] = interaction = CavityRadiation(
+            name,
+            createStepName,
+            surfaces,
+            surfaceEmissivities,
+            ambientTemp,
+            blocking,
+            blockingSurfaces,
+            rangeOfView,
+            surfaceReflection,
+            viewfactorAccurTol,
+            minInfinitesimalRatio,
+            numPointsPerEdge,
+            minLumpedAreaDS,
+            cyclicSymmetry,
+            cyclicImages,
+            cyclicRotPt,
+            cyclicRotEndPt,
+            cyclicSymPt,
+            periodicSymmetries,
+            periodicImages_1,
+            periodicImages_2,
+            periodicImages_3,
+            periodicSymAxis_1,
+            periodicSymAxis_2,
+            periodicSymPlane_1,
+            periodicSymPlane_2,
+            periodicSymPlane_3,
+            periodicDistance_1,
+            periodicDistance_2,
+            periodicDistance_3,
+            periodicSymZ,
+            periodicDistZ,
+            reflectionSymmetries,
+            reflectionSymAxis_1,
+            reflectionSymAxis_2,
+            reflectionSymPlane_1,
+            reflectionSymPlane_2,
+            reflectionSymPlane_3,
+            reflectionSymZ,
+        )
         return interaction
 
-    def CavityRadiationProp(self, name: str, temperatureDependency: Boolean = OFF, dependencies: int = 0,
-                            property: tuple = ()) -> CavityRadiationProp:
+    def CavityRadiationProp(
+        self,
+        name: str,
+        temperatureDependency: Boolean = OFF,
+        dependencies: int = 0,
+        property: tuple = (),
+    ) -> CavityRadiationProp:
         """This method creates a CavityRadiationProp object.
 
         Notes
         -----
             This function can be accessed by:
-            
+
             .. code-block:: python
-            
+
                 mdb.models[name].CavityRadiationProp
-        
+
         Parameters
         ----------
         name
@@ -604,25 +726,38 @@ class InteractionModel(InteractionContactControlModel,
         -------
             A CavityRadiationProp object.
         """
-        self.interactions[name] = interaction = CavityRadiationProp(name, temperatureDependency, dependencies, property)
+        self.interactions[name] = interaction = CavityRadiationProp(
+            name, temperatureDependency, dependencies, property
+        )
         return interaction
 
-    def ConcentratedFilmCondition(self, name: str, createStepName: str, region: Region, definition: SymbolicConstant,
-                                  nodalArea: float = 1, explicitRegionType: SymbolicConstant = LAGRANGIAN,
-                                  interactionProperty: str = '', field: str = '', sinkTemperature: float = 0,
-                                  sinkAmplitude: str = '', filmCoeff: float = 0, filmCoeffAmplitude: str = '',
-                                  sinkFieldName: str = '',
-                                  sinkDistributionType: SymbolicConstant = UNIFORM) -> ConcentratedFilmCondition:
+    def ConcentratedFilmCondition(
+        self,
+        name: str,
+        createStepName: str,
+        region: Region,
+        definition: SymbolicConstant,
+        nodalArea: float = 1,
+        explicitRegionType: SymbolicConstant = LAGRANGIAN,
+        interactionProperty: str = "",
+        field: str = "",
+        sinkTemperature: float = 0,
+        sinkAmplitude: str = "",
+        filmCoeff: float = 0,
+        filmCoeffAmplitude: str = "",
+        sinkFieldName: str = "",
+        sinkDistributionType: SymbolicConstant = UNIFORM,
+    ) -> ConcentratedFilmCondition:
         """This method creates a ConcentratedFilmCondition object.
 
         Notes
         -----
             This function can be accessed by:
-            
+
             .. code-block:: python
-            
+
                 mdb.models[name].ConcentratedFilmCondition
-        
+
         Parameters
         ----------
         name
@@ -685,27 +820,47 @@ class InteractionModel(InteractionContactControlModel,
         -------
             A ConcentratedFilmCondition object.
         """
-        self.interactions[name] = interaction = ConcentratedFilmCondition(name, createStepName, region, definition,
-                                                                          nodalArea, explicitRegionType,
-                                                                          interactionProperty, field, sinkTemperature,
-                                                                          sinkAmplitude, filmCoeff, filmCoeffAmplitude,
-                                                                          sinkFieldName, sinkDistributionType)
+        self.interactions[name] = interaction = ConcentratedFilmCondition(
+            name,
+            createStepName,
+            region,
+            definition,
+            nodalArea,
+            explicitRegionType,
+            interactionProperty,
+            field,
+            sinkTemperature,
+            sinkAmplitude,
+            filmCoeff,
+            filmCoeffAmplitude,
+            sinkFieldName,
+            sinkDistributionType,
+        )
         return interaction
 
-    def ConcentratedRadiationToAmbient(self, name: str, createStepName: str, region: Region, ambientTemperature: float,
-                                       ambientTemperatureAmp: str, emissivity: float, nodalArea: float = 1,
-                                       explicitRegionType: SymbolicConstant = LAGRANGIAN, field: str = '',
-                                       distributionType: SymbolicConstant = UNIFORM) -> ConcentratedRadiationToAmbient:
+    def ConcentratedRadiationToAmbient(
+        self,
+        name: str,
+        createStepName: str,
+        region: Region,
+        ambientTemperature: float,
+        ambientTemperatureAmp: str,
+        emissivity: float,
+        nodalArea: float = 1,
+        explicitRegionType: SymbolicConstant = LAGRANGIAN,
+        field: str = "",
+        distributionType: SymbolicConstant = UNIFORM,
+    ) -> ConcentratedRadiationToAmbient:
         """This method creates a ConcentratedRadiationToAmbient object.
 
         Notes
         -----
             This function can be accessed by:
-            
+
             .. code-block:: python
-            
+
                 mdb.models[name].ConcentratedRadiationToAmbient
-        
+
         Parameters
         ----------
         name
@@ -746,35 +901,48 @@ class InteractionModel(InteractionContactControlModel,
         -------
             A ConcentratedRadiationToAmbient object.
         """
-        self.interactions[name] = interaction = ConcentratedRadiationToAmbient(name, createStepName, region,
-                                                                               ambientTemperature,
-                                                                               ambientTemperatureAmp, emissivity,
-                                                                               nodalArea, explicitRegionType, field,
-                                                                               distributionType)
+        self.interactions[name] = interaction = ConcentratedRadiationToAmbient(
+            name,
+            createStepName,
+            region,
+            ambientTemperature,
+            ambientTemperatureAmp,
+            emissivity,
+            nodalArea,
+            explicitRegionType,
+            field,
+            distributionType,
+        )
         return interaction
 
-    def ContactExp(self, name: str, createStepName: str, useAllstar: Boolean = OFF,
-                   globalSmoothing: Boolean = ON, includedPairs: RegionPairs = RegionPairs(),
-                   excludedPairs: RegionPairs = RegionPairs(),
-                   contactPropertyAssignments: ContactPropertyAssignment = ContactPropertyAssignment(),
-                   surfaceThicknessAssignments: SurfaceThicknessAssignment = SurfaceThicknessAssignment(),
-                   surfaceOffsetAssignments: SurfaceOffsetAssignment = SurfaceOffsetAssignment(),
-                   surfaceFeatureAssignments: SurfaceFeatureAssignment = SurfaceFeatureAssignment(),
-                   smoothingAssignments: SmoothingAssignment = SmoothingAssignment(),
-                   surfaceCrushTriggerAssignments: SurfaceCrushTriggerAssignment = SurfaceCrushTriggerAssignment(),
-                   surfaceFrictionAssignments: SurfaceFrictionAssignment = SurfaceFrictionAssignment(),
-                   mainSecondaryAssignments: MainSecondaryAssignment = MainSecondaryAssignment(),
-                   polarityAssignments: PolarityAssignments = PolarityAssignments()) -> ContactExp:
+    def ContactExp(
+        self,
+        name: str,
+        createStepName: str,
+        useAllstar: Boolean = OFF,
+        globalSmoothing: Boolean = ON,
+        includedPairs: RegionPairs = RegionPairs(),
+        excludedPairs: RegionPairs = RegionPairs(),
+        contactPropertyAssignments: ContactPropertyAssignment = ContactPropertyAssignment(),
+        surfaceThicknessAssignments: SurfaceThicknessAssignment = SurfaceThicknessAssignment(),
+        surfaceOffsetAssignments: SurfaceOffsetAssignment = SurfaceOffsetAssignment(),
+        surfaceFeatureAssignments: SurfaceFeatureAssignment = SurfaceFeatureAssignment(),
+        smoothingAssignments: SmoothingAssignment = SmoothingAssignment(),
+        surfaceCrushTriggerAssignments: SurfaceCrushTriggerAssignment = SurfaceCrushTriggerAssignment(),
+        surfaceFrictionAssignments: SurfaceFrictionAssignment = SurfaceFrictionAssignment(),
+        mainSecondaryAssignments: MainSecondaryAssignment = MainSecondaryAssignment(),
+        polarityAssignments: PolarityAssignments = PolarityAssignments(),
+    ) -> ContactExp:
         """This method creates a ContactExp object.
 
         Notes
         -----
             This function can be accessed by:
-            
+
             .. code-block:: python
-            
+
                 mdb.models[name].ContactExp
-        
+
         Parameters
         ----------
         name
@@ -823,12 +991,23 @@ class InteractionModel(InteractionContactControlModel,
         -------
             A ContactExp object.
         """
-        self.interactions[name] = interaction = ContactExp(name, createStepName, useAllstar, globalSmoothing,
-                                                           includedPairs, excludedPairs, contactPropertyAssignments,
-                                                           surfaceThicknessAssignments, surfaceOffsetAssignments,
-                                                           surfaceFeatureAssignments, smoothingAssignments,
-                                                           surfaceCrushTriggerAssignments, surfaceFrictionAssignments,
-                                                           mainSecondaryAssignments, polarityAssignments)
+        self.interactions[name] = interaction = ContactExp(
+            name,
+            createStepName,
+            useAllstar,
+            globalSmoothing,
+            includedPairs,
+            excludedPairs,
+            contactPropertyAssignments,
+            surfaceThicknessAssignments,
+            surfaceOffsetAssignments,
+            surfaceFeatureAssignments,
+            smoothingAssignments,
+            surfaceCrushTriggerAssignments,
+            surfaceFrictionAssignments,
+            mainSecondaryAssignments,
+            polarityAssignments,
+        )
         return interaction
 
     def ContactProperty(self, name: str) -> ContactProperty:
@@ -837,11 +1016,11 @@ class InteractionModel(InteractionContactControlModel,
         Notes
         -----
             This function can be accessed by:
-            
+
             .. code-block:: python
-            
+
                 mdb.models[name].ContactProperty
-        
+
         Parameters
         ----------
         name
@@ -856,31 +1035,37 @@ class InteractionModel(InteractionContactControlModel,
         self.interactionProperties[name] = interactionProperties
         return interactionProperties
 
-    def ContactStd(self, name: str, createStepName: str, useAllstar: Boolean = OFF,
-                   globalSmoothing: Boolean = ON, includedPairs: RegionPairs = RegionPairs(),
-                   excludedPairs: RegionPairs = RegionPairs(),
-                   contactPropertyAssignments: ContactPropertyAssignment = ContactPropertyAssignment(),
-                   surfaceThicknessAssignments: SurfaceThicknessAssignment = SurfaceThicknessAssignment(),
-                   surfaceOffsetAssignments: SurfaceOffsetAssignment = SurfaceOffsetAssignment(),
-                   surfaceFeatureAssignments: SurfaceFeatureAssignment = SurfaceFeatureAssignment(),
-                   surfaceBeamSmoothingAssignments: SurfaceBeamSmoothingAssignment = SurfaceBeamSmoothingAssignment(),
-                   surfaceVertexCriteriaAssignments: SurfaceVertexCriteriaAssignment = SurfaceVertexCriteriaAssignment(),
-                   mainSecondaryAssignments: MainSecondaryAssignment = MainSecondaryAssignment(),
-                   initializationAssignments: InitializationAssignment = InitializationAssignment(),
-                   stabilizationAssignments: StabilizationAssignment = StabilizationAssignment(),
-                   smoothingAssignments: SmoothingAssignment = SmoothingAssignment(),
-                   slidingTransitionAssignments: SlidingTransitionAssignment = SlidingTransitionAssignment(),
-                   slidingFormulationAssignments: SlidingFormulationAssignment = SlidingFormulationAssignment()) -> ContactStd:
+    def ContactStd(
+        self,
+        name: str,
+        createStepName: str,
+        useAllstar: Boolean = OFF,
+        globalSmoothing: Boolean = ON,
+        includedPairs: RegionPairs = RegionPairs(),
+        excludedPairs: RegionPairs = RegionPairs(),
+        contactPropertyAssignments: ContactPropertyAssignment = ContactPropertyAssignment(),
+        surfaceThicknessAssignments: SurfaceThicknessAssignment = SurfaceThicknessAssignment(),
+        surfaceOffsetAssignments: SurfaceOffsetAssignment = SurfaceOffsetAssignment(),
+        surfaceFeatureAssignments: SurfaceFeatureAssignment = SurfaceFeatureAssignment(),
+        surfaceBeamSmoothingAssignments: SurfaceBeamSmoothingAssignment = SurfaceBeamSmoothingAssignment(),
+        surfaceVertexCriteriaAssignments: SurfaceVertexCriteriaAssignment = SurfaceVertexCriteriaAssignment(),
+        mainSecondaryAssignments: MainSecondaryAssignment = MainSecondaryAssignment(),
+        initializationAssignments: InitializationAssignment = InitializationAssignment(),
+        stabilizationAssignments: StabilizationAssignment = StabilizationAssignment(),
+        smoothingAssignments: SmoothingAssignment = SmoothingAssignment(),
+        slidingTransitionAssignments: SlidingTransitionAssignment = SlidingTransitionAssignment(),
+        slidingFormulationAssignments: SlidingFormulationAssignment = SlidingFormulationAssignment(),
+    ) -> ContactStd:
         """This method creates a ContactStd object.
 
         Notes
         -----
             This function can be accessed by:
-            
+
             .. code-block:: python
-            
+
                 mdb.models[name].ContactStd
-        
+
         Parameters
         ----------
         name
@@ -938,32 +1123,55 @@ class InteractionModel(InteractionContactControlModel,
         -------
             A ContactStd object.
         """
-        self.interactions[name] = interaction = ContactStd(name, createStepName, useAllstar, globalSmoothing,
-                                                           includedPairs, excludedPairs, contactPropertyAssignments,
-                                                           surfaceThicknessAssignments, surfaceOffsetAssignments,
-                                                           surfaceFeatureAssignments, surfaceBeamSmoothingAssignments,
-                                                           surfaceVertexCriteriaAssignments, mainSecondaryAssignments,
-                                                           initializationAssignments, stabilizationAssignments,
-                                                           smoothingAssignments, slidingTransitionAssignments,
-                                                           slidingFormulationAssignments)
+        self.interactions[name] = interaction = ContactStd(
+            name,
+            createStepName,
+            useAllstar,
+            globalSmoothing,
+            includedPairs,
+            excludedPairs,
+            contactPropertyAssignments,
+            surfaceThicknessAssignments,
+            surfaceOffsetAssignments,
+            surfaceFeatureAssignments,
+            surfaceBeamSmoothingAssignments,
+            surfaceVertexCriteriaAssignments,
+            mainSecondaryAssignments,
+            initializationAssignments,
+            stabilizationAssignments,
+            smoothingAssignments,
+            slidingTransitionAssignments,
+            slidingFormulationAssignments,
+        )
         return interaction
 
-    def CyclicSymmetry(self, name: str, createStepName: str, main: Region, secondary: Region, repetitiveSectors: int,
-                       axisPoint1: Region, axisPoint2: Region,
-                       extractedNodalDiameter: SymbolicConstant = ALL_NODAL_DIAMETER,
-                       lowestNodalDiameter: int = 0, highestNodalDiameter: int = 0,
-                       excitationNodalDiameter: int = 0, adjustTie: Boolean = ON, positionTolerance: float = 0,
-                       positionToleranceMethod: SymbolicConstant = COMPUTED_TOLERANCE) -> CyclicSymmetry:
+    def CyclicSymmetry(
+        self,
+        name: str,
+        createStepName: str,
+        main: Region,
+        secondary: Region,
+        repetitiveSectors: int,
+        axisPoint1: Region,
+        axisPoint2: Region,
+        extractedNodalDiameter: SymbolicConstant = ALL_NODAL_DIAMETER,
+        lowestNodalDiameter: int = 0,
+        highestNodalDiameter: int = 0,
+        excitationNodalDiameter: int = 0,
+        adjustTie: Boolean = ON,
+        positionTolerance: float = 0,
+        positionToleranceMethod: SymbolicConstant = COMPUTED_TOLERANCE,
+    ) -> CyclicSymmetry:
         """This method creates a CyclicSymmetry object.
 
         Notes
         -----
             This function can be accessed by:
-            
+
             .. code-block:: python
-            
+
                 mdb.models[name].CyclicSymmetry
-        
+
         Parameters
         ----------
         name
@@ -1019,24 +1227,37 @@ class InteractionModel(InteractionContactControlModel,
         -------
             A CyclicSymmetry object.
         """
-        self.interactions[name] = interaction = CyclicSymmetry(name, createStepName, main, secondary, repetitiveSectors,
-                                                               axisPoint1, axisPoint2, extractedNodalDiameter,
-                                                               lowestNodalDiameter, highestNodalDiameter,
-                                                               excitationNodalDiameter, adjustTie, positionTolerance,
-                                                               positionToleranceMethod)
+        self.interactions[name] = interaction = CyclicSymmetry(
+            name,
+            createStepName,
+            main,
+            secondary,
+            repetitiveSectors,
+            axisPoint1,
+            axisPoint2,
+            extractedNodalDiameter,
+            lowestNodalDiameter,
+            highestNodalDiameter,
+            excitationNodalDiameter,
+            adjustTie,
+            positionTolerance,
+            positionToleranceMethod,
+        )
         return interaction
 
-    def ElasticFoundation(self, name: str, createStepName: str, surface: Region, stiffness: float) -> ElasticFoundation:
+    def ElasticFoundation(
+        self, name: str, createStepName: str, surface: Region, stiffness: float
+    ) -> ElasticFoundation:
         """This method creates an ElasticFoundation object.
 
         Notes
         -----
             This function can be accessed by:
-            
+
             .. code-block:: python
-            
+
                 mdb.models[name].ElasticFoundation
-        
+
         Parameters
         ----------
         name
@@ -1053,22 +1274,31 @@ class InteractionModel(InteractionContactControlModel,
         -------
             An ElasticFoundation object.
         """
-        self.interactions[name] = interaction = ElasticFoundation(name, createStepName, surface, stiffness)
+        self.interactions[name] = interaction = ElasticFoundation(
+            name, createStepName, surface, stiffness
+        )
         return interaction
 
-    def ExpContactControl(self, name: str, globTrkChoice: SymbolicConstant = DEFAULT, globTrkInc: int = None,
-                          fastLocalTrk: Boolean = ON, scalePenalty: float = 1, warpCheckPeriod: int = 20,
-                          warpCutoff: float = 20) -> ExpContactControl:
+    def ExpContactControl(
+        self,
+        name: str,
+        globTrkChoice: SymbolicConstant = DEFAULT,
+        globTrkInc: int = None,
+        fastLocalTrk: Boolean = ON,
+        scalePenalty: float = 1,
+        warpCheckPeriod: int = 20,
+        warpCutoff: float = 20,
+    ) -> ExpContactControl:
         """This method creates an ExpContactControl object.
 
         Notes
         -----
             This function can be accessed by:
-            
+
             .. code-block:: python
-            
+
                 mdb.models[name].ExpContactControl
-        
+
         Parameters
         ----------
         name
@@ -1103,25 +1333,39 @@ class InteractionModel(InteractionContactControlModel,
         ------
             RangeError.
         """
-        self.interactions[name] = interaction = ExpContactControl(name, globTrkChoice, globTrkInc, fastLocalTrk,
-                                                                  scalePenalty, warpCheckPeriod, warpCutoff)
+        self.interactions[name] = interaction = ExpContactControl(
+            name,
+            globTrkChoice,
+            globTrkInc,
+            fastLocalTrk,
+            scalePenalty,
+            warpCheckPeriod,
+            warpCutoff,
+        )
         return interaction
 
-    def ExpInitialization(self, name: str, overclosureType: SymbolicConstant = ADJUST,
-                          interferenceDistance: float = None, clearanceDistance: float = None,
-                          openingTolerance: float = None, overclosureTolerance: float = None,
-                          adjustNodalCoords: Boolean = True, secondaryNodesetName: str = None,
-                          stepFraction: float = 1) -> ExpInitialization:
+    def ExpInitialization(
+        self,
+        name: str,
+        overclosureType: SymbolicConstant = ADJUST,
+        interferenceDistance: float = None,
+        clearanceDistance: float = None,
+        openingTolerance: float = None,
+        overclosureTolerance: float = None,
+        adjustNodalCoords: Boolean = True,
+        secondaryNodesetName: str = None,
+        stepFraction: float = 1,
+    ) -> ExpInitialization:
         """This method creates an ExpInitialization object.
 
         Notes
         -----
             This function can be accessed by:
-            
+
             .. code-block:: python
-            
+
                 mdb.models[name].ExpInitialization
-        
+
         Parameters
         ----------
         name
@@ -1167,26 +1411,44 @@ class InteractionModel(InteractionContactControlModel,
         ------
             RangeError.
         """
-        self.interactions[name] = interaction = ExpInitialization(name, overclosureType, interferenceDistance,
-                                                                  clearanceDistance, openingTolerance,
-                                                                  overclosureTolerance, adjustNodalCoords,
-                                                                  secondaryNodesetName, stepFraction)
+        self.interactions[name] = interaction = ExpInitialization(
+            name,
+            overclosureType,
+            interferenceDistance,
+            clearanceDistance,
+            openingTolerance,
+            overclosureTolerance,
+            adjustNodalCoords,
+            secondaryNodesetName,
+            stepFraction,
+        )
         return interaction
 
-    def FilmCondition(self, name: str, createStepName: str, surface: Region, definition: SymbolicConstant,
-                      interactionProperty: str = '', sinkTemperature: float = 0, sinkAmplitude: str = '',
-                      filmCoeff: float = 0, filmCoeffAmplitude: str = '', field: str = '',
-                      sinkFieldName: str = '', sinkDistributionType: SymbolicConstant = UNIFORM) -> FilmCondition:
+    def FilmCondition(
+        self,
+        name: str,
+        createStepName: str,
+        surface: Region,
+        definition: SymbolicConstant,
+        interactionProperty: str = "",
+        sinkTemperature: float = 0,
+        sinkAmplitude: str = "",
+        filmCoeff: float = 0,
+        filmCoeffAmplitude: str = "",
+        field: str = "",
+        sinkFieldName: str = "",
+        sinkDistributionType: SymbolicConstant = UNIFORM,
+    ) -> FilmCondition:
         """This method creates a FilmCondition object.
 
         Notes
         -----
             This function can be accessed by:
-            
+
             .. code-block:: python
-            
+
                 mdb.models[name].FilmCondition
-        
+
         Parameters
         ----------
         name
@@ -1240,24 +1502,39 @@ class InteractionModel(InteractionContactControlModel,
         -------
             A FilmCondition object.
         """
-        self.interactions[name] = interaction = FilmCondition(name, createStepName, surface, definition,
-                                                              interactionProperty, sinkTemperature, sinkAmplitude,
-                                                              filmCoeff, filmCoeffAmplitude, field, sinkFieldName,
-                                                              sinkDistributionType)
+        self.interactions[name] = interaction = FilmCondition(
+            name,
+            createStepName,
+            surface,
+            definition,
+            interactionProperty,
+            sinkTemperature,
+            sinkAmplitude,
+            filmCoeff,
+            filmCoeffAmplitude,
+            field,
+            sinkFieldName,
+            sinkDistributionType,
+        )
         return interaction
 
-    def FilmConditionProp(self, name: str, temperatureDependency: Boolean = OFF, dependencies: int = 0,
-                          property: tuple = ()) -> FilmConditionProp:
+    def FilmConditionProp(
+        self,
+        name: str,
+        temperatureDependency: Boolean = OFF,
+        dependencies: int = 0,
+        property: tuple = (),
+    ) -> FilmConditionProp:
         """This method creates a FilmConditionProp object.
 
         Notes
         -----
             This function can be accessed by:
-            
+
             .. code-block:: python
-            
+
                 mdb.models[name].FilmConditionProp
-        
+
         Parameters
         ----------
         name
@@ -1278,22 +1555,33 @@ class InteractionModel(InteractionContactControlModel,
         -------
             A FilmConditionProp object.
         """
-        self.interactions[name] = interaction = FilmConditionProp(name, temperatureDependency, dependencies, property)
+        self.interactions[name] = interaction = FilmConditionProp(
+            name, temperatureDependency, dependencies, property
+        )
         return interaction
 
-    def FluidCavity(self, name: str, createStepName: str, cavityPoint: Region, cavitySurface: Region,
-                    interactionProperty: str, ambientPressure: float = 0, thickness: float = 1,
-                    useAdiabatic: Boolean = OFF, checkNormals: Boolean = ON) -> FluidCavity:
+    def FluidCavity(
+        self,
+        name: str,
+        createStepName: str,
+        cavityPoint: Region,
+        cavitySurface: Region,
+        interactionProperty: str,
+        ambientPressure: float = 0,
+        thickness: float = 1,
+        useAdiabatic: Boolean = OFF,
+        checkNormals: Boolean = ON,
+    ) -> FluidCavity:
         """This method creates an FluidCavity object.
 
         Notes
         -----
             This function can be accessed by:
-            
+
             .. code-block:: python
-            
+
                 mdb.models[name].FluidCavity
-        
+
         Parameters
         ----------
         name
@@ -1323,30 +1611,50 @@ class InteractionModel(InteractionContactControlModel,
         -------
             A FluidCavity object.
         """
-        self.interactions[name] = interaction = FluidCavity(name, createStepName, cavityPoint, cavitySurface,
-                                                            interactionProperty, ambientPressure, thickness,
-                                                            useAdiabatic, checkNormals)
+        self.interactions[name] = interaction = FluidCavity(
+            name,
+            createStepName,
+            cavityPoint,
+            cavitySurface,
+            interactionProperty,
+            ambientPressure,
+            thickness,
+            useAdiabatic,
+            checkNormals,
+        )
         return interaction
 
-    def FluidCavityProperty(self, name: str, definition: SymbolicConstant = HYDRAULIC, fluidDensity: float = None,
-                            molecularWeight: float = None, useExpansion: Boolean = OFF,
-                            expansionTempDep: Boolean = OFF, expansionDependencies: int = 0,
-                            referenceTemperature: float = 0, expansionTable: tuple = (),
-                            useBulkModulus: Boolean = OFF, bulkModulusTempDep: Boolean = OFF,
-                            bulkModulusDependencies: int = 0, bulkModulusTable: tuple = (),
-                            useCapacity: Boolean = OFF, capacityType: SymbolicConstant = POLYNOMIAL,
-                            capacityTempDep: Boolean = OFF, capacityDependencies: int = 0,
-                            capacityTable: tuple = ()) -> FluidCavityProperty:
+    def FluidCavityProperty(
+        self,
+        name: str,
+        definition: SymbolicConstant = HYDRAULIC,
+        fluidDensity: float = None,
+        molecularWeight: float = None,
+        useExpansion: Boolean = OFF,
+        expansionTempDep: Boolean = OFF,
+        expansionDependencies: int = 0,
+        referenceTemperature: float = 0,
+        expansionTable: tuple = (),
+        useBulkModulus: Boolean = OFF,
+        bulkModulusTempDep: Boolean = OFF,
+        bulkModulusDependencies: int = 0,
+        bulkModulusTable: tuple = (),
+        useCapacity: Boolean = OFF,
+        capacityType: SymbolicConstant = POLYNOMIAL,
+        capacityTempDep: Boolean = OFF,
+        capacityDependencies: int = 0,
+        capacityTable: tuple = (),
+    ) -> FluidCavityProperty:
         """This method creates a FluidCavityProperty object.
 
         Notes
         -----
             This function can be accessed by:
-            
+
             .. code-block:: python
-            
+
                 mdb.models[name].FluidCavityProperty
-        
+
         Parameters
         ----------
         name
@@ -1444,28 +1752,48 @@ class InteractionModel(InteractionContactControlModel,
         -------
             A FluidCavityProperty object.
         """
-        self.interactions[name] = interaction = FluidCavityProperty(name, definition, fluidDensity, molecularWeight,
-                                                                    useExpansion, expansionTempDep,
-                                                                    expansionDependencies, referenceTemperature,
-                                                                    expansionTable, useBulkModulus, bulkModulusTempDep,
-                                                                    bulkModulusDependencies, bulkModulusTable,
-                                                                    useCapacity, capacityType, capacityTempDep,
-                                                                    capacityDependencies, capacityTable)
+        self.interactions[name] = interaction = FluidCavityProperty(
+            name,
+            definition,
+            fluidDensity,
+            molecularWeight,
+            useExpansion,
+            expansionTempDep,
+            expansionDependencies,
+            referenceTemperature,
+            expansionTable,
+            useBulkModulus,
+            bulkModulusTempDep,
+            bulkModulusDependencies,
+            bulkModulusTable,
+            useCapacity,
+            capacityType,
+            capacityTempDep,
+            capacityDependencies,
+            capacityTable,
+        )
         return interaction
 
-    def FluidExchange(self, name: str, createStepName: str, firstCavity: str, interactionProperty: str,
-                      definition: SymbolicConstant = TO_ENVIRONMENT, secondCavity: str = '',
-                      exchangeArea: float = 1) -> FluidExchange:
+    def FluidExchange(
+        self,
+        name: str,
+        createStepName: str,
+        firstCavity: str,
+        interactionProperty: str,
+        definition: SymbolicConstant = TO_ENVIRONMENT,
+        secondCavity: str = "",
+        exchangeArea: float = 1,
+    ) -> FluidExchange:
         """This method creates an FluidExchange object.
 
         Notes
         -----
             This function can be accessed by:
-            
+
             .. code-block:: python
-            
+
                 mdb.models[name].FluidExchange
-        
+
         Parameters
         ----------
         name
@@ -1490,23 +1818,36 @@ class InteractionModel(InteractionContactControlModel,
         -------
             A FluidExchange object.
         """
-        self.interactions[name] = interaction = FluidExchange(name, createStepName, firstCavity, interactionProperty,
-                                                              definition, secondCavity, exchangeArea)
+        self.interactions[name] = interaction = FluidExchange(
+            name,
+            createStepName,
+            firstCavity,
+            interactionProperty,
+            definition,
+            secondCavity,
+            exchangeArea,
+        )
         return interaction
 
-    def FluidExchangeProperty(self, name: str, dataTable: tuple, definition: SymbolicConstant = BULK_VISCOSITY,
-                              pressureDependency: Boolean = OFF, temperatureDependency: Boolean = OFF,
-                              fieldDependencies: int = 0) -> FluidExchangeProperty:
+    def FluidExchangeProperty(
+        self,
+        name: str,
+        dataTable: tuple,
+        definition: SymbolicConstant = BULK_VISCOSITY,
+        pressureDependency: Boolean = OFF,
+        temperatureDependency: Boolean = OFF,
+        fieldDependencies: int = 0,
+    ) -> FluidExchangeProperty:
         """This method creates a FluidExchangeProperty object.
 
         Notes
         -----
             This function can be accessed by:
-            
+
             .. code-block:: python
-            
+
                 mdb.models[name].FluidExchangeProperty
-        
+
         Parameters
         ----------
         name
@@ -1573,22 +1914,35 @@ class InteractionModel(InteractionContactControlModel,
         -------
             A FluidExchangeProperty object.
         """
-        self.interactions[name] = interaction = FluidExchangeProperty(name, dataTable, definition, pressureDependency,
-                                                                      temperatureDependency, fieldDependencies)
+        self.interactions[name] = interaction = FluidExchangeProperty(
+            name,
+            dataTable,
+            definition,
+            pressureDependency,
+            temperatureDependency,
+            fieldDependencies,
+        )
         return interaction
 
-    def FluidInflator(self, name: str, createStepName: str, cavity: str, interactionProperty: str,
-                      inflationTimeAmplitude: str = '', massFlowAmplitude: str = '') -> FluidInflator:
+    def FluidInflator(
+        self,
+        name: str,
+        createStepName: str,
+        cavity: str,
+        interactionProperty: str,
+        inflationTimeAmplitude: str = "",
+        massFlowAmplitude: str = "",
+    ) -> FluidInflator:
         """This method creates a FluidInflator object.
 
         Notes
         -----
             This function can be accessed by:
-            
+
             .. code-block:: python
-            
+
                 mdb.models[name].FluidInflator
-        
+
         Parameters
         ----------
         name
@@ -1610,24 +1964,40 @@ class InteractionModel(InteractionContactControlModel,
         -------
             A FluidInflator object.
         """
-        self.interactions[name] = interaction = FluidInflator(name, createStepName, cavity, interactionProperty,
-                                                              inflationTimeAmplitude, massFlowAmplitude)
+        self.interactions[name] = interaction = FluidInflator(
+            name,
+            createStepName,
+            cavity,
+            interactionProperty,
+            inflationTimeAmplitude,
+            massFlowAmplitude,
+        )
         return interaction
 
-    def FluidInflatorProperty(self, name: str, definition: str, effectiveArea: float, tankVolume: float,
-                              dischargeCoefficient: float = None, dataTable: tuple = (), numFluids: int = None,
-                              mixtureType: str = '', inflationTime: tuple = (), fluidbehaviorName: tuple = (),
-                              massFraction: tuple = ()) -> FluidInflatorProperty:
+    def FluidInflatorProperty(
+        self,
+        name: str,
+        definition: str,
+        effectiveArea: float,
+        tankVolume: float,
+        dischargeCoefficient: float = None,
+        dataTable: tuple = (),
+        numFluids: int = None,
+        mixtureType: str = "",
+        inflationTime: tuple = (),
+        fluidbehaviorName: tuple = (),
+        massFraction: tuple = (),
+    ) -> FluidInflatorProperty:
         """This method creates a FluidInflatorProperty object.
 
         Notes
         -----
             This function can be accessed by:
-            
+
             .. code-block:: python
-            
+
                 mdb.models[name].FluidInflatorProperty
-        
+
         Parameters
         ----------
         name
@@ -1666,27 +2036,48 @@ class InteractionModel(InteractionContactControlModel,
         -------
             A FluidInflatorProperty object.
         """
-        self.interactions[name] = interaction = FluidInflatorProperty(name, definition, effectiveArea, tankVolume,
-                                                                      dischargeCoefficient, dataTable, numFluids,
-                                                                      mixtureType, inflationTime, fluidbehaviorName,
-                                                                      massFraction)
+        self.interactions[name] = interaction = FluidInflatorProperty(
+            name,
+            definition,
+            effectiveArea,
+            tankVolume,
+            dischargeCoefficient,
+            dataTable,
+            numFluids,
+            mixtureType,
+            inflationTime,
+            fluidbehaviorName,
+            massFraction,
+        )
         return interaction
 
-    def IncidentWave(self, name: str, createStepName: str, sourcePoint: Region, standoffPoint: Region,
-                     surface: Region, interactionProperty: str, definition: SymbolicConstant = PRESSURE,
-                     amplitude: str = '', imaginaryAmplitude: str = '', surfaceNormal: tuple = (),
-                     initialDepth: float = None, referenceMagnitude: float = None,
-                     detonationTime: float = None, magnitudeFactor: float = 1) -> IncidentWave:
+    def IncidentWave(
+        self,
+        name: str,
+        createStepName: str,
+        sourcePoint: Region,
+        standoffPoint: Region,
+        surface: Region,
+        interactionProperty: str,
+        definition: SymbolicConstant = PRESSURE,
+        amplitude: str = "",
+        imaginaryAmplitude: str = "",
+        surfaceNormal: tuple = (),
+        initialDepth: float = None,
+        referenceMagnitude: float = None,
+        detonationTime: float = None,
+        magnitudeFactor: float = 1,
+    ) -> IncidentWave:
         """This method creates an IncidentWave object.
 
         Notes
         -----
             This function can be accessed by:
-            
+
             .. code-block:: python
-            
+
                 mdb.models[name].IncidentWave
-        
+
         Parameters
         ----------
         name
@@ -1741,34 +2132,69 @@ class InteractionModel(InteractionContactControlModel,
         -------
             An IncidentWave object.
         """
-        self.interactions[name] = interaction = IncidentWave(name, createStepName, sourcePoint, standoffPoint, surface,
-                                                             interactionProperty, definition, amplitude,
-                                                             imaginaryAmplitude, surfaceNormal, initialDepth,
-                                                             referenceMagnitude, detonationTime, magnitudeFactor)
+        self.interactions[name] = interaction = IncidentWave(
+            name,
+            createStepName,
+            sourcePoint,
+            standoffPoint,
+            surface,
+            interactionProperty,
+            definition,
+            amplitude,
+            imaginaryAmplitude,
+            surfaceNormal,
+            initialDepth,
+            referenceMagnitude,
+            detonationTime,
+            magnitudeFactor,
+        )
         return interaction
 
-    def IncidentWaveProperty(self, name: str, definition: SymbolicConstant = PLANAR,
-                             propagationModel: SymbolicConstant = ACOUSTIC, soundSpeed: float = None,
-                             fluidDensity: float = None, specificHeatRatio: float = None, gravity: float = None,
-                             atmosphericPressure: float = None, dragCoefficient: float = None,
-                             dragExponent: float = 2, waveEffects: Boolean = ON, chargeDensity: float = None,
-                             chargeMass: float = None, constantK1: float = None, constantK2: float = None,
-                             constantA: float = None, constantB: float = None, constantKc: float = None,
-                             duration: float = None, maximumSteps: int = 1500, relativeStepControl: float = None,
-                             absoluteStepControl: float = None, stepControlExponent: float = 0, genDecayA: float = 0,
-                             genDecayB: float = 0, genDecayC: float = 0, seedNumber: int = None,
-                             massTNT: float = None, massFactor: float = 1, lengthFactor: float = 1,
-                             timeFactor: float = 1, pressureFactor: float = 1) -> IncidentWaveProperty:
+    def IncidentWaveProperty(
+        self,
+        name: str,
+        definition: SymbolicConstant = PLANAR,
+        propagationModel: SymbolicConstant = ACOUSTIC,
+        soundSpeed: float = None,
+        fluidDensity: float = None,
+        specificHeatRatio: float = None,
+        gravity: float = None,
+        atmosphericPressure: float = None,
+        dragCoefficient: float = None,
+        dragExponent: float = 2,
+        waveEffects: Boolean = ON,
+        chargeDensity: float = None,
+        chargeMass: float = None,
+        constantK1: float = None,
+        constantK2: float = None,
+        constantA: float = None,
+        constantB: float = None,
+        constantKc: float = None,
+        duration: float = None,
+        maximumSteps: int = 1500,
+        relativeStepControl: float = None,
+        absoluteStepControl: float = None,
+        stepControlExponent: float = 0,
+        genDecayA: float = 0,
+        genDecayB: float = 0,
+        genDecayC: float = 0,
+        seedNumber: int = None,
+        massTNT: float = None,
+        massFactor: float = 1,
+        lengthFactor: float = 1,
+        timeFactor: float = 1,
+        pressureFactor: float = 1,
+    ) -> IncidentWaveProperty:
         """This method creates an IncidentWaveProperty object.
 
         Notes
         -----
             This function can be accessed by:
-            
+
             .. code-block:: python
-            
+
                 mdb.models[name].IncidentWaveProperty
-        
+
         Parameters
         ----------
         name
@@ -1893,31 +2319,62 @@ class InteractionModel(InteractionContactControlModel,
         -------
             An IncidentWaveProperty object.
         """
-        self.interactions[name] = interaction = IncidentWaveProperty(name, definition, propagationModel, soundSpeed,
-                                                                     fluidDensity, specificHeatRatio, gravity,
-                                                                     atmosphericPressure, dragCoefficient, dragExponent,
-                                                                     waveEffects, chargeDensity, chargeMass, constantK1,
-                                                                     constantK2, constantA, constantB, constantKc,
-                                                                     duration, maximumSteps, relativeStepControl,
-                                                                     absoluteStepControl, stepControlExponent,
-                                                                     genDecayA, genDecayB, genDecayC, seedNumber,
-                                                                     massTNT, massFactor, lengthFactor, timeFactor,
-                                                                     pressureFactor)
+        self.interactions[name] = interaction = IncidentWaveProperty(
+            name,
+            definition,
+            propagationModel,
+            soundSpeed,
+            fluidDensity,
+            specificHeatRatio,
+            gravity,
+            atmosphericPressure,
+            dragCoefficient,
+            dragExponent,
+            waveEffects,
+            chargeDensity,
+            chargeMass,
+            constantK1,
+            constantK2,
+            constantA,
+            constantB,
+            constantKc,
+            duration,
+            maximumSteps,
+            relativeStepControl,
+            absoluteStepControl,
+            stepControlExponent,
+            genDecayA,
+            genDecayB,
+            genDecayC,
+            seedNumber,
+            massTNT,
+            massFactor,
+            lengthFactor,
+            timeFactor,
+            pressureFactor,
+        )
         return interaction
 
-    def ModelChange(self, name: str, createStepName: str, isRestart: Boolean = OFF,
-                    regionType: SymbolicConstant = GEOMETRY, region: Region = Region(),
-                    activeInStep: Boolean = OFF, includeStrain: Boolean = OFF) -> ModelChange:
+    def ModelChange(
+        self,
+        name: str,
+        createStepName: str,
+        isRestart: Boolean = OFF,
+        regionType: SymbolicConstant = GEOMETRY,
+        region: Region = Region(),
+        activeInStep: Boolean = OFF,
+        includeStrain: Boolean = OFF,
+    ) -> ModelChange:
         """This method creates a ModelChange object.
 
         Notes
         -----
             This function can be accessed by:
-            
+
             .. code-block:: python
-            
+
                 mdb.models[name].ModelChange
-        
+
         Parameters
         ----------
         name
@@ -1947,23 +2404,39 @@ class InteractionModel(InteractionContactControlModel,
         -------
             A ModelChange object.
         """
-        self.interactions[name] = interaction = ModelChange(name, createStepName, isRestart, regionType, region,
-                                                            activeInStep, includeStrain)
+        self.interactions[name] = interaction = ModelChange(
+            name,
+            createStepName,
+            isRestart,
+            regionType,
+            region,
+            activeInStep,
+            includeStrain,
+        )
         return interaction
 
-    def PressurePenetration(self, name: str, createStepName: str, contactInteraction: str, mainPoints: RegionArray,
-                            secondaryPoints: RegionArray, penetrationPressure: float, criticalPressure: float,
-                            amplitude: str = UNSET, penetrationTime: float = 0) -> PressurePenetration:
+    def PressurePenetration(
+        self,
+        name: str,
+        createStepName: str,
+        contactInteraction: str,
+        mainPoints: RegionArray,
+        secondaryPoints: RegionArray,
+        penetrationPressure: float,
+        criticalPressure: float,
+        amplitude: str = UNSET,
+        penetrationTime: float = 0,
+    ) -> PressurePenetration:
         """This method creates a PressurePenetration object.
 
         Notes
         -----
             This function can be accessed by:
-            
+
             .. code-block:: python
-            
+
                 mdb.models[name].PressurePenetration
-        
+
         Parameters
         ----------
         name
@@ -1998,24 +2471,41 @@ class InteractionModel(InteractionContactControlModel,
         -------
             A PressurePenetration object.
         """
-        self.interactions[name] = interaction = PressurePenetration(name, createStepName, contactInteraction,
-                                                                    mainPoints, secondaryPoints, penetrationPressure,
-                                                                    criticalPressure, amplitude, penetrationTime)
+        self.interactions[name] = interaction = PressurePenetration(
+            name,
+            createStepName,
+            contactInteraction,
+            mainPoints,
+            secondaryPoints,
+            penetrationPressure,
+            criticalPressure,
+            amplitude,
+            penetrationTime,
+        )
         return interaction
 
-    def RadiationToAmbient(self, name: str, createStepName: str, surface: Region, emissivity: float, field: str = '',
-                           distributionType: SymbolicConstant = UNIFORM, radiationType: SymbolicConstant = AMBIENT,
-                           ambientTemperature: float = 0, ambientTemperatureAmp: str = '') -> RadiationToAmbient:
+    def RadiationToAmbient(
+        self,
+        name: str,
+        createStepName: str,
+        surface: Region,
+        emissivity: float,
+        field: str = "",
+        distributionType: SymbolicConstant = UNIFORM,
+        radiationType: SymbolicConstant = AMBIENT,
+        ambientTemperature: float = 0,
+        ambientTemperatureAmp: str = "",
+    ) -> RadiationToAmbient:
         """This method creates a RadiationToAmbient object.
 
         Notes
         -----
             This function can be accessed by:
-            
+
             .. code-block:: python
-            
+
                 mdb.models[name].RadiationToAmbient
-        
+
         Parameters
         ----------
         name
@@ -2054,23 +2544,38 @@ class InteractionModel(InteractionContactControlModel,
         -------
             A RadiationToAmbient object.
         """
-        self.interactions[name] = interaction = RadiationToAmbient(name, createStepName, surface, emissivity, field,
-                                                                   distributionType, radiationType, ambientTemperature,
-                                                                   ambientTemperatureAmp)
+        self.interactions[name] = interaction = RadiationToAmbient(
+            name,
+            createStepName,
+            surface,
+            emissivity,
+            field,
+            distributionType,
+            radiationType,
+            ambientTemperature,
+            ambientTemperatureAmp,
+        )
         return interaction
 
-    def SelfContactExp(self, name: str, createStepName: str, surface: Region, interactionProperty: str,
-                       mechanicalConstraint: SymbolicConstant = KINEMATIC, contactControls: str = '') -> SelfContactExp:
+    def SelfContactExp(
+        self,
+        name: str,
+        createStepName: str,
+        surface: Region,
+        interactionProperty: str,
+        mechanicalConstraint: SymbolicConstant = KINEMATIC,
+        contactControls: str = "",
+    ) -> SelfContactExp:
         """This method creates a SelfContactExp object.
 
         Notes
         -----
             This function can be accessed by:
-            
+
             .. code-block:: python
-            
+
                 mdb.models[name].SelfContactExp
-        
+
         Parameters
         ----------
         name
@@ -2094,23 +2599,37 @@ class InteractionModel(InteractionContactControlModel,
         -------
             A SelfContactExp object.
         """
-        self.interactions[name] = interaction = SelfContactExp(name, createStepName, surface, interactionProperty,
-                                                               mechanicalConstraint, contactControls)
+        self.interactions[name] = interaction = SelfContactExp(
+            name,
+            createStepName,
+            surface,
+            interactionProperty,
+            mechanicalConstraint,
+            contactControls,
+        )
         return interaction
 
-    def SelfContactStd(self, name: str, createStepName: str, surface: Region, interactionProperty: str,
-                       enforcement: SymbolicConstant = SURFACE_TO_SURFACE, thickness: Boolean = ON,
-                       smooth: float = 0, contactControls: str = '') -> SelfContactStd:
+    def SelfContactStd(
+        self,
+        name: str,
+        createStepName: str,
+        surface: Region,
+        interactionProperty: str,
+        enforcement: SymbolicConstant = SURFACE_TO_SURFACE,
+        thickness: Boolean = ON,
+        smooth: float = 0,
+        contactControls: str = "",
+    ) -> SelfContactStd:
         """This method creates a SelfContactStd object.
 
         Notes
         -----
             This function can be accessed by:
-            
+
             .. code-block:: python
-            
+
                 mdb.models[name].SelfContactStd
-        
+
         Parameters
         ----------
         name
@@ -2141,29 +2660,49 @@ class InteractionModel(InteractionContactControlModel,
         -------
             A SelfContactStd object.
         """
-        self.interactions[name] = interaction = SelfContactStd(name, createStepName, surface, interactionProperty,
-                                                               enforcement, thickness, smooth, contactControls)
+        self.interactions[name] = interaction = SelfContactStd(
+            name,
+            createStepName,
+            surface,
+            interactionProperty,
+            enforcement,
+            thickness,
+            smooth,
+            contactControls,
+        )
         return interaction
 
-    def StdContactControl(self, name: str, stiffnessScaleFactor: float = 1,
-                          penetrationTolChoice: SymbolicConstant = RELATIVE,
-                          relativePenetrationTolerance: float = None, absolutePenetrationTolerance: float = None,
-                          frictionOnset: SymbolicConstant = None, automaticTolerances: Boolean = OFF,
-                          maxchp: int = 0, perrmx: float = 0, uerrmx: float = 0,
-                          stabilizeChoice: SymbolicConstant = NONE, dampFactor: float = 1, dampCoef: float = 0,
-                          tangFraction: float = 1, eosFraction: float = 0,
-                          zeroDampingChoice: SymbolicConstant = COMPUTE, zeroDamping: float = None,
-                          enforceWithLagrangeMultipliers: SymbolicConstant = DEFAULT) -> StdContactControl:
+    def StdContactControl(
+        self,
+        name: str,
+        stiffnessScaleFactor: float = 1,
+        penetrationTolChoice: SymbolicConstant = RELATIVE,
+        relativePenetrationTolerance: float = None,
+        absolutePenetrationTolerance: float = None,
+        frictionOnset: SymbolicConstant = None,
+        automaticTolerances: Boolean = OFF,
+        maxchp: int = 0,
+        perrmx: float = 0,
+        uerrmx: float = 0,
+        stabilizeChoice: SymbolicConstant = NONE,
+        dampFactor: float = 1,
+        dampCoef: float = 0,
+        tangFraction: float = 1,
+        eosFraction: float = 0,
+        zeroDampingChoice: SymbolicConstant = COMPUTE,
+        zeroDamping: float = None,
+        enforceWithLagrangeMultipliers: SymbolicConstant = DEFAULT,
+    ) -> StdContactControl:
         """This method creates an StdContactControl object.
 
         Notes
         -----
             This function can be accessed by:
-            
+
             .. code-block:: python
-            
+
                 mdb.models[name].StdContactControl
-        
+
         Parameters
         ----------
         name
@@ -2256,28 +2795,47 @@ class InteractionModel(InteractionContactControlModel,
         ------
             RangeError.
         """
-        self.interactions[name] = interaction = StdContactControl(name, stiffnessScaleFactor, penetrationTolChoice,
-                                                                  relativePenetrationTolerance,
-                                                                  absolutePenetrationTolerance, frictionOnset,
-                                                                  automaticTolerances, maxchp, perrmx, uerrmx,
-                                                                  stabilizeChoice, dampFactor, dampCoef, tangFraction,
-                                                                  eosFraction, zeroDampingChoice, zeroDamping,
-                                                                  enforceWithLagrangeMultipliers)
+        self.interactions[name] = interaction = StdContactControl(
+            name,
+            stiffnessScaleFactor,
+            penetrationTolChoice,
+            relativePenetrationTolerance,
+            absolutePenetrationTolerance,
+            frictionOnset,
+            automaticTolerances,
+            maxchp,
+            perrmx,
+            uerrmx,
+            stabilizeChoice,
+            dampFactor,
+            dampCoef,
+            tangFraction,
+            eosFraction,
+            zeroDampingChoice,
+            zeroDamping,
+            enforceWithLagrangeMultipliers,
+        )
         return interaction
 
-    def StdInitialization(self, name: str, overclosureType: SymbolicConstant = ADJUST,
-                          interferenceDistance: float = None, clearanceDistance: float = None,
-                          openingTolerance: float = None, overclosureTolerance: float = None) -> StdInitialization:
+    def StdInitialization(
+        self,
+        name: str,
+        overclosureType: SymbolicConstant = ADJUST,
+        interferenceDistance: float = None,
+        clearanceDistance: float = None,
+        openingTolerance: float = None,
+        overclosureTolerance: float = None,
+    ) -> StdInitialization:
         """This method creates a StdInitialization object.
 
         Notes
         -----
             This function can be accessed by:
-            
+
             .. code-block:: python
-            
+
                 mdb.models[name].StdInitialization
-        
+
         Parameters
         ----------
         name
@@ -2309,24 +2867,36 @@ class InteractionModel(InteractionContactControlModel,
         ------
             RangeError.
         """
-        self.interactions[name] = interaction = StdInitialization(name, overclosureType, interferenceDistance,
-                                                                  clearanceDistance, openingTolerance,
-                                                                  overclosureTolerance)
+        self.interactions[name] = interaction = StdInitialization(
+            name,
+            overclosureType,
+            interferenceDistance,
+            clearanceDistance,
+            openingTolerance,
+            overclosureTolerance,
+        )
         return interaction
 
-    def StdStabilization(self, name: str, zeroDistance: float = None, reductionFactor: float = 0,
-                         scaleFactor: float = 1, tangentialFactor: float = 0, amplitude: str = '',
-                         reset: Boolean = OFF) -> StdStabilization:
+    def StdStabilization(
+        self,
+        name: str,
+        zeroDistance: float = None,
+        reductionFactor: float = 0,
+        scaleFactor: float = 1,
+        tangentialFactor: float = 0,
+        amplitude: str = "",
+        reset: Boolean = OFF,
+    ) -> StdStabilization:
         """This method creates a StdStabilization object.
 
         Notes
         -----
             This function can be accessed by:
-            
+
             .. code-block:: python
-            
+
                 mdb.models[name].StdStabilization
-        
+
         Parameters
         ----------
         name
@@ -2359,23 +2929,36 @@ class InteractionModel(InteractionContactControlModel,
         ------
             RangeError.
         """
-        self.interactions[name] = interaction = StdStabilization(name, zeroDistance, reductionFactor, scaleFactor,
-                                                                 tangentialFactor, amplitude, reset)
+        self.interactions[name] = interaction = StdStabilization(
+            name,
+            zeroDistance,
+            reductionFactor,
+            scaleFactor,
+            tangentialFactor,
+            amplitude,
+            reset,
+        )
         return interaction
 
-    def StdXplCosimulation(self, name: str, createStepName: str, region: Region,
-                           incrementation: SymbolicConstant = ALLOW_SUBCYCLING, stepSize: float = 0,
-                           stepSizeDefinition: SymbolicConstant = DEFAULT) -> StdXplCosimulation:
+    def StdXplCosimulation(
+        self,
+        name: str,
+        createStepName: str,
+        region: Region,
+        incrementation: SymbolicConstant = ALLOW_SUBCYCLING,
+        stepSize: float = 0,
+        stepSizeDefinition: SymbolicConstant = DEFAULT,
+    ) -> StdXplCosimulation:
         """This method creates a StdXplCosimulation object.
 
         Notes
         -----
             This function can be accessed by:
-            
+
             .. code-block:: python
-            
+
                 mdb.models[name].StdXplCosimulation
-        
+
         Parameters
         ----------
         name
@@ -2403,31 +2986,42 @@ class InteractionModel(InteractionContactControlModel,
         -------
             A StdXplCosimulation object.
         """
-        self.interactions[name] = interaction = StdXplCosimulation(name, createStepName, region, incrementation,
-                                                                   stepSize, stepSizeDefinition)
+        self.interactions[name] = interaction = StdXplCosimulation(
+            name, createStepName, region, incrementation, stepSize, stepSizeDefinition
+        )
         return interaction
 
-    def SurfaceToSurfaceContactExp(self, name: str, createStepName: str, main: Region, secondary: Region,
-                                   sliding: SymbolicConstant, interactionProperty: str,
-                                   mechanicalConstraint: SymbolicConstant = KINEMATIC,
-                                   weightingFactorType: SymbolicConstant = DEFAULT, weightingFactor: float = 0,
-                                   contactControls: str = '',
-                                   initialClearance: typing.Union[SymbolicConstant, float] = OMIT,
-                                   halfThreadAngle: str = None, pitch: str = None,
-                                   majorBoltDiameter: typing.Union[SymbolicConstant, float] = COMPUTED,
-                                   meanBoltDiameter: typing.Union[SymbolicConstant, float] = COMPUTED,
-                                   datumAxis: DatumAxis = DatumAxis(), useReverseDatumAxis: Boolean = OFF,
-                                   clearanceRegion: Region = Region()) -> SurfaceToSurfaceContactExp:
+    def SurfaceToSurfaceContactExp(
+        self,
+        name: str,
+        createStepName: str,
+        main: Region,
+        secondary: Region,
+        sliding: SymbolicConstant,
+        interactionProperty: str,
+        mechanicalConstraint: SymbolicConstant = KINEMATIC,
+        weightingFactorType: SymbolicConstant = DEFAULT,
+        weightingFactor: float = 0,
+        contactControls: str = "",
+        initialClearance: typing.Union[SymbolicConstant, float] = OMIT,
+        halfThreadAngle: str = None,
+        pitch: str = None,
+        majorBoltDiameter: typing.Union[SymbolicConstant, float] = COMPUTED,
+        meanBoltDiameter: typing.Union[SymbolicConstant, float] = COMPUTED,
+        datumAxis: DatumAxis = DatumAxis(),
+        useReverseDatumAxis: Boolean = OFF,
+        clearanceRegion: Region = Region(),
+    ) -> SurfaceToSurfaceContactExp:
         """This method creates a SurfaceToSurfaceContactExp object.
 
         Notes
         -----
             This function can be accessed by:
-            
+
             .. code-block:: python
-            
+
                 mdb.models[name].SurfaceToSurfaceContactExp
-        
+
         Parameters
         ----------
         name
@@ -2486,42 +3080,74 @@ class InteractionModel(InteractionContactControlModel,
         -------
             A SurfaceToSurfaceContactExp object.
         """
-        self.interactions[name] = interaction = SurfaceToSurfaceContactExp(name, createStepName, main, secondary,
-                                                                           sliding, interactionProperty,
-                                                                           mechanicalConstraint, weightingFactorType,
-                                                                           weightingFactor, contactControls,
-                                                                           initialClearance, halfThreadAngle, pitch,
-                                                                           majorBoltDiameter, meanBoltDiameter,
-                                                                           datumAxis, useReverseDatumAxis,
-                                                                           clearanceRegion)
+        self.interactions[name] = interaction = SurfaceToSurfaceContactExp(
+            name,
+            createStepName,
+            main,
+            secondary,
+            sliding,
+            interactionProperty,
+            mechanicalConstraint,
+            weightingFactorType,
+            weightingFactor,
+            contactControls,
+            initialClearance,
+            halfThreadAngle,
+            pitch,
+            majorBoltDiameter,
+            meanBoltDiameter,
+            datumAxis,
+            useReverseDatumAxis,
+            clearanceRegion,
+        )
         return interaction
 
-    def SurfaceToSurfaceContactStd(self, name: str, createStepName: str, master: Region, slave: Region,
-                                   sliding: SymbolicConstant, interactionProperty: str,
-                                   interferenceType: SymbolicConstant = NONE, overclosure: float = 0,
-                                   interferenceDirectionType: SymbolicConstant = COMPUTED, direction: tuple = (),
-                                   amplitude: str = '', smooth: float = 0, hcrit: float = 0, extensionZone: float = 0,
-                                   adjustMethod: SymbolicConstant = NONE, adjustTolerance: float = 0,
-                                   adjustSet: Region = Region(), enforcement: SymbolicConstant = SURFACE_TO_SURFACE,
-                                   thickness: Boolean = ON, contactControls: str = '', tied: Boolean = OFF,
-                                   initialClearance: typing.Union[SymbolicConstant, float] = OMIT,
-                                   halfThreadAngle: str = None, pitch: str = None,
-                                   majorBoltDiameter: typing.Union[SymbolicConstant, float] = COMPUTED,
-                                   meanBoltDiameter: typing.Union[SymbolicConstant, float] = COMPUTED,
-                                   datumAxis: DatumAxis = DatumAxis(), useReverseDatumAxis: Boolean = OFF,
-                                   clearanceRegion: Region = Region(), surfaceSmoothing: SymbolicConstant = NONE,
-                                   bondingSet: Region = Region(), handedness: SymbolicConstant = RIGHT,
-                                   normalAdjustment: SymbolicConstant = None) -> SurfaceToSurfaceContactStd:
+    def SurfaceToSurfaceContactStd(
+        self,
+        name: str,
+        createStepName: str,
+        master: Region,
+        slave: Region,
+        sliding: SymbolicConstant,
+        interactionProperty: str,
+        interferenceType: SymbolicConstant = NONE,
+        overclosure: float = 0,
+        interferenceDirectionType: SymbolicConstant = COMPUTED,
+        direction: tuple = (),
+        amplitude: str = "",
+        smooth: float = 0,
+        hcrit: float = 0,
+        extensionZone: float = 0,
+        adjustMethod: SymbolicConstant = NONE,
+        adjustTolerance: float = 0,
+        adjustSet: Region = Region(),
+        enforcement: SymbolicConstant = SURFACE_TO_SURFACE,
+        thickness: Boolean = ON,
+        contactControls: str = "",
+        tied: Boolean = OFF,
+        initialClearance: typing.Union[SymbolicConstant, float] = OMIT,
+        halfThreadAngle: str = None,
+        pitch: str = None,
+        majorBoltDiameter: typing.Union[SymbolicConstant, float] = COMPUTED,
+        meanBoltDiameter: typing.Union[SymbolicConstant, float] = COMPUTED,
+        datumAxis: DatumAxis = DatumAxis(),
+        useReverseDatumAxis: Boolean = OFF,
+        clearanceRegion: Region = Region(),
+        surfaceSmoothing: SymbolicConstant = NONE,
+        bondingSet: Region = Region(),
+        handedness: SymbolicConstant = RIGHT,
+        normalAdjustment: SymbolicConstant = None,
+    ) -> SurfaceToSurfaceContactStd:
         """This method creates a SurfaceToSurfaceContactStd object.
 
         Notes
         -----
             This function can be accessed by:
-            
+
             .. code-block:: python
-            
+
                 mdb.models[name].SurfaceToSurfaceContactStd
-        
+
         Parameters
         ----------
         name
@@ -2638,32 +3264,56 @@ class InteractionModel(InteractionContactControlModel,
         -------
             A SurfaceToSurfaceContactStd object.
         """
-        self.interactions[name] = interaction = SurfaceToSurfaceContactStd(name, createStepName, master, slave, sliding,
-                                                                           interactionProperty, interferenceType,
-                                                                           overclosure, interferenceDirectionType,
-                                                                           direction, amplitude, smooth, hcrit,
-                                                                           extensionZone, adjustMethod, adjustTolerance,
-                                                                           adjustSet, enforcement, thickness,
-                                                                           contactControls, tied, initialClearance,
-                                                                           halfThreadAngle, pitch, majorBoltDiameter,
-                                                                           meanBoltDiameter, datumAxis,
-                                                                           useReverseDatumAxis, clearanceRegion,
-                                                                           surfaceSmoothing, bondingSet, handedness,
-                                                                           normalAdjustment)
+        self.interactions[name] = interaction = SurfaceToSurfaceContactStd(
+            name,
+            createStepName,
+            master,
+            slave,
+            sliding,
+            interactionProperty,
+            interferenceType,
+            overclosure,
+            interferenceDirectionType,
+            direction,
+            amplitude,
+            smooth,
+            hcrit,
+            extensionZone,
+            adjustMethod,
+            adjustTolerance,
+            adjustSet,
+            enforcement,
+            thickness,
+            contactControls,
+            tied,
+            initialClearance,
+            halfThreadAngle,
+            pitch,
+            majorBoltDiameter,
+            meanBoltDiameter,
+            datumAxis,
+            useReverseDatumAxis,
+            clearanceRegion,
+            surfaceSmoothing,
+            bondingSet,
+            handedness,
+            normalAdjustment,
+        )
         return interaction
 
-    def XFEMCrackGrowth(self, name: str, createStepName: str, crackName: str,
-                        allowGrowth: Boolean = ON) -> XFEMCrackGrowth:
+    def XFEMCrackGrowth(
+        self, name: str, createStepName: str, crackName: str, allowGrowth: Boolean = ON
+    ) -> XFEMCrackGrowth:
         """This method creates an XFEMCrackGrowth object.
 
         Notes
         -----
             This function can be accessed by:
-            
+
             .. code-block:: python
-            
+
                 mdb.models[name].XFEMCrackGrowth
-        
+
         Parameters
         ----------
         name
@@ -2680,5 +3330,7 @@ class InteractionModel(InteractionContactControlModel,
         -------
             A XFEMCrackGrowth object.
         """
-        self.interactions[name] = interaction = XFEMCrackGrowth(name, createStepName, crackName, allowGrowth)
+        self.interactions[name] = interaction = XFEMCrackGrowth(
+            name, createStepName, crackName, allowGrowth
+        )
         return interaction

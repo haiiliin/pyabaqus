@@ -3,15 +3,15 @@ from .MeshElementArray import MeshElementArray
 
 class MeshEdge:
     """The MeshEdge object refers to an element edge. It has no constructor or members. A
-    MeshEdge object can be accessed via a MeshEdgeArray or a repository on a part or part 
-    instance. 
+    MeshEdge object can be accessed via a MeshEdgeArray or a repository on a part or part
+    instance.
 
     Notes
     -----
     This object can be accessed by:
-    
+
     .. code-block:: python
-        
+
         import part
         mdb.models[name].parts[name].elemEdges[i]
         mdb.models[name].parts[name].elementEdges[i]
@@ -35,12 +35,12 @@ class MeshEdge:
     def getElementsViaTopology(self, domain: MeshElementArray = MeshElementArray([])):
         """This method returns an array of MeshElement objects that are obtained by recursively
         finding adjacent elements via topology.
-        
+
         Parameters
         ----------
         domain
-            A MeshElementArray object specifying the domain to include in the search. By default, 
-            all elements in the mesh are included. 
+            A MeshElementArray object specifying the domain to include in the search. By default,
+            all elements in the mesh are included.
 
         Returns
         -------
@@ -51,12 +51,12 @@ class MeshEdge:
     def getNodesViaTopology(self, domain: MeshElementArray = MeshElementArray([])):
         """This method returns an array of MeshNode objects that lie along element edges
         topologically in line with the element edge.
-        
+
         Parameters
         ----------
         domain
-            A MeshElementArray object specifying the domain to include in the search. By default, 
-            all elements in the mesh are included. 
+            A MeshElementArray object specifying the domain to include in the search. By default,
+            all elements in the mesh are included.
 
         Returns
         -------

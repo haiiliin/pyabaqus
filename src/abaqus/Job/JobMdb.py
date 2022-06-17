@@ -19,27 +19,46 @@ class JobMdb(MdbBase):
 
     """
 
-    def Job(self, name: str, model: str, description: str = '', type: SymbolicConstant = ANALYSIS,
-            queue: str = '', waitHours: int = 0, waitMinutes: int = 0, atTime: str = '',
-            echoPrint: Boolean = OFF, contactPrint: Boolean = OFF, modelPrint: Boolean = OFF,
-            historyPrint: Boolean = OFF, scratch: str = '', userSubroutine: str = '',
-            numCpus: int = 1, memory: int = 90, memoryUnits: SymbolicConstant = PERCENTAGE,
-            explicitPrecision: SymbolicConstant = SINGLE,
-            nodalOutputPrecision: SymbolicConstant = SINGLE,
-            parallelizationMethodExplicit: SymbolicConstant = DOMAIN, numDomains: int = 1,
-            activateLoadBalancing: Boolean = OFF, multiprocessingMode: SymbolicConstant = DEFAULT,
-            licenseType: SymbolicConstant = DEFAULT, *args, **kwargs) -> ModelJob:
+    def Job(
+        self,
+        name: str,
+        model: str,
+        description: str = "",
+        type: SymbolicConstant = ANALYSIS,
+        queue: str = "",
+        waitHours: int = 0,
+        waitMinutes: int = 0,
+        atTime: str = "",
+        echoPrint: Boolean = OFF,
+        contactPrint: Boolean = OFF,
+        modelPrint: Boolean = OFF,
+        historyPrint: Boolean = OFF,
+        scratch: str = "",
+        userSubroutine: str = "",
+        numCpus: int = 1,
+        memory: int = 90,
+        memoryUnits: SymbolicConstant = PERCENTAGE,
+        explicitPrecision: SymbolicConstant = SINGLE,
+        nodalOutputPrecision: SymbolicConstant = SINGLE,
+        parallelizationMethodExplicit: SymbolicConstant = DOMAIN,
+        numDomains: int = 1,
+        activateLoadBalancing: Boolean = OFF,
+        multiprocessingMode: SymbolicConstant = DEFAULT,
+        licenseType: SymbolicConstant = DEFAULT,
+        *args,
+        **kwargs
+    ) -> ModelJob:
         """This method creates an analysis job using a model on a model database (MDB) for the
         model definition.
 
         Notes
         -----
             This function can be accessed by:
-            
+
             .. code-block:: python
-            
+
                 mdb.Job
-            
+
         Parameters
         ----------
         name
@@ -135,32 +154,68 @@ class JobMdb(MdbBase):
         ------
             AbaqusException.
         """
-        self.jobs[name] = job = ModelJob(name, model, description, type, queue, waitHours, waitMinutes, atTime,
-                                         echoPrint, contactPrint, modelPrint, historyPrint, scratch, userSubroutine,
-                                         numCpus, memory, memoryUnits, explicitPrecision, nodalOutputPrecision,
-                                         parallelizationMethodExplicit, numDomains, activateLoadBalancing,
-                                         multiprocessingMode, licenseType, *args, **kwargs)
+        self.jobs[name] = job = ModelJob(
+            name,
+            model,
+            description,
+            type,
+            queue,
+            waitHours,
+            waitMinutes,
+            atTime,
+            echoPrint,
+            contactPrint,
+            modelPrint,
+            historyPrint,
+            scratch,
+            userSubroutine,
+            numCpus,
+            memory,
+            memoryUnits,
+            explicitPrecision,
+            nodalOutputPrecision,
+            parallelizationMethodExplicit,
+            numDomains,
+            activateLoadBalancing,
+            multiprocessingMode,
+            licenseType,
+            *args,
+            **kwargs
+        )
         return job
 
-    def JobFromInputFile(self, name: str, inputFileName: str, type: SymbolicConstant = ANALYSIS, queue: str = '',
-                         waitHours: int = 0, waitMinutes: int = 0, atTime: str = '', scratch: str = '',
-                         userSubroutine: str = '', numCpus: int = 1, memory: int = 90,
-                         memoryUnits: SymbolicConstant = PERCENTAGE,
-                         explicitPrecision: SymbolicConstant = SINGLE,
-                         nodalOutputPrecision: SymbolicConstant = SINGLE,
-                         parallelizationMethodExplicit: SymbolicConstant = DOMAIN, numDomains: int = 1,
-                         activateLoadBalancing: Boolean = OFF, multiprocessingMode: SymbolicConstant = DEFAULT,
-                         licenseType: SymbolicConstant = DEFAULT) -> JobFromInputFile:
+    def JobFromInputFile(
+        self,
+        name: str,
+        inputFileName: str,
+        type: SymbolicConstant = ANALYSIS,
+        queue: str = "",
+        waitHours: int = 0,
+        waitMinutes: int = 0,
+        atTime: str = "",
+        scratch: str = "",
+        userSubroutine: str = "",
+        numCpus: int = 1,
+        memory: int = 90,
+        memoryUnits: SymbolicConstant = PERCENTAGE,
+        explicitPrecision: SymbolicConstant = SINGLE,
+        nodalOutputPrecision: SymbolicConstant = SINGLE,
+        parallelizationMethodExplicit: SymbolicConstant = DOMAIN,
+        numDomains: int = 1,
+        activateLoadBalancing: Boolean = OFF,
+        multiprocessingMode: SymbolicConstant = DEFAULT,
+        licenseType: SymbolicConstant = DEFAULT,
+    ) -> JobFromInputFile:
         """This method creates an analysis job using an input file for the model definition.
 
         Notes
         -----
             This function can be accessed by:
-            
+
             .. code-block:: python
-            
+
                 mdb.JobFromInputFile
-            
+
         Parameters
         ----------
         name
@@ -236,27 +291,53 @@ class JobMdb(MdbBase):
             available.
         """
 
-        self.jobs[name] = jobFromInputFile = JobFromInputFile(name, inputFileName, type, queue, waitHours, waitMinutes,
-                                                              atTime, scratch, userSubroutine, numCpus, memory,
-                                                              memoryUnits, explicitPrecision, nodalOutputPrecision,
-                                                              parallelizationMethodExplicit, numDomains,
-                                                              activateLoadBalancing, multiprocessingMode, licenseType)
+        self.jobs[name] = jobFromInputFile = JobFromInputFile(
+            name,
+            inputFileName,
+            type,
+            queue,
+            waitHours,
+            waitMinutes,
+            atTime,
+            scratch,
+            userSubroutine,
+            numCpus,
+            memory,
+            memoryUnits,
+            explicitPrecision,
+            nodalOutputPrecision,
+            parallelizationMethodExplicit,
+            numDomains,
+            activateLoadBalancing,
+            multiprocessingMode,
+            licenseType,
+        )
         return jobFromInputFile
 
-    def OptimizationProcess(self, name: str, model: str, task: str, prototypeJob: str, description: str = '',
-                            maxDesignCycle: int = 15, dataSaveFrequency: str = OPT_DATASAVE_SPECIFY_CYCLE,
-                            saveInitial: Boolean = True, saveFirst: Boolean = True, saveLast: Boolean = True,
-                            saveEvery: int = None) -> OptimizationProcess:
+    def OptimizationProcess(
+        self,
+        name: str,
+        model: str,
+        task: str,
+        prototypeJob: str,
+        description: str = "",
+        maxDesignCycle: int = 15,
+        dataSaveFrequency: str = OPT_DATASAVE_SPECIFY_CYCLE,
+        saveInitial: Boolean = True,
+        saveFirst: Boolean = True,
+        saveLast: Boolean = True,
+        saveEvery: int = None,
+    ) -> OptimizationProcess:
         """This method creates an OptimizationProcess object.
 
         Notes
         -----
             This function can be accessed by:
-            
+
             .. code-block:: python
-            
+
                 mdb.OptimizationProcess
-            
+
         Parameters
         ----------
         name
@@ -304,8 +385,17 @@ class JobMdb(MdbBase):
         ------
             AbaqusException.
         """
-        self.optimizationProcesses[name] = optimizationProcess = OptimizationProcess(name, model, task, prototypeJob,
-                                                                                     description, maxDesignCycle,
-                                                                                     dataSaveFrequency, saveInitial,
-                                                                                     saveFirst, saveLast, saveEvery)
+        self.optimizationProcesses[name] = optimizationProcess = OptimizationProcess(
+            name,
+            model,
+            task,
+            prototypeJob,
+            description,
+            maxDesignCycle,
+            dataSaveFrequency,
+            saveInitial,
+            saveFirst,
+            saveLast,
+            saveEvery,
+        )
         return optimizationProcess

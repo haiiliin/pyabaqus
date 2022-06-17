@@ -4,7 +4,7 @@ from ..Region.Region import Region
 
 class ElasticFoundation(Interaction):
     """The ElasticFoundation object defines a mechanical foundation.
-    The ElasticFoundation object is derived from the Interaction object. 
+    The ElasticFoundation object is derived from the Interaction object.
 
     Notes
     -----
@@ -21,7 +21,9 @@ class ElasticFoundation(Interaction):
 
     """
 
-    def __init__(self, name: str, createStepName: str, surface: Region, stiffness: float):
+    def __init__(
+        self, name: str, createStepName: str, surface: Region, stiffness: float
+    ):
         """This method creates an ElasticFoundation object.
 
         Notes
@@ -31,18 +33,18 @@ class ElasticFoundation(Interaction):
         .. code-block:: python
 
             mdb.models[name].ElasticFoundation
-        
+
         Parameters
         ----------
         name
-            A String specifying the repository key. 
+            A String specifying the repository key.
         createStepName
-            A String specifying the name of the step in which the ElasticFoundation object is 
-            created. *createStepName* must be set to 'Initial'. 
+            A String specifying the name of the step in which the ElasticFoundation object is
+            created. *createStepName* must be set to 'Initial'.
         surface
-            A Region object specifying the surface to which the foundation applies. 
+            A Region object specifying the surface to which the foundation applies.
         stiffness
-            A Float specifying the foundation stiffness per area (or per length for beams). 
+            A Float specifying the foundation stiffness per area (or per length for beams).
 
         Returns
         -------
@@ -60,12 +62,12 @@ class ElasticFoundation(Interaction):
     def setValuesInStep(self, stepName: str, stiffness: float = None):
         """This method modifies the propagating data of an existing ElasticFoundation object in the
         specified step.
-        
+
         Parameters
         ----------
         stepName
-            A String specifying the name of the step in which the interaction is modified. 
+            A String specifying the name of the step in which the interaction is modified.
         stiffness
-            A Float specifying the foundation stiffness per area (or per length for beams). 
+            A Float specifying the foundation stiffness per area (or per length for beams).
         """
         pass

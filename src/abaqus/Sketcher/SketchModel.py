@@ -15,19 +15,24 @@ class SketchModel(ModelBase):
 
     """
 
-    def ConstrainedSketch(self, name: str, sheetSize: float, gridSpacing: float = None, 
-                          transform: tuple = ()) -> ConstrainedSketch:
+    def ConstrainedSketch(
+        self,
+        name: str,
+        sheetSize: float,
+        gridSpacing: float = None,
+        transform: tuple = (),
+    ) -> ConstrainedSketch:
         """This method creates a ConstrainedSketch object. If the sketch cannot be created, the
         method returns None.
 
         Notes
         -----
             This function can be accessed by:
-            
+
             .. code-block:: python
-            
+
                 mdb.models[name].ConstrainedSketch
-        
+
         Parameters
         ----------
         name
@@ -50,5 +55,7 @@ class SketchModel(ModelBase):
         sketch: ConstrainedSketch
             A ConstrainedSketch object.
         """
-        self.sketches[name] = sketch = ConstrainedSketch(name, sheetSize, gridSpacing, transform)
+        self.sketches[name] = sketch = ConstrainedSketch(
+            name, sheetSize, gridSpacing, transform
+        )
         return sketch

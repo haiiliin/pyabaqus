@@ -30,20 +30,20 @@ class LatentHeat:
         Notes
         -----
             This function can be accessed by:
-            
+
             .. code-block:: python
-            
+
                 mdb.models[name].materials[name].LatentHeat
                 session.odbs[name].materials[name].LatentHeat
-        
+
         Parameters
         ----------
         table
-            A sequence of sequences of Floats specifying the items described below. 
+            A sequence of sequences of Floats specifying the items described below.
 
         Returns
         -------
-            A LatentHeat object. 
+            A LatentHeat object.
 
         Raises
         ------

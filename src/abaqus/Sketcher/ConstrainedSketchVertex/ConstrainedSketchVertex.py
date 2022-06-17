@@ -4,16 +4,16 @@ class ConstrainedSketchVertex:
     Notes
     -----
     This object can be accessed by:
-    
+
     .. code-block:: python
-        
+
         import sketch
         mdb.models[name].sketches[name].vertices[i]
         mdb.models[name].sketches[name].vertices[i][i]
 
     """
 
-    # A tuple of Floats specifying the*X*-, *Y*-, and *Z*-coordinates of the sketch vertex. 
+    # A tuple of Floats specifying the*X*-, *Y*-, and *Z*-coordinates of the sketch vertex.
     coords: float = None
 
     def Spot(self, point: tuple[float]):
@@ -22,15 +22,15 @@ class ConstrainedSketchVertex:
         Notes
         -----
             This function can be accessed by:
-            
+
             .. code-block:: python
-            
+
                 mdb.models[name].sketches[name].Spot
-        
+
         Parameters
         ----------
         point
-            A pair of Floats specifying the coordinates of the construction point. 
+            A pair of Floats specifying the coordinates of the construction point.
 
         Returns
         -------

@@ -3,8 +3,8 @@ from .CommandRegister import CommandRegister
 
 class RegisteredList(CommandRegister):
     """This class allows you to create a list that can be queried from the GUI and is capable
-    of notifying the GUI when the contents of the list change. 
-    The RegisteredList object is derived from the CommandRegister object. 
+    of notifying the GUI when the contents of the list change.
+    The RegisteredList object is derived from the CommandRegister object.
 
     Notes
     -----
@@ -35,6 +35,5 @@ class RegisteredList(CommandRegister):
         pass
 
     def Methods(self):
-        """The RegisteredList object supports the same methods as a standard Python list object.
-        """
+        """The RegisteredList object supports the same methods as a standard Python list object."""
         pass

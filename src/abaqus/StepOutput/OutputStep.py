@@ -7,35 +7,45 @@ from ..Step.StepBase import StepBase
 
 class OutputStep(StepBase):
     """The Step object stores the parameters that determine the context of the step. The Step
-    object is the abstract base type for other Step objects. The Step object has no explicit 
-    constructor. The methods and members of the Step object are common to all objects 
-    derived from the Step. 
+    object is the abstract base type for other Step objects. The Step object has no explicit
+    constructor. The methods and members of the Step object are common to all objects
+    derived from the Step.
 
     Notes
     -----
     This object can be accessed by:
-    
+
     .. code-block:: python
-    
+
         import step
         mdb.models[name].steps[name]
 
     """
 
-    def DiagnosticPrint(self, allke: Boolean = ON, criticalElement: Boolean = ON, dmass: Boolean = OFF,
-                        etotal: Boolean = OFF, contact: Boolean = ON, modelChange: Boolean = OFF,
-                        plasticity: Boolean = OFF, residual: Boolean = ON, frequency: int = 1,
-                        solve: Boolean = ON, mass: Boolean = OFF) -> DiagnosticPrint:
+    def DiagnosticPrint(
+        self,
+        allke: Boolean = ON,
+        criticalElement: Boolean = ON,
+        dmass: Boolean = OFF,
+        etotal: Boolean = OFF,
+        contact: Boolean = ON,
+        modelChange: Boolean = OFF,
+        plasticity: Boolean = OFF,
+        residual: Boolean = ON,
+        frequency: int = 1,
+        solve: Boolean = ON,
+        mass: Boolean = OFF,
+    ) -> DiagnosticPrint:
         """This method creates a DiagnosticPrint object.
 
         Notes
         -----
             This function can be accessed by:
-            
+
             .. code-block:: python
-            
+
                 mdb.models[name].steps[name].DiagnosticPrint
-        
+
         Parameters
         ----------
         allke
@@ -86,9 +96,19 @@ class OutputStep(StepBase):
         diagnosticPrint: DiagnosticPrint
             A DiagnosticPrint object
         """
-        self.diagnosticPrint = diagnosticPrint = DiagnosticPrint(allke, criticalElement, dmass, etotal, contact,
-                                                                 modelChange, plasticity, residual, frequency, solve,
-                                                                 mass)
+        self.diagnosticPrint = diagnosticPrint = DiagnosticPrint(
+            allke,
+            criticalElement,
+            dmass,
+            etotal,
+            contact,
+            modelChange,
+            plasticity,
+            residual,
+            frequency,
+            solve,
+            mass,
+        )
         return diagnosticPrint
 
     def Monitor(self, node: str, dof: SymbolicConstant, frequency: int) -> Monitor:
@@ -98,11 +118,11 @@ class OutputStep(StepBase):
         Notes
         -----
             This function can be accessed by:
-            
+
             .. code-block:: python
-            
+
                 mdb.models[name].steps[name].Monitor
-        
+
         Parameters
         ----------
         node
@@ -137,18 +157,23 @@ class OutputStep(StepBase):
         self.monitor = monitor = Monitor(node, dof, frequency)
         return monitor
 
-    def Restart(self, numberIntervals: int = 0, timeMarks: Boolean = OFF, overlay: Boolean = OFF,
-                frequency: int = 0) -> Restart:
+    def Restart(
+        self,
+        numberIntervals: int = 0,
+        timeMarks: Boolean = OFF,
+        overlay: Boolean = OFF,
+        frequency: int = 0,
+    ) -> Restart:
         """This method creates a restart request.
 
         Notes
         -----
             This function can be accessed by:
-            
+
             .. code-block:: python
-            
+
                 mdb.models[name].steps[name].Restart
-        
+
         Parameters
         ----------
         numberIntervals

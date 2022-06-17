@@ -4,10 +4,10 @@ from .NumberFormat import NumberFormat
 
 class JournalOptions:
     """A JournalOptions object specifies how to record selection of geometry in the journal and
-    replay files. *journalOptions* can also be used to set the numeric formatting options 
-    for field report output, geometry commands output, and a default format for other 
-    numeric output. The JournalOptions object has no constructor. Abaqus creates the 
-    *journalOptions* member when a session is started. 
+    replay files. *journalOptions* can also be used to set the numeric formatting options
+    for field report output, geometry commands output, and a default format for other
+    numeric output. The JournalOptions object has no constructor. Abaqus creates the
+    *journalOptions* member when a session is started.
 
     Attributes
     ----------
@@ -23,40 +23,49 @@ class JournalOptions:
         session.journalOptions
 
     """
+
     # Format of the number
     numberFormat: NumberFormat = NumberFormat()
 
-    def setValues(self, replayGeometry: SymbolicConstant = COMPRESSEDINDEX,
-                  recoverGeometry: SymbolicConstant = COMPRESSEDINDEX,
-                  defaultFormat: NumberFormat = NumberFormat(),
-                  fieldReportFormat: NumberFormat = NumberFormat(),
-                  geometryFormat: NumberFormat = NumberFormat()):
+    def setValues(
+        self,
+        replayGeometry: SymbolicConstant = COMPRESSEDINDEX,
+        recoverGeometry: SymbolicConstant = COMPRESSEDINDEX,
+        defaultFormat: NumberFormat = NumberFormat(),
+        fieldReportFormat: NumberFormat = NumberFormat(),
+        geometryFormat: NumberFormat = NumberFormat(),
+    ):
         """This method modifies the JournalOptions object.
-        
+
         Parameters
         ----------
         replayGeometry
-            A SymbolicConstant specifying the format of the geometry in the replay file. Possible 
-            values are COORDINATE, INDEX, and COMPRESSEDINDEX. The default value is COMPRESSEDINDEX. 
+            A SymbolicConstant specifying the format of the geometry in the replay file. Possible
+            values are COORDINATE, INDEX, and COMPRESSEDINDEX. The default value is COMPRESSEDINDEX.
         recoverGeometry
-            A SymbolicConstant specifying the format of the geometry in the recovery file. Possible 
-            values are COORDINATE, INDEX, and COMPRESSEDINDEX. The default value is COMPRESSEDINDEX. 
+            A SymbolicConstant specifying the format of the geometry in the recovery file. Possible
+            values are COORDINATE, INDEX, and COMPRESSEDINDEX. The default value is COMPRESSEDINDEX.
         defaultFormat
-            A NumberFormat object specifying the default format for numeric output. The default 
-            values are the same as the default values for the NumberFormat object. 
+            A NumberFormat object specifying the default format for numeric output. The default
+            values are the same as the default values for the NumberFormat object.
         fieldReportFormat
-            A NumberFormat object specifying the default format for numbers in a field report 
-            output. The default values are the same as the default values for the NumberFormat 
-            object. 
+            A NumberFormat object specifying the default format for numbers in a field report
+            output. The default values are the same as the default values for the NumberFormat
+            object.
         geometryFormat
-            A NumberFormat object specifying the default format for numbers in geometry commands 
-            output. The default values are the same as the default values for the NumberFormat 
-            object. 
+            A NumberFormat object specifying the default format for numbers in geometry commands
+            output. The default values are the same as the default values for the NumberFormat
+            object.
         """
         pass
 
-    def NumberFormat(self, blankPad: Boolean = ON, format: SymbolicConstant = ENGINEERING, numDigits: int = 6,
-                     precision: int = 0) -> NumberFormat:
+    def NumberFormat(
+        self,
+        blankPad: Boolean = ON,
+        format: SymbolicConstant = ENGINEERING,
+        numDigits: int = 6,
+        precision: int = 0,
+    ) -> NumberFormat:
         """This method creates a NumberFormat object.
 
         Notes
@@ -68,7 +77,7 @@ class JournalOptions:
             session.defaultFieldReportOptions.NumberFormat
             session.fieldReportOptions.NumberFormat
             session.journalOptions.NumberFormat
-        
+
         Parameters
         ----------
         blankPad
@@ -90,5 +99,7 @@ class JournalOptions:
         -------
             A NumberFormat object.
         """
-        self.numberFormat = numberFormat = NumberFormat(blankPad, format, numDigits, precision)
+        self.numberFormat = numberFormat = NumberFormat(
+            blankPad, format, numDigits, precision
+        )
         return numberFormat

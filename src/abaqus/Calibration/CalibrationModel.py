@@ -21,11 +21,11 @@ class CalibrationModel(ModelBase):
         Notes
         -----
             This function can be accessed by:
-            
+
             .. code-block:: python
-            
+
                 mdb.models[name].Calibration
-        
+
         Parameters
         ----------
         name

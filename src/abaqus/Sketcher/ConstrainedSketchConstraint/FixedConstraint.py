@@ -1,9 +1,10 @@
 from .ConstrainedSketchConstraint import ConstrainedSketchConstraint
-from ..ConstrainedSketchGeometry.ConstrainedSketchGeometry import ConstrainedSketchGeometry
+from ..ConstrainedSketchGeometry.ConstrainedSketchGeometry import (
+    ConstrainedSketchGeometry,
+)
 
 
 class FixedConstraint(ConstrainedSketchConstraint):
-
     def __init__(self, entity: ConstrainedSketchGeometry):
         """This method creates a fixed constraint. This constraint applies to a
         ConstrainedSketchGeometry object or a ConstrainedSketchVertex object and constrains them to be fixed in
@@ -12,20 +13,20 @@ class FixedConstraint(ConstrainedSketchConstraint):
         Notes
         -----
             This function can be accessed by:
-            
+
             .. code-block:: python
-            
+
                 mdb.models[name].sketches[name].FixedConstraint
-        
+
         Parameters
         ----------
         entity
             A ConstrainedSketchGeometry object or a ConstrainedSketchVertex object specifying the item to fix in
-            space. 
+            space.
 
         Returns
         -------
             A ConstrainedSketchConstraint object.
-            
+
         """
         pass

@@ -4,18 +4,17 @@ from ..Session.SessionBase import SessionBase
 
 
 class DisplayGroupSession(SessionBase):
-
     def DisplayGroup(self, name: str, leaf: Leaf) -> DisplayGroup:
         """This method creates a DisplayGroup object.
 
         Notes
         -----
             This function can be accessed by:
-            
+
             .. code-block:: python
-            
+
                 session.DisplayGroup
-        
+
         Parameters
         ----------
         name

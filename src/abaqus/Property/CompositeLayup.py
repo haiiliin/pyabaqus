@@ -38,18 +38,25 @@ class CompositeLayup:
 
     """
 
-    # A GeometryShellSection object. 
+    # A GeometryShellSection object.
     section: GeometryShellSection = GeometryShellSection()
 
-    # A MaterialOrientation object. 
+    # A MaterialOrientation object.
     orientation: MaterialOrientation = MaterialOrientation()
 
-    # A CompositePlyArray object specifying the plies that make up this composite layup. 
+    # A CompositePlyArray object specifying the plies that make up this composite layup.
     plies: CompositePlyArray = CompositePlyArray()
 
-    def __init__(self, name: str, description: str = '', offsetType: SymbolicConstant = GLOBAL,
-                 offsetField: str = '', offsetValues: float = 0, elementType: SymbolicConstant = SHELL,
-                 symmetric: Boolean = OFF):
+    def __init__(
+        self,
+        name: str,
+        description: str = "",
+        offsetType: SymbolicConstant = GLOBAL,
+        offsetField: str = "",
+        offsetValues: float = 0,
+        elementType: SymbolicConstant = SHELL,
+        symmetric: Boolean = OFF,
+    ):
         """This method creates a CompositeLayup object.
 
         Notes
@@ -59,91 +66,105 @@ class CompositeLayup:
         .. code-block:: python
 
             mdb.models[name].parts[*name*].CompositeLayup
-        
+
         Parameters
         ----------
         name
-            A String specifying the repository key. 
+            A String specifying the repository key.
         description
-            A String specifying a description of the composite layup. 
+            A String specifying a description of the composite layup.
         offsetType
-            A SymbolicConstant specifying the method used to define the shell offset. If 
-            *offsetType*=OFFSET_FIELD the *offsetField* argument is required. This member is valid 
-            only if *elementType*=SHELL. Possible values are SINGLE_VALUE, MIDDLE_SURFACE, 
-            TOP_SURFACE, BOTTOM_SURFACE, OFFSET_FIELD, and GLOBAL. The default value is GLOBAL. 
+            A SymbolicConstant specifying the method used to define the shell offset. If
+            *offsetType*=OFFSET_FIELD the *offsetField* argument is required. This member is valid
+            only if *elementType*=SHELL. Possible values are SINGLE_VALUE, MIDDLE_SURFACE,
+            TOP_SURFACE, BOTTOM_SURFACE, OFFSET_FIELD, and GLOBAL. The default value is GLOBAL.
         offsetField
-            A String specifying The name of the field specifying the offset. This member is valid 
-            only if *elementType*=SHELL. The default value is an empty string. 
+            A String specifying The name of the field specifying the offset. This member is valid
+            only if *elementType*=SHELL. The default value is an empty string.
         offsetValues
-            A Float specifying The offset of the shell section. This member is valid only if 
-            *elementType*=SHELL. The default value is 0.0. 
+            A Float specifying The offset of the shell section. This member is valid only if
+            *elementType*=SHELL. The default value is 0.0.
         elementType
-            A SymbolicConstant specifying the type of element in the composite layup. Possible 
-            values are SHELL, CONTINUUM_SHELL, and SOLID. The default value is SHELL. 
+            A SymbolicConstant specifying the type of element in the composite layup. Possible
+            values are SHELL, CONTINUUM_SHELL, and SOLID. The default value is SHELL.
         symmetric
-            A Boolean specifying whether or not the layup should be made symmetric by the analysis. 
-            The default value is OFF. 
+            A Boolean specifying whether or not the layup should be made symmetric by the analysis.
+            The default value is OFF.
 
         Returns
         -------
-            A CompositeLayup object. 
+            A CompositeLayup object.
 
         Raises
         ------
-            AbaqusException. 
+            AbaqusException.
         """
         pass
 
     def suppress(self):
-        """This method suppresses a composite layup.
-        """
+        """This method suppresses a composite layup."""
         pass
 
     def resume(self):
-        """This method resumes a composite layup that was previously suppressed.
-        """
+        """This method resumes a composite layup that was previously suppressed."""
         pass
 
     def deletePlies(self):
-        """This method deletes all of the plies from a composite layup.
-        """
+        """This method deletes all of the plies from a composite layup."""
         pass
 
-    def setValues(self, description: str = '', offsetType: SymbolicConstant = GLOBAL, offsetField: str = '',
-                  offsetValues: float = 0, elementType: SymbolicConstant = SHELL,
-                  symmetric: Boolean = OFF):
+    def setValues(
+        self,
+        description: str = "",
+        offsetType: SymbolicConstant = GLOBAL,
+        offsetField: str = "",
+        offsetValues: float = 0,
+        elementType: SymbolicConstant = SHELL,
+        symmetric: Boolean = OFF,
+    ):
         """This method modifies the CompositeLayup object.
-        
+
         Parameters
         ----------
         description
-            A String specifying a description of the composite layup. 
+            A String specifying a description of the composite layup.
         offsetType
-            A SymbolicConstant specifying the method used to define the shell offset. If 
-            *offsetType*=OFFSET_FIELD the *offsetField* argument is required. This member is valid 
-            only if *elementType*=SHELL. Possible values are SINGLE_VALUE, MIDDLE_SURFACE, 
-            TOP_SURFACE, BOTTOM_SURFACE, OFFSET_FIELD, and GLOBAL. The default value is GLOBAL. 
+            A SymbolicConstant specifying the method used to define the shell offset. If
+            *offsetType*=OFFSET_FIELD the *offsetField* argument is required. This member is valid
+            only if *elementType*=SHELL. Possible values are SINGLE_VALUE, MIDDLE_SURFACE,
+            TOP_SURFACE, BOTTOM_SURFACE, OFFSET_FIELD, and GLOBAL. The default value is GLOBAL.
         offsetField
-            A String specifying The name of the field specifying the offset. This member is valid 
-            only if *elementType*=SHELL. The default value is an empty string. 
+            A String specifying The name of the field specifying the offset. This member is valid
+            only if *elementType*=SHELL. The default value is an empty string.
         offsetValues
-            A Float specifying The offset of the shell section. This member is valid only if 
-            *elementType*=SHELL. The default value is 0.0. 
+            A Float specifying The offset of the shell section. This member is valid only if
+            *elementType*=SHELL. The default value is 0.0.
         elementType
-            A SymbolicConstant specifying the type of element in the composite layup. Possible 
-            values are SHELL, CONTINUUM_SHELL, and SOLID. The default value is SHELL. 
+            A SymbolicConstant specifying the type of element in the composite layup. Possible
+            values are SHELL, CONTINUUM_SHELL, and SOLID. The default value is SHELL.
         symmetric
-            A Boolean specifying whether or not the layup should be made symmetric by the analysis. 
-            The default value is OFF. 
+            A Boolean specifying whether or not the layup should be made symmetric by the analysis.
+            The default value is OFF.
         """
         pass
 
-    def CompositePly(self, thickness: float, region: Region, material: str, plyName: str,
-                     orientationType: SymbolicConstant, thicknessType: SymbolicConstant,
-                     orientationValue: float = 0, thicknessField: str = '', numIntPts: int = 3,
-                     axis: SymbolicConstant = AXIS_1, angle: float = 0,
-                     additionalRotationType: SymbolicConstant = ROTATION_NONE,
-                     orientation: SymbolicConstant = None, additionalRotationField: str = '') -> CompositePly:
+    def CompositePly(
+        self,
+        thickness: float,
+        region: Region,
+        material: str,
+        plyName: str,
+        orientationType: SymbolicConstant,
+        thicknessType: SymbolicConstant,
+        orientationValue: float = 0,
+        thicknessField: str = "",
+        numIntPts: int = 3,
+        axis: SymbolicConstant = AXIS_1,
+        angle: float = 0,
+        additionalRotationType: SymbolicConstant = ROTATION_NONE,
+        orientation: SymbolicConstant = None,
+        additionalRotationField: str = "",
+    ) -> CompositePly:
         """This method creates a CompositePly object.
 
         Notes
@@ -153,7 +174,7 @@ class CompositeLayup:
         .. code-block:: python
 
             mdb.models[name].parts[*name*].CompositeLayup
-        
+
         Parameters
         ----------
         thickness
@@ -219,20 +240,45 @@ class CompositeLayup:
         ------
             AbaqusException.
         """
-        compositePly = CompositePly(thickness, region, material, plyName, orientationType, thicknessType,
-                                    orientationValue, thicknessField, numIntPts, axis, angle, additionalRotationType,
-                                    orientation, additionalRotationField)
+        compositePly = CompositePly(
+            thickness,
+            region,
+            material,
+            plyName,
+            orientationType,
+            thicknessType,
+            orientationValue,
+            thicknessField,
+            numIntPts,
+            axis,
+            angle,
+            additionalRotationType,
+            orientation,
+            additionalRotationField,
+        )
         self.plies.append(compositePly)
         return compositePly
 
-    def CompositeShellSection(self, name: str, layup: SectionLayerArray, symmetric: Boolean = OFF,
-                              thicknessType: SymbolicConstant = UNIFORM, preIntegrate: Boolean = OFF,
-                              poissonDefinition: SymbolicConstant = DEFAULT, poisson: float = 0,
-                              integrationRule: SymbolicConstant = SIMPSON, temperature: SymbolicConstant = GRADIENT,
-                              idealization: SymbolicConstant = NO_IDEALIZATION, nTemp: int = None,
-                              thicknessModulus: float = None, useDensity: Boolean = OFF, density: float = 0,
-                              layupName: str = '', thicknessField: str = '',
-                              nodalThicknessField: str = '') -> CompositeShellSection:
+    def CompositeShellSection(
+        self,
+        name: str,
+        layup: SectionLayerArray,
+        symmetric: Boolean = OFF,
+        thicknessType: SymbolicConstant = UNIFORM,
+        preIntegrate: Boolean = OFF,
+        poissonDefinition: SymbolicConstant = DEFAULT,
+        poisson: float = 0,
+        integrationRule: SymbolicConstant = SIMPSON,
+        temperature: SymbolicConstant = GRADIENT,
+        idealization: SymbolicConstant = NO_IDEALIZATION,
+        nTemp: int = None,
+        thicknessModulus: float = None,
+        useDensity: Boolean = OFF,
+        density: float = 0,
+        layupName: str = "",
+        thicknessField: str = "",
+        nodalThicknessField: str = "",
+    ) -> CompositeShellSection:
         """This method creates a CompositeShellSection object.
 
         Notes
@@ -242,7 +288,7 @@ class CompositeLayup:
         .. code-block:: python
 
             mdb.models[name].parts[*name*].CompositeLayup
-        
+
         Parameters
         ----------
         name
@@ -312,19 +358,42 @@ class CompositeLayup:
         -------
             A CompositeShellSection object.
         """
-        self.section = compositeShellSection = CompositeShellSection(name, layup, symmetric, thicknessType,
-                                                                     preIntegrate, poissonDefinition, poisson,
-                                                                     integrationRule, temperature, idealization, nTemp,
-                                                                     thicknessModulus, useDensity, density, layupName,
-                                                                     thicknessField, nodalThicknessField)
+        self.section = compositeShellSection = CompositeShellSection(
+            name,
+            layup,
+            symmetric,
+            thicknessType,
+            preIntegrate,
+            poissonDefinition,
+            poisson,
+            integrationRule,
+            temperature,
+            idealization,
+            nTemp,
+            thicknessModulus,
+            useDensity,
+            density,
+            layupName,
+            thicknessField,
+            nodalThicknessField,
+        )
         return compositeShellSection
 
-    def GeometryShellSection(self, nodalThicknessField: str = '', thicknessField: str = '',
-                             thicknessType: SymbolicConstant = UNIFORM, preIntegrate: Boolean = OFF,
-                             poissonDefinition: SymbolicConstant = DEFAULT, poisson: float = 0,
-                             integrationRule: SymbolicConstant = SIMPSON, temperature: SymbolicConstant = GRADIENT,
-                             nTemp: int = None, thicknessModulus: float = None, useDensity: Boolean = OFF,
-                             density: float = 0) -> GeometryShellSection:
+    def GeometryShellSection(
+        self,
+        nodalThicknessField: str = "",
+        thicknessField: str = "",
+        thicknessType: SymbolicConstant = UNIFORM,
+        preIntegrate: Boolean = OFF,
+        poissonDefinition: SymbolicConstant = DEFAULT,
+        poisson: float = 0,
+        integrationRule: SymbolicConstant = SIMPSON,
+        temperature: SymbolicConstant = GRADIENT,
+        nTemp: int = None,
+        thicknessModulus: float = None,
+        useDensity: Boolean = OFF,
+        density: float = 0,
+    ) -> GeometryShellSection:
         """This method creates a GeometryShellSection object.
 
         Notes
@@ -334,7 +403,7 @@ class CompositeLayup:
         .. code-block:: python
 
             mdb.models[name].parts[*name*].CompositeLayup
-        
+
         Parameters
         ----------
         nodalThicknessField
@@ -389,19 +458,42 @@ class CompositeLayup:
         -------
             A GeometryShellSection object.
         """
-        self.section = geometryShellSection = GeometryShellSection(nodalThicknessField, thicknessField, thicknessType,
-                                                                   preIntegrate, poissonDefinition, poisson,
-                                                                   integrationRule, temperature, nTemp,
-                                                                   thicknessModulus, useDensity, density)
+        self.section = geometryShellSection = GeometryShellSection(
+            nodalThicknessField,
+            thicknessField,
+            thicknessType,
+            preIntegrate,
+            poissonDefinition,
+            poisson,
+            integrationRule,
+            temperature,
+            nTemp,
+            thicknessModulus,
+            useDensity,
+            density,
+        )
         return geometryShellSection
 
-    def HomogeneousShellSection(self, name: str, material: str, thickness: float = 0, numIntPts: int = 5,
-                 thicknessType: SymbolicConstant = UNIFORM, preIntegrate: Boolean = OFF,
-                 poissonDefinition: SymbolicConstant = DEFAULT, poisson: float = 0,
-                 integrationRule: SymbolicConstant = SIMPSON, temperature: SymbolicConstant = GRADIENT,
-                 idealization: SymbolicConstant = NO_IDEALIZATION, nTemp: int = None,
-                 thicknessModulus: float = None, useDensity: Boolean = OFF, density: float = 0,
-                 thicknessField: str = '', nodalThicknessField: str = '') -> HomogeneousShellSection:
+    def HomogeneousShellSection(
+        self,
+        name: str,
+        material: str,
+        thickness: float = 0,
+        numIntPts: int = 5,
+        thicknessType: SymbolicConstant = UNIFORM,
+        preIntegrate: Boolean = OFF,
+        poissonDefinition: SymbolicConstant = DEFAULT,
+        poisson: float = 0,
+        integrationRule: SymbolicConstant = SIMPSON,
+        temperature: SymbolicConstant = GRADIENT,
+        idealization: SymbolicConstant = NO_IDEALIZATION,
+        nTemp: int = None,
+        thicknessModulus: float = None,
+        useDensity: Boolean = OFF,
+        density: float = 0,
+        thicknessField: str = "",
+        nodalThicknessField: str = "",
+    ) -> HomogeneousShellSection:
         """This method creates a HomogeneousShellSection object.
 
         Notes
@@ -411,7 +503,7 @@ class CompositeLayup:
         .. code-block:: python
 
             mdb.models[name].parts[*name*].CompositeLayup
-        
+
         Parameters
         ----------
         name
@@ -483,5 +575,23 @@ class CompositeLayup:
         -------
             A HomogeneousShellSection object.
         """
-        self.section[name] = homogeneousShellSection = HomogeneousShellSection(name, material, thickness, numIntPts, thicknessType, preIntegrate, poissonDefinition, poisson, integrationRule, temperature, idealization, nTemp, thicknessModulus, useDensity, density, thicknessField, nodalThicknessField)
+        self.section[name] = homogeneousShellSection = HomogeneousShellSection(
+            name,
+            material,
+            thickness,
+            numIntPts,
+            thicknessType,
+            preIntegrate,
+            poissonDefinition,
+            poisson,
+            integrationRule,
+            temperature,
+            idealization,
+            nTemp,
+            thicknessModulus,
+            useDensity,
+            density,
+            thicknessField,
+            nodalThicknessField,
+        )
         return homogeneousShellSection

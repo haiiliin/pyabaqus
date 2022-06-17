@@ -1,4 +1,6 @@
-from .StructuralDampingByFrequencyComponentArray import StructuralDampingByFrequencyComponentArray
+from .StructuralDampingByFrequencyComponentArray import (
+    StructuralDampingByFrequencyComponentArray,
+)
 
 
 class StructuralDampingByFrequency:
@@ -12,13 +14,15 @@ class StructuralDampingByFrequency:
     Notes
     -----
     This object can be accessed by:
-    
+
     .. code-block:: python
-    
+
         import step
         mdb.models[name].steps[name].structuralDampingByFrequency
 
     """
 
-    # A StructuralDampingByFrequencyComponentArray object. 
-    components: StructuralDampingByFrequencyComponentArray = StructuralDampingByFrequencyComponentArray()
+    # A StructuralDampingByFrequencyComponentArray object.
+    components: StructuralDampingByFrequencyComponentArray = (
+        StructuralDampingByFrequencyComponentArray()
+    )

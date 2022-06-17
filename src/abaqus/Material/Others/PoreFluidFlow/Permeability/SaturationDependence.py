@@ -1,7 +1,6 @@
-
 class SaturationDependence:
     """The SaturationDependence object specifies the dependence of the permeability of a
-    material on the saturation of the wetting liquid. 
+    material on the saturation of the wetting liquid.
 
     Notes
     -----
@@ -31,20 +30,20 @@ class SaturationDependence:
         Notes
         -----
             This function can be accessed by:
-            
+
             .. code-block:: python
-            
+
                 mdb.models[name].materials[name].permeability.SaturationDependence
                 session.odbs[name].materials[name].permeability.SaturationDependence
-        
+
         Parameters
         ----------
         table
-            A sequence of sequences of Floats specifying the items described below. 
+            A sequence of sequences of Floats specifying the items described below.
 
         Returns
         -------
-            A SaturationDependence object. 
+            A SaturationDependence object.
 
         Raises
         ------

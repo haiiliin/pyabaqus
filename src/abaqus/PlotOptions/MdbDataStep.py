@@ -13,14 +13,14 @@ class MdbDataStep:
     Notes
     -----
     This object can be accessed by:
-    
+
     .. code-block:: python
-        
+
         import visualization
         session.mdbData[name].steps[i]
 
     """
 
-    # A MdbDataFrameArray object specifying the list of frames. The list is read-only. There 
-    # is only one frame in a step. 
+    # A MdbDataFrameArray object specifying the list of frames. The list is read-only. There
+    # is only one frame in a step.
     frames: MdbDataFrameArray = MdbDataFrameArray()

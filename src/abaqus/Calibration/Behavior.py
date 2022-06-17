@@ -29,19 +29,19 @@ class Behavior:
 
     """
 
-    # A string specifying the name of the model to which the behavior belongs. 
-    modelName: str = ''
+    # A string specifying the name of the model to which the behavior belongs.
+    modelName: str = ""
 
-    # A string specifying the name of calibration to which the behavior belongs. 
-    calibrationName: str = ''
+    # A string specifying the name of calibration to which the behavior belongs.
+    calibrationName: str = ""
 
-    # A String specifying the name of the dataset containing all the raw data in the test data 
-    # file. Only valid if the behavior is of type FeFpBehavior 
-    biAxialAllName: str = ''
+    # A String specifying the name of the dataset containing all the raw data in the test data
+    # file. Only valid if the behavior is of type FeFpBehavior
+    biAxialAllName: str = ""
 
-    # A String specifying the name of the dataset containing all the raw data in the test data 
-    # file. Only valid if the behavior is of type FeFpBehavior 
-    uniAxialAllName: str = ''
+    # A String specifying the name of the dataset containing all the raw data in the test data
+    # file. Only valid if the behavior is of type FeFpBehavior
+    uniAxialAllName: str = ""
 
     def __init__(self, name: str, typeName: str):
         """This method creates a Behavior object.
@@ -53,14 +53,14 @@ class Behavior:
         .. code-block:: python
 
                       mdb.models[name].calibrations[name].Behavior
-        
+
         Parameters
         ----------
         name
-            A String specifying the name of the new behavior. 
+            A String specifying the name of the new behavior.
         typeName
-            A String specifying the type of the new Behavior. Values can be "ElasIsoBehavior", 
-            "ElasPlasIsoBehavior", "FeFpBehavior", or a user plug-in behavior type. 
+            A String specifying the type of the new Behavior. Values can be "ElasIsoBehavior",
+            "ElasPlasIsoBehavior", "FeFpBehavior", or a user plug-in behavior type.
 
         Returns
         -------
@@ -68,92 +68,114 @@ class Behavior:
         """
         pass
 
-    def setValues(self, E: str = '', nu: str = '', ds1Name: str = '', ds2Name: str = '', materialName: str = '',
-                  yieldPoint: str = '', ultimatePoint: str = '', plasticPoints: str = '',
-                  PoissonsRatio: str = '', elasticModulus: str = '', plasticPointsRange: str = '',
-                  name: str = '', uniaxialName: str = '', biaxialName: str = '', interpolation: str = '',
-                  uniWeight: str = '', biWeight: str = '', uMullinsReload: str = '',
-                  uMullinsUnload: str = '', uPYieldPoint: tuple = (), uPermSet: str = '',
-                  uPrimary: str = '', bMullinsReload: str = '', bMullinsUnload: str = '',
-                  bPYieldPoint: tuple = (), bPermSet: str = '', bPrimary: str = ''):
+    def setValues(
+        self,
+        E: str = "",
+        nu: str = "",
+        ds1Name: str = "",
+        ds2Name: str = "",
+        materialName: str = "",
+        yieldPoint: str = "",
+        ultimatePoint: str = "",
+        plasticPoints: str = "",
+        PoissonsRatio: str = "",
+        elasticModulus: str = "",
+        plasticPointsRange: str = "",
+        name: str = "",
+        uniaxialName: str = "",
+        biaxialName: str = "",
+        interpolation: str = "",
+        uniWeight: str = "",
+        biWeight: str = "",
+        uMullinsReload: str = "",
+        uMullinsUnload: str = "",
+        uPYieldPoint: tuple = (),
+        uPermSet: str = "",
+        uPrimary: str = "",
+        bMullinsReload: str = "",
+        bMullinsUnload: str = "",
+        bPYieldPoint: tuple = (),
+        bPermSet: str = "",
+        bPrimary: str = "",
+    ):
         """This method modifies the data for an existing behavior object.
-        
+
         Parameters
         ----------
         E
-            Young's modulus. Only valid if the behavior type is ElasIsoBehavior. 
+            Young's modulus. Only valid if the behavior type is ElasIsoBehavior.
         nu
-            Poisson's ratio. Only valid if the behavior type is ElasIsoBehavior. 
+            Poisson's ratio. Only valid if the behavior type is ElasIsoBehavior.
         ds1Name
-            The name of the first data set. Only valid if the behavior type is ElasIsoBehavior or 
-            ElasPlasIsoBehavior 
+            The name of the first data set. Only valid if the behavior type is ElasIsoBehavior or
+            ElasPlasIsoBehavior
         ds2Name
-            The name of the second data set. Only valid if the behavior type is ElasIsoBehavior or 
-            ElasPlasIsoBehavior 
+            The name of the second data set. Only valid if the behavior type is ElasIsoBehavior or
+            ElasPlasIsoBehavior
         materialName
-            Material Name. 
+            Material Name.
         yieldPoint
-            Stress/strain value for the material yield point.Only valid if the behavior type is 
-            ElasPlasIsoBehavior 
+            Stress/strain value for the material yield point.Only valid if the behavior type is
+            ElasPlasIsoBehavior
         ultimatePoint
-            Stress/strain value for the material ultimate point.Only valid if the behavior type is 
-            ElasPlasIsoBehavior 
+            Stress/strain value for the material ultimate point.Only valid if the behavior type is
+            ElasPlasIsoBehavior
         plasticPoints
             Stress/strain values for the Plastic portion of material curve. Only valid if the
-            behavior type is ElasPlasIsoBehavior 
+            behavior type is ElasPlasIsoBehavior
         PoissonsRatio
-            Poisson's Ratio. Only valid if the behavior type is ElasPlasIsoBehavior 
+            Poisson's Ratio. Only valid if the behavior type is ElasPlasIsoBehavior
         elasticModulus
-            Young's Modulus for the elastic portion of the material curve. Only valid if the 
-            behavior type is ElasPlasIsoBehavior 
+            Young's Modulus for the elastic portion of the material curve. Only valid if the
+            behavior type is ElasPlasIsoBehavior
         plasticPointsRange
             Extent of the material Plastic points. Only valid if the behavior type is
-            ElasPlasIsoBehavior 
+            ElasPlasIsoBehavior
         name
-            Name of the behavior. 
+            Name of the behavior.
         uniaxialName
-            Name of the uniaxial dataset. Only valid if the behavior type is FeFpBehavior 
+            Name of the uniaxial dataset. Only valid if the behavior type is FeFpBehavior
         biaxialName
-            Name of the biaxial dataset. Only valid if the behavior type is FeFpBehavior 
+            Name of the biaxial dataset. Only valid if the behavior type is FeFpBehavior
         interpolation
-            'linear' specifies linear interpolation between data points, otherwise 'logarithmic'. 
-            Only valid if the behavior type is FeFpBehavior 
+            'linear' specifies linear interpolation between data points, otherwise 'logarithmic'.
+            Only valid if the behavior type is FeFpBehavior
         uniWeight
-            Uniaxial weight factor, uniWeight + biWeight should equal 1.0. Only valid if the 
-            behavior type is FeFpBehavior 
+            Uniaxial weight factor, uniWeight + biWeight should equal 1.0. Only valid if the
+            behavior type is FeFpBehavior
         biWeight
-            Biaxial weight factor, uniWeight + biWeight should equal 1.0. Only valid if the behavior 
-            type is FeFpBehavior 
+            Biaxial weight factor, uniWeight + biWeight should equal 1.0. Only valid if the behavior
+            type is FeFpBehavior
         uMullinsReload
-            A List of strings, specifying names of reloading DataSet objects obtained from uniaxial 
-            test data. Only valid if the behavior is of type FeFpBehavior 
+            A List of strings, specifying names of reloading DataSet objects obtained from uniaxial
+            test data. Only valid if the behavior is of type FeFpBehavior
         uMullinsUnload
-            A List of strings, specifying names of reloading DataSet objects obtained from uniaxial 
-            test data. Only valid if the behavior is of type FeFpBehavior 
+            A List of strings, specifying names of reloading DataSet objects obtained from uniaxial
+            test data. Only valid if the behavior is of type FeFpBehavior
         uPYieldPoint
-            A tuple specifying the coordinates of yield point of the permanent data set. Only valid 
-            if the behavior is of type FeFpBehavior 
+            A tuple specifying the coordinates of yield point of the permanent data set. Only valid
+            if the behavior is of type FeFpBehavior
         uPermSet
-            A List of strings, specifying names of permanent DataSet objects obtained from uniaxial 
-            test data. Only valid if the behavior is of type FeFpBehavior 
+            A List of strings, specifying names of permanent DataSet objects obtained from uniaxial
+            test data. Only valid if the behavior is of type FeFpBehavior
         uPrimary
-            A string specifying name of Primary DataSet object.Only valid if the behavior is of type 
-            FeFpBehavior 
+            A string specifying name of Primary DataSet object.Only valid if the behavior is of type
+            FeFpBehavior
         bMullinsReload
-            A List of strings, specifying names of reloading DataSet objects obtained from biaxial 
-            test data. Only valid if the behavior is of type FeFpBehavior 
+            A List of strings, specifying names of reloading DataSet objects obtained from biaxial
+            test data. Only valid if the behavior is of type FeFpBehavior
         bMullinsUnload
-            A List of strings, specifying names of unloading DataSet objects obtained from biaxial 
-            test data. Only valid if the behavior is of type FeFpBehavior 
+            A List of strings, specifying names of unloading DataSet objects obtained from biaxial
+            test data. Only valid if the behavior is of type FeFpBehavior
         bPYieldPoint
-            A tuple specifying the coordinates of yield point of the permanent data set. Only valid 
-            if the behavior is of type FeFpBehavior 
+            A tuple specifying the coordinates of yield point of the permanent data set. Only valid
+            if the behavior is of type FeFpBehavior
         bPermSet
-            A List of strings, specifying names of permanent DataSet objects obtained from biaxial 
-            test data. Only valid if the behavior is of type FeFpBehavior 
+            A List of strings, specifying names of permanent DataSet objects obtained from biaxial
+            test data. Only valid if the behavior is of type FeFpBehavior
         bPrimary
-            A string specifying name of Primary DataSet object. Only valid if the behavior is of 
-            type FeFpBehavior 
+            A string specifying name of Primary DataSet object. Only valid if the behavior is of
+            type FeFpBehavior
         """
         pass
 
@@ -163,26 +185,26 @@ class Behavior:
         poisson's ratio. For ElasPlasIsoBehavior it appends the young's modulus, poisson's ratio
         and Plastic points range and for FeFpBehavior it appends Plastic points range and
         Mullins effect properties.
-        
+
         Parameters
         ----------
         materialName
-            A String specifying the name of the existing material 
+            A String specifying the name of the existing material
         """
         pass
 
     def compute_E(self, dataSet: DataSet):
         """This method computes the value of young's modulus from the existing DataSet object. The
         method is only valid for ElasIsoBehavior type of behavior.
-        
+
         Parameters
         ----------
         dataSet
-            A DataSet object. 
+            A DataSet object.
 
         Returns
         -------
-            A tuple consisting of a and b values of the regression line(y = ax + b), coefficient of 
+            A tuple consisting of a and b values of the regression line(y = ax + b), coefficient of
             determination(r-squared) value and the start and end-points of the line.
         """
         pass
@@ -190,15 +212,15 @@ class Behavior:
     def compute_nu(self, dataSet: DataSet):
         """This method computes the value of Poisson's Ratio from the existing DataSet object. The
         method is only valid for ElasIsoBehavior and ElasPlasIsoBehavior type of behavior.
-        
+
         Parameters
         ----------
         dataSet
-            A DataSet object. 
+            A DataSet object.
 
         Returns
         -------
-            A tuple consisting of a and b values of the regression line(y = ax + b), coefficient of 
+            A tuple consisting of a and b values of the regression line(y = ax + b), coefficient of
             determination(r-squared) value and the start and end-points of the line.
         """
         pass
@@ -206,11 +228,11 @@ class Behavior:
     def compute_ultimatePoint(self, dataSet: DataSet):
         """This method computes the coordinates of the Ultimate point from the existing DataSet
         object. The method is only valid for ElasPlasIsoBehavior type of behavior.
-        
+
         Parameters
         ----------
         dataSet
-            A DataSet object. 
+            A DataSet object.
 
         Returns
         -------
@@ -221,11 +243,11 @@ class Behavior:
     def compute_elasticModulus(self, yieldPoint: tuple):
         """This method computes the value of the elastic modulus from the yieldpoint value. The
         method is only valid for ElasPlasIsoBehavior type of behavior.
-        
+
         Parameters
         ----------
         yieldPoint
-            A tuple consisting of coordinates of the yieldpoint. 
+            A tuple consisting of coordinates of the yieldpoint.
 
         Returns
         -------
@@ -233,48 +255,57 @@ class Behavior:
         """
         pass
 
-    def compute_plasticPoints(self, dataSet: DataSet, slider_val: str, start_index: str, end_index: str, yp: str = ''):
+    def compute_plasticPoints(
+        self,
+        dataSet: DataSet,
+        slider_val: str,
+        start_index: str,
+        end_index: str,
+        yp: str = "",
+    ):
         """This method extracts the coordinates of the Plastic Points. The method is only valid for
         ElasPlasIsoBehavior type of behavior.
-        
+
         Parameters
         ----------
         dataSet
-            A DataSet object. 
+            A DataSet object.
         slider_val
-            A float specifying the number of values to be taken. 
+            A float specifying the number of values to be taken.
         start_index
-            A float specifying the lower limit of the range. 
+            A float specifying the lower limit of the range.
         end_index
-            A float specifying the upper limit of the range. 
+            A float specifying the upper limit of the range.
         yp
-            Coordinates of the yieldpoint. The default value is (0,0). 
+            Coordinates of the yieldpoint. The default value is (0,0).
 
         Returns
         -------
-            A sequence of coordinates of the Plastic points.. 
+            A sequence of coordinates of the Plastic points..
         """
         pass
 
-    def xyDataDissect(self, dsName: str, modelName: str, calibrationName: str, biaxial: Boolean = True):
+    def xyDataDissect(
+        self, dsName: str, modelName: str, calibrationName: str, biaxial: Boolean = True
+    ):
         """This method extracts primary, unload, reload and permanent DataSet objects from the
         existing DataSet object.The method is only valid for FeFpBehavior type of behavior.
-        
+
         Parameters
         ----------
         dsName
-            A string specifying the name of the uniaxial/biaxial test dataset. 
+            A string specifying the name of the uniaxial/biaxial test dataset.
         modelName
-            A string specifying the name of the model to which the calibration behavior belongs. 
+            A string specifying the name of the model to which the calibration behavior belongs.
         calibrationName
-            A string specifying the name of the Calibration object to which the behavior belongs. 
+            A string specifying the name of the Calibration object to which the behavior belongs.
         biaxial
-            A boolean specifying whether the test data is biaxial or uniaxial. The default value is 
-            True. 
+            A boolean specifying whether the test data is biaxial or uniaxial. The default value is
+            True.
 
         Returns
         -------
-            A sequence of strings specifying names of the DataSet objects containing loading, 
+            A sequence of strings specifying names of the DataSet objects containing loading,
             unloading, reloading and primary datasets.
         """
         pass

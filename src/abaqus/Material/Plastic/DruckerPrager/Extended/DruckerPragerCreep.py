@@ -7,9 +7,9 @@ class DruckerPragerCreep:
     Notes
     -----
     This object can be accessed by:
-    
+
     .. code-block:: python
-        
+
         import material
         mdb.models[name].materials[name].druckerPrager.druckerPragerCreep
         import odbMaterial
@@ -41,36 +41,41 @@ class DruckerPragerCreep:
 
     """
 
-    def __init__(self, table: tuple, law: SymbolicConstant = STRAIN, temperatureDependency: Boolean = OFF,
-                 dependencies: int = 0):
+    def __init__(
+        self,
+        table: tuple,
+        law: SymbolicConstant = STRAIN,
+        temperatureDependency: Boolean = OFF,
+        dependencies: int = 0,
+    ):
         """This method creates a DruckerPragerCreep object.
 
         Notes
         -----
             This function can be accessed by:
-            
+
             .. code-block:: python
-            
+
                 mdb.models[name].materials[name].druckerPrager.DruckerPragerCreep
                 session.odbs[name].materials[name].druckerPrager.DruckerPragerCreep
-        
+
         Parameters
         ----------
         table
-            A sequence of sequences of Floats specifying the items described below. 
+            A sequence of sequences of Floats specifying the items described below.
         law
-            A SymbolicConstant specifying the type of data defining the creep law. Possible values 
-            are:STRAIN, specifying a strain-hardening power law.TIME, specifying a time-hardening 
-            power law.SINGHM, specifying a Singh-Mitchell type law.USER, specifying the creep law is 
-            input from user subroutine CREEP.The default value is STRAIN. 
+            A SymbolicConstant specifying the type of data defining the creep law. Possible values
+            are:STRAIN, specifying a strain-hardening power law.TIME, specifying a time-hardening
+            power law.SINGHM, specifying a Singh-Mitchell type law.USER, specifying the creep law is
+            input from user subroutine CREEP.The default value is STRAIN.
         temperatureDependency
-            A Boolean specifying whether the data depend on temperature. The default value is OFF. 
+            A Boolean specifying whether the data depend on temperature. The default value is OFF.
         dependencies
-            An Int specifying the number of field variable dependencies. The default value is 0. 
+            An Int specifying the number of field variable dependencies. The default value is 0.
 
         Returns
         -------
-            A DruckerPragerCreep object. 
+            A DruckerPragerCreep object.
 
         Raises
         ------

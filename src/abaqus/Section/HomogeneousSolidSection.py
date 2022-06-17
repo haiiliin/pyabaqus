@@ -3,7 +3,7 @@ from .SolidSection import SolidSection
 
 class HomogeneousSolidSection(SolidSection):
     """The HomogeneousSolidSection object defines the properties of a solid section.
-    The HomogeneousSolidSection object is derived from the SolidSection object. 
+    The HomogeneousSolidSection object is derived from the SolidSection object.
 
     Notes
     -----
@@ -33,36 +33,36 @@ class HomogeneousSolidSection(SolidSection):
 
             mdb.models[name].HomogeneousSolidSection
             session.odbs[name].HomogeneousSolidSection
-        
+
         Parameters
         ----------
         name
-            A String specifying the repository key. 
+            A String specifying the repository key.
         material
-            A String specifying the name of the material. 
+            A String specifying the name of the material.
         thickness
-            A Float specifying the thickness of the section. Possible values are None or greater 
-            than zero. The default value is 1.0. 
+            A Float specifying the thickness of the section. Possible values are None or greater
+            than zero. The default value is 1.0.
 
         Returns
         -------
-            A HomogeneousSolidSection object. 
-            
+            A HomogeneousSolidSection object.
+
         Raises
         ------
         InvalidNameError
-        RangeError 
+        RangeError
         """
         super().__init__()
         pass
 
     def setValues(self, thickness: float = 1):
         """This method modifies the HomogeneousSolidSection object.
-        
+
         Parameters
         ----------
         thickness
-            A Float specifying the thickness of the section. Possible values are None or greater 
+            A Float specifying the thickness of the section. Possible values are None or greater
             than zero. The default value is 1.0.
 
         Raises

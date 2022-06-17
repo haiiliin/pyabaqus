@@ -1,10 +1,11 @@
 from .Profile import Profile
 
+
 class GeneralizedProfile(Profile):
 
-    """The GeneralizedProfile object defines the properties of a profile via its area, moment 
-    of inertia, etc. 
-    The GeneralizedProfile object is derived from the Profile object. 
+    """The GeneralizedProfile object defines the properties of a profile via its area, moment
+    of inertia, etc.
+    The GeneralizedProfile object is derived from the Profile object.
 
     Notes
     -----
@@ -23,8 +24,17 @@ class GeneralizedProfile(Profile):
 
     """
 
-    def __init__(self, name: str, area: float, i11: float, i12: float, i22: float, j: float, gammaO: float, 
-                 gammaW: float):
+    def __init__(
+        self,
+        name: str,
+        area: float,
+        i11: float,
+        i12: float,
+        i22: float,
+        j: float,
+        gammaO: float,
+        gammaW: float,
+    ):
         """This method creates a GeneralizedProfile object.
 
         Notes
@@ -35,34 +45,34 @@ class GeneralizedProfile(Profile):
 
             mdb.models[name].GeneralizedProfile
             session.odbs[name].GeneralizedProfile
-        
+
         Parameters
         ----------
         name
-            A String specifying the repository key. 
+            A String specifying the repository key.
         area
-            A Float specifying the cross-sectional area for the profile. 
+            A Float specifying the cross-sectional area for the profile.
         i11
-            A Float specifying the moment of inertia for bending about the 1-axis, I11I11. 
+            A Float specifying the moment of inertia for bending about the 1-axis, I11I11.
         i12
-            A Float specifying the moment of inertia for cross bending, I12I12. 
+            A Float specifying the moment of inertia for cross bending, I12I12.
         i22
-            A Float specifying the moment of inertia for bending about the 2-axis, I22I22. 
+            A Float specifying the moment of inertia for bending about the 2-axis, I22I22.
         j
-            A Float specifying the torsional constant, JJ. 
+            A Float specifying the torsional constant, JJ.
         gammaO
-            A Float specifying the sectorial moment, Γ0Γ0. 
+            A Float specifying the sectorial moment, Γ0Γ0.
         gammaW
-            A Float specifying the warping constant, ΓWΓW. 
+            A Float specifying the warping constant, ΓWΓW.
 
         Returns
         -------
-            A GeneralizedProfile object. 
+            A GeneralizedProfile object.
 
         Raises
         ------
         RangeError
-            
+
         """
         super().__init__()
         pass
@@ -73,7 +83,6 @@ class GeneralizedProfile(Profile):
         Raises
         ------
         RangeError
-            
+
         """
         pass
-

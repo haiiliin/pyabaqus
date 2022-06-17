@@ -3,7 +3,7 @@ from abaqusConstants import *
 
 class Trs:
     """The Trs object defines the temperature-time shift for time history viscoelastic
-    analysis. 
+    analysis.
 
     Notes
     -----
@@ -36,22 +36,22 @@ class Trs:
         Notes
         -----
             This function can be accessed by:
-            
+
             .. code-block:: python
-            
+
                 mdb.models[name].materials[name].viscoelastic.Trs
                 mdb.models[name].materials[name].viscosity.Trs
                 session.odbs[name].materials[name].viscoelastic.Trs
                 session.odbs[name].materials[name].viscosity.Trs
-        
+
         Parameters
         ----------
         definition
-            A SymbolicConstant specifying the definition of the shift function. Possible values are 
-            WLF, ARRHENIUS, and USER. The default value is WLF. 
+            A SymbolicConstant specifying the definition of the shift function. Possible values are
+            WLF, ARRHENIUS, and USER. The default value is WLF.
         table
-            A sequence of sequences of Floats specifying the items described below. The default 
-            value is an empty sequence.This argument is valid only when *definition*=WLF. 
+            A sequence of sequences of Floats specifying the items described below. The default
+            value is an empty sequence.This argument is valid only when *definition*=WLF.
 
         Returns
         -------
@@ -60,6 +60,5 @@ class Trs:
         pass
 
     def setValues(self):
-        """This method modifies the Trs object.
-        """
+        """This method modifies the Trs object."""
         pass

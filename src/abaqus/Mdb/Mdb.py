@@ -43,11 +43,19 @@ class Mdb(AcisMdb, JobMdb):
 
     """
 
-    def Model(self, name: str, description: str = '', stefanBoltzmann: float = None,
-              absoluteZero: float = None, waveFormulation: SymbolicConstant = NOT_SET,
-              modelType: SymbolicConstant = STANDARD_EXPLICIT, universalGas: float = None,
-              copyConstraints: Boolean = ON, copyConnectors: Boolean = ON,
-              copyInteractions: Boolean = ON) -> Model:
+    def Model(
+        self,
+        name: str,
+        description: str = "",
+        stefanBoltzmann: float = None,
+        absoluteZero: float = None,
+        waveFormulation: SymbolicConstant = NOT_SET,
+        modelType: SymbolicConstant = STANDARD_EXPLICIT,
+        universalGas: float = None,
+        copyConstraints: Boolean = ON,
+        copyConnectors: Boolean = ON,
+        copyInteractions: Boolean = ON,
+    ) -> Model:
         """This method creates a Model object.
 
         Notes
@@ -57,7 +65,7 @@ class Mdb(AcisMdb, JobMdb):
         .. code-block:: python
 
             mdb.Model
-        
+
         Parameters
         ----------
         name
@@ -93,7 +101,16 @@ class Mdb(AcisMdb, JobMdb):
         model: Model
             A Model object
         """
-        self.models[name] = model = Model(name, description, stefanBoltzmann, absoluteZero, waveFormulation, modelType,
-                                          universalGas, copyConstraints, copyConnectors, copyInteractions)
+        self.models[name] = model = Model(
+            name,
+            description,
+            stefanBoltzmann,
+            absoluteZero,
+            waveFormulation,
+            modelType,
+            universalGas,
+            copyConstraints,
+            copyConnectors,
+            copyInteractions,
+        )
         return model
-    

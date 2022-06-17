@@ -4,9 +4,9 @@ from ..PlotOptions.OdbDisplayOptions import OdbDisplayOptions
 
 class DisplayGroupInstance:
     """A DisplayGroupInstance object stores the IDs of the entities displayed in a viewport.
-    The DisplayGroupInstance object has no constructor. When you set a display group to be 
-    plotted in a viewport, Abaqus/CAE creates a DisplayGroupInstance object for each display 
-    group and places it in the DisplayGroupInstanceRepository object. 
+    The DisplayGroupInstance object has no constructor. When you set a display group to be
+    plotted in a viewport, Abaqus/CAE creates a DisplayGroupInstance object for each display
+    group and places it in the DisplayGroupInstanceRepository object.
 
     Attributes
     ----------
@@ -26,9 +26,9 @@ class DisplayGroupInstance:
     Notes
     -----
     This object can be accessed by:
-    
+
     .. code-block:: python
-        
+
         import assembly
         session.viewports[name].assemblyDisplay.displayGroupInstances[name]
         session.viewports[name].layers[name].assemblyDisplay.displayGroupInstances[name]
@@ -41,19 +41,19 @@ class DisplayGroupInstance:
 
     """
 
-    # A String specifying the repository key. 
-    name: str = ''
+    # A String specifying the repository key.
+    name: str = ""
 
-    # A Boolean specifying whether the display options stored on the DisplayGroupInstance 
-    # object should be synchronized with changes to the viewport display options. This member 
-    # is available only for DisplayGroupInstance objects that are members of the 
-    # DisplayGroupInstance repository member of the OdbDisplay object. The default value is 
-    # OFF. 
+    # A Boolean specifying whether the display options stored on the DisplayGroupInstance
+    # object should be synchronized with changes to the viewport display options. This member
+    # is available only for DisplayGroupInstance objects that are members of the
+    # DisplayGroupInstance repository member of the OdbDisplay object. The default value is
+    # OFF.
     lockOptions: Boolean = OFF
 
-    # An OdbDisplayOptions object specifying this member is available only for 
-    # DisplayGroupInstance objects that are members of the DisplayGroupInstance repository 
-    # member of the OdbDisplay object. 
+    # An OdbDisplayOptions object specifying this member is available only for
+    # DisplayGroupInstance objects that are members of the DisplayGroupInstance repository
+    # member of the OdbDisplay object.
     odbDisplayOptions: OdbDisplayOptions = OdbDisplayOptions()
 
     def nodes(self):
@@ -88,14 +88,14 @@ class DisplayGroupInstance:
         """This method modifies the DisplayGroupInstance object. The setValues method is available
         only for DisplayGroupInstance objects that are members of the DisplayGroupInstance
         repository member of the OdbDisplay object.
-        
+
         Parameters
         ----------
         lockOptions
-            A Boolean specifying whether the display options stored on the DisplayGroupInstance 
-            object should be synchronized with changes to the viewport display options. This member 
-            is available only for DisplayGroupInstance objects that are members of the 
-            DisplayGroupInstance repository member of the OdbDisplay object. The default value is 
-            OFF. 
+            A Boolean specifying whether the display options stored on the DisplayGroupInstance
+            object should be synchronized with changes to the viewport display options. This member
+            is available only for DisplayGroupInstance objects that are members of the
+            DisplayGroupInstance repository member of the OdbDisplay object. The default value is
+            OFF.
         """
         pass

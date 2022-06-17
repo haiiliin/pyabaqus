@@ -7,9 +7,9 @@ class Hypoelastic:
     Notes
     -----
     This object can be accessed by:
-    
+
     .. code-block:: python
-        
+
         import material
         mdb.models[name].materials[name].hypoelastic
         import odbMaterial
@@ -35,19 +35,19 @@ class Hypoelastic:
         Notes
         -----
             This function can be accessed by:
-            
+
             .. code-block:: python
-            
+
                 mdb.models[name].materials[name].Hypoelastic
                 session.odbs[name].materials[name].Hypoelastic
-        
+
         Parameters
         ----------
         table
-            A sequence of sequences of Floats specifying the items described below. 
+            A sequence of sequences of Floats specifying the items described below.
         user
-            A Boolean specifying that hypoelasticity is defined by user subroutine UHYPEL. The 
-            default value is OFF. 
+            A Boolean specifying that hypoelasticity is defined by user subroutine UHYPEL. The
+            default value is OFF.
 
         Returns
         -------
@@ -56,6 +56,5 @@ class Hypoelastic:
         pass
 
     def setValues(self):
-        """This method modifies the Hypoelastic object.
-        """
+        """This method modifies the Hypoelastic object."""
         pass

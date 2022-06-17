@@ -4,11 +4,11 @@ from .InteractionState import InteractionState
 
 class StdXplCosimulationState(InteractionState):
     """The StdXplCosimulationState object stores the propagating data for a StdXplCosimulation
-    object. One instance of this object is created internally by the StdXplCosimulation 
-    object for each step. The instance is also deleted internally by the StdXplCosimulation 
-    object. 
-    The StdXplCosimulationState object has no constructor or methods. 
-    The StdXplCosimulationState object is derived from the InteractionState object. 
+    object. One instance of this object is created internally by the StdXplCosimulation
+    object for each step. The instance is also deleted internally by the StdXplCosimulation
+    object.
+    The StdXplCosimulationState object has no constructor or methods.
+    The StdXplCosimulationState object is derived from the InteractionState object.
 
     Attributes
     ----------
@@ -28,9 +28,9 @@ class StdXplCosimulationState(InteractionState):
     Notes
     -----
     This object can be accessed by:
-    
+
     .. code-block:: python
-        
+
         import interaction
         mdb.models[name].steps[name].interactionStates[name]
 
@@ -42,15 +42,15 @@ class StdXplCosimulationState(InteractionState):
 
     """
 
-    # A SymbolicConstant specifying the propagation state of the InteractionState object. 
-    # Possible values are: 
-    # - NOT_YET_ACTIVE 
-    # - CREATED 
-    # - PROPAGATED 
-    # - MODIFIED 
-    # - DEACTIVATED 
-    # - NO_LONGER_ACTIVE 
-    # - TYPE_NOT_APPLICABLE 
-    # - INSTANCE_NOT_APPLICABLE 
-    # - BUILT_INTO_BASE_STATE 
+    # A SymbolicConstant specifying the propagation state of the InteractionState object.
+    # Possible values are:
+    # - NOT_YET_ACTIVE
+    # - CREATED
+    # - PROPAGATED
+    # - MODIFIED
+    # - DEACTIVATED
+    # - NO_LONGER_ACTIVE
+    # - TYPE_NOT_APPLICABLE
+    # - INSTANCE_NOT_APPLICABLE
+    # - BUILT_INTO_BASE_STATE
     status: SymbolicConstant = None
