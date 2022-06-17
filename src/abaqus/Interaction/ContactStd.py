@@ -4,7 +4,7 @@ from abaqusConstants import *
 from .ContactPropertyAssignment import ContactPropertyAssignment
 from .InitializationAssignment import InitializationAssignment
 from .Interaction import Interaction
-from .MasterSlaveAssignment import MasterSlaveAssignment
+from .MainSecondaryAssignment import MainSecondaryAssignment
 from .RegionPairs import RegionPairs
 from .SlidingFormulationAssignment import SlidingFormulationAssignment
 from .SlidingTransitionAssignment import SlidingTransitionAssignment

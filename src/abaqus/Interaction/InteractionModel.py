@@ -4,6 +4,7 @@ from abaqusConstants import *
 from .InteractionContactControlModel import InteractionContactControlModel
 from .InteractionContactInitializationModel import InteractionContactInitializationModel
 from .InteractionPropertyModel import InteractionPropertyModel
+from .MainSecondaryAssignment import MainSecondaryAssignment
 from .PolarityAssignments import PolarityAssignments
 from ..BasicGeometry.ModelDot import ModelDot
 from ..Datum.DatumAxis import DatumAxis
@@ -34,7 +35,6 @@ from ..Interaction.FluidInflatorProperty import FluidInflatorProperty
 from ..Interaction.IncidentWave import IncidentWave
 from ..Interaction.IncidentWaveProperty import IncidentWaveProperty
 from ..Interaction.InitializationAssignment import InitializationAssignment
-from ..Interaction.MasterSlaveAssignment import MasterSlaveAssignment
 from ..Interaction.ModelChange import ModelChange
 from ..Interaction.PressurePenetration import PressurePenetration
 from ..Interaction.RadiationToAmbient import RadiationToAmbient

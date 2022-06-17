@@ -3,7 +3,7 @@ import typing
 from abaqusConstants import *
 from .ContactPropertyAssignment import ContactPropertyAssignment
 from .Interaction import Interaction
-from .MasterSlaveAssignment import MasterSlaveAssignment
+from .MainSecondaryAssignment import MainSecondaryAssignment
 from .PolarityAssignments import PolarityAssignments
 from .RegionPairs import RegionPairs
 from .SmoothingAssignment import SmoothingAssignment
