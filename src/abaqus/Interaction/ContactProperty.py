@@ -703,7 +703,7 @@ class ContactProperty(InteractionProperty):
         -------
             A GapHeatGeneration object.
         """
-        self.heatGeneration = GapHeatGeneration(conversionFraction, slaveFraction)
+        self.heatGeneration = GapHeatGeneration(conversionFraction, secondaryFraction)
         return self.heatGeneration
 
     def Radiation(
@@ -733,7 +733,7 @@ class ContactProperty(InteractionProperty):
         -------
             A Radiation object.
         """
-        self.radiation = Radiation(masterEmissivity, slaveEmissivity, table)
+        self.radiation = Radiation(mainEmissivity, secondaryEmissivity, table)
         return self.radiation
 
     def GeometricProperties(
