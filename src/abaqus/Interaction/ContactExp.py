@@ -3,7 +3,7 @@ import typing
 from abaqusConstants import *
 from .ContactPropertyAssignment import ContactPropertyAssignment
 from .Interaction import Interaction
-from .MainSecondaryAssignment import MainSecondaryAssignment
+from .MasterSlaveAssignment import MasterSlaveAssignment
 from .PolarityAssignments import PolarityAssignments
 from .RegionPairs import RegionPairs
 from .SmoothingAssignment import SmoothingAssignment
@@ -45,8 +45,8 @@ class ContactExp(Interaction):
     smoothingAssignments: SmoothingAssignment
         A :py:class:`~abaqus.Interaction.SmoothingAssignment.SmoothingAssignment` object specifying the surface smoothing assignments in the contact
         domain.
-    mainSecondaryAssignments: MainSecondaryAssignment
-        A :py:class:`~abaqus.Interaction.MainSecondaryAssignment.MainSecondaryAssignment` object specifying the main-secondary assignments in the
+    masterSlaveAssignments: MasterSlaveAssignment
+        A :py:class:`~abaqus.Interaction.MasterSlaveAssignment.MasterSlaveAssignment` object specifying the master-slave assignments in the
         contact domain.
     polarityAssignments: PolarityAssignments
         A :py:class:`~abaqus.Interaction.PolarityAssignments.PolarityAssignments` object specifying the polarity assignments in the contact domain.

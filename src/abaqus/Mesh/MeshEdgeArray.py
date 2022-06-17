@@ -18,7 +18,7 @@ class MeshEdgeArray(list[MeshEdge]):
 
     """
 
-    def __init__(self, elemEdges: list[MeshEdge]):
+    def __init__(self, edges: list[MeshEdge]):
         """This method creates a MeshEdgeArray object.
 
         Notes

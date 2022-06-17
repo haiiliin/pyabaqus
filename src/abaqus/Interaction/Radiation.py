@@ -16,7 +16,7 @@ class Radiation:
 
     """
 
-    def __init__(self, mainEmissivity: float, secondaryEmissivity: float, table: tuple):
+    def __init__(self, masterEmissivity: float, slaveEmissivity: float, table: tuple):
         """This method creates a Radiation object.
 
         Notes

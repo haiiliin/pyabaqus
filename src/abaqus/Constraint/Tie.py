@@ -100,7 +100,7 @@ class Tie(Constraint):
         pass
 
     def swapSurfaces(self):
-        """This method switches the main and secondary surfaces of a tied constraint. This command
+        """This method switches the master and slave surfaces of a tied constraint. This command
         is valid only during the step in which the interaction is created.
         """
         pass

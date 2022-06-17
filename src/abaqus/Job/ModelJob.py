@@ -362,11 +362,6 @@ class ModelJob(Job):
             A SymbolicConstant specifying whether an analysis is decomposed into threads or into
             multiple processes that communicate through a message passing interface (MPI). Possible
             values are DEFAULT, THREADS, and MPI. The default value is DEFAULT.
-        licenseType
-            A SymbolicConstant specifying the type of license type being used in the case of the
-            DSLS SimUnit license model. Possible values are DEFAULT, TOKEN, and CREDIT. The default
-            value is DEFAULT.If the license model is not the DSLS SimUnit, the licenseType is not
-            available.
 
         Returns
         -------

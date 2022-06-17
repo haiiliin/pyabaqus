@@ -113,7 +113,7 @@ class CyclicSymmetry(Interaction):
         pass
 
     def swapSurfaces(self):
-        """This method switches the main and secondary surfaces of a cyclic symmetry interaction.
+        """This method switches the master and slave surfaces of a cyclic symmetry interaction.
         This command is valid only during the step in which the interaction is created.
         """
         pass

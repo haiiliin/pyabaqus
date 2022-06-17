@@ -115,7 +115,7 @@ class SurfaceToSurfaceContactExp(Interaction):
         pass
 
     def swapSurfaces(self):
-        """This method switches the main and secondary surfaces of a surface-to-surface contact
+        """This method switches the master and slave surfaces of a surface-to-surface contact
         pair. This command is valid only during the step in which the interaction is created.
         """
         pass

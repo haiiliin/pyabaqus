@@ -4,7 +4,7 @@ from abaqusConstants import *
 from .ContactPropertyAssignment import ContactPropertyAssignment
 from .InitializationAssignment import InitializationAssignment
 from .Interaction import Interaction
-from .MainSecondaryAssignment import MainSecondaryAssignment
+from .MasterSlaveAssignment import MasterSlaveAssignment
 from .RegionPairs import RegionPairs
 from .SlidingFormulationAssignment import SlidingFormulationAssignment
 from .SlidingTransitionAssignment import SlidingTransitionAssignment
@@ -42,8 +42,8 @@ class ContactStd(Interaction):
     surfaceOffsetAssignments: SurfaceOffsetAssignment
         A :py:class:`~abaqus.Interaction.SurfaceOffsetAssignment.SurfaceOffsetAssignment` object specifying the surface offset fraction assignments in
         the contact domain.
-    mainSecondaryAssignments: MainSecondaryAssignment
-        A :py:class:`~abaqus.Interaction.MainSecondaryAssignment.MainSecondaryAssignment` object specifying the main-secondary assignments in the
+    masterSlaveAssignments: MasterSlaveAssignment
+        A :py:class:`~abaqus.Interaction.MasterSlaveAssignment.MasterSlaveAssignment` object specifying the master-slave assignments in the
         contact domain.
     initializationAssignments: InitializationAssignment
         An :py:class:`~abaqus.Interaction.InitializationAssignment.InitializationAssignment` object specifying the contact initialization assignments in

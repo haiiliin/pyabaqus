@@ -17,11 +17,11 @@ class PressurePenetration(Interaction):
         created.
     contactInteraction: str
         A String specifying the name of the Surface-to-surface contact (Standard) interaction.
-    mainPoints: RegionArray
-        A :py:class:`~abaqus.Region.RegionArray.RegionArray` object specifying the points on the main surface that are exposed to the
+    masterPoints: RegionArray
+        A :py:class:`~abaqus.Region.RegionArray.RegionArray` object specifying the points on the master surface that are exposed to the
         fluid.
-    secondaryPoints: RegionArray
-        A :py:class:`~abaqus.Region.RegionArray.RegionArray` object specifying the points on the secondary surface that are exposed to
+    slavePoints: RegionArray
+        A :py:class:`~abaqus.Region.RegionArray.RegionArray` object specifying the points on the slave surface that are exposed to
         the fluid.
 
     Notes
