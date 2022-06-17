@@ -20,4 +20,9 @@ Object features
 
 .. autoclass:: abaqus.Mdb.Mdb.Mdb
     :members:
-    :inherited-members:
+
+.. autoclass:: abaqus.Part.AcisMdb.AcisMdb
+    :members:
+
+.. autoclass:: abaqus.Job.JobMdb.JobMdb
+    :members:
