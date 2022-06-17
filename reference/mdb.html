@@ -368,8 +368,461 @@ or part instances.</p>
 </table>
 </div>
 <dl class="py method">
-<dt class="sig sig-object py" id="abaqus.Mdb.Mdb.Mdb.Job">
-<span class="sig-name descname"><span class="pre">Job</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">model</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">description</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">type</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">SymbolicConstantType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'ANALYSIS'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">queue</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">waitHours</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">waitMinutes</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">atTime</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">echoPrint</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">BooleanType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">contactPrint</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">BooleanType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">modelPrint</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">BooleanType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">historyPrint</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">BooleanType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">scratch</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">userSubroutine</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">numCpus</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">memory</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">90</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">memoryUnits</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">SymbolicConstantType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'PERCENTAGE'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">explicitPrecision</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">SymbolicConstantType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'SINGLE'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">nodalOutputPrecision</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">SymbolicConstantType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'SINGLE'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">parallelizationMethodExplicit</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">SymbolicConstantType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'DOMAIN'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">numDomains</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">activateLoadBalancing</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">BooleanType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">multiprocessingMode</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">SymbolicConstantType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'DEFAULT'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">licenseType</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">SymbolicConstantType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'DEFAULT'</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="mdb/job.html#abaqus.Job.ModelJob.ModelJob" title="abaqus.Job.ModelJob.ModelJob"><span class="pre">ModelJob</span></a></span></span><a class="reference external" href="https://github.com/haiiliin/pyabaqus/blob/V2022/src/abaqus/Mdb/Mdb.py#L22-L143"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#abaqus.Mdb.Mdb.Mdb.Job" title="Permalink to this definition">#</a></dt>
+<dt class="sig sig-object py" id="abaqus.Mdb.Mdb.Mdb.Model">
+<span class="sig-name descname"><span class="pre">Model</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">description</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">stefanBoltzmann</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">absoluteZero</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">waveFormulation</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">SymbolicConstantType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'NOT_SET'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">modelType</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">SymbolicConstantType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'STANDARD_EXPLICIT'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">universalGas</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">copyConstraints</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">BooleanType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">copyConnectors</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">BooleanType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">copyInteractions</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">BooleanType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">1</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="mdb/model.html#abaqus.Model.Model.Model" title="abaqus.Model.Model.Model"><span class="pre">Model</span></a></span></span><a class="reference external" href="https://github.com/haiiliin/pyabaqus/blob/V2022/src/abaqus/Mdb/Mdb.py#L46-L98"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#abaqus.Mdb.Mdb.Mdb.Model" title="Permalink to this definition">#</a></dt>
+<dd><p>This method creates a Model object.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>name</strong></dt><dd><p>A String specifying the repository key.</p>
+</dd>
+<dt><strong>description</strong></dt><dd><p>A String specifying the purpose and contents of the Model object. The default value is
+an empty string.</p>
+</dd>
+<dt><strong>stefanBoltzmann</strong></dt><dd><p>None or a Float specifying the Stefan-Boltzmann constant. The default value is None.</p>
+</dd>
+<dt><strong>absoluteZero</strong></dt><dd><p>None or a Float specifying the absolute zero constant. The default value is None.</p>
+</dd>
+<dt><strong>waveFormulation</strong></dt><dd><p>A SymbolicConstant specifying the type of incident wave formulation to be used in
+acoustic problems. Possible values are NOT_SET, SCATTERED, and TOTAL. The default value
+is NOT_SET.</p>
+</dd>
+<dt><strong>modelType</strong></dt><dd><p>A SymbolicConstant specifying the analysis model type. Possible values are
+STANDARD_EXPLICIT and ELECTROMAGNETIC. The default is STANDARD_EXPLICIT.</p>
+</dd>
+<dt><strong>universalGas</strong></dt><dd><p>None or a Float specifying the universal gas constant. The default value is None.</p>
+</dd>
+<dt><strong>copyConstraints</strong></dt><dd><p>A boolean specifying whether to copy the constraints created in the model to the model
+that instances this model. The default value is ON.</p>
+</dd>
+<dt><strong>copyConnectors</strong></dt><dd><p>A boolean specifying whether to copy the connectors created in the model to the model
+that instances this model. The default value is ON.</p>
+</dd>
+<dt><strong>copyInteractions</strong></dt><dd><p>A boolean specifying whether to copy the interactions created in the model to the model
+that instances this model. The default value is ON.</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><dl class="simple">
+<dt>model: <a class="reference internal" href="mdb/model.html#abaqus.Mdb.Mdb.Mdb.Model" title="abaqus.Mdb.Mdb.Mdb.Model"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Model</span></code></a></dt><dd><p>A Model object</p>
+</dd>
+</dl>
+</dd>
+</dl>
+<p class="rubric">Notes</p>
+<p>This function can be accessed by:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">mdb</span><span class="o">.</span><span class="n">Model</span>
+</pre></div>
+</div>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="abaqus.Part.AcisMdb.AcisMdb">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">AcisMdb</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">pathName</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">''</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/haiiliin/pyabaqus/blob/V2022/src/abaqus/Part/AcisMdb.py#L6-L316"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#abaqus.Part.AcisMdb.AcisMdb" title="Permalink to this definition">#</a></dt>
+<dd><p>The Mdb object is the high-level Abaqus model database. A model database stores models
+and analysis controls.</p>
+<p class="rubric">Notes</p>
+<p>This object can be accessed by:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">mdb</span>
+</pre></div>
+</div>
+<p class="rubric">Methods</p>
+<div class="table-wrapper autosummary longtable docutils container">
+<table class="autosummary longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="mdb/model/part.html#abaqus.Part.AcisMdb.AcisMdb.openAcis" title="abaqus.Part.AcisMdb.AcisMdb.openAcis"><code class="xref py py-obj docutils literal notranslate"><span class="pre">openAcis</span></code></a>(fileName[, scaleFromFile])</p></td>
+<td><p>This method creates an AcisFile object from a file containing ACIS-format geometry.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="mdb/model/part.html#abaqus.Part.AcisMdb.AcisMdb.openCatia" title="abaqus.Part.AcisMdb.AcisMdb.openCatia"><code class="xref py py-obj docutils literal notranslate"><span class="pre">openCatia</span></code></a>(fileName[, topology, ...])</p></td>
+<td><p>This method creates an AcisFile object from a file containing V5-format geometry.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="mdb/model/part.html#abaqus.Part.AcisMdb.AcisMdb.openEnf" title="abaqus.Part.AcisMdb.AcisMdb.openEnf"><code class="xref py py-obj docutils literal notranslate"><span class="pre">openEnf</span></code></a>(fileName, fileType[, topology, ...])</p></td>
+<td><p>This method creates an AcisFile object from a file containing Elysium Neutral File-format geometry that was created by CATIA V5, I-DEAS, or Pro/ENGINEER.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="mdb/model/part.html#abaqus.Part.AcisMdb.AcisMdb.openIges" title="abaqus.Part.AcisMdb.AcisMdb.openIges"><code class="xref py py-obj docutils literal notranslate"><span class="pre">openIges</span></code></a>(fileName[, trimCurve, ...])</p></td>
+<td><p>This method creates an AcisFile object from a file containing IGES-format geometry.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="mdb/model/part.html#abaqus.Part.AcisMdb.AcisMdb.openParasolid" title="abaqus.Part.AcisMdb.AcisMdb.openParasolid"><code class="xref py py-obj docutils literal notranslate"><span class="pre">openParasolid</span></code></a>(fileName[, topology])</p></td>
+<td><p>This method creates an AcisFile object from a file containing Parasolid-format geometry.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="mdb/model/part.html#abaqus.Part.AcisMdb.AcisMdb.openSolidworks" title="abaqus.Part.AcisMdb.AcisMdb.openSolidworks"><code class="xref py py-obj docutils literal notranslate"><span class="pre">openSolidworks</span></code></a>(fileName[, topology])</p></td>
+<td><p>This method creates an AcisFile object from a file containing Solidworks format geometry.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="mdb/model/part.html#abaqus.Part.AcisMdb.AcisMdb.openStep" title="abaqus.Part.AcisMdb.AcisMdb.openStep"><code class="xref py py-obj docutils literal notranslate"><span class="pre">openStep</span></code></a>(fileName[, scale])</p></td>
+<td><p>This method creates an AcisFile object from a file containing STEP-format geometry.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="mdb/model/part.html#abaqus.Part.AcisMdb.AcisMdb.openVda" title="abaqus.Part.AcisMdb.AcisMdb.openVda"><code class="xref py py-obj docutils literal notranslate"><span class="pre">openVda</span></code></a>(fileName)</p></td>
+<td><p>This method creates an AcisFile object from a file containing VDA-FS-format geometry.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<dl class="py method">
+<dt class="sig sig-object py" id="abaqus.Part.AcisMdb.AcisMdb.openAcis">
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">openAcis</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">fileName</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">scaleFromFile</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">BooleanType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/haiiliin/pyabaqus/blob/V2022/src/abaqus/Part/AcisMdb.py#L20-L52"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#abaqus.Part.AcisMdb.AcisMdb.openAcis" title="Permalink to this definition">#</a></dt>
+<dd><p>This method creates an AcisFile object from a file containing ACIS-format geometry. This
+object is subsequently used by the PartFromGeometryFile method.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>fileName</strong></dt><dd><p>A String specifying the path to the ACIS file to open.</p>
+</dd>
+<dt><strong>scaleFromFile</strong></dt><dd><p>A Boolean specifying whether to scale, rotate, and translate the part using the
+transform read from the ACIS file. The default value is OFF.</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><dl class="simple">
+<dt><code class="xref py py-obj docutils literal notranslate"><span class="pre">An</span></code> <code class="xref py py-obj docutils literal notranslate"><span class="pre">AcisFile</span></code> object.</dt><dd></dd>
+</dl>
+</dd>
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><ul class="simple">
+<li><dl class="simple">
+<dt><code class="xref py py-obj docutils literal notranslate"><span class="pre">File</span></code> <code class="xref py py-obj docutils literal notranslate"><span class="pre">is</span></code> <code class="xref py py-obj docutils literal notranslate"><span class="pre">from</span></code> <code class="xref py py-obj docutils literal notranslate"><span class="pre">a</span></code> <code class="xref py py-obj docutils literal notranslate"><span class="pre">newer</span></code> <code class="xref py py-obj docutils literal notranslate"><span class="pre">version</span></code> <code class="xref py py-obj docutils literal notranslate"><span class="pre">of</span></code> <code class="xref py py-obj docutils literal notranslate"><span class="pre">ACIS</span></code> <code class="xref py py-obj docutils literal notranslate"><span class="pre">than</span></code> <code class="xref py py-obj docutils literal notranslate"><span class="pre">the</span></code> <code class="xref py py-obj docutils literal notranslate"><span class="pre">CAE</span></code> kernel.</dt><dd><p>Texterror: ACIS File version exceeds Kernel.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><code class="xref py py-obj docutils literal notranslate"><span class="pre">The</span></code> <code class="xref py py-obj docutils literal notranslate"><span class="pre">data</span></code> <code class="xref py py-obj docutils literal notranslate"><span class="pre">in</span></code> <code class="xref py py-obj docutils literal notranslate"><span class="pre">the</span></code> <code class="xref py py-obj docutils literal notranslate"><span class="pre">ACIS</span></code> <code class="xref py py-obj docutils literal notranslate"><span class="pre">file</span></code> <code class="xref py py-obj docutils literal notranslate"><span class="pre">are</span></code> corrupted.</dt><dd><p>Texterror: Failed to read ACIS file.</p>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+<p class="rubric">Notes</p>
+<p>This function can be accessed by:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">mdb</span><span class="o">.</span><span class="n">openAcis</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="abaqus.Part.AcisMdb.AcisMdb.openCatia">
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">openCatia</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">fileName</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">topology</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">SymbolicConstantType</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">convertUnits</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">SymbolicConstantType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">combineBodies</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">BooleanType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/haiiliin/pyabaqus/blob/V2022/src/abaqus/Part/AcisMdb.py#L54-L90"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#abaqus.Part.AcisMdb.AcisMdb.openCatia" title="Permalink to this definition">#</a></dt>
+<dd><p>This method creates an AcisFile object from a file containing V5-format geometry. This
+object is subsequently used by the PartFromGeometryFile method.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>fileName</strong></dt><dd><p>A String specifying the path to the CATIA file to open.</p>
+</dd>
+<dt><strong>topology</strong></dt><dd><p>A SymbolicConstant specifying the topology of the data to be read from the file and of
+the part to be created. Possible values are SOLID , SHELL, and WIRE. If
+<a href="#id1"><span class="problematic" id="id2">*</span></a>topology*=SOLID, Abaqus/CAE attempts to attach cells to create a solid. If
+<a href="#id3"><span class="problematic" id="id4">*</span></a>topology*=SHELL, Abaqus/CAE builds the body as a shell entity and not as a solid
+entity. The default value is SOLID .</p>
+</dd>
+<dt><strong>convertUnits</strong></dt><dd><p>A SymbolicConstant specifying whether the original units should be retained. Possible
+values are ON and OFF. The default value is OFF.</p>
+</dd>
+<dt><strong>combineBodies</strong></dt><dd><p>A Boolean specifying whether to combine the bodies in the CATPart file. If the bodies to
+be combined touch or overlap, invalid entities would result. For CATProduct files, this
+option will be ignored.</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><dl class="simple">
+<dt><code class="xref py py-obj docutils literal notranslate"><span class="pre">An</span></code> <code class="xref py py-obj docutils literal notranslate"><span class="pre">AcisFile</span></code> object.</dt><dd></dd>
+</dl>
+</dd>
+</dl>
+<p class="rubric">Notes</p>
+<p>This function can be accessed by:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">mdb</span><span class="o">.</span><span class="n">openCatia</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="abaqus.Part.AcisMdb.AcisMdb.openEnf">
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">openEnf</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">fileName</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fileType</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">topology</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">SymbolicConstantType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'SOLID'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">convertUnits</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">BooleanType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/haiiliin/pyabaqus/blob/V2022/src/abaqus/Part/AcisMdb.py#L92-L130"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#abaqus.Part.AcisMdb.AcisMdb.openEnf" title="Permalink to this definition">#</a></dt>
+<dd><p>This method creates an AcisFile object from a file containing Elysium Neutral
+File-format geometry that was created by CATIA V5, I-DEAS, or Pro/ENGINEER. This object
+is subsequently used by the PartFromGeometryFile method.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>fileName</strong></dt><dd><p>A String specifying the path to the Elysium Neutral File that was created by I-DEAS,
+Pro/ENGINEER, or CATIA V5.</p>
+</dd>
+<dt><strong>fileType</strong></dt><dd><p>A String specifying the type of CAD system that created the file. Possible values are
+“ideas”, “proe”, or “catiav5” or a combination similar to “proe/ideas/catiav5” if the
+type is unknown.</p>
+</dd>
+<dt><strong>topology</strong></dt><dd><p>A SymbolicConstant specifying the topology of the data to be read from the file and of
+the part to be created. Possible values are SOLID , SHELL, and WIRE. If
+<a href="#id5"><span class="problematic" id="id6">*</span></a>topology*=SOLID, Abaqus/CAE attempts to attach cells to create a solid. If
+<a href="#id7"><span class="problematic" id="id8">*</span></a>topology*=SHELL, Abaqus/CAE builds the body as a shell entity and not as a solid
+entity. The default value is SOLID.</p>
+</dd>
+<dt><strong>convertUnits</strong></dt><dd><p>A Boolean specifying if the dimensions of the part should be converted to millimeters.
+The default value is OFF.</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><dl class="simple">
+<dt><code class="xref py py-obj docutils literal notranslate"><span class="pre">An</span></code> <code class="xref py py-obj docutils literal notranslate"><span class="pre">AcisFile</span></code> object.</dt><dd></dd>
+</dl>
+</dd>
+</dl>
+<p class="rubric">Notes</p>
+<p>This function can be accessed by:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">mdb</span><span class="o">.</span><span class="n">openEnf</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="abaqus.Part.AcisMdb.AcisMdb.openIges">
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">openIges</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">fileName</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">trimCurve</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">SymbolicConstantType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'DEFAULT'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">scaleFromFile</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">SymbolicConstantType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">msbo</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">BooleanType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">includedLayers</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">tuple</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">()</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">topology</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">SymbolicConstantType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'SOLID'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">uniteWires</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">SymbolicConstantType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">1</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/haiiliin/pyabaqus/blob/V2022/src/abaqus/Part/AcisMdb.py#L132-L190"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#abaqus.Part.AcisMdb.AcisMdb.openIges" title="Permalink to this definition">#</a></dt>
+<dd><p>This method creates an AcisFile object from a file containing IGES-format geometry. This
+object is subsequently used by the PartFromGeometryFile method.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>fileName</strong></dt><dd><p>A String specifying the path to the IGES file to open.</p>
+</dd>
+<dt><strong>trimCurve</strong></dt><dd><p>A SymbolicConstant specifying the method used to define the trim curves that bound
+parametric surfaces. Possible values are:DEFAULT, use either of the following as
+specified by the contents of the IGES file.PARAMETRIC_DATA, use the parameter space of
+the surface being trimmed.THREED_DATA, use real space—the coordinate system of the part
+along with an indication that the trim curve lies on the parametric surface.The default
+value is DEFAULT.</p>
+</dd>
+<dt><strong>scaleFromFile</strong></dt><dd><p>A SymbolicConstant specifying whether the imported geometry needs to be scaled using the
+units information available in the IGES file. Possible values are ON and OFF. The
+default value is OFF. When the argument is set to ON, the geometry is scaled to
+millimeters with respect to the unit system specified in the IGES file.</p>
+</dd>
+<dt><strong>msbo</strong></dt><dd><p>A Boolean specifying if the IGES file contains MSBO (Manifold Solid B-Rep Object)
+entities. The default value is False.</p>
+</dd>
+<dt><strong>includedLayers</strong></dt><dd><p>A sequence of Ints specifying the levels or layers of entities that will be translated
+from the IGES file to build the part. The default is to include all the layers.</p>
+</dd>
+<dt><strong>topology</strong></dt><dd><p>A SymbolicConstant specifying the topology of the data to be read from the file and of
+the part to be created. Possible values are SOLID , SHELL, and WIRE. If
+<a href="#id9"><span class="problematic" id="id10">*</span></a>topology*=SOLID, Abaqus/CAE attempts to attach cells to create a solid. If
+<a href="#id11"><span class="problematic" id="id12">*</span></a>topology*=SHELL, Abaqus/CAE builds the body as a shell entity and not as a solid
+entity. The default value is SOLID.</p>
+</dd>
+<dt><strong>uniteWires</strong></dt><dd><p>A SymbolicConstant specifying whether the imported wires need to be united or not.
+Possible values are ON and OFF. The default value is ON. When importing a sketch, this
+value is set to OFF.</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><dl class="simple">
+<dt><code class="xref py py-obj docutils literal notranslate"><span class="pre">An</span></code> <code class="xref py py-obj docutils literal notranslate"><span class="pre">AcisFile</span></code> object.</dt><dd></dd>
+</dl>
+</dd>
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><ul class="simple">
+<li><dl class="simple">
+<dt><code class="xref py py-obj docutils literal notranslate"><span class="pre">The</span></code> <code class="xref py py-obj docutils literal notranslate"><span class="pre">data</span></code> <code class="xref py py-obj docutils literal notranslate"><span class="pre">in</span></code> <code class="xref py py-obj docutils literal notranslate"><span class="pre">the</span></code> <code class="xref py py-obj docutils literal notranslate"><span class="pre">IGES</span></code> <code class="xref py py-obj docutils literal notranslate"><span class="pre">file</span></code> <code class="xref py py-obj docutils literal notranslate"><span class="pre">are</span></code> corrupted.</dt><dd><p>Texterror: Failed to read IGES file.</p>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+<p class="rubric">Notes</p>
+<p>This function can be accessed by:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">mdb</span><span class="o">.</span><span class="n">openIges</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="abaqus.Part.AcisMdb.AcisMdb.openParasolid">
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">openParasolid</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">fileName</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">topology</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">SymbolicConstantType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'SOLID'</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/haiiliin/pyabaqus/blob/V2022/src/abaqus/Part/AcisMdb.py#L192-L220"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#abaqus.Part.AcisMdb.AcisMdb.openParasolid" title="Permalink to this definition">#</a></dt>
+<dd><p>This method creates an AcisFile object from a file containing Parasolid-format geometry.
+This object is subsequently used by the PartFromGeometryFile method.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>fileName</strong></dt><dd><p>A String specifying the path to the Parasolid file to open.</p>
+</dd>
+<dt><strong>topology</strong></dt><dd><p>A SymbolicConstant specifying the topology of the data to be read from the file and of
+the part to be created. Possible values are SOLID , SHELL, and WIRE. If
+<a href="#id13"><span class="problematic" id="id14">*</span></a>topology*=SOLID, Abaqus/CAE attempts to attach cells to create a solid. If
+<a href="#id15"><span class="problematic" id="id16">*</span></a>topology*=SHELL, Abaqus/CAE builds the body as a shell entity and not as a solid
+entity. The default value is SOLID.</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><dl class="simple">
+<dt><code class="xref py py-obj docutils literal notranslate"><span class="pre">An</span></code> <code class="xref py py-obj docutils literal notranslate"><span class="pre">AcisFile</span></code> object.</dt><dd></dd>
+</dl>
+</dd>
+</dl>
+<p class="rubric">Notes</p>
+<p>This function can be accessed by:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">mdb</span><span class="o">.</span><span class="n">openParasolid</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="abaqus.Part.AcisMdb.AcisMdb.openSolidworks">
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">openSolidworks</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">fileName</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">topology</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">SymbolicConstantType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'SOLID'</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/haiiliin/pyabaqus/blob/V2022/src/abaqus/Part/AcisMdb.py#L283-L316"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#abaqus.Part.AcisMdb.AcisMdb.openSolidworks" title="Permalink to this definition">#</a></dt>
+<dd><p>This method creates an AcisFile object from a file containing Solidworks format
+geometry. This object is subsequently used by the PartFromGeometryFile method.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>fileName</strong></dt><dd><p>A String specifying the path to the Solidworks file to open.</p>
+</dd>
+<dt><strong>topology</strong></dt><dd><p>A SymbolicConstant specifying the topology of the data to be read from the file and of
+the part to be created. Possible values are SOLID, SHELL, and WIRE. If <a href="#id17"><span class="problematic" id="id18">*</span></a>topology*=SOLID,
+Abaqus/CAE attempts to attach cells to create a solid entity. If <a href="#id19"><span class="problematic" id="id20">*</span></a>topology*=SHELL,
+Abaqus/CAE builds the body as a shell entity, not as a solid entity. The default value
+is SOLID.</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><dl class="simple">
+<dt><code class="xref py py-obj docutils literal notranslate"><span class="pre">An</span></code> <code class="xref py py-obj docutils literal notranslate"><span class="pre">AcisFile</span></code> object.</dt><dd></dd>
+</dl>
+</dd>
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><ul class="simple">
+<li><dl class="simple">
+<dt><code class="xref py py-obj docutils literal notranslate"><span class="pre">The</span></code> <code class="xref py py-obj docutils literal notranslate"><span class="pre">data</span></code> <code class="xref py py-obj docutils literal notranslate"><span class="pre">in</span></code> <code class="xref py py-obj docutils literal notranslate"><span class="pre">the</span></code> <code class="xref py py-obj docutils literal notranslate"><span class="pre">Solidworks</span></code> <code class="xref py py-obj docutils literal notranslate"><span class="pre">file</span></code> <code class="xref py py-obj docutils literal notranslate"><span class="pre">are</span></code> corrupted.</dt><dd><p>Texterror: Failed to read Solidworks file.</p>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+<p class="rubric">Notes</p>
+<p>This function can be accessed by:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">openSolidworks</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="abaqus.Part.AcisMdb.AcisMdb.openStep">
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">openStep</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">fileName</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">scale</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">1</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/haiiliin/pyabaqus/blob/V2022/src/abaqus/Part/AcisMdb.py#L222-L252"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#abaqus.Part.AcisMdb.AcisMdb.openStep" title="Permalink to this definition">#</a></dt>
+<dd><p>This method creates an AcisFile object from a file containing STEP-format geometry. This
+object is subsequently used by the PartFromGeometryFile method.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>fileName</strong></dt><dd><p>A String specifying the path to the STEP file to open.</p>
+</dd>
+<dt><strong>scale</strong></dt><dd><p>A Float specifying the scaling factor to apply to the imported geometric entities. The
+default value is 1.0.</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><dl class="simple">
+<dt><code class="xref py py-obj docutils literal notranslate"><span class="pre">An</span></code> <code class="xref py py-obj docutils literal notranslate"><span class="pre">AcisFile</span></code> object.</dt><dd></dd>
+</dl>
+</dd>
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><ul class="simple">
+<li><dl class="simple">
+<dt><code class="xref py py-obj docutils literal notranslate"><span class="pre">The</span></code> <code class="xref py py-obj docutils literal notranslate"><span class="pre">data</span></code> <code class="xref py py-obj docutils literal notranslate"><span class="pre">in</span></code> <code class="xref py py-obj docutils literal notranslate"><span class="pre">the</span></code> <code class="xref py py-obj docutils literal notranslate"><span class="pre">STEP</span></code> <code class="xref py py-obj docutils literal notranslate"><span class="pre">file</span></code> <code class="xref py py-obj docutils literal notranslate"><span class="pre">are</span></code> corrupted.</dt><dd><p>Texterror: Failed to read STEP file.</p>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+<p class="rubric">Notes</p>
+<p>This function can be accessed by:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">mdb</span><span class="o">.</span><span class="n">openStep</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="abaqus.Part.AcisMdb.AcisMdb.openVda">
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">openVda</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">fileName</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/haiiliin/pyabaqus/blob/V2022/src/abaqus/Part/AcisMdb.py#L254-L281"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#abaqus.Part.AcisMdb.AcisMdb.openVda" title="Permalink to this definition">#</a></dt>
+<dd><p>This method creates an AcisFile object from a file containing VDA-FS-format geometry.
+This object is subsequently used by the PartFromGeometryFile method.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>fileName</strong></dt><dd><p>A String specifying the path to the VDA-FS file to open.</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><dl class="simple">
+<dt><code class="xref py py-obj docutils literal notranslate"><span class="pre">An</span></code> <code class="xref py py-obj docutils literal notranslate"><span class="pre">AcisFile</span></code> object.</dt><dd></dd>
+</dl>
+</dd>
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><ul class="simple">
+<li><dl class="simple">
+<dt><code class="xref py py-obj docutils literal notranslate"><span class="pre">The</span></code> <code class="xref py py-obj docutils literal notranslate"><span class="pre">data</span></code> <code class="xref py py-obj docutils literal notranslate"><span class="pre">in</span></code> <code class="xref py py-obj docutils literal notranslate"><span class="pre">the</span></code> VDA-FS <code class="xref py py-obj docutils literal notranslate"><span class="pre">file</span></code> <code class="xref py py-obj docutils literal notranslate"><span class="pre">are</span></code> corrupted.</dt><dd><p>Texterror: Failed to read VDA file.</p>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+<p class="rubric">Notes</p>
+<p>This function can be accessed by:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">mdb</span><span class="o">.</span><span class="n">openVda</span>
+</pre></div>
+</div>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="abaqus.Job.JobMdb.JobMdb">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">JobMdb</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">pathName</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">''</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/haiiliin/pyabaqus/blob/V2022/src/abaqus/Job/JobMdb.py#L8-L311"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#abaqus.Job.JobMdb.JobMdb" title="Permalink to this definition">#</a></dt>
+<dd><p>The Mdb object is the high-level Abaqus model database. A model database stores models
+and analysis controls.</p>
+<p class="rubric">Notes</p>
+<p>This object can be accessed by:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">mdb</span>
+</pre></div>
+</div>
+<p class="rubric">Methods</p>
+<div class="table-wrapper autosummary longtable docutils container">
+<table class="autosummary longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#abaqus.Job.JobMdb.JobMdb.Job" title="abaqus.Job.JobMdb.JobMdb.Job"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Job</span></code></a>(name, model[, description, type, queue, ...])</p></td>
+<td><p>This method creates an analysis job using a model on a model database (MDB) for the model definition.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#abaqus.Job.JobMdb.JobMdb.JobFromInputFile" title="abaqus.Job.JobMdb.JobMdb.JobFromInputFile"><code class="xref py py-obj docutils literal notranslate"><span class="pre">JobFromInputFile</span></code></a>(name, inputFileName[, ...])</p></td>
+<td><p>This method creates an analysis job using an input file for the model definition.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#abaqus.Job.JobMdb.JobMdb.OptimizationProcess" title="abaqus.Job.JobMdb.JobMdb.OptimizationProcess"><code class="xref py py-obj docutils literal notranslate"><span class="pre">OptimizationProcess</span></code></a>(name, model, task, ...)</p></td>
+<td><p>This method creates an OptimizationProcess object.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<dl class="py method">
+<dt class="sig sig-object py" id="abaqus.Job.JobMdb.JobMdb.Job">
+<span class="sig-name descname"><span class="pre">Job</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">model</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">description</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">type</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">SymbolicConstantType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'ANALYSIS'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">queue</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">waitHours</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">waitMinutes</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">atTime</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">echoPrint</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">BooleanType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">contactPrint</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">BooleanType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">modelPrint</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">BooleanType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">historyPrint</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">BooleanType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">scratch</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">userSubroutine</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">numCpus</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">memory</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">90</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">memoryUnits</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">SymbolicConstantType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'PERCENTAGE'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">explicitPrecision</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">SymbolicConstantType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'SINGLE'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">nodalOutputPrecision</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">SymbolicConstantType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'SINGLE'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">parallelizationMethodExplicit</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">SymbolicConstantType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'DOMAIN'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">numDomains</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">activateLoadBalancing</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">BooleanType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">multiprocessingMode</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">SymbolicConstantType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'DEFAULT'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">licenseType</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">SymbolicConstantType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'DEFAULT'</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="mdb/job.html#abaqus.Job.ModelJob.ModelJob" title="abaqus.Job.ModelJob.ModelJob"><span class="pre">ModelJob</span></a></span></span><a class="reference external" href="https://github.com/haiiliin/pyabaqus/blob/V2022/src/abaqus/Job/JobMdb.py#L22-L143"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#abaqus.Job.JobMdb.JobMdb.Job" title="Permalink to this definition">#</a></dt>
 <dd><p>This method creates an analysis job using a model on a model database (MDB) for the
 model definition.</p>
 <dl class="field-list simple">
@@ -385,7 +838,7 @@ the model to be analyzed.</p>
 </dd>
 <dt><strong>type</strong></dt><dd><p>A SymbolicConstant specifying the type of job. Possible values are ANALYSIS,
 SYNTAXCHECK, RECOVER, and RESTART. The default value is ANALYSIS.If the object has the
-type JobFromInputFile, <a href="#id1"><span class="problematic" id="id2">*</span></a>type*=RESTART is not available.</p>
+type JobFromInputFile, <a href="#id21"><span class="problematic" id="id22">*</span></a>type*=RESTART is not available.</p>
 </dd>
 <dt><strong>queue</strong></dt><dd><p>A String specifying the name of the queue to which to submit the job. The default value
 is an empty string.Note:You can use the <em>queue</em> argument when creating a Job object on a
@@ -480,8 +933,8 @@ available.</p>
 </dd></dl>
 
 <dl class="py method">
-<dt class="sig sig-object py" id="abaqus.Mdb.Mdb.Mdb.JobFromInputFile">
-<span class="sig-name descname"><span class="pre">JobFromInputFile</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">inputFileName</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">type</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">SymbolicConstantType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'ANALYSIS'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">queue</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">waitHours</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">waitMinutes</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">atTime</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">scratch</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">userSubroutine</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">numCpus</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">memory</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">90</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">memoryUnits</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">SymbolicConstantType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'PERCENTAGE'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">explicitPrecision</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">SymbolicConstantType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'SINGLE'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">nodalOutputPrecision</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">SymbolicConstantType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'SINGLE'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">parallelizationMethodExplicit</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">SymbolicConstantType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'DOMAIN'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">numDomains</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">activateLoadBalancing</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">BooleanType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">multiprocessingMode</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">SymbolicConstantType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'DEFAULT'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">licenseType</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">SymbolicConstantType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'DEFAULT'</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="mdb/job.html#abaqus.Job.JobFromInputFile.JobFromInputFile" title="abaqus.Job.JobFromInputFile.JobFromInputFile"><span class="pre">JobFromInputFile</span></a></span></span><a class="reference external" href="https://github.com/haiiliin/pyabaqus/blob/V2022/src/abaqus/Mdb/Mdb.py#L145-L244"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#abaqus.Mdb.Mdb.Mdb.JobFromInputFile" title="Permalink to this definition">#</a></dt>
+<dt class="sig sig-object py" id="abaqus.Job.JobMdb.JobMdb.JobFromInputFile">
+<span class="sig-name descname"><span class="pre">JobFromInputFile</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">inputFileName</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">type</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">SymbolicConstantType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'ANALYSIS'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">queue</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">waitHours</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">waitMinutes</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">atTime</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">scratch</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">userSubroutine</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">numCpus</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">memory</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">90</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">memoryUnits</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">SymbolicConstantType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'PERCENTAGE'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">explicitPrecision</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">SymbolicConstantType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'SINGLE'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">nodalOutputPrecision</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">SymbolicConstantType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'SINGLE'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">parallelizationMethodExplicit</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">SymbolicConstantType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'DOMAIN'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">numDomains</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">activateLoadBalancing</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">BooleanType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">multiprocessingMode</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">SymbolicConstantType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'DEFAULT'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">licenseType</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">SymbolicConstantType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'DEFAULT'</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="mdb/job.html#abaqus.Job.JobFromInputFile.JobFromInputFile" title="abaqus.Job.JobFromInputFile.JobFromInputFile"><span class="pre">JobFromInputFile</span></a></span></span><a class="reference external" href="https://github.com/haiiliin/pyabaqus/blob/V2022/src/abaqus/Job/JobMdb.py#L145-L244"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#abaqus.Job.JobMdb.JobMdb.JobFromInputFile" title="Permalink to this definition">#</a></dt>
 <dd><p>This method creates an analysis job using an input file for the model definition.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -495,7 +948,7 @@ it for the user.</p>
 </dd>
 <dt><strong>type</strong></dt><dd><p>A SymbolicConstant specifying the type of job. Possible values are ANALYSIS,
 SYNTAXCHECK, and RECOVER. The default value is ANALYSIS.For theJobFromInputFile object,
-<a href="#id3"><span class="problematic" id="id4">*</span></a>type*=RESTART is not currently supported.</p>
+<a href="#id23"><span class="problematic" id="id24">*</span></a>type*=RESTART is not currently supported.</p>
 </dd>
 <dt><strong>queue</strong></dt><dd><p>A String specifying the name of the queue to which to submit the job. The default value
 is an empty string.Note: You can use the <em>queue</em> argument when creating a Job object on
@@ -568,58 +1021,8 @@ available.</p>
 </dd></dl>
 
 <dl class="py method">
-<dt class="sig sig-object py" id="abaqus.Mdb.Mdb.Mdb.Model">
-<span class="sig-name descname"><span class="pre">Model</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">description</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">stefanBoltzmann</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">absoluteZero</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">waveFormulation</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">SymbolicConstantType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'NOT_SET'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">modelType</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">SymbolicConstantType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'STANDARD_EXPLICIT'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">universalGas</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">copyConstraints</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">BooleanType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">copyConnectors</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">BooleanType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">copyInteractions</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">BooleanType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">1</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="mdb/model.html#abaqus.Model.Model.Model" title="abaqus.Model.Model.Model"><span class="pre">Model</span></a></span></span><a class="reference external" href="https://github.com/haiiliin/pyabaqus/blob/V2022/src/abaqus/Mdb/Mdb.py#L46-L98"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#abaqus.Mdb.Mdb.Mdb.Model" title="Permalink to this definition">#</a></dt>
-<dd><p>This method creates a Model object.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><dl class="simple">
-<dt><strong>name</strong></dt><dd><p>A String specifying the repository key.</p>
-</dd>
-<dt><strong>description</strong></dt><dd><p>A String specifying the purpose and contents of the Model object. The default value is
-an empty string.</p>
-</dd>
-<dt><strong>stefanBoltzmann</strong></dt><dd><p>None or a Float specifying the Stefan-Boltzmann constant. The default value is None.</p>
-</dd>
-<dt><strong>absoluteZero</strong></dt><dd><p>None or a Float specifying the absolute zero constant. The default value is None.</p>
-</dd>
-<dt><strong>waveFormulation</strong></dt><dd><p>A SymbolicConstant specifying the type of incident wave formulation to be used in
-acoustic problems. Possible values are NOT_SET, SCATTERED, and TOTAL. The default value
-is NOT_SET.</p>
-</dd>
-<dt><strong>modelType</strong></dt><dd><p>A SymbolicConstant specifying the analysis model type. Possible values are
-STANDARD_EXPLICIT and ELECTROMAGNETIC. The default is STANDARD_EXPLICIT.</p>
-</dd>
-<dt><strong>universalGas</strong></dt><dd><p>None or a Float specifying the universal gas constant. The default value is None.</p>
-</dd>
-<dt><strong>copyConstraints</strong></dt><dd><p>A boolean specifying whether to copy the constraints created in the model to the model
-that instances this model. The default value is ON.</p>
-</dd>
-<dt><strong>copyConnectors</strong></dt><dd><p>A boolean specifying whether to copy the connectors created in the model to the model
-that instances this model. The default value is ON.</p>
-</dd>
-<dt><strong>copyInteractions</strong></dt><dd><p>A boolean specifying whether to copy the interactions created in the model to the model
-that instances this model. The default value is ON.</p>
-</dd>
-</dl>
-</dd>
-<dt class="field-even">Returns</dt>
-<dd class="field-even"><dl class="simple">
-<dt>model: <a class="reference internal" href="mdb/model.html#abaqus.Mdb.Mdb.Mdb.Model" title="abaqus.Mdb.Mdb.Mdb.Model"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Model</span></code></a></dt><dd><p>A Model object</p>
-</dd>
-</dl>
-</dd>
-</dl>
-<p class="rubric">Notes</p>
-<p>This function can be accessed by:</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">mdb</span><span class="o">.</span><span class="n">Model</span>
-</pre></div>
-</div>
-</dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="abaqus.Mdb.Mdb.Mdb.OptimizationProcess">
-<span class="sig-name descname"><span class="pre">OptimizationProcess</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">model</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">task</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">prototypeJob</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">description</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">maxDesignCycle</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">15</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dataSaveFrequency</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'OPT_DATASAVE_SPECIFY_CYCLE'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">saveInitial</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">BooleanType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">saveFirst</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">BooleanType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">saveLast</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">BooleanType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">saveEvery</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="mdb/job.html#abaqus.Job.OptimizationProcess.OptimizationProcess" title="abaqus.Job.OptimizationProcess.OptimizationProcess"><span class="pre">OptimizationProcess</span></a></span></span><a class="reference external" href="https://github.com/haiiliin/pyabaqus/blob/V2022/src/abaqus/Mdb/Mdb.py#L246-L311"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#abaqus.Mdb.Mdb.Mdb.OptimizationProcess" title="Permalink to this definition">#</a></dt>
+<dt class="sig sig-object py" id="abaqus.Job.JobMdb.JobMdb.OptimizationProcess">
+<span class="sig-name descname"><span class="pre">OptimizationProcess</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">model</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">task</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">prototypeJob</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">description</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">maxDesignCycle</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">15</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dataSaveFrequency</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'OPT_DATASAVE_SPECIFY_CYCLE'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">saveInitial</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">BooleanType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">saveFirst</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">BooleanType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">saveLast</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">BooleanType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">saveEvery</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="mdb/job.html#abaqus.Job.OptimizationProcess.OptimizationProcess" title="abaqus.Job.OptimizationProcess.OptimizationProcess"><span class="pre">OptimizationProcess</span></a></span></span><a class="reference external" href="https://github.com/haiiliin/pyabaqus/blob/V2022/src/abaqus/Job/JobMdb.py#L246-L311"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#abaqus.Job.JobMdb.JobMdb.OptimizationProcess" title="Permalink to this definition">#</a></dt>
 <dd><p>This method creates an OptimizationProcess object.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -657,14 +1060,14 @@ OPT_DATASAVE_SPECIFY_CYCLE. The default value is True.</p>
 </dd>
 <dt><strong>saveEvery</strong></dt><dd><p>An Int specifying every nth cycle iterations to be saved when <em>dataSaveFrequency</em> is
 OPT_DATASAVE_SPECIFY_CYCLE. Abaqus saves file iterations for every nth iteration after
-iteration 1; if you set <a href="#id5"><span class="problematic" id="id6">*</span></a>saveEvery*=3, Abaqus saves file iterations for cycles 1, 4, 7,
+iteration 1; if you set <a href="#id25"><span class="problematic" id="id26">*</span></a>saveEvery*=3, Abaqus saves file iterations for cycles 1, 4, 7,
 and so on. The default value is None.</p>
 </dd>
 </dl>
 </dd>
 <dt class="field-even">Returns</dt>
 <dd class="field-even"><dl class="simple">
-<dt><code class="xref py py-obj docutils literal notranslate"><span class="pre">An</span></code> <a class="reference internal" href="#abaqus.Mdb.Mdb.Mdb.OptimizationProcess" title="abaqus.Mdb.Mdb.Mdb.OptimizationProcess"><code class="xref py py-obj docutils literal notranslate"><span class="pre">OptimizationProcess</span></code></a> object.</dt><dd></dd>
+<dt><code class="xref py py-obj docutils literal notranslate"><span class="pre">An</span></code> <a class="reference internal" href="#abaqus.Job.JobMdb.JobMdb.OptimizationProcess" title="abaqus.Job.JobMdb.JobMdb.OptimizationProcess"><code class="xref py py-obj docutils literal notranslate"><span class="pre">OptimizationProcess</span></code></a> object.</dt><dd></dd>
 </dl>
 </dd>
 <dt class="field-odd">Raises</dt>
@@ -678,558 +1081,6 @@ and so on. The default value is None.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">mdb</span><span class="o">.</span><span class="n">OptimizationProcess</span>
 </pre></div>
 </div>
-</dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="abaqus.Mdb.Mdb.Mdb.close">
-<span class="sig-name descname"><span class="pre">close</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference external" href="https://github.com/haiiliin/pyabaqus/blob/V2022/src/abaqus/Mdb/Mdb.py#L174-L178"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#abaqus.Mdb.Mdb.Mdb.close" title="Permalink to this definition">#</a></dt>
-<dd><p>This method closes an open Mdb object but does not save the Mdb object to disk. After
-closing the Mdb object, this method creates a new unnamed empty Mdb object.</p>
-</dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="abaqus.Mdb.Mdb.Mdb.closeAuxMdb">
-<span class="sig-name descname"><span class="pre">closeAuxMdb</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference external" href="https://github.com/haiiliin/pyabaqus/blob/V2022/src/abaqus/Mdb/Mdb.py#L246-L259"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#abaqus.Mdb.Mdb.Mdb.closeAuxMdb" title="Permalink to this definition">#</a></dt>
-<dd><p>This method closes the auxiliary Mdb which had been opened earlier using the openAuxMdb
-command.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><dl class="simple">
-<dt><strong>MdbError</strong></dt><dd><p>The auxiliary Mdb was not opened;
-If the auxiliary Mdb was not opened earlier</p>
-</dd>
-</dl>
-</dd>
-<dt class="field-even">Raises</dt>
-<dd class="field-even"></dd>
-</dl>
-</dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="abaqus.Mdb.Mdb.Mdb.copyAuxMdbModel">
-<span class="sig-name descname"><span class="pre">copyAuxMdbModel</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">fromName</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">toName</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">''</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/haiiliin/pyabaqus/blob/V2022/src/abaqus/Mdb/Mdb.py#L280-L302"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#abaqus.Mdb.Mdb.Mdb.copyAuxMdbModel" title="Permalink to this definition">#</a></dt>
-<dd><p>This method copies a specified model from the auxiliary Mdb which had been opened
-earlier using the openAuxMdb command.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><dl class="simple">
-<dt><strong>fromName</strong></dt><dd><p>A String specifying the model name in the auxiliary Mdb which is to be copied.</p>
-</dd>
-<dt><strong>toName</strong></dt><dd><p>A String specifying the name to be given to the model after it is copied into the Mdb. 
-If this argument is not specified <em>toName</em> is assumed to be the same as <em>fromName</em>. If a 
-model with name <em>toName</em> already exists in Mdb, it is overwritten.</p>
-</dd>
-</dl>
-</dd>
-<dt class="field-even">Raises</dt>
-<dd class="field-even"><dl class="simple">
-<dt><code class="xref py py-obj docutils literal notranslate"><span class="pre">MdbError</span></code></dt><dd><p>The auxiliary Mdb was not opened;
-If the auxiliary Mdb was not opened earlier</p>
-</dd>
-<dt><code class="xref py py-obj docutils literal notranslate"><span class="pre">KeyError</span></code></dt><dd><p>fromName does not exist;
-If the model fromName does not exist in the auxiliary Mdb</p>
-</dd>
-</dl>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="abaqus.Mdb.Mdb.Mdb.getAuxMdbModelNames">
-<span class="sig-name descname"><span class="pre">getAuxMdbModelNames</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference external" href="https://github.com/haiiliin/pyabaqus/blob/V2022/src/abaqus/Mdb/Mdb.py#L261-L278"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#abaqus.Mdb.Mdb.Mdb.getAuxMdbModelNames" title="Permalink to this definition">#</a></dt>
-<dd><p>This method returns a list of model names present in the auxiliary Mdb which had been
-opened earlier using the openAuxMdb command.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><dl class="simple">
-<dt><strong>MdbError</strong></dt><dd><p>The auxiliary Mdb was not opened; 
-If the auxiliary Mdb was not opened earlier</p>
-</dd>
-</dl>
-</dd>
-<dt class="field-even">Returns</dt>
-<dd class="field-even"><dl class="simple">
-<dt><code class="xref py py-obj docutils literal notranslate"><span class="pre">A</span></code> <code class="xref py py-class docutils literal notranslate"><span class="pre">python:list</span></code> <code class="xref py py-obj docutils literal notranslate"><span class="pre">of</span></code> <code class="xref py py-obj docutils literal notranslate"><span class="pre">model</span></code> <code class="xref py py-obj docutils literal notranslate"><span class="pre">names</span></code> <code class="xref py py-obj docutils literal notranslate"><span class="pre">present</span></code> <code class="xref py py-obj docutils literal notranslate"><span class="pre">in</span></code> <code class="xref py py-obj docutils literal notranslate"><span class="pre">the</span></code> <code class="xref py py-obj docutils literal notranslate"><span class="pre">auxiliaryMdb</span></code></dt><dd></dd>
-</dl>
-</dd>
-<dt class="field-odd">Raises</dt>
-<dd class="field-odd"></dd>
-</dl>
-</dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="abaqus.Mdb.Mdb.Mdb.importDxf">
-<span class="sig-name descname"><span class="pre">importDxf</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">fileName</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/haiiliin/pyabaqus/blob/V2022/src/abaqus/Mdb/Mdb.py#L109-L132"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#abaqus.Mdb.Mdb.Mdb.importDxf" title="Permalink to this definition">#</a></dt>
-<dd><p>This method creates a ConstrainedSketch object from a file containing dxf-format
-(AutoCAD) geometry. Only a limited number of entities are supported. This format should
-be used only if no other formats are available.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><dl class="simple">
-<dt><strong>fileName</strong></dt><dd><p>A String specifying the path to the dxf file to open.</p>
-</dd>
-</dl>
-</dd>
-<dt class="field-even">Returns</dt>
-<dd class="field-even"><dl class="simple">
-<dt><a class="reference internal" href="#abaqus.Mdb.Mdb.Mdb" title="abaqus.Mdb.Mdb.Mdb"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Mdb</span></code></a></dt><dd><p>A Mdb object</p>
-</dd>
-</dl>
-</dd>
-</dl>
-<p class="rubric">Notes</p>
-<p>This function can be accessed by:</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">Mdb</span>
-</pre></div>
-</div>
-</dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="abaqus.Mdb.Mdb.Mdb.openAcis">
-<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">openAcis</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">fileName</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">scaleFromFile</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">BooleanType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/haiiliin/pyabaqus/blob/V2022/src/abaqus/Mdb/Mdb.py#L20-L52"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#abaqus.Mdb.Mdb.Mdb.openAcis" title="Permalink to this definition">#</a></dt>
-<dd><p>This method creates an AcisFile object from a file containing ACIS-format geometry. This
-object is subsequently used by the PartFromGeometryFile method.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><dl class="simple">
-<dt><strong>fileName</strong></dt><dd><p>A String specifying the path to the ACIS file to open.</p>
-</dd>
-<dt><strong>scaleFromFile</strong></dt><dd><p>A Boolean specifying whether to scale, rotate, and translate the part using the
-transform read from the ACIS file. The default value is OFF.</p>
-</dd>
-</dl>
-</dd>
-<dt class="field-even">Returns</dt>
-<dd class="field-even"><dl class="simple">
-<dt><code class="xref py py-obj docutils literal notranslate"><span class="pre">An</span></code> <code class="xref py py-obj docutils literal notranslate"><span class="pre">AcisFile</span></code> object.</dt><dd></dd>
-</dl>
-</dd>
-<dt class="field-odd">Raises</dt>
-<dd class="field-odd"><ul class="simple">
-<li><dl class="simple">
-<dt><code class="xref py py-obj docutils literal notranslate"><span class="pre">File</span></code> <code class="xref py py-obj docutils literal notranslate"><span class="pre">is</span></code> <code class="xref py py-obj docutils literal notranslate"><span class="pre">from</span></code> <code class="xref py py-obj docutils literal notranslate"><span class="pre">a</span></code> <code class="xref py py-obj docutils literal notranslate"><span class="pre">newer</span></code> <code class="xref py py-obj docutils literal notranslate"><span class="pre">version</span></code> <code class="xref py py-obj docutils literal notranslate"><span class="pre">of</span></code> <code class="xref py py-obj docutils literal notranslate"><span class="pre">ACIS</span></code> <code class="xref py py-obj docutils literal notranslate"><span class="pre">than</span></code> <code class="xref py py-obj docutils literal notranslate"><span class="pre">the</span></code> <code class="xref py py-obj docutils literal notranslate"><span class="pre">CAE</span></code> kernel.</dt><dd><p>Texterror: ACIS File version exceeds Kernel.</p>
-</dd>
-</dl>
-</li>
-<li><dl class="simple">
-<dt><code class="xref py py-obj docutils literal notranslate"><span class="pre">The</span></code> <code class="xref py py-obj docutils literal notranslate"><span class="pre">data</span></code> <code class="xref py py-obj docutils literal notranslate"><span class="pre">in</span></code> <code class="xref py py-obj docutils literal notranslate"><span class="pre">the</span></code> <code class="xref py py-obj docutils literal notranslate"><span class="pre">ACIS</span></code> <code class="xref py py-obj docutils literal notranslate"><span class="pre">file</span></code> <code class="xref py py-obj docutils literal notranslate"><span class="pre">are</span></code> corrupted.</dt><dd><p>Texterror: Failed to read ACIS file.</p>
-</dd>
-</dl>
-</li>
-</ul>
-</dd>
-</dl>
-<p class="rubric">Notes</p>
-<p>This function can be accessed by:</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">mdb</span><span class="o">.</span><span class="n">openAcis</span>
-</pre></div>
-</div>
-</dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="abaqus.Mdb.Mdb.Mdb.openAuxMdb">
-<span class="sig-name descname"><span class="pre">openAuxMdb</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">pathName</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/haiiliin/pyabaqus/blob/V2022/src/abaqus/Mdb/Mdb.py#L221-L244"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#abaqus.Mdb.Mdb.Mdb.openAuxMdb" title="Permalink to this definition">#</a></dt>
-<dd><p>This method opens an auxiliary Mdb object on the disk at the specified location. This
-enables models from the auxiliary Mdb object to be copied into the current Mdb.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><dl class="simple">
-<dt><strong>pathName: str</strong></dt><dd><p>A String specifying the path to the auxiliary Mdb which is to be opened. If you do not 
-provide a file extension, .cae is appended automatically to the path.</p>
-</dd>
-</dl>
-</dd>
-<dt class="field-even">Raises</dt>
-<dd class="field-even"><dl class="simple">
-<dt><code class="xref py py-obj docutils literal notranslate"><span class="pre">MdbError</span></code></dt><dd><p>invalid model database;
-If the file is an invalid model database</p>
-</dd>
-<dt><code class="xref py py-obj docutils literal notranslate"><span class="pre">MdbError</span></code></dt><dd><p>incompatible release number;
-If the file contains a model database from an Abaqus release other than the Abaqus 
-release you are currently running</p>
-</dd>
-<dt><code class="xref py py-obj docutils literal notranslate"><span class="pre">MdbError</span></code></dt><dd><p>cannot open file; 
-If the command fails to open the model database file for reasons not mentioned above</p>
-</dd>
-</dl>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="abaqus.Mdb.Mdb.Mdb.openCatia">
-<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">openCatia</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">fileName</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">topology</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">SymbolicConstantType</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">convertUnits</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">SymbolicConstantType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">combineBodies</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">BooleanType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/haiiliin/pyabaqus/blob/V2022/src/abaqus/Mdb/Mdb.py#L54-L90"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#abaqus.Mdb.Mdb.Mdb.openCatia" title="Permalink to this definition">#</a></dt>
-<dd><p>This method creates an AcisFile object from a file containing V5-format geometry. This
-object is subsequently used by the PartFromGeometryFile method.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><dl class="simple">
-<dt><strong>fileName</strong></dt><dd><p>A String specifying the path to the CATIA file to open.</p>
-</dd>
-<dt><strong>topology</strong></dt><dd><p>A SymbolicConstant specifying the topology of the data to be read from the file and of
-the part to be created. Possible values are SOLID , SHELL, and WIRE. If
-<a href="#id7"><span class="problematic" id="id8">*</span></a>topology*=SOLID, Abaqus/CAE attempts to attach cells to create a solid. If
-<a href="#id9"><span class="problematic" id="id10">*</span></a>topology*=SHELL, Abaqus/CAE builds the body as a shell entity and not as a solid
-entity. The default value is SOLID .</p>
-</dd>
-<dt><strong>convertUnits</strong></dt><dd><p>A SymbolicConstant specifying whether the original units should be retained. Possible
-values are ON and OFF. The default value is OFF.</p>
-</dd>
-<dt><strong>combineBodies</strong></dt><dd><p>A Boolean specifying whether to combine the bodies in the CATPart file. If the bodies to
-be combined touch or overlap, invalid entities would result. For CATProduct files, this
-option will be ignored.</p>
-</dd>
-</dl>
-</dd>
-<dt class="field-even">Returns</dt>
-<dd class="field-even"><dl class="simple">
-<dt><code class="xref py py-obj docutils literal notranslate"><span class="pre">An</span></code> <code class="xref py py-obj docutils literal notranslate"><span class="pre">AcisFile</span></code> object.</dt><dd></dd>
-</dl>
-</dd>
-</dl>
-<p class="rubric">Notes</p>
-<p>This function can be accessed by:</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">mdb</span><span class="o">.</span><span class="n">openCatia</span>
-</pre></div>
-</div>
-</dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="abaqus.Mdb.Mdb.Mdb.openEnf">
-<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">openEnf</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">fileName</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fileType</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">topology</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">SymbolicConstantType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'SOLID'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">convertUnits</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">BooleanType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/haiiliin/pyabaqus/blob/V2022/src/abaqus/Mdb/Mdb.py#L92-L130"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#abaqus.Mdb.Mdb.Mdb.openEnf" title="Permalink to this definition">#</a></dt>
-<dd><p>This method creates an AcisFile object from a file containing Elysium Neutral
-File-format geometry that was created by CATIA V5, I-DEAS, or Pro/ENGINEER. This object
-is subsequently used by the PartFromGeometryFile method.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><dl class="simple">
-<dt><strong>fileName</strong></dt><dd><p>A String specifying the path to the Elysium Neutral File that was created by I-DEAS,
-Pro/ENGINEER, or CATIA V5.</p>
-</dd>
-<dt><strong>fileType</strong></dt><dd><p>A String specifying the type of CAD system that created the file. Possible values are
-“ideas”, “proe”, or “catiav5” or a combination similar to “proe/ideas/catiav5” if the
-type is unknown.</p>
-</dd>
-<dt><strong>topology</strong></dt><dd><p>A SymbolicConstant specifying the topology of the data to be read from the file and of
-the part to be created. Possible values are SOLID , SHELL, and WIRE. If
-<a href="#id11"><span class="problematic" id="id12">*</span></a>topology*=SOLID, Abaqus/CAE attempts to attach cells to create a solid. If
-<a href="#id13"><span class="problematic" id="id14">*</span></a>topology*=SHELL, Abaqus/CAE builds the body as a shell entity and not as a solid
-entity. The default value is SOLID.</p>
-</dd>
-<dt><strong>convertUnits</strong></dt><dd><p>A Boolean specifying if the dimensions of the part should be converted to millimeters.
-The default value is OFF.</p>
-</dd>
-</dl>
-</dd>
-<dt class="field-even">Returns</dt>
-<dd class="field-even"><dl class="simple">
-<dt><code class="xref py py-obj docutils literal notranslate"><span class="pre">An</span></code> <code class="xref py py-obj docutils literal notranslate"><span class="pre">AcisFile</span></code> object.</dt><dd></dd>
-</dl>
-</dd>
-</dl>
-<p class="rubric">Notes</p>
-<p>This function can be accessed by:</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">mdb</span><span class="o">.</span><span class="n">openEnf</span>
-</pre></div>
-</div>
-</dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="abaqus.Mdb.Mdb.Mdb.openIges">
-<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">openIges</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">fileName</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">trimCurve</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">SymbolicConstantType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'DEFAULT'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">scaleFromFile</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">SymbolicConstantType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">msbo</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">BooleanType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">includedLayers</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">tuple</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">()</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">topology</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">SymbolicConstantType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'SOLID'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">uniteWires</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">SymbolicConstantType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">1</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/haiiliin/pyabaqus/blob/V2022/src/abaqus/Mdb/Mdb.py#L132-L190"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#abaqus.Mdb.Mdb.Mdb.openIges" title="Permalink to this definition">#</a></dt>
-<dd><p>This method creates an AcisFile object from a file containing IGES-format geometry. This
-object is subsequently used by the PartFromGeometryFile method.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><dl class="simple">
-<dt><strong>fileName</strong></dt><dd><p>A String specifying the path to the IGES file to open.</p>
-</dd>
-<dt><strong>trimCurve</strong></dt><dd><p>A SymbolicConstant specifying the method used to define the trim curves that bound
-parametric surfaces. Possible values are:DEFAULT, use either of the following as
-specified by the contents of the IGES file.PARAMETRIC_DATA, use the parameter space of
-the surface being trimmed.THREED_DATA, use real space—the coordinate system of the part
-along with an indication that the trim curve lies on the parametric surface.The default
-value is DEFAULT.</p>
-</dd>
-<dt><strong>scaleFromFile</strong></dt><dd><p>A SymbolicConstant specifying whether the imported geometry needs to be scaled using the
-units information available in the IGES file. Possible values are ON and OFF. The
-default value is OFF. When the argument is set to ON, the geometry is scaled to
-millimeters with respect to the unit system specified in the IGES file.</p>
-</dd>
-<dt><strong>msbo</strong></dt><dd><p>A Boolean specifying if the IGES file contains MSBO (Manifold Solid B-Rep Object)
-entities. The default value is False.</p>
-</dd>
-<dt><strong>includedLayers</strong></dt><dd><p>A sequence of Ints specifying the levels or layers of entities that will be translated
-from the IGES file to build the part. The default is to include all the layers.</p>
-</dd>
-<dt><strong>topology</strong></dt><dd><p>A SymbolicConstant specifying the topology of the data to be read from the file and of
-the part to be created. Possible values are SOLID , SHELL, and WIRE. If
-<a href="#id15"><span class="problematic" id="id16">*</span></a>topology*=SOLID, Abaqus/CAE attempts to attach cells to create a solid. If
-<a href="#id17"><span class="problematic" id="id18">*</span></a>topology*=SHELL, Abaqus/CAE builds the body as a shell entity and not as a solid
-entity. The default value is SOLID.</p>
-</dd>
-<dt><strong>uniteWires</strong></dt><dd><p>A SymbolicConstant specifying whether the imported wires need to be united or not.
-Possible values are ON and OFF. The default value is ON. When importing a sketch, this
-value is set to OFF.</p>
-</dd>
-</dl>
-</dd>
-<dt class="field-even">Returns</dt>
-<dd class="field-even"><dl class="simple">
-<dt><code class="xref py py-obj docutils literal notranslate"><span class="pre">An</span></code> <code class="xref py py-obj docutils literal notranslate"><span class="pre">AcisFile</span></code> object.</dt><dd></dd>
-</dl>
-</dd>
-<dt class="field-odd">Raises</dt>
-<dd class="field-odd"><ul class="simple">
-<li><dl class="simple">
-<dt><code class="xref py py-obj docutils literal notranslate"><span class="pre">The</span></code> <code class="xref py py-obj docutils literal notranslate"><span class="pre">data</span></code> <code class="xref py py-obj docutils literal notranslate"><span class="pre">in</span></code> <code class="xref py py-obj docutils literal notranslate"><span class="pre">the</span></code> <code class="xref py py-obj docutils literal notranslate"><span class="pre">IGES</span></code> <code class="xref py py-obj docutils literal notranslate"><span class="pre">file</span></code> <code class="xref py py-obj docutils literal notranslate"><span class="pre">are</span></code> corrupted.</dt><dd><p>Texterror: Failed to read IGES file.</p>
-</dd>
-</dl>
-</li>
-</ul>
-</dd>
-</dl>
-<p class="rubric">Notes</p>
-<p>This function can be accessed by:</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">mdb</span><span class="o">.</span><span class="n">openIges</span>
-</pre></div>
-</div>
-</dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="abaqus.Mdb.Mdb.Mdb.openMdb">
-<span class="sig-name descname"><span class="pre">openMdb</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">pathName</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/haiiliin/pyabaqus/blob/V2022/src/abaqus/Mdb/Mdb.py#L134-L172"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#abaqus.Mdb.Mdb.Mdb.openMdb" title="Permalink to this definition">#</a></dt>
-<dd><p>This method opens an existing model database file.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><dl class="simple">
-<dt><strong>pathName: str</strong></dt><dd><p>A String specifying the path to the model database file to open. If you do not provide a 
-file extension, Abaqus/CAE attempts to open the file with .cae appended to the path.</p>
-</dd>
-</dl>
-</dd>
-<dt class="field-even">Returns</dt>
-<dd class="field-even"><dl class="simple">
-<dt><a class="reference internal" href="#abaqus.Mdb.Mdb.Mdb" title="abaqus.Mdb.Mdb.Mdb"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Mdb</span></code></a></dt><dd><p>A Mdb object</p>
-</dd>
-</dl>
-</dd>
-<dt class="field-odd">Raises</dt>
-<dd class="field-odd"><dl class="simple">
-<dt><code class="xref py py-obj docutils literal notranslate"><span class="pre">MdbError</span></code></dt><dd><p>invalid model database; 
-If the file is an invalid model database</p>
-</dd>
-<dt><code class="xref py py-obj docutils literal notranslate"><span class="pre">MdbError</span></code></dt><dd><p>incompatible release number, expected <em>&lt;Abaqus release&gt;</em>, got <em>&lt;earlier or later Abaqus release&gt;</em>; 
-If the file contains a model database from an Abaqus release other than the Abaqus 
-release you are currently running</p>
-</dd>
-<dt><code class="xref py py-obj docutils literal notranslate"><span class="pre">MdbError</span></code></dt><dd><p>cannot open file; may be in use by another CAE session;
-If the model database file is already opened in write mode</p>
-</dd>
-<dt><code class="xref py py-obj docutils literal notranslate"><span class="pre">MdbError</span></code></dt><dd><p>cannot open file; 
-If the command fails to open the model database file for reasons not mentioned above</p>
-</dd>
-</dl>
-</dd>
-</dl>
-<p class="rubric">Notes</p>
-<p>This function can be accessed by:</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">Mdb</span>
-</pre></div>
-</div>
-</dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="abaqus.Mdb.Mdb.Mdb.openParasolid">
-<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">openParasolid</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">fileName</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">topology</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">SymbolicConstantType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'SOLID'</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/haiiliin/pyabaqus/blob/V2022/src/abaqus/Mdb/Mdb.py#L192-L220"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#abaqus.Mdb.Mdb.Mdb.openParasolid" title="Permalink to this definition">#</a></dt>
-<dd><p>This method creates an AcisFile object from a file containing Parasolid-format geometry.
-This object is subsequently used by the PartFromGeometryFile method.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><dl class="simple">
-<dt><strong>fileName</strong></dt><dd><p>A String specifying the path to the Parasolid file to open.</p>
-</dd>
-<dt><strong>topology</strong></dt><dd><p>A SymbolicConstant specifying the topology of the data to be read from the file and of
-the part to be created. Possible values are SOLID , SHELL, and WIRE. If
-<a href="#id19"><span class="problematic" id="id20">*</span></a>topology*=SOLID, Abaqus/CAE attempts to attach cells to create a solid. If
-<a href="#id21"><span class="problematic" id="id22">*</span></a>topology*=SHELL, Abaqus/CAE builds the body as a shell entity and not as a solid
-entity. The default value is SOLID.</p>
-</dd>
-</dl>
-</dd>
-<dt class="field-even">Returns</dt>
-<dd class="field-even"><dl class="simple">
-<dt><code class="xref py py-obj docutils literal notranslate"><span class="pre">An</span></code> <code class="xref py py-obj docutils literal notranslate"><span class="pre">AcisFile</span></code> object.</dt><dd></dd>
-</dl>
-</dd>
-</dl>
-<p class="rubric">Notes</p>
-<p>This function can be accessed by:</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">mdb</span><span class="o">.</span><span class="n">openParasolid</span>
-</pre></div>
-</div>
-</dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="abaqus.Mdb.Mdb.Mdb.openSolidworks">
-<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">openSolidworks</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">fileName</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">topology</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">SymbolicConstantType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'SOLID'</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/haiiliin/pyabaqus/blob/V2022/src/abaqus/Mdb/Mdb.py#L283-L316"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#abaqus.Mdb.Mdb.Mdb.openSolidworks" title="Permalink to this definition">#</a></dt>
-<dd><p>This method creates an AcisFile object from a file containing Solidworks format
-geometry. This object is subsequently used by the PartFromGeometryFile method.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><dl class="simple">
-<dt><strong>fileName</strong></dt><dd><p>A String specifying the path to the Solidworks file to open.</p>
-</dd>
-<dt><strong>topology</strong></dt><dd><p>A SymbolicConstant specifying the topology of the data to be read from the file and of
-the part to be created. Possible values are SOLID, SHELL, and WIRE. If <a href="#id23"><span class="problematic" id="id24">*</span></a>topology*=SOLID,
-Abaqus/CAE attempts to attach cells to create a solid entity. If <a href="#id25"><span class="problematic" id="id26">*</span></a>topology*=SHELL,
-Abaqus/CAE builds the body as a shell entity, not as a solid entity. The default value
-is SOLID.</p>
-</dd>
-</dl>
-</dd>
-<dt class="field-even">Returns</dt>
-<dd class="field-even"><dl class="simple">
-<dt><code class="xref py py-obj docutils literal notranslate"><span class="pre">An</span></code> <code class="xref py py-obj docutils literal notranslate"><span class="pre">AcisFile</span></code> object.</dt><dd></dd>
-</dl>
-</dd>
-<dt class="field-odd">Raises</dt>
-<dd class="field-odd"><ul class="simple">
-<li><dl class="simple">
-<dt><code class="xref py py-obj docutils literal notranslate"><span class="pre">The</span></code> <code class="xref py py-obj docutils literal notranslate"><span class="pre">data</span></code> <code class="xref py py-obj docutils literal notranslate"><span class="pre">in</span></code> <code class="xref py py-obj docutils literal notranslate"><span class="pre">the</span></code> <code class="xref py py-obj docutils literal notranslate"><span class="pre">Solidworks</span></code> <code class="xref py py-obj docutils literal notranslate"><span class="pre">file</span></code> <code class="xref py py-obj docutils literal notranslate"><span class="pre">are</span></code> corrupted.</dt><dd><p>Texterror: Failed to read Solidworks file.</p>
-</dd>
-</dl>
-</li>
-</ul>
-</dd>
-</dl>
-<p class="rubric">Notes</p>
-<p>This function can be accessed by:</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">openSolidworks</span>
-</pre></div>
-</div>
-</dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="abaqus.Mdb.Mdb.Mdb.openStep">
-<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">openStep</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">fileName</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">scale</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">1</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/haiiliin/pyabaqus/blob/V2022/src/abaqus/Mdb/Mdb.py#L222-L252"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#abaqus.Mdb.Mdb.Mdb.openStep" title="Permalink to this definition">#</a></dt>
-<dd><p>This method creates an AcisFile object from a file containing STEP-format geometry. This
-object is subsequently used by the PartFromGeometryFile method.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><dl class="simple">
-<dt><strong>fileName</strong></dt><dd><p>A String specifying the path to the STEP file to open.</p>
-</dd>
-<dt><strong>scale</strong></dt><dd><p>A Float specifying the scaling factor to apply to the imported geometric entities. The
-default value is 1.0.</p>
-</dd>
-</dl>
-</dd>
-<dt class="field-even">Returns</dt>
-<dd class="field-even"><dl class="simple">
-<dt><code class="xref py py-obj docutils literal notranslate"><span class="pre">An</span></code> <code class="xref py py-obj docutils literal notranslate"><span class="pre">AcisFile</span></code> object.</dt><dd></dd>
-</dl>
-</dd>
-<dt class="field-odd">Raises</dt>
-<dd class="field-odd"><ul class="simple">
-<li><dl class="simple">
-<dt><code class="xref py py-obj docutils literal notranslate"><span class="pre">The</span></code> <code class="xref py py-obj docutils literal notranslate"><span class="pre">data</span></code> <code class="xref py py-obj docutils literal notranslate"><span class="pre">in</span></code> <code class="xref py py-obj docutils literal notranslate"><span class="pre">the</span></code> <code class="xref py py-obj docutils literal notranslate"><span class="pre">STEP</span></code> <code class="xref py py-obj docutils literal notranslate"><span class="pre">file</span></code> <code class="xref py py-obj docutils literal notranslate"><span class="pre">are</span></code> corrupted.</dt><dd><p>Texterror: Failed to read STEP file.</p>
-</dd>
-</dl>
-</li>
-</ul>
-</dd>
-</dl>
-<p class="rubric">Notes</p>
-<p>This function can be accessed by:</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">mdb</span><span class="o">.</span><span class="n">openStep</span>
-</pre></div>
-</div>
-</dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="abaqus.Mdb.Mdb.Mdb.openVda">
-<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">openVda</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">fileName</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/haiiliin/pyabaqus/blob/V2022/src/abaqus/Mdb/Mdb.py#L254-L281"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#abaqus.Mdb.Mdb.Mdb.openVda" title="Permalink to this definition">#</a></dt>
-<dd><p>This method creates an AcisFile object from a file containing VDA-FS-format geometry.
-This object is subsequently used by the PartFromGeometryFile method.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><dl class="simple">
-<dt><strong>fileName</strong></dt><dd><p>A String specifying the path to the VDA-FS file to open.</p>
-</dd>
-</dl>
-</dd>
-<dt class="field-even">Returns</dt>
-<dd class="field-even"><dl class="simple">
-<dt><code class="xref py py-obj docutils literal notranslate"><span class="pre">An</span></code> <code class="xref py py-obj docutils literal notranslate"><span class="pre">AcisFile</span></code> object.</dt><dd></dd>
-</dl>
-</dd>
-<dt class="field-odd">Raises</dt>
-<dd class="field-odd"><ul class="simple">
-<li><dl class="simple">
-<dt><code class="xref py py-obj docutils literal notranslate"><span class="pre">The</span></code> <code class="xref py py-obj docutils literal notranslate"><span class="pre">data</span></code> <code class="xref py py-obj docutils literal notranslate"><span class="pre">in</span></code> <code class="xref py py-obj docutils literal notranslate"><span class="pre">the</span></code> VDA-FS <code class="xref py py-obj docutils literal notranslate"><span class="pre">file</span></code> <code class="xref py py-obj docutils literal notranslate"><span class="pre">are</span></code> corrupted.</dt><dd><p>Texterror: Failed to read VDA file.</p>
-</dd>
-</dl>
-</li>
-</ul>
-</dd>
-</dl>
-<p class="rubric">Notes</p>
-<p>This function can be accessed by:</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">mdb</span><span class="o">.</span><span class="n">openVda</span>
-</pre></div>
-</div>
-</dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="abaqus.Mdb.Mdb.Mdb.save">
-<span class="sig-name descname"><span class="pre">save</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference external" href="https://github.com/haiiliin/pyabaqus/blob/V2022/src/abaqus/Mdb/Mdb.py#L180-L199"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#abaqus.Mdb.Mdb.Mdb.save" title="Permalink to this definition">#</a></dt>
-<dd><p>This method saves an Mdb object to disk at the location specified by <em>pathName</em>
-(<em>pathName</em> is a member of the Mdb object).</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><dl class="simple">
-<dt><strong>MdbError</strong></dt><dd><p>cannot save file; 
-If the command fails to save the Mdb object to disk for reasons not mentioned above</p>
-</dd>
-</dl>
-</dd>
-<dt class="field-even">Raises</dt>
-<dd class="field-even"><dl class="simple">
-<dt><code class="xref py py-obj docutils literal notranslate"><span class="pre">MdbError</span></code></dt><dd><p>cannot save file: pathname member is empty; 
-If <em>pathName</em> is empty</p>
-</dd>
-<dt><code class="xref py py-obj docutils literal notranslate"><span class="pre">MdbError</span></code></dt><dd><p>“abaqus.cae” is an invalid CAE filename; 
-If <em>pathName</em> is abaqus.cae</p>
-</dd>
-</dl>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="abaqus.Mdb.Mdb.Mdb.saveAs">
-<span class="sig-name descname"><span class="pre">saveAs</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">pathName</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/haiiliin/pyabaqus/blob/V2022/src/abaqus/Mdb/Mdb.py#L201-L219"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#abaqus.Mdb.Mdb.Mdb.saveAs" title="Permalink to this definition">#</a></dt>
-<dd><p>This method saves an Mdb object to disk at the specified location.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><dl class="simple">
-<dt><strong>pathName: str</strong></dt><dd><p>A String specifying the path to be used when the model database is saved to a file. If 
-you do not provide a file extension, .cae is appended automatically to the path.</p>
-</dd>
-</dl>
-</dd>
-<dt class="field-even">Raises</dt>
-<dd class="field-even"><dl class="simple">
-<dt><code class="xref py py-obj docutils literal notranslate"><span class="pre">MdbError</span></code></dt><dd><p>“abaqus.cae” is an invalid CAE filename; 
-If <em>pathName</em> is abaqus.cae</p>
-</dd>
-<dt><code class="xref py py-obj docutils literal notranslate"><span class="pre">MdbError</span></code></dt><dd><p>cannot save file; 
-If the command fails to save the Mdb object to disk for reasons not mentioned above</p>
-</dd>
-</dl>
-</dd>
-</dl>
 </dd></dl>
 
 </dd></dl>

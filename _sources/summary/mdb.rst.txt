@@ -11,3 +11,12 @@ Abaqus Model Database
 
 .. autoclass:: abaqus.Mdb.Mdb.Mdb
     :noindex:
+
+From Others
+-----------
+
+.. autoclass:: abaqus.Part.AcisMdb.AcisMdb
+    :noindex:
+
+.. autoclass:: abaqus.Job.JobMdb.JobMdb
+    :noindex:
