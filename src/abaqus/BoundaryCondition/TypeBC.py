@@ -56,6 +56,54 @@ class TypeBC(BoundaryCondition):
     # condition's degrees of freedom. If *localCsys*=None, the degrees of freedom are defined
     # in the global coordinate system. The default value is None.
     localCsys: str = None
+    
+    def __init__(
+        self,
+        name: str,
+        createStepName: str,
+        region: Region,
+        buckleCase: SymbolicConstant = NOT_APPLICABLE,
+        localCsys: str = None,
+    ) -> None:
+        """This method creates an TypeBC object.
+
+        Notes
+        -----
+        This function can be accessed by:
+
+        .. code-block:: python
+
+            mdb.models[name].EncastreBC
+            mdb.models[name].PinnedBC
+            mdb.models[name].XsymmBC
+            mdb.models[name].YsymmBC
+            mdb.models[name].ZsymmBC
+            mdb.models[name].XasymmBC
+            mdb.models[name].YasymmBC
+            mdb.models[name].ZasymmBC
+
+        Parameters
+        ----------
+        name
+            A String specifying the boundary condition repository key.
+        createStepName
+            A String specifying the name of the step in which the boundary condition is created.
+        region
+            A Region object specifying the region to which the boundary condition is applied.
+        buckleCase
+            A SymbolicConstant specifying how the boundary condition is defined in a BUCKLE
+            analysis. Possible values are NOT_APPLICABLE, STRESS_PERTURBATION, BUCKLING_MODES, and
+            PERTURBATION_AND_BUCKLING. The default value is NOT_APPLICABLE.
+        localCsys
+            None or a DatumCsys object specifying the local coordinate system of the boundary
+            condition's degrees of freedom. If *localCsys*=None, the degrees of freedom are defined
+            in the global coordinate system. The default value is None.
+        """
+        super().__init__()
+        self.name = name
+        self.buckleCase = buckleCase
+        self.region = region
+        self.localCsys = localCsys
 
     def EncastreBC(
         self,
@@ -64,7 +112,7 @@ class TypeBC(BoundaryCondition):
         region: Region,
         buckleCase: SymbolicConstant = NOT_APPLICABLE,
         localCsys: str = None,
-    ):
+    ) -> "TypeBC":
         """This method creates an encastre TypeBC object.
 
         Notes
@@ -96,7 +144,7 @@ class TypeBC(BoundaryCondition):
         -------
             A TypeBC object.
         """
-        pass
+        return TypeBC(name, createStepName, region, buckleCase, localCsys)
 
     def PinnedBC(
         self,
@@ -105,7 +153,7 @@ class TypeBC(BoundaryCondition):
         region: Region,
         buckleCase: SymbolicConstant = NOT_APPLICABLE,
         localCsys: str = None,
-    ):
+    ) -> "TypeBC":
         """This method creates a pinned TypeBC object.
 
         Notes
@@ -114,7 +162,7 @@ class TypeBC(BoundaryCondition):
 
         .. code-block:: python
 
-            mdb.models[name].EncastreBC
+            mdb.models[name].PinnedBC
 
         Parameters
         ----------
@@ -137,7 +185,7 @@ class TypeBC(BoundaryCondition):
         -------
             A TypeBC object.
         """
-        pass
+        return TypeBC(name, createStepName, region, buckleCase, localCsys)
 
     def XsymmBC(
         self,
@@ -146,7 +194,7 @@ class TypeBC(BoundaryCondition):
         region: Region,
         buckleCase: SymbolicConstant = NOT_APPLICABLE,
         localCsys: str = None,
-    ):
+    ) -> "TypeBC":
         """This method creates a TypeBC object that specifies symmetry about the *X*-axis.
 
         Notes
@@ -155,7 +203,7 @@ class TypeBC(BoundaryCondition):
 
         .. code-block:: python
 
-            mdb.models[name].EncastreBC
+            mdb.models[name].XsymmBC
 
         Parameters
         ----------
@@ -178,7 +226,7 @@ class TypeBC(BoundaryCondition):
         -------
             A TypeBC object.
         """
-        pass
+        return TypeBC(name, createStepName, region, buckleCase, localCsys)
 
     def YsymmBC(
         self,
@@ -187,7 +235,7 @@ class TypeBC(BoundaryCondition):
         region: Region,
         buckleCase: SymbolicConstant = NOT_APPLICABLE,
         localCsys: str = None,
-    ):
+    ) -> "TypeBC":
         """This method creates a TypeBC object that specifies symmetry about the *Y*-axis.
 
         Notes
@@ -196,7 +244,7 @@ class TypeBC(BoundaryCondition):
 
         .. code-block:: python
 
-            mdb.models[name].EncastreBC
+            mdb.models[name].YsymmBC
 
         Parameters
         ----------
@@ -219,7 +267,7 @@ class TypeBC(BoundaryCondition):
         -------
             A TypeBC object.
         """
-        pass
+        return TypeBC(name, createStepName, region, buckleCase, localCsys)
 
     def ZsymmBC(
         self,
@@ -228,7 +276,7 @@ class TypeBC(BoundaryCondition):
         region: Region,
         buckleCase: SymbolicConstant = NOT_APPLICABLE,
         localCsys: str = None,
-    ):
+    ) -> "TypeBC":
         """This method creates a TypeBC object that specifies symmetry about the *Z*-axis.
 
         Notes
@@ -237,7 +285,7 @@ class TypeBC(BoundaryCondition):
 
         .. code-block:: python
 
-            mdb.models[name].EncastreBC
+            mdb.models[name].ZsymmBC
 
         Parameters
         ----------
@@ -260,7 +308,7 @@ class TypeBC(BoundaryCondition):
         -------
             A TypeBC object.
         """
-        pass
+        return TypeBC(name, createStepName, region, buckleCase, localCsys)
 
     def XasymmBC(
         self,
@@ -269,7 +317,7 @@ class TypeBC(BoundaryCondition):
         region: Region,
         buckleCase: SymbolicConstant = NOT_APPLICABLE,
         localCsys: str = None,
-    ):
+    ) -> "TypeBC":
         """This method creates a TypeBC object that specifies antisymmetry about the *X*-axis.
 
         Notes
@@ -278,7 +326,7 @@ class TypeBC(BoundaryCondition):
 
         .. code-block:: python
 
-            mdb.models[name].EncastreBC
+            mdb.models[name].XasymmBC
 
         Parameters
         ----------
@@ -301,7 +349,7 @@ class TypeBC(BoundaryCondition):
         -------
             A TypeBC object.
         """
-        pass
+        return TypeBC(name, createStepName, region, buckleCase, localCsys)
 
     def YasymmBC(
         self,
@@ -310,7 +358,7 @@ class TypeBC(BoundaryCondition):
         region: Region,
         buckleCase: SymbolicConstant = NOT_APPLICABLE,
         localCsys: str = None,
-    ):
+    ) -> "TypeBC":
         """This method creates a TypeBC object that specifies antisymmetry about the *Y*-axis.
 
         Notes
@@ -319,7 +367,7 @@ class TypeBC(BoundaryCondition):
 
         .. code-block:: python
 
-            mdb.models[name].EncastreBC
+            mdb.models[name].YasymmBC
 
         Parameters
         ----------
@@ -342,7 +390,7 @@ class TypeBC(BoundaryCondition):
         -------
             A TypeBC object.
         """
-        pass
+        return TypeBC(name, createStepName, region, buckleCase, localCsys)
 
     def ZasymmBC(
         self,
@@ -351,7 +399,7 @@ class TypeBC(BoundaryCondition):
         region: Region,
         buckleCase: SymbolicConstant = NOT_APPLICABLE,
         localCsys: str = None,
-    ):
+    ) -> "TypeBC":
         """This method creates a TypeBC object that specifies antisymmetry about the *Z*-axis.
 
         Notes
@@ -360,7 +408,7 @@ class TypeBC(BoundaryCondition):
 
         .. code-block:: python
 
-            mdb.models[name].EncastreBC
+            mdb.models[name].ZasymmBC
 
         Parameters
         ----------
@@ -383,7 +431,7 @@ class TypeBC(BoundaryCondition):
         -------
             A TypeBC object.
         """
-        pass
+        return TypeBC(name, createStepName, region, buckleCase, localCsys)
 
     def setValues(
         self,
