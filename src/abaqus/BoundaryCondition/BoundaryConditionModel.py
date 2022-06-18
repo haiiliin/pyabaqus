@@ -40,6 +40,7 @@ from .SubmodelBC import SubmodelBC
 from .SubmodelBCState import SubmodelBCState
 from .TemperatureBC import TemperatureBC
 from .TemperatureBCState import TemperatureBCState
+from .TypeBC import TypeBC
 from .VelocityBC import VelocityBC
 from .VelocityBCState import VelocityBCState
 from .VelocityBaseMotionBC import VelocityBaseMotionBC
@@ -1875,4 +1876,388 @@ class BoundaryConditionModel(ModelBase):
             distributionType,
         )
         self.steps[createStepName].boundaryConditionStates[name] = VelocityBCState()
+        return boundaryCondition
+
+    def EncastreBC(
+        self,
+        name: str,
+        createStepName: str,
+        region: Region,
+        buckleCase: SymbolicConstant = NOT_APPLICABLE,
+        localCsys: str = None,
+    ) -> TypeBC:
+        """This method creates an encastre TypeBC object.
+
+        Notes
+        -----
+        This function can be accessed by:
+
+        .. code-block:: python
+
+            mdb.models[name].EncastreBC
+
+        Parameters
+        ----------
+        name
+            A String specifying the boundary condition repository key.
+        createStepName
+            A String specifying the name of the step in which the boundary condition is created.
+        region
+            A Region object specifying the region to which the boundary condition is applied.
+        buckleCase
+            A SymbolicConstant specifying how the boundary condition is defined in a BUCKLE
+            analysis. Possible values are NOT_APPLICABLE, STRESS_PERTURBATION, BUCKLING_MODES, and
+            PERTURBATION_AND_BUCKLING. The default value is NOT_APPLICABLE.
+        localCsys
+            None or a DatumCsys object specifying the local coordinate system of the boundary
+            condition's degrees of freedom. If *localCsys*=None, the degrees of freedom are defined
+            in the global coordinate system. The default value is None.
+
+        Returns
+        -------
+            A TypeBC object.
+        """
+        self.boundaryConditions[name] = boundaryCondition = TypeBC.EncastreBC(
+            name,
+            createStepName,
+            region,
+            buckleCase,
+            localCsys,
+        )
+        return boundaryCondition
+
+    def PinnedBC(
+        self,
+        name: str,
+        createStepName: str,
+        region: Region,
+        buckleCase: SymbolicConstant = NOT_APPLICABLE,
+        localCsys: str = None,
+    ) -> TypeBC:
+        """This method creates a pinned TypeBC object.
+
+        Notes
+        -----
+        This function can be accessed by:
+
+        .. code-block:: python
+
+            mdb.models[name].PinnedBC
+
+        Parameters
+        ----------
+        name
+            A String specifying the boundary condition repository key.
+        createStepName
+            A String specifying the name of the step in which the boundary condition is created.
+        region
+            A Region object specifying the region to which the boundary condition is applied.
+        buckleCase
+            A SymbolicConstant specifying how the boundary condition is defined in a BUCKLE
+            analysis. Possible values are NOT_APPLICABLE, STRESS_PERTURBATION, BUCKLING_MODES, and
+            PERTURBATION_AND_BUCKLING. The default value is NOT_APPLICABLE.
+        localCsys
+            None or a DatumCsys object specifying the local coordinate system of the boundary
+            condition's degrees of freedom. If *localCsys*=None, the degrees of freedom are defined
+            in the global coordinate system. The default value is None.
+
+        Returns
+        -------
+            A TypeBC object.
+        """
+        self.boundaryConditions[name] = boundaryCondition = TypeBC.PinnedBC(
+            name,
+            createStepName,
+            region,
+            buckleCase,
+            localCsys,
+        )
+        return boundaryCondition
+
+    def XsymmBC(
+        self,
+        name: str,
+        createStepName: str,
+        region: Region,
+        buckleCase: SymbolicConstant = NOT_APPLICABLE,
+        localCsys: str = None,
+    ) -> TypeBC:
+        """This method creates a TypeBC object that specifies symmetry about the *X*-axis.
+
+        Notes
+        -----
+        This function can be accessed by:
+
+        .. code-block:: python
+
+            mdb.models[name].EncastreBC
+
+        Parameters
+        ----------
+        name
+            A String specifying the boundary condition repository key.
+        createStepName
+            A String specifying the name of the step in which the boundary condition is created.
+        region
+            A Region object specifying the region to which the boundary condition is applied.
+        buckleCase
+            A SymbolicConstant specifying how the boundary condition is defined in a BUCKLE
+            analysis. Possible values are NOT_APPLICABLE, STRESS_PERTURBATION, BUCKLING_MODES, and
+            PERTURBATION_AND_BUCKLING. The default value is NOT_APPLICABLE.
+        localCsys
+            None or a DatumCsys object specifying the local coordinate system of the boundary
+            condition's degrees of freedom. If *localCsys*=None, the degrees of freedom are defined
+            in the global coordinate system. The default value is None.
+
+        Returns
+        -------
+            A TypeBC object.
+        """
+        self.boundaryConditions[name] = boundaryCondition = TypeBC.XsymmBC(
+            name,
+            createStepName,
+            region,
+            buckleCase,
+            localCsys,
+        )
+        return boundaryCondition
+
+    def YsymmBC(
+        self,
+        name: str,
+        createStepName: str,
+        region: Region,
+        buckleCase: SymbolicConstant = NOT_APPLICABLE,
+        localCsys: str = None,
+    ) -> TypeBC:
+        """This method creates a TypeBC object that specifies symmetry about the *Y*-axis.
+
+        Notes
+        -----
+        This function can be accessed by:
+
+        .. code-block:: python
+
+            mdb.models[name].YsymmBC
+
+        Parameters
+        ----------
+        name
+            A String specifying the boundary condition repository key.
+        createStepName
+            A String specifying the name of the step in which the boundary condition is created.
+        region
+            A Region object specifying the region to which the boundary condition is applied.
+        buckleCase
+            A SymbolicConstant specifying how the boundary condition is defined in a BUCKLE
+            analysis. Possible values are NOT_APPLICABLE, STRESS_PERTURBATION, BUCKLING_MODES, and
+            PERTURBATION_AND_BUCKLING. The default value is NOT_APPLICABLE.
+        localCsys
+            None or a DatumCsys object specifying the local coordinate system of the boundary
+            condition's degrees of freedom. If *localCsys*=None, the degrees of freedom are defined
+            in the global coordinate system. The default value is None.
+
+        Returns
+        -------
+            A TypeBC object.
+        """
+        self.boundaryConditions[name] = boundaryCondition = TypeBC.YsymmBC(
+            name,
+            createStepName,
+            region,
+            buckleCase,
+            localCsys,
+        )
+        return boundaryCondition
+
+    def ZsymmBC(
+        self,
+        name: str,
+        createStepName: str,
+        region: Region,
+        buckleCase: SymbolicConstant = NOT_APPLICABLE,
+        localCsys: str = None,
+    ) -> TypeBC:
+        """This method creates a TypeBC object that specifies symmetry about the *Z*-axis.
+
+        Notes
+        -----
+        This function can be accessed by:
+
+        .. code-block:: python
+
+            mdb.models[name].EncastreBC
+
+        Parameters
+        ----------
+        name
+            A String specifying the boundary condition repository key.
+        createStepName
+            A String specifying the name of the step in which the boundary condition is created.
+        region
+            A Region object specifying the region to which the boundary condition is applied.
+        buckleCase
+            A SymbolicConstant specifying how the boundary condition is defined in a BUCKLE
+            analysis. Possible values are NOT_APPLICABLE, STRESS_PERTURBATION, BUCKLING_MODES, and
+            PERTURBATION_AND_BUCKLING. The default value is NOT_APPLICABLE.
+        localCsys
+            None or a DatumCsys object specifying the local coordinate system of the boundary
+            condition's degrees of freedom. If *localCsys*=None, the degrees of freedom are defined
+            in the global coordinate system. The default value is None.
+
+        Returns
+        -------
+            A TypeBC object.
+        """
+        self.boundaryConditions[name] = boundaryCondition = TypeBC.ZsymmBC(
+            name,
+            createStepName,
+            region,
+            buckleCase,
+            localCsys,
+        )
+        return boundaryCondition
+
+    def XasymmBC(
+        self,
+        name: str,
+        createStepName: str,
+        region: Region,
+        buckleCase: SymbolicConstant = NOT_APPLICABLE,
+        localCsys: str = None,
+    ) -> TypeBC:
+        """This method creates a TypeBC object that specifies antisymmetry about the *X*-axis.
+
+        Notes
+        -----
+        This function can be accessed by:
+
+        .. code-block:: python
+
+            mdb.models[name].EncastreBC
+
+        Parameters
+        ----------
+        name
+            A String specifying the boundary condition repository key.
+        createStepName
+            A String specifying the name of the step in which the boundary condition is created.
+        region
+            A Region object specifying the region to which the boundary condition is applied.
+        buckleCase
+            A SymbolicConstant specifying how the boundary condition is defined in a BUCKLE
+            analysis. Possible values are NOT_APPLICABLE, STRESS_PERTURBATION, BUCKLING_MODES, and
+            PERTURBATION_AND_BUCKLING. The default value is NOT_APPLICABLE.
+        localCsys
+            None or a DatumCsys object specifying the local coordinate system of the boundary
+            condition's degrees of freedom. If *localCsys*=None, the degrees of freedom are defined
+            in the global coordinate system. The default value is None.
+
+        Returns
+        -------
+            A TypeBC object.
+        """
+        self.boundaryConditions[name] = boundaryCondition = TypeBC.XasymmBC(
+            name,
+            createStepName,
+            region,
+            buckleCase,
+            localCsys,
+        )
+        return boundaryCondition
+
+    def YasymmBC(
+        self,
+        name: str,
+        createStepName: str,
+        region: Region,
+        buckleCase: SymbolicConstant = NOT_APPLICABLE,
+        localCsys: str = None,
+    ) -> TypeBC:
+        """This method creates a TypeBC object that specifies antisymmetry about the *Y*-axis.
+
+        Notes
+        -----
+        This function can be accessed by:
+
+        .. code-block:: python
+
+            mdb.models[name].YasymmBC
+
+        Parameters
+        ----------
+        name
+            A String specifying the boundary condition repository key.
+        createStepName
+            A String specifying the name of the step in which the boundary condition is created.
+        region
+            A Region object specifying the region to which the boundary condition is applied.
+        buckleCase
+            A SymbolicConstant specifying how the boundary condition is defined in a BUCKLE
+            analysis. Possible values are NOT_APPLICABLE, STRESS_PERTURBATION, BUCKLING_MODES, and
+            PERTURBATION_AND_BUCKLING. The default value is NOT_APPLICABLE.
+        localCsys
+            None or a DatumCsys object specifying the local coordinate system of the boundary
+            condition's degrees of freedom. If *localCsys*=None, the degrees of freedom are defined
+            in the global coordinate system. The default value is None.
+
+        Returns
+        -------
+            A TypeBC object.
+        """
+        self.boundaryConditions[name] = boundaryCondition = TypeBC.YasymmBC(
+            name,
+            createStepName,
+            region,
+            buckleCase,
+            localCsys,
+        )
+        return boundaryCondition
+
+    def ZasymmBC(
+        self,
+        name: str,
+        createStepName: str,
+        region: Region,
+        buckleCase: SymbolicConstant = NOT_APPLICABLE,
+        localCsys: str = None,
+    ) -> TypeBC:
+        """This method creates a TypeBC object that specifies antisymmetry about the *Z*-axis.
+
+        Notes
+        -----
+        This function can be accessed by:
+
+        .. code-block:: python
+
+            mdb.models[name].ZasymmBC
+
+        Parameters
+        ----------
+        name
+            A String specifying the boundary condition repository key.
+        createStepName
+            A String specifying the name of the step in which the boundary condition is created.
+        region
+            A Region object specifying the region to which the boundary condition is applied.
+        buckleCase
+            A SymbolicConstant specifying how the boundary condition is defined in a BUCKLE
+            analysis. Possible values are NOT_APPLICABLE, STRESS_PERTURBATION, BUCKLING_MODES, and
+            PERTURBATION_AND_BUCKLING. The default value is NOT_APPLICABLE.
+        localCsys
+            None or a DatumCsys object specifying the local coordinate system of the boundary
+            condition's degrees of freedom. If *localCsys*=None, the degrees of freedom are defined
+            in the global coordinate system. The default value is None.
+
+        Returns
+        -------
+            A TypeBC object.
+        """
+        self.boundaryConditions[name] = boundaryCondition = TypeBC.ZasymmBC(
+            name,
+            createStepName,
+            region,
+            buckleCase,
+            localCsys,
+        )
         return boundaryCondition
