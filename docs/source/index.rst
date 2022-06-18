@@ -129,6 +129,7 @@ Documentation
    :maxdepth: 1
    :caption: Contents
 
+   CHANGE_LOG
    getting_started
    tutorials
    summary
