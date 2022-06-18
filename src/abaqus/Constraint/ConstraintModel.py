@@ -488,9 +488,9 @@ class ConstraintModel(ModelBase):
         ----------
         name
             A String specifying the constraint repository key.
-        master
+        main
             A Region object specifying the name of the master surface.
-        slave
+        secondary
             A Region object specifying the name of the slave surface.
         adjust
             A Boolean specifying whether initial positions of tied slave nodes are adjusted to
