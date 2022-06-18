@@ -40,6 +40,7 @@ from .SubmodelBC import SubmodelBC
 from .SubmodelBCState import SubmodelBCState
 from .TemperatureBC import TemperatureBC
 from .TemperatureBCState import TemperatureBCState
+from .TypeBC import TypeBC
 from .VelocityBC import VelocityBC
 from .VelocityBCState import VelocityBCState
 from .VelocityBaseMotionBC import VelocityBaseMotionBC
@@ -1884,7 +1885,7 @@ class BoundaryConditionModel(ModelBase):
         region: Region,
         buckleCase: SymbolicConstant = NOT_APPLICABLE,
         localCsys: str = None,
-    ):
+    ) -> TypeBC:
         """This method creates an encastre TypeBC object.
 
         Notes
@@ -1916,7 +1917,14 @@ class BoundaryConditionModel(ModelBase):
         -------
             A TypeBC object.
         """
-        pass
+        self.boundaryConditions[name] = boundaryCondition = TypeBC.EncastreBC(
+            name,
+            createStepName,
+            region,
+            buckleCase,
+            localCsys,
+        )
+        return boundaryCondition
 
     def PinnedBC(
         self,
@@ -1925,7 +1933,7 @@ class BoundaryConditionModel(ModelBase):
         region: Region,
         buckleCase: SymbolicConstant = NOT_APPLICABLE,
         localCsys: str = None,
-    ):
+    ) -> TypeBC:
         """This method creates a pinned TypeBC object.
 
         Notes
@@ -1934,7 +1942,7 @@ class BoundaryConditionModel(ModelBase):
 
         .. code-block:: python
 
-            mdb.models[name].EncastreBC
+            mdb.models[name].PinnedBC
 
         Parameters
         ----------
@@ -1957,7 +1965,14 @@ class BoundaryConditionModel(ModelBase):
         -------
             A TypeBC object.
         """
-        pass
+        self.boundaryConditions[name] = boundaryCondition = TypeBC.PinnedBC(
+            name,
+            createStepName,
+            region,
+            buckleCase,
+            localCsys,
+        )
+        return boundaryCondition
 
     def XsymmBC(
         self,
@@ -1966,7 +1981,7 @@ class BoundaryConditionModel(ModelBase):
         region: Region,
         buckleCase: SymbolicConstant = NOT_APPLICABLE,
         localCsys: str = None,
-    ):
+    ) -> TypeBC:
         """This method creates a TypeBC object that specifies symmetry about the *X*-axis.
 
         Notes
@@ -1998,7 +2013,14 @@ class BoundaryConditionModel(ModelBase):
         -------
             A TypeBC object.
         """
-        pass
+        self.boundaryConditions[name] = boundaryCondition = TypeBC.XsymmBC(
+            name,
+            createStepName,
+            region,
+            buckleCase,
+            localCsys,
+        )
+        return boundaryCondition
 
     def YsymmBC(
         self,
@@ -2007,7 +2029,7 @@ class BoundaryConditionModel(ModelBase):
         region: Region,
         buckleCase: SymbolicConstant = NOT_APPLICABLE,
         localCsys: str = None,
-    ):
+    ) -> TypeBC:
         """This method creates a TypeBC object that specifies symmetry about the *Y*-axis.
 
         Notes
@@ -2016,7 +2038,7 @@ class BoundaryConditionModel(ModelBase):
 
         .. code-block:: python
 
-            mdb.models[name].EncastreBC
+            mdb.models[name].YsymmBC
 
         Parameters
         ----------
@@ -2039,7 +2061,14 @@ class BoundaryConditionModel(ModelBase):
         -------
             A TypeBC object.
         """
-        pass
+        self.boundaryConditions[name] = boundaryCondition = TypeBC.YsymmBC(
+            name,
+            createStepName,
+            region,
+            buckleCase,
+            localCsys,
+        )
+        return boundaryCondition
 
     def ZsymmBC(
         self,
@@ -2048,7 +2077,7 @@ class BoundaryConditionModel(ModelBase):
         region: Region,
         buckleCase: SymbolicConstant = NOT_APPLICABLE,
         localCsys: str = None,
-    ):
+    ) -> TypeBC:
         """This method creates a TypeBC object that specifies symmetry about the *Z*-axis.
 
         Notes
@@ -2080,7 +2109,14 @@ class BoundaryConditionModel(ModelBase):
         -------
             A TypeBC object.
         """
-        pass
+        self.boundaryConditions[name] = boundaryCondition = TypeBC.ZsymmBC(
+            name,
+            createStepName,
+            region,
+            buckleCase,
+            localCsys,
+        )
+        return boundaryCondition
 
     def XasymmBC(
         self,
@@ -2089,7 +2125,7 @@ class BoundaryConditionModel(ModelBase):
         region: Region,
         buckleCase: SymbolicConstant = NOT_APPLICABLE,
         localCsys: str = None,
-    ):
+    ) -> TypeBC:
         """This method creates a TypeBC object that specifies antisymmetry about the *X*-axis.
 
         Notes
@@ -2121,7 +2157,14 @@ class BoundaryConditionModel(ModelBase):
         -------
             A TypeBC object.
         """
-        pass
+        self.boundaryConditions[name] = boundaryCondition = TypeBC.XasymmBC(
+            name,
+            createStepName,
+            region,
+            buckleCase,
+            localCsys,
+        )
+        return boundaryCondition
 
     def YasymmBC(
         self,
@@ -2130,7 +2173,7 @@ class BoundaryConditionModel(ModelBase):
         region: Region,
         buckleCase: SymbolicConstant = NOT_APPLICABLE,
         localCsys: str = None,
-    ):
+    ) -> TypeBC:
         """This method creates a TypeBC object that specifies antisymmetry about the *Y*-axis.
 
         Notes
@@ -2139,7 +2182,7 @@ class BoundaryConditionModel(ModelBase):
 
         .. code-block:: python
 
-            mdb.models[name].EncastreBC
+            mdb.models[name].YasymmBC
 
         Parameters
         ----------
@@ -2162,7 +2205,14 @@ class BoundaryConditionModel(ModelBase):
         -------
             A TypeBC object.
         """
-        pass
+        self.boundaryConditions[name] = boundaryCondition = TypeBC.YasymmBC(
+            name,
+            createStepName,
+            region,
+            buckleCase,
+            localCsys,
+        )
+        return boundaryCondition
 
     def ZasymmBC(
         self,
@@ -2171,7 +2221,7 @@ class BoundaryConditionModel(ModelBase):
         region: Region,
         buckleCase: SymbolicConstant = NOT_APPLICABLE,
         localCsys: str = None,
-    ):
+    ) -> TypeBC:
         """This method creates a TypeBC object that specifies antisymmetry about the *Z*-axis.
 
         Notes
@@ -2180,7 +2230,7 @@ class BoundaryConditionModel(ModelBase):
 
         .. code-block:: python
 
-            mdb.models[name].EncastreBC
+            mdb.models[name].ZasymmBC
 
         Parameters
         ----------
@@ -2203,4 +2253,11 @@ class BoundaryConditionModel(ModelBase):
         -------
             A TypeBC object.
         """
-        pass
+        self.boundaryConditions[name] = boundaryCondition = TypeBC.ZasymmBC(
+            name,
+            createStepName,
+            region,
+            buckleCase,
+            localCsys,
+        )
+        return boundaryCondition
