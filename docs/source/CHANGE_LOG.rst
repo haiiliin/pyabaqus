@@ -44,7 +44,7 @@ Job
 ---
 
 - :py:class:`~abaqus.Job.JobFromInputFile.JobFromInputFile` and :py:meth:`JobMdb.JobFromInputFile() <abaqus.Job.JobMdb.JobMdb.JobFromInputFile>`: add argument **licenseType**.
-- :py:class:`~abaqus.Job.JobFromInputFile.JobFromInputFile` and :py:meth:`JobMdb.Job() <abaqus.Job.JobMdb.JobMdb.Job>`: add argument **licenseType**.
+- :py:meth:`JobMdb.Job() <abaqus.Job.JobMdb.JobMdb.Job>`: add argument **licenseType**.
 - Add :py:class:`~abaqus.Job.Coexecution.Coexecution` to attributes of :py:class:`~abaqus.Mdb.Mdb.Mdb`. 
 
 Material
