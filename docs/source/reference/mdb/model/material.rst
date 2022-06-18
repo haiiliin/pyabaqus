@@ -547,6 +547,21 @@ CrushableFoam
 
 .. autoclass:: abaqus.Material.Plastic.CrushableFoam.CrushableFoam.CrushableFoam
 
+CrushStress
+*************
+
+
+CrushStress
+'''''''''''
+
+.. autoclass:: abaqus.Material.Plastic.CrushStress.CrushStress.CrushStress
+
+
+CrushStressVelocityFactor
+'''''''''''''''''''''''''
+
+.. autoclass:: abaqus.Material.Plastic.CrushStress.CrushStressVelocityFactor.CrushStressVelocityFactor
+
 CrushableFoamHardening
 ''''''''''''''''''''''
 

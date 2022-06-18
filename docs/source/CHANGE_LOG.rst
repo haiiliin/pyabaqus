@@ -92,7 +92,7 @@ Part
 Session
 -------
 
-- :py:meth:`~abaqus.Session.SessionBase.SessionBase.printToFile`: argument **compression**'s docstring changes. 
+- :py:meth:`~abaqus.Session.Session.Session.printToFile`: argument **compression**'s docstring changes.
 
 Step Output
 -----------
