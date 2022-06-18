@@ -2648,7 +2648,7 @@ class InteractionModel(
             A Boolean specifying whether shell/membrane element thickness is considered. The default
             value is ON.This argument in valid only when *enforcement*=SURFACE_TO_SURFACE.
         smooth
-            A Float specifying the degree of smoothing used for deformable or rigid master surfaces
+            A Float specifying the degree of smoothing used for deformable or rigid main surfaces
             involved when *enforcement*=NODE_TO_SURFACE. The value given must lie between 0.0 and
             0.5. The default value is 0.2.
         contactControls
@@ -3106,8 +3106,8 @@ class InteractionModel(
         self,
         name: str,
         createStepName: str,
-        master: Region,
-        slave: Region,
+        main: Region,
+        secondary: Region,
         sliding: SymbolicConstant,
         interactionProperty: str,
         interferenceType: SymbolicConstant = NONE,
@@ -3155,9 +3155,9 @@ class InteractionModel(
         createStepName
             A String specifying the name of the step in which the SurfaceToSurfaceContactStd object
             is created.
-        master
+        main
             A Region object specifying the master surface.
-        salve
+        secondary
             A Region object specifying the slave surface.
         sliding
             A SymbolicConstant specifying the contact formulation. Possible values are FINITE and

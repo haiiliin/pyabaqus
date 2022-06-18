@@ -16,6 +16,7 @@ from ..BasicGeometry.IgnoredVertexArray import IgnoredVertexArray
 from ..BasicGeometry.ReferencePoints import ReferencePoints
 from ..BasicGeometry.VertexArray import VertexArray
 from ..Datum.Datum import Datum
+from ..Datum.DatumCsys import DatumCsys
 from ..EngineeringFeature.EngineeringFeature import EngineeringFeature
 from ..Mesh.MeshEdge import MeshEdge
 from ..Mesh.MeshEdgeArray import MeshEdgeArray
@@ -1175,13 +1176,16 @@ class PartBase(Feature):
         """
         pass
 
-    def getCoordinates(self, entity: str):
+    def getCoordinates(self, entity: str, csys: DatumCsys):
         """This method returns the coordinates of specified point.
 
         Parameters
         ----------
         entity
             A ConstrainedSketchVertex, Datum point, MeshNode, or ReferencePoint specifying the entity to query.
+        csys
+            A DatumCsys object specifying the desired coordinate system of the returned 
+            coordinates. By default, coordinates are given in the global coordinate system.
 
         Returns
         -------

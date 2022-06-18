@@ -284,6 +284,12 @@ TopologyMemberSize
 .. autoclass:: abaqus.Optimization.TopologyMemberSize.TopologyMemberSize
     :members:
 
+TopologyMillingControl
+~~~~~~~~~~~~~~~~~~~~~~
+
+.. autoclass:: abaqus.Optimization.TopologyMillingControl.TopologyMillingControl
+    :members:
+
 TopologyOverhangControl
 ~~~~~~~~~~~~~~~~~~~~~~~
 

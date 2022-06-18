@@ -53,8 +53,8 @@ class SurfaceToSurfaceContactStd(Interaction):
         self,
         name: str,
         createStepName: str,
-        master: Region,
-        slave: Region,
+        main: Region,
+        secondary: Region,
         sliding: SymbolicConstant,
         interactionProperty: str,
         interferenceType: SymbolicConstant = NONE,
@@ -102,9 +102,9 @@ class SurfaceToSurfaceContactStd(Interaction):
         createStepName
             A String specifying the name of the step in which the SurfaceToSurfaceContactStd object
             is created.
-        master
+        main
             A Region object specifying the main surface.
-        slave
+        secondary
             A Region object specifying the secondary surface.
         sliding
             A SymbolicConstant specifying the contact formulation. Possible values are FINITE and
