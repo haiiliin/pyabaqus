@@ -473,7 +473,7 @@ that one Material object cannot contain two AcousticMedium objects, for example.
 </dd>
 <dt><strong>crushableFoam: CrushableFoam</strong></dt><dd><p>A <a class="reference internal" href="#abaqus.Material.Plastic.CrushableFoam.CrushableFoam.CrushableFoam" title="abaqus.Material.Plastic.CrushableFoam.CrushableFoam.CrushableFoam"><code class="xref py py-class docutils literal notranslate"><span class="pre">CrushableFoam</span></code></a> object.</p>
 </dd>
-<dt><strong>crushStress: CrushStress</strong></dt><dd><p>A <code class="xref py py-class docutils literal notranslate"><span class="pre">CrushStress</span></code> object.</p>
+<dt><strong>crushStress: CrushStress</strong></dt><dd><p>A <a class="reference internal" href="#abaqus.Material.Plastic.CrushStress.CrushStress.CrushStress" title="abaqus.Material.Plastic.CrushStress.CrushStress.CrushStress"><code class="xref py py-class docutils literal notranslate"><span class="pre">CrushStress</span></code></a> object.</p>
 </dd>
 <dt><strong>ductileDamageInitiation: DamageInitiation</strong></dt><dd><p>A <a class="reference internal" href="#abaqus.Material.ProgressiveDamageFailure.DamageInitiation.DamageInitiation" title="abaqus.Material.ProgressiveDamageFailure.DamageInitiation.DamageInitiation"><code class="xref py py-class docutils literal notranslate"><span class="pre">DamageInitiation</span></code></a> object.</p>
 </dd>
@@ -3165,7 +3165,7 @@ that one Material object cannot contain two AcousticMedium objects, for example.
 </dd>
 <dt><strong>crushableFoam: CrushableFoam</strong></dt><dd><p>A <a class="reference internal" href="#abaqus.Material.Plastic.CrushableFoam.CrushableFoam.CrushableFoam" title="abaqus.Material.Plastic.CrushableFoam.CrushableFoam.CrushableFoam"><code class="xref py py-class docutils literal notranslate"><span class="pre">CrushableFoam</span></code></a> object.</p>
 </dd>
-<dt><strong>crushStress: CrushStress</strong></dt><dd><p>A <code class="xref py py-class docutils literal notranslate"><span class="pre">CrushStress</span></code> object.</p>
+<dt><strong>crushStress: CrushStress</strong></dt><dd><p>A <a class="reference internal" href="#abaqus.Material.Plastic.CrushStress.CrushStress.CrushStress" title="abaqus.Material.Plastic.CrushStress.CrushStress.CrushStress"><code class="xref py py-class docutils literal notranslate"><span class="pre">CrushStress</span></code></a> object.</p>
 </dd>
 <dt><strong>ductileDamageInitiation: DamageInitiation</strong></dt><dd><p>A <a class="reference internal" href="#abaqus.Material.ProgressiveDamageFailure.DamageInitiation.DamageInitiation" title="abaqus.Material.ProgressiveDamageFailure.DamageInitiation.DamageInitiation"><code class="xref py py-class docutils literal notranslate"><span class="pre">DamageInitiation</span></code></a> object.</p>
 </dd>
@@ -10338,6 +10338,112 @@ Concrete model.</p>
 </dd></dl>
 
 </section>
+</section>
+<section id="crushstress">
+<h4>CrushStress<a class="headerlink" href="#crushstress" title="Permalink to this headline">#</a></h4>
+<section id="id471">
+<h5>CrushStress<a class="headerlink" href="#id471" title="Permalink to this headline">#</a></h5>
+<dl class="py class">
+<dt class="sig sig-object py" id="abaqus.Material.Plastic.CrushStress.CrushStress.CrushStress">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">CrushStress</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">crushStressTable</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">tuple</span><span class="p"><span class="pre">[</span></span><span class="pre">tuple</span><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="p"><span class="pre">...</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">temperatureDependency</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">BooleanType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dependencies</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/haiiliin/pyabaqus/blob/V2022/src/abaqus/Material/Plastic/CrushStress/CrushStress.py#L6-L114"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#abaqus.Material.Plastic.CrushStress.CrushStress.CrushStress" title="Permalink to this definition">#</a></dt>
+<dd><p>The CrushStress object specifies the crush stress of a material.</p>
+<p class="rubric">Notes</p>
+<p>This object can be accessed by:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">material</span>
+<span class="n">mdb</span><span class="o">.</span><span class="n">models</span><span class="p">[</span><span class="n">name</span><span class="p">]</span><span class="o">.</span><span class="n">materials</span><span class="p">[</span><span class="n">name</span><span class="p">]</span><span class="o">.</span><span class="n">crushStress</span>
+<span class="kn">import</span> <span class="nn">odbMaterial</span>
+<span class="n">session</span><span class="o">.</span><span class="n">odbs</span><span class="p">[</span><span class="n">name</span><span class="p">]</span><span class="o">.</span><span class="n">materials</span><span class="p">[</span><span class="n">name</span><span class="p">]</span><span class="o">.</span><span class="n">crushStress</span>
+</pre></div>
+</div>
+<p>The table data for this object are:</p>
+<ul class="simple">
+<li><p>Scaling factor.</p></li>
+<li><p>Relative velocity.</p></li>
+</ul>
+<p>The corresponding analysis keywords are:</p>
+<ul class="simple">
+<li><p>CRUSH STRESS</p></li>
+</ul>
+<dl class="field-list simple">
+<dt class="field-odd">Attributes</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>crushStressTable: tuple[tuple[float, …]]</strong></dt><dd><p>A sequence of sequences of Floats specifying the items described below.</p>
+</dd>
+<dt><strong>temperatureDependency: Boolean</strong></dt><dd><p>A Boolean specifying whether the data depend on temperature. The default value is OFF.</p>
+</dd>
+<dt><strong>dependencies: int</strong></dt><dd><p>An Int specifying the number of field variable dependencies. The default value is 0.</p>
+</dd>
+<dt><strong>crushStressVelocityFactor: CrushStressVelocityFactor</strong></dt><dd><p>A <a class="reference internal" href="#abaqus.Material.Plastic.CrushStress.CrushStressVelocityFactor.CrushStressVelocityFactor" title="abaqus.Material.Plastic.CrushStress.CrushStressVelocityFactor.CrushStressVelocityFactor"><code class="xref py py-class docutils literal notranslate"><span class="pre">CrushStressVelocityFactor</span></code></a> object.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+<p class="rubric">Methods</p>
+<div class="table-wrapper autosummary longtable docutils container">
+<table class="autosummary longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">setValues</span></code>([crushStressTable, ...])</p></td>
+<td><p>This method creates a CrushStress object.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</dd></dl>
+
+</section>
+<section id="crushstressvelocityfactor">
+<h5>CrushStressVelocityFactor<a class="headerlink" href="#crushstressvelocityfactor" title="Permalink to this headline">#</a></h5>
+<dl class="py class">
+<dt class="sig sig-object py" id="abaqus.Material.Plastic.CrushStress.CrushStressVelocityFactor.CrushStressVelocityFactor">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">CrushStressVelocityFactor</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">crushStressVelocityFactorTable</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">tuple</span><span class="p"><span class="pre">[</span></span><span class="pre">tuple</span><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="p"><span class="pre">...</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/haiiliin/pyabaqus/blob/V2022/src/abaqus/Material/Plastic/CrushStress/CrushStressVelocityFactor.py#L1-L52"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#abaqus.Material.Plastic.CrushStress.CrushStressVelocityFactor.CrushStressVelocityFactor" title="Permalink to this definition">#</a></dt>
+<dd><p>The CrushStressVelocityFactor object defines how the approach velocity at a crushing interface
+influences a material’s resistance to crushing.</p>
+<p class="rubric">Notes</p>
+<p>This object can be accessed by:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">material</span>
+<span class="n">mdb</span><span class="o">.</span><span class="n">models</span><span class="p">[</span><span class="n">name</span><span class="p">]</span><span class="o">.</span><span class="n">materials</span><span class="p">[</span><span class="n">name</span><span class="p">]</span><span class="o">.</span><span class="n">crushStress</span><span class="o">.</span><span class="n">crushStressVelocityFactor</span>
+<span class="kn">import</span> <span class="nn">odbMaterial</span>
+<span class="n">session</span><span class="o">.</span><span class="n">odbs</span><span class="p">[</span><span class="n">name</span><span class="p">]</span><span class="o">.</span><span class="n">materials</span><span class="p">[</span><span class="n">name</span><span class="p">]</span><span class="o">.</span><span class="n">crushStress</span><span class="o">.</span><span class="n">crushStressVelocityFactor</span>
+</pre></div>
+</div>
+<p>The table data for this object are:</p>
+<ul class="simple">
+<li><p>Scaling factor.</p></li>
+<li><p>Relative velocity.</p></li>
+</ul>
+<p>The corresponding analysis keywords are:</p>
+<ul class="simple">
+<li><p>CRUSH STRESS VELOCITY FACTOR</p></li>
+</ul>
+<dl class="field-list simple">
+<dt class="field-odd">Attributes</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>crushStressVelocityFactorTable: tuple[tuple[float, …]]</strong></dt><dd><p>A sequence of sequences of Floats specifying the items described below.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+<p class="rubric">Methods</p>
+<div class="table-wrapper autosummary longtable docutils container">
+<table class="autosummary longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">setValues</span></code>([crushStressVelocityFactorTable])</p></td>
+<td><p>This method creates a CrushStressVelocityFactor object.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</dd></dl>
+
+</section>
 <section id="crushablefoamhardening">
 <h5>CrushableFoamHardening<a class="headerlink" href="#crushablefoamhardening" title="Permalink to this headline">#</a></h5>
 <dl class="py class">
@@ -10388,8 +10494,8 @@ model.</p>
 <h4>DruckerPrager<a class="headerlink" href="#druckerprager" title="Permalink to this headline">#</a></h4>
 <section id="extended">
 <h5>Extended<a class="headerlink" href="#extended" title="Permalink to this headline">#</a></h5>
-<section id="id471">
-<h6>DruckerPrager<a class="headerlink" href="#id471" title="Permalink to this headline">#</a></h6>
+<section id="id472">
+<h6>DruckerPrager<a class="headerlink" href="#id472" title="Permalink to this headline">#</a></h6>
 <dl class="py class">
 <dt class="sig sig-object py" id="abaqus.Material.Plastic.DruckerPrager.Extended.DruckerPrager.DruckerPrager">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">DruckerPrager</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">table</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">tuple</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">shearCriterion</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">SymbolicConstantType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'LINEAR'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">eccentricity</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">testData</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">BooleanType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">temperatureDependency</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">BooleanType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dependencies</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/haiiliin/pyabaqus/blob/V2022/src/abaqus/Material/Plastic/DruckerPrager/Extended/DruckerPrager.py#L8-L126"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#abaqus.Material.Plastic.DruckerPrager.Extended.DruckerPrager.DruckerPrager" title="Permalink to this definition">#</a></dt>
@@ -10405,7 +10511,7 @@ model.</p>
 <p>The table data for this object are:</p>
 <ul class="simple">
 <li><dl class="simple">
-<dt>If <a href="#id472"><span class="problematic" id="id473">*</span></a>shearCriterion*=LINEAR (the only option allowed in an Abaqus/Explicit analysis), the table data specify the following:</dt><dd><ul>
+<dt>If <a href="#id473"><span class="problematic" id="id474">*</span></a>shearCriterion*=LINEAR (the only option allowed in an Abaqus/Explicit analysis), the table data specify the following:</dt><dd><ul>
 <li><p>Material angle of friction, β, in the p–t plane. Give the value in degrees.</p></li>
 <li><dl class="simple">
 <dt>K, the ratio of the flow stress in triaxial tension to the flow stress in triaxial compression. 0.778≤K≤1.0.</dt><dd><p>If the default value of 0.0 is accepted, a value of 1.0 is assumed.</p>
@@ -10422,7 +10528,7 @@ model.</p>
 </dl>
 </li>
 <li><dl class="simple">
-<dt>If <a href="#id474"><span class="problematic" id="id475">*</span></a>shearCriterion*=HYPERBOLIC, the table data specify the following:</dt><dd><ul>
+<dt>If <a href="#id475"><span class="problematic" id="id476">*</span></a>shearCriterion*=HYPERBOLIC, the table data specify the following:</dt><dd><ul>
 <li><p>Material angle of friction, β, at high confining pressure in the p–q plane. Give the value in degrees.</p></li>
 <li><p>Initial hydrostatic tension strength, pt|0.</p></li>
 <li><p>Dilation angle, ψ, at high confining pressure in the p–q plane. Give the value in degrees.</p></li>
@@ -10435,7 +10541,7 @@ model.</p>
 </dl>
 </li>
 <li><dl class="simple">
-<dt>If <a href="#id476"><span class="problematic" id="id477">*</span></a>shearCriterion*=EXPONENTIAL, the table data specify the following:</dt><dd><ul>
+<dt>If <a href="#id477"><span class="problematic" id="id478">*</span></a>shearCriterion*=EXPONENTIAL, the table data specify the following:</dt><dd><ul>
 <li><p>Dilation angle, ψ, at high confining pressure in the p–q plane. Give the value in degrees.</p></li>
 <li><p>Temperature, if the data depend on temperature.</p></li>
 <li><p>Value of the first field variable, if the data depend on field variables.</p></li>
@@ -10484,7 +10590,7 @@ model.</p>
 <p>The table data for this object are:</p>
 <ul class="simple">
 <li><dl class="simple">
-<dt>If <a href="#id478"><span class="problematic" id="id479">*</span></a>law*=TIME or <a href="#id480"><span class="problematic" id="id481">*</span></a>law*=STRAIN, the table data specify the following:</dt><dd><ul>
+<dt>If <a href="#id479"><span class="problematic" id="id480">*</span></a>law*=TIME or <a href="#id481"><span class="problematic" id="id482">*</span></a>law*=STRAIN, the table data specify the following:</dt><dd><ul>
 <li><p>AA. (Units of F-nL2nT−1−m.)</p></li>
 <li><ol class="loweralpha simple" start="14">
 <li></li>
@@ -10503,7 +10609,7 @@ model.</p>
 </dl>
 </li>
 <li><dl class="simple">
-<dt>If <a href="#id482"><span class="problematic" id="id483">*</span></a>law*=SINGHM, the table data specify the following:</dt><dd><ul>
+<dt>If <a href="#id483"><span class="problematic" id="id484">*</span></a>law*=SINGHM, the table data specify the following:</dt><dd><ul>
 <li><ol class="upperalpha simple">
 <li><p>(Units of T−1.)</p></li>
 </ol>
@@ -10650,7 +10756,7 @@ models.</p>
 <p>The table data for this object are:</p>
 <ul class="simple">
 <li><dl class="simple">
-<dt>If <a href="#id484"><span class="problematic" id="id485">*</span></a>law*=STRAIN or <a href="#id486"><span class="problematic" id="id487">*</span></a>law*=TIME, the table data specify the following:</dt><dd><ul>
+<dt>If <a href="#id485"><span class="problematic" id="id486">*</span></a>law*=STRAIN or <a href="#id487"><span class="problematic" id="id488">*</span></a>law*=TIME, the table data specify the following:</dt><dd><ul>
 <li><ol class="upperalpha simple">
 <li></li>
 </ol>
@@ -10672,7 +10778,7 @@ models.</p>
 </dl>
 </li>
 <li><dl class="simple">
-<dt>If <a href="#id488"><span class="problematic" id="id489">*</span></a>law*=SINGHM, the table data specify the following:</dt><dd><ul>
+<dt>If <a href="#id489"><span class="problematic" id="id490">*</span></a>law*=SINGHM, the table data specify the following:</dt><dd><ul>
 <li><ol class="upperalpha simple">
 <li></li>
 </ol>
@@ -10692,7 +10798,7 @@ models.</p>
 </dl>
 </li>
 <li><dl class="simple">
-<dt>If <a href="#id490"><span class="problematic" id="id491">*</span></a>law*=POWER_LAW or <a href="#id492"><span class="problematic" id="id493">*</span></a>law*=TIME_POWER_LAW, the table data specify the following:</dt><dd><ul>
+<dt>If <a href="#id491"><span class="problematic" id="id492">*</span></a>law*=POWER_LAW or <a href="#id493"><span class="problematic" id="id494">*</span></a>law*=TIME_POWER_LAW, the table data specify the following:</dt><dd><ul>
 <li><p>q0.</p></li>
 <li><ol class="loweralpha simple" start="14">
 <li></li>
@@ -10750,7 +10856,7 @@ models.</p>
 <p>The table data for this object are:</p>
 <ul class="simple">
 <li><dl class="simple">
-<dt>If <a href="#id494"><span class="problematic" id="id495">*</span></a>law*=STRAIN or <a href="#id496"><span class="problematic" id="id497">*</span></a>law*=TIME, the table data specify the following:</dt><dd><ul>
+<dt>If <a href="#id495"><span class="problematic" id="id496">*</span></a>law*=STRAIN or <a href="#id497"><span class="problematic" id="id498">*</span></a>law*=TIME, the table data specify the following:</dt><dd><ul>
 <li><ol class="upperalpha simple">
 <li></li>
 </ol>
@@ -10772,7 +10878,7 @@ models.</p>
 </dl>
 </li>
 <li><dl class="simple">
-<dt>If <a href="#id498"><span class="problematic" id="id499">*</span></a>law*=SINGHM, the table data specify the following:</dt><dd><ul>
+<dt>If <a href="#id499"><span class="problematic" id="id500">*</span></a>law*=SINGHM, the table data specify the following:</dt><dd><ul>
 <li><ol class="upperalpha simple">
 <li></li>
 </ol>
@@ -10792,7 +10898,7 @@ models.</p>
 </dl>
 </li>
 <li><dl class="simple">
-<dt>If <a href="#id500"><span class="problematic" id="id501">*</span></a>law*=POWER_LAW or <a href="#id502"><span class="problematic" id="id503">*</span></a>law*=TIME_POWER_LAW, the table data specify the following:</dt><dd><ul>
+<dt>If <a href="#id501"><span class="problematic" id="id502">*</span></a>law*=POWER_LAW or <a href="#id503"><span class="problematic" id="id504">*</span></a>law*=TIME_POWER_LAW, the table data specify the following:</dt><dd><ul>
 <li><p>q0.</p></li>
 <li><ol class="loweralpha simple" start="14">
 <li></li>
@@ -11173,8 +11279,8 @@ isotropic/kinematic hardening model.</p>
 <p>The table data for this object are:</p>
 <ul class="simple">
 <li><p>Equivalent stress.</p></li>
-<li><p>Q∞Q(only if <a href="#id504"><span class="problematic" id="id505">*</span></a>parameters*=ON).</p></li>
-<li><p>Hardening parameter (only if <a href="#id506"><span class="problematic" id="id507">*</span></a>parameters*=ON).</p></li>
+<li><p>Q∞Q(only if <a href="#id505"><span class="problematic" id="id506">*</span></a>parameters*=ON).</p></li>
+<li><p>Hardening parameter (only if <a href="#id507"><span class="problematic" id="id508">*</span></a>parameters*=ON).</p></li>
 <li><p>Temperature, if the data depend on temperature.</p></li>
 <li><p>Value of the first field variable, if the data depend on field variables.</p></li>
 <li><p>Value of the second field variable.</p></li>
@@ -11251,8 +11357,8 @@ isotropic/kinematic hardening model.</p>
 </section>
 <section id="ornl">
 <h5>ORNL<a class="headerlink" href="#ornl" title="Permalink to this headline">#</a></h5>
-<section id="id508">
-<h6>Ornl<a class="headerlink" href="#id508" title="Permalink to this headline">#</a></h6>
+<section id="id509">
+<h6>Ornl<a class="headerlink" href="#id509" title="Permalink to this headline">#</a></h6>
 <dl class="py class">
 <dt class="sig sig-object py" id="abaqus.Material.Plastic.Metal.ORNL.Ornl.Ornl">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">Ornl</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">a</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">h</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">reset</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">BooleanType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/haiiliin/pyabaqus/blob/V2022/src/abaqus/Material/Plastic/Metal/ORNL/Ornl.py#L4-L74"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#abaqus.Material.Plastic.Metal.ORNL.Ornl.Ornl" title="Permalink to this definition">#</a></dt>
@@ -11290,8 +11396,8 @@ Laboratory.</p>
 
 </section>
 </section>
-<section id="id509">
-<h5>Porous<a class="headerlink" href="#id509" title="Permalink to this headline">#</a></h5>
+<section id="id510">
+<h5>Porous<a class="headerlink" href="#id510" title="Permalink to this headline">#</a></h5>
 <section id="porousfailurecriteria">
 <h6>PorousFailureCriteria<a class="headerlink" href="#porousfailurecriteria" title="Permalink to this headline">#</a></h6>
 <dl class="py class">
@@ -11421,8 +11527,8 @@ metal.</p>
 </section>
 <section id="ratedependent">
 <h5>RateDependent<a class="headerlink" href="#ratedependent" title="Permalink to this headline">#</a></h5>
-<section id="id510">
-<h6>RateDependent<a class="headerlink" href="#id510" title="Permalink to this headline">#</a></h6>
+<section id="id511">
+<h6>RateDependent<a class="headerlink" href="#id511" title="Permalink to this headline">#</a></h6>
 <dl class="py class">
 <dt class="sig sig-object py" id="abaqus.Material.Plastic.Metal.RateDependent.RateDependent.RateDependent">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">RateDependent</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">table</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">tuple</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">type</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">SymbolicConstantType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'POWER_LAW'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">temperatureDependency</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">BooleanType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dependencies</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/haiiliin/pyabaqus/blob/V2022/src/abaqus/Material/Plastic/Metal/RateDependent/RateDependent.py#L4-L99"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#abaqus.Material.Plastic.Metal.RateDependent.RateDependent.RateDependent" title="Permalink to this definition">#</a></dt>
@@ -11442,7 +11548,7 @@ metal.</p>
 <p>The table data for this object are:</p>
 <ul class="simple">
 <li><dl class="simple">
-<dt>If <a href="#id511"><span class="problematic" id="id512">*</span></a>type*=POWER_LAW, the table data specify the following:</dt><dd><ul>
+<dt>If <a href="#id512"><span class="problematic" id="id513">*</span></a>type*=POWER_LAW, the table data specify the following:</dt><dd><ul>
 <li><ol class="upperalpha simple" start="4">
 <li></li>
 </ol>
@@ -11460,7 +11566,7 @@ metal.</p>
 </dl>
 </li>
 <li><dl class="simple">
-<dt>If <a href="#id513"><span class="problematic" id="id514">*</span></a>type*=YIELD_RATIO, the table data specify the following:</dt><dd><ul>
+<dt>If <a href="#id514"><span class="problematic" id="id515">*</span></a>type*=YIELD_RATIO, the table data specify the following:</dt><dd><ul>
 <li><p>Yield stress ratio, R=¯σ/σ0.</p></li>
 <li><p>Equivalent Plastic strain rate, ˙¯εpl.</p></li>
 <li><p>Temperature, if the data depend on temperature.</p></li>
@@ -11472,7 +11578,7 @@ metal.</p>
 </dl>
 </li>
 <li><dl class="simple">
-<dt>If <a href="#id515"><span class="problematic" id="id516">*</span></a>type*=JOHNSON_COOK, the table data specify the following:</dt><dd><ul>
+<dt>If <a href="#id516"><span class="problematic" id="id517">*</span></a>type*=JOHNSON_COOK, the table data specify the following:</dt><dd><ul>
 <li><ol class="upperalpha simple" start="3">
 <li></li>
 </ol>
@@ -11525,7 +11631,7 @@ material model.</p>
 <p>The table data for this object are:</p>
 <ul class="simple">
 <li><dl class="simple">
-<dt>If <a href="#id517"><span class="problematic" id="id518">*</span></a>law*=STRAIN or <a href="#id519"><span class="problematic" id="id520">*</span></a>law*=TIME, the table data specify the following:</dt><dd><ul>
+<dt>If <a href="#id518"><span class="problematic" id="id519">*</span></a>law*=STRAIN or <a href="#id520"><span class="problematic" id="id521">*</span></a>law*=TIME, the table data specify the following:</dt><dd><ul>
 <li><ol class="upperalpha simple">
 <li></li>
 </ol>
@@ -11551,7 +11657,7 @@ material model.</p>
 </dl>
 </li>
 <li><dl class="simple">
-<dt>If <a href="#id521"><span class="problematic" id="id522">*</span></a>law*=USER, the table data specify the following:</dt><dd><ul>
+<dt>If <a href="#id522"><span class="problematic" id="id523">*</span></a>law*=USER, the table data specify the following:</dt><dd><ul>
 <li><ol class="loweralpha simple" start="6">
 <li></li>
 </ol>
@@ -11565,7 +11671,7 @@ material model.</p>
 </dl>
 </li>
 <li><dl class="simple">
-<dt>If <a href="#id523"><span class="problematic" id="id524">*</span></a>law*=ANAND, the table data specify the following:</dt><dd><ul>
+<dt>If <a href="#id524"><span class="problematic" id="id525">*</span></a>law*=ANAND, the table data specify the following:</dt><dd><ul>
 <li><p>s1.</p></li>
 <li><p>QR.</p></li>
 <li><ol class="upperalpha simple">
@@ -11602,7 +11708,7 @@ material model.</p>
 </dl>
 </li>
 <li><dl class="simple">
-<dt>If <a href="#id525"><span class="problematic" id="id526">*</span></a>law*=DARVEAUX, the table data specify the following:</dt><dd><ul>
+<dt>If <a href="#id526"><span class="problematic" id="id527">*</span></a>law*=DARVEAUX, the table data specify the following:</dt><dd><ul>
 <li><p>Css.</p></li>
 <li><p>QR.</p></li>
 <li><p>α.</p></li>
@@ -11624,7 +11730,7 @@ material model.</p>
 </dl>
 </li>
 <li><dl class="simple">
-<dt>If <a href="#id527"><span class="problematic" id="id528">*</span></a>law*=DOUBLE_POWER, the table data specify the following:</dt><dd><ul>
+<dt>If <a href="#id528"><span class="problematic" id="id529">*</span></a>law*=DOUBLE_POWER, the table data specify the following:</dt><dd><ul>
 <li><p>A1.</p></li>
 <li><p>B1.</p></li>
 <li><p>C1.</p></li>
@@ -11641,7 +11747,7 @@ material model.</p>
 </dl>
 </li>
 <li><dl class="simple">
-<dt>If <a href="#id529"><span class="problematic" id="id530">*</span></a>law*=POWER_LAW or <a href="#id531"><span class="problematic" id="id532">*</span></a>law*=TIME_POWER_LAW, the table data specify the following:</dt><dd><ul>
+<dt>If <a href="#id530"><span class="problematic" id="id531">*</span></a>law*=POWER_LAW or <a href="#id532"><span class="problematic" id="id533">*</span></a>law*=TIME_POWER_LAW, the table data specify the following:</dt><dd><ul>
 <li><p>q0.</p></li>
 <li><ol class="loweralpha simple" start="14">
 <li></li>
@@ -11825,8 +11931,8 @@ example the Mohr-Coulomb plasticity model.</p>
 
 </section>
 </section>
-<section id="id533">
-<h4>Plastic<a class="headerlink" href="#id533" title="Permalink to this headline">#</a></h4>
+<section id="id534">
+<h4>Plastic<a class="headerlink" href="#id534" title="Permalink to this headline">#</a></h4>
 <dl class="py class">
 <dt class="sig sig-object py" id="abaqus.Material.Plastic.Plastic.Plastic">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">Plastic</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">table</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">tuple</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">hardening</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">SymbolicConstantType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'ISOTROPIC'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">rate</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">BooleanType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dataType</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">SymbolicConstantType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'HALF_CYCLE'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">strainRangeDependency</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">BooleanType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">numBackstresses</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">temperatureDependency</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">BooleanType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dependencies</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">extrapolation</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">SymbolicConstantType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'CONSTANT'</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/haiiliin/pyabaqus/blob/V2022/src/abaqus/Material/Plastic/Plastic.py#L11-L163"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#abaqus.Material.Plastic.Plastic.Plastic" title="Permalink to this definition">#</a></dt>
@@ -11842,7 +11948,7 @@ example the Mohr-Coulomb plasticity model.</p>
 <p>The table data for this object are:</p>
 <ul class="simple">
 <li><dl class="simple">
-<dt>If <a href="#id534"><span class="problematic" id="id535">*</span></a>hardening*=ISOTROPIC, or if <a href="#id536"><span class="problematic" id="id537">*</span></a>hardening*=COMBINED and <a href="#id538"><span class="problematic" id="id539">*</span></a>dataType*=HALF_CYCLE, the table data specify the following:</dt><dd><ul>
+<dt>If <a href="#id535"><span class="problematic" id="id536">*</span></a>hardening*=ISOTROPIC, or if <a href="#id537"><span class="problematic" id="id538">*</span></a>hardening*=COMBINED and <a href="#id539"><span class="problematic" id="id540">*</span></a>dataType*=HALF_CYCLE, the table data specify the following:</dt><dd><ul>
 <li><p>Yield stress.</p></li>
 <li><p>Plastic strain.</p></li>
 <li><p>Equivalent Plastic strain rate, ε¯˙p⁢l.</p></li>
@@ -11855,7 +11961,7 @@ example the Mohr-Coulomb plasticity model.</p>
 </dl>
 </li>
 <li><dl class="simple">
-<dt>If <a href="#id540"><span class="problematic" id="id541">*</span></a>hardening*=COMBINED and <a href="#id542"><span class="problematic" id="id543">*</span></a>dataType*=STABILIZED, the table data specify the following:</dt><dd><ul>
+<dt>If <a href="#id541"><span class="problematic" id="id542">*</span></a>hardening*=COMBINED and <a href="#id543"><span class="problematic" id="id544">*</span></a>dataType*=STABILIZED, the table data specify the following:</dt><dd><ul>
 <li><p>Yield stress.</p></li>
 <li><p>Plastic strain.</p></li>
 <li><p>Strain range, if the data depend on strain range.</p></li>
@@ -11868,7 +11974,7 @@ example the Mohr-Coulomb plasticity model.</p>
 </dl>
 </li>
 <li><dl class="simple">
-<dt>If <a href="#id544"><span class="problematic" id="id545">*</span></a>hardening*=COMBINED and <a href="#id546"><span class="problematic" id="id547">*</span></a>dataType*=PARAMETERS, the table data specify the following:</dt><dd><ul>
+<dt>If <a href="#id545"><span class="problematic" id="id546">*</span></a>hardening*=COMBINED and <a href="#id547"><span class="problematic" id="id548">*</span></a>dataType*=PARAMETERS, the table data specify the following:</dt><dd><ul>
 <li><p>Yield stress at zero Plastic strain.</p></li>
 <li><p>The first kinematic hardening parameter, C1.</p></li>
 <li><p>The first kinematic hardening parameter, γ1.</p></li>
@@ -11884,7 +11990,7 @@ example the Mohr-Coulomb plasticity model.</p>
 </dl>
 </li>
 <li><dl class="simple">
-<dt>If <a href="#id548"><span class="problematic" id="id549">*</span></a>hardening*=KINEMATIC, the table data specify the following:</dt><dd><ul>
+<dt>If <a href="#id549"><span class="problematic" id="id550">*</span></a>hardening*=KINEMATIC, the table data specify the following:</dt><dd><ul>
 <li><p>Yield stress.</p></li>
 <li><p>Plastic strain.</p></li>
 <li><p>Temperature, if the data depend on temperature.</p></li>
@@ -11893,7 +11999,7 @@ example the Mohr-Coulomb plasticity model.</p>
 </dl>
 </li>
 <li><dl class="simple">
-<dt>If <a href="#id550"><span class="problematic" id="id551">*</span></a>hardening*=JOHNSON_COOK, the table data specify the following:</dt><dd><ul>
+<dt>If <a href="#id551"><span class="problematic" id="id552">*</span></a>hardening*=JOHNSON_COOK, the table data specify the following:</dt><dd><ul>
 <li><ol class="upperalpha simple">
 <li></li>
 </ol>
@@ -11917,7 +12023,7 @@ example the Mohr-Coulomb plasticity model.</p>
 </dl>
 </li>
 <li><dl class="simple">
-<dt>If <a href="#id552"><span class="problematic" id="id553">*</span></a>hardening*=USER, the table data specify the following:</dt><dd><ul>
+<dt>If <a href="#id553"><span class="problematic" id="id554">*</span></a>hardening*=USER, the table data specify the following:</dt><dd><ul>
 <li><p>Hardening properties.</p></li>
 </ul>
 </dd>
@@ -11997,8 +12103,8 @@ example the Mohr-Coulomb plasticity model.</p>
 </dd></dl>
 
 </section>
-<section id="id554">
-<h4>SuperElastic<a class="headerlink" href="#id554" title="Permalink to this headline">#</a></h4>
+<section id="id555">
+<h4>SuperElastic<a class="headerlink" href="#id555" title="Permalink to this headline">#</a></h4>
 <section id="superelastichardening">
 <h5>SuperElasticHardening<a class="headerlink" href="#superelastichardening" title="Permalink to this headline">#</a></h5>
 <dl class="py class">
@@ -12087,8 +12193,8 @@ transformation stress levels of a material model.</p>
 </section>
 <section id="swelling">
 <h4>Swelling<a class="headerlink" href="#swelling" title="Permalink to this headline">#</a></h4>
-<section id="id555">
-<h5>Swelling<a class="headerlink" href="#id555" title="Permalink to this headline">#</a></h5>
+<section id="id556">
+<h5>Swelling<a class="headerlink" href="#id556" title="Permalink to this headline">#</a></h5>
 <dl class="py class">
 <dt class="sig sig-object py" id="abaqus.Material.Plastic.Swelling.Swelling.Swelling">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">Swelling</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">table</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">tuple</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">law</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">SymbolicConstantType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'INPUT'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">temperatureDependency</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">BooleanType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dependencies</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/haiiliin/pyabaqus/blob/V2022/src/abaqus/Material/Plastic/Swelling/Swelling.py#L5-L84"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#abaqus.Material.Plastic.Swelling.Swelling.Swelling" title="Permalink to this definition">#</a></dt>
@@ -12226,7 +12332,7 @@ damage.</p>
 <p>The table data for this object are:</p>
 <ul class="simple">
 <li><dl class="simple">
-<dt>If <a href="#id556"><span class="problematic" id="id557">*</span></a>type*=DISPLACEMENT, and <a href="#id558"><span class="problematic" id="id559">*</span></a>softening*=LINEAR, and <a href="#id560"><span class="problematic" id="id561">*</span></a>mixedModeBehavior*=MODE_INDEPENDENT, the table data specify the following:</dt><dd><ul>
+<dt>If <a href="#id557"><span class="problematic" id="id558">*</span></a>type*=DISPLACEMENT, and <a href="#id559"><span class="problematic" id="id560">*</span></a>softening*=LINEAR, and <a href="#id561"><span class="problematic" id="id562">*</span></a>mixedModeBehavior*=MODE_INDEPENDENT, the table data specify the following:</dt><dd><ul>
 <li><p>Equivalent total or Plastic displacement at failure, measured from the time of damage initiation.</p></li>
 <li><p>Temperature, if the data depend on temperature.</p></li>
 <li><p>Value of the first field variable, if the data depend on field variables.</p></li>
@@ -12237,7 +12343,7 @@ damage.</p>
 </dl>
 </li>
 <li><dl class="simple">
-<dt>If <a href="#id562"><span class="problematic" id="id563">*</span></a>type*=ENERGY, and <a href="#id564"><span class="problematic" id="id565">*</span></a>softening*=LINEAR, and <a href="#id566"><span class="problematic" id="id567">*</span></a>mixedModeBehavior*=MODE_INDEPENDENT, the table data specify the following:</dt><dd><ul>
+<dt>If <a href="#id563"><span class="problematic" id="id564">*</span></a>type*=ENERGY, and <a href="#id565"><span class="problematic" id="id566">*</span></a>softening*=LINEAR, and <a href="#id567"><span class="problematic" id="id568">*</span></a>mixedModeBehavior*=MODE_INDEPENDENT, the table data specify the following:</dt><dd><ul>
 <li><p>Fracture energy.</p></li>
 <li><p>Temperature, if the data depend on temperature.</p></li>
 <li><p>Value of the first field variable, if the data depend on field variables.</p></li>
@@ -12248,7 +12354,7 @@ damage.</p>
 </dl>
 </li>
 <li><dl class="simple">
-<dt>If <a href="#id568"><span class="problematic" id="id569">*</span></a>type*=DISPLACEMENT, and <a href="#id570"><span class="problematic" id="id571">*</span></a>softening*=LINEAR, and <a href="#id572"><span class="problematic" id="id573">*</span></a>mixedModeBehavior*=TABULAR, the table data specify the following:</dt><dd><ul>
+<dt>If <a href="#id569"><span class="problematic" id="id570">*</span></a>type*=DISPLACEMENT, and <a href="#id571"><span class="problematic" id="id572">*</span></a>softening*=LINEAR, and <a href="#id573"><span class="problematic" id="id574">*</span></a>mixedModeBehavior*=TABULAR, the table data specify the following:</dt><dd><ul>
 <li><p>Total displacement at failure, measured from the time of damage initiation.</p></li>
 <li><p>Appropriate mode mix ratio.</p></li>
 <li><p>Appropriate mode mix ratio (if relevant, for three-dimensional problems with anisotropic shear behavior).</p></li>
@@ -12261,7 +12367,7 @@ damage.</p>
 </dl>
 </li>
 <li><dl class="simple">
-<dt>If <a href="#id574"><span class="problematic" id="id575">*</span></a>type*=ENERGY, and <a href="#id576"><span class="problematic" id="id577">*</span></a>softening*=LINEAR, and <a href="#id578"><span class="problematic" id="id579">*</span></a>mixedModeBehavior*=TABULAR, the table data specify the following:</dt><dd><ul>
+<dt>If <a href="#id575"><span class="problematic" id="id576">*</span></a>type*=ENERGY, and <a href="#id577"><span class="problematic" id="id578">*</span></a>softening*=LINEAR, and <a href="#id579"><span class="problematic" id="id580">*</span></a>mixedModeBehavior*=TABULAR, the table data specify the following:</dt><dd><ul>
 <li><p>Fracture energy.</p></li>
 <li><p>Appropriate mode mix ratio.</p></li>
 <li><p>Appropriate mode mix ratio (if relevant, for three-dimensional problems with anisotropic shear behavior).</p></li>
@@ -12274,7 +12380,7 @@ damage.</p>
 </dl>
 </li>
 <li><dl class="simple">
-<dt>If <a href="#id580"><span class="problematic" id="id581">*</span></a>type*=DISPLACEMENT, and <a href="#id582"><span class="problematic" id="id583">*</span></a>softening*=EXPONENTIAL, and <a href="#id584"><span class="problematic" id="id585">*</span></a>mixedModeBehavior*=MODE_INDEPENDENT, the table data specify the following:</dt><dd><ul>
+<dt>If <a href="#id581"><span class="problematic" id="id582">*</span></a>type*=DISPLACEMENT, and <a href="#id583"><span class="problematic" id="id584">*</span></a>softening*=EXPONENTIAL, and <a href="#id585"><span class="problematic" id="id586">*</span></a>mixedModeBehavior*=MODE_INDEPENDENT, the table data specify the following:</dt><dd><ul>
 <li><p>Equivalent total or Plastic displacement at failure, measured from the time of damage initiation.</p></li>
 <li><p>Exponential law parameter.</p></li>
 <li><p>Temperature, if the data depend on temperature.</p></li>
@@ -12286,7 +12392,7 @@ damage.</p>
 </dl>
 </li>
 <li><dl class="simple">
-<dt>If <a href="#id586"><span class="problematic" id="id587">*</span></a>type*=ENERGY, and <a href="#id588"><span class="problematic" id="id589">*</span></a>softening*=EXPONENTIAL, and <a href="#id590"><span class="problematic" id="id591">*</span></a>mixedModeBehavior*=MODE_INDEPENDENT, the table data specify the following:</dt><dd><ul>
+<dt>If <a href="#id587"><span class="problematic" id="id588">*</span></a>type*=ENERGY, and <a href="#id589"><span class="problematic" id="id590">*</span></a>softening*=EXPONENTIAL, and <a href="#id591"><span class="problematic" id="id592">*</span></a>mixedModeBehavior*=MODE_INDEPENDENT, the table data specify the following:</dt><dd><ul>
 <li><p>Fracture energy.</p></li>
 <li><p>Temperature, if the data depend on temperature.</p></li>
 <li><p>Value of the first field variable, if the data depend on field variables.</p></li>
@@ -12297,7 +12403,7 @@ damage.</p>
 </dl>
 </li>
 <li><dl class="simple">
-<dt>If <a href="#id592"><span class="problematic" id="id593">*</span></a>type*=DISPLACEMENT, and <a href="#id594"><span class="problematic" id="id595">*</span></a>softening*=EXPONENTIAL, and <a href="#id596"><span class="problematic" id="id597">*</span></a>mixedModeBehavior*=TABULAR, the table data specify the following:</dt><dd><ul>
+<dt>If <a href="#id593"><span class="problematic" id="id594">*</span></a>type*=DISPLACEMENT, and <a href="#id595"><span class="problematic" id="id596">*</span></a>softening*=EXPONENTIAL, and <a href="#id597"><span class="problematic" id="id598">*</span></a>mixedModeBehavior*=TABULAR, the table data specify the following:</dt><dd><ul>
 <li><p>Total displacement at failure, measured from the time of damage initiation.</p></li>
 <li><p>Exponential law parameter.</p></li>
 <li><p>Appropriate mode mix ratio.</p></li>
@@ -12311,7 +12417,7 @@ damage.</p>
 </dl>
 </li>
 <li><dl class="simple">
-<dt>If <a href="#id598"><span class="problematic" id="id599">*</span></a>type*=ENERGY, and <a href="#id600"><span class="problematic" id="id601">*</span></a>softening*=EXPONENTIAL, and <a href="#id602"><span class="problematic" id="id603">*</span></a>mixedModeBehavior*=TABULAR, the table data specify the following:</dt><dd><ul>
+<dt>If <a href="#id599"><span class="problematic" id="id600">*</span></a>type*=ENERGY, and <a href="#id601"><span class="problematic" id="id602">*</span></a>softening*=EXPONENTIAL, and <a href="#id603"><span class="problematic" id="id604">*</span></a>mixedModeBehavior*=TABULAR, the table data specify the following:</dt><dd><ul>
 <li><p>Fracture energy.</p></li>
 <li><p>Appropriate mode mix ratio.</p></li>
 <li><p>Appropriate mode mix ratio (if relevant, for three-dimensional problems with anisotropic shear behavior).</p></li>
@@ -12324,7 +12430,7 @@ damage.</p>
 </dl>
 </li>
 <li><dl class="simple">
-<dt>If <a href="#id604"><span class="problematic" id="id605">*</span></a>type*=DISPLACEMENT, and <a href="#id606"><span class="problematic" id="id607">*</span></a>softening*=TABULAR, and <a href="#id608"><span class="problematic" id="id609">*</span></a>mixedModeBehavior*=MODE_INDEPENDENT, the table data specify the following:</dt><dd><ul>
+<dt>If <a href="#id605"><span class="problematic" id="id606">*</span></a>type*=DISPLACEMENT, and <a href="#id607"><span class="problematic" id="id608">*</span></a>softening*=TABULAR, and <a href="#id609"><span class="problematic" id="id610">*</span></a>mixedModeBehavior*=MODE_INDEPENDENT, the table data specify the following:</dt><dd><ul>
 <li><p>Damage variable.</p></li>
 <li><p>Equivalent total or Plastic displacement, measured from the time of damage initiation.</p></li>
 <li><p>Temperature, if the data depend on temperature.</p></li>
@@ -12336,7 +12442,7 @@ damage.</p>
 </dl>
 </li>
 <li><dl class="simple">
-<dt>If <a href="#id610"><span class="problematic" id="id611">*</span></a>type*=DISPLACEMENT, and <a href="#id612"><span class="problematic" id="id613">*</span></a>softening*=TABULAR, and <a href="#id614"><span class="problematic" id="id615">*</span></a>mixedModeBehavior*=TABULAR, the table data specify the following:</dt><dd><ul>
+<dt>If <a href="#id611"><span class="problematic" id="id612">*</span></a>type*=DISPLACEMENT, and <a href="#id613"><span class="problematic" id="id614">*</span></a>softening*=TABULAR, and <a href="#id615"><span class="problematic" id="id616">*</span></a>mixedModeBehavior*=TABULAR, the table data specify the following:</dt><dd><ul>
 <li><p>Damage variable.</p></li>
 <li><p>Equivalent total or Plastic displacement, measured from the time of damage initiation.</p></li>
 <li><p>Appropriate mode mix ratio.</p></li>
@@ -12350,7 +12456,7 @@ damage.</p>
 </dl>
 </li>
 <li><dl class="simple">
-<dt>If <a href="#id616"><span class="problematic" id="id617">*</span></a>type*=ENERGY, and <a href="#id618"><span class="problematic" id="id619">*</span></a>softening*=LINEAR or EXPONENTIAL, and <a href="#id620"><span class="problematic" id="id621">*</span></a>mixedModeBehavior*=POWER_LAW or BK, the table data specify the following:</dt><dd><ul>
+<dt>If <a href="#id617"><span class="problematic" id="id618">*</span></a>type*=ENERGY, and <a href="#id619"><span class="problematic" id="id620">*</span></a>softening*=LINEAR or EXPONENTIAL, and <a href="#id621"><span class="problematic" id="id622">*</span></a>mixedModeBehavior*=POWER_LAW or BK, the table data specify the following:</dt><dd><ul>
 <li><p>Normal mode fracture energy.</p></li>
 <li><p>Shear mode fracture energy for failure in the first shear direction.</p></li>
 <li><p>Shear mode fracture energy for failure in the second shear direction.</p></li>
@@ -12363,7 +12469,7 @@ damage.</p>
 </dl>
 </li>
 <li><dl class="simple">
-<dt>If <a href="#id622"><span class="problematic" id="id623">*</span></a>type*=ENERGY, <a href="#id624"><span class="problematic" id="id625">*</span></a>softening*=LINEAR and constructor for [DamageInitiation](<a class="reference external" href="https://help.3ds.com/2022/english/DSSIMULIA_Established/SIMACAEKERRefMap/simaker-c-damageinitiationpyc.htm?ContextScope=all)=HashinDamageInitiation">https://help.3ds.com/2022/english/DSSIMULIA_Established/SIMACAEKERRefMap/simaker-c-damageinitiationpyc.htm?ContextScope=all)=HashinDamageInitiation</a> the table data specify the following:</dt><dd><ul>
+<dt>If <a href="#id623"><span class="problematic" id="id624">*</span></a>type*=ENERGY, <a href="#id625"><span class="problematic" id="id626">*</span></a>softening*=LINEAR and constructor for [DamageInitiation](<a class="reference external" href="https://help.3ds.com/2022/english/DSSIMULIA_Established/SIMACAEKERRefMap/simaker-c-damageinitiationpyc.htm?ContextScope=all)=HashinDamageInitiation">https://help.3ds.com/2022/english/DSSIMULIA_Established/SIMACAEKERRefMap/simaker-c-damageinitiationpyc.htm?ContextScope=all)=HashinDamageInitiation</a> the table data specify the following:</dt><dd><ul>
 <li><p>Fiber tensile fracture energy.</p></li>
 <li><p>Fiber compressive fracture energy.</p></li>
 <li><p>Matrix tensile fracture energy.</p></li>
@@ -12505,7 +12611,7 @@ damage.</p>
 </dl>
 </li>
 <li><dl class="simple">
-<dt>If constructor is MsfldDamageInitiation and <a href="#id626"><span class="problematic" id="id627">*</span></a>definition*=MSFLD, the table data specify the following:</dt><dd><ul>
+<dt>If constructor is MsfldDamageInitiation and <a href="#id627"><span class="problematic" id="id628">*</span></a>definition*=MSFLD, the table data specify the following:</dt><dd><ul>
 <li><p>Nominal strain at damage initiation in a normal-only mode.</p></li>
 <li><p>Equivalent Plastic strain at initiation of localized necking.</p></li>
 <li><p>Ratio of minor to major principal strains.</p></li>
@@ -12519,7 +12625,7 @@ damage.</p>
 </dl>
 </li>
 <li><dl class="simple">
-<dt>If constructor is MsfldDamageInitiation and <a href="#id628"><span class="problematic" id="id629">*</span></a>definition*=FLD, the table data specify the following:</dt><dd><ul>
+<dt>If constructor is MsfldDamageInitiation and <a href="#id629"><span class="problematic" id="id630">*</span></a>definition*=FLD, the table data specify the following:</dt><dd><ul>
 <li><p>Major principal strain at initiation of localized necking.</p></li>
 <li><p>Equivalent Plastic strain at initiation of localized necking.</p></li>
 <li><p>Ratio of minor to major principal strains.</p></li>
@@ -13253,7 +13359,7 @@ modulus as a function of time.</p>
 <li><dl class="simple">
 <dt>For a viscoelastic material model, the values depend on the value of the <em>time</em> member of the [Viscoelastic](<a class="reference external" href="https://help.3ds.com/2022/english/DSSIMULIA_Established/SIMACAEKERRefMap/simaker-c-viscoelasticpyc.htm?ContextScope=all">https://help.3ds.com/2022/english/DSSIMULIA_Established/SIMACAEKERRefMap/simaker-c-viscoelasticpyc.htm?ContextScope=all</a>) object.</dt><dd><ul>
 <li><dl class="simple">
-<dt>If <a href="#id630"><span class="problematic" id="id631">*</span></a>time*=RELAXATION_TEST_DATA, the table data specify the following:</dt><dd><ul>
+<dt>If <a href="#id631"><span class="problematic" id="id632">*</span></a>time*=RELAXATION_TEST_DATA, the table data specify the following:</dt><dd><ul>
 <li><p>Normalized volumetric (bulk) modulus kR(t),(0≤kR(t)≤1).</p></li>
 <li><p>Time t (t&gt;0).</p></li>
 </ul>
@@ -13261,7 +13367,7 @@ modulus as a function of time.</p>
 </dl>
 </li>
 <li><dl class="simple">
-<dt>If <a href="#id632"><span class="problematic" id="id633">*</span></a>time*=CREEP_TEST_DATA, the table data specify the following:</dt><dd><ul>
+<dt>If <a href="#id633"><span class="problematic" id="id634">*</span></a>time*=CREEP_TEST_DATA, the table data specify the following:</dt><dd><ul>
 <li><p>Normalized volumetric (bulk) compliance jK(t),(jK(t)≥1).</p></li>
 <li><p>Time t (t&gt;0).</p></li>
 </ul>
@@ -13528,12 +13634,17 @@ modulus as a function of time.</p>
 </li>
 <li><a class="reference internal" href="#crushablefoam">CrushableFoam</a><ul>
 <li><a class="reference internal" href="#id466">CrushableFoam</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#crushstress">CrushStress</a><ul>
+<li><a class="reference internal" href="#id471">CrushStress</a></li>
+<li><a class="reference internal" href="#crushstressvelocityfactor">CrushStressVelocityFactor</a></li>
 <li><a class="reference internal" href="#crushablefoamhardening">CrushableFoamHardening</a></li>
 </ul>
 </li>
 <li><a class="reference internal" href="#druckerprager">DruckerPrager</a><ul>
 <li><a class="reference internal" href="#extended">Extended</a><ul>
-<li><a class="reference internal" href="#id471">DruckerPrager</a></li>
+<li><a class="reference internal" href="#id472">DruckerPrager</a></li>
 <li><a class="reference internal" href="#druckerpragercreep">DruckerPragerCreep</a></li>
 <li><a class="reference internal" href="#druckerpragerhardening">DruckerPragerHardening</a></li>
 <li><a class="reference internal" href="#triaxialtestdata">TriaxialTestData</a></li>
@@ -13569,17 +13680,17 @@ modulus as a function of time.</p>
 </ul>
 </li>
 <li><a class="reference internal" href="#ornl">ORNL</a><ul>
-<li><a class="reference internal" href="#id508">Ornl</a></li>
+<li><a class="reference internal" href="#id509">Ornl</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#id509">Porous</a><ul>
+<li><a class="reference internal" href="#id510">Porous</a><ul>
 <li><a class="reference internal" href="#porousfailurecriteria">PorousFailureCriteria</a></li>
 <li><a class="reference internal" href="#porousmetalplasticity">PorousMetalPlasticity</a></li>
 <li><a class="reference internal" href="#voidnucleation">VoidNucleation</a></li>
 </ul>
 </li>
 <li><a class="reference internal" href="#ratedependent">RateDependent</a><ul>
-<li><a class="reference internal" href="#id510">RateDependent</a></li>
+<li><a class="reference internal" href="#id511">RateDependent</a></li>
 </ul>
 </li>
 <li><a class="reference internal" href="#twolayerviscoplasticity">TwoLayerViscoPlasticity</a><ul>
@@ -13594,15 +13705,15 @@ modulus as a function of time.</p>
 <li><a class="reference internal" href="#tensioncutoff">TensionCutOff</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#id533">Plastic</a></li>
+<li><a class="reference internal" href="#id534">Plastic</a></li>
 <li><a class="reference internal" href="#potential">Potential</a></li>
-<li><a class="reference internal" href="#id554">SuperElastic</a><ul>
+<li><a class="reference internal" href="#id555">SuperElastic</a><ul>
 <li><a class="reference internal" href="#superelastichardening">SuperElasticHardening</a></li>
 <li><a class="reference internal" href="#superelastichardeningmodifications">SuperElasticHardeningModifications</a></li>
 </ul>
 </li>
 <li><a class="reference internal" href="#swelling">Swelling</a><ul>
-<li><a class="reference internal" href="#id555">Swelling</a></li>
+<li><a class="reference internal" href="#id556">Swelling</a></li>
 </ul>
 </li>
 <li><a class="reference internal" href="#tensilefailure">TensileFailure</a></li>
