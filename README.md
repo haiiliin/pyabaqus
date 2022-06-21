@@ -9,6 +9,9 @@
 [![GitHub release](https://img.shields.io/github/release/haiiliin/pyabaqus.svg)](https://GitHub.com/haiiliin/pyabaqus/releases/)
 [![PyPI download month](https://img.shields.io/pypi/dm/pyabaqus.svg)](https://pypi.python.org/pypi/pyabaqus/)
 
+> **Note**
+> The repo will be eventually transferred to [abqpy](https://github.com/haiiliin/abqpy).
+
 Type hints for Abaqus/Python scripting
 
 `pyabaqus` is a Python package providing type hints for Python scripting of Abaqus, you can 
