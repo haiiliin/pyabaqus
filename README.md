@@ -7,7 +7,7 @@
 [![made-with-sphinx-doc](https://img.shields.io/badge/Made%20with-Sphinx-1f425f.svg)](https://www.sphinx-doc.org/)
 [![Anaconda platforms](https://anaconda.org/haiiliin/pyabaqus/badges/platforms.svg)](https://anaconda.org/haiiliin/pyabaqus)
 [![GitHub release](https://img.shields.io/github/release/haiiliin/pyabaqus.svg)](https://GitHub.com/haiiliin/pyabaqus/releases/)
-[![PyPI download month](https://img.shields.io/pypi/dm/ansicolortags.svg)](https://pypi.python.org/pypi/pyabaqus/)
+[![PyPI download month](https://img.shields.io/pypi/dm/pyabaqus.svg)](https://pypi.python.org/pypi/pyabaqus/)
 
 Type hints for Abaqus/Python scripting
 
