@@ -1,4 +1,5 @@
 from abaqus.Odb.OdbCommands import *
+from abaqus.Odb.Odb import Odb
 
 
 def openOdb(name: str, *args, **kwargs):
@@ -20,3 +21,5 @@ def openOdb(name: str, *args, **kwargs):
     except:
         pass
     os.system(f'{abaqus} cae database={odbName} script={fileName}')
+    os.system('exit')
+    return Odb(name)
