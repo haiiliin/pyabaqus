@@ -480,7 +480,7 @@ class ConstrainedSketch(
         """This method resets the view to be perpendicular to the sketching plane."""
         pass
 
-    def rectangle(self, point1: tuple[float], point2: tuple[float]):
+    def rectangle(self, point1: tuple[float,float], point2: tuple[float,float]):
         """This method creates four lines that form a rectangle with diagonal corners defined by
         the given points and inserts them into the geometry repository of the ConstrainedSketch
         object.
