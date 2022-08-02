@@ -51,7 +51,7 @@ class CellArray:
         """
         pass
 
-    def findAt(self, coordinates: tuple, printWarning: Boolean = True):
+    def findAt(self, coordinates: tuple, printWarning: Boolean = True) -> tuple[Cell]:
         """This method returns the object or objects in the CellArray located at the given
         coordinates. findAt initially uses the ACIS tolerance of 1E-6. As a result, findAt
         returns any entity that is at the arbitrary point specified or at a distance of less

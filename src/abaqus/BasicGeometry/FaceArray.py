@@ -63,7 +63,7 @@ class FaceArray:
 
     def findAt(
         self, coordinates: tuple, normal: tuple = (), printWarning: Boolean = True
-    ):
+    ) -> tuple[Face]:
         """This method returns the object or objects in the FaceArray located at the given
         coordinates.
         findAt initially uses the ACIS tolerance of 1E-6. As a result, findAt returns any face
