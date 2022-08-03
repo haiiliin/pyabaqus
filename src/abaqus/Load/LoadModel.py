@@ -1,3 +1,5 @@
+import typing
+
 from abaqusConstants import *
 from .BodyCharge import BodyCharge
 from .BodyConcentrationFlux import BodyConcentrationFlux
@@ -37,7 +39,7 @@ from .SurfaceTraction import SurfaceTraction
 from ..Datum.DatumAxis import DatumAxis
 from ..Model.ModelBase import ModelBase
 from ..Region.Region import Region
-
+from ..Region.Set import Set
 
 class LoadModel(ModelBase):
     """Abaqus creates a Model object named `Model-1` when a session is started.
@@ -1511,7 +1513,7 @@ class LoadModel(ModelBase):
         self,
         name: str,
         createStepName: str,
-        region: Region,
+        region: typing.Union[Region,Set],
         magnitude: float = 0.0,
         hZero: float = 0.0,
         hReference: float = 0.0,
