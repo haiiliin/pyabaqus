@@ -48,6 +48,7 @@ from .VelocityBaseMotionBCState import VelocityBaseMotionBCState
 from ..Amplitude.CorrelationArray import CorrelationArray
 from ..Model.ModelBase import ModelBase
 from ..Region.Region import Region
+from ..Region.Set import Set
 from ..Region.RegionArray import RegionArray
 
 
@@ -794,7 +795,7 @@ class BoundaryConditionModel(ModelBase):
         self,
         name: str,
         createStepName: str,
-        region: Region,
+        region: typing.Union[Region,Set],
         fieldName: str = "",
         u1: typing.Union[SymbolicConstant, float] = UNSET,
         u2: typing.Union[SymbolicConstant, float] = UNSET,
