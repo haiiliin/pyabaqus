@@ -949,7 +949,7 @@ class SectionModel(ModelBase):
         return section
 
     def HomogeneousSolidSection(
-        self, name: str, material: str, thickness: float = 1
+        self, name: str, material: str, thickness: typing.Optional[float] = 1
     ) -> HomogeneousSolidSection:
         """This method creates a HomogeneousSolidSection object.
 
