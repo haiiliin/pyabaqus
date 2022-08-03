@@ -545,7 +545,7 @@ class XYSession(XYSessionBase):
         self,
         odb: Odb,
         outputPosition: SymbolicConstant,
-        variable: tuple[tuple[str, SymbolicConstant, tuple[SymbolicConstant, str]]],
+        variable: tuple[tuple[str, SymbolicConstant, tuple[tuple[SymbolicConstant, str],...]],...],
         elementSets: tuple = (),
         elementLabels: tuple = (),
         nodeSets: tuple = (),
