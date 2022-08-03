@@ -9,12 +9,7 @@ from .TextStyle import TextStyle
 from .XYData import XYData
 from .XYSessionBase import XYSessionBase
 from ..PathAndProbe.Path import Path
-
-
-# prevent circular imports
-class Odb:
-    pass
-
+from ..Odb.Odb import Odb
 
 class XYSession(XYSessionBase):
     @staticmethod
