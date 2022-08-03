@@ -899,7 +899,7 @@ class MeshPart(PartBase):
         """
         pass
 
-    def setElementType(self, regions: tuple, elemTypes: tuple[ElemType]):
+    def setElementType(self, regions: tuple, elemTypes: tuple[ElemType,...]):
         """This method assigns element types to the specified regions.
 
         Parameters
