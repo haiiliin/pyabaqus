@@ -846,4 +846,4 @@ class SessionBase:
 
     @staticmethod
     def exit():
-        os.system("exit")
+        sys.exit()
