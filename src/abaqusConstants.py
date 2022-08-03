@@ -2642,8 +2642,8 @@ class BooleanType(int):
         """ x.__xor__(y) <==> x^y """
         pass
 
-
-Boolean = BooleanType
+import typing
+Boolean = typing.Union[BooleanType,int]
 
 
 class SymbolicConstantType(object):
