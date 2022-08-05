@@ -2,7 +2,7 @@ from abaqus.Odb.OdbCommands import *
 from abaqus.Odb.Odb import Odb
 
 
-def openOdb(name: str, *args, **kwargs):
+def openOdb(path: str, *args, **kwargs):
     abaqus = 'abaqus'
     if 'ABAQUS_BAT_PATH' in os.environ.keys():
         abaqus = os.environ['ABAQUS_BAT_PATH']
@@ -10,7 +10,7 @@ def openOdb(name: str, *args, **kwargs):
     filePath = os.path.abspath(sys.argv[0])
     fileDir = os.path.dirname(filePath)
     fileName = os.path.basename(filePath)
-    odbName = os.path.basename(os.path.abspath(name))
+    odbName = os.path.basename(os.path.abspath(path))
 
     os.system(f'cd {fileDir}')
     try:  # If it is a jupyter notebook
@@ -22,4 +22,4 @@ def openOdb(name: str, *args, **kwargs):
         pass
     os.system(f'{abaqus} cae database={odbName} script={fileName}')
     os.system('exit')
-    return Odb(name)
+    return Odb(path)
