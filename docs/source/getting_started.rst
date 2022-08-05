@@ -78,10 +78,17 @@ The secret is hided in the :py:meth:`~abaqus.Mdb.Mdb.Mdb.saveAs` method:
 .. code-block:: python
 
     def saveAs(self, pathName: str):
-        abaqus = 'abaqus'
-        if 'ABAQUS_BAT_PATH' in os.environ.keys():
-            abaqus = os.environ['ABAQUS_BAT_PATH']
-        os.system('{} cae -noGUI {}'.format(abaqus, os.path.abspath(sys.argv[0])))
+        abaqus = "abaqus"
+        if "ABAQUS_BAT_PATH" in os.environ.keys():
+            abaqus = os.environ["ABAQUS_BAT_PATH"]
+
+        filePath = os.path.abspath(sys.argv[0])
+        fileDir = os.path.dirname(filePath)
+        fileName = os.path.basename(filePath)
+
+        os.system(f"cd {fileDir}")
+        ...
+        os.system(f"{abaqus} cae -noGUI {fileName}")
 
 In this package, the :py:meth:`~abaqus.Mdb.Mdb.Mdb.saveAs` method is reimplemented, if you call this method in your
 script (i.e., `mdb.saveAs('model.cae')`), the Python interpreter (not Abaqus Python interpreter) will use the
@@ -93,11 +100,24 @@ method :py:meth:`~abaqus.Session.Session.Session.openOdb` is also reimplemented:
 
 .. code-block:: python
 
-    def openOdb(self, name: str, *args, **kwargs):
-        abaqus = 'abaqus'
-        if 'ABAQUS_BAT_PATH' in os.environ.keys():
-            abaqus = os.environ['ABAQUS_BAT_PATH']
-        os.system('{} cae database={} script={}'.format(abaqus, os.path.abspath(name), os.path.abspath(sys.argv[0])))
+    def openOdb(self, name: str, *args, **kwargs) -> Odb:
+        self.odbs[name] = odb = Odb(name, *args, **kwargs)
+
+        abaqus = "abaqus"
+        if "ABAQUS_BAT_PATH" in os.environ.keys():
+            abaqus = os.environ["ABAQUS_BAT_PATH"]
+
+        filePath = os.path.abspath(sys.argv[0])
+        fileDir = os.path.dirname(filePath)
+        fileName = os.path.basename(filePath)
+        odbName = os.path.basename(os.path.abspath(name))
+
+        os.system(f"cd {fileDir}")
+        ...
+        os.system(f"{abaqus} cae database={odbName} script={fileName}")
+
+        self.exit()
+        return odb
 
 Therefore, if you want to run your Python script in Abaqus Python environment, please make sure to use these methods.
 
