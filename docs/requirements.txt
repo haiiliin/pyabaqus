@@ -3,3 +3,4 @@ furo
 numpydoc
 sphinx_rtd_theme
 sphinx-toolbox
+sphinx_copybutton
