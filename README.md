@@ -10,7 +10,7 @@
 [![PyPI download month](https://img.shields.io/pypi/dm/pyabaqus.svg)](https://pypi.python.org/pypi/pyabaqus/)
 
 > **Note**
-> The repo will be eventually transferred to [abqpy](https://github.com/haiiliin/abqpy).
+> The repo has been transferred to [abqpy](https://github.com/haiiliin/abqpy).
 
 Type hints for Abaqus/Python scripting
 
