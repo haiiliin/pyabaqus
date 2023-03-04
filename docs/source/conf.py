@@ -120,7 +120,11 @@ html_theme = 'furo'
 
 
 html_theme_options = {
-    'navigation_depth': 9,
+    "announcement": "The `pyabaqus` package has been deprecated. Please use the <a href='https://github.com/haiiliin/abqpy' target='_blank'>abqpy</a> package instead.",
+    "light_css_variables": {
+        "color-announcement-background": "#7C4DFF",
+        "color-announcement-text": "#FFFFFF",
+    }
 }
 
 # Add any paths that contain custom static files (such as style sheets) here,
