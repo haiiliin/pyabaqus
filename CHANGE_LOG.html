@@ -1,14 +1,14 @@
 <!doctype html>
-<html class="no-js">
+<html class="no-js" lang="en">
   <head><meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width,initial-scale=1"/>
-    <meta name="color-scheme" content="light dark"><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="color-scheme" content="light dark"><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 <link rel="index" title="Index" href="genindex.html" /><link rel="search" title="Search" href="search.html" /><link rel="next" title="Getting Started" href="getting_started.html" /><link rel="prev" title="PYABAQUS documentation" href="index.html" />
 
-    <meta name="generator" content="sphinx-4.5.0, furo 2022.06.21"/>
+    <!-- Generated with Sphinx 6.1.3 and Furo 2022.12.07 -->
         <title>Change Log - PYABAQUS 2022.1 documentation</title>
       <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="_static/styles/furo.css?digest=40978830699223671f4072448e654b5958f38b89" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/furo.css?digest=91d0f0d1c444bdcb17a68e833c7a53903343c195" />
     <link rel="stylesheet" type="text/css" href="_static/styles/furo-extensions.css?digest=30d1aed668e5c3a91c3e3bf6a60b675221979f0e" />
     
     
@@ -18,6 +18,8 @@
   body {
     --color-code-background: #f8f8f8;
   --color-code-foreground: black;
+  --color-announcement-background: #7C4DFF;
+  --color-announcement-text: #FFFFFF;
   
   }
   @media not print {
@@ -112,7 +114,11 @@
   <div class="visually-hidden">Hide table of contents sidebar</div>
 </label>
 
-
+<div class="announcement">
+  <aside class="announcement-content">
+     The `pyabaqus` package has been deprecated. Please use the <a href='https://github.com/haiiliin/abqpy' target='_blank'>abqpy</a> package instead. 
+  </aside>
+</div>
 
 <div class="page">
   <header class="mobile-header">
@@ -149,7 +155,7 @@
   <span class="sidebar-brand-text">PYABAQUS 2022.1 documentation</span>
   
 </a><form class="sidebar-search-container" method="get" action="search.html" role="search">
-  <input class="sidebar-search" placeholder=Search name="q" aria-label="Search">
+  <input class="sidebar-search" placeholder="Search" name="q" aria-label="Search">
   <input type="hidden" name="check_keywords" value="yes">
   <input type="hidden" name="area" value="default">
 </form>
@@ -288,7 +294,8 @@
           <span>Back to top</span>
         </a>
         <div class="content-icon-container">
-          <div class="theme-toggle-container theme-toggle-content">
+          
+<div class="theme-toggle-container theme-toggle-content">
             <button class="theme-toggle">
               <div class="visually-hidden">Toggle Light / Dark / Auto color theme</div>
               <svg class="theme-icon-when-auto"><use href="#svg-sun-half"></use></svg>
@@ -303,29 +310,29 @@
         </div>
         <article role="main">
           <section id="change-log">
-<h1>Change Log<a class="headerlink" href="#change-log" title="Permalink to this headline">#</a></h1>
+<h1>Change Log<a class="headerlink" href="#change-log" title="Permalink to this heading">#</a></h1>
 <p>Change log from V2021 to V2022</p>
 <section id="constraint">
-<h2>Constraint<a class="headerlink" href="#constraint" title="Permalink to this headline">#</a></h2>
+<h2>Constraint<a class="headerlink" href="#constraint" title="Permalink to this heading">#</a></h2>
 <ul class="simple">
 <li><p><a class="reference internal" href="reference/mdb/model/constraint.html#abaqus.Constraint.Coupling.Coupling" title="abaqus.Constraint.Coupling.Coupling"><code class="xref py py-class docutils literal notranslate"><span class="pre">Coupling</span></code></a> and <a class="reference internal" href="reference/mdb/model/constraint.html#abaqus.Constraint.ConstraintModel.ConstraintModel.Coupling" title="abaqus.Constraint.ConstraintModel.ConstraintModel.Coupling"><code class="xref py py-meth docutils literal notranslate"><span class="pre">ConstraintModel.Coupling()</span></code></a>: add <strong>alpha</strong> argument.</p></li>
 <li><p><a class="reference internal" href="reference/mdb/model/constraint.html#abaqus.Constraint.Tie.Tie" title="abaqus.Constraint.Tie.Tie"><code class="xref py py-class docutils literal notranslate"><span class="pre">Tie</span></code></a> and <a class="reference internal" href="reference/mdb/model/constraint.html#abaqus.Constraint.ConstraintModel.ConstraintModel.Tie" title="abaqus.Constraint.ConstraintModel.ConstraintModel.Tie"><code class="xref py py-meth docutils literal notranslate"><span class="pre">ConstraintModel.Tie()</span></code></a>: arguments <strong>master</strong> and <strong>slave</strong> change to <strong>main</strong> and <strong>secondary</strong>.</p></li>
 </ul>
 </section>
 <section id="datum">
-<h2>Datum<a class="headerlink" href="#datum" title="Permalink to this headline">#</a></h2>
+<h2>Datum<a class="headerlink" href="#datum" title="Permalink to this heading">#</a></h2>
 <ul class="simple">
 <li><p>Add <a class="reference internal" href="reference/mdb/model/part_assembly/datum.html#abaqus.Datum.DatumCsys.DatumCsys.globalToLocal" title="abaqus.Datum.DatumCsys.DatumCsys.globalToLocal"><code class="xref py py-meth docutils literal notranslate"><span class="pre">DatumCsys.globalToLocal()</span></code></a> and <a class="reference internal" href="reference/mdb/model/part_assembly/datum.html#abaqus.Datum.DatumCsys.DatumCsys.localToGlobal" title="abaqus.Datum.DatumCsys.DatumCsys.localToGlobal"><code class="xref py py-meth docutils literal notranslate"><span class="pre">DatumCsys.localToGlobal()</span></code></a>.</p></li>
 </ul>
 </section>
 <section id="field-report">
-<h2>Field Report<a class="headerlink" href="#field-report" title="Permalink to this headline">#</a></h2>
+<h2>Field Report<a class="headerlink" href="#field-report" title="Permalink to this heading">#</a></h2>
 <ul class="simple">
 <li><p><a class="reference internal" href="reference/session/field_report.html#abaqus.FieldReport.FieldReportOptions.FieldReportOptions.setValues" title="abaqus.FieldReport.FieldReportOptions.FieldReportOptions.setValues"><code class="xref py py-meth docutils literal notranslate"><span class="pre">FieldReportOptions.setValues()</span></code></a>: add printLocalCSYS argument.</p></li>
 </ul>
 </section>
 <section id="interaction">
-<h2>Interaction<a class="headerlink" href="#interaction" title="Permalink to this headline">#</a></h2>
+<h2>Interaction<a class="headerlink" href="#interaction" title="Permalink to this heading">#</a></h2>
 <ul class="simple">
 <li><p><a class="reference internal" href="reference/mdb/model/interaction.html#abaqus.Interaction.ContactExp.ContactExp" title="abaqus.Interaction.ContactExp.ContactExp"><code class="xref py py-class docutils literal notranslate"><span class="pre">ContactExp</span></code></a> and <a class="reference internal" href="reference/mdb/model/interaction.html#abaqus.Interaction.InteractionModel.InteractionModel.ContactExp" title="abaqus.Interaction.InteractionModel.InteractionModel.ContactExp"><code class="xref py py-meth docutils literal notranslate"><span class="pre">InteractionModel.ContactExp()</span></code></a>: argument <strong>masterSlaveAssignments</strong> renames to <strong>mainSecondaryAssignments</strong>.</p></li>
 <li><p><a class="reference internal" href="reference/mdb/model/interaction.html#abaqus.Interaction.ContactStd.ContactStd" title="abaqus.Interaction.ContactStd.ContactStd"><code class="xref py py-class docutils literal notranslate"><span class="pre">ContactStd</span></code></a> and <a class="reference internal" href="reference/mdb/model/interaction.html#abaqus.Interaction.InteractionModel.InteractionModel.ContactStd" title="abaqus.Interaction.InteractionModel.InteractionModel.ContactStd"><code class="xref py py-meth docutils literal notranslate"><span class="pre">InteractionModel.ContactStd()</span></code></a>: argument <strong>masterSlaveAssignments</strong> renames to <strong>mainSecondaryAssignments</strong>.</p></li>
@@ -347,7 +354,7 @@
 </ul>
 </section>
 <section id="job">
-<h2>Job<a class="headerlink" href="#job" title="Permalink to this headline">#</a></h2>
+<h2>Job<a class="headerlink" href="#job" title="Permalink to this heading">#</a></h2>
 <ul class="simple">
 <li><p><a class="reference internal" href="reference/mdb/job.html#abaqus.Job.JobFromInputFile.JobFromInputFile" title="abaqus.Job.JobFromInputFile.JobFromInputFile"><code class="xref py py-class docutils literal notranslate"><span class="pre">JobFromInputFile</span></code></a> and <a class="reference internal" href="reference/mdb.html#abaqus.Job.JobMdb.JobMdb.JobFromInputFile" title="abaqus.Job.JobMdb.JobMdb.JobFromInputFile"><code class="xref py py-meth docutils literal notranslate"><span class="pre">JobMdb.JobFromInputFile()</span></code></a>: add argument <strong>licenseType</strong>.</p></li>
 <li><p><a class="reference internal" href="reference/mdb.html#abaqus.Job.JobMdb.JobMdb.Job" title="abaqus.Job.JobMdb.JobMdb.Job"><code class="xref py py-meth docutils literal notranslate"><span class="pre">JobMdb.Job()</span></code></a>: add argument <strong>licenseType</strong>.</p></li>
@@ -355,7 +362,7 @@
 </ul>
 </section>
 <section id="material">
-<h2>Material<a class="headerlink" href="#material" title="Permalink to this headline">#</a></h2>
+<h2>Material<a class="headerlink" href="#material" title="Permalink to this heading">#</a></h2>
 <ul class="simple">
 <li><p>Add classes <a class="reference internal" href="reference/mdb/model/material.html#abaqus.Material.Plastic.CrushStress.CrushStress.CrushStress" title="abaqus.Material.Plastic.CrushStress.CrushStress.CrushStress"><code class="xref py py-class docutils literal notranslate"><span class="pre">CrushStress</span></code></a> and <a class="reference internal" href="reference/mdb/model/material.html#abaqus.Material.Plastic.CrushStress.CrushStressVelocityFactor.CrushStressVelocityFactor" title="abaqus.Material.Plastic.CrushStress.CrushStressVelocityFactor.CrushStressVelocityFactor"><code class="xref py py-class docutils literal notranslate"><span class="pre">CrushStressVelocityFactor</span></code></a>, add method <a class="reference internal" href="reference/mdb/model/material.html#id107" title="abaqus.Material.Material.Material.CrushStress"><code class="xref py py-meth docutils literal notranslate"><span class="pre">Material.CrushStress()</span></code></a>.</p></li>
 <li><p><a class="reference internal" href="reference/mdb/model/material.html#abaqus.Material.Elastic.Linear.Elastic.Elastic" title="abaqus.Material.Elastic.Linear.Elastic.Elastic"><code class="xref py py-class docutils literal notranslate"><span class="pre">Elastic</span></code></a> and <a class="reference internal" href="reference/mdb/model/material.html#id122" title="abaqus.Material.Material.Material.Elastic"><code class="xref py py-meth docutils literal notranslate"><span class="pre">Material.Elastic()</span></code></a>: argument <strong>type</strong> add <strong>BILAMINA</strong>.</p></li>
@@ -364,7 +371,7 @@
 </ul>
 </section>
 <section id="mesh">
-<h2>Mesh<a class="headerlink" href="#mesh" title="Permalink to this headline">#</a></h2>
+<h2>Mesh<a class="headerlink" href="#mesh" title="Permalink to this heading">#</a></h2>
 <ul class="simple">
 <li><p><a class="reference internal" href="reference/mdb/model/mesh.html#abaqus.Mesh.ElemType.ElemType" title="abaqus.Mesh.ElemType.ElemType"><code class="xref py py-class docutils literal notranslate"><span class="pre">ElemType</span></code></a>: add arguments <strong>linearKinematicCtrl</strong> and <strong>initialGapOpening</strong>.</p></li>
 <li><p><a class="reference internal" href="reference/mdb/model/mesh.html#abaqus.Mesh.MeshFaceArray.MeshFaceArray" title="abaqus.Mesh.MeshFaceArray.MeshFaceArray"><code class="xref py py-class docutils literal notranslate"><span class="pre">MeshFaceArray</span></code></a>:  argument <strong>faces</strong> changes to <strong>elemFaces</strong>.</p></li>
@@ -372,13 +379,13 @@
 </ul>
 </section>
 <section id="odb">
-<h2>Odb<a class="headerlink" href="#odb" title="Permalink to this headline">#</a></h2>
+<h2>Odb<a class="headerlink" href="#odb" title="Permalink to this heading">#</a></h2>
 <ul class="simple">
 <li><p>Add <a class="reference internal" href="reference/odb.html#abaqus.Odb.OdbDatumCsys.OdbDatumCsys.globalToLocal" title="abaqus.Odb.OdbDatumCsys.OdbDatumCsys.globalToLocal"><code class="xref py py-meth docutils literal notranslate"><span class="pre">OdbDatumCsys.globalToLocal()</span></code></a> and <a class="reference internal" href="reference/odb.html#abaqus.Odb.OdbDatumCsys.OdbDatumCsys.localToGlobal" title="abaqus.Odb.OdbDatumCsys.OdbDatumCsys.localToGlobal"><code class="xref py py-meth docutils literal notranslate"><span class="pre">OdbDatumCsys.localToGlobal()</span></code></a>.</p></li>
 </ul>
 </section>
 <section id="optimization">
-<h2>Optimization<a class="headerlink" href="#optimization" title="Permalink to this headline">#</a></h2>
+<h2>Optimization<a class="headerlink" href="#optimization" title="Permalink to this heading">#</a></h2>
 <ul class="simple">
 <li><p><a class="reference internal" href="reference/mdb/model/optimization.html#abaqus.Optimization.BeadTask.BeadTask" title="abaqus.Optimization.BeadTask.BeadTask"><code class="xref py py-class docutils literal notranslate"><span class="pre">BeadTask</span></code></a> and <a class="reference internal" href="reference/mdb/model/optimization.html#abaqus.Optimization.OptimizationTaskModel.OptimizationTaskModel.BeadTask" title="abaqus.Optimization.OptimizationTaskModel.OptimizationTaskModel.BeadTask"><code class="xref py py-meth docutils literal notranslate"><span class="pre">OptimizationTaskModel.BeadTask()</span></code></a>: add argument <strong>groupOperator</strong>.</p></li>
 <li><p><a class="reference internal" href="reference/mdb/model/optimization.html#abaqus.Optimization.DesignDirection.DesignDirection" title="abaqus.Optimization.DesignDirection.DesignDirection"><code class="xref py py-class docutils literal notranslate"><span class="pre">DesignDirection</span></code></a> and and <a class="reference internal" href="reference/mdb/model/optimization.html#abaqus.Optimization.OptimizationTask.OptimizationTask.DesignDirection" title="abaqus.Optimization.OptimizationTask.OptimizationTask.DesignDirection"><code class="xref py py-meth docutils literal notranslate"><span class="pre">OptimizationTask.DesignDirection()</span></code></a>: arguments <strong>masterPoint</strong> and <strong>masterDetermination</strong> change to <strong>mainPoint</strong> and <strong>mainPointDetermination</strong>.</p></li>
@@ -396,25 +403,25 @@
 </ul>
 </section>
 <section id="part">
-<h2>Part<a class="headerlink" href="#part" title="Permalink to this headline">#</a></h2>
+<h2>Part<a class="headerlink" href="#part" title="Permalink to this heading">#</a></h2>
 <ul class="simple">
 <li><p><a class="reference internal" href="reference/mdb/model/part.html#abaqus.Part.PartBase.PartBase.getCoordinates" title="abaqus.Part.PartBase.PartBase.getCoordinates"><code class="xref py py-meth docutils literal notranslate"><span class="pre">PartBase.getCoordinates()</span></code></a> add argument <strong>csys</strong>.</p></li>
 </ul>
 </section>
 <section id="session">
-<h2>Session<a class="headerlink" href="#session" title="Permalink to this headline">#</a></h2>
+<h2>Session<a class="headerlink" href="#session" title="Permalink to this heading">#</a></h2>
 <ul class="simple">
 <li><p><a class="reference internal" href="reference/session.html#abaqus.Session.Session.Session.printToFile" title="abaqus.Session.Session.Session.printToFile"><code class="xref py py-meth docutils literal notranslate"><span class="pre">Session.printToFile()</span></code></a>: argument <strong>compression</strong>’s docstring changes.</p></li>
 </ul>
 </section>
 <section id="step-output">
-<h2>Step Output<a class="headerlink" href="#step-output" title="Permalink to this headline">#</a></h2>
+<h2>Step Output<a class="headerlink" href="#step-output" title="Permalink to this heading">#</a></h2>
 <ul class="simple">
 <li><p><a class="reference internal" href="reference/mdb/model/output.html#abaqus.StepOutput.FieldOutputRequest.FieldOutputRequest.setValuesInStep" title="abaqus.StepOutput.FieldOutputRequest.FieldOutputRequest.setValuesInStep"><code class="xref py py-meth docutils literal notranslate"><span class="pre">FieldOutputRequest.setValuesInStep()</span></code></a>: argument <strong>timePoints</strong> changes to <strong>timePoint</strong>.</p></li>
 </ul>
 </section>
 <section id="xy">
-<h2>XY<a class="headerlink" href="#xy" title="Permalink to this headline">#</a></h2>
+<h2>XY<a class="headerlink" href="#xy" title="Permalink to this heading">#</a></h2>
 <ul class="simple">
 <li><p><a class="reference internal" href="reference/session/xy.html#abaqus.XY.XYData.XYData.xyDataListFromField" title="abaqus.XY.XYData.XYData.xyDataListFromField"><code class="xref py py-meth docutils literal notranslate"><span class="pre">XYData.xyDataListFromField()</span></code></a> add argument <strong>operator</strong>.</p></li>
 </ul>
@@ -433,10 +440,10 @@
                 </div>
                 <div class="title">Getting Started</div>
               </div>
-              <svg><use href="#svg-arrow-right"></use></svg>
+              <svg class="furo-related-icon"><use href="#svg-arrow-right"></use></svg>
             </a>
           <a class="prev-page" href="index.html">
-              <svg><use href="#svg-arrow-right"></use></svg>
+              <svg class="furo-related-icon"><use href="#svg-arrow-right"></use></svg>
               <div class="page-info">
                 <div class="context">
                   <span>Previous</span>
@@ -458,9 +465,7 @@
             
           </div>
           <div class="right-details">
-            <div class="icons">
-              
-            </div>
+            
           </div>
         </div>
         
@@ -472,7 +477,7 @@
       <div class="toc-sticky toc-scroll">
         <div class="toc-title-container">
           <span class="toc-title">
-            Contents
+            On this page
           </span>
         </div>
         <div class="toc-tree-container">
@@ -504,9 +509,8 @@
     </aside>
   </div>
 </div><script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
-    <script src="_static/jquery.js"></script>
-    <script src="_static/underscore.js"></script>
     <script src="_static/doctools.js"></script>
+    <script src="_static/sphinx_highlight.js"></script>
     <script src="_static/scripts/furo.js"></script>
     </body>
 </html>

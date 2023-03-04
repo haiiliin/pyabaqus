@@ -1,14 +1,14 @@
 <!doctype html>
-<html class="no-js">
+<html class="no-js" lang="en">
   <head><meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width,initial-scale=1"/>
-    <meta name="color-scheme" content="light dark"><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="color-scheme" content="light dark"><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 <link rel="index" title="Index" href="../../genindex.html" /><link rel="search" title="Search" href="../../search.html" /><link rel="next" title="Utility and View" href="utility.html" /><link rel="prev" title="Table Collection" href="table_collection.html" />
 
-    <meta name="generator" content="sphinx-4.5.0, furo 2022.06.21"/>
+    <!-- Generated with Sphinx 6.1.3 and Furo 2022.12.07 -->
         <title>Text Representation - PYABAQUS 2022.1 documentation</title>
       <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/styles/furo.css?digest=40978830699223671f4072448e654b5958f38b89" />
+    <link rel="stylesheet" type="text/css" href="../../_static/styles/furo.css?digest=91d0f0d1c444bdcb17a68e833c7a53903343c195" />
     <link rel="stylesheet" type="text/css" href="../../_static/styles/furo-extensions.css?digest=30d1aed668e5c3a91c3e3bf6a60b675221979f0e" />
     
     
@@ -18,6 +18,8 @@
   body {
     --color-code-background: #f8f8f8;
   --color-code-foreground: black;
+  --color-announcement-background: #7C4DFF;
+  --color-announcement-text: #FFFFFF;
   
   }
   @media not print {
@@ -112,7 +114,11 @@
   <div class="visually-hidden">Hide table of contents sidebar</div>
 </label>
 
-
+<div class="announcement">
+  <aside class="announcement-content">
+     The `pyabaqus` package has been deprecated. Please use the <a href='https://github.com/haiiliin/abqpy' target='_blank'>abqpy</a> package instead. 
+  </aside>
+</div>
 
 <div class="page">
   <header class="mobile-header">
@@ -149,7 +155,7 @@
   <span class="sidebar-brand-text">PYABAQUS 2022.1 documentation</span>
   
 </a><form class="sidebar-search-container" method="get" action="../../search.html" role="search">
-  <input class="sidebar-search" placeholder=Search name="q" aria-label="Search">
+  <input class="sidebar-search" placeholder="Search" name="q" aria-label="Search">
   <input type="hidden" name="check_keywords" value="yes">
   <input type="hidden" name="area" value="default">
 </form>
@@ -288,7 +294,8 @@
           <span>Back to top</span>
         </a>
         <div class="content-icon-container">
-          <div class="theme-toggle-container theme-toggle-content">
+          
+<div class="theme-toggle-container theme-toggle-content">
             <button class="theme-toggle">
               <div class="visually-hidden">Toggle Light / Dark / Auto color theme</div>
               <svg class="theme-icon-when-auto"><use href="#svg-sun-half"></use></svg>
@@ -303,18 +310,18 @@
         </div>
         <article role="main">
           <section id="text-representation">
-<h1>Text Representation<a class="headerlink" href="#text-representation" title="Permalink to this headline">#</a></h1>
+<h1>Text Representation<a class="headerlink" href="#text-representation" title="Permalink to this heading">#</a></h1>
 <p>Text representation commands are used to determine how objects are printed on the Python command line.</p>
 <section id="object-features">
-<h2>Object features<a class="headerlink" href="#object-features" title="Permalink to this headline">#</a></h2>
+<h2>Object features<a class="headerlink" href="#object-features" title="Permalink to this heading">#</a></h2>
 <section id="redentabq">
-<h3>redentABQ<a class="headerlink" href="#redentabq" title="Permalink to this headline">#</a></h3>
+<h3>redentABQ<a class="headerlink" href="#redentabq" title="Permalink to this heading">#</a></h3>
 </section>
 <section id="textrepr">
-<h3>textRepr<a class="headerlink" href="#textrepr" title="Permalink to this headline">#</a></h3>
+<h3>textRepr<a class="headerlink" href="#textrepr" title="Permalink to this heading">#</a></h3>
 </section>
 <section id="textreproptions">
-<h3>TextReprOptions<a class="headerlink" href="#textreproptions" title="Permalink to this headline">#</a></h3>
+<h3>TextReprOptions<a class="headerlink" href="#textreproptions" title="Permalink to this heading">#</a></h3>
 <dl class="py class">
 <dt class="sig sig-object py" id="abaqus.TextRepresentation.TextReprOptions.TextReprOptions">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">TextReprOptions</span></span><a class="reference external" href="https://github.com/haiiliin/pyabaqus/blob/V2022/src/abaqus/TextRepresentation/TextReprOptions.py#L4-L57"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#abaqus.TextRepresentation.TextReprOptions.TextReprOptions" title="Permalink to this definition">#</a></dt>
@@ -334,10 +341,6 @@ member when a session is started.</p>
 <p class="rubric">Methods</p>
 <div class="table-wrapper autosummary longtable docutils container">
 <table class="autosummary longtable docutils align-default">
-<colgroup>
-<col style="width: 10%" />
-<col style="width: 90%" />
-</colgroup>
 <tbody>
 <tr class="row-odd"><td><p><a class="reference internal" href="#abaqus.TextRepresentation.TextReprOptions.TextReprOptions.setValues" title="abaqus.TextRepresentation.TextReprOptions.TextReprOptions.setValues"><code class="xref py py-obj docutils literal notranslate"><span class="pre">setValues</span></code></a>([style, maxRecursionDepth, ...])</p></td>
 <td><p>This method modifies the TextReprOptions object.</p></td>
@@ -347,10 +350,10 @@ member when a session is started.</p>
 </div>
 <dl class="py method">
 <dt class="sig sig-object py" id="abaqus.TextRepresentation.TextReprOptions.TextReprOptions.setValues">
-<span class="sig-name descname"><span class="pre">setValues</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">style</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">SymbolicConstantType</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">maxRecursionDepth</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">SymbolicConstantType</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">maxRecursionString</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">maxElementsInSequence</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">SymbolicConstantType</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/haiiliin/pyabaqus/blob/V2022/src/abaqus/TextRepresentation/TextReprOptions.py#L25-L57"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#abaqus.TextRepresentation.TextReprOptions.TextReprOptions.setValues" title="Permalink to this definition">#</a></dt>
+<span class="sig-name descname"><span class="pre">setValues</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">style</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">SymbolicConstantType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">maxRecursionDepth</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">SymbolicConstantType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">maxRecursionString</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">maxElementsInSequence</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">SymbolicConstantType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/haiiliin/pyabaqus/blob/V2022/src/abaqus/TextRepresentation/TextReprOptions.py#L25-L57"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#abaqus.TextRepresentation.TextReprOptions.TextReprOptions.setValues" title="Permalink to this definition">#</a></dt>
 <dd><p>This method modifies the TextReprOptions object.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><dl class="simple">
 <dt><strong>style</strong></dt><dd><p>A SymbolicConstant specifying the style of the text representation. Possible values
 are:RECURSIVE: return a recursive representation of the object.SIMPLE: return a String
@@ -395,10 +398,10 @@ sequence to return. Possible values are UNLIMITED or Ints &gt;&gt; 0. The initia
                 </div>
                 <div class="title">Utility and View</div>
               </div>
-              <svg><use href="#svg-arrow-right"></use></svg>
+              <svg class="furo-related-icon"><use href="#svg-arrow-right"></use></svg>
             </a>
           <a class="prev-page" href="table_collection.html">
-              <svg><use href="#svg-arrow-right"></use></svg>
+              <svg class="furo-related-icon"><use href="#svg-arrow-right"></use></svg>
               <div class="page-info">
                 <div class="context">
                   <span>Previous</span>
@@ -420,9 +423,7 @@ sequence to return. Possible values are UNLIMITED or Ints &gt;&gt; 0. The initia
             
           </div>
           <div class="right-details">
-            <div class="icons">
-              
-            </div>
+            
           </div>
         </div>
         
@@ -434,7 +435,7 @@ sequence to return. Possible values are UNLIMITED or Ints &gt;&gt; 0. The initia
       <div class="toc-sticky toc-scroll">
         <div class="toc-title-container">
           <span class="toc-title">
-            Contents
+            On this page
           </span>
         </div>
         <div class="toc-tree-container">
@@ -444,7 +445,13 @@ sequence to return. Possible values are UNLIMITED or Ints &gt;&gt; 0. The initia
 <li><a class="reference internal" href="#object-features">Object features</a><ul>
 <li><a class="reference internal" href="#redentabq">redentABQ</a></li>
 <li><a class="reference internal" href="#textrepr">textRepr</a></li>
-<li><a class="reference internal" href="#textreproptions">TextReprOptions</a></li>
+<li><a class="reference internal" href="#textreproptions">TextReprOptions</a><ul>
+<li><a class="reference internal" href="#abaqus.TextRepresentation.TextReprOptions.TextReprOptions"><code class="docutils literal notranslate"><span class="pre">TextReprOptions</span></code></a><ul>
+<li><a class="reference internal" href="#abaqus.TextRepresentation.TextReprOptions.TextReprOptions.setValues"><code class="docutils literal notranslate"><span class="pre">TextReprOptions.setValues()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
@@ -459,9 +466,8 @@ sequence to return. Possible values are UNLIMITED or Ints &gt;&gt; 0. The initia
     </aside>
   </div>
 </div><script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
-    <script src="../../_static/jquery.js"></script>
-    <script src="../../_static/underscore.js"></script>
     <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/sphinx_highlight.js"></script>
     <script src="../../_static/scripts/furo.js"></script>
     </body>
 </html>

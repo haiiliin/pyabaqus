@@ -1,14 +1,14 @@
 <!doctype html>
-<html class="no-js">
+<html class="no-js" lang="en">
   <head><meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width,initial-scale=1"/>
-    <meta name="color-scheme" content="light dark"><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="color-scheme" content="light dark"><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 <link rel="index" title="Index" href="../../genindex.html" /><link rel="search" title="Search" href="../../search.html" /><link rel="next" title="Input File Parser" href="input.html" /><link rel="prev" title="Kernel" href="../kernel.html" />
 
-    <meta name="generator" content="sphinx-4.5.0, furo 2022.06.21"/>
+    <!-- Generated with Sphinx 6.1.3 and Furo 2022.12.07 -->
         <title>Abaqus CAE Display Preferences - PYABAQUS 2022.1 documentation</title>
       <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/styles/furo.css?digest=40978830699223671f4072448e654b5958f38b89" />
+    <link rel="stylesheet" type="text/css" href="../../_static/styles/furo.css?digest=91d0f0d1c444bdcb17a68e833c7a53903343c195" />
     <link rel="stylesheet" type="text/css" href="../../_static/styles/furo-extensions.css?digest=30d1aed668e5c3a91c3e3bf6a60b675221979f0e" />
     
     
@@ -18,6 +18,8 @@
   body {
     --color-code-background: #f8f8f8;
   --color-code-foreground: black;
+  --color-announcement-background: #7C4DFF;
+  --color-announcement-text: #FFFFFF;
   
   }
   @media not print {
@@ -112,7 +114,11 @@
   <div class="visually-hidden">Hide table of contents sidebar</div>
 </label>
 
-
+<div class="announcement">
+  <aside class="announcement-content">
+     The `pyabaqus` package has been deprecated. Please use the <a href='https://github.com/haiiliin/abqpy' target='_blank'>abqpy</a> package instead. 
+  </aside>
+</div>
 
 <div class="page">
   <header class="mobile-header">
@@ -149,7 +155,7 @@
   <span class="sidebar-brand-text">PYABAQUS 2022.1 documentation</span>
   
 </a><form class="sidebar-search-container" method="get" action="../../search.html" role="search">
-  <input class="sidebar-search" placeholder=Search name="q" aria-label="Search">
+  <input class="sidebar-search" placeholder="Search" name="q" aria-label="Search">
   <input type="hidden" name="check_keywords" value="yes">
   <input type="hidden" name="area" value="default">
 </form>
@@ -288,7 +294,8 @@
           <span>Back to top</span>
         </a>
         <div class="content-icon-container">
-          <div class="theme-toggle-container theme-toggle-content">
+          
+<div class="theme-toggle-container theme-toggle-content">
             <button class="theme-toggle">
               <div class="visually-hidden">Toggle Light / Dark / Auto color theme</div>
               <svg class="theme-icon-when-auto"><use href="#svg-sun-half"></use></svg>
@@ -303,11 +310,11 @@
         </div>
         <article role="main">
           <section id="abaqus-cae-display-preferences">
-<h1>Abaqus CAE Display Preferences<a class="headerlink" href="#abaqus-cae-display-preferences" title="Permalink to this headline">#</a></h1>
+<h1>Abaqus CAE Display Preferences<a class="headerlink" href="#abaqus-cae-display-preferences" title="Permalink to this heading">#</a></h1>
 <section id="object-features">
-<h2>Object features<a class="headerlink" href="#object-features" title="Permalink to this headline">#</a></h2>
+<h2>Object features<a class="headerlink" href="#object-features" title="Permalink to this heading">#</a></h2>
 <section id="caeguiprefs">
-<h3>CaeGuiPrefs<a class="headerlink" href="#caeguiprefs" title="Permalink to this headline">#</a></h3>
+<h3>CaeGuiPrefs<a class="headerlink" href="#caeguiprefs" title="Permalink to this heading">#</a></h3>
 <dl class="py class">
 <dt class="sig sig-object py" id="abaqus.AbaqusCAEDisplayPreferences.CaeGuiPrefs.CaeGuiPrefs">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">CaeGuiPrefs</span></span><a class="reference external" href="https://github.com/haiiliin/pyabaqus/blob/V2022/src/abaqus/AbaqusCAEDisplayPreferences/CaeGuiPrefs.py#L4-L46"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#abaqus.AbaqusCAEDisplayPreferences.CaeGuiPrefs.CaeGuiPrefs" title="Permalink to this definition">#</a></dt>
@@ -320,7 +327,7 @@ guiPreferences section of the abaqus_2021.gpr file.</p>
 </pre></div>
 </div>
 <dl class="field-list simple">
-<dt class="field-odd">Attributes</dt>
+<dt class="field-odd">Attributes<span class="colon">:</span></dt>
 <dd class="field-odd"><dl class="simple">
 <dt><strong>fileName: str</strong></dt><dd><p>A String specifying the path to the preferences file.</p>
 </dd>
@@ -330,10 +337,6 @@ guiPreferences section of the abaqus_2021.gpr file.</p>
 <p class="rubric">Methods</p>
 <div class="table-wrapper autosummary longtable docutils container">
 <table class="autosummary longtable docutils align-default">
-<colgroup>
-<col style="width: 10%" />
-<col style="width: 90%" />
-</colgroup>
 <tbody>
 <tr class="row-odd"><td><p><a class="reference internal" href="#abaqus.AbaqusCAEDisplayPreferences.CaeGuiPrefs.CaeGuiPrefs.save" title="abaqus.AbaqusCAEDisplayPreferences.CaeGuiPrefs.CaeGuiPrefs.save"><code class="xref py py-obj docutils literal notranslate"><span class="pre">save</span></code></a>([backupFile])</p></td>
 <td><p>This method saves the guiPreferences section specified in the current <strong>fileName</strong>.</p></td>
@@ -349,7 +352,7 @@ guiPreferences section of the abaqus_2021.gpr file.</p>
 <span class="sig-name descname"><span class="pre">save</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">backupFile</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">BooleanType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/haiiliin/pyabaqus/blob/V2022/src/abaqus/AbaqusCAEDisplayPreferences/CaeGuiPrefs.py#L27-L36"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#abaqus.AbaqusCAEDisplayPreferences.CaeGuiPrefs.CaeGuiPrefs.save" title="Permalink to this definition">#</a></dt>
 <dd><p>This method saves the guiPreferences section specified in the current <strong>fileName</strong>.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><dl class="simple">
 <dt><strong>backupFile: Boolean</strong></dt><dd><p>A Boolean specifying whether Abaqus should save a numbered backup copy of the
 preferences file, <em>fileName</em>. Default is True.</p>
@@ -364,7 +367,7 @@ preferences file, <em>fileName</em>. Default is True.</p>
 <span class="sig-name descname"><span class="pre">saveAs</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">fileName</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/haiiliin/pyabaqus/blob/V2022/src/abaqus/AbaqusCAEDisplayPreferences/CaeGuiPrefs.py#L38-L46"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#abaqus.AbaqusCAEDisplayPreferences.CaeGuiPrefs.CaeGuiPrefs.saveAs" title="Permalink to this definition">#</a></dt>
 <dd><p>This method saves the guiPreferences settings to the specified location.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><dl class="simple">
 <dt><strong>fileName: str</strong></dt><dd><p>A String specifying the path to the preferences file.</p>
 </dd>
@@ -377,7 +380,7 @@ preferences file, <em>fileName</em>. Default is True.</p>
 
 </section>
 <section id="caekerprefs">
-<h3>CaeKerPrefs<a class="headerlink" href="#caekerprefs" title="Permalink to this headline">#</a></h3>
+<h3>CaeKerPrefs<a class="headerlink" href="#caekerprefs" title="Permalink to this heading">#</a></h3>
 <dl class="py class">
 <dt class="sig sig-object py" id="abaqus.AbaqusCAEDisplayPreferences.CaeKerPrefs.CaeKerPrefs">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">CaeKerPrefs</span></span><a class="reference external" href="https://github.com/haiiliin/pyabaqus/blob/V2022/src/abaqus/AbaqusCAEDisplayPreferences/CaeKerPrefs.py#L4-L58"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#abaqus.AbaqusCAEDisplayPreferences.CaeKerPrefs.CaeKerPrefs" title="Permalink to this definition">#</a></dt>
@@ -389,7 +392,7 @@ preferences file, <em>fileName</em>. Default is True.</p>
 </pre></div>
 </div>
 <dl class="field-list simple">
-<dt class="field-odd">Attributes</dt>
+<dt class="field-odd">Attributes<span class="colon">:</span></dt>
 <dd class="field-odd"><dl class="simple">
 <dt><strong>fileName: str</strong></dt><dd><p>A String specifying the path to the preferences file that the <a class="reference internal" href="#abaqus.AbaqusCAEDisplayPreferences.CaeKerPrefs.CaeKerPrefs" title="abaqus.AbaqusCAEDisplayPreferences.CaeKerPrefs.CaeKerPrefs"><code class="xref py py-class docutils literal notranslate"><span class="pre">CaeKerPrefs</span></code></a> object
 represents.</p>
@@ -400,10 +403,6 @@ represents.</p>
 <p class="rubric">Methods</p>
 <div class="table-wrapper autosummary longtable docutils container">
 <table class="autosummary longtable docutils align-default">
-<colgroup>
-<col style="width: 10%" />
-<col style="width: 90%" />
-</colgroup>
 <tbody>
 <tr class="row-odd"><td><p><a class="reference internal" href="#abaqus.AbaqusCAEDisplayPreferences.CaeKerPrefs.CaeKerPrefs.save" title="abaqus.AbaqusCAEDisplayPreferences.CaeKerPrefs.CaeKerPrefs.save"><code class="xref py py-obj docutils literal notranslate"><span class="pre">save</span></code></a>([backupFile])</p></td>
 <td><p>This method saves the sessionOptions in the current <em>fileName</em>.</p></td>
@@ -419,7 +418,7 @@ represents.</p>
 <span class="sig-name descname"><span class="pre">save</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">backupFile</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">BooleanType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/haiiliin/pyabaqus/blob/V2022/src/abaqus/AbaqusCAEDisplayPreferences/CaeKerPrefs.py#L28-L37"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#abaqus.AbaqusCAEDisplayPreferences.CaeKerPrefs.CaeKerPrefs.save" title="Permalink to this definition">#</a></dt>
 <dd><p>This method saves the sessionOptions in the current <em>fileName</em>.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><dl class="simple">
 <dt><strong>backupFile: Boolean</strong></dt><dd><p>A Boolean specifying whether save a numbered backup copy of the preferences file,
 <strong>fileName</strong>. Default is True.</p>
@@ -434,7 +433,7 @@ represents.</p>
 <span class="sig-name descname"><span class="pre">saveAs</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">fileName</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">directory</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">SymbolicConstantType</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/haiiliin/pyabaqus/blob/V2022/src/abaqus/AbaqusCAEDisplayPreferences/CaeKerPrefs.py#L39-L58"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#abaqus.AbaqusCAEDisplayPreferences.CaeKerPrefs.CaeKerPrefs.saveAs" title="Permalink to this definition">#</a></dt>
 <dd><p>This method saves the sessionOptions to the specified location.</p>
 <dl class="field-list">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><dl>
 <dt><strong>fileName: str</strong></dt><dd><p>A String specifying the path to the preferences file.</p>
 </dd>
@@ -458,7 +457,7 @@ supplied. The <strong>fileName</strong> or <strong>directory</strong> arguments 
 
 </section>
 <section id="caeprefsaccess">
-<h3>caePrefsAccess<a class="headerlink" href="#caeprefsaccess" title="Permalink to this headline">#</a></h3>
+<h3>caePrefsAccess<a class="headerlink" href="#caeprefsaccess" title="Permalink to this heading">#</a></h3>
 </section>
 </section>
 </section>
@@ -475,10 +474,10 @@ supplied. The <strong>fileName</strong> or <strong>directory</strong> arguments 
                 </div>
                 <div class="title">Input File Parser</div>
               </div>
-              <svg><use href="#svg-arrow-right"></use></svg>
+              <svg class="furo-related-icon"><use href="#svg-arrow-right"></use></svg>
             </a>
           <a class="prev-page" href="../kernel.html">
-              <svg><use href="#svg-arrow-right"></use></svg>
+              <svg class="furo-related-icon"><use href="#svg-arrow-right"></use></svg>
               <div class="page-info">
                 <div class="context">
                   <span>Previous</span>
@@ -500,9 +499,7 @@ supplied. The <strong>fileName</strong> or <strong>directory</strong> arguments 
             
           </div>
           <div class="right-details">
-            <div class="icons">
-              
-            </div>
+            
           </div>
         </div>
         
@@ -514,7 +511,7 @@ supplied. The <strong>fileName</strong> or <strong>directory</strong> arguments 
       <div class="toc-sticky toc-scroll">
         <div class="toc-title-container">
           <span class="toc-title">
-            Contents
+            On this page
           </span>
         </div>
         <div class="toc-tree-container">
@@ -522,8 +519,22 @@ supplied. The <strong>fileName</strong> or <strong>directory</strong> arguments 
             <ul>
 <li><a class="reference internal" href="#">Abaqus CAE Display Preferences</a><ul>
 <li><a class="reference internal" href="#object-features">Object features</a><ul>
-<li><a class="reference internal" href="#caeguiprefs">CaeGuiPrefs</a></li>
-<li><a class="reference internal" href="#caekerprefs">CaeKerPrefs</a></li>
+<li><a class="reference internal" href="#caeguiprefs">CaeGuiPrefs</a><ul>
+<li><a class="reference internal" href="#abaqus.AbaqusCAEDisplayPreferences.CaeGuiPrefs.CaeGuiPrefs"><code class="docutils literal notranslate"><span class="pre">CaeGuiPrefs</span></code></a><ul>
+<li><a class="reference internal" href="#abaqus.AbaqusCAEDisplayPreferences.CaeGuiPrefs.CaeGuiPrefs.save"><code class="docutils literal notranslate"><span class="pre">CaeGuiPrefs.save()</span></code></a></li>
+<li><a class="reference internal" href="#abaqus.AbaqusCAEDisplayPreferences.CaeGuiPrefs.CaeGuiPrefs.saveAs"><code class="docutils literal notranslate"><span class="pre">CaeGuiPrefs.saveAs()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a class="reference internal" href="#caekerprefs">CaeKerPrefs</a><ul>
+<li><a class="reference internal" href="#abaqus.AbaqusCAEDisplayPreferences.CaeKerPrefs.CaeKerPrefs"><code class="docutils literal notranslate"><span class="pre">CaeKerPrefs</span></code></a><ul>
+<li><a class="reference internal" href="#abaqus.AbaqusCAEDisplayPreferences.CaeKerPrefs.CaeKerPrefs.save"><code class="docutils literal notranslate"><span class="pre">CaeKerPrefs.save()</span></code></a></li>
+<li><a class="reference internal" href="#abaqus.AbaqusCAEDisplayPreferences.CaeKerPrefs.CaeKerPrefs.saveAs"><code class="docutils literal notranslate"><span class="pre">CaeKerPrefs.saveAs()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
 <li><a class="reference internal" href="#caeprefsaccess">caePrefsAccess</a></li>
 </ul>
 </li>
@@ -539,9 +550,8 @@ supplied. The <strong>fileName</strong> or <strong>directory</strong> arguments 
     </aside>
   </div>
 </div><script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
-    <script src="../../_static/jquery.js"></script>
-    <script src="../../_static/underscore.js"></script>
     <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/sphinx_highlight.js"></script>
     <script src="../../_static/scripts/furo.js"></script>
     </body>
 </html>

@@ -1,14 +1,14 @@
 <!doctype html>
-<html class="no-js">
+<html class="no-js" lang="en">
   <head><meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width,initial-scale=1"/>
-    <meta name="color-scheme" content="light dark"><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="color-scheme" content="light dark"><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 <link rel="index" title="Index" href="../../genindex.html" /><link rel="search" title="Search" href="../../search.html" /><link rel="next" title="Table Collection" href="table_collection.html" /><link rel="prev" title="Custom Kernel" href="kernel.html" />
 
-    <meta name="generator" content="sphinx-4.5.0, furo 2022.06.21"/>
+    <!-- Generated with Sphinx 6.1.3 and Furo 2022.12.07 -->
         <title>Messaging - PYABAQUS 2022.1 documentation</title>
       <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/styles/furo.css?digest=40978830699223671f4072448e654b5958f38b89" />
+    <link rel="stylesheet" type="text/css" href="../../_static/styles/furo.css?digest=91d0f0d1c444bdcb17a68e833c7a53903343c195" />
     <link rel="stylesheet" type="text/css" href="../../_static/styles/furo-extensions.css?digest=30d1aed668e5c3a91c3e3bf6a60b675221979f0e" />
     
     
@@ -18,6 +18,8 @@
   body {
     --color-code-background: #f8f8f8;
   --color-code-foreground: black;
+  --color-announcement-background: #7C4DFF;
+  --color-announcement-text: #FFFFFF;
   
   }
   @media not print {
@@ -112,7 +114,11 @@
   <div class="visually-hidden">Hide table of contents sidebar</div>
 </label>
 
-
+<div class="announcement">
+  <aside class="announcement-content">
+     The `pyabaqus` package has been deprecated. Please use the <a href='https://github.com/haiiliin/abqpy' target='_blank'>abqpy</a> package instead. 
+  </aside>
+</div>
 
 <div class="page">
   <header class="mobile-header">
@@ -149,7 +155,7 @@
   <span class="sidebar-brand-text">PYABAQUS 2022.1 documentation</span>
   
 </a><form class="sidebar-search-container" method="get" action="../../search.html" role="search">
-  <input class="sidebar-search" placeholder=Search name="q" aria-label="Search">
+  <input class="sidebar-search" placeholder="Search" name="q" aria-label="Search">
   <input type="hidden" name="check_keywords" value="yes">
   <input type="hidden" name="area" value="default">
 </form>
@@ -288,7 +294,8 @@
           <span>Back to top</span>
         </a>
         <div class="content-icon-container">
-          <div class="theme-toggle-container theme-toggle-content">
+          
+<div class="theme-toggle-container theme-toggle-content">
             <button class="theme-toggle">
               <div class="visually-hidden">Toggle Light / Dark / Auto color theme</div>
               <svg class="theme-icon-when-auto"><use href="#svg-sun-half"></use></svg>
@@ -303,12 +310,12 @@
         </div>
         <article role="main">
           <section id="messaging">
-<h1>Messaging<a class="headerlink" href="#messaging" title="Permalink to this headline">#</a></h1>
+<h1>Messaging<a class="headerlink" href="#messaging" title="Permalink to this heading">#</a></h1>
 <p>Messaging commands are available only if Abaqus/CAE is run interactively using the GUI.</p>
 <section id="object-features">
-<h2>Object features<a class="headerlink" href="#object-features" title="Permalink to this headline">#</a></h2>
+<h2>Object features<a class="headerlink" href="#object-features" title="Permalink to this heading">#</a></h2>
 <section id="dataobject">
-<h3>DataObject<a class="headerlink" href="#dataobject" title="Permalink to this headline">#</a></h3>
+<h3>DataObject<a class="headerlink" href="#dataobject" title="Permalink to this heading">#</a></h3>
 <dl class="py class">
 <dt class="sig sig-object py" id="abaqus.Messaging.DataObject.DataObject">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">DataObject</span></span><a class="reference external" href="https://github.com/haiiliin/pyabaqus/blob/V2022/src/abaqus/Messaging/DataObject.py#L4-L153"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#abaqus.Messaging.DataObject.DataObject" title="Permalink to this definition">#</a></dt>
@@ -318,7 +325,7 @@ DataObject instances have the following members, regardless of type:</p>
 <p class="rubric">Notes</p>
 <p>This object can be accessed by:</p>
 <dl class="field-list simple">
-<dt class="field-odd">Attributes</dt>
+<dt class="field-odd">Attributes<span class="colon">:</span></dt>
 <dd class="field-odd"><dl class="simple">
 <dt><strong>phase: SymbolicConstant</strong></dt><dd><p>A SymbolicConstant specifying the phase of the analysis. Possible values are
 BATCHPRE_PHASE, PACKAGER_PHASE, STANDARD_PHASE, EXPLICIT_PHASE, CALCULATOR_PHASE, and
@@ -383,7 +390,7 @@ Possible values are BatchPre, Packager, Standard, Explicit, and Calculator.</p>
 
 </section>
 <section id="monitormgr">
-<h3>MonitorMgr<a class="headerlink" href="#monitormgr" title="Permalink to this headline">#</a></h3>
+<h3>MonitorMgr<a class="headerlink" href="#monitormgr" title="Permalink to this heading">#</a></h3>
 <dl class="py class">
 <dt class="sig sig-object py" id="abaqus.Messaging.MonitorMgr.MonitorMgr">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">MonitorMgr</span></span><a class="reference external" href="https://github.com/haiiliin/pyabaqus/blob/V2022/src/abaqus/Messaging/MonitorMgr.py#L4-L106"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#abaqus.Messaging.MonitorMgr.MonitorMgr" title="Permalink to this definition">#</a></dt>
@@ -399,10 +406,6 @@ object.)</p>
 <p class="rubric">Methods</p>
 <div class="table-wrapper autosummary longtable docutils container">
 <table class="autosummary longtable docutils align-default">
-<colgroup>
-<col style="width: 10%" />
-<col style="width: 90%" />
-</colgroup>
 <tbody>
 <tr class="row-odd"><td><p><a class="reference internal" href="#abaqus.Messaging.MonitorMgr.MonitorMgr.addMessageCallback" title="abaqus.Messaging.MonitorMgr.MonitorMgr.addMessageCallback"><code class="xref py py-obj docutils literal notranslate"><span class="pre">addMessageCallback</span></code></a>(jobName, messageType, ...)</p></td>
 <td><p>This method specifies a callback function that will be called when the specified message is received from the analysis product.</p></td>
@@ -423,7 +426,7 @@ object.)</p>
 is received from the analysis product.
 For more information, see An example of a callback function.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><dl class="simple">
 <dt><strong>jobName</strong></dt><dd><p>A String specifying the name of the job to be monitored or the SymbolicConstant ANY_JOB.</p>
 </dd>
@@ -449,7 +452,7 @@ passed as the <em>userData</em> argument to the addMessageCallback method.</p>
 <span class="sig-name descname"><span class="pre">checkMonitorStatus</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference external" href="https://github.com/haiiliin/pyabaqus/blob/V2022/src/abaqus/Messaging/MonitorMgr.py#L98-L106"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#abaqus.Messaging.MonitorMgr.MonitorMgr.checkMonitorStatus" title="Permalink to this definition">#</a></dt>
 <dd><p>This method raises a MonitorError exception if the monitoring status is not ENABLED.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Raises</dt>
+<dt class="field-odd">Raises<span class="colon">:</span></dt>
 <dd class="field-odd"><dl class="simple">
 <dt><code class="xref py py-obj docutils literal notranslate"><span class="pre">MonitorError</span></code></dt><dd><p>Status is not ENABLED</p>
 </dd>
@@ -464,7 +467,7 @@ passed as the <em>userData</em> argument to the addMessageCallback method.</p>
 <dd><p>This method removes a callback function. You specify the callback function to remove
 using the same arguments you used to add the callback.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><dl class="simple">
 <dt><strong>jobName</strong></dt><dd><p>A String specifying the name of the job to be monitored or the SymbolicConstant ANY_JOB.</p>
 </dd>
@@ -526,10 +529,10 @@ the original call to addMessageCallback.</p>
                 </div>
                 <div class="title">Table Collection</div>
               </div>
-              <svg><use href="#svg-arrow-right"></use></svg>
+              <svg class="furo-related-icon"><use href="#svg-arrow-right"></use></svg>
             </a>
           <a class="prev-page" href="kernel.html">
-              <svg><use href="#svg-arrow-right"></use></svg>
+              <svg class="furo-related-icon"><use href="#svg-arrow-right"></use></svg>
               <div class="page-info">
                 <div class="context">
                   <span>Previous</span>
@@ -551,9 +554,7 @@ the original call to addMessageCallback.</p>
             
           </div>
           <div class="right-details">
-            <div class="icons">
-              
-            </div>
+            
           </div>
         </div>
         
@@ -565,7 +566,7 @@ the original call to addMessageCallback.</p>
       <div class="toc-sticky toc-scroll">
         <div class="toc-title-container">
           <span class="toc-title">
-            Contents
+            On this page
           </span>
         </div>
         <div class="toc-tree-container">
@@ -573,8 +574,19 @@ the original call to addMessageCallback.</p>
             <ul>
 <li><a class="reference internal" href="#">Messaging</a><ul>
 <li><a class="reference internal" href="#object-features">Object features</a><ul>
-<li><a class="reference internal" href="#dataobject">DataObject</a></li>
-<li><a class="reference internal" href="#monitormgr">MonitorMgr</a></li>
+<li><a class="reference internal" href="#dataobject">DataObject</a><ul>
+<li><a class="reference internal" href="#abaqus.Messaging.DataObject.DataObject"><code class="docutils literal notranslate"><span class="pre">DataObject</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#monitormgr">MonitorMgr</a><ul>
+<li><a class="reference internal" href="#abaqus.Messaging.MonitorMgr.MonitorMgr"><code class="docutils literal notranslate"><span class="pre">MonitorMgr</span></code></a><ul>
+<li><a class="reference internal" href="#abaqus.Messaging.MonitorMgr.MonitorMgr.addMessageCallback"><code class="docutils literal notranslate"><span class="pre">MonitorMgr.addMessageCallback()</span></code></a></li>
+<li><a class="reference internal" href="#abaqus.Messaging.MonitorMgr.MonitorMgr.checkMonitorStatus"><code class="docutils literal notranslate"><span class="pre">MonitorMgr.checkMonitorStatus()</span></code></a></li>
+<li><a class="reference internal" href="#abaqus.Messaging.MonitorMgr.MonitorMgr.removeMessageCallback"><code class="docutils literal notranslate"><span class="pre">MonitorMgr.removeMessageCallback()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
@@ -589,9 +601,8 @@ the original call to addMessageCallback.</p>
     </aside>
   </div>
 </div><script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
-    <script src="../../_static/jquery.js"></script>
-    <script src="../../_static/underscore.js"></script>
     <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/sphinx_highlight.js"></script>
     <script src="../../_static/scripts/furo.js"></script>
     </body>
 </html>

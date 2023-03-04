@@ -1,14 +1,14 @@
 <!doctype html>
-<html class="no-js">
+<html class="no-js" lang="en">
   <head><meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width,initial-scale=1"/>
-    <meta name="color-scheme" content="light dark"><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="color-scheme" content="light dark"><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 <link rel="index" title="Index" href="../../genindex.html" /><link rel="search" title="Search" href="../../search.html" /><link rel="prev" title="Text Representation" href="text_representation.html" />
 
-    <meta name="generator" content="sphinx-4.5.0, furo 2022.06.21"/>
+    <!-- Generated with Sphinx 6.1.3 and Furo 2022.12.07 -->
         <title>Utility and View - PYABAQUS 2022.1 documentation</title>
       <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/styles/furo.css?digest=40978830699223671f4072448e654b5958f38b89" />
+    <link rel="stylesheet" type="text/css" href="../../_static/styles/furo.css?digest=91d0f0d1c444bdcb17a68e833c7a53903343c195" />
     <link rel="stylesheet" type="text/css" href="../../_static/styles/furo-extensions.css?digest=30d1aed668e5c3a91c3e3bf6a60b675221979f0e" />
     
     
@@ -18,6 +18,8 @@
   body {
     --color-code-background: #f8f8f8;
   --color-code-foreground: black;
+  --color-announcement-background: #7C4DFF;
+  --color-announcement-text: #FFFFFF;
   
   }
   @media not print {
@@ -112,7 +114,11 @@
   <div class="visually-hidden">Hide table of contents sidebar</div>
 </label>
 
-
+<div class="announcement">
+  <aside class="announcement-content">
+     The `pyabaqus` package has been deprecated. Please use the <a href='https://github.com/haiiliin/abqpy' target='_blank'>abqpy</a> package instead. 
+  </aside>
+</div>
 
 <div class="page">
   <header class="mobile-header">
@@ -149,7 +155,7 @@
   <span class="sidebar-brand-text">PYABAQUS 2022.1 documentation</span>
   
 </a><form class="sidebar-search-container" method="get" action="../../search.html" role="search">
-  <input class="sidebar-search" placeholder=Search name="q" aria-label="Search">
+  <input class="sidebar-search" placeholder="Search" name="q" aria-label="Search">
   <input type="hidden" name="check_keywords" value="yes">
   <input type="hidden" name="area" value="default">
 </form>
@@ -288,7 +294,8 @@
           <span>Back to top</span>
         </a>
         <div class="content-icon-container">
-          <div class="theme-toggle-container theme-toggle-content">
+          
+<div class="theme-toggle-container theme-toggle-content">
             <button class="theme-toggle">
               <div class="visually-hidden">Toggle Light / Dark / Auto color theme</div>
               <svg class="theme-icon-when-auto"><use href="#svg-sun-half"></use></svg>
@@ -303,7 +310,7 @@
         </div>
         <article role="main">
           <section id="utility-and-view">
-<h1>Utility and View<a class="headerlink" href="#utility-and-view" title="Permalink to this headline">#</a></h1>
+<h1>Utility and View<a class="headerlink" href="#utility-and-view" title="Permalink to this heading">#</a></h1>
 <p>Utility commands are used to do the following:</p>
 <ul class="simple">
 <li><p>Create SymbolicConstant and Boolean objects.</p></li>
@@ -318,9 +325,9 @@
 </ul>
 <p>View commands are used to transform three-dimensional views stored in Session and Viewport objects to the screen. (See Session object and Viewport object.)</p>
 <section id="object-features">
-<h2>Object features<a class="headerlink" href="#object-features" title="Permalink to this headline">#</a></h2>
+<h2>Object features<a class="headerlink" href="#object-features" title="Permalink to this heading">#</a></h2>
 <section id="abaqusboolean">
-<h3>AbaqusBoolean<a class="headerlink" href="#abaqusboolean" title="Permalink to this headline">#</a></h3>
+<h3>AbaqusBoolean<a class="headerlink" href="#abaqusboolean" title="Permalink to this heading">#</a></h3>
 <dl class="py class">
 <dt class="sig sig-object py" id="abaqus.UtilityAndView.AbaqusBoolean.AbaqusBoolean">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">AbaqusBoolean</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/haiiliin/pyabaqus/blob/V2022/src/abaqus/UtilityAndView/AbaqusBoolean.py#L1-L48"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#abaqus.UtilityAndView.AbaqusBoolean.AbaqusBoolean" title="Permalink to this definition">#</a></dt>
@@ -347,7 +354,7 @@ Python bool (True, False), or a Python int (1, 0).</p>
 
 </section>
 <section id="backwardcompatibility">
-<h3>BackwardCompatibility<a class="headerlink" href="#backwardcompatibility" title="Permalink to this headline">#</a></h3>
+<h3>BackwardCompatibility<a class="headerlink" href="#backwardcompatibility" title="Permalink to this heading">#</a></h3>
 <dl class="py class">
 <dt class="sig sig-object py" id="abaqus.UtilityAndView.BackwardCompatibility.BackwardCompatibility">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">BackwardCompatibility</span></span><a class="reference external" href="https://github.com/haiiliin/pyabaqus/blob/V2022/src/abaqus/UtilityAndView/BackwardCompatibility.py#L4-L120"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#abaqus.UtilityAndView.BackwardCompatibility.BackwardCompatibility" title="Permalink to this definition">#</a></dt>
@@ -395,7 +402,7 @@ print backwardCompatibility.getDeprecatedArgsUsed()</p>
 </pre></div>
 </div>
 <dl class="field-list simple">
-<dt class="field-odd">Attributes</dt>
+<dt class="field-odd">Attributes<span class="colon">:</span></dt>
 <dd class="field-odd"><dl class="simple">
 <dt><strong>includeDeprecated: Boolean</strong></dt><dd><p>A Boolean specifying whether deprecated members, methods, and arguments can be seen and
 used. Possible values are ON and OFF. The default value is ON.</p>
@@ -412,10 +419,6 @@ displayed when <strong>reportDeprecated</strong> is True. The default value is F
 <p class="rubric">Methods</p>
 <div class="table-wrapper autosummary longtable docutils container">
 <table class="autosummary longtable docutils align-default">
-<colgroup>
-<col style="width: 10%" />
-<col style="width: 90%" />
-</colgroup>
 <tbody>
 <tr class="row-odd"><td><p><a class="reference internal" href="#abaqus.UtilityAndView.BackwardCompatibility.BackwardCompatibility.getDeprecatedArgsUsed" title="abaqus.UtilityAndView.BackwardCompatibility.BackwardCompatibility.getDeprecatedArgsUsed"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getDeprecatedArgsUsed</span></code></a>()</p></td>
 <td><p>This method returns a list of deprecated arguments used since the last call to resetDeprecatedArgsUsed.</p></td>
@@ -441,7 +444,7 @@ displayed when <strong>reportDeprecated</strong> is True. The default value is F
 <dd><p>This method returns a list of deprecated arguments used since the last call to
 resetDeprecatedArgsUsed.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Returns</dt>
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
 <dd class="field-odd"><dl class="simple">
 <dt><code class="xref py py-obj docutils literal notranslate"><span class="pre">A</span></code> <code class="xref py py-class docutils literal notranslate"><span class="pre">python:list</span></code> <code class="xref py py-obj docutils literal notranslate"><span class="pre">of</span></code> Strings.</dt><dd></dd>
 </dl>
@@ -455,7 +458,7 @@ resetDeprecatedArgsUsed.</p>
 <dd><p>This method returns a list of deprecated methods used since the last call to
 resetDeprecatedMethodsUsed.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Returns</dt>
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
 <dd class="field-odd"><dl class="simple">
 <dt><code class="xref py py-obj docutils literal notranslate"><span class="pre">A</span></code> <code class="xref py py-class docutils literal notranslate"><span class="pre">python:list</span></code> <code class="xref py py-obj docutils literal notranslate"><span class="pre">of</span></code> Strings.</dt><dd></dd>
 </dl>
@@ -480,7 +483,7 @@ resetDeprecatedMethodsUsed.</p>
 <span class="sig-name descname"><span class="pre">setValues</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">includeDeprecated</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">BooleanType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">reportDeprecated</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">BooleanType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">showKeysInReport</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">BooleanType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/haiiliin/pyabaqus/blob/V2022/src/abaqus/UtilityAndView/BackwardCompatibility.py#L100-L120"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#abaqus.UtilityAndView.BackwardCompatibility.BackwardCompatibility.setValues" title="Permalink to this definition">#</a></dt>
 <dd><p>This method modifies the BackwardCompatibility object.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><dl class="simple">
 <dt><strong>includeDeprecated</strong></dt><dd><p>A Boolean specifying whether deprecated members, methods, and arguments can be seen and
 used. The default value is ON.</p>
@@ -500,7 +503,7 @@ displayed when <em>reportDeprecated</em> is True. The default value is False.</p
 
 </section>
 <section id="module-abaqus.UtilityAndView.Callback">
-<span id="callback"></span><h3>Callback<a class="headerlink" href="#module-abaqus.UtilityAndView.Callback" title="Permalink to this headline">#</a></h3>
+<span id="callback"></span><h3>Callback<a class="headerlink" href="#module-abaqus.UtilityAndView.Callback" title="Permalink to this heading">#</a></h3>
 <p>These functions execute Python commands or functions.</p>
 <dl class="py function">
 <dt class="sig sig-object py" id="abaqus.UtilityAndView.Callback.addImportCallback">
@@ -509,7 +512,7 @@ displayed when <em>reportDeprecated</em> is True. The default value is False.</p
 imported. You cannot specify a custom module.
 For more information, see An example of a callback function.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><dl class="simple">
 <dt><strong>moduleName</strong></dt><dd><p>A String specifying the name of a specified Abaqus/CAE module.</p>
 </dd>
@@ -534,7 +537,7 @@ object passed as the <em>userData</em> argument to the addImportCallback method.
 <span class="sig-name descname"><span class="pre">removeImportCallback</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">callback</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">userData</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/haiiliin/pyabaqus/blob/V2022/src/abaqus/UtilityAndView/Callback.py#L34-L55"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#abaqus.UtilityAndView.Callback.removeImportCallback" title="Permalink to this definition">#</a></dt>
 <dd><p>This function removes a callback added in addImportCallback.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><dl class="simple">
 <dt><strong>callback</strong></dt><dd><p>A Python function to be called; it must be the same as the <em>callback</em> argument specified
 in the original call to addImportCallback.</p>
@@ -554,7 +557,7 @@ the original call to addImportCallback.</p>
 
 </section>
 <section id="module-abaqus.UtilityAndView.Customization">
-<span id="customization"></span><h3>Customization<a class="headerlink" href="#module-abaqus.UtilityAndView.Customization" title="Permalink to this headline">#</a></h3>
+<span id="customization"></span><h3>Customization<a class="headerlink" href="#module-abaqus.UtilityAndView.Customization" title="Permalink to this heading">#</a></h3>
 <p>The following command is used to record a user-defined command in the Abaqus journal
 file.</p>
 <dl class="py function">
@@ -578,7 +581,7 @@ built-in Abaqus Scripting Interface commands, because built-in commands are jour
 default. A command that changes the mdb customData is one example of a command that
 should call journalMethodCall.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><dl class="simple">
 <dt><strong>objectPath</strong></dt><dd><p>A String specifying the path to the object.</p>
 </dd>
@@ -600,17 +603,17 @@ should call journalMethodCall.</p>
 
 </section>
 <section id="module-abaqus.UtilityAndView.Delete">
-<span id="delete"></span><h3>Delete<a class="headerlink" href="#module-abaqus.UtilityAndView.Delete" title="Permalink to this headline">#</a></h3>
+<span id="delete"></span><h3>Delete<a class="headerlink" href="#module-abaqus.UtilityAndView.Delete" title="Permalink to this heading">#</a></h3>
 <dl class="py function">
 <dt class="sig sig-object py" id="abaqus.UtilityAndView.Delete.deleteObjectCallback">
-<span class="sig-name descname"><span class="pre">deleteObjectCallback</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">callback</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">path</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">userData</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">includeChildren</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">BooleanType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/haiiliin/pyabaqus/blob/V2022/src/abaqus/UtilityAndView/Delete.py#L24-L62"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#abaqus.UtilityAndView.Delete.deleteObjectCallback" title="Permalink to this definition">#</a></dt>
+<span class="sig-name descname"><span class="pre">deleteObjectCallback</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">callback</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">path</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">userData</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">includeChildren</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">BooleanType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/haiiliin/pyabaqus/blob/V2022/src/abaqus/UtilityAndView/Delete.py#L24-L62"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#abaqus.UtilityAndView.Delete.deleteObjectCallback" title="Permalink to this definition">#</a></dt>
 <dd><p>This method adds a callback function that will be invoked when the specified Abaqus
 Scripting Interface objects are about to be deleted. The callback is invoked only when
 the object is deleted using the Python statement del object. The callback is not invoked
 when the object is deleted using an Abaqus Scripting Interface command such as
 mdb.models[name].parts[name].deleteFeature().</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><dl class="simple">
 <dt><strong>callback</strong></dt><dd><p>A Python function to be called when an object matching the specified path is about to be
 deleted. The interface definition of the callback function is:<a href="#id5"><span class="problematic" id="id6">`</span></a>def
@@ -641,14 +644,14 @@ specified by the <em>path</em> argument is about to be deleted. The default valu
 
 </section>
 <section id="module-abaqus.UtilityAndView.Method">
-<span id="method"></span><h3>Method<a class="headerlink" href="#module-abaqus.UtilityAndView.Method" title="Permalink to this headline">#</a></h3>
+<span id="method"></span><h3>Method<a class="headerlink" href="#module-abaqus.UtilityAndView.Method" title="Permalink to this heading">#</a></h3>
 <dl class="py function">
 <dt class="sig sig-object py" id="abaqus.UtilityAndView.Method.addCallback">
-<span class="sig-name descname"><span class="pre">addCallback</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">caller</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">methodName</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">callback</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">userData</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">callAfter</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">BooleanType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/haiiliin/pyabaqus/blob/V2022/src/abaqus/UtilityAndView/Method.py#L27-L73"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#abaqus.UtilityAndView.Method.addCallback" title="Permalink to this definition">#</a></dt>
+<span class="sig-name descname"><span class="pre">addCallback</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">caller</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">methodName</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">callback</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">userData</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">callAfter</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">BooleanType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/haiiliin/pyabaqus/blob/V2022/src/abaqus/UtilityAndView/Method.py#L27-L73"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#abaqus.UtilityAndView.Method.addCallback" title="Permalink to this definition">#</a></dt>
 <dd><p>This method adds a callback function that will be invoked when certain Abaqus/CAE
 commands are about to be executed.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><dl class="simple">
 <dt><strong>caller</strong></dt><dd><p>An object or type object specifying which object will trigger the callback function to
 be invoked or the Symbolic Constant ALL_TYPES.</p>
@@ -686,11 +689,11 @@ getMethodReturnValue function is in the global namespace of the callback functio
 
 <dl class="py function">
 <dt class="sig sig-object py" id="abaqus.UtilityAndView.Method.removeCallback">
-<span class="sig-name descname"><span class="pre">removeCallback</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">caller</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">methodName</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">callback</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">userData</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/haiiliin/pyabaqus/blob/V2022/src/abaqus/UtilityAndView/Method.py#L76-L109"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#abaqus.UtilityAndView.Method.removeCallback" title="Permalink to this definition">#</a></dt>
+<span class="sig-name descname"><span class="pre">removeCallback</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">caller</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">methodName</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">callback</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">userData</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/haiiliin/pyabaqus/blob/V2022/src/abaqus/UtilityAndView/Method.py#L76-L109"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#abaqus.UtilityAndView.Method.removeCallback" title="Permalink to this definition">#</a></dt>
 <dd><p>This method removes a callback added by the addCallback method. To successfully remove a
 callback, all arguments must exactly match those used when the callback was added.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><dl class="simple">
 <dt><strong>caller</strong></dt><dd><p>An object or type object specifying which object will trigger the callback function to
 be invoked or the Symbolic Constant ALL_TYPES.</p>
@@ -721,7 +724,7 @@ is None.</p>
 
 </section>
 <section id="repository">
-<h3>Repository<a class="headerlink" href="#repository" title="Permalink to this headline">#</a></h3>
+<h3>Repository<a class="headerlink" href="#repository" title="Permalink to this heading">#</a></h3>
 <dl class="py class">
 <dt class="sig sig-object py" id="abaqus.UtilityAndView.Repository.Repository">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">Repository</span></span><a class="reference external" href="https://github.com/haiiliin/pyabaqus/blob/V2022/src/abaqus/UtilityAndView/Repository.py#L1-L33"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#abaqus.UtilityAndView.Repository.Repository" title="Permalink to this definition">#</a></dt>
@@ -746,10 +749,6 @@ The Repository object is derived from the dict object.
 <p class="rubric">Methods</p>
 <div class="table-wrapper autosummary longtable docutils container">
 <table class="autosummary longtable docutils align-default">
-<colgroup>
-<col style="width: 10%" />
-<col style="width: 90%" />
-</colgroup>
 <tbody>
 <tr class="row-odd"><td><p><a class="reference internal" href="#abaqus.UtilityAndView.Repository.Repository.changeKey" title="abaqus.UtilityAndView.Repository.Repository.changeKey"><code class="xref py py-obj docutils literal notranslate"><span class="pre">changeKey</span></code></a>(fromName, toName)</p></td>
 <td><p>This method changes the name of a key in a repository and the <em>name</em> member of the value object.</p></td>
@@ -763,7 +762,7 @@ The Repository object is derived from the dict object.
 <dd><p>This method changes the name of a key in a repository and the <em>name</em> member of the value
 object.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><dl class="simple">
 <dt><strong>fromName</strong></dt><dd><p>A String specifying the old name of the repository key.</p>
 </dd>
@@ -778,10 +777,10 @@ object.</p>
 
 </section>
 <section id="status">
-<h3>Status<a class="headerlink" href="#status" title="Permalink to this headline">#</a></h3>
+<h3>Status<a class="headerlink" href="#status" title="Permalink to this heading">#</a></h3>
 </section>
 <section id="symbolicconstant">
-<h3>SymbolicConstant<a class="headerlink" href="#symbolicconstant" title="Permalink to this headline">#</a></h3>
+<h3>SymbolicConstant<a class="headerlink" href="#symbolicconstant" title="Permalink to this heading">#</a></h3>
 <dl class="py class">
 <dt class="sig sig-object py" id="abaqus.UtilityAndView.SymbolicConstant.SymbolicConstant">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">SymbolicConstant</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">text</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/haiiliin/pyabaqus/blob/V2022/src/abaqus/UtilityAndView/SymbolicConstant.py#L1-L47"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#abaqus.UtilityAndView.SymbolicConstant.SymbolicConstant" title="Permalink to this definition">#</a></dt>
@@ -807,13 +806,13 @@ symbolicConstants module.</p>
 
 </section>
 <section id="upgrade">
-<h3>Upgrade<a class="headerlink" href="#upgrade" title="Permalink to this headline">#</a></h3>
+<h3>Upgrade<a class="headerlink" href="#upgrade" title="Permalink to this heading">#</a></h3>
 </section>
 <section id="user">
-<h3>User<a class="headerlink" href="#user" title="Permalink to this headline">#</a></h3>
+<h3>User<a class="headerlink" href="#user" title="Permalink to this heading">#</a></h3>
 </section>
 <section id="view">
-<h3>View<a class="headerlink" href="#view" title="Permalink to this headline">#</a></h3>
+<h3>View<a class="headerlink" href="#view" title="Permalink to this heading">#</a></h3>
 <dl class="py class">
 <dt class="sig sig-object py" id="abaqus.UtilityAndView.View.View">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">View</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">nearPlane</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">farPlane</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">width</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">height</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">projection</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">SymbolicConstantType</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cameraPosition</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">tuple</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cameraUpVector</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">tuple</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cameraTarget</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">tuple</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">viewOffsetX</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">viewOffsetY</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">autoFit</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">BooleanType</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">movieMode</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">BooleanType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/haiiliin/pyabaqus/blob/V2022/src/abaqus/UtilityAndView/View.py#L4-L412"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#abaqus.UtilityAndView.View.View" title="Permalink to this definition">#</a></dt>
@@ -832,7 +831,7 @@ the Layer within a viewport.</p>
 </pre></div>
 </div>
 <dl class="field-list simple">
-<dt class="field-odd">Attributes</dt>
+<dt class="field-odd">Attributes<span class="colon">:</span></dt>
 <dd class="field-odd"><dl class="simple">
 <dt><strong>displayedObjectScreenWidth: float</strong></dt><dd><p>A Float specifying the width in viewport millimeters of the bounding rectangle around
 the viewport contents. This value does not include annotations or symbols and it is not
@@ -851,10 +850,6 @@ the Layer within a viewport.</p>
 <p class="rubric">Methods</p>
 <div class="table-wrapper autosummary longtable docutils container">
 <table class="autosummary longtable docutils align-default">
-<colgroup>
-<col style="width: 10%" />
-<col style="width: 90%" />
-</colgroup>
 <tbody>
 <tr class="row-odd"><td><p><a class="reference internal" href="#abaqus.UtilityAndView.View.View.fitView" title="abaqus.UtilityAndView.View.View.fitView"><code class="xref py py-obj docutils literal notranslate"><span class="pre">fitView</span></code></a>([drawImmediately])</p></td>
 <td><p>This method scales the displayable object (such as a part, the assembly, or an <em>X–Y</em> plot) to fit the viewport.</p></td>
@@ -901,7 +896,7 @@ the Layer within a viewport.</p>
 <dd><p>This method scales the displayable object (such as a part, the assembly, or an <em>X–Y</em>
 plot) to fit the viewport.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><dl class="simple">
 <dt><strong>drawImmediately</strong></dt><dd><p>A Boolean specifying the viewport should refresh immediately after the command is
 processed. This is typically only used when writing a script and it is desirable to show
@@ -920,7 +915,7 @@ intermediate results before the script completes. The default value is False.</p
 action is taken.
 Note:This method is not available for a Layer View.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><dl class="simple">
 <dt><strong>drawImmediately</strong></dt><dd><p>A Boolean specifying the viewport should refresh immediately after the command is
 processed. This is typically only used when writing a script and it is desirable to show
@@ -936,7 +931,7 @@ intermediate results before the script completes. The default value is False.</p
 <span class="sig-name descname"><span class="pre">pan</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">xFraction</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">yFraction</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">asMovie</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">BooleanType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">drawImmediately</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">BooleanType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/haiiliin/pyabaqus/blob/V2022/src/abaqus/UtilityAndView/View.py#L166-L194"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#abaqus.UtilityAndView.View.View.pan" title="Permalink to this definition">#</a></dt>
 <dd><p>This method pans the view in the viewport using absolute, not relative, mode.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><dl class="simple">
 <dt><strong>xFraction</strong></dt><dd><p>A Float specifying the amount to pan the model in the screen <em>X</em>-direction as a fraction
 of the viewport width. A positive value pans the model to the right. A negative value
@@ -967,7 +962,7 @@ False.</p>
 no action is taken.
 Note:This method is not available for a Layer View.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><dl class="simple">
 <dt><strong>drawImmediately</strong></dt><dd><p>A Boolean specifying the viewport should refresh immediately after the command is
 processed. This argument is typically used only when writing a script and it is
@@ -986,7 +981,7 @@ False.</p>
 previously specified and <em>asMovie</em> is OFF then this method will honor that rotation
 center.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><dl class="simple">
 <dt><strong>xAngle</strong></dt><dd><p>A Float specifying the degrees to rotate about the <em>X</em>-axis. The default value is 0.0.</p>
 </dd>
@@ -1014,11 +1009,11 @@ False.</p>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="abaqus.UtilityAndView.View.View.setLayerTransform">
-<span class="sig-name descname"><span class="pre">setLayerTransform</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">layerTransform</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">tuple</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">()</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">options</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#abaqus.UtilityAndView.View.View" title="abaqus.UtilityAndView.View.View"><span class="pre">View</span></a><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">drawImmediately</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">BooleanType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/haiiliin/pyabaqus/blob/V2022/src/abaqus/UtilityAndView/View.py#L249-L272"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#abaqus.UtilityAndView.View.View.setLayerTransform" title="Permalink to this definition">#</a></dt>
+<span class="sig-name descname"><span class="pre">setLayerTransform</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">layerTransform</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">tuple</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">()</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">options</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#abaqus.UtilityAndView.View.View" title="abaqus.UtilityAndView.View.View"><span class="pre">View</span></a></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">drawImmediately</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">BooleanType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/haiiliin/pyabaqus/blob/V2022/src/abaqus/UtilityAndView/View.py#L249-L272"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#abaqus.UtilityAndView.View.View.setLayerTransform" title="Permalink to this definition">#</a></dt>
 <dd><p>This method modifies the transformation used to position a Layer.
 Note:This method is not available for Session and Viewport Views.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><dl class="simple">
 <dt><strong>layerTransform</strong></dt><dd><p>A sequence of 16 Floats specifying the transformation matrix.</p>
 </dd>
@@ -1044,7 +1039,7 @@ Choosing PERSPECTIVE makes a model appear more realistic by decreasing the appar
 of features that are farther away from the viewing point.
 Note:This method is not available for a Layer View.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><dl class="simple">
 <dt><strong>projection</strong></dt><dd><p>A SymbolicConstant specifying the projection mode. Possible values are PERSPECTIVE and
 PARALLEL.</p>
@@ -1056,7 +1051,7 @@ False.</p>
 </dd>
 </dl>
 </dd>
-<dt class="field-even">Raises</dt>
+<dt class="field-even">Raises<span class="colon">:</span></dt>
 <dd class="field-even"><dl class="simple">
 <dt><code class="xref py py-obj docutils literal notranslate"><span class="pre">RangeError</span></code></dt><dd></dd>
 </dl>
@@ -1069,14 +1064,14 @@ False.</p>
 <span class="sig-name descname"><span class="pre">setRotationCenter</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">rotationCenter</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">tuple</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/haiiliin/pyabaqus/blob/V2022/src/abaqus/UtilityAndView/View.py#L299-L313"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#abaqus.UtilityAndView.View.View.setRotationCenter" title="Permalink to this definition">#</a></dt>
 <dd><p>This method sets the center of rotation to the specified location.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><dl class="simple">
 <dt><strong>rotationCenter</strong></dt><dd><p>A sequence of a String and an Int specifying a part instance name and a node label or a
 sequence of 3 Floats specifying a point.</p>
 </dd>
 </dl>
 </dd>
-<dt class="field-even">Raises</dt>
+<dt class="field-even">Raises<span class="colon">:</span></dt>
 <dd class="field-even"><dl class="simple">
 <dt>TypeError: <code class="xref py py-obj docutils literal notranslate"><span class="pre">rotationCenter</span></code> <code class="xref py py-obj docutils literal notranslate"><span class="pre">cannot</span></code> <code class="xref py py-obj docutils literal notranslate"><span class="pre">be</span></code> <code class="xref py py-obj docutils literal notranslate"><span class="pre">set</span></code> <code class="xref py py-obj docutils literal notranslate"><span class="pre">using</span></code> <code class="xref py py-obj docutils literal notranslate"><span class="pre">a</span></code> <code class="xref py py-obj docutils literal notranslate"><span class="pre">part</span></code> <code class="xref py py-obj docutils literal notranslate"><span class="pre">instance</span></code> <code class="xref py py-obj docutils literal notranslate"><span class="pre">and</span></code> <code class="xref py py-obj docutils literal notranslate"><span class="pre">node</span></code> <code class="xref py py-obj docutils literal notranslate"><span class="pre">label</span></code> <code class="xref py py-obj docutils literal notranslate"><span class="pre">unless</span></code> <code class="xref py py-obj docutils literal notranslate"><span class="pre">the</span></code></dt><dd></dd>
 <dt><code class="xref py py-obj docutils literal notranslate"><span class="pre">displayed</span></code> <code class="xref py py-obj docutils literal notranslate"><span class="pre">object</span></code> <code class="xref py py-obj docutils literal notranslate"><span class="pre">is</span></code> <code class="xref py py-obj docutils literal notranslate"><span class="pre">an</span></code> <code class="xref py py-obj docutils literal notranslate"><span class="pre">ODB</span></code></dt><dd></dd>
@@ -1091,14 +1086,14 @@ sequence of 3 Floats specifying a point.</p>
 <dd><p>This method modifies the View object.
 Note:This method is not available for a Layer View.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><dl class="simple">
 <dt><strong>movieMode</strong></dt><dd><p>A Boolean specifying whether or not the camera is in movie mode. The default value is
 OFF.</p>
 </dd>
 </dl>
 </dd>
-<dt class="field-even">Raises</dt>
+<dt class="field-even">Raises<span class="colon">:</span></dt>
 <dd class="field-even"><dl class="simple">
 <dt><code class="xref py py-obj docutils literal notranslate"><span class="pre">RangeError</span></code></dt><dd></dd>
 </dl>
@@ -1112,7 +1107,7 @@ OFF.</p>
 <dd><p>This method sets the camera’s position in the viewport.
 Note:This method is not available for a Layer View.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><dl class="simple">
 <dt><strong>viewVector</strong></dt><dd><p>A sequence of three Floats specifying the viewing vector (from the camera to the origin
 of the model).</p>
@@ -1135,7 +1130,7 @@ False.</p>
 <span class="sig-name descname"><span class="pre">zoom</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">zoomFactor</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mode</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">SymbolicConstantType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'ABSOLUTE'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">asMovie</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">BooleanType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">drawImmediately</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">BooleanType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/haiiliin/pyabaqus/blob/V2022/src/abaqus/UtilityAndView/View.py#L356-L388"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#abaqus.UtilityAndView.View.View.zoom" title="Permalink to this definition">#</a></dt>
 <dd><p>This method magnifies the view in the viewport.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><dl class="simple">
 <dt><strong>zoomFactor</strong></dt><dd><p>A Float specifying the amount to zoom. Possible values are 0.000001 ≤≤ <em>zoomFactor</em> ≤≤
 1000000. A <em>zoomFactor</em> less than one reduces the image. A <em>zoomFactor</em> greater than one
@@ -1155,7 +1150,7 @@ False.</p>
 </dd>
 </dl>
 </dd>
-<dt class="field-even">Raises</dt>
+<dt class="field-even">Raises<span class="colon">:</span></dt>
 <dd class="field-even"><dl class="simple">
 <dt><code class="xref py py-obj docutils literal notranslate"><span class="pre">RangeError</span></code></dt><dd></dd>
 </dl>
@@ -1168,7 +1163,7 @@ False.</p>
 <span class="sig-name descname"><span class="pre">zoomRectangle</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">point1</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">tuple</span><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">point2</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">tuple</span><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">drawImmediately</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">BooleanType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/haiiliin/pyabaqus/blob/V2022/src/abaqus/UtilityAndView/View.py#L390-L412"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#abaqus.UtilityAndView.View.View.zoomRectangle" title="Permalink to this definition">#</a></dt>
 <dd><p>This method fills the viewport with the graphics located within the given rectangle.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><dl class="simple">
 <dt><strong>point1</strong></dt><dd><p>A pair of Floats specifying the*X*- and <em>Y</em>-coordinates of one corner of the rectangle
 in fractions of the viewport width and height.</p>
@@ -1199,7 +1194,7 @@ False.</p>
         <div class="related-pages">
           
           <a class="prev-page" href="text_representation.html">
-              <svg><use href="#svg-arrow-right"></use></svg>
+              <svg class="furo-related-icon"><use href="#svg-arrow-right"></use></svg>
               <div class="page-info">
                 <div class="context">
                   <span>Previous</span>
@@ -1221,9 +1216,7 @@ False.</p>
             
           </div>
           <div class="right-details">
-            <div class="icons">
-              
-            </div>
+            
           </div>
         </div>
         
@@ -1235,7 +1228,7 @@ False.</p>
       <div class="toc-sticky toc-scroll">
         <div class="toc-title-container">
           <span class="toc-title">
-            Contents
+            On this page
           </span>
         </div>
         <div class="toc-tree-container">
@@ -1243,18 +1236,71 @@ False.</p>
             <ul>
 <li><a class="reference internal" href="#">Utility and View</a><ul>
 <li><a class="reference internal" href="#object-features">Object features</a><ul>
-<li><a class="reference internal" href="#abaqusboolean">AbaqusBoolean</a></li>
-<li><a class="reference internal" href="#backwardcompatibility">BackwardCompatibility</a></li>
-<li><a class="reference internal" href="#module-abaqus.UtilityAndView.Callback">Callback</a></li>
-<li><a class="reference internal" href="#module-abaqus.UtilityAndView.Customization">Customization</a></li>
-<li><a class="reference internal" href="#module-abaqus.UtilityAndView.Delete">Delete</a></li>
-<li><a class="reference internal" href="#module-abaqus.UtilityAndView.Method">Method</a></li>
-<li><a class="reference internal" href="#repository">Repository</a></li>
+<li><a class="reference internal" href="#abaqusboolean">AbaqusBoolean</a><ul>
+<li><a class="reference internal" href="#abaqus.UtilityAndView.AbaqusBoolean.AbaqusBoolean"><code class="docutils literal notranslate"><span class="pre">AbaqusBoolean</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#backwardcompatibility">BackwardCompatibility</a><ul>
+<li><a class="reference internal" href="#abaqus.UtilityAndView.BackwardCompatibility.BackwardCompatibility"><code class="docutils literal notranslate"><span class="pre">BackwardCompatibility</span></code></a><ul>
+<li><a class="reference internal" href="#abaqus.UtilityAndView.BackwardCompatibility.BackwardCompatibility.getDeprecatedArgsUsed"><code class="docutils literal notranslate"><span class="pre">BackwardCompatibility.getDeprecatedArgsUsed()</span></code></a></li>
+<li><a class="reference internal" href="#abaqus.UtilityAndView.BackwardCompatibility.BackwardCompatibility.getDeprecatedMethodsUsed"><code class="docutils literal notranslate"><span class="pre">BackwardCompatibility.getDeprecatedMethodsUsed()</span></code></a></li>
+<li><a class="reference internal" href="#abaqus.UtilityAndView.BackwardCompatibility.BackwardCompatibility.resetDeprecatedArgsUsed"><code class="docutils literal notranslate"><span class="pre">BackwardCompatibility.resetDeprecatedArgsUsed()</span></code></a></li>
+<li><a class="reference internal" href="#abaqus.UtilityAndView.BackwardCompatibility.BackwardCompatibility.resetDeprecatedMethodsUsed"><code class="docutils literal notranslate"><span class="pre">BackwardCompatibility.resetDeprecatedMethodsUsed()</span></code></a></li>
+<li><a class="reference internal" href="#abaqus.UtilityAndView.BackwardCompatibility.BackwardCompatibility.setValues"><code class="docutils literal notranslate"><span class="pre">BackwardCompatibility.setValues()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a class="reference internal" href="#module-abaqus.UtilityAndView.Callback">Callback</a><ul>
+<li><a class="reference internal" href="#abaqus.UtilityAndView.Callback.addImportCallback"><code class="docutils literal notranslate"><span class="pre">addImportCallback()</span></code></a></li>
+<li><a class="reference internal" href="#abaqus.UtilityAndView.Callback.removeImportCallback"><code class="docutils literal notranslate"><span class="pre">removeImportCallback()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#module-abaqus.UtilityAndView.Customization">Customization</a><ul>
+<li><a class="reference internal" href="#abaqus.UtilityAndView.Customization.journalMethodCall"><code class="docutils literal notranslate"><span class="pre">journalMethodCall()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#module-abaqus.UtilityAndView.Delete">Delete</a><ul>
+<li><a class="reference internal" href="#abaqus.UtilityAndView.Delete.deleteObjectCallback"><code class="docutils literal notranslate"><span class="pre">deleteObjectCallback()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#module-abaqus.UtilityAndView.Method">Method</a><ul>
+<li><a class="reference internal" href="#abaqus.UtilityAndView.Method.addCallback"><code class="docutils literal notranslate"><span class="pre">addCallback()</span></code></a></li>
+<li><a class="reference internal" href="#abaqus.UtilityAndView.Method.removeCallback"><code class="docutils literal notranslate"><span class="pre">removeCallback()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#repository">Repository</a><ul>
+<li><a class="reference internal" href="#abaqus.UtilityAndView.Repository.Repository"><code class="docutils literal notranslate"><span class="pre">Repository</span></code></a><ul>
+<li><a class="reference internal" href="#abaqus.UtilityAndView.Repository.Repository.changeKey"><code class="docutils literal notranslate"><span class="pre">Repository.changeKey()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
 <li><a class="reference internal" href="#status">Status</a></li>
-<li><a class="reference internal" href="#symbolicconstant">SymbolicConstant</a></li>
+<li><a class="reference internal" href="#symbolicconstant">SymbolicConstant</a><ul>
+<li><a class="reference internal" href="#abaqus.UtilityAndView.SymbolicConstant.SymbolicConstant"><code class="docutils literal notranslate"><span class="pre">SymbolicConstant</span></code></a></li>
+</ul>
+</li>
 <li><a class="reference internal" href="#upgrade">Upgrade</a></li>
 <li><a class="reference internal" href="#user">User</a></li>
-<li><a class="reference internal" href="#view">View</a></li>
+<li><a class="reference internal" href="#view">View</a><ul>
+<li><a class="reference internal" href="#abaqus.UtilityAndView.View.View"><code class="docutils literal notranslate"><span class="pre">View</span></code></a><ul>
+<li><a class="reference internal" href="#abaqus.UtilityAndView.View.View.fitView"><code class="docutils literal notranslate"><span class="pre">View.fitView()</span></code></a></li>
+<li><a class="reference internal" href="#abaqus.UtilityAndView.View.View.next"><code class="docutils literal notranslate"><span class="pre">View.next()</span></code></a></li>
+<li><a class="reference internal" href="#abaqus.UtilityAndView.View.View.pan"><code class="docutils literal notranslate"><span class="pre">View.pan()</span></code></a></li>
+<li><a class="reference internal" href="#abaqus.UtilityAndView.View.View.previous"><code class="docutils literal notranslate"><span class="pre">View.previous()</span></code></a></li>
+<li><a class="reference internal" href="#abaqus.UtilityAndView.View.View.rotate"><code class="docutils literal notranslate"><span class="pre">View.rotate()</span></code></a></li>
+<li><a class="reference internal" href="#abaqus.UtilityAndView.View.View.setLayerTransform"><code class="docutils literal notranslate"><span class="pre">View.setLayerTransform()</span></code></a></li>
+<li><a class="reference internal" href="#abaqus.UtilityAndView.View.View.setProjection"><code class="docutils literal notranslate"><span class="pre">View.setProjection()</span></code></a></li>
+<li><a class="reference internal" href="#abaqus.UtilityAndView.View.View.setRotationCenter"><code class="docutils literal notranslate"><span class="pre">View.setRotationCenter()</span></code></a></li>
+<li><a class="reference internal" href="#abaqus.UtilityAndView.View.View.setValues"><code class="docutils literal notranslate"><span class="pre">View.setValues()</span></code></a></li>
+<li><a class="reference internal" href="#abaqus.UtilityAndView.View.View.setViewpoint"><code class="docutils literal notranslate"><span class="pre">View.setViewpoint()</span></code></a></li>
+<li><a class="reference internal" href="#abaqus.UtilityAndView.View.View.zoom"><code class="docutils literal notranslate"><span class="pre">View.zoom()</span></code></a></li>
+<li><a class="reference internal" href="#abaqus.UtilityAndView.View.View.zoomRectangle"><code class="docutils literal notranslate"><span class="pre">View.zoomRectangle()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
@@ -1269,9 +1315,8 @@ False.</p>
     </aside>
   </div>
 </div><script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
-    <script src="../../_static/jquery.js"></script>
-    <script src="../../_static/underscore.js"></script>
     <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/sphinx_highlight.js"></script>
     <script src="../../_static/scripts/furo.js"></script>
     </body>
 </html>

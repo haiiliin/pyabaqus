@@ -1,14 +1,14 @@
 <!doctype html>
-<html class="no-js">
+<html class="no-js" lang="en">
   <head><meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width,initial-scale=1"/>
-    <meta name="color-scheme" content="light dark"><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="color-scheme" content="light dark"><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 <link rel="index" title="Index" href="../../../../genindex.html" /><link rel="search" title="Search" href="../../../../search.html" /><link rel="next" title="Abaqus Job" href="../../job.html" /><link rel="prev" title="Step" href="../step.html" />
 
-    <meta name="generator" content="sphinx-4.5.0, furo 2022.06.21"/>
+    <!-- Generated with Sphinx 6.1.3 and Furo 2022.12.07 -->
         <title>Step Miscellaneous - PYABAQUS 2022.1 documentation</title>
       <link rel="stylesheet" type="text/css" href="../../../../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../../../../_static/styles/furo.css?digest=40978830699223671f4072448e654b5958f38b89" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/styles/furo.css?digest=91d0f0d1c444bdcb17a68e833c7a53903343c195" />
     <link rel="stylesheet" type="text/css" href="../../../../_static/styles/furo-extensions.css?digest=30d1aed668e5c3a91c3e3bf6a60b675221979f0e" />
     
     
@@ -18,6 +18,8 @@
   body {
     --color-code-background: #f8f8f8;
   --color-code-foreground: black;
+  --color-announcement-background: #7C4DFF;
+  --color-announcement-text: #FFFFFF;
   
   }
   @media not print {
@@ -112,7 +114,11 @@
   <div class="visually-hidden">Hide table of contents sidebar</div>
 </label>
 
-
+<div class="announcement">
+  <aside class="announcement-content">
+     The `pyabaqus` package has been deprecated. Please use the <a href='https://github.com/haiiliin/abqpy' target='_blank'>abqpy</a> package instead. 
+  </aside>
+</div>
 
 <div class="page">
   <header class="mobile-header">
@@ -149,7 +155,7 @@
   <span class="sidebar-brand-text">PYABAQUS 2022.1 documentation</span>
   
 </a><form class="sidebar-search-container" method="get" action="../../../../search.html" role="search">
-  <input class="sidebar-search" placeholder=Search name="q" aria-label="Search">
+  <input class="sidebar-search" placeholder="Search" name="q" aria-label="Search">
   <input type="hidden" name="check_keywords" value="yes">
   <input type="hidden" name="area" value="default">
 </form>
@@ -288,7 +294,8 @@
           <span>Back to top</span>
         </a>
         <div class="content-icon-container">
-          <div class="theme-toggle-container theme-toggle-content">
+          
+<div class="theme-toggle-container theme-toggle-content">
             <button class="theme-toggle">
               <div class="visually-hidden">Toggle Light / Dark / Auto color theme</div>
               <svg class="theme-icon-when-auto"><use href="#svg-sun-half"></use></svg>
@@ -303,12 +310,12 @@
         </div>
         <article role="main">
           <section id="step-miscellaneous">
-<h1>Step Miscellaneous<a class="headerlink" href="#step-miscellaneous" title="Permalink to this headline">#</a></h1>
+<h1>Step Miscellaneous<a class="headerlink" href="#step-miscellaneous" title="Permalink to this heading">#</a></h1>
 <p>Miscellaneous Step commands are used for configuring controls, damping, and frequency tables.</p>
 <section id="object-features">
-<h2>Object features<a class="headerlink" href="#object-features" title="Permalink to this headline">#</a></h2>
+<h2>Object features<a class="headerlink" href="#object-features" title="Permalink to this heading">#</a></h2>
 <section id="compositedamping">
-<h3>CompositeDamping<a class="headerlink" href="#compositedamping" title="Permalink to this headline">#</a></h3>
+<h3>CompositeDamping<a class="headerlink" href="#compositedamping" title="Permalink to this heading">#</a></h3>
 <dl class="py class">
 <dt class="sig sig-object py">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">CompositeDamping</span></span><a class="reference external" href="https://github.com/haiiliin/pyabaqus/blob/V2022/src/abaqus/StepMiscellaneous/CompositeDamping.py#L4-L24"><span class="viewcode-link"><span class="pre">[source]</span></span></a></dt>
@@ -320,7 +327,7 @@
 </pre></div>
 </div>
 <dl class="field-list simple">
-<dt class="field-odd">Attributes</dt>
+<dt class="field-odd">Attributes<span class="colon">:</span></dt>
 <dd class="field-odd"><dl class="simple">
 <dt><strong>components: CompositeDampingComponentArray</strong></dt><dd><p>A <a class="reference internal" href="../../../../reference/mdb/model/step/step_miscellaneous.html#abaqus.StepMiscellaneous.CompositeDampingComponentArray.CompositeDampingComponentArray" title="abaqus.StepMiscellaneous.CompositeDampingComponentArray.CompositeDampingComponentArray"><code class="xref py py-class docutils literal notranslate"><span class="pre">CompositeDampingComponentArray</span></code></a> object.</p>
 </dd>
@@ -331,7 +338,7 @@
 
 </section>
 <section id="compositedampingcomponent">
-<h3>CompositeDampingComponent<a class="headerlink" href="#compositedampingcomponent" title="Permalink to this headline">#</a></h3>
+<h3>CompositeDampingComponent<a class="headerlink" href="#compositedampingcomponent" title="Permalink to this heading">#</a></h3>
 <dl class="py class">
 <dt class="sig sig-object py">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">CompositeDampingComponent</span></span><a class="reference external" href="https://github.com/haiiliin/pyabaqus/blob/V2022/src/abaqus/StepMiscellaneous/CompositeDampingComponent.py#L1-L27"><span class="viewcode-link"><span class="pre">[source]</span></span></a></dt>
@@ -344,7 +351,7 @@ modes.</p>
 </pre></div>
 </div>
 <dl class="field-list simple">
-<dt class="field-odd">Attributes</dt>
+<dt class="field-odd">Attributes<span class="colon">:</span></dt>
 <dd class="field-odd"><dl class="simple">
 <dt><strong>start: int</strong></dt><dd><p>An Int specifying the mode number of the lowest mode of a range.</p>
 </dd>
@@ -357,17 +364,13 @@ modes.</p>
 
 </section>
 <section id="compositedampingcomponentarray">
-<h3>CompositeDampingComponentArray<a class="headerlink" href="#compositedampingcomponentarray" title="Permalink to this headline">#</a></h3>
+<h3>CompositeDampingComponentArray<a class="headerlink" href="#compositedampingcomponentarray" title="Permalink to this heading">#</a></h3>
 <dl class="py class">
 <dt class="sig sig-object py">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">CompositeDampingComponentArray</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">iterable</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">()</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">/</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/haiiliin/pyabaqus/blob/V2022/src/abaqus/StepMiscellaneous/CompositeDampingComponentArray.py#L4-L6"><span class="viewcode-link"><span class="pre">[source]</span></span></a></dt>
 <dd><p class="rubric">Methods</p>
 <div class="table-wrapper docutils container">
 <table class="docutils align-default">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
 <tbody>
 <tr class="row-odd"><td><p><strong>findAt</strong></p></td>
 <td></td>
@@ -379,7 +382,7 @@ modes.</p>
 
 </section>
 <section id="control">
-<h3>Control<a class="headerlink" href="#control" title="Permalink to this headline">#</a></h3>
+<h3>Control<a class="headerlink" href="#control" title="Permalink to this heading">#</a></h3>
 <dl class="py class">
 <dt class="sig sig-object py">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">Control</span></span><a class="reference external" href="https://github.com/haiiliin/pyabaqus/blob/V2022/src/abaqus/StepMiscellaneous/Control.py#L6-L124"><span class="viewcode-link"><span class="pre">[source]</span></span></a></dt>
@@ -393,10 +396,6 @@ modes.</p>
 <p class="rubric">Methods</p>
 <div class="table-wrapper autosummary longtable docutils container">
 <table class="autosummary longtable docutils align-default">
-<colgroup>
-<col style="width: 10%" />
-<col style="width: 90%" />
-</colgroup>
 <tbody>
 <tr class="row-odd"><td><p><a class="reference internal" href="../../../../reference/mdb/model/step/step_miscellaneous.html#abaqus.StepMiscellaneous.Control.Control.setValues" title="abaqus.StepMiscellaneous.Control.Control.setValues"><code class="xref py py-obj docutils literal notranslate"><span class="pre">setValues</span></code></a>([allowPropagation, ...])</p></td>
 <td><p>This method modifies the Control object.</p></td>
@@ -408,7 +407,7 @@ modes.</p>
 
 </section>
 <section id="directdamping">
-<h3>DirectDamping<a class="headerlink" href="#directdamping" title="Permalink to this headline">#</a></h3>
+<h3>DirectDamping<a class="headerlink" href="#directdamping" title="Permalink to this heading">#</a></h3>
 <dl class="py class">
 <dt class="sig sig-object py">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">DirectDamping</span></span><a class="reference external" href="https://github.com/haiiliin/pyabaqus/blob/V2022/src/abaqus/StepMiscellaneous/DirectDamping.py#L4-L24"><span class="viewcode-link"><span class="pre">[source]</span></span></a></dt>
@@ -420,7 +419,7 @@ modes.</p>
 </pre></div>
 </div>
 <dl class="field-list simple">
-<dt class="field-odd">Attributes</dt>
+<dt class="field-odd">Attributes<span class="colon">:</span></dt>
 <dd class="field-odd"><dl class="simple">
 <dt><strong>components: DirectDampingComponentArray</strong></dt><dd><p>A <a class="reference internal" href="../../../../reference/mdb/model/step/step_miscellaneous.html#abaqus.StepMiscellaneous.DirectDampingComponentArray.DirectDampingComponentArray" title="abaqus.StepMiscellaneous.DirectDampingComponentArray.DirectDampingComponentArray"><code class="xref py py-class docutils literal notranslate"><span class="pre">DirectDampingComponentArray</span></code></a> object.</p>
 </dd>
@@ -431,7 +430,7 @@ modes.</p>
 
 </section>
 <section id="directdampingbyfrequency">
-<h3>DirectDampingByFrequency<a class="headerlink" href="#directdampingbyfrequency" title="Permalink to this headline">#</a></h3>
+<h3>DirectDampingByFrequency<a class="headerlink" href="#directdampingbyfrequency" title="Permalink to this heading">#</a></h3>
 <dl class="py class">
 <dt class="sig sig-object py">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">DirectDampingByFrequency</span></span><a class="reference external" href="https://github.com/haiiliin/pyabaqus/blob/V2022/src/abaqus/StepMiscellaneous/DirectDampingByFrequency.py#L6-L28"><span class="viewcode-link"><span class="pre">[source]</span></span></a></dt>
@@ -443,7 +442,7 @@ modes.</p>
 </pre></div>
 </div>
 <dl class="field-list simple">
-<dt class="field-odd">Attributes</dt>
+<dt class="field-odd">Attributes<span class="colon">:</span></dt>
 <dd class="field-odd"><dl class="simple">
 <dt><strong>components: DirectDampingByFrequencyComponentArray</strong></dt><dd><p>A <a class="reference internal" href="../../../../reference/mdb/model/step/step_miscellaneous.html#abaqus.StepMiscellaneous.DirectDampingByFrequencyComponentArray.DirectDampingByFrequencyComponentArray" title="abaqus.StepMiscellaneous.DirectDampingByFrequencyComponentArray.DirectDampingByFrequencyComponentArray"><code class="xref py py-class docutils literal notranslate"><span class="pre">DirectDampingByFrequencyComponentArray</span></code></a> object.</p>
 </dd>
@@ -454,7 +453,7 @@ modes.</p>
 
 </section>
 <section id="directdampingbyfrequencycomponent">
-<h3>DirectDampingByFrequencyComponent<a class="headerlink" href="#directdampingbyfrequencycomponent" title="Permalink to this headline">#</a></h3>
+<h3>DirectDampingByFrequencyComponent<a class="headerlink" href="#directdampingbyfrequencycomponent" title="Permalink to this heading">#</a></h3>
 <dl class="py class">
 <dt class="sig sig-object py">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">DirectDampingByFrequencyComponent</span></span><a class="reference external" href="https://github.com/haiiliin/pyabaqus/blob/V2022/src/abaqus/StepMiscellaneous/DirectDampingByFrequencyComponent.py#L1-L27"><span class="viewcode-link"><span class="pre">[source]</span></span></a></dt>
@@ -467,7 +466,7 @@ of frequencies.</p>
 </pre></div>
 </div>
 <dl class="field-list simple">
-<dt class="field-odd">Attributes</dt>
+<dt class="field-odd">Attributes<span class="colon">:</span></dt>
 <dd class="field-odd"><dl class="simple">
 <dt><strong>frequency: float</strong></dt><dd><p>A Float specifying the frequency value in cycles/time.</p>
 </dd>
@@ -480,17 +479,13 @@ of frequencies.</p>
 
 </section>
 <section id="directdampingbyfrequencycomponentarray">
-<h3>DirectDampingByFrequencyComponentArray<a class="headerlink" href="#directdampingbyfrequencycomponentarray" title="Permalink to this headline">#</a></h3>
+<h3>DirectDampingByFrequencyComponentArray<a class="headerlink" href="#directdampingbyfrequencycomponentarray" title="Permalink to this heading">#</a></h3>
 <dl class="py class">
 <dt class="sig sig-object py">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">DirectDampingByFrequencyComponentArray</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">iterable</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">()</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">/</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/haiiliin/pyabaqus/blob/V2022/src/abaqus/StepMiscellaneous/DirectDampingByFrequencyComponentArray.py#L4-L6"><span class="viewcode-link"><span class="pre">[source]</span></span></a></dt>
 <dd><p class="rubric">Methods</p>
 <div class="table-wrapper docutils container">
 <table class="docutils align-default">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
 <tbody>
 <tr class="row-odd"><td><p><strong>findAt</strong></p></td>
 <td></td>
@@ -502,7 +497,7 @@ of frequencies.</p>
 
 </section>
 <section id="directdampingcomponent">
-<h3>DirectDampingComponent<a class="headerlink" href="#directdampingcomponent" title="Permalink to this headline">#</a></h3>
+<h3>DirectDampingComponent<a class="headerlink" href="#directdampingcomponent" title="Permalink to this heading">#</a></h3>
 <dl class="py class">
 <dt class="sig sig-object py">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">DirectDampingComponent</span></span><a class="reference external" href="https://github.com/haiiliin/pyabaqus/blob/V2022/src/abaqus/StepMiscellaneous/DirectDampingComponent.py#L1-L31"><span class="viewcode-link"><span class="pre">[source]</span></span></a></dt>
@@ -514,7 +509,7 @@ of frequencies.</p>
 </pre></div>
 </div>
 <dl class="field-list simple">
-<dt class="field-odd">Attributes</dt>
+<dt class="field-odd">Attributes<span class="colon">:</span></dt>
 <dd class="field-odd"><dl class="simple">
 <dt><strong>start: int</strong></dt><dd><p>An Int specifying the mode number of the lowest mode of a range.</p>
 </dd>
@@ -529,17 +524,13 @@ of frequencies.</p>
 
 </section>
 <section id="directdampingcomponentarray">
-<h3>DirectDampingComponentArray<a class="headerlink" href="#directdampingcomponentarray" title="Permalink to this headline">#</a></h3>
+<h3>DirectDampingComponentArray<a class="headerlink" href="#directdampingcomponentarray" title="Permalink to this heading">#</a></h3>
 <dl class="py class">
 <dt class="sig sig-object py">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">DirectDampingComponentArray</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">iterable</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">()</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">/</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/haiiliin/pyabaqus/blob/V2022/src/abaqus/StepMiscellaneous/DirectDampingComponentArray.py#L4-L6"><span class="viewcode-link"><span class="pre">[source]</span></span></a></dt>
 <dd><p class="rubric">Methods</p>
 <div class="table-wrapper docutils container">
 <table class="docutils align-default">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
 <tbody>
 <tr class="row-odd"><td><p><strong>findAt</strong></p></td>
 <td></td>
@@ -551,7 +542,7 @@ of frequencies.</p>
 
 </section>
 <section id="emagtimeharmonicfrequency">
-<h3>EmagTimeHarmonicFrequency<a class="headerlink" href="#emagtimeharmonicfrequency" title="Permalink to this headline">#</a></h3>
+<h3>EmagTimeHarmonicFrequency<a class="headerlink" href="#emagtimeharmonicfrequency" title="Permalink to this heading">#</a></h3>
 <dl class="py class">
 <dt class="sig sig-object py">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">EmagTimeHarmonicFrequency</span></span><a class="reference external" href="https://github.com/haiiliin/pyabaqus/blob/V2022/src/abaqus/StepMiscellaneous/EmagTimeHarmonicFrequency.py#L1-L35"><span class="viewcode-link"><span class="pre">[source]</span></span></a></dt>
@@ -562,7 +553,7 @@ of frequencies.</p>
 </pre></div>
 </div>
 <dl class="field-list simple">
-<dt class="field-odd">Attributes</dt>
+<dt class="field-odd">Attributes<span class="colon">:</span></dt>
 <dd class="field-odd"><dl class="simple">
 <dt><strong>lower: float</strong></dt><dd><p>A Float specifying the lower limit of frequency range or a single frequency, in
 cycles/time.</p>
@@ -579,17 +570,13 @@ given.</p>
 
 </section>
 <section id="emagtimeharmonicfrequencyarray">
-<h3>EmagTimeHarmonicFrequencyArray<a class="headerlink" href="#emagtimeharmonicfrequencyarray" title="Permalink to this headline">#</a></h3>
+<h3>EmagTimeHarmonicFrequencyArray<a class="headerlink" href="#emagtimeharmonicfrequencyarray" title="Permalink to this heading">#</a></h3>
 <dl class="py class">
 <dt class="sig sig-object py">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">EmagTimeHarmonicFrequencyArray</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">iterable</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">()</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">/</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/haiiliin/pyabaqus/blob/V2022/src/abaqus/StepMiscellaneous/EmagTimeHarmonicFrequencyArray.py#L4-L6"><span class="viewcode-link"><span class="pre">[source]</span></span></a></dt>
 <dd><p class="rubric">Methods</p>
 <div class="table-wrapper docutils container">
 <table class="docutils align-default">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
 <tbody>
 <tr class="row-odd"><td><p><strong>findAt</strong></p></td>
 <td></td>
@@ -601,7 +588,7 @@ given.</p>
 
 </section>
 <section id="massscaling">
-<h3>MassScaling<a class="headerlink" href="#massscaling" title="Permalink to this headline">#</a></h3>
+<h3>MassScaling<a class="headerlink" href="#massscaling" title="Permalink to this heading">#</a></h3>
 <dl class="py class">
 <dt class="sig sig-object py">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">MassScaling</span></span><a class="reference external" href="https://github.com/haiiliin/pyabaqus/blob/V2022/src/abaqus/StepMiscellaneous/MassScaling.py#L4-L97"><span class="viewcode-link"><span class="pre">[source]</span></span></a></dt>
@@ -613,7 +600,7 @@ given.</p>
 </pre></div>
 </div>
 <dl class="field-list simple">
-<dt class="field-odd">Attributes</dt>
+<dt class="field-odd">Attributes<span class="colon">:</span></dt>
 <dd class="field-odd"><dl class="simple">
 <dt><strong>objective: SymbolicConstant</strong></dt><dd><p>A SymbolicConstant specifying <code class="xref py py-class docutils literal notranslate"><span class="pre">the</span></code> objective of <code class="xref py py-class docutils literal notranslate"><span class="pre">the</span></code> mass scaling definition. Possible
 values are SEMI_AUTOMATIC, AUTOMATIC, and REINITIALIZE. The default value is
@@ -655,17 +642,13 @@ applied. The default value is MODEL.</p>
 
 </section>
 <section id="massscalingarray">
-<h3>MassScalingArray<a class="headerlink" href="#massscalingarray" title="Permalink to this headline">#</a></h3>
+<h3>MassScalingArray<a class="headerlink" href="#massscalingarray" title="Permalink to this heading">#</a></h3>
 <dl class="py class">
 <dt class="sig sig-object py">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">MassScalingArray</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">iterable</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">()</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">/</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/haiiliin/pyabaqus/blob/V2022/src/abaqus/StepMiscellaneous/MassScalingArray.py#L4-L6"><span class="viewcode-link"><span class="pre">[source]</span></span></a></dt>
 <dd><p class="rubric">Methods</p>
 <div class="table-wrapper docutils container">
 <table class="docutils align-default">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
 <tbody>
 <tr class="row-odd"><td><p><strong>findAt</strong></p></td>
 <td></td>
@@ -677,7 +660,7 @@ applied. The default value is MODEL.</p>
 
 </section>
 <section id="randomresponsefrequency">
-<h3>RandomResponseFrequency<a class="headerlink" href="#randomresponsefrequency" title="Permalink to this headline">#</a></h3>
+<h3>RandomResponseFrequency<a class="headerlink" href="#randomresponsefrequency" title="Permalink to this heading">#</a></h3>
 <dl class="py class">
 <dt class="sig sig-object py">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">RandomResponseFrequency</span></span><a class="reference external" href="https://github.com/haiiliin/pyabaqus/blob/V2022/src/abaqus/StepMiscellaneous/RandomResponseFrequency.py#L1-L39"><span class="viewcode-link"><span class="pre">[source]</span></span></a></dt>
@@ -690,7 +673,7 @@ This page discusses:</p>
 </pre></div>
 </div>
 <dl class="field-list simple">
-<dt class="field-odd">Attributes</dt>
+<dt class="field-odd">Attributes<span class="colon">:</span></dt>
 <dd class="field-odd"><dl class="simple">
 <dt><strong>lower: float</strong></dt><dd><p>A Float specifying the lower limit of the frequency range in cycles per time.</p>
 </dd>
@@ -708,17 +691,13 @@ should be calculated.</p>
 
 </section>
 <section id="randomresponsefrequencyarray">
-<h3>RandomResponseFrequencyArray<a class="headerlink" href="#randomresponsefrequencyarray" title="Permalink to this headline">#</a></h3>
+<h3>RandomResponseFrequencyArray<a class="headerlink" href="#randomresponsefrequencyarray" title="Permalink to this heading">#</a></h3>
 <dl class="py class">
 <dt class="sig sig-object py">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">RandomResponseFrequencyArray</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">iterable</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">()</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">/</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/haiiliin/pyabaqus/blob/V2022/src/abaqus/StepMiscellaneous/RandomResponseFrequencyArray.py#L4-L6"><span class="viewcode-link"><span class="pre">[source]</span></span></a></dt>
 <dd><p class="rubric">Methods</p>
 <div class="table-wrapper docutils container">
 <table class="docutils align-default">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
 <tbody>
 <tr class="row-odd"><td><p><strong>findAt</strong></p></td>
 <td></td>
@@ -730,7 +709,7 @@ should be calculated.</p>
 
 </section>
 <section id="rayleighdamping">
-<h3>RayleighDamping<a class="headerlink" href="#rayleighdamping" title="Permalink to this headline">#</a></h3>
+<h3>RayleighDamping<a class="headerlink" href="#rayleighdamping" title="Permalink to this heading">#</a></h3>
 <dl class="py class">
 <dt class="sig sig-object py">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">RayleighDamping</span></span><a class="reference external" href="https://github.com/haiiliin/pyabaqus/blob/V2022/src/abaqus/StepMiscellaneous/RayleighDamping.py#L4-L24"><span class="viewcode-link"><span class="pre">[source]</span></span></a></dt>
@@ -742,7 +721,7 @@ should be calculated.</p>
 </pre></div>
 </div>
 <dl class="field-list simple">
-<dt class="field-odd">Attributes</dt>
+<dt class="field-odd">Attributes<span class="colon">:</span></dt>
 <dd class="field-odd"><dl class="simple">
 <dt><strong>components: RayleighDampingComponentArray</strong></dt><dd><p>A <a class="reference internal" href="../../../../reference/mdb/model/step/step_miscellaneous.html#abaqus.StepMiscellaneous.RayleighDampingComponentArray.RayleighDampingComponentArray" title="abaqus.StepMiscellaneous.RayleighDampingComponentArray.RayleighDampingComponentArray"><code class="xref py py-class docutils literal notranslate"><span class="pre">RayleighDampingComponentArray</span></code></a> object.</p>
 </dd>
@@ -753,7 +732,7 @@ should be calculated.</p>
 
 </section>
 <section id="rayleighdampingbyfrequency">
-<h3>RayleighDampingByFrequency<a class="headerlink" href="#rayleighdampingbyfrequency" title="Permalink to this headline">#</a></h3>
+<h3>RayleighDampingByFrequency<a class="headerlink" href="#rayleighdampingbyfrequency" title="Permalink to this heading">#</a></h3>
 <dl class="py class">
 <dt class="sig sig-object py">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">RayleighDampingByFrequency</span></span><a class="reference external" href="https://github.com/haiiliin/pyabaqus/blob/V2022/src/abaqus/StepMiscellaneous/RayleighDampingByFrequency.py#L6-L28"><span class="viewcode-link"><span class="pre">[source]</span></span></a></dt>
@@ -765,7 +744,7 @@ should be calculated.</p>
 </pre></div>
 </div>
 <dl class="field-list simple">
-<dt class="field-odd">Attributes</dt>
+<dt class="field-odd">Attributes<span class="colon">:</span></dt>
 <dd class="field-odd"><dl class="simple">
 <dt><strong>components: RayleighDampingByFrequencyComponentArray</strong></dt><dd><p>A <a class="reference internal" href="../../../../reference/mdb/model/step/step_miscellaneous.html#abaqus.StepMiscellaneous.RayleighDampingByFrequencyComponentArray.RayleighDampingByFrequencyComponentArray" title="abaqus.StepMiscellaneous.RayleighDampingByFrequencyComponentArray.RayleighDampingByFrequencyComponentArray"><code class="xref py py-class docutils literal notranslate"><span class="pre">RayleighDampingByFrequencyComponentArray</span></code></a> object.</p>
 </dd>
@@ -776,7 +755,7 @@ should be calculated.</p>
 
 </section>
 <section id="rayleighdampingbyfrequencycomponent">
-<h3>RayleighDampingByFrequencyComponent<a class="headerlink" href="#rayleighdampingbyfrequencycomponent" title="Permalink to this headline">#</a></h3>
+<h3>RayleighDampingByFrequencyComponent<a class="headerlink" href="#rayleighdampingbyfrequencycomponent" title="Permalink to this heading">#</a></h3>
 <dl class="py class">
 <dt class="sig sig-object py">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">RayleighDampingByFrequencyComponent</span></span><a class="reference external" href="https://github.com/haiiliin/pyabaqus/blob/V2022/src/abaqus/StepMiscellaneous/RayleighDampingByFrequencyComponent.py#L1-L32"><span class="viewcode-link"><span class="pre">[source]</span></span></a></dt>
@@ -789,7 +768,7 @@ range of frequencies.</p>
 </pre></div>
 </div>
 <dl class="field-list simple">
-<dt class="field-odd">Attributes</dt>
+<dt class="field-odd">Attributes<span class="colon">:</span></dt>
 <dd class="field-odd"><dl class="simple">
 <dt><strong>frequency: float</strong></dt><dd><p>A Float specifying the frequency value in cycles/time.</p>
 </dd>
@@ -804,17 +783,13 @@ range of frequencies.</p>
 
 </section>
 <section id="rayleighdampingbyfrequencycomponentarray">
-<h3>RayleighDampingByFrequencyComponentArray<a class="headerlink" href="#rayleighdampingbyfrequencycomponentarray" title="Permalink to this headline">#</a></h3>
+<h3>RayleighDampingByFrequencyComponentArray<a class="headerlink" href="#rayleighdampingbyfrequencycomponentarray" title="Permalink to this heading">#</a></h3>
 <dl class="py class">
 <dt class="sig sig-object py">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">RayleighDampingByFrequencyComponentArray</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">iterable</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">()</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">/</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/haiiliin/pyabaqus/blob/V2022/src/abaqus/StepMiscellaneous/RayleighDampingByFrequencyComponentArray.py#L4-L8"><span class="viewcode-link"><span class="pre">[source]</span></span></a></dt>
 <dd><p class="rubric">Methods</p>
 <div class="table-wrapper docutils container">
 <table class="docutils align-default">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
 <tbody>
 <tr class="row-odd"><td><p><strong>findAt</strong></p></td>
 <td></td>
@@ -826,7 +801,7 @@ range of frequencies.</p>
 
 </section>
 <section id="rayleighdampingcomponent">
-<h3>RayleighDampingComponent<a class="headerlink" href="#rayleighdampingcomponent" title="Permalink to this headline">#</a></h3>
+<h3>RayleighDampingComponent<a class="headerlink" href="#rayleighdampingcomponent" title="Permalink to this heading">#</a></h3>
 <dl class="py class">
 <dt class="sig sig-object py">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">RayleighDampingComponent</span></span><a class="reference external" href="https://github.com/haiiliin/pyabaqus/blob/V2022/src/abaqus/StepMiscellaneous/RayleighDampingComponent.py#L1-L37"><span class="viewcode-link"><span class="pre">[source]</span></span></a></dt>
@@ -839,7 +814,7 @@ modes.</p>
 </pre></div>
 </div>
 <dl class="field-list simple">
-<dt class="field-odd">Attributes</dt>
+<dt class="field-odd">Attributes<span class="colon">:</span></dt>
 <dd class="field-odd"><dl class="simple">
 <dt><strong>start: int</strong></dt><dd><p>An Int specifying the mode number of the lowest mode of a range.</p>
 </dd>
@@ -856,17 +831,13 @@ modes.</p>
 
 </section>
 <section id="rayleighdampingcomponentarray">
-<h3>RayleighDampingComponentArray<a class="headerlink" href="#rayleighdampingcomponentarray" title="Permalink to this headline">#</a></h3>
+<h3>RayleighDampingComponentArray<a class="headerlink" href="#rayleighdampingcomponentarray" title="Permalink to this heading">#</a></h3>
 <dl class="py class">
 <dt class="sig sig-object py">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">RayleighDampingComponentArray</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">iterable</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">()</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">/</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/haiiliin/pyabaqus/blob/V2022/src/abaqus/StepMiscellaneous/RayleighDampingComponentArray.py#L4-L6"><span class="viewcode-link"><span class="pre">[source]</span></span></a></dt>
 <dd><p class="rubric">Methods</p>
 <div class="table-wrapper docutils container">
 <table class="docutils align-default">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
 <tbody>
 <tr class="row-odd"><td><p><strong>findAt</strong></p></td>
 <td></td>
@@ -878,7 +849,7 @@ modes.</p>
 
 </section>
 <section id="responsespectrumcomponent">
-<h3>ResponseSpectrumComponent<a class="headerlink" href="#responsespectrumcomponent" title="Permalink to this headline">#</a></h3>
+<h3>ResponseSpectrumComponent<a class="headerlink" href="#responsespectrumcomponent" title="Permalink to this heading">#</a></h3>
 <dl class="py class">
 <dt class="sig sig-object py">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">ResponseSpectrumComponent</span></span><a class="reference external" href="https://github.com/haiiliin/pyabaqus/blob/V2022/src/abaqus/StepMiscellaneous/ResponseSpectrumComponent.py#L1-L50"><span class="viewcode-link"><span class="pre">[source]</span></span></a></dt>
@@ -890,7 +861,7 @@ modes.</p>
 </pre></div>
 </div>
 <dl class="field-list simple">
-<dt class="field-odd">Attributes</dt>
+<dt class="field-odd">Attributes<span class="colon">:</span></dt>
 <dd class="field-odd"><dl class="simple">
 <dt><strong>x: float</strong></dt><dd><p>A Float specifying the <strong>X</strong>-direction cosine.</p>
 </dd>
@@ -913,17 +884,13 @@ SPECTRUM.</p>
 
 </section>
 <section id="responsespectrumcomponentarray">
-<h3>ResponseSpectrumComponentArray<a class="headerlink" href="#responsespectrumcomponentarray" title="Permalink to this headline">#</a></h3>
+<h3>ResponseSpectrumComponentArray<a class="headerlink" href="#responsespectrumcomponentarray" title="Permalink to this heading">#</a></h3>
 <dl class="py class">
 <dt class="sig sig-object py">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">ResponseSpectrumComponentArray</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">iterable</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">()</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">/</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/haiiliin/pyabaqus/blob/V2022/src/abaqus/StepMiscellaneous/ResponseSpectrumComponentArray.py#L4-L6"><span class="viewcode-link"><span class="pre">[source]</span></span></a></dt>
 <dd><p class="rubric">Methods</p>
 <div class="table-wrapper docutils container">
 <table class="docutils align-default">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
 <tbody>
 <tr class="row-odd"><td><p><strong>findAt</strong></p></td>
 <td></td>
@@ -935,7 +902,7 @@ SPECTRUM.</p>
 
 </section>
 <section id="solvercontrol">
-<h3>SolverControl<a class="headerlink" href="#solvercontrol" title="Permalink to this headline">#</a></h3>
+<h3>SolverControl<a class="headerlink" href="#solvercontrol" title="Permalink to this heading">#</a></h3>
 <dl class="py class">
 <dt class="sig sig-object py">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">SolverControl</span></span><a class="reference external" href="https://github.com/haiiliin/pyabaqus/blob/V2022/src/abaqus/StepMiscellaneous/SolverControl.py#L6-L53"><span class="viewcode-link"><span class="pre">[source]</span></span></a></dt>
@@ -949,10 +916,6 @@ SPECTRUM.</p>
 <p class="rubric">Methods</p>
 <div class="table-wrapper autosummary longtable docutils container">
 <table class="autosummary longtable docutils align-default">
-<colgroup>
-<col style="width: 10%" />
-<col style="width: 90%" />
-</colgroup>
 <tbody>
 <tr class="row-odd"><td><p><a class="reference internal" href="../../../../reference/mdb/model/step/step_miscellaneous.html#abaqus.StepMiscellaneous.SolverControl.SolverControl.setValues" title="abaqus.StepMiscellaneous.SolverControl.SolverControl.setValues"><code class="xref py py-obj docutils literal notranslate"><span class="pre">setValues</span></code></a>([allowPropagation, ...])</p></td>
 <td><p>This method modifies the SolverControl object.</p></td>
@@ -964,7 +927,7 @@ SPECTRUM.</p>
 
 </section>
 <section id="steadystatedirectfrequency">
-<h3>SteadyStateDirectFrequency<a class="headerlink" href="#steadystatedirectfrequency" title="Permalink to this headline">#</a></h3>
+<h3>SteadyStateDirectFrequency<a class="headerlink" href="#steadystatedirectfrequency" title="Permalink to this heading">#</a></h3>
 <dl class="py class">
 <dt class="sig sig-object py">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">SteadyStateDirectFrequency</span></span><a class="reference external" href="https://github.com/haiiliin/pyabaqus/blob/V2022/src/abaqus/StepMiscellaneous/SteadyStateDirectFrequency.py#L1-L44"><span class="viewcode-link"><span class="pre">[source]</span></span></a></dt>
@@ -976,7 +939,7 @@ SPECTRUM.</p>
 </pre></div>
 </div>
 <dl class="field-list simple">
-<dt class="field-odd">Attributes</dt>
+<dt class="field-odd">Attributes<span class="colon">:</span></dt>
 <dd class="field-odd"><dl class="simple">
 <dt><strong>lower: float</strong></dt><dd><p>A Float specifying the lower limit of frequency range or a single frequency, in
 cycles/time.</p>
@@ -997,17 +960,13 @@ better resolution. The default value is 3.0.</p>
 
 </section>
 <section id="steadystatedirectfrequencyarray">
-<h3>SteadyStateDirectFrequencyArray<a class="headerlink" href="#steadystatedirectfrequencyarray" title="Permalink to this headline">#</a></h3>
+<h3>SteadyStateDirectFrequencyArray<a class="headerlink" href="#steadystatedirectfrequencyarray" title="Permalink to this heading">#</a></h3>
 <dl class="py class">
 <dt class="sig sig-object py">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">SteadyStateDirectFrequencyArray</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">iterable</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">()</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">/</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/haiiliin/pyabaqus/blob/V2022/src/abaqus/StepMiscellaneous/SteadyStateDirectFrequencyArray.py#L4-L6"><span class="viewcode-link"><span class="pre">[source]</span></span></a></dt>
 <dd><p class="rubric">Methods</p>
 <div class="table-wrapper docutils container">
 <table class="docutils align-default">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
 <tbody>
 <tr class="row-odd"><td><p><strong>findAt</strong></p></td>
 <td></td>
@@ -1019,7 +978,7 @@ better resolution. The default value is 3.0.</p>
 
 </section>
 <section id="steadystatemodalfrequency">
-<h3>SteadyStateModalFrequency<a class="headerlink" href="#steadystatemodalfrequency" title="Permalink to this headline">#</a></h3>
+<h3>SteadyStateModalFrequency<a class="headerlink" href="#steadystatemodalfrequency" title="Permalink to this heading">#</a></h3>
 <dl class="py class">
 <dt class="sig sig-object py">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">SteadyStateModalFrequency</span></span><a class="reference external" href="https://github.com/haiiliin/pyabaqus/blob/V2022/src/abaqus/StepMiscellaneous/SteadyStateModalFrequency.py#L1-L44"><span class="viewcode-link"><span class="pre">[source]</span></span></a></dt>
@@ -1031,7 +990,7 @@ better resolution. The default value is 3.0.</p>
 </pre></div>
 </div>
 <dl class="field-list simple">
-<dt class="field-odd">Attributes</dt>
+<dt class="field-odd">Attributes<span class="colon">:</span></dt>
 <dd class="field-odd"><dl class="simple">
 <dt><strong>lower: float</strong></dt><dd><p>A Float specifying the lower limit of frequency range or a single frequency, in
 cycles/time.</p>
@@ -1052,17 +1011,13 @@ better resolution. The default value is 3.0.</p>
 
 </section>
 <section id="steadystatemodalfrequencyarray">
-<h3>SteadyStateModalFrequencyArray<a class="headerlink" href="#steadystatemodalfrequencyarray" title="Permalink to this headline">#</a></h3>
+<h3>SteadyStateModalFrequencyArray<a class="headerlink" href="#steadystatemodalfrequencyarray" title="Permalink to this heading">#</a></h3>
 <dl class="py class">
 <dt class="sig sig-object py">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">SteadyStateModalFrequencyArray</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">iterable</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">()</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">/</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/haiiliin/pyabaqus/blob/V2022/src/abaqus/StepMiscellaneous/SteadyStateModalFrequencyArray.py#L4-L6"><span class="viewcode-link"><span class="pre">[source]</span></span></a></dt>
 <dd><p class="rubric">Methods</p>
 <div class="table-wrapper docutils container">
 <table class="docutils align-default">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
 <tbody>
 <tr class="row-odd"><td><p><strong>findAt</strong></p></td>
 <td></td>
@@ -1074,7 +1029,7 @@ better resolution. The default value is 3.0.</p>
 
 </section>
 <section id="steadystatesubspacefrequency">
-<h3>SteadyStateSubspaceFrequency<a class="headerlink" href="#steadystatesubspacefrequency" title="Permalink to this headline">#</a></h3>
+<h3>SteadyStateSubspaceFrequency<a class="headerlink" href="#steadystatesubspacefrequency" title="Permalink to this heading">#</a></h3>
 <dl class="py class">
 <dt class="sig sig-object py">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">SteadyStateSubspaceFrequency</span></span><a class="reference external" href="https://github.com/haiiliin/pyabaqus/blob/V2022/src/abaqus/StepMiscellaneous/SteadyStateSubspaceFrequency.py#L1-L45"><span class="viewcode-link"><span class="pre">[source]</span></span></a></dt>
@@ -1087,7 +1042,7 @@ modes.</p>
 </pre></div>
 </div>
 <dl class="field-list simple">
-<dt class="field-odd">Attributes</dt>
+<dt class="field-odd">Attributes<span class="colon">:</span></dt>
 <dd class="field-odd"><dl class="simple">
 <dt><strong>lower: float</strong></dt><dd><p>A Float specifying the lower limit of frequency range or a single frequency, in
 cycles/time.</p>
@@ -1108,17 +1063,13 @@ better resolution. The default value is 3.0.</p>
 
 </section>
 <section id="steadystatesubspacefrequencyarray">
-<h3>SteadyStateSubspaceFrequencyArray<a class="headerlink" href="#steadystatesubspacefrequencyarray" title="Permalink to this headline">#</a></h3>
+<h3>SteadyStateSubspaceFrequencyArray<a class="headerlink" href="#steadystatesubspacefrequencyarray" title="Permalink to this heading">#</a></h3>
 <dl class="py class">
 <dt class="sig sig-object py">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">SteadyStateSubspaceFrequencyArray</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">iterable</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">()</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">/</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/haiiliin/pyabaqus/blob/V2022/src/abaqus/StepMiscellaneous/SteadyStateSubspaceFrequencyArray.py#L4-L6"><span class="viewcode-link"><span class="pre">[source]</span></span></a></dt>
 <dd><p class="rubric">Methods</p>
 <div class="table-wrapper docutils container">
 <table class="docutils align-default">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
 <tbody>
 <tr class="row-odd"><td><p><strong>findAt</strong></p></td>
 <td></td>
@@ -1130,7 +1081,7 @@ better resolution. The default value is 3.0.</p>
 
 </section>
 <section id="structuraldamping">
-<h3>StructuralDamping<a class="headerlink" href="#structuraldamping" title="Permalink to this headline">#</a></h3>
+<h3>StructuralDamping<a class="headerlink" href="#structuraldamping" title="Permalink to this heading">#</a></h3>
 <dl class="py class">
 <dt class="sig sig-object py">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">StructuralDamping</span></span><a class="reference external" href="https://github.com/haiiliin/pyabaqus/blob/V2022/src/abaqus/StepMiscellaneous/StructuralDamping.py#L4-L24"><span class="viewcode-link"><span class="pre">[source]</span></span></a></dt>
@@ -1142,7 +1093,7 @@ better resolution. The default value is 3.0.</p>
 </pre></div>
 </div>
 <dl class="field-list simple">
-<dt class="field-odd">Attributes</dt>
+<dt class="field-odd">Attributes<span class="colon">:</span></dt>
 <dd class="field-odd"><dl class="simple">
 <dt><strong>components: StructuralDampingComponentArray</strong></dt><dd><p>A <a class="reference internal" href="../../../../reference/mdb/model/step/step_miscellaneous.html#abaqus.StepMiscellaneous.StructuralDampingComponentArray.StructuralDampingComponentArray" title="abaqus.StepMiscellaneous.StructuralDampingComponentArray.StructuralDampingComponentArray"><code class="xref py py-class docutils literal notranslate"><span class="pre">StructuralDampingComponentArray</span></code></a> object.</p>
 </dd>
@@ -1153,7 +1104,7 @@ better resolution. The default value is 3.0.</p>
 
 </section>
 <section id="structuraldampingbyfrequency">
-<h3>StructuralDampingByFrequency<a class="headerlink" href="#structuraldampingbyfrequency" title="Permalink to this headline">#</a></h3>
+<h3>StructuralDampingByFrequency<a class="headerlink" href="#structuraldampingbyfrequency" title="Permalink to this heading">#</a></h3>
 <dl class="py class">
 <dt class="sig sig-object py">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">StructuralDampingByFrequency</span></span><a class="reference external" href="https://github.com/haiiliin/pyabaqus/blob/V2022/src/abaqus/StepMiscellaneous/StructuralDampingByFrequency.py#L6-L28"><span class="viewcode-link"><span class="pre">[source]</span></span></a></dt>
@@ -1165,7 +1116,7 @@ better resolution. The default value is 3.0.</p>
 </pre></div>
 </div>
 <dl class="field-list simple">
-<dt class="field-odd">Attributes</dt>
+<dt class="field-odd">Attributes<span class="colon">:</span></dt>
 <dd class="field-odd"><dl class="simple">
 <dt><strong>components: StructuralDampingByFrequencyComponentArray</strong></dt><dd><p>A <a class="reference internal" href="../../../../reference/mdb/model/step/step_miscellaneous.html#abaqus.StepMiscellaneous.StructuralDampingByFrequencyComponentArray.StructuralDampingByFrequencyComponentArray" title="abaqus.StepMiscellaneous.StructuralDampingByFrequencyComponentArray.StructuralDampingByFrequencyComponentArray"><code class="xref py py-class docutils literal notranslate"><span class="pre">StructuralDampingByFrequencyComponentArray</span></code></a> object.</p>
 </dd>
@@ -1176,7 +1127,7 @@ better resolution. The default value is 3.0.</p>
 
 </section>
 <section id="structuraldampingbyfrequencycomponent">
-<h3>StructuralDampingByFrequencyComponent<a class="headerlink" href="#structuraldampingbyfrequencycomponent" title="Permalink to this headline">#</a></h3>
+<h3>StructuralDampingByFrequencyComponent<a class="headerlink" href="#structuraldampingbyfrequencycomponent" title="Permalink to this heading">#</a></h3>
 <dl class="py class">
 <dt class="sig sig-object py">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">StructuralDampingByFrequencyComponent</span></span><a class="reference external" href="https://github.com/haiiliin/pyabaqus/blob/V2022/src/abaqus/StepMiscellaneous/StructuralDampingByFrequencyComponent.py#L1-L27"><span class="viewcode-link"><span class="pre">[source]</span></span></a></dt>
@@ -1189,7 +1140,7 @@ a range of frequencies.</p>
 </pre></div>
 </div>
 <dl class="field-list simple">
-<dt class="field-odd">Attributes</dt>
+<dt class="field-odd">Attributes<span class="colon">:</span></dt>
 <dd class="field-odd"><dl class="simple">
 <dt><strong>frequency: float</strong></dt><dd><p>A Float specifying the frequency value in cycles/time.</p>
 </dd>
@@ -1202,17 +1153,13 @@ a range of frequencies.</p>
 
 </section>
 <section id="structuraldampingbyfrequencycomponentarray">
-<h3>StructuralDampingByFrequencyComponentArray<a class="headerlink" href="#structuraldampingbyfrequencycomponentarray" title="Permalink to this headline">#</a></h3>
+<h3>StructuralDampingByFrequencyComponentArray<a class="headerlink" href="#structuraldampingbyfrequencycomponentarray" title="Permalink to this heading">#</a></h3>
 <dl class="py class">
 <dt class="sig sig-object py">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">StructuralDampingByFrequencyComponentArray</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">iterable</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">()</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">/</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/haiiliin/pyabaqus/blob/V2022/src/abaqus/StepMiscellaneous/StructuralDampingByFrequencyComponentArray.py#L4-L8"><span class="viewcode-link"><span class="pre">[source]</span></span></a></dt>
 <dd><p class="rubric">Methods</p>
 <div class="table-wrapper docutils container">
 <table class="docutils align-default">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
 <tbody>
 <tr class="row-odd"><td><p><strong>findAt</strong></p></td>
 <td></td>
@@ -1224,7 +1171,7 @@ a range of frequencies.</p>
 
 </section>
 <section id="structuraldampingcomponent">
-<h3>StructuralDampingComponent<a class="headerlink" href="#structuraldampingcomponent" title="Permalink to this headline">#</a></h3>
+<h3>StructuralDampingComponent<a class="headerlink" href="#structuraldampingcomponent" title="Permalink to this heading">#</a></h3>
 <dl class="py class">
 <dt class="sig sig-object py">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">StructuralDampingComponent</span></span><a class="reference external" href="https://github.com/haiiliin/pyabaqus/blob/V2022/src/abaqus/StepMiscellaneous/StructuralDampingComponent.py#L1-L32"><span class="viewcode-link"><span class="pre">[source]</span></span></a></dt>
@@ -1237,7 +1184,7 @@ modes.</p>
 </pre></div>
 </div>
 <dl class="field-list simple">
-<dt class="field-odd">Attributes</dt>
+<dt class="field-odd">Attributes<span class="colon">:</span></dt>
 <dd class="field-odd"><dl class="simple">
 <dt><strong>start: int</strong></dt><dd><p>An Int specifying the mode number of the lowest mode of a range.</p>
 </dd>
@@ -1252,17 +1199,13 @@ modes.</p>
 
 </section>
 <section id="structuraldampingcomponentarray">
-<h3>StructuralDampingComponentArray<a class="headerlink" href="#structuraldampingcomponentarray" title="Permalink to this headline">#</a></h3>
+<h3>StructuralDampingComponentArray<a class="headerlink" href="#structuraldampingcomponentarray" title="Permalink to this heading">#</a></h3>
 <dl class="py class">
 <dt class="sig sig-object py">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">StructuralDampingComponentArray</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">iterable</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">()</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">/</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/haiiliin/pyabaqus/blob/V2022/src/abaqus/StepMiscellaneous/StructuralDampingComponentArray.py#L4-L6"><span class="viewcode-link"><span class="pre">[source]</span></span></a></dt>
 <dd><p class="rubric">Methods</p>
 <div class="table-wrapper docutils container">
 <table class="docutils align-default">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
 <tbody>
 <tr class="row-odd"><td><p><strong>findAt</strong></p></td>
 <td></td>
@@ -1274,7 +1217,7 @@ modes.</p>
 
 </section>
 <section id="substructuregeneratefrequency">
-<h3>SubstructureGenerateFrequency<a class="headerlink" href="#substructuregeneratefrequency" title="Permalink to this headline">#</a></h3>
+<h3>SubstructureGenerateFrequency<a class="headerlink" href="#substructuregeneratefrequency" title="Permalink to this heading">#</a></h3>
 <dl class="py class">
 <dt class="sig sig-object py">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">SubstructureGenerateFrequency</span></span><a class="reference external" href="https://github.com/haiiliin/pyabaqus/blob/V2022/src/abaqus/StepMiscellaneous/SubstructureGenerateFrequency.py#L1-L28"><span class="viewcode-link"><span class="pre">[source]</span></span></a></dt>
@@ -1288,7 +1231,7 @@ the frequency boundary.</p>
 </pre></div>
 </div>
 <dl class="field-list simple">
-<dt class="field-odd">Attributes</dt>
+<dt class="field-odd">Attributes<span class="colon">:</span></dt>
 <dd class="field-odd"><dl class="simple">
 <dt><strong>lower: float</strong></dt><dd><p>A Float specifying the lower limit of the frequency range, in cycles/time.</p>
 </dd>
@@ -1301,17 +1244,13 @@ the frequency boundary.</p>
 
 </section>
 <section id="substructuregeneratefrequencyarray">
-<h3>SubstructureGenerateFrequencyArray<a class="headerlink" href="#substructuregeneratefrequencyarray" title="Permalink to this headline">#</a></h3>
+<h3>SubstructureGenerateFrequencyArray<a class="headerlink" href="#substructuregeneratefrequencyarray" title="Permalink to this heading">#</a></h3>
 <dl class="py class">
 <dt class="sig sig-object py">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">SubstructureGenerateFrequencyArray</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">iterable</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">()</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">/</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/haiiliin/pyabaqus/blob/V2022/src/abaqus/StepMiscellaneous/SubstructureGenerateFrequencyArray.py#L4-L6"><span class="viewcode-link"><span class="pre">[source]</span></span></a></dt>
 <dd><p class="rubric">Methods</p>
 <div class="table-wrapper docutils container">
 <table class="docutils align-default">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
 <tbody>
 <tr class="row-odd"><td><p><strong>findAt</strong></p></td>
 <td></td>
@@ -1323,7 +1262,7 @@ the frequency boundary.</p>
 
 </section>
 <section id="substructuregeneratemodes">
-<h3>SubstructureGenerateModes<a class="headerlink" href="#substructuregeneratemodes" title="Permalink to this headline">#</a></h3>
+<h3>SubstructureGenerateModes<a class="headerlink" href="#substructuregeneratemodes" title="Permalink to this heading">#</a></h3>
 <dl class="py class">
 <dt class="sig sig-object py">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">SubstructureGenerateModes</span></span><a class="reference external" href="https://github.com/haiiliin/pyabaqus/blob/V2022/src/abaqus/StepMiscellaneous/SubstructureGenerateModes.py#L1-L34"><span class="viewcode-link"><span class="pre">[source]</span></span></a></dt>
@@ -1336,7 +1275,7 @@ dynamic analysis.</p>
 </pre></div>
 </div>
 <dl class="field-list simple">
-<dt class="field-odd">Attributes</dt>
+<dt class="field-odd">Attributes<span class="colon">:</span></dt>
 <dd class="field-odd"><dl class="simple">
 <dt><strong>start: int</strong></dt><dd><p>An Int specifying the mode number of the lowest mode of a range.</p>
 </dd>
@@ -1352,17 +1291,13 @@ from the lowest mode to the highest mode.</p>
 
 </section>
 <section id="substructuregeneratemodesarray">
-<h3>SubstructureGenerateModesArray<a class="headerlink" href="#substructuregeneratemodesarray" title="Permalink to this headline">#</a></h3>
+<h3>SubstructureGenerateModesArray<a class="headerlink" href="#substructuregeneratemodesarray" title="Permalink to this heading">#</a></h3>
 <dl class="py class">
 <dt class="sig sig-object py">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">SubstructureGenerateModesArray</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">iterable</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">()</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">/</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/haiiliin/pyabaqus/blob/V2022/src/abaqus/StepMiscellaneous/SubstructureGenerateModesArray.py#L4-L6"><span class="viewcode-link"><span class="pre">[source]</span></span></a></dt>
 <dd><p class="rubric">Methods</p>
 <div class="table-wrapper docutils container">
 <table class="docutils align-default">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
 <tbody>
 <tr class="row-odd"><td><p><strong>findAt</strong></p></td>
 <td></td>
@@ -1388,10 +1323,10 @@ from the lowest mode to the highest mode.</p>
                 </div>
                 <div class="title">Abaqus Job</div>
               </div>
-              <svg><use href="#svg-arrow-right"></use></svg>
+              <svg class="furo-related-icon"><use href="#svg-arrow-right"></use></svg>
             </a>
           <a class="prev-page" href="../step.html">
-              <svg><use href="#svg-arrow-right"></use></svg>
+              <svg class="furo-related-icon"><use href="#svg-arrow-right"></use></svg>
               <div class="page-info">
                 <div class="context">
                   <span>Previous</span>
@@ -1413,9 +1348,7 @@ from the lowest mode to the highest mode.</p>
             
           </div>
           <div class="right-details">
-            <div class="icons">
-              
-            </div>
+            
           </div>
         </div>
         
@@ -1427,7 +1360,7 @@ from the lowest mode to the highest mode.</p>
       <div class="toc-sticky toc-scroll">
         <div class="toc-title-container">
           <span class="toc-title">
-            Contents
+            On this page
           </span>
         </div>
         <div class="toc-tree-container">
@@ -1490,9 +1423,8 @@ from the lowest mode to the highest mode.</p>
     </aside>
   </div>
 </div><script data-url_root="../../../../" id="documentation_options" src="../../../../_static/documentation_options.js"></script>
-    <script src="../../../../_static/jquery.js"></script>
-    <script src="../../../../_static/underscore.js"></script>
     <script src="../../../../_static/doctools.js"></script>
+    <script src="../../../../_static/sphinx_highlight.js"></script>
     <script src="../../../../_static/scripts/furo.js"></script>
     </body>
 </html>

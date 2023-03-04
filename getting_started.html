@@ -1,14 +1,14 @@
 <!doctype html>
-<html class="no-js">
+<html class="no-js" lang="en">
   <head><meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width,initial-scale=1"/>
-    <meta name="color-scheme" content="light dark"><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="color-scheme" content="light dark"><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 <link rel="index" title="Index" href="genindex.html" /><link rel="search" title="Search" href="search.html" /><link rel="next" title="Tutorials" href="tutorials.html" /><link rel="prev" title="Change Log" href="CHANGE_LOG.html" />
 
-    <meta name="generator" content="sphinx-4.5.0, furo 2022.06.21"/>
+    <!-- Generated with Sphinx 6.1.3 and Furo 2022.12.07 -->
         <title>Getting Started - PYABAQUS 2022.1 documentation</title>
       <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="_static/styles/furo.css?digest=40978830699223671f4072448e654b5958f38b89" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/furo.css?digest=91d0f0d1c444bdcb17a68e833c7a53903343c195" />
     <link rel="stylesheet" type="text/css" href="_static/styles/furo-extensions.css?digest=30d1aed668e5c3a91c3e3bf6a60b675221979f0e" />
     
     
@@ -18,6 +18,8 @@
   body {
     --color-code-background: #f8f8f8;
   --color-code-foreground: black;
+  --color-announcement-background: #7C4DFF;
+  --color-announcement-text: #FFFFFF;
   
   }
   @media not print {
@@ -112,7 +114,11 @@
   <div class="visually-hidden">Hide table of contents sidebar</div>
 </label>
 
-
+<div class="announcement">
+  <aside class="announcement-content">
+     The `pyabaqus` package has been deprecated. Please use the <a href='https://github.com/haiiliin/abqpy' target='_blank'>abqpy</a> package instead. 
+  </aside>
+</div>
 
 <div class="page">
   <header class="mobile-header">
@@ -149,7 +155,7 @@
   <span class="sidebar-brand-text">PYABAQUS 2022.1 documentation</span>
   
 </a><form class="sidebar-search-container" method="get" action="search.html" role="search">
-  <input class="sidebar-search" placeholder=Search name="q" aria-label="Search">
+  <input class="sidebar-search" placeholder="Search" name="q" aria-label="Search">
   <input type="hidden" name="check_keywords" value="yes">
   <input type="hidden" name="area" value="default">
 </form>
@@ -288,7 +294,8 @@
           <span>Back to top</span>
         </a>
         <div class="content-icon-container">
-          <div class="theme-toggle-container theme-toggle-content">
+          
+<div class="theme-toggle-container theme-toggle-content">
             <button class="theme-toggle">
               <div class="visually-hidden">Toggle Light / Dark / Auto color theme</div>
               <svg class="theme-icon-when-auto"><use href="#svg-sun-half"></use></svg>
@@ -303,16 +310,16 @@
         </div>
         <article role="main">
           <section id="getting-started">
-<h1>Getting Started<a class="headerlink" href="#getting-started" title="Permalink to this headline">#</a></h1>
+<h1>Getting Started<a class="headerlink" href="#getting-started" title="Permalink to this heading">#</a></h1>
 <section id="introduction">
-<h2>Introduction<a class="headerlink" href="#introduction" title="Permalink to this headline">#</a></h2>
+<h2>Introduction<a class="headerlink" href="#introduction" title="Permalink to this heading">#</a></h2>
 <p><cite>pyabaqus</cite> is a Python package providing type hints for Python scripting of Abaqus, you can
 use it to write you Python script of Abaqus fluently, even without doing anything in Abaqus.
 It also provides some simple APIs to execute the Abaqus commands so that you can run your
 Python script to build the model, submit the job and extract the output data in just one
 Python script, even without opening the Abaqus/CAE.</p>
 <section id="two-python-interpreters">
-<h3>Two Python interpreters<a class="headerlink" href="#two-python-interpreters" title="Permalink to this headline">#</a></h3>
+<h3>Two Python interpreters<a class="headerlink" href="#two-python-interpreters" title="Permalink to this heading">#</a></h3>
 <p>Before we go any further, it is necessary for us to understand two Python interpreters.</p>
 <p>When we use the Abaqus/CAE graphical user interface (GUI) to create a model and to visualize
 the results, commands are issued internally by Abaqus/CAE after every operation. These
@@ -327,21 +334,21 @@ be done in Abaqus/CAE, can also be done using Python script. Abaqus has already 
 Python interpreter so that Abaqus/CAE can use it to interact with the Abaqus kernel.</p>
 <p>For some reasons, we cannot directly use the Python interpreter inside Abaqus to build an
 Abaqus model. But fortunately, we can use the commands provided by Abaqus to access it. i.e.</p>
-<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>abaqus cae
-    <span class="o">[</span><span class="nv">database</span><span class="o">=</span>database-file<span class="o">]</span>
-    <span class="o">[</span><span class="nv">replay</span><span class="o">=</span>replay-file<span class="o">]</span>
-    <span class="o">[</span><span class="nv">recover</span><span class="o">=</span>journal-file<span class="o">]</span>
-    <span class="o">[</span><span class="nv">startup</span><span class="o">=</span>startup-file<span class="o">]</span>
-    <span class="o">[</span><span class="nv">script</span><span class="o">=</span>script-file<span class="o">]</span>
-    <span class="o">[</span><span class="nv">noGUI</span><span class="o">=</span>noGUI-file<span class="o">]</span>
-    <span class="o">[</span>noenvstartup<span class="o">]</span>
-    <span class="o">[</span>noSavedOptions<span class="o">]</span>
-    <span class="o">[</span>noSavedGuiPrefs<span class="o">]</span>
-    <span class="o">[</span>noStartupDialog<span class="o">]</span>
-    <span class="o">[</span><span class="nv">custom</span><span class="o">=</span>script-file<span class="o">]</span>
-    <span class="o">[</span><span class="nv">guiTester</span><span class="o">=</span>GUI-script<span class="o">]</span>
-    <span class="o">[</span>guiRecord<span class="o">]</span>
-    <span class="o">[</span>guiNoRecord<span class="o">]</span>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>abaqus<span class="w"> </span>cae
+<span class="w">    </span><span class="o">[</span><span class="nv">database</span><span class="o">=</span>database-file<span class="o">]</span>
+<span class="w">    </span><span class="o">[</span><span class="nv">replay</span><span class="o">=</span>replay-file<span class="o">]</span>
+<span class="w">    </span><span class="o">[</span><span class="nv">recover</span><span class="o">=</span>journal-file<span class="o">]</span>
+<span class="w">    </span><span class="o">[</span><span class="nv">startup</span><span class="o">=</span>startup-file<span class="o">]</span>
+<span class="w">    </span><span class="o">[</span><span class="nv">script</span><span class="o">=</span>script-file<span class="o">]</span>
+<span class="w">    </span><span class="o">[</span><span class="nv">noGUI</span><span class="o">=</span>noGUI-file<span class="o">]</span>
+<span class="w">    </span><span class="o">[</span>noenvstartup<span class="o">]</span>
+<span class="w">    </span><span class="o">[</span>noSavedOptions<span class="o">]</span>
+<span class="w">    </span><span class="o">[</span>noSavedGuiPrefs<span class="o">]</span>
+<span class="w">    </span><span class="o">[</span>noStartupDialog<span class="o">]</span>
+<span class="w">    </span><span class="o">[</span><span class="nv">custom</span><span class="o">=</span>script-file<span class="o">]</span>
+<span class="w">    </span><span class="o">[</span><span class="nv">guiTester</span><span class="o">=</span>GUI-script<span class="o">]</span>
+<span class="w">    </span><span class="o">[</span>guiRecord<span class="o">]</span>
+<span class="w">    </span><span class="o">[</span>guiNoRecord<span class="o">]</span>
 </pre></div>
 </div>
 <p>Usually, we can use the noGUI-file or script-file to execute our Python script in Abaqus.</p>
@@ -352,12 +359,12 @@ Abaqus Python script quickly.</p>
 </section>
 </section>
 <section id="how-does-this-package-work">
-<h2>How does this package work?<a class="headerlink" href="#how-does-this-package-work" title="Permalink to this headline">#</a></h2>
+<h2>How does this package work?<a class="headerlink" href="#how-does-this-package-work" title="Permalink to this heading">#</a></h2>
 <p><cite>pyabaqus</cite> is just a package to provide type hints for Abaqus/Python scripting, it is installed outside Abaqus/Python
 environment, you can use <cite>pyabaqus</cite> to write your Abaqus/Python scripts, and run the scripts inside Abaqus on your own.
 However, with the help of Abaqus command, an easier way can be achieved: <strong>you can actually run the script using your
 own Python interpreter without opening Abaqus</strong>, which is achieved via the <strong>abaqus</strong> command like this:</p>
-<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>abaqus cae -noGUI script.py
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>abaqus<span class="w"> </span>cae<span class="w"> </span>-noGUI<span class="w"> </span>script.py
 </pre></div>
 </div>
 <p>The secret is hided in the <code class="xref py py-meth docutils literal notranslate"><span class="pre">saveAs()</span></code> method:</p>
@@ -384,7 +391,7 @@ method <a class="reference internal" href="reference/session.html#abaqus.Session
 <p>Therefore, if you want to run your Python script in Abaqus Python environment, please make sure to use these methods.</p>
 </section>
 <section id="installation">
-<h2>Installation<a class="headerlink" href="#installation" title="Permalink to this headline">#</a></h2>
+<h2>Installation<a class="headerlink" href="#installation" title="Permalink to this heading">#</a></h2>
 <p><cite>pyabaqus</cite> is using type hints features that require Python 3.9 or a later version,
 please upgrade it to Python 3.9 or a later version if you are using an earlier version.</p>
 <p><cite>pyabaqus</cite> is uploaded to <a class="reference external" href="https://pypi.org/project/pyabaqus">PyPI</a>, you can simply install
@@ -392,22 +399,22 @@ it using pip, since pyabaqus (from V1.0.15) depends on <cite>ipyparams</cite> an
 anaconda, you have to use <cite>pip</cite> to install it manually:</p>
 <p><cite>pyabaqus</cite> is also uploaded to <a class="reference external" href="https://anaconda.org/haiiliin/pyabaqus">anaconda</a>, you can use
 <cite>conda</cite> to install it:</p>
-<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>pip install ipyparams
-conda install -c haiiliin pyabaqus
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>pip<span class="w"> </span>install<span class="w"> </span>ipyparams
+conda<span class="w"> </span>install<span class="w"> </span>-c<span class="w"> </span>haiiliin<span class="w"> </span>pyabaqus
 </pre></div>
 </div>
 <p>You may install the latest development version by cloning the
 <a class="reference external" href="https://github.com/Haiiliin/pyabaqus">GitHub repository</a> and use <cite>python</cite> to install from
 the local directory:</p>
-<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>pip install ipyparams
-git clone https://github.com/Haiiliin/pyabaqus.git
-<span class="nb">cd</span> pyabaqus
-python setup.py install
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>pip<span class="w"> </span>install<span class="w"> </span>ipyparams
+git<span class="w"> </span>clone<span class="w"> </span>https://github.com/Haiiliin/pyabaqus.git
+<span class="nb">cd</span><span class="w"> </span>pyabaqus
+python<span class="w"> </span>setup.py<span class="w"> </span>install
 </pre></div>
 </div>
 </section>
 <section id="dependencies">
-<h2>Dependencies<a class="headerlink" href="#dependencies" title="Permalink to this headline">#</a></h2>
+<h2>Dependencies<a class="headerlink" href="#dependencies" title="Permalink to this heading">#</a></h2>
 <dl class="simple">
 <dt>Required dependencies:</dt><dd><ul class="simple">
 <li><p>ipyparams, used to get the file name of the jupyter notebook</p></li>
@@ -418,7 +425,7 @@ python setup.py install
 now.</p>
 </section>
 <section id="abaqus-command">
-<h2>Abaqus command<a class="headerlink" href="#abaqus-command" title="Permalink to this headline">#</a></h2>
+<h2>Abaqus command<a class="headerlink" href="#abaqus-command" title="Permalink to this heading">#</a></h2>
 <p>In order to use Abaqus command to execute the Python script and submit the job, you need to tell
 <cite>pyabaqus</cite> where the Abaqus command located. Usually, Abaqus command locates in a directory like this:</p>
 <div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>C:/SIMULIA/Commands/abaqus.bat
@@ -442,10 +449,10 @@ system variable named <cite>ABAQUS_BAT_PATH</cite>, and set the value to the fil
                 </div>
                 <div class="title">Tutorials</div>
               </div>
-              <svg><use href="#svg-arrow-right"></use></svg>
+              <svg class="furo-related-icon"><use href="#svg-arrow-right"></use></svg>
             </a>
           <a class="prev-page" href="CHANGE_LOG.html">
-              <svg><use href="#svg-arrow-right"></use></svg>
+              <svg class="furo-related-icon"><use href="#svg-arrow-right"></use></svg>
               <div class="page-info">
                 <div class="context">
                   <span>Previous</span>
@@ -467,9 +474,7 @@ system variable named <cite>ABAQUS_BAT_PATH</cite>, and set the value to the fil
             
           </div>
           <div class="right-details">
-            <div class="icons">
-              
-            </div>
+            
           </div>
         </div>
         
@@ -481,7 +486,7 @@ system variable named <cite>ABAQUS_BAT_PATH</cite>, and set the value to the fil
       <div class="toc-sticky toc-scroll">
         <div class="toc-title-container">
           <span class="toc-title">
-            Contents
+            On this page
           </span>
         </div>
         <div class="toc-tree-container">
@@ -508,9 +513,8 @@ system variable named <cite>ABAQUS_BAT_PATH</cite>, and set the value to the fil
     </aside>
   </div>
 </div><script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
-    <script src="_static/jquery.js"></script>
-    <script src="_static/underscore.js"></script>
     <script src="_static/doctools.js"></script>
+    <script src="_static/sphinx_highlight.js"></script>
     <script src="_static/scripts/furo.js"></script>
     </body>
 </html>

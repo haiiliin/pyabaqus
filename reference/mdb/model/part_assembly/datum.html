@@ -1,14 +1,14 @@
 <!doctype html>
-<html class="no-js">
+<html class="no-js" lang="en">
   <head><meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width,initial-scale=1"/>
-    <meta name="color-scheme" content="light dark"><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="color-scheme" content="light dark"><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 <link rel="index" title="Index" href="../../../../genindex.html" /><link rel="search" title="Search" href="../../../../search.html" /><link rel="next" title="Engineering Feature" href="engineering.html" /><link rel="prev" title="Assembly" href="../assembly.html" />
 
-    <meta name="generator" content="sphinx-4.5.0, furo 2022.06.21"/>
+    <!-- Generated with Sphinx 6.1.3 and Furo 2022.12.07 -->
         <title>Datum - PYABAQUS 2022.1 documentation</title>
       <link rel="stylesheet" type="text/css" href="../../../../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../../../../_static/styles/furo.css?digest=40978830699223671f4072448e654b5958f38b89" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/styles/furo.css?digest=91d0f0d1c444bdcb17a68e833c7a53903343c195" />
     <link rel="stylesheet" type="text/css" href="../../../../_static/styles/furo-extensions.css?digest=30d1aed668e5c3a91c3e3bf6a60b675221979f0e" />
     
     
@@ -18,6 +18,8 @@
   body {
     --color-code-background: #f8f8f8;
   --color-code-foreground: black;
+  --color-announcement-background: #7C4DFF;
+  --color-announcement-text: #FFFFFF;
   
   }
   @media not print {
@@ -112,7 +114,11 @@
   <div class="visually-hidden">Hide table of contents sidebar</div>
 </label>
 
-
+<div class="announcement">
+  <aside class="announcement-content">
+     The `pyabaqus` package has been deprecated. Please use the <a href='https://github.com/haiiliin/abqpy' target='_blank'>abqpy</a> package instead. 
+  </aside>
+</div>
 
 <div class="page">
   <header class="mobile-header">
@@ -149,7 +155,7 @@
   <span class="sidebar-brand-text">PYABAQUS 2022.1 documentation</span>
   
 </a><form class="sidebar-search-container" method="get" action="../../../../search.html" role="search">
-  <input class="sidebar-search" placeholder=Search name="q" aria-label="Search">
+  <input class="sidebar-search" placeholder="Search" name="q" aria-label="Search">
   <input type="hidden" name="check_keywords" value="yes">
   <input type="hidden" name="area" value="default">
 </form>
@@ -288,7 +294,8 @@
           <span>Back to top</span>
         </a>
         <div class="content-icon-container">
-          <div class="theme-toggle-container theme-toggle-content">
+          
+<div class="theme-toggle-container theme-toggle-content">
             <button class="theme-toggle">
               <div class="visually-hidden">Toggle Light / Dark / Auto color theme</div>
               <svg class="theme-icon-when-auto"><use href="#svg-sun-half"></use></svg>
@@ -303,13 +310,13 @@
         </div>
         <article role="main">
           <section id="datum">
-<h1>Datum<a class="headerlink" href="#datum" title="Permalink to this headline">#</a></h1>
+<h1>Datum<a class="headerlink" href="#datum" title="Permalink to this heading">#</a></h1>
 <p>Datum commands return Feature objects and inherit the methods of Feature objects. For more details, see Feature commands. Datums can be created using methods on a Part or Assembly object.</p>
 <p>Each command also creates a Datum object in the corresponding datum repository. The Datum object is used as an argument to other commands, such as Part and Partition commands.</p>
 <section id="object-features">
-<h2>Object features<a class="headerlink" href="#object-features" title="Permalink to this headline">#</a></h2>
+<h2>Object features<a class="headerlink" href="#object-features" title="Permalink to this heading">#</a></h2>
 <section id="id1">
-<h3>Datum<a class="headerlink" href="#id1" title="Permalink to this headline">#</a></h3>
+<h3>Datum<a class="headerlink" href="#id1" title="Permalink to this heading">#</a></h3>
 <dl class="py class">
 <dt class="sig sig-object py" id="abaqus.Datum.Datum.Datum">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">Datum</span></span><a class="reference external" href="https://github.com/haiiliin/pyabaqus/blob/V2022/src/abaqus/Datum/Datum.py#L1-L22"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#abaqus.Datum.Datum.Datum" title="Permalink to this definition">#</a></dt>
@@ -331,7 +338,7 @@ objects derived from the Datum.</p>
 
 </section>
 <section id="datumaxis">
-<h3>DatumAxis<a class="headerlink" href="#datumaxis" title="Permalink to this headline">#</a></h3>
+<h3>DatumAxis<a class="headerlink" href="#datumaxis" title="Permalink to this heading">#</a></h3>
 <dl class="py class">
 <dt class="sig sig-object py" id="abaqus.Datum.DatumAxis.DatumAxis">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">DatumAxis</span></span><a class="reference external" href="https://github.com/haiiliin/pyabaqus/blob/V2022/src/abaqus/Datum/DatumAxis.py#L4-L40"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#abaqus.Datum.DatumAxis.DatumAxis" title="Permalink to this definition">#</a></dt>
@@ -350,7 +357,7 @@ The DatumAxis object is derived from the Datum object.</p>
 </pre></div>
 </div>
 <dl class="field-list simple">
-<dt class="field-odd">Attributes</dt>
+<dt class="field-odd">Attributes<span class="colon">:</span></dt>
 <dd class="field-odd"><dl class="simple">
 <dt><strong>pointOn: float</strong></dt><dd><p>A tuple of Floats specifying the <strong>X</strong>-, <strong>Y</strong>-, and <strong>Z</strong>-coordinates of a point located on
 the datum.</p>
@@ -365,7 +372,7 @@ axis.</p>
 
 </section>
 <section id="datumcsys">
-<h3>DatumCsys<a class="headerlink" href="#datumcsys" title="Permalink to this headline">#</a></h3>
+<h3>DatumCsys<a class="headerlink" href="#datumcsys" title="Permalink to this heading">#</a></h3>
 <dl class="py class">
 <dt class="sig sig-object py" id="abaqus.Datum.DatumCsys.DatumCsys">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">DatumCsys</span></span><a class="reference external" href="https://github.com/haiiliin/pyabaqus/blob/V2022/src/abaqus/Datum/DatumCsys.py#L7-L96"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#abaqus.Datum.DatumCsys.DatumCsys" title="Permalink to this definition">#</a></dt>
@@ -389,7 +396,7 @@ The DatumCsys object is derived from the Datum object.</p>
 </pre></div>
 </div>
 <dl class="field-list simple">
-<dt class="field-odd">Attributes</dt>
+<dt class="field-odd">Attributes<span class="colon">:</span></dt>
 <dd class="field-odd"><dl class="simple">
 <dt><strong>coordSysType: SymbolicConstant</strong></dt><dd><p>A SymbolicConstant specifying the type of the coordinate system. Possible values are
 CARTESIAN, CYLINDRICAL, and SPHERICAL.</p>
@@ -408,10 +415,6 @@ CARTESIAN, CYLINDRICAL, and SPHERICAL.</p>
 <p class="rubric">Methods</p>
 <div class="table-wrapper autosummary longtable docutils container">
 <table class="autosummary longtable docutils align-default">
-<colgroup>
-<col style="width: 10%" />
-<col style="width: 90%" />
-</colgroup>
 <tbody>
 <tr class="row-odd"><td><p><a class="reference internal" href="#abaqus.Datum.DatumCsys.DatumCsys.globalToLocal" title="abaqus.Datum.DatumCsys.DatumCsys.globalToLocal"><code class="xref py py-obj docutils literal notranslate"><span class="pre">globalToLocal</span></code></a>(coordinates)</p></td>
 <td><p>This method transforms specified coordinates in the global coordinate system into this local coordinate system.</p></td>
@@ -428,13 +431,13 @@ CARTESIAN, CYLINDRICAL, and SPHERICAL.</p>
 <dd><p>This method transforms specified coordinates in the global coordinate system into this
 local coordinate system.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><dl class="simple">
 <dt><strong>coordinates</strong></dt><dd><p>A tuple of three Floats representing the coordinates in the global coordinate system.</p>
 </dd>
 </dl>
 </dd>
-<dt class="field-even">Returns</dt>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><dl class="simple">
 <dt><code class="xref py py-class docutils literal notranslate"><span class="pre">python:tuple</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">python:float</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">python:float</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">python:float</span></code>]</dt><dd><p>A tuple of three Floats representing the coordinates in this local coordinate system.</p>
 </dd>
@@ -448,13 +451,13 @@ local coordinate system.</p>
 <span class="sig-name descname"><span class="pre">localToGlobal</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">coordinates</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">tuple</span><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">float</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">tuple</span><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">float</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></span></span><a class="reference external" href="https://github.com/haiiliin/pyabaqus/blob/V2022/src/abaqus/Datum/DatumCsys.py#L81-L96"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#abaqus.Datum.DatumCsys.DatumCsys.localToGlobal" title="Permalink to this definition">#</a></dt>
 <dd><p>This method transforms specified coordinates in this local coordinate system into the global coordinate system.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><dl class="simple">
 <dt><strong>coordinates</strong></dt><dd><p>A tuple of three Floats representing the coordinates in the local coordinate system.</p>
 </dd>
 </dl>
 </dd>
-<dt class="field-even">Returns</dt>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><dl class="simple">
 <dt><code class="xref py py-class docutils literal notranslate"><span class="pre">python:tuple</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">python:float</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">python:float</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">python:float</span></code>]</dt><dd><p>A tuple of three Floats representing the coordinates in this global coordinate system.</p>
 </dd>
@@ -467,7 +470,7 @@ local coordinate system.</p>
 
 </section>
 <section id="datumplane">
-<h3>DatumPlane<a class="headerlink" href="#datumplane" title="Permalink to this headline">#</a></h3>
+<h3>DatumPlane<a class="headerlink" href="#datumplane" title="Permalink to this heading">#</a></h3>
 <dl class="py class">
 <dt class="sig sig-object py" id="abaqus.Datum.DatumPlane.DatumPlane">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">DatumPlane</span></span><a class="reference external" href="https://github.com/haiiliin/pyabaqus/blob/V2022/src/abaqus/Datum/DatumPlane.py#L4-L38"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#abaqus.Datum.DatumPlane.DatumPlane" title="Permalink to this definition">#</a></dt>
@@ -486,7 +489,7 @@ The DatumPlane object is derived from the Datum object.</p>
 </pre></div>
 </div>
 <dl class="field-list simple">
-<dt class="field-odd">Attributes</dt>
+<dt class="field-odd">Attributes<span class="colon">:</span></dt>
 <dd class="field-odd"><dl class="simple">
 <dt><strong>pointOn: float</strong></dt><dd><p>A tuple of Floats specifying the <strong>X</strong>-, <strong>Y</strong>-, and <strong>Z</strong>-coordinates of a point located on
 the datum.</p>
@@ -500,7 +503,7 @@ the datum.</p>
 
 </section>
 <section id="datumpoint">
-<h3>DatumPoint<a class="headerlink" href="#datumpoint" title="Permalink to this headline">#</a></h3>
+<h3>DatumPoint<a class="headerlink" href="#datumpoint" title="Permalink to this heading">#</a></h3>
 <dl class="py class">
 <dt class="sig sig-object py" id="abaqus.Datum.DatumPoint.DatumPoint">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">DatumPoint</span></span><a class="reference external" href="https://github.com/haiiliin/pyabaqus/blob/V2022/src/abaqus/Datum/DatumPoint.py#L4-L33"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#abaqus.Datum.DatumPoint.DatumPoint" title="Permalink to this definition">#</a></dt>
@@ -519,7 +522,7 @@ The DatumPoint object is derived from the Datum object.</p>
 </pre></div>
 </div>
 <dl class="field-list simple">
-<dt class="field-odd">Attributes</dt>
+<dt class="field-odd">Attributes<span class="colon">:</span></dt>
 <dd class="field-odd"><dl class="simple">
 <dt><strong>pointOn: float</strong></dt><dd><p>A tuple of Floats specifying the <strong>X</strong>-, <strong>Y</strong>-, and <strong>Z</strong>-coordinates of a point located on
 the datum.</p>
@@ -545,10 +548,10 @@ the datum.</p>
                 </div>
                 <div class="title">Engineering Feature</div>
               </div>
-              <svg><use href="#svg-arrow-right"></use></svg>
+              <svg class="furo-related-icon"><use href="#svg-arrow-right"></use></svg>
             </a>
           <a class="prev-page" href="../assembly.html">
-              <svg><use href="#svg-arrow-right"></use></svg>
+              <svg class="furo-related-icon"><use href="#svg-arrow-right"></use></svg>
               <div class="page-info">
                 <div class="context">
                   <span>Previous</span>
@@ -570,9 +573,7 @@ the datum.</p>
             
           </div>
           <div class="right-details">
-            <div class="icons">
-              
-            </div>
+            
           </div>
         </div>
         
@@ -584,7 +585,7 @@ the datum.</p>
       <div class="toc-sticky toc-scroll">
         <div class="toc-title-container">
           <span class="toc-title">
-            Contents
+            On this page
           </span>
         </div>
         <div class="toc-tree-container">
@@ -592,11 +593,30 @@ the datum.</p>
             <ul>
 <li><a class="reference internal" href="#">Datum</a><ul>
 <li><a class="reference internal" href="#object-features">Object features</a><ul>
-<li><a class="reference internal" href="#id1">Datum</a></li>
-<li><a class="reference internal" href="#datumaxis">DatumAxis</a></li>
-<li><a class="reference internal" href="#datumcsys">DatumCsys</a></li>
-<li><a class="reference internal" href="#datumplane">DatumPlane</a></li>
-<li><a class="reference internal" href="#datumpoint">DatumPoint</a></li>
+<li><a class="reference internal" href="#id1">Datum</a><ul>
+<li><a class="reference internal" href="#abaqus.Datum.Datum.Datum"><code class="docutils literal notranslate"><span class="pre">Datum</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#datumaxis">DatumAxis</a><ul>
+<li><a class="reference internal" href="#abaqus.Datum.DatumAxis.DatumAxis"><code class="docutils literal notranslate"><span class="pre">DatumAxis</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#datumcsys">DatumCsys</a><ul>
+<li><a class="reference internal" href="#abaqus.Datum.DatumCsys.DatumCsys"><code class="docutils literal notranslate"><span class="pre">DatumCsys</span></code></a><ul>
+<li><a class="reference internal" href="#abaqus.Datum.DatumCsys.DatumCsys.globalToLocal"><code class="docutils literal notranslate"><span class="pre">DatumCsys.globalToLocal()</span></code></a></li>
+<li><a class="reference internal" href="#abaqus.Datum.DatumCsys.DatumCsys.localToGlobal"><code class="docutils literal notranslate"><span class="pre">DatumCsys.localToGlobal()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a class="reference internal" href="#datumplane">DatumPlane</a><ul>
+<li><a class="reference internal" href="#abaqus.Datum.DatumPlane.DatumPlane"><code class="docutils literal notranslate"><span class="pre">DatumPlane</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#datumpoint">DatumPoint</a><ul>
+<li><a class="reference internal" href="#abaqus.Datum.DatumPoint.DatumPoint"><code class="docutils literal notranslate"><span class="pre">DatumPoint</span></code></a></li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
@@ -611,9 +631,8 @@ the datum.</p>
     </aside>
   </div>
 </div><script data-url_root="../../../../" id="documentation_options" src="../../../../_static/documentation_options.js"></script>
-    <script src="../../../../_static/jquery.js"></script>
-    <script src="../../../../_static/underscore.js"></script>
     <script src="../../../../_static/doctools.js"></script>
+    <script src="../../../../_static/sphinx_highlight.js"></script>
     <script src="../../../../_static/scripts/furo.js"></script>
     </body>
 </html>
