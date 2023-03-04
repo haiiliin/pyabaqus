@@ -9,8 +9,8 @@
 [![GitHub release](https://img.shields.io/github/release/haiiliin/pyabaqus.svg)](https://GitHub.com/haiiliin/pyabaqus/releases/)
 [![PyPI download month](https://img.shields.io/pypi/dm/pyabaqus.svg)](https://pypi.python.org/pypi/pyabaqus/)
 
-> **Note**
-> The repo has been transferred to [abqpy](https://github.com/haiiliin/abqpy).
+> **Warning**
+> The `pyabaqus` package has been deprecated. Please use the [abqpy](https://github.com/haiiliin/abqpy) package instead.
 
 Type hints for Abaqus/Python scripting
 

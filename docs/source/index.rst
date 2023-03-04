@@ -19,6 +19,9 @@ Python script, even without opening the Abaqus/CAE.
 .. model, submit and monitor the job, and visualize the results in just one python script, you 
 .. don't even need to open Abaqus the whole time.
 
+.. warning::
+    The `pyabaqus` package has been deprecated. Please use the `abqpy <https://github.com/haiiliin/abqpy>`_ package instead.
+
 Other links for this project
 ----------------------------
 
