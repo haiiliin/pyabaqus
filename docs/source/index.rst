@@ -28,14 +28,6 @@ Other links for this project
 * GitHub repository: `github.com/Haiiliin/pyabaqus <https://github.com/Haiiliin/pyabaqus>`_
 * PyPI: `pypi.org/project/pyabaqus <https://pypi.org/project/pyabaqus/>`_
 * Anaconda: `anaconda.org/haiiliin/pyabaqus <https://anaconda.org/haiiliin/pyabaqus>`_
-* Read the Docs: `readthedocs.org/projects/pyabaqus <https://readthedocs.org/projects/pyabaqus>`_
-
-Related project
----------------
-
-Abaqus Executor is an application to run your Abaqus model more fluently,
-check it in `github.com/Haiiliin/pyabaqus-executor <https://github.com/Haiiliin/pyabaqus-executor>`_ or check 
-the `documentation <https://executor.haiiliin.com/>`_.
 
 Quick Start
 -----------
