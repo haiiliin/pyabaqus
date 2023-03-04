@@ -390,51 +390,6 @@ method <a class="reference internal" href="reference/session.html#abaqus.Session
 </div>
 <p>Therefore, if you want to run your Python script in Abaqus Python environment, please make sure to use these methods.</p>
 </section>
-<section id="installation">
-<h2>Installation<a class="headerlink" href="#installation" title="Permalink to this heading">#</a></h2>
-<p><cite>pyabaqus</cite> is using type hints features that require Python 3.9 or a later version,
-please upgrade it to Python 3.9 or a later version if you are using an earlier version.</p>
-<p><cite>pyabaqus</cite> is uploaded to <a class="reference external" href="https://pypi.org/project/pyabaqus">PyPI</a>, you can simply install
-it using pip, since pyabaqus (from V1.0.15) depends on <cite>ipyparams</cite> and it is not distributed to
-anaconda, you have to use <cite>pip</cite> to install it manually:</p>
-<p><cite>pyabaqus</cite> is also uploaded to <a class="reference external" href="https://anaconda.org/haiiliin/pyabaqus">anaconda</a>, you can use
-<cite>conda</cite> to install it:</p>
-<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>pip<span class="w"> </span>install<span class="w"> </span>ipyparams
-conda<span class="w"> </span>install<span class="w"> </span>-c<span class="w"> </span>haiiliin<span class="w"> </span>pyabaqus
-</pre></div>
-</div>
-<p>You may install the latest development version by cloning the
-<a class="reference external" href="https://github.com/Haiiliin/pyabaqus">GitHub repository</a> and use <cite>python</cite> to install from
-the local directory:</p>
-<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>pip<span class="w"> </span>install<span class="w"> </span>ipyparams
-git<span class="w"> </span>clone<span class="w"> </span>https://github.com/Haiiliin/pyabaqus.git
-<span class="nb">cd</span><span class="w"> </span>pyabaqus
-python<span class="w"> </span>setup.py<span class="w"> </span>install
-</pre></div>
-</div>
-</section>
-<section id="dependencies">
-<h2>Dependencies<a class="headerlink" href="#dependencies" title="Permalink to this heading">#</a></h2>
-<dl class="simple">
-<dt>Required dependencies:</dt><dd><ul class="simple">
-<li><p>ipyparams, used to get the file name of the jupyter notebook</p></li>
-</ul>
-</dd>
-</dl>
-<p>Once you have installed <cite>pyabaqus</cite> and <cite>PyQt5</cite>, you can start to build your Abaqus model right
-now.</p>
-</section>
-<section id="abaqus-command">
-<h2>Abaqus command<a class="headerlink" href="#abaqus-command" title="Permalink to this heading">#</a></h2>
-<p>In order to use Abaqus command to execute the Python script and submit the job, you need to tell
-<cite>pyabaqus</cite> where the Abaqus command located. Usually, Abaqus command locates in a directory like this:</p>
-<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>C:/SIMULIA/Commands/abaqus.bat
-</pre></div>
-</div>
-<p>You can add the directory <cite>C:/SIMULIA/Commands</cite> to the system environment variable <cite>Path</cite>, or you can create a new
-system variable named <cite>ABAQUS_BAT_PATH</cite>, and set the value to the file path of the Abaqus command, i.e.,
-<cite>C:/SIMULIA/Commands/abaqus.bat</cite>.</p>
-</section>
 </section>
 
         </article>
@@ -498,9 +453,6 @@ system variable named <cite>ABAQUS_BAT_PATH</cite>, and set the value to the fil
 </ul>
 </li>
 <li><a class="reference internal" href="#how-does-this-package-work">How does this package work?</a></li>
-<li><a class="reference internal" href="#installation">Installation</a></li>
-<li><a class="reference internal" href="#dependencies">Dependencies</a></li>
-<li><a class="reference internal" href="#abaqus-command">Abaqus command</a></li>
 </ul>
 </li>
 </ul>
